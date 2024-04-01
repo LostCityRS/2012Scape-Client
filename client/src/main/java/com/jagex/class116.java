@@ -127,7 +127,7 @@ public class class116 {
 			this.field1214 = var5.field6474;
 			return null;
 		}
-		class317 var6 = this.field1217.method8565().field3464;
+		Vector3 var6 = this.field1217.method8565().field3464;
 		class423 var7 = client.field8980.method6098();
 		if (arg3) {
 			var7.method7451(this.field1224, this.field1213, (int) var6.field3475, (int) var6.field3477, this.field1228);
@@ -229,7 +229,7 @@ public class class116 {
 	@ObfuscatedName("ck.f(Lra;I)V")
 	public void method2441(class14 arg0) {
 		if (this.field1224 != null) {
-			class317 var2 = this.field1217.method8565().field3464;
+			Vector3 var2 = this.field1217.method8565().field3464;
 			client.field8980.method6098().method7451(this.field1224, this.field1213, (int) var2.field3475, (int) var2.field3477, this.field1228);
 			this.field1228 = null;
 			this.field1224 = null;

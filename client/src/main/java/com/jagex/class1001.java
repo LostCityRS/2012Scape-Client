@@ -24,9 +24,9 @@ public class class1001 extends class948 {
 		this.field10591 = arg3;
 	}
 
-	public class1001(int arg0, class814 arg1) {
+	public class1001(int arg0, Packet arg1) {
 		super(arg0);
-		this.field10590 = class180.method7070(arg1.method15220());
+		this.field10590 = class180.method7070(arg1.g1());
 		this.field10589 = arg1.method15324();
 		this.field10591 = arg1.method15324();
 	}
@@ -59,8 +59,8 @@ public class class1001 extends class948 {
 	}
 
 	@ObfuscatedName("alj.s(Laet;I)V")
-	public void method16671(class814 arg0) {
-		this.field10590 = class180.method7070(arg0.method15220());
+	public void method16671(Packet arg0) {
+		this.field10590 = class180.method7070(arg0.g1());
 		this.field10589 = arg0.method15324();
 		this.field10591 = arg0.method15324();
 	}

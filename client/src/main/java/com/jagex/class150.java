@@ -8,13 +8,13 @@ public abstract class class150 {
 	@ObfuscatedName("dm.u")
 	public final int field1566;
 
-	public class150(class814 arg0) {
-		this.field1566 = arg0.method15239();
+	public class150(Packet arg0) {
+		this.field1566 = arg0.g2();
 	}
 
 	@ObfuscatedName("gq.u(Laet;I)Ldm;")
-	public static class150 method3928(class814 arg0) {
-		int var1 = arg0.method15220();
+	public static class150 method3928(Packet arg0) {
+		int var1 = arg0.g1();
 		class634 var2 = class634.method12118(var1);
 		class150 var3 = null;
 		switch(var2.field7412) {

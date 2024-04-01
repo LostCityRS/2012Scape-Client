@@ -9,9 +9,9 @@ public class class700 extends class150 {
 	@ObfuscatedName("zl.j")
 	public final int field8484;
 
-	public class700(class814 arg0) {
+	public class700(Packet arg0) {
 		super(arg0);
-		this.field8484 = arg0.method15239();
+		this.field8484 = arg0.g2();
 	}
 
 	@ObfuscatedName("zl.j(I)V")

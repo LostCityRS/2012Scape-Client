@@ -453,18 +453,18 @@ public class class359 {
 	@ObfuscatedName("ml.ai(Lajl;I)V")
 	public void method6119(class964 arg0) {
 		int var2 = arg0.method15271();
-		int var3 = arg0.method15239();
+		int var3 = arg0.g2();
 		boolean var4 = arg0.method15271() == 1;
 		int var5 = arg0.method15281();
 		if (!this.field3813) {
 			this.method6196();
 		}
 		this.method6123(class184.method2571(var2));
-		int var6 = (arg0.field9629.length - arg0.field9626) / 16;
+		int var6 = (arg0.data.length - arg0.pos) / 16;
 		this.field3831 = new int[var6][4];
 		for (int var7 = 0; var7 < var6; var7++) {
 			for (int var8 = 0; var8 < 4; var8++) {
-				this.field3831[var7][var8] = arg0.method15379();
+				this.field3831[var7][var8] = arg0.g4s();
 			}
 		}
 		this.field3820 = new int[var6];
@@ -495,10 +495,10 @@ public class class359 {
 	@ObfuscatedName("ml.ao(Lajl;B)V")
 	public void method6120(class964 arg0) {
 		int var2 = arg0.method15281();
-		int var3 = arg0.method15220();
+		int var3 = arg0.g1();
 		boolean var4 = (var3 & 0x1) != 0;
-		int var5 = arg0.method15239();
-		int var6 = arg0.method15220();
+		int var5 = arg0.g2();
+		int var6 = arg0.g1();
 		int var7 = arg0.method15272();
 		if (var7 == 1) {
 			this.field3827 = class360.field3835;
@@ -527,11 +527,11 @@ public class class359 {
 			}
 		}
 		arg0.method16881();
-		int var12 = (arg0.field9629.length - arg0.field9626) / 16;
+		int var12 = (arg0.data.length - arg0.pos) / 16;
 		this.field3831 = new int[var12][4];
 		for (int var13 = 0; var13 < var12; var13++) {
 			for (int var14 = 0; var14 < 4; var14++) {
-				this.field3831[var13][var14] = arg0.method15379();
+				this.field3831[var13][var14] = arg0.g4s();
 			}
 		}
 		this.field3820 = new int[var12];
@@ -771,7 +771,7 @@ public class class359 {
 						var6.field8642[var7] -= var2;
 						var6.field8643[var7] -= var3;
 					}
-					class317 var8 = class317.method5290(var6.method8565().field3464);
+					Vector3 var8 = Vector3.method5290(var6.method8565().field3464);
 					var8.field3475 -= var2 * 512;
 					var8.field3477 -= var3 * 512;
 					var6.method8551(var8);
@@ -787,7 +787,7 @@ public class class359 {
 				class798 var13 = client.field8965[var12];
 				if (var13 != null) {
 					class903 var14 = (class903) var13.field9550;
-					class317 var15 = class317.method5290(var14.method8565().field3464);
+					Vector3 var15 = Vector3.method5290(var14.method8565().field3464);
 					var15.field3475 -= var2 * 512;
 					var15.field3477 -= var3 * 512;
 					var14.method8551(var15);
@@ -832,7 +832,7 @@ public class class359 {
 					var22.field8642[var23] -= var2;
 					var22.field8643[var23] -= var3;
 				}
-				class317 var24 = class317.method5290(var22.method8565().field3464);
+				Vector3 var24 = Vector3.method5290(var22.method8565().field3464);
 				var24.field3475 -= var2 * 512;
 				var24.field3477 -= var3 * 512;
 				var22.method8551(var24);
@@ -941,7 +941,7 @@ public class class359 {
 		this.field3816 = 0;
 		for (int var1 = 0; var1 < this.field3800.length; var1++) {
 			if (this.field3821[var1] != -1 && this.field3800[var1] == null) {
-				this.field3800[var1] = Statics.field7343.method5627(this.field3821[var1], 0);
+				this.field3800[var1] = Statics.field7343.getFile(this.field3821[var1], 0);
 				if (this.field3800[var1] == null) {
 					this.field3816++;
 				}
@@ -953,13 +953,13 @@ public class class359 {
 				}
 			}
 			if (this.field3797[var1] != -1 && this.field3830[var1] == null) {
-				this.field3830[var1] = Statics.field7343.method5627(this.field3797[var1], 0);
+				this.field3830[var1] = Statics.field7343.getFile(this.field3797[var1], 0);
 				if (this.field3830[var1] == null) {
 					this.field3816++;
 				}
 			}
 			if (this.field3825[var1] != -1 && this.field3832[var1] == null) {
-				this.field3832[var1] = Statics.field7343.method5627(this.field3825[var1], 0);
+				this.field3832[var1] = Statics.field7343.getFile(this.field3825[var1], 0);
 				if (this.field3832[var1] == null) {
 					this.field3816++;
 				}
@@ -1204,7 +1204,7 @@ public class class359 {
 		} else {
 			class395.method3461();
 			this.field3802.method8173();
-			class385.method2427();
+			GameShell.method2427();
 		}
 		for (int var23 = 0; var23 < 4; var23++) {
 			for (int var24 = 0; var24 < this.field3799; var24++) {
@@ -1284,7 +1284,7 @@ public class class359 {
 		for (int var4 = 0; var4 < var3; var4++) {
 			byte[] var5 = arg1[var4];
 			if (var5 != null) {
-				class814 var6 = new class814(var5);
+				Packet var6 = new Packet(var5);
 				int var7 = this.field3820[var4] >> 8;
 				int var8 = this.field3820[var4] & 0xFF;
 				int var9 = var7 * 64 - this.field3795.field4836;
@@ -1327,7 +1327,7 @@ public class class359 {
 							int var11 = (var9 / 8 << 8) + var10 / 8;
 							for (int var12 = 0; var12 < this.field3820.length; var12++) {
 								if (this.field3820[var12] == var11 && arg1[var12] != null) {
-									class814 var13 = new class814(arg1[var12]);
+									Packet var13 = new Packet(arg1[var12]);
 									arg0.method5839(var13, var3, var4 * 8, var5 * 8, var7, var9, var10, var8, this.field3811);
 									arg0.method14270(Statics.field5187, var13, var3, var4 * 8, var5 * 8, var7, var9, var10, var8);
 									break;
@@ -1420,23 +1420,23 @@ public class class359 {
 					client.field8984[client.field8985] = this.field3820[var2];
 					var3 = ++client.field8985 - 1;
 				}
-				class814 var5 = new class814(this.field3810[var2]);
+				Packet var5 = new Packet(this.field3810[var2]);
 				int var6 = 0;
-				while (var5.field9626 < this.field3810[var2].length && var6 < 511 && client.field9104 < 1023) {
+				while (var5.pos < this.field3810[var2].length && var6 < 511 && client.field9104 < 1023) {
 					int var7 = var3 | var6++ << 6;
-					int var8 = var5.method15239();
+					int var8 = var5.g2();
 					int var9 = var8 >> 14;
 					int var10 = var8 >> 7 & 0x3F;
 					int var11 = var8 & 0x3F;
 					int var12 = (this.field3820[var2] >> 8) * 64 - this.field3795.field4836 + var10;
 					int var13 = (this.field3820[var2] & 0xFF) * 64 - this.field3795.field4838 + var11;
-					class611 var14 = Statics.field3774.method12565(var5.method15239());
+					class611 var14 = Statics.field3774.method12565(var5.g2());
 					class798 var15 = (class798) client.field8964.method11923((long) var7);
 					if (var15 == null && (var14.field7220 & 0x1) > 0 && var12 >= 0 && var14.field7213 + var12 < this.field3799 && var13 >= 0 && var14.field7213 + var13 < this.field3826) {
 						class903 var16 = new class903(this.field3791);
 						var16.field8593 = var7;
 						class798 var17 = new class798(var16);
-						client.field8964.method11927(var17, (long) var7);
+						client.field8964.pushNode(var17, (long) var7);
 						client.field8965[++client.field8966 - 1] = var17;
 						client.field9056[++client.field9104 - 1] = var7;
 						var16.field8618 = client.field9213;

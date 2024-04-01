@@ -53,7 +53,7 @@ public class class791 extends class399 {
 	public float[][] field9462;
 
 	@ObfuscatedName("adn.i")
-	public class565 field9463;
+	public IterableMap field9463;
 
 	@ObfuscatedName("adn.v")
 	public ByteBuffer field9464;
@@ -114,7 +114,7 @@ public class class791 extends class399 {
 			}
 		}
 		if (this.field9456 > 0) {
-			this.field9463 = new class565(class595.method2839(this.field9456));
+			this.field9463 = new IterableMap(IntMath.bitceil(this.field9456));
 			this.field9464 = this.field9460.field8244;
 			this.field9464.clear();
 			this.field9464.position(2097152);
@@ -218,7 +218,7 @@ public class class791 extends class399 {
 		}
 		short var14 = (short) this.field9455;
 		if (var7 != -1L) {
-			this.field9463.method11927(new class799(var14), var7);
+			this.field9463.pushNode(new class799(var14), var7);
 		}
 		float var15;
 		float var16;

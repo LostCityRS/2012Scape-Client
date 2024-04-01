@@ -3,7 +3,7 @@ package com.jagex;
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ajl")
-public class class964 extends class814 {
+public class class964 extends Packet {
 
 	@ObfuscatedName("ajl.n")
 	public class568 field10473;
@@ -25,31 +25,31 @@ public class class964 extends class814 {
 
 	@ObfuscatedName("ajl.ie(II)V")
 	public void method16864(int arg0) {
-		this.field9629[++this.field9626 - 1] = (byte) (arg0 + this.field10473.method11968());
+		this.data[++this.pos - 1] = (byte) (arg0 + this.field10473.method11968());
 	}
 
 	@ObfuscatedName("ajl.ii(I)Z")
 	public boolean method16859() {
-		int var1 = this.field9629[this.field9626] - this.field10473.method11963() & 0xFF;
+		int var1 = this.data[this.pos] - this.field10473.method11963() & 0xFF;
 		return var1 >= 128;
 	}
 
 	@ObfuscatedName("ajl.in(I)I")
 	public int method16883() {
-		int var1 = this.field9629[++this.field9626 - 1] - this.field10473.method11968() & 0xFF;
-		return var1 < 128 ? var1 : (var1 - 128 << 8) + (this.field9629[++this.field9626 - 1] - this.field10473.method11968() & 0xFF);
+		int var1 = this.data[++this.pos - 1] - this.field10473.method11968() & 0xFF;
+		return var1 < 128 ? var1 : (var1 - 128 << 8) + (this.data[++this.pos - 1] - this.field10473.method11968() & 0xFF);
 	}
 
 	@ObfuscatedName("ajl.ih([BIIB)V")
 	public void method16861(byte[] arg0, int arg1, int arg2) {
 		for (int var4 = 0; var4 < arg2; var4++) {
-			arg0[arg1 + var4] = (byte) (this.field9629[++this.field9626 - 1] - this.field10473.method11968());
+			arg0[arg1 + var4] = (byte) (this.data[++this.pos - 1] - this.field10473.method11968());
 		}
 	}
 
 	@ObfuscatedName("ajl.ig(I)V")
 	public void method16862() {
-		this.field10475 = this.field9626 * 8;
+		this.field10475 = this.pos * 8;
 	}
 
 	@ObfuscatedName("ajl.ia(II)I")
@@ -59,22 +59,22 @@ public class class964 extends class814 {
 		int var4 = 0;
 		this.field10475 += arg0;
 		while (arg0 > var3) {
-			var4 += (this.field9629[var2++] & field10474[var3]) << arg0 - var3;
+			var4 += (this.data[var2++] & field10474[var3]) << arg0 - var3;
 			arg0 -= var3;
 			var3 = 8;
 		}
 		int var5;
 		if (arg0 == var3) {
-			var5 = (this.field9629[var2] & field10474[var3]) + var4;
+			var5 = (this.data[var2] & field10474[var3]) + var4;
 		} else {
-			var5 = (this.field9629[var2] >> var3 - arg0 & field10474[arg0]) + var4;
+			var5 = (this.data[var2] >> var3 - arg0 & field10474[arg0]) + var4;
 		}
 		return var5;
 	}
 
 	@ObfuscatedName("ajl.iw(I)V")
 	public void method16881() {
-		this.field9626 = (this.field10475 + 7) / 8;
+		this.pos = (this.field10475 + 7) / 8;
 	}
 
 	@ObfuscatedName("ajl.iq(II)I")

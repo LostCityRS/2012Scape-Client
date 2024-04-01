@@ -13,8 +13,8 @@ public class class260 implements class264 {
 	}
 
 	@ObfuscatedName("tj.u(Laet;I)Lig;")
-	public static class260 method11849(class814 arg0) {
-		int var1 = arg0.method15379();
+	public static class260 method11849(Packet arg0) {
+		int var1 = arg0.g4s();
 		return new class260(var1);
 	}
 

@@ -38,25 +38,25 @@ public class class959 extends class803 {
 		if (this.field9558 > 0 && !"SUB".equals(this.field10426)) {
 			return;
 		}
-		class814 var2 = new class814(arg0.getData());
-		int var3 = var2.method15220();
+		Packet var2 = new Packet(arg0.getData());
+		int var3 = var2.g1();
 		if (this.field9558 <= 8) {
 			if ((var3 | 0x80) == 0) {
 				throw new IllegalStateException();
 			}
 			if (this.field9558 == 0) {
-				var2.field9626 += 23;
+				var2.pos += 23;
 				this.field10422 = var2.method15341();
 				this.field10425 = var2.method15341();
 				if (this.field10422 == 0 || this.field10425 == 0) {
 					throw new IllegalStateException();
 				}
-				class814 var4 = new class814(16);
-				var2.method15263(var4.field9629, 0, 16);
-				this.field10427 = var4.method15337();
-				var4.field9626 = 0;
-				var2.method15263(var4.field9629, 0, 16);
-				this.field10426 = var4.method15337();
+				Packet var4 = new Packet(16);
+				var2.method15263(var4.data, 0, 16);
+				this.field10427 = var4.gjstr();
+				var4.pos = 0;
+				var2.method15263(var4.data, 0, 16);
+				this.field10426 = var4.gjstr();
 			}
 			return;
 		}
@@ -70,10 +70,10 @@ public class class959 extends class803 {
 			this.field10428 = (float) ((long) this.field10425 * var5) / (float) this.field10422;
 			this.field10429 = (float) ((var5 + var7) * (long) this.field10425) / (float) this.field10422;
 			int var11 = var2.method15341();
-			if (var11 < 0 || var11 > var2.field9629.length - var2.field9626) {
+			if (var11 < 0 || var11 > var2.data.length - var2.pos) {
 				throw new IllegalStateException();
 			}
-			this.field10430 = Statics.method2786(var2.field9629, var2.field9626, var11);
+			this.field10430 = Statics.method2786(var2.data, var2.pos, var11);
 		}
 		if ((var3 | 0x80) != 0) {
 			return;

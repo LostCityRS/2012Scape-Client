@@ -99,7 +99,7 @@ public class class673 extends class12 {
 	public float[][] field7731;
 
 	@ObfuscatedName("yn.ax")
-	public class565 field7749;
+	public IterableMap field7749;
 
 	@ObfuscatedName("yn.aw")
 	public class399[] field7753;
@@ -171,7 +171,7 @@ public class class673 extends class12 {
 		}
 		this.field7744--;
 		this.field7730++;
-		this.field7749 = new class565(128);
+		this.field7749 = new IterableMap(128);
 		if ((this.field7752 & 0x10) != 0) {
 			this.field7740 = new class235(this.field7722, this);
 		}
@@ -221,7 +221,7 @@ public class class673 extends class12 {
 			}
 			if (var20 == null) {
 				var14[var15] = new class790(this, var16, var17, arg10);
-				this.field7749.method11927(var14[var15], var18);
+				this.field7749.pushNode(var14[var15], var18);
 			} else {
 				var14[var15] = (class790) var20;
 			}
@@ -323,11 +323,11 @@ public class class673 extends class12 {
 		this.field7755 = this.field7747;
 		this.field7756 = (long) (this.field7746 * 4) + this.field7747;
 		class790[] var5 = new class790[this.field7746];
-		int var6 = class595.method1962(this.field7746 / 4);
+		int var6 = IntMath.method1962(this.field7746 / 4);
 		if (var6 < 1) {
 			var6 = 1;
 		}
-		class565 var7 = new class565(var6);
+		IterableMap var7 = new IterableMap(var6);
 		class790[] var8 = new class790[this.field7720];
 		for (int var9 = 0; var9 < this.field387; var9++) {
 			for (int var10 = 0; var10 < this.field386; var10++) {
@@ -455,7 +455,7 @@ public class class673 extends class12 {
 	}
 
 	@ObfuscatedName("yn.y(II[[B[Ladd;Luo;[Ladd;)V")
-	public void method12982(int arg0, int arg1, byte[][] arg2, class790[] arg3, class565 arg4, class790[] arg5) {
+	public void method12982(int arg0, int arg1, byte[][] arg2, class790[] arg3, IterableMap arg4, class790[] arg5) {
 		if (this.field7733[arg0][arg1] == null) {
 			return;
 		}
@@ -643,7 +643,7 @@ public class class673 extends class12 {
 				if (var40 != -1) {
 					arg5[var81] = var7[var35];
 				}
-				arg4.method11927(new class799(var34[var35]), var43);
+				arg4.pushNode(new class799(var34[var35]), var43);
 			} else {
 				var34[var35] = ((class799) var66).field9551;
 				var81 = var34[var35] & 0xFFFF;

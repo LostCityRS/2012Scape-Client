@@ -43,7 +43,7 @@ public class class757 extends class333 {
 	public int field8867 = 0;
 
 	@ObfuscatedName("abt.w")
-	public class565 field8868 = new class565(16);
+	public IterableMap field8868 = new IterableMap(16);
 
 	@ObfuscatedName("abt.b")
 	public boolean field8857;
@@ -232,7 +232,7 @@ public class class757 extends class333 {
 			} else {
 				throw new RuntimeException();
 			}
-			this.field8868.method11927(var3, (long) arg0);
+			this.field8868.pushNode(var3, (long) arg0);
 		}
 		if (var3.field10352) {
 			return null;
@@ -273,7 +273,7 @@ public class class757 extends class333 {
 				var3.method6979();
 				if (var3.field10354 && !this.field8853.method5738()) {
 					class1003 var17 = this.field8853.method5765(this.field8860, arg0, (byte) 2, true);
-					this.field8868.method11927(var17, (long) arg0);
+					this.field8868.pushNode(var17, (long) arg0);
 				}
 				return null;
 			}
@@ -329,7 +329,7 @@ public class class757 extends class333 {
 			var3.method6979();
 			if (var3.field10354 && !this.field8853.method5738()) {
 				class1003 var11 = this.field8853.method5765(this.field8860, arg0, (byte) 2, true);
-				this.field8868.method11927(var11, (long) arg0);
+				this.field8868.pushNode(var11, (long) arg0);
 			}
 			return null;
 		}

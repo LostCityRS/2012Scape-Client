@@ -414,7 +414,7 @@ public class class423 {
 		if (var6 == null) {
 			return;
 		}
-		arg4.method8551(new class317((float) ((arg1 << this.field4510) + this.field4487), (float) arg3, (float) ((arg2 << this.field4510) + this.field4487)));
+		arg4.method8551(new Vector3((float) ((arg1 << this.field4510) + this.field4487), (float) arg3, (float) ((arg2 << this.field4510) + this.field4487)));
 		var6.field4553 = arg4;
 		int var7 = this.field4502 == this.field4498 ? 1 : 0;
 		if (!arg4.method12807()) {
@@ -561,7 +561,7 @@ public class class423 {
 			}
 		}
 		if (arg1) {
-			class317 var16 = class317.method5290(arg0.method8565().field3464);
+			Vector3 var16 = Vector3.method5290(arg0.method8565().field3464);
 			var16.field3476 -= var7;
 			arg0.method8551(var16);
 			var16.method5291();
@@ -1177,7 +1177,7 @@ public class class423 {
 
 	@ObfuscatedName("oo.ak(Laes;I)V")
 	public void method7491(class836 arg0) {
-		class317 var2 = arg0.method8565().field3464;
+		Vector3 var2 = arg0.method8565().field3464;
 		this.field4489.method550((float) var2.field3475, (float) ((int) var2.field3476 + (arg0.method12809() >> 1)), (float) var2.field3477, this.field4522);
 		arg0.field9810 = (int) this.field4522[2];
 	}
@@ -1254,7 +1254,7 @@ public class class423 {
 			}
 			return true;
 		} else {
-			class317 var12 = arg0.method8565().field3464;
+			Vector3 var12 = arg0.method8565().field3464;
 			int var13 = (int) var12.field3475 >> this.field4510;
 			int var14 = (int) var12.field3477 >> this.field4510;
 			if (arg0.field9809 >= this.field4494 || var13 < this.field4486 || var13 >= this.field4484 || var14 < this.field4532 || var14 >= this.field4533) {
@@ -1279,7 +1279,7 @@ public class class423 {
 		if (this.field4502 == this.field4498) {
 			boolean var4 = false;
 			boolean var5 = false;
-			class317 var6 = arg0.method8565().field3464;
+			Vector3 var6 = arg0.method8565().field3464;
 			int var7;
 			int var8;
 			if (arg0 instanceof class974) {

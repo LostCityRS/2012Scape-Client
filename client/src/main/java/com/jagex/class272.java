@@ -7,7 +7,7 @@ import deob.Statics;
 public class class272 {
 
 	@ObfuscatedName("ik.a")
-	public static class451 field2660 = new class451(64);
+	public static WeightedCache field2660 = new WeightedCache(64);
 
 	@ObfuscatedName("ik.s")
 	public int field2661 = -1;
@@ -41,19 +41,19 @@ public class class272 {
 		if (var1 != null) {
 			return var1;
 		}
-		byte[] var2 = Statics.field2663.method5627(0, arg0);
+		byte[] var2 = Statics.field2663.getFile(0, arg0);
 		class272 var3 = new class272();
 		if (var2 != null) {
-			var3.method4641(new class814(var2), arg0);
+			var3.method4641(new Packet(var2), arg0);
 		}
 		field2660.method7937(var3, (long) arg0);
 		return var3;
 	}
 
 	@ObfuscatedName("ik.a(Laet;II)V")
-	public void method4641(class814 arg0, int arg1) {
+	public void method4641(Packet arg0, int arg1) {
 		while (true) {
-			int var3 = arg0.method15220();
+			int var3 = arg0.g1();
 			if (var3 == 0) {
 				return;
 			}
@@ -62,21 +62,21 @@ public class class272 {
 	}
 
 	@ObfuscatedName("ik.s(Laet;III)V")
-	public void method4643(class814 arg0, int arg1, int arg2) {
+	public void method4643(Packet arg0, int arg1, int arg2) {
 		if (arg1 == 1) {
-			this.field2661 = arg0.method15239();
+			this.field2661 = arg0.g2();
 			if (this.field2661 == 65535) {
 				this.field2661 = -1;
 			}
 		} else if (arg1 == 2) {
-			this.field2658 = arg0.method15239() + 1;
-			this.field2662 = arg0.method15239() + 1;
+			this.field2658 = arg0.g2() + 1;
+			this.field2662 = arg0.g2() + 1;
 		} else if (arg1 == 3) {
 			arg0.method15238();
 		} else if (arg1 == 4) {
-			this.field2664 = arg0.method15220();
+			this.field2664 = arg0.g1();
 		} else if (arg1 == 5) {
-			this.field2665 = arg0.method15220();
+			this.field2665 = arg0.g1();
 		} else if (arg1 == 6) {
 			this.field2666 = true;
 		} else if (arg1 == 7) {

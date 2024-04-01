@@ -32,11 +32,11 @@ public class class43 {
 		}
 		class792 var1 = class792.method14781(class280.field2859, client.field8959.field834);
 		var1.field9467.method15287(0);
-		int var2 = var1.field9467.field9626;
+		int var2 = var1.field9467.pos;
 		var1.field9467.method15228(arg0);
-		var1.field9467.field9626 += 7;
-		var1.field9467.method15280(Statics.field630, var2, var1.field9467.field9626);
-		var1.field9467.method15233(var1.field9467.field9626 - var2);
+		var1.field9467.pos += 7;
+		var1.field9467.method15280(Statics.field630, var2, var1.field9467.pos);
+		var1.field9467.method15233(var1.field9467.pos - var2);
 		client.field8959.method1913(var1);
 		Statics.field9312 = class536.field6453;
 	}
@@ -97,27 +97,27 @@ public class class43 {
 				class792 var1 = class792.method4876();
 				var1.field9467.method15308(class281.field2959.field2970);
 				var1.field9467.method15287(0);
-				int var2 = var1.field9467.field9626;
+				int var2 = var1.field9467.pos;
 				var1.field9467.method15287(742);
 				var1.field9467.method15287(2);
 				Statics.field630 = method11380(var1);
-				int var3 = var1.field9467.field9626;
+				int var3 = var1.field9467.pos;
 				var1.field9467.method15228(client.field8921);
 				var1.field9467.method15287(client.field9043);
 				var1.field9467.method15420(client.field8910);
 				var1.field9467.method15228(Statics.field6817);
 				var1.field9467.method15308(Statics.field2308.method6339());
 				var1.field9467.method15308(client.field9163.field6408);
-				class385.method3615(var1.field9467);
+				GameShell.method3615(var1.field9467);
 				String var4 = client.field9099;
 				var1.field9467.method15308(var4 == null ? 0 : 1);
 				if (var4 != null) {
 					var1.field9467.method15228(var4);
 				}
 				Statics.field2305.method15475(var1.field9467);
-				var1.field9467.field9626 += 7;
-				var1.field9467.method15280(Statics.field630, var3, var1.field9467.field9626);
-				var1.field9467.method15233(var1.field9467.field9626 - var2);
+				var1.field9467.pos += 7;
+				var1.field9467.method15280(Statics.field630, var3, var1.field9467.pos);
+				var1.field9467.method15233(var1.field9467.pos - var2);
 				client.field8959.method1913(var1);
 				client.field8959.method1912();
 				Statics.field633 = class36.field565;
@@ -130,8 +130,8 @@ public class class43 {
 				if (!client.field8959.method1927().method7212(1)) {
 					return;
 				}
-				client.field8959.method1927().method7196(client.field8959.field832.field9629, 0, 1);
-				Statics.field629 = (class534) class518.method8032(class534.method8658(), client.field8959.field832.field9629[0] & 0xFF);
+				client.field8959.method1927().method7196(client.field8959.field832.data, 0, 1);
+				Statics.field629 = (class534) class518.method8032(class534.method8658(), client.field8959.field832.data[0] & 0xFF);
 				if (Statics.field629 == class534.field6424) {
 					client.field8959.field834 = new class568(Statics.field630);
 					int[] var5 = new int[4];
@@ -143,7 +143,7 @@ public class class43 {
 					client.field8959.field832.method16876(client.field8959.field833);
 					client.method11307(14);
 					client.field8959.method1935();
-					client.field8959.field832.field9626 = 0;
+					client.field8959.field832.pos = 0;
 					client.field8959.field843 = null;
 					client.field8959.field844 = null;
 					client.field8959.field831 = null;
@@ -161,7 +161,7 @@ public class class43 {
 
 	@ObfuscatedName("tk.o(Lada;B)[I")
 	public static int[] method11380(class792 arg0) {
-		class814 var1 = new class814(518);
+		Packet var1 = new Packet(518);
 		int[] var2 = new int[4];
 		for (int var3 = 0; var3 < 4; var3++) {
 			var2[var3] = (int) (Math.random() * 9.9999999E7D);
@@ -176,7 +176,7 @@ public class class43 {
 		}
 		var1.method15287((int) (Math.random() * 9.9999999E7D));
 		var1.method15265(class51.field666, class51.field667);
-		arg0.field9467.method15276(var1.field9629, 0, var1.field9626);
+		arg0.field9467.method15276(var1.data, 0, var1.pos);
 		return var2;
 	}
 }

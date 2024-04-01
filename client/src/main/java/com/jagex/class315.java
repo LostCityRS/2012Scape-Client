@@ -9,7 +9,7 @@ public class class315 {
 	public class316 field3463 = new class316();
 
 	@ObfuscatedName("kx.j")
-	public class317 field3464 = new class317();
+	public Vector3 field3464 = new Vector3();
 
 	public class315() {
 	}

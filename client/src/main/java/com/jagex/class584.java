@@ -18,7 +18,7 @@ public class class584 {
 	public int field6832 = 0;
 
 	@ObfuscatedName("vx.c")
-	public final class451 field6829 = new class451(64);
+	public final WeightedCache field6829 = new WeightedCache(64);
 
 	@ObfuscatedName("vx.l")
 	public class472 field6830 = null;
@@ -43,14 +43,14 @@ public class class584 {
 		}
 		byte[] var3;
 		if (arg0 >= 32768) {
-			var3 = this.field6826.method5627(1, arg0 & 0x7FFF);
+			var3 = this.field6826.getFile(1, arg0 & 0x7FFF);
 		} else {
-			var3 = this.field6827.method5627(1, arg0);
+			var3 = this.field6827.getFile(1, arg0);
 		}
 		class955 var4 = new class955();
 		var4.field10394 = this;
 		if (var3 != null) {
-			var4.method16746(new class814(var3));
+			var4.method16746(new Packet(var3));
 		}
 		if (arg0 >= 32768) {
 			var4.method16754();

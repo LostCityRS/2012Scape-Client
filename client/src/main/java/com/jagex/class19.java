@@ -106,7 +106,7 @@ public class class19 extends class14 implements class10 {
 			class482.method8092(false, true);
 			this.field449 = true;
 			this.field441 = new class320();
-			new class317();
+			new Vector3();
 			this.field442 = new class314();
 			new class316();
 			this.field464 = new class320();

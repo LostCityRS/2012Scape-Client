@@ -15,7 +15,7 @@ public final class class452 {
 	public int field4832;
 
 	@ObfuscatedName("pk.s")
-	public class565 field4833;
+	public IterableMap field4833;
 
 	@ObfuscatedName("pk.c")
 	public class552 field4830 = new class552();
@@ -26,11 +26,11 @@ public final class class452 {
 		int var2;
 		for (var2 = 1; var2 + var2 < arg0; var2 += var2) {
 		}
-		this.field4833 = new class565(var2);
+		this.field4833 = new IterableMap(var2);
 	}
 
 	@ObfuscatedName("pk.u(J)Ladi;")
-	public class800 method7965(long arg0) {
+	public class800 get(long arg0) {
 		class800 var3 = (class800) this.field4833.method11923(arg0);
 		if (var3 != null) {
 			this.field4830.method11728(var3);
@@ -39,7 +39,7 @@ public final class class452 {
 	}
 
 	@ObfuscatedName("pk.j(Ladi;J)V")
-	public void method7958(class800 arg0, long arg1) {
+	public void put(class800 arg0, long arg1) {
 		if (this.field4832 == 0) {
 			class800 var4 = this.field4830.method11729();
 			var4.method6979();
@@ -52,7 +52,7 @@ public final class class452 {
 		} else {
 			this.field4832--;
 		}
-		this.field4833.method11927(arg0, arg1);
+		this.field4833.pushNode(arg0, arg1);
 		this.field4830.method11728(arg0);
 	}
 

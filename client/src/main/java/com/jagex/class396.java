@@ -26,13 +26,13 @@ public class class396 {
 	@ObfuscatedName("nj.m")
 	public LinkedList field4219;
 
-	public class396(class14 arg0, class814 arg1, int arg2) {
+	public class396(class14 arg0, Packet arg1, int arg2) {
 		this.field4217 = arg2;
 		this.field4218 = arg1.method15254();
 		this.field4216 = new int[this.field4218];
 		this.field4220 = new int[this.field4218];
-		int var4 = arg1.method15239();
-		int var5 = arg1.method15239();
+		int var4 = arg1.g2();
+		int var5 = arg1.g2();
 		for (int var6 = 0; var6 < this.field4218; var6++) {
 			this.field4216[var6] = var4 + arg1.method15238();
 			this.field4220[var6] = var5 + arg1.method15238();

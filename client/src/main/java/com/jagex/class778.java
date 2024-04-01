@@ -150,7 +150,7 @@ public class class778 extends class399 {
 	public void method14862(int[] arg0, int arg1) {
 		int var3 = 0;
 		class963 var4 = this.field9350.field8226;
-		var4.field9626 = 0;
+		var4.pos = 0;
 		if (this.field9350.field8149) {
 			for (int var5 = 0; var5 < arg1; var5++) {
 				int var6 = arg0[var5];
@@ -199,7 +199,7 @@ public class class778 extends class399 {
 		if (var3 <= 0) {
 			return;
 		}
-		this.field9347.method2338(5123, var4.field9629, var4.field9626);
+		this.field9347.method2338(5123, var4.data, var4.pos);
 		this.field9350.method13305(this.field9342.field7708, this.field9342.field7710, this.field9349, this.field9342.field7701);
 		this.field9350.method13473(this.field9343, (this.field9342.field7692 & 0x7) != 0, (this.field9342.field7692 & 0x8) != 0);
 		if (this.field9350.field8174) {

@@ -123,11 +123,11 @@ public class class951 extends class800 {
 
 	@ObfuscatedName("yt.m(Lls;III)Lajo;")
 	public static class951 method13263(class334 arg0, int arg1, int arg2) {
-		class814 var3 = new class814(arg0.method5627(arg1, arg2));
-		class951 var4 = new class951(arg2, var3.method15337(), var3.method15337(), var3.method15379(), var3.method15379(), var3.method15220() == 1, var3.method15220(), var3.method15220());
-		int var5 = var3.method15220();
+		Packet var3 = new Packet(arg0.getFile(arg1, arg2));
+		class951 var4 = new class951(arg2, var3.gjstr(), var3.gjstr(), var3.g4s(), var3.g4s(), var3.g1() == 1, var3.g1(), var3.g1());
+		int var5 = var3.g1();
 		for (int var6 = 0; var6 < var5; var6++) {
-			var4.field10363.method11558(new class807(var3.method15220(), var3.method15239(), var3.method15239(), var3.method15239(), var3.method15239(), var3.method15239(), var3.method15239(), var3.method15239(), var3.method15239()));
+			var4.field10363.method11558(new class807(var3.g1(), var3.g2(), var3.g2(), var3.g2(), var3.g2(), var3.g2(), var3.g2(), var3.g2(), var3.g2()));
 		}
 		var4.method16710();
 		return var4;

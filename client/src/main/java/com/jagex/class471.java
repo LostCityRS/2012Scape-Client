@@ -34,10 +34,10 @@ public class class471 {
 	public static final int[] field5003 = new int[] { 8, 11, 4, 6, 9, 7, 10, 0 };
 
 	@ObfuscatedName("qc.p")
-	public static class451 field5012 = new class451(260);
+	public static WeightedCache field5012 = new WeightedCache(260);
 
 	@ObfuscatedName("qc.w")
-	public static class451 field4998 = new class451(5);
+	public static WeightedCache field4998 = new WeightedCache(5);
 
 	@ObfuscatedName("qc.u(I[I[Lvq;[IZIB)V")
 	public void method8230(int arg0, int[] arg1, class593[] arg2, int[] arg3, boolean arg4, int arg5) {
@@ -87,7 +87,7 @@ public class class471 {
 
 	@ObfuscatedName("qc.m(I)V")
 	public void method8229() {
-		long[] var1 = class814.field9628;
+		long[] var1 = Packet.field9628;
 		this.field5007 = -1L;
 		this.field5007 = this.field5007 >>> 8 ^ var1[(int) ((this.field5007 ^ (long) (this.field5002 >> 8)) & 0xFFL)];
 		this.field5007 = this.field5007 >>> 8 ^ var1[(int) ((this.field5007 ^ (long) this.field5002) & 0xFFL)];
@@ -218,7 +218,7 @@ public class class471 {
 				}
 			}
 		}
-		class451 var33 = field5012;
+		WeightedCache var33 = field5012;
 		class13 var34;
 		synchronized (field5012) {
 			var34 = (class13) field5012.method7916(var17);
@@ -237,7 +237,7 @@ public class class471 {
 				if (var39 >= var19.length) {
 					if (var38) {
 						if (this.field5008 != -1L) {
-							class451 var45 = field5012;
+							WeightedCache var45 = field5012;
 							synchronized (field5012) {
 								var34 = (class13) field5012.method7916(this.field5008);
 							}
@@ -305,7 +305,7 @@ public class class471 {
 					}
 					if (arg13) {
 						var34.method252(var16);
-						class451 var65 = field5012;
+						WeightedCache var65 = field5012;
 						synchronized (field5012) {
 							field5012.method7937(var34, var17);
 						}
@@ -411,7 +411,7 @@ public class class471 {
 			return arg3.method12565(this.field5006).method12512(arg0, arg1, arg6, arg7, null);
 		}
 		int var9 = arg7 == null ? arg1 : arg1 | arg7.method11779();
-		class451 var10 = field4998;
+		WeightedCache var10 = field4998;
 		class13 var11;
 		synchronized (field4998) {
 			var11 = (class13) field4998.method7916(this.field5007);
@@ -469,7 +469,7 @@ public class class471 {
 				}
 			}
 			var11.method252(var9);
-			class451 var29 = field4998;
+			WeightedCache var29 = field4998;
 			synchronized (field4998) {
 				field4998.method7937(var11, this.field5007);
 			}
@@ -487,7 +487,7 @@ public class class471 {
 	public class13 method8257(class14 arg0, int arg1, class205 arg2, class510 arg3, class553 arg4, int arg5, int arg6, int arg7) {
 		int var9 = arg4 == null ? arg1 : arg1 | arg4.method11779();
 		long var10 = (long) arg7 << 32 | (long) (arg6 << 16) | (long) arg5;
-		class451 var12 = field4998;
+		WeightedCache var12 = field4998;
 		class13 var13;
 		synchronized (field4998) {
 			var13 = (class13) field4998.method7916(var10);
@@ -524,7 +524,7 @@ public class class471 {
 				}
 			}
 			var13.method252(var9);
-			class451 var25 = field4998;
+			WeightedCache var25 = field4998;
 			synchronized (field4998) {
 				field4998.method7937(var13, var10);
 			}
@@ -540,7 +540,7 @@ public class class471 {
 
 	@ObfuscatedName("fd.d(I)I")
 	public static int method3503() {
-		class451 var0 = field5012;
+		WeightedCache var0 = field5012;
 		synchronized (field5012) {
 			return field5012.method7926();
 		}
@@ -548,11 +548,11 @@ public class class471 {
 
 	@ObfuscatedName("c.n(I)V")
 	public static void method1323() {
-		class451 var0 = field5012;
+		WeightedCache var0 = field5012;
 		synchronized (field5012) {
 			field5012.method7922();
 		}
-		class451 var2 = field4998;
+		WeightedCache var2 = field4998;
 		synchronized (field4998) {
 			field4998.method7922();
 		}
@@ -560,11 +560,11 @@ public class class471 {
 
 	@ObfuscatedName("jr.o(IB)V")
 	public static void method4781(int arg0) {
-		class451 var1 = field5012;
+		WeightedCache var1 = field5012;
 		synchronized (field5012) {
 			field5012.method7921(arg0);
 		}
-		class451 var3 = field4998;
+		WeightedCache var3 = field4998;
 		synchronized (field4998) {
 			field4998.method7921(arg0);
 		}

@@ -32,16 +32,16 @@ public class class781 extends class399 {
 	@ObfuscatedName("ack.n")
 	public final int field9380;
 
-	public class781(class814 arg0) {
-		int var2 = arg0.method15379();
+	public class781(Packet arg0) {
+		int var2 = arg0.g4s();
 		this.field9379 = var2 >>> 28;
 		this.field9373 = var2 >>> 14 & 0x3FFF;
 		this.field9374 = var2 & 0x3FFF;
-		this.field9378 = arg0.method15220();
-		this.field9377 = arg0.method15220();
-		this.field9375 = arg0.method15220();
-		this.field9376 = arg0.method15220();
-		this.field9372 = arg0.method15220();
-		this.field9380 = arg0.method15220();
+		this.field9378 = arg0.g1();
+		this.field9377 = arg0.g1();
+		this.field9375 = arg0.g1();
+		this.field9376 = arg0.g1();
+		this.field9372 = arg0.g1();
+		this.field9380 = arg0.g1();
 	}
 }

@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 import java.util.Iterator;
 
 @ObfuscatedName("uo")
-public final class class565 implements Iterable {
+public final class IterableMap implements Iterable {
 
 	@ObfuscatedName("uo.u")
 	public int field6722;
@@ -24,7 +24,7 @@ public final class class565 implements Iterable {
 	@ObfuscatedName("uo.m")
 	public int field6723 = 0;
 
-	public class565(int arg0) {
+	public IterableMap(int arg0) {
 		this.field6722 = arg0;
 		this.field6725 = new class399[arg0];
 		for (int var2 = 0; var2 < arg0; var2++) {
@@ -92,7 +92,7 @@ public final class class565 implements Iterable {
 	}
 
 	@ObfuscatedName("uo.c(Lnz;J)V")
-	public void method11927(class399 arg0, long arg1) {
+	public void pushNode(class399 arg0, long arg1) {
 		if (arg0.field4227 != null) {
 			arg0.method6979();
 		}

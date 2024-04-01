@@ -75,9 +75,9 @@ public class class218 {
 	public String[] field2367;
 
 	@ObfuscatedName("ga.y")
-	public class565 field2368;
+	public IterableMap field2368;
 
-	public class218(class814 arg0) {
+	public class218(Packet arg0) {
 		this.method4048(arg0);
 	}
 
@@ -158,7 +158,7 @@ public class class218 {
 			return null;
 		} else {
 			class399 var2 = this.field2368.method11923((long) arg0);
-			return var2 != null && var2 instanceof class802 ? Integer.valueOf(((class802) var2).field9556) : null;
+			return var2 != null && var2 instanceof IntNode ? Integer.valueOf(((IntNode) var2).field9556) : null;
 		}
 	}
 
@@ -168,9 +168,9 @@ public class class218 {
 			return null;
 		}
 		class399 var4 = this.field2368.method11923((long) arg0);
-		if (var4 != null && var4 instanceof class802) {
+		if (var4 != null && var4 instanceof IntNode) {
 			int var5 = arg2 == 31 ? -1 : (0x1 << arg2 + 1) - 1;
-			return Integer.valueOf((((class802) var4).field9556 & var5) >>> arg1);
+			return Integer.valueOf((((IntNode) var4).field9556 & var5) >>> arg1);
 		} else {
 			return null;
 		}
@@ -376,12 +376,12 @@ public class class218 {
 	@ObfuscatedName("ga.b(IIB)Z")
 	public boolean method4060(int arg0, int arg1) {
 		if (this.field2368 == null) {
-			this.field2368 = new class565(4);
+			this.field2368 = new IterableMap(4);
 		} else {
 			class399 var3 = this.field2368.method11923((long) arg0);
 			if (var3 != null) {
-				if (var3 instanceof class802) {
-					class802 var4 = (class802) var3;
+				if (var3 instanceof IntNode) {
+					IntNode var4 = (IntNode) var3;
 					if (var4.field9556 == arg1) {
 						return false;
 					}
@@ -391,7 +391,7 @@ public class class218 {
 				var3.method6979();
 			}
 		}
-		this.field2368.method11927(new class802(arg1), (long) arg0);
+		this.field2368.pushNode(new IntNode(arg1), (long) arg0);
 		return true;
 	}
 
@@ -403,12 +403,12 @@ public class class218 {
 		int var8 = arg1 << arg2;
 		int var9 = var8 & var7;
 		if (this.field2368 == null) {
-			this.field2368 = new class565(4);
+			this.field2368 = new IterableMap(4);
 		} else {
 			class399 var10 = this.field2368.method11923((long) arg0);
 			if (var10 != null) {
-				if (var10 instanceof class802) {
-					class802 var11 = (class802) var10;
+				if (var10 instanceof IntNode) {
+					IntNode var11 = (IntNode) var10;
 					if ((var11.field9556 & var7) == var9) {
 						return false;
 					}
@@ -419,14 +419,14 @@ public class class218 {
 				var10.method6979();
 			}
 		}
-		this.field2368.method11927(new class802(var9), (long) arg0);
+		this.field2368.pushNode(new IntNode(var9), (long) arg0);
 		return true;
 	}
 
 	@ObfuscatedName("ga.i(IJ)Z")
 	public boolean method4062(int arg0, long arg1) {
 		if (this.field2368 == null) {
-			this.field2368 = new class565(4);
+			this.field2368 = new IterableMap(4);
 		} else {
 			class399 var4 = this.field2368.method11923((long) arg0);
 			if (var4 != null) {
@@ -441,7 +441,7 @@ public class class218 {
 				var4.method6979();
 			}
 		}
-		this.field2368.method11927(new class801(arg1), (long) arg0);
+		this.field2368.pushNode(new class801(arg1), (long) arg0);
 		return true;
 	}
 
@@ -453,7 +453,7 @@ public class class218 {
 			arg1 = arg1.substring(0, 80);
 		}
 		if (this.field2368 == null) {
-			this.field2368 = new class565(4);
+			this.field2368 = new IterableMap(4);
 		} else {
 			class399 var3 = this.field2368.method11923((long) arg0);
 			if (var3 != null) {
@@ -465,24 +465,24 @@ public class class218 {
 						}
 						var4.method6979();
 						var4.method6979();
-						this.field2368.method11927(new class798(arg1), var4.field4228);
+						this.field2368.pushNode(new class798(arg1), var4.field4228);
 						return true;
 					}
 				}
 				var3.method6979();
 			}
 		}
-		this.field2368.method11927(new class798(arg1), (long) arg0);
+		this.field2368.pushNode(new class798(arg1), (long) arg0);
 		return true;
 	}
 
 	@ObfuscatedName("ga.k(Laet;I)V")
-	public void method4048(class814 arg0) {
-		int var2 = arg0.method15220();
+	public void method4048(Packet arg0) {
+		int var2 = arg0.g1();
 		if (var2 < 1 || var2 > 5) {
 			throw new RuntimeException("" + var2);
 		}
-		int var3 = arg0.method15220();
+		int var3 = arg0.g1();
 		if ((var3 & 0x1) != 0) {
 			this.field2345 = true;
 		}
@@ -497,18 +497,18 @@ public class class218 {
 			this.field2355 = null;
 			this.field2367 = null;
 		}
-		this.field2348 = arg0.method15379();
-		this.field2371 = arg0.method15379();
+		this.field2348 = arg0.g4s();
+		this.field2371 = arg0.g4s();
 		if (var2 <= 3 && this.field2371 != 0) {
 			this.field2371 += 16912800;
 		}
-		this.field2346 = arg0.method15239();
-		this.field2356 = arg0.method15220();
-		this.field2349 = arg0.method15337();
+		this.field2346 = arg0.g2();
+		this.field2356 = arg0.g1();
+		this.field2349 = arg0.gjstr();
 		if (var2 >= 4) {
-			arg0.method15379();
+			arg0.g4s();
 		}
-		this.field2366 = arg0.method15220() == 1;
+		this.field2366 = arg0.g1() == 1;
 		this.field2352 = arg0.method15238();
 		this.field2353 = arg0.method15238();
 		this.field2354 = arg0.method15238();
@@ -531,17 +531,17 @@ public class class218 {
 			}
 			for (int var4 = 0; var4 < this.field2346; var4++) {
 				if (this.field2345) {
-					this.field2351[var4] = arg0.method15246();
+					this.field2351[var4] = arg0.g8();
 				}
 				if (this.field2373) {
-					this.field2355[var4] = arg0.method15219();
+					this.field2355[var4] = arg0.fastgstr();
 				}
 				this.field2358[var4] = arg0.method15238();
 				if (var2 >= 2) {
-					this.field2372[var4] = arg0.method15379();
+					this.field2372[var4] = arg0.g4s();
 				}
 				if (var2 >= 5) {
-					this.field2361[var4] = arg0.method15239();
+					this.field2361[var4] = arg0.g2();
 				} else {
 					this.field2361[var4] = 0;
 				}
@@ -557,34 +557,34 @@ public class class218 {
 			}
 			for (int var5 = 0; var5 < this.field2356; var5++) {
 				if (this.field2345) {
-					this.field2365[var5] = arg0.method15246();
+					this.field2365[var5] = arg0.g8();
 				}
 				if (this.field2373) {
-					this.field2367[var5] = arg0.method15219();
+					this.field2367[var5] = arg0.fastgstr();
 				}
 			}
 		}
 		if (var2 < 3) {
 			return;
 		}
-		int var6 = arg0.method15239();
+		int var6 = arg0.g2();
 		if (var6 <= 0) {
 			return;
 		}
-		this.field2368 = new class565(var6 < 16 ? class595.method2839(var6) : 16);
+		this.field2368 = new IterableMap(var6 < 16 ? IntMath.bitceil(var6) : 16);
 		while (var6-- > 0) {
-			int var7 = arg0.method15379();
+			int var7 = arg0.g4s();
 			int var8 = var7 & 0x3FFFFFFF;
 			int var9 = var7 >>> 30;
 			if (var9 == 0) {
-				int var10 = arg0.method15379();
-				this.field2368.method11927(new class802(var10), (long) var8);
+				int var10 = arg0.g4s();
+				this.field2368.pushNode(new IntNode(var10), (long) var8);
 			} else if (var9 == 1) {
-				long var11 = arg0.method15246();
-				this.field2368.method11927(new class801(var11), (long) var8);
+				long var11 = arg0.g8();
+				this.field2368.pushNode(new class801(var11), (long) var8);
 			} else if (var9 == 2) {
-				String var13 = arg0.method15337();
-				this.field2368.method11927(new class798(var13), (long) var8);
+				String var13 = arg0.gjstr();
+				this.field2368.pushNode(new class798(var13), (long) var8);
 			}
 		}
 	}

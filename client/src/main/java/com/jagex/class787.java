@@ -9,5 +9,5 @@ public abstract class class787 extends class399 {
 	public abstract void method14955(class218 arg0);
 
 	@ObfuscatedName("acy.u(Laet;I)V")
-	public abstract void method14956(class814 arg0);
+	public abstract void method14956(Packet arg0);
 }

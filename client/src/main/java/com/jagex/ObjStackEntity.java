@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 import deob.Statics;
 
 @ObfuscatedName("ali")
-public class class1008 extends class973 {
+public class ObjStackEntity extends class973 {
 
 	@ObfuscatedName("ali.b")
 	public int field10611;
@@ -45,7 +45,7 @@ public class class1008 extends class973 {
 	@ObfuscatedName("ali.ar")
 	public int field10617;
 
-	public class1008(class423 arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+	public ObjStackEntity(class423 arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
 		super(arg0, arg1, arg2, arg3, arg4, arg5);
 		this.method15642(3);
 		this.method17149();
@@ -85,7 +85,7 @@ public class class1008 extends class973 {
 
 	@ObfuscatedName("ali.bi(Lra;B)Loz;")
 	public class425 method12812(class14 arg0) {
-		class317 var2 = class317.method5290(this.method8565().field3464);
+		Vector3 var2 = Vector3.method5290(this.method8565().field3464);
 		class430 var3 = this.field9808.method7438(this.field9807, (int) var2.field3475 >> 9, (int) var2.field3477 >> 9);
 		class970 var4 = this.field9808.method7517(this.field9807, (int) var2.field3475 >> 9, (int) var2.field3477 >> 9);
 		int var5 = 0;
@@ -146,7 +146,7 @@ public class class1008 extends class973 {
 			}
 		}
 		var2.method5291();
-		class317 var33 = this.method8565().field3464;
+		Vector3 var33 = this.method8565().field3464;
 		var6.method5116(var33.field3475, var33.field3476 - 10.0F, var33.field3477);
 		class425 var34 = class425.method12205(true);
 		this.field10613 = false;

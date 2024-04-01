@@ -131,7 +131,7 @@ public abstract class class172 {
 	}
 
 	@ObfuscatedName("ec.i(Laig;Lko;I)V")
-	public final void method3420(class918 arg0, class317 arg1) {
+	public final void method3420(class918 arg0, Vector3 arg1) {
 		this.field2073[this.field2079].method3233(arg0, arg1.field3475, arg1.field3476, arg1.field3477);
 	}
 
@@ -180,7 +180,7 @@ public abstract class class172 {
 	}
 
 	@ObfuscatedName("ec.af(ILko;B)V")
-	public final void method3351(int arg0, class317 arg1) {
+	public final void method3351(int arg0, Vector3 arg1) {
 		this.field2073[this.field2079].method3239(arg0, arg1.field3475, arg1.field3476, arg1.field3477);
 	}
 

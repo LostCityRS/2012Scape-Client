@@ -39,22 +39,22 @@ public class class427 {
 	@ObfuscatedName("or.as")
 	public int field4599;
 
-	public class427(class14 arg0, int arg1, class814 arg2, int arg3) {
+	public class427(class14 arg0, int arg1, Packet arg2, int arg3) {
 		if (Statics.field1598 == null) {
 			method5967();
 		}
-		this.field4592 = arg2.method15220();
+		this.field4592 = arg2.g1();
 		this.field4587 = (this.field4592 & 0x8) != 0;
 		this.field4591 = (this.field4592 & 0x10) != 0;
 		this.field4592 &= 0x7;
-		int var5 = arg2.method15239() << arg3;
-		int var6 = arg2.method15239() << arg3;
-		int var7 = arg2.method15239() << arg3;
-		int var8 = arg2.method15220();
+		int var5 = arg2.g2() << arg3;
+		int var6 = arg2.g2() << arg3;
+		int var7 = arg2.g2() << arg3;
+		int var8 = arg2.g1();
 		int var9 = var8 * 2 + 1;
 		this.field4597 = new short[var9];
 		for (int var10 = 0; var10 < this.field4597.length; var10++) {
-			short var11 = (short) arg2.method15239();
+			short var11 = (short) arg2.g2();
 			int var12 = var11 >>> 8;
 			int var13 = var11 & 0xFF;
 			if (var12 >= var9) {
@@ -66,8 +66,8 @@ public class class427 {
 			this.field4597[var10] = (short) (var12 << 8 | var13);
 		}
 		int var14 = (var8 << arg1) + (0x1 << arg1 >> 1);
-		int var15 = Statics.field5084 == null ? Statics.field5083[class482.method3444(arg2.method15239()) & 0xFFFF] : Statics.field5084[arg2.method15239()];
-		int var16 = arg2.method15220();
+		int var15 = Statics.field5084 == null ? Statics.field5083[class482.method3444(arg2.g2()) & 0xFFFF] : Statics.field5084[arg2.g2()];
+		int var16 = arg2.g1();
 		this.field4594 = var16 & 0x1F;
 		this.field4572 = (var16 & 0xE0) << 3;
 		if (this.field4594 != 31) {

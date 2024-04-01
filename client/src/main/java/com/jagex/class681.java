@@ -109,10 +109,10 @@ public class class681 extends class14 {
 	public class66[] field8031;
 
 	@ObfuscatedName("yt.bg")
-	public class451 field8032;
+	public WeightedCache field8032;
 
 	@ObfuscatedName("yt.bl")
-	public class451 field8033;
+	public WeightedCache field8033;
 
 	@ObfuscatedName("yt.bk")
 	public class118 field8034;
@@ -146,10 +146,10 @@ public class class681 extends class14 {
 		this.field8019 = new float[6][4];
 		this.field8028 = 1.0F;
 		this.field8006 = 0.0F;
-		this.field8033 = new class451(16);
+		this.field8033 = new WeightedCache(16);
 		this.field8035 = -1;
 		try {
-			this.field8032 = new class451(6291456, 256);
+			this.field8032 = new WeightedCache(6291456, 256);
 			this.field8029 = new class314();
 			this.field8016 = new class320();
 			this.field8017 = new class320();
@@ -225,7 +225,7 @@ public class class681 extends class14 {
 
 	@ObfuscatedName("yt.n(I)[I")
 	public int[] method13241(int arg0) {
-		class451 var2 = this.field8032;
+		WeightedCache var2 = this.field8032;
 		class775 var3;
 		synchronized (this.field8032) {
 			var3 = (class775) this.field8032.method7916((long) arg0 | Long.MIN_VALUE);

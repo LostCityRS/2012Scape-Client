@@ -38,13 +38,13 @@ public class class487 {
 
 	public class487(class334 arg0) {
 		byte[] var2 = arg0.method5635(class491.field5137.field5145);
-		this.method8582(new class814(var2));
+		this.method8582(new Packet(var2));
 	}
 
 	@ObfuscatedName("rx.u(Laet;I)V")
-	public void method8582(class814 arg0) {
+	public void method8582(Packet arg0) {
 		while (true) {
-			int var2 = arg0.method15220();
+			int var2 = arg0.g1();
 			if (var2 == 0) {
 				return;
 			}
@@ -71,9 +71,9 @@ public class class487 {
 			} else if (var2 == 11) {
 				this.field5124 = true;
 			} else if (var2 == 12) {
-				this.field5127 = arg0.method15379();
+				this.field5127 = arg0.g4s();
 			} else if (var2 == 13) {
-				this.field5128 = arg0.method15379();
+				this.field5128 = arg0.g4s();
 			}
 		}
 	}

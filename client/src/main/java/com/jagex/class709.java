@@ -21,12 +21,12 @@ public class class709 extends class150 {
 	@ObfuscatedName("zg.m")
 	public class393 field8524;
 
-	public class709(class814 arg0) {
+	public class709(Packet arg0) {
 		super(arg0);
-		this.field8520 = arg0.method15239();
-		this.field8521 = arg0.method15220();
-		this.field8522 = arg0.method15220();
-		this.field8523 = arg0.method15220();
+		this.field8520 = arg0.g2();
+		this.field8521 = arg0.g1();
+		this.field8522 = arg0.g1();
+		this.field8523 = arg0.g1();
 	}
 
 	@ObfuscatedName("zg.j(I)V")

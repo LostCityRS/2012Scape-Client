@@ -4,10 +4,10 @@ import deob.ObfuscatedName;
 import deob.Statics;
 
 @ObfuscatedName("ko")
-public class class317 {
+public class Vector3 {
 
 	@ObfuscatedName("ko.u")
-	public static class317[] field3473;
+	public static Vector3[] field3473;
 
 	@ObfuscatedName("ko.s")
 	public float field3475;
@@ -19,23 +19,23 @@ public class class317 {
 	public float field3477;
 
 	static {
-		new class317(0.0F, 0.0F, 0.0F);
-		field3473 = new class317[0];
+		new Vector3(0.0F, 0.0F, 0.0F);
+		field3473 = new Vector3[0];
 	}
 
 	@ObfuscatedName("ko.u(I)V")
 	public static void method5323(int arg0) {
 		Statics.field3474 = arg0;
-		field3473 = new class317[arg0];
+		field3473 = new Vector3[arg0];
 		Statics.field3472 = 0;
 	}
 
 	@ObfuscatedName("ko.j()Lko;")
-	public static class317 method5288() {
-		class317[] var0 = field3473;
+	public static Vector3 method5288() {
+		Vector3[] var0 = field3473;
 		synchronized (field3473) {
 			if (Statics.field3472 == 0) {
-				return new class317();
+				return new Vector3();
 			} else {
 				field3473[--Statics.field3472].method5370();
 				return field3473[Statics.field3472];
@@ -44,11 +44,11 @@ public class class317 {
 	}
 
 	@ObfuscatedName("ko.a(FFF)Lko;")
-	public static class317 method5294(float arg0, float arg1, float arg2) {
-		class317[] var3 = field3473;
+	public static Vector3 method5294(float arg0, float arg1, float arg2) {
+		Vector3[] var3 = field3473;
 		synchronized (field3473) {
 			if (Statics.field3472 == 0) {
-				return new class317(arg0, arg1, arg2);
+				return new Vector3(arg0, arg1, arg2);
 			} else {
 				field3473[--Statics.field3472].method5373(arg0, arg1, arg2);
 				return field3473[Statics.field3472];
@@ -57,11 +57,11 @@ public class class317 {
 	}
 
 	@ObfuscatedName("ko.s(Lko;)Lko;")
-	public static class317 method5290(class317 arg0) {
-		class317[] var1 = field3473;
+	public static Vector3 method5290(Vector3 arg0) {
+		Vector3[] var1 = field3473;
 		synchronized (field3473) {
 			if (Statics.field3472 == 0) {
-				return new class317(arg0);
+				return new Vector3(arg0);
 			} else {
 				field3473[--Statics.field3472].method5334(arg0);
 				return field3473[Statics.field3472];
@@ -71,7 +71,7 @@ public class class317 {
 
 	@ObfuscatedName("ko.c()V")
 	public void method5291() {
-		class317[] var1 = field3473;
+		Vector3[] var1 = field3473;
 		synchronized (field3473) {
 			if (Statics.field3472 < Statics.field3474 - 1) {
 				field3473[Statics.field3472++] = this;
@@ -79,29 +79,29 @@ public class class317 {
 		}
 	}
 
-	public class317() {
+	public Vector3() {
 	}
 
-	public class317(float arg0, float arg1, float arg2) {
+	public Vector3(float arg0, float arg1, float arg2) {
 		this.field3475 = arg0;
 		this.field3476 = arg1;
 		this.field3477 = arg2;
 	}
 
-	public class317(class317 arg0) {
+	public Vector3(Vector3 arg0) {
 		this.field3475 = arg0.field3475;
 		this.field3476 = arg0.field3476;
 		this.field3477 = arg0.field3477;
 	}
 
-	public class317(class814 arg0) {
+	public Vector3(Packet arg0) {
 		this.field3475 = arg0.method15324();
 		this.field3476 = arg0.method15324();
 		this.field3477 = arg0.method15324();
 	}
 
 	@ObfuscatedName("ko.m(Laet;)V")
-	public void method5292(class814 arg0) {
+	public void method5292(Packet arg0) {
 		this.field3475 = arg0.method15324();
 		this.field3476 = arg0.method15324();
 		this.field3477 = arg0.method15324();
@@ -115,7 +115,7 @@ public class class317 {
 	}
 
 	@ObfuscatedName("ko.l(Lko;)V")
-	public void method5334(class317 arg0) {
+	public void method5334(Vector3 arg0) {
 		this.method5373(arg0.field3475, arg0.field3476, arg0.field3477);
 	}
 
@@ -127,7 +127,7 @@ public class class317 {
 	}
 
 	@ObfuscatedName("ko.d(Lko;)Z")
-	public boolean method5296(class317 arg0) {
+	public boolean method5296(Vector3 arg0) {
 		return this.field3475 == arg0.field3475 && this.field3476 == arg0.field3476 && this.field3477 == arg0.field3477;
 	}
 
@@ -147,28 +147,28 @@ public class class317 {
 	}
 
 	@ObfuscatedName("ko.o(Lko;)V")
-	public final void method5299(class317 arg0) {
+	public final void method5299(Vector3 arg0) {
 		this.field3475 += arg0.field3475;
 		this.field3476 += arg0.field3476;
 		this.field3477 += arg0.field3477;
 	}
 
 	@ObfuscatedName("ko.q(Lko;F)V")
-	public final void method5289(class317 arg0, float arg1) {
+	public final void method5289(Vector3 arg0, float arg1) {
 		this.field3475 += arg0.field3475 * arg1;
 		this.field3476 += arg0.field3476 * arg1;
 		this.field3477 += arg0.field3477 * arg1;
 	}
 
 	@ObfuscatedName("ko.p(Lko;Lko;)Lko;")
-	public static final class317 method5301(class317 arg0, class317 arg1) {
-		class317 var2 = method5290(arg0);
+	public static final Vector3 method5301(Vector3 arg0, Vector3 arg1) {
+		Vector3 var2 = method5290(arg0);
 		var2.method5299(arg1);
 		return var2;
 	}
 
 	@ObfuscatedName("ko.w(Lko;)V")
-	public final void method5302(class317 arg0) {
+	public final void method5302(Vector3 arg0) {
 		this.field3475 -= arg0.field3475;
 		this.field3476 -= arg0.field3476;
 		this.field3477 -= arg0.field3477;
@@ -182,30 +182,30 @@ public class class317 {
 	}
 
 	@ObfuscatedName("ko.x(Lko;Lko;)Lko;")
-	public static final class317 method5377(class317 arg0, class317 arg1) {
-		class317 var2 = method5290(arg0);
+	public static final Vector3 method5377(Vector3 arg0, Vector3 arg1) {
+		Vector3 var2 = method5290(arg0);
 		var2.method5302(arg1);
 		return var2;
 	}
 
 	@ObfuscatedName("ko.i(Lko;)F")
-	public final float method5362(class317 arg0) {
+	public final float method5362(Vector3 arg0) {
 		return this.field3477 * arg0.field3477 + this.field3476 * arg0.field3476 + this.field3475 * arg0.field3475;
 	}
 
 	@ObfuscatedName("ko.v(Lko;Lko;)F")
-	public static final float method5306(class317 arg0, class317 arg1) {
+	public static final float method5306(Vector3 arg0, Vector3 arg1) {
 		return arg0.method5362(arg1);
 	}
 
 	@ObfuscatedName("ko.k(Lko;)V")
-	public final void method5307(class317 arg0) {
+	public final void method5307(Vector3 arg0) {
 		this.method5373(this.field3476 * arg0.field3477 - this.field3477 * arg0.field3476, this.field3477 * arg0.field3475 - this.field3475 * arg0.field3477, this.field3475 * arg0.field3476 - this.field3476 * arg0.field3475);
 	}
 
 	@ObfuscatedName("ko.h(Lko;Lko;)Lko;")
-	public static final class317 method5308(class317 arg0, class317 arg1) {
-		class317 var2 = method5290(arg0);
+	public static final Vector3 method5308(Vector3 arg0, Vector3 arg1) {
+		Vector3 var2 = method5290(arg0);
 		var2.method5307(arg1);
 		return var2;
 	}
@@ -229,15 +229,15 @@ public class class317 {
 	}
 
 	@ObfuscatedName("ko.y(Lko;)V")
-	public final void method5311(class317 arg0) {
+	public final void method5311(Vector3 arg0) {
 		this.field3475 *= arg0.field3475;
 		this.field3476 *= arg0.field3476;
 		this.field3477 *= arg0.field3477;
 	}
 
 	@ObfuscatedName("ko.e(Lko;Lko;)Lko;")
-	public static final class317 method5312(class317 arg0, class317 arg1) {
-		class317 var2 = method5290(arg0);
+	public static final Vector3 method5312(Vector3 arg0, Vector3 arg1) {
+		Vector3 var2 = method5290(arg0);
 		var2.method5311(arg1);
 		return var2;
 	}
@@ -250,15 +250,15 @@ public class class317 {
 	}
 
 	@ObfuscatedName("ko.af(Lko;)V")
-	public final void method5314(class317 arg0) {
+	public final void method5314(Vector3 arg0) {
 		this.field3475 /= arg0.field3475;
 		this.field3476 /= arg0.field3476;
 		this.field3477 /= arg0.field3477;
 	}
 
 	@ObfuscatedName("ko.ar(Lko;Lko;)Lko;")
-	public static final class317 method5315(class317 arg0, class317 arg1) {
-		class317 var2 = method5290(arg0);
+	public static final Vector3 method5315(Vector3 arg0, Vector3 arg1) {
+		Vector3 var2 = method5290(arg0);
 		var2.method5314(arg1);
 		return var2;
 	}
@@ -271,8 +271,8 @@ public class class317 {
 	}
 
 	@ObfuscatedName("ko.ap(Lko;F)Lko;")
-	public static final class317 method5317(class317 arg0, float arg1) {
-		class317 var2 = method5290(arg0);
+	public static final Vector3 method5317(Vector3 arg0, float arg1) {
+		Vector3 var2 = method5290(arg0);
 		var2.method5357(arg1);
 		return var2;
 	}
@@ -308,7 +308,7 @@ public class class317 {
 	}
 
 	@ObfuscatedName("ko.ao(Lko;F)V")
-	public final void method5321(class317 arg0, float arg1) {
+	public final void method5321(Vector3 arg0, float arg1) {
 		this.method5357(1.0F - arg1);
 		this.method5299(method5317(arg0, arg1));
 	}

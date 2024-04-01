@@ -25,9 +25,9 @@ public class class955 extends class800 {
 	public boolean field10395 = true;
 
 	@ObfuscatedName("ajt.u(Laet;I)V")
-	public void method16746(class814 arg0) {
+	public void method16746(Packet arg0) {
 		while (true) {
-			int var2 = arg0.method15220();
+			int var2 = arg0.g1();
 			if (var2 == 0) {
 				return;
 			}
@@ -36,27 +36,27 @@ public class class955 extends class800 {
 	}
 
 	@ObfuscatedName("ajt.j(Laet;IS)V")
-	public void method16770(class814 arg0, int arg1) {
+	public void method16770(Packet arg0, int arg1) {
 		if (arg1 == 1) {
-			this.field10392 = class526.method11508(arg0.method15337(), '<');
+			this.field10392 = class526.method11508(arg0.gjstr(), '<');
 		} else if (arg1 == 2) {
-			int var3 = arg0.method15220();
+			int var3 = arg0.g1();
 			this.field10393 = new int[var3];
 			for (int var4 = 0; var4 < var3; var4++) {
-				this.field10393[var4] = arg0.method15239();
+				this.field10393[var4] = arg0.g2();
 			}
 		} else if (arg1 == 3) {
-			int var5 = arg0.method15220();
+			int var5 = arg0.g1();
 			this.field10390 = new int[var5];
 			this.field10391 = new int[var5][];
 			for (int var6 = 0; var6 < var5; var6++) {
-				int var7 = arg0.method15239();
+				int var7 = arg0.g2();
 				class473 var8 = Statics.method15663(var7);
 				if (var8 != null) {
 					this.field10390[var6] = var7;
 					this.field10391[var6] = new int[var8.field5032];
 					for (int var9 = 0; var9 < var8.field5032; var9++) {
-						this.field10391[var6][var9] = arg0.method15239();
+						this.field10391[var6][var9] = arg0.g2();
 					}
 				}
 			}
@@ -66,7 +66,7 @@ public class class955 extends class800 {
 	}
 
 	@ObfuscatedName("ajt.a(Laet;[II)V")
-	public void method16748(class814 arg0, int[] arg1) {
+	public void method16748(Packet arg0, int[] arg1) {
 		if (this.field10390 == null) {
 			return;
 		}
@@ -79,7 +79,7 @@ public class class955 extends class800 {
 	}
 
 	@ObfuscatedName("ajt.s(Laet;I)Ljava/lang/String;")
-	public String method16749(class814 arg0) {
+	public String method16749(Packet arg0) {
 		StringBuilder var2 = new StringBuilder(80);
 		if (this.field10390 != null) {
 			for (int var3 = 0; var3 < this.field10390.length; var3++) {

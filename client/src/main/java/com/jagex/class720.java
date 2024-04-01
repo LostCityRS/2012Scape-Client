@@ -24,9 +24,9 @@ public class class720 extends class199 {
 	}
 
 	@ObfuscatedName("aax.ep(Laet;IB)V")
-	public void method14033(class814 arg0, int arg1) {
-		int var3 = arg0.field9626;
-		int var4 = arg0.method15220();
+	public void method14033(Packet arg0, int arg1) {
+		int var3 = arg0.pos;
+		int var4 = arg0.g1();
 		this.method3691(class193.method1411(var4 & 0x1));
 		class188 var5 = class188.method12904(var4 >> 1 & 0x3);
 		if (this.field2221 != var5) {
@@ -45,7 +45,7 @@ public class class720 extends class199 {
 			}
 		}
 		if ((var4 >> 7 & 0x1) == 1) {
-			int var9 = arg0.method15239();
+			int var9 = arg0.g2();
 			if ((var9 >> class189.field2180.field2186 & 0x1) == 1) {
 				this.field2229.method5292(arg0);
 			}
@@ -67,26 +67,26 @@ public class class720 extends class199 {
 				this.field2241 = arg0.method15324();
 			}
 			if ((var9 >> class189.field2171.field2186 & 0x1) == 1) {
-				this.field2220 = class194.method8664(arg0.method15220());
+				this.field2220 = class194.method8664(arg0.g1());
 			}
 			if ((var9 >> class189.field2178.field2186 & 0x1) == 1) {
 				this.field2238 = arg0.method15241();
-				arg0.method15220();
+				arg0.g1();
 			}
 			if ((var9 >> class189.field2179.field2186 & 0x1) == 1) {
-				int var10 = arg0.method15220();
+				int var10 = arg0.g1();
 				this.field2242 = (var10 & 0x1) == 1;
 				this.field2243 = (var10 & 0x2) == 2;
 			}
 			if ((var9 >> class189.field2175.field2186 & 0x1) == 1) {
-				int var11 = arg0.method15220();
+				int var11 = arg0.g1();
 				for (int var12 = 0; var12 < var11; var12++) {
-					int var13 = arg0.method15220();
-					int var14 = arg0.method15220();
+					int var13 = arg0.g1();
+					int var14 = arg0.g1();
 					if (var13 == 0) {
 						this.method3710(var14);
 					} else {
-						class179 var15 = Statics.method7654(arg0.method15220());
+						class179 var15 = Statics.method7654(arg0.g1());
 						boolean var16 = true;
 						Iterator var17 = this.field2225.iterator();
 						while (var17.hasNext()) {
@@ -104,11 +104,11 @@ public class class720 extends class199 {
 				}
 			}
 			if ((var9 >> class189.field2172.field2186 & 0x1) == 1) {
-				this.field2244 = arg0.method15239();
+				this.field2244 = arg0.g2();
 				this.field2236 = arg0.method15324();
 			}
 			if ((var9 >> class189.field2182.field2186 & 0x1) == 1) {
-				this.field2226 = class192.method1955(arg0.method15220());
+				this.field2226 = class192.method1955(arg0.g1());
 			}
 			if ((var9 >> class189.field2183.field2186 & 0x1) == 1) {
 				this.field2246.method5292(arg0);
@@ -129,8 +129,8 @@ public class class720 extends class199 {
 		if (this.field2224 != null && (var4 >> 6 & 0x1) == 1) {
 			this.field2224.method4018(arg0);
 		}
-		if (arg0.field9626 - var3 != arg1) {
-			throw new RuntimeException(arg0.field9626 - var3 + "," + arg1);
+		if (arg0.pos - var3 != arg1) {
+			throw new RuntimeException(arg0.pos - var3 + "," + arg1);
 		}
 	}
 }

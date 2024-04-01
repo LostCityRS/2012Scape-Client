@@ -34,7 +34,7 @@ public class class305 implements Runnable {
 	public int field3355;
 
 	@ObfuscatedName("kh.d")
-	public class307 field3356;
+	public LoadingStage field3356;
 
 	@ObfuscatedName("kh.u(B)I")
 	public int method4952() {
@@ -59,7 +59,7 @@ public class class305 implements Runnable {
 	}
 
 	@ObfuscatedName("kh.c(JLjava/lang/String;ILky;I)V")
-	public synchronized void method4956(long arg0, String arg1, int arg2, class307 arg3) {
+	public synchronized void method4956(long arg0, String arg1, int arg2, LoadingStage arg3) {
 		this.field3351 = arg0;
 		this.field3354 = arg1;
 		this.field3355 = arg2;
@@ -97,7 +97,7 @@ public class class305 implements Runnable {
 	}
 
 	@ObfuscatedName("kh.d(I)Lky;")
-	public class307 method4960() {
+	public LoadingStage method4960() {
 		return this.field3356;
 	}
 
@@ -154,12 +154,12 @@ public class class305 implements Runnable {
 								Statics.field5187.method466();
 							}
 						} catch (class881 var18) {
-							class983.method16252(var18.getMessage() + Statics.field1543.method6701(), var18);
+							class983.report(var18.getMessage() + Statics.field1543.method6701(), var18);
 							Statics.method5600(0, true);
 						}
 					}
 					this.field3348 = false;
-					if (Statics.field5187 != null && !(this.field3349 instanceof class306) && this.field3356.field3404 < class307.field3401.field3404) {
+					if (Statics.field5187 != null && !(this.field3349 instanceof class306) && this.field3356.field3404 < LoadingStage.field3401.field3404) {
 						client.method13896();
 					}
 				} catch (Exception var19) {

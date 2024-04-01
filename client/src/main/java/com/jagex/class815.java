@@ -128,24 +128,24 @@ public class class815 extends class399 {
 
 	public class815(class527 arg0, int arg1) {
 		this.field9639 = arg0;
-		this.field9638 = new class538(class385.field4152, class385.field4144, Statics.field4150.toLowerCase().indexOf("arm") != -1);
+		this.field9638 = new class538(GameShell.field4152, GameShell.field4144, Statics.field4150.toLowerCase().indexOf("arm") != -1);
 		this.field9661 = new class851(arg1, this);
 		this.method15445(true);
 	}
 
-	public class815(class814 arg0, class527 arg1, int arg2) {
+	public class815(Packet arg0, class527 arg1, int arg2) {
 		this.field9639 = arg1;
-		this.field9638 = new class538(class385.field4152, class385.field4144, Statics.field4150.indexOf("arm") != -1);
+		this.field9638 = new class538(GameShell.field4152, GameShell.field4144, Statics.field4150.indexOf("arm") != -1);
 		this.field9661 = new class851(arg2, this);
 		this.method15443(arg0);
 	}
 
 	@ObfuscatedName("aeg.u(Laet;I)V")
-	public void method15443(class814 arg0) {
-		if (arg0 == null || arg0.field9629 == null) {
+	public void method15443(Packet arg0) {
+		if (arg0 == null || arg0.data == null) {
 			this.method15445(true);
 		} else {
-			int var2 = arg0.method15220();
+			int var2 = arg0.g1();
 			if (var2 < 23) {
 				try {
 					this.method15446(arg0, var2);
@@ -156,56 +156,56 @@ public class class815 extends class399 {
 			} else if (var2 > 27) {
 				this.method15445(true);
 			} else {
-				this.field9637 = new class856(arg0.method15220(), this);
+				this.field9637 = new class856(arg0.g1(), this);
 				this.field9665 = new class856(this.field9637.method15829(), this);
-				this.field9673 = new class855(arg0.method15220(), this);
-				this.field9642 = new class839(arg0.method15220(), this);
-				this.field9643 = new class852(arg0.method15220(), this);
+				this.field9673 = new class855(arg0.g1(), this);
+				this.field9642 = new class839(arg0.g1(), this);
+				this.field9643 = new class852(arg0.g1(), this);
 				if (var2 >= 27) {
-					this.field9644 = new class859(arg0.method15220(), this);
+					this.field9644 = new class859(arg0.g1(), this);
 				}
-				this.field9645 = new class840(arg0.method15220(), this);
-				this.field9646 = new class842(arg0.method15220(), this);
-				this.field9647 = new class858(arg0.method15220(), this);
-				this.field9671 = new class845(arg0.method15220(), this);
-				this.field9649 = new class857(arg0.method15220(), this);
-				this.field9650 = new class838(arg0.method15220(), this);
-				this.field9651 = new class848(arg0.method15220(), this);
+				this.field9645 = new class840(arg0.g1(), this);
+				this.field9646 = new class842(arg0.g1(), this);
+				this.field9647 = new class858(arg0.g1(), this);
+				this.field9671 = new class845(arg0.g1(), this);
+				this.field9649 = new class857(arg0.g1(), this);
+				this.field9650 = new class838(arg0.g1(), this);
+				this.field9651 = new class848(arg0.g1(), this);
 				if (var2 >= 24) {
-					this.field9641 = new class847(arg0.method15220(), this);
+					this.field9641 = new class847(arg0.g1(), this);
 				}
-				this.field9648 = new class844(arg0.method15220(), this);
-				this.field9660 = new class846(arg0.method15220(), this);
+				this.field9648 = new class844(arg0.g1(), this);
+				this.field9660 = new class846(arg0.g1(), this);
 				this.field9655 = new class846(this.field9660.method15735(), this);
-				this.field9677 = new class853(arg0.method15220(), this);
+				this.field9677 = new class853(arg0.g1(), this);
 				if (var2 >= 25) {
-					this.field9657 = new class854(arg0.method15220(), this);
+					this.field9657 = new class854(arg0.g1(), this);
 				}
-				this.field9658 = new class843(arg0.method15220(), this);
+				this.field9658 = new class843(arg0.g1(), this);
 				if (var2 <= 25) {
-					arg0.field9626++;
+					arg0.pos++;
 				}
-				this.field9659 = new class841(arg0.method15220(), this);
-				this.field9670 = new class851(arg0.method15220(), this);
+				this.field9659 = new class841(arg0.g1(), this);
+				this.field9670 = new class851(arg0.g1(), this);
 				this.field9661 = new class851(this.field9670.method15781(), this);
-				arg0.method15220();
-				this.field9666 = new class849(arg0.method15220(), this);
-				this.field9663 = new class850(arg0.method15220(), this);
+				arg0.g1();
+				this.field9666 = new class849(arg0.g1(), this);
+				this.field9663 = new class850(arg0.g1(), this);
 				this.field9664 = new class850(this.field9663.method15766(), this);
-				this.field9640 = new class867(arg0.method15220(), this);
-				this.field9633 = new class861(arg0.method15220(), this);
-				this.field9652 = new class862(arg0.method15220(), this);
-				this.field9668 = new class860(arg0.method15220(), this);
-				this.field9669 = new class863(arg0.method15220(), this);
+				this.field9640 = new class867(arg0.g1(), this);
+				this.field9633 = new class861(arg0.g1(), this);
+				this.field9652 = new class862(arg0.g1(), this);
+				this.field9668 = new class860(arg0.g1(), this);
+				this.field9669 = new class863(arg0.g1(), this);
 				if (var2 >= 26) {
-					this.field9667 = new class864(arg0.method15220(), this);
+					this.field9667 = new class864(arg0.g1(), this);
 				}
-				this.field9654 = new class866(arg0.method15220(), this);
-				this.field9672 = new class866(arg0.method15220(), this);
-				this.field9653 = new class866(arg0.method15220(), this);
-				this.field9674 = new class866(arg0.method15220(), this);
-				this.field9675 = new class866(arg0.method15220(), this);
-				this.field9676 = new class865(arg0.method15220(), this);
+				this.field9654 = new class866(arg0.g1(), this);
+				this.field9672 = new class866(arg0.g1(), this);
+				this.field9653 = new class866(arg0.g1(), this);
+				this.field9674 = new class866(arg0.g1(), this);
+				this.field9675 = new class866(arg0.g1(), this);
+				this.field9676 = new class865(arg0.g1(), this);
 				this.method15445(false);
 			}
 		}
@@ -331,110 +331,110 @@ public class class815 extends class399 {
 	}
 
 	@ObfuscatedName("aeg.a(Laet;II)V")
-	public void method15446(class814 arg0, int arg1) {
-		this.field9642 = new class839(arg0.method15220(), this);
-		arg0.field9626++;
-		this.field9660 = new class846(arg0.method15220() + 1, this);
-		this.field9671 = new class845(arg0.method15220(), this);
-		arg0.field9626++;
-		this.field9649 = new class857(arg0.method15220(), this);
-		this.field9645 = new class840(arg0.method15220(), this);
-		arg0.method15220();
-		this.field9658 = new class843(arg0.method15220(), this);
-		int var3 = arg0.method15220();
+	public void method15446(Packet arg0, int arg1) {
+		this.field9642 = new class839(arg0.g1(), this);
+		arg0.pos++;
+		this.field9660 = new class846(arg0.g1() + 1, this);
+		this.field9671 = new class845(arg0.g1(), this);
+		arg0.pos++;
+		this.field9649 = new class857(arg0.g1(), this);
+		this.field9645 = new class840(arg0.g1(), this);
+		arg0.g1();
+		this.field9658 = new class843(arg0.g1(), this);
+		int var3 = arg0.g1();
 		int var4 = 0;
 		if (arg1 >= 17) {
-			var4 = arg0.method15220();
+			var4 = arg0.g1();
 		}
 		this.field9651 = new class848(var3 > var4 ? var3 : var4, this);
 		boolean var5 = true;
 		boolean var6 = true;
 		boolean var7;
 		if (arg1 >= 2) {
-			var7 = arg0.method15220() == 1;
+			var7 = arg0.g1() == 1;
 			if (arg1 >= 17) {
-				var6 = arg0.method15220() == 1;
+				var6 = arg0.g1() == 1;
 			}
 		} else {
-			var7 = arg0.method15220() == 1;
-			arg0.method15220();
+			var7 = arg0.g1() == 1;
+			arg0.g1();
 		}
 		this.field9650 = new class838(var7 | var6 ? 1 : 0, this);
-		this.field9666 = new class849(arg0.method15220(), this);
-		this.field9646 = new class842(arg0.method15220(), this);
-		this.field9637 = new class856(arg0.method15220(), this);
-		this.field9676 = new class865(arg0.method15220(), this);
-		this.field9654 = new class866(arg0.method15220(), this);
+		this.field9666 = new class849(arg0.g1(), this);
+		this.field9646 = new class842(arg0.g1(), this);
+		this.field9637 = new class856(arg0.g1(), this);
+		this.field9676 = new class865(arg0.g1(), this);
+		this.field9654 = new class866(arg0.g1(), this);
 		if (arg1 >= 20) {
-			this.field9653 = new class866(arg0.method15220(), this);
+			this.field9653 = new class866(arg0.g1(), this);
 		} else {
 			this.field9653 = new class866(this.field9654.method15899(), this);
 		}
-		this.field9674 = new class866(arg0.method15220(), this);
-		this.field9672 = new class866(arg0.method15220(), this);
+		this.field9674 = new class866(arg0.g1(), this);
+		this.field9672 = new class866(arg0.g1(), this);
 		if (arg1 >= 21) {
-			this.field9675 = new class866(arg0.method15220(), this);
+			this.field9675 = new class866(arg0.g1(), this);
 		} else {
 			this.field9675 = new class866(this.field9674.method15899(), this);
 		}
 		if (arg1 >= 1) {
-			arg0.method15239();
-			arg0.method15239();
+			arg0.g2();
+			arg0.g2();
 		}
 		if (arg1 >= 3 && arg1 < 6) {
-			arg0.method15220();
+			arg0.g1();
 		}
 		if (arg1 >= 4) {
-			this.field9648 = new class844(arg0.method15220(), this);
+			this.field9648 = new class844(arg0.g1(), this);
 		}
-		arg0.method15379();
+		arg0.g4s();
 		if (arg1 >= 6) {
-			this.field9663 = new class850(arg0.method15220(), this);
+			this.field9663 = new class850(arg0.g1(), this);
 		}
 		if (arg1 >= 7) {
-			this.field9669 = new class863(arg0.method15220(), this);
+			this.field9669 = new class863(arg0.g1(), this);
 		}
 		if (arg1 >= 8) {
-			arg0.method15220();
+			arg0.g1();
 		}
 		if (arg1 >= 9) {
-			this.field9643 = new class852(arg0.method15220(), this);
+			this.field9643 = new class852(arg0.g1(), this);
 		}
 		if (arg1 >= 10) {
-			this.field9673 = new class855(arg0.method15220(), this);
+			this.field9673 = new class855(arg0.g1(), this);
 		}
 		if (arg1 >= 11) {
-			this.field9640 = new class867(arg0.method15220(), this);
+			this.field9640 = new class867(arg0.g1(), this);
 		}
 		if (arg1 >= 12) {
-			this.field9649 = new class857(arg0.method15220(), this);
+			this.field9649 = new class857(arg0.g1(), this);
 		}
 		if (arg1 >= 13) {
-			this.field9647 = new class858(arg0.method15220(), this);
+			this.field9647 = new class858(arg0.g1(), this);
 		}
 		if (arg1 >= 14) {
-			this.field9670 = new class851(arg0.method15220(), this);
+			this.field9670 = new class851(arg0.g1(), this);
 		}
 		if (arg1 >= 15) {
-			this.field9652 = new class862(arg0.method15220(), this);
+			this.field9652 = new class862(arg0.g1(), this);
 		}
 		if (arg1 >= 16) {
-			this.field9659 = new class841(arg0.method15220(), this);
+			this.field9659 = new class841(arg0.g1(), this);
 		}
 		if (arg1 >= 18) {
-			this.field9633 = new class861(arg0.method15220(), this);
+			this.field9633 = new class861(arg0.g1(), this);
 		}
 		if (arg1 >= 19) {
-			this.field9677 = new class853(arg0.method15220(), this);
+			this.field9677 = new class853(arg0.g1(), this);
 		}
 		if (arg1 >= 22) {
-			this.field9668 = new class860(arg0.method15220(), this);
+			this.field9668 = new class860(arg0.g1(), this);
 		}
 	}
 
 	@ObfuscatedName("aeg.s(I)Laet;")
-	public class814 method15447() {
-		class814 var1 = new class814(40);
+	public Packet method15447() {
+		Packet var1 = new Packet(40);
 		var1.method15308(27);
 		var1.method15308(this.field9637.method15829());
 		var1.method15308(this.field9673.method15816());

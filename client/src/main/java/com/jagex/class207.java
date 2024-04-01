@@ -53,10 +53,10 @@ public class class207 implements class214 {
 		return arg0.method836(arg1, arg2 + arg4, arg3 + arg4, this.field2306.field2598 - arg4 * 2, this.field2306.field2601 - arg4 * 2, this.field2306.field2595, this.field2306.field2596, 0, 0, 0, null, null, null, 0, 0);
 	}
 
-	public static final void add(class503 arg0, byte arg1) {
-		arg0.field5216 -= 2;
-		int var2 = arg0.field5215[arg0.field5216];
-		int var3 = arg0.field5215[arg0.field5216 + 1];
-		arg0.field5215[++arg0.field5216 - 1] = Statics.field3779.method12176(var2).field10393[var3];
+	public static final void add(ClientScriptState arg0, byte arg1) {
+		arg0.isp -= 2;
+		int var2 = arg0.intStack[arg0.isp];
+		int var3 = arg0.intStack[arg0.isp + 1];
+		arg0.intStack[++arg0.isp - 1] = Statics.field3779.method12176(var2).field10393[var3];
 	}
 }

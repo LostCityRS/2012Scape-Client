@@ -45,9 +45,9 @@ public class class593 {
 	}
 
 	@ObfuscatedName("agg.u(Lvn;Laet;S)Lvq;")
-	public static class593 method15930(class592 arg0, class814 arg1) {
+	public static class593 method15930(class592 arg0, Packet arg1) {
 		class593 var2 = new class593(arg0);
-		int var3 = arg1.method15220();
+		int var3 = arg1.g1();
 		boolean var4 = (var3 & 0x1) != 0;
 		boolean var5 = (var3 & 0x2) != 0;
 		boolean var6 = (var3 & 0x4) != 0;
@@ -73,20 +73,20 @@ public class class593 {
 			}
 		}
 		if (var6) {
-			int var8 = arg1.method15239();
+			int var8 = arg1.g2();
 			int[] var9 = new int[] { var8 & 0xF, var8 >> 4 & 0xF, var8 >> 8 & 0xF, var8 >> 12 & 0xF };
 			for (int var10 = 0; var10 < 4; var10++) {
 				if (var9[var10] != 15) {
-					var2.field7134[var9[var10]] = (short) arg1.method15239();
+					var2.field7134[var9[var10]] = (short) arg1.g2();
 				}
 			}
 		}
 		if (var7) {
-			int var11 = arg1.method15220();
+			int var11 = arg1.g1();
 			int[] var12 = new int[] { var11 & 0xF, var11 >> 4 & 0xF };
 			for (int var13 = 0; var13 < 2; var13++) {
 				if (var12[var13] != 15) {
-					var2.field7135[var12[var13]] = (short) arg1.method15239();
+					var2.field7135[var12[var13]] = (short) arg1.g2();
 				}
 			}
 		}

@@ -22,10 +22,10 @@ public class class821 extends class403 {
 	public int field9746;
 
 	@ObfuscatedName("aeh.h")
-	public final class814 field9751 = new class814(null);
+	public final Packet field9751 = new Packet(null);
 
 	@ObfuscatedName("aeh.r")
-	public final class814 field9752 = new class814(null);
+	public final Packet field9752 = new Packet(null);
 
 	public class821(int arg0, class334 arg1, int arg2) {
 		super(arg0);
@@ -39,54 +39,54 @@ public class class821 extends class403 {
 			if (!this.field9747.method5629(this.field9748, 0)) {
 				return 0;
 			}
-			byte[] var2 = this.field9747.method5627(this.field9748, 0);
+			byte[] var2 = this.field9747.getFile(this.field9748, 0);
 			if (var2 == null) {
 				throw new IllegalStateException("");
 			}
-			this.field9752.field9629 = var2;
-			this.field9752.field9626 = 0;
+			this.field9752.data = var2;
+			this.field9752.pos = 0;
 			int var3 = var2.length >> 1;
 			this.field9750 = new int[var3];
 			for (int var4 = 0; var4 < var3; var4++) {
-				this.field9750[var4] = this.field9752.method15239();
+				this.field9750[var4] = this.field9752.g2();
 			}
 		}
 		if (this.field9746 >= this.field9750.length) {
 			return -1;
 		}
 		this.method15486();
-		this.field9752.field9629 = arg0;
-		this.field9752.field9626 = 0;
+		this.field9752.data = arg0;
+		this.field9752.pos = 0;
 		do {
-			if (this.field9752.field9626 >= this.field9752.field9629.length) {
-				this.field9752.field9629 = null;
+			if (this.field9752.pos >= this.field9752.data.length) {
+				this.field9752.data = null;
 				return arg0.length;
 			}
-			if (this.field9751.field9629 == null) {
+			if (this.field9751.data == null) {
 				if (this.field9749[0] == null) {
-					this.field9752.field9629 = null;
-					return this.field9752.field9626;
+					this.field9752.data = null;
+					return this.field9752.pos;
 				}
-				this.field9751.field9629 = this.field9749[0];
+				this.field9751.data = this.field9749[0];
 			}
-			int var5 = this.field9752.field9629.length - this.field9752.field9626;
-			int var6 = this.field9751.field9629.length - this.field9751.field9626;
+			int var5 = this.field9752.data.length - this.field9752.pos;
+			int var6 = this.field9751.data.length - this.field9751.pos;
 			if (var5 < var6) {
-				this.field9751.method15263(this.field9752.field9629, this.field9752.field9626, var5);
-				this.field9752.field9629 = null;
+				this.field9751.method15263(this.field9752.data, this.field9752.pos, var5);
+				this.field9752.data = null;
 				return arg0.length;
 			}
-			this.field9752.method15276(this.field9751.field9629, this.field9751.field9626, var6);
-			this.field9751.field9629 = null;
-			this.field9751.field9626 = 0;
+			this.field9752.method15276(this.field9751.data, this.field9751.pos, var6);
+			this.field9751.data = null;
+			this.field9751.pos = 0;
 			this.field9746++;
 			for (int var7 = 0; var7 < 9; var7++) {
 				this.field9749[var7] = this.field9749[var7 + 1];
 			}
 			this.field9749[9] = null;
 		} while (this.field9746 < this.field9750.length);
-		this.field9752.field9629 = null;
-		return this.field9752.field9626;
+		this.field9752.data = null;
+		return this.field9752.pos;
 	}
 
 	@ObfuscatedName("aeh.au(I)V")
@@ -96,7 +96,7 @@ public class class821 extends class403 {
 		}
 		for (int var1 = 0; var1 < 10 && this.field9746 + var1 < this.field9750.length; var1++) {
 			if (this.field9749[var1] == null && this.field9747.method5629(this.field9750[this.field9746 + var1], 0)) {
-				this.field9749[var1] = this.field9747.method5627(this.field9750[this.field9746 + var1], 0);
+				this.field9749[var1] = this.field9747.getFile(this.field9750[this.field9746 + var1], 0);
 			}
 		}
 	}

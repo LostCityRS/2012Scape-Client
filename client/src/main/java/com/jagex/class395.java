@@ -119,7 +119,7 @@ public class class395 {
 							if (Statics.field2119.field9807 == var4) {
 								int var5 = (var1.field4177 & 0xFF) << 9;
 								int var6 = Statics.field2119.method13954() << 8;
-								class317 var7 = Statics.field2119.method8565().field3464;
+								Vector3 var7 = Statics.field2119.method8565().field3464;
 								int var8 = var1.field4177 >> 16 & 0xFF;
 								int var9 = (var8 << 9) + 256 - (int) var7.field3475 + var6;
 								int var10 = var1.field4177 >> 8 & 0xFF;
@@ -255,7 +255,7 @@ public class class395 {
 		if (field4196 == null) {
 			return;
 		}
-		class317 var0 = class317.method5290(Statics.field2119.method8565().field3464);
+		Vector3 var0 = Vector3.method5290(Statics.field2119.method8565().field3464);
 		class453 var1 = client.field8980.method6214();
 		var0.field3475 += var1.field4836 << 9;
 		var0.field3477 += var1.field4838 << 9;

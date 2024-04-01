@@ -44,7 +44,7 @@ public class class46 {
 	public static void method3312() {
 		class733 var0 = (class733) Statics.field3780.method3699();
 		class869 var1 = (class869) Statics.field3780.method3716();
-		class317 var2 = var0.method4016();
+		Vector3 var2 = var0.method4016();
 		class316 var3 = var1.method15921();
 		if (client.field9113 != null) {
 			int var4 = client.field9113.field1863;
@@ -61,7 +61,7 @@ public class class46 {
 			class316 var10 = class316.method5206();
 			var10.method5216(1.0F, 0.0F, 0.0F, (float) (Statics.field7136.method7255() - Statics.field7432) / 200.0F);
 			var3.method5266(var10);
-			class317 var11 = class317.method5294(0.0F, 1.0F, 0.0F);
+			Vector3 var11 = Vector3.method5294(0.0F, 1.0F, 0.0F);
 			var11.method5318(var3);
 			class316 var12 = class316.method5206();
 			var12.method5215(var11, (float) (Statics.field643 - Statics.field7136.method7254()) / 200.0F);
@@ -72,25 +72,25 @@ public class class46 {
 		Statics.field7432 = Statics.field7136.method7255();
 		var3.method5220();
 		if (Statics.field2131.method7243(98)) {
-			class317 var13 = class317.method5294(0.0F, 0.0F, 25.0F);
+			Vector3 var13 = Vector3.method5294(0.0F, 0.0F, 25.0F);
 			var13.method5318(var3);
 			var13.field3476 *= -1.0F;
 			var2.method5299(var13);
 		}
 		if (Statics.field2131.method7243(99)) {
-			class317 var14 = class317.method5294(0.0F, 0.0F, -25.0F);
+			Vector3 var14 = Vector3.method5294(0.0F, 0.0F, -25.0F);
 			var14.method5318(var3);
 			var14.field3476 *= -1.0F;
 			var2.method5299(var14);
 		}
 		if (Statics.field2131.method7243(96)) {
-			class317 var15 = class317.method5294(-25.0F, 0.0F, 0.0F);
+			Vector3 var15 = Vector3.method5294(-25.0F, 0.0F, 0.0F);
 			var15.method5318(var3);
 			var15.field3476 *= -1.0F;
 			var2.method5299(var15);
 		}
 		if (Statics.field2131.method7243(97)) {
-			class317 var16 = class317.method5294(25.0F, 0.0F, 0.0F);
+			Vector3 var16 = Vector3.method5294(25.0F, 0.0F, 0.0F);
 			var16.method5318(var3);
 			var16.field3476 *= -1.0F;
 			var2.method5299(var16);

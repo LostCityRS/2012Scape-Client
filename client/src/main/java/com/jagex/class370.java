@@ -16,21 +16,21 @@ public class class370 {
 
 	@ObfuscatedName("mr.u(Lls;II)Lmr;")
 	public static class370 method6466(class334 arg0, int arg1, int arg2) {
-		byte[] var3 = arg0.method5627(arg1, arg2);
-		return var3 == null ? null : new class370(new class814(var3));
+		byte[] var3 = arg0.getFile(arg1, arg2);
+		return var3 == null ? null : new class370(new Packet(var3));
 	}
 
-	public class370(class814 arg0) {
+	public class370(Packet arg0) {
 		for (int var2 = 0; var2 < 10; var2++) {
-			int var3 = arg0.method15220();
+			int var3 = arg0.g1();
 			if (var3 != 0) {
-				arg0.field9626--;
+				arg0.pos--;
 				this.field3994[var2] = new class380();
 				this.field3994[var2].method6600(arg0);
 			}
 		}
-		this.field3996 = arg0.method15239();
-		this.field3993 = arg0.method15239();
+		this.field3996 = arg0.g2();
+		this.field3993 = arg0.g2();
 	}
 
 	@ObfuscatedName("mr.j()Lalu;")

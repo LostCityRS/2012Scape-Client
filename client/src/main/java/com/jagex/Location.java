@@ -3,7 +3,7 @@ package com.jagex;
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ca")
-public interface class113 {
+public interface Location {
 
 	@ObfuscatedName("ca.j(B)I")
 	int method2390();

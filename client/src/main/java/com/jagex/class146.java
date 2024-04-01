@@ -26,7 +26,7 @@ public class class146 {
 	@ObfuscatedName("dr.t")
 	public final int[] field1550;
 
-	public class146(class814 arg0) {
+	public class146(Packet arg0) {
 		int var2 = arg0.method15277();
 		this.field1546 = new int[var2];
 		this.field1545 = new int[var2];
@@ -36,11 +36,11 @@ public class class146 {
 		this.field1549 = new int[var2];
 		this.field1550 = new int[var2];
 		for (int var3 = 0; var3 < var2; var3++) {
-			this.field1546[var3] = arg0.method15239() - 5120;
-			this.field1544[var3] = arg0.method15239() - 5120;
+			this.field1546[var3] = arg0.g2() - 5120;
+			this.field1544[var3] = arg0.g2() - 5120;
 			this.field1545[var3] = arg0.method15240();
-			this.field1548[var3] = arg0.method15239() - 5120;
-			this.field1550[var3] = arg0.method15239() - 5120;
+			this.field1548[var3] = arg0.g2() - 5120;
+			this.field1550[var3] = arg0.g2() - 5120;
 			this.field1549[var3] = arg0.method15240();
 			this.field1547[var3] = arg0.method15240();
 		}

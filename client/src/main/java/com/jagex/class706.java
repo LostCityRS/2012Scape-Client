@@ -15,10 +15,10 @@ public class class706 extends class150 {
 	@ObfuscatedName("zx.s")
 	public class157 field8512;
 
-	public class706(class814 arg0) {
+	public class706(Packet arg0) {
 		super(arg0);
-		this.field8510 = arg0.method15239();
-		this.field8511 = arg0.method15220();
+		this.field8510 = arg0.g2();
+		this.field8511 = arg0.g1();
 	}
 
 	@ObfuscatedName("zx.j(I)V")

@@ -7,7 +7,7 @@ import deob.Statics;
 public class class521 {
 
 	@ObfuscatedName("sh.j")
-	public static class565 field6388 = new class565(4);
+	public static IterableMap field6388 = new IterableMap(4);
 
 	@ObfuscatedName("sh.a")
 	public static final class520 field6390 = new class520();
@@ -24,7 +24,7 @@ public class class521 {
 		if (client.field8944) {
 			class813 var3 = new class813(arg0, new class821(4096, Statics.field2117, arg0), arg1, arg2);
 			var3.field9618.method7003(Statics.field2308.method11187());
-			field6388.method11927(var3, (long) arg0);
+			field6388.pushNode(var3, (long) arg0);
 		} else {
 			method5563(arg0, arg2);
 		}
@@ -56,7 +56,7 @@ public class class521 {
 			var2.field9467.method15287(arg0);
 			client.field8975.method1913(var2);
 		} else {
-			class502.method1372(class619.field7307, arg0, -1);
+			ScriptRunner.runTrigger(ClientTriggerType.VIDEO_END, arg0, -1);
 		}
 	}
 
@@ -99,7 +99,7 @@ public class class521 {
 				try {
 					var0.field9618.method7006();
 				} catch (Exception var4) {
-					class983.method16252("" + var0.field9624, var4);
+					class983.report("" + var0.field9624, var4);
 					method2930(var0.field9624);
 				}
 				if (!var0.field9623 && !var0.field9622) {

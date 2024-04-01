@@ -26,7 +26,7 @@ public class class378 {
 	@ObfuscatedName("mc.u(II)I")
 	public static int method6587(int arg0, int arg1) {
 		int var2;
-		for (var2 = (int) Math.pow((double) arg0, 1.0D / (double) arg1) + 1; class595.method1621(var2, arg1) > arg0; var2--) {
+		for (var2 = (int) Math.pow((double) arg0, 1.0D / (double) arg1) + 1; IntMath.method1621(var2, arg1) > arg0; var2--) {
 		}
 		return var2;
 	}
@@ -41,7 +41,7 @@ public class class378 {
 			int var2 = 0;
 			int var3 = class796.method15060(5) + 1;
 			while (var2 < this.field4063) {
-				int var4 = class796.method15060(class595.method2540(this.field4063 - var2));
+				int var4 = class796.method15060(IntMath.method2540(this.field4063 - var2));
 				for (int var5 = 0; var5 < var4; var5++) {
 					this.field4062[var2++] = var3;
 				}

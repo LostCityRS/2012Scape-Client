@@ -55,7 +55,7 @@ public class class332 {
 	public int[] field3561;
 
 	public class332(byte[] arg0, int arg1, byte[] arg2) {
-		this.field3546 = class814.method7834(arg0, arg0.length);
+		this.field3546 = Packet.method7834(arg0, arg0.length);
 		if (this.field3546 != arg1) {
 			throw new RuntimeException();
 		}
@@ -75,23 +75,23 @@ public class class332 {
 
 	@ObfuscatedName("lb.u([BI)V")
 	public void method5594(byte[] arg0) {
-		class814 var2 = new class814(Statics.method1598(arg0));
-		int var3 = var2.method15220();
+		Packet var2 = new Packet(Statics.method1598(arg0));
+		int var3 = var2.g1();
 		if (var3 < 5 || var3 > 7) {
 			throw new RuntimeException();
 		}
 		if (var3 >= 6) {
-			this.field3547 = var2.method15379();
+			this.field3547 = var2.g4s();
 		} else {
 			this.field3547 = 0;
 		}
-		int var4 = var2.method15220();
+		int var4 = var2.g1();
 		boolean var5 = (var4 & 0x1) != 0;
 		boolean var6 = (var4 & 0x2) != 0;
 		if (var3 >= 7) {
 			this.field3549 = var2.method15259();
 		} else {
-			this.field3549 = var2.method15239();
+			this.field3549 = var2.g2();
 		}
 		int var7 = 0;
 		int var8 = -1;
@@ -105,7 +105,7 @@ public class class332 {
 			}
 		} else {
 			for (int var10 = 0; var10 < this.field3549; var10++) {
-				this.field3554[var10] = var7 += var2.method15239();
+				this.field3554[var10] = var7 += var2.g2();
 				if (this.field3554[var10] > var8) {
 					var8 = this.field3554[var10];
 				}
@@ -126,12 +126,12 @@ public class class332 {
 				this.field3551[var11] = -1;
 			}
 			for (int var12 = 0; var12 < this.field3549; var12++) {
-				this.field3551[this.field3554[var12]] = var2.method15379();
+				this.field3551[this.field3554[var12]] = var2.g4s();
 			}
 			this.field3560 = new class183(this.field3551);
 		}
 		for (int var13 = 0; var13 < this.field3549; var13++) {
-			this.field3548[this.field3554[var13]] = var2.method15379();
+			this.field3548[this.field3554[var13]] = var2.g4s();
 		}
 		if (var6) {
 			for (int var14 = 0; var14 < this.field3549; var14++) {
@@ -141,7 +141,7 @@ public class class332 {
 			}
 		}
 		for (int var16 = 0; var16 < this.field3549; var16++) {
-			this.field3545[this.field3554[var16]] = var2.method15379();
+			this.field3545[this.field3554[var16]] = var2.g4s();
 		}
 		if (var3 >= 7) {
 			for (int var17 = 0; var17 < this.field3549; var17++) {
@@ -166,7 +166,7 @@ public class class332 {
 			}
 		} else {
 			for (int var25 = 0; var25 < this.field3549; var25++) {
-				this.field3557[this.field3554[var25]] = var2.method15239();
+				this.field3557[this.field3554[var25]] = var2.g2();
 			}
 			for (int var26 = 0; var26 < this.field3549; var26++) {
 				int var27 = this.field3554[var26];
@@ -175,7 +175,7 @@ public class class332 {
 				int var30 = -1;
 				this.field3556[var27] = new int[var28];
 				for (int var31 = 0; var31 < var28; var31++) {
-					int var32 = this.field3556[var27][var31] = var29 += var2.method15239();
+					int var32 = this.field3556[var27][var31] = var29 += var2.g2();
 					if (var32 > var30) {
 						var30 = var32;
 					}
@@ -205,7 +205,7 @@ public class class332 {
 				} else {
 					var38 = this.field3556[var34][var37];
 				}
-				this.field3559[var34][var38] = var2.method15379();
+				this.field3559[var34][var38] = var2.g4s();
 			}
 			this.field3558[var34] = new class183(this.field3559[var34]);
 		}

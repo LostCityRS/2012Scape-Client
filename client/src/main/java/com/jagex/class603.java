@@ -26,7 +26,7 @@ public class class603 {
 
 	@ObfuscatedName("ur.u(Lls;III)Lvm;")
 	public static class603 method12156(class334 arg0, int arg1, int arg2) {
-		byte[] var3 = arg0.method5627(arg1, arg2);
+		byte[] var3 = arg0.getFile(arg1, arg2);
 		return var3 == null ? null : new class603(var3);
 	}
 
@@ -37,22 +37,22 @@ public class class603 {
 	}
 
 	public class603(byte[] arg0) {
-		class814 var2 = new class814(arg0);
-		int var3 = var2.method15220();
+		Packet var2 = new Packet(arg0);
+		int var3 = var2.g1();
 		if (var3 != 0) {
 			throw new RuntimeException("");
 		}
-		boolean var4 = var2.method15220() == 1;
+		boolean var4 = var2.g1() == 1;
 		this.field7178 = new byte[256];
 		var2.method15263(this.field7178, 0, 256);
 		if (var4) {
 			int[] var5 = new int[256];
 			int[] var6 = new int[256];
 			for (int var7 = 0; var7 < 256; var7++) {
-				var5[var7] = var2.method15220();
+				var5[var7] = var2.g1();
 			}
 			for (int var8 = 0; var8 < 256; var8++) {
-				var6[var8] = var2.method15220();
+				var6[var8] = var2.g1();
 			}
 			byte[][] var9 = new byte[256][];
 			for (int var10 = 0; var10 < 256; var10++) {
@@ -84,12 +84,12 @@ public class class603 {
 			}
 			this.field7175 = var5[32] + var6[32];
 		} else {
-			this.field7175 = var2.method15220();
+			this.field7175 = var2.g1();
 		}
-		var2.method15220();
-		var2.method15220();
-		this.field7176 = var2.method15220();
-		this.field7177 = var2.method15220();
+		var2.g1();
+		var2.g1();
+		this.field7176 = var2.g1();
+		this.field7177 = var2.g1();
 	}
 
 	@ObfuscatedName("fd.a([[B[[B[I[B[IIII)I")

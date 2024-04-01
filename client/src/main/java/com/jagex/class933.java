@@ -17,12 +17,12 @@ public class class933 extends class789 {
 	}
 
 	@ObfuscatedName("ail.u(Laet;B)V")
-	public void method14985(class814 arg0) {
-		this.field10217 = arg0.method15239();
-		arg0.method15220();
-		if (arg0.method15220() != 255) {
-			arg0.field9626--;
-			arg0.method15246();
+	public void method14985(Packet arg0) {
+		this.field10217 = arg0.g2();
+		arg0.g1();
+		if (arg0.g1() != 255) {
+			arg0.pos--;
+			arg0.g8();
 		}
 	}
 

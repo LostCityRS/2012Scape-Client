@@ -5,7 +5,7 @@ import deob.Statics;
 import java.io.IOException;
 
 @ObfuscatedName("ks")
-public class class309 {
+public class Loading {
 
 	@ObfuscatedName("ks.u")
 	public static final int[] field3425 = new int[] { 4, 4, 1, 2, 6, 4, 2, 44, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0 };
@@ -19,7 +19,7 @@ public class class309 {
 	@ObfuscatedName("ks.i")
 	public static int field3424 = -1;
 
-	public class309() throws Throwable {
+	public Loading() throws Throwable {
 		throw new Error();
 	}
 
@@ -44,7 +44,7 @@ public class class309 {
 		if (Statics.field6789 == null) {
 			method3460();
 		}
-		class307 var0 = Statics.field1208;
+		LoadingStage var0 = Statics.field1208;
 		int var1 = method1610();
 		if (Statics.field1208 == var0) {
 			Statics.field2324 = Statics.field1208.field3405.method12206(Statics.field2308);
@@ -54,7 +54,7 @@ public class class309 {
 			if (Statics.field1208.field3409) {
 				Statics.field2324 = Statics.field2324 + Statics.field4455 + "%";
 			}
-		} else if (Statics.field1208 == class307.field3403) {
+		} else if (Statics.field1208 == LoadingStage.field3403) {
 			Statics.field6789 = null;
 			client.method11307(6);
 			if (field3421) {
@@ -153,7 +153,7 @@ public class class309 {
 				}
 			}
 		}
-		if (Statics.field1208 == class307.field3390) {
+		if (Statics.field1208 == LoadingStage.field3390) {
 			if (Statics.field3562 == null) {
 				Statics.field3562 = new class331(Statics.field848, Statics.field1210, class51.field665, class51.field668);
 			}
@@ -166,7 +166,7 @@ public class class309 {
 			Statics.field1937 = client.method7706(class162.field1719, false, 1, true);
 			Statics.field8745 = client.method7706(class162.field1691, false, 1, true);
 		}
-		if (Statics.field1208 == class307.field3394) {
+		if (Statics.field1208 == LoadingStage.field3394) {
 			boolean var1 = Statics.field1937.method5662();
 			int var2 = Statics.field4456[class162.field1719.method3089()].method14244();
 			int var3 = var2 + Statics.field4456[Statics.field5109 ? class162.field1700.method3089() : class162.field1718.method3089()].method14244();
@@ -192,17 +192,17 @@ public class class309 {
 				}
 			}
 		}
-		if (Statics.field1208 == class307.field3388) {
+		if (Statics.field1208 == LoadingStage.field3388) {
 			Statics.field6784 = new class292(Statics.field4761, Statics.field8745, class35.method6244());
 		}
-		if (Statics.field1208 == class307.field3407) {
+		if (Statics.field1208 == LoadingStage.field3407) {
 			int var10 = Statics.field6784.method4839();
 			int var11 = Statics.field6784.method4841();
 			if (var10 < var11) {
 				return var10 * 100 / var11;
 			}
 		}
-		if (Statics.field1208 == class307.field3386) {
+		if (Statics.field1208 == LoadingStage.field3386) {
 			if (Statics.field3422 != null && Statics.field3422.length > 0) {
 				if (Statics.field3422[0].method4981() < 100) {
 					return 0;
@@ -215,7 +215,7 @@ public class class309 {
 			class35.method2931(Statics.field5187);
 			client.method11307(2);
 		}
-		if (Statics.field1208 == class307.field3389) {
+		if (Statics.field1208 == LoadingStage.field3389) {
 			Statics.field7387 = client.method7706(class162.field1694, false, 1, false);
 			Statics.field7567 = client.method7706(class162.field1708, false, 1, false);
 			Statics.field6690 = client.method7706(class162.field1716, false, 1, false);
@@ -229,7 +229,7 @@ public class class309 {
 			Statics.field6435 = client.method7706(class162.field1723, true, 1, false);
 			Statics.field3523 = client.method7706(class162.field1696, false, 1, false);
 			Statics.field1509 = client.method7706(class162.field1697, false, 1, false);
-			Statics.field6651 = client.method7706(class162.field1698, false, 1, true);
+			Statics.clientScriptsJs5 = client.method7706(class162.field1698, false, 1, true);
 			Statics.field3156 = client.method7706(class162.field1688, false, 1, false);
 			Statics.field5104 = client.method7706(class162.field1687, false, 1, false);
 			Statics.field1565 = client.method7706(class162.field1702, false, 1, true);
@@ -251,7 +251,7 @@ public class class309 {
 			Statics.field2670 = client.method7706(class162.field1717, true, 1, true);
 			Statics.field2117 = client.method7706(class162.field1722, true, 2, false);
 		}
-		if (Statics.field1208 == class307.field3392) {
+		if (Statics.field1208 == LoadingStage.field3392) {
 			int var12 = 0;
 			for (int var13 = 0; var13 < Statics.field4456.length; var13++) {
 				if (Statics.field4456[var13] != null) {
@@ -267,7 +267,7 @@ public class class309 {
 			class35.method8388(Statics.field7387);
 			Statics.field6784 = new class292(Statics.field7387, Statics.field8745, class35.method6244());
 		}
-		if (Statics.field1208 == class307.field3393) {
+		if (Statics.field1208 == LoadingStage.field3393) {
 			byte[] var14 = Statics.field849.method5635(class491.field5143.field5145);
 			if (var14 == null) {
 				return 0;
@@ -276,11 +276,11 @@ public class class309 {
 			Statics.method4790();
 			client.method11307(10);
 		}
-		if (Statics.field1208 == class307.field3391 && Statics.field2137 == null) {
+		if (Statics.field1208 == LoadingStage.field3391 && Statics.field2137 == null) {
 			Statics.field2137 = new class387(Statics.field663);
 			class618.method5010(Statics.field2137);
 		}
-		if (Statics.field1208 == class307.field3395) {
+		if (Statics.field1208 == LoadingStage.field3395) {
 			int var15 = class326.method6562();
 			if (var15 < 100) {
 				return var15;
@@ -297,7 +297,7 @@ public class class309 {
 			Statics.field1736 = new class487(Statics.field849);
 			Statics.field2190 = new class489(Statics.field849);
 		}
-		if (Statics.field1208 == class307.field3396) {
+		if (Statics.field1208 == LoadingStage.field3396) {
 			if (Statics.field4825.field5156 != -1 && !Statics.field4560.method5629(Statics.field4825.field5156, 0)) {
 				return 99;
 			}
@@ -348,17 +348,17 @@ public class class309 {
 			Statics.field8481 = Statics.method4777();
 			Statics.field2305 = new class817(true);
 		}
-		if (Statics.field1208 == class307.field3387) {
+		if (Statics.field1208 == LoadingStage.field3387) {
 			int var17 = class35.method12092(Statics.field7387) + Statics.field6784.method4840(true);
 			int var18 = class35.method1589() + Statics.field6784.method4841();
 			if (var17 < var18) {
 				return var17 * 100 / var18;
 			}
 		}
-		if (Statics.field1208 == class307.field3408) {
+		if (Statics.field1208 == LoadingStage.field3408) {
 			class408.method7080(Statics.field4059, Statics.field3615, Statics.field4450, client.field8980.method6103(), Statics.field8499, Statics.field850, Statics.field2669);
 		}
-		if (Statics.field1208 == class307.field3399) {
+		if (Statics.field1208 == LoadingStage.field3399) {
 			Statics.field6666 = new int[Statics.field8455.field7160];
 			Statics.field2210 = new boolean[Statics.field8455.field7160];
 			Statics.field3498 = new String[Statics.field8514.field7322];
@@ -377,14 +377,14 @@ public class class309 {
 			Statics.field3523.method5636(true, true);
 			client.field8938 = true;
 		}
-		if (Statics.field1208 == class307.field3400) {
-			if (!class165.method6404(Statics.field4825.field5162, null)) {
+		if (Statics.field1208 == LoadingStage.field3400) {
+			if (!class165.openInterface(Statics.field4825.field5162, null)) {
 				return 0;
 			}
 			boolean var20 = true;
-			for (int var21 = 0; var21 < Statics.field1756[Statics.field4825.field5162].field1732.length; var21++) {
-				class165 var22 = Statics.field1756[Statics.field4825.field5162].field1732[var21];
-				if (var22.field1766 == 5 && var22.field1797 != -1 && !Statics.field7387.method5629(var22.field1797, 0)) {
+			for (int var21 = 0; var21 < Statics.interfaces[Statics.field4825.field5162].components.length; var21++) {
+				class165 var22 = Statics.interfaces[Statics.field4825.field5162].components[var21];
+				if (var22.type == 5 && var22.field1797 != -1 && !Statics.field7387.method5629(var22.field1797, 0)) {
 					var20 = false;
 				}
 			}
@@ -392,10 +392,10 @@ public class class309 {
 				return 0;
 			}
 		}
-		if (Statics.field1208 == class307.field3401) {
+		if (Statics.field1208 == LoadingStage.field3401) {
 			client.method12035(true);
 		}
-		if (Statics.field1208 == class307.field3402) {
+		if (Statics.field1208 == LoadingStage.field3402) {
 			Statics.field6789.method4975();
 			try {
 				Statics.field2668.join();
@@ -439,34 +439,34 @@ public class class309 {
 
 	@ObfuscatedName("pd.f([BB)V")
 	public static void method7678(byte[] arg0) {
-		class814 var1 = new class814(arg0);
+		Packet var1 = new Packet(arg0);
 		while (true) {
-			int var2 = var1.method15220();
+			int var2 = var1.g1();
 			if (var2 == 0) {
 				return;
 			}
 			if (var2 == 1) {
 				int[] var3 = Statics.field9860 = new int[6];
-				var3[0] = var1.method15239();
-				var3[1] = var1.method15239();
-				var3[2] = var1.method15239();
-				var3[3] = var1.method15239();
-				var3[4] = var1.method15239();
-				var3[5] = var1.method15239();
+				var3[0] = var1.g2();
+				var3[1] = var1.g2();
+				var3[2] = var1.g2();
+				var3[3] = var1.g2();
+				var3[4] = var1.g2();
+				var3[5] = var1.g2();
 			}
 		}
 	}
 
 	@ObfuscatedName("fn.d([BI)V")
 	public static void method3560(byte[] arg0) {
-		class814 var1 = new class814(arg0);
+		Packet var1 = new Packet(arg0);
 		while (true) {
-			int var2 = var1.method15220();
+			int var2 = var1.g1();
 			if (var2 == 0) {
 				return;
 			}
 			if (var2 == 1) {
-				int var3 = var1.method15239();
+				int var3 = var1.g2();
 				if (class395.field4205 == -1) {
 					class395.field4205 = var3;
 				}
@@ -478,7 +478,7 @@ public class class309 {
 	public static void method2862() {
 		class576 var0 = null;
 		try {
-			var0 = class385.method4031("2", client.field9163.field6404, false);
+			var0 = GameShell.method4031("2", client.field9163.field6404, false);
 			byte[] var1 = new byte[(int) var0.method12077()];
 			int var3;
 			for (int var2 = 0; var2 < var1.length; var2 += var3) {
@@ -487,7 +487,7 @@ public class class309 {
 					throw new IOException();
 				}
 			}
-			method3665(new class814(var1));
+			method3665(new Packet(var1));
 		} catch (Exception var7) {
 		}
 		try {
@@ -499,21 +499,21 @@ public class class309 {
 	}
 
 	@ObfuscatedName("fi.n(Laet;I)V")
-	public static void method3665(class814 arg0) {
-		if (arg0.field9629.length - arg0.field9626 < 1) {
+	public static void method3665(Packet arg0) {
+		if (arg0.data.length - arg0.pos < 1) {
 			return;
 		}
-		int var1 = arg0.method15220();
-		if (var1 < 0 || var1 > 1 || arg0.field9629.length - arg0.field9626 < 2) {
+		int var1 = arg0.g1();
+		if (var1 < 0 || var1 > 1 || arg0.data.length - arg0.pos < 2) {
 			return;
 		}
-		int var2 = arg0.method15239();
-		if (arg0.field9629.length - arg0.field9626 < var2 * 6) {
+		int var2 = arg0.g2();
+		if (arg0.data.length - arg0.pos < var2 * 6) {
 			return;
 		}
 		for (int var3 = 0; var3 < var2; var3++) {
-			int var4 = arg0.method15239();
-			int var5 = arg0.method15379();
+			int var4 = arg0.g2();
+			int var5 = arg0.g4s();
 			if (var4 < Statics.field6666.length && Statics.field2210[var4] && (Statics.field8455.method12359(var4).field7153 != '1' || var5 >= -1 && var5 <= 1)) {
 				Statics.field6666[var4] = var5;
 			}

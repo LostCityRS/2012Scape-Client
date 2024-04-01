@@ -35,7 +35,7 @@ public class class99 {
 	public final int field1127 = 1600;
 
 	@ObfuscatedName("bu.d")
-	public final int field1136 = class595.method2540(1600);
+	public final int field1136 = IntMath.method2540(1600);
 
 	@ObfuscatedName("bu.z")
 	public final int field1129 = 64;
@@ -95,7 +95,7 @@ public class class99 {
 			int var14 = var9 - var8;
 			int var15;
 			if (var14 + 2 > 1600) {
-				var15 = class595.method2540(var14) + 1 - this.field1136;
+				var15 = IntMath.method2540(var14) + 1 - this.field1136;
 				var14 = (var14 >> var15) + 2;
 			} else {
 				var15 = 0;
@@ -178,7 +178,7 @@ public class class99 {
 		float var15 = var6 - var3;
 		float var16 = var7 - var4;
 		float var17 = var8 - var5;
-		this.field1120.field9626 = 0;
+		this.field1120.pos = 0;
 		if (arg0.field8149) {
 			for (int var18 = arg1 - 1; var18 >= 0; var18--) {
 				int var19 = this.field1131[var18] > 64 ? 64 : this.field1131[var18];
@@ -390,10 +390,10 @@ public class class99 {
 				}
 			}
 		}
-		if (this.field1120.field9626 != 0) {
-			this.field1121.method2234(24, this.field1120.field9629, this.field1120.field9626);
+		if (this.field1120.pos != 0) {
+			this.field1121.method2234(24, this.field1120.data, this.field1120.pos);
 			arg0.method13305(this.field1135, null, this.field1123, this.field1124);
-			arg0.method13306(7, 0, this.field1120.field9626 / 24);
+			arg0.method13306(7, 0, this.field1120.pos / 24);
 		}
 	}
 

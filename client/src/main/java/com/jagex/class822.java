@@ -43,10 +43,10 @@ public class class822 extends class408 {
 	public static boolean field9758 = false;
 
 	@ObfuscatedName("aeq.be")
-	public static class565 field9765 = new class565(8);
+	public static IterableMap field9765 = new IterableMap(8);
 
 	@ObfuscatedName("aeq.bw")
-	public static class565 field9766 = new class565(8);
+	public static IterableMap field9766 = new IterableMap(8);
 
 	@ObfuscatedName("aeq.bo")
 	public static class550 field9767 = new class550(new class547());
@@ -78,7 +78,7 @@ public class class822 extends class408 {
 			int[] var2 = new int[3];
 			int var3 = -1;
 			int var4 = -1;
-			class317 var5 = Statics.field2119.method8565().field3464;
+			Vector3 var5 = Statics.field2119.method8565().field3464;
 			class453 var6 = client.field8980.method6214();
 			if (Statics.field4292.method16705(Statics.field2119.field9807, ((int) var5.field3475 >> 9) + var6.field4836, ((int) var5.field3477 >> 9) + var6.field4838, var2)) {
 				var3 = var2[1] - Statics.field4283;
@@ -152,7 +152,7 @@ public class class822 extends class408 {
 			method7120(arg0, field4273, field4274);
 			field9753 = 60;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else if (field9753 == 60) {
 			if (Statics.field4264.method5680(Statics.field4292.field10362 + "_staticelements")) {
 				if (!Statics.field4264.method5648(Statics.field4292.field10362 + "_staticelements")) {
@@ -165,47 +165,47 @@ public class class822 extends class408 {
 			method7093();
 			field9753 = 70;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else if (field9753 == 70) {
 			Statics.field4684 = new class56(arg0, 11, true, Statics.field1231);
 			field9753 = 73;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else if (field9753 == 73) {
 			Statics.field6790 = new class56(arg0, 12, true, Statics.field1231);
 			field9753 = 76;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else if (field9753 == 76) {
 			Statics.field1578 = new class56(arg0, 14, true, Statics.field1231);
 			field9753 = 79;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else if (field9753 == 79) {
 			Statics.field9549 = new class56(arg0, 17, true, Statics.field1231);
 			field9753 = 82;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else if (field9753 == 82) {
 			Statics.field3263 = new class56(arg0, 19, true, Statics.field1231);
 			field9753 = 85;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else if (field9753 == 85) {
 			Statics.field1388 = new class56(arg0, 22, true, Statics.field1231);
 			field9753 = 88;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else if (field9753 == 88) {
 			Statics.field7158 = new class56(arg0, 26, true, Statics.field1231);
 			field9753 = 91;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else {
 			Statics.field4325 = new class56(arg0, 30, true, Statics.field1231);
 			field9753 = 100;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 			System.gc();
 		}
 	}
@@ -318,7 +318,7 @@ public class class822 extends class408 {
 		}
 		int var14 = arg2 + arg4 - 5;
 		int var15 = arg3 + arg5 - 8;
-		Statics.field560.method862("Fps:" + class385.field4121, var14, var15, 16776960, -1);
+		Statics.field560.method862("Fps:" + GameShell.field4121, var14, var15, 16776960, -1);
 		int var19 = var15 - 15;
 		Runtime var16 = Runtime.getRuntime();
 		int var17 = (int) ((var16.totalMemory() - var16.freeMemory()) / 1024L);
@@ -777,14 +777,14 @@ public class class822 extends class408 {
 				}
 				if (!var4.field9303.field9570) {
 					var4.field9303.field9570 = true;
-					class502.method1372(class619.field7304, var4.field9303.field9564, var5.field4775);
+					ScriptRunner.runTrigger(ClientTriggerType.WORLDMAPELEMENTMOUSEOVER, var4.field9303.field9564, var5.field4775);
 				}
 				if (var4.field9303.field9570) {
-					class502.method1372(class619.field7311, var4.field9303.field9564, var5.field4775);
+					ScriptRunner.runTrigger(ClientTriggerType.WORLDMAPELEMENTMOUSEREPEAT, var4.field9303.field9564, var5.field4775);
 				}
 			} else if (var4.field9303.field9570) {
 				var4.field9303.field9570 = false;
-				class502.method1372(class619.field7319, var4.field9303.field9564, var5.field4775);
+				ScriptRunner.runTrigger(ClientTriggerType.WORLDMAPELEMENTMOUSELEAVE, var4.field9303.field9564, var5.field4775);
 			}
 		}
 	}
@@ -792,15 +792,15 @@ public class class822 extends class408 {
 	@ObfuscatedName("ze.co(IIII)V")
 	public static void method13878(int arg0, int arg1, int arg2) {
 		if (arg0 == 1008) {
-			class502.method1372(class619.field7317, arg1, arg2);
+			ScriptRunner.runTrigger(ClientTriggerType.OPWORLDMAPELEMENT1, arg1, arg2);
 		} else if (arg0 == 1009) {
-			class502.method1372(class619.field7306, arg1, arg2);
+			ScriptRunner.runTrigger(ClientTriggerType.OPWORLDMAPELEMENT2, arg1, arg2);
 		} else if (arg0 == 1010) {
-			class502.method1372(class619.field7301, arg1, arg2);
+			ScriptRunner.runTrigger(ClientTriggerType.OPWORLDMAPELEMENT3, arg1, arg2);
 		} else if (arg0 == 1011) {
-			class502.method1372(class619.field7302, arg1, arg2);
+			ScriptRunner.runTrigger(ClientTriggerType.OPWORLDMAPELEMENT4, arg1, arg2);
 		} else if (arg0 == 1012) {
-			class502.method1372(class619.field7303, arg1, arg2);
+			ScriptRunner.runTrigger(ClientTriggerType.OPWORLDMAPELEMENT5, arg1, arg2);
 		}
 	}
 

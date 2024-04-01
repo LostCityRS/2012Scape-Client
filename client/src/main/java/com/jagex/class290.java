@@ -163,7 +163,7 @@ public abstract class class290 {
 		}
 		for (int var3 = 0; var3 < 255; var3++) {
 			int var4 = 255 - var3;
-			int var5 = class595.method2715(var1, var4);
+			int var5 = IntMath.method2715(var1, var4);
 			short var6 = this.field3294[var5];
 			this.field3294[var5] = this.field3294[var4];
 			this.field3294[var4] = this.field3294[var4 + 256] = var6;

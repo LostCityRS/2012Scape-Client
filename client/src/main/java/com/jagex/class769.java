@@ -7,10 +7,10 @@ import deob.Statics;
 public class class769 extends class399 {
 
 	@ObfuscatedName("acx.s")
-	public static final class565 field9273 = new class565(32);
+	public static final IterableMap field9273 = new IterableMap(32);
 
 	@ObfuscatedName("acx.c")
-	public static final class451 field9274 = new class451(10);
+	public static final WeightedCache field9274 = new WeightedCache(10);
 
 	@ObfuscatedName("acx.t")
 	public int[] field9276 = new int[] { -1 };
@@ -111,7 +111,7 @@ public class class769 extends class399 {
 		class769 var7 = (class769) field9273.method11923(var5);
 		if (var7 == null) {
 			var7 = new class769();
-			field9273.method11927(var7, var5);
+			field9273.pushNode(var7, var5);
 		}
 		if (var7.field9276.length <= arg1) {
 			int[] var8 = new int[arg1 + 1];
@@ -157,7 +157,7 @@ public class class769 extends class399 {
 
 	@ObfuscatedName("acx.z([II[IZI)J")
 	public long method14760(int[] arg0, int arg1, int[] arg2, boolean arg3) {
-		long[] var5 = class814.field9628;
+		long[] var5 = Packet.field9628;
 		long var6 = -1L;
 		long var8 = var6 >>> 8 ^ var5[(int) ((var6 ^ (long) (arg1 >> 8)) & 0xFFL)];
 		long var10 = var8 >>> 8 ^ var5[(int) ((var8 ^ (long) arg1) & 0xFFL)];

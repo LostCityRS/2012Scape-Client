@@ -45,39 +45,39 @@ public class class713 extends class150 {
 	@ObfuscatedName("aah.w")
 	public final int field8553;
 
-	public class713(class814 arg0, int arg1, int arg2) {
+	public class713(Packet arg0, int arg1, int arg2) {
 		super(arg0);
 		if (arg1 == 0) {
-			int var4 = arg0.method15379();
+			int var4 = arg0.g4s();
 			this.field8543 = var4 >>> 16;
 			this.field8551 = var4 & 0xFFFF;
 			this.field8539 = -1;
 		} else {
 			this.field8543 = -1;
 			this.field8551 = -1;
-			this.field8539 = arg0.method15239();
+			this.field8539 = arg0.g2();
 		}
 		if (arg2 == 0) {
-			int var5 = arg0.method15379();
+			int var5 = arg0.g4s();
 			this.field8546 = (var5 >>> 16) * 512;
 			this.field8548 = (var5 & 0xFFFF) * 262144;
 			this.field8541 = -1;
 		} else {
 			this.field8546 = -512;
 			this.field8548 = -262144;
-			this.field8541 = arg0.method15239();
+			this.field8541 = arg0.g2();
 		}
 		if (arg1 == 0 && arg2 == 0) {
-			this.field8547 = arg0.method15220();
+			this.field8547 = arg0.g1();
 		} else {
 			this.field8547 = -1;
 		}
-		this.field8550 = arg0.method15239();
-		this.field8544 = arg0.method15220();
-		this.field8549 = arg0.method15220();
+		this.field8550 = arg0.g2();
+		this.field8544 = arg0.g1();
+		this.field8549 = arg0.g1();
 		this.field8542 = arg0.method15241();
-		this.field8552 = arg0.method15239();
-		this.field8553 = arg0.method15220();
+		this.field8552 = arg0.g2();
+		this.field8553 = arg0.g1();
 	}
 
 	@ObfuscatedName("aah.j(I)V")
@@ -90,8 +90,8 @@ public class class713 extends class150 {
 			var2 = this.field8551 * 512 + 256;
 			var3 = this.field8547;
 		} else {
-			class719 var4 = Statics.field1537[this.field8539].method2854();
-			class317 var5 = var4.method8565().field3464;
+			PathingEntity var4 = Statics.field1537[this.field8539].method2854();
+			Vector3 var5 = var4.method8565().field3464;
 			var1 = (int) var5.field3475;
 			var2 = (int) var5.field3477;
 			var3 = var4.field9807;
@@ -102,8 +102,8 @@ public class class713 extends class150 {
 			var6 = this.field8546 * 262144 + 256;
 			var7 = this.field8548 * 512 + 256;
 		} else {
-			class719 var8 = Statics.field1537[this.field8541].method2854();
-			class317 var9 = var8.method8565().field3464;
+			PathingEntity var8 = Statics.field1537[this.field8541].method2854();
+			Vector3 var9 = var8.method8565().field3464;
 			var6 = (int) var9.field3475;
 			var7 = (int) var9.field3477;
 			if (var3 < 0) {

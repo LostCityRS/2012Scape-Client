@@ -2,7 +2,7 @@ package com.jagex;
 
 import deob.ObfuscatedName;
 import deob.Statics;
-import java.awt.datatransfer.ClipboardOwner;
+
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.Transferable;
@@ -384,7 +384,7 @@ public class class62 {
 				return;
 			}
 			if (arg0.equals("heap")) {
-				method1958("Heap: " + class385.field4152 + "MB");
+				method1958("Heap: " + GameShell.field4152 + "MB");
 				return;
 			}
 			if (arg0.equalsIgnoreCase("getcamerapos")) {
@@ -625,7 +625,7 @@ public class class62 {
 				if (arg0 == 25) {
 					method16885();
 				} else if (arg0 == 9) {
-					method1958("" + class385.field4121);
+					method1958("" + GameShell.field4121);
 				} else if (arg0 == 19) {
 					class428 var1 = client.field8980.method6098().field4493;
 					var1.field4624 = !var1.field4624;
@@ -669,7 +669,7 @@ public class class62 {
 				} else if (arg0 == 11) {
 					Statics.field1231.setLocation(50, 50);
 				} else if (arg0 == 17) {
-					Statics.field1231.setLocation(class385.field4147, class385.field4127);
+					Statics.field1231.setLocation(GameShell.field4147, GameShell.field4127);
 				} else if (arg0 == 8) {
 					method1623();
 				} else if (arg0 == 28) {
@@ -677,10 +677,10 @@ public class class62 {
 					client.field8980.field3833 = true;
 					method1623();
 				} else if (arg0 == 22) {
-					class317 var10 = Statics.field2119.method8565().field3464;
+					Vector3 var10 = Statics.field2119.method8565().field3464;
 					method1958(((int) var10.field3475 >> 9) + " " + ((int) var10.field3477 >> 9));
 				} else if (arg0 == 26) {
-					class317 var11 = Statics.field2119.method8565().field3464;
+					Vector3 var11 = Statics.field2119.method8565().field3464;
 					method1958("" + client.field8980.method6098().field4498[Statics.field2119.field9807].method199((int) var11.field3475 >> 9, (int) var11.field3477 >> 9));
 				} else if (arg0 == 1) {
 					method1958(class165.field1757.method7924() + " " + class165.field1757.method7923());

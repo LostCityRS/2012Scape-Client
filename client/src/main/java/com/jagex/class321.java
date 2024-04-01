@@ -6,7 +6,7 @@ import deob.ObfuscatedName;
 public class class321 {
 
 	@ObfuscatedName("kd.u")
-	public final class317[] field3483 = new class317[4];
+	public final Vector3[] field3483 = new Vector3[4];
 
 	@ObfuscatedName("kd.j")
 	public float field3482;
@@ -16,7 +16,7 @@ public class class321 {
 
 	public class321() {
 		for (int var1 = 0; var1 < 4; var1++) {
-			this.field3483[var1] = new class317();
+			this.field3483[var1] = new Vector3();
 		}
 		this.method5491();
 	}
@@ -28,19 +28,19 @@ public class class321 {
 	}
 
 	@ObfuscatedName("kd.j(ILko;)V")
-	public void method5492(int arg0, class317 arg1) {
+	public void method5492(int arg0, Vector3 arg1) {
 		this.field3483[arg0].method5334(arg1);
 		this.method5491();
 	}
 
 	@ObfuscatedName("kd.a(I)Lko;")
-	public class317 method5493(int arg0) {
+	public Vector3 method5493(int arg0) {
 		return this.field3483[arg0];
 	}
 
 	@ObfuscatedName("kd.s(F)Lko;")
-	public class317 method5490(float arg0) {
-		class317 var2 = new class317();
+	public Vector3 method5490(float arg0) {
+		Vector3 var2 = new Vector3();
 		float var3 = arg0 * arg0;
 		float var4 = arg0 * var3;
 		float var5 = (this.field3483[1].field3475 - this.field3483[0].field3475) * 3.0F;
@@ -97,11 +97,11 @@ public class class321 {
 	@ObfuscatedName("kd.t()V")
 	public void method5497() {
 		byte var1 = 20;
-		class317 var2 = this.method5490(0.0F);
+		Vector3 var2 = this.method5490(0.0F);
 		float var3 = 0.0F;
 		for (int var4 = 1; var4 <= var1; var4++) {
-			class317 var5 = this.method5490((float) var4 / (float) var1);
-			var3 += class317.method5377(var5, var2).method5338();
+			Vector3 var5 = this.method5490((float) var4 / (float) var1);
+			var3 += Vector3.method5377(var5, var2).method5338();
 			var2 = var5;
 		}
 		int var6 = (int) (var3 / 20.0F);
@@ -109,11 +109,11 @@ public class class321 {
 			var6 = var1;
 		}
 		this.field3481 = new float[var6];
-		class317 var7 = this.method5490(0.0F);
+		Vector3 var7 = this.method5490(0.0F);
 		float var8 = 0.0F;
 		for (int var9 = 1; var9 <= var6; var9++) {
-			class317 var10 = this.method5490((float) var9 / (float) var6);
-			float var11 = class317.method5377(var10, var7).method5338();
+			Vector3 var10 = this.method5490((float) var9 / (float) var6);
+			float var11 = Vector3.method5377(var10, var7).method5338();
 			var8 += var11;
 			this.field3481[var9 - 1] = var11;
 			var7 = var10;

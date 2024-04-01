@@ -43,7 +43,7 @@ public class class834 extends class478 {
 	}
 
 	@ObfuscatedName("aec.at(Laet;Lajn;I)V")
-	public void method15626(class814 arg0, class962 arg1) {
+	public void method15626(Packet arg0, class962 arg1) {
 		arg0.method15308(arg1.method16842());
 	}
 
@@ -53,7 +53,7 @@ public class class834 extends class478 {
 	}
 
 	@ObfuscatedName("aec.m(Laet;Ladv;B)V")
-	public void method8356(class814 arg0, class809 arg1) {
+	public void method8356(Packet arg0, class809 arg1) {
 		this.method15626(arg0, (class962) arg1);
 	}
 }

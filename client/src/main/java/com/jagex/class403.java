@@ -23,7 +23,7 @@ public abstract class class403 {
 	public final OggSyncState field4235;
 
 	@ObfuscatedName("nw.t")
-	public final class565 field4234;
+	public final IterableMap field4234;
 
 	@ObfuscatedName("nw.l")
 	public boolean field4237;
@@ -57,7 +57,7 @@ public abstract class class403 {
 		this.field4235 = new OggSyncState();
 		this.field4236 = new OggPage();
 		this.field4230 = new OggPacket();
-		this.field4234 = new class565(8);
+		this.field4234 = new IterableMap(8);
 	}
 
 	@ObfuscatedName("nw.j(B)Ladp;")
@@ -112,7 +112,7 @@ public abstract class class403 {
 						var4 = new class960(var3);
 					}
 				}
-				this.field4234.method11927(var4, (long) var2);
+				this.field4234.pushNode(var4, (long) var2);
 				return var4;
 			} else {
 				throw new IllegalStateException();

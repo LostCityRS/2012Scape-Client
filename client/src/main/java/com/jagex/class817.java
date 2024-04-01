@@ -179,9 +179,9 @@ public class class817 extends class399 {
 			}
 			this.field9701 = var11;
 			this.field9710 = false;
-			this.field9711 = class385.field4152;
+			this.field9711 = GameShell.field4152;
 			if (this.field9707 > 3) {
-				this.field9705 = class385.field4144;
+				this.field9705 = GameShell.field4144;
 			} else {
 				this.field9705 = 0;
 			}
@@ -206,12 +206,12 @@ public class class817 extends class399 {
 					}
 					class581 var24 = (class581) var16.get(0);
 					if (var24 != null) {
-						class814 var25 = new class814(13);
+						Packet var25 = new Packet(13);
 						var25.method15274(var24.field6822);
 						var25.method15274(var24.field6820);
 						var25.method15274(var24.field6823);
-						var25.field9626 = 0;
-						this.field9725 = var25.method15337();
+						var25.pos = 0;
+						this.field9725 = var25.gjstr();
 					}
 					class581 var26 = (class581) var16.get(1);
 					if (var26 != null) {
@@ -225,7 +225,7 @@ public class class817 extends class399 {
 					if (var28 != null) {
 						this.field9727[2] = var28.field6820;
 					}
-					class814 var29 = new class814(49);
+					Packet var29 = new Packet(49);
 					for (int var30 = -2147483646; var30 <= -2147483644; var30++) {
 						class581 var31 = (class581) var16.get(var30);
 						if (var31 != null) {
@@ -235,8 +235,8 @@ public class class817 extends class399 {
 							var29.method15274(var31.field6820);
 						}
 					}
-					var29.field9626 = 0;
-					this.field9726 = var29.method15337();
+					var29.pos = 0;
+					this.field9726 = var29.gjstr();
 				}
 				String[][] var32 = HardwareInfo.getDXDiagDisplayDevicesProps();
 				if (var32 != null && var32.length > 0 && var32[0] != null) {
@@ -313,7 +313,7 @@ public class class817 extends class399 {
 	}
 
 	@ObfuscatedName("aeb.j(Laet;I)V")
-	public void method15475(class814 arg0) {
+	public void method15475(Packet arg0) {
 		arg0.method15308(6);
 		arg0.method15308(this.field9698);
 		arg0.method15308(this.field9687 ? 1 : 0);
@@ -346,11 +346,11 @@ public class class817 extends class399 {
 	@ObfuscatedName("aeb.a(I)I")
 	public int method15476() {
 		byte var1 = 38;
-		int var2 = var1 + class814.method13882(this.field9717);
-		int var3 = var2 + class814.method13882(this.field9718);
-		int var4 = var3 + class814.method13882(this.field9719);
-		int var5 = var4 + class814.method13882(this.field9720);
-		int var6 = var5 + class814.method13882(this.field9725);
-		return var6 + class814.method13882(this.field9726);
+		int var2 = var1 + Packet.method13882(this.field9717);
+		int var3 = var2 + Packet.method13882(this.field9718);
+		int var4 = var3 + Packet.method13882(this.field9719);
+		int var5 = var4 + Packet.method13882(this.field9720);
+		int var6 = var5 + Packet.method13882(this.field9725);
+		return var6 + Packet.method13882(this.field9726);
 	}
 }

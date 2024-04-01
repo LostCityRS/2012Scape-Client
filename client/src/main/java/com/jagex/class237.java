@@ -45,7 +45,7 @@ public class class237 {
 	public final int field2491;
 
 	@ObfuscatedName("ha.p")
-	public static final int field2496 = class595.method2540(16);
+	public static final int field2496 = IntMath.method2540(16);
 
 	@ObfuscatedName("ha.w")
 	public final int field2494;

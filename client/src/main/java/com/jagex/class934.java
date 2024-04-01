@@ -22,10 +22,10 @@ public class class934 extends class789 {
 	}
 
 	@ObfuscatedName("aiy.u(Laet;B)V")
-	public void method14985(class814 arg0) {
-		this.field10220 = arg0.method15219();
+	public void method14985(Packet arg0) {
+		this.field10220 = arg0.fastgstr();
 		if (this.field10220 != null) {
-			arg0.method15220();
+			arg0.g1();
 			this.field10218 = arg0.method15238();
 			this.field10219 = arg0.method15238();
 		}

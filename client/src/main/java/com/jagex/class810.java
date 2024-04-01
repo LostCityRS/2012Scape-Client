@@ -50,8 +50,8 @@ public class class810 extends class399 {
 	}
 
 	@ObfuscatedName("adu.a(I)Lko;")
-	public class317 method15209() {
-		return new class317((float) this.field9594, (float) this.field9597, (float) this.field9598);
+	public Vector3 method15209() {
+		return new Vector3((float) this.field9594, (float) this.field9597, (float) this.field9598);
 	}
 
 	public String toString() {

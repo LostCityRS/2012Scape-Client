@@ -126,9 +126,9 @@ public abstract class class81 {
 
 	@ObfuscatedName("bg.f(IIIIII[I)V")
 	public static void method2053(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int[] arg6) {
-		if (arg2 > 0 && !class595.method11258(arg2)) {
+		if (arg2 > 0 && !IntMath.method11258(arg2)) {
 			throw new IllegalArgumentException("");
-		} else if (arg3 > 0 && !class595.method11258(arg3)) {
+		} else if (arg3 > 0 && !IntMath.method11258(arg3)) {
 			throw new IllegalArgumentException("");
 		} else if (arg4 == 32993) {
 			int var7 = 0;
@@ -189,9 +189,9 @@ public abstract class class81 {
 
 	@ObfuscatedName("bg.d(IIIILcy;[B)V")
 	public static void method2054(int arg0, int arg1, int arg2, int arg3, class124 arg4, byte[] arg5) {
-		if (arg2 > 0 && !class595.method11258(arg2)) {
+		if (arg2 > 0 && !IntMath.method11258(arg2)) {
 			throw new IllegalArgumentException("");
-		} else if (arg3 <= 0 || class595.method11258(arg3)) {
+		} else if (arg3 <= 0 || IntMath.method11258(arg3)) {
 			int var6 = arg4.field1306;
 			int var7 = 0;
 			int var8 = arg2 < arg3 ? arg2 : arg3;
@@ -243,9 +243,9 @@ public abstract class class81 {
 
 	@ObfuscatedName("bg.z(IIIILcy;[F)V")
 	public static void method2059(int arg0, int arg1, int arg2, int arg3, class124 arg4, float[] arg5) {
-		if (arg2 > 0 && !class595.method11258(arg2)) {
+		if (arg2 > 0 && !IntMath.method11258(arg2)) {
 			throw new IllegalArgumentException("");
-		} else if (arg3 <= 0 || class595.method11258(arg3)) {
+		} else if (arg3 <= 0 || IntMath.method11258(arg3)) {
 			int var6 = arg4.field1306;
 			int var7 = 0;
 			int var8 = arg2 < arg3 ? arg2 : arg3;

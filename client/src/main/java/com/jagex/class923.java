@@ -17,8 +17,8 @@ public class class923 extends class787 {
 	}
 
 	@ObfuscatedName("aic.u(Laet;I)V")
-	public void method14956(class814 arg0) {
-		this.field10189 = arg0.method15239();
+	public void method14956(Packet arg0) {
+		this.field10189 = arg0.g2();
 	}
 
 	@ObfuscatedName("aic.j(Lga;B)V")

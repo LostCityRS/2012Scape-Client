@@ -102,16 +102,16 @@ public class class796 extends class399 {
 
 	@ObfuscatedName("adr.c([B)V")
 	public void method15061(byte[] arg0) throws IOException {
-		class814 var2 = new class814(arg0);
-		this.field9495 = var2.method15379();
-		this.field9480 = var2.method15379();
-		this.field9487 = var2.method15379();
-		this.field9482 = var2.method15379();
+		Packet var2 = new Packet(arg0);
+		this.field9495 = var2.g4s();
+		this.field9480 = var2.g4s();
+		this.field9487 = var2.g4s();
+		this.field9482 = var2.g4s();
 		if (this.field9482 < 0) {
 			this.field9482 = ~this.field9482;
 			this.field9483 = true;
 		}
-		int var3 = var2.method15379();
+		int var3 = var2.g4s();
 		if (var3 < 0) {
 			throw new IOException();
 		}
@@ -120,7 +120,7 @@ public class class796 extends class399 {
 			int var5 = 0;
 			int var6;
 			do {
-				var6 = var2.method15220();
+				var6 = var2.g1();
 				var5 += var6;
 			} while (var6 >= 255);
 			byte[] var7 = new byte[var5];
@@ -156,9 +156,9 @@ public class class796 extends class399 {
 				var10[var11 * 2 + 1] = -((float) Math.sin((double) (var11 * 4 + 2) * 3.141592653589793D / (double) var2));
 			}
 			int[] var12 = new int[var5];
-			int var13 = class595.method2540(var5 - 1);
+			int var13 = IntMath.method2540(var5 - 1);
 			for (int var14 = 0; var14 < var5; var14++) {
-				var12[var14] = class595.method3511(var14, var13);
+				var12[var14] = IntMath.method3511(var14, var13);
 			}
 			if (var1 == 0) {
 				Statics.field9508 = var6;
@@ -212,7 +212,7 @@ public class class796 extends class399 {
 	public float[] method15076(int arg0) {
 		method15082(this.field9496[arg0], 0);
 		method15084();
-		int var2 = method15060(class595.method2540(Statics.field9494.length - 1));
+		int var2 = method15060(IntMath.method2540(Statics.field9494.length - 1));
 		boolean var3 = Statics.field9493[var2];
 		int var4 = var3 ? Statics.field9488 : Statics.field9481;
 		boolean var5 = false;
@@ -300,7 +300,7 @@ public class class796 extends class399 {
 				var28[var40 * 4 + 3] = (var41 - var43) * var45 - (var42 - var44) * var46;
 				var28[var40 * 4 + 1] = (var41 - var43) * var46 + (var42 - var44) * var45;
 			}
-			int var47 = class595.method2540(var4 - 1);
+			int var47 = IntMath.method2540(var4 - 1);
 			for (int var48 = 0; var48 < var47 - 3; var48++) {
 				int var49 = var4 >> var48 + 2;
 				int var50 = 0x8 << var48;
@@ -418,7 +418,7 @@ public class class796 extends class399 {
 	@ObfuscatedName("adr.l(Lls;)Z")
 	public static boolean method15064(class334 arg0) {
 		if (!field9479) {
-			byte[] var1 = arg0.method5627(0, 0);
+			byte[] var1 = arg0.getFile(0, 0);
 			if (var1 == null) {
 				return false;
 			}
@@ -433,7 +433,7 @@ public class class796 extends class399 {
 			arg0.method5629(arg1, arg2);
 			return null;
 		}
-		byte[] var3 = arg0.method5627(arg1, arg2);
+		byte[] var3 = arg0.getFile(arg1, arg2);
 		if (var3 == null) {
 			return null;
 		}
@@ -472,7 +472,7 @@ public class class796 extends class399 {
 	@ObfuscatedName("adr.z()Laly;")
 	public class996 method15099() {
 		class373.method4778(this);
-		return this.method15071() && (this.field9510 <= this.field9495 || this.field9512 <= this.field9495 / class385.method2809()) ? null : new class996(this.field9495, this, this.field9509, this.field9487, this.field9482, this.field9483);
+		return this.method15071() && (this.field9510 <= this.field9495 || this.field9512 <= this.field9495 / GameShell.method2809()) ? null : new class996(this.field9495, this, this.field9509, this.field9487, this.field9482, this.field9483);
 	}
 
 	@ObfuscatedName("adr.n(I)I")

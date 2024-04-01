@@ -14,7 +14,7 @@ public class class909 extends class750 {
 	}
 
 	@ObfuscatedName("afu.n(Laet;I)Liq;")
-	public static class262 method15894(class814 arg0) {
+	public static class262 method15894(Packet arg0) {
 		class750 var1 = (class750) class750.method4623(arg0);
 		int var2 = arg0.method15240();
 		return new class909(var1.field2605, var1.field2603, var1.field2604, var1.field2608, var1.field2602, var1.field2607, var1.field2610, var1.field2609, var1.field2606, var1.field8822, var1.field8820, var1.field8821, var1.field8824, var1.field8823, var1.field8819, var2);

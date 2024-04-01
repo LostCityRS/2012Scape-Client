@@ -16,7 +16,7 @@ public class class375 {
 
 	public class375(int arg0, int arg1) {
 		if (arg0 != arg1) {
-			int var3 = class595.method5734(arg0, arg1);
+			int var3 = IntMath.method5734(arg0, arg1);
 			int var4 = arg0 / var3;
 			int var5 = arg1 / var3;
 			this.field4046 = var4;

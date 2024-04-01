@@ -6,23 +6,23 @@ import deob.ObfuscatedName;
 public class class782 extends class399 {
 
 	@ObfuscatedName("acw.s")
-	public class565 field9382;
+	public IterableMap field9382;
 
 	@ObfuscatedName("acw.c")
 	public byte[] field9381;
 
 	@ObfuscatedName("acw.u(Lls;II)Lacw;")
 	public static class782 method14909(class334 arg0, int arg1, int arg2) {
-		byte[] var3 = arg0.method5627(arg1, arg2);
-		return var3 == null ? null : new class782(new class814(var3));
+		byte[] var3 = arg0.getFile(arg1, arg2);
+		return var3 == null ? null : new class782(new Packet(var3));
 	}
 
-	public class782(class814 arg0) {
-		arg0.field9626 = arg0.field9629.length - 3;
-		int var2 = arg0.method15220();
-		int var3 = arg0.method15239();
+	public class782(Packet arg0) {
+		arg0.pos = arg0.data.length - 3;
+		int var2 = arg0.g1();
+		int var3 = arg0.g2();
 		int var4 = var2 * 10 + 14;
-		arg0.field9626 = 0;
+		arg0.pos = 0;
 		int var5 = 0;
 		int var6 = 0;
 		int var7 = 0;
@@ -34,7 +34,7 @@ public class class782 extends class399 {
 		for (int var13 = 0; var13 < var2; var13++) {
 			int var14 = -1;
 			while (true) {
-				int var15 = arg0.method15220();
+				int var15 = arg0.g1();
 				if (var14 != var15) {
 					var4++;
 				}
@@ -66,13 +66,13 @@ public class class782 extends class399 {
 		int var16 = var5 * 5 + var4;
 		int var17 = (var7 + var8 + var6 + var9 + var11) * 2 + var16;
 		int var18 = var10 + var12 + var17;
-		int var19 = arg0.field9626;
+		int var19 = arg0.pos;
 		int var20 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
 		for (int var21 = 0; var21 < var20; var21++) {
 			arg0.method15261();
 		}
-		int var22 = arg0.field9626 - var19 + var18;
-		int var23 = arg0.field9626;
+		int var22 = arg0.pos - var19 + var18;
+		int var23 = arg0.pos;
 		int var24 = 0;
 		int var25 = 0;
 		int var26 = 0;
@@ -87,7 +87,7 @@ public class class782 extends class399 {
 		int var35 = 0;
 		int var36 = 0;
 		for (int var37 = 0; var37 < var6; var37++) {
-			var36 = var36 + arg0.method15220() & 0x7F;
+			var36 = var36 + arg0.g1() & 0x7F;
 			if (var36 == 0 || var36 == 32) {
 				var12++;
 			} else if (var36 == 1) {
@@ -117,56 +117,56 @@ public class class782 extends class399 {
 			}
 		}
 		int var38 = 0;
-		int var39 = arg0.field9626;
-		arg0.field9626 += var34;
-		int var40 = arg0.field9626;
-		arg0.field9626 += var11;
-		int var41 = arg0.field9626;
-		arg0.field9626 += var10;
-		int var42 = arg0.field9626;
-		arg0.field9626 += var9;
-		int var43 = arg0.field9626;
-		arg0.field9626 += var24;
-		int var44 = arg0.field9626;
-		arg0.field9626 += var26;
-		int var45 = arg0.field9626;
-		arg0.field9626 += var28;
-		int var46 = arg0.field9626;
-		arg0.field9626 += var7 + var8 + var11;
-		int var47 = arg0.field9626;
-		arg0.field9626 += var7;
-		int var48 = arg0.field9626;
-		arg0.field9626 += var35;
-		int var49 = arg0.field9626;
-		arg0.field9626 += var8;
-		int var50 = arg0.field9626;
-		arg0.field9626 += var25;
-		int var51 = arg0.field9626;
-		arg0.field9626 += var27;
-		int var52 = arg0.field9626;
-		arg0.field9626 += var29;
-		int var53 = arg0.field9626;
-		arg0.field9626 += var12;
-		int var54 = arg0.field9626;
-		arg0.field9626 += var9;
-		int var55 = arg0.field9626;
-		arg0.field9626 += var30;
-		int var56 = arg0.field9626;
-		arg0.field9626 += var31;
-		int var57 = arg0.field9626;
-		arg0.field9626 += var32;
-		int var58 = arg0.field9626;
-		arg0.field9626 += var33;
-		int var59 = arg0.field9626;
-		arg0.field9626 += var5 * 3;
+		int var39 = arg0.pos;
+		arg0.pos += var34;
+		int var40 = arg0.pos;
+		arg0.pos += var11;
+		int var41 = arg0.pos;
+		arg0.pos += var10;
+		int var42 = arg0.pos;
+		arg0.pos += var9;
+		int var43 = arg0.pos;
+		arg0.pos += var24;
+		int var44 = arg0.pos;
+		arg0.pos += var26;
+		int var45 = arg0.pos;
+		arg0.pos += var28;
+		int var46 = arg0.pos;
+		arg0.pos += var7 + var8 + var11;
+		int var47 = arg0.pos;
+		arg0.pos += var7;
+		int var48 = arg0.pos;
+		arg0.pos += var35;
+		int var49 = arg0.pos;
+		arg0.pos += var8;
+		int var50 = arg0.pos;
+		arg0.pos += var25;
+		int var51 = arg0.pos;
+		arg0.pos += var27;
+		int var52 = arg0.pos;
+		arg0.pos += var29;
+		int var53 = arg0.pos;
+		arg0.pos += var12;
+		int var54 = arg0.pos;
+		arg0.pos += var9;
+		int var55 = arg0.pos;
+		arg0.pos += var30;
+		int var56 = arg0.pos;
+		arg0.pos += var31;
+		int var57 = arg0.pos;
+		arg0.pos += var32;
+		int var58 = arg0.pos;
+		arg0.pos += var33;
+		int var59 = arg0.pos;
+		arg0.pos += var5 * 3;
 		this.field9381 = new byte[var22];
-		class814 var60 = new class814(this.field9381);
+		Packet var60 = new Packet(this.field9381);
 		var60.method15223(1297377380);
 		var60.method15223(6);
 		var60.method15287(var2 > 1 ? 1 : 0);
 		var60.method15287(var2);
 		var60.method15287(var3);
-		arg0.field9626 = var19;
+		arg0.pos = var19;
 		int var61 = 0;
 		int var62 = 0;
 		int var63 = 0;
@@ -178,14 +178,14 @@ public class class782 extends class399 {
 		int var69 = 0;
 		label223: for (int var70 = 0; var70 < var2; var70++) {
 			var60.method15223(1297379947);
-			var60.field9626 += 4;
-			int var71 = var60.field9626;
+			var60.pos += 4;
+			int var71 = var60.pos;
 			int var72 = -1;
 			while (true) {
 				while (true) {
 					int var73 = arg0.method15261();
 					var60.method15315(var73);
-					int var74 = arg0.field9629[var38++] & 0xFF;
+					int var74 = arg0.data[var38++] & 0xFF;
 					boolean var75 = var72 != var74;
 					var72 = var74 & 0xF;
 					if (var74 == 7) {
@@ -194,7 +194,7 @@ public class class782 extends class399 {
 						}
 						var60.method15308(47);
 						var60.method15308(0);
-						var60.method15256(var60.field9626 - var71);
+						var60.method15256(var60.pos - var71);
 						continue label223;
 					}
 					if (var74 == 23) {
@@ -203,60 +203,60 @@ public class class782 extends class399 {
 						}
 						var60.method15308(81);
 						var60.method15308(3);
-						var60.method15308(arg0.field9629[var59++]);
-						var60.method15308(arg0.field9629[var59++]);
-						var60.method15308(arg0.field9629[var59++]);
+						var60.method15308(arg0.data[var59++]);
+						var60.method15308(arg0.data[var59++]);
+						var60.method15308(arg0.data[var59++]);
 					} else {
 						var61 ^= var74 >> 4;
 						if (var72 == 0) {
 							if (var75) {
 								var60.method15308(var61 + 144);
 							}
-							var62 += arg0.field9629[var46++];
-							var63 += arg0.field9629[var47++];
+							var62 += arg0.data[var46++];
+							var63 += arg0.data[var47++];
 							var60.method15308(var62 & 0x7F);
 							var60.method15308(var63 & 0x7F);
 						} else if (var72 == 1) {
 							if (var75) {
 								var60.method15308(var61 + 128);
 							}
-							var62 += arg0.field9629[var46++];
-							var64 += arg0.field9629[var49++];
+							var62 += arg0.data[var46++];
+							var64 += arg0.data[var49++];
 							var60.method15308(var62 & 0x7F);
 							var60.method15308(var64 & 0x7F);
 						} else if (var72 == 2) {
 							if (var75) {
 								var60.method15308(var61 + 176);
 							}
-							var69 = var69 + arg0.field9629[var23++] & 0x7F;
+							var69 = var69 + arg0.data[var23++] & 0x7F;
 							var60.method15308(var69);
 							byte var76;
 							if (var69 == 0 || var69 == 32) {
-								var76 = arg0.field9629[var53++];
+								var76 = arg0.data[var53++];
 							} else if (var69 == 1) {
-								var76 = arg0.field9629[var43++];
+								var76 = arg0.data[var43++];
 							} else if (var69 == 33) {
-								var76 = arg0.field9629[var50++];
+								var76 = arg0.data[var50++];
 							} else if (var69 == 7) {
-								var76 = arg0.field9629[var44++];
+								var76 = arg0.data[var44++];
 							} else if (var69 == 39) {
-								var76 = arg0.field9629[var51++];
+								var76 = arg0.data[var51++];
 							} else if (var69 == 10) {
-								var76 = arg0.field9629[var45++];
+								var76 = arg0.data[var45++];
 							} else if (var69 == 42) {
-								var76 = arg0.field9629[var52++];
+								var76 = arg0.data[var52++];
 							} else if (var69 == 99) {
-								var76 = arg0.field9629[var55++];
+								var76 = arg0.data[var55++];
 							} else if (var69 == 98) {
-								var76 = arg0.field9629[var56++];
+								var76 = arg0.data[var56++];
 							} else if (var69 == 101) {
-								var76 = arg0.field9629[var57++];
+								var76 = arg0.data[var57++];
 							} else if (var69 == 100) {
-								var76 = arg0.field9629[var58++];
+								var76 = arg0.data[var58++];
 							} else if (var69 == 64 || var69 == 65 || var69 == 120 || var69 == 121 || var69 == 123) {
-								var76 = arg0.field9629[var39++];
+								var76 = arg0.data[var39++];
 							} else {
-								var76 = arg0.field9629[var48++];
+								var76 = arg0.data[var48++];
 							}
 							int var77 = var68[var69] + var76;
 							var68[var69] = var77;
@@ -265,29 +265,29 @@ public class class782 extends class399 {
 							if (var75) {
 								var60.method15308(var61 + 224);
 							}
-							int var78 = var65 + arg0.field9629[var54++];
-							var65 = var78 + (arg0.field9629[var42++] << 7);
+							int var78 = var65 + arg0.data[var54++];
+							var65 = var78 + (arg0.data[var42++] << 7);
 							var60.method15308(var65 & 0x7F);
 							var60.method15308(var65 >> 7 & 0x7F);
 						} else if (var72 == 4) {
 							if (var75) {
 								var60.method15308(var61 + 208);
 							}
-							var66 += arg0.field9629[var41++];
+							var66 += arg0.data[var41++];
 							var60.method15308(var66 & 0x7F);
 						} else if (var72 == 5) {
 							if (var75) {
 								var60.method15308(var61 + 160);
 							}
-							var62 += arg0.field9629[var46++];
-							var67 += arg0.field9629[var40++];
+							var62 += arg0.data[var46++];
+							var67 += arg0.data[var40++];
 							var60.method15308(var62 & 0x7F);
 							var60.method15308(var67 & 0x7F);
 						} else if (var72 == 6) {
 							if (var75) {
 								var60.method15308(var61 + 192);
 							}
-							var60.method15308(arg0.field9629[var53++]);
+							var60.method15308(arg0.data[var53++]);
 						} else {
 							throw new RuntimeException();
 						}
@@ -302,7 +302,7 @@ public class class782 extends class399 {
 		if (this.field9382 != null) {
 			return;
 		}
-		this.field9382 = new class565(16);
+		this.field9382 = new IterableMap(16);
 		int[] var1 = new int[16];
 		int[] var2 = new int[16];
 		var2[9] = 128;
@@ -352,7 +352,7 @@ public class class782 extends class399 {
 							class798 var20 = (class798) this.field9382.method11923((long) var19);
 							if (var20 == null) {
 								var20 = new class798(new byte[128]);
-								this.field9382.method11927(var20, (long) var19);
+								this.field9382.pushNode(var20, (long) var19);
 							}
 							((byte[]) var20.field9550)[var17] = 1;
 						}

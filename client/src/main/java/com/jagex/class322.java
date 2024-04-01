@@ -12,14 +12,14 @@ public class class322 {
 	public float[] field3485 = new float[2];
 
 	@ObfuscatedName("kz.u(Lko;Lko;F)V")
-	public void method5526(class317 arg0, class317 arg1, float arg2) {
+	public void method5526(Vector3 arg0, Vector3 arg1, float arg2) {
 		class321[] var4 = new class321[this.field3484.length + 1];
 		System.arraycopy(this.field3484, 0, var4, 0, this.field3484.length);
 		class321 var5 = new class321();
 		class321 var6 = this.field3484[this.field3484.length - 1];
 		var5.method5492(0, var6.method5493(3));
-		class317 var7 = class317.method5377(var6.method5493(3), var6.method5493(2));
-		var5.method5492(1, class317.method5301(var6.method5493(3), var7));
+		Vector3 var7 = Vector3.method5377(var6.method5493(3), var6.method5493(2));
+		var5.method5492(1, Vector3.method5301(var6.method5493(3), var7));
 		var5.method5492(3, arg0);
 		var5.method5492(2, arg1);
 		var4[var4.length - 1] = var5;
@@ -45,7 +45,7 @@ public class class322 {
 	}
 
 	@ObfuscatedName("kz.s(F)Lko;")
-	public class317 method5528(float arg0) {
+	public Vector3 method5528(float arg0) {
 		float var2 = 0.0F;
 		float var3 = 0.0F;
 		for (int var4 = 0; var4 < this.field3484.length; var4++) {
@@ -74,7 +74,7 @@ public class class322 {
 	}
 
 	@ObfuscatedName("kz.m(F)Lko;")
-	public class317 method5517(float arg0) {
+	public Vector3 method5517(float arg0) {
 		int var2 = (int) arg0;
 		return var2 < this.field3484.length ? this.field3484[var2].method5490(arg0 - (float) var2) : this.field3484[this.field3484.length - 1].method5490(1.0F);
 	}
@@ -117,18 +117,18 @@ public class class322 {
 		}
 	}
 
-	public class322(class814 arg0) {
+	public class322(Packet arg0) {
 		int var2 = arg0.method15277();
 		this.field3484[0] = new class321();
-		this.field3484[0].method5492(0, new class317(arg0));
-		this.field3484[0].method5492(1, new class317(arg0));
+		this.field3484[0].method5492(0, new Vector3(arg0));
+		this.field3484[0].method5492(1, new Vector3(arg0));
 		this.field3485[0] = arg0.method15324();
-		this.field3484[0].method5492(3, new class317(arg0));
-		this.field3484[0].method5492(2, new class317(arg0));
+		this.field3484[0].method5492(3, new Vector3(arg0));
+		this.field3484[0].method5492(2, new Vector3(arg0));
 		this.field3485[1] = arg0.method15324();
 		for (int var3 = 2; var3 < var2; var3++) {
-			class317 var4 = new class317(arg0);
-			class317 var5 = new class317(arg0);
+			Vector3 var4 = new Vector3(arg0);
+			Vector3 var5 = new Vector3(arg0);
 			this.method5526(var4, var5, arg0.method15324());
 		}
 	}

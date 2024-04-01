@@ -9,16 +9,16 @@ public class class632 {
 	public class264[] field7395;
 
 	@ObfuscatedName("wb.u(Laet;I)V")
-	public void method12719(class814 arg0) {
-		this.field7395 = new class264[arg0.method15220()];
+	public void method12719(Packet arg0) {
+		this.field7395 = new class264[arg0.g1()];
 		class266[] var2 = class266.method8288();
 		for (int var3 = 0; var3 < this.field7395.length; var3++) {
-			this.field7395[var3] = this.method12720(arg0, var2[arg0.method15220()]);
+			this.field7395[var3] = this.method12720(arg0, var2[arg0.g1()]);
 		}
 	}
 
 	@ObfuscatedName("wb.j(Laet;Lio;B)Lij;")
-	public class264 method12720(class814 arg0, class266 arg1) {
+	public class264 method12720(Packet arg0, class266 arg1) {
 		if (class266.field2623 == arg1) {
 			return class260.method11849(arg0);
 		} else if (class266.field2620 == arg1) {

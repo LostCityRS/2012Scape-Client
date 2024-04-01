@@ -14,7 +14,7 @@ public class class292 {
 	public final class334 field3302;
 
 	@ObfuscatedName("je.a")
-	public final class451 field3303 = new class451(20);
+	public final WeightedCache field3303 = new WeightedCache(20);
 
 	@ObfuscatedName("je.s")
 	public final int[] field3304;

@@ -52,16 +52,16 @@ public class class165 {
 	public static int field1751 = 1409;
 
 	@ObfuscatedName("ew.r")
-	public static class451 field1757 = new class451(3000000, 200);
+	public static WeightedCache field1757 = new WeightedCache(3000000, 200);
 
 	@ObfuscatedName("ew.g")
-	public static class451 field1768 = new class451(8);
+	public static WeightedCache field1768 = new WeightedCache(8);
 
 	@ObfuscatedName("ew.y")
-	public static class451 field1745 = new class451(4);
+	public static WeightedCache field1745 = new WeightedCache(4);
 
 	@ObfuscatedName("ew.e")
-	public static class451 field1760 = new class451(50);
+	public static WeightedCache field1760 = new WeightedCache(50);
 
 	@ObfuscatedName("ew.af")
 	public static boolean field1761 = false;
@@ -73,13 +73,13 @@ public class class165 {
 	public int field1850;
 
 	@ObfuscatedName("ew.ap")
-	public int field1764 = -1;
+	public int parentLayer = -1;
 
 	@ObfuscatedName("ew.ag")
-	public int field1765 = -1;
+	public int id = -1;
 
 	@ObfuscatedName("ew.as")
-	public int field1766;
+	public int type;
 
 	@ObfuscatedName("ew.ai")
 	public int field1767 = 0;
@@ -127,7 +127,7 @@ public class class165 {
 	public int field1781 = 1;
 
 	@ObfuscatedName("ew.ae")
-	public int field1886 = -1;
+	public int layer = -1;
 
 	@ObfuscatedName("ew.ac")
 	public boolean field1807 = false;
@@ -355,7 +355,7 @@ public class class165 {
 	public boolean field1861 = false;
 
 	@ObfuscatedName("ew.dm")
-	public Object[] field1862;
+	public Object[] onLoad;
 
 	@ObfuscatedName("ew.dq")
 	public Object[] field1912;
@@ -475,7 +475,7 @@ public class class165 {
 	public Object[] field1778;
 
 	@ObfuscatedName("ew.fo")
-	public class565 field1902;
+	public IterableMap field1902;
 
 	@ObfuscatedName("ew.fm")
 	public int field1903 = -1;
@@ -514,10 +514,10 @@ public class class165 {
 	public class553 field1789;
 
 	@ObfuscatedName("ew.ft")
-	public class165[] field1915;
+	public class165[] subcomponents;
 
 	@ObfuscatedName("ew.gw")
-	public class165[] field1918;
+	public class165[] sortedsubcomponents;
 
 	@ObfuscatedName("ew.gn")
 	public boolean field1917 = false;
@@ -564,18 +564,18 @@ public class class165 {
 	@ObfuscatedName("tk.j(IB)Lew;")
 	public static class165 method11381(int arg0) {
 		int var1 = arg0 >> 16;
-		if (Statics.field1756[var1] == null || Statics.field1756[var1].method3108(arg0) == null) {
-			boolean var2 = method6404(var1, null);
+		if (Statics.interfaces[var1] == null || Statics.interfaces[var1].method3108(arg0) == null) {
+			boolean var2 = openInterface(var1, null);
 			if (!var2) {
 				return null;
 			}
 		}
-		return Statics.field1756[var1].method3108(arg0);
+		return Statics.interfaces[var1].method3108(arg0);
 	}
 
 	@ObfuscatedName("adf.a(II)Lej;")
 	public static class164 method14993(int arg0) {
-		return Statics.field1756[arg0 >> 16];
+		return Statics.interfaces[arg0 >> 16];
 	}
 
 	@ObfuscatedName("adi.s(III)Lew;")
@@ -583,20 +583,20 @@ public class class165 {
 		class165 var2 = method11381(arg0);
 		if (arg1 == -1) {
 			return var2;
-		} else if (var2 == null || var2.field1915 == null || arg1 >= var2.field1915.length) {
+		} else if (var2 == null || var2.subcomponents == null || arg1 >= var2.subcomponents.length) {
 			return null;
 		} else {
-			return var2.field1915[arg1];
+			return var2.subcomponents[arg1];
 		}
 	}
 
 	@ObfuscatedName("mq.c(I[II)Z")
-	public static boolean method6404(int arg0, int[] arg1) {
+	public static boolean openInterface(int arg0, int[] arg1) {
 		if (Statics.field1834[arg0]) {
 			return true;
 		}
-		Statics.field1756[arg0] = method3971(arg0, arg1, Statics.field1756[arg0], false);
-		if (Statics.field1756[arg0] == null) {
+		Statics.interfaces[arg0] = method3971(arg0, arg1, Statics.interfaces[arg0], false);
+		if (Statics.interfaces[arg0] == null) {
 			return false;
 		} else {
 			Statics.field1834[arg0] = true;
@@ -616,21 +616,21 @@ public class class165 {
 		} else if (arg2 == null) {
 			var5 = new class165[var4];
 		} else {
-			var5 = arg2.field1732;
+			var5 = arg2.components;
 		}
 		if (arg2 == null) {
 			arg2 = new class164(arg3, var5);
 		} else {
-			arg2.field1732 = var5;
+			arg2.components = var5;
 			arg2.field1734 = arg3;
 		}
 		for (int var6 = 0; var6 < var4; var6++) {
-			if (arg2.field1732[var6] == null) {
+			if (arg2.components[var6] == null) {
 				byte[] var7 = Statics.field1928.method5699(arg0, var6, arg1);
 				if (var7 != null) {
-					class165 var8 = arg2.field1732[var6] = new class165();
-					var8.field1764 = (arg0 << 16) + var6;
-					var8.method3112(new class814(var7));
+					class165 var8 = arg2.components[var6] = new class165();
+					var8.parentLayer = (arg0 << 16) + var6;
+					var8.method3112(new Packet(var7));
 				}
 			}
 		}
@@ -641,7 +641,7 @@ public class class165 {
 	public static void method7691(int arg0) {
 		if (arg0 != -1 && !Statics.field1834[arg0]) {
 			Statics.field1928.method5639(arg0);
-			Statics.field1756[arg0] = null;
+			Statics.interfaces[arg0] = null;
 		}
 	}
 
@@ -652,63 +652,63 @@ public class class165 {
 	}
 
 	@ObfuscatedName("ew.f(Laet;I)V")
-	public void method3112(class814 arg0) {
-		int var2 = arg0.method15220();
+	public void method3112(Packet arg0) {
+		int var2 = arg0.g1();
 		if (var2 == 255) {
 			var2 = -1;
 		}
-		this.field1766 = arg0.method15220();
-		if ((this.field1766 & 0x80) != 0) {
-			this.field1766 &= 0x7F;
-			this.field1762 = arg0.method15337();
+		this.type = arg0.g1();
+		if ((this.type & 0x80) != 0) {
+			this.type &= 0x7F;
+			this.field1762 = arg0.gjstr();
 		}
-		this.field1767 = arg0.method15239();
+		this.field1767 = arg0.g2();
 		this.field1772 = arg0.method15240();
 		this.field1774 = arg0.method15240();
-		this.field1910 = arg0.method15239();
-		this.field1775 = arg0.method15239();
+		this.field1910 = arg0.g2();
+		this.field1775 = arg0.g2();
 		this.field1856 = arg0.method15238();
 		this.field1771 = arg0.method15238();
 		this.field1829 = arg0.method15238();
 		this.field1769 = arg0.method15238();
-		this.field1886 = arg0.method15239();
-		if (this.field1886 == 65535) {
-			this.field1886 = -1;
+		this.layer = arg0.g2();
+		if (this.layer == 65535) {
+			this.layer = -1;
 		} else {
-			this.field1886 += this.field1764 & 0xFFFF0000;
+			this.layer += this.parentLayer & 0xFFFF0000;
 		}
-		int var3 = arg0.method15220();
+		int var3 = arg0.g1();
 		this.field1807 = (var3 & 0x1) != 0;
 		if (var2 >= 0) {
 			this.field1787 = (var3 & 0x2) != 0;
 		}
-		if (this.field1766 == 0) {
-			this.field1790 = arg0.method15239();
-			this.field1894 = arg0.method15239();
+		if (this.type == 0) {
+			this.field1790 = arg0.g2();
+			this.field1894 = arg0.g2();
 			if (var2 < 0) {
-				this.field1787 = arg0.method15220() == 1;
+				this.field1787 = arg0.g1() == 1;
 			}
 		}
-		if (this.field1766 == 5) {
-			this.field1797 = arg0.method15379();
-			this.field1783 = arg0.method15239();
-			int var4 = arg0.method15220();
+		if (this.type == 5) {
+			this.field1797 = arg0.g4s();
+			this.field1783 = arg0.g2();
+			int var4 = arg0.g1();
 			this.field1799 = (var4 & 0x1) != 0;
 			this.field1804 = (var4 & 0x2) != 0;
-			this.field1794 = arg0.method15220();
-			this.field1800 = arg0.method15220();
-			this.field1801 = arg0.method15379();
-			this.field1770 = arg0.method15220() == 1;
-			this.field1803 = arg0.method15220() == 1;
-			this.field1792 = arg0.method15379();
+			this.field1794 = arg0.g1();
+			this.field1800 = arg0.g1();
+			this.field1801 = arg0.g4s();
+			this.field1770 = arg0.g1() == 1;
+			this.field1803 = arg0.g1() == 1;
+			this.field1792 = arg0.g4s();
 			if (var2 >= 3) {
-				this.field1805 = arg0.method15220() == 1;
+				this.field1805 = arg0.g1() == 1;
 			}
 		}
-		if (this.field1766 == 6) {
+		if (this.type == 6) {
 			this.field1806 = 1;
 			this.field1838 = arg0.method15411();
-			int var5 = arg0.method15220();
+			int var5 = arg0.g1();
 			boolean var6 = (var5 & 0x1) == 1;
 			this.field1816 = (var5 & 0x2) == 2;
 			this.field1821 = (var5 & 0x4) == 4;
@@ -716,55 +716,55 @@ public class class165 {
 			if (var6) {
 				this.field1811 = arg0.method15240();
 				this.field1916 = arg0.method15240();
-				this.field1812 = arg0.method15239();
-				this.field1813 = arg0.method15239();
-				this.field1814 = arg0.method15239();
-				this.field1818 = arg0.method15239();
+				this.field1812 = arg0.g2();
+				this.field1813 = arg0.g2();
+				this.field1814 = arg0.g2();
+				this.field1818 = arg0.g2();
 			} else if (this.field1816) {
 				this.field1811 = arg0.method15240();
 				this.field1916 = arg0.method15240();
 				this.field1817 = arg0.method15240();
-				this.field1812 = arg0.method15239();
-				this.field1813 = arg0.method15239();
-				this.field1814 = arg0.method15239();
+				this.field1812 = arg0.g2();
+				this.field1813 = arg0.g2();
+				this.field1814 = arg0.g2();
 				this.field1818 = arg0.method15240();
 			}
 			this.field1747 = arg0.method15411();
 			if (this.field1856 != 0) {
-				this.field1819 = arg0.method15239();
+				this.field1819 = arg0.g2();
 			}
 			if (this.field1771 != 0) {
-				this.field1895 = arg0.method15239();
+				this.field1895 = arg0.g2();
 			}
 		}
-		if (this.field1766 == 4) {
+		if (this.type == 4) {
 			this.field1793 = arg0.method15411();
 			if (var2 >= 2) {
-				this.field1833 = arg0.method15220() == 1;
+				this.field1833 = arg0.g1() == 1;
 			}
-			this.field1825 = arg0.method15337();
-			this.field1835 = arg0.method15220();
-			this.field1836 = arg0.method15220();
-			this.field1837 = arg0.method15220();
-			this.field1901 = arg0.method15220() == 1;
-			this.field1792 = arg0.method15379();
-			this.field1794 = arg0.method15220();
+			this.field1825 = arg0.gjstr();
+			this.field1835 = arg0.g1();
+			this.field1836 = arg0.g1();
+			this.field1837 = arg0.g1();
+			this.field1901 = arg0.g1() == 1;
+			this.field1792 = arg0.g4s();
+			this.field1794 = arg0.g1();
 			if (var2 >= 0) {
-				this.field1839 = arg0.method15220();
+				this.field1839 = arg0.g1();
 			}
 		}
-		if (this.field1766 == 3) {
-			this.field1792 = arg0.method15379();
-			this.field1741 = arg0.method15220() == 1;
-			this.field1794 = arg0.method15220();
+		if (this.type == 3) {
+			this.field1792 = arg0.g4s();
+			this.field1741 = arg0.g1() == 1;
+			this.field1794 = arg0.g1();
 		}
-		if (this.field1766 == 9) {
-			this.field1791 = arg0.method15220();
-			this.field1792 = arg0.method15379();
-			this.field1796 = arg0.method15220() == 1;
+		if (this.type == 9) {
+			this.field1791 = arg0.g1();
+			this.field1792 = arg0.g4s();
+			this.field1796 = arg0.g1() == 1;
 		}
 		int var7 = arg0.method15241();
-		int var8 = arg0.method15220();
+		int var8 = arg0.g1();
 		if (var8 != 0) {
 			this.field1905 = new byte[11][];
 			this.field1844 = new byte[11][];
@@ -772,7 +772,7 @@ public class class165 {
 			this.field1846 = new int[11];
 			while (var8 != 0) {
 				int var9 = (var8 >> 4) - 1;
-				int var10 = var8 << 8 | arg0.method15220();
+				int var10 = var8 << 8 | arg0.g1();
 				int var11 = var10 & 0xFFF;
 				if (var11 == 4095) {
 					var11 = -1;
@@ -785,76 +785,76 @@ public class class165 {
 				this.field1845[var9] = var11;
 				this.field1905[var9] = new byte[] { var12 };
 				this.field1844[var9] = new byte[] { var13 };
-				var8 = arg0.method15220();
+				var8 = arg0.g1();
 			}
 		}
-		this.field1795 = arg0.method15337();
-		int var14 = arg0.method15220();
+		this.field1795 = arg0.gjstr();
+		int var14 = arg0.g1();
 		int var15 = var14 & 0xF;
 		int var16 = var14 >> 4;
 		if (var15 > 0) {
 			this.field1852 = new String[var15];
 			for (int var17 = 0; var17 < var15; var17++) {
-				this.field1852[var17] = arg0.method15337();
+				this.field1852[var17] = arg0.gjstr();
 			}
 		}
 		if (var16 > 0) {
-			int var18 = arg0.method15220();
+			int var18 = arg0.g1();
 			this.field1854 = new int[var18 + 1];
 			for (int var19 = 0; var19 < this.field1854.length; var19++) {
 				this.field1854[var19] = -1;
 			}
-			this.field1854[var18] = arg0.method15239();
+			this.field1854[var18] = arg0.g2();
 		}
 		if (var16 > 1) {
-			int var20 = arg0.method15220();
-			this.field1854[var20] = arg0.method15239();
+			int var20 = arg0.g1();
+			this.field1854[var20] = arg0.g2();
 		}
-		this.field1853 = arg0.method15337();
+		this.field1853 = arg0.gjstr();
 		if (this.field1853.equals("")) {
 			this.field1853 = null;
 		}
-		this.field1848 = arg0.method15220();
-		this.field1870 = arg0.method15220();
-		this.field1859 = arg0.method15220();
-		this.field1914 = arg0.method15337();
+		this.field1848 = arg0.g1();
+		this.field1870 = arg0.g1();
+		this.field1859 = arg0.g1();
+		this.field1914 = arg0.gjstr();
 		int var21 = -1;
 		if (class785.method15568(var7) != 0) {
-			var21 = arg0.method15239();
+			var21 = arg0.g2();
 			if (var21 == 65535) {
 				var21 = -1;
 			}
-			this.field1827 = arg0.method15239();
+			this.field1827 = arg0.g2();
 			if (this.field1827 == 65535) {
 				this.field1827 = -1;
 			}
-			this.field1763 = arg0.method15239();
+			this.field1763 = arg0.g2();
 			if (this.field1763 == 65535) {
 				this.field1763 = -1;
 			}
 		}
 		if (var2 >= 0) {
-			this.field1786 = arg0.method15239();
+			this.field1786 = arg0.g2();
 			if (this.field1786 == 65535) {
 				this.field1786 = -1;
 			}
 		}
 		this.field1841 = new class785(var7, var21);
 		if (var2 >= 0) {
-			int var22 = arg0.method15220();
+			int var22 = arg0.g1();
 			for (int var23 = 0; var23 < var22; var23++) {
 				int var24 = arg0.method15241();
-				int var25 = arg0.method15379();
-				this.field1902.method11927(new class802(var25), (long) var24);
+				int var25 = arg0.g4s();
+				this.field1902.pushNode(new IntNode(var25), (long) var24);
 			}
-			int var26 = arg0.method15220();
+			int var26 = arg0.g1();
 			for (int var27 = 0; var27 < var26; var27++) {
 				int var28 = arg0.method15241();
-				String var29 = arg0.method15366();
-				this.field1902.method11927(new class798(var29), (long) var28);
+				String var29 = arg0.gjstr2();
+				this.field1902.pushNode(new class798(var29), (long) var28);
 			}
 		}
-		this.field1862 = this.method3198(arg0);
+		this.onLoad = this.method3198(arg0);
 		this.field1867 = this.method3198(arg0);
 		this.field1888 = this.method3198(arg0);
 		this.field1873 = this.method3198(arg0);
@@ -885,18 +885,18 @@ public class class165 {
 	}
 
 	@ObfuscatedName("ew.d(Laet;I)[Ljava/lang/Object;")
-	public Object[] method3198(class814 arg0) {
-		int var2 = arg0.method15220();
+	public Object[] method3198(Packet arg0) {
+		int var2 = arg0.g1();
 		if (var2 == 0) {
 			return null;
 		}
 		Object[] var3 = new Object[var2];
 		for (int var4 = 0; var4 < var2; var4++) {
-			int var5 = arg0.method15220();
+			int var5 = arg0.g1();
 			if (var5 == 0) {
-				var3[var4] = Integer.valueOf(arg0.method15379());
+				var3[var4] = Integer.valueOf(arg0.g4s());
 			} else if (var5 == 1) {
-				var3[var4] = arg0.method15337();
+				var3[var4] = arg0.gjstr();
 			}
 		}
 		this.field1861 = true;
@@ -904,14 +904,14 @@ public class class165 {
 	}
 
 	@ObfuscatedName("ew.z(Laet;I)[I")
-	public int[] method3114(class814 arg0) {
-		int var2 = arg0.method15220();
+	public int[] method3114(Packet arg0) {
+		int var2 = arg0.g1();
 		if (var2 == 0) {
 			return null;
 		}
 		int[] var3 = new int[var2];
 		for (int var4 = 0; var4 < var2; var4++) {
-			var3[var4] = arg0.method15379();
+			var3[var4] = arg0.g4s();
 		}
 		return var3;
 	}
@@ -981,7 +981,7 @@ public class class165 {
 				arg1 |= arg8.method11779();
 			}
 			long var12 = -1L;
-			long[] var14 = class814.field9628;
+			long[] var14 = Packet.field9628;
 			if (this.field1754 != null) {
 				for (int var15 = 0; var15 < this.field1754.length; var15++) {
 					long var16 = var12 >>> 8 ^ var14[(int) ((var12 ^ (long) (this.field1754[var15] >> 8)) & 0xFFL)];
@@ -1146,7 +1146,7 @@ public class class165 {
 
 	@ObfuscatedName("ew.r(I)V")
 	public void method3156() {
-		this.field1862 = null;
+		this.onLoad = null;
 		this.field1912 = null;
 		this.field1864 = null;
 		this.field1773 = null;
@@ -1218,7 +1218,7 @@ public class class165 {
 
 	@ObfuscatedName("ew.e(Lra;B)Les;")
 	public class163 method3124(class14 arg0) {
-		long var2 = (long) this.field1764 << 32 | (long) this.field1765 & 0xFFFFFFFFL;
+		long var2 = (long) this.parentLayer << 32 | (long) this.id & 0xFFFFFFFFL;
 		class163 var4 = (class163) field1768.method7916(var2);
 		if (var4 != null) {
 			if (this.field1797 != var4.field1731) {
@@ -1270,7 +1270,7 @@ public class class165 {
 		if (this.field1902 == null) {
 			return arg1;
 		} else {
-			class802 var3 = (class802) this.field1902.method11923((long) arg0);
+			IntNode var3 = (IntNode) this.field1902.method11923((long) arg0);
 			return var3 == null ? arg1 : var3.field9556;
 		}
 	}
@@ -1288,13 +1288,13 @@ public class class165 {
 	@ObfuscatedName("ew.ar(IIB)V")
 	public void method3127(int arg0, int arg1) {
 		if (this.field1902 == null) {
-			this.field1902 = new class565(16);
-			this.field1902.method11927(new class802(arg1), (long) arg0);
+			this.field1902 = new IterableMap(16);
+			this.field1902.pushNode(new IntNode(arg1), (long) arg0);
 			return;
 		}
-		class802 var3 = (class802) this.field1902.method11923((long) arg0);
+		IntNode var3 = (IntNode) this.field1902.method11923((long) arg0);
 		if (var3 == null) {
-			this.field1902.method11927(new class802(arg1), (long) arg0);
+			this.field1902.pushNode(new IntNode(arg1), (long) arg0);
 		} else {
 			var3.field9556 = arg1;
 		}
@@ -1303,15 +1303,15 @@ public class class165 {
 	@ObfuscatedName("ew.an(ILjava/lang/String;B)V")
 	public void method3128(int arg0, String arg1) {
 		if (this.field1902 == null) {
-			this.field1902 = new class565(16);
-			this.field1902.method11927(new class798(arg1), (long) arg0);
+			this.field1902 = new IterableMap(16);
+			this.field1902.pushNode(new class798(arg1), (long) arg0);
 			return;
 		}
 		class798 var3 = (class798) this.field1902.method11923((long) arg0);
 		if (var3 != null) {
 			var3.method6979();
 		}
-		this.field1902.method11927(new class798(arg1), (long) arg0);
+		this.field1902.pushNode(new class798(arg1), (long) arg0);
 	}
 
 	@ObfuscatedName("ew.ap(IB)V")

@@ -58,7 +58,7 @@ public class class326 {
 			class587.field6857.method12193(new class324(Statics.field8734));
 			class587.field6854.method12193(new class323(Statics.field3523, "huffman"));
 			class587.field6846.method12193(new class324(Statics.field2653));
-			class587.field6860.method12193(new class324(Statics.field6651));
+			class587.field6860.method12193(new class324(Statics.clientScriptsJs5));
 			class587.field6861.method12193(new class324(Statics.field8745));
 			class587.field6849.method12193(new class325(Statics.field4059, "details"));
 			for (int var1 = 0; var1 < Statics.field3496.length; var1++) {

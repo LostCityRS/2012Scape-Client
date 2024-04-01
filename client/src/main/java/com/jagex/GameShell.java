@@ -10,7 +10,6 @@ import java.awt.Font;
 import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Insets;
-import java.awt.LayoutManager;
 import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -18,14 +17,13 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-import java.awt.image.ImageObserver;
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.net.URL;
 
 @ObfuscatedName("nv")
-public abstract class class385 implements class388, Runnable, FocusListener, WindowListener {
+public abstract class GameShell implements GameShellStub, Runnable, FocusListener, WindowListener {
 
 	@ObfuscatedName("nv.j")
 	public static long field4120 = 20000000L;
@@ -116,7 +114,7 @@ public abstract class class385 implements class388, Runnable, FocusListener, Win
 			Statics.field10526 = Statics.field6387;
 			this.method6652(arg1, arg2, arg3, arg4, arg5, arg6);
 		} catch (Throwable var10) {
-			class983.method16252(null, var10);
+			class983.report(null, var10);
 			this.method6675("crash");
 		}
 	}
@@ -244,27 +242,27 @@ public abstract class class385 implements class388, Runnable, FocusListener, Win
 		if (Statics.field3918.exists()) {
 			try {
 				class576 var8 = new class576(Statics.field3918, "rw", 10000L);
-				class814 var9 = new class814((int) var8.method12077());
-				while (var9.field9626 < var9.field9629.length) {
-					int var10 = var8.method12078(var9.field9629, var9.field9626, var9.field9629.length - var9.field9626);
+				Packet var9 = new Packet((int) var8.method12077());
+				while (var9.pos < var9.data.length) {
+					int var10 = var8.method12078(var9.data, var9.pos, var9.data.length - var9.pos);
 					if (var10 == -1) {
 						throw new IOException();
 					}
-					var9.field9626 += var10;
+					var9.pos += var10;
 				}
-				var9.field9626 = 0;
-				int var11 = var9.method15220();
+				var9.pos = 0;
+				int var11 = var9.g1();
 				if (var11 < 1 || var11 > 3) {
 					throw new IOException("" + var11);
 				}
 				int var12 = 0;
 				if (var11 > 1) {
-					var12 = var9.method15220();
+					var12 = var9.g1();
 				}
 				if (var11 <= 2) {
-					var5 = var9.method15366();
+					var5 = var9.gjstr2();
 					if (var12 == 1) {
-						var6 = var9.method15366();
+						var6 = var9.gjstr2();
 					}
 				} else {
 					var5 = var9.method15232();
@@ -352,14 +350,14 @@ public abstract class class385 implements class388, Runnable, FocusListener, Win
 	public void method6654(File arg0, File arg1) {
 		try {
 			class576 var3 = new class576(Statics.field3918, "rw", 10000L);
-			class814 var4 = new class814(500);
+			Packet var4 = new Packet(500);
 			var4.method15308(3);
 			var4.method15308(arg1 == null ? 0 : 1);
 			var4.method15230(arg0.getPath());
 			if (arg1 != null) {
 				var4.method15230(arg1.getPath());
 			}
-			var3.method12075(var4.field9629, 0, var4.field9626);
+			var3.method12075(var4.data, 0, var4.pos);
 			var3.method12076();
 		} catch (IOException var6) {
 			var6.printStackTrace();
@@ -449,7 +447,7 @@ public abstract class class385 implements class388, Runnable, FocusListener, Win
 	}
 
 	@ObfuscatedName("fj.d(Laet;I)V")
-	public static void method3615(class814 arg0) {
+	public static void method3615(Packet arg0) {
 		byte[] var1 = new byte[24];
 		try {
 			field4155.method12109(0L);
@@ -564,7 +562,7 @@ public abstract class class385 implements class388, Runnable, FocusListener, Win
 		} catch (ThreadDeath var7) {
 			throw var7;
 		} catch (Throwable var8) {
-			class983.method16252(this.method6701(), var8);
+			class983.report(this.method6701(), var8);
 			this.method6675("crash");
 		} finally {
 			this.method6664(true);

@@ -94,9 +94,9 @@ public abstract class class347 implements class254 {
 
 	@ObfuscatedName("lm.bl(III[I)V")
 	public void method5985(int arg0, int arg1, int arg2, int[] arg3) {
-		if (arg1 > 0 && !class595.method11258(arg1)) {
+		if (arg1 > 0 && !IntMath.method11258(arg1)) {
 			throw new IllegalArgumentException("");
-		} else if (arg2 > 0 && !class595.method11258(arg2)) {
+		} else if (arg2 > 0 && !IntMath.method11258(arg2)) {
 			throw new IllegalArgumentException("");
 		} else if (class124.field1296 == this.field3736) {
 			int var5 = 0;
@@ -157,9 +157,9 @@ public abstract class class347 implements class254 {
 
 	@ObfuscatedName("lm.bk(III[B)V")
 	public void method5974(int arg0, int arg1, int arg2, byte[] arg3) {
-		if (arg1 > 0 && !class595.method11258(arg1)) {
+		if (arg1 > 0 && !IntMath.method11258(arg1)) {
 			throw new IllegalArgumentException("");
-		} else if (arg2 <= 0 || class595.method11258(arg2)) {
+		} else if (arg2 <= 0 || IntMath.method11258(arg2)) {
 			int var5 = this.field3736.field1306;
 			int var6 = 0;
 			int var7 = arg1 < arg2 ? arg1 : arg2;
@@ -211,9 +211,9 @@ public abstract class class347 implements class254 {
 
 	@ObfuscatedName("lm.bs(III[F)V")
 	public void method5978(int arg0, int arg1, int arg2, float[] arg3) {
-		if (arg1 > 0 && !class595.method11258(arg1)) {
+		if (arg1 > 0 && !IntMath.method11258(arg1)) {
 			throw new IllegalArgumentException("");
-		} else if (arg2 <= 0 || class595.method11258(arg2)) {
+		} else if (arg2 <= 0 || IntMath.method11258(arg2)) {
 			int var5 = this.field3736.field1306;
 			int var6 = 0;
 			int var7 = arg1 < arg2 ? arg1 : arg2;

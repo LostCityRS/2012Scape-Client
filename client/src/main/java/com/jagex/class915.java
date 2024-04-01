@@ -98,8 +98,8 @@ public class class915 extends class776 {
 	public void method14821(int arg0, int arg1) {
 		this.field10165 = arg0;
 		this.field10154 = arg1;
-		int var3 = class595.method1962(this.field10165);
-		int var4 = class595.method1962(this.field10154);
+		int var3 = IntMath.method1962(this.field10165);
+		int var4 = IntMath.method1962(this.field10154);
 		if (this.field10167 == var3 && this.field10168 == var4) {
 			return;
 		}
@@ -193,8 +193,8 @@ public class class915 extends class776 {
 			OpenGL.glEnd();
 		} else {
 			this.field9320.method464(this.field10161);
-			int var4 = class595.method1962(this.field10165);
-			int var5 = class595.method1962(this.field10154);
+			int var4 = IntMath.method1962(this.field10165);
+			int var5 = IntMath.method1962(this.field10154);
 			int var6 = 0;
 			while (var4 > 256 || var5 > 256) {
 				OpenGL.glViewport(0, 0, var4, var5);

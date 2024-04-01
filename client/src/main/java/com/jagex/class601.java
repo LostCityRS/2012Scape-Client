@@ -23,11 +23,11 @@ public class class601 {
 				class334 var6 = this.field7172;
 				byte[] var7;
 				synchronized (this.field7172) {
-					var7 = this.field7172.method5627(class161.field1651.field1668, var5);
+					var7 = this.field7172.getFile(class161.field1651.field1668, var5);
 				}
 				class956 var9 = new class956();
 				if (var7 != null) {
-					var9.method16778(new class814(var7));
+					var9.method16778(new Packet(var7));
 				}
 				this.field7170[var5] = var9;
 			}

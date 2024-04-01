@@ -39,7 +39,7 @@ public class class590 {
 		if (var1 == null) {
 			return;
 		}
-		int var2 = arg0.field9626;
+		int var2 = arg0.pos;
 		arg0.method15223(var1.field9740);
 		for (int var3 = 0; var3 < var1.field9741; var3++) {
 			if (var1.field9738[var3] == 0) {
@@ -120,10 +120,10 @@ public class class590 {
 	}
 
 	@ObfuscatedName("dc.s(Laet;II)V")
-	public static void method2794(class814 arg0, int arg1) {
+	public static void method2794(Packet arg0, int arg1) {
 		class819 var2 = new class819();
-		var2.field9741 = arg0.method15220();
-		var2.field9740 = arg0.method15379();
+		var2.field9741 = arg0.g1();
+		var2.field9740 = arg0.g4s();
 		var2.field9737 = new int[var2.field9741];
 		var2.field9738 = new int[var2.field9741];
 		var2.field9739 = new Field[var2.field9741];
@@ -132,13 +132,13 @@ public class class590 {
 		var2.field9742 = new byte[var2.field9741][][];
 		for (int var3 = 0; var3 < var2.field9741; var3++) {
 			try {
-				int var4 = arg0.method15220();
+				int var4 = arg0.g1();
 				if (var4 == 0 || var4 == 1 || var4 == 2) {
-					String var5 = arg0.method15337();
-					String var6 = arg0.method15337();
+					String var5 = arg0.gjstr();
+					String var6 = arg0.gjstr();
 					int var7 = 0;
 					if (var4 == 1) {
-						var7 = arg0.method15379();
+						var7 = arg0.g4s();
 					}
 					var2.field9737[var3] = var4;
 					var2.field9735[var3] = var7;
@@ -147,18 +147,18 @@ public class class590 {
 					}
 					var2.field9739[var3] = Statics.method16251(var5).getDeclaredField(var6);
 				} else if (var4 == 3 || var4 == 4) {
-					String var8 = arg0.method15337();
-					String var9 = arg0.method15337();
-					int var10 = arg0.method15220();
+					String var8 = arg0.gjstr();
+					String var9 = arg0.gjstr();
+					int var10 = arg0.g1();
 					String[] var11 = new String[var10];
 					for (int var12 = 0; var12 < var10; var12++) {
-						var11[var12] = arg0.method15337();
+						var11[var12] = arg0.gjstr();
 					}
-					String var13 = arg0.method15337();
+					String var13 = arg0.gjstr();
 					byte[][] var14 = new byte[var10][];
 					if (var4 == 3) {
 						for (int var15 = 0; var15 < var10; var15++) {
-							int var16 = arg0.method15379();
+							int var16 = arg0.g4s();
 							var14[var15] = new byte[var16];
 							arg0.method15263(var14[var15], 0, var16);
 						}

@@ -39,9 +39,9 @@ public class class204 implements class464 {
 	public static final int[] field2289 = new int[] { 7, 8, 9, 10, 11, 12, 13, 15 };
 
 	@ObfuscatedName("gp.u(Laet;I)V")
-	public void method3902(class814 arg0) {
+	public void method3902(Packet arg0) {
 		while (true) {
-			int var2 = arg0.method15220();
+			int var2 = arg0.g1();
 			if (var2 == 0) {
 				return;
 			}
@@ -50,34 +50,34 @@ public class class204 implements class464 {
 	}
 
 	@ObfuscatedName("gp.j(Laet;II)V")
-	public void method3893(class814 arg0, int arg1) {
+	public void method3893(Packet arg0, int arg1) {
 		if (arg1 == 1) {
-			arg0.method15220();
+			arg0.g1();
 		} else if (arg1 == 2) {
-			int var3 = arg0.method15220();
+			int var3 = arg0.g1();
 			this.field2287 = new int[var3];
 			for (int var4 = 0; var4 < var3; var4++) {
 				this.field2287[var4] = arg0.method15411();
 			}
 		} else if (arg1 != 3) {
 			if (arg1 == 40) {
-				int var5 = arg0.method15220();
+				int var5 = arg0.g1();
 				this.field2288 = new short[var5];
 				this.field2290 = new short[var5];
 				for (int var6 = 0; var6 < var5; var6++) {
-					this.field2288[var6] = (short) arg0.method15239();
-					this.field2290[var6] = (short) arg0.method15239();
+					this.field2288[var6] = (short) arg0.g2();
+					this.field2290[var6] = (short) arg0.g2();
 				}
 			} else if (arg1 == 41) {
-				int var7 = arg0.method15220();
+				int var7 = arg0.g1();
 				this.field2286 = new short[var7];
 				this.field2291 = new short[var7];
 				for (int var8 = 0; var8 < var7; var8++) {
-					this.field2286[var8] = (short) arg0.method15239();
-					this.field2291[var8] = (short) arg0.method15239();
+					this.field2286[var8] = (short) arg0.g2();
+					this.field2291[var8] = (short) arg0.g2();
 				}
 			} else if (arg1 == 44) {
-				int var9 = arg0.method15239();
+				int var9 = arg0.g2();
 				int var10 = 0;
 				for (int var11 = var9; var11 > 0; var11 >>= 0x1) {
 					var10++;
@@ -92,7 +92,7 @@ public class class204 implements class464 {
 					}
 				}
 			} else if (arg1 == 45) {
-				int var14 = arg0.method15239();
+				int var14 = arg0.g2();
 				int var15 = 0;
 				for (int var16 = var14; var16 > 0; var16 >>= 0x1) {
 					var15++;

@@ -25,11 +25,11 @@ public class class931 extends class787 {
 	}
 
 	@ObfuscatedName("aio.u(Laet;I)V")
-	public void method14956(class814 arg0) {
-		this.field10209 = arg0.method15379();
-		this.field10212 = arg0.method15379();
-		this.field10210 = arg0.method15220();
-		this.field10211 = arg0.method15220();
+	public void method14956(Packet arg0) {
+		this.field10209 = arg0.g4s();
+		this.field10212 = arg0.g4s();
+		this.field10210 = arg0.g1();
+		this.field10211 = arg0.g1();
 	}
 
 	@ObfuscatedName("aio.j(Lga;B)V")

@@ -9,7 +9,7 @@ public class class734 extends class216 {
 	public class198 field8741;
 
 	@ObfuscatedName("aav.a")
-	public final class317 field8736 = new class317();
+	public final Vector3 field8736 = new Vector3();
 
 	@ObfuscatedName("aav.s")
 	public final class316 field8737 = new class316();
@@ -24,13 +24,13 @@ public class class734 extends class216 {
 	public int field8740;
 
 	@ObfuscatedName("aav.l")
-	public final class317 field8739 = new class317(Float.NaN, Float.NaN, Float.NaN);
+	public final Vector3 field8739 = new Vector3(Float.NaN, Float.NaN, Float.NaN);
 
 	@ObfuscatedName("aav.f")
-	public final class317 field8735 = new class317(Float.NaN, Float.NaN, Float.NaN);
+	public final Vector3 field8735 = new Vector3(Float.NaN, Float.NaN, Float.NaN);
 
 	@ObfuscatedName("aav.d")
-	public final class317 field8743 = new class317();
+	public final Vector3 field8743 = new Vector3();
 
 	@ObfuscatedName("aav.z")
 	public final class316 field8744 = new class316();
@@ -40,7 +40,7 @@ public class class734 extends class216 {
 	}
 
 	@ObfuscatedName("aav.i(Lfs;Lko;Lkn;ZILmv;[[[IB)V")
-	public void method14097(class198 arg0, class317 arg1, class316 arg2, boolean arg3, int arg4, class361 arg5, int[][][] arg6) {
+	public void method14097(class198 arg0, Vector3 arg1, class316 arg2, boolean arg3, int arg4, class361 arg5, int[][][] arg6) {
 		this.field8741 = arg0;
 		this.field8736.method5334(arg1);
 		this.field8737.method5214(arg2);
@@ -67,9 +67,9 @@ public class class734 extends class216 {
 	public class316 method14098() {
 		class316 var1 = class316.method5234(this.field8737);
 		if (this.field8738) {
-			class317 var2 = this.field8741.method3683();
+			Vector3 var2 = this.field8741.method3683();
 			if (var2.method5338() < (float) this.field8742) {
-				var2 = class317.method5294(0.0F, 0.0F, 1.0F);
+				var2 = Vector3.method5294(0.0F, 0.0F, 1.0F);
 				class316 var3 = this.field8741.method3680();
 				var2.method5318(var3);
 			}
@@ -99,29 +99,29 @@ public class class734 extends class216 {
 	}
 
 	@ObfuscatedName("aav.a(I)Lko;")
-	public class317 method4016() {
-		class317 var1 = class317.method5290(this.field8736);
+	public Vector3 method4016() {
+		Vector3 var1 = Vector3.method5290(this.field8736);
 		var1.method5318(this.field8744);
-		class317 var2 = class317.method5301(this.field8739, var1);
+		Vector3 var2 = Vector3.method5301(this.field8739, var1);
 		var1.method5291();
 		return var2;
 	}
 
 	@ObfuscatedName("aav.s(B)Ladu;")
 	public class810 method4017() {
-		class317 var1 = this.method4016();
+		Vector3 var1 = this.method4016();
 		class810 var2 = new class810(this.field8740, (int) var1.field3475, (int) var1.field3476, (int) var1.field3477);
 		var1.method5291();
 		return var2;
 	}
 
 	@ObfuscatedName("aav.h(I)Lko;")
-	public class317 method14100() {
+	public Vector3 method14100() {
 		return this.field8739;
 	}
 
 	@ObfuscatedName("aav.r(I)Lko;")
-	public class317 method14101() {
+	public Vector3 method14101() {
 		return this.field8736;
 	}
 
@@ -137,7 +137,7 @@ public class class734 extends class216 {
 
 	@ObfuscatedName("aav.c(Lfi;III)V")
 	public void method4029(class195 arg0, int arg1, int arg2) {
-		class317 var4 = this.method4016();
+		Vector3 var4 = this.method4016();
 		arg0.field2212 = (int) var4.field3475 - arg1;
 		arg0.field2211 = (int) -var4.field3476;
 		arg0.field2213 = (int) var4.field3477 - arg2;
@@ -145,17 +145,17 @@ public class class734 extends class216 {
 	}
 
 	@ObfuscatedName("aav.m(Laet;B)V")
-	public void method4018(class814 arg0) {
-		class197 var2 = class197.method4728(arg0.method15220());
-		int var3 = arg0.method15239();
+	public void method4018(Packet arg0) {
+		class197 var2 = class197.method4728(arg0.g1());
+		int var3 = arg0.g2();
 		this.field8736.method5292(arg0);
 		this.field8737.method5245(arg0);
-		if (arg0.method15220() == 1) {
+		if (arg0.g1() == 1) {
 			this.field8738 = true;
 		} else {
 			this.field8738 = false;
 		}
-		this.field8742 = arg0.method15239();
+		this.field8742 = arg0.g2();
 		this.field8741 = this.field2340.method3717().method1355(var2, var3);
 	}
 }

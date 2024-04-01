@@ -25,8 +25,8 @@ public class class869 extends class546 {
 	}
 
 	@ObfuscatedName("ago.a(S)Lko;")
-	public class317 method11550() {
-		class317 var1 = new class317(0.0F, 0.0F, 1000.0F);
+	public Vector3 method11550() {
+		Vector3 var1 = new Vector3(0.0F, 0.0F, 1000.0F);
 		var1.method5318(class316.method5221(this.field9886));
 		var1.field3476 *= -1.0F;
 		var1.method5299(this.field6645.method3720());
@@ -50,7 +50,7 @@ public class class869 extends class546 {
 
 	@ObfuscatedName("ago.s(Lfi;Lkc;III)V")
 	public void method11543(class195 arg0, class314 arg1, int arg2, int arg3) {
-		class317 var5 = class317.method5290(this.field6645.method3720());
+		Vector3 var5 = Vector3.method5290(this.field6645.method3720());
 		var5.field3475 -= arg2;
 		var5.field3477 -= arg3;
 		var5.field3476 *= -1.0F;
@@ -61,7 +61,7 @@ public class class869 extends class546 {
 	}
 
 	@ObfuscatedName("ago.c(Laet;I)V")
-	public void method11542(class814 arg0) {
+	public void method11542(Packet arg0) {
 		this.field9885.method5245(arg0);
 	}
 }

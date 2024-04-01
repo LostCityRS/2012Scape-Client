@@ -6,7 +6,7 @@ import deob.ObfuscatedName;
 public class class780 extends class399 {
 
 	@ObfuscatedName("acg.s")
-	public class317 field9369 = new class317();
+	public Vector3 field9369 = new Vector3();
 
 	@ObfuscatedName("acg.c")
 	public int field9370;

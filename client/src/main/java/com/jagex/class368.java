@@ -193,7 +193,7 @@ public class class368 {
 			Statics.field3982[var3] = this.field3983[var3];
 		}
 		int var4 = field3987[this.field3992 - 1];
-		int var5 = class595.method2540(var4 - 1);
+		int var5 = IntMath.method2540(var4 - 1);
 		Statics.field3990[0] = class796.method15060(var5);
 		Statics.field3990[1] = class796.method15060(var5);
 		int var6 = 2;

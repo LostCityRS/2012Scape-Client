@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 import deob.Statics;
 
 @ObfuscatedName("ahs")
-public class class903 extends class719 {
+public class class903 extends PathingEntity {
 
 	@ObfuscatedName("ahs.bo")
 	public class611 field10075;
@@ -321,7 +321,7 @@ public class class903 extends class719 {
 		this.field8648 = 0;
 		this.field8642[0] = arg1;
 		this.field8643[0] = arg2;
-		class317 var11 = class317.method5290(this.method8565().field3464);
+		Vector3 var11 = Vector3.method5290(this.method8565().field3464);
 		var11.field3475 = (this.field8642[0] << 9) + (arg4 << 8);
 		var11.field3477 = (this.field8643[0] << 9) + (arg4 << 8);
 		this.method8551(var11);
@@ -465,7 +465,7 @@ public class class903 extends class719 {
 
 	@ObfuscatedName("ahs.gy(Ljava/lang/String;III)V")
 	public void method16148(String arg0, int arg1, int arg2) {
-		int var4 = class385.method2809() * Statics.field4825.field5163;
+		int var4 = GameShell.method2809() * Statics.field4825.field5163;
 		this.method13998(arg0, arg1, arg2, var4);
 	}
 
@@ -488,7 +488,7 @@ public class class903 extends class719 {
 	}
 
 	@ObfuscatedName("ahs.a(I)Lko;")
-	public class317 method3683() {
-		return class317.method5288();
+	public Vector3 method3683() {
+		return Vector3.method5288();
 	}
 }

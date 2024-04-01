@@ -46,13 +46,13 @@ public class class469 {
 	public final class470 field4962;
 
 	@ObfuscatedName("qp.g")
-	public final class317 field4980 = new class317(-50.0F, -60.0F, -50.0F);
+	public final Vector3 field4980 = new Vector3(-50.0F, -60.0F, -50.0F);
 
 	@ObfuscatedName("qp.y")
-	public final class451 field4984 = new class451(8);
+	public final WeightedCache field4984 = new WeightedCache(8);
 
 	@ObfuscatedName("qp.e")
-	public final class451 field4985 = new class451(8);
+	public final WeightedCache field4985 = new WeightedCache(8);
 
 	public class469(class14 arg0, int arg1, int arg2) {
 		this.field4973 = arg0;

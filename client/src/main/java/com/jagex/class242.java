@@ -29,7 +29,7 @@ public class class242 {
 	public final int field2509 = 1600;
 
 	@ObfuscatedName("hw.l")
-	public final int field2504 = class595.method2540(1600);
+	public final int field2504 = IntMath.method2540(1600);
 
 	@ObfuscatedName("hw.f")
 	public final int field2511 = 64;
@@ -125,7 +125,7 @@ public class class242 {
 		int var14 = var9 - var8;
 		int var15;
 		if (var14 + 2 > 1600) {
-			var15 = class595.method2540(var14) + 1 - this.field2504;
+			var15 = IntMath.method2540(var14) + 1 - this.field2504;
 			var14 = (var14 >> var15) + 2;
 		} else {
 			var15 = 0;

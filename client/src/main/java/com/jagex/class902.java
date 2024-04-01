@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 import deob.Statics;
 
 @ObfuscatedName("ahg")
-public class class902 extends class719 {
+public class class902 extends PathingEntity {
 
 	@ObfuscatedName("ahg.bo")
 	public String field10063;
@@ -105,9 +105,9 @@ public class class902 extends class719 {
 	}
 
 	@ObfuscatedName("ahg.gl(Laet;I)V")
-	public final void method16116(class814 arg0) {
-		arg0.field9626 = 0;
-		int var2 = arg0.method15220();
+	public final void method16116(Packet arg0) {
+		arg0.pos = 0;
+		int var2 = arg0.g1();
 		this.field10043 = (byte) (var2 & 0x1);
 		boolean var3 = this.field10051;
 		this.field10051 = (var2 & 0x2) != 0;
@@ -116,18 +116,18 @@ public class class902 extends class719 {
 		this.method13979((var2 >> 3 & 0x7) + 1);
 		boolean var6 = (var2 & 0x40) != 0;
 		boolean var7 = (var2 & 0x80) != 0;
-		class317 var8 = class317.method5290(this.method8565().field3464);
+		Vector3 var8 = Vector3.method5290(this.method8565().field3464);
 		var8.field3475 += this.method13954() - var5 << 8;
 		var8.field3477 += this.method13954() - var5 << 8;
 		this.method8551(var8);
 		var8.method5291();
 		if (var6) {
-			this.field10041 = arg0.method15366();
+			this.field10041 = arg0.gjstr2();
 		} else {
 			this.field10041 = null;
 		}
 		if (var7) {
-			this.field10042 = arg0.method15366();
+			this.field10042 = arg0.gjstr2();
 		} else {
 			this.field10042 = null;
 		}
@@ -144,15 +144,15 @@ public class class902 extends class719 {
 		class592[] var12 = new class592[Statics.field3226.field5171.length];
 		for (int var13 = 0; var13 < Statics.field3226.field5171.length; var13++) {
 			if (Statics.field3226.field5171[var13] != 1) {
-				int var14 = arg0.method15220();
+				int var14 = arg0.g1();
 				if (var14 == 0) {
 					var10[var13] = 0;
 				} else {
-					int var15 = arg0.method15220();
+					int var15 = arg0.g1();
 					int var16 = (var14 << 8) + var15;
 					if (var13 == 0 && var16 == 65535) {
 						var9 = arg0.method15411();
-						this.field10061 = arg0.method15220();
+						this.field10061 = arg0.g1();
 						break;
 					}
 					if (var16 >= 16384) {
@@ -170,7 +170,7 @@ public class class902 extends class719 {
 			}
 		}
 		if (var9 == -1) {
-			int var19 = arg0.method15239();
+			int var19 = arg0.g2();
 			int var20 = 0;
 			for (int var21 = 0; var21 < Statics.field3226.field5171.length; var21++) {
 				if (Statics.field3226.field5171[var21] == 0) {
@@ -183,21 +183,21 @@ public class class902 extends class719 {
 		}
 		int[] var22 = new int[10];
 		for (int var23 = 0; var23 < 10; var23++) {
-			int var24 = arg0.method15220();
+			int var24 = arg0.g1();
 			if (Statics.field5010.length < 1 || var24 < 0 || var24 >= Statics.field5010[var23][0].length) {
 				var24 = 0;
 			}
 			var22[var23] = var24;
 		}
-		this.field10068 = arg0.method15239();
-		this.field10063 = arg0.method15337();
+		this.field10068 = arg0.g2();
+		this.field10063 = arg0.gjstr();
 		this.field10040 = this.field10063;
 		if (Statics.field2119 == this) {
 			Statics.field10527 = this.field10063;
 		}
-		this.field10047 = arg0.method15220();
+		this.field10047 = arg0.g1();
 		if (var4) {
-			this.field10046 = arg0.method15239();
+			this.field10046 = arg0.g2();
 			if (this.field10046 == 65535) {
 				this.field10046 = -1;
 			}
@@ -205,14 +205,14 @@ public class class902 extends class719 {
 			this.field10049 = -1;
 		} else {
 			this.field10046 = 0;
-			this.field10048 = arg0.method15220();
-			this.field10049 = arg0.method15220();
+			this.field10048 = arg0.g1();
+			this.field10049 = arg0.g1();
 			if (this.field10049 == 255) {
 				this.field10049 = -1;
 			}
 		}
 		int var25 = this.field10039;
-		this.field10039 = arg0.method15220();
+		this.field10039 = arg0.g1();
 		if (this.field10039 == 0) {
 			class797.method7377(this);
 		} else {
@@ -221,11 +221,11 @@ public class class902 extends class719 {
 			int var28 = this.field10056;
 			int var29 = this.field10057;
 			int var30 = this.field10060;
-			this.field10054 = arg0.method15239();
-			this.field10059 = arg0.method15239();
-			this.field10056 = arg0.method15239();
-			this.field10057 = arg0.method15239();
-			this.field10060 = arg0.method15220();
+			this.field10054 = arg0.g2();
+			this.field10059 = arg0.g2();
+			this.field10056 = arg0.g2();
+			this.field10057 = arg0.g2();
+			this.field10060 = arg0.g1();
 			if (this.field10051 != var3 || this.field10039 != var25 || this.field10054 != var26 || this.field10059 != var27 || this.field10056 != var28 || this.field10057 != var29 || this.field10060 != var30) {
 				class797.method1807(this);
 			}
@@ -237,7 +237,7 @@ public class class902 extends class719 {
 		int[] var32 = this.field10044.field5000;
 		this.field10044.method8230(this.method13960(), var10, var11, var22, this.field10043 == 1, var9);
 		if (var9 != var31) {
-			class317 var33 = class317.method5290(this.method8565().field3464);
+			Vector3 var33 = Vector3.method5290(this.method8565().field3464);
 			var33.field3475 = (this.field8642[0] << 9) + (this.method13954() << 8);
 			var33.field3477 = (this.field8643[0] << 9) + (this.method13954() << 8);
 			this.method8551(var33);
@@ -315,14 +315,14 @@ public class class902 extends class719 {
 						class798 var15 = (class798) client.field8964.method11923((long) var14.field772);
 						if (var15 != null) {
 							class903 var16 = (class903) var15.field9550;
-							class317 var17 = class317.method5377(var16.method8565().field3464, Statics.field2119.method8565().field3464);
+							Vector3 var17 = Vector3.method5377(var16.method8565().field3464, Statics.field2119.method8565().field3464);
 							int var18 = (int) var17.field3475;
 							int var19 = (int) var17.field3477;
 							this.method16118(arg0, var2, this.field8651[0], (long) var18, (long) var19, var14.field779, 92160000L);
 						}
 					}
 					if (var14.field776 == 2) {
-						class317 var20 = Statics.field2119.method8565().field3464;
+						Vector3 var20 = Statics.field2119.method8565().field3464;
 						long var21 = (long) (var14.field778 * 512 - (int) var20.field3475);
 						long var23 = (long) (var14.field777 * 262144 - (int) var20.field3477);
 						long var25 = (long) (var14.field780 << 9);
@@ -332,7 +332,7 @@ public class class902 extends class719 {
 					if (var14.field776 == 10 && var14.field772 >= 0 && var14.field772 < client.field9070.length) {
 						class902 var29 = client.field9070[var14.field772];
 						if (var29 != null) {
-							class317 var30 = class317.method5377(var29.method8565().field3464, Statics.field2119.method8565().field3464);
+							Vector3 var30 = Vector3.method5377(var29.method8565().field3464, Statics.field2119.method8565().field3464);
 							int var31 = (int) var30.field3475;
 							int var32 = (int) var30.field3477;
 							this.method16118(arg0, var2, this.field8651[0], (long) var31, (long) var32, var14.field779, 92160000L);
@@ -416,7 +416,7 @@ public class class902 extends class719 {
 		}
 		class13 var11 = this.field8651[0] = this.field10044.method8244(arg0, arg1, Statics.field3769, Statics.field7650, Statics.field3774, Statics.field3492, Statics.field566, Statics.field2669, var5, var6, this.field8633, this.field8654, var9, true, Statics.field3226);
 		int var12 = class471.method3503();
-		if (class385.field4152 < 96 && var12 > 50) {
+		if (GameShell.field4152 < 96 && var12 > 50) {
 			class59.method16899();
 		}
 		if (Statics.field6683 != class515.field6368 && var12 < 50) {
@@ -521,7 +521,7 @@ public class class902 extends class719 {
 		this.field8642[0] = arg0;
 		this.field8643[0] = arg1;
 		int var3 = this.method13954();
-		class317 var4 = class317.method5290(this.method8565().field3464);
+		Vector3 var4 = Vector3.method5290(this.method8565().field3464);
 		var4.field3475 = this.field8642[0] * 512 + var3 * 256;
 		var4.field3477 = this.field8643[0] * 512 + var3 * 256;
 		this.method8551(var4);
@@ -623,7 +623,7 @@ public class class902 extends class719 {
 
 	@ObfuscatedName("ahg.gg(Ljava/lang/String;III)V")
 	public void method16127(String arg0, int arg1, int arg2) {
-		this.method13998(arg0, arg1, arg2, class385.method2809() * Statics.field4825.field5165);
+		this.method13998(arg0, arg1, arg2, GameShell.method2809() * Statics.field4825.field5165);
 	}
 
 	@ObfuscatedName("ahg.u(I)Ladu;")
@@ -640,8 +640,8 @@ public class class902 extends class719 {
 	}
 
 	@ObfuscatedName("ahg.a(I)Lko;")
-	public class317 method3683() {
-		return class317.method5288();
+	public Vector3 method3683() {
+		return Vector3.method5288();
 	}
 
 	@ObfuscatedName("ahg.dk(S)I")

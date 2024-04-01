@@ -26,7 +26,7 @@ public class class983 extends RuntimeException {
 	}
 
 	@ObfuscatedName("aiv.u(Ljava/lang/String;Ljava/lang/Throwable;B)V")
-	public static void method16252(String arg0, Throwable arg1) {
+	public static void report(String arg0, Throwable arg1) {
 		try {
 			String var2 = "";
 			if (arg1 != null) {
@@ -55,7 +55,7 @@ public class class983 extends RuntimeException {
 			var8.read();
 			var8.close();
 		} catch (Exception var11) {
-			var11.printStackTrace();
+			// var11.printStackTrace();
 		}
 	}
 
@@ -73,6 +73,7 @@ public class class983 extends RuntimeException {
 
 	@ObfuscatedName("np.a(Ljava/lang/Throwable;I)Ljava/lang/String;")
 	public static String method6882(Throwable arg0) throws IOException {
+		arg0.printStackTrace();
 		String var2;
 		if (arg0 instanceof class983) {
 			class983 var1 = (class983) arg0;

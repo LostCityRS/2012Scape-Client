@@ -54,13 +54,13 @@ public class class777 extends class399 {
 	public float[][] field9337;
 
 	@ObfuscatedName("acq.v")
-	public class814 field9338;
+	public Packet field9338;
 
 	@ObfuscatedName("acq.k")
 	public class963 field9339;
 
 	@ObfuscatedName("acq.h")
-	public class565 field9340;
+	public IterableMap field9340;
 
 	public class777(class682 arg0, class672 arg1, class780 arg2, int[] arg3) {
 		this.field9330 = arg0;
@@ -118,9 +118,9 @@ public class class777 extends class399 {
 			}
 		}
 		if (this.field9336 > 0) {
-			this.field9338 = new class814(this.field9336 * 2);
+			this.field9338 = new Packet(this.field9336 * 2);
 			this.field9339 = new class963(this.field9336 * 16);
-			this.field9340 = new class565(class595.method2839(this.field9336));
+			this.field9340 = new IterableMap(IntMath.bitceil(this.field9336));
 			int var21 = 0;
 			int var22 = 0;
 			for (int var23 = this.field9327; var23 <= this.field9328; var23++) {
@@ -179,8 +179,8 @@ public class class777 extends class399 {
 				}
 				var21++;
 			}
-			this.field9322 = this.field9330.method13345(5123, this.field9338.field9629, this.field9338.field9626, false);
-			this.field9332 = this.field9330.method13301(16, this.field9339.field9629, this.field9339.field9626, false);
+			this.field9322 = this.field9330.method13345(5123, this.field9338.data, this.field9338.pos, false);
+			this.field9332 = this.field9330.method13301(16, this.field9339.data, this.field9339.pos, false);
 			this.field9323 = new class93(this.field9332, 5126, 3, 0);
 			this.field9334 = new class93(this.field9332, 5121, 4, 12);
 		} else {
@@ -222,7 +222,7 @@ public class class777 extends class399 {
 		}
 		short var13 = (short) this.field9331++;
 		if (var7 != -1L) {
-			this.field9340.method11927(new class799(var13), var7);
+			this.field9340.pushNode(new class799(var13), var7);
 		}
 		float var14;
 		float var15;

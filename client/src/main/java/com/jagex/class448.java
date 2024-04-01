@@ -28,9 +28,9 @@ public class class448 implements class445 {
 	}
 
 	@ObfuscatedName("ul.a(Laet;I)Lpi;")
-	public static class448 method11866(class814 arg0) {
-		int var1 = arg0.method15220();
-		int var2 = arg0.method15220();
+	public static class448 method11866(Packet arg0) {
+		int var1 = arg0.g1();
+		int var2 = arg0.g1();
 		return new class448(var1, var2);
 	}
 }

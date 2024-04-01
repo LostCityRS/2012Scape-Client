@@ -24,7 +24,7 @@ public abstract class class200 {
 	public final class320 field2248 = new class320();
 
 	@ObfuscatedName("fq.l")
-	public final class317 field2258 = new class317();
+	public final Vector3 field2258 = new Vector3();
 
 	@ObfuscatedName("fq.f")
 	public float field2254;
@@ -36,25 +36,25 @@ public abstract class class200 {
 	public final class311 field2266 = new class311();
 
 	@ObfuscatedName("fq.n")
-	public final class317 field2259 = new class317();
+	public final Vector3 field2259 = new Vector3();
 
 	@ObfuscatedName("fq.o")
 	public final class311 field2260 = new class311();
 
 	@ObfuscatedName("fq.q")
-	public final class317 field2249 = new class317();
+	public final Vector3 field2249 = new Vector3();
 
 	@ObfuscatedName("fq.p")
-	public final class317 field2262 = new class317();
+	public final Vector3 field2262 = new Vector3();
 
 	@ObfuscatedName("fq.w")
-	public final class317 field2263 = new class317();
+	public final Vector3 field2263 = new Vector3();
 
 	@ObfuscatedName("fq.b")
-	public final class317 field2264 = new class317();
+	public final Vector3 field2264 = new Vector3();
 
 	@ObfuscatedName("fq.x")
-	public final class317 field2265 = new class317();
+	public final Vector3 field2265 = new Vector3();
 
 	@ObfuscatedName("fq.i")
 	public final class320 field2256 = new class320();

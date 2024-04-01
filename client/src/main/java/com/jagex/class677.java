@@ -3266,10 +3266,10 @@ public class class677 extends class13 {
 
 	@ObfuscatedName("yz.ge(Z)V")
 	public void method13095(boolean arg0) {
-		if (this.field7891.field8226.field9629.length < this.field7877 * 6) {
+		if (this.field7891.field8226.data.length < this.field7877 * 6) {
 			this.field7891.field8226 = new class963((this.field7877 + 100) * 6);
 		} else {
-			this.field7891.field8226.field9626 = 0;
+			this.field7891.field8226.pos = 0;
 		}
 		class963 var2 = this.field7891.field8226;
 		if (this.field7891.field8149) {
@@ -3285,18 +3285,18 @@ public class class677 extends class13 {
 				var2.method15221(this.field7896[var4]);
 			}
 		}
-		if (var2.field9626 == 0) {
+		if (var2.pos == 0) {
 			return;
 		}
 		if (arg0) {
 			if (this.field7893 == null) {
-				this.field7893 = this.field7891.method13345(5123, var2.field9629, var2.field9626, true);
+				this.field7893 = this.field7891.method13345(5123, var2.data, var2.pos, true);
 			} else {
-				this.field7893.method2338(5123, var2.field9629, var2.field9626);
+				this.field7893.method2338(5123, var2.data, var2.pos);
 			}
 			this.field7892.field1096 = this.field7893;
 		} else {
-			this.field7892.field1096 = this.field7891.method13345(5123, var2.field9629, var2.field9626, false);
+			this.field7892.field1096 = this.field7891.method13345(5123, var2.data, var2.pos, false);
 		}
 		if (!arg0) {
 			this.field7900 = true;
@@ -3339,10 +3339,10 @@ public class class677 extends class13 {
 		if (var6 == 0) {
 			return;
 		}
-		if (this.field7891.field8226.field9629.length < this.field7870 * var6) {
+		if (this.field7891.field8226.data.length < this.field7870 * var6) {
 			this.field7891.field8226 = new class963((this.field7870 + 100) * var6);
 		} else {
-			this.field7891.field8226.field9626 = 0;
+			this.field7891.field8226.pos = 0;
 		}
 		class963 var11 = this.field7891.field8226;
 		if (var4) {
@@ -3358,7 +3358,7 @@ public class class677 extends class13 {
 						if (var19 == -1) {
 							break;
 						}
-						var11.field9626 = var6 * var19;
+						var11.pos = var6 * var19;
 						var11.method15223(var13);
 						var11.method15223(var14);
 						var11.method15223(var15);
@@ -3376,7 +3376,7 @@ public class class677 extends class13 {
 						if (var27 == -1) {
 							break;
 						}
-						var11.field9626 = var6 * var27;
+						var11.pos = var6 * var27;
 						var11.method15274(var21);
 						var11.method15274(var22);
 						var11.method15274(var23);
@@ -3439,7 +3439,7 @@ public class class677 extends class13 {
 					} else if (var49 > 255) {
 						var49 = 255;
 					}
-					var11.field9626 = var6 * var43 + var8;
+					var11.pos = var6 * var43 + var8;
 					var11.method15308(var47);
 					var11.method15308(var48);
 					var11.method15308(var49);
@@ -3471,7 +3471,7 @@ public class class677 extends class13 {
 					} else if (var56 > 255) {
 						var56 = 255;
 					}
-					var11.field9626 = var6 * var50 + var8;
+					var11.pos = var6 * var50 + var8;
 					var11.method15308(var54);
 					var11.method15308(var55);
 					var11.method15308(var56);
@@ -3503,7 +3503,7 @@ public class class677 extends class13 {
 					} else if (var63 > 255) {
 						var63 = 255;
 					}
-					var11.field9626 = var6 * var57 + var8;
+					var11.pos = var6 * var57 + var8;
 					var11.method15308(var61);
 					var11.method15308(var62);
 					var11.method15308(var63);
@@ -3512,11 +3512,11 @@ public class class677 extends class13 {
 			} else {
 				for (int var64 = 0; var64 < this.field7883 * -1431655765; var64++) {
 					int var65 = this.method13088(this.field7912[var64], this.field7897[var64], this.field7859, this.field7881[var64]);
-					var11.field9626 = (this.field7882[var64] & 0xFFFF) * var6 + var8;
+					var11.pos = (this.field7882[var64] & 0xFFFF) * var6 + var8;
 					var11.method15223(var65);
-					var11.field9626 = (this.field7902[var64] & 0xFFFF) * var6 + var8;
+					var11.pos = (this.field7902[var64] & 0xFFFF) * var6 + var8;
 					var11.method15223(var65);
-					var11.field9626 = (this.field7896[var64] & 0xFFFF) * var6 + var8;
+					var11.pos = (this.field7896[var64] & 0xFFFF) * var6 + var8;
 					var11.method15223(var65);
 				}
 			}
@@ -3539,7 +3539,7 @@ public class class677 extends class13 {
 			}
 			float var70 = 3.0F / (float) this.field7860;
 			float var71 = 3.0F / (float) (this.field7860 / 2 + this.field7860);
-			var11.field9626 = var9;
+			var11.pos = var9;
 			if (this.field7891.field8149) {
 				for (int var72 = 0; var72 < this.field7870; var72++) {
 					int var73 = var69[var72] & 0xFF;
@@ -3553,7 +3553,7 @@ public class class677 extends class13 {
 						var11.method16851((float) var67[var72] * var74);
 						var11.method16851((float) var68[var72] * var74);
 					}
-					var11.field9626 += var6 - 12;
+					var11.pos += var6 - 12;
 				}
 			} else {
 				for (int var75 = 0; var75 < this.field7870; var75++) {
@@ -3568,38 +3568,38 @@ public class class677 extends class13 {
 						var11.method16855((float) var67[var75] * var77);
 						var11.method16855((float) var68[var75] * var77);
 					}
-					var11.field9626 += var6 - 12;
+					var11.pos += var6 - 12;
 				}
 			}
 		}
 		if (var5) {
-			var11.field9626 = var10;
+			var11.pos = var10;
 			if (this.field7891.field8149) {
 				for (int var78 = 0; var78 < this.field7870; var78++) {
 					var11.method16851(this.field7876[var78]);
 					var11.method16851(this.field7901[var78]);
-					var11.field9626 += var6 - 8;
+					var11.pos += var6 - 8;
 				}
 			} else {
 				for (int var79 = 0; var79 < this.field7870; var79++) {
 					var11.method16855(this.field7876[var79]);
 					var11.method16855(this.field7901[var79]);
-					var11.field9626 += var6 - 8;
+					var11.pos += var6 - 8;
 				}
 			}
 		}
-		var11.field9626 = this.field7870 * var6;
+		var11.pos = this.field7870 * var6;
 		class90 var80;
 		if (arg0) {
 			if (this.field7894 == null) {
-				this.field7894 = this.field7891.method13301(var6, var11.field9629, var11.field9626, true);
+				this.field7894 = this.field7891.method13301(var6, var11.data, var11.pos, true);
 			} else {
-				this.field7894.method2234(var6, var11.field9629, var11.field9626);
+				this.field7894.method2234(var6, var11.data, var11.pos);
 			}
 			var80 = this.field7894;
 			this.field7858 = 0;
 		} else {
-			var80 = this.field7891.method13301(var6, var11.field9629, var11.field9626, false);
+			var80 = this.field7891.method13301(var6, var11.data, var11.pos, false);
 			this.field7900 = true;
 		}
 		if (var4) {

@@ -21,16 +21,16 @@ public class class541 {
 	public final class334 field6555;
 
 	@ObfuscatedName("tz.t")
-	public class451 field6561 = new class451(256);
+	public WeightedCache field6561 = new WeightedCache(256);
 
 	@ObfuscatedName("tz.l")
-	public final class451 field6558 = new class451(500);
+	public final WeightedCache field6558 = new WeightedCache(500);
 
 	@ObfuscatedName("tz.f")
-	public final class451 field6559 = new class451(30);
+	public final WeightedCache field6559 = new WeightedCache(30);
 
 	@ObfuscatedName("tz.d")
-	public final class451 field6560 = new class451(50);
+	public final WeightedCache field6560 = new WeightedCache(50);
 
 	@ObfuscatedName("tz.z")
 	public int field6551;
@@ -64,7 +64,7 @@ public class class541 {
 
 	@ObfuscatedName("tz.u(II)Ltg;")
 	public class540 method11471(int arg0) {
-		class451 var2 = this.field6561;
+		WeightedCache var2 = this.field6561;
 		class540 var3;
 		synchronized (this.field6561) {
 			var3 = (class540) this.field6561.method7916((long) arg0);
@@ -75,14 +75,14 @@ public class class541 {
 		class334 var5 = this.field6554;
 		byte[] var6;
 		synchronized (this.field6554) {
-			var6 = this.field6554.method5627(class161.field1631.method3073(arg0), class161.field1631.method3075(arg0));
+			var6 = this.field6554.getFile(class161.field1631.method3073(arg0), class161.field1631.method3075(arg0));
 		}
 		class540 var8 = new class540();
 		var8.field6474 = arg0;
 		var8.field6473 = this;
 		var8.field6505 = (String[]) this.field6563.clone();
 		if (var6 != null) {
-			var8.method11408(new class814(var6));
+			var8.method11408(new Packet(var6));
 		}
 		var8.method11410();
 		if (var8.field6481) {
@@ -93,7 +93,7 @@ public class class541 {
 			var8.field6505 = null;
 			var8.field6545 = null;
 		}
-		class451 var9 = this.field6561;
+		WeightedCache var9 = this.field6561;
 		synchronized (this.field6561) {
 			this.field6561.method7937(var8, (long) arg0);
 			return var8;
@@ -111,15 +111,15 @@ public class class541 {
 	@ObfuscatedName("tz.a(II)V")
 	public void method11473(int arg0) {
 		this.field6551 = arg0;
-		class451 var2 = this.field6558;
+		WeightedCache var2 = this.field6558;
 		synchronized (this.field6558) {
 			this.field6558.method7922();
 		}
-		class451 var4 = this.field6559;
+		WeightedCache var4 = this.field6559;
 		synchronized (this.field6559) {
 			this.field6559.method7922();
 		}
-		class451 var6 = this.field6560;
+		WeightedCache var6 = this.field6560;
 		synchronized (this.field6560) {
 			this.field6560.method7922();
 		}
@@ -127,24 +127,24 @@ public class class541 {
 
 	@ObfuscatedName("tz.s(II)V")
 	public void method11474(int arg0) {
-		this.field6561 = new class451(arg0);
+		this.field6561 = new WeightedCache(arg0);
 	}
 
 	@ObfuscatedName("tz.c(I)V")
 	public void method11479() {
-		class451 var1 = this.field6561;
+		WeightedCache var1 = this.field6561;
 		synchronized (this.field6561) {
 			this.field6561.method7922();
 		}
-		class451 var3 = this.field6558;
+		WeightedCache var3 = this.field6558;
 		synchronized (this.field6558) {
 			this.field6558.method7922();
 		}
-		class451 var5 = this.field6559;
+		WeightedCache var5 = this.field6559;
 		synchronized (this.field6559) {
 			this.field6559.method7922();
 		}
-		class451 var7 = this.field6560;
+		WeightedCache var7 = this.field6560;
 		synchronized (this.field6560) {
 			this.field6560.method7922();
 		}
@@ -154,19 +154,19 @@ public class class541 {
 
 	@ObfuscatedName("tz.m(IB)V")
 	public void method11487(int arg0) {
-		class451 var2 = this.field6561;
+		WeightedCache var2 = this.field6561;
 		synchronized (this.field6561) {
 			this.field6561.method7921(arg0);
 		}
-		class451 var4 = this.field6558;
+		WeightedCache var4 = this.field6558;
 		synchronized (this.field6558) {
 			this.field6558.method7921(arg0);
 		}
-		class451 var6 = this.field6559;
+		WeightedCache var6 = this.field6559;
 		synchronized (this.field6559) {
 			this.field6559.method7921(arg0);
 		}
-		class451 var8 = this.field6560;
+		WeightedCache var8 = this.field6560;
 		synchronized (this.field6560) {
 			this.field6560.method7921(arg0);
 		}
@@ -174,19 +174,19 @@ public class class541 {
 
 	@ObfuscatedName("tz.t(I)V")
 	public void method11477() {
-		class451 var1 = this.field6561;
+		WeightedCache var1 = this.field6561;
 		synchronized (this.field6561) {
 			this.field6561.method7925();
 		}
-		class451 var3 = this.field6558;
+		WeightedCache var3 = this.field6558;
 		synchronized (this.field6558) {
 			this.field6558.method7925();
 		}
-		class451 var5 = this.field6559;
+		WeightedCache var5 = this.field6559;
 		synchronized (this.field6559) {
 			this.field6559.method7925();
 		}
-		class451 var7 = this.field6560;
+		WeightedCache var7 = this.field6560;
 		synchronized (this.field6560) {
 			this.field6560.method7925();
 		}

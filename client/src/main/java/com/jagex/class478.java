@@ -35,7 +35,7 @@ public abstract class class478 {
 						break label102;
 					}
 					class809 var6 = (class809) var5.next();
-					if (var1 != null && var1.field9467.field9626 - var2 >= 252 - (this.method8355() + 6)) {
+					if (var1 != null && var1.field9467.pos - var2 >= 252 - (this.method8355() + 6)) {
 						break label102;
 					}
 					var6.method6979();
@@ -57,8 +57,8 @@ public abstract class class478 {
 						if (var1 == null) {
 							var1 = this.method8375();
 							var1.field9467.method15308(0);
-							var2 = var1.field9467.field9626;
-							var1.field9467.field9626 += 2;
+							var2 = var1.field9467.pos;
+							var1.field9467.pos += 2;
 							var3 = 0;
 							var4 = 0;
 						}
@@ -109,12 +109,12 @@ public abstract class class478 {
 				}
 			}
 			if (var1 != null) {
-				var1.field9467.method15251(var1.field9467.field9626 - var2);
-				int var12 = var1.field9467.field9626;
-				var1.field9467.field9626 = var2;
+				var1.field9467.method15251(var1.field9467.pos - var2);
+				int var12 = var1.field9467.pos;
+				var1.field9467.pos = var2;
 				var1.field9467.method15308(var3 / var4);
 				var1.field9467.method15308(var3 % var4);
-				var1.field9467.field9626 = var12;
+				var1.field9467.pos = var12;
 				client.field8975.method1913(var1);
 			}
 		}
@@ -154,7 +154,7 @@ public abstract class class478 {
 	public abstract int method8355();
 
 	@ObfuscatedName("qs.m(Laet;Ladv;B)V")
-	public abstract void method8356(class814 arg0, class809 arg1);
+	public abstract void method8356(Packet arg0, class809 arg1);
 
 	@ObfuscatedName("qs.t(B)V")
 	public abstract void method8357();

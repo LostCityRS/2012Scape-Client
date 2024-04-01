@@ -18,9 +18,9 @@ public class class608 {
 	public boolean field7195 = false;
 
 	@ObfuscatedName("vc.u(Laet;B)V")
-	public void method12486(class814 arg0) {
+	public void method12486(Packet arg0) {
 		while (true) {
-			int var2 = arg0.method15220();
+			int var2 = arg0.g1();
 			if (var2 == 0) {
 				return;
 			}
@@ -29,7 +29,7 @@ public class class608 {
 	}
 
 	@ObfuscatedName("vc.j(Laet;II)V")
-	public void method12483(class814 arg0, int arg1) {
+	public void method12483(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			this.field7192 = arg0.method15411();
 		} else if (arg1 == 2) {

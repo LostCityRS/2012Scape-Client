@@ -24,27 +24,27 @@ public class class123 implements class16 {
 	public class123(class334 arg0, class334 arg1, class334 arg2) {
 		this.field1292 = arg1;
 		this.field1293 = arg2;
-		class814 var4 = new class814(arg0.method5627(0, 0));
-		this.field1294 = var4.method15239();
+		Packet var4 = new Packet(arg0.getFile(0, 0));
+		this.field1294 = var4.g2();
 		this.field1291 = new class120[this.field1294];
 		for (int var5 = 0; var5 < this.field1294; var5++) {
-			if (var4.method15220() == 1) {
+			if (var4.g1() == 1) {
 				this.field1291[var5] = new class120();
 			}
 		}
 		for (int var6 = 0; var6 < this.field1294; var6++) {
 			if (this.field1291[var6] != null) {
-				this.field1291[var6].field1250 = var4.method15220() == 0;
+				this.field1291[var6].field1250 = var4.g1() == 0;
 			}
 		}
 		for (int var7 = 0; var7 < this.field1294; var7++) {
 			if (this.field1291[var7] != null) {
-				this.field1291[var7].field1252 = class120.method1839(var4.method15220());
+				this.field1291[var7].field1252 = class120.method1839(var4.g1());
 			}
 		}
 		for (int var8 = 0; var8 < this.field1294; var8++) {
 			if (this.field1291[var8] != null) {
-				this.field1291[var8].field1265 = var4.method15220() == 1;
+				this.field1291[var8].field1265 = var4.g1() == 1;
 			}
 		}
 		for (int var9 = 0; var9 < this.field1294; var9++) {
@@ -69,7 +69,7 @@ public class class123 implements class16 {
 		}
 		for (int var13 = 0; var13 < this.field1294; var13++) {
 			if (this.field1291[var13] != null) {
-				this.field1291[var13].field1260 = (short) var4.method15239();
+				this.field1291[var13].field1260 = (short) var4.g2();
 			}
 		}
 		for (int var14 = 0; var14 < this.field1294; var14++) {
@@ -84,12 +84,12 @@ public class class123 implements class16 {
 		}
 		for (int var16 = 0; var16 < this.field1294; var16++) {
 			if (this.field1291[var16] != null) {
-				this.field1291[var16].field1276 = var4.method15220() == 1;
+				this.field1291[var16].field1276 = var4.g1() == 1;
 			}
 		}
 		for (int var17 = 0; var17 < this.field1294; var17++) {
 			if (this.field1291[var17] != null) {
-				this.field1291[var17].field1277 = var4.method15220() == 1;
+				this.field1291[var17].field1277 = var4.g1() == 1;
 			}
 		}
 		for (int var18 = 0; var18 < this.field1294; var18++) {
@@ -99,32 +99,32 @@ public class class123 implements class16 {
 		}
 		for (int var19 = 0; var19 < this.field1294; var19++) {
 			if (this.field1291[var19] != null) {
-				this.field1291[var19].field1273 = var4.method15220() == 1;
+				this.field1291[var19].field1273 = var4.g1() == 1;
 			}
 		}
 		for (int var20 = 0; var20 < this.field1294; var20++) {
 			if (this.field1291[var20] != null) {
-				this.field1291[var20].field1274 = var4.method15220() == 1;
+				this.field1291[var20].field1274 = var4.g1() == 1;
 			}
 		}
 		for (int var21 = 0; var21 < this.field1294; var21++) {
 			if (this.field1291[var21] != null) {
-				this.field1291[var21].field1245 = var4.method15220() == 1;
+				this.field1291[var21].field1245 = var4.g1() == 1;
 			}
 		}
 		for (int var22 = 0; var22 < this.field1294; var22++) {
 			if (this.field1291[var22] != null) {
-				this.field1291[var22].field1278 = var4.method15220();
+				this.field1291[var22].field1278 = var4.g1();
 			}
 		}
 		for (int var23 = 0; var23 < this.field1294; var23++) {
 			if (this.field1291[var23] != null) {
-				this.field1291[var23].field1264 = var4.method15379();
+				this.field1291[var23].field1264 = var4.g4s();
 			}
 		}
 		for (int var24 = 0; var24 < this.field1294; var24++) {
 			if (this.field1291[var24] != null) {
-				this.field1291[var24].field1262 = (class456) class518.method8032(class456.method7322(), var4.method15220());
+				this.field1291[var24].field1262 = (class456) class518.method8032(class456.method7322(), var4.g1());
 			}
 		}
 	}

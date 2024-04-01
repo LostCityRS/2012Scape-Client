@@ -240,7 +240,7 @@ public class class467 {
 						class811 var8 = null;
 						if (arg0[var7].method2534().field2760 == 1 && class466.field4920 < 32) {
 							var8 = new class811(arg0[var7], this);
-							class466.field4924.method11927(var8, (long) arg0[var7].field1243);
+							class466.field4924.pushNode(var8, (long) arg0[var7].field1243);
 							class466.field4920++;
 						}
 						if (var8 == null) {

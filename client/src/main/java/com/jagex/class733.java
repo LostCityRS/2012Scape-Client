@@ -9,13 +9,13 @@ public class class733 extends class216 {
 	public int field8731;
 
 	@ObfuscatedName("aaq.a")
-	public final class317 field8730 = new class317(Float.NaN, Float.NaN, Float.NaN);
+	public final Vector3 field8730 = new Vector3(Float.NaN, Float.NaN, Float.NaN);
 
 	@ObfuscatedName("aaq.s")
-	public final class317 field8732 = new class317(Float.NaN, Float.NaN, Float.NaN);
+	public final Vector3 field8732 = new Vector3(Float.NaN, Float.NaN, Float.NaN);
 
 	@ObfuscatedName("aaq.c")
-	public final class317 field8733 = new class317();
+	public final Vector3 field8733 = new Vector3();
 
 	public class733(class199 arg0) {
 		super(arg0);
@@ -44,8 +44,8 @@ public class class733 extends class216 {
 	}
 
 	@ObfuscatedName("aaq.a(I)Lko;")
-	public class317 method4016() {
-		return class317.method5290(this.field8730);
+	public Vector3 method4016() {
+		return Vector3.method5290(this.field8730);
 	}
 
 	@ObfuscatedName("aaq.s(B)Ladu;")
@@ -61,7 +61,7 @@ public class class733 extends class216 {
 	}
 
 	@ObfuscatedName("aaq.m(Laet;B)V")
-	public void method4018(class814 arg0) {
+	public void method4018(Packet arg0) {
 		this.field8732.method5292(arg0);
 	}
 }

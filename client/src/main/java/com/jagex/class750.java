@@ -34,7 +34,7 @@ public class class750 extends class262 {
 	}
 
 	@ObfuscatedName("iz.s(Laet;B)Liq;")
-	public static class262 method4623(class814 arg0) {
+	public static class262 method4623(Packet arg0) {
 		class262 var1 = class262.method2603(arg0);
 		int var2 = arg0.method15411();
 		int var3 = arg0.method15411();

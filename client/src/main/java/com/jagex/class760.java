@@ -71,11 +71,11 @@ public class class760 extends class374 {
 			this.field8896 = arg0;
 			this.field8901 = false;
 		} catch (LineUnavailableException var4) {
-			if (class595.method14067(arg0) == 1) {
+			if (IntMath.method14067(arg0) == 1) {
 				this.field8901 = true;
 				throw var4;
 			} else {
-				this.method6538(class595.method2839(arg0));
+				this.method6538(IntMath.bitceil(arg0));
 			}
 		}
 	}

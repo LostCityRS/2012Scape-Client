@@ -33,7 +33,7 @@ public class class42 {
 	public static class547 field595 = new class547();
 
 	@ObfuscatedName("w.k")
-	public static class565 field609 = new class565(16);
+	public static IterableMap field609 = new IterableMap(16);
 
 	@ObfuscatedName("w.h")
 	public static class552 field592 = new class552();
@@ -45,7 +45,7 @@ public class class42 {
 	public static class547 field599 = new class547();
 
 	@ObfuscatedName("w.y")
-	public static class451 field600 = new class451(30);
+	public static WeightedCache field600 = new WeightedCache(30);
 
 	@ObfuscatedName("w.ai")
 	public static class165 field597 = null;
@@ -87,7 +87,7 @@ public class class42 {
 	public static int field616 = -1;
 
 	@ObfuscatedName("w.bx")
-	public static class451 field620 = new class451(8);
+	public static WeightedCache field620 = new WeightedCache(8);
 
 	@ObfuscatedName("w.bo")
 	public static float[] field618 = new float[4];
@@ -456,7 +456,7 @@ public class class42 {
 				if (var4 == null) {
 					var4 = new class946(arg0.field10334);
 				}
-				field609.method11927(var4, var2);
+				field609.pushNode(var4, var2);
 				field594++;
 			}
 		}
@@ -486,37 +486,37 @@ public class class42 {
 		if (client.field9117) {
 			class613 var3 = Statics.field7366 == -1 ? null : Statics.field4464.method12600(Statics.field7366);
 			if (client.method14331(arg0).method14931() && (Statics.field4822 & 0x20) != 0 && (var3 == null || arg0.method3132(Statics.field7366, var3.field7287) != var3.field7287)) {
-				Statics.method8140(client.field9103, client.field9151 + " " + class32.field491 + " " + arg0.field1795, Statics.field477, 58, arg0.field1903, 0L, arg0.field1765, arg0.field1764, true, false, (long) (arg0.field1765 << 32 | arg0.field1764), false);
+				Statics.method8140(client.field9103, client.field9151 + " " + class32.field491 + " " + arg0.field1795, Statics.field477, 58, arg0.field1903, 0L, arg0.id, arg0.parentLayer, true, false, (long) (arg0.id << 32 | arg0.parentLayer), false);
 			}
 		}
 		for (int var4 = 9; var4 >= 5; var4--) {
 			String var5 = method3213(arg0, var4);
 			if (var5 != null) {
-				Statics.method8140(var5, arg0.field1795, client.method1956(arg0, var4), 1007, arg0.field1903, (long) (var4 + 1), arg0.field1765, arg0.field1764, true, false, (long) (arg0.field1765 << 32 | arg0.field1764), false);
+				Statics.method8140(var5, arg0.field1795, client.method1956(arg0, var4), 1007, arg0.field1903, (long) (var4 + 1), arg0.id, arg0.parentLayer, true, false, (long) (arg0.id << 32 | arg0.parentLayer), false);
 			}
 		}
 		String var6 = client.method14722(arg0);
 		if (var6 != null) {
-			Statics.method8140(var6, arg0.field1795, arg0.field1855, 25, arg0.field1903, 0L, arg0.field1765, arg0.field1764, true, false, (long) (arg0.field1765 << 32 | arg0.field1764), false);
+			Statics.method8140(var6, arg0.field1795, arg0.field1855, 25, arg0.field1903, 0L, arg0.id, arg0.parentLayer, true, false, (long) (arg0.id << 32 | arg0.parentLayer), false);
 		}
 		for (int var7 = 4; var7 >= 0; var7--) {
 			String var8 = method3213(arg0, var7);
 			if (var8 != null) {
-				Statics.method8140(var8, arg0.field1795, client.method1956(arg0, var7), 57, arg0.field1903, (long) (var7 + 1), arg0.field1765, arg0.field1764, true, false, (long) (arg0.field1765 << 32 | arg0.field1764), false);
+				Statics.method8140(var8, arg0.field1795, client.method1956(arg0, var7), 57, arg0.field1903, (long) (var7 + 1), arg0.id, arg0.parentLayer, true, false, (long) (arg0.id << 32 | arg0.parentLayer), false);
 			}
 		}
 		if (!client.method14331(arg0).method14927()) {
 			return;
 		}
 		if (arg0.field1853 == null) {
-			Statics.method8140(class588.field6914.method12206(Statics.field2308), "", -1, 30, arg0.field1903, 0L, arg0.field1765, arg0.field1764, true, false, (long) (arg0.field1765 << 32 | arg0.field1764), false);
+			Statics.method8140(class588.field6914.method12206(Statics.field2308), "", -1, 30, arg0.field1903, 0L, arg0.id, arg0.parentLayer, true, false, (long) (arg0.id << 32 | arg0.parentLayer), false);
 		} else {
-			Statics.method8140(arg0.field1853, "", -1, 30, arg0.field1903, 0L, arg0.field1765, arg0.field1764, true, false, (long) (arg0.field1765 << 32 | arg0.field1764), false);
+			Statics.method8140(arg0.field1853, "", -1, 30, arg0.field1903, 0L, arg0.id, arg0.parentLayer, true, false, (long) (arg0.id << 32 | arg0.parentLayer), false);
 		}
 	}
 
 	@ObfuscatedName("dv.i(Laay;B)V")
-	public static void method2845(class719 arg0) {
+	public static void method2845(PathingEntity arg0) {
 		if (arg0 instanceof class903) {
 			class903 var1 = (class903) arg0;
 			if (var1.field10075 != null) {
@@ -594,7 +594,7 @@ public class class42 {
 		while (true) {
 			int var32;
 			int var33;
-			class113 var83;
+			Location var83;
 			class540 var84;
 			String[] var86;
 			do {
@@ -618,7 +618,7 @@ public class class42 {
 										var32 = ((class974) var29.field4563).field10510;
 										var33 = ((class974) var29.field4563).field10509;
 									} else {
-										class317 var34 = var29.field4563.method8565().field3464;
+										Vector3 var34 = var29.field4563.method8565().field3464;
 										var32 = (int) var34.field3475 >> 9;
 										var33 = (int) var34.field3477 >> 9;
 									}
@@ -627,7 +627,7 @@ public class class42 {
 									}
 									class902 var35 = (class902) var29.field4563;
 									int var36 = var35.method13954();
-									class317 var37 = var35.method8565().field3464;
+									Vector3 var37 = var35.method8565().field3464;
 									if ((var36 & 0x1) == 0 && ((int) var37.field3475 & 0x1FF) == 0 && ((int) var37.field3477 & 0x1FF) == 0 || (var36 & 0x1) == 1 && ((int) var37.field3475 & 0x1FF) == 256 && ((int) var37.field3477 & 0x1FF) == 256) {
 										int var38 = (int) var37.field3475 - (var35.method13954() - 1 << 8);
 										int var39 = (int) var37.field3477 - (var35.method13954() - 1 << 8);
@@ -636,7 +636,7 @@ public class class42 {
 											if (var41 != null) {
 												class903 var42 = (class903) var41.field9550;
 												if (client.field9213 != var42.field8635 && var42.field8634) {
-													class317 var43 = var42.method8565().field3464;
+													Vector3 var43 = var42.method8565().field3464;
 													int var44 = (int) var43.field3475 - (var42.field10075.field7213 - 1 << 8);
 													int var45 = (int) var43.field3477 - (var42.field10075.field7213 - 1 << 8);
 													if (var44 >= var38 && var42.field10075.field7213 <= var35.method13954() - (var44 - var38 >> 9) && var45 >= var39 && var42.field10075.field7213 <= var35.method13954() - (var45 - var39 >> 9)) {
@@ -651,7 +651,7 @@ public class class42 {
 										for (int var48 = 0; var48 < var46; var48++) {
 											class902 var49 = client.field9070[var47[var48]];
 											if (var49 != null && client.field9213 != var49.field8635 && var35 != var49 && var49.field8634) {
-												class317 var50 = var49.method8565().field3464;
+												Vector3 var50 = var49.method8565().field3464;
 												int var51 = (int) var50.field3475 - (var49.method13954() - 1 << 8);
 												int var52 = (int) var50.field3477 - (var49.method13954() - 1 << 8);
 												if (var51 >= var38 && var49.method13954() <= var35.method13954() - (var51 - var38 >> 9) && var52 >= var39 && var49.method13954() <= var35.method13954() - (var52 - var39 >> 9)) {
@@ -674,7 +674,7 @@ public class class42 {
 								if (var53.field10075 == null) {
 									break;
 								}
-								class317 var54 = var53.method8565().field3464;
+								Vector3 var54 = var53.method8565().field3464;
 								if ((var53.field10075.field7213 & 0x1) == 0 && ((int) var54.field3475 & 0x1FF) == 0 && ((int) var54.field3477 & 0x1FF) == 0 || (var53.field10075.field7213 & 0x1) == 1 && ((int) var54.field3475 & 0x1FF) == 256 && ((int) var54.field3477 & 0x1FF) == 256) {
 									int var55 = (int) var54.field3475 - (var53.field10075.field7213 - 1 << 8);
 									int var56 = (int) var54.field3477 - (var53.field10075.field7213 - 1 << 8);
@@ -683,7 +683,7 @@ public class class42 {
 										if (var58 != null) {
 											class903 var59 = (class903) var58.field9550;
 											if (client.field9213 != var59.field8635 && var53 != var59 && var59.field8634) {
-												class317 var60 = var59.method8565().field3464;
+												Vector3 var60 = var59.method8565().field3464;
 												int var61 = (int) var60.field3475 - (var59.field10075.field7213 - 1 << 8);
 												int var62 = (int) var60.field3477 - (var59.field10075.field7213 - 1 << 8);
 												if (var61 >= var55 && var59.field10075.field7213 <= var53.field10075.field7213 - (var61 - var55 >> 9) && var62 >= var56 && var59.field10075.field7213 <= var53.field10075.field7213 - (var62 - var56 >> 9)) {
@@ -698,7 +698,7 @@ public class class42 {
 									for (int var65 = 0; var65 < var63; var65++) {
 										class902 var66 = client.field9070[var64[var65]];
 										if (var66 != null && client.field9213 != var66.field8635 && var66.field8634) {
-											class317 var67 = var66.method8565().field3464;
+											Vector3 var67 = var66.method8565().field3464;
 											int var68 = (int) var67.field3475 - (var66.method13954() - 1 << 8);
 											int var69 = (int) var67.field3477 - (var66.method13954() - 1 << 8);
 											if (var68 >= var55 && var66.method13954() <= var53.field10075.field7213 - (var68 - var55 >> 9) && var69 >= var56 && var66.method13954() <= var53.field10075.field7213 - (var69 - var56 >> 9)) {
@@ -714,7 +714,7 @@ public class class42 {
 									break;
 								}
 							}
-							if (var29.field4563 instanceof class1008) {
+							if (var29.field4563 instanceof ObjStackEntity) {
 								int var70 = var3.field4836 + var32;
 								int var71 = var3.field4838 + var33;
 								class774 var72 = (class774) client.field9088.method11923((long) (var29.field4563.field9807 << 28 | var71 << 14 | var70));
@@ -774,8 +774,8 @@ public class class42 {
 									}
 								}
 							}
-						} while (!(var29.field4563 instanceof class113));
-						var83 = (class113) var29.field4563;
+						} while (!(var29.field4563 instanceof Location));
+						var83 = (Location) var29.field4563;
 						var84 = client.field8980.method6103().method11471(var83.method2401());
 						if (var84.field6534 != null) {
 							var84 = var84.method11431(Statics.field2669);
@@ -823,7 +823,7 @@ public class class42 {
 	}
 
 	@ObfuscatedName("acr.k(Lca;III)J")
-	public static long method14745(class113 arg0, int arg1, int arg2) {
+	public static long method14745(Location arg0, int arg1, int arg2) {
 		long var3 = 4194304L;
 		long var5 = Long.MIN_VALUE;
 		class540 var7 = client.field8980.method6103().method11471(arg0.method2401());
@@ -1081,15 +1081,15 @@ public class class42 {
 		}
 		int var2 = arg0 >> 16;
 		int var3 = arg0 & 0xFFFF;
-		if (Statics.field1756[var2] == null || Statics.field1756[var2].field1732[var3] == null) {
+		if (Statics.interfaces[var2] == null || Statics.interfaces[var2].components[var3] == null) {
 			return false;
 		}
-		class165 var4 = Statics.field1756[var2].field1732[var3];
-		if (arg1 == -1 && var4.field1766 == 0) {
+		class165 var4 = Statics.interfaces[var2].components[var3];
+		if (arg1 == -1 && var4.type == 0) {
 			for (class944 var5 = (class944) field595.method11563(); var5 != null; var5 = (class944) field595.method11567()) {
 				if (var5.field10340 == 58 || var5.field10340 == 1007 || var5.field10340 == 25 || var5.field10340 == 57 || var5.field10340 == 30) {
-					for (class165 var6 = class165.method11381(var5.field10335); var6 != null; var6 = client.method4752(Statics.field1756[var6.field1764 >> 16], var6)) {
-						if (var4.field1764 == var6.field1764) {
+					for (class165 var6 = class165.method11381(var5.field10335); var6 != null; var6 = client.method4752(Statics.interfaces[var6.parentLayer >> 16], var6)) {
+						if (var4.parentLayer == var6.parentLayer) {
 							return true;
 						}
 					}
@@ -1097,7 +1097,7 @@ public class class42 {
 			}
 		} else {
 			for (class944 var7 = (class944) field595.method11563(); var7 != null; var7 = (class944) field595.method11567()) {
-				if (var7.field10329 == arg1 && var4.field1764 == var7.field10335 && (var7.field10340 == 58 || var7.field10340 == 1007 || var7.field10340 == 25 || var7.field10340 == 57 || var7.field10340 == 30)) {
+				if (var7.field10329 == arg1 && var4.parentLayer == var7.field10335 && (var7.field10340 == 58 || var7.field10340 == 1007 || var7.field10340 == 25 || var7.field10340 == 57 || var7.field10340 == 30)) {
 					return true;
 				}
 			}

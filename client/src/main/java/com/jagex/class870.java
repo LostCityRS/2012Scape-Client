@@ -9,26 +9,26 @@ public class class870 extends class546 {
 	public class198 field9887;
 
 	@ObfuscatedName("agg.a")
-	public final class317 field9888 = new class317();
+	public final Vector3 field9888 = new Vector3();
 
 	@ObfuscatedName("agg.s")
 	public boolean field9892;
 
 	@ObfuscatedName("agg.c")
-	public final class317 field9890 = new class317(Float.NaN, Float.NaN, Float.NaN);
+	public final Vector3 field9890 = new Vector3(Float.NaN, Float.NaN, Float.NaN);
 
 	@ObfuscatedName("agg.m")
-	public final class317 field9891 = new class317(Float.NaN, Float.NaN, Float.NaN);
+	public final Vector3 field9891 = new Vector3(Float.NaN, Float.NaN, Float.NaN);
 
 	@ObfuscatedName("agg.t")
-	public final class317 field9889 = new class317();
+	public final Vector3 field9889 = new Vector3();
 
 	public class870(class199 arg0) {
 		super(arg0);
 	}
 
 	@ObfuscatedName("agg.b(Lfs;Lko;ZI)V")
-	public void method15927(class198 arg0, class317 arg1, boolean arg2) {
+	public void method15927(class198 arg0, Vector3 arg1, boolean arg2) {
 		this.field9887 = arg0;
 		this.field9888.method5334(arg1);
 		this.field9892 = arg2;
@@ -50,11 +50,11 @@ public class class870 extends class546 {
 
 	@ObfuscatedName("agg.s(Lfi;Lkc;III)V")
 	public void method11543(class195 arg0, class314 arg1, int arg2, int arg3) {
-		class317 var5 = class317.method5290(this.field6645.method3720());
+		Vector3 var5 = Vector3.method5290(this.field6645.method3720());
 		var5.field3475 -= arg2;
 		var5.field3477 -= arg3;
 		var5.field3476 *= -1.0F;
-		class317 var6 = this.method11550();
+		Vector3 var6 = this.method11550();
 		var6.field3475 -= arg2;
 		var6.field3477 -= arg3;
 		var6.field3476 *= -1.0F;
@@ -64,9 +64,9 @@ public class class870 extends class546 {
 	}
 
 	@ObfuscatedName("agg.a(S)Lko;")
-	public class317 method11550() {
-		class317 var1 = class317.method5290(this.field9890);
-		class317 var2 = class317.method5290(this.field9888);
+	public Vector3 method11550() {
+		Vector3 var1 = Vector3.method5290(this.field9890);
+		Vector3 var2 = Vector3.method5290(this.field9888);
 		if (this.field9892) {
 			var2.method5318(this.field9887.method3680());
 		}
@@ -76,12 +76,12 @@ public class class870 extends class546 {
 	}
 
 	@ObfuscatedName("agg.c(Laet;I)V")
-	public void method11542(class814 arg0) {
-		class197 var2 = class197.method4728(arg0.method15220());
-		int var3 = arg0.method15239();
+	public void method11542(Packet arg0) {
+		class197 var2 = class197.method4728(arg0.g1());
+		int var3 = arg0.g2();
 		this.field9887 = this.field6645.method3717().method1355(var2, var3);
 		this.field9888.method5292(arg0);
-		if (arg0.method15220() == 1) {
+		if (arg0.g1() == 1) {
 			this.field9892 = true;
 		} else {
 			this.field9892 = false;

@@ -10,14 +10,14 @@ public class class437 {
 	}
 
 	@ObfuscatedName("pd.u(FLko;Lko;Lko;Lko;Lko;FFB)V")
-	public static void method7675(float arg0, class317 arg1, class317 arg2, class317 arg3, class317 arg4, class317 arg5, float arg6, float arg7) {
+	public static void method7675(float arg0, Vector3 arg1, Vector3 arg2, Vector3 arg3, Vector3 arg4, Vector3 arg5, float arg6, float arg7) {
 		if (arg2.method5296(arg1)) {
 			return;
 		}
-		class317 var8 = class317.method5377(arg2, arg1);
+		Vector3 var8 = Vector3.method5377(arg2, arg1);
 		float var9 = var8.method5338();
 		if (arg6 > 0.0F) {
-			arg4 = class317.method5290(arg4);
+			arg4 = Vector3.method5290(arg4);
 			arg4.method5357(var9 / arg6 * arg7);
 		}
 		if (arg4.field3475 == Float.POSITIVE_INFINITY || Float.isNaN(arg1.field3475) || var9 > 5120.0F) {
@@ -25,12 +25,12 @@ public class class437 {
 			arg3.method5370();
 			return;
 		}
-		class317 var10 = class317.method5290(arg3);
+		Vector3 var10 = Vector3.method5290(arg3);
 		var10.method5310();
-		class317 var11 = class317.method5315(var10, arg4);
-		class317 var12 = class317.method5312(var10, var11);
-		class317 var13 = class317.method5290(arg3);
-		class317 var14 = class317.method5290(var8);
+		Vector3 var11 = Vector3.method5315(var10, arg4);
+		Vector3 var12 = Vector3.method5312(var10, var11);
+		Vector3 var13 = Vector3.method5290(arg3);
+		Vector3 var14 = Vector3.method5290(var8);
 		var14.method5310();
 		if (var12.field3475 > var14.field3475) {
 			if (var8.field3475 < 0.0F) {
@@ -112,7 +112,7 @@ public class class437 {
 			arg1.method5334(arg2);
 			arg3.method5370();
 		} else {
-			arg1.method5299(class317.method5317(arg3, arg0));
+			arg1.method5299(Vector3.method5317(arg3, arg0));
 		}
 		var10.method5291();
 		var13.method5291();

@@ -12,7 +12,7 @@ public class class341 {
 	public final class334 field3705;
 
 	@ObfuscatedName("lt.a")
-	public final class451 field3706 = new class451(64);
+	public final WeightedCache field3706 = new WeightedCache(64);
 
 	public class341(class519 arg0, class334 arg1, class334 arg2) {
 		this.field3704 = arg1;
@@ -33,13 +33,13 @@ public class class341 {
 		}
 		byte[] var3;
 		if (arg0 >= 32768) {
-			var3 = this.field3705.method5627(0, arg0 & 0x7FFF);
+			var3 = this.field3705.getFile(0, arg0 & 0x7FFF);
 		} else {
-			var3 = this.field3704.method5627(0, arg0);
+			var3 = this.field3704.getFile(0, arg0);
 		}
 		class950 var4 = new class950();
 		if (var3 != null) {
-			var4.method16690(new class814(var3));
+			var4.method16690(new Packet(var3));
 		}
 		if (arg0 >= 32768) {
 			var4.method16694();

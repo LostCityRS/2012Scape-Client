@@ -10,7 +10,7 @@ public class class144 {
 	public static class547 field1534 = new class547();
 
 	@ObfuscatedName("dd.t")
-	public static class565 field1529 = new class565(32);
+	public static IterableMap field1529 = new IterableMap(32);
 
 	@ObfuscatedName("dd.l")
 	public static int field1530 = 1;
@@ -49,9 +49,9 @@ public class class144 {
 			if (var1 == null) {
 				return false;
 			}
-			class814 var2 = new class814(var1);
+			Packet var2 = new Packet(var1);
 			method7325(var2);
-			int var3 = var2.method15220();
+			int var3 = var2.g1();
 			for (int var4 = 0; var4 < var3; var4++) {
 				field1534.method11558(new class781(var2));
 			}
@@ -114,13 +114,13 @@ public class class144 {
 	}
 
 	@ObfuscatedName("oe.j(Laet;B)V")
-	public static void method7325(class814 arg0) {
+	public static void method7325(Packet arg0) {
 		while (true) {
-			int var1 = arg0.method15220();
+			int var1 = arg0.g1();
 			switch(var1) {
 				case 0:
-					field1527 = arg0.method15239();
-					field1531 = arg0.method15239();
+					field1527 = arg0.g2();
+					field1531 = arg0.g2();
 					break;
 				case 255:
 					return;
@@ -190,7 +190,7 @@ public class class144 {
 		Statics.field416 = null;
 		client.field8989 = false;
 		if (field1533 > 0) {
-			class502.method1372(class619.field7312, field1533, -1);
+			ScriptRunner.runTrigger(ClientTriggerType.CUTSCENE_END, field1533, -1);
 		}
 		method2911();
 		class792 var4 = class792.method14781(class280.field2953, client.field8975.field834);

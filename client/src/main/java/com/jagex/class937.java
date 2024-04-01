@@ -7,7 +7,7 @@ import deob.Statics;
 public class class937 extends class793 {
 
 	@ObfuscatedName("aih.l")
-	public class565 field10239;
+	public IterableMap field10239;
 
 	@ObfuscatedName("aih.f")
 	public int field10229 = 256;
@@ -103,7 +103,7 @@ public class class937 extends class793 {
 	public boolean field10238;
 
 	public class937() {
-		this.field10239 = new class565(128);
+		this.field10239 = new IterableMap(128);
 		this.method16266(-1, 256);
 		this.method16287(true);
 	}
@@ -157,7 +157,7 @@ public class class937 extends class793 {
 					var5 = false;
 					continue;
 				}
-				this.field10239.method11927(var9, (long) var8);
+				this.field10239.pushNode(var9, (long) var8);
 			}
 			if (!var9.method14918(arg2, (byte[]) var7.field9550, var6)) {
 				var5 = false;

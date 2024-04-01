@@ -15,11 +15,11 @@ public class class711 extends class150 {
 	@ObfuscatedName("aak.s")
 	public final int field8527;
 
-	public class711(class814 arg0) {
+	public class711(Packet arg0) {
 		super(arg0);
-		this.field8529 = arg0.method15239();
-		this.field8528 = arg0.method15239();
-		this.field8527 = arg0.method15220();
+		this.field8529 = arg0.g2();
+		this.field8528 = arg0.g2();
+		this.field8527 = arg0.g1();
 	}
 
 	@ObfuscatedName("aak.j(I)V")

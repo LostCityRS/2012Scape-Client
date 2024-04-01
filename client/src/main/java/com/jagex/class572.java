@@ -9,9 +9,9 @@ public class class572 {
 	public char field6760;
 
 	@ObfuscatedName("uh.u(Laet;I)V")
-	public void method12016(class814 arg0) {
+	public void method12016(Packet arg0) {
 		while (true) {
-			int var2 = arg0.method15220();
+			int var2 = arg0.g1();
 			if (var2 == 0) {
 				return;
 			}
@@ -20,7 +20,7 @@ public class class572 {
 	}
 
 	@ObfuscatedName("uh.j(Laet;II)V")
-	public void method12021(class814 arg0, int arg1) {
+	public void method12021(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			this.field6760 = class524.method16898(arg0.method15238());
 		}

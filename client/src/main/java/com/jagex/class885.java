@@ -25,45 +25,45 @@ public class class885 extends class640 {
 
 	@ObfuscatedName("agx.ac(Lyq;Lcy;Ldz;II)Lagx;")
 	public static class885 method15981(class682 arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
-		if (arg0.field8151 || class595.method11258(arg3) && class595.method11258(arg4)) {
+		if (arg0.field8151 || IntMath.method11258(arg3) && IntMath.method11258(arg4)) {
 			return new class885(arg0, 3553, arg1, arg2, arg3, arg4);
 		} else if (arg0.field8208) {
 			return new class885(arg0, 34037, arg1, arg2, arg3, arg4);
 		} else {
-			return new class885(arg0, arg1, arg2, arg3, arg4, class595.method2839(arg3), class595.method2839(arg4));
+			return new class885(arg0, arg1, arg2, arg3, arg4, IntMath.bitceil(arg3), IntMath.bitceil(arg4));
 		}
 	}
 
 	@ObfuscatedName("agx.aq(Lyq;IIZ[III)Lagx;")
 	public static class885 method15974(class682 arg0, int arg1, int arg2, boolean arg3, int[] arg4, int arg5, int arg6) {
-		if (arg0.field8151 || class595.method11258(arg1) && class595.method11258(arg2)) {
+		if (arg0.field8151 || IntMath.method11258(arg1) && IntMath.method11258(arg2)) {
 			return new class885(arg0, 3553, arg1, arg2, arg3, arg4, arg5, arg6);
 		} else if (arg0.field8208) {
 			return new class885(arg0, 34037, arg1, arg2, arg3, arg4, arg5, arg6);
 		} else {
-			return new class885(arg0, arg1, arg2, class595.method2839(arg1), class595.method2839(arg2), arg4);
+			return new class885(arg0, arg1, arg2, IntMath.bitceil(arg1), IntMath.bitceil(arg2), arg4);
 		}
 	}
 
 	@ObfuscatedName("agx.ab(Lyq;Lcy;Ldz;IIZ[BLcy;)Lagx;")
 	public static class885 method15975(class682 arg0, class124 arg1, class139 arg2, int arg3, int arg4, boolean arg5, byte[] arg6, class124 arg7) {
-		if (arg0.field8151 || class595.method11258(arg3) && class595.method11258(arg4)) {
+		if (arg0.field8151 || IntMath.method11258(arg3) && IntMath.method11258(arg4)) {
 			return new class885(arg0, 3553, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 		} else if (arg0.field8208) {
 			return new class885(arg0, 34037, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 		} else {
-			return new class885(arg0, arg1, arg2, arg3, arg4, class595.method2839(arg3), class595.method2839(arg4), arg6, arg7);
+			return new class885(arg0, arg1, arg2, arg3, arg4, IntMath.bitceil(arg3), IntMath.bitceil(arg4), arg6, arg7);
 		}
 	}
 
 	@ObfuscatedName("agx.bq(Lyq;IIII)Lagx;")
 	public static class885 method15976(class682 arg0, int arg1, int arg2, int arg3, int arg4) {
-		if (arg0.field8151 || class595.method11258(arg3) && class595.method11258(arg4)) {
+		if (arg0.field8151 || IntMath.method11258(arg3) && IntMath.method11258(arg4)) {
 			return new class885(arg0, 3553, arg1, arg2, arg3, arg4, true);
 		} else if (arg0.field8208) {
 			return new class885(arg0, 34037, arg1, arg2, arg3, arg4, true);
 		} else {
-			return new class885(arg0, arg1, arg2, arg3, arg4, class595.method2839(arg3), class595.method2839(arg4), true);
+			return new class885(arg0, arg1, arg2, arg3, arg4, IntMath.bitceil(arg3), IntMath.bitceil(arg4), true);
 		}
 	}
 

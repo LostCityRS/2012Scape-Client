@@ -3,7 +3,7 @@ package com.jagex;
 import deob.ObfuscatedName;
 
 @ObfuscatedName("xm")
-public class class658 extends class970 implements class113 {
+public class class658 extends class970 implements Location {
 
 	@ObfuscatedName("xm.z")
 	public class116 field7530;
@@ -79,7 +79,7 @@ public class class658 extends class970 implements class113 {
 	public void method12851(class14 arg0) {
 		class13 var2 = this.field7530.method2437(arg0, 262144, true, true);
 		if (var2 != null) {
-			class317 var3 = this.method8565().field3464;
+			Vector3 var3 = this.method8565().field3464;
 			int var4 = (int) var3.field3475 >> 9;
 			int var5 = (int) var3.field3477 >> 9;
 			this.field7530.method2438(arg0, var2, this.method8558(), var4, var4, var5, var5, false);

@@ -20,13 +20,13 @@ public class class691 extends class150 {
 	@ObfuscatedName("ze.m")
 	public final int field8454;
 
-	public class691(class814 arg0) {
+	public class691(Packet arg0) {
 		super(arg0);
-		this.field8450 = arg0.method15239();
-		this.field8451 = arg0.method15239();
-		this.field8452 = arg0.method15239();
-		this.field8453 = arg0.method15239();
-		this.field8454 = arg0.method15239();
+		this.field8450 = arg0.g2();
+		this.field8451 = arg0.g2();
+		this.field8452 = arg0.g2();
+		this.field8453 = arg0.g2();
+		this.field8454 = arg0.g2();
 	}
 
 	@ObfuscatedName("ze.j(I)V")

@@ -12,7 +12,7 @@ public class class484 {
 	public int field5105;
 
 	@ObfuscatedName("rd.a")
-	public final class451 field5107 = new class451(64);
+	public final WeightedCache field5107 = new WeightedCache(64);
 
 	@ObfuscatedName("rd.s")
 	public int field5108 = 0;
@@ -24,7 +24,7 @@ public class class484 {
 
 	@ObfuscatedName("rd.u(IS)Lry;")
 	public class483 method8503(int arg0) {
-		class451 var2 = this.field5107;
+		WeightedCache var2 = this.field5107;
 		class483 var3;
 		synchronized (this.field5107) {
 			var3 = (class483) this.field5107.method7916((long) arg0);
@@ -35,16 +35,16 @@ public class class484 {
 		class334 var5 = this.field5106;
 		byte[] var6;
 		synchronized (this.field5106) {
-			var6 = this.field5106.method5627(class161.field1629.field1668, arg0);
+			var6 = this.field5106.getFile(class161.field1629.field1668, arg0);
 		}
 		class483 var8 = new class483();
 		var8.field5088 = this;
 		var8.field5089 = arg0;
 		if (var6 != null) {
-			var8.method8494(new class814(var6));
+			var8.method8494(new Packet(var6));
 		}
 		var8.method8489();
-		class451 var9 = this.field5107;
+		WeightedCache var9 = this.field5107;
 		synchronized (this.field5107) {
 			this.field5107.method7937(var8, (long) arg0);
 			return var8;
@@ -53,7 +53,7 @@ public class class484 {
 
 	@ObfuscatedName("rd.j(I)V")
 	public void method8500() {
-		class451 var1 = this.field5107;
+		WeightedCache var1 = this.field5107;
 		synchronized (this.field5107) {
 			this.field5107.method7922();
 		}
@@ -61,7 +61,7 @@ public class class484 {
 
 	@ObfuscatedName("rd.a(IB)V")
 	public void method8501(int arg0) {
-		class451 var2 = this.field5107;
+		WeightedCache var2 = this.field5107;
 		synchronized (this.field5107) {
 			this.field5107.method7921(arg0);
 		}
@@ -69,7 +69,7 @@ public class class484 {
 
 	@ObfuscatedName("rd.s(I)V")
 	public void method8502() {
-		class451 var1 = this.field5107;
+		WeightedCache var1 = this.field5107;
 		synchronized (this.field5107) {
 			this.field5107.method7925();
 		}

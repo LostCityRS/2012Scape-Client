@@ -46,7 +46,7 @@ public class class788 extends class399 {
 		}
 	}
 
-	public class788(class814 arg0) {
+	public class788(Packet arg0) {
 		this.method14967(arg0);
 	}
 
@@ -96,21 +96,21 @@ public class class788 extends class399 {
 	}
 
 	@ObfuscatedName("adh.m(Laet;I)V")
-	public void method14967(class814 arg0) {
-		int var2 = arg0.method15220();
+	public void method14967(Packet arg0) {
+		int var2 = arg0.g1();
 		if ((var2 & 0x1) != 0) {
 			this.field9433 = true;
 		}
 		if ((var2 & 0x2) != 0) {
 			this.field9428 = true;
 		}
-		this.field4228 = arg0.method15246();
-		this.field9435 = arg0.method15246();
-		this.field9427 = arg0.method15337();
-		arg0.method15220();
+		this.field4228 = arg0.g8();
+		this.field9435 = arg0.g8();
+		this.field9427 = arg0.gjstr();
+		arg0.g1();
 		this.field9432 = arg0.method15238();
 		this.field9434 = arg0.method15238();
-		this.field9430 = arg0.method15239();
+		this.field9430 = arg0.g2();
 		if (this.field9430 <= 0) {
 			return;
 		}
@@ -118,13 +118,13 @@ public class class788 extends class399 {
 		for (int var3 = 0; var3 < this.field9430; var3++) {
 			class217 var4 = new class217();
 			if (this.field9433) {
-				arg0.method15246();
+				arg0.g8();
 			}
 			if (this.field9428) {
-				var4.field2343 = arg0.method15337();
+				var4.field2343 = arg0.gjstr();
 			}
 			var4.field2342 = arg0.method15238();
-			var4.field2341 = arg0.method15239();
+			var4.field2341 = arg0.g2();
 			this.field9429[var3] = var4;
 		}
 	}

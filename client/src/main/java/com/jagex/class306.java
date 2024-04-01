@@ -9,7 +9,6 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.MediaTracker;
 import java.awt.Toolkit;
-import java.awt.image.ImageObserver;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -210,7 +209,7 @@ public class class306 implements class310 {
 				Image var37 = Statics.field1231.createImage(var36, this.field3378 - var27 - var25);
 				int var38 = var37.getWidth(null);
 				Graphics var39 = var37.getGraphics();
-				int var40 = this.field3374 * class309.method3587() / 10 % var29;
+				int var40 = this.field3374 * Loading.method3587() / 10 % var29;
 				for (int var41 = var40 - var29; var41 < var38; var41 += var29) {
 					var39.drawImage(this.field3362, var41, 0, null);
 				}
@@ -254,12 +253,12 @@ public class class306 implements class310 {
 
 	@ObfuscatedName("kb.c(I)V")
 	public void method4984() {
-		class385.method4801(Statics.field6789.method4974(), Statics.field6789.method4959(), client.field8974[client.field8907], client.field8956[client.field8907], client.field8902[client.field8907]);
+		GameShell.method4801(Statics.field6789.method4974(), Statics.field6789.method4959(), client.field8974[client.field8907], client.field8956[client.field8907], client.field8902[client.field8907]);
 	}
 
 	@ObfuscatedName("kb.m(I)V")
 	public void method4985() {
-		class385.method1947();
+		GameShell.method1947();
 	}
 
 	@ObfuscatedName("kb.t(B)V")

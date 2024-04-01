@@ -27,7 +27,7 @@ public abstract class class974 extends class836 {
 		super(arg0);
 		this.field9807 = (byte) arg1;
 		this.field9809 = (byte) arg2;
-		this.method8551(new class317((float) arg3, (float) arg4, (float) arg5));
+		this.method8551(new Vector3((float) arg3, (float) arg4, (float) arg5));
 		this.field10510 = (short) arg6;
 		this.field10508 = (short) arg7;
 		this.field10509 = (short) arg8;

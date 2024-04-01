@@ -27,7 +27,7 @@ public class class466 {
 	public static int field4926 = 0;
 
 	@ObfuscatedName("qr.d")
-	public static class565 field4924 = new class565(8);
+	public static IterableMap field4924 = new IterableMap(8);
 
 	@ObfuscatedName("qr.z")
 	public static int field4920 = 0;

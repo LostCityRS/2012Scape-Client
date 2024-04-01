@@ -11,8 +11,8 @@ public class class447 {
 	}
 
 	@ObfuscatedName("afu.u(Laet;I)Lpr;")
-	public static class445 method15895(class814 arg0) {
-		class449 var1 = class449.method6333(arg0.method15220());
+	public static class445 method15895(Packet arg0) {
+		class449 var1 = class449.method6333(arg0.g1());
 		if (class449.field4820 == var1) {
 			return class446.method1698(arg0);
 		} else if (class449.field4818 == var1) {

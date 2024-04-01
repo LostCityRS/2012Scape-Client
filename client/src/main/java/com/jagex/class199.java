@@ -40,22 +40,22 @@ public abstract class class199 {
 	public float field2228;
 
 	@ObfuscatedName("fe.n")
-	public final class317 field2229 = new class317();
+	public final Vector3 field2229 = new Vector3();
 
 	@ObfuscatedName("fe.o")
-	public final class317 field2230 = new class317();
+	public final Vector3 field2230 = new Vector3();
 
 	@ObfuscatedName("fe.p")
-	public final class317 field2232 = new class317();
+	public final Vector3 field2232 = new Vector3();
 
 	@ObfuscatedName("fe.w")
-	public final class317 field2233 = new class317();
+	public final Vector3 field2233 = new Vector3();
 
 	@ObfuscatedName("fe.b")
-	public final class317 field2246 = new class317();
+	public final Vector3 field2246 = new Vector3();
 
 	@ObfuscatedName("fe.x")
-	public final class317 field2235 = new class317();
+	public final Vector3 field2235 = new Vector3();
 
 	@ObfuscatedName("fe.i")
 	public float field2245;
@@ -88,7 +88,7 @@ public abstract class class199 {
 	public float field2236 = 1.0F;
 
 	@ObfuscatedName("fe.ar")
-	public class565 field2225 = new class565(8);
+	public IterableMap field2225 = new IterableMap(8);
 
 	public class199(class190 arg0, class196 arg1) {
 		this.field2227 = arg0;
@@ -146,7 +146,7 @@ public abstract class class199 {
 	}
 
 	@ObfuscatedName("fe.a(ZFLko;Lkn;Lko;Lko;I)V")
-	public void method3811(boolean arg0, float arg1, class317 arg2, class316 arg3, class317 arg4, class317 arg5) {
+	public void method3811(boolean arg0, float arg1, Vector3 arg2, class316 arg3, Vector3 arg4, Vector3 arg5) {
 		if (class192.field2196 == this.field2226) {
 			class437.method7675(arg1, arg2, arg4, arg5, arg0 ? this.field2233 : this.field2232, arg0 ? this.field2230 : this.field2229, (float) this.field2244, this.field2236);
 		} else if (class192.field2197 == this.field2226) {
@@ -234,7 +234,7 @@ public abstract class class199 {
 	}
 
 	@ObfuscatedName("fe.z(Lko;I)V")
-	public void method3698(class317 arg0) throws class884 {
+	public void method3698(Vector3 arg0) throws class884 {
 		if (!this.method3715() || !this.field2226.field2200) {
 			throw new class884();
 		}
@@ -242,7 +242,7 @@ public abstract class class199 {
 	}
 
 	@ObfuscatedName("fe.n(Lko;I)V")
-	public void method3755(class317 arg0) throws class884 {
+	public void method3755(Vector3 arg0) throws class884 {
 		if (!this.method3715() || !this.field2226.field2200) {
 			throw new class884();
 		}
@@ -250,7 +250,7 @@ public abstract class class199 {
 	}
 
 	@ObfuscatedName("fe.o(Lko;B)V")
-	public void method3700(class317 arg0) throws class884 {
+	public void method3700(Vector3 arg0) throws class884 {
 		if (!this.method3715() || !this.field2226.field2200) {
 			throw new class884();
 		}
@@ -258,7 +258,7 @@ public abstract class class199 {
 	}
 
 	@ObfuscatedName("fe.q(Lko;B)V")
-	public void method3771(class317 arg0) throws class884 {
+	public void method3771(Vector3 arg0) throws class884 {
 		if (!this.method3715() || !this.field2226.field2200) {
 			throw new class884();
 		}
@@ -266,7 +266,7 @@ public abstract class class199 {
 	}
 
 	@ObfuscatedName("fe.p(Lko;FI)V")
-	public void method3702(class317 arg0, float arg1) throws class884 {
+	public void method3702(Vector3 arg0, float arg1) throws class884 {
 		if (!this.method3715() || this.field2226.field2200) {
 			throw new class884();
 		}
@@ -277,7 +277,7 @@ public abstract class class199 {
 	}
 
 	@ObfuscatedName("fe.w(Lko;FB)V")
-	public void method3768(class317 arg0, float arg1) throws class884 {
+	public void method3768(Vector3 arg0, float arg1) throws class884 {
 		if (!this.method3715() || this.field2226.field2200) {
 			throw new class884();
 		}
@@ -286,7 +286,7 @@ public abstract class class199 {
 	}
 
 	@ObfuscatedName("fe.b(Lko;FI)V")
-	public void method3687(class317 arg0, float arg1) throws class884 {
+	public void method3687(Vector3 arg0, float arg1) throws class884 {
 		if (!this.method3715() || this.field2226.field2200) {
 			throw new class884();
 		}
@@ -332,7 +332,7 @@ public abstract class class199 {
 
 	@ObfuscatedName("fe.h(Laja;I)V")
 	public void method3709(class948 arg0) {
-		this.field2225.method11927(arg0, (long) arg0.field10351);
+		this.field2225.pushNode(arg0, (long) arg0.field10351);
 	}
 
 	@ObfuscatedName("fe.r(II)V")
@@ -414,12 +414,12 @@ public abstract class class199 {
 	}
 
 	@ObfuscatedName("fe.ai(I)Lko;")
-	public class317 method3720() {
+	public Vector3 method3720() {
 		return this.field2224 == null ? null : this.field2224.method4016();
 	}
 
 	@ObfuscatedName("fe.ao(I)Lko;")
-	public class317 method3828() {
+	public Vector3 method3828() {
 		return this.field2222 == null ? null : this.field2222.method11550();
 	}
 
@@ -430,11 +430,11 @@ public abstract class class199 {
 
 	@ObfuscatedName("fe.at(B)F")
 	public float method3723() {
-		class317 var1 = this.method3720();
-		class317 var2 = this.method3828();
+		Vector3 var1 = this.method3720();
+		Vector3 var2 = this.method3828();
 		float var3 = 0.0F;
 		if (var1 != null && var2 != null) {
-			class317 var4 = class317.method5377(var2, var1);
+			Vector3 var4 = Vector3.method5377(var2, var1);
 			float var5 = (float) Math.sqrt((double) (var4.field3477 * var4.field3477 + var4.field3475 * var4.field3475));
 			var3 = (float) Math.atan2((double) -var4.field3476, (double) var5);
 			var1.method5291();
@@ -445,11 +445,11 @@ public abstract class class199 {
 
 	@ObfuscatedName("fe.ax(B)F")
 	public float method3791() {
-		class317 var1 = this.method3720();
-		class317 var2 = this.method3828();
+		Vector3 var1 = this.method3720();
+		Vector3 var2 = this.method3828();
 		float var3 = 0.0F;
 		if (var1 != null && var2 != null) {
-			class317 var4 = class317.method5377(var1, var2);
+			Vector3 var4 = Vector3.method5377(var1, var2);
 			var4.field3476 = 0.0F;
 			var3 = (float) Math.atan2((double) var4.field3475, (double) var4.field3477);
 			var1.method5291();
@@ -471,12 +471,12 @@ public abstract class class199 {
 	}
 
 	@ObfuscatedName("fe.am(B)Lko;")
-	public class317 method3809() {
+	public Vector3 method3809() {
 		return this.field2232;
 	}
 
 	@ObfuscatedName("fe.ad(B)Lko;")
-	public class317 method3728() {
+	public Vector3 method3728() {
 		return this.field2233;
 	}
 
@@ -486,12 +486,12 @@ public abstract class class199 {
 	}
 
 	@ObfuscatedName("fe.ak(I)Lko;")
-	public class317 method3730() {
+	public Vector3 method3730() {
 		return this.field2229;
 	}
 
 	@ObfuscatedName("fe.av(S)Lko;")
-	public class317 method3724() {
+	public Vector3 method3724() {
 		return this.field2230;
 	}
 

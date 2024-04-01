@@ -100,7 +100,7 @@ public class class672 extends class12 {
 	public float[][] field7717;
 
 	@ObfuscatedName("yj.ax")
-	public class565 field7697;
+	public IterableMap field7697;
 
 	@ObfuscatedName("yj.aw")
 	public static final float[] field7719 = new float[16];
@@ -134,7 +134,7 @@ public class class672 extends class12 {
 				this.field7717[var10][var9] = (float) var12 * var13;
 			}
 		}
-		this.field7697 = new class565(128);
+		this.field7697 = new IterableMap(128);
 		if ((this.field7692 & 0x10) != 0) {
 			this.field7704 = new class100(this.field7688, this);
 		}
@@ -184,7 +184,7 @@ public class class672 extends class12 {
 			}
 			if (var20 == null) {
 				var14[var15] = new class778(this, var16, var17, arg10);
-				this.field7697.method11927(var14[var15], var18);
+				this.field7697.pushNode(var14[var15], var18);
 			} else {
 				var14[var15] = (class778) var20;
 			}
@@ -287,11 +287,11 @@ public class class672 extends class12 {
 			NativeHeapBuffer var6 = this.field7688.field8094.method70(this.field7712 * var5, false);
 			Stream var7 = new Stream(var6);
 			class778[] var8 = new class778[this.field7712];
-			int var9 = class595.method1962(this.field7712 / 4);
+			int var9 = IntMath.method1962(this.field7712 / 4);
 			if (var9 < 1) {
 				var9 = 1;
 			}
-			class565 var10 = new class565(var9);
+			IterableMap var10 = new IterableMap(var9);
 			class778[] var11 = new class778[this.field7713];
 			for (int var12 = 0; var12 < this.field387; var12++) {
 				for (int var13 = 0; var13 < this.field386; var13++) {
@@ -486,7 +486,7 @@ public class class672 extends class12 {
 								if (var47 != -1) {
 									var8[var84] = var14[var42];
 								}
-								var10.method11927(new class799(var41[var42]), var50);
+								var10.pushNode(new class799(var41[var42]), var50);
 							} else {
 								var41[var42] = ((class799) var73).field9551;
 								var84 = var41[var42] & 0xFFFF;
@@ -617,7 +617,7 @@ public class class672 extends class12 {
 		if (this.field7688.field8229.length < var8) {
 			this.field7688.field8229 = new int[var8];
 		}
-		if (this.field7688.field8226.field9629.length < this.field7694 * 2) {
+		if (this.field7688.field8226.data.length < this.field7694 * 2) {
 			this.field7688.field8226 = new class963(this.field7694 * 2);
 		}
 		int var9 = arg0 - arg2;
@@ -741,10 +741,10 @@ public class class672 extends class12 {
 			this.field7688.method13294();
 		}
 		this.field7688.method13305(this.field7708, this.field7710, this.field7715, this.field7701);
-		if (this.field7688.field8226.field9629.length < this.field7694 * 2) {
+		if (this.field7688.field8226.data.length < this.field7694 * 2) {
 			this.field7688.field8226 = new class963(this.field7694 * 2);
 		} else {
-			this.field7688.field8226.field9626 = 0;
+			this.field7688.field8226.pos = 0;
 		}
 		int var10 = 0;
 		class963 var11 = this.field7688.field8226;
@@ -782,7 +782,7 @@ public class class672 extends class12 {
 			}
 		}
 		if (var10 > 0) {
-			class655 var22 = new class655(this.field7688, 5123, var11.field9629, var11.field9626);
+			class655 var22 = new class655(this.field7688, 5123, var11.data, var11.pos);
 			this.field7688.method13307(var22, 4, 0, var10);
 		}
 	}

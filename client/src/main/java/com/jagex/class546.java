@@ -19,11 +19,11 @@ public abstract class class546 {
 	public abstract boolean method11541();
 
 	@ObfuscatedName("td.c(Laet;I)V")
-	public abstract void method11542(class814 arg0);
+	public abstract void method11542(Packet arg0);
 
 	@ObfuscatedName("td.s(Lfi;Lkc;III)V")
 	public abstract void method11543(class195 arg0, class314 arg1, int arg2, int arg3);
 
 	@ObfuscatedName("td.a(S)Lko;")
-	public abstract class317 method11550();
+	public abstract Vector3 method11550();
 }

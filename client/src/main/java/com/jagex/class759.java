@@ -40,15 +40,15 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("abo.cd(Lra;Laet;IIB)V")
-	public final void method14269(class14 arg0, class814 arg1, int arg2, int arg3) {
+	public final void method14269(class14 arg0, Packet arg1, int arg2, int arg3) {
 		if (this.field3644) {
 			return;
 		}
 		boolean var5 = false;
 		class470 var6 = null;
 		while (true) {
-			while (arg1.field9626 < arg1.field9629.length) {
-				int var7 = arg1.method15220();
+			while (arg1.pos < arg1.data.length) {
+				int var7 = arg1.g1();
 				if (var7 == 0) {
 					if (var6 == null) {
 						var6 = new class470(arg1, this.field8883);
@@ -56,12 +56,12 @@ public class class759 extends class340 {
 						var6.method8205(arg1, this.field8883);
 					}
 				} else if (var7 == 1) {
-					int var8 = arg1.method15220();
+					int var8 = arg1.g1();
 					if (var8 > 0) {
 						for (int var9 = 0; var9 < var8; var9++) {
 							class427 var10 = new class427(arg0, this.field3619.field4510, arg1, 2);
 							if (var10.field4594 == 31) {
-								class607 var11 = Statics.field785.method12453(arg1.method15239());
+								class607 var11 = Statics.field785.method12453(arg1.g2());
 								var10.method7577(var11.field7188, var11.field7191, var11.field7189, var11.field7190);
 							}
 							if (arg0.method768() > 0) {
@@ -216,7 +216,7 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("abo.ce(Lra;Laet;IIIIIIII)V")
-	public final void method14270(class14 arg0, class814 arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8) {
+	public final void method14270(class14 arg0, Packet arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8) {
 		if (this.field3644) {
 			return;
 		}
@@ -225,8 +225,8 @@ public class class759 extends class340 {
 		int var12 = (arg6 & 0x7) * 8;
 		int var13 = (arg7 & 0x7) * 8;
 		while (true) {
-			while (arg1.field9626 < arg1.field9629.length) {
-				int var14 = arg1.method15220();
+			while (arg1.pos < arg1.data.length) {
+				int var14 = arg1.g1();
 				if (var14 == 0) {
 					if (var11 == null) {
 						var11 = new class470(arg1, this.field8883);
@@ -234,12 +234,12 @@ public class class759 extends class340 {
 						var11.method8205(arg1, this.field8883);
 					}
 				} else if (var14 == 1) {
-					int var15 = arg1.method15220();
+					int var15 = arg1.g1();
 					if (var15 > 0) {
 						for (int var16 = 0; var16 < var15; var16++) {
 							class427 var17 = new class427(arg0, this.field3619.field4510, arg1, 2);
 							if (var17.field4594 == 31) {
-								class607 var18 = Statics.field785.method12453(arg1.method15239());
+								class607 var18 = Statics.field785.method12453(arg1.g2());
 								var17.method7577(var18.field7188, var18.field7191, var18.field7189, var18.field7190);
 							}
 							if (arg0.method768() > 0) {
@@ -358,7 +358,7 @@ public class class759 extends class340 {
 	@ObfuscatedName("md.ct(Ltz;[BIIIIB)I")
 	public static final int method6583(class541 arg0, byte[] arg1, int arg2, int arg3, int arg4, int arg5) {
 		int var6 = 0;
-		class814 var7 = new class814(arg1);
+		Packet var7 = new Packet(arg1);
 		int var8 = -1;
 		label57: while (true) {
 			int var9 = var7.method15258();
@@ -377,7 +377,7 @@ public class class759 extends class340 {
 					var10 += var13 - 1;
 					int var14 = var10 & 0x3F;
 					int var15 = var10 >> 6 & 0x3F;
-					int var16 = var7.method15220() >> 2;
+					int var16 = var7.g1() >> 2;
 					int var17 = arg2 + var15;
 					int var18 = arg3 + var14;
 					if (var17 > 0 && var18 > 0 && var17 < arg4 - 1 && var18 < arg5 - 1) {
@@ -394,7 +394,7 @@ public class class759 extends class340 {
 				if (var12 == 0) {
 					break;
 				}
-				var7.method15220();
+				var7.g1();
 			}
 		}
 	}
@@ -413,7 +413,7 @@ public class class759 extends class340 {
 
 	@ObfuscatedName("abo.cc(Lra;[BII[Lmv;B)V")
 	public final void method14271(class14 arg0, byte[] arg1, int arg2, int arg3, class361[] arg4) {
-		class814 var6 = new class814(arg1);
+		Packet var6 = new Packet(arg1);
 		int var7 = -1;
 		while (true) {
 			int var8 = var6.method15258();
@@ -431,7 +431,7 @@ public class class759 extends class340 {
 				int var11 = var9 & 0x3F;
 				int var12 = var9 >> 6 & 0x3F;
 				int var13 = var9 >> 12;
-				int var14 = var6.method15220();
+				int var14 = var6.g1();
 				int var15 = var14 >> 2;
 				int var16 = var14 & 0x3;
 				int var17 = arg2 + var12;
@@ -455,7 +455,7 @@ public class class759 extends class340 {
 
 	@ObfuscatedName("abo.cg(Lra;[BIIIIIII[Lmv;I)V")
 	public final void method14272(class14 arg0, byte[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, class361[] arg9) {
-		class814 var11 = new class814(arg1);
+		Packet var11 = new Packet(arg1);
 		int var12 = -1;
 		while (true) {
 			int var13 = var11.method15258();
@@ -473,7 +473,7 @@ public class class759 extends class340 {
 				int var16 = var14 & 0x3F;
 				int var17 = var14 >> 6 & 0x3F;
 				int var18 = var14 >> 12;
-				int var19 = var11.method15220();
+				int var19 = var11.g1();
 				int var20 = var19 >> 2;
 				int var21 = var19 & 0x3;
 				if (arg5 == var18 && var17 >= arg6 && var17 < arg6 + 8 && var16 >= arg7 && var16 < arg7 + 8) {
@@ -821,7 +821,7 @@ public class class759 extends class340 {
 			return true;
 		} else if (class542.field6573.field6590 == arg1) {
 			int var16 = 65;
-			class113 var17 = (class113) this.field3619.method7433(arg6, arg11, arg12);
+			Location var17 = (Location) this.field3619.method7433(arg6, arg11, arg12);
 			if (var17 != null) {
 				var16 = this.field8894.method11471(var17.method2401()).field6502 + 1;
 			}
@@ -839,7 +839,7 @@ public class class759 extends class340 {
 			return true;
 		} else if (class542.field6574.field6590 == arg1) {
 			int var20 = 33;
-			class113 var21 = (class113) this.field3619.method7433(arg6, arg11, arg12);
+			Location var21 = (Location) this.field3619.method7433(arg6, arg11, arg12);
 			if (var21 != null) {
 				var20 = this.field8894.method11471(var21.method2401()).field6502 / 2 + 1;
 			}
@@ -872,7 +872,7 @@ public class class759 extends class340 {
 		} else if (class542.field6576.field6590 == arg1) {
 			int var27 = arg2 + 2 & 0x3;
 			int var28 = 33;
-			class113 var29 = (class113) this.field3619.method7433(arg6, arg11, arg12);
+			Location var29 = (Location) this.field3619.method7433(arg6, arg11, arg12);
 			if (var29 != null) {
 				var28 = this.field8894.method11471(var29.method2401()).field6502 / 2 + 1;
 			}
@@ -904,7 +904,7 @@ public class class759 extends class340 {
 
 	@ObfuscatedName("abo.dl(Lra;IIIILmv;B)V")
 	public void method14280(class14 arg0, int arg1, int arg2, int arg3, int arg4, class361 arg5) {
-		class113 var7 = this.method14289(arg1, arg2, arg3, arg4);
+		Location var7 = this.method14289(arg1, arg2, arg3, arg4);
 		if (var7 == null) {
 			return;
 		}
@@ -958,19 +958,19 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("abo.dj(IIIII)Lca;")
-	public class113 method14289(int arg0, int arg1, int arg2, int arg3) {
-		class113 var5 = null;
+	public Location method14289(int arg0, int arg1, int arg2, int arg3) {
+		Location var5 = null;
 		if (arg1 == 0) {
-			var5 = (class113) this.field3619.method7433(arg0, arg2, arg3);
+			var5 = (Location) this.field3619.method7433(arg0, arg2, arg3);
 		}
 		if (arg1 == 1) {
-			var5 = (class113) this.field3619.method7435(arg0, arg2, arg3);
+			var5 = (Location) this.field3619.method7435(arg0, arg2, arg3);
 		}
 		if (arg1 == 2) {
-			var5 = (class113) this.field3619.method7437(arg0, arg2, arg3, client.field9216);
+			var5 = (Location) this.field3619.method7437(arg0, arg2, arg3, client.field9216);
 		}
 		if (arg1 == 3) {
-			var5 = (class113) this.field3619.method7517(arg0, arg2, arg3);
+			var5 = (Location) this.field3619.method7517(arg0, arg2, arg3);
 		}
 		return var5;
 	}

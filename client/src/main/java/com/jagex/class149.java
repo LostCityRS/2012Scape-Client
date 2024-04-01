@@ -24,9 +24,9 @@ public final class class149 {
 	@ObfuscatedName("dn.t")
 	public int[] field1564;
 
-	public class149(class814 arg0, int arg1) {
+	public class149(Packet arg0, int arg1) {
 		this.field1559 = arg1;
-		int var3 = arg0.method15220();
+		int var3 = arg0.g1();
 		switch(var3) {
 			case 0:
 				this.field1560 = arg0.method15411();
@@ -37,7 +37,7 @@ public final class class149 {
 			default:
 				this.field1560 = -1;
 		}
-		arg0.method15337();
+		arg0.gjstr();
 	}
 
 	@ObfuscatedName("dn.u(IIIIB)V")
@@ -88,7 +88,7 @@ public final class class149 {
 	}
 
 	@ObfuscatedName("dn.s(B)Laay;")
-	public class719 method2854() {
+	public PathingEntity method2854() {
 		return this.field1558 == null ? this.field1562 : this.field1558;
 	}
 

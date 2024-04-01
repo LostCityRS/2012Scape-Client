@@ -98,7 +98,7 @@ public final class class316 {
 	}
 
 	@ObfuscatedName("kn.m(Laet;)V")
-	public void method5245(class814 arg0) {
+	public void method5245(Packet arg0) {
 		this.field3465 = arg0.method15324();
 		this.field3469 = arg0.method15324();
 		this.field3470 = arg0.method15324();
@@ -122,7 +122,7 @@ public final class class316 {
 	}
 
 	@ObfuscatedName("kn.f(Lko;F)V")
-	public void method5215(class317 arg0, float arg1) {
+	public void method5215(Vector3 arg0, float arg1) {
 		this.method5216(arg0.field3475, arg0.field3476, arg0.field3477, arg1);
 	}
 

@@ -132,18 +132,18 @@ public final class class770 extends class399 {
 		if (var1 == null) {
 			return;
 		}
-		class113 var2 = null;
+		Location var2 = null;
 		if (arg0.field9293 == 0) {
-			var2 = (class113) var1.method7433(arg0.field9281, arg0.field9291, arg0.field9280);
+			var2 = (Location) var1.method7433(arg0.field9281, arg0.field9291, arg0.field9280);
 		}
 		if (arg0.field9293 == 1) {
-			var2 = (class113) var1.method7435(arg0.field9281, arg0.field9291, arg0.field9280);
+			var2 = (Location) var1.method7435(arg0.field9281, arg0.field9291, arg0.field9280);
 		}
 		if (arg0.field9293 == 2) {
-			var2 = (class113) var1.method7437(arg0.field9281, arg0.field9291, arg0.field9280, client.field9216);
+			var2 = (Location) var1.method7437(arg0.field9281, arg0.field9291, arg0.field9280, client.field9216);
 		}
 		if (arg0.field9293 == 3) {
-			var2 = (class113) var1.method7517(arg0.field9281, arg0.field9291, arg0.field9280);
+			var2 = (Location) var1.method7517(arg0.field9281, arg0.field9291, arg0.field9280);
 		}
 		if (var2 == null) {
 			arg0.field9282 = -1;
@@ -221,7 +221,7 @@ public final class class770 extends class399 {
 		if (client.field8980.method6098() == null) {
 			return;
 		}
-		class113 var5 = client.field8980.method6157().method14289(arg0, arg1, arg2, arg3);
+		Location var5 = client.field8980.method6157().method14289(arg0, arg1, arg2, arg3);
 		if (var5 == null) {
 			return;
 		}

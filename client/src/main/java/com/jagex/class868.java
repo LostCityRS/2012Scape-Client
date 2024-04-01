@@ -6,13 +6,13 @@ import deob.ObfuscatedName;
 public class class868 extends class546 {
 
 	@ObfuscatedName("aga.j")
-	public final class317 field9883 = new class317(Float.NaN, Float.NaN, Float.NaN);
+	public final Vector3 field9883 = new Vector3(Float.NaN, Float.NaN, Float.NaN);
 
 	@ObfuscatedName("aga.a")
-	public final class317 field9882 = new class317(Float.NaN, Float.NaN, Float.NaN);
+	public final Vector3 field9882 = new Vector3(Float.NaN, Float.NaN, Float.NaN);
 
 	@ObfuscatedName("aga.s")
-	public final class317 field9884 = new class317();
+	public final Vector3 field9884 = new Vector3();
 
 	public class868(class199 arg0) {
 		super(arg0);
@@ -41,11 +41,11 @@ public class class868 extends class546 {
 
 	@ObfuscatedName("aga.s(Lfi;Lkc;III)V")
 	public void method11543(class195 arg0, class314 arg1, int arg2, int arg3) {
-		class317 var5 = class317.method5290(this.field6645.method3720());
+		Vector3 var5 = Vector3.method5290(this.field6645.method3720());
 		var5.field3475 -= arg2;
 		var5.field3477 -= arg3;
 		var5.field3476 *= -1.0F;
-		class317 var6 = class317.method5290(this.field9883);
+		Vector3 var6 = Vector3.method5290(this.field9883);
 		var6.field3475 -= arg2;
 		var6.field3477 -= arg3;
 		var6.field3476 *= -1.0F;
@@ -55,12 +55,12 @@ public class class868 extends class546 {
 	}
 
 	@ObfuscatedName("aga.a(S)Lko;")
-	public class317 method11550() {
-		return class317.method5290(this.field9883);
+	public Vector3 method11550() {
+		return Vector3.method5290(this.field9883);
 	}
 
 	@ObfuscatedName("aga.c(Laet;I)V")
-	public void method11542(class814 arg0) {
+	public void method11542(Packet arg0) {
 		this.field9882.method5292(arg0);
 	}
 }

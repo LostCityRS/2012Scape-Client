@@ -16,13 +16,13 @@ public abstract class class216 {
 	public abstract void method4014(float arg0, class361 arg1, int[][][] arg2);
 
 	@ObfuscatedName("go.a(I)Lko;")
-	public abstract class317 method4016();
+	public abstract Vector3 method4016();
 
 	@ObfuscatedName("go.s(B)Ladu;")
 	public abstract class810 method4017();
 
 	@ObfuscatedName("go.m(Laet;B)V")
-	public abstract void method4018(class814 arg0);
+	public abstract void method4018(Packet arg0);
 
 	@ObfuscatedName("go.c(Lfi;III)V")
 	public abstract void method4029(class195 arg0, int arg1, int arg2);

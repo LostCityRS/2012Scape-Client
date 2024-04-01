@@ -359,7 +359,7 @@ public class class314 {
 	}
 
 	@ObfuscatedName("kc.b(Lko;)V")
-	public void method5127(class317 arg0) {
+	public void method5127(Vector3 arg0) {
 		this.method5116(arg0.field3475, arg0.field3476, arg0.field3477);
 	}
 

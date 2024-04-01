@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 import deob.Statics;
 
 @ObfuscatedName("yc")
-public class class660 extends class971 implements class113 {
+public class class660 extends class971 implements Location {
 
 	@ObfuscatedName("yc.z")
 	public class541 field7550;
@@ -109,13 +109,13 @@ public class class660 extends class971 implements class113 {
 				var6 = null;
 			}
 		}
-		class317 var7 = this.method8565().field3464;
+		Vector3 var7 = this.method8565().field3464;
 		return var4.method11447(arg0, arg1, this.field7549, this.field7546, var5, var6, (int) var7.field3475, (int) var7.field3476, (int) var7.field3477, arg2, null);
 	}
 
 	@ObfuscatedName("yc.br(Lra;I)Lok;")
 	public class429 method12810(class14 arg0) {
-		class317 var2 = this.method8565().field3464;
+		Vector3 var2 = this.method8565().field3464;
 		if (this.field7545 == null) {
 			this.field7545 = class836.method15140((int) var2.field3475, (int) var2.field3476, (int) var2.field3477, this.method12878(arg0, 0));
 		}
@@ -188,7 +188,7 @@ public class class660 extends class971 implements class113 {
 			var4 = this.field7547;
 			this.field7547 = null;
 		}
-		class317 var5 = this.method8565().field3464;
+		Vector3 var5 = this.method8565().field3464;
 		if (var4 != null) {
 			this.field9808.method7445(var4, this.field9809, (int) var5.field3475, (int) var5.field3477, null);
 		}
@@ -205,7 +205,7 @@ public class class660 extends class971 implements class113 {
 			var4 = this.field7547;
 			this.field7547 = null;
 		}
-		class317 var5 = this.method8565().field3464;
+		Vector3 var5 = this.method8565().field3464;
 		if (var4 != null) {
 			this.field9808.method7451(var4, this.field9809, (int) var5.field3475, (int) var5.field3477, null);
 		}

@@ -307,7 +307,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("lq.c(Laet;IIII[Lmv;I)V")
-	public final void method5838(class814 arg0, int arg1, int arg2, int arg3, int arg4, class361[] arg5) {
+	public final void method5838(Packet arg0, int arg1, int arg2, int arg3, int arg4, class361[] arg5) {
 		if (!this.field3644) {
 			for (int var7 = 0; var7 < 4; var7++) {
 				class361 var8 = arg5[var7];
@@ -334,7 +334,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("lq.m(Laet;IIIIIII[Lmv;B)V")
-	public final void method5839(class814 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, class361[] arg8) {
+	public final void method5839(Packet arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, class361[] arg8) {
 		int var10 = (arg5 & 0x7) * 8;
 		int var11 = (arg6 & 0x7) * 8;
 		if (!this.field3644) {
@@ -432,7 +432,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("lq.t(Laet;IIIIIIIIZB)V")
-	public final void method5843(class814 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9) {
+	public final void method5843(Packet arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9) {
 		if (arg8 == 1) {
 			arg5 = 1;
 		} else if (arg8 == 2) {
@@ -443,16 +443,16 @@ public class class340 {
 		}
 		if (arg2 < 0 || arg2 >= this.field3627 || arg3 < 0 || arg3 >= this.field3643) {
 			while (true) {
-				int var13 = arg0.method15220();
+				int var13 = arg0.g1();
 				if (var13 == 0) {
 					break;
 				}
 				if (var13 == 1) {
-					arg0.method15220();
+					arg0.g1();
 					break;
 				}
 				if (var13 <= 49) {
-					arg0.method15220();
+					arg0.g1();
 				}
 			}
 			return;
@@ -461,7 +461,7 @@ public class class340 {
 			this.field3618.field3606[arg1][arg2][arg3] = 0;
 		}
 		while (true) {
-			int var11 = arg0.method15220();
+			int var11 = arg0.g1();
 			if (var11 == 0) {
 				if (this.field3644) {
 					this.field3697[0][arg2 + arg4][arg3 + arg5] = 0;
@@ -473,7 +473,7 @@ public class class340 {
 				break;
 			}
 			if (var11 == 1) {
-				int var12 = arg0.method15220();
+				int var12 = arg0.g1();
 				if (this.field3644) {
 					this.field3697[0][arg2 + arg4][arg3 + arg5] = var12 * 8 << 2;
 				} else {
@@ -490,7 +490,7 @@ public class class340 {
 			}
 			if (var11 <= 49) {
 				if (arg9) {
-					arg0.method15220();
+					arg0.g1();
 				} else {
 					this.field3636[arg1][arg2][arg3] = arg0.method15238();
 					this.field3703[arg1][arg2][arg3] = (byte) ((var11 - 2) / 4);

@@ -13,7 +13,7 @@ public class class55 {
 	public static byte[] field730 = new byte[2048];
 
 	@ObfuscatedName("ag.c")
-	public static class814[] field731 = new class814[2048];
+	public static Packet[] field731 = new Packet[2048];
 
 	@ObfuscatedName("ag.m")
 	public static int field732 = 0;
@@ -89,8 +89,8 @@ public class class55 {
 		field728 = 0;
 		method11491(arg0);
 		method15865(arg0);
-		if (arg0.field9626 != arg1) {
-			throw new RuntimeException(arg0.field9626 + " " + arg1);
+		if (arg0.pos != arg1) {
+			throw new RuntimeException(arg0.pos + " " + arg1);
 		}
 	}
 
@@ -219,12 +219,12 @@ public class class55 {
 		for (int var1 = 0; var1 < field728; var1++) {
 			int var2 = field738[var1];
 			class902 var3 = client.field9070[var2];
-			int var4 = arg0.method15220();
+			int var4 = arg0.g1();
 			if ((var4 & 0x8) != 0) {
-				var4 += arg0.method15220() << 8;
+				var4 += arg0.g1() << 8;
 			}
 			if ((var4 & 0x2000) != 0) {
-				var4 += arg0.method15220() << 16;
+				var4 += arg0.g1() << 16;
 			}
 			method11159(arg0, var2, var3, var4);
 		}
@@ -234,7 +234,7 @@ public class class55 {
 	public static final void method11159(class964 arg0, int arg1, class902 arg2, int arg3) {
 		byte var4 = class365.field3923.field3924;
 		if ((arg3 & 0x1000) != 0) {
-			arg2.field10065 = arg0.method15220() == 1;
+			arg2.field10065 = arg0.g1() == 1;
 		}
 		if ((arg3 & 0x8000) != 0) {
 			var4 = arg0.method15275();
@@ -285,13 +285,13 @@ public class class55 {
 			arg2.field8617 = arg0.method15329();
 			arg2.field8631 = (byte) arg0.method15272();
 			arg2.field8626 = client.field9213 + arg0.method15281();
-			arg2.field8632 = client.field9213 + arg0.method15239();
+			arg2.field8632 = client.field9213 + arg0.g2();
 		}
 		if ((arg3 & 0x100000) != 0) {
-			int var20 = arg0.field9629[++arg0.field9626 - 1] & 0xFF;
+			int var20 = arg0.data[++arg0.pos - 1] & 0xFF;
 			for (int var21 = 0; var21 < var20; var21++) {
 				int var22 = arg0.method15391();
-				int var23 = arg0.method15379();
+				int var23 = arg0.g4s();
 				arg2.field10055.method2372(var22, var23);
 			}
 		}
@@ -312,10 +312,10 @@ public class class55 {
 		}
 		if ((arg3 & 0x80000) != 0) {
 			arg2.field10055.method2377();
-			int var28 = arg0.field9629[++arg0.field9626 - 1] & 0xFF;
+			int var28 = arg0.data[++arg0.pos - 1] & 0xFF;
 			for (int var29 = 0; var29 < var28; var29++) {
 				int var30 = arg0.method15248();
-				int var31 = arg0.method15379();
+				int var31 = arg0.g4s();
 				arg2.field10055.method2372(var30, var31);
 			}
 		}
@@ -342,9 +342,9 @@ public class class55 {
 			arg2.method13950(var32, var33, var35, var36, var37, 0);
 		}
 		if ((arg3 & 0x20) != 0) {
-			int var38 = arg0.method15220();
+			int var38 = arg0.g1();
 			byte[] var39 = new byte[var38];
-			class814 var40 = new class814(var39);
+			Packet var40 = new Packet(var39);
 			arg0.method15292(var39, 0, var38);
 			field731[arg1] = var40;
 			arg2.method16116(var40);
@@ -365,13 +365,13 @@ public class class55 {
 			arg2.method13950(var41, var42, var44, var45, var46, 1);
 		}
 		if ((arg3 & 0x20000) != 0) {
-			int var47 = arg0.method15220();
+			int var47 = arg0.g1();
 			int[] var48 = new int[var47];
 			int[] var49 = new int[var47];
 			for (int var50 = 0; var50 < var47; var50++) {
 				int var51 = arg0.method15281();
 				if ((var51 & 0xC000) == 49152) {
-					int var52 = arg0.method15239();
+					int var52 = arg0.g2();
 					var48[var50] = var51 << 16 | var52;
 				} else {
 					var48[var50] = var51;
@@ -381,7 +381,7 @@ public class class55 {
 			arg2.method13948(var48, var49);
 		}
 		if ((arg3 & 0x10000) != 0) {
-			String var53 = arg0.method15337();
+			String var53 = arg0.gjstr();
 			int var54 = arg0.method15273();
 			if ((var54 & 0x1) != 0) {
 				class175.method3943(2, var54, arg2.method16120(true), arg2.method16121(false), arg2.field10063, var53);
@@ -398,7 +398,7 @@ public class class55 {
 			arg2.field8605 = arg0.method15238() * 262144;
 			arg2.field8649 = arg0.method15391() + client.field9213;
 			arg2.field8620 = arg0.method15391() + client.field9213;
-			arg2.field8625 = arg0.method15239();
+			arg2.field8625 = arg0.g2();
 			if (arg2.field10062) {
 				arg2.field8619 = arg2.field8619 * 262144 + arg2.field10052 * 262144;
 				arg2.field8621 = arg2.field8621 * 262144 + arg2.field10064 * 262144;
@@ -430,7 +430,7 @@ public class class55 {
 			arg2.field10067 = arg0.method15273() == 1;
 		}
 		if ((arg3 & 0x400) != 0) {
-			String var60 = arg0.method15337();
+			String var60 = arg0.gjstr();
 			if (Statics.field2119 == arg2) {
 				class175.method3943(2, 0, arg2.method16120(true), arg2.method16121(false), arg2.field10063, var60);
 			}
@@ -453,7 +453,7 @@ public class class55 {
 		}
 		if ((arg3 & 0x400000) != 0) {
 			int var67 = arg0.method15391();
-			int var68 = arg0.method15379();
+			int var68 = arg0.g4s();
 			if (var67 == 65535) {
 				var67 = -1;
 			}

@@ -118,7 +118,7 @@ public class class129 {
 
 	@ObfuscatedName("dw.u(Lls;II)Ldw;")
 	public static class129 method2664(class334 arg0, int arg1, int arg2) {
-		byte[] var3 = arg0.method5627(arg1, arg2);
+		byte[] var3 = arg0.getFile(arg1, arg2);
 		return var3 == null ? null : new class129(var3);
 	}
 
@@ -387,18 +387,18 @@ public class class129 {
 
 	@ObfuscatedName("dw.a([B)V")
 	public void method2621(byte[] arg0) {
-		class814 var2 = new class814(arg0);
-		class814 var3 = new class814(arg0);
-		class814 var4 = new class814(arg0);
-		class814 var5 = new class814(arg0);
-		class814 var6 = new class814(arg0);
-		class814 var7 = new class814(arg0);
-		class814 var8 = new class814(arg0);
-		var2.field9626 = arg0.length - 23;
-		this.field1328 = var2.method15239();
-		this.field1342 = var2.method15239();
-		this.field1334 = var2.method15220();
-		int var9 = var2.method15220();
+		Packet var2 = new Packet(arg0);
+		Packet var3 = new Packet(arg0);
+		Packet var4 = new Packet(arg0);
+		Packet var5 = new Packet(arg0);
+		Packet var6 = new Packet(arg0);
+		Packet var7 = new Packet(arg0);
+		Packet var8 = new Packet(arg0);
+		var2.pos = arg0.length - 23;
+		this.field1328 = var2.g2();
+		this.field1342 = var2.g2();
+		this.field1334 = var2.g1();
+		int var9 = var2.g1();
 		boolean var10 = (var9 & 0x1) == 1;
 		boolean var11 = (var9 & 0x2) == 2;
 		boolean var12 = (var9 & 0x4) == 4;
@@ -407,23 +407,23 @@ public class class129 {
 		boolean var15 = (var9 & 0x20) == 32;
 		boolean var16 = (var9 & 0x40) == 64;
 		if (var13) {
-			var2.field9626 -= 7;
-			this.field1314 = var2.method15220();
-			var2.field9626 += 6;
+			var2.pos -= 7;
+			this.field1314 = var2.g1();
+			var2.pos += 6;
 		}
-		int var17 = var2.method15220();
-		int var18 = var2.method15220();
-		int var19 = var2.method15220();
-		int var20 = var2.method15220();
-		int var21 = var2.method15220();
-		int var22 = var2.method15239();
-		int var23 = var2.method15239();
-		int var24 = var2.method15239();
-		int var25 = var2.method15239();
-		int var26 = var2.method15239();
+		int var17 = var2.g1();
+		int var18 = var2.g1();
+		int var19 = var2.g1();
+		int var20 = var2.g1();
+		int var21 = var2.g1();
+		int var22 = var2.g2();
+		int var23 = var2.g2();
+		int var24 = var2.g2();
+		int var25 = var2.g2();
+		int var26 = var2.g2();
 		int var27;
 		if (var14) {
-			var27 = var2.method15239();
+			var27 = var2.g2();
 		} else if (var21 == 1) {
 			var27 = this.field1328;
 		} else {
@@ -431,7 +431,7 @@ public class class129 {
 		}
 		int var28;
 		if (var15) {
-			var28 = var2.method15239();
+			var28 = var2.g2();
 		} else if (var19 == 1) {
 			var28 = this.field1342;
 		} else {
@@ -442,7 +442,7 @@ public class class129 {
 		int var31 = 0;
 		if (this.field1334 > 0) {
 			this.field1335 = new byte[this.field1334];
-			var2.field9626 = 0;
+			var2.pos = 0;
 			for (int var32 = 0; var32 < this.field1334; var32++) {
 				byte var33 = this.field1335[var32] = var2.method15238();
 				if (var33 == 0) {
@@ -542,16 +542,16 @@ public class class129 {
 				this.field1344 = new int[var31];
 			}
 		}
-		var2.field9626 = var34;
-		var3.field9626 = var52;
-		var4.field9626 = var54;
-		var5.field9626 = var56;
-		var6.field9626 = var42;
+		var2.pos = var34;
+		var3.pos = var52;
+		var4.pos = var54;
+		var5.pos = var56;
+		var6.pos = var42;
 		int var73 = 0;
 		int var74 = 0;
 		int var75 = 0;
 		for (int var76 = 0; var76 < this.field1328; var76++) {
-			int var77 = var2.method15220();
+			int var77 = var2.g1();
 			int var78 = 0;
 			if ((var77 & 0x1) != 0) {
 				var78 = var3.method15254();
@@ -574,22 +574,22 @@ public class class129 {
 				if (var14) {
 					this.field1313[var76] = var6.method15355();
 				} else {
-					this.field1313[var76] = var6.method15220();
+					this.field1313[var76] = var6.g1();
 					if (this.field1313[var76] == 255) {
 						this.field1313[var76] = -1;
 					}
 				}
 			}
 		}
-		var2.field9626 = var50;
-		var3.field9626 = var37;
-		var4.field9626 = var40;
-		var5.field9626 = var45;
-		var6.field9626 = var39;
-		var7.field9626 = var48;
-		var8.field9626 = var47;
+		var2.pos = var50;
+		var3.pos = var37;
+		var4.pos = var40;
+		var5.pos = var45;
+		var6.pos = var39;
+		var7.pos = var48;
+		var8.pos = var47;
 		for (int var81 = 0; var81 < this.field1342; var81++) {
-			this.field1329[var81] = (short) var2.method15239();
+			this.field1329[var81] = (short) var2.g2();
 			if (var10) {
 				this.field1345[var81] = var3.method15238();
 			}
@@ -603,42 +603,42 @@ public class class129 {
 				if (var15) {
 					this.field1331[var81] = var6.method15355();
 				} else {
-					this.field1331[var81] = var6.method15220();
+					this.field1331[var81] = var6.g1();
 					if (this.field1331[var81] == 255) {
 						this.field1331[var81] = -1;
 					}
 				}
 			}
 			if (var20 == 1) {
-				this.field1330[var81] = (short) (var7.method15239() - 1);
+				this.field1330[var81] = (short) (var7.g2() - 1);
 			}
 			if (this.field1348 != null) {
 				if (this.field1330[var81] == -1) {
 					this.field1348[var81] = -1;
 				} else {
-					this.field1348[var81] = (byte) (var8.method15220() - 1);
+					this.field1348[var81] = (byte) (var8.g1() - 1);
 				}
 			}
 		}
 		this.field1315 = -1;
-		var2.field9626 = var44;
-		var3.field9626 = var36;
+		var2.pos = var44;
+		var3.pos = var36;
 		this.method2622(var2, var3);
-		var2.field9626 = var58;
-		var3.field9626 = var60;
-		var4.field9626 = var62;
-		var5.field9626 = var65;
-		var6.field9626 = var67;
-		var7.field9626 = var69;
+		var2.pos = var58;
+		var3.pos = var60;
+		var4.pos = var62;
+		var5.pos = var65;
+		var6.pos = var67;
+		var7.pos = var69;
 		this.method2628(var2, var3, var4, var5, var6, var7);
-		var2.field9626 = var71;
+		var2.pos = var71;
 		if (var11) {
-			int var82 = var2.method15220();
+			int var82 = var2.g1();
 			if (var82 > 0) {
 				this.field1347 = new class134[var82];
 				for (int var83 = 0; var83 < var82; var83++) {
-					int var84 = var2.method15239();
-					int var85 = var2.method15239();
+					int var84 = var2.g2();
+					int var85 = var2.g2();
 					byte var86;
 					if (var17 == 255) {
 						var86 = this.field1326[var85];
@@ -648,12 +648,12 @@ public class class129 {
 					this.field1347[var83] = new class134(var84, this.field1322[var85], this.field1323[var85], this.field1324[var85], var86);
 				}
 			}
-			int var87 = var2.method15220();
+			int var87 = var2.g1();
 			if (var87 > 0) {
 				this.field1346 = new class119[var87];
 				for (int var88 = 0; var88 < var87; var88++) {
-					int var89 = var2.method15239();
-					int var90 = var2.method15239();
+					int var89 = var2.g2();
+					int var90 = var2.g2();
 					this.field1346[var88] = new class119(var89, var90);
 				}
 			}
@@ -661,19 +661,19 @@ public class class129 {
 		if (!var12) {
 			return;
 		}
-		int var91 = var2.method15220();
+		int var91 = var2.g1();
 		if (var91 <= 0) {
 			return;
 		}
 		this.field1349 = new class141[var91];
 		for (int var92 = 0; var92 < var91; var92++) {
-			int var93 = var2.method15239();
-			int var94 = var2.method15239();
+			int var93 = var2.g2();
+			int var94 = var2.g2();
 			int var95;
 			if (var16) {
 				var95 = var2.method15355();
 			} else {
-				var95 = var2.method15220();
+				var95 = var2.g1();
 				if (var95 == 255) {
 					var95 = -1;
 				}
@@ -684,13 +684,13 @@ public class class129 {
 	}
 
 	@ObfuscatedName("dw.s(Laet;Laet;)V")
-	public void method2622(class814 arg0, class814 arg1) {
+	public void method2622(Packet arg0, Packet arg1) {
 		short var3 = 0;
 		short var4 = 0;
 		short var5 = 0;
 		short var6 = 0;
 		for (int var7 = 0; var7 < this.field1342; var7++) {
-			int var8 = arg1.method15220();
+			int var8 = arg1.g1();
 			if (var8 == 1) {
 				var3 = (short) (arg0.method15254() + var6);
 				var4 = (short) (arg0.method15254() + var3);
@@ -749,26 +749,26 @@ public class class129 {
 	}
 
 	@ObfuscatedName("dw.c(Laet;Laet;Laet;Laet;Laet;Laet;)V")
-	public void method2628(class814 arg0, class814 arg1, class814 arg2, class814 arg3, class814 arg4, class814 arg5) {
+	public void method2628(Packet arg0, Packet arg1, Packet arg2, Packet arg3, Packet arg4, Packet arg5) {
 		for (int var7 = 0; var7 < this.field1334; var7++) {
 			int var8 = this.field1335[var7] & 0xFF;
 			if (var8 == 0) {
-				this.field1336[var7] = (short) arg0.method15239();
-				this.field1337[var7] = (short) arg0.method15239();
-				this.field1338[var7] = (short) arg0.method15239();
+				this.field1336[var7] = (short) arg0.g2();
+				this.field1337[var7] = (short) arg0.g2();
+				this.field1338[var7] = (short) arg0.g2();
 			}
 			if (var8 == 1) {
-				this.field1336[var7] = (short) arg1.method15239();
-				this.field1337[var7] = (short) arg1.method15239();
-				this.field1338[var7] = (short) arg1.method15239();
+				this.field1336[var7] = (short) arg1.g2();
+				this.field1337[var7] = (short) arg1.g2();
+				this.field1338[var7] = (short) arg1.g2();
 				if (this.field1314 < 15) {
-					this.field1339[var7] = arg2.method15239();
+					this.field1339[var7] = arg2.g2();
 					if (this.field1314 < 14) {
-						this.field1340[var7] = arg2.method15239();
+						this.field1340[var7] = arg2.g2();
 					} else {
 						this.field1340[var7] = arg2.method15241();
 					}
-					this.field1341[var7] = arg2.method15239();
+					this.field1341[var7] = arg2.g2();
 				} else {
 					this.field1339[var7] = arg2.method15241();
 					this.field1340[var7] = arg2.method15241();
@@ -779,17 +779,17 @@ public class class129 {
 				this.field1317[var7] = arg5.method15238();
 			}
 			if (var8 == 2) {
-				this.field1336[var7] = (short) arg1.method15239();
-				this.field1337[var7] = (short) arg1.method15239();
-				this.field1338[var7] = (short) arg1.method15239();
+				this.field1336[var7] = (short) arg1.g2();
+				this.field1337[var7] = (short) arg1.g2();
+				this.field1338[var7] = (short) arg1.g2();
 				if (this.field1314 < 15) {
-					this.field1339[var7] = arg2.method15239();
+					this.field1339[var7] = arg2.g2();
 					if (this.field1314 < 14) {
-						this.field1340[var7] = arg2.method15239();
+						this.field1340[var7] = arg2.g2();
 					} else {
 						this.field1340[var7] = arg2.method15241();
 					}
-					this.field1341[var7] = arg2.method15239();
+					this.field1341[var7] = arg2.g2();
 				} else {
 					this.field1339[var7] = arg2.method15241();
 					this.field1340[var7] = arg2.method15241();
@@ -802,17 +802,17 @@ public class class129 {
 				this.field1344[var7] = arg5.method15238();
 			}
 			if (var8 == 3) {
-				this.field1336[var7] = (short) arg1.method15239();
-				this.field1337[var7] = (short) arg1.method15239();
-				this.field1338[var7] = (short) arg1.method15239();
+				this.field1336[var7] = (short) arg1.g2();
+				this.field1337[var7] = (short) arg1.g2();
+				this.field1338[var7] = (short) arg1.g2();
 				if (this.field1314 < 15) {
-					this.field1339[var7] = arg2.method15239();
+					this.field1339[var7] = arg2.g2();
 					if (this.field1314 < 14) {
-						this.field1340[var7] = arg2.method15239();
+						this.field1340[var7] = arg2.g2();
 					} else {
 						this.field1340[var7] = arg2.method15241();
 					}
-					this.field1341[var7] = arg2.method15239();
+					this.field1341[var7] = arg2.g2();
 				} else {
 					this.field1339[var7] = arg2.method15241();
 					this.field1340[var7] = arg2.method15241();
@@ -829,24 +829,24 @@ public class class129 {
 	public void method2624(byte[] arg0) {
 		boolean var2 = false;
 		boolean var3 = false;
-		class814 var4 = new class814(arg0);
-		class814 var5 = new class814(arg0);
-		class814 var6 = new class814(arg0);
-		class814 var7 = new class814(arg0);
-		class814 var8 = new class814(arg0);
-		var4.field9626 = arg0.length - 18;
-		this.field1328 = var4.method15239();
-		this.field1342 = var4.method15239();
-		this.field1334 = var4.method15220();
-		int var9 = var4.method15220();
-		int var10 = var4.method15220();
-		int var11 = var4.method15220();
-		int var12 = var4.method15220();
-		int var13 = var4.method15220();
-		int var14 = var4.method15239();
-		int var15 = var4.method15239();
-		int var16 = var4.method15239();
-		int var17 = var4.method15239();
+		Packet var4 = new Packet(arg0);
+		Packet var5 = new Packet(arg0);
+		Packet var6 = new Packet(arg0);
+		Packet var7 = new Packet(arg0);
+		Packet var8 = new Packet(arg0);
+		var4.pos = arg0.length - 18;
+		this.field1328 = var4.g2();
+		this.field1342 = var4.g2();
+		this.field1334 = var4.g1();
+		int var9 = var4.g1();
+		int var10 = var4.g1();
+		int var11 = var4.g1();
+		int var12 = var4.g1();
+		int var13 = var4.g1();
+		int var14 = var4.g2();
+		int var15 = var4.g2();
+		int var16 = var4.g2();
+		int var17 = var4.g2();
 		byte var18 = 0;
 		int var20 = this.field1328 + var18;
 		int var22 = this.field1342 + var20;
@@ -908,16 +908,16 @@ public class class129 {
 			this.field1331 = new int[this.field1342];
 		}
 		this.field1329 = new short[this.field1342];
-		var4.field9626 = var18;
-		var5.field9626 = var33;
-		var6.field9626 = var35;
-		var7.field9626 = var37;
-		var8.field9626 = var26;
+		var4.pos = var18;
+		var5.pos = var33;
+		var6.pos = var35;
+		var7.pos = var37;
+		var8.pos = var26;
 		int var40 = 0;
 		int var41 = 0;
 		int var42 = 0;
 		for (int var43 = 0; var43 < this.field1328; var43++) {
-			int var44 = var4.method15220();
+			int var44 = var4.g1();
 			int var45 = 0;
 			if ((var44 & 0x1) != 0) {
 				var45 = var5.method15254();
@@ -937,18 +937,18 @@ public class class129 {
 			var41 = this.field1320[var43];
 			var42 = this.field1318[var43];
 			if (var13 == 1) {
-				this.field1313[var43] = var8.method15220();
+				this.field1313[var43] = var8.g1();
 			}
 		}
-		var4.field9626 = var29;
-		var5.field9626 = var25;
-		var6.field9626 = var23;
-		var7.field9626 = var27;
-		var8.field9626 = var24;
+		var4.pos = var29;
+		var5.pos = var25;
+		var6.pos = var23;
+		var7.pos = var27;
+		var8.pos = var24;
 		for (int var48 = 0; var48 < this.field1342; var48++) {
-			this.field1329[var48] = (short) var4.method15239();
+			this.field1329[var48] = (short) var4.g2();
 			if (var9 == 1) {
-				int var49 = var5.method15220();
+				int var49 = var5.g1();
 				if ((var49 & 0x1) == 1) {
 					this.field1345[var48] = 1;
 					var2 = true;
@@ -974,18 +974,18 @@ public class class129 {
 				this.field1332[var48] = var7.method15238();
 			}
 			if (var12 == 1) {
-				this.field1331[var48] = var8.method15220();
+				this.field1331[var48] = var8.g1();
 			}
 		}
 		this.field1315 = -1;
-		var4.field9626 = var22;
-		var5.field9626 = var20;
+		var4.pos = var22;
+		var5.pos = var20;
 		short var50 = 0;
 		short var51 = 0;
 		short var52 = 0;
 		short var53 = 0;
 		for (int var54 = 0; var54 < this.field1342; var54++) {
-			int var55 = var5.method15220();
+			int var55 = var5.g1();
 			if (var55 == 1) {
 				var50 = (short) (var4.method15254() + var53);
 				var51 = (short) (var4.method15254() + var50);
@@ -1041,12 +1041,12 @@ public class class129 {
 			}
 		}
 		this.field1315++;
-		var4.field9626 = var31;
+		var4.pos = var31;
 		for (int var59 = 0; var59 < this.field1334; var59++) {
 			this.field1335[var59] = 0;
-			this.field1336[var59] = (short) var4.method15239();
-			this.field1337[var59] = (short) var4.method15239();
-			this.field1338[var59] = (short) var4.method15239();
+			this.field1336[var59] = (short) var4.g2();
+			this.field1337[var59] = (short) var4.g2();
+			this.field1338[var59] = (short) var4.g2();
 		}
 		if (this.field1348 != null) {
 			boolean var60 = false;

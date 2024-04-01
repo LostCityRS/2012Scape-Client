@@ -115,9 +115,9 @@ public class class367 {
 			this.field3967 = null;
 			return false;
 		}
-		int var12 = class595.method2839(this.field3966);
+		int var12 = IntMath.bitceil(this.field3966);
 		if (var12 > arg3) {
-			var12 = class595.method1962(arg3);
+			var12 = IntMath.method1962(arg3);
 		}
 		if (var12 > 512) {
 			var12 = 512;

@@ -19,7 +19,7 @@ public class class470 {
 	public float field4996;
 
 	@ObfuscatedName("qf.c")
-	public class317 field4990;
+	public Vector3 field4990;
 
 	@ObfuscatedName("qf.m")
 	public int field4989;
@@ -46,14 +46,14 @@ public class class470 {
 		this.method8202();
 	}
 
-	public class470(class814 arg0, class469 arg1) {
+	public class470(Packet arg0, class469 arg1) {
 		this.method8205(arg0, arg1);
 	}
 
 	@ObfuscatedName("qf.u(I)V")
 	public void method8202() {
 		this.field4991 = class469.field4983;
-		this.field4990 = class317.method5294(-50.0F, -60.0F, -50.0F);
+		this.field4990 = Vector3.method5294(-50.0F, -60.0F, -50.0F);
 		this.field4987 = 1.1523438F;
 		this.field4988 = 0.69921875F;
 		this.field4996 = 1.2F;
@@ -113,41 +113,41 @@ public class class470 {
 	}
 
 	@ObfuscatedName("qf.s(Laet;Lqp;I)V")
-	public void method8205(class814 arg0, class469 arg1) {
-		int var3 = arg0.method15220();
+	public void method8205(Packet arg0, class469 arg1) {
+		int var3 = arg0.g1();
 		if (Statics.field4961.field9650.method15667() == 1 && Statics.field5187.method768() > 0) {
 			if ((var3 & 0x1) == 0) {
 				this.field4991 = class469.field4983;
 			} else {
-				this.field4991 = arg0.method15379();
+				this.field4991 = arg0.g4s();
 			}
 			if ((var3 & 0x2) == 0) {
 				this.field4987 = 1.1523438F;
 			} else {
-				this.field4987 = (float) arg0.method15239() / 256.0F;
+				this.field4987 = (float) arg0.g2() / 256.0F;
 			}
 			if ((var3 & 0x4) == 0) {
 				this.field4988 = 0.69921875F;
 			} else {
-				this.field4988 = (float) arg0.method15239() / 256.0F;
+				this.field4988 = (float) arg0.g2() / 256.0F;
 			}
 			if ((var3 & 0x8) == 0) {
 				this.field4996 = 1.2F;
 			} else {
-				this.field4996 = (float) arg0.method15239() / 256.0F;
+				this.field4996 = (float) arg0.g2() / 256.0F;
 			}
 		} else {
 			if ((var3 & 0x1) != 0) {
-				arg0.method15379();
+				arg0.g4s();
 			}
 			if ((var3 & 0x2) != 0) {
-				arg0.method15239();
+				arg0.g2();
 			}
 			if ((var3 & 0x4) != 0) {
-				arg0.method15239();
+				arg0.g2();
 			}
 			if ((var3 & 0x8) != 0) {
-				arg0.method15239();
+				arg0.g2();
 			}
 			this.field4991 = class469.field4983;
 			this.field4996 = 1.2F;
@@ -155,47 +155,47 @@ public class class470 {
 			this.field4987 = 1.1523438F;
 		}
 		if ((var3 & 0x10) == 0) {
-			this.field4990 = class317.method5294(-50.0F, -60.0F, -50.0F);
+			this.field4990 = Vector3.method5294(-50.0F, -60.0F, -50.0F);
 		} else {
-			this.field4990 = class317.method5294((float) arg0.method15240(), (float) arg0.method15240(), (float) arg0.method15240());
+			this.field4990 = Vector3.method5294((float) arg0.method15240(), (float) arg0.method15240(), (float) arg0.method15240());
 		}
 		if ((var3 & 0x20) == 0) {
 			this.field4989 = class469.field4982;
 		} else {
-			this.field4989 = arg0.method15379();
+			this.field4989 = arg0.g4s();
 		}
 		if ((var3 & 0x40) == 0) {
 			this.field4997 = 0;
 		} else {
-			this.field4997 = arg0.method15239();
+			this.field4997 = arg0.g2();
 		}
 		if ((var3 & 0x80) == 0) {
 			this.field4993 = Statics.field4971;
 			return;
 		}
-		int var4 = arg0.method15239();
-		int var5 = arg0.method15239();
-		int var6 = arg0.method15239();
-		int var7 = arg0.method15239();
-		int var8 = arg0.method15239();
-		int var9 = arg0.method15239();
+		int var4 = arg0.g2();
+		int var5 = arg0.g2();
+		int var6 = arg0.g2();
+		int var7 = arg0.g2();
+		int var8 = arg0.g2();
+		int var9 = arg0.g2();
 		this.field4993 = arg1.method8185(var4, var5, var6, var7, var8, var9);
 	}
 
 	@ObfuscatedName("qf.c(Laet;S)V")
-	public void method8206(class814 arg0) {
-		this.field4992 = (float) (arg0.method15220() * 8) / 255.0F;
-		this.field4995 = (float) (arg0.method15220() * 8) / 255.0F;
-		this.field4994 = (float) (arg0.method15220() * 8) / 255.0F;
+	public void method8206(Packet arg0) {
+		this.field4992 = (float) (arg0.g1() * 8) / 255.0F;
+		this.field4995 = (float) (arg0.g1() * 8) / 255.0F;
+		this.field4994 = (float) (arg0.g1() * 8) / 255.0F;
 	}
 
 	@ObfuscatedName("qf.m(Laet;Lqp;I)V")
-	public void method8207(class814 arg0, class469 arg1) {
-		int var3 = arg0.method15239();
+	public void method8207(Packet arg0, class469 arg1) {
+		int var3 = arg0.g2();
 		int var4 = arg0.method15240();
 		int var5 = arg0.method15240();
 		int var6 = arg0.method15240();
-		int var7 = arg0.method15239();
+		int var7 = arg0.g2();
 		Statics.field3358 = var7;
 		this.field4986 = arg1.method8193(var3, var4, var5, var6);
 	}

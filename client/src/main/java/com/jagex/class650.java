@@ -25,7 +25,7 @@ public class class650 extends class85 {
 			byte[][] var3 = new byte[6][16384];
 			byte[][] var4 = new byte[6][16384];
 			int var5 = 0;
-			class317 var6 = new class317(0.0F, -1.0F, 0.0F);
+			Vector3 var6 = new Vector3(0.0F, -1.0F, 0.0F);
 			for (int var7 = 0; var7 < 128; var7++) {
 				for (int var8 = 0; var8 < 128; var8++) {
 					float var9 = (float) var8 * 2.0F / 128.0F - 1.0F;
@@ -34,19 +34,19 @@ public class class650 extends class85 {
 					float var12 = var9 * var11;
 					float var13 = var10 * var11;
 					for (int var14 = 0; var14 < 6; var14++) {
-						class317 var15;
+						Vector3 var15;
 						if (var14 == 0) {
-							var15 = new class317(-var11, -var12, var13);
+							var15 = new Vector3(-var11, -var12, var13);
 						} else if (var14 == 1) {
-							var15 = new class317(var11, var12, var13);
+							var15 = new Vector3(var11, var12, var13);
 						} else if (var14 == 2) {
-							var15 = new class317(-var12, var13, -var11);
+							var15 = new Vector3(-var12, var13, -var11);
 						} else if (var14 == 3) {
-							var15 = new class317(-var12, -var13, var11);
+							var15 = new Vector3(-var12, -var13, var11);
 						} else if (var14 == 4) {
-							var15 = new class317(var12, var11, -var13);
+							var15 = new Vector3(var12, var11, -var13);
 						} else {
-							var15 = new class317(var12, -var11, var13);
+							var15 = new Vector3(var12, -var11, var13);
 						}
 						float var16 = var15.method5362(var6);
 						float var17 = Math.max(0.0F, Math.min(1.0F, var16));

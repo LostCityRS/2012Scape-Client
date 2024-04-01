@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 import deob.Statics;
 
 @ObfuscatedName("aay")
-public abstract class class719 extends class974 implements class198 {
+public abstract class PathingEntity extends class974 implements class198 {
 
 	@ObfuscatedName("aay.o")
 	public int field8593;
@@ -192,7 +192,7 @@ public abstract class class719 extends class974 implements class198 {
 	@ObfuscatedName("aay.bw")
 	public int field8630;
 
-	public class719(class423 arg0, int arg1) {
+	public PathingEntity(class423 arg0, int arg1) {
 		super(arg0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, (byte) 0);
 		this.field8594 = 1;
 		this.field8622 = -32768;
@@ -240,7 +240,7 @@ public abstract class class719 extends class974 implements class198 {
 		this.field8633 = new class977[Statics.field3226.field5171.length];
 	}
 
-	public class719(class423 arg0) {
+	public PathingEntity(class423 arg0) {
 		this(arg0, 10);
 	}
 
@@ -678,7 +678,7 @@ public abstract class class719 extends class974 implements class198 {
 	@ObfuscatedName("aay.dz(I)V")
 	public void method14006() {
 		int var1 = (this.field8594 - 1 << 8) + 240;
-		class317 var2 = this.method8565().field3464;
+		Vector3 var2 = this.method8565().field3464;
 		this.field10510 = (short) ((int) var2.field3475 - var1 >> 9);
 		this.field10509 = (short) ((int) var2.field3477 - var1 >> 9);
 		this.field10508 = (short) ((int) var2.field3475 + var1 >> 9);
@@ -788,7 +788,7 @@ public abstract class class719 extends class974 implements class198 {
 
 	@ObfuscatedName("aay.g(IIIIII)V")
 	public void method13958(int arg0, int arg1, int arg2, int arg3, int arg4) {
-		class317 var6 = this.method8565().field3464;
+		Vector3 var6 = this.method8565().field3464;
 		int var7 = this.field10510 + this.field10508 >> 1;
 		int var8 = this.field10511 + this.field10509 >> 1;
 		int var9 = class312.field3439[arg0];
@@ -896,7 +896,7 @@ public abstract class class719 extends class974 implements class198 {
 			return false;
 		} else {
 			this.field8653 = arg0;
-			class502.method11374(this.field8652.field1732);
+			ScriptRunner.runOnLoad(this.field8652.components);
 			return true;
 		}
 	}
@@ -933,7 +933,7 @@ public abstract class class719 extends class974 implements class198 {
 	@ObfuscatedName("aay.de(IIZI)V")
 	public void method13969(int arg0, int arg1, boolean arg2) {
 		if (this.method13976()) {
-			client.method11323(this.field8652.field1732, -1, arg0, arg1, arg2);
+			client.method11323(this.field8652.components, -1, arg0, arg1, arg2);
 		}
 	}
 

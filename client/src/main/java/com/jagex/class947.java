@@ -39,16 +39,16 @@ public class class947 extends class800 {
 				int[] var2 = Statics.field674.method5683(this.field10349);
 				this.field10348 = new byte[var2.length][];
 				for (int var3 = 0; var3 < var2.length; var3++) {
-					this.field10348[var3] = Statics.field674.method5627(this.field10349, var2[var3]);
+					this.field10348[var3] = Statics.field674.getFile(this.field10349, var2[var3]);
 				}
 			}
 		}
 		boolean var5 = true;
 		for (int var6 = 0; var6 < this.field10348.length; var6++) {
 			byte[] var7 = this.field10348[var6];
-			class814 var8 = new class814(var7);
-			var8.field9626 = 1;
-			int var9 = var8.method15239();
+			Packet var8 = new Packet(var7);
+			var8.pos = 1;
+			int var9 = var8.g2();
 			class334 var10 = Statics.field10347;
 			synchronized (Statics.field10347) {
 				var5 &= Statics.field10347.method5630(var9);
@@ -67,9 +67,9 @@ public class class947 extends class800 {
 		}
 		for (int var17 = 0; var17 < var15.length; var17++) {
 			byte[] var18 = this.field10348[var17];
-			class814 var19 = new class814(var18);
-			var19.field9626 = 1;
-			int var20 = var19.method15239();
+			Packet var19 = new Packet(var18);
+			var19.pos = 1;
+			int var20 = var19.g2();
 			class779 var21 = null;
 			for (class779 var22 = (class779) var12.method11563(); var22 != null; var22 = (class779) var12.method11567()) {
 				if (var22.field9357 == var20) {

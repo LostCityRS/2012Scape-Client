@@ -19,18 +19,18 @@ public class class702 extends class150 {
 	@ObfuscatedName("zh.c")
 	public final int[] field8495;
 
-	public class702(class814 arg0) {
+	public class702(Packet arg0) {
 		super(arg0);
-		this.field8493 = arg0.method15239();
+		this.field8493 = arg0.g2();
 		this.field8495 = new int[class365.method2553().length];
 		this.field8492 = arg0.method15411();
 		Arrays.fill(this.field8495, 0, this.field8495.length, this.field8492);
-		this.field8494 = arg0.method15379();
+		this.field8494 = arg0.g4s();
 	}
 
 	@ObfuscatedName("zh.j(I)V")
 	public void method2873() {
-		class719 var1 = Statics.field1537[this.field8493].method2854();
+		PathingEntity var1 = Statics.field1537[this.field8493].method2854();
 		if (this.field8494 == 0) {
 			client.method8263(var1, this.field8495, 0, false);
 		} else {

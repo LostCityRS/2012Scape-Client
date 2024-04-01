@@ -16,7 +16,7 @@ public class class49 implements class567 {
 	public int[] field661 = new int[Statics.field6667.field3312];
 
 	@ObfuscatedName("e.l")
-	public class565 field662 = new class565(128);
+	public IterableMap field662 = new IterableMap(128);
 
 	static {
 		int var0 = 2;
@@ -49,7 +49,7 @@ public class class49 implements class567 {
 			this.field657[var1] = 0;
 			this.field661[var1] = 0;
 		}
-		this.field662 = new class565(128);
+		this.field662 = new IterableMap(128);
 	}
 
 	@ObfuscatedName("e.a(III)V")
@@ -58,7 +58,7 @@ public class class49 implements class567 {
 		class801 var3 = (class801) this.field662.method11923((long) arg0);
 		if (var3 == null) {
 			class801 var4 = new class801(class153.method5554() + 500L);
-			this.field662.method11927(var4, (long) arg0);
+			this.field662.pushNode(var4, (long) arg0);
 		} else {
 			var3.field9555 = class153.method5554() + 500L;
 		}
@@ -70,7 +70,7 @@ public class class49 implements class567 {
 		class801 var3 = (class801) this.field662.method11923((long) arg0);
 		if (var3 == null) {
 			class801 var4 = new class801(4611686018427387905L);
-			this.field662.method11927(var4, (long) arg0);
+			this.field662.pushNode(var4, (long) arg0);
 		} else if (var3.field9555 != 4611686018427387905L) {
 			var3.field9555 = class153.method5554() + 500L | 0x4000000000000000L;
 		}

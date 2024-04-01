@@ -9,7 +9,7 @@ public interface class198 {
 	class316 method3680();
 
 	@ObfuscatedName("fs.a(I)Lko;")
-	class317 method3683();
+    Vector3 method3683();
 
 	@ObfuscatedName("fs.u(I)Ladu;")
 	class810 method3684();

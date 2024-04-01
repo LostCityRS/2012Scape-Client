@@ -145,7 +145,7 @@ public class class366 {
 	public boolean method6366(class14 arg0, int arg1, int arg2) {
 		if (this.field3933 != arg1) {
 			this.field3933 = arg1;
-			int var4 = class595.method1962(arg1);
+			int var4 = IntMath.method1962(arg1);
 			if (var4 > 512) {
 				var4 = 512;
 			}

@@ -98,7 +98,7 @@ public abstract class class683 extends class14 {
 	public class320 field8357 = new class320();
 
 	@ObfuscatedName("yk.bl")
-	public class317 field8266 = new class317();
+	public Vector3 field8266 = new Vector3();
 
 	@ObfuscatedName("yk.bk")
 	public float[] field8254 = new float[4];

@@ -16,7 +16,7 @@ public class class797 extends class399 {
 	public static class547 field9528 = new class547();
 
 	@ObfuscatedName("adg.l")
-	public static class565 field9516 = new class565(16);
+	public static IterableMap field9516 = new IterableMap(16);
 
 	@ObfuscatedName("adg.f")
 	public int field9517;
@@ -281,7 +281,7 @@ public class class797 extends class399 {
 			var7.field9532 = 256;
 			var7.field9524 = 256;
 			var7.field9522 = 0;
-			field9516.method11927(var7, (long) arg6.field8593);
+			field9516.pushNode(var7, (long) arg6.field8593);
 		}
 	}
 
@@ -428,7 +428,7 @@ public class class797 extends class399 {
 					}
 				}
 			}
-			class317 var12 = var5.field9527.method8565().field3464;
+			Vector3 var12 = var5.field9527.method8565().field3464;
 			var5.field9518 = (int) var12.field3475;
 			var5.field9547 = (int) var12.field3475 + (var5.field9527.method13954() << 8);
 			var5.field9519 = (int) var12.field3477;
@@ -474,7 +474,7 @@ public class class797 extends class399 {
 					}
 				}
 			}
-			class317 var19 = var13.field9513.method8565().field3464;
+			Vector3 var19 = var13.field9513.method8565().field3464;
 			var13.field9518 = (int) var19.field3475;
 			var13.field9547 = (int) var19.field3475 + (var13.field9513.method13954() << 8);
 			var13.field9519 = (int) var19.field3477;

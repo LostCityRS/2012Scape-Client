@@ -7,7 +7,7 @@ import deob.Statics;
 public final class class114 {
 
 	@ObfuscatedName("ch.u")
-	public class565 field1199;
+	public IterableMap field1199;
 
 	@ObfuscatedName("ch.j")
 	public final int field1200;
@@ -26,12 +26,12 @@ public final class class114 {
 	@ObfuscatedName("ch.j(III)V")
 	public void method2418(int arg0, int arg1) {
 		if (this.field1199 == null) {
-			this.field1199 = new class565(this.field1200);
+			this.field1199 = new IterableMap(this.field1200);
 		}
-		class802 var3 = (class802) this.field1199.method11923((long) arg0);
+		IntNode var3 = (IntNode) this.field1199.method11923((long) arg0);
 		if (var3 == null) {
-			class802 var4 = new class802(arg1);
-			this.field1199.method11927(var4, (long) arg0);
+			IntNode var4 = new IntNode(arg1);
+			this.field1199.pushNode(var4, (long) arg0);
 		} else {
 			var3.field9556 = arg1;
 		}
@@ -39,7 +39,7 @@ public final class class114 {
 
 	@ObfuscatedName("ch.a(II)I")
 	public int method2416(int arg0) {
-		class802 var2 = (class802) this.field1199.method11923((long) arg0);
+		IntNode var2 = (IntNode) this.field1199.method11923((long) arg0);
 		if (var2 == null) {
 			class572 var3 = Statics.field1510.method12004(arg0);
 			return var3.field6760 == 'i' ? 0 : -1;

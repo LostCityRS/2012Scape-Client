@@ -3,19 +3,19 @@ package com.jagex;
 import deob.ObfuscatedName;
 
 @ObfuscatedName("rn")
-public class class503 {
+public class ClientScriptState {
 
 	@ObfuscatedName("rn.u")
-	public int[] field5235;
+	public int[] intLocals;
 
 	@ObfuscatedName("rn.j")
-	public Object[] field5211;
+	public Object[] objectLocals;
 
 	@ObfuscatedName("rn.a")
-	public long[] field5212;
+	public long[] longLocals;
 
 	@ObfuscatedName("rn.s")
-	public boolean field5238;
+	public boolean secondary;
 
 	@ObfuscatedName("rn.c")
 	public int[] field5237 = new int[5];
@@ -24,34 +24,34 @@ public class class503 {
 	public int[][] field5224 = new int[5][5000];
 
 	@ObfuscatedName("rn.t")
-	public int[] field5215 = new int[1000];
+	public int[] intStack = new int[1000];
 
 	@ObfuscatedName("rn.l")
-	public int field5216 = 0;
+	public int isp = 0;
 
 	@ObfuscatedName("rn.f")
-	public Object[] field5222 = new Object[1000];
+	public Object[] objectStack = new Object[1000];
 
 	@ObfuscatedName("rn.d")
-	public int field5230 = 0;
+	public int osp = 0;
 
 	@ObfuscatedName("rn.z")
-	public long[] field5219 = new long[1000];
+	public long[] longStack = new long[1000];
 
 	@ObfuscatedName("rn.n")
-	public int field5220 = 0;
+	public int lsp = 0;
 
 	@ObfuscatedName("rn.o")
-	public int field5221 = 0;
+	public int fp = 0;
 
 	@ObfuscatedName("rn.q")
-	public class499[] field5225 = new class499[50];
+	public ScriptFrame[] frames = new ScriptFrame[50];
 
 	@ObfuscatedName("rn.p")
-	public class504 field5223 = new class504();
+	public class504 activeComponent = new class504();
 
 	@ObfuscatedName("rn.w")
-	public class504 field5210 = new class504();
+	public class504 activeComponent2 = new class504();
 
 	@ObfuscatedName("rn.b")
 	public class270 field5213;
@@ -63,16 +63,16 @@ public class class503 {
 	public class788 field5217;
 
 	@ObfuscatedName("rn.v")
-	public class719 field5228;
+	public PathingEntity activeEntity;
 
 	@ObfuscatedName("rn.k")
-	public class113 field5229;
+	public Location activeLoc;
 
 	@ObfuscatedName("rn.h")
-	public class1008 field5234;
+	public ObjStackEntity activeObj;
 
 	@ObfuscatedName("rn.r")
-	public int field5231 = 0;
+	public int nestedCount = 0;
 
 	@ObfuscatedName("rn.g")
 	public int field5232;
@@ -81,14 +81,14 @@ public class class503 {
 	public class53 field5233;
 
 	@ObfuscatedName("rn.e")
-	public int[] field5227;
+	public int[] intOperands;
 
 	@ObfuscatedName("rn.ay")
-	public class508[] field5214;
+	public ClientScriptCommand[] instructions;
 
 	@ObfuscatedName("rn.af")
-	public int field5236 = -1;
+	public int pc = -1;
 
 	@ObfuscatedName("rn.ar")
-	public class954 field5218;
+	public ClientScript script;
 }

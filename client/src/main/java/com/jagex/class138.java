@@ -59,21 +59,21 @@ public class class138 {
 	public class138(byte[] arg0, class779 arg1) {
 		this.field1496 = arg1;
 		try {
-			class814 var3 = new class814(arg0);
-			class814 var4 = new class814(arg0);
-			var3.method15220();
-			var3.field9626 += 2;
-			int var5 = var3.method15239();
+			Packet var3 = new Packet(arg0);
+			Packet var4 = new Packet(arg0);
+			var3.g1();
+			var3.pos += 2;
+			int var5 = var3.g2();
 			int var6 = 0;
 			int var7 = -1;
 			int var8 = -1;
-			var4.field9626 = var3.field9626 + var5;
+			var4.pos = var3.pos + var5;
 			for (int var9 = 0; var9 < var5; var9++) {
 				int var10 = this.field1496.field9365[var9];
 				if (var10 == 0) {
 					var7 = var9;
 				}
-				int var11 = var3.method15220();
+				int var11 = var3.g1();
 				if (var11 > 0) {
 					if (var10 == 0) {
 						var8 = var9;
@@ -120,7 +120,7 @@ public class class138 {
 					var6++;
 				}
 			}
-			if (var4.field9626 != arg0.length) {
+			if (var4.pos != arg0.length) {
 				throw new RuntimeException();
 			}
 			this.field1485 = var6;

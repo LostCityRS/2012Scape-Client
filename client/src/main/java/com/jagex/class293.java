@@ -12,9 +12,9 @@ public class class293 implements class464 {
 	public char field3309;
 
 	@ObfuscatedName("ju.u(Laet;I)V")
-	public void method4870(class814 arg0) {
+	public void method4870(Packet arg0) {
 		while (true) {
-			int var2 = arg0.method15220();
+			int var2 = arg0.g1();
 			if (var2 == 0) {
 				return;
 			}
@@ -23,11 +23,11 @@ public class class293 implements class464 {
 	}
 
 	@ObfuscatedName("ju.j(Laet;II)V")
-	public void method4867(class814 arg0, int arg1) {
+	public void method4867(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			this.field3309 = class524.method16898(arg0.method15238());
 		} else if (arg1 == 5) {
-			this.field3310 = arg0.method15239();
+			this.field3310 = arg0.g2();
 		}
 	}
 }

@@ -12,7 +12,7 @@ public class class458 {
 	public int field4859;
 
 	@ObfuscatedName("qd.a")
-	public class565 field4856;
+	public IterableMap field4856;
 
 	@ObfuscatedName("qd.s")
 	public class552 field4858 = new class552();
@@ -23,7 +23,7 @@ public class class458 {
 		int var2;
 		for (var2 = 1; var2 + var2 < arg0; var2 += var2) {
 		}
-		this.field4856 = new class565(var2);
+		this.field4856 = new IterableMap(var2);
 	}
 
 	@ObfuscatedName("qd.u(Lqu;)Ljava/lang/Object;")
@@ -35,7 +35,7 @@ public class class458 {
 				if (var5 != null) {
 					if (var4.method16730()) {
 						class1006 var6 = new class1006(arg0, var5, var4.field10374);
-						this.field4856.method11927(var6, var4.field4228);
+						this.field4856.pushNode(var6, var4.field4228);
 						this.field4858.method11728(var6);
 						var6.field9554 = 0L;
 						var4.method6979();
@@ -91,7 +91,7 @@ public class class458 {
 			this.method8003(var4);
 		}
 		class1006 var5 = new class1006(arg1, arg0, arg2);
-		this.field4856.method11927(var5, arg1.method7998());
+		this.field4856.pushNode(var5, arg1.method7998());
 		this.field4858.method11728(var5);
 		var5.field9554 = 0L;
 	}
@@ -107,7 +107,7 @@ public class class458 {
 				}
 			} else if (++var2.field9554 > (long) arg0) {
 				class1007 var3 = new class1007(var2.field10375, var2.method16728(), var2.field10374);
-				this.field4856.method11927(var3, var2.field4228);
+				this.field4856.pushNode(var3, var2.field4228);
 				class552.method2355(var3, var2);
 				var2.method6979();
 				var2.method15142();

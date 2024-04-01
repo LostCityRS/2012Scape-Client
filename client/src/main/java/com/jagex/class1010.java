@@ -92,7 +92,7 @@ public class class1010 extends class974 {
 		class507 var4 = Statics.field4213.method11082(arg2);
 		class12 var5 = this.field9808.field4527[this.field9807];
 		class12 var6 = this.field9809 < 3 ? this.field9808.field4527[this.field9809 + 1] : null;
-		class317 var7 = this.method8565().field3464;
+		Vector3 var7 = this.method8565().field3464;
 		return this.field10642 == null || this.field10642.method11784() ? var4.method11103(arg0, arg1, true, var5, var6, (int) var7.field3475, (int) var7.field3476, (int) var7.field3477, null, (byte) 2) : var4.method11103(arg0, arg1, true, var5, var6, (int) var7.field3475, (int) var7.field3476, (int) var7.field3477, this.field10642, (byte) 2);
 	}
 

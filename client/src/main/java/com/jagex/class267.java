@@ -13,7 +13,7 @@ public class class267 implements class264 {
 	}
 
 	@ObfuscatedName("fr.u(Laet;I)Lib;")
-	public static class267 method3522(class814 arg0) {
+	public static class267 method3522(Packet arg0) {
 		int var1 = arg0.method15411();
 		return new class267(var1);
 	}

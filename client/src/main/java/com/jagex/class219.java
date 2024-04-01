@@ -14,15 +14,15 @@ public class class219 {
 	@ObfuscatedName("gs.a")
 	public class547 field2376 = new class547();
 
-	public class219(class814 arg0) {
+	public class219(Packet arg0) {
 		this.method4110(arg0);
 	}
 
 	@ObfuscatedName("gs.u(Laet;B)V")
-	public void method4110(class814 arg0) {
-		this.field2379 = arg0.method15246();
-		this.field2375 = arg0.method15379();
-		for (int var2 = arg0.method15220(); var2 != 0; var2 = arg0.method15220()) {
+	public void method4110(Packet arg0) {
+		this.field2379 = arg0.g8();
+		this.field2375 = arg0.g4s();
+		for (int var2 = arg0.g1(); var2 != 0; var2 = arg0.g1()) {
 			class787 var3;
 			if (var2 == 3) {
 				var3 = new class920(this);

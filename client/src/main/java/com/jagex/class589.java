@@ -48,7 +48,7 @@ public class class589 {
 			}
 			for (int var4 = 0; var4 < 255; var4++) {
 				int var5 = 255 - var4;
-				int var6 = class595.method2715(var2, var5);
+				int var6 = IntMath.method2715(var2, var5);
 				byte var7 = var1[var6];
 				var1[var6] = var1[var5];
 				var1[var5] = var1[511 - var4] = var7;

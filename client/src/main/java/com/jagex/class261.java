@@ -53,18 +53,18 @@ public class class261 implements class264 {
 	}
 
 	@ObfuscatedName("cu.u(Laet;B)Liw;")
-	public static class261 method2548(class814 arg0) {
-		int var1 = arg0.method15220();
-		class265 var2 = class265.method15177()[arg0.method15220()];
-		class263 var3 = class263.method3623()[arg0.method15220()];
+	public static class261 method2548(Packet arg0) {
+		int var1 = arg0.g1();
+		class265 var2 = class265.method15177()[arg0.g1()];
+		class263 var3 = class263.method3623()[arg0.g1()];
 		int var4 = arg0.method15240();
 		int var5 = arg0.method15240();
-		int var6 = arg0.method15239();
-		int var7 = arg0.method15239();
-		int var8 = arg0.method15379();
-		int var9 = arg0.method15379();
-		int var10 = arg0.method15379();
-		boolean var11 = arg0.method15220() == 1;
+		int var6 = arg0.g2();
+		int var7 = arg0.g2();
+		int var8 = arg0.g4s();
+		int var9 = arg0.g4s();
+		int var10 = arg0.g4s();
+		boolean var11 = arg0.g1() == 1;
 		return new class261(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11);
 	}
 

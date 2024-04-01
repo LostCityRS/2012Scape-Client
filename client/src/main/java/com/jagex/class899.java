@@ -594,12 +594,12 @@ public final class class899 extends class683 {
 
 	@ObfuscatedName("ahv.qh(IIZ[III)Lhc;")
 	public class239 method13552(int arg0, int arg1, boolean arg2, int[] arg3, int arg4, int arg5) {
-		if (this.field10006 || class595.method11258(arg0) && class595.method11258(arg1)) {
+		if (this.field10006 || IntMath.method11258(arg0) && IntMath.method11258(arg1)) {
 			return new class745(this, arg0, arg1, arg2, arg3, arg4, arg5);
 		} else if (this.field10025) {
 			return new class746(this, arg0, arg1, arg3, arg4, arg5);
 		} else {
-			class745 var7 = new class745(this, class124.field1296, class139.field1501, class595.method2839(arg0), class595.method2839(arg1));
+			class745 var7 = new class745(this, class124.field1296, class139.field1501, IntMath.bitceil(arg0), IntMath.bitceil(arg1));
 			var7.method4413(0, 0, arg0, arg1, arg3, arg4, arg5);
 			return var7;
 		}
@@ -607,12 +607,12 @@ public final class class899 extends class683 {
 
 	@ObfuscatedName("ahv.qj(Lcy;IIZ[BII)Lhc;")
 	public class239 method13599(class124 arg0, int arg1, int arg2, boolean arg3, byte[] arg4, int arg5, int arg6) {
-		if (this.field10006 || class595.method11258(arg1) && class595.method11258(arg2)) {
+		if (this.field10006 || IntMath.method11258(arg1) && IntMath.method11258(arg2)) {
 			return new class745(this, arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 		} else if (this.field10025) {
 			return new class746(this, arg0, arg1, arg2, arg4, arg5, arg6);
 		} else {
-			class745 var8 = new class745(this, arg0, class139.field1501, class595.method2839(arg1), class595.method2839(arg2));
+			class745 var8 = new class745(this, arg0, class139.field1501, IntMath.bitceil(arg1), IntMath.bitceil(arg2));
 			var8.method4414(0, 0, arg1, arg2, arg4, arg0, arg5, arg6);
 			return var8;
 		}
@@ -620,12 +620,12 @@ public final class class899 extends class683 {
 
 	@ObfuscatedName("ahv.qz(Lcy;IIZ[FII)Lhc;")
 	public class239 method13630(class124 arg0, int arg1, int arg2, boolean arg3, float[] arg4, int arg5, int arg6) {
-		if (this.field10006 || class595.method11258(arg1) && class595.method11258(arg2)) {
+		if (this.field10006 || IntMath.method11258(arg1) && IntMath.method11258(arg2)) {
 			return new class745(this, arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 		} else if (this.field10025) {
 			return new class746(this, arg0, arg1, arg2, arg4, arg5, arg6);
 		} else {
-			class745 var8 = new class745(this, arg0, class139.field1506, class595.method2839(arg1), class595.method2839(arg2));
+			class745 var8 = new class745(this, arg0, class139.field1506, IntMath.bitceil(arg1), IntMath.bitceil(arg2));
 			var8.method14192(0, 0, arg1, arg2, arg4, arg0, arg5, arg6);
 			return var8;
 		}
@@ -633,12 +633,12 @@ public final class class899 extends class683 {
 
 	@ObfuscatedName("ahv.qy(Lcy;Ldz;II)Lii;")
 	public class257 method13542(class124 arg0, class139 arg1, int arg2, int arg3) {
-		if (this.field10006 || class595.method11258(arg2) && class595.method11258(arg3)) {
+		if (this.field10006 || IntMath.method11258(arg2) && IntMath.method11258(arg3)) {
 			return new class745(this, arg0, arg1, arg2, arg3);
 		} else if (this.field10025) {
 			return new class746(this, arg0, arg1, arg2, arg3);
 		} else {
-			return new class745(this, arg0, arg1, class595.method2839(arg2), class595.method2839(arg3));
+			return new class745(this, arg0, arg1, IntMath.bitceil(arg2), IntMath.bitceil(arg3));
 		}
 	}
 
@@ -1032,7 +1032,7 @@ public final class class899 extends class683 {
 		int var2 = 0;
 		int var3 = arg0 & Integer.MAX_VALUE;
 		while (!this.field10005.method11585()) {
-			class802 var4 = (class802) this.field10005.method11560();
+			IntNode var4 = (IntNode) this.field10005.method11560();
 			this.field10012[var2++] = (int) var4.field4228;
 			this.field8252 -= var4.field9556;
 			if (var2 == 1000) {
@@ -1045,7 +1045,7 @@ public final class class899 extends class683 {
 			var2 = 0;
 		}
 		while (!this.field10010.method11585()) {
-			class802 var5 = (class802) this.field10010.method11560();
+			IntNode var5 = (IntNode) this.field10010.method11560();
 			this.field10012[var2++] = (int) var5.field4228;
 			this.field8325 -= var5.field9556;
 			if (var2 == 1000) {
@@ -1058,7 +1058,7 @@ public final class class899 extends class683 {
 			var2 = 0;
 		}
 		while (!this.field10007.method11585()) {
-			class802 var6 = (class802) this.field10007.method11560();
+			IntNode var6 = (IntNode) this.field10007.method11560();
 			this.field10012[var2++] = var6.field9556;
 			if (var2 == 1000) {
 				OpenGL.glDeleteFramebuffersEXT(var2, this.field10012, 0);
@@ -1070,7 +1070,7 @@ public final class class899 extends class683 {
 			var2 = 0;
 		}
 		while (!this.field10008.method11585()) {
-			class802 var7 = (class802) this.field10008.method11560();
+			IntNode var7 = (IntNode) this.field10008.method11560();
 			this.field10012[var2++] = (int) var7.field4228;
 			this.field8334 -= var7.field9556;
 			if (var2 == 1000) {
@@ -1083,7 +1083,7 @@ public final class class899 extends class683 {
 			boolean var8 = false;
 		}
 		while (!this.field10031.method11585()) {
-			class802 var9 = (class802) this.field10031.method11560();
+			IntNode var9 = (IntNode) this.field10031.method11560();
 			OpenGL.glDeleteLists((int) var9.field4228, var9.field9556);
 		}
 		while (!this.field10009.method11585()) {
@@ -1095,7 +1095,7 @@ public final class class899 extends class683 {
 			OpenGL.glDeleteShader((int) var11.field4228);
 		}
 		while (!this.field10031.method11585()) {
-			class802 var12 = (class802) this.field10031.method11560();
+			IntNode var12 = (IntNode) this.field10031.method11560();
 			OpenGL.glDeleteLists((int) var12.field4228, var12.field9556);
 		}
 		if (this.method552() > 100663296 && class153.method5554() > this.field10011 + 60000L) {
@@ -1107,27 +1107,27 @@ public final class class899 extends class683 {
 
 	@ObfuscatedName("ahv.acp(II)V")
 	public final synchronized void method16083(int arg0, int arg1) {
-		class802 var3 = new class802(arg1);
+		IntNode var3 = new IntNode(arg1);
 		var3.field4228 = arg0;
 		this.field10005.method11558(var3);
 	}
 
 	@ObfuscatedName("ahv.aca(II)V")
 	public final synchronized void method16086(int arg0, int arg1) {
-		class802 var3 = new class802(arg1);
+		IntNode var3 = new IntNode(arg1);
 		var3.field4228 = arg0;
 		this.field10010.method11558(var3);
 	}
 
 	@ObfuscatedName("ahv.acv(I)V")
 	public final synchronized void method16087(int arg0) {
-		class802 var2 = new class802(arg0);
+		IntNode var2 = new IntNode(arg0);
 		this.field10007.method11558(var2);
 	}
 
 	@ObfuscatedName("ahv.acl(II)V")
 	public final synchronized void method16088(int arg0, int arg1) {
-		class802 var3 = new class802(arg1);
+		IntNode var3 = new IntNode(arg1);
 		var3.field4228 = arg0;
 		this.field10008.method11558(var3);
 	}

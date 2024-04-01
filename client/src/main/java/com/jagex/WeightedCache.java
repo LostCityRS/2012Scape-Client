@@ -3,7 +3,7 @@ package com.jagex;
 import deob.ObfuscatedName;
 
 @ObfuscatedName("pm")
-public final class class451 {
+public final class WeightedCache {
 
 	@ObfuscatedName("pm.u")
 	public int field4826;
@@ -12,23 +12,23 @@ public final class class451 {
 	public int field4827;
 
 	@ObfuscatedName("pm.a")
-	public class565 field4828;
+	public IterableMap field4828;
 
 	@ObfuscatedName("pm.s")
 	public class552 field4829;
 
-	public class451(int arg0) {
+	public WeightedCache(int arg0) {
 		this(arg0, arg0);
 	}
 
-	public class451(int arg0, int arg1) {
+	public WeightedCache(int arg0, int arg1) {
 		this.field4829 = new class552();
 		this.field4826 = arg0;
 		this.field4827 = arg0;
 		int var3;
 		for (var3 = 1; var3 + var3 < arg0 && var3 < arg1; var3 += var3) {
 		}
-		this.field4828 = new class565(var3);
+		this.field4828 = new IterableMap(var3);
 	}
 
 	@ObfuscatedName("pm.u(J)Ljava/lang/Object;")
@@ -46,7 +46,7 @@ public final class class451 {
 		}
 		if (var3.method16724()) {
 			class1005 var5 = new class1005(var4, var3.field10373);
-			this.field4828.method11927(var5, var3.field4228);
+			this.field4828.pushNode(var5, var3.field4228);
 			this.field4829.method11728(var5);
 			var5.field9554 = 0L;
 			var3.method6979();
@@ -90,7 +90,7 @@ public final class class451 {
 			this.method7950(var5);
 		}
 		class1005 var6 = new class1005(arg0, arg2);
-		this.field4828.method11927(var6, arg1);
+		this.field4828.pushNode(var6, arg1);
 		this.field4829.method11728(var6);
 		var6.field9554 = 0L;
 	}
@@ -106,7 +106,7 @@ public final class class451 {
 				}
 			} else if (++var2.field9554 > (long) arg0) {
 				class1004 var3 = new class1004(var2.method16722(), var2.field10373);
-				this.field4828.method11927(var3, var2.field4228);
+				this.field4828.pushNode(var3, var2.field4228);
 				class552.method2355(var3, var2);
 				var2.method6979();
 				var2.method15142();

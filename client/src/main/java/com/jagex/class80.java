@@ -55,7 +55,7 @@ public class class80 {
 		}
 		this.field1037 = var10;
 		if (var10 > 0) {
-			class814 var17 = new class814(var10 * 2);
+			Packet var17 = new Packet(var10 * 2);
 			if (this.field1031.field8149) {
 				for (int var18 = 0; var18 < var9; var18++) {
 					int var19 = arg2.field387 * (var12 + var18) + var11;
@@ -81,7 +81,7 @@ public class class80 {
 					}
 				}
 			}
-			this.field1038 = this.field1031.method13345(5123, var17.field9629, var17.field9626, false);
+			this.field1038 = this.field1031.method13345(5123, var17.data, var17.pos, false);
 			this.field1036 = new class655(this.field1031, 5123, null, 1);
 		} else {
 			this.field1029 = null;

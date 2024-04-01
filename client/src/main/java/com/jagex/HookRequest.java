@@ -3,38 +3,38 @@ package com.jagex;
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ady")
-public class class812 extends class399 {
+public class HookRequest extends class399 {
 
 	@ObfuscatedName("ady.s")
-	public Object[] field9613;
+	public Object[] onOp;
 
 	@ObfuscatedName("ady.c")
 	public boolean field9608;
 
 	@ObfuscatedName("ady.m")
-	public class165 field9609;
+	public class165 component;
 
 	@ObfuscatedName("ady.t")
-	public int field9610;
+	public int mouseX;
 
 	@ObfuscatedName("ady.l")
-	public int field9617;
+	public int mouseY;
 
 	@ObfuscatedName("ady.f")
-	public int field9612;
+	public int opIndex;
 
 	@ObfuscatedName("ady.d")
-	public class165 field9607;
+	public class165 drop;
 
 	@ObfuscatedName("ady.z")
-	public int field9611;
+	public int key;
 
 	@ObfuscatedName("ady.n")
-	public int field9614;
+	public int keyChar;
 
 	@ObfuscatedName("ady.o")
-	public String field9616;
+	public String opBase;
 
 	@ObfuscatedName("ady.q")
-	public int field9615;
+	public int nestedCount;
 }

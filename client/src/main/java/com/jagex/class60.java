@@ -37,7 +37,7 @@ public class class60 {
 	public int field774;
 
 	@ObfuscatedName("at.z")
-	public static class451 field782 = new class451(4);
+	public static WeightedCache field782 = new WeightedCache(4);
 
 	@ObfuscatedName("rx.u(Lra;IIIIIB)Lqa;")
 	public static class13 method8588(class14 arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {

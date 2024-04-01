@@ -120,7 +120,7 @@ public class class1009 extends class974 {
 
 	@ObfuscatedName("alv.j(IIIIB)V")
 	public final void method17162(int arg0, int arg1, int arg2, int arg3) {
-		class317 var5 = class317.method5290(this.method8565().field3464);
+		Vector3 var5 = Vector3.method5290(this.method8565().field3464);
 		if (!this.field10629) {
 			float var6 = (float) arg0 - var5.field3475;
 			float var7 = (float) arg1 - var5.field3477;
@@ -154,7 +154,7 @@ public class class1009 extends class974 {
 		if (this.field10629 || this.field10624 == 0) {
 			return;
 		}
-		class719 var1 = null;
+		PathingEntity var1 = null;
 		if (client.field8988 == 0) {
 			var1 = Statics.field1537[this.field10624 - 1].method2854();
 		} else if (this.field10624 < 0) {
@@ -168,13 +168,13 @@ public class class1009 extends class974 {
 			int var3 = this.field10624 - 1;
 			class798 var4 = (class798) client.field8964.method11923((long) var3);
 			if (var4 != null) {
-				var1 = (class719) var4.field9550;
+				var1 = (PathingEntity) var4.field9550;
 			}
 		}
 		if (var1 == null) {
 			return;
 		}
-		class317 var5 = var1.method8565().field3464;
+		Vector3 var5 = var1.method8565().field3464;
 		this.method8552(var5.field3475, (float) (client.method8663((int) var5.field3475, (int) var5.field3477, this.field9807) - this.field10628), var5.field3477);
 		if (this.field10627 < 0) {
 			return;
@@ -203,7 +203,7 @@ public class class1009 extends class974 {
 		int var13 = class312.field3447[var11];
 		int var14 = var7 * var13 + var8 * var12 >> 14;
 		int var15 = var8 * var13 - var7 * var12 >> 14;
-		class317 var17 = class317.method5290(this.method8565().field3464);
+		Vector3 var17 = Vector3.method5290(this.method8565().field3464);
 		var17.field3475 += var14;
 		var17.field3477 += var15;
 		this.method8551(var17);
@@ -274,7 +274,7 @@ public class class1009 extends class974 {
 
 	@ObfuscatedName("alv.dz(I)V")
 	public void method14006() {
-		class317 var1 = this.method8565().field3464;
+		Vector3 var1 = this.method8565().field3464;
 		this.field10510 = this.field10508 = (short) (var1.field3475 / 512.0F);
 		this.field10509 = this.field10511 = (short) (var1.field3477 / 512.0F);
 	}

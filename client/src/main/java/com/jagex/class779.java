@@ -25,23 +25,23 @@ public class class779 extends class399 {
 
 	public class779(int arg0, byte[] arg1) {
 		this.field9357 = arg0;
-		class814 var3 = new class814(arg1);
-		this.field9362 = var3.method15239();
+		Packet var3 = new Packet(arg1);
+		this.field9362 = var3.g2();
 		this.field9365 = new int[this.field9362];
 		this.field9364 = new int[this.field9362][];
 		this.field9361 = new boolean[this.field9362];
 		this.field9352 = new int[this.field9362];
 		for (int var4 = 0; var4 < this.field9362; var4++) {
-			this.field9365[var4] = var3.method15220();
+			this.field9365[var4] = var3.g1();
 			if (this.field9365[var4] == 6) {
 				this.field9365[var4] = 2;
 			}
 		}
 		for (int var5 = 0; var5 < this.field9362; var5++) {
-			this.field9361[var5] = var3.method15220() == 1;
+			this.field9361[var5] = var3.g1() == 1;
 		}
 		for (int var6 = 0; var6 < this.field9362; var6++) {
-			this.field9352[var6] = var3.method15239();
+			this.field9352[var6] = var3.g2();
 		}
 		for (int var7 = 0; var7 < this.field9362; var7++) {
 			this.field9364[var7] = new int[var3.method15277()];

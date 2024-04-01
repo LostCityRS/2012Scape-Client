@@ -51,9 +51,9 @@ public class class441 {
 	public int field4755 = 0;
 
 	@ObfuscatedName("po.u(Laet;I)V")
-	public void method7791(class814 arg0) {
+	public void method7791(Packet arg0) {
 		while (true) {
-			int var2 = arg0.method15220();
+			int var2 = arg0.g1();
 			if (var2 == 0) {
 				return;
 			}
@@ -62,7 +62,7 @@ public class class441 {
 	}
 
 	@ObfuscatedName("po.j(Laet;II)V")
-	public void method7792(class814 arg0, int arg1) {
+	public void method7792(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			this.field4744 = arg0.method15411();
 		} else if (arg1 == 2) {
@@ -79,19 +79,19 @@ public class class441 {
 		} else if (arg1 == 7) {
 			this.field4738 = arg0.method15240();
 		} else if (arg1 == 8) {
-			this.field4753 = arg0.method15366();
+			this.field4753 = arg0.gjstr2();
 		} else if (arg1 == 9) {
-			this.field4750 = arg0.method15239();
+			this.field4750 = arg0.g2();
 		} else if (arg1 == 10) {
 			this.field4751 = arg0.method15240();
 		} else if (arg1 == 11) {
 			this.field4752 = 0;
 		} else if (arg1 == 12) {
-			this.field4743 = arg0.method15220();
+			this.field4743 = arg0.g1();
 		} else if (arg1 == 13) {
 			this.field4755 = arg0.method15240();
 		} else if (arg1 == 14) {
-			this.field4752 = arg0.method15239();
+			this.field4752 = arg0.g2();
 		}
 	}
 

@@ -150,10 +150,10 @@ public class class477 {
 		}
 		class792 var7 = class792.method14781(class280.field2888, client.field8975.field834);
 		var7.field9467.method15308(0);
-		int var8 = var7.field9467.field9626;
-		class814 var9 = Statics.field4961.method15447();
-		var7.field9467.method15276(var9.field9629, 0, var9.field9626);
-		var7.field9467.method15251(var7.field9467.field9626 - var8);
+		int var8 = var7.field9467.pos;
+		Packet var9 = Statics.field4961.method15447();
+		var7.field9467.method15276(var9.data, 0, var9.pos);
+		var7.field9467.method15251(var7.field9467.pos - var8);
 		client.field8975.method1913(var7);
 		client.field8932 = true;
 	}

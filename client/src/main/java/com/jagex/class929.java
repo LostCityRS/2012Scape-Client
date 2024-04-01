@@ -19,9 +19,9 @@ public class class929 extends class787 {
 	}
 
 	@ObfuscatedName("ait.u(Laet;I)V")
-	public void method14956(class814 arg0) {
-		this.field10206 = arg0.method15379();
-		this.field10205 = arg0.method15379();
+	public void method14956(Packet arg0) {
+		this.field10206 = arg0.g4s();
+		this.field10205 = arg0.g4s();
 	}
 
 	@ObfuscatedName("ait.j(Lga;B)V")

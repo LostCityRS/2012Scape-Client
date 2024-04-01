@@ -4,7 +4,7 @@ import com.jagex.class1009;
 import com.jagex.class1010;
 import com.jagex.class11;
 import com.jagex.class111;
-import com.jagex.class113;
+import com.jagex.Location;
 import com.jagex.class118;
 import com.jagex.class122;
 import com.jagex.class125;
@@ -50,10 +50,10 @@ import com.jagex.class284;
 import com.jagex.class292;
 import com.jagex.class294;
 import com.jagex.class305;
-import com.jagex.class307;
+import com.jagex.LoadingStage;
 import com.jagex.class310;
 import com.jagex.class312;
-import com.jagex.class317;
+import com.jagex.Vector3;
 import com.jagex.class32;
 import com.jagex.class320;
 import com.jagex.class322;
@@ -81,7 +81,7 @@ import com.jagex.class377;
 import com.jagex.class378;
 import com.jagex.class382;
 import com.jagex.class384;
-import com.jagex.class385;
+import com.jagex.GameShell;
 import com.jagex.class386;
 import com.jagex.class387;
 import com.jagex.class39;
@@ -113,7 +113,7 @@ import com.jagex.class443;
 import com.jagex.class444;
 import com.jagex.class45;
 import com.jagex.class450;
-import com.jagex.class451;
+import com.jagex.WeightedCache;
 import com.jagex.class453;
 import com.jagex.class459;
 import com.jagex.class46;
@@ -134,10 +134,10 @@ import com.jagex.class49;
 import com.jagex.class492;
 import com.jagex.class493;
 import com.jagex.class495;
-import com.jagex.class498;
-import com.jagex.class499;
-import com.jagex.class502;
-import com.jagex.class503;
+import com.jagex.ClientScriptHelpers;
+import com.jagex.ScriptFrame;
+import com.jagex.ScriptRunner;
+import com.jagex.ClientScriptState;
 import com.jagex.class504;
 import com.jagex.class506;
 import com.jagex.class507;
@@ -169,7 +169,7 @@ import com.jagex.class56;
 import com.jagex.class561;
 import com.jagex.class562;
 import com.jagex.class563;
-import com.jagex.class565;
+import com.jagex.IterableMap;
 import com.jagex.class567;
 import com.jagex.class57;
 import com.jagex.class571;
@@ -192,7 +192,6 @@ import com.jagex.class599;
 import com.jagex.class60;
 import com.jagex.class600;
 import com.jagex.class601;
-import com.jagex.class602;
 import com.jagex.class603;
 import com.jagex.class604;
 import com.jagex.class606;
@@ -204,7 +203,7 @@ import com.jagex.class612;
 import com.jagex.class613;
 import com.jagex.class614;
 import com.jagex.class617;
-import com.jagex.class619;
+import com.jagex.ClientTriggerType;
 import com.jagex.class62;
 import com.jagex.class621;
 import com.jagex.class623;
@@ -216,7 +215,7 @@ import com.jagex.class636;
 import com.jagex.class64;
 import com.jagex.class674;
 import com.jagex.class685;
-import com.jagex.class719;
+import com.jagex.PathingEntity;
 import com.jagex.class720;
 import com.jagex.class733;
 import com.jagex.class757;
@@ -232,11 +231,11 @@ import com.jagex.class788;
 import com.jagex.class792;
 import com.jagex.class797;
 import com.jagex.class798;
-import com.jagex.class802;
+import com.jagex.IntNode;
 import com.jagex.class809;
 import com.jagex.class810;
-import com.jagex.class812;
-import com.jagex.class814;
+import com.jagex.HookRequest;
+import com.jagex.Packet;
 import com.jagex.class815;
 import com.jagex.class817;
 import com.jagex.class822;
@@ -259,7 +258,7 @@ import com.jagex.class944;
 import com.jagex.class945;
 import com.jagex.class946;
 import com.jagex.class951;
-import com.jagex.class954;
+import com.jagex.ClientScript;
 import com.jagex.class962;
 import com.jagex.class964;
 import com.jagex.class969;
@@ -378,7 +377,7 @@ public class Statics {
 	public static class475 field1202;
 
 	@ObfuscatedName("cv.p")
-	public static class307 field1208;
+	public static LoadingStage field1208;
 
 	@ObfuscatedName("cv.y")
 	public static Image field1209;
@@ -522,7 +521,7 @@ public class Statics {
 	public static class487 field1736;
 
 	@ObfuscatedName("ew.x")
-	public static class164[] field1756;
+	public static class164[] interfaces;
 
 	@ObfuscatedName("ew.i")
 	public static boolean[] field1834;
@@ -771,7 +770,7 @@ public class Statics {
 	public static class118 field3411;
 
 	@ObfuscatedName("ks.j")
-	public static class307[] field3420;
+	public static LoadingStage[] field3420;
 
 	@ObfuscatedName("ks.a")
 	public static class310[] field3422;
@@ -954,7 +953,7 @@ public class Statics {
 	public static String field4150;
 
 	@ObfuscatedName("ra.jx")
-	public static class814 field416;
+	public static Packet field416;
 
 	@ObfuscatedName("nb.bm")
 	public static int field4161;
@@ -1524,7 +1523,7 @@ public class Statics {
 	public static int field6648;
 
 	@ObfuscatedName("tf.fx")
-	public static class334 field6651;
+	public static class334 clientScriptsJs5;
 
 	@ObfuscatedName("th.p")
 	public static class944 field6655;
@@ -1608,7 +1607,7 @@ public class Statics {
 	public static boolean field6776;
 
 	@ObfuscatedName("uu.f")
-	public static class814 field6778;
+	public static Packet field6778;
 
 	@ObfuscatedName("uu.s")
 	public static class573 field6779;
@@ -2207,7 +2206,7 @@ public class Statics {
 
 	@ObfuscatedName("gb.u(I)V")
 	public static void method4012() {
-		class498.field5186.method7959();
+		ClientScriptHelpers.cache.method7959();
 	}
 
 	@ObfuscatedName("jagdx/u.u(I)Z")
@@ -2264,8 +2263,8 @@ public class Statics {
 	}
 
 	@ObfuscatedName("dz.s(Lrn;I)V")
-	public static void method2717(class503 arg0) {
-		arg0.field5215[arg0.field5216 - 1] = field4959.method8401(arg0.field5215[arg0.field5216 - 1]).field5063;
+	public static void method2717(ClientScriptState arg0) {
+		arg0.intStack[arg0.isp - 1] = field4959.method8401(arg0.intStack[arg0.isp - 1]).field5063;
 	}
 
 	@ObfuscatedName("dq.j(Ljava/lang/Object;ZI)[B")
@@ -2287,11 +2286,11 @@ public class Statics {
 	}
 
 	@ObfuscatedName("fp.a(Laet;I)Lpf;")
-	public static class450 method3541(class814 arg0) {
-		int var1 = arg0.method15220();
+	public static class450 method3541(Packet arg0) {
+		int var1 = arg0.g1();
 		int[] var2 = new int[var1];
 		for (int var3 = 0; var3 < var1; var3++) {
-			var2[var3] = arg0.method15220();
+			var2[var3] = arg0.g1();
 		}
 		return new class450(var2);
 	}
@@ -2341,8 +2340,8 @@ public class Statics {
 	}
 
 	@ObfuscatedName("wu.m(Lrn;I)V")
-	public static void method12700(class503 arg0) {
-		arg0.field5215[arg0.field5216 - 1] = field4959.method8401(arg0.field5215[arg0.field5216 - 1]).field5065;
+	public static void method12700(ClientScriptState arg0) {
+		arg0.intStack[arg0.isp - 1] = field4959.method8401(arg0.intStack[arg0.isp - 1]).field5065;
 	}
 
 	@ObfuscatedName("lp.u(I)V")
@@ -2364,8 +2363,8 @@ public class Statics {
 	}
 
 	@ObfuscatedName("ky.u(I)[Lky;")
-	public static class307[] method5013() {
-		return new class307[] { class307.field3390, class307.field3394, class307.field3388, class307.field3407, class307.field3386, class307.field3389, class307.field3392, class307.field3393, class307.field3391, class307.field3395, class307.field3396, class307.field3387, class307.field3408, class307.field3399, class307.field3400, class307.field3401, class307.field3402, class307.field3403 };
+	public static LoadingStage[] method5013() {
+		return new LoadingStage[] { LoadingStage.field3390, LoadingStage.field3394, LoadingStage.field3388, LoadingStage.field3407, LoadingStage.field3386, LoadingStage.field3389, LoadingStage.field3392, LoadingStage.field3393, LoadingStage.field3391, LoadingStage.field3395, LoadingStage.field3396, LoadingStage.field3387, LoadingStage.field3408, LoadingStage.field3399, LoadingStage.field3400, LoadingStage.field3401, LoadingStage.field3402, LoadingStage.field3403 };
 	}
 
 	@ObfuscatedName("fj.a(I)V")
@@ -2396,9 +2395,9 @@ public class Statics {
 	}
 
 	@ObfuscatedName("cu.l(Lrn;I)V")
-	public static void method2549(class503 arg0) {
-		arg0.field5215[arg0.field5216 - 2] = field4959.method8401(arg0.field5215[arg0.field5216 - 2]).field5076[arg0.field5215[arg0.field5216 - 1]];
-		arg0.field5216--;
+	public static void method2549(ClientScriptState arg0) {
+		arg0.intStack[arg0.isp - 2] = field4959.method8401(arg0.intStack[arg0.isp - 2]).field5076[arg0.intStack[arg0.isp - 1]];
+		arg0.isp--;
 	}
 
 	@ObfuscatedName("aay.u(I)[Loc;")
@@ -2574,7 +2573,7 @@ public class Statics {
 		class576 var0 = null;
 		class815 var1 = new class815(client.field9163, 0);
 		try {
-			var0 = class385.method4031("", client.field9163.field6404, false);
+			var0 = GameShell.method4031("", client.field9163.field6404, false);
 			byte[] var2 = new byte[(int) var0.method12077()];
 			int var4;
 			for (int var3 = 0; var3 < var2.length; var3 += var4) {
@@ -2583,7 +2582,7 @@ public class Statics {
 					throw new IOException();
 				}
 			}
-			var1 = new class815(new class814(var2), client.field9163, 0);
+			var1 = new class815(new Packet(var2), client.field9163, 0);
 		} catch (Exception var8) {
 		}
 		try {
@@ -2629,14 +2628,14 @@ public class Statics {
 		}
 		class792 var4 = class792.method14781(class280.field2924, client.field8959.field834);
 		var4.field9467.method15287(0);
-		int var5 = var4.field9467.field9626;
+		int var5 = var4.field9467.pos;
 		var4.field9467.method15228(arg0);
 		var4.field9467.method15228(arg1);
 		var4.field9467.method15308(arg2);
 		var4.field9467.method15308(arg3 ? 1 : 0);
-		var4.field9467.field9626 += 7;
-		var4.field9467.method15280(field630, var5, var4.field9467.field9626);
-		var4.field9467.method15233(var4.field9467.field9626 - var5);
+		var4.field9467.pos += 7;
+		var4.field9467.method15280(field630, var5, var4.field9467.pos);
+		var4.field9467.method15233(var4.field9467.pos - var5);
 		client.field8959.method1913(var4);
 		if (arg2 < 13) {
 			client.field8946 = true;
@@ -2654,7 +2653,7 @@ public class Statics {
 
 	@ObfuscatedName("y.s(B)V")
 	public static void method1638() {
-		class466.field4924 = new class565(8);
+		class466.field4924 = new IterableMap(8);
 		class466.field4920 = 0;
 		Iterator var0 = field4686.iterator();
 		while (var0.hasNext()) {
@@ -2667,9 +2666,9 @@ public class Statics {
 	public static void method1245() {
 		class576 var0 = null;
 		try {
-			var0 = class385.method4031("", client.field9163.field6404, true);
-			class814 var1 = field4961.method15447();
-			var0.method12075(var1.field9629, 0, var1.field9626);
+			var0 = GameShell.method4031("", client.field9163.field6404, true);
+			Packet var1 = field4961.method15447();
+			var0.method12075(var1.data, 0, var1.pos);
 		} catch (Exception var5) {
 		}
 		try {
@@ -2938,15 +2937,15 @@ public class Statics {
 				for (int var52 = var8; var52 < var3 + var8; var52++) {
 					for (int var53 = arg1; var53 <= arg1 + 1 && var53 <= 3; var53++) {
 						if (var4.method5795(arg1, var53, var51, var52)) {
-							class113 var54 = (class113) var5.method7517(var53, var51, var52);
+							Location var54 = (Location) var5.method7517(var53, var51, var52);
 							if (var54 == null) {
-								var54 = (class113) var5.method7437(var53, var51, var52, client.field9216);
+								var54 = (Location) var5.method7437(var53, var51, var52, client.field9216);
 							}
 							if (var54 == null) {
-								var54 = (class113) var5.method7433(var53, var51, var52);
+								var54 = (Location) var5.method7433(var53, var51, var52);
 							}
 							if (var54 == null) {
-								var54 = (class113) var5.method7435(var53, var51, var52);
+								var54 = (Location) var5.method7435(var53, var51, var52);
 							}
 							if (var54 != null) {
 								class540 var55 = var50.method11471(var54.method2401());
@@ -3013,11 +3012,11 @@ public class Statics {
 						int var72 = (var71 >> 14 & 0x3FFF) - var69.field4836;
 						int var73 = (var71 & 0x3FFF) - var69.field4838;
 						if (var72 >= 0 && var72 < var2 && var73 >= 0 && var73 < var3) {
-							class58.field758.method11558(new class802(var70));
+							class58.field758.method11558(new IntNode(var70));
 						} else {
 							class443 var74 = field8499.method7862(var68.field4253[var70]);
 							if (var74.field4788 != null && var74.field4792 + var72 >= 0 && var74.field4790 + var72 < var2 && var74.field4773 + var73 >= 0 && var74.field4791 + var73 < var3) {
-								class58.field758.method11558(new class802(var70));
+								class58.field758.method11558(new IntNode(var70));
 							}
 						}
 					}
@@ -3553,8 +3552,8 @@ public class Statics {
 			}
 			if (arg0.field6339 != -1) {
 				int var10 = 0;
-				if (arg2 instanceof class719) {
-					var10 = ((class719) arg2).method13970();
+				if (arg2 instanceof PathingEntity) {
+					var10 = ((PathingEntity) arg2).method13970();
 				} else if (arg2 instanceof class1010) {
 					var10 = ((class1010) arg2).method17176();
 				} else if (arg2 instanceof class1009) {
@@ -3569,7 +3568,7 @@ public class Statics {
 					}
 				}
 			}
-			class317 var11 = arg2.method8565().field3464;
+			Vector3 var11 = arg2.method8565().field3464;
 			int var12 = (int) var11.field3475 - 256 >> 9;
 			int var13 = (int) var11.field3477 - 256 >> 9;
 			int var14 = field2119 == arg2 ? 0 : (var13 << 8) + (arg2.field9807 << 24) + (var12 << 16) + var6;
@@ -3658,7 +3657,7 @@ public class Statics {
 		field1928 = arg0;
 		field1191 = arg1;
 		field1600 = arg2;
-		field1756 = new class164[field1928.method5638()];
+		interfaces = new class164[field1928.method5638()];
 		field1834 = new boolean[field1928.method5638()];
 	}
 
@@ -3690,16 +3689,16 @@ public class Statics {
 
 	@ObfuscatedName("el.n(ILjava/lang/String;IB)V")
 	public static void method3211(int arg0, String arg1, int arg2) {
-		class954 var3 = class498.method15968(class619.field7309, arg0, -1);
+		ClientScript var3 = ClientScriptHelpers.getByTrigger(ClientTriggerType.CUTSCENE_SUBTITLE, arg0, -1);
 		if (var3 == null) {
 			return;
 		}
-		class503 var4 = class502.method8088();
-		var4.field5235 = new int[var3.field10379];
-		var4.field5211 = new String[var3.field10387];
-		var4.field5211[0] = arg1;
-		var4.field5235[0] = arg2;
-		class502.method6355(var3, 200000, var4);
+		ClientScriptState var4 = ScriptRunner.createClientScriptState();
+		var4.intLocals = new int[var3.intLocalCount];
+		var4.objectLocals = new String[var3.objectLocalCount];
+		var4.objectLocals[0] = arg1;
+		var4.intLocals[0] = arg2;
+		ScriptRunner.execute(var3, 200000, var4);
 	}
 
 	@ObfuscatedName("ic.p(B)V")
@@ -3877,9 +3876,9 @@ public class Statics {
 
 	@ObfuscatedName("x.ag([BB)[B")
 	public static final byte[] method1598(byte[] arg0) {
-		class814 var1 = new class814(arg0);
-		int var2 = var1.method15220();
-		int var3 = var1.method15379();
+		Packet var1 = new Packet(arg0);
+		int var2 = var1.g1();
+		int var3 = var1.g4s();
 		if (var3 < 0 || class334.field3573 != 0 && var3 > class334.field3573) {
 			throw new RuntimeException();
 		} else if (var2 == 0) {
@@ -3887,7 +3886,7 @@ public class Statics {
 			var1.method15263(var4, 0, var3);
 			return var4;
 		} else {
-			int var5 = var1.method15379();
+			int var5 = var1.g4s();
 			if (var5 < 0 || class334.field3573 != 0 && var5 > class334.field3573) {
 				throw new RuntimeException();
 			}
@@ -3905,13 +3904,13 @@ public class Statics {
 	}
 
 	@ObfuscatedName("vl.n(Laet;IB)V")
-	public static void method12450(class814 arg0, int arg1) {
-		if (class385.field4155 == null) {
+	public static void method12450(Packet arg0, int arg1) {
+		if (GameShell.field4155 == null) {
 			return;
 		}
 		try {
-			class385.field4155.method12109(0L);
-			class385.field4155.method12102(arg0.field9629, arg1, 24);
+			GameShell.field4155.method12109(0L);
+			GameShell.field4155.method12102(arg0.data, arg1, 24);
 		} catch (Exception var3) {
 		}
 	}
@@ -3919,11 +3918,11 @@ public class Statics {
 	@ObfuscatedName("pl.z(II)V")
 	public static void method7906(int arg0) {
 		field3537 = arg0;
-		class451 var1 = class471.field4998;
+		WeightedCache var1 = class471.field4998;
 		synchronized (class471.field4998) {
 			class471.field4998.method7922();
 		}
-		class451 var3 = class471.field5012;
+		WeightedCache var3 = class471.field5012;
 		synchronized (class471.field5012) {
 			class471.field5012.method7922();
 		}
@@ -3931,11 +3930,11 @@ public class Statics {
 
 	@ObfuscatedName("oz.q(I)V")
 	public static void method7573() {
-		class451 var0 = class471.field5012;
+		WeightedCache var0 = class471.field5012;
 		synchronized (class471.field5012) {
 			class471.field5012.method7925();
 		}
-		class451 var2 = class471.field4998;
+		WeightedCache var2 = class471.field4998;
 		synchronized (class471.field4998) {
 			class471.field4998.method7925();
 		}
@@ -3952,7 +3951,7 @@ public class Statics {
 
 	@ObfuscatedName("id.h(I)V")
 	public static void method4591() {
-		field1756 = new class164[field1928.method5638()];
+		interfaces = new class164[field1928.method5638()];
 		field1834 = new boolean[field1928.method5638()];
 	}
 
@@ -3985,7 +3984,7 @@ public class Statics {
 
 	@ObfuscatedName("ln.ax(B)Lnt;")
 	public static class384 method5937() {
-		return class385.field4148;
+		return GameShell.field4148;
 	}
 
 	@ObfuscatedName("tc.ag(III)V")
@@ -3997,7 +3996,7 @@ public class Statics {
 	@ObfuscatedName("u.ap(I)V")
 	public static void method1237() {
 		field501.method1935();
-		field501.field832.field9626 = 0;
+		field501.field832.pos = 0;
 		field501.field840 = null;
 		field501.field843 = null;
 		field501.field844 = null;
@@ -4012,7 +4011,7 @@ public class Statics {
 		}
 		field2119 = null;
 		for (int var1 = 0; var1 < client.field8966; var1++) {
-			class719 var2 = (class719) client.field8965[var1].field9550;
+			PathingEntity var2 = (PathingEntity) client.field8965[var1].field9550;
 			if (var2 != null) {
 				var2.field8624 = -1;
 			}
@@ -4296,7 +4295,7 @@ public class Statics {
 			method11509(var4, var3);
 			client.field9108 = class165.method15145(var4, var3);
 			if (client.field9108 != null) {
-				client.method12939(client.field9108);
+				client.requestRedrawComponent(client.field9108);
 			}
 		}
 		if (var5 == 57 || var5 == 1007) {
@@ -4315,7 +4314,7 @@ public class Statics {
 					var18.field9467.method15308(client.field9087);
 					var18.field9467.method15308(client.field8976);
 					var18.field9467.method15308(89);
-					class317 var19 = field2119.method8565().field3464;
+					Vector3 var19 = field2119.method8565().field3464;
 					var18.field9467.method15287((int) var19.field3475);
 					var18.field9467.method15287((int) var19.field3477);
 					var18.field9467.method15308(63);
@@ -4482,7 +4481,7 @@ public class Statics {
 			client.method11223();
 		}
 		if (field9471 != null && client.field9053 == 0) {
-			client.method12939(field9471);
+			client.requestRedrawComponent(field9471);
 		}
 	}
 
@@ -4579,7 +4578,7 @@ public class Statics {
 		class48.method6026();
 		client.field9131.method7925();
 		class42.field620.method7925();
-		class502.field5207.method7925();
+		ScriptRunner.field5207.method7925();
 	}
 
 	@ObfuscatedName("nk.gs(I)V")
@@ -4604,9 +4603,9 @@ public class Statics {
 		while (class590.method3320()) {
 			class792 var1 = class792.method14781(class280.field2943, client.field8975.field834);
 			var1.field9467.method15308(0);
-			int var2 = var1.field9467.field9626;
+			int var2 = var1.field9467.pos;
 			class590.method5552(var1.field9467);
-			var1.field9467.method15251(var1.field9467.field9626 - var2);
+			var1.field9467.method15251(var1.field9467.pos - var2);
 			client.field8975.method1913(var1);
 		}
 		if (field3357 == null) {
@@ -4685,16 +4684,16 @@ public class Statics {
 					if (field1307.method3719() != class191.field2192) {
 						field1307.method3693(class191.field2192, false);
 					}
-					field1307.method3771(class317.method5294(99999.0F, 99999.0F, 99999.0F));
-					field1307.method3755(class317.method5294(Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY));
+					field1307.method3771(Vector3.method5294(99999.0F, 99999.0F, 99999.0F));
+					field1307.method3755(Vector3.method5294(Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY));
 					class733 var17 = (class733) field1307.method3699();
 					class453 var18 = client.field8980.method6214();
 					var17.method14091(class810.method8611(field7324, field6769 + var18.field4836 * 512, -field8423, field8424 + var18.field4838 * 512));
 					if (field1307.method3751() != class188.field2167) {
 						field1307.method3692(class188.field2167, false);
 					}
-					field1307.method3700(class317.method5294(99999.0F, 99999.0F, 99999.0F));
-					field1307.method3698(class317.method5294(Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY));
+					field1307.method3700(Vector3.method5294(99999.0F, 99999.0F, 99999.0F));
+					field1307.method3698(Vector3.method5294(Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY));
 					class868 var19 = (class868) field1307.method3716();
 					var19.method15915(field2119.method3684());
 				}
@@ -4749,7 +4748,7 @@ public class Statics {
 					for (int var23 = 0; var23 < field1537.length; var23++) {
 						class149 var24 = field1537[var23];
 						if (var24.field1563) {
-							class719 var25 = var24.method2854();
+							PathingEntity var25 = var24.method2854();
 							client.method7985(var25, true);
 						}
 					}
@@ -4769,7 +4768,7 @@ public class Statics {
 		if (field9471 != null) {
 			client.field9053++;
 			if (client.field9053 >= 15) {
-				client.method12939(field9471);
+				client.requestRedrawComponent(field9471);
 				field9471 = null;
 			}
 		}
@@ -4790,25 +4789,25 @@ public class Statics {
 			client.field9041 = false;
 		}
 		while (true) {
-			class812 var27;
+			HookRequest var27;
 			class165 var28;
 			class165 var29;
 			do {
-				var27 = (class812) client.field9159.method11560();
+				var27 = (HookRequest) client.field9159.method11560();
 				if (var27 == null) {
 					while (true) {
-						class812 var30;
+						HookRequest var30;
 						class165 var31;
 						class165 var32;
 						do {
-							var30 = (class812) client.field9125.method11560();
+							var30 = (HookRequest) client.field9125.method11560();
 							if (var30 == null) {
 								while (true) {
-									class812 var33;
+									HookRequest var33;
 									class165 var34;
 									class165 var35;
 									do {
-										var33 = (class812) client.field9089.method11560();
+										var33 = (HookRequest) client.field9089.method11560();
 										if (var33 == null) {
 											if (field4960 == null) {
 												client.field9150 = 0;
@@ -4915,31 +4914,31 @@ public class Statics {
 											}
 											return;
 										}
-										var34 = var33.field9609;
-										if (var34.field1765 < 0) {
+										var34 = var33.component;
+										if (var34.id < 0) {
 											break;
 										}
-										var35 = class165.method11381(var34.field1886);
-									} while (var35 == null || var35.field1915 == null || var34.field1765 >= var35.field1915.length || var35.field1915[var34.field1765] != var34);
-									class502.method8605(var33);
+										var35 = class165.method11381(var34.layer);
+									} while (var35 == null || var35.subcomponents == null || var34.id >= var35.subcomponents.length || var35.subcomponents[var34.id] != var34);
+									ScriptRunner.runHook(var33);
 								}
 							}
-							var31 = var30.field9609;
-							if (var31.field1765 < 0) {
+							var31 = var30.component;
+							if (var31.id < 0) {
 								break;
 							}
-							var32 = class165.method11381(var31.field1886);
-						} while (var32 == null || var32.field1915 == null || var31.field1765 >= var32.field1915.length || var32.field1915[var31.field1765] != var31);
-						class502.method8605(var30);
+							var32 = class165.method11381(var31.layer);
+						} while (var32 == null || var32.subcomponents == null || var31.id >= var32.subcomponents.length || var32.subcomponents[var31.id] != var31);
+						ScriptRunner.runHook(var30);
 					}
 				}
-				var28 = var27.field9609;
-				if (var28.field1765 < 0) {
+				var28 = var27.component;
+				if (var28.id < 0) {
 					break;
 				}
-				var29 = class165.method11381(var28.field1886);
-			} while (var29 == null || var29.field1915 == null || var28.field1765 >= var29.field1915.length || var29.field1915[var28.field1765] != var28);
-			class502.method8605(var27);
+				var29 = class165.method11381(var28.layer);
+			} while (var29 == null || var29.subcomponents == null || var28.id >= var29.subcomponents.length || var29.subcomponents[var28.id] != var28);
+			ScriptRunner.runHook(var27);
 		}
 	}
 
@@ -4967,7 +4966,7 @@ public class Statics {
 			var2 = client.field9190[4] + 128;
 		}
 		int var3 = client.field9008 + (int) client.field9021 & 0x3FFF;
-		class317 var4 = field2119.method8565().field3464;
+		Vector3 var4 = field2119.method8565().field3464;
 		client.method7768(field2297, client.method8663((int) var4.field3475, (int) var4.field3477, field7324) - client.field9027, field6818, var2, var3, (var2 >> 3) * 3 + 600 << 2, arg0);
 		float var5 = 1.0F - (float) ((100 - var1) * (100 - var1) * (100 - var1)) / 1000000.0F;
 		field6769 = (int) ((float) (field6769 - field6412) * var5 + (float) field6412);
@@ -4994,59 +4993,59 @@ public class Statics {
 	}
 
 	@ObfuscatedName("aax.y(Lrn;B)V")
-	public static final void method14037(class503 arg0) {
-		arg0.field5216 -= 2;
-		if (arg0.field5215[arg0.field5216] != arg0.field5215[arg0.field5216 + 1]) {
-			arg0.field5236 += arg0.field5227[arg0.field5236];
+	public static final void method14037(ClientScriptState arg0) {
+		arg0.isp -= 2;
+		if (arg0.intStack[arg0.isp] != arg0.intStack[arg0.isp + 1]) {
+			arg0.pc += arg0.intOperands[arg0.pc];
 		}
 	}
 
 	@ObfuscatedName("rg.as(Lrn;B)V")
-	public static final void method8720(class503 arg0) {
-		if (arg0.field5221 == 0) {
+	public static final void method8720(ClientScriptState arg0) {
+		if (arg0.fp == 0) {
 			return;
 		}
-		class499 var1 = arg0.field5225[--arg0.field5221];
-		arg0.field5218 = var1.field5191;
-		arg0.field5214 = arg0.field5218.field10378;
-		arg0.field5227 = arg0.field5218.field10385;
-		arg0.field5236 = var1.field5189;
-		arg0.field5235 = var1.field5188;
-		arg0.field5211 = var1.field5190;
-		arg0.field5212 = var1.field5192;
+		ScriptFrame var1 = arg0.frames[--arg0.fp];
+		arg0.script = var1.script;
+		arg0.instructions = arg0.script.instructions;
+		arg0.intOperands = arg0.script.intOperands;
+		arg0.pc = var1.pc;
+		arg0.intLocals = var1.intLocals;
+		arg0.objectLocals = var1.objectLocals;
+		arg0.longLocals = var1.longLocals;
 	}
 
 	@ObfuscatedName("po.ao(Lrn;I)V")
-	public static final void method7814(class503 arg0) {
-		int var1 = arg0.field5227[arg0.field5236];
-		field2669.method1644(var1, arg0.field5215[--arg0.field5216]);
+	public static final void method7814(ClientScriptState arg0) {
+		int var1 = arg0.intOperands[arg0.pc];
+		field2669.method1644(var1, arg0.intStack[--arg0.isp]);
 	}
 
 	@ObfuscatedName("py.ad(Lrn;B)V")
-	public static final void method7981(class503 arg0) {
-		int var1 = arg0.field5227[arg0.field5236];
-		arg0.field5230 -= var1;
-		String var2 = class526.method3527(arg0.field5222, arg0.field5230, var1);
-		arg0.field5222[++arg0.field5230 - 1] = var2;
+	public static final void method7981(ClientScriptState arg0) {
+		int var1 = arg0.intOperands[arg0.pc];
+		arg0.osp -= var1;
+		String var2 = class526.method3527(arg0.objectStack, arg0.osp, var1);
+		arg0.objectStack[++arg0.osp - 1] = var2;
 	}
 
 	@ObfuscatedName("fd.hp(Laay;I)I")
-	public static final int method3510(class719 arg0) {
+	public static final int method3510(PathingEntity arg0) {
 		if (arg0.field8636 == 0) {
 			return 0;
 		}
 		if (arg0.field8624 != -1) {
-			class719 var1 = null;
+			PathingEntity var1 = null;
 			if (arg0.field8624 < 32768) {
 				class798 var2 = (class798) client.field8964.method11923((long) arg0.field8624);
 				if (var2 != null) {
-					var1 = (class719) var2.field9550;
+					var1 = (PathingEntity) var2.field9550;
 				}
 			} else if (arg0.field8624 >= 32768) {
 				var1 = client.field9070[arg0.field8624 - 32768];
 			}
 			if (var1 != null) {
-				class317 var3 = class317.method5377(arg0.method8565().field3464, var1.method8565().field3464);
+				Vector3 var3 = Vector3.method5377(arg0.method8565().field3464, var1.method8565().field3464);
 				int var4 = (int) var3.field3475;
 				int var5 = (int) var3.field3477;
 				if (var4 != 0 || var5 != 0) {
@@ -5063,7 +5062,7 @@ public class Statics {
 		} else if (arg0 instanceof class903) {
 			class903 var7 = (class903) arg0;
 			if (var7.field10080 != -1 && (var7.field8628 == 0 || var7.field8648 > 0)) {
-				class317 var8 = var7.method8565().field3464;
+				Vector3 var8 = var7.method8565().field3464;
 				class453 var9 = client.field8980.method6214();
 				int var10 = (int) var8.field3475 - (var7.field10080 * 256 - var9.field4836 * 256 - var9.field4836 * 256);
 				int var11 = (int) var8.field3477 - (var7.field10070 * 256 - var9.field4838 * 256 - var9.field4838 * 256);
@@ -5077,37 +5076,37 @@ public class Statics {
 	}
 
 	@ObfuscatedName("jm.bq(Lrn;I)V")
-	public static final void method4729(class503 arg0) {
-		class565 var1 = arg0.field5218.field10383[arg0.field5227[arg0.field5236]];
-		class802 var2 = (class802) var1.method11923((long) arg0.field5215[--arg0.field5216]);
+	public static final void method4729(ClientScriptState arg0) {
+		IterableMap var1 = arg0.script.switchTables[arg0.intOperands[arg0.pc]];
+		IntNode var2 = (IntNode) var1.method11923((long) arg0.intStack[--arg0.isp]);
 		if (var2 != null) {
-			arg0.field5236 += var2.field9556;
+			arg0.pc += var2.field9556;
 		}
 	}
 
 	@ObfuscatedName("jw.bz(Lrn;I)V")
-	public static final void method4893(class503 arg0) {
-		arg0.field5219[++arg0.field5220 - 1] = arg0.field5218.field10381[arg0.field5236];
+	public static final void method4893(ClientScriptState arg0) {
+		arg0.longStack[++arg0.lsp - 1] = arg0.script.longOperands[arg0.pc];
 	}
 
 	@ObfuscatedName("da.bg(Lrn;I)V")
-	public static final void method2820(class503 arg0) {
-		arg0.field5220 -= 2;
-		if (arg0.field5219[arg0.field5220] == arg0.field5219[arg0.field5220 + 1]) {
-			arg0.field5236 += arg0.field5227[arg0.field5236];
+	public static final void method2820(ClientScriptState arg0) {
+		arg0.lsp -= 2;
+		if (arg0.longStack[arg0.lsp] == arg0.longStack[arg0.lsp + 1]) {
+			arg0.pc += arg0.intOperands[arg0.pc];
 		}
 	}
 
 	@ObfuscatedName("pu.bd(Lrn;I)V")
-	public static final void method7988(class503 arg0) {
-		if (arg0.field5215[--arg0.field5216] == 0) {
-			arg0.field5236 += arg0.field5227[arg0.field5236];
+	public static final void method7988(ClientScriptState arg0) {
+		if (arg0.intStack[--arg0.isp] == 0) {
+			arg0.pc += arg0.intOperands[arg0.pc];
 		}
 	}
 
 	@ObfuscatedName("tj.bm(Lrn;I)V")
-	public static final void method11851(class503 arg0) {
-		int var1 = arg0.field5227[arg0.field5236];
+	public static final void method11851(ClientScriptState arg0) {
+		int var1 = arg0.intOperands[arg0.pc];
 		class474 var2 = field1202.method8290(var1);
 		if (var2 == null) {
 			throw new RuntimeException();
@@ -5119,11 +5118,11 @@ public class Statics {
 		} else {
 			var4 = var3;
 		}
-		arg0.field5215[++arg0.field5216 - 1] = var4;
+		arg0.intStack[++arg0.isp - 1] = var4;
 	}
 
 	@ObfuscatedName("tu.hi(Laay;I)V")
-	public static final void method11843(class719 arg0) {
+	public static final void method11843(PathingEntity arg0) {
 		class874 var1 = arg0.field8616;
 		if (var1.method11767() && var1.method11787(1) && var1.method11784()) {
 			if (var1.field9899) {
@@ -5192,23 +5191,23 @@ public class Statics {
 	}
 
 	@ObfuscatedName("ajk.cl(ZLrn;I)V")
-	public static final void method16642(boolean arg0, class503 arg1) {
-		int var2 = arg1.field5215[--arg1.field5216];
+	public static final void method16642(boolean arg0, ClientScriptState arg1) {
+		int var2 = arg1.intStack[--arg1.isp];
 		class165 var3 = class165.method11381(var2);
-		class164 var4 = field1756[var2 >> 16];
+		class164 var4 = interfaces[var2 >> 16];
 		if (arg0) {
-			class502.method2840(var4, var3);
+			ScriptRunner.method2840(var4, var3);
 		} else {
-			class502.method15937(var4, var3);
+			ScriptRunner.method15937(var4, var3);
 		}
 	}
 
 	@ObfuscatedName("ge.cm(Lew;Lrn;B)V")
-	public static final void method3983(class165 arg0, class503 arg1) {
+	public static final void method3983(class165 arg0, ClientScriptState arg1) {
 		if (client.method14331(arg0).method14927() && client.field9108 == null) {
-			method11509(arg0.field1764, arg0.field1765);
-			client.field9108 = class165.method15145(arg0.field1764, arg0.field1765);
-			client.method12939(client.field9108);
+			method11509(arg0.parentLayer, arg0.id);
+			client.field9108 = class165.method15145(arg0.parentLayer, arg0.id);
+			client.requestRedrawComponent(client.field9108);
 		}
 	}
 
@@ -5220,17 +5219,17 @@ public class Statics {
 	}
 
 	@ObfuscatedName("ln.dp(Lrn;I)V")
-	public static final void method5938(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method5938(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		class165 var2 = class165.method11381(var1);
-		class164 var3 = field1756[var1 >> 16];
-		class502.method7912(var2, var3, arg0);
+		class164 var3 = interfaces[var1 >> 16];
+		ScriptRunner.method7912(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("aey.di(Lew;Lej;Lrn;B)V")
-	public static final void method15567(class165 arg0, class164 arg1, class503 arg2) {
-		arg0.field1741 = arg2.field5215[--arg2.field5216] == 1;
-		client.method12939(arg0);
+	public static final void method15567(class165 arg0, class164 arg1, ClientScriptState arg2) {
+		arg0.field1741 = arg2.intStack[--arg2.isp] == 1;
+		client.requestRedrawComponent(arg0);
 	}
 
 	@ObfuscatedName("sq.ih(IIIIZI)V")
@@ -5288,11 +5287,11 @@ public class Statics {
 	}
 
 	@ObfuscatedName("gq.dh(Lrn;I)V")
-	public static final void method3922(class503 arg0) {
-		class504 var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		class165 var2 = var1.field5240;
-		class164 var3 = var1.field5239;
-		class502.method3060(var2, var3, arg0);
+	public static final void method3922(ClientScriptState arg0) {
+		class504 var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		class165 var2 = var1.com;
+		class164 var3 = var1.itf;
+		ScriptRunner.method3060(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("ol.ig(S)V")
@@ -5315,80 +5314,80 @@ public class Statics {
 	}
 
 	@ObfuscatedName("dr.df(Lrn;B)V")
-	public static final void method2823(class503 arg0) {
-		class504 var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		class165 var2 = var1.field5240;
-		class164 var3 = var1.field5239;
-		class502.method6308(var2, var3, arg0);
+	public static final void method2823(ClientScriptState arg0) {
+		class504 var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		class165 var2 = var1.com;
+		class164 var3 = var1.itf;
+		ScriptRunner.method6308(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("pb.ee(Lrn;B)V")
-	public static final void method7831(class503 arg0) {
-		class504 var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		class165 var2 = var1.field5240;
-		class164 var3 = var1.field5239;
-		class502.method4103(var2, var3, arg0);
+	public static final void method7831(ClientScriptState arg0) {
+		class504 var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		class165 var2 = var1.com;
+		class164 var3 = var1.itf;
+		ScriptRunner.method4103(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("rj.ea(Lrn;B)V")
-	public static final void method8597(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method8597(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		class165 var2 = class165.method11381(var1);
-		class164 var3 = field1756[var1 >> 16];
-		class502.method3463(var2, var3, arg0);
+		class164 var3 = interfaces[var1 >> 16];
+		ScriptRunner.method3463(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("qv.fp(Lrn;I)V")
-	public static final void method8303(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method8303(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		class165 var2 = class165.method11381(var1);
-		class164 var3 = field1756[var1 >> 16];
-		class502.method2787(var2, var3, arg0);
+		class164 var3 = interfaces[var1 >> 16];
+		ScriptRunner.method2787(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("pd.fv(Lrn;I)V")
-	public static final void method7676(class503 arg0) {
-		class504 var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		class165 var2 = var1.field5240;
-		class164 var3 = var1.field5239;
-		class502.method2787(var2, var3, arg0);
+	public static final void method7676(ClientScriptState arg0) {
+		class504 var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		class165 var2 = var1.com;
+		class164 var3 = var1.itf;
+		ScriptRunner.method2787(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("ig.fy(Lrn;B)V")
-	public static final void method4555(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method4555(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		class165 var2 = class165.method11381(var1);
-		class164 var3 = field1756[var1 >> 16];
-		class502.method1626(var2, var3, arg0);
+		class164 var3 = interfaces[var1 >> 16];
+		ScriptRunner.method1626(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("yu.fg(Lew;Lej;Lrn;B)V")
-	public static final void method12994(class165 arg0, class164 arg1, class503 arg2) {
-		arg0.field1804 = arg2.field5215[--arg2.field5216] == 1;
-		client.method12939(arg0);
+	public static final void method12994(class165 arg0, class164 arg1, ClientScriptState arg2) {
+		arg0.field1804 = arg2.intStack[--arg2.isp] == 1;
+		client.requestRedrawComponent(arg0);
 	}
 
 	@ObfuscatedName("nh.fb(Lrn;B)V")
-	public static final void method6876(class503 arg0) {
-		class504 var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		class165 var2 = var1.field5240;
-		class164 var3 = var1.field5239;
-		class502.method2604(var2, var3, arg0);
+	public static final void method6876(ClientScriptState arg0) {
+		class504 var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		class165 var2 = var1.com;
+		class164 var3 = var1.itf;
+		ScriptRunner.method2604(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("zl.fe(Lrn;B)V")
-	public static final void method13893(class503 arg0) {
-		class504 var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		class165 var2 = var1.field5240;
-		class164 var3 = var1.field5239;
-		class502.method8485(var2, var3, arg0);
+	public static final void method13893(ClientScriptState arg0) {
+		class504 var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		class165 var2 = var1.com;
+		class164 var3 = var1.itf;
+		ScriptRunner.method8485(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("pk.gz(Lew;Lej;Lrn;S)V")
-	public static final void method7967(class165 arg0, class164 arg1, class503 arg2) {
-		arg2.field5216 -= 2;
-		int var3 = arg2.field5215[arg2.field5216];
-		int var4 = arg2.field5215[arg2.field5216 + 1];
+	public static final void method7967(class165 arg0, class164 arg1, ClientScriptState arg2) {
+		arg2.isp -= 2;
+		int var3 = arg2.intStack[arg2.isp];
+		int var4 = arg2.intStack[arg2.isp + 1];
 		class613 var5 = field4464.method12600(var3);
 		if (var5.field7287 == var4) {
 			arg0.method3129(var3);
@@ -5398,27 +5397,27 @@ public class Statics {
 	}
 
 	@ObfuscatedName("dv.gc(Lrn;B)V")
-	public static final void method2843(class503 arg0) {
-		class504 var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		class165 var2 = var1.field5240;
-		class164 var3 = var1.field5239;
+	public static final void method2843(ClientScriptState arg0) {
+		class504 var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		class165 var2 = var1.com;
+		class164 var3 = var1.itf;
 		method7967(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("on.gs(Lew;Lej;Lrn;I)V")
-	public static final void method7179(class165 arg0, class164 arg1, class503 arg2) {
-		if (arg0.field1766 == 4) {
-			class502.method8481(arg0, arg1, arg2);
+	public static final void method7179(class165 arg0, class164 arg1, ClientScriptState arg2) {
+		if (arg0.type == 4) {
+			ScriptRunner.method8481(arg0, arg1, arg2);
 		}
 	}
 
 	@ObfuscatedName("fl.he(Lrn;B)V")
-	public static final void method3571(class503 arg0) {
-		class504 var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		class165 var2 = var1.field5240;
-		arg0.field5216 -= 2;
-		int var3 = arg0.field5215[arg0.field5216];
-		int var4 = arg0.field5215[arg0.field5216 + 1];
+	public static final void method3571(ClientScriptState arg0) {
+		class504 var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		class165 var2 = var1.com;
+		arg0.isp -= 2;
+		int var3 = arg0.intStack[arg0.isp];
+		int var4 = arg0.intStack[arg0.isp + 1];
 		class613 var5 = field4464.method12600(var3);
 		if (var5.field7287 == var4) {
 			var2.method3129(var3);
@@ -5438,9 +5437,9 @@ public class Statics {
 				var1.method17152();
 				if (var1.field10626 > 0) {
 					if (client.field8988 == 0) {
-						class719 var2 = field1537[var1.field10626 - 1].method2854();
+						PathingEntity var2 = field1537[var1.field10626 - 1].method2854();
 						if (var2 != null) {
-							class317 var3 = var2.method8565().field3464;
+							Vector3 var3 = var2.method8565().field3464;
 							if ((int) var3.field3475 >= 0 && (int) var3.field3475 < client.field8980.method6220() * 512 && (int) var3.field3477 >= 0 && (int) var3.field3477 < client.field8980.method6193() * 512) {
 								var1.method17162((int) var3.field3475, (int) var3.field3477, client.method8663((int) var3.field3475, (int) var3.field3477, var2.field9807) - var1.field10620, client.field9213);
 							}
@@ -5449,7 +5448,7 @@ public class Statics {
 						class798 var4 = (class798) client.field8964.method11923((long) (var1.field10626 - 1));
 						if (var4 != null) {
 							class903 var5 = (class903) var4.field9550;
-							class317 var6 = var5.method8565().field3464;
+							Vector3 var6 = var5.method8565().field3464;
 							if ((int) var6.field3475 >= 0 && (int) var6.field3475 < client.field8980.method6220() * 512 && (int) var6.field3477 >= 0 && (int) var6.field3477 < client.field8980.method6193() * 512) {
 								var1.method17162((int) var6.field3475, (int) var6.field3477, client.method8663((int) var6.field3475, (int) var6.field3477, var1.field9807) - var1.field10620, client.field9213);
 							}
@@ -5465,7 +5464,7 @@ public class Statics {
 						var8 = client.field9070[var7];
 					}
 					if (var8 != null) {
-						class317 var9 = var8.method8565().field3464;
+						Vector3 var9 = var8.method8565().field3464;
 						if ((int) var9.field3475 >= 0 && (int) var9.field3475 < client.field8980.method6220() * 512 && (int) var9.field3477 >= 0 && (int) var9.field3477 < client.field8980.method6193() * 512) {
 							var1.method17162((int) var9.field3475, (int) var9.field3477, client.method8663((int) var9.field3475, (int) var9.field3477, var1.field9807) - var1.field10620, client.field9213);
 						}
@@ -5478,84 +5477,84 @@ public class Statics {
 	}
 
 	@ObfuscatedName("qi.hb(Lew;Lej;Lrn;I)V")
-	public static final void method8049(class165 arg0, class164 arg1, class503 arg2) {
+	public static final void method8049(class165 arg0, class164 arg1, ClientScriptState arg2) {
 		arg0.field1806 = 3;
 		arg0.field1838 = client.field9071;
 		arg0.field1832 = 0;
-		if (arg0.field1765 == -1 && !arg1.field1734) {
-			method4107(arg0.field1764);
+		if (arg0.id == -1 && !arg1.field1734) {
+			method4107(arg0.parentLayer);
 		}
 	}
 
 	@ObfuscatedName("dq.hp(Lrn;I)V")
-	public static final void method2894(class503 arg0) {
-		class504 var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		class165 var2 = var1.field5240;
-		class164 var3 = var1.field5239;
-		class502.method7651(var2, var3, true, 0, arg0);
+	public static final void method2894(ClientScriptState arg0) {
+		class504 var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		class165 var2 = var1.com;
+		class164 var3 = var1.itf;
+		ScriptRunner.method7651(var2, var3, true, 0, arg0);
 	}
 
 	@ObfuscatedName("nv.ii(Lew;Lej;Lrn;I)V")
-	public static final void method6788(class165 arg0, class164 arg1, class503 arg2) {
+	public static final void method6788(class165 arg0, class164 arg1, ClientScriptState arg2) {
 		arg0.field1806 = 5;
-		arg0.field1838 = arg2.field5215[--arg2.field5216];
-		if (arg0.field1765 == -1 && !arg1.field1734) {
-			method4107(arg0.field1764);
+		arg0.field1838 = arg2.intStack[--arg2.isp];
+		if (arg0.id == -1 && !arg1.field1734) {
+			method4107(arg0.parentLayer);
 		}
 	}
 
 	@ObfuscatedName("am.iv(Lrn;I)V")
-	public static final void method1905(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method1905(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		class165 var2 = class165.method11381(var1);
-		class164 var3 = field1756[var1 >> 16];
-		class502.method14903(var2, var3, arg0);
+		class164 var3 = interfaces[var1 >> 16];
+		ScriptRunner.method14903(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("fp.ji(Lrn;I)V")
-	public static final void method3542(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method3542(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		class165 var2 = class165.method11381(var1);
-		class164 var3 = field1756[var1 >> 16];
-		class502.method11906(var2, var3, arg0);
+		class164 var3 = interfaces[var1 >> 16];
+		ScriptRunner.method11906(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("eb.jd(Lew;Lej;Lrn;I)V")
-	public static final void method3319(class165 arg0, class164 arg1, class503 arg2) {
+	public static final void method3319(class165 arg0, class164 arg1, ClientScriptState arg2) {
 		arg0.field1852 = null;
 	}
 
 	@ObfuscatedName("ks.jl(Lew;Lej;Lrn;I)V")
-	public static final void method5069(class165 arg0, class164 arg1, class503 arg2) {
-		arg0.field1855 = arg2.field5215[--arg2.field5216];
+	public static final void method5069(class165 arg0, class164 arg1, ClientScriptState arg2) {
+		arg0.field1855 = arg2.intStack[--arg2.isp];
 	}
 
 	@ObfuscatedName("fg.ki(Lrn;I)V")
-	public static final void method3638(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method3638(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		class165 var2 = class165.method11381(var1);
-		class502.method8614(var2, arg0);
+		ScriptRunner.method8614(var2, arg0);
 	}
 
 	@ObfuscatedName("xb.kp(Lrn;I)V")
-	public static final void method12749(class503 arg0) {
-		class504 var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		class165 var2 = var1.field5240;
-		class502.method7054(var2, arg0);
+	public static final void method12749(ClientScriptState arg0) {
+		class504 var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		class165 var2 = var1.com;
+		ScriptRunner.method7054(var2, arg0);
 	}
 
 	@ObfuscatedName("zm.kx(Lrn;I)V")
-	public static final void method13892(class503 arg0) {
-		arg0.field5216 -= 3;
-		byte[] var1 = new byte[] { (byte) arg0.field5215[arg0.field5216] };
-		byte[] var2 = new byte[] { (byte) arg0.field5215[arg0.field5216 + 1] };
-		int var3 = arg0.field5215[arg0.field5216 + 2];
+	public static final void method13892(ClientScriptState arg0) {
+		arg0.isp -= 3;
+		byte[] var1 = new byte[] { (byte) arg0.intStack[arg0.isp] };
+		byte[] var2 = new byte[] { (byte) arg0.intStack[arg0.isp + 1] };
+		int var3 = arg0.intStack[arg0.isp + 2];
 		class165 var4 = class165.method11381(var3);
-		class502.method2813(var4, var1, var2, arg0);
+		ScriptRunner.method2813(var4, var1, var2, arg0);
 	}
 
 	@ObfuscatedName("vy.jc(Laay;Laay;IIIIIIIB)V")
-	public static final void method12479(class719 arg0, class719 arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8) {
+	public static final void method12479(PathingEntity arg0, PathingEntity arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8) {
 		int var9 = arg1.method13961();
 		if (var9 == -1) {
 			return;
@@ -5570,7 +5569,7 @@ public class Statics {
 			var11 = field5187.method517(var12[0], true);
 			client.field9131.method7937(var11, (long) var9);
 		}
-		class317 var13 = arg0.method8565().field3464;
+		Vector3 var13 = arg0.method8565().field3464;
 		client.method1979(arg0.field9807, (int) var13.field3475, (int) var13.field3477, arg0.method13954() * 256, 0, false);
 		int var14 = (int) (client.field9048[0] + (float) arg3 - 18.0F);
 		int var15 = (int) (client.field9048[1] + (float) arg4 - 16.0F - 54.0F);
@@ -5590,16 +5589,16 @@ public class Statics {
 	}
 
 	@ObfuscatedName("pi.ka(Lew;Lej;Lrn;I)V")
-	public static final void method7900(class165 arg0, class164 arg1, class503 arg2) {
-		arg0.field1786 = arg2.field5215[--arg2.field5216];
+	public static final void method7900(class165 arg0, class164 arg1, ClientScriptState arg2) {
+		arg0.field1786 = arg2.intStack[--arg2.isp];
 	}
 
 	@ObfuscatedName("pk.kj(Lrn;S)V")
-	public static final void method7968(class503 arg0) {
-		class504 var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		class165 var2 = var1.field5240;
-		class164 var3 = var1.field5239;
-		class502.method6973(var2, var3, arg0);
+	public static final void method7968(ClientScriptState arg0) {
+		class504 var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		class165 var2 = var1.com;
+		class164 var3 = var1.itf;
+		ScriptRunner.method6973(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("pt.ji(IIIIB)V")
@@ -5608,103 +5607,103 @@ public class Statics {
 	}
 
 	@ObfuscatedName("iv.ll(Lew;Lej;Lrn;I)V")
-	public static final void method4583(class165 arg0, class164 arg1, class503 arg2) {
-		String var3 = (String) arg2.field5222[--arg2.field5230];
-		if (class502.method3662(var3, arg2) != null) {
+	public static final void method4583(class165 arg0, class164 arg1, ClientScriptState arg2) {
+		String var3 = (String) arg2.objectStack[--arg2.osp];
+		if (ScriptRunner.method3662(var3, arg2) != null) {
 			var3 = var3.substring(0, var3.length() - 1);
 		}
-		arg0.field1873 = class502.method8142(var3, arg2);
+		arg0.field1873 = ScriptRunner.method8142(var3, arg2);
 		arg0.field1861 = true;
 	}
 
 	@ObfuscatedName("aes.le(Lew;Lej;Lrn;B)V")
-	public static final void method15654(class165 arg0, class164 arg1, class503 arg2) {
-		String var3 = (String) arg2.field5222[--arg2.field5230];
-		int[] var4 = class502.method3662(var3, arg2);
+	public static final void method15654(class165 arg0, class164 arg1, ClientScriptState arg2) {
+		String var3 = (String) arg2.objectStack[--arg2.osp];
+		int[] var4 = ScriptRunner.method3662(var3, arg2);
 		if (var4 != null) {
 			var3 = var3.substring(0, var3.length() - 1);
 		}
-		arg0.field1874 = class502.method8142(var3, arg2);
+		arg0.field1874 = ScriptRunner.method8142(var3, arg2);
 		arg0.field1875 = var4;
 		arg0.field1861 = true;
 	}
 
 	@ObfuscatedName("eh.lp(Lew;Lej;Lrn;I)V")
-	public static final void method3070(class165 arg0, class164 arg1, class503 arg2) {
-		String var3 = (String) arg2.field5222[--arg2.field5230];
-		if (class502.method3662(var3, arg2) != null) {
+	public static final void method3070(class165 arg0, class164 arg1, ClientScriptState arg2) {
+		String var3 = (String) arg2.objectStack[--arg2.osp];
+		if (ScriptRunner.method3662(var3, arg2) != null) {
 			var3 = var3.substring(0, var3.length() - 1);
 		}
-		arg0.field1784 = class502.method8142(var3, arg2);
+		arg0.field1784 = ScriptRunner.method8142(var3, arg2);
 		arg0.field1861 = true;
 	}
 
 	@ObfuscatedName("vw.md(Lrn;B)V")
-	public static final void method12347(class503 arg0) {
-		class504 var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		class165 var2 = var1.field5240;
-		class164 var3 = var1.field5239;
-		class502.method3497(var2, var3, arg0);
+	public static final void method12347(ClientScriptState arg0) {
+		class504 var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		class165 var2 = var1.com;
+		class164 var3 = var1.itf;
+		ScriptRunner.method3497(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("eu.nk(Lew;Lej;Lrn;I)V")
-	public static final void method2929(class165 arg0, class164 arg1, class503 arg2) {
-		String var3 = (String) arg2.field5222[--arg2.field5230];
-		if (class502.method3662(var3, arg2) != null) {
+	public static final void method2929(class165 arg0, class164 arg1, ClientScriptState arg2) {
+		String var3 = (String) arg2.objectStack[--arg2.osp];
+		if (ScriptRunner.method3662(var3, arg2) != null) {
 			var3 = var3.substring(0, var3.length() - 1);
 		}
-		arg0.field1896 = class502.method8142(var3, arg2);
+		arg0.field1896 = ScriptRunner.method8142(var3, arg2);
 		arg0.field1861 = true;
 	}
 
 	@ObfuscatedName("jw.nz(Lrn;B)V")
-	public static final void method4895(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method4895(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		class165 var2 = class165.method11381(var1);
-		class164 var3 = field1756[var1 >> 16];
-		class502.method8454(var2, var3, arg0);
+		class164 var3 = interfaces[var1 >> 16];
+		ScriptRunner.method8454(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("re.of(Lrn;B)V")
-	public static final void method8660(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method8660(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		class165 var2 = class165.method11381(var1);
-		class164 var3 = field1756[var1 >> 16];
-		class502.method12221(var2, var3, arg0);
+		class164 var3 = interfaces[var1 >> 16];
+		ScriptRunner.method12221(var2, var3, arg0);
 	}
 
 	@ObfuscatedName("pm.qu(Lrn;I)V")
-	public static final void method7955(class503 arg0) {
-		class504 var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		class165 var2 = var1.field5240;
-		arg0.field5215[++arg0.field5216 - 1] = var2.field1793;
+	public static final void method7955(ClientScriptState arg0) {
+		class504 var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		class165 var2 = var1.com;
+		arg0.intStack[++arg0.isp - 1] = var2.field1793;
 	}
 
 	@ObfuscatedName("gz.qd(Lrn;I)V")
-	public static final void method3944(class503 arg0) {
-		class504 var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		class165 var2 = var1.field5240;
-		arg0.field5215[++arg0.field5216 - 1] = var2.field1903;
+	public static final void method3944(ClientScriptState arg0) {
+		class504 var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		class165 var2 = var1.com;
+		arg0.intStack[++arg0.isp - 1] = var2.field1903;
 	}
 
 	@ObfuscatedName("vv.qi(Lrn;I)V")
-	public static final void method12369(class503 arg0) {
-		class504 var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		class165 var2 = var1.field5240;
-		arg0.field5215[++arg0.field5216 - 1] = var2.field1765;
+	public static final void method12369(ClientScriptState arg0) {
+		class504 var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		class165 var2 = var1.com;
+		arg0.intStack[++arg0.isp - 1] = var2.id;
 	}
 
 	@ObfuscatedName("if.qp(Lrn;I)V")
-	public static final void method4706(class503 arg0) {
-		class504 var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		class165 var2 = var1.field5240;
-		class502.method2816(var2, arg0);
+	public static final void method4706(ClientScriptState arg0) {
+		class504 var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		class165 var2 = var1.com;
+		ScriptRunner.method2816(var2, arg0);
 	}
 
 	@ObfuscatedName("lh.qe(Lew;Lrn;I)V")
-	public static final void method5714(class165 arg0, class503 arg1) {
-		int var2 = arg1.field5215[--arg1.field5216];
-		int var3 = arg1.field5215[--arg1.field5216] - 1;
+	public static final void method5714(class165 arg0, ClientScriptState arg1) {
+		int var2 = arg1.intStack[--arg1.isp];
+		int var3 = arg1.intStack[--arg1.isp] - 1;
 		if (arg0.field1806 != 2) {
 			throw new RuntimeException("");
 		}
@@ -5712,46 +5711,46 @@ public class Statics {
 		if (arg0.field1930 == null) {
 			arg0.field1930 = new class610(var4, false);
 		}
-		arg0.field1930.field7203 = class502.method3530();
+		arg0.field1930.field7203 = ScriptRunner.method3530();
 		if (var3 < 0 || var3 >= var4.field7215.length) {
 			throw new RuntimeException("");
 		}
 		arg0.field1930.field7204[var3] = var2;
-		client.method12939(arg0);
+		client.requestRedrawComponent(arg0);
 	}
 
 	@ObfuscatedName("aar.rp(Lrn;B)V")
-	public static final void method13908(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method13908(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		class165 var2 = class165.method11381(var1);
-		arg0.field5215[++arg0.field5216 - 1] = var2.field1739;
+		arg0.intStack[++arg0.isp - 1] = var2.field1739;
 	}
 
 	@ObfuscatedName("xb.rq(Lrn;I)V")
-	public static final void method12748(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method12748(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		class165 var2 = class165.method11381(var1);
-		arg0.field5215[++arg0.field5216 - 1] = var2.field1783;
+		arg0.intStack[++arg0.isp - 1] = var2.field1783;
 	}
 
 	@ObfuscatedName("tq.st(Lrn;I)V")
-	public static final void method11638(class503 arg0) {
-		class165 var1 = class165.method11381(arg0.field5215[--arg0.field5216]);
-		arg0.field5215[++arg0.field5216 - 1] = var1.field1903;
+	public static final void method11638(ClientScriptState arg0) {
+		class165 var1 = class165.method11381(arg0.intStack[--arg0.isp]);
+		arg0.intStack[++arg0.isp - 1] = var1.field1903;
 	}
 
 	@ObfuscatedName("wm.sj(Lrn;I)V")
-	public static final void method12702(class503 arg0) {
-		arg0.field5216 -= 2;
-		int var1 = arg0.field5215[arg0.field5216];
-		int var2 = arg0.field5215[arg0.field5216 + 1];
-		class504 var3 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-		client.method8390(var3.field5240, var1, var2);
+	public static final void method12702(ClientScriptState arg0) {
+		arg0.isp -= 2;
+		int var1 = arg0.intStack[arg0.isp];
+		int var2 = arg0.intStack[arg0.isp + 1];
+		class504 var3 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+		client.method8390(var3.com, var1, var2);
 	}
 
 	@ObfuscatedName("pg.tc(Lrn;I)V")
-	public static final void method7975(class503 arg0) {
-		String var1 = (String) arg0.field5222[--arg0.field5230];
+	public static final void method7975(ClientScriptState arg0) {
+		String var1 = (String) arg0.objectStack[--arg0.osp];
 		class792 var2 = class792.method14781(class280.field2929, client.field8975.field834);
 		var2.field9467.method15308(var1.length() + 1);
 		var2.field9467.method15228(var1);
@@ -5759,48 +5758,48 @@ public class Statics {
 	}
 
 	@ObfuscatedName("qk.tn(Lrn;B)V")
-	public static final void method8398(class503 arg0) {
-		arg0.field5216 -= 4;
-		class395.method1717(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2], arg0.field5215[arg0.field5216 + 3], false, 256);
+	public static final void method8398(ClientScriptState arg0) {
+		arg0.isp -= 4;
+		class395.method1717(arg0.intStack[arg0.isp], arg0.intStack[arg0.isp + 1], arg0.intStack[arg0.isp + 2], arg0.intStack[arg0.isp + 3], false, 256);
 	}
 
 	@ObfuscatedName("nv.tt(Lrn;I)V")
-	public static final void method6790(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
-		arg0.field5215[++arg0.field5216 - 1] = client.field9093[var1];
+	public static final void method6790(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
+		arg0.intStack[++arg0.isp - 1] = client.field9093[var1];
 	}
 
 	@ObfuscatedName("nt.tl(Lrn;I)V")
-	public static final void method6646(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
-		arg0.field5215[++arg0.field5216 - 1] = var1 >> 14 & 0x3FFF;
+	public static final void method6646(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
+		arg0.intStack[++arg0.isp - 1] = var1 >> 14 & 0x3FFF;
 	}
 
 	@ObfuscatedName("fc.uo(Lrn;I)V")
-	public static final void method3531(class503 arg0) {
-		arg0.field5215[++arg0.field5216 - 1] = field6772.field6768;
+	public static final void method3531(ClientScriptState arg0) {
+		arg0.intStack[++arg0.isp - 1] = field6772.field6768;
 	}
 
 	@ObfuscatedName("k.ue(Lrn;I)V")
-	public static final void method1605(class503 arg0) {
+	public static final void method1605(ClientScriptState arg0) {
 		if (client.field8916 >= 5 && client.field8916 <= 9) {
-			arg0.field5215[++arg0.field5216 - 1] = 1;
+			arg0.intStack[++arg0.isp - 1] = 1;
 		} else {
-			arg0.field5215[++arg0.field5216 - 1] = 0;
+			arg0.intStack[++arg0.isp - 1] = 0;
 		}
 	}
 
 	@ObfuscatedName("lu.vx(Lrn;B)V")
-	public static final void method5827(class503 arg0) {
-		arg0.field5215[++arg0.field5216 - 1] = field7136.method7255();
+	public static final void method5827(ClientScriptState arg0) {
+		arg0.intStack[++arg0.isp - 1] = field7136.method7255();
 	}
 
 	@ObfuscatedName("cj.vv(Lrn;I)V")
-	public static final void method2576(class503 arg0) {
-		arg0.field5216 -= 3;
-		int var1 = arg0.field5215[arg0.field5216];
-		int var2 = arg0.field5215[arg0.field5216 + 1];
-		int var3 = arg0.field5215[arg0.field5216 + 2];
+	public static final void method2576(ClientScriptState arg0) {
+		arg0.isp -= 3;
+		int var1 = arg0.intStack[arg0.isp];
+		int var2 = arg0.intStack[arg0.isp + 1];
+		int var3 = arg0.intStack[arg0.isp + 2];
 		if (var2 == -1) {
 			throw new RuntimeException();
 		}
@@ -5813,166 +5812,166 @@ public class Statics {
 		if (var5 != null) {
 			var6 = var5.length;
 		}
-		arg0.field5215[++arg0.field5216 - 1] = var6;
+		arg0.intStack[++arg0.isp - 1] = var6;
 	}
 
 	@ObfuscatedName("aev.wd(Lrn;B)V")
-	public static final void method15610(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method15610(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		if (client.field9121 == 2 && var1 < client.field9206) {
-			arg0.field5215[++arg0.field5216 - 1] = client.field9209[var1].field645;
+			arg0.intStack[++arg0.isp - 1] = client.field9209[var1].field645;
 		} else {
-			arg0.field5215[++arg0.field5216 - 1] = 0;
+			arg0.intStack[++arg0.isp - 1] = 0;
 		}
 	}
 
 	@ObfuscatedName("ik.wp(Lrn;I)V")
-	public static final void method4654(class503 arg0) {
-		String var1 = (String) arg0.field5222[--arg0.field5230];
+	public static final void method4654(ClientScriptState arg0) {
+		String var1 = (String) arg0.objectStack[--arg0.osp];
 		client.method13904(var1, false);
 	}
 
 	@ObfuscatedName("vp.wt(Lrn;B)V")
-	public static final void method12465(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method12465(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		if (client.field9121 == 0 || var1 >= client.field9211) {
-			arg0.field5222[++arg0.field5230 - 1] = "";
-			arg0.field5222[++arg0.field5230 - 1] = "";
+			arg0.objectStack[++arg0.osp - 1] = "";
+			arg0.objectStack[++arg0.osp - 1] = "";
 			return;
 		}
 		class45 var2 = client.field8999[var1];
-		arg0.field5222[++arg0.field5230 - 1] = var2.field639;
+		arg0.objectStack[++arg0.osp - 1] = var2.field639;
 		if (var2.field638 == null) {
-			arg0.field5222[++arg0.field5230 - 1] = "";
+			arg0.objectStack[++arg0.osp - 1] = "";
 		} else {
-			arg0.field5222[++arg0.field5230 - 1] = var2.field638;
+			arg0.objectStack[++arg0.osp - 1] = var2.field638;
 		}
 	}
 
 	@ObfuscatedName("ji.wh(Lrn;I)V")
-	public static final void method4793(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method4793(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		if (client.field9121 == 2 && var1 >= 0 && var1 < client.field9206) {
-			arg0.field5215[++arg0.field5216 - 1] = client.field9209[var1].field650;
+			arg0.intStack[++arg0.isp - 1] = client.field9209[var1].field650;
 		} else {
-			arg0.field5215[++arg0.field5216 - 1] = 0;
+			arg0.intStack[++arg0.isp - 1] = 0;
 		}
 	}
 
 	@ObfuscatedName("ph.xy(Lrn;I)V")
-	public static final void method7879(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
-		arg0.field5215[++arg0.field5216 - 1] = client.field8999[var1].field640 ? 1 : 0;
+	public static final void method7879(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
+		arg0.intStack[++arg0.isp - 1] = client.field8999[var1].field640 ? 1 : 0;
 	}
 
 	@ObfuscatedName("gz.xq(Lrn;I)V")
-	public static final void method3939(class503 arg0) {
-		arg0.field5215[++arg0.field5216 - 1] = arg0.field5226.field2354;
+	public static final void method3939(ClientScriptState arg0) {
+		arg0.intStack[++arg0.isp - 1] = arg0.field5226.field2354;
 	}
 
 	@ObfuscatedName("ol.yo(Lrn;B)V")
-	public static final void method7074(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
-		arg0.field5222[++arg0.field5230 - 1] = arg0.field5217.field9429[var1].field2343;
+	public static final void method7074(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
+		arg0.objectStack[++arg0.osp - 1] = arg0.field5217.field9429[var1].field2343;
 	}
 
 	@ObfuscatedName("sp.yv(Lrn;I)V")
-	public static final void method11255(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method11255(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		client.method12622(field8458 == arg0.field5217, var1);
 	}
 
 	@ObfuscatedName("gp.yi(Lrn;B)V")
-	public static final void method3907(class503 arg0) {
-		arg0.field5216 -= 2;
-		int var1 = arg0.field5215[arg0.field5216];
-		int var2 = arg0.field5215[arg0.field5216 + 1];
-		arg0.field5215[++arg0.field5216 - 1] = var1 + var2;
+	public static final void method3907(ClientScriptState arg0) {
+		arg0.isp -= 2;
+		int var1 = arg0.intStack[arg0.isp];
+		int var2 = arg0.intStack[arg0.isp + 1];
+		arg0.intStack[++arg0.isp - 1] = var1 + var2;
 	}
 
 	@ObfuscatedName("mf.zn(Lrn;I)V")
-	public static final void method6081(class503 arg0) {
-		arg0.field5216 -= 2;
-		int var1 = arg0.field5215[arg0.field5216];
-		int var2 = arg0.field5215[arg0.field5216 + 1];
-		arg0.field5215[++arg0.field5216 - 1] = var1 | 0x1 << var2;
+	public static final void method6081(ClientScriptState arg0) {
+		arg0.isp -= 2;
+		int var1 = arg0.intStack[arg0.isp];
+		int var2 = arg0.intStack[arg0.isp + 1];
+		arg0.intStack[++arg0.isp - 1] = var1 | 0x1 << var2;
 	}
 
 	@ObfuscatedName("aaf.zk(Lrn;I)V")
-	public static final void method14062(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
-		arg0.field5215[++arg0.field5216 - 1] = ~var1;
+	public static final void method14062(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
+		arg0.intStack[++arg0.isp - 1] = ~var1;
 	}
 
 	@ObfuscatedName("ac.za(Lrn;I)V")
-	public static final void method1977(class503 arg0) {
-		String var1 = (String) arg0.field5222[--arg0.field5230];
-		arg0.field5222[++arg0.field5230 - 1] = var1.toLowerCase();
+	public static final void method1977(ClientScriptState arg0) {
+		String var1 = (String) arg0.objectStack[--arg0.osp];
+		arg0.objectStack[++arg0.osp - 1] = var1.toLowerCase();
 	}
 
 	@ObfuscatedName("lk.aay(Lrn;I)V")
-	public static final void method5571(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
-		arg0.field5215[++arg0.field5216 - 1] = class526.method8060((char) var1) ? 1 : 0;
+	public static final void method5571(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
+		arg0.intStack[++arg0.isp - 1] = class526.method8060((char) var1) ? 1 : 0;
 	}
 
 	@ObfuscatedName("ji.aam(Lrn;I)V")
-	public static final void method4795(class503 arg0) {
-		String var1 = (String) arg0.field5222[--arg0.field5230];
+	public static final void method4795(ClientScriptState arg0) {
+		String var1 = (String) arg0.objectStack[--arg0.osp];
 		if (var1 == null) {
-			arg0.field5215[++arg0.field5216 - 1] = 0;
+			arg0.intStack[++arg0.isp - 1] = 0;
 		} else {
-			arg0.field5215[++arg0.field5216 - 1] = var1.length();
+			arg0.intStack[++arg0.isp - 1] = var1.length();
 		}
 	}
 
 	@ObfuscatedName("al.aat(Lrn;I)V")
-	public static final void method1822(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
-		arg0.field5215[++arg0.field5216 - 1] = Character.toUpperCase((char) var1);
+	public static final void method1822(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
+		arg0.intStack[++arg0.isp - 1] = Character.toUpperCase((char) var1);
 	}
 
 	@ObfuscatedName("nt.abp(Lrn;I)V")
-	public static final void method6647(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
-		arg0.field5215[++arg0.field5216 - 1] = field3492.method12316(var1).field7078 == 1 ? 1 : 0;
+	public static final void method6647(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
+		arg0.intStack[++arg0.isp - 1] = field3492.method12316(var1).field7078 == 1 ? 1 : 0;
 	}
 
 	@ObfuscatedName("gz.aby(Lrn;I)V")
-	public static final void method3945(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method3945(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		class592 var2 = field3492.method12316(var1);
 		if (var2.field7108 == -1 && var2.field7107 >= 0) {
-			arg0.field5215[++arg0.field5216 - 1] = var2.field7107;
+			arg0.intStack[++arg0.isp - 1] = var2.field7107;
 		} else {
-			arg0.field5215[++arg0.field5216 - 1] = var1;
+			arg0.intStack[++arg0.isp - 1] = var1;
 		}
 	}
 
 	@ObfuscatedName("ew.abj(Lrn;I)V")
-	public static final void method3207(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
-		arg0.field5215[++arg0.field5216 - 1] = field3492.method12316(var1).field7085;
+	public static final void method3207(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
+		arg0.intStack[++arg0.isp - 1] = field3492.method12316(var1).field7085;
 	}
 
 	@ObfuscatedName("nx.abk(Lrn;B)V")
-	public static final void method6829(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
-		arg0.field5215[++arg0.field5216 - 1] = field3492.method12316(var1).field7068;
+	public static final void method6829(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
+		arg0.intStack[++arg0.isp - 1] = field3492.method12316(var1).field7068;
 	}
 
 	@ObfuscatedName("lr.acm(Lrn;I)V")
-	public static final void method6035(class503 arg0) {
+	public static final void method6035(ClientScriptState arg0) {
 		if (field769 == null) {
-			arg0.field5215[++arg0.field5216 - 1] = -1;
+			arg0.intStack[++arg0.isp - 1] = -1;
 		} else {
-			arg0.field5215[++arg0.field5216 - 1] = field769.field6699;
+			arg0.intStack[++arg0.isp - 1] = field769.field6699;
 		}
 	}
 
 	@ObfuscatedName("np.acx(Lrn;I)V")
-	public static final void method6879(class503 arg0) {
-		String var1 = (String) arg0.field5222[--arg0.field5230];
+	public static final void method6879(ClientScriptState arg0) {
+		String var1 = (String) arg0.objectStack[--arg0.osp];
 		if (client.field9074 == 0 && (client.field9054 && !client.field9077 || client.field9081)) {
 			return;
 		}
@@ -6091,23 +6090,23 @@ public class Statics {
 		class64 var6 = client.method4104();
 		class792 var7 = class792.method14781(class280.field2935, var6.field834);
 		var7.field9467.method15308(0);
-		int var8 = var7.field9467.field9626;
+		int var8 = var7.field9467.pos;
 		var7.field9467.method15308(var3);
 		var7.field9467.method15308(var5);
 		class178.method14081(var7.field9467, var1);
-		var7.field9467.method15251(var7.field9467.field9626 - var8);
+		var7.field9467.method15251(var7.field9467.pos - var8);
 		var6.method1913(var7);
 	}
 
 	@ObfuscatedName("jj.acf(Lrn;B)V")
-	public static final void method4771(class503 arg0) {
+	public static final void method4771(ClientScriptState arg0) {
 		String var1;
 		if (field2119 == null || field2119.field10063 == null) {
 			var1 = "";
 		} else {
 			var1 = field2119.method16120(true);
 		}
-		arg0.field5222[++arg0.field5230 - 1] = var1;
+		arg0.objectStack[++arg0.osp - 1] = var1;
 	}
 
 	@ObfuscatedName("qx.ky(ILjava/lang/String;I)V")
@@ -6153,29 +6152,29 @@ public class Statics {
 			return;
 		}
 		if (arg0.field1872 != null) {
-			class812 var3 = new class812();
-			var3.field9609 = arg0;
-			var3.field9613 = arg0.field1872;
-			class502.method8605(var3);
+			HookRequest var3 = new HookRequest();
+			var3.component = arg0;
+			var3.onOp = arg0.field1872;
+			ScriptRunner.runHook(var3);
 		}
 		client.field9117 = true;
-		field4166 = arg0.field1764;
-		client.field9101 = arg0.field1765;
+		field4166 = arg0.parentLayer;
+		client.field9101 = arg0.id;
 		field4822 = arg1;
 		field7366 = arg2;
 		client.field9102 = arg0.field1903;
 		field477 = arg0.field1827;
 		client.field9235 = arg0.field1763;
-		client.method12939(arg0);
+		client.requestRedrawComponent(arg0);
 	}
 
 	@ObfuscatedName("io.adi(Lrn;I)V")
-	public static final void method4599(class503 arg0) {
-		arg0.field5216 -= 2;
-		int var1 = arg0.field5215[arg0.field5216];
-		int var2 = arg0.field5215[arg0.field5216 + 1];
+	public static final void method4599(ClientScriptState arg0) {
+		arg0.isp -= 2;
+		int var1 = arg0.intStack[arg0.isp];
+		int var2 = arg0.intStack[arg0.isp + 1];
 		int var3 = field3779.method12176(var1).method16752(var2).field5029;
-		arg0.field5215[++arg0.field5216 - 1] = var3;
+		arg0.intStack[++arg0.isp - 1] = var3;
 	}
 
 	@ObfuscatedName("tm.ku(IIB)V")
@@ -6187,77 +6186,77 @@ public class Statics {
 	}
 
 	@ObfuscatedName("nw.ads(Lrn;B)V")
-	public static final void method7050(class503 arg0) {
+	public static final void method7050(ClientScriptState arg0) {
 		class64 var1 = client.method4104();
 		class792 var2 = class792.method14781(class280.field2936, var1.field834);
 		var2.field9467.method15308(0);
-		int var3 = var2.field9467.field9626;
+		int var3 = var2.field9467.pos;
 		var2.field9467.method15308(2);
 		var2.field9467.method15287(arg0.field5213.field2655);
 		arg0.field5213.field2656.method16748(var2.field9467, arg0.field5213.field2657);
-		var2.field9467.method15251(var2.field9467.field9626 - var3);
+		var2.field9467.method15251(var2.field9467.pos - var3);
 		var1.method1913(var2);
 	}
 
 	@ObfuscatedName("fg.aew(Lrn;I)V")
-	public static final void method3642(class503 arg0) {
-		arg0.field5215[++arg0.field5216 - 1] = class822.field9753 == 100 ? 1 : 0;
+	public static final void method3642(ClientScriptState arg0) {
+		arg0.intStack[++arg0.isp - 1] = class822.field9753 == 100 ? 1 : 0;
 	}
 
 	@ObfuscatedName("qg.aef(Lrn;I)V")
-	public static final void method8406(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method8406(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		class822.method12730(var1 >> 14 & 0x3FFF, var1 & 0x3FFF);
 	}
 
 	@ObfuscatedName("fx.aev(Lrn;I)V")
-	public static final void method3585(class503 arg0) {
+	public static final void method3585(ClientScriptState arg0) {
 		class951 var1 = class822.method12024();
 		if (var1 == null) {
-			arg0.field5215[++arg0.field5216 - 1] = -1;
-			arg0.field5215[++arg0.field5216 - 1] = -1;
+			arg0.intStack[++arg0.isp - 1] = -1;
+			arg0.intStack[++arg0.isp - 1] = -1;
 			return;
 		}
-		boolean var2 = var1.method16707(field4465 + field4283, field6770 + field4284, class502.field5200);
+		boolean var2 = var1.method16707(field4465 + field4283, field6770 + field4284, ScriptRunner.result);
 		if (var2) {
-			arg0.field5215[++arg0.field5216 - 1] = class502.field5200[1];
-			arg0.field5215[++arg0.field5216 - 1] = class502.field5200[2];
+			arg0.intStack[++arg0.isp - 1] = ScriptRunner.result[1];
+			arg0.intStack[++arg0.isp - 1] = ScriptRunner.result[2];
 		} else {
-			arg0.field5215[++arg0.field5216 - 1] = -1;
-			arg0.field5215[++arg0.field5216 - 1] = -1;
+			arg0.intStack[++arg0.isp - 1] = -1;
+			arg0.intStack[++arg0.isp - 1] = -1;
 		}
 	}
 
 	@ObfuscatedName("pa.afd(Lrn;I)V")
-	public static final void method7744(class503 arg0) {
-		arg0.field5216 -= 2;
-		int var1 = arg0.field5215[arg0.field5216];
-		int var2 = arg0.field5215[arg0.field5216 + 1];
+	public static final void method7744(ClientScriptState arg0) {
+		arg0.isp -= 2;
+		int var1 = arg0.intStack[arg0.isp];
+		int var2 = arg0.intStack[arg0.isp + 1];
 		int var3 = var2 >> 14 & 0x3FFF;
 		int var4 = var2 & 0x3FFF;
 		int var5 = class822.method7984(var1, var3, var4);
 		if (var5 < 0) {
-			arg0.field5215[++arg0.field5216 - 1] = -1;
+			arg0.intStack[++arg0.isp - 1] = -1;
 		} else {
-			arg0.field5215[++arg0.field5216 - 1] = var5;
+			arg0.intStack[++arg0.isp - 1] = var5;
 		}
 	}
 
 	@ObfuscatedName("fc.afm(Lrn;I)V")
-	public static final void method3532(class503 arg0) {
-		arg0.field5215[++arg0.field5216 - 1] = client.method12476();
+	public static final void method3532(ClientScriptState arg0) {
+		arg0.intStack[++arg0.isp - 1] = client.method12476();
 	}
 
 	@ObfuscatedName("rb.afr(Lrn;I)V")
-	public static final void method11055(class503 arg0) {
-		arg0.field5216 -= 7;
-		int var1 = arg0.field5215[arg0.field5216];
-		int var2 = arg0.field5215[arg0.field5216 + 1] << 1;
-		int var3 = arg0.field5215[arg0.field5216 + 2];
-		int var4 = arg0.field5215[arg0.field5216 + 3];
-		int var5 = arg0.field5215[arg0.field5216 + 4];
-		int var6 = arg0.field5215[arg0.field5216 + 5];
-		int var7 = arg0.field5215[arg0.field5216 + 6];
+	public static final void method11055(ClientScriptState arg0) {
+		arg0.isp -= 7;
+		int var1 = arg0.intStack[arg0.isp];
+		int var2 = arg0.intStack[arg0.isp + 1] << 1;
+		int var3 = arg0.intStack[arg0.isp + 2];
+		int var4 = arg0.intStack[arg0.isp + 3];
+		int var5 = arg0.intStack[arg0.isp + 4];
+		int var6 = arg0.intStack[arg0.isp + 5];
+		int var7 = arg0.intStack[arg0.isp + 6];
 		if (var1 >= 0 && var1 < 2 && client.field9076[var1] != null && var2 >= 0 && var2 < client.field9076[var1].length) {
 			client.field9076[var1][var2] = new int[] { (var3 >> 14 & 0x3FFF) << 9, var4 << 2, (var3 & 0x3FFF) << 9, var7 };
 			client.field9076[var1][var2 + 1] = new int[] { (var5 >> 14 & 0x3FFF) << 9, var6 << 2, (var5 & 0x3FFF) << 9 };
@@ -6265,50 +6264,50 @@ public class Statics {
 	}
 
 	@ObfuscatedName("dj.afq(Lrn;B)V")
-	public static final void method2611(class503 arg0) {
-		int var1 = client.field9076[arg0.field5215[--arg0.field5216]].length >> 1;
-		arg0.field5215[++arg0.field5216 - 1] = var1;
+	public static final void method2611(ClientScriptState arg0) {
+		int var1 = client.field9076[arg0.intStack[--arg0.isp]].length >> 1;
+		arg0.intStack[++arg0.isp - 1] = var1;
 	}
 
 	@ObfuscatedName("ahj.afe(Lrn;B)V")
-	public static final void method16113(class503 arg0) {
-		arg0.field5216 -= 2;
-		client.field9096 = arg0.field5215[arg0.field5216];
-		client.field9098 = arg0.field5215[arg0.field5216 + 1];
+	public static final void method16113(ClientScriptState arg0) {
+		arg0.isp -= 2;
+		client.field9096 = arg0.intStack[arg0.isp];
+		client.field9098 = arg0.intStack[arg0.isp + 1];
 	}
 
 	@ObfuscatedName("nw.agx(Lrn;B)V")
-	public static final void method7053(class503 arg0) {
-		arg0.field5215[++arg0.field5216 - 1] = (int) client.field9171 >> 3;
+	public static final void method7053(ClientScriptState arg0) {
+		arg0.intStack[++arg0.isp - 1] = (int) client.field9171 >> 3;
 	}
 
 	@ObfuscatedName("fo.ain(Lrn;I)V")
-	public static final void method3622(class503 arg0) throws class884 {
-		field1307.method3696((float) arg0.field5215[--arg0.field5216] / 1000.0F);
+	public static final void method3622(ClientScriptState arg0) throws class884 {
+		field1307.method3696((float) arg0.intStack[--arg0.isp] / 1000.0F);
 	}
 
 	@ObfuscatedName("iy.aio(Lrn;I)V")
-	public static final void method4697(class503 arg0) throws class884 {
-		arg0.field5216 -= 4;
-		float var1 = (float) arg0.field5215[arg0.field5216];
-		float var2 = (float) arg0.field5215[arg0.field5216 + 1];
-		float var3 = (float) arg0.field5215[arg0.field5216 + 2];
-		float var4 = (float) arg0.field5215[arg0.field5216 + 3] / 1000.0F;
-		field1307.method3768(class317.method5294(var1, var2, var3), var4);
+	public static final void method4697(ClientScriptState arg0) throws class884 {
+		arg0.isp -= 4;
+		float var1 = (float) arg0.intStack[arg0.isp];
+		float var2 = (float) arg0.intStack[arg0.isp + 1];
+		float var3 = (float) arg0.intStack[arg0.isp + 2];
+		float var4 = (float) arg0.intStack[arg0.isp + 3] / 1000.0F;
+		field1307.method3768(Vector3.method5294(var1, var2, var3), var4);
 	}
 
 	@ObfuscatedName("pe.aiy(Lrn;I)V")
-	public static final void method7693(class503 arg0) {
+	public static final void method7693(ClientScriptState arg0) {
 		method4011();
 	}
 
 	@ObfuscatedName("qr.aip(Lrn;I)V")
-	public static final void method8091(class503 arg0) {
-		arg0.field5215[++arg0.field5216 - 1] = class33.field507;
+	public static final void method8091(ClientScriptState arg0) {
+		arg0.intStack[++arg0.isp - 1] = class33.field507;
 	}
 
 	@ObfuscatedName("eu.ajc(Lrn;I)V")
-	public static final void method2932(class503 arg0) {
+	public static final void method2932(ClientScriptState arg0) {
 		if (client.field8923 == 3) {
 			class792 var1 = class792.method14781(class280.field2949, client.field8959.field834);
 			client.field8959.method1913(var1);
@@ -6316,47 +6315,47 @@ public class Statics {
 	}
 
 	@ObfuscatedName("aah.ajt(Lrn;B)V")
-	public static final void method13912(class503 arg0) {
-		arg0.field5215[++arg0.field5216 - 1] = client.field8946 ? 1 : 0;
+	public static final void method13912(ClientScriptState arg0) {
+		arg0.intStack[++arg0.isp - 1] = client.field8946 ? 1 : 0;
 	}
 
 	@ObfuscatedName("lv.ajr(Lrn;I)V")
-	public static final void method5615(class503 arg0) {
-		arg0.field5215[++arg0.field5216 - 1] = class33.field545;
+	public static final void method5615(ClientScriptState arg0) {
+		arg0.intStack[++arg0.isp - 1] = class33.field545;
 	}
 
 	@ObfuscatedName("pq.ajw(Lrn;I)V")
-	public static final void method7717(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
+	public static final void method7717(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
 		class33.method11156(var1);
 	}
 
 	@ObfuscatedName("rt.akt(Lrn;I)V")
-	public static final void method8622(class503 arg0) {
-		field4961.method15448(field4961.field9672, arg0.field5215[--arg0.field5216]);
+	public static final void method8622(ClientScriptState arg0) {
+		field4961.method15448(field4961.field9672, arg0.intStack[--arg0.isp]);
 		method1245();
 		client.field8932 = false;
 	}
 
 	@ObfuscatedName("kk.lh(Lew;I)V")
 	public static void method5567(class165 arg0) {
-		if (arg0.field1766 == 5 && arg0.field1903 != -1) {
+		if (arg0.type == 5 && arg0.field1903 != -1) {
 			class52.method8730(field5187, arg0);
 		}
 	}
 
 	@ObfuscatedName("lf.akf(Lrn;I)V")
-	public static final void method6069(class503 arg0) {
-		field4961.method15448(field4961.field9643, arg0.field5215[--arg0.field5216]);
+	public static final void method6069(ClientScriptState arg0) {
+		field4961.method15448(field4961.field9643, arg0.intStack[--arg0.isp]);
 		method1245();
 		client.field8932 = false;
 	}
 
 	@ObfuscatedName("it.akl(Lrn;I)V")
-	public static final void method4711(class503 arg0) {
-		arg0.field5216 -= 2;
-		int var1 = arg0.field5215[arg0.field5216];
-		boolean var2 = arg0.field5215[arg0.field5216 + 1] == 1;
+	public static final void method4711(ClientScriptState arg0) {
+		arg0.isp -= 2;
+		int var1 = arg0.intStack[arg0.isp];
+		boolean var2 = arg0.intStack[arg0.isp + 1] == 1;
 		field4961.method15448(field4961.field9670, var1);
 		if (!var2) {
 			field4961.method15448(field4961.field9633, 0);
@@ -6366,18 +6365,18 @@ public class Statics {
 	}
 
 	@ObfuscatedName("abq.aln(Lrn;B)V")
-	public static final void method14199(class503 arg0) {
-		arg0.field5215[++arg0.field5216 - 1] = field4961.field9660.method15735() == 2 ? 1 : 0;
+	public static final void method14199(ClientScriptState arg0) {
+		arg0.intStack[++arg0.isp - 1] = field4961.field9660.method15735() == 2 ? 1 : 0;
 	}
 
 	@ObfuscatedName("gm.ali(Lrn;I)V")
-	public static final void method3967(class503 arg0) {
-		arg0.field5215[++arg0.field5216 - 1] = field4961.field9676.method15891() == 1 ? 1 : 0;
+	public static final void method3967(ClientScriptState arg0) {
+		arg0.intStack[++arg0.isp - 1] = field4961.field9676.method15891() == 1 ? 1 : 0;
 	}
 
 	@ObfuscatedName("wb.alf(Lrn;I)V")
-	public static final void method12728(class503 arg0) {
-		arg0.field5215[++arg0.field5216 - 1] = field4961.field9674.method15899();
+	public static final void method12728(ClientScriptState arg0) {
+		arg0.intStack[++arg0.isp - 1] = field4961.field9674.method15899();
 	}
 
 	@ObfuscatedName("rf.le(Lew;I)V")
@@ -6408,7 +6407,7 @@ public class Statics {
 	}
 
 	@ObfuscatedName("yw.ano(Lrn;I)V")
-	public static final void method12909(class503 arg0) {
+	public static final void method12909(ClientScriptState arg0) {
 		method12022();
 	}
 
@@ -6471,7 +6470,7 @@ public class Statics {
 	}
 
 	@ObfuscatedName("aiq.ani(Lrn;I)V")
-	public static final void method16476(class503 arg0) {
+	public static final void method16476(ClientScriptState arg0) {
 	}
 
 	@ObfuscatedName("rx.mw(II)V")
@@ -6484,16 +6483,16 @@ public class Statics {
 	}
 
 	@ObfuscatedName("ch.aok(Lrn;I)V")
-	public static final void method2426(class503 arg0) {
-		arg0.field5215[++arg0.field5216 - 1] = (int) (field6701 / 60000L);
-		arg0.field5215[++arg0.field5216 - 1] = (int) ((field6701 - class153.method5554() - field3384) / 60000L);
-		arg0.field5215[++arg0.field5216 - 1] = field628 ? 1 : 0;
+	public static final void method2426(ClientScriptState arg0) {
+		arg0.intStack[++arg0.isp - 1] = (int) (field6701 / 60000L);
+		arg0.intStack[++arg0.isp - 1] = (int) ((field6701 - class153.method5554() - field3384) / 60000L);
+		arg0.intStack[++arg0.isp - 1] = field628 ? 1 : 0;
 	}
 
 	@ObfuscatedName("tv.nv(IIIIIIIIIIIIIIZII)V")
 	public static void method11760(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, int arg13, boolean arg14, int arg15) {
 		if (arg1 != 0 && arg3 != -1) {
-			class719 var16 = null;
+			PathingEntity var16 = null;
 			if (arg1 < 0) {
 				int var17 = -arg1 - 1;
 				if (client.field9071 == var17) {
@@ -6505,7 +6504,7 @@ public class Statics {
 				int var18 = arg1 - 1;
 				class798 var19 = (class798) client.field8964.method11923((long) var18);
 				if (var19 != null) {
-					var16 = (class719) var19.field9550;
+					var16 = (PathingEntity) var19.field9550;
 				}
 			}
 			if (var16 != null) {
@@ -6524,7 +6523,7 @@ public class Statics {
 	}
 
 	@ObfuscatedName("lg.apb(Lrn;I)V")
-	public static final void method5810(class503 arg0) {
+	public static final void method5810(ClientScriptState arg0) {
 		class63.method1886(true);
 		client.field8980.method6102();
 		method1245();
@@ -6532,7 +6531,7 @@ public class Statics {
 	}
 
 	@ObfuscatedName("vj.api(Lrn;I)V")
-	public static final void method12325(class503 arg0) {
+	public static final void method12325(ClientScriptState arg0) {
 		boolean var1 = true;
 		if (client.field8903) {
 			try {
@@ -6543,62 +6542,62 @@ public class Statics {
 			} catch (Throwable var4) {
 			}
 		}
-		arg0.field5215[++arg0.field5216 - 1] = var1 ? 1 : 0;
+		arg0.intStack[++arg0.isp - 1] = var1 ? 1 : 0;
 	}
 
 	@ObfuscatedName("cj.aqk(Lrn;I)V")
-	public static final void method2577(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
-		arg0.field5215[++arg0.field5216 - 1] = field4961.field9651.method11387(var1);
+	public static final void method2577(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
+		arg0.intStack[++arg0.isp - 1] = field4961.field9651.method11387(var1);
 	}
 
 	@ObfuscatedName("pu.aqi(Lrn;B)V")
-	public static final void method7991(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
-		arg0.field5215[++arg0.field5216 - 1] = field4961.field9659.method11387(var1);
+	public static final void method7991(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
+		arg0.intStack[++arg0.isp - 1] = field4961.field9659.method11387(var1);
 	}
 
 	@ObfuscatedName("ix.aqm(Lrn;B)V")
-	public static final void method4615(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
-		arg0.field5215[++arg0.field5216 - 1] = field4961.field9677.method11387(var1);
+	public static final void method4615(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
+		arg0.intStack[++arg0.isp - 1] = field4961.field9677.method11387(var1);
 	}
 
 	@ObfuscatedName("xa.aqb(Lrn;B)V")
-	public static final void method234(class503 arg0) {
-		int var1 = arg0.field5215[--arg0.field5216];
-		arg0.field5215[++arg0.field5216 - 1] = field4961.field9641.method11387(var1);
+	public static final void method234(ClientScriptState arg0) {
+		int var1 = arg0.intStack[--arg0.isp];
+		arg0.intStack[++arg0.isp - 1] = field4961.field9641.method11387(var1);
 	}
 
 	@ObfuscatedName("al.aqf(Lrn;I)V")
-	public static final void method1821(class503 arg0) {
-		arg0.field5216 -= 2;
-		int var1 = arg0.field5215[arg0.field5216];
-		int var2 = arg0.field5215[arg0.field5216 + 1];
+	public static final void method1821(ClientScriptState arg0) {
+		arg0.isp -= 2;
+		int var1 = arg0.intStack[arg0.isp];
+		int var2 = arg0.intStack[arg0.isp + 1];
 		class504 var3;
-		if (arg0.field5238) {
-			var3 = arg0.field5210;
+		if (arg0.secondary) {
+			var3 = arg0.activeComponent2;
 		} else {
-			var3 = arg0.field5223;
+			var3 = arg0.activeComponent;
 		}
-		arg0.field5215[++arg0.field5216 - 1] = var3.method11066(arg0.field5228.field8652, var1, var2) ? 1 : 0;
+		arg0.intStack[++arg0.isp - 1] = var3.method11066(arg0.activeEntity.field8652, var1, var2) ? 1 : 0;
 	}
 
 	@ObfuscatedName("va.arw(Lrn;B)V")
-	public static final void method12185(class503 arg0) {
-		arg0.field5215[++arg0.field5216 - 1] = ((class903) arg0.field5228).field10075.field7211;
+	public static final void method12185(ClientScriptState arg0) {
+		arg0.intStack[++arg0.isp - 1] = ((class903) arg0.activeEntity).field10075.field7211;
 	}
 
 	@ObfuscatedName("ak.ark(Lrn;I)V")
-	public static final void method1954(class503 arg0) {
-		client.method7883(arg0.field5234, arg0.field5215[--arg0.field5216]);
-		arg0.field5215[++arg0.field5216 - 1] = (int) client.field9048[0];
-		arg0.field5215[++arg0.field5216 - 1] = (int) client.field9048[1];
-		arg0.field5215[++arg0.field5216 - 1] = (int) client.field9048[2];
+	public static final void method1954(ClientScriptState arg0) {
+		client.method7883(arg0.activeObj, arg0.intStack[--arg0.isp]);
+		arg0.intStack[++arg0.isp - 1] = (int) client.field9048[0];
+		arg0.intStack[++arg0.isp - 1] = (int) client.field9048[1];
+		arg0.intStack[++arg0.isp - 1] = (int) client.field9048[2];
 	}
 
 	@ObfuscatedName("ro.arg(Lrn;I)V")
-	public static final void method8728(class503 arg0) {
-		class502.method1680(arg0.field5228, arg0);
+	public static final void method8728(ClientScriptState arg0) {
+		ScriptRunner.method1680(arg0.activeEntity, arg0);
 	}
 }

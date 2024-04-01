@@ -32,25 +32,25 @@ public class class59 {
 				for (int var4 = 0; var4 < var2[var3].length; var4++) {
 					class424 var5 = var2[var3][var4];
 					if (var5 != null) {
-						if (var5.field4552 instanceof class113) {
-							((class113) var5.field4552).method2409();
+						if (var5.field4552 instanceof Location) {
+							((Location) var5.field4552).method2409();
 						}
-						if (var5.field4546 instanceof class113) {
-							((class113) var5.field4546).method2409();
+						if (var5.field4546 instanceof Location) {
+							((Location) var5.field4546).method2409();
 						}
-						if (var5.field4551 instanceof class113) {
-							((class113) var5.field4551).method2409();
+						if (var5.field4551 instanceof Location) {
+							((Location) var5.field4551).method2409();
 						}
-						if (var5.field4548 instanceof class113) {
-							((class113) var5.field4548).method2409();
+						if (var5.field4548 instanceof Location) {
+							((Location) var5.field4548).method2409();
 						}
-						if (var5.field4550 instanceof class113) {
-							((class113) var5.field4550).method2409();
+						if (var5.field4550 instanceof Location) {
+							((Location) var5.field4550).method2409();
 						}
 						for (class430 var6 = var5.field4554; var6 != null; var6 = var6.field4641) {
 							class974 var7 = var6.field4642;
-							if (var7 instanceof class113) {
-								((class113) var7).method2409();
+							if (var7 instanceof Location) {
+								((Location) var7).method2409();
 							}
 						}
 					}

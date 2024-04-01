@@ -1052,7 +1052,7 @@ public class class682 extends class14 {
 			} else if (var9 > 512) {
 				var9 = 512;
 			}
-			int var10 = class595.method1962(var9);
+			int var10 = IntMath.method1962(var9);
 			OpenGL.glVertex2f((float) arg2 + var6, var7);
 			for (int var11 = 16384 - var10; var11 > 0; var11 -= var10) {
 				OpenGL.glVertex2f(class101.field1146[var11] * (float) arg2 + var6, class101.field1147[var11] * (float) arg2 + var7);
@@ -1427,7 +1427,7 @@ public class class682 extends class14 {
 			var2.method16855(1.0F);
 			var2.method16855(0.0F);
 		}
-		this.field8223 = this.method13301(20, var2.field9629, var2.field9626, false);
+		this.field8223 = this.method13301(20, var2.data, var2.pos, false);
 		this.field8221 = new class93(this.field8223, 5126, 3, 0);
 		this.field8211 = new class93(this.field8223, 5126, 2, 12);
 		this.field8085.method2263(this);
@@ -2564,7 +2564,7 @@ public class class682 extends class14 {
 		int var2 = 0;
 		int var3 = arg0 & Integer.MAX_VALUE;
 		while (!this.field8039.method11585()) {
-			class802 var4 = (class802) this.field8039.method11560();
+			IntNode var4 = (IntNode) this.field8039.method11560();
 			field8228[var2++] = (int) var4.field4228;
 			this.field8157 -= var4.field9556;
 			if (var2 == 1000) {
@@ -2577,7 +2577,7 @@ public class class682 extends class14 {
 			var2 = 0;
 		}
 		while (!this.field8198.method11585()) {
-			class802 var5 = (class802) this.field8198.method11560();
+			IntNode var5 = (IntNode) this.field8198.method11560();
 			field8228[var2++] = (int) var5.field4228;
 			this.field8096 -= var5.field9556;
 			if (var2 == 1000) {
@@ -2590,7 +2590,7 @@ public class class682 extends class14 {
 			var2 = 0;
 		}
 		while (!this.field8102.method11585()) {
-			class802 var6 = (class802) this.field8102.method11560();
+			IntNode var6 = (IntNode) this.field8102.method11560();
 			field8228[var2++] = var6.field9556;
 			if (var2 == 1000) {
 				OpenGL.glDeleteFramebuffersEXT(var2, field8228, 0);
@@ -2602,7 +2602,7 @@ public class class682 extends class14 {
 			var2 = 0;
 		}
 		while (!this.field8103.method11585()) {
-			class802 var7 = (class802) this.field8103.method11560();
+			IntNode var7 = (IntNode) this.field8103.method11560();
 			field8228[var2++] = (int) var7.field4228;
 			this.field8098 -= var7.field9556;
 			if (var2 == 1000) {
@@ -2615,7 +2615,7 @@ public class class682 extends class14 {
 			boolean var8 = false;
 		}
 		while (!this.field8099.method11585()) {
-			class802 var9 = (class802) this.field8099.method11560();
+			IntNode var9 = (IntNode) this.field8099.method11560();
 			OpenGL.glDeleteLists((int) var9.field4228, var9.field9556);
 		}
 		while (!this.field8194.method11585()) {
@@ -2627,7 +2627,7 @@ public class class682 extends class14 {
 			OpenGL.glDeleteShader((int) var11.field4228);
 		}
 		while (!this.field8099.method11585()) {
-			class802 var12 = (class802) this.field8099.method11560();
+			IntNode var12 = (IntNode) this.field8099.method11560();
 			OpenGL.glDeleteLists((int) var12.field4228, var12.field9556);
 		}
 		this.field8083.method2326();
@@ -2640,27 +2640,27 @@ public class class682 extends class14 {
 
 	@ObfuscatedName("yq.qo(II)V")
 	public final synchronized void method13328(int arg0, int arg1) {
-		class802 var3 = new class802(arg1);
+		IntNode var3 = new IntNode(arg1);
 		var3.field4228 = arg0;
 		this.field8039.method11558(var3);
 	}
 
 	@ObfuscatedName("yq.qr(II)V")
 	public final synchronized void method13329(int arg0, int arg1) {
-		class802 var3 = new class802(arg1);
+		IntNode var3 = new IntNode(arg1);
 		var3.field4228 = arg0;
 		this.field8198.method11558(var3);
 	}
 
 	@ObfuscatedName("yq.qw(I)V")
 	public final synchronized void method13330(int arg0) {
-		class802 var2 = new class802(arg0);
+		IntNode var2 = new IntNode(arg0);
 		this.field8102.method11558(var2);
 	}
 
 	@ObfuscatedName("yq.ql(II)V")
 	public final synchronized void method13331(int arg0, int arg1) {
-		class802 var3 = new class802(arg1);
+		IntNode var3 = new IntNode(arg1);
 		var3.field4228 = arg0;
 		this.field8103.method11558(var3);
 	}

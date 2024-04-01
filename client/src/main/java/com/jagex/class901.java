@@ -15,11 +15,11 @@ public class class901 extends class703 {
 	@ObfuscatedName("ahr.t")
 	public final int field10038;
 
-	public class901(class814 arg0) {
+	public class901(Packet arg0) {
 		super(arg0);
-		this.field10037 = arg0.method15239();
-		this.field10036 = arg0.method15220();
-		this.field10038 = arg0.method15239();
+		this.field10037 = arg0.g2();
+		this.field10036 = arg0.g1();
+		this.field10038 = arg0.g2();
 	}
 
 	@ObfuscatedName("ahr.j(I)V")

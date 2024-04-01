@@ -4,9 +4,9 @@ import deob.ObfuscatedName;
 import java.util.Random;
 
 @ObfuscatedName("vw")
-public class class595 {
+public class IntMath {
 
-	public class595() throws Throwable {
+	public IntMath() throws Throwable {
 		throw new Error();
 	}
 
@@ -53,7 +53,7 @@ public class class595 {
 	}
 
 	@ObfuscatedName("df.s(II)I")
-	public static int method2839(int arg0) {
+	public static int bitceil(int arg0) {
 		int var6 = arg0 - 1;
 		int var1 = var6 | var6 >>> 1;
 		int var2 = var1 | var1 >>> 2;

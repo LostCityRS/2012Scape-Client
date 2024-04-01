@@ -12,7 +12,7 @@ public class class233 {
 	public final class16 field2446;
 
 	@ObfuscatedName("hm.a")
-	public class451 field2448 = new class451(6291456, 256);
+	public WeightedCache field2448 = new WeightedCache(6291456, 256);
 
 	public class233(class683 arg0, class16 arg1) {
 		this.field2447 = arg0;

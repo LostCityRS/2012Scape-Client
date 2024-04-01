@@ -46,21 +46,21 @@ public class class371 {
 	}
 
 	@ObfuscatedName("mt.u(Laet;)V")
-	public final void method6470(class814 arg0) {
-		this.field3998 = arg0.method15220();
-		this.field4000 = arg0.method15379();
-		this.field4001 = arg0.method15379();
+	public final void method6470(Packet arg0) {
+		this.field3998 = arg0.g1();
+		this.field4000 = arg0.g4s();
+		this.field4001 = arg0.g4s();
 		this.method6471(arg0);
 	}
 
 	@ObfuscatedName("mt.j(Laet;)V")
-	public final void method6471(class814 arg0) {
-		this.field3999 = arg0.method15220();
+	public final void method6471(Packet arg0) {
+		this.field3999 = arg0.g1();
 		this.field4007 = new int[this.field3999];
 		this.field3997 = new int[this.field3999];
 		for (int var2 = 0; var2 < this.field3999; var2++) {
-			this.field4007[var2] = arg0.method15239();
-			this.field3997[var2] = arg0.method15239();
+			this.field4007[var2] = arg0.g2();
+			this.field3997[var2] = arg0.g2();
 		}
 	}
 

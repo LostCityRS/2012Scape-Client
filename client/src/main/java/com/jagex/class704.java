@@ -21,14 +21,14 @@ public class class704 extends class150 {
 	@ObfuscatedName("zk.m")
 	public final int field8504;
 
-	public class704(class814 arg0) {
+	public class704(Packet arg0) {
 		super(arg0);
-		this.field8503 = arg0.method15239();
-		int var2 = arg0.method15379();
+		this.field8503 = arg0.g2();
+		int var2 = arg0.g4s();
 		this.field8501 = var2 >>> 16;
 		this.field8502 = var2 & 0xFFFF;
-		this.field8500 = arg0.method15220();
-		this.field8504 = arg0.method15220();
+		this.field8500 = arg0.g1();
+		this.field8504 = arg0.g1();
 	}
 
 	@ObfuscatedName("zk.j(I)V")

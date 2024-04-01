@@ -9,7 +9,7 @@ import java.util.Iterator;
 public class class408 {
 
 	@ObfuscatedName("om.f")
-	public static class565 field4272 = new class565(16);
+	public static IterableMap field4272 = new IterableMap(16);
 
 	@ObfuscatedName("om.d")
 	public static int field4273 = (int) (Math.random() * 11.0D) - 5;
@@ -45,7 +45,7 @@ public class class408 {
 		if (var8 != null) {
 			for (int var9 = 0; var9 < var8.length; var9++) {
 				class951 var10 = class951.method13263(Statics.field4264, var7, var8[var9]);
-				field4272.method11927(var10, (long) var10.field10370);
+				field4272.pushNode(var10, (long) var10.field10370);
 			}
 		}
 		class482.method8092(true, false);
@@ -154,22 +154,22 @@ public class class408 {
 
 	@ObfuscatedName("om.d(Lra;II)V")
 	public static void method7120(class14 arg0, int arg1, int arg2) {
-		class814 var3 = new class814(Statics.field4264.method5645(Statics.field4292.field10362, "area"));
-		int var4 = var3.method15220();
+		Packet var3 = new Packet(Statics.field4264.method5645(Statics.field4292.field10362, "area"));
+		int var4 = var3.g1();
 		int[] var5 = new int[var4];
 		for (int var6 = 0; var6 < var4; var6++) {
-			var5[var6] = var3.method15220();
+			var5[var6] = var3.g1();
 		}
-		int var7 = var3.method15220();
+		int var7 = var3.g1();
 		int[] var8 = new int[var7];
 		for (int var9 = 0; var9 < var7; var9++) {
-			var8[var9] = var3.method15220();
+			var8[var9] = var3.g1();
 		}
 		while (true) {
-			while (var3.field9626 < var3.field9629.length) {
-				if (var3.method15220() == 0) {
-					int var10 = var3.method15220();
-					int var11 = var3.method15220();
+			while (var3.pos < var3.data.length) {
+				if (var3.g1() == 0) {
+					int var10 = var3.g1();
+					int var11 = var3.g1();
 					for (int var12 = 0; var12 < 64; var12++) {
 						for (int var13 = 0; var13 < 64; var13++) {
 							int var14 = var10 * 64 + var12 - Statics.field4283;
@@ -178,10 +178,10 @@ public class class408 {
 						}
 					}
 				} else {
-					int var16 = var3.method15220();
-					int var17 = var3.method15220();
-					int var18 = var3.method15220();
-					int var19 = var3.method15220();
+					int var16 = var3.g1();
+					int var17 = var3.g1();
+					int var18 = var3.g1();
+					int var19 = var3.g1();
 					for (int var20 = 0; var20 < 8; var20++) {
 						for (int var21 = 0; var21 < 8; var21++) {
 							int var22 = var16 * 64 + var18 * 8 + var20 - Statics.field4283;
@@ -234,8 +234,8 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.z(Lra;Laet;IIII[I[I)V")
-	public static void method7085(class14 arg0, class814 arg1, int arg2, int arg3, int arg4, int arg5, int[] arg6, int[] arg7) {
-		int var8 = arg1.method15220();
+	public static void method7085(class14 arg0, Packet arg1, int arg2, int arg3, int arg4, int arg5, int[] arg6, int[] arg7) {
+		int var8 = arg1.g1();
 		if ((var8 & 0x1) == 0) {
 			boolean var9 = (var8 & 0x2) == 0;
 			int var10 = var8 >> 2 & 0x3F;
@@ -244,7 +244,7 @@ public class class408 {
 			}
 			int var11;
 			if (var10 == 63) {
-				var11 = arg1.method15220();
+				var11 = arg1.g1();
 			} else if (var9) {
 				var11 = arg6[var10];
 			} else {
@@ -264,16 +264,16 @@ public class class408 {
 		boolean var13 = (var8 & 0x8) != 0;
 		boolean var14 = (var8 & 0x10) != 0;
 		for (int var15 = 0; var15 < var12; var15++) {
-			int var16 = arg1.method15220();
+			int var16 = arg1.g1();
 			int var17 = 0;
 			int var18 = 0;
 			if (var13) {
-				var17 = arg1.method15220();
-				var18 = arg1.method15220();
+				var17 = arg1.g1();
+				var18 = arg1.g1();
 			}
 			int var19 = 0;
 			if (var14) {
-				var19 = arg1.method15220();
+				var19 = arg1.g1();
 			}
 			if (var15 == 0) {
 				Statics.field4288[Statics.field4285 * arg5 + arg4] = (byte) var16;

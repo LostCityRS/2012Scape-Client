@@ -22,7 +22,7 @@ public class class331 {
 	public class1003 field3542;
 
 	@ObfuscatedName("li.m")
-	public class814 field3538;
+	public Packet field3538;
 
 	@ObfuscatedName("li.t")
 	public class757[] field3544;
@@ -51,11 +51,11 @@ public class class331 {
 		if (this.field3542.field10352) {
 			return false;
 		}
-		class814 var1 = new class814(this.field3542.method16685());
-		var1.field9626 = 5;
-		int var2 = var1.method15220();
-		var1.field9626 += var2 * 72;
-		byte[] var3 = new byte[var1.field9629.length - var1.field9626];
+		Packet var1 = new Packet(this.field3542.method16685());
+		var1.pos = 5;
+		int var2 = var1.g1();
+		var1.pos += var2 * 72;
+		byte[] var3 = new byte[var1.data.length - var1.pos];
 		var1.method15263(var3, 0, var3.length);
 		byte[] var6;
 		if (this.field3543 == null || this.field3541 == null || !client.ENABLE_JS5_RSA) {
@@ -68,7 +68,7 @@ public class class331 {
 		if (var6.length != 65) {
 			throw new RuntimeException();
 		}
-		byte[] var7 = class569.method2920(var1.field9629, 5, var1.field9626 - var3.length - 5);
+		byte[] var7 = class569.method2920(var1.data, 5, var1.pos - var3.length - 5);
 		for (int var8 = 0; var8 < 64; var8++) {
 			if (var6[var8 + 1] != var7[var8]) {
 				throw new RuntimeException();
@@ -80,9 +80,9 @@ public class class331 {
 		} else {
 			for (int var9 = 0; var9 < this.field3544.length; var9++) {
 				if (this.field3544[var9] != null) {
-					this.field3538.field9626 = var9 * 72 + 6;
-					int var10 = this.field3538.method15379();
-					int var11 = this.field3538.method15379();
+					this.field3538.pos = var9 * 72 + 6;
+					int var10 = this.field3538.g4s();
+					int var11 = this.field3538.g4s();
 					byte[] var12 = new byte[64];
 					this.field3538.method15263(var12, 0, 64);
 					this.field3544[var9].method14234(var10, var12, var11);
@@ -104,9 +104,9 @@ public class class331 {
 		} else if (arg0 < 0 || arg0 >= this.field3544.length) {
 			throw new RuntimeException();
 		} else if (this.field3544[arg0] == null) {
-			this.field3538.field9626 = arg0 * 72 + 6;
-			int var5 = this.field3538.method15379();
-			int var6 = this.field3538.method15379();
+			this.field3538.pos = arg0 * 72 + 6;
+			int var5 = this.field3538.g4s();
+			int var6 = this.field3538.g4s();
 			byte[] var7 = new byte[64];
 			this.field3538.method15263(var7, 0, 64);
 			class757 var8 = new class757(arg0, arg1, arg2, this.field3540, this.field3539, var5, var7, var6, arg3);

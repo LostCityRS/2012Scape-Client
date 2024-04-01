@@ -100,7 +100,7 @@ public class class486 {
 	}
 
 	@ObfuscatedName("ri.ap(Lko;)V")
-	public final void method8551(class317 arg0) {
+	public final void method8551(Vector3 arg0) {
 		this.field5111.field3464.method5334(arg0);
 		this.method8554();
 		if (this.field5118 != null) {

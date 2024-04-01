@@ -19,7 +19,7 @@ public class class967 extends class816 {
 		if (var1 == null) {
 			return false;
 		} else {
-			class502.method2842(class619.field7314, this.field9679, -1, var1, this.field10478);
+			ScriptRunner.runPathingEntity(ClientTriggerType.IF_PROCESS_ACTIVE_PLAYER, this.field9679, -1, var1, this.field10478);
 			return true;
 		}
 	}

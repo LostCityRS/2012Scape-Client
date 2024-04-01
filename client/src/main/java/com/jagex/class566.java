@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class class566 implements Iterator {
 
 	@ObfuscatedName("uk.u")
-	public class565 field6730;
+	public IterableMap field6730;
 
 	@ObfuscatedName("uk.j")
 	public class399 field6729;
@@ -18,7 +18,7 @@ public class class566 implements Iterator {
 	@ObfuscatedName("uk.s")
 	public class399 field6728 = null;
 
-	public class566(class565 arg0) {
+	public class566(IterableMap arg0) {
 		this.field6730 = arg0;
 		this.method11950();
 	}

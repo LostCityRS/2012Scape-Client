@@ -3362,7 +3362,7 @@ public class class678 extends class13 {
 				var2.field2265.method5373(this.field7925.field8319 * this.field7925.field8316, this.field7925.field8319 * this.field7925.field8317, this.field7925.field8319 * this.field7925.field8237);
 				if (this.field7925.field8323 > 0) {
 					var12 = this.field7925.field8323;
-					class317 var13 = this.field7925.field8266;
+					Vector3 var13 = this.field7925.field8266;
 					for (int var14 = 0; var14 < var12; var14++) {
 						class780 var15 = this.field7925.field8365[var14];
 						int var16 = var15.method14881();

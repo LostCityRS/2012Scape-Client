@@ -18,12 +18,12 @@ public class class698 extends class150 {
 	@ObfuscatedName("zr.c")
 	public final int field8477;
 
-	public class698(class814 arg0) {
+	public class698(Packet arg0) {
 		super(arg0);
-		this.field8478 = arg0.method15239();
-		this.field8480 = arg0.method15337();
-		this.field8479 = arg0.method15379();
-		this.field8477 = arg0.method15239();
+		this.field8478 = arg0.g2();
+		this.field8480 = arg0.gjstr();
+		this.field8479 = arg0.g4s();
+		this.field8477 = arg0.g2();
 	}
 
 	@ObfuscatedName("zr.j(I)V")

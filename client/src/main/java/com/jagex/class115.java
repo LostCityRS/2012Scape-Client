@@ -20,7 +20,7 @@ public class class115 {
 	@ObfuscatedName("cv.c")
 	public int field1206;
 
-	public class115(class719 arg0) {
+	public class115(PathingEntity arg0) {
 		this.field1203 = new class875(arg0, false);
 	}
 }

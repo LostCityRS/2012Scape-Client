@@ -3,20 +3,20 @@ package com.jagex;
 import deob.ObfuscatedName;
 
 @ObfuscatedName("re")
-public class class499 {
+public class ScriptFrame {
 
 	@ObfuscatedName("re.u")
-	public class954 field5191;
+	public ClientScript script;
 
 	@ObfuscatedName("re.j")
-	public int field5189 = -1;
+	public int pc = -1;
 
 	@ObfuscatedName("re.a")
-	public int[] field5188;
+	public int[] intLocals;
 
 	@ObfuscatedName("re.s")
-	public Object[] field5190;
+	public Object[] objectLocals;
 
 	@ObfuscatedName("re.c")
-	public long[] field5192;
+	public long[] longLocals;
 }

@@ -5,7 +5,7 @@ import java.applet.Applet;
 import java.awt.Graphics;
 
 @ObfuscatedName("nu")
-public interface class388 {
+public interface GameShellStub {
 
 	void init();
 

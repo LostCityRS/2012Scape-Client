@@ -24,14 +24,14 @@ public class class943 extends class800 {
 	public static class552 field10317 = new class552();
 
 	@ObfuscatedName("aif.ao")
-	public static class565 field10326 = new class565(16);
+	public static IterableMap field10326 = new IterableMap(16);
 
 	@ObfuscatedName("qv.u(IJ)Laif;")
 	public static class943 method8304(int arg0, long arg1) {
 		class943 var3 = (class943) field10326.method11923((long) arg0 << 56 | arg1);
 		if (var3 == null) {
 			var3 = new class943(arg0, arg1);
-			field10326.method11927(var3, var3.field4228);
+			field10326.pushNode(var3, var3.field4228);
 		}
 		return var3;
 	}

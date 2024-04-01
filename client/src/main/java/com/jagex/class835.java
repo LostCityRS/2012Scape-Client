@@ -50,7 +50,7 @@ public class class835 extends class478 {
 	}
 
 	@ObfuscatedName("ael.m(Laet;Ladv;B)V")
-	public void method8356(class814 arg0, class809 arg1) {
+	public void method8356(Packet arg0, class809 arg1) {
 	}
 
 	@ObfuscatedName("ael.c(I)I")

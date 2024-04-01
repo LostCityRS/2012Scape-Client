@@ -44,13 +44,13 @@ public abstract class class735 extends class216 {
 	}
 
 	@ObfuscatedName("aaj.a(I)Lko;")
-	public class317 method4016() {
-		return class317.method5290(this.field8746.method5528(this.field8747));
+	public Vector3 method4016() {
+		return Vector3.method5290(this.field8746.method5528(this.field8747));
 	}
 
 	@ObfuscatedName("aaj.s(B)Ladu;")
 	public class810 method4017() {
-		class317 var1 = this.field8746.method5528(this.field8747);
+		Vector3 var1 = this.field8746.method5528(this.field8747);
 		return new class810(0, (int) var1.field3475, (int) var1.field3476, (int) var1.field3477);
 	}
 
@@ -61,14 +61,14 @@ public abstract class class735 extends class216 {
 
 	@ObfuscatedName("aaj.c(Lfi;III)V")
 	public void method4029(class195 arg0, int arg1, int arg2) {
-		class317 var4 = this.field8746.method5528(this.field8747);
+		Vector3 var4 = this.field8746.method5528(this.field8747);
 		arg0.field2212 = (int) var4.field3475 - arg1;
 		arg0.field2211 = (int) -var4.field3476;
 		arg0.field2213 = (int) var4.field3477 - arg2;
 	}
 
 	@ObfuscatedName("aaj.m(Laet;B)V")
-	public void method4018(class814 arg0) {
+	public void method4018(Packet arg0) {
 		this.field8746 = new class322(arg0);
 		this.field8747 = 0.0F;
 		this.field8748 = 0.0F;

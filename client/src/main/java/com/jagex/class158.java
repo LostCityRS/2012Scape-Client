@@ -6,7 +6,7 @@ import deob.ObfuscatedName;
 public class class158 {
 
 	@ObfuscatedName("en.u")
-	public class814 field1614 = new class814(null);
+	public Packet field1614 = new Packet(null);
 
 	@ObfuscatedName("en.j")
 	public int field1606;
@@ -41,21 +41,21 @@ public class class158 {
 
 	@ObfuscatedName("en.u([B)V")
 	public void method3015(byte[] arg0) {
-		this.field1614.field9629 = arg0;
-		this.field1614.field9626 = 10;
-		int var2 = this.field1614.method15239();
-		this.field1606 = this.field1614.method15239();
+		this.field1614.data = arg0;
+		this.field1614.pos = 10;
+		int var2 = this.field1614.g2();
+		this.field1606 = this.field1614.g2();
 		this.field1603 = 500000;
 		this.field1610 = new int[var2];
 		int var3 = 0;
 		while (var3 < var2) {
-			int var4 = this.field1614.method15379();
-			int var5 = this.field1614.method15379();
+			int var4 = this.field1614.g4s();
+			int var5 = this.field1614.g4s();
 			if (var4 == 1297379947) {
-				this.field1610[var3] = this.field1614.field9626;
+				this.field1610[var3] = this.field1614.pos;
 				var3++;
 			}
-			this.field1614.field9626 += var5;
+			this.field1614.pos += var5;
 		}
 		this.field1609 = 0L;
 		this.field1604 = new int[var2];
@@ -68,7 +68,7 @@ public class class158 {
 
 	@ObfuscatedName("en.j()V")
 	public void method3016() {
-		this.field1614.field9629 = null;
+		this.field1614.data = null;
 		this.field1610 = null;
 		this.field1604 = null;
 		this.field1605 = null;
@@ -77,7 +77,7 @@ public class class158 {
 
 	@ObfuscatedName("en.a()Z")
 	public boolean method3017() {
-		return this.field1614.field9629 != null;
+		return this.field1614.data != null;
 	}
 
 	@ObfuscatedName("en.s()I")
@@ -87,17 +87,17 @@ public class class158 {
 
 	@ObfuscatedName("en.c(I)V")
 	public void method3030(int arg0) {
-		this.field1614.field9626 = this.field1604[arg0];
+		this.field1614.pos = this.field1604[arg0];
 	}
 
 	@ObfuscatedName("en.m(I)V")
 	public void method3020(int arg0) {
-		this.field1604[arg0] = this.field1614.field9626;
+		this.field1604[arg0] = this.field1614.pos;
 	}
 
 	@ObfuscatedName("en.t()V")
 	public void method3043() {
-		this.field1614.field9626 = -1;
+		this.field1614.pos = -1;
 	}
 
 	@ObfuscatedName("en.l(I)V")
@@ -113,12 +113,12 @@ public class class158 {
 
 	@ObfuscatedName("en.d(I)I")
 	public int method3024(int arg0) {
-		byte var2 = this.field1614.field9629[this.field1614.field9626];
+		byte var2 = this.field1614.data[this.field1614.pos];
 		int var3;
 		if (var2 < 0) {
 			var3 = var2 & 0xFF;
 			this.field1613[arg0] = var3;
-			this.field1614.field9626++;
+			this.field1614.pos++;
 		} else {
 			var3 = this.field1613[arg0];
 		}
@@ -127,14 +127,14 @@ public class class158 {
 		}
 		int var4 = this.field1614.method15261();
 		if (var3 == 247 && var4 > 0) {
-			int var5 = this.field1614.field9629[this.field1614.field9626] & 0xFF;
+			int var5 = this.field1614.data[this.field1614.pos] & 0xFF;
 			if (var5 >= 241 && var5 <= 243 || var5 == 246 || var5 == 248 || var5 >= 250 && var5 <= 252 || var5 == 254) {
-				this.field1614.field9626++;
+				this.field1614.pos++;
 				this.field1613[arg0] = var5;
 				return this.method3014(arg0, var5);
 			}
 		}
-		this.field1614.field9626 += var4;
+		this.field1614.pos += var4;
 		return 0;
 	}
 
@@ -144,17 +144,17 @@ public class class158 {
 			byte var7 = field1607[arg1 - 128];
 			int var8 = arg1;
 			if (var7 >= 1) {
-				var8 = arg1 | this.field1614.method15220() << 8;
+				var8 = arg1 | this.field1614.g1() << 8;
 			}
 			if (var7 >= 2) {
-				var8 |= this.field1614.method15220() << 16;
+				var8 |= this.field1614.g1() << 16;
 			}
 			return var8;
 		}
-		int var3 = this.field1614.method15220();
+		int var3 = this.field1614.g1();
 		int var4 = this.field1614.method15261();
 		if (var3 == 47) {
-			this.field1614.field9626 += var4;
+			this.field1614.pos += var4;
 			return 1;
 		} else if (var3 == 81) {
 			int var5 = this.field1614.method15241();
@@ -162,10 +162,10 @@ public class class158 {
 			int var6 = this.field1605[arg0];
 			this.field1609 += (long) (this.field1603 - var5) * (long) var6;
 			this.field1603 = var5;
-			this.field1614.field9626 += var4;
+			this.field1614.pos += var4;
 			return 2;
 		} else {
-			this.field1614.field9626 += var4;
+			this.field1614.pos += var4;
 			return 3;
 		}
 	}
@@ -207,9 +207,9 @@ public class class158 {
 		for (int var4 = 0; var4 < var3; var4++) {
 			this.field1605[var4] = 0;
 			this.field1613[var4] = 0;
-			this.field1614.field9626 = this.field1610[var4];
+			this.field1614.pos = this.field1610[var4];
 			this.method3025(var4);
-			this.field1604[var4] = this.field1614.field9626;
+			this.field1604[var4] = this.field1614.pos;
 		}
 	}
 }

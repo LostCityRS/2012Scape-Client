@@ -12,7 +12,7 @@ public class class621 {
 	public int field7322;
 
 	public class621(class527 arg0, class519 arg1, class334 arg2) {
-		new class451(64);
+		new WeightedCache(64);
 		this.field7323 = arg2;
 		this.field7322 = this.field7323.method5637(class161.field1656.field1668);
 	}
