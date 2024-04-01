@@ -351,8 +351,8 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
 		try {
 			class576 var3 = new class576(Statics.field3918, "rw", 10000L);
 			Packet var4 = new Packet(500);
-			var4.method15308(3);
-			var4.method15308(arg1 == null ? 0 : 1);
+			var4.p1(3);
+			var4.p1(arg1 == null ? 0 : 1);
 			var4.method15230(arg0.getPath());
 			if (arg1 != null) {
 				var4.method15230(arg1.getPath());

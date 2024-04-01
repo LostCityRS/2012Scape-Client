@@ -390,7 +390,7 @@ public class class757 extends class333 {
 						}
 						if (this.field8866[this.field8871] == 0) {
 							class399 var4 = new class399();
-							var4.field4228 = (long) (this.field8871 * -2001188995) * 1012378069L;
+							var4.field4228 = (long) (this.field8871);
 							this.field8872.method11558(var4);
 							var1 = false;
 						}
@@ -427,7 +427,7 @@ public class class757 extends class333 {
 						}
 						if (this.field8866[this.field8871] != 1) {
 							class399 var8 = new class399();
-							var8.field4228 = (long) (this.field8871 * -2001188995) * 1012378069L;
+							var8.field4228 = (long) (this.field8871);
 							this.field8872.method11558(var8);
 							var5 = false;
 						}

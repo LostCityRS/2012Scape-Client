@@ -200,9 +200,9 @@ public class class777 extends class399 {
 	@ObfuscatedName("acq.u(S)V")
 	public void method14850(short arg0) {
 		if (this.field9330.field8149) {
-			this.field9338.method15287(arg0);
+			this.field9338.p2(arg0);
 		} else {
-			this.field9338.method15221(arg0);
+			this.field9338.ip2(arg0);
 		}
 	}
 
@@ -305,10 +305,10 @@ public class class777 extends class399 {
 			this.field9339.method16855((float) var11);
 			this.field9339.method16855((float) var10);
 		}
-		this.field9339.method15308(var44);
-		this.field9339.method15308(var45);
-		this.field9339.method15308(var46);
-		this.field9339.method15308(255);
+		this.field9339.p1(var44);
+		this.field9339.p1(var45);
+		this.field9339.p1(var46);
+		this.field9339.p1(255);
 		this.method14850(var13);
 	}
 

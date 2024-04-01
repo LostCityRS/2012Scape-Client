@@ -60,11 +60,11 @@ public class class713 extends class150 {
 		if (arg2 == 0) {
 			int var5 = arg0.g4s();
 			this.field8546 = (var5 >>> 16) * 512;
-			this.field8548 = (var5 & 0xFFFF) * 262144;
+			this.field8548 = (var5 & 0xFFFF) * 512;
 			this.field8541 = -1;
 		} else {
 			this.field8546 = -512;
-			this.field8548 = -262144;
+			this.field8548 = -512;
 			this.field8541 = arg0.g2();
 		}
 		if (arg1 == 0 && arg2 == 0) {
@@ -99,7 +99,7 @@ public class class713 extends class150 {
 		int var6;
 		int var7;
 		if (this.field8551 >= 0) {
-			var6 = this.field8546 * 262144 + 256;
+			var6 = this.field8546 * 512 + 256;
 			var7 = this.field8548 * 512 + 256;
 		} else {
 			PathingEntity var8 = Statics.field1537[this.field8541].method2854();

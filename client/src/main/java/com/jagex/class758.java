@@ -45,15 +45,15 @@ public class class758 extends class337 {
 		try {
 			for (class1003 var5 = (class1003) this.field3594.method11756(); var5 != null; var5 = (class1003) this.field3594.method11744()) {
 				this.field3597.pos = 0;
-				this.field3597.method15308(1);
-				this.field3597.method15234(var5.field9554);
+				this.field3597.p1(1);
+				this.field3597.p5(var5.field9554);
 				this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
 				this.field3595.method11728(var5);
 			}
 			for (class1003 var6 = (class1003) this.field3605.method11756(); var6 != null; var6 = (class1003) this.field3605.method11744()) {
 				this.field3597.pos = 0;
-				this.field3597.method15308(0);
-				this.field3597.method15234(var6.field9554);
+				this.field3597.p1(0);
+				this.field3597.p5(var6.field9554);
 				this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
 				this.field3596.method11728(var6);
 			}
@@ -109,8 +109,8 @@ public class class758 extends class337 {
 							int var22 = var16 == 0 ? 5 : 9;
 							this.field3592 = var21;
 							this.field3592.field10599 = new Packet(var15 + var22 + this.field3592.field10598);
-							this.field3592.field10599.method15308(var16);
-							this.field3592.field10599.method15223(var15);
+							this.field3592.field10599.p1(var16);
+							this.field3592.field10599.p4(var15);
 							this.field3592.field10600 = 10;
 							this.field3590.pos = 0;
 						} else if (this.field3592.field10600 != 0) {
@@ -184,9 +184,9 @@ public class class758 extends class337 {
 						if (this.field3601 != 0) {
 							try {
 								this.field3597.pos = 0;
-								this.field3597.method15308(4);
-								this.field3597.method15308(this.field3601);
-								this.field3597.method15223(0);
+								this.field3597.p1(4);
+								this.field3597.p1(this.field3601);
+								this.field3597.p4(0);
 								this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
 							} catch (IOException var9) {
 								try {
@@ -216,9 +216,9 @@ public class class758 extends class337 {
 		}
 		try {
 			this.field3597.pos = 0;
-			this.field3597.method15308(6);
-			this.field3597.method15222(3);
-			this.field3597.method15287(0);
+			this.field3597.p1(6);
+			this.field3597.p3(3);
+			this.field3597.p2(0);
 			this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
 		} catch (IOException var4) {
 			try {
@@ -238,8 +238,8 @@ public class class758 extends class337 {
 		}
 		try {
 			this.field3597.pos = 0;
-			this.field3597.method15308(arg0 ? 2 : 3);
-			this.field3597.method15234(0L);
+			this.field3597.p1(arg0 ? 2 : 3);
+			this.field3597.p5(0L);
 			this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
 		} catch (IOException var5) {
 			try {
@@ -259,8 +259,8 @@ public class class758 extends class337 {
 		}
 		try {
 			this.field3597.pos = 0;
-			this.field3597.method15308(7);
-			this.field3597.method15234(0L);
+			this.field3597.p1(7);
+			this.field3597.p5(0L);
 			this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
 		} catch (IOException var4) {
 			try {

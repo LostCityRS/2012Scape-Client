@@ -70,7 +70,7 @@ public class class469 {
 
 	@ObfuscatedName("qp.u(Lml;B)V")
 	public void method8144(class359 arg0) {
-		if (client.method11059(client.field8923) || client.method12902(client.field8923)) {
+		if (client.method11059(client.state) || client.method12902(client.state)) {
 			this.method8152(Statics.field6769 >> 12, Statics.field8424 >> 12, field4972);
 		} else {
 			int var2 = -1;
@@ -196,7 +196,7 @@ public class class469 {
 			return;
 		}
 		long var1 = class153.method5554();
-		this.field4978 = (int) ((long) (this.field4978 * -1653075315) - (var1 - this.field4977) * -1653075315L) * 1911488581;
+		this.field4978 = (int) ((long) (this.field4978) - (var1 - this.field4977));
 		if (this.field4978 > 0) {
 			this.field4965.method8218(this.field4973, this.field4981, this.field4962, (float) (this.field4975 - this.field4978) / (float) this.field4975);
 		} else {

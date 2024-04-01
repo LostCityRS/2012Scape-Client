@@ -92,7 +92,7 @@ public class class483 {
 		} else if (arg1 == 13) {
 			this.field5102 = arg0.method15241();
 		} else if (arg1 == 14) {
-			this.field5099 = (arg0.g1() << 2) * 1678505033;
+			this.field5099 = arg0.g1() << 2;
 		} else if (arg1 == 16) {
 			this.field5100 = arg0.g1();
 		} else if (arg1 == 20) {

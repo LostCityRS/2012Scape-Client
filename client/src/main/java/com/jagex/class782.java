@@ -161,11 +161,11 @@ public class class782 extends class399 {
 		arg0.pos += var5 * 3;
 		this.field9381 = new byte[var22];
 		Packet var60 = new Packet(this.field9381);
-		var60.method15223(1297377380);
-		var60.method15223(6);
-		var60.method15287(var2 > 1 ? 1 : 0);
-		var60.method15287(var2);
-		var60.method15287(var3);
+		var60.p4(1297377380);
+		var60.p4(6);
+		var60.p2(var2 > 1 ? 1 : 0);
+		var60.p2(var2);
+		var60.p2(var3);
 		arg0.pos = var19;
 		int var61 = 0;
 		int var62 = 0;
@@ -177,7 +177,7 @@ public class class782 extends class399 {
 		int[] var68 = new int[128];
 		int var69 = 0;
 		label223: for (int var70 = 0; var70 < var2; var70++) {
-			var60.method15223(1297379947);
+			var60.p4(1297379947);
 			var60.pos += 4;
 			int var71 = var60.pos;
 			int var72 = -1;
@@ -190,46 +190,46 @@ public class class782 extends class399 {
 					var72 = var74 & 0xF;
 					if (var74 == 7) {
 						if (var75) {
-							var60.method15308(255);
+							var60.p1(255);
 						}
-						var60.method15308(47);
-						var60.method15308(0);
-						var60.method15256(var60.pos - var71);
+						var60.p1(47);
+						var60.p1(0);
+						var60.psize4(var60.pos - var71);
 						continue label223;
 					}
 					if (var74 == 23) {
 						if (var75) {
-							var60.method15308(255);
+							var60.p1(255);
 						}
-						var60.method15308(81);
-						var60.method15308(3);
-						var60.method15308(arg0.data[var59++]);
-						var60.method15308(arg0.data[var59++]);
-						var60.method15308(arg0.data[var59++]);
+						var60.p1(81);
+						var60.p1(3);
+						var60.p1(arg0.data[var59++]);
+						var60.p1(arg0.data[var59++]);
+						var60.p1(arg0.data[var59++]);
 					} else {
 						var61 ^= var74 >> 4;
 						if (var72 == 0) {
 							if (var75) {
-								var60.method15308(var61 + 144);
+								var60.p1(var61 + 144);
 							}
 							var62 += arg0.data[var46++];
 							var63 += arg0.data[var47++];
-							var60.method15308(var62 & 0x7F);
-							var60.method15308(var63 & 0x7F);
+							var60.p1(var62 & 0x7F);
+							var60.p1(var63 & 0x7F);
 						} else if (var72 == 1) {
 							if (var75) {
-								var60.method15308(var61 + 128);
+								var60.p1(var61 + 128);
 							}
 							var62 += arg0.data[var46++];
 							var64 += arg0.data[var49++];
-							var60.method15308(var62 & 0x7F);
-							var60.method15308(var64 & 0x7F);
+							var60.p1(var62 & 0x7F);
+							var60.p1(var64 & 0x7F);
 						} else if (var72 == 2) {
 							if (var75) {
-								var60.method15308(var61 + 176);
+								var60.p1(var61 + 176);
 							}
 							var69 = var69 + arg0.data[var23++] & 0x7F;
-							var60.method15308(var69);
+							var60.p1(var69);
 							byte var76;
 							if (var69 == 0 || var69 == 32) {
 								var76 = arg0.data[var53++];
@@ -260,34 +260,34 @@ public class class782 extends class399 {
 							}
 							int var77 = var68[var69] + var76;
 							var68[var69] = var77;
-							var60.method15308(var77 & 0x7F);
+							var60.p1(var77 & 0x7F);
 						} else if (var72 == 3) {
 							if (var75) {
-								var60.method15308(var61 + 224);
+								var60.p1(var61 + 224);
 							}
 							int var78 = var65 + arg0.data[var54++];
 							var65 = var78 + (arg0.data[var42++] << 7);
-							var60.method15308(var65 & 0x7F);
-							var60.method15308(var65 >> 7 & 0x7F);
+							var60.p1(var65 & 0x7F);
+							var60.p1(var65 >> 7 & 0x7F);
 						} else if (var72 == 4) {
 							if (var75) {
-								var60.method15308(var61 + 208);
+								var60.p1(var61 + 208);
 							}
 							var66 += arg0.data[var41++];
-							var60.method15308(var66 & 0x7F);
+							var60.p1(var66 & 0x7F);
 						} else if (var72 == 5) {
 							if (var75) {
-								var60.method15308(var61 + 160);
+								var60.p1(var61 + 160);
 							}
 							var62 += arg0.data[var46++];
 							var67 += arg0.data[var40++];
-							var60.method15308(var62 & 0x7F);
-							var60.method15308(var67 & 0x7F);
+							var60.p1(var62 & 0x7F);
+							var60.p1(var67 & 0x7F);
 						} else if (var72 == 6) {
 							if (var75) {
-								var60.method15308(var61 + 192);
+								var60.p1(var61 + 192);
 							}
-							var60.method15308(arg0.data[var53++]);
+							var60.p1(arg0.data[var53++]);
 						} else {
 							throw new RuntimeException();
 						}

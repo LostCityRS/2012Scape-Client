@@ -13,7 +13,7 @@ public class class356 {
 	@ObfuscatedName("rd.u(ZI)V")
 	public static void method8512(boolean arg0) {
 		class395.method3461();
-		if (!client.method1608(client.field8923)) {
+		if (!client.method1608(client.state)) {
 			return;
 		}
 		class64[] var1 = client.field9011;

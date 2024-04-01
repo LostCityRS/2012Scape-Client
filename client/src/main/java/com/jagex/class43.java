@@ -27,25 +27,25 @@ public class class43 {
 
 	@ObfuscatedName("vl.s(Ljava/lang/String;I)V")
 	public static void method12448(String arg0) {
-		if (client.field8923 != 14) {
+		if (client.state != 14) {
 			return;
 		}
 		class792 var1 = class792.method14781(class280.field2859, client.field8959.field834);
-		var1.field9467.method15287(0);
+		var1.field9467.p2(0);
 		int var2 = var1.field9467.pos;
-		var1.field9467.method15228(arg0);
+		var1.field9467.pjstr(arg0);
 		var1.field9467.pos += 7;
-		var1.field9467.method15280(Statics.field630, var2, var1.field9467.pos);
-		var1.field9467.method15233(var1.field9467.pos - var2);
+		var1.field9467.tinyenc(Statics.field630, var2, var1.field9467.pos);
+		var1.field9467.psize2(var1.field9467.pos - var2);
 		client.field8959.method1913(var1);
 		Statics.field9312 = class536.field6453;
 	}
 
 	@ObfuscatedName("gz.m(II)V")
 	public static void method3942(int arg0) {
-		if (client.field8923 == 14) {
+		if (client.state == 14) {
 			class792 var1 = class792.method14781(class280.field2917, client.field8959.field834);
-			var1.field9467.method15308(arg0);
+			var1.field9467.p1(arg0);
 			client.field8959.method1913(var1);
 		}
 	}
@@ -95,29 +95,29 @@ public class class43 {
 				client.field8959.method1911(class411.method12184(Statics.field6782.method12025(), 15000), Statics.field6782.field6765);
 				client.field8959.method1935();
 				class792 var1 = class792.method4876();
-				var1.field9467.method15308(class281.field2959.field2970);
-				var1.field9467.method15287(0);
+				var1.field9467.p1(LoginProt.field2959.field2970);
+				var1.field9467.p2(0);
 				int var2 = var1.field9467.pos;
-				var1.field9467.method15287(742);
-				var1.field9467.method15287(2);
+				var1.field9467.p2(742);
+				var1.field9467.p2(2);
 				Statics.field630 = method11380(var1);
 				int var3 = var1.field9467.pos;
-				var1.field9467.method15228(client.field8921);
-				var1.field9467.method15287(client.field9043);
-				var1.field9467.method15420(client.field8910);
-				var1.field9467.method15228(Statics.field6817);
-				var1.field9467.method15308(Statics.field2308.method6339());
-				var1.field9467.method15308(client.field9163.field6408);
+				var1.field9467.pjstr(client.field8921);
+				var1.field9467.p2(client.field9043);
+				var1.field9467.p8(client.field8910);
+				var1.field9467.pjstr(Statics.field6817);
+				var1.field9467.p1(Statics.field2308.method6339());
+				var1.field9467.p1(client.field9163.field6408);
 				GameShell.method3615(var1.field9467);
 				String var4 = client.field9099;
-				var1.field9467.method15308(var4 == null ? 0 : 1);
+				var1.field9467.p1(var4 == null ? 0 : 1);
 				if (var4 != null) {
-					var1.field9467.method15228(var4);
+					var1.field9467.pjstr(var4);
 				}
 				Statics.field2305.method15475(var1.field9467);
 				var1.field9467.pos += 7;
-				var1.field9467.method15280(Statics.field630, var3, var1.field9467.pos);
-				var1.field9467.method15233(var1.field9467.pos - var2);
+				var1.field9467.tinyenc(Statics.field630, var3, var1.field9467.pos);
+				var1.field9467.psize2(var1.field9467.pos - var2);
 				client.field8959.method1913(var1);
 				client.field8959.method1912();
 				Statics.field633 = class36.field565;
@@ -149,7 +149,7 @@ public class class43 {
 					client.field8959.field831 = null;
 					client.field8959.field837 = 0;
 				} else {
-					client.field8959.method1916();
+					client.field8959.closeGracefully();
 				}
 				client.field8959.field840 = null;
 				Statics.field633 = null;
@@ -166,16 +166,16 @@ public class class43 {
 		for (int var3 = 0; var3 < 4; var3++) {
 			var2[var3] = (int) (Math.random() * 9.9999999E7D);
 		}
-		var1.method15308(10);
-		var1.method15223(var2[0]);
-		var1.method15223(var2[1]);
-		var1.method15223(var2[2]);
-		var1.method15223(var2[3]);
+		var1.p1(10);
+		var1.p4(var2[0]);
+		var1.p4(var2[1]);
+		var1.p4(var2[2]);
+		var1.p4(var2[3]);
 		for (int var4 = 0; var4 < 10; var4++) {
-			var1.method15223((int) (Math.random() * 9.9999999E7D));
+			var1.p4((int) (Math.random() * 9.9999999E7D));
 		}
-		var1.method15287((int) (Math.random() * 9.9999999E7D));
-		var1.method15265(class51.field666, class51.field667);
+		var1.p2((int) (Math.random() * 9.9999999E7D));
+		var1.rsaenc(class51.field666, class51.field667);
 		arg0.field9467.method15276(var1.data, 0, var1.pos);
 		return var2;
 	}

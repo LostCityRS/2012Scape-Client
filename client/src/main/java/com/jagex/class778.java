@@ -163,11 +163,11 @@ public class class778 extends class399 {
 						if ((var8 & 0x1 << var9++) == 0) {
 							var10 += 3;
 						} else {
-							var4.method15287(var7[var10++] & 0xFFFF);
+							var4.p2(var7[var10++] & 0xFFFF);
 							var3++;
-							var4.method15287(var7[var10++] & 0xFFFF);
+							var4.p2(var7[var10++] & 0xFFFF);
 							var3++;
-							var4.method15287(var7[var10++] & 0xFFFF);
+							var4.p2(var7[var10++] & 0xFFFF);
 							var3++;
 						}
 					}
@@ -185,11 +185,11 @@ public class class778 extends class399 {
 						if ((var14 & 0x1 << var15++) == 0) {
 							var16 += 3;
 						} else {
-							var4.method15221(var13[var16++] & 0xFFFF);
+							var4.ip2(var13[var16++] & 0xFFFF);
 							var3++;
-							var4.method15221(var13[var16++] & 0xFFFF);
+							var4.ip2(var13[var16++] & 0xFFFF);
 							var3++;
-							var4.method15221(var13[var16++] & 0xFFFF);
+							var4.ip2(var13[var16++] & 0xFFFF);
 							var3++;
 						}
 					}

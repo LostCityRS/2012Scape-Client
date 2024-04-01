@@ -40,7 +40,7 @@ public class class590 {
 			return;
 		}
 		int var2 = arg0.pos;
-		arg0.method15223(var1.field9740);
+		arg0.p4(var1.field9740);
 		for (int var3 = 0; var3 < var1.field9741; var3++) {
 			if (var1.field9738[var3] == 0) {
 				try {
@@ -48,17 +48,17 @@ public class class590 {
 					if (var4 == 0) {
 						Field var5 = var1.field9739[var3];
 						int var6 = var5.getInt(null);
-						arg0.method15308(0);
-						arg0.method15223(var6);
+						arg0.p1(0);
+						arg0.p4(var6);
 					} else if (var4 == 1) {
 						Field var7 = var1.field9739[var3];
 						var7.setInt(null, var1.field9735[var3]);
-						arg0.method15308(0);
+						arg0.p1(0);
 					} else if (var4 == 2) {
 						Field var8 = var1.field9739[var3];
 						int var9 = var8.getModifiers();
-						arg0.method15308(0);
-						arg0.method15223(var9);
+						arg0.p1(0);
+						arg0.p4(var9);
 					}
 					if (var4 == 3) {
 						Method var10 = var1.field9736[var3];
@@ -70,52 +70,52 @@ public class class590 {
 						}
 						Object var15 = var10.invoke(null, var12);
 						if (var15 == null) {
-							arg0.method15308(0);
+							arg0.p1(0);
 						} else if (var15 instanceof Number) {
-							arg0.method15308(1);
-							arg0.method15420(((Number) var15).longValue());
+							arg0.p1(1);
+							arg0.p8(((Number) var15).longValue());
 						} else if (var15 instanceof String) {
-							arg0.method15308(2);
-							arg0.method15228((String) var15);
+							arg0.p1(2);
+							arg0.pjstr((String) var15);
 						} else {
-							arg0.method15308(4);
+							arg0.p1(4);
 						}
 					} else if (var4 == 4) {
 						Method var16 = var1.field9736[var3];
 						int var17 = var16.getModifiers();
-						arg0.method15308(0);
-						arg0.method15223(var17);
+						arg0.p1(0);
+						arg0.p4(var17);
 					}
 				} catch (ClassNotFoundException var30) {
-					arg0.method15308(-10);
+					arg0.p1(-10);
 				} catch (InvalidClassException var31) {
-					arg0.method15308(-11);
+					arg0.p1(-11);
 				} catch (StreamCorruptedException var32) {
-					arg0.method15308(-12);
+					arg0.p1(-12);
 				} catch (OptionalDataException var33) {
-					arg0.method15308(-13);
+					arg0.p1(-13);
 				} catch (IllegalAccessException var34) {
-					arg0.method15308(-14);
+					arg0.p1(-14);
 				} catch (IllegalArgumentException var35) {
-					arg0.method15308(-15);
+					arg0.p1(-15);
 				} catch (InvocationTargetException var36) {
-					arg0.method15308(-16);
+					arg0.p1(-16);
 				} catch (SecurityException var37) {
-					arg0.method15308(-17);
+					arg0.p1(-17);
 				} catch (IOException var38) {
-					arg0.method15308(-18);
+					arg0.p1(-18);
 				} catch (NullPointerException var39) {
-					arg0.method15308(-19);
+					arg0.p1(-19);
 				} catch (Exception var40) {
-					arg0.method15308(-20);
+					arg0.p1(-20);
 				} catch (Throwable var41) {
-					arg0.method15308(-21);
+					arg0.p1(-21);
 				}
 			} else {
-				arg0.method15308(var1.field9738[var3]);
+				arg0.p1(var1.field9738[var3]);
 			}
 		}
-		arg0.method15266(var2);
+		arg0.addcrc(var2);
 		var1.method6979();
 	}
 

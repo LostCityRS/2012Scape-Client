@@ -405,21 +405,21 @@ public class class797 extends class399 {
 					var5.field9534 = var6;
 				} else if (var5.field9536 == var9 && var5.field9537 == var10.field7264) {
 					var5.field9534 = var6;
-					var5.field9546 = var10.field7263 * 512;
+					var5.field9546 = var10.field7263;
 				} else {
 					boolean var11 = false;
 					if (var5.field9540 == null) {
 						var11 = true;
 					} else {
-						var5.field9546 = var5.field9546 * 262144 - 262144;
-						if (var5.field9546 * 512 <= 0) {
+						var5.field9546 -= 512;
+						if (var5.field9546 <= 0) {
 							Statics.field4201.method16445(var5.field9540);
 							var5.field9540 = null;
 							var11 = true;
 						}
 					}
 					if (var11) {
-						var5.field9546 = var10.field7263 * 512;
+						var5.field9546 = var10.field7263;
 						var5.field9539 = null;
 						var5.field9538 = null;
 						var5.field9536 = var9;
@@ -450,22 +450,22 @@ public class class797 extends class399 {
 			if (var13.field9534 != var14) {
 				int var17 = method11761(var13.field9513);
 				if (var13.field9536 == var17 && var13.field9513.field10051 == var13.field9537) {
-					var13.field9546 = var13.field9513.field10060 * 512;
+					var13.field9546 = var13.field9513.field10060;
 					var13.field9534 = var14;
 				} else {
 					boolean var18 = false;
 					if (var13.field9540 == null) {
 						var18 = true;
 					} else {
-						var13.field9546 = var13.field9546 * 262144 - 262144;
-						if (var13.field9546 * 512 <= 0) {
+						var13.field9546 -= 512;
+						if (var13.field9546 <= 0) {
 							Statics.field4201.method16445(var13.field9540);
 							var13.field9540 = null;
 							var18 = true;
 						}
 					}
 					if (var18) {
-						var13.field9546 = var13.field9513.field10060 * 512;
+						var13.field9546 = var13.field9513.field10060;
 						var13.field9539 = null;
 						var13.field9538 = null;
 						var13.field9536 = var17;

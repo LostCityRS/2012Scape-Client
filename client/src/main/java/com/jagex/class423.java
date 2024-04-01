@@ -947,14 +947,14 @@ public class class423 {
 		this.field4525 = arg2;
 		this.field4486 = this.field4521 - this.field4531;
 		if (this.field4486 < 0) {
-			this.field4518 = -(this.field4486 * -1252114123) * 715180317;
+			this.field4518 = -(this.field4486);
 			this.field4486 = 0;
 		} else {
 			this.field4518 = 0;
 		}
 		this.field4532 = this.field4503 - this.field4531;
 		if (this.field4532 < 0) {
-			this.field4529 = -(this.field4532 * -182828459) * 16820989;
+			this.field4529 = -(this.field4532);
 			this.field4532 = 0;
 		} else {
 			this.field4529 = 0;

@@ -56,7 +56,7 @@ public abstract class class478 {
 					} else {
 						if (var1 == null) {
 							var1 = this.method8375();
-							var1.field9467.method15308(0);
+							var1.field9467.p1(0);
 							var2 = var1.field9467.pos;
 							var1.field9467.pos += 2;
 							var3 = 0;
@@ -80,25 +80,25 @@ public abstract class class478 {
 						if (var11 < 8 && var9 >= -32 && var9 <= 31 && var10 >= -32 && var10 <= 31) {
 							var9 += 32;
 							var10 += 32;
-							var1.field9467.method15287((var9 << 6) + (var11 << 12) + var10);
+							var1.field9467.p2((var9 << 6) + (var11 << 12) + var10);
 						} else if (var11 < 32 && var9 >= -128 && var9 <= 127 && var10 >= -128 && var10 <= 127) {
 							var9 += 128;
 							var10 += 128;
-							var1.field9467.method15308(var11 + 128);
-							var1.field9467.method15287((var9 << 8) + var10);
+							var1.field9467.p1(var11 + 128);
+							var1.field9467.p2((var9 << 8) + var10);
 						} else if (var11 < 32) {
-							var1.field9467.method15308(var11 + 192);
+							var1.field9467.p1(var11 + 192);
 							if (var8 == -1 || var7 == -1) {
-								var1.field9467.method15223(Integer.MIN_VALUE);
+								var1.field9467.p4(Integer.MIN_VALUE);
 							} else {
-								var1.field9467.method15223(var8 | var7 << 16);
+								var1.field9467.p4(var8 | var7 << 16);
 							}
 						} else {
-							var1.field9467.method15287((var11 & 0x1FFF) + 57344);
+							var1.field9467.p2((var11 & 0x1FFF) + 57344);
 							if (var8 == -1 || var7 == -1) {
-								var1.field9467.method15223(Integer.MIN_VALUE);
+								var1.field9467.p4(Integer.MIN_VALUE);
 							} else {
-								var1.field9467.method15223(var8 | var7 << 16);
+								var1.field9467.p4(var8 | var7 << 16);
 							}
 						}
 						var4++;
@@ -112,8 +112,8 @@ public abstract class class478 {
 				var1.field9467.method15251(var1.field9467.pos - var2);
 				int var12 = var1.field9467.pos;
 				var1.field9467.pos = var2;
-				var1.field9467.method15308(var3 / var4);
-				var1.field9467.method15308(var3 % var4);
+				var1.field9467.p1(var3 / var4);
+				var1.field9467.p1(var3 % var4);
 				var1.field9467.pos = var12;
 				client.field8975.method1913(var1);
 			}

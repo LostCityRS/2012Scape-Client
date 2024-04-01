@@ -26,8 +26,8 @@ public class Loading {
 	@ObfuscatedName("ta.u(B)V")
 	public static void method186() {
 		field3421 = true;
-		Statics.field6391 = class33.field533;
-		Statics.field4814 = class33.field534;
+		Statics.field6391 = class33.username;
+		Statics.field4814 = class33.password;
 		client.method13897(false);
 		Statics.field3420 = null;
 		Statics.field3562 = null;
@@ -79,7 +79,7 @@ public class Loading {
 			return;
 		}
 		for (int var2 = field3423 + 1; var2 < Statics.field3422.length; var2++) {
-			if (Statics.field3422[var2].method4981() >= 100 && field3423 == var2 - 1 && client.field8923 != 12 && Statics.field6789.method4954()) {
+			if (Statics.field3422[var2].method4981() >= 100 && field3423 == var2 - 1 && client.state != 12 && Statics.field6789.method4954()) {
 				try {
 					Statics.field3422[var2].method5006();
 				} catch (Exception var4) {

@@ -53,7 +53,7 @@ public class class521 {
 	public static void method5563(int arg0, boolean arg1) {
 		if (arg1) {
 			class792 var2 = class792.method14781(class280.field2867, client.field8975.field834);
-			var2.field9467.method15287(arg0);
+			var2.field9467.p2(arg0);
 			client.field8975.method1913(var2);
 		} else {
 			ScriptRunner.runTrigger(ClientTriggerType.VIDEO_END, arg0, -1);

@@ -575,8 +575,8 @@ public class class77 {
 	@ObfuscatedName("bv.c(ZZ[IIIIIIFFFF)V")
 	public final void method1988(boolean arg0, boolean arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, float arg8, float arg9, float arg10, float arg11) {
 		if (this.field988) {
-			if (arg7 > this.field1010 * 859149921) {
-				arg7 = this.field1010 * 859149921;
+			if (arg7 > this.field1010) {
+				arg7 = this.field1010;
 			}
 			if (arg6 < 0) {
 				arg6 = 0;
@@ -1424,8 +1424,8 @@ public class class77 {
 	@ObfuscatedName("bv.t(ZZ[IIIIIIFFFFFFFF)V")
 	public final void method2003(boolean arg0, boolean arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, float arg8, float arg9, float arg10, float arg11, float arg12, float arg13, float arg14, float arg15) {
 		if (this.field988) {
-			if (arg7 > this.field1010 * 859149921) {
-				arg7 = this.field1010 * 859149921;
+			if (arg7 > this.field1010) {
+				arg7 = this.field1010;
 			}
 			if (arg6 < 0) {
 				arg6 = 0;
@@ -2523,8 +2523,8 @@ public class class77 {
 	@ObfuscatedName("bv.f(ZZZ[IIIIIIFF)V")
 	public final void method1992(boolean arg0, boolean arg1, boolean arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, float arg9, float arg10) {
 		if (this.field988) {
-			if (arg8 > this.field1010 * 859149921) {
-				arg8 = this.field1010 * 859149921;
+			if (arg8 > this.field1010) {
+				arg8 = this.field1010;
 			}
 			if (arg7 < 0) {
 				arg7 = 0;
@@ -2691,7 +2691,7 @@ public class class77 {
 					}
 					var14 = arg10 + var31;
 				}
-			} else if (arg7 != 0 && arg8 <= this.field1010 * 859149921 - 1) {
+			} else if (arg7 != 0 && arg8 <= this.field1010 - 1) {
 				while (true) {
 					var13--;
 					if (var13 < 0) {
@@ -2835,7 +2835,7 @@ public class class77 {
 					}
 					var14 = arg10 + var51;
 				}
-			} else if (arg7 != 0 && arg8 <= this.field1010 * 859149921 - 1) {
+			} else if (arg7 != 0 && arg8 <= this.field1010 - 1) {
 				while (true) {
 					var13--;
 					if (var13 < 0) {
@@ -3382,8 +3382,8 @@ public class class77 {
 		float var35 = (arg22 - arg21) * var27;
 		float var36 = (arg24 - arg23) * var27;
 		if (this.field988) {
-			if (arg6 > this.field1010 * 859149921) {
-				arg6 = this.field1010 * 859149921;
+			if (arg6 > this.field1010) {
+				arg6 = this.field1010;
 			}
 			if (arg5 < 0) {
 				arg7 -= (float) arg5 * var28;
@@ -4094,8 +4094,8 @@ public class class77 {
 		float var40 = (arg25 - arg24) * var30;
 		float var41 = (arg27 - arg26) * var30;
 		if (this.field988) {
-			if (arg5 > this.field1010 * 859149921) {
-				arg5 = this.field1010 * 859149921;
+			if (arg5 > this.field1010) {
+				arg5 = this.field1010;
 			}
 			if (arg4 < 0) {
 				arg6 -= (float) arg4 * var31;

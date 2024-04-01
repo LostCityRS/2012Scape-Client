@@ -709,7 +709,7 @@ public class class340 {
 							this.field3688++;
 						}
 						if (!this.field3644 && arg2 == 0) {
-							this.field3619.method7416(var7, var8, var13.field5102, var13.field5099 * 1322381256, var13.field5100, var13.field5101, var13.field5090, var13.field5098);
+							this.field3619.method7416(var7, var8, var13.field5102, var13.field5099, var13.field5100, var13.field5101, var13.field5090, var13.field5098);
 						}
 					}
 					if (var14 != null) {
@@ -1140,7 +1140,7 @@ public class class340 {
 				this.field3626++;
 			}
 			if (!this.field3644 && arg1 == 0) {
-				this.field3619.method7416(arg2, arg3, arg4.field5102, arg4.field5099 * 1322381256, arg4.field5100, arg4.field5101, arg4.field5090, arg4.field5098);
+				this.field3619.method7416(arg2, arg3, arg4.field5102, arg4.field5099, arg4.field5100, arg4.field5101, arg4.field5090, arg4.field5098);
 			}
 			if (this.field3669 != 12 && arg4.field5094 != -1 && arg4.field5095) {
 				this.field3694 = true;

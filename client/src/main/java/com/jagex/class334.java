@@ -332,7 +332,7 @@ public final class class334 {
 			} else {
 				var10 = Statics.method2896(this.field3564[arg0], true);
 				Packet var11 = new Packet(var10);
-				var11.method15336(arg2, 5, var11.data.length);
+				var11.tinydec(arg2, 5, var11.data.length);
 			}
 			byte[] var12;
 			try {

@@ -105,12 +105,12 @@ public class class100 {
 									if (var26 != null) {
 										if (this.field1141.field8149) {
 											for (int var27 = 0; var27 < var26.length; var27++) {
-												var22.method15287(var26[var27] & 0xFFFF);
+												var22.p2(var26[var27] & 0xFFFF);
 												var19++;
 											}
 										} else {
 											for (int var28 = 0; var28 < var26.length; var28++) {
-												var22.method15221(var26[var28] & 0xFFFF);
+												var22.ip2(var26[var28] & 0xFFFF);
 												var19++;
 											}
 										}

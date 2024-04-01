@@ -78,31 +78,31 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.s(II)V")
-	public void method15308(int arg0) {
+	public void p1(int arg0) {
 		this.data[++this.pos - 1] = (byte) arg0;
 	}
 
 	@ObfuscatedName("aet.c(II)V")
-	public void method15287(int arg0) {
+	public void p2(int arg0) {
 		this.data[++this.pos - 1] = (byte) (arg0 >> 8);
 		this.data[++this.pos - 1] = (byte) arg0;
 	}
 
 	@ObfuscatedName("aet.m(II)V")
-	public void method15221(int arg0) {
+	public void ip2(int arg0) {
 		this.data[++this.pos - 1] = (byte) arg0;
 		this.data[++this.pos - 1] = (byte) (arg0 >> 8);
 	}
 
 	@ObfuscatedName("aet.t(IB)V")
-	public void method15222(int arg0) {
+	public void p3(int arg0) {
 		this.data[++this.pos - 1] = (byte) (arg0 >> 16);
 		this.data[++this.pos - 1] = (byte) (arg0 >> 8);
 		this.data[++this.pos - 1] = (byte) arg0;
 	}
 
 	@ObfuscatedName("aet.l(II)V")
-	public void method15223(int arg0) {
+	public void p4(int arg0) {
 		this.data[++this.pos - 1] = (byte) (arg0 >> 24);
 		this.data[++this.pos - 1] = (byte) (arg0 >> 16);
 		this.data[++this.pos - 1] = (byte) (arg0 >> 8);
@@ -110,7 +110,7 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.f(II)V")
-	public void method15274(int arg0) {
+	public void ip4(int arg0) {
 		this.data[++this.pos - 1] = (byte) arg0;
 		this.data[++this.pos - 1] = (byte) (arg0 >> 8);
 		this.data[++this.pos - 1] = (byte) (arg0 >> 16);
@@ -118,7 +118,7 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.d(J)V")
-	public void method15234(long arg0) {
+	public void p5(long arg0) {
 		this.data[++this.pos - 1] = (byte) (arg0 >> 32);
 		this.data[++this.pos - 1] = (byte) (arg0 >> 24);
 		this.data[++this.pos - 1] = (byte) (arg0 >> 16);
@@ -127,7 +127,7 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.z(J)V")
-	public void method15420(long arg0) {
+	public void p8(long arg0) {
 		this.data[++this.pos - 1] = (byte) (arg0 >> 56);
 		this.data[++this.pos - 1] = (byte) (arg0 >> 48);
 		this.data[++this.pos - 1] = (byte) (arg0 >> 40);
@@ -150,7 +150,7 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.q(Ljava/lang/String;I)V")
-	public void method15228(String arg0) {
+	public void pjstr(String arg0) {
 		int var2 = arg0.indexOf(0);
 		if (var2 >= 0) {
 			throw new IllegalArgumentException("");
@@ -160,12 +160,12 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("zi.x(Ljava/lang/String;B)I")
-	public static int method13882(String arg0) {
+	public static int pjstr2len(String arg0) {
 		return arg0.length() + 2;
 	}
 
 	@ObfuscatedName("aet.k(Ljava/lang/String;I)V")
-	public void method15229(String arg0) {
+	public void pjstr2(String arg0) {
 		int var2 = arg0.indexOf(0);
 		if (var2 >= 0) {
 			throw new IllegalArgumentException("");
@@ -191,7 +191,7 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.g(II)V")
-	public void method15256(int arg0) {
+	public void psize4(int arg0) {
 		this.data[this.pos - arg0 - 4] = (byte) (arg0 >> 24);
 		this.data[this.pos - arg0 - 3] = (byte) (arg0 >> 16);
 		this.data[this.pos - arg0 - 2] = (byte) (arg0 >> 8);
@@ -199,7 +199,7 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.y(II)V")
-	public void method15233(int arg0) {
+	public void psize2(int arg0) {
 		this.data[this.pos - arg0 - 2] = (byte) (arg0 >> 8);
 		this.data[this.pos - arg0 - 1] = (byte) arg0;
 	}
@@ -212,9 +212,9 @@ public class Packet extends class399 {
 	@ObfuscatedName("aet.ay(II)V")
 	public void method15235(int arg0) {
 		if (arg0 >= 0 && arg0 < 128) {
-			this.method15308(arg0);
+			this.p1(arg0);
 		} else if (arg0 >= 0 && arg0 < 32768) {
-			this.method15287(arg0 + 32768);
+			this.p2(arg0 + 32768);
 		} else {
 			throw new IllegalArgumentException();
 		}
@@ -226,15 +226,15 @@ public class Packet extends class399 {
 			if ((arg0 & 0xFFFFC000) != 0) {
 				if ((arg0 & 0xFFE00000) != 0) {
 					if ((arg0 & 0xF0000000) != 0) {
-						this.method15308(arg0 >>> 28 | 0x80);
+						this.p1(arg0 >>> 28 | 0x80);
 					}
-					this.method15308(arg0 >>> 21 | 0x80);
+					this.p1(arg0 >>> 21 | 0x80);
 				}
-				this.method15308(arg0 >>> 14 | 0x80);
+				this.p1(arg0 >>> 14 | 0x80);
 			}
-			this.method15308(arg0 >>> 7 | 0x80);
+			this.p1(arg0 >>> 7 | 0x80);
 		}
-		this.method15308(arg0 & 0x7F);
+		this.p1(arg0 & 0x7F);
 	}
 
 	@ObfuscatedName("aet.ar(I)I")
@@ -441,7 +441,7 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.bz([IB)V")
-	public void method15262(int[] arg0) {
+	public void tinydec(int[] arg0) {
 		int var2 = this.pos / 8;
 		this.pos = 0;
 		for (int var3 = 0; var3 < var2; var3++) {
@@ -456,13 +456,13 @@ public class Packet extends class399 {
 				var4 -= (var5 << 4 ^ var5 >>> 5) + var5 ^ arg0[var6 & 0x3] + var6;
 			}
 			this.pos -= 8;
-			this.method15223(var4);
-			this.method15223(var5);
+			this.p4(var4);
+			this.p4(var5);
 		}
 	}
 
 	@ObfuscatedName("aet.bv([IIII)V")
-	public void method15280(int[] arg0, int arg1, int arg2) {
+	public void tinyenc(int[] arg0, int arg1, int arg2) {
 		int var4 = this.pos;
 		this.pos = arg1;
 		int var5 = (arg2 - arg1) / 8;
@@ -478,14 +478,14 @@ public class Packet extends class399 {
 				var8 += (var7 << 4 ^ var7 >>> 5) + var7 ^ arg0[var9 >>> 11 & 0x3] + var9;
 			}
 			this.pos -= 8;
-			this.method15223(var7);
-			this.method15223(var8);
+			this.p4(var7);
+			this.p4(var8);
 		}
 		this.pos = var4;
 	}
 
 	@ObfuscatedName("aet.bj([IIII)V")
-	public void method15336(int[] arg0, int arg1, int arg2) {
+	public void tinydec(int[] arg0, int arg1, int arg2) {
 		int var4 = this.pos;
 		this.pos = arg1;
 		int var5 = (arg2 - arg1) / 8;
@@ -501,14 +501,14 @@ public class Packet extends class399 {
 				var7 -= (var8 << 4 ^ var8 >>> 5) + var8 ^ arg0[var9 & 0x3] + var9;
 			}
 			this.pos -= 8;
-			this.method15223(var7);
-			this.method15223(var8);
+			this.p4(var7);
+			this.p4(var8);
 		}
 		this.pos = var4;
 	}
 
 	@ObfuscatedName("aet.bf(Ljava/math/BigInteger;Ljava/math/BigInteger;B)V")
-	public void method15265(BigInteger arg0, BigInteger arg1) {
+	public void rsaenc(BigInteger arg0, BigInteger arg1) {
 		int var3 = this.pos;
 		this.pos = 0;
 		byte[] var4 = new byte[var3];
@@ -517,19 +517,19 @@ public class Packet extends class399 {
 		BigInteger var6 = client.ENABLE_RSA ?  var5.modPow(arg0, arg1) : var5;
 		byte[] var7 = var6.toByteArray();
 		this.pos = 0;
-		this.method15287(var7.length);
+		this.p2(var7.length);
 		this.method15276(var7, 0, var7.length);
 	}
 
 	@ObfuscatedName("aet.bt(IB)I")
-	public int method15266(int arg0) {
+	public int addcrc(int arg0) {
 		int var2 = method4692(this.data, arg0, this.pos);
-		this.method15223(var2);
+		this.p4(var2);
 		return var2;
 	}
 
 	@ObfuscatedName("aet.bg(I)Z")
-	public boolean method15267() {
+	public boolean checkcrc() {
 		this.pos -= 4;
 		int var1 = method4692(this.data, 0, this.pos);
 		int var2 = this.g4s();

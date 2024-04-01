@@ -128,7 +128,7 @@ public class class64 {
 	}
 
 	@ObfuscatedName("ad.m(I)V")
-	public void method1916() {
+	public void closeGracefully() {
 		if (this.field827 != null) {
 			this.field827.method7192();
 			this.field827 = null;

@@ -756,7 +756,7 @@ public class class672 extends class12 {
 						short[] var15 = this.field7687[var13];
 						if (var15 != null) {
 							for (int var16 = 0; var16 < var15.length; var16++) {
-								var11.method15287(var15[var16] & 0xFFFF);
+								var11.p2(var15[var16] & 0xFFFF);
 								var10++;
 							}
 						}
@@ -772,7 +772,7 @@ public class class672 extends class12 {
 						short[] var20 = this.field7687[var18];
 						if (var20 != null) {
 							for (int var21 = 0; var21 < var20.length; var21++) {
-								var11.method15221(var20[var21] & 0xFFFF);
+								var11.ip2(var20[var21] & 0xFFFF);
 								var10++;
 							}
 						}

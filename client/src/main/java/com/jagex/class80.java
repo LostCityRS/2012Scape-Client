@@ -63,7 +63,7 @@ public class class80 {
 						short[] var21 = arg2.field7687[var19++];
 						if (var21 != null) {
 							for (int var22 = 0; var22 < var21.length; var22++) {
-								var17.method15287(var21[var22] & 0xFFFF);
+								var17.p2(var21[var22] & 0xFFFF);
 							}
 						}
 					}
@@ -75,7 +75,7 @@ public class class80 {
 						short[] var26 = arg2.field7687[var24++];
 						if (var26 != null) {
 							for (int var27 = 0; var27 < var26.length; var27++) {
-								var17.method15221(var26[var27] & 0xFFFF);
+								var17.ip2(var26[var27] & 0xFFFF);
 							}
 						}
 					}

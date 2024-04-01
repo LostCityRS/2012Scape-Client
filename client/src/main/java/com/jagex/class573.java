@@ -28,6 +28,7 @@ public class class573 {
 
 	@ObfuscatedName("uf.u(B)Ljava/net/Socket;")
 	public Socket method12025() throws IOException {
+		System.out.println("Connecting to: " + this.field6765 + ":" + (this.field6767 ? this.field6766 : this.field6764));
 		return this.field6763 ? class580.method4864(this.field6765, this.field6767 ? this.field6766 : this.field6764).method12150() : new Socket(InetAddress.getByName(this.field6765), this.field6767 ? this.field6766 : this.field6764);
 	}
 

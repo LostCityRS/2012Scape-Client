@@ -138,7 +138,7 @@ public abstract class class938 extends class793 {
 	public final synchronized void method16413(boolean arg0) {
 		this.field10264 = (this.field10264 >>> 31) + (this.field10264 ^ this.field10264 >> 31);
 		if (arg0) {
-			this.field10264 = -(this.field10264 * -268721813) * -866024637;
+			this.field10264 = -(this.field10264);
 		}
 	}
 
@@ -377,7 +377,7 @@ public abstract class class938 extends class793 {
 								return;
 							}
 							this.field10266 = var2 + var2 - 1 - this.field10266;
-							this.field10264 = -(this.field10264 * -268721813) * -866024637;
+							this.field10264 = -(this.field10264);
 							if (--this.field10265 == 0) {
 								break label121;
 							}
@@ -387,7 +387,7 @@ public abstract class class938 extends class793 {
 								return;
 							}
 							this.field10266 = var3 + var3 - 1 - this.field10266;
-							this.field10264 = -(this.field10264 * -268721813) * -866024637;
+							this.field10264 = -(this.field10264);
 							if (--this.field10265 == 0) {
 								break;
 							}
@@ -395,7 +395,7 @@ public abstract class class938 extends class793 {
 								return;
 							}
 							this.field10266 = var2 + var2 - 1 - this.field10266;
-							this.field10264 = -(this.field10264 * -268721813) * -866024637;
+							this.field10264 = -(this.field10264);
 						} while (--this.field10265 != 0);
 					}
 				} else {
@@ -445,16 +445,16 @@ public abstract class class938 extends class793 {
 					return;
 				}
 				this.field10266 = var2 + var2 - 1 - this.field10266;
-				this.field10264 = -(this.field10264 * -268721813) * -866024637;
+				this.field10264 = -(this.field10264);
 			}
 			while (this.field10266 >= var3) {
 				this.field10266 = var3 + var3 - 1 - this.field10266;
-				this.field10264 = -(this.field10264 * -268721813) * -866024637;
+				this.field10264 = -(this.field10264);
 				if (this.field10266 >= var2) {
 					return;
 				}
 				this.field10266 = var2 + var2 - 1 - this.field10266;
-				this.field10264 = -(this.field10264 * -268721813) * -866024637;
+				this.field10264 = -(this.field10264);
 			}
 		} else if (this.field10264 < 0) {
 			if (this.field10266 >= var2) {

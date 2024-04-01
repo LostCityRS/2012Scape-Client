@@ -45,7 +45,7 @@ public class class62 {
 
 	@ObfuscatedName("kj.u(I)Z")
 	public static boolean method5548() {
-		return !Statics.method2888(client.field8923);
+		return !Statics.method2888(client.state);
 	}
 
 	@ObfuscatedName("tp.j(I)V")
@@ -509,9 +509,9 @@ public class class62 {
 					return;
 				}
 				if (arg0.equalsIgnoreCase("clientdrop")) {
-					if (client.field8923 == 1) {
+					if (client.state == 1) {
 						client.method8047();
-					} else if (client.field8923 == 16) {
+					} else if (client.state == 16) {
 						client.field8975.field846 = true;
 					}
 					return;
@@ -595,13 +595,13 @@ public class class62 {
 					String[] var25 = class526.method11508(Statics.method12093(Statics.method8318(var24), '\r', ""), '\n');
 					method14213(var25);
 				}
-				if (client.field8923 == 1 || client.field8923 == 15) {
+				if (client.state == 1 || client.state == 15) {
 					class64 var26 = client.method4104();
 					class792 var27 = class792.method14781(class280.field2951, var26.field834);
-					var27.field9467.method15308(arg0.length() + 3);
-					var27.field9467.method15308(arg1 ? 1 : 0);
-					var27.field9467.method15308(arg2 ? 1 : 0);
-					var27.field9467.method15228(arg0);
+					var27.field9467.p1(arg0.length() + 3);
+					var27.field9467.p1(arg1 ? 1 : 0);
+					var27.field9467.p1(arg2 ? 1 : 0);
+					var27.field9467.pjstr(arg0);
 					var26.method1913(var27);
 				}
 			} catch (Exception var32) {
@@ -609,7 +609,7 @@ public class class62 {
 				return;
 			}
 		}
-		if (client.field8923 != 1 && client.field8923 != 15) {
+		if (client.state != 1 && client.state != 15) {
 			method1958(class588.field6894.method12206(Statics.field2308) + arg0);
 		}
 	}

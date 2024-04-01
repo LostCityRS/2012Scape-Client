@@ -30,7 +30,7 @@ public class class835 extends class478 {
 		}
 		class792 var6 = class792.method14781(class280.field2893, client.field8975.field834);
 		var6.field9467.method15345(var4 | var3 << 16);
-		var6.field9467.method15287(var2 | var5 << 15);
+		var6.field9467.p2(var2 | var5 << 15);
 		client.field8975.method1913(var6);
 	}
 

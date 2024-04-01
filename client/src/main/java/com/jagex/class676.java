@@ -2842,7 +2842,7 @@ public class class676 extends class13 {
 		this.field7785.field893 = this.field7768.field991;
 		this.field7785.field895 = this.field7768.field1015;
 		this.field7785.field906 = this.field7768.field995;
-		this.field7785.field889 = this.field7768.field1010 * 859149921;
+		this.field7785.field889 = this.field7768.field1010;
 		for (int var31 = 0; var31 < this.field7780; var31++) {
 			int var32 = this.field7807[var31];
 			int var33 = this.field7783[var31];

@@ -44,7 +44,7 @@ public class class834 extends class478 {
 
 	@ObfuscatedName("aec.at(Laet;Lajn;I)V")
 	public void method15626(Packet arg0, class962 arg1) {
-		arg0.method15308(arg1.method16842());
+		arg0.p1(arg1.method16842());
 	}
 
 	@ObfuscatedName("aec.c(I)I")

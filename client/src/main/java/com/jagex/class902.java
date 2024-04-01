@@ -324,7 +324,7 @@ public class class902 extends PathingEntity {
 					if (var14.field776 == 2) {
 						Vector3 var20 = Statics.field2119.method8565().field3464;
 						long var21 = (long) (var14.field778 * 512 - (int) var20.field3475);
-						long var23 = (long) (var14.field777 * 262144 - (int) var20.field3477);
+						long var23 = (long) (var14.field777 * 512 - (int) var20.field3477);
 						long var25 = (long) (var14.field780 << 9);
 						long var27 = var25 * var25;
 						this.method16118(arg0, var2, this.field8651[0], var21, var23, var14.field779, var27);
