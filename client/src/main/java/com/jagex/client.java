@@ -1797,7 +1797,7 @@ public final class client extends class385 {
 				var2.method15308(class281.field2960.field2970);
 				var2.method15308(var1);
 				var2.method15223(742);
-				var2.method15223(1);
+				var2.method15223(2);
 				var2.method15228(field8921);
 				Statics.field3614.method7193(var2.field9629, 0, var1 + 2);
 				field8958++;

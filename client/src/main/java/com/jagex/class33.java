@@ -297,7 +297,7 @@ public class class33 {
 					var1.field9467.method15287(0);
 					int var2 = var1.field9467.field9626;
 					var1.field9467.method15223(742);
-					var1.field9467.method15223(1);
+					var1.field9467.method15223(2);
 					if (Statics.field500 == 223) {
 						var1.field9467.method15308(client.field8923 == 9 ? 1 : 0);
 					}
@@ -407,7 +407,7 @@ public class class33 {
 					int var12 = var9.field9626;
 					if (!field504) {
 						var9.method15223(742);
-						var9.method15223(1);
+						var9.method15223(2);
 						var9.method15308(client.field8923 == 9 ? 1 : 0);
 						int var13 = var9.field9626;
 						class814 var14 = method5564();
@@ -464,7 +464,7 @@ public class class33 {
 					int var19 = var9.field9626;
 					if (!field504) {
 						var9.method15223(742);
-						var9.method15223(1);
+						var9.method15223(2);
 						class814 var20 = method5564();
 						var9.method15276(var20.field9629, 0, var20.field9626);
 						var19 = var9.field9626;

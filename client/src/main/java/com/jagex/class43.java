@@ -99,7 +99,7 @@ public class class43 {
 				var1.field9467.method15287(0);
 				int var2 = var1.field9467.field9626;
 				var1.field9467.method15287(742);
-				var1.field9467.method15287(1);
+				var1.field9467.method15287(2);
 				Statics.field630 = method11380(var1);
 				int var3 = var1.field9467.field9626;
 				var1.field9467.method15228(client.field8921);
