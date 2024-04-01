@@ -170,7 +170,7 @@ public final class class544 {
 		int[] var20 = null;
 		int[] var21 = null;
 		int[] var22 = null;
-		arg0.field6614 = 1410065408;
+		arg0.field6614 = 1;
 		if (Statics.field9879 == null) {
 			Statics.field9879 = new int[arg0.field6614 * 100000];
 		}
