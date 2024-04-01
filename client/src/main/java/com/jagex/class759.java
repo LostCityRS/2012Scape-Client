@@ -33,7 +33,7 @@ public class class759 extends class340 {
 	@ObfuscatedName("abo.cg")
 	public class541 field8894;
 
-	public class759(class423 arg0, class541 arg1, int arg2, int arg3, int arg4, boolean arg5, class338 arg6, class469 arg7) {
+	public class759(class423 arg0, class541 arg1, int arg2, int arg3, int arg4, boolean arg5, SceneLevelTileFlags arg6, class469 arg7) {
 		super(arg0, arg2, arg3, arg4, arg5, Statics.field3615, Statics.field4450, arg6);
 		this.field8894 = arg1;
 		this.field8883 = arg7;

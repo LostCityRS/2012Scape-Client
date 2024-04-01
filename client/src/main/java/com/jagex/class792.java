@@ -12,7 +12,7 @@ public class class792 extends class399 {
 	public int field9466;
 
 	@ObfuscatedName("ada.m")
-	public class964 field9467;
+	public PacketBit field9467;
 
 	@ObfuscatedName("ada.t")
 	public int field9465;
@@ -29,20 +29,20 @@ public class class792 extends class399 {
 	}
 
 	@ObfuscatedName("acx.j(Ljm;Lue;I)Lada;")
-	public static class792 method14781(class280 arg0, class568 arg1) {
+	public static class792 method14781(class280 arg0, Isaac arg1) {
 		class792 var2 = method11377();
 		var2.field9469 = arg0;
 		var2.field9466 = arg0.field2896;
 		if (var2.field9466 == -1) {
-			var2.field9467 = new class964(260);
+			var2.field9467 = new PacketBit(260);
 		} else if (var2.field9466 == -2) {
-			var2.field9467 = new class964(10000);
+			var2.field9467 = new PacketBit(10000);
 		} else if (var2.field9466 <= 18) {
-			var2.field9467 = new class964(20);
+			var2.field9467 = new PacketBit(20);
 		} else if (var2.field9466 <= 98) {
-			var2.field9467 = new class964(100);
+			var2.field9467 = new PacketBit(100);
 		} else {
-			var2.field9467 = new class964(260);
+			var2.field9467 = new PacketBit(260);
 		}
 		var2.field9467.method16876(arg1);
 		var2.field9467.method16864(var2.field9469.field2957);
@@ -55,7 +55,7 @@ public class class792 extends class399 {
 		class792 var0 = method11377();
 		var0.field9469 = null;
 		var0.field9466 = 0;
-		var0.field9467 = new class964(5000);
+		var0.field9467 = new PacketBit(5000);
 		return var0;
 	}
 

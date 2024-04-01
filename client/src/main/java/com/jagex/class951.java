@@ -52,7 +52,7 @@ public class class951 extends class800 {
 		if (this.field10367 == 255) {
 			this.field10367 = 0;
 		}
-		class184.method2571(arg7);
+		BuildAreaSize.get(arg7);
 		this.field10363 = new class547();
 	}
 

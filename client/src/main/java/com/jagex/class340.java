@@ -12,7 +12,7 @@ public class class340 {
 	public class563 field3668;
 
 	@ObfuscatedName("lq.a")
-	public class338 field3618;
+	public SceneLevelTileFlags field3618;
 
 	@ObfuscatedName("lq.s")
 	public int field3688;
@@ -224,7 +224,7 @@ public class class340 {
 	@ObfuscatedName("lq.cs")
 	public int[] field3693 = null;
 
-	public class340(class423 arg0, int arg1, int arg2, int arg3, boolean arg4, class484 arg5, class563 arg6, class338 arg7) {
+	public class340(class423 arg0, int arg1, int arg2, int arg3, boolean arg4, class484 arg5, class563 arg6, SceneLevelTileFlags arg7) {
 		this.field3619 = arg0;
 		this.field3628 = arg1;
 		this.field3627 = arg2;

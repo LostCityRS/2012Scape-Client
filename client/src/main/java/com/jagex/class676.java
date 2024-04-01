@@ -712,8 +712,8 @@ public class class676 extends class13 {
 			int var6 = 0;
 			int var7 = 0;
 			if (this.field7779 != 0) {
-				var6 = this.field7839.field7998 * 589824 / this.field7779;
-				var7 = this.field7839.field8013 * 768 / this.field7779;
+				var6 = this.field7839.field7998 / this.field7779;
+				var7 = this.field7839.field8013 / this.field7779;
 			}
 			if (this.field7840 == null) {
 				this.field7840 = new int[this.field7788];

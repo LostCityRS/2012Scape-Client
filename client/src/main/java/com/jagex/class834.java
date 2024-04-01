@@ -24,10 +24,10 @@ public class class834 extends class478 {
 		if (var1 == null) {
 			return;
 		}
-		class792 var2 = class792.method14781(class280.field2956, client.field8975.field834);
-		var2.field9467.method15268(var1.method16844() << 1 | var1.method16842() & 0x1);
-		var2.field9467.method15278(this.method8354(var1, 65535));
-		var2.field9467.method15289(var1.method15182() | var1.method15183() << 16);
+		class792 var2 = class792.method14781(class280.field2956, client.field8975.randomOut);
+		var2.field9467.p1_alt1(var1.method16844() << 1 | var1.method16842() & 0x1);
+		var2.field9467.p2_alt2(this.method8354(var1, 65535));
+		var2.field9467.p4_alt3(var1.method15182() | var1.method15183() << 16);
 		client.field8975.method1913(var2);
 		var1.method15186();
 	}
@@ -39,7 +39,7 @@ public class class834 extends class478 {
 
 	@ObfuscatedName("aec.f(I)Lada;")
 	public class792 method8375() {
-		return class792.method14781(class280.field2947, client.field8975.field834);
+		return class792.method14781(class280.field2947, client.field8975.randomOut);
 	}
 
 	@ObfuscatedName("aec.at(Laet;Lajn;I)V")

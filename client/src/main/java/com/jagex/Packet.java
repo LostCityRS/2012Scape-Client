@@ -46,7 +46,7 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("ic.u([BIII)I")
-	public static int method4692(byte[] arg0, int arg1, int arg2) {
+	public static int getcrc(byte[] arg0, int arg1, int arg2) {
 		int var3 = -1;
 		for (int var4 = arg1; var4 < arg2; var4++) {
 			var3 = var3 >>> 8 ^ field9627[(var3 ^ arg0[var4]) & 0xFF];
@@ -56,7 +56,7 @@ public class Packet extends class399 {
 
 	@ObfuscatedName("pb.j([BIS)I")
 	public static int method7834(byte[] arg0, int arg1) {
-		return method4692(arg0, 0, arg1);
+		return getcrc(arg0, 0, arg1);
 	}
 
 	public Packet(int arg0) {
@@ -523,7 +523,7 @@ public class Packet extends class399 {
 
 	@ObfuscatedName("aet.bt(IB)I")
 	public int addcrc(int arg0) {
-		int var2 = method4692(this.data, arg0, this.pos);
+		int var2 = getcrc(this.data, arg0, this.pos);
 		this.p4(var2);
 		return var2;
 	}
@@ -531,94 +531,94 @@ public class Packet extends class399 {
 	@ObfuscatedName("aet.bg(I)Z")
 	public boolean checkcrc() {
 		this.pos -= 4;
-		int var1 = method4692(this.data, 0, this.pos);
+		int var1 = getcrc(this.data, 0, this.pos);
 		int var2 = this.g4s();
 		return var1 == var2;
 	}
 
 	@ObfuscatedName("aet.bl(II)V")
-	public void method15268(int arg0) {
-		this.data[++this.pos - 1] = (byte) (arg0 + 128);
+	public void p1_alt1(int val) {
+		this.data[++this.pos - 1] = (byte) (val + 128);
 	}
 
 	@ObfuscatedName("aet.bk(II)V")
-	public void method15269(int arg0) {
-		this.data[++this.pos - 1] = (byte) -arg0;
+	public void p1_alt2(int val) {
+		this.data[++this.pos - 1] = (byte) -val;
 	}
 
 	@ObfuscatedName("aet.bs(IB)V")
-	public void method15318(int arg0) {
-		this.data[++this.pos - 1] = (byte) (128 - arg0);
+	public void p1_alt3(int val) {
+		this.data[++this.pos - 1] = (byte) (128 - val);
 	}
 
 	@ObfuscatedName("aet.bn(I)I")
-	public int method15271() {
+	public int g1_alt1() {
 		return this.data[++this.pos - 1] - 128 & 0xFF;
 	}
 
 	@ObfuscatedName("aet.ba(B)I")
-	public int method15272() {
+	public int g1_alt2() {
 		return -this.data[++this.pos - 1] & 0xFF;
 	}
 
 	@ObfuscatedName("aet.bd(I)I")
-	public int method15273() {
+	public int g1_alt3() {
 		return 128 - this.data[++this.pos - 1] & 0xFF;
 	}
 
 	@ObfuscatedName("aet.bc(I)B")
-	public byte method15392() {
+	public byte g1b_alt1() {
 		return (byte) (this.data[++this.pos - 1] - 128);
 	}
 
 	@ObfuscatedName("aet.br(I)B")
-	public byte method15275() {
+	public byte g1b_alt2() {
 		return (byte) -this.data[++this.pos - 1];
 	}
 
 	@ObfuscatedName("aet.bp(I)B")
-	public byte method15329() {
+	public byte g1b_alt3() {
 		return (byte) (128 - this.data[++this.pos - 1]);
 	}
 
 	@ObfuscatedName("aet.bi(II)V")
-	public void method15293(int arg0) {
-		this.data[++this.pos - 1] = (byte) arg0;
-		this.data[++this.pos - 1] = (byte) (arg0 >> 8);
+	public void p2_alt1(int val) {
+		this.data[++this.pos - 1] = (byte) val;
+		this.data[++this.pos - 1] = (byte) (val >> 8);
 	}
 
 	@ObfuscatedName("aet.bx(II)V")
-	public void method15278(int arg0) {
-		this.data[++this.pos - 1] = (byte) (arg0 >> 8);
-		this.data[++this.pos - 1] = (byte) (arg0 + 128);
+	public void p2_alt2(int val) {
+		this.data[++this.pos - 1] = (byte) (val >> 8);
+		this.data[++this.pos - 1] = (byte) (val + 128);
 	}
 
 	@ObfuscatedName("aet.bm(II)V")
-	public void method15279(int arg0) {
-		this.data[++this.pos - 1] = (byte) (arg0 + 128);
-		this.data[++this.pos - 1] = (byte) (arg0 >> 8);
+	public void p2_alt3(int val) {
+		this.data[++this.pos - 1] = (byte) (val + 128);
+		this.data[++this.pos - 1] = (byte) (val >> 8);
 	}
 
 	@ObfuscatedName("aet.bb(I)I")
-	public int method15248() {
+	public int g2_alt1() {
 		this.pos += 2;
 		return ((this.data[this.pos - 1] & 0xFF) << 8) + (this.data[this.pos - 2] & 0xFF);
 	}
 
 	@ObfuscatedName("aet.be(I)I")
-	public int method15281() {
+	public int g2_alt2() {
 		this.pos += 2;
 		return ((this.data[this.pos - 2] & 0xFF) << 8) + (this.data[this.pos - 1] - 128 & 0xFF);
 	}
 
 	@ObfuscatedName("aet.bw(I)I")
-	public int method15391() {
+	public int g2_alt3() {
 		this.pos += 2;
 		return ((this.data[this.pos - 1] & 0xFF) << 8) + (this.data[this.pos - 2] - 128 & 0xFF);
 	}
 
 	@ObfuscatedName("aet.bo(I)I")
-	public int method15283() {
+	public int g2s_alt1() {
 		this.pos += 2;
 		int var1 = ((this.data[this.pos - 1] & 0xFF) << 8) + (this.data[this.pos - 2] & 0xFF);
 		if (var1 > 32767) {
@@ -628,74 +628,74 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.bh(I)I")
-	public int method15284() {
+	public int g2s_alt3() {
 		this.pos += 2;
-		int var1 = ((this.data[this.pos - 1] & 0xFF) << 8) + (this.data[this.pos - 2] - 128 & 0xFF);
-		if (var1 > 32767) {
-			var1 -= 65536;
+		int val = ((this.data[this.pos - 1] & 0xFF) << 8) + (this.data[this.pos - 2] - 128 & 0xFF);
+		if (val > 32767) {
+			val -= 65536;
 		}
-		return var1;
+		return val;
 	}
 
 	@ObfuscatedName("aet.by(II)V")
-	public void method15285(int arg0) {
-		this.data[++this.pos - 1] = (byte) arg0;
-		this.data[++this.pos - 1] = (byte) (arg0 >> 8);
-		this.data[++this.pos - 1] = (byte) (arg0 >> 16);
+	public void p3_alt2(int val) {
+		this.data[++this.pos - 1] = (byte) val;
+		this.data[++this.pos - 1] = (byte) (val >> 8);
+		this.data[++this.pos - 1] = (byte) (val >> 16);
 	}
 
 	@ObfuscatedName("aet.bu(I)I")
-	public int method15286() {
+	public int g3_alt3() {
 		this.pos += 3;
 		return (this.data[this.pos - 1] & 0xFF) + ((this.data[this.pos - 2] & 0xFF) << 16) + ((this.data[this.pos - 3] & 0xFF) << 8);
 	}
 
 	@ObfuscatedName("aet.cl(II)V")
-	public void method15345(int arg0) {
-		this.data[++this.pos - 1] = (byte) arg0;
-		this.data[++this.pos - 1] = (byte) (arg0 >> 8);
-		this.data[++this.pos - 1] = (byte) (arg0 >> 16);
-		this.data[++this.pos - 1] = (byte) (arg0 >> 24);
+	public void p4_alt1(int val) {
+		this.data[++this.pos - 1] = (byte) val;
+		this.data[++this.pos - 1] = (byte) (val >> 8);
+		this.data[++this.pos - 1] = (byte) (val >> 16);
+		this.data[++this.pos - 1] = (byte) (val >> 24);
 	}
 
 	@ObfuscatedName("aet.cq(II)V")
-	public void method15397(int arg0) {
-		this.data[++this.pos - 1] = (byte) (arg0 >> 8);
-		this.data[++this.pos - 1] = (byte) arg0;
-		this.data[++this.pos - 1] = (byte) (arg0 >> 24);
-		this.data[++this.pos - 1] = (byte) (arg0 >> 16);
+	public void p4_alt2(int val) {
+		this.data[++this.pos - 1] = (byte) (val >> 8);
+		this.data[++this.pos - 1] = (byte) val;
+		this.data[++this.pos - 1] = (byte) (val >> 24);
+		this.data[++this.pos - 1] = (byte) (val >> 16);
 	}
 
 	@ObfuscatedName("aet.co(II)V")
-	public void method15289(int arg0) {
-		this.data[++this.pos - 1] = (byte) (arg0 >> 16);
-		this.data[++this.pos - 1] = (byte) (arg0 >> 24);
-		this.data[++this.pos - 1] = (byte) arg0;
-		this.data[++this.pos - 1] = (byte) (arg0 >> 8);
+	public void p4_alt3(int val) {
+		this.data[++this.pos - 1] = (byte) (val >> 16);
+		this.data[++this.pos - 1] = (byte) (val >> 24);
+		this.data[++this.pos - 1] = (byte) val;
+		this.data[++this.pos - 1] = (byte) (val >> 8);
 	}
 
 	@ObfuscatedName("aet.cb(I)I")
-	public int method15331() {
+	public int g4s_alt1() {
 		this.pos += 4;
 		return (this.data[this.pos - 4] & 0xFF) + ((this.data[this.pos - 3] & 0xFF) << 8) + ((this.data[this.pos - 2] & 0xFF) << 16) + ((this.data[this.pos - 1] & 0xFF) << 24);
 	}
 
 	@ObfuscatedName("aet.cm(I)I")
-	public int method15342() {
+	public int g4s_alt2() {
 		this.pos += 4;
 		return (this.data[this.pos - 3] & 0xFF) + ((this.data[this.pos - 4] & 0xFF) << 8) + ((this.data[this.pos - 2] & 0xFF) << 24) + ((this.data[this.pos - 1] & 0xFF) << 16);
 	}
 
 	@ObfuscatedName("aet.cw(I)I")
-	public int method15311() {
+	public int g4s_alt3() {
 		this.pos += 4;
 		return (this.data[this.pos - 2] & 0xFF) + ((this.data[this.pos - 1] & 0xFF) << 8) + ((this.data[this.pos - 4] & 0xFF) << 16) + ((this.data[this.pos - 3] & 0xFF) << 24);
 	}
 
 	@ObfuscatedName("aet.cx([BIII)V")
-	public void method15292(byte[] arg0, int arg1, int arg2) {
-		for (int var4 = arg1 + arg2 - 1; var4 >= arg1; var4--) {
-			arg0[var4] = (byte) (this.data[++this.pos - 1] - 128);
+	public void gdata_alt2(byte[] dest, int off, int len) {
+		for (int i = off + len - 1; i >= off; i--) {
+			dest[i] = (byte) (this.data[++this.pos - 1] - 128);
 		}
 	}
 }

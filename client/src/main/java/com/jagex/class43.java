@@ -30,7 +30,7 @@ public class class43 {
 		if (client.state != 14) {
 			return;
 		}
-		class792 var1 = class792.method14781(class280.field2859, client.field8959.field834);
+		class792 var1 = class792.method14781(class280.field2859, client.field8959.randomOut);
 		var1.field9467.p2(0);
 		int var2 = var1.field9467.pos;
 		var1.field9467.pjstr(arg0);
@@ -44,7 +44,7 @@ public class class43 {
 	@ObfuscatedName("gz.m(II)V")
 	public static void method3942(int arg0) {
 		if (client.state == 14) {
-			class792 var1 = class792.method14781(class280.field2917, client.field8959.field834);
+			class792 var1 = class792.method14781(class280.field2917, client.field8959.randomOut);
 			var1.field9467.p1(arg0);
 			client.field8959.method1913(var1);
 		}
@@ -130,20 +130,20 @@ public class class43 {
 				if (!client.field8959.method1927().method7212(1)) {
 					return;
 				}
-				client.field8959.method1927().method7196(client.field8959.field832.data, 0, 1);
-				Statics.field629 = (class534) class518.method8032(class534.method8658(), client.field8959.field832.data[0] & 0xFF);
+				client.field8959.method1927().method7196(client.field8959.in.data, 0, 1);
+				Statics.field629 = (class534) class518.method8032(class534.method8658(), client.field8959.in.data[0] & 0xFF);
 				if (Statics.field629 == class534.field6424) {
-					client.field8959.field834 = new class568(Statics.field630);
+					client.field8959.randomOut = new Isaac(Statics.field630);
 					int[] var5 = new int[4];
 					for (int var6 = 0; var6 < 4; var6++) {
 						var5[var6] = Statics.field630[var6] + 50;
 					}
-					client.field8959.field833 = new class568(var5);
-					new class568(var5);
-					client.field8959.field832.method16876(client.field8959.field833);
+					client.field8959.randomIn = new Isaac(var5);
+					new Isaac(var5);
+					client.field8959.in.method16876(client.field8959.randomIn);
 					client.method11307(14);
 					client.field8959.method1935();
-					client.field8959.field832.pos = 0;
+					client.field8959.in.pos = 0;
 					client.field8959.field843 = null;
 					client.field8959.field844 = null;
 					client.field8959.field831 = null;
@@ -151,7 +151,7 @@ public class class43 {
 				} else {
 					client.field8959.closeGracefully();
 				}
-				client.field8959.field840 = null;
+				client.field8959.packetType = null;
 				Statics.field633 = null;
 			}
 		} catch (IOException var8) {

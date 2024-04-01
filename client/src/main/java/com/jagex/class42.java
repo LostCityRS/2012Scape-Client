@@ -1664,14 +1664,14 @@ public class class42 {
 	public static class792 method1910(int arg0, int arg1, int arg2) {
 		class792 var3 = null;
 		if (arg2 == 0) {
-			var3 = class792.method14781(class280.field2923, client.field8975.field834);
+			var3 = class792.method14781(class280.field2923, client.field8975.randomOut);
 		}
 		if (arg2 == 1) {
-			var3 = class792.method14781(class280.field2890, client.field8975.field834);
+			var3 = class792.method14781(class280.field2890, client.field8975.randomOut);
 		}
 		class453 var4 = client.field8980.method6214();
 		var3.field9467.p2(var4.field4838 + arg1);
-		var3.field9467.method15279(var4.field4836 + arg0);
+		var3.field9467.p2_alt3(var4.field4836 + arg0);
 		var3.field9467.p1(method3496() ? 1 : 0);
 		class58.field763 = arg0;
 		class58.field764 = arg1;

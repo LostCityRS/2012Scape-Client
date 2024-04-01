@@ -62,7 +62,7 @@ import com.jagex.class331;
 import com.jagex.class334;
 import com.jagex.class336;
 import com.jagex.class337;
-import com.jagex.class338;
+import com.jagex.SceneLevelTileFlags;
 import com.jagex.class341;
 import com.jagex.class354;
 import com.jagex.class358;
@@ -260,7 +260,7 @@ import com.jagex.class946;
 import com.jagex.class951;
 import com.jagex.ClientScript;
 import com.jagex.class962;
-import com.jagex.class964;
+import com.jagex.PacketBit;
 import com.jagex.class969;
 import com.jagex.class977;
 import com.jagex.class991;
@@ -2626,7 +2626,7 @@ public class Statics {
 		if (client.state != 14) {
 			return;
 		}
-		class792 var4 = class792.method14781(class280.field2924, client.field8959.field834);
+		class792 var4 = class792.method14781(class280.field2924, client.field8959.randomOut);
 		var4.field9467.p2(0);
 		int var5 = var4.field9467.pos;
 		var4.field9467.pjstr(arg0);
@@ -2771,7 +2771,7 @@ public class Statics {
 		}
 		int var2 = client.field8980.method6220();
 		int var3 = client.field8980.method6193();
-		class338 var4 = client.field8980.method6100();
+		SceneLevelTileFlags var4 = client.field8980.method6100();
 		class423 var5 = client.field8980.method6098();
 		int var6 = var2 / 2;
 		byte var7 = 0;
@@ -3348,7 +3348,7 @@ public class Statics {
 	}
 
 	@ObfuscatedName("oy.c(Lajl;IB)V")
-	public static void method7394(class964 arg0, int arg1) {
+	public static void method7394(PacketBit arg0, int arg1) {
 		class453 var2 = client.field8980.method6214();
 		boolean var3 = arg0.method16863(1) == 1;
 		if (var3) {
@@ -3706,7 +3706,7 @@ public class Statics {
 	}
 
 	@ObfuscatedName("ej.m(Lajl;II)Z")
-	public static boolean method3110(class964 arg0, int arg1) {
+	public static boolean method3110(PacketBit arg0, int arg1) {
 		int var2 = arg0.method16863(2);
 		if (var2 == 0) {
 			if (arg0.method16863(1) != 0) {
@@ -3996,8 +3996,8 @@ public class Statics {
 	@ObfuscatedName("u.ap(I)V")
 	public static void method1237() {
 		connection.method1935();
-		connection.field832.pos = 0;
-		connection.field840 = null;
+		connection.in.pos = 0;
+		connection.packetType = null;
 		connection.field843 = null;
 		connection.field844 = null;
 		connection.field831 = null;
@@ -4197,12 +4197,12 @@ public class Statics {
 				client.field9032 = arg2;
 				client.field9052 = 2;
 				client.field9051 = 0;
-				class792 var11 = class792.method14781(class280.field2955, client.field8975.field834);
-				var11.field9467.method15278(client.field9102);
+				class792 var11 = class792.method14781(class280.field2955, client.field8975.randomOut);
+				var11.field9467.p2_alt2(client.field9102);
 				var11.field9467.p1(class42.method3496() ? 1 : 0);
 				var11.field9467.p4(field4166);
 				var11.field9467.p2(client.field9101);
-				var11.field9467.method15293(var6);
+				var11.field9467.p2_alt1(var6);
 				client.field8975.method1913(var11);
 				client.method2677(var10.field8642[0], var10.field8643[0], true, class434.method11404(var10.field8642[0], var10.field8643[0], var10.method13954(), var10.method13954(), 0));
 			}
@@ -4212,9 +4212,9 @@ public class Statics {
 			client.field9032 = arg2;
 			client.field9052 = 1;
 			client.field9051 = 0;
-			class792 var12 = class792.method14781(class280.field2948, client.field8975.field834);
-			var12.field9467.method15279(client.field9102);
-			var12.field9467.method15279(var9.field4838 + var4);
+			class792 var12 = class792.method14781(class280.field2948, client.field8975.randomOut);
+			var12.field9467.p2_alt3(client.field9102);
+			var12.field9467.p2_alt3(var9.field4838 + var4);
 			var12.field9467.p2(client.field9101);
 			var12.field9467.p2(var9.field4836 + var3);
 			var12.field9467.p4(field4166);
@@ -4240,9 +4240,9 @@ public class Statics {
 			client.field9032 = arg2;
 			client.field9052 = 2;
 			client.field9051 = 0;
-			class792 var14 = class792.method14781(var13, client.field8975.field834);
+			class792 var14 = class792.method14781(var13, client.field8975.randomOut);
 			var14.field9467.p1(class42.method3496() ? 1 : 0);
-			var14.field9467.method15293(var9.field4838 + var4);
+			var14.field9467.p2_alt1(var9.field4838 + var4);
 			var14.field9467.p2(var9.field4836 + var3);
 			var14.field9467.p2(var6);
 			client.field8975.method1913(var14);
@@ -4253,14 +4253,14 @@ public class Statics {
 			client.field9032 = arg2;
 			client.field9052 = 2;
 			client.field9051 = 0;
-			class792 var15 = class792.method14781(class280.field2905, client.field8975.field834);
-			var15.field9467.method15278(var9.field4838 + var4);
-			var15.field9467.method15279(var9.field4836 + var3);
+			class792 var15 = class792.method14781(class280.field2905, client.field8975.randomOut);
+			var15.field9467.p2_alt2(var9.field4838 + var4);
+			var15.field9467.p2_alt3(var9.field4836 + var3);
 			var15.field9467.p2(client.field9102);
-			var15.field9467.method15269(class42.method3496() ? 1 : 0);
+			var15.field9467.p1_alt2(class42.method3496() ? 1 : 0);
 			var15.field9467.p4((int) (var7 >>> 32) & Integer.MAX_VALUE);
-			var15.field9467.method15345(field4166);
-			var15.field9467.method15279(client.field9101);
+			var15.field9467.p4_alt1(field4166);
+			var15.field9467.p2_alt3(client.field9101);
 			client.field8975.method1913(var15);
 			client.method5830(var3, var4, var7);
 		}
@@ -4283,11 +4283,11 @@ public class Statics {
 			client.field9032 = arg2;
 			client.field9052 = 2;
 			client.field9051 = 0;
-			class792 var17 = class792.method14781(var16, client.field8975.field834);
-			var17.field9467.method15269(class42.method3496() ? 1 : 0);
-			var17.field9467.method15279(var9.field4838 + var4);
-			var17.field9467.method15345((int) (var7 >>> 32) & Integer.MAX_VALUE);
-			var17.field9467.method15279(var9.field4836 + var3);
+			class792 var17 = class792.method14781(var16, client.field8975.randomOut);
+			var17.field9467.p1_alt2(class42.method3496() ? 1 : 0);
+			var17.field9467.p2_alt3(var9.field4838 + var4);
+			var17.field9467.p4_alt1((int) (var7 >>> 32) & Integer.MAX_VALUE);
+			var17.field9467.p2_alt3(var9.field4836 + var3);
 			client.field8975.method1913(var17);
 			client.method5830(var3, var4, var7);
 		}
@@ -4333,12 +4333,12 @@ public class Statics {
 			client.field9032 = arg2;
 			client.field9052 = 2;
 			client.field9051 = 0;
-			class792 var20 = class792.method14781(class280.field2955, client.field8975.field834);
-			var20.field9467.method15278(client.field9102);
+			class792 var20 = class792.method14781(class280.field2955, client.field8975.randomOut);
+			var20.field9467.p2_alt2(client.field9102);
 			var20.field9467.p1(class42.method3496() ? 1 : 0);
 			var20.field9467.p4(field4166);
 			var20.field9467.p2(client.field9101);
-			var20.field9467.method15293(field2119.field8593);
+			var20.field9467.p2_alt1(field2119.field8593);
 			client.field8975.method1913(var20);
 		}
 		if (var5 == 25) {
@@ -4360,14 +4360,14 @@ public class Statics {
 			client.field9032 = arg2;
 			client.field9052 = 2;
 			client.field9051 = 0;
-			class792 var23 = class792.method14781(class280.field2874, client.field8975.field834);
-			var23.field9467.method15279(var9.field4838 + var4);
+			class792 var23 = class792.method14781(class280.field2874, client.field8975.randomOut);
+			var23.field9467.p2_alt3(var9.field4838 + var4);
 			var23.field9467.p4(field4166);
-			var23.field9467.method15278(client.field9101);
-			var23.field9467.method15279(var6);
-			var23.field9467.method15278(client.field9102);
+			var23.field9467.p2_alt2(client.field9101);
+			var23.field9467.p2_alt3(var6);
+			var23.field9467.p2_alt2(client.field9102);
 			var23.field9467.p2(var9.field4836 + var3);
-			var23.field9467.method15318(class42.method3496() ? 1 : 0);
+			var23.field9467.p1_alt3(class42.method3496() ? 1 : 0);
 			client.field8975.method1913(var23);
 			client.method12668(var3, var4);
 		}
@@ -4379,9 +4379,9 @@ public class Statics {
 				client.field9032 = arg2;
 				client.field9052 = 1;
 				client.field9051 = 0;
-				class792 var24 = class792.method14781(class280.field2897, client.field8975.field834);
-				var24.field9467.method15279(var9.field4836 + var3);
-				var24.field9467.method15279(var9.field4838 + var4);
+				class792 var24 = class792.method14781(class280.field2897, client.field8975.randomOut);
+				var24.field9467.p2_alt3(var9.field4836 + var3);
+				var24.field9467.p2_alt3(var9.field4838 + var4);
 				client.field8975.method1913(var24);
 			}
 		}
@@ -4414,8 +4414,8 @@ public class Statics {
 				client.field9032 = arg2;
 				client.field9052 = 2;
 				client.field9051 = 0;
-				class792 var27 = class792.method14781(var25, client.field8975.field834);
-				var27.field9467.method15279(var6);
+				class792 var27 = class792.method14781(var25, client.field8975.randomOut);
+				var27.field9467.p2_alt3(var6);
 				var27.field9467.p1(class42.method3496() ? 1 : 0);
 				client.field8975.method1913(var27);
 				client.method2677(var26.field8642[0], var26.field8643[0], true, class434.method11404(var26.field8642[0], var26.field8643[0], var26.method13954(), var26.method13954(), 0));
@@ -4429,12 +4429,12 @@ public class Statics {
 				client.field9032 = arg2;
 				client.field9052 = 2;
 				client.field9051 = 0;
-				class792 var30 = class792.method14781(class280.field2855, client.field8975.field834);
-				var30.field9467.method15279(var6);
-				var30.field9467.method15397(field4166);
-				var30.field9467.method15278(client.field9102);
+				class792 var30 = class792.method14781(class280.field2855, client.field8975.randomOut);
+				var30.field9467.p2_alt3(var6);
+				var30.field9467.p4_alt2(field4166);
+				var30.field9467.p2_alt2(client.field9102);
 				var30.field9467.p2(client.field9101);
-				var30.field9467.method15318(class42.method3496() ? 1 : 0);
+				var30.field9467.p1_alt3(class42.method3496() ? 1 : 0);
 				client.field8975.method1913(var30);
 				client.method2677(var29.field8642[0], var29.field8643[0], true, class434.method11404(var29.field8642[0], var29.field8643[0], var29.method13954(), var29.method13954(), 0));
 			}
@@ -4461,8 +4461,8 @@ public class Statics {
 				client.field9032 = arg2;
 				client.field9052 = 2;
 				client.field9051 = 0;
-				class792 var34 = class792.method14781(var31, client.field8975.field834);
-				var34.field9467.method15293(var6);
+				class792 var34 = class792.method14781(var31, client.field8975.randomOut);
+				var34.field9467.p2_alt1(var6);
 				var34.field9467.p1(class42.method3496() ? 1 : 0);
 				client.field8975.method1913(var34);
 				client.method2677(var33.field8642[0], var33.field8643[0], true, class434.method11404(var33.field8642[0], var33.field8643[0], var33.method13954(), var33.method13954(), 0));
@@ -4601,7 +4601,7 @@ public class Statics {
 			return;
 		}
 		while (class590.method3320()) {
-			class792 var1 = class792.method14781(class280.field2943, client.field8975.field834);
+			class792 var1 = class792.method14781(class280.field2943, client.field8975.randomOut);
 			var1.field9467.p1(0);
 			int var2 = var1.field9467.pos;
 			class590.method5552(var1.field9467);
@@ -4613,7 +4613,7 @@ public class Statics {
 				field3357 = client.field9192.method8637(field6772.field6765);
 			}
 		} else if (field3357.field5178 != -1) {
-			class792 var3 = class792.method14781(class280.field2933, client.field8975.field834);
+			class792 var3 = class792.method14781(class280.field2933, client.field8975.randomOut);
 			if (field5168 == null || !field5168.isValid()) {
 				try {
 					Iterator var4 = ManagementFactory.getGarbageCollectorMXBeans().iterator();
@@ -4644,7 +4644,7 @@ public class Statics {
 			}
 			var3.field9467.p1(client.field4121);
 			var3.field9467.p1(var9);
-			var3.field9467.method15278(field3357.field5178);
+			var3.field9467.p2_alt2(field3357.field5178);
 			client.field8975.method1913(var3);
 			field3357 = null;
 			field3307 = var7 + 30000L;
@@ -4783,8 +4783,8 @@ public class Statics {
 		client.method4782();
 		client.field9132++;
 		if (client.field9041) {
-			class792 var26 = class792.method14781(class280.field2942, client.field8975.field834);
-			var26.field9467.method15345(field669 << 28 | field9405 << 14 | field6665);
+			class792 var26 = class792.method14781(class280.field2942, client.field8975.randomOut);
+			var26.field9467.p4_alt1(field669 << 28 | field9405 << 14 | field6665);
 			client.field8975.method1913(var26);
 			client.field9041 = false;
 		}
@@ -4900,7 +4900,7 @@ public class Statics {
 											}
 											client.field8975.field839++;
 											if (client.field8975.field839 > 50) {
-												class792 var42 = class792.method14781(class280.field2873, client.field8975.field834);
+												class792 var42 = class792.method14781(class280.field2873, client.field8975.randomOut);
 												client.field8975.method1913(var42);
 											}
 											if (client.field8978) {
@@ -5751,7 +5751,7 @@ public class Statics {
 	@ObfuscatedName("pg.tc(Lrn;I)V")
 	public static final void method7975(ClientScriptState arg0) {
 		String var1 = (String) arg0.objectStack[--arg0.osp];
-		class792 var2 = class792.method14781(class280.field2929, client.field8975.field834);
+		class792 var2 = class792.method14781(class280.field2929, client.field8975.randomOut);
 		var2.field9467.p1(var1.length() + 1);
 		var2.field9467.pjstr(var1);
 		client.field8975.method1913(var2);
@@ -6088,7 +6088,7 @@ public class Statics {
 			}
 		}
 		class64 var6 = client.method4104();
-		class792 var7 = class792.method14781(class280.field2935, var6.field834);
+		class792 var7 = class792.method14781(class280.field2935, var6.randomOut);
 		var7.field9467.p1(0);
 		int var8 = var7.field9467.pos;
 		var7.field9467.p1(var3);
@@ -6132,8 +6132,8 @@ public class Statics {
 					var7 = class280.field2902;
 				}
 				if (var7 != null) {
-					class792 var8 = class792.method14781(var7, client.field8975.field834);
-					var8.field9467.method15279(var3[var5]);
+					class792 var8 = class792.method14781(var7, client.field8975.randomOut);
+					var8.field9467.p2_alt3(var3[var5]);
 					var8.field9467.p1(0);
 					client.field8975.method1913(var8);
 				}
@@ -6179,16 +6179,16 @@ public class Statics {
 
 	@ObfuscatedName("tm.ku(IIB)V")
 	public static void method11509(int arg0, int arg1) {
-		class792 var2 = class792.method14781(class280.field2932, client.field8975.field834);
-		var2.field9467.method15293(arg1);
-		var2.field9467.method15397(arg0);
+		class792 var2 = class792.method14781(class280.field2932, client.field8975.randomOut);
+		var2.field9467.p2_alt1(arg1);
+		var2.field9467.p4_alt2(arg0);
 		client.field8975.method1913(var2);
 	}
 
 	@ObfuscatedName("nw.ads(Lrn;B)V")
 	public static final void method7050(ClientScriptState arg0) {
 		class64 var1 = client.method4104();
-		class792 var2 = class792.method14781(class280.field2936, var1.field834);
+		class792 var2 = class792.method14781(class280.field2936, var1.randomOut);
 		var2.field9467.p1(0);
 		int var3 = var2.field9467.pos;
 		var2.field9467.p1(2);
@@ -6309,7 +6309,7 @@ public class Statics {
 	@ObfuscatedName("eu.ajc(Lrn;I)V")
 	public static final void method2932(ClientScriptState arg0) {
 		if (client.state == 3) {
-			class792 var1 = class792.method14781(class280.field2949, client.field8959.field834);
+			class792 var1 = class792.method14781(class280.field2949, client.field8959.randomOut);
 			client.field8959.method1913(var1);
 		}
 	}
@@ -6431,7 +6431,7 @@ public class Statics {
 				}
 				client.field9148 = client.field9132;
 				class64 var7 = client.method4104();
-				class792 var8 = class792.method14781(class280.field2930, var7.field834);
+				class792 var8 = class792.method14781(class280.field2930, var7.randomOut);
 				var8.field9467.p1(method1724(arg0));
 				var8.field9467.pjstr(arg0);
 				var7.method1913(var8);
@@ -6460,7 +6460,7 @@ public class Statics {
 				}
 				client.field9148 = client.field9132;
 				class64 var7 = client.method4104();
-				class792 var8 = class792.method14781(class280.field2931, var7.field834);
+				class792 var8 = class792.method14781(class280.field2931, var7.randomOut);
 				var8.field9467.p1(method1724(arg0));
 				var8.field9467.pjstr(arg0);
 				var7.method1913(var8);

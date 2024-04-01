@@ -52,7 +52,7 @@ public class class521 {
 	@ObfuscatedName("kg.s(IZI)V")
 	public static void method5563(int arg0, boolean arg1) {
 		if (arg1) {
-			class792 var2 = class792.method14781(class280.field2867, client.field8975.field834);
+			class792 var2 = class792.method14781(class280.field2867, client.field8975.randomOut);
 			var2.field9467.p2(arg0);
 			client.field8975.method1913(var2);
 		} else {

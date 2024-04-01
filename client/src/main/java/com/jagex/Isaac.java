@@ -3,7 +3,7 @@ package com.jagex;
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ue")
-public final class class568 {
+public final class Isaac {
 
 	@ObfuscatedName("ue.s")
 	public int field6733;
@@ -23,7 +23,7 @@ public final class class568 {
 	@ObfuscatedName("ue.f")
 	public int field6735;
 
-	public class568(int[] arg0) {
+	public Isaac(int[] arg0) {
 		for (int var2 = 0; var2 < arg0.length; var2++) {
 			this.field6736[var2] = arg0[var2];
 		}

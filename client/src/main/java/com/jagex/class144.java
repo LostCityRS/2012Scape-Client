@@ -193,7 +193,7 @@ public class class144 {
 			ScriptRunner.runTrigger(ClientTriggerType.CUTSCENE_END, field1533, -1);
 		}
 		method2911();
-		class792 var4 = class792.method14781(class280.field2953, client.field8975.field834);
+		class792 var4 = class792.method14781(class280.field2953, client.field8975.randomOut);
 		var4.field9467.p1(arg0 ? 1 : 0);
 		client.field8975.method1913(var4);
 	}

@@ -3,10 +3,10 @@ package com.jagex;
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ajl")
-public class class964 extends Packet {
+public class PacketBit extends Packet {
 
 	@ObfuscatedName("ajl.n")
-	public class568 field10473;
+	public Isaac field10473;
 
 	@ObfuscatedName("ajl.o")
 	public static final int[] field10474 = new int[] { 0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, Integer.MAX_VALUE, -1 };
@@ -14,12 +14,12 @@ public class class964 extends Packet {
 	@ObfuscatedName("ajl.q")
 	public int field10475;
 
-	public class964(int arg0) {
+	public PacketBit(int arg0) {
 		super(arg0);
 	}
 
 	@ObfuscatedName("ajl.ir(Lue;I)V")
-	public void method16876(class568 arg0) {
+	public void method16876(Isaac arg0) {
 		this.field10473 = arg0;
 	}
 

@@ -193,7 +193,7 @@ public class class395 {
 			field4203 = false;
 			Statics.field2327 = null;
 		} else if (Statics.field4961.field9674.method15899() != 0 && field4202 != -1 && !class155.method13899()) {
-			class792 var21 = class792.method14781(class280.field2868, client.field8975.field834);
+			class792 var21 = class792.method14781(class280.field2868, client.field8975.randomOut);
 			var21.field9467.p4(field4202);
 			client.field8975.method1913(var21);
 			field4202 = -1;
@@ -290,7 +290,7 @@ public class class395 {
 			field4202 = arg0;
 			Statics.field4206 = null;
 			Statics.field2327 = null;
-			class792 var3 = class792.method14781(class280.field2881, client.field8975.field834);
+			class792 var3 = class792.method14781(class280.field2881, client.field8975.randomOut);
 			var3.field9467.p4(-1);
 			client.field8975.method1913(var3);
 			return;
@@ -367,7 +367,7 @@ public class class395 {
 
 	@ObfuscatedName("ls.ay(II)V")
 	public static void method5712(int arg0) {
-		class792 var1 = class792.method14781(class280.field2881, client.field8975.field834);
+		class792 var1 = class792.method14781(class280.field2881, client.field8975.randomOut);
 		var1.field9467.p4(-1);
 		client.field8975.method1913(var1);
 		Statics.field4206 = new class157(Statics.field9367, arg0);
@@ -376,7 +376,7 @@ public class class395 {
 	@ObfuscatedName("aip.af(I)V")
 	public static void method16504() {
 		if (Statics.field4206 != null && !Statics.field4206.method3000() && Statics.field4206.method2999()) {
-			class792 var0 = class792.method14781(class280.field2881, client.field8975.field834);
+			class792 var0 = class792.method14781(class280.field2881, client.field8975.randomOut);
 			var0.field9467.p4(Statics.field4206.field1591);
 			client.field8975.method1913(var0);
 		}

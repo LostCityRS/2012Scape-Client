@@ -597,7 +597,7 @@ public class class62 {
 				}
 				if (client.state == 1 || client.state == 15) {
 					class64 var26 = client.method4104();
-					class792 var27 = class792.method14781(class280.field2951, var26.field834);
+					class792 var27 = class792.method14781(class280.field2951, var26.randomOut);
 					var27.field9467.p1(arg0.length() + 3);
 					var27.field9467.p1(arg1 ? 1 : 0);
 					var27.field9467.p1(arg2 ? 1 : 0);

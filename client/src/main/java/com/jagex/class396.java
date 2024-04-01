@@ -81,7 +81,7 @@ public class class396 {
 	@ObfuscatedName("nj.s(Loo;I)V")
 	public void method6953(class423 arg0) {
 		this.field4219 = new LinkedList();
-		class338 var2 = client.field8980.method6100();
+		SceneLevelTileFlags var2 = client.field8980.method6100();
 		class453 var3 = client.field8980.method6214();
 		class453 var4 = new class453(Statics.field7324, this.field4216[0], this.field4220[0]);
 		for (int var5 = 1; var5 < this.field4218; var5++) {

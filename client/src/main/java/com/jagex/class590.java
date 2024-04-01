@@ -34,7 +34,7 @@ public class class590 {
 	}
 
 	@ObfuscatedName("kw.a(Lajl;I)V")
-	public static void method5552(class964 arg0) {
+	public static void method5552(PacketBit arg0) {
 		class819 var1 = (class819) field7044.method11563();
 		if (var1 == null) {
 			return;

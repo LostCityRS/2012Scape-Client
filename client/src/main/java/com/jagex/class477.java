@@ -114,7 +114,7 @@ public class class477 {
 		field5040.method8371();
 		field5045.method8371();
 		if (client.field8953 > 0) {
-			class792 var0 = class792.method14781(class280.field2878, client.field8975.field834);
+			class792 var0 = class792.method14781(class280.field2878, client.field8975.randomOut);
 			var0.field9467.p2(client.field8953 * 4);
 			for (int var1 = 0; var1 < client.field8953; var1++) {
 				class415 var2 = client.field9072[var1];
@@ -134,21 +134,21 @@ public class class477 {
 		if (client.field9028 && field5043 <= 0) {
 			field5043 = 20;
 			client.field9028 = false;
-			class792 var5 = class792.method14781(class280.field2882, client.field8975.field834);
-			var5.field9467.method15279((int) client.field9171 >> 3);
-			var5.field9467.method15279((int) client.field9021 >> 3);
+			class792 var5 = class792.method14781(class280.field2882, client.field8975.randomOut);
+			var5.field9467.p2_alt3((int) client.field9171 >> 3);
+			var5.field9467.p2_alt3((int) client.field9021 >> 3);
 			client.field8975.method1913(var5);
 		}
 		if (Statics.field578 != field5042) {
 			field5042 = Statics.field578;
-			class792 var6 = class792.method14781(class280.field2925, client.field8975.field834);
+			class792 var6 = class792.method14781(class280.field2925, client.field8975.randomOut);
 			var6.field9467.p1(Statics.field578 ? 1 : 0);
 			client.field8975.method1913(var6);
 		}
 		if (client.field8932) {
 			return;
 		}
-		class792 var7 = class792.method14781(class280.field2888, client.field8975.field834);
+		class792 var7 = class792.method14781(class280.field2888, client.field8975.randomOut);
 		var7.field9467.p1(0);
 		int var8 = var7.field9467.pos;
 		Packet var9 = Statics.field4961.method15447();

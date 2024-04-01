@@ -3,12 +3,12 @@ package com.jagex;
 import deob.ObfuscatedName;
 
 @ObfuscatedName("lg")
-public class class338 {
+public class SceneLevelTileFlags {
 
 	@ObfuscatedName("lg.l")
 	public byte[][][] field3606;
 
-	public class338(int arg0, int arg1, int arg2) {
+	public SceneLevelTileFlags(int arg0, int arg1, int arg2) {
 		this.field3606 = new byte[arg0][arg1][arg2];
 	}
 

@@ -2389,8 +2389,8 @@ public class class681 extends class14 {
 
 	@ObfuscatedName("yt.m(IFFFFF)V")
 	public void method530(int arg0, float arg1, float arg2, float arg3, float arg4, float arg5) {
-		this.field7998 = (int) (arg1 * 65535.0F) * 768;
-		this.field8013 = (int) (arg2 * 65535.0F) * 589824;
+		this.field7998 = (int) (arg1 * 65535.0F);
+		this.field8013 = (int) (arg2 * 65535.0F);
 		float var7 = (float) Math.sqrt((double) (arg5 * arg5 + arg3 * arg3 + arg4 * arg4));
 		this.field8021 = (int) (arg3 * 65535.0F / var7);
 		this.field8009 = (int) (arg4 * 65535.0F / var7);

@@ -16,19 +16,19 @@ public class class64 {
 	public int field826 = 0;
 
 	@ObfuscatedName("ad.c")
-	public Packet field830 = new Packet(1600);
+	public Packet out = new Packet(1600);
 
 	@ObfuscatedName("ad.m")
-	public class568 field834;
+	public Isaac randomOut;
 
 	@ObfuscatedName("ad.t")
-	public class964 field832 = new class964(15000);
+	public PacketBit in = new PacketBit(15000);
 
 	@ObfuscatedName("ad.l")
-	public class568 field833;
+	public Isaac randomIn;
 
 	@ObfuscatedName("ad.f")
-	public class283 field840 = null;
+	public ServerProt packetType = null;
 
 	@ObfuscatedName("ad.d")
 	public int field835 = 0;
@@ -55,13 +55,13 @@ public class class64 {
 	public int field838;
 
 	@ObfuscatedName("ad.x")
-	public class283 field843;
+	public ServerProt field843;
 
 	@ObfuscatedName("ad.i")
-	public class283 field844;
+	public ServerProt field844;
 
 	@ObfuscatedName("ad.v")
-	public class283 field831;
+	public ServerProt field831;
 
 	@ObfuscatedName("ad.k")
 	public boolean field846 = false;
@@ -86,16 +86,16 @@ public class class64 {
 		if (this.field827 == null || this.field826 <= 0) {
 			return;
 		}
-		this.field830.pos = 0;
+		this.out.pos = 0;
 		while (true) {
 			class792 var1 = (class792) this.field829.method11563();
-			if (var1 == null || var1.field9465 > this.field830.data.length - this.field830.pos) {
-				this.field827.method7193(this.field830.data, 0, this.field830.pos);
-				this.field845 += this.field830.pos;
+			if (var1 == null || var1.field9465 > this.out.data.length - this.out.pos) {
+				this.field827.method7193(this.out.data, 0, this.out.pos);
+				this.field845 += this.out.pos;
 				this.field839 = 0;
 				break;
 			}
-			this.field830.method15276(var1.field9467.data, 0, var1.field9465);
+			this.out.method15276(var1.field9467.data, 0, var1.field9465);
 			this.field826 -= var1.field9465;
 			var1.method6979();
 			var1.field9467.method15282();
