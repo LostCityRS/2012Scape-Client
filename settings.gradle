@@ -1,0 +1,14 @@
+rootProject.name = "2012Scape-Client"
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        flatDir {
+            dirs 'lib'
+        }
+    }
+}
+
+include(
+    "client"
+)
