@@ -292,7 +292,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Stack;
-import netscape.javascript.JSObject;
+// import netscape.javascript.JSObject;
 
 public class Statics {
 
@@ -2152,7 +2152,7 @@ public class Statics {
 
 	@ObfuscatedName("uy.u(Ljava/applet/Applet;Ljava/lang/String;B)V")
 	public static void method12166(Applet arg0, String arg1) throws Throwable {
-		JSObject.getWindow(arg0).eval(arg1);
+		// JSObject.getWindow(arg0).eval(arg1);
 	}
 
 	@ObfuscatedName("tm.u(Lub;I)[Lus;")
