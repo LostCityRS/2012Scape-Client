@@ -58,7 +58,7 @@ public class class331 {
 		byte[] var3 = new byte[var1.field9629.length - var1.field9626];
 		var1.method15263(var3, 0, var3.length);
 		byte[] var6;
-		if (this.field3543 == null || this.field3541 == null) {
+		if (this.field3543 == null || this.field3541 == null || !client.ENABLE_JS5_RSA) {
 			var6 = var3;
 		} else {
 			BigInteger var4 = new BigInteger(var3);

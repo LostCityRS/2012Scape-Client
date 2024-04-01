@@ -24,7 +24,7 @@ public class AppletViewer extends Applet implements AppletStub {
 		client_parameters.put("5", "true,false,0,43,200,18,0,21,354,-15,Verdana,11,0xF4ECE9,candy_bar_middle.gif,candy_bar_back.gif,candy_bar_outline_left.gif,candy_bar_outline_right.gif,candy_bar_outline_top.gif,candy_bar_outline_bottom.gif,loadbar_body_left.gif,loadbar_body_right.gif,loadbar_body_fill.gif,6");
 		client_parameters.put("11", "0");
 		client_parameters.put("34", "225");
-		client_parameters.put("30", "MpanIDx68ZShS/0wQc60lSvsuEhgYKEW");
+		client_parameters.put("30", "MpanIDx68ZShS/0wQc60lSvsuExhgYKEW");
 		client_parameters.put("9", "false");
 		client_parameters.put("32", "7E38D137C0C97EAC1B89C07E1823D93B92621D5FF287F27135B71ECF61D4B07BDF4D957CA0C90F16707EE156B23C4365");
 		client_parameters.put("25", "false");

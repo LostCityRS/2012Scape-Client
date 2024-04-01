@@ -23,6 +23,11 @@ import java.util.Vector;
 
 public final class client extends class385 {
 
+    public static final boolean ENABLE_RSA = false;
+    public static final boolean ENABLE_JS5_RSA = false;
+    public static final boolean ENABLE_HOST_CHECK = false;
+    public static final boolean ENABLE_ISAAC = false;
+
 	@ObfuscatedName("client.bx")
 	public static class527 field9163 = null;
 

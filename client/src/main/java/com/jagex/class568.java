@@ -36,7 +36,7 @@ public final class class568 {
 			this.method11969();
 			this.field6733 = 256;
 		}
-		return this.field6736[--this.field6733];
+		return client.ENABLE_ISAAC ? this.field6736[--this.field6733] : 0;
 	}
 
 	@ObfuscatedName("ue.j(I)I")
@@ -45,7 +45,7 @@ public final class class568 {
 			this.method11969();
 			this.field6733 = 256;
 		}
-		return this.field6736[this.field6733 - 1];
+		return client.ENABLE_ISAAC ? this.field6736[this.field6733 - 1] : 0;
 	}
 
 	@ObfuscatedName("ue.a(I)V")
