@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 java {
@@ -8,6 +9,18 @@ java {
     }
 
     sourceCompatibility = JavaVersion.VERSION_1_6
+}
+
+application {
+    mainClass = "AppletViewer"
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'AppletViewer'
+        )
+    }
 }
 
 tasks.withType(JavaCompile) {
