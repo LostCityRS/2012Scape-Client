@@ -367,7 +367,7 @@ public class class428 {
 					if (var9 < 0.0F) {
 						var9 *= -1.0F;
 					}
-					if (!var9 < (float) this.field4608 && (this.method7597(arg1, 0) && (this.method7597(arg1, 1) && (this.method7597(arg1, 2) && this.method7597(arg1, 3))))) {
+					if (!(var9 < (float) this.field4608) && (this.method7597(arg1, 0) && (this.method7597(arg1, 1) && (this.method7597(arg1, 2) && this.method7597(arg1, 3))))) {
 						this.field4618[this.field4617++] = arg1;
 					}
 				}
