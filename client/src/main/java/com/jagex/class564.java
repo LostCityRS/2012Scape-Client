@@ -46,7 +46,7 @@ public class class564 {
 	@ObfuscatedName("uc.j(Laet;II)V")
 	public void method11918(Packet arg0, int arg1) {
 		if (arg1 == 1) {
-			this.field6716 = arg0.method15241();
+			this.field6716 = arg0.g3();
 			this.method11916(this.field6716);
 		} else if (arg1 == 2) {
 			this.field6713 = arg0.g2();

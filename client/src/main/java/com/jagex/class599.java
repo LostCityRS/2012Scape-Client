@@ -31,7 +31,7 @@ public class class599 {
 	@ObfuscatedName("vv.j(Laet;IB)V")
 	public void method12362(Packet arg0, int arg1) {
 		if (arg1 == 1) {
-			this.field7164 = arg0.method15411();
+			this.field7164 = arg0.gSmart2or4null();
 		} else if (arg1 == 2) {
 			this.field7163 = arg0.g1();
 			this.field7165 = arg0.g1();

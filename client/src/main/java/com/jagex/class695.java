@@ -15,7 +15,7 @@ public class class695 extends class150 {
 	public class695(Packet arg0) {
 		super(arg0);
 		this.field8467 = arg0.g2();
-		this.field8468 = arg0.method15411();
+		this.field8468 = arg0.gSmart2or4null();
 	}
 
 	@ObfuscatedName("zt.j(I)V")

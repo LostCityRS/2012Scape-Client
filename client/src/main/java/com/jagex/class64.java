@@ -95,10 +95,10 @@ public class class64 {
 				this.field839 = 0;
 				break;
 			}
-			this.out.method15276(var1.field9467.data, 0, var1.field9465);
+			this.out.pdata(var1.field9467.data, 0, var1.field9465);
 			this.field826 -= var1.field9465;
 			var1.method6979();
-			var1.field9467.method15282();
+			var1.field9467.release();
 			var1.method15023();
 		}
 	}

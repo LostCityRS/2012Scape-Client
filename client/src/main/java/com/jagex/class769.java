@@ -157,7 +157,7 @@ public class class769 extends class399 {
 
 	@ObfuscatedName("acx.z([II[IZI)J")
 	public long method14760(int[] arg0, int arg1, int[] arg2, boolean arg3) {
-		long[] var5 = Packet.field9628;
+		long[] var5 = Packet.crc64table;
 		long var6 = -1L;
 		long var8 = var6 >>> 8 ^ var5[(int) ((var6 ^ (long) (arg1 >> 8)) & 0xFFL)];
 		long var10 = var8 >>> 8 ^ var5[(int) ((var8 ^ (long) arg1) & 0xFFL)];

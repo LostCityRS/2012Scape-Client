@@ -22,7 +22,7 @@ public class class572 {
 	@ObfuscatedName("uh.j(Laet;II)V")
 	public void method12021(Packet arg0, int arg1) {
 		if (arg1 == 1) {
-			this.field6760 = class524.method16898(arg0.method15238());
+			this.field6760 = class524.method16898(arg0.g1b());
 		}
 	}
 }

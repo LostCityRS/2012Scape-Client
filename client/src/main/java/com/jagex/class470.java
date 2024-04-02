@@ -157,7 +157,7 @@ public class class470 {
 		if ((var3 & 0x10) == 0) {
 			this.field4990 = Vector3.method5294(-50.0F, -60.0F, -50.0F);
 		} else {
-			this.field4990 = Vector3.method5294((float) arg0.method15240(), (float) arg0.method15240(), (float) arg0.method15240());
+			this.field4990 = Vector3.method5294((float) arg0.g2s(), (float) arg0.g2s(), (float) arg0.g2s());
 		}
 		if ((var3 & 0x20) == 0) {
 			this.field4989 = class469.field4982;
@@ -192,9 +192,9 @@ public class class470 {
 	@ObfuscatedName("qf.m(Laet;Lqp;I)V")
 	public void method8207(Packet arg0, class469 arg1) {
 		int var3 = arg0.g2();
-		int var4 = arg0.method15240();
-		int var5 = arg0.method15240();
-		int var6 = arg0.method15240();
+		int var4 = arg0.g2s();
+		int var5 = arg0.g2s();
+		int var6 = arg0.g2s();
 		int var7 = arg0.g2();
 		Statics.field3358 = var7;
 		this.field4986 = arg1.method8193(var3, var4, var5, var6);

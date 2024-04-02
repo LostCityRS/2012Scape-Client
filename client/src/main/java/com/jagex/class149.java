@@ -29,7 +29,7 @@ public final class class149 {
 		int var3 = arg0.g1();
 		switch(var3) {
 			case 0:
-				this.field1560 = arg0.method15411();
+				this.field1560 = arg0.gSmart2or4null();
 				break;
 			case 1:
 				this.field1560 = -1;

@@ -92,7 +92,7 @@ public class class759 extends class340 {
 						this.field3631 = new byte[4][][];
 					}
 					for (int var17 = 0; var17 < 4; var17++) {
-						byte var18 = arg1.method15238();
+						byte var18 = arg1.g1b();
 						if (var18 == 0 && this.field3631[var17] != null) {
 							int var19 = arg2;
 							int var20 = arg2 + 64;
@@ -131,7 +131,7 @@ public class class759 extends class340 {
 							}
 							for (int var23 = 0; var23 < 64; var23 += 4) {
 								for (int var24 = 0; var24 < 64; var24 += 4) {
-									byte var25 = arg1.method15238();
+									byte var25 = arg1.g1b();
 									for (int var26 = arg2 + var23; var26 < arg2 + var23 + 4; var26++) {
 										for (int var27 = arg3 + var24; var27 < arg3 + var24 + 4; var27++) {
 											if (var26 >= 0 && var26 < this.field3627 && var27 >= 0 && var27 < this.field3643) {
@@ -274,7 +274,7 @@ public class class759 extends class340 {
 						this.field3631 = new byte[4][][];
 					}
 					for (int var26 = 0; var26 < 4; var26++) {
-						byte var27 = arg1.method15238();
+						byte var27 = arg1.g1b();
 						if (var27 == 0 && this.field3631[arg2] != null) {
 							if (var26 <= arg5) {
 								int var28 = arg3;
@@ -315,7 +315,7 @@ public class class759 extends class340 {
 							}
 							for (int var32 = 0; var32 < 64; var32 += 4) {
 								for (int var33 = 0; var33 < 64; var33 += 4) {
-									byte var34 = arg1.method15238();
+									byte var34 = arg1.g1b();
 									if (var26 <= arg5) {
 										for (int var35 = var32; var35 < var32 + 4; var35++) {
 											for (int var36 = var33; var36 < var33 + 4; var36++) {
@@ -361,7 +361,7 @@ public class class759 extends class340 {
 		Packet var7 = new Packet(arg1);
 		int var8 = -1;
 		label57: while (true) {
-			int var9 = var7.method15258();
+			int var9 = var7.gExtended1or2();
 			if (var9 == 0) {
 				return var6;
 			}
@@ -370,7 +370,7 @@ public class class759 extends class340 {
 			boolean var11 = false;
 			while (true) {
 				while (!var11) {
-					int var13 = var7.method15277();
+					int var13 = var7.gSmart1or2();
 					if (var13 == 0) {
 						continue label57;
 					}
@@ -390,7 +390,7 @@ public class class759 extends class340 {
 						}
 					}
 				}
-				int var12 = var7.method15277();
+				int var12 = var7.gSmart1or2();
 				if (var12 == 0) {
 					break;
 				}
@@ -416,14 +416,14 @@ public class class759 extends class340 {
 		Packet var6 = new Packet(arg1);
 		int var7 = -1;
 		while (true) {
-			int var8 = var6.method15258();
+			int var8 = var6.gExtended1or2();
 			if (var8 == 0) {
 				return;
 			}
 			var7 += var8;
 			int var9 = 0;
 			while (true) {
-				int var10 = var6.method15277();
+				int var10 = var6.gSmart1or2();
 				if (var10 == 0) {
 					break;
 				}
@@ -458,14 +458,14 @@ public class class759 extends class340 {
 		Packet var11 = new Packet(arg1);
 		int var12 = -1;
 		while (true) {
-			int var13 = var11.method15258();
+			int var13 = var11.gExtended1or2();
 			if (var13 == 0) {
 				return;
 			}
 			var12 += var13;
 			int var14 = 0;
 			while (true) {
-				int var15 = var11.method15277();
+				int var15 = var11.gSmart1or2();
 				if (var15 == 0) {
 					break;
 				}

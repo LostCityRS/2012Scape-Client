@@ -55,27 +55,27 @@ public class class144 {
 			for (int var4 = 0; var4 < var3; var4++) {
 				field1534.method11558(new class781(var2));
 			}
-			int var5 = var2.method15277();
+			int var5 = var2.gSmart1or2();
 			Statics.field10534 = new class146[var5];
 			for (int var6 = 0; var6 < var5; var6++) {
 				Statics.field10534[var6] = new class146(var2);
 			}
-			int var7 = var2.method15277();
+			int var7 = var2.gSmart1or2();
 			Statics.field1537 = new class149[var7];
 			for (int var8 = 0; var8 < var7; var8++) {
 				Statics.field1537[var8] = new class149(var2, var8);
 			}
-			int var9 = var2.method15277();
+			int var9 = var2.gSmart1or2();
 			Statics.field1528 = new class147[var9];
 			for (int var10 = 0; var10 < var9; var10++) {
 				Statics.field1528[var10] = new class147(var2);
 			}
-			int var11 = var2.method15277();
+			int var11 = var2.gSmart1or2();
 			Statics.field5181 = new class151[var11];
 			for (int var12 = 0; var12 < var11; var12++) {
 				Statics.field5181[var12] = new class151(var2);
 			}
-			int var13 = var2.method15277();
+			int var13 = var2.gSmart1or2();
 			Statics.field6396 = new class150[var13];
 			for (int var14 = 0; var14 < var13; var14++) {
 				Statics.field6396[var14] = class150.method3928(var2);

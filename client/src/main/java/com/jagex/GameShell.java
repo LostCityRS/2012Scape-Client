@@ -265,9 +265,9 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
 						var6 = var9.gjstr2();
 					}
 				} else {
-					var5 = var9.method15232();
+					var5 = var9.gUTF8();
 					if (var12 == 1) {
-						var6 = var9.method15232();
+						var6 = var9.gUTF8();
 					}
 				}
 				var8.method12076();
@@ -353,9 +353,9 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
 			Packet var4 = new Packet(500);
 			var4.p1(3);
 			var4.p1(arg1 == null ? 0 : 1);
-			var4.method15230(arg0.getPath());
+			var4.pUTF8(arg0.getPath());
 			if (arg1 != null) {
-				var4.method15230(arg1.getPath());
+				var4.pUTF8(arg1.getPath());
 			}
 			var3.method12075(var4.data, 0, var4.pos);
 			var3.method12076();
@@ -463,7 +463,7 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
 				var1[var4] = -1;
 			}
 		}
-		arg0.method15276(var1, 0, 24);
+		arg0.pdata(var1, 0, 24);
 	}
 
 	@ObfuscatedName("nv.o(Ljava/lang/String;I)V")

@@ -28,7 +28,7 @@ public class class932 extends class789 {
 	@ObfuscatedName("aiw.u(Laet;B)V")
 	public void method14985(Packet arg0) {
 		this.field10214 = arg0.g2();
-		this.field10213 = arg0.method15238();
+		this.field10213 = arg0.g1b();
 		this.field10215 = arg0.g2();
 		arg0.g8();
 		this.field10216 = arg0.gjstr();

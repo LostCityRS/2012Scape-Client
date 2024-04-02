@@ -99,10 +99,10 @@ public final class class316 {
 
 	@ObfuscatedName("kn.m(Laet;)V")
 	public void method5245(Packet arg0) {
-		this.field3465 = arg0.method15324();
-		this.field3469 = arg0.method15324();
-		this.field3470 = arg0.method15324();
-		this.field3471 = arg0.method15324();
+		this.field3465 = arg0.gFloat();
+		this.field3469 = arg0.gFloat();
+		this.field3470 = arg0.gFloat();
+		this.field3471 = arg0.gFloat();
 	}
 
 	@ObfuscatedName("kn.t(FFFF)V")

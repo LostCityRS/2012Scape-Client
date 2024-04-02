@@ -72,7 +72,7 @@ public class class272 {
 			this.field2658 = arg0.g2() + 1;
 			this.field2662 = arg0.g2() + 1;
 		} else if (arg1 == 3) {
-			arg0.method15238();
+			arg0.g1b();
 		} else if (arg1 == 4) {
 			this.field2664 = arg0.g1();
 		} else if (arg1 == 5) {

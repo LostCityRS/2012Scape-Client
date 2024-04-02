@@ -37,7 +37,7 @@ public class class607 {
 		} else if (arg1 == 3) {
 			this.field7189 = arg0.g2();
 		} else if (arg1 == 4) {
-			this.field7190 = arg0.method15240();
+			this.field7190 = arg0.g2s();
 		}
 	}
 }

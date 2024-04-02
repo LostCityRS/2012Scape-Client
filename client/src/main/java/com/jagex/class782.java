@@ -69,7 +69,7 @@ public class class782 extends class399 {
 		int var19 = arg0.pos;
 		int var20 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
 		for (int var21 = 0; var21 < var20; var21++) {
-			arg0.method15261();
+			arg0.gVarInt();
 		}
 		int var22 = arg0.pos - var19 + var18;
 		int var23 = arg0.pos;
@@ -183,8 +183,8 @@ public class class782 extends class399 {
 			int var72 = -1;
 			while (true) {
 				while (true) {
-					int var73 = arg0.method15261();
-					var60.method15315(var73);
+					int var73 = arg0.gVarInt();
+					var60.pVarInt(var73);
 					int var74 = arg0.data[var38++] & 0xFF;
 					boolean var75 = var72 != var74;
 					var72 = var74 & 0xF;

@@ -43,7 +43,7 @@ public class class784 extends class399 {
 		}
 		byte[] var4 = new byte[var3];
 		for (int var5 = 0; var5 < var3; var5++) {
-			var4[var5] = var2.method15238();
+			var4[var5] = var2.g1b();
 		}
 		var2.pos++;
 		var3++;
@@ -54,7 +54,7 @@ public class class784 extends class399 {
 		}
 		byte[] var8 = new byte[var7];
 		for (int var9 = 0; var9 < var7; var9++) {
-			var8[var9] = var2.method15238();
+			var8[var9] = var2.g1b();
 		}
 		var2.pos++;
 		var7++;
@@ -65,7 +65,7 @@ public class class784 extends class399 {
 		}
 		byte[] var12 = new byte[var11];
 		for (int var13 = 0; var13 < var11; var13++) {
-			var12[var13] = var2.method15238();
+			var12[var13] = var2.g1b();
 		}
 		var2.pos++;
 		var11++;
@@ -112,7 +112,7 @@ public class class784 extends class399 {
 		}
 		byte[] var29 = new byte[var28];
 		for (int var30 = 0; var30 < var28; var30++) {
-			var29[var30] = var2.method15238();
+			var29[var30] = var2.g1b();
 		}
 		var2.pos++;
 		var28++;
@@ -136,7 +136,7 @@ public class class784 extends class399 {
 				} else {
 					var35 = -1;
 				}
-				var37 = var2.method15261();
+				var37 = var2.gVarInt();
 			}
 			this.field9406[var38] = (short) (this.field9406[var38] + ((var37 - 1 & 0x2) << 14));
 			this.field9407[var38] = var37;
@@ -215,23 +215,23 @@ public class class784 extends class399 {
 			class159 var56 = var19[var55];
 			if (var56.field1622 != null) {
 				for (int var57 = 1; var57 < var56.field1622.length; var57 += 2) {
-					var56.field1622[var57] = var2.method15238();
+					var56.field1622[var57] = var2.g1b();
 				}
 			}
 			if (var56.field1616 != null) {
 				for (int var58 = 3; var58 < var56.field1616.length - 2; var58 += 2) {
-					var56.field1616[var58] = var2.method15238();
+					var56.field1616[var58] = var2.g1b();
 				}
 			}
 		}
 		if (var25 != null) {
 			for (int var59 = 1; var59 < var25.length; var59 += 2) {
-				var25[var59] = var2.method15238();
+				var25[var59] = var2.g1b();
 			}
 		}
 		if (var27 != null) {
 			for (int var60 = 1; var60 < var27.length; var60 += 2) {
-				var27[var60] = var2.method15238();
+				var27[var60] = var2.g1b();
 			}
 		}
 		for (int var61 = 0; var61 < var16; var61++) {

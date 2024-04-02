@@ -28,7 +28,7 @@ public class class694 extends class150 {
 		this.field8461 = var2 >>> 16;
 		this.field8460 = var2 & 0xFFFF;
 		this.field8463 = arg0.g1();
-		this.field8464 = arg0.method15254();
+		this.field8464 = arg0.gSmart1or2s();
 	}
 
 	@ObfuscatedName("zi.j(I)V")

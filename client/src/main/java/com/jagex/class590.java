@@ -160,7 +160,7 @@ public class class590 {
 						for (int var15 = 0; var15 < var10; var15++) {
 							int var16 = arg0.g4s();
 							var14[var15] = new byte[var16];
-							arg0.method15263(var14[var15], 0, var16);
+							arg0.gdata(var14[var15], 0, var16);
 						}
 					}
 					var2.field9737[var3] = var4;

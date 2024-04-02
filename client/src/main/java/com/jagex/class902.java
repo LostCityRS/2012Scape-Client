@@ -131,9 +131,9 @@ public class class902 extends PathingEntity {
 		} else {
 			this.field10042 = null;
 		}
-		this.field10045 = arg0.method15238();
-		this.field10053 = arg0.method15238();
-		this.field10066 = arg0.method15238() == 1;
+		this.field10045 = arg0.g1b();
+		this.field10053 = arg0.g1b();
+		this.field10066 = arg0.g1b() == 1;
 		if (Statics.field6683 == class515.field6368 && client.field9074 >= 2) {
 			this.field10066 = false;
 		}
@@ -151,7 +151,7 @@ public class class902 extends PathingEntity {
 					int var15 = arg0.g1();
 					int var16 = (var14 << 8) + var15;
 					if (var13 == 0 && var16 == 65535) {
-						var9 = arg0.method15411();
+						var9 = arg0.gSmart2or4null();
 						this.field10061 = arg0.g1();
 						break;
 					}

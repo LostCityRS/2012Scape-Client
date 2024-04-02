@@ -44,11 +44,11 @@ public class class779 extends class399 {
 			this.field9352[var6] = var3.g2();
 		}
 		for (int var7 = 0; var7 < this.field9362; var7++) {
-			this.field9364[var7] = new int[var3.method15277()];
+			this.field9364[var7] = new int[var3.gSmart1or2()];
 		}
 		for (int var8 = 0; var8 < this.field9362; var8++) {
 			for (int var9 = 0; var9 < this.field9364[var8].length; var9++) {
-				this.field9364[var8][var9] = var3.method15277();
+				this.field9364[var8][var9] = var3.gSmart1or2();
 			}
 		}
 	}

@@ -44,8 +44,8 @@ public class class792 extends class399 {
 		} else {
 			var2.field9467 = new PacketBit(260);
 		}
-		var2.field9467.method16876(arg1);
-		var2.field9467.method16864(var2.field9469.field2957);
+		var2.field9467.setSeed(arg1);
+		var2.field9467.pIsaac1(var2.field9469.field2957);
 		var2.field9465 = 0;
 		return var2;
 	}

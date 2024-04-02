@@ -41,7 +41,7 @@ public class class950 extends class800 {
 			this.field10358 = new char[var3];
 			for (int var4 = 0; var4 < var3; var4++) {
 				this.field10359[var4] = arg0.g2();
-				byte var5 = arg0.method15238();
+				byte var5 = arg0.g1b();
 				this.field10358[var4] = var5 == 0 ? 0 : class524.method16898(var5);
 			}
 		} else if (arg1 == 3) {
@@ -50,7 +50,7 @@ public class class950 extends class800 {
 			this.field10360 = new char[var6];
 			for (int var7 = 0; var7 < var6; var7++) {
 				this.field10356[var7] = arg0.g2();
-				byte var8 = arg0.method15238();
+				byte var8 = arg0.g1b();
 				this.field10360[var7] = var8 == 0 ? 0 : class524.method16898(var8);
 			}
 		} else if (arg1 == 4) {

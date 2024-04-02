@@ -14,10 +14,10 @@ public class Packet extends class399 {
 	public int pos;
 
 	@ObfuscatedName("aet.m")
-	public static int[] field9627 = new int[256];
+	public static int[] crctable = new int[256];
 
 	@ObfuscatedName("aet.l")
-	public static long[] field9628;
+	public static long[] crc64table = new long[256];
 
 	static {
 		for (int var0 = 0; var0 < 256; var0++) {
@@ -29,9 +29,9 @@ public class Packet extends class399 {
 					var1 >>>= 0x1;
 				}
 			}
-			field9627[var0] = var1;
+			crctable[var0] = var1;
 		}
-		field9628 = new long[256];
+
 		for (int var3 = 0; var3 < 256; var3++) {
 			long var4 = (long) var3;
 			for (int var6 = 0; var6 < 8; var6++) {
@@ -41,7 +41,7 @@ public class Packet extends class399 {
 					var4 >>>= 0x1;
 				}
 			}
-			field9628[var3] = var4;
+			crc64table[var3] = var4;
 		}
 	}
 
@@ -49,18 +49,18 @@ public class Packet extends class399 {
 	public static int getcrc(byte[] arg0, int arg1, int arg2) {
 		int var3 = -1;
 		for (int var4 = arg1; var4 < arg2; var4++) {
-			var3 = var3 >>> 8 ^ field9627[(var3 ^ arg0[var4]) & 0xFF];
+			var3 = var3 >>> 8 ^ crctable[(var3 ^ arg0[var4]) & 0xFF];
 		}
 		return ~var3;
 	}
 
 	@ObfuscatedName("pb.j([BIS)I")
-	public static int method7834(byte[] arg0, int arg1) {
+	public static int getcrc(byte[] arg0, int arg1) {
 		return getcrc(arg0, 0, arg1);
 	}
 
 	public Packet(int arg0) {
-		this.data = Statics.method11364(arg0);
+		this.data = Statics.alloc(arg0);
 		this.pos = 0;
 	}
 
@@ -70,7 +70,7 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.a(I)V")
-	public void method15282() {
+	public void release() {
 		if (this.data != null) {
 			class532.method7068(this.data);
 		}
@@ -139,7 +139,7 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.n(JII)V")
-	public void method15227(long arg0, int arg1) {
+	public void pVarLong(long arg0, int arg1) {
 		int var5 = arg1 - 1;
 		if (var5 < 0 || var5 > 7) {
 			throw new IllegalArgumentException();
@@ -176,15 +176,15 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.h(Ljava/lang/CharSequence;B)V")
-	public void method15230(CharSequence arg0) {
+	public void pUTF8(CharSequence arg0) {
 		int var2 = class479.method7859(arg0);
 		this.data[++this.pos - 1] = 0;
-		this.method15315(var2);
+		this.pVarInt(var2);
 		this.pos += class479.method4006(this.data, this.pos, arg0);
 	}
 
 	@ObfuscatedName("aet.r([BIIB)V")
-	public void method15276(byte[] arg0, int arg1, int arg2) {
+	public void pdata(byte[] arg0, int arg1, int arg2) {
 		for (int var4 = arg1; var4 < arg1 + arg2; var4++) {
 			this.data[++this.pos - 1] = arg0[var4];
 		}
@@ -205,12 +205,12 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.e(II)V")
-	public void method15251(int arg0) {
+	public void psize1(int arg0) {
 		this.data[this.pos - arg0 - 1] = (byte) arg0;
 	}
 
 	@ObfuscatedName("aet.ay(II)V")
-	public void method15235(int arg0) {
+	public void pSmart2or4(int arg0) {
 		if (arg0 >= 0 && arg0 < 128) {
 			this.p1(arg0);
 		} else if (arg0 >= 0 && arg0 < 32768) {
@@ -221,7 +221,7 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.af(II)V")
-	public void method15315(int arg0) {
+	public void pVarInt(int arg0) {
 		if ((arg0 & 0xFFFFFF80) != 0) {
 			if ((arg0 & 0xFFFFC000) != 0) {
 				if ((arg0 & 0xFFE00000) != 0) {
@@ -243,7 +243,7 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.an(I)B")
-	public byte method15238() {
+	public byte g1b() {
 		return this.data[++this.pos - 1];
 	}
 
@@ -254,7 +254,7 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.ag(I)I")
-	public int method15240() {
+	public int g2s() {
 		this.pos += 2;
 		int var1 = ((this.data[this.pos - 2] & 0xFF) << 8) + (this.data[this.pos - 1] & 0xFF);
 		if (var1 > 32767) {
@@ -264,13 +264,13 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.as(B)I")
-	public int method15241() {
+	public int g3() {
 		this.pos += 3;
 		return (this.data[this.pos - 1] & 0xFF) + ((this.data[this.pos - 2] & 0xFF) << 8) + ((this.data[this.pos - 3] & 0xFF) << 16);
 	}
 
 	@ObfuscatedName("aet.ai(B)I")
-	public int method15242() {
+	public int g3s() {
 		this.pos += 3;
 		int var1 = (this.data[this.pos - 1] & 0xFF) + ((this.data[this.pos - 2] & 0xFF) << 8) + ((this.data[this.pos - 3] & 0xFF) << 16);
 		if (var1 > 8388607) {
@@ -286,13 +286,13 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.al(I)I")
-	public int method15341() {
+	public int ig4s() {
 		this.pos += 4;
 		return (this.data[this.pos - 4] & 0xFF) + ((this.data[this.pos - 3] & 0xFF) << 8) + ((this.data[this.pos - 1] & 0xFF) << 24) + ((this.data[this.pos - 2] & 0xFF) << 16);
 	}
 
 	@ObfuscatedName("aet.at(B)J")
-	public long method15245() {
+	public long g5() {
 		long var1 = (long) this.g1() & 0xFFFFFFFFL;
 		long var3 = (long) this.g4s() & 0xFFFFFFFFL;
 		return (var1 << 32) + var3;
@@ -306,14 +306,14 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.aw(I)J")
-	public long method15247() {
-		long var1 = (long) this.method15341() & 0xFFFFFFFFL;
-		long var3 = (long) this.method15341() & 0xFFFFFFFFL;
+	public long ig8() {
+		long var1 = (long) this.ig4s() & 0xFFFFFFFFL;
+		long var3 = (long) this.ig4s() & 0xFFFFFFFFL;
 		return (var3 << 32) + var1;
 	}
 
 	@ObfuscatedName("aet.aa(II)J")
-	public long method15231(int arg0) {
+	public long gVarLong(int arg0) {
 		int var5 = arg0 - 1;
 		if (var5 < 0 || var5 > 7) {
 			throw new IllegalArgumentException();
@@ -328,7 +328,7 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.am(I)F")
-	public float method15324() {
+	public float gFloat() {
 		return Float.intBitsToFloat(this.g4s());
 	}
 
@@ -365,12 +365,12 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.av(B)Ljava/lang/String;")
-	public String method15232() {
+	public String gUTF8() {
 		byte var1 = this.data[++this.pos - 1];
 		if (var1 != 0) {
 			throw new IllegalStateException("");
 		}
-		int var2 = this.method15261();
+		int var2 = this.gVarInt();
 		if (this.pos + var2 > this.data.length) {
 			throw new IllegalStateException("");
 		}
@@ -380,47 +380,47 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.aj([BIIB)V")
-	public void method15263(byte[] arg0, int arg1, int arg2) {
+	public void gdata(byte[] arg0, int arg1, int arg2) {
 		for (int var4 = arg1; var4 < arg1 + arg2; var4++) {
 			arg0[var4] = this.data[++this.pos - 1];
 		}
 	}
 
 	@ObfuscatedName("aet.ah(B)I")
-	public int method15254() {
+	public int gSmart1or2s() {
 		int var1 = this.data[this.pos] & 0xFF;
 		return var1 < 128 ? this.g1() - 64 : this.g2() - 49152;
 	}
 
 	@ObfuscatedName("aet.au(I)I")
-	public int method15277() {
+	public int gSmart1or2() {
 		int var1 = this.data[this.pos] & 0xFF;
 		return var1 < 128 ? this.g1() : this.g2() - 32768;
 	}
 
 	@ObfuscatedName("aet.ae(B)I")
-	public int method15355() {
+	public int gSmart1or2null() {
 		int var1 = this.data[this.pos] & 0xFF;
 		return var1 < 128 ? this.g1() - 1 : this.g2() - 32769;
 	}
 
 	@ObfuscatedName("aet.ac(I)I")
-	public int method15258() {
+	public int gExtended1or2() {
 		int var1 = 0;
 		int var2;
-		for (var2 = this.method15277(); var2 == 32767; var2 = this.method15277()) {
+		for (var2 = this.gSmart1or2(); var2 == 32767; var2 = this.gSmart1or2()) {
 			var1 += 32767;
 		}
 		return var1 + var2;
 	}
 
 	@ObfuscatedName("aet.aq(B)I")
-	public int method15259() {
+	public int gSmart2or4() {
 		return this.data[this.pos] < 0 ? this.g4s() & Integer.MAX_VALUE : this.g2();
 	}
 
 	@ObfuscatedName("aet.ab(B)I")
-	public int method15411() {
+	public int gSmart2or4null() {
 		if (this.data[this.pos] < 0) {
 			return this.g4s() & Integer.MAX_VALUE;
 		} else {
@@ -430,7 +430,7 @@ public class Packet extends class399 {
 	}
 
 	@ObfuscatedName("aet.bq(B)I")
-	public int method15261() {
+	public int gVarInt() {
 		byte var1 = this.data[++this.pos - 1];
 		int var2 = 0;
 		while (var1 < 0) {
@@ -512,13 +512,13 @@ public class Packet extends class399 {
 		int var3 = this.pos;
 		this.pos = 0;
 		byte[] var4 = new byte[var3];
-		this.method15263(var4, 0, var3);
+		this.gdata(var4, 0, var3);
 		BigInteger var5 = new BigInteger(var4);
 		BigInteger var6 = client.ENABLE_RSA ?  var5.modPow(arg0, arg1) : var5;
 		byte[] var7 = var6.toByteArray();
 		this.pos = 0;
 		this.p2(var7.length);
-		this.method15276(var7, 0, var7.length);
+		this.pdata(var7, 0, var7.length);
 	}
 
 	@ObfuscatedName("aet.bt(IB)I")

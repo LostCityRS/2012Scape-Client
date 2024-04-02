@@ -36,12 +36,12 @@ public class class750 extends class262 {
 	@ObfuscatedName("iz.s(Laet;B)Liq;")
 	public static class262 method4623(Packet arg0) {
 		class262 var1 = class262.method2603(arg0);
-		int var2 = arg0.method15411();
-		int var3 = arg0.method15411();
-		int var4 = arg0.method15411();
-		int var5 = arg0.method15411();
-		int var6 = arg0.method15411();
-		int var7 = arg0.method15411();
+		int var2 = arg0.gSmart2or4null();
+		int var3 = arg0.gSmart2or4null();
+		int var4 = arg0.gSmart2or4null();
+		int var5 = arg0.gSmart2or4null();
+		int var6 = arg0.gSmart2or4null();
+		int var7 = arg0.gSmart2or4null();
 		return new class750(var1.field2605, var1.field2603, var1.field2604, var1.field2608, var1.field2602, var1.field2607, var1.field2610, var1.field2609, var1.field2606, var2, var3, var4, var5, var6, var7);
 	}
 

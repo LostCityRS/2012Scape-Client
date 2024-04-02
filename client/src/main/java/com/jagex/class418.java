@@ -46,7 +46,7 @@ public class class418 {
 		} else if (arg1 == 4) {
 			this.field4460 = (class420) class518.method8032(Statics.method14028(), arg0.g1());
 		} else if (arg1 == 5) {
-			this.field4461 = arg0.method15411();
+			this.field4461 = arg0.gSmart2or4null();
 		}
 	}
 }

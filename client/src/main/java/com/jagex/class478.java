@@ -109,7 +109,7 @@ public abstract class class478 {
 				}
 			}
 			if (var1 != null) {
-				var1.field9467.method15251(var1.field9467.pos - var2);
+				var1.field9467.psize1(var1.field9467.pos - var2);
 				int var12 = var1.field9467.pos;
 				var1.field9467.pos = var2;
 				var1.field9467.p1(var3 / var4);

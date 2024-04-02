@@ -139,15 +139,15 @@ public class class443 {
 	@ObfuscatedName("pw.j(Laet;II)V")
 	public void method7837(Packet arg0, int arg1) {
 		if (arg1 == 1) {
-			this.field4764 = arg0.method15411();
+			this.field4764 = arg0.gSmart2or4null();
 		} else if (arg1 == 2) {
-			this.field4769 = arg0.method15411();
+			this.field4769 = arg0.gSmart2or4null();
 		} else if (arg1 == 3) {
 			this.field4766 = arg0.gjstr();
 		} else if (arg1 == 4) {
-			this.field4767 = arg0.method15241();
+			this.field4767 = arg0.g3();
 		} else if (arg1 == 5) {
-			this.field4768 = arg0.method15241();
+			this.field4768 = arg0.g3();
 		} else if (arg1 == 6) {
 			this.field4777 = arg0.g1();
 		} else if (arg1 == 7) {
@@ -177,7 +177,7 @@ public class class443 {
 			int var4 = arg0.g1();
 			this.field4788 = new int[var4 * 2];
 			for (int var5 = 0; var5 < var4 * 2; var5++) {
-				this.field4788[var5] = arg0.method15240();
+				this.field4788[var5] = arg0.g2s();
 			}
 			this.field4785 = arg0.g4s();
 			int var6 = arg0.g1();
@@ -187,14 +187,14 @@ public class class443 {
 			}
 			this.field4762 = new byte[var4];
 			for (int var8 = 0; var8 < var4; var8++) {
-				this.field4762[var8] = arg0.method15238();
+				this.field4762[var8] = arg0.g1b();
 			}
 		} else if (arg1 == 16) {
 			this.field4802 = false;
 		} else if (arg1 == 17) {
 			this.field4779 = arg0.gjstr();
 		} else if (arg1 == 18) {
-			this.field4780 = arg0.method15411();
+			this.field4780 = arg0.gSmart2or4null();
 		} else if (arg1 == 19) {
 			this.field4775 = arg0.g2();
 		} else if (arg1 == 20) {
@@ -217,8 +217,8 @@ public class class443 {
 			this.field4796 = arg0.g1();
 			this.field4794 = arg0.g1();
 		} else if (arg1 == 24) {
-			this.field4793 = arg0.method15240();
-			this.field4799 = arg0.method15240();
+			this.field4793 = arg0.g2s();
+			this.field4799 = arg0.g2s();
 		} else if (arg1 == 249) {
 			int var9 = arg0.g1();
 			if (this.field4804 == null) {
@@ -227,7 +227,7 @@ public class class443 {
 			}
 			for (int var11 = 0; var11 < var9; var11++) {
 				boolean var12 = arg0.g1() == 1;
-				int var13 = arg0.method15241();
+				int var13 = arg0.g3();
 				class399 var14;
 				if (var12) {
 					var14 = new class798(arg0.gjstr());

@@ -16,7 +16,7 @@ public class class753 extends class269 {
 	@ObfuscatedName("wk.z(Laet;B)Liz;")
 	public static class269 method12717(Packet arg0) {
 		class269 var1 = class269.method7324(arg0);
-		int var2 = arg0.method15242();
+		int var2 = arg0.g3s();
 		return new class753(var1.field2648, var1.field2651, var1.field2649, var1.field2650, var1.field2647, var2);
 	}
 

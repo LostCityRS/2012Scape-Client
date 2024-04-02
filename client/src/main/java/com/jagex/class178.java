@@ -19,7 +19,7 @@ public class class178 {
 	public static int method14081(Packet arg0, String arg1) {
 		int var2 = arg0.pos;
 		byte[] var3 = class524.method7652(arg1);
-		arg0.method15235(var3.length);
+		arg0.pSmart2or4(var3.length);
 		arg0.pos += Statics.field2118.method3500(var3, 0, var3.length, arg0.data, arg0.pos);
 		return arg0.pos - var2;
 	}
@@ -32,7 +32,7 @@ public class class178 {
 	@ObfuscatedName("jm.s(Laet;II)Ljava/lang/String;")
 	public static String method4727(Packet arg0, int arg1) {
 		try {
-			int var2 = arg0.method15277();
+			int var2 = arg0.gSmart1or2();
 			if (var2 > arg1) {
 				var2 = arg1;
 			}

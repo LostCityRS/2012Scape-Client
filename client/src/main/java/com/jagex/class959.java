@@ -46,30 +46,30 @@ public class class959 extends class803 {
 			}
 			if (this.field9558 == 0) {
 				var2.pos += 23;
-				this.field10422 = var2.method15341();
-				this.field10425 = var2.method15341();
+				this.field10422 = var2.ig4s();
+				this.field10425 = var2.ig4s();
 				if (this.field10422 == 0 || this.field10425 == 0) {
 					throw new IllegalStateException();
 				}
 				Packet var4 = new Packet(16);
-				var2.method15263(var4.data, 0, 16);
+				var2.gdata(var4.data, 0, 16);
 				this.field10427 = var4.gjstr();
 				var4.pos = 0;
-				var2.method15263(var4.data, 0, 16);
+				var2.gdata(var4.data, 0, 16);
 				this.field10426 = var4.gjstr();
 			}
 			return;
 		}
 		if (var3 == 0) {
-			long var5 = var2.method15247();
-			long var7 = var2.method15247();
-			long var9 = var2.method15247();
+			long var5 = var2.ig8();
+			long var7 = var2.ig8();
+			long var9 = var2.ig8();
 			if (var5 < 0L || var7 < 0L || var9 < 0L || var9 > var5) {
 				throw new IllegalStateException();
 			}
 			this.field10428 = (float) ((long) this.field10425 * var5) / (float) this.field10422;
 			this.field10429 = (float) ((var5 + var7) * (long) this.field10425) / (float) this.field10422;
-			int var11 = var2.method15341();
+			int var11 = var2.ig4s();
 			if (var11 < 0 || var11 > var2.data.length - var2.pos) {
 				throw new IllegalStateException();
 			}

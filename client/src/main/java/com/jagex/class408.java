@@ -256,7 +256,7 @@ public class class408 {
 			} else {
 				Statics.field4287[Statics.field4285 * arg5 + arg4] = (byte) var11;
 				Statics.field4291[Statics.field4285 * arg5 + arg4] = 0;
-				Statics.field4288[Statics.field4285 * arg5 + arg4] = arg1.method15238();
+				Statics.field4288[Statics.field4285 * arg5 + arg4] = arg1.g1b();
 			}
 			return;
 		}
@@ -280,14 +280,14 @@ public class class408 {
 				Statics.field4287[Statics.field4285 * arg5 + arg4] = (byte) var17;
 				Statics.field4291[Statics.field4285 * arg5 + arg4] = (byte) var18;
 				if (var19 == 1) {
-					Statics.field4293[Statics.field4285 * arg5 + arg4] = Integer.valueOf(arg1.method15411());
-					Statics.field4294[Statics.field4285 * arg5 + arg4] = arg1.method15238();
+					Statics.field4293[Statics.field4285 * arg5 + arg4] = Integer.valueOf(arg1.gSmart2or4null());
+					Statics.field4294[Statics.field4285 * arg5 + arg4] = arg1.g1b();
 				} else if (var19 > 1) {
 					int[] var20 = new int[var19];
 					byte[] var21 = new byte[var19];
 					for (int var22 = 0; var22 < var19; var22++) {
-						var20[var22] = arg1.method15411();
-						var21[var22] = arg1.method15238();
+						var20[var22] = arg1.gSmart2or4null();
+						var21[var22] = arg1.g1b();
 					}
 					Statics.field4293[Statics.field4285 * arg5 + arg4] = new class805(var20, var21);
 				}
@@ -298,8 +298,8 @@ public class class408 {
 					var23 = new int[var19];
 					var24 = new byte[var19];
 					for (int var25 = 0; var25 < var19; var25++) {
-						var23[var25] = arg1.method15411();
-						var24[var25] = arg1.method15238();
+						var23[var25] = arg1.gSmart2or4null();
+						var24[var25] = arg1.g1b();
 					}
 				}
 				if (Statics.field4295[var15 - 1][arg2 - (Statics.field4283 >> 6)][arg3 - (Statics.field4284 >> 6)] == null) {

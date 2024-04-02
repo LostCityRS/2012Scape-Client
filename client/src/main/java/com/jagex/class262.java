@@ -48,12 +48,12 @@ public class class262 implements class264 {
 	public static class262 method2603(Packet arg0) {
 		class265 var1 = class265.method15177()[arg0.g1()];
 		class263 var2 = class263.method3623()[arg0.g1()];
-		int var3 = arg0.method15240();
-		int var4 = arg0.method15240();
+		int var3 = arg0.g2s();
+		int var4 = arg0.g2s();
 		int var5 = arg0.g2();
 		int var6 = arg0.g2();
-		int var7 = arg0.method15240();
-		int var8 = arg0.method15411();
+		int var7 = arg0.g2s();
+		int var8 = arg0.gSmart2or4null();
 		int var9 = arg0.g4s();
 		return new class262(var1, var2, var3, var4, var5, var6, var7, var8, var9);
 	}

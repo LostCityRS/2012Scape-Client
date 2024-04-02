@@ -75,7 +75,7 @@ public class class713 extends class150 {
 		this.field8550 = arg0.g2();
 		this.field8544 = arg0.g1();
 		this.field8549 = arg0.g1();
-		this.field8542 = arg0.method15241();
+		this.field8542 = arg0.g3();
 		this.field8552 = arg0.g2();
 		this.field8553 = arg0.g1();
 	}

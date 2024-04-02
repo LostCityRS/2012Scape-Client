@@ -53,23 +53,23 @@ public class class593 {
 		boolean var6 = (var3 & 0x4) != 0;
 		boolean var7 = (var3 & 0x8) != 0;
 		if (var4) {
-			var2.field7130[0] = arg1.method15411();
-			var2.field7128[0] = arg1.method15411();
+			var2.field7130[0] = arg1.gSmart2or4null();
+			var2.field7128[0] = arg1.gSmart2or4null();
 			if (arg0.field7090 != -1 || arg0.field7092 != -1) {
-				var2.field7130[1] = arg1.method15411();
-				var2.field7128[1] = arg1.method15411();
+				var2.field7130[1] = arg1.gSmart2or4null();
+				var2.field7128[1] = arg1.gSmart2or4null();
 			}
 			if (arg0.field7093 != -1 || arg0.field7119 != -1) {
-				var2.field7130[2] = arg1.method15411();
-				var2.field7128[2] = arg1.method15411();
+				var2.field7130[2] = arg1.gSmart2or4null();
+				var2.field7128[2] = arg1.gSmart2or4null();
 			}
 		}
 		if (var5) {
-			var2.field7132[0] = arg1.method15411();
-			var2.field7126[0] = arg1.method15411();
+			var2.field7132[0] = arg1.gSmart2or4null();
+			var2.field7126[0] = arg1.gSmart2or4null();
 			if (arg0.field7120 != -1 || arg0.field7104 != -1) {
-				var2.field7132[1] = arg1.method15411();
-				var2.field7126[1] = arg1.method15411();
+				var2.field7132[1] = arg1.gSmart2or4null();
+				var2.field7126[1] = arg1.gSmart2or4null();
 			}
 		}
 		if (var6) {

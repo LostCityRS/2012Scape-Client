@@ -57,8 +57,8 @@ public class class261 implements class264 {
 		int var1 = arg0.g1();
 		class265 var2 = class265.method15177()[arg0.g1()];
 		class263 var3 = class263.method3623()[arg0.g1()];
-		int var4 = arg0.method15240();
-		int var5 = arg0.method15240();
+		int var4 = arg0.g2s();
+		int var5 = arg0.g2s();
 		int var6 = arg0.g2();
 		int var7 = arg0.g2();
 		int var8 = arg0.g4s();

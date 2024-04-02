@@ -55,7 +55,7 @@ public class class332 {
 	public int[] field3561;
 
 	public class332(byte[] arg0, int arg1, byte[] arg2) {
-		this.field3546 = Packet.method7834(arg0, arg0.length);
+		this.field3546 = Packet.getcrc(arg0, arg0.length);
 		if (this.field3546 != arg1) {
 			throw new RuntimeException();
 		}
@@ -89,7 +89,7 @@ public class class332 {
 		boolean var5 = (var4 & 0x1) != 0;
 		boolean var6 = (var4 & 0x2) != 0;
 		if (var3 >= 7) {
-			this.field3549 = var2.method15259();
+			this.field3549 = var2.gSmart2or4();
 		} else {
 			this.field3549 = var2.g2();
 		}
@@ -98,7 +98,7 @@ public class class332 {
 		this.field3554 = new int[this.field3549];
 		if (var3 >= 7) {
 			for (int var9 = 0; var9 < this.field3549; var9++) {
-				this.field3554[var9] = var7 += var2.method15259();
+				this.field3554[var9] = var7 += var2.gSmart2or4();
 				if (this.field3554[var9] > var8) {
 					var8 = this.field3554[var9];
 				}
@@ -136,7 +136,7 @@ public class class332 {
 		if (var6) {
 			for (int var14 = 0; var14 < this.field3549; var14++) {
 				byte[] var15 = new byte[64];
-				var2.method15263(var15, 0, 64);
+				var2.gdata(var15, 0, 64);
 				this.field3555[this.field3554[var14]] = var15;
 			}
 		}
@@ -145,7 +145,7 @@ public class class332 {
 		}
 		if (var3 >= 7) {
 			for (int var17 = 0; var17 < this.field3549; var17++) {
-				this.field3557[this.field3554[var17]] = var2.method15259();
+				this.field3557[this.field3554[var17]] = var2.gSmart2or4();
 			}
 			for (int var18 = 0; var18 < this.field3549; var18++) {
 				int var19 = this.field3554[var18];
@@ -154,7 +154,7 @@ public class class332 {
 				int var22 = -1;
 				this.field3556[var19] = new int[var20];
 				for (int var23 = 0; var23 < var20; var23++) {
-					int var24 = this.field3556[var19][var23] = var21 += var2.method15259();
+					int var24 = this.field3556[var19][var23] = var21 += var2.gSmart2or4();
 					if (var24 > var22) {
 						var22 = var24;
 					}

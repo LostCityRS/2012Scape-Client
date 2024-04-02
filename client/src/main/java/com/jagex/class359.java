@@ -513,20 +513,20 @@ public class class359 {
 			this.method6196();
 		}
 		this.setBuildAreaSize(BuildAreaSize.get(var6));
-		arg0.method16862();
+		arg0.bits();
 		for (int var8 = 0; var8 < 4; var8++) {
 			for (int var9 = 0; var9 < this.mapSizeX >> 3; var9++) {
 				for (int var10 = 0; var10 < this.mapSizeZ >> 3; var10++) {
-					int var11 = arg0.method16863(1);
+					int var11 = arg0.gBit(1);
 					if (var11 == 1) {
-						this.field3801[var8][var9][var10] = arg0.method16863(26);
+						this.field3801[var8][var9][var10] = arg0.gBit(26);
 					} else {
 						this.field3801[var8][var9][var10] = -1;
 					}
 				}
 			}
 		}
-		arg0.method16881();
+		arg0.bytes();
 		int var12 = (arg0.data.length - arg0.pos) / 16;
 		this.field3831 = new int[var12][4];
 		for (int var13 = 0; var13 < var12; var13++) {

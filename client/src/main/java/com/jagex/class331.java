@@ -56,7 +56,7 @@ public class class331 {
 		int var2 = var1.g1();
 		var1.pos += var2 * 72;
 		byte[] var3 = new byte[var1.data.length - var1.pos];
-		var1.method15263(var3, 0, var3.length);
+		var1.gdata(var3, 0, var3.length);
 		byte[] var6;
 		if (this.field3543 == null || this.field3541 == null || !client.ENABLE_JS5_RSA) {
 			var6 = var3;
@@ -84,7 +84,7 @@ public class class331 {
 					int var10 = this.field3538.g4s();
 					int var11 = this.field3538.g4s();
 					byte[] var12 = new byte[64];
-					this.field3538.method15263(var12, 0, 64);
+					this.field3538.gdata(var12, 0, 64);
 					this.field3544[var9].method14234(var10, var12, var11);
 				}
 			}
@@ -108,7 +108,7 @@ public class class331 {
 			int var5 = this.field3538.g4s();
 			int var6 = this.field3538.g4s();
 			byte[] var7 = new byte[64];
-			this.field3538.method15263(var7, 0, 64);
+			this.field3538.gdata(var7, 0, 64);
 			class757 var8 = new class757(arg0, arg1, arg2, this.field3540, this.field3539, var5, var7, var6, arg3);
 			this.field3544[arg0] = var8;
 			return var8;

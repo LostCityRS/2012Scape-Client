@@ -44,7 +44,7 @@ public class class603 {
 		}
 		boolean var4 = var2.g1() == 1;
 		this.field7178 = new byte[256];
-		var2.method15263(this.field7178, 0, 256);
+		var2.gdata(this.field7178, 0, 256);
 		if (var4) {
 			int[] var5 = new int[256];
 			int[] var6 = new int[256];
@@ -59,7 +59,7 @@ public class class603 {
 				var9[var10] = new byte[var5[var10]];
 				byte var11 = 0;
 				for (int var12 = 0; var12 < var9[var10].length; var12++) {
-					var11 += var2.method15238();
+					var11 += var2.g1b();
 					var9[var10][var12] = var11;
 				}
 			}
@@ -68,7 +68,7 @@ public class class603 {
 				var13[var14] = new byte[var5[var14]];
 				byte var15 = 0;
 				for (int var16 = 0; var16 < var13[var14].length; var16++) {
-					var15 += var2.method15238();
+					var15 += var2.g1b();
 					var13[var14][var16] = var15;
 				}
 			}

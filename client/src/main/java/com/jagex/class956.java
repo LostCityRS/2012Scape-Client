@@ -31,7 +31,7 @@ public class class956 extends class800 {
 		}
 		for (int var5 = 0; var5 < var3; var5++) {
 			boolean var6 = arg0.g1() == 1;
-			int var7 = arg0.method15241();
+			int var7 = arg0.g3();
 			class399 var8;
 			if (var6) {
 				var8 = new class798(arg0.gjstr());

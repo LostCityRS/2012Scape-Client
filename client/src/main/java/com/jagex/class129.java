@@ -444,7 +444,7 @@ public class class129 {
 			this.field1335 = new byte[this.field1334];
 			var2.pos = 0;
 			for (int var32 = 0; var32 < this.field1334; var32++) {
-				byte var33 = this.field1335[var32] = var2.method15238();
+				byte var33 = this.field1335[var32] = var2.g1b();
 				if (var33 == 0) {
 					var29++;
 				}
@@ -554,15 +554,15 @@ public class class129 {
 			int var77 = var2.g1();
 			int var78 = 0;
 			if ((var77 & 0x1) != 0) {
-				var78 = var3.method15254();
+				var78 = var3.gSmart1or2s();
 			}
 			int var79 = 0;
 			if ((var77 & 0x2) != 0) {
-				var79 = var4.method15254();
+				var79 = var4.gSmart1or2s();
 			}
 			int var80 = 0;
 			if ((var77 & 0x4) != 0) {
-				var80 = var5.method15254();
+				var80 = var5.gSmart1or2s();
 			}
 			this.field1316[var76] = var73 + var78;
 			this.field1320[var76] = var74 + var79;
@@ -572,7 +572,7 @@ public class class129 {
 			var75 = this.field1318[var76];
 			if (var21 == 1) {
 				if (var14) {
-					this.field1313[var76] = var6.method15355();
+					this.field1313[var76] = var6.gSmart1or2null();
 				} else {
 					this.field1313[var76] = var6.g1();
 					if (this.field1313[var76] == 255) {
@@ -591,17 +591,17 @@ public class class129 {
 		for (int var81 = 0; var81 < this.field1342; var81++) {
 			this.field1329[var81] = (short) var2.g2();
 			if (var10) {
-				this.field1345[var81] = var3.method15238();
+				this.field1345[var81] = var3.g1b();
 			}
 			if (var17 == 255) {
-				this.field1326[var81] = var4.method15238();
+				this.field1326[var81] = var4.g1b();
 			}
 			if (var18 == 1) {
-				this.field1332[var81] = var5.method15238();
+				this.field1332[var81] = var5.g1b();
 			}
 			if (var19 == 1) {
 				if (var15) {
-					this.field1331[var81] = var6.method15355();
+					this.field1331[var81] = var6.gSmart1or2null();
 				} else {
 					this.field1331[var81] = var6.g1();
 					if (this.field1331[var81] == 255) {
@@ -671,14 +671,14 @@ public class class129 {
 			int var94 = var2.g2();
 			int var95;
 			if (var16) {
-				var95 = var2.method15355();
+				var95 = var2.gSmart1or2null();
 			} else {
 				var95 = var2.g1();
 				if (var95 == 255) {
 					var95 = -1;
 				}
 			}
-			byte var96 = var2.method15238();
+			byte var96 = var2.g1b();
 			this.field1349[var92] = new class141(var93, var94, var95, var96);
 		}
 	}
@@ -692,9 +692,9 @@ public class class129 {
 		for (int var7 = 0; var7 < this.field1342; var7++) {
 			int var8 = arg1.g1();
 			if (var8 == 1) {
-				var3 = (short) (arg0.method15254() + var6);
-				var4 = (short) (arg0.method15254() + var3);
-				var5 = (short) (arg0.method15254() + var4);
+				var3 = (short) (arg0.gSmart1or2s() + var6);
+				var4 = (short) (arg0.gSmart1or2s() + var3);
+				var5 = (short) (arg0.gSmart1or2s() + var4);
 				var6 = var5;
 				this.field1322[var7] = var3;
 				this.field1323[var7] = var4;
@@ -711,7 +711,7 @@ public class class129 {
 			}
 			if (var8 == 2) {
 				var4 = var5;
-				var5 = (short) (arg0.method15254() + var6);
+				var5 = (short) (arg0.gSmart1or2s() + var6);
 				var6 = var5;
 				this.field1322[var7] = var3;
 				this.field1323[var7] = var4;
@@ -722,7 +722,7 @@ public class class129 {
 			}
 			if (var8 == 3) {
 				var3 = var5;
-				var5 = (short) (arg0.method15254() + var6);
+				var5 = (short) (arg0.gSmart1or2s() + var6);
 				var6 = var5;
 				this.field1322[var7] = var3;
 				this.field1323[var7] = var4;
@@ -735,7 +735,7 @@ public class class129 {
 				short var11 = var3;
 				var3 = var4;
 				var4 = var11;
-				var5 = (short) (arg0.method15254() + var6);
+				var5 = (short) (arg0.gSmart1or2s() + var6);
 				var6 = var5;
 				this.field1322[var7] = var3;
 				this.field1323[var7] = var11;
@@ -766,17 +766,17 @@ public class class129 {
 					if (this.field1314 < 14) {
 						this.field1340[var7] = arg2.g2();
 					} else {
-						this.field1340[var7] = arg2.method15241();
+						this.field1340[var7] = arg2.g3();
 					}
 					this.field1341[var7] = arg2.g2();
 				} else {
-					this.field1339[var7] = arg2.method15241();
-					this.field1340[var7] = arg2.method15241();
-					this.field1341[var7] = arg2.method15241();
+					this.field1339[var7] = arg2.g3();
+					this.field1340[var7] = arg2.g3();
+					this.field1341[var7] = arg2.g3();
 				}
-				this.field1327[var7] = arg3.method15238();
-				this.field1325[var7] = arg4.method15238();
-				this.field1317[var7] = arg5.method15238();
+				this.field1327[var7] = arg3.g1b();
+				this.field1325[var7] = arg4.g1b();
+				this.field1317[var7] = arg5.g1b();
 			}
 			if (var8 == 2) {
 				this.field1336[var7] = (short) arg1.g2();
@@ -787,19 +787,19 @@ public class class129 {
 					if (this.field1314 < 14) {
 						this.field1340[var7] = arg2.g2();
 					} else {
-						this.field1340[var7] = arg2.method15241();
+						this.field1340[var7] = arg2.g3();
 					}
 					this.field1341[var7] = arg2.g2();
 				} else {
-					this.field1339[var7] = arg2.method15241();
-					this.field1340[var7] = arg2.method15241();
-					this.field1341[var7] = arg2.method15241();
+					this.field1339[var7] = arg2.g3();
+					this.field1340[var7] = arg2.g3();
+					this.field1341[var7] = arg2.g3();
 				}
-				this.field1327[var7] = arg3.method15238();
-				this.field1325[var7] = arg4.method15238();
-				this.field1317[var7] = arg5.method15238();
-				this.field1343[var7] = arg5.method15238();
-				this.field1344[var7] = arg5.method15238();
+				this.field1327[var7] = arg3.g1b();
+				this.field1325[var7] = arg4.g1b();
+				this.field1317[var7] = arg5.g1b();
+				this.field1343[var7] = arg5.g1b();
+				this.field1344[var7] = arg5.g1b();
 			}
 			if (var8 == 3) {
 				this.field1336[var7] = (short) arg1.g2();
@@ -810,17 +810,17 @@ public class class129 {
 					if (this.field1314 < 14) {
 						this.field1340[var7] = arg2.g2();
 					} else {
-						this.field1340[var7] = arg2.method15241();
+						this.field1340[var7] = arg2.g3();
 					}
 					this.field1341[var7] = arg2.g2();
 				} else {
-					this.field1339[var7] = arg2.method15241();
-					this.field1340[var7] = arg2.method15241();
-					this.field1341[var7] = arg2.method15241();
+					this.field1339[var7] = arg2.g3();
+					this.field1340[var7] = arg2.g3();
+					this.field1341[var7] = arg2.g3();
 				}
-				this.field1327[var7] = arg3.method15238();
-				this.field1325[var7] = arg4.method15238();
-				this.field1317[var7] = arg5.method15238();
+				this.field1327[var7] = arg3.g1b();
+				this.field1325[var7] = arg4.g1b();
+				this.field1317[var7] = arg5.g1b();
 			}
 		}
 	}
@@ -920,15 +920,15 @@ public class class129 {
 			int var44 = var4.g1();
 			int var45 = 0;
 			if ((var44 & 0x1) != 0) {
-				var45 = var5.method15254();
+				var45 = var5.gSmart1or2s();
 			}
 			int var46 = 0;
 			if ((var44 & 0x2) != 0) {
-				var46 = var6.method15254();
+				var46 = var6.gSmart1or2s();
 			}
 			int var47 = 0;
 			if ((var44 & 0x4) != 0) {
-				var47 = var7.method15254();
+				var47 = var7.gSmart1or2s();
 			}
 			this.field1316[var43] = var40 + var45;
 			this.field1320[var43] = var41 + var46;
@@ -968,10 +968,10 @@ public class class129 {
 				}
 			}
 			if (var10 == 255) {
-				this.field1326[var48] = var6.method15238();
+				this.field1326[var48] = var6.g1b();
 			}
 			if (var11 == 1) {
-				this.field1332[var48] = var7.method15238();
+				this.field1332[var48] = var7.g1b();
 			}
 			if (var12 == 1) {
 				this.field1331[var48] = var8.g1();
@@ -987,9 +987,9 @@ public class class129 {
 		for (int var54 = 0; var54 < this.field1342; var54++) {
 			int var55 = var5.g1();
 			if (var55 == 1) {
-				var50 = (short) (var4.method15254() + var53);
-				var51 = (short) (var4.method15254() + var50);
-				var52 = (short) (var4.method15254() + var51);
+				var50 = (short) (var4.gSmart1or2s() + var53);
+				var51 = (short) (var4.gSmart1or2s() + var50);
+				var52 = (short) (var4.gSmart1or2s() + var51);
 				var53 = var52;
 				this.field1322[var54] = var50;
 				this.field1323[var54] = var51;
@@ -1006,7 +1006,7 @@ public class class129 {
 			}
 			if (var55 == 2) {
 				var51 = var52;
-				var52 = (short) (var4.method15254() + var53);
+				var52 = (short) (var4.gSmart1or2s() + var53);
 				var53 = var52;
 				this.field1322[var54] = var50;
 				this.field1323[var54] = var51;
@@ -1017,7 +1017,7 @@ public class class129 {
 			}
 			if (var55 == 3) {
 				var50 = var52;
-				var52 = (short) (var4.method15254() + var53);
+				var52 = (short) (var4.gSmart1or2s() + var53);
 				var53 = var52;
 				this.field1322[var54] = var50;
 				this.field1323[var54] = var51;
@@ -1030,7 +1030,7 @@ public class class129 {
 				short var58 = var50;
 				var50 = var51;
 				var51 = var58;
-				var52 = (short) (var4.method15254() + var53);
+				var52 = (short) (var4.gSmart1or2s() + var53);
 				var53 = var52;
 				this.field1322[var54] = var50;
 				this.field1323[var54] = var58;

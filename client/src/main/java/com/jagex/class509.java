@@ -141,7 +141,7 @@ public class class509 {
 				int var14 = arg0.g1();
 				if (var14 > 0) {
 					this.field6338[var13] = new int[var14];
-					this.field6338[var13][0] = arg0.method15241();
+					this.field6338[var13][0] = arg0.g3();
 					for (int var15 = 1; var15 < var14; var15++) {
 						this.field6338[var13][var15] = arg0.g2();
 					}
@@ -184,7 +184,7 @@ public class class509 {
 				}
 				for (int var21 = 0; var21 < var19; var21++) {
 					boolean var22 = arg0.g1() == 1;
-					int var23 = arg0.method15241();
+					int var23 = arg0.g3();
 					class399 var24;
 					if (var22) {
 						var24 = new class798(arg0.gjstr());

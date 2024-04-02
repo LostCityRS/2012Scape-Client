@@ -61,13 +61,13 @@ public class class416 {
 		} else if (arg1 == 6) {
 			arg0.g1();
 		} else if (arg1 == 7) {
-			this.field4441 = arg0.method15411();
+			this.field4441 = arg0.gSmart2or4null();
 		} else if (arg1 == 8) {
-			this.field4447 = arg0.method15411();
+			this.field4447 = arg0.gSmart2or4null();
 		} else if (arg1 == 9) {
-			this.field4448 = arg0.method15411();
+			this.field4448 = arg0.gSmart2or4null();
 		} else if (arg1 == 10) {
-			this.field4449 = arg0.method15411();
+			this.field4449 = arg0.gSmart2or4null();
 		} else if (arg1 == 11) {
 			this.field4443 = arg0.g2();
 		}

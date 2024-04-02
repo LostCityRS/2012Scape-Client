@@ -31,7 +31,7 @@ public final class Isaac {
 	}
 
 	@ObfuscatedName("ue.u(I)I")
-	public final int method11968() {
+	public final int nextInt() {
 		if (this.field6733 == 0) {
 			this.method11969();
 			this.field6733 = 256;
@@ -40,7 +40,7 @@ public final class Isaac {
 	}
 
 	@ObfuscatedName("ue.j(I)I")
-	public final int method11963() {
+	public final int getInt() {
 		if (this.field6733 == 0) {
 			this.method11969();
 			this.field6733 = 256;

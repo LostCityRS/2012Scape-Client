@@ -65,14 +65,14 @@ public class class268 implements class264 {
 		String var1 = arg0.gjstr();
 		class265 var2 = class265.method15177()[arg0.g1()];
 		class263 var3 = class263.method3623()[arg0.g1()];
-		int var4 = arg0.method15240();
-		int var5 = arg0.method15240();
+		int var4 = arg0.g2s();
+		int var5 = arg0.g2s();
 		int var6 = arg0.g1();
 		int var7 = arg0.g1();
 		int var8 = arg0.g1();
 		int var9 = arg0.g2();
 		int var10 = arg0.g2();
-		int var11 = arg0.method15411();
+		int var11 = arg0.gSmart2or4null();
 		int var12 = arg0.g4s();
 		int var13 = arg0.g4s();
 		return new class268(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13);

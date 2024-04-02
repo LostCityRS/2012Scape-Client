@@ -9118,7 +9118,7 @@ public class ScriptRunner {
 			var2.field9467.p1(0);
 			int var3 = var2.field9467.pos;
 			var2.field9467.pjstr(var1);
-			var2.field9467.method15251(var2.field9467.pos - var3);
+			var2.field9467.psize1(var2.field9467.pos - var3);
 			client.field8959.method1913(var2);
 		}
 	}
@@ -9415,7 +9415,7 @@ public class ScriptRunner {
 		var2.field9467.p1(0);
 		var2.field9467.p2(arg0.field5213.field2655);
 		arg0.field5213.field2656.method16748(var2.field9467, arg0.field5213.field2657);
-		var2.field9467.method15251(var2.field9467.pos - var3);
+		var2.field9467.psize1(var2.field9467.pos - var3);
 		var1.method1913(var2);
 	}
 
@@ -9429,7 +9429,7 @@ public class ScriptRunner {
 		var3.field9467.pjstr(var1);
 		var3.field9467.p2(arg0.field5213.field2655);
 		arg0.field5213.field2656.method16748(var3.field9467, arg0.field5213.field2657);
-		var3.field9467.method15251(var3.field9467.pos - var4);
+		var3.field9467.psize1(var3.field9467.pos - var4);
 		var2.method1913(var3);
 	}
 
@@ -9442,7 +9442,7 @@ public class ScriptRunner {
 		var2.field9467.p1(1);
 		var2.field9467.p2(arg0.field5213.field2655);
 		arg0.field5213.field2656.method16748(var2.field9467, arg0.field5213.field2657);
-		var2.field9467.method15251(var2.field9467.pos - var3);
+		var2.field9467.psize1(var2.field9467.pos - var3);
 		var1.method1913(var2);
 	}
 
@@ -9552,7 +9552,7 @@ public class ScriptRunner {
 		var2.field9467.p1(3);
 		var2.field9467.p2(arg0.field5213.field2655);
 		arg0.field5213.field2656.method16748(var2.field9467, arg0.field5213.field2657);
-		var2.field9467.method15251(var2.field9467.pos - var3);
+		var2.field9467.psize1(var2.field9467.pos - var3);
 		var1.method1913(var2);
 	}
 

@@ -152,8 +152,8 @@ public class class477 {
 		var7.field9467.p1(0);
 		int var8 = var7.field9467.pos;
 		Packet var9 = Statics.field4961.method15447();
-		var7.field9467.method15276(var9.data, 0, var9.pos);
-		var7.field9467.method15251(var7.field9467.pos - var8);
+		var7.field9467.pdata(var9.data, 0, var9.pos);
+		var7.field9467.psize1(var7.field9467.pos - var8);
 		client.field8975.method1913(var7);
 		client.field8932 = true;
 	}

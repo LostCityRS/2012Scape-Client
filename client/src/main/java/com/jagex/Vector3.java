@@ -95,16 +95,16 @@ public class Vector3 {
 	}
 
 	public Vector3(Packet arg0) {
-		this.field3475 = arg0.method15324();
-		this.field3476 = arg0.method15324();
-		this.field3477 = arg0.method15324();
+		this.field3475 = arg0.gFloat();
+		this.field3476 = arg0.gFloat();
+		this.field3477 = arg0.gFloat();
 	}
 
 	@ObfuscatedName("ko.m(Laet;)V")
 	public void method5292(Packet arg0) {
-		this.field3475 = arg0.method15324();
-		this.field3476 = arg0.method15324();
-		this.field3477 = arg0.method15324();
+		this.field3475 = arg0.gFloat();
+		this.field3476 = arg0.gFloat();
+		this.field3477 = arg0.gFloat();
 	}
 
 	@ObfuscatedName("ko.t(FFF)V")

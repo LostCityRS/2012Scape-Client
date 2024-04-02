@@ -20,7 +20,7 @@ public class class636 {
 	public byte[] method12747(byte[] arg0) {
 		Packet var2 = new Packet(arg0);
 		var2.pos = arg0.length - 4;
-		int var3 = var2.method15341();
+		int var3 = var2.ig4s();
 		byte[] var4 = new byte[var3];
 		var2.pos = 0;
 		this.method12743(var2, var4);

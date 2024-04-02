@@ -91,12 +91,12 @@ public class class492 {
 						this.field5148 = new int[4];
 					}
 					for (int var5 = 0; var5 < this.field5155.length; var5++) {
-						this.field5155[var5] = arg0.method15240();
-						this.field5148[var5] = arg0.method15240();
+						this.field5155[var5] = arg0.g2s();
+						this.field5148[var5] = arg0.g2s();
 					}
 					var2 = true;
 				} else if (var3 == 2) {
-					this.field5156 = arg0.method15411();
+					this.field5156 = arg0.gSmart2or4null();
 				} else if (var3 == 3) {
 					this.field5147 = arg0.g1();
 					this.field5155 = new int[this.field5147];
@@ -104,9 +104,9 @@ public class class492 {
 				} else if (var3 == 4) {
 					this.field5159 = false;
 				} else if (var3 == 5) {
-					this.field5162 = arg0.method15241();
+					this.field5162 = arg0.g3();
 				} else if (var3 == 6) {
-					this.field5158 = arg0.method15241();
+					this.field5158 = arg0.g3();
 				} else if (var3 == 7) {
 					this.field5146 = new short[10][4];
 					this.field5161 = new short[10][4][];

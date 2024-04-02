@@ -50,9 +50,9 @@ public class class579 {
 	@ObfuscatedName("ud.j(Laet;II)V")
 	public void method12122(Packet arg0, int arg1) {
 		if (arg1 == 1) {
-			this.field6807 = class524.method16898(arg0.method15238());
+			this.field6807 = class524.method16898(arg0.g1b());
 		} else if (arg1 == 2) {
-			this.field6806 = class524.method16898(arg0.method15238());
+			this.field6806 = class524.method16898(arg0.g1b());
 		} else if (arg1 == 3) {
 			this.field6808 = arg0.gjstr();
 		} else if (arg1 == 4) {

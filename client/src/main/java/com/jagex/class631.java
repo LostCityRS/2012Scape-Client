@@ -43,8 +43,8 @@ public class class631 {
 				int var13;
 				int var14;
 				if (var5 > 2) {
-					this.field7394 = var4.method15240();
-					var13 = var4.method15241();
+					this.field7394 = var4.g2s();
+					var13 = var4.g3();
 					var14 = var4.g2();
 				} else {
 					this.field7394 = -1;
@@ -61,7 +61,7 @@ public class class631 {
 						var19 = new class633[var18];
 						for (int var20 = 0; var20 < var18; var20++) {
 							int var21 = var4.g2();
-							int var22 = var4.method15241();
+							int var22 = var4.g3();
 							int var23 = var4.g2();
 							var19[var20] = new class633(var21, var22, var23);
 						}
@@ -71,7 +71,7 @@ public class class631 {
 						var19[0] = new class633(this.field7394, var13, var14);
 						for (int var24 = 0; var24 < var18; var24++) {
 							int var25 = var4.g2();
-							int var26 = var4.method15241();
+							int var26 = var4.g3();
 							int var27 = var4.g2();
 							var19[var24 + 1] = new class633(var25, var26, var27);
 						}

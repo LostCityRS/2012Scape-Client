@@ -59,18 +59,18 @@ public class class720 extends class199 {
 				this.field2233.method5292(arg0);
 			}
 			if ((var9 >> class189.field2177.field2186 & 0x1) == 1) {
-				this.field2223 = arg0.method15324();
-				this.field2239 = arg0.method15324();
+				this.field2223 = arg0.gFloat();
+				this.field2239 = arg0.gFloat();
 			}
 			if ((var9 >> class189.field2176.field2186 & 0x1) == 1) {
-				this.field2218 = arg0.method15324();
-				this.field2241 = arg0.method15324();
+				this.field2218 = arg0.gFloat();
+				this.field2241 = arg0.gFloat();
 			}
 			if ((var9 >> class189.field2171.field2186 & 0x1) == 1) {
 				this.field2220 = class194.method8664(arg0.g1());
 			}
 			if ((var9 >> class189.field2178.field2186 & 0x1) == 1) {
-				this.field2238 = arg0.method15241();
+				this.field2238 = arg0.g3();
 				arg0.g1();
 			}
 			if ((var9 >> class189.field2179.field2186 & 0x1) == 1) {
@@ -105,7 +105,7 @@ public class class720 extends class199 {
 			}
 			if ((var9 >> class189.field2172.field2186 & 0x1) == 1) {
 				this.field2244 = arg0.g2();
-				this.field2236 = arg0.method15324();
+				this.field2236 = arg0.gFloat();
 			}
 			if ((var9 >> class189.field2182.field2186 & 0x1) == 1) {
 				this.field2226 = class192.method1955(arg0.g1());
@@ -113,14 +113,14 @@ public class class720 extends class199 {
 			if ((var9 >> class189.field2183.field2186 & 0x1) == 1) {
 				this.field2246.method5292(arg0);
 				this.field2235.method5292(arg0);
-				this.field2245 = arg0.method15324();
-				this.field2237 = arg0.method15324();
+				this.field2245 = arg0.gFloat();
+				this.field2237 = arg0.gFloat();
 			}
 			if ((var9 >> class189.field2184.field2186 & 0x1) == 1) {
-				arg0.method15324();
+				arg0.gFloat();
 			}
 			if ((var9 >> class189.field2185.field2186 & 0x1) == 1) {
-				this.field2228 = arg0.method15324();
+				this.field2228 = arg0.gFloat();
 			}
 		}
 		if (this.field2222 != null && (var4 >> 5 & 0x1) == 1) {

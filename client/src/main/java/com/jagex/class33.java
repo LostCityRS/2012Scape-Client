@@ -317,7 +317,7 @@ public class class33 {
 					var3.p1(client.field9163.field6408);
 					var3.p1((int) (Math.random() * 9.9999999E7D));
 					var3.rsaenc(class51.field666, class51.field667);
-					var1.field9467.method15276(var3.data, 0, var3.pos);
+					var1.field9467.pdata(var3.data, 0, var3.pos);
 					var1.field9467.psize2(var1.field9467.pos - var2);
 				} else {
 					var1.field9467.p1(LoginProt.INIT_GAME_CONNECTION.field2970);
@@ -421,7 +421,7 @@ public class class33 {
 						}
 						int var13 = var9.pos;
 						Packet var14 = method5564();
-						var9.method15276(var14.data, 0, var14.pos);
+						var9.pdata(var14.data, 0, var14.pos);
 						var12 = var9.pos;
 						var9.p1(field506 == -1L ? 1 : 0);
 						if (field506 == -1L) {
@@ -439,11 +439,11 @@ public class class33 {
 					var9.p4(client.field9043);
 					Packet var15 = Statics.field4961.method15447();
 					var9.p1(var15.pos);
-					var9.method15276(var15.data, 0, var15.pos);
+					var9.pdata(var15.data, 0, var15.pos);
 					client.field8932 = true;
 					Packet var16 = new Packet(Statics.field2305.method15476());
 					Statics.field2305.method15475(var16);
-					var9.method15276(var16.data, 0, var16.data.length);
+					var9.pdata(var16.data, 0, var16.data.length);
 					var9.p4(client.field9023);
 					var9.p8(client.field8910);
 					var9.pjstr(Statics.field6817);
@@ -476,7 +476,7 @@ public class class33 {
 						var9.p4(742);
 						var9.p4(2);
 						Packet var20 = method5564();
-						var9.method15276(var20.data, 0, var20.pos);
+						var9.pdata(var20.data, 0, var20.pos);
 						var19 = var9.pos;
 						var9.p1(field506 == -1L ? 1 : 0);
 						if (field506 == -1L) {
@@ -491,10 +491,10 @@ public class class33 {
 					var9.pjstr(client.field8947);
 					Packet var21 = Statics.field4961.method15447();
 					var9.p1(var21.pos);
-					var9.method15276(var21.data, 0, var21.pos);
+					var9.pdata(var21.data, 0, var21.pos);
 					Packet var22 = new Packet(Statics.field2305.method15476());
 					Statics.field2305.method15475(var22);
-					var9.method15276(var22.data, 0, var22.data.length);
+					var9.pdata(var22.data, 0, var22.data.length);
 					var9.pjstr(Statics.field6817);
 					var9.p4(client.field9043);
 					var9.p4(client.field9015);
@@ -511,7 +511,7 @@ public class class33 {
 				}
 				Statics.connection.randomIn = new Isaac(Statics.field541);
 				new Isaac(Statics.field541);
-				Statics.connection.in.method16876(Statics.connection.randomIn);
+				Statics.connection.in.setSeed(Statics.connection.randomIn);
 				Statics.field541 = null;
 				loginState = 96;
 			}
@@ -580,8 +580,8 @@ public class class33 {
 				Statics.connection.method1935();
 				class792 var25 = class792.method4876();
 				PacketBit var26 = var25.field9467;
-				var26.method16876(Statics.connection.randomOut);
-				var26.method16864(LoginProt.field2968.field2970);
+				var26.setSeed(Statics.connection.randomOut);
+				var26.pIsaac1(LoginProt.field2968.field2970);
 				Statics.connection.method1913(var25);
 				Statics.connection.method1912();
 				loginState = 96;
@@ -663,7 +663,7 @@ public class class33 {
 				Statics.connection.method1927().method7196(Statics.connection.in.data, 0, Statics.field10389);
 				Statics.connection.in.pos = 0;
 				byte[] var28 = new byte[Statics.field10389 + 1];
-				Statics.connection.in.method16861(var28, 0, Statics.field10389);
+				Statics.connection.in.gIsaacArrayBuffer(var28, 0, Statics.field10389);
 				Statics.connection.in.pos = 0;
 				Packet var29 = new Packet(var28);
 				String var30 = var29.gjstr();
@@ -703,7 +703,7 @@ public class class33 {
 					client.field9081 = var31.g1() == 1;
 					client.field9071 = var31.g2();
 					client.field8998 = var31.g1() == 1;
-					Statics.field8469 = var31.method15242();
+					Statics.field8469 = var31.g3s();
 					client.field9142 = var31.g1() == 1;
 					Statics.field4685 = var31.gjstr();
 					client.field8980.method6103().method11472(client.field9142);
@@ -716,12 +716,12 @@ public class class33 {
 					client.field9074 = var31.g1();
 					client.field8916 = var31.g1();
 					client.field9054 = var31.g1() == 1;
-					Statics.field8469 = var31.method15242();
+					Statics.field8469 = var31.g3s();
 					Statics.field2119.field10043 = (byte) var31.g1();
 					client.field9077 = var31.g1() == 1;
 					client.field9078 = var31.g1() == 1;
 					Statics.field6701 = var31.g8();
-					Statics.field3384 = Statics.field6701 - class153.method5554() - var31.method15245();
+					Statics.field3384 = Statics.field6701 - class153.method5554() - var31.g5();
 					int var32 = var31.g1();
 					client.field8998 = (var32 & 0x1) != 0;
 					Statics.field628 = (var32 & 0x2) != 0;
@@ -798,13 +798,13 @@ public class class33 {
 			if (loginState == 173) {
 				PacketBit var36 = Statics.connection.in;
 				var36.pos = 0;
-				if (var36.method16859()) {
+				if (var36.isIsaac2()) {
 					if (!Statics.connection.method1927().method7212(1)) {
 						return;
 					}
 					Statics.connection.method1927().method7196(var36.data, 3, 1);
 				}
-				Statics.connection.packetType = ServerProt.method14807()[var36.method16883()];
+				Statics.connection.packetType = ServerProt.method14807()[var36.gIsaac1or2()];
 				Statics.connection.field835 = var36.g2();
 				loginState = 153;
 			}

@@ -23,7 +23,7 @@ public class class702 extends class150 {
 		super(arg0);
 		this.field8493 = arg0.g2();
 		this.field8495 = new int[class365.method2553().length];
-		this.field8492 = arg0.method15411();
+		this.field8492 = arg0.gSmart2or4null();
 		Arrays.fill(this.field8495, 0, this.field8495.length, this.field8492);
 		this.field8494 = arg0.g4s();
 	}

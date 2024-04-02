@@ -73,7 +73,7 @@ public class class955 extends class800 {
 		for (int var3 = 0; var3 < this.field10390.length && var3 < arg1.length; var3++) {
 			int var4 = this.method16752(var3).field5016;
 			if (var4 > 0) {
-				arg0.method15227((long) arg1[var3], var4);
+				arg0.pVarLong((long) arg1[var3], var4);
 			}
 		}
 	}
@@ -84,7 +84,7 @@ public class class955 extends class800 {
 		if (this.field10390 != null) {
 			for (int var3 = 0; var3 < this.field10390.length; var3++) {
 				var2.append(this.field10392[var3]);
-				var2.append(this.field10394.method12175(this.method16752(var3), this.field10391[var3], arg0.method15231(Statics.method15663(this.field10390[var3]).field5018)));
+				var2.append(this.field10394.method12175(this.method16752(var3), this.field10391[var3], arg0.gVarLong(Statics.method15663(this.field10390[var3]).field5018)));
 			}
 		}
 		var2.append(this.field10392[this.field10392.length - 1]);

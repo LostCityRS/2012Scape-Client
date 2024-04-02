@@ -56,19 +56,19 @@ public class class186 {
 		} else if (arg1 == 2) {
 			this.field2159 = true;
 		} else if (arg1 == 3) {
-			this.field2152 = arg0.method15240();
-			this.field2153 = arg0.method15240();
-			this.field2154 = arg0.method15240();
+			this.field2152 = arg0.g2s();
+			this.field2153 = arg0.g2s();
+			this.field2154 = arg0.g2s();
 		} else if (arg1 == 4) {
 			this.field2156 = arg0.g1();
 		} else if (arg1 == 5) {
-			this.field2150 = arg0.method15411();
+			this.field2150 = arg0.gSmart2or4null();
 		} else if (arg1 == 6) {
-			this.field2155 = arg0.method15241();
+			this.field2155 = arg0.g3();
 		} else if (arg1 == 7) {
-			this.field2158 = arg0.method15240();
-			this.field2157 = arg0.method15240();
-			this.field2160 = arg0.method15240();
+			this.field2158 = arg0.g2s();
+			this.field2157 = arg0.g2s();
+			this.field2160 = arg0.g2s();
 		}
 	}
 }

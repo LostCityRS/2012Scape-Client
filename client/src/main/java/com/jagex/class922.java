@@ -22,7 +22,7 @@ public class class922 extends class787 {
 	@ObfuscatedName("ais.u(Laet;I)V")
 	public void method14956(Packet arg0) {
 		this.field10186 = arg0.g2();
-		this.field10187 = arg0.method15238();
+		this.field10187 = arg0.g1b();
 	}
 
 	@ObfuscatedName("ais.j(Lga;B)V")

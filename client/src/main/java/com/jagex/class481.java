@@ -141,7 +141,7 @@ public class class481 {
 		} else if (arg1 == 15) {
 			this.field5067 = arg0.g2();
 		} else if (arg1 == 17) {
-			this.field5079 = arg0.method15411();
+			this.field5079 = arg0.gSmart2or4null();
 		} else if (arg1 == 18) {
 			int var13 = arg0.g1();
 			this.field5062 = new int[var13];
@@ -174,7 +174,7 @@ public class class481 {
 			}
 			for (int var19 = 0; var19 < var17; var19++) {
 				boolean var20 = arg0.g1() == 1;
-				int var21 = arg0.method15241();
+				int var21 = arg0.g3();
 				class399 var22;
 				if (var20) {
 					var22 = new class798(arg0.gjstr());

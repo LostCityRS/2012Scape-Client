@@ -140,7 +140,7 @@ public class class43 {
 					}
 					client.field8959.randomIn = new Isaac(var5);
 					new Isaac(var5);
-					client.field8959.in.method16876(client.field8959.randomIn);
+					client.field8959.in.setSeed(client.field8959.randomIn);
 					client.method11307(14);
 					client.field8959.method1935();
 					client.field8959.in.pos = 0;
@@ -176,7 +176,7 @@ public class class43 {
 		}
 		var1.p2((int) (Math.random() * 9.9999999E7D));
 		var1.rsaenc(class51.field666, class51.field667);
-		arg0.field9467.method15276(var1.data, 0, var1.pos);
+		arg0.field9467.pdata(var1.data, 0, var1.pos);
 		return var2;
 	}
 }

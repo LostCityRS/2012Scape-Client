@@ -509,10 +509,10 @@ public class class218 {
 			arg0.g4s();
 		}
 		this.field2366 = arg0.g1() == 1;
-		this.field2352 = arg0.method15238();
-		this.field2353 = arg0.method15238();
-		this.field2354 = arg0.method15238();
-		this.field2350 = arg0.method15238();
+		this.field2352 = arg0.g1b();
+		this.field2353 = arg0.g1b();
+		this.field2354 = arg0.g1b();
+		this.field2350 = arg0.g1b();
 		if (this.field2346 > 0) {
 			if (this.field2345 && (this.field2351 == null || this.field2351.length < this.field2346)) {
 				this.field2351 = new long[this.field2346];
@@ -536,7 +536,7 @@ public class class218 {
 				if (this.field2373) {
 					this.field2355[var4] = arg0.fastgstr();
 				}
-				this.field2358[var4] = arg0.method15238();
+				this.field2358[var4] = arg0.g1b();
 				if (var2 >= 2) {
 					this.field2372[var4] = arg0.g4s();
 				}

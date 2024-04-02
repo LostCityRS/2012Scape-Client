@@ -102,7 +102,7 @@ public class class158 {
 
 	@ObfuscatedName("en.l(I)V")
 	public void method3025(int arg0) {
-		int var2 = this.field1614.method15261();
+		int var2 = this.field1614.gVarInt();
 		this.field1605[arg0] += var2;
 	}
 
@@ -125,7 +125,7 @@ public class class158 {
 		if (var3 != 240 && var3 != 247) {
 			return this.method3014(arg0, var3);
 		}
-		int var4 = this.field1614.method15261();
+		int var4 = this.field1614.gVarInt();
 		if (var3 == 247 && var4 > 0) {
 			int var5 = this.field1614.data[this.field1614.pos] & 0xFF;
 			if (var5 >= 241 && var5 <= 243 || var5 == 246 || var5 == 248 || var5 >= 250 && var5 <= 252 || var5 == 254) {
@@ -152,12 +152,12 @@ public class class158 {
 			return var8;
 		}
 		int var3 = this.field1614.g1();
-		int var4 = this.field1614.method15261();
+		int var4 = this.field1614.gVarInt();
 		if (var3 == 47) {
 			this.field1614.pos += var4;
 			return 1;
 		} else if (var3 == 81) {
-			int var5 = this.field1614.method15241();
+			int var5 = this.field1614.g3();
 			var4 -= 3;
 			int var6 = this.field1605[arg0];
 			this.field1609 += (long) (this.field1603 - var5) * (long) var6;

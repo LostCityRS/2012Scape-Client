@@ -73,9 +73,9 @@ public class class507 {
 	@ObfuscatedName("se.j(Laet;II)V")
 	public void method11101(Packet arg0, int arg1) {
 		if (arg1 == 1) {
-			this.field5251 = arg0.method15411();
+			this.field5251 = arg0.gSmart2or4null();
 		} else if (arg1 == 2) {
-			this.field5252 = arg0.method15411();
+			this.field5252 = arg0.gSmart2or4null();
 		} else if (arg1 == 4) {
 			this.field5259 = arg0.g2();
 		} else if (arg1 == 5) {

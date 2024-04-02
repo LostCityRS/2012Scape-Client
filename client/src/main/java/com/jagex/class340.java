@@ -492,7 +492,7 @@ public class class340 {
 				if (arg9) {
 					arg0.g1();
 				} else {
-					this.field3636[arg1][arg2][arg3] = arg0.method15238();
+					this.field3636[arg1][arg2][arg3] = arg0.g1b();
 					this.field3703[arg1][arg2][arg3] = (byte) ((var11 - 2) / 4);
 					this.field3621[arg1][arg2][arg3] = (byte) (var11 - 2 + arg8 & 0x3);
 				}

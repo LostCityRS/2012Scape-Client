@@ -30,7 +30,7 @@ public class class935 extends class789 {
 		}
 		this.field10223 = arg0.fastgstr();
 		this.field10221 = arg0.g2();
-		this.field10222 = arg0.method15238();
+		this.field10222 = arg0.g1b();
 		arg0.g8();
 	}
 

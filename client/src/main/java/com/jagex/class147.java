@@ -25,7 +25,7 @@ public class class147 {
 	public int field1556;
 
 	public class147(Packet arg0) {
-		this.field1552 = arg0.method15411();
+		this.field1552 = arg0.gSmart2or4null();
 		this.field1551 = (class542) class518.method8032(class542.method6247(), arg0.g1());
 	}
 

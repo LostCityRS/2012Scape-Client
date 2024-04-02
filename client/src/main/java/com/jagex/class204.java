@@ -57,7 +57,7 @@ public class class204 implements class464 {
 			int var3 = arg0.g1();
 			this.field2287 = new int[var3];
 			for (int var4 = 0; var4 < var3; var4++) {
-				this.field2287[var4] = arg0.method15411();
+				this.field2287[var4] = arg0.gSmart2or4null();
 			}
 		} else if (arg1 != 3) {
 			if (arg1 == 40) {
@@ -107,7 +107,7 @@ public class class204 implements class464 {
 					}
 				}
 			} else if (arg1 >= 60 && arg1 < 70) {
-				this.field2294[arg1 - 60] = arg0.method15411();
+				this.field2294[arg1 - 60] = arg0.gSmart2or4null();
 			}
 		}
 	}

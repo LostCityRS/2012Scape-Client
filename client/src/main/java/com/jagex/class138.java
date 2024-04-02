@@ -86,17 +86,17 @@ public class class138 {
 					if ((var11 & 0x1) == 0) {
 						field1479[var6] = var12;
 					} else {
-						field1479[var6] = (short) var4.method15254();
+						field1479[var6] = (short) var4.gSmart1or2s();
 					}
 					if ((var11 & 0x2) == 0) {
 						field1480[var6] = var12;
 					} else {
-						field1480[var6] = (short) var4.method15254();
+						field1480[var6] = (short) var4.gSmart1or2s();
 					}
 					if ((var11 & 0x4) == 0) {
 						field1484[var6] = var12;
 					} else {
-						field1484[var6] = (short) var4.method15254();
+						field1484[var6] = (short) var4.gSmart1or2s();
 					}
 					field1483[var6] = (byte) (var11 >>> 3 & 0x3);
 					if (var10 == 2 || var10 == 9) {

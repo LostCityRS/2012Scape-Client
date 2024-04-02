@@ -86,7 +86,7 @@ public class class574 {
 		if (Statics.field6778 == null) {
 			Statics.field6778 = new Packet(20000);
 		}
-		Statics.field6778.method15276(arg1, 0, arg1.length);
+		Statics.field6778.pdata(arg1, 0, arg1.length);
 		if (!arg0) {
 			return;
 		}

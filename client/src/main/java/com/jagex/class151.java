@@ -12,7 +12,7 @@ public class class151 {
 	public final int[] field1570;
 
 	public class151(Packet arg0) {
-		int var2 = arg0.method15277();
+		int var2 = arg0.gSmart1or2();
 		this.field1569 = new int[var2];
 		this.field1570 = new int[var2];
 		for (int var3 = 0; var3 < var2; var3++) {

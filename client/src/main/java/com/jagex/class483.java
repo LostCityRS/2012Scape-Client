@@ -67,7 +67,7 @@ public class class483 {
 	@ObfuscatedName("ry.j(Laet;II)V")
 	public void method8488(Packet arg0, int arg1) {
 		if (arg1 == 1) {
-			this.field5094 = method5934(arg0.method15241());
+			this.field5094 = method5934(arg0.g3());
 		} else if (arg1 == 2) {
 			this.field5092 = arg0.g1();
 		} else if (arg1 == 3) {
@@ -78,7 +78,7 @@ public class class483 {
 		} else if (arg1 == 5) {
 			this.field5103 = false;
 		} else if (arg1 == 7) {
-			this.field5091 = method5934(arg0.method15241());
+			this.field5091 = method5934(arg0.g3());
 		} else if (arg1 == 8) {
 			this.field5088.field5108 = this.field5089;
 		} else if (arg1 == 9) {
@@ -90,7 +90,7 @@ public class class483 {
 		} else if (arg1 == 12) {
 			this.field5097 = true;
 		} else if (arg1 == 13) {
-			this.field5102 = arg0.method15241();
+			this.field5102 = arg0.g3();
 		} else if (arg1 == 14) {
 			this.field5099 = arg0.g1() << 2;
 		} else if (arg1 == 16) {

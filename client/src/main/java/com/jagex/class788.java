@@ -108,8 +108,8 @@ public class class788 extends class399 {
 		this.field9435 = arg0.g8();
 		this.field9427 = arg0.gjstr();
 		arg0.g1();
-		this.field9432 = arg0.method15238();
-		this.field9434 = arg0.method15238();
+		this.field9432 = arg0.g1b();
+		this.field9434 = arg0.g1b();
 		this.field9430 = arg0.g2();
 		if (this.field9430 <= 0) {
 			return;
@@ -123,7 +123,7 @@ public class class788 extends class399 {
 			if (this.field9428) {
 				var4.field2343 = arg0.gjstr();
 			}
-			var4.field2342 = arg0.method15238();
+			var4.field2342 = arg0.g1b();
 			var4.field2341 = arg0.g2();
 			this.field9429[var3] = var4;
 		}

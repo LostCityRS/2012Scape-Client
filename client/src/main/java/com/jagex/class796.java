@@ -124,7 +124,7 @@ public class class796 extends class399 {
 				var5 += var6;
 			} while (var6 >= 255);
 			byte[] var7 = new byte[var5];
-			var2.method15263(var7, 0, var5);
+			var2.gdata(var7, 0, var5);
 			this.field9496[var4] = var7;
 		}
 	}

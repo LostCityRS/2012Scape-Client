@@ -71,7 +71,7 @@ public class class125 {
 			var1.pos = arg0.length - 7 - var2 * 8 - (var7 - 1) * 3;
 			int[] var14 = new int[var7];
 			for (int var15 = 1; var15 < var7; var15++) {
-				var14[var15] = var1.method15241();
+				var14[var15] = var1.g3();
 				if (var14[var15] == 0) {
 					var14[var15] = 1;
 				}
@@ -90,21 +90,21 @@ public class class125 {
 					var18.field8416 = new byte[var19];
 					if ((var20 & 0x1) == 0) {
 						for (int var25 = 0; var25 < var19; var25++) {
-							var18.field8408[var25] = var1.method15238();
+							var18.field8408[var25] = var1.g1b();
 						}
 						for (int var26 = 0; var26 < var19; var26++) {
-							byte var27 = var18.field8416[var26] = var1.method15238();
+							byte var27 = var18.field8416[var26] = var1.g1b();
 							var24 |= var27 != -1;
 						}
 					} else {
 						for (int var28 = 0; var28 < var18.field8415; var28++) {
 							for (int var29 = 0; var29 < var18.field8409; var29++) {
-								var18.field8408[var18.field8415 * var29 + var28] = var1.method15238();
+								var18.field8408[var18.field8415 * var29 + var28] = var1.g1b();
 							}
 						}
 						for (int var30 = 0; var30 < var18.field8415; var30++) {
 							for (int var31 = 0; var31 < var18.field8409; var31++) {
-								byte var32 = var18.field8416[var18.field8415 * var31 + var30] = var1.method15238();
+								byte var32 = var18.field8416[var18.field8415 * var31 + var30] = var1.g1b();
 								var24 |= var32 != -1;
 							}
 						}
@@ -114,12 +114,12 @@ public class class125 {
 					}
 				} else if ((var20 & 0x1) == 0) {
 					for (int var21 = 0; var21 < var19; var21++) {
-						var18.field8408[var21] = var1.method15238();
+						var18.field8408[var21] = var1.g1b();
 					}
 				} else {
 					for (int var22 = 0; var22 < var18.field8415; var22++) {
 						for (int var23 = 0; var23 < var18.field8409; var23++) {
-							var18.field8408[var18.field8415 * var23 + var22] = var1.method15238();
+							var18.field8408[var18.field8415 * var23 + var22] = var1.g1b();
 						}
 					}
 				}
@@ -134,7 +134,7 @@ public class class125 {
 			int var36 = var1.g2();
 			int[] var37 = new int[var35 * var36];
 			for (int var38 = 0; var38 < var35 * var36; var38++) {
-				var37[var38] = var1.method15241() | 0xFF000000;
+				var37[var38] = var1.g3() | 0xFF000000;
 			}
 			if (var34) {
 				for (int var39 = 0; var39 < var35 * var36; var39++) {

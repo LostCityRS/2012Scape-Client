@@ -155,24 +155,24 @@ public class class439 {
 	@ObfuscatedName("ps.j(Laet;II)V")
 	public void method7762(Packet arg0, int arg1) {
 		if (arg1 == 1) {
-			this.field4688 = arg0.method15411();
-			this.field4694 = arg0.method15411();
+			this.field4688 = arg0.gSmart2or4null();
+			this.field4694 = arg0.gSmart2or4null();
 		} else if (arg1 == 2) {
-			this.field4702 = arg0.method15411();
+			this.field4702 = arg0.gSmart2or4null();
 		} else if (arg1 == 3) {
-			this.field4692 = arg0.method15411();
+			this.field4692 = arg0.gSmart2or4null();
 		} else if (arg1 == 4) {
-			this.field4697 = arg0.method15411();
+			this.field4697 = arg0.gSmart2or4null();
 		} else if (arg1 == 5) {
-			this.field4705 = arg0.method15411();
+			this.field4705 = arg0.gSmart2or4null();
 		} else if (arg1 == 6) {
-			this.field4710 = arg0.method15411();
+			this.field4710 = arg0.gSmart2or4null();
 		} else if (arg1 == 7) {
-			this.field4699 = arg0.method15411();
+			this.field4699 = arg0.gSmart2or4null();
 		} else if (arg1 == 8) {
-			this.field4726 = arg0.method15411();
+			this.field4726 = arg0.gSmart2or4null();
 		} else if (arg1 == 9) {
-			this.field4701 = arg0.method15411();
+			this.field4701 = arg0.gSmart2or4null();
 		} else if (arg1 == 26) {
 			this.field4712 = (short) (arg0.g1() * 4);
 			this.field4713 = (short) (arg0.g1() * 4);
@@ -183,7 +183,7 @@ public class class439 {
 			int var3 = arg0.g1();
 			this.field4716[var3] = new int[6];
 			for (int var4 = 0; var4 < 6; var4++) {
-				this.field4716[var3][var4] = arg0.method15240();
+				this.field4716[var3][var4] = arg0.g2s();
 			}
 		} else if (arg1 == 28) {
 			int var5 = arg0.g1();
@@ -203,25 +203,25 @@ public class class439 {
 		} else if (arg1 == 32) {
 			this.field4724 = arg0.g2();
 		} else if (arg1 == 33) {
-			this.field4725 = arg0.method15240();
+			this.field4725 = arg0.g2s();
 		} else if (arg1 == 34) {
 			this.field4721 = arg0.g1();
 		} else if (arg1 == 35) {
 			this.field4727 = arg0.g2();
 		} else if (arg1 == 36) {
-			this.field4728 = arg0.method15240();
+			this.field4728 = arg0.g2s();
 		} else if (arg1 == 37) {
 			this.field4704 = arg0.g1();
 		} else if (arg1 == 38) {
-			this.field4691 = arg0.method15411();
+			this.field4691 = arg0.gSmart2or4null();
 		} else if (arg1 == 39) {
-			this.field4703 = arg0.method15411();
+			this.field4703 = arg0.gSmart2or4null();
 		} else if (arg1 == 40) {
-			this.field4695 = arg0.method15411();
+			this.field4695 = arg0.gSmart2or4null();
 		} else if (arg1 == 41) {
-			this.field4696 = arg0.method15411();
+			this.field4696 = arg0.gSmart2or4null();
 		} else if (arg1 == 42) {
-			this.field4717 = arg0.method15411();
+			this.field4717 = arg0.gSmart2or4null();
 		} else if (arg1 == 43) {
 			arg0.g2();
 		} else if (arg1 == 44) {
@@ -229,23 +229,23 @@ public class class439 {
 		} else if (arg1 == 45) {
 			this.field4730 = arg0.g2();
 		} else if (arg1 == 46) {
-			this.field4706 = arg0.method15411();
+			this.field4706 = arg0.gSmart2or4null();
 		} else if (arg1 == 47) {
-			this.field4707 = arg0.method15411();
+			this.field4707 = arg0.gSmart2or4null();
 		} else if (arg1 == 48) {
-			this.field4708 = arg0.method15411();
+			this.field4708 = arg0.gSmart2or4null();
 		} else if (arg1 == 49) {
-			this.field4709 = arg0.method15411();
+			this.field4709 = arg0.gSmart2or4null();
 		} else if (arg1 == 50) {
-			this.field4693 = arg0.method15411();
+			this.field4693 = arg0.gSmart2or4null();
 		} else if (arg1 == 51) {
-			this.field4711 = arg0.method15411();
+			this.field4711 = arg0.gSmart2or4null();
 		} else if (arg1 == 52) {
 			int var7 = arg0.g1();
 			this.field4689 = new int[var7];
 			this.field4690 = new int[var7];
 			for (int var8 = 0; var8 < var7; var8++) {
-				this.field4689[var8] = arg0.method15411();
+				this.field4689[var8] = arg0.gSmart2or4null();
 				int var9 = arg0.g1();
 				this.field4690[var8] = var9;
 				this.field4731 += var9;
@@ -268,7 +268,7 @@ public class class439 {
 			int var11 = arg0.g1();
 			this.field4729[var11] = new int[3];
 			for (int var12 = 0; var12 < 3; var12++) {
-				this.field4729[var11][var12] = arg0.method15240();
+				this.field4729[var11][var12] = arg0.g2s();
 			}
 		}
 	}

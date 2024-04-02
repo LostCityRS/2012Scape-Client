@@ -2230,7 +2230,7 @@ public class Statics {
 	}
 
 	@ObfuscatedName("sg.u(IS)[B")
-	public static synchronized byte[] method11364(int arg0) {
+	public static synchronized byte[] alloc(int arg0) {
 		if (arg0 == 100 && class532.field6417 > 0) {
 			byte[] var1 = class532.field6418[--class532.field6417];
 			class532.field6418[class532.field6417] = null;
@@ -3350,11 +3350,11 @@ public class Statics {
 	@ObfuscatedName("oy.c(Lajl;IB)V")
 	public static void method7394(PacketBit arg0, int arg1) {
 		class453 var2 = client.field8980.method6214();
-		boolean var3 = arg0.method16863(1) == 1;
+		boolean var3 = arg0.gBit(1) == 1;
 		if (var3) {
 			class55.field738[++class55.field728 - 1] = arg1;
 		}
-		int var4 = arg0.method16863(2);
+		int var4 = arg0.gBit(2);
 		class902 var5 = client.field9070[arg1];
 		if (var4 == 0) {
 			if (var3) {
@@ -3376,12 +3376,12 @@ public class Statics {
 					class797.method7377(var5);
 				}
 				client.field9070[arg1] = null;
-				if (arg0.method16863(1) != 0) {
+				if (arg0.gBit(1) != 0) {
 					method3110(arg0, arg1);
 				}
 			}
 		} else if (var4 == 1) {
-			int var7 = arg0.method16863(3);
+			int var7 = arg0.gBit(3);
 			int var8 = var5.field8642[0];
 			int var9 = var5.field8643[0];
 			if (var7 == 0) {
@@ -3413,7 +3413,7 @@ public class Statics {
 				var5.method16131(var8, var9, class55.field730[arg1]);
 			}
 		} else if (var4 == 2) {
-			int var10 = arg0.method16863(4);
+			int var10 = arg0.gBit(4);
 			int var11 = var5.field8642[0];
 			int var12 = var5.field8643[0];
 			if (var10 == 0) {
@@ -3469,9 +3469,9 @@ public class Statics {
 				var5.method16131(var11, var12, class55.field730[arg1]);
 			}
 		} else {
-			int var13 = arg0.method16863(1);
+			int var13 = arg0.gBit(1);
 			if (var13 == 0) {
-				int var14 = arg0.method16863(12);
+				int var14 = arg0.gBit(12);
 				int var15 = var14 >> 10;
 				int var16 = var14 >> 5 & 0x1F;
 				if (var16 > 15) {
@@ -3498,7 +3498,7 @@ public class Statics {
 					field7324 = var5.field9807;
 				}
 			} else {
-				int var20 = arg0.method16863(30);
+				int var20 = arg0.gBit(30);
 				int var21 = var20 >> 28;
 				int var22 = var20 >> 14 & 0x3FFF;
 				int var23 = var20 & 0x3FFF;
@@ -3707,14 +3707,14 @@ public class Statics {
 
 	@ObfuscatedName("ej.m(Lajl;II)Z")
 	public static boolean method3110(PacketBit arg0, int arg1) {
-		int var2 = arg0.method16863(2);
+		int var2 = arg0.gBit(2);
 		if (var2 == 0) {
-			if (arg0.method16863(1) != 0) {
+			if (arg0.gBit(1) != 0) {
 				method3110(arg0, arg1);
 			}
-			int var3 = arg0.method16863(6);
-			int var4 = arg0.method16863(6);
-			boolean var5 = arg0.method16863(1) == 1;
+			int var3 = arg0.gBit(6);
+			int var4 = arg0.gBit(6);
+			boolean var5 = arg0.gBit(1) == 1;
 			if (var5) {
 				class55.field738[++class55.field728 - 1] = arg1;
 			}
@@ -3748,12 +3748,12 @@ public class Statics {
 			class55.field733[arg1] = null;
 			return true;
 		} else if (var2 == 1) {
-			int var15 = arg0.method16863(2);
+			int var15 = arg0.gBit(2);
 			int var16 = class55.field733[arg1].field570;
 			class55.field733[arg1].field570 = (((var16 >> 28) + var15 & 0x3) << 28) + (var16 & 0xFFFFFFF);
 			return false;
 		} else if (var2 == 2) {
-			int var17 = arg0.method16863(5);
+			int var17 = arg0.gBit(5);
 			int var18 = var17 >> 3;
 			int var19 = var17 & 0x7;
 			int var20 = class55.field733[arg1].field570;
@@ -3791,7 +3791,7 @@ public class Statics {
 			class55.field733[arg1].field570 = (var21 << 28) + (var22 << 14) + var23;
 			return false;
 		} else {
-			int var24 = arg0.method16863(18);
+			int var24 = arg0.gBit(18);
 			int var25 = var24 >> 16;
 			int var26 = var24 >> 8 & 0xFF;
 			int var27 = var24 & 0xFF;
@@ -3883,7 +3883,7 @@ public class Statics {
 			throw new RuntimeException();
 		} else if (var2 == 0) {
 			byte[] var4 = new byte[var3];
-			var1.method15263(var4, 0, var3);
+			var1.gdata(var4, 0, var3);
 			return var4;
 		} else {
 			int var5 = var1.g4s();
@@ -4605,7 +4605,7 @@ public class Statics {
 			var1.field9467.p1(0);
 			int var2 = var1.field9467.pos;
 			class590.method5552(var1.field9467);
-			var1.field9467.method15251(var1.field9467.pos - var2);
+			var1.field9467.psize1(var1.field9467.pos - var2);
 			client.field8975.method1913(var1);
 		}
 		if (field3357 == null) {
@@ -6094,7 +6094,7 @@ public class Statics {
 		var7.field9467.p1(var3);
 		var7.field9467.p1(var5);
 		class178.method14081(var7.field9467, var1);
-		var7.field9467.method15251(var7.field9467.pos - var8);
+		var7.field9467.psize1(var7.field9467.pos - var8);
 		var6.method1913(var7);
 	}
 
@@ -6194,7 +6194,7 @@ public class Statics {
 		var2.field9467.p1(2);
 		var2.field9467.p2(arg0.field5213.field2655);
 		arg0.field5213.field2656.method16748(var2.field9467, arg0.field5213.field2657);
-		var2.field9467.method15251(var2.field9467.pos - var3);
+		var2.field9467.psize1(var2.field9467.pos - var3);
 		var1.method1913(var2);
 	}
 

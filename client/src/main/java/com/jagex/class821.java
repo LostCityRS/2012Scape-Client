@@ -72,11 +72,11 @@ public class class821 extends class403 {
 			int var5 = this.field9752.data.length - this.field9752.pos;
 			int var6 = this.field9751.data.length - this.field9751.pos;
 			if (var5 < var6) {
-				this.field9751.method15263(this.field9752.data, this.field9752.pos, var5);
+				this.field9751.gdata(this.field9752.data, this.field9752.pos, var5);
 				this.field9752.data = null;
 				return arg0.length;
 			}
-			this.field9752.method15276(this.field9751.data, this.field9751.pos, var6);
+			this.field9752.pdata(this.field9751.data, this.field9751.pos, var6);
 			this.field9751.data = null;
 			this.field9751.pos = 0;
 			this.field9746++;
