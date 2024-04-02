@@ -8,7 +8,7 @@ public class class641 extends GlTexture {
 	@ObfuscatedName("xl.h")
 	public final int field7448;
 
-	public class641(GlToolkit arg0, class124 arg1, class139 arg2, int arg3) {
+	public class641(GlToolkit arg0, class124 arg1, DataType arg2, int arg3) {
 		super(arg0, 34067, arg1, arg2, arg3 * arg3 * 6, false);
 		this.field7448 = arg3;
 		this.field1054.method13315(this);
@@ -18,7 +18,7 @@ public class class641 extends GlTexture {
 		this.method2055(true);
 	}
 
-	public class641(GlToolkit arg0, class124 arg1, class139 arg2, int arg3, boolean arg4, int[][] arg5) {
+	public class641(GlToolkit arg0, class124 arg1, DataType arg2, int arg3, boolean arg4, int[][] arg5) {
 		super(arg0, 34067, arg1, arg2, arg3 * arg3 * 6, arg4);
 		this.field7448 = arg3;
 		this.field1054.method13315(this);
@@ -34,7 +34,7 @@ public class class641 extends GlTexture {
 		this.method2055(true);
 	}
 
-	public class641(GlToolkit arg0, class124 arg1, class139 arg2, int arg3, boolean arg4, byte[][] arg5, class124 arg6) {
+	public class641(GlToolkit arg0, class124 arg1, DataType arg2, int arg3, boolean arg4, byte[][] arg5, class124 arg6) {
 		super(arg0, 34067, arg1, arg2, arg3 * arg3 * 6, arg4);
 		this.field7448 = arg3;
 		this.field1054.method13315(this);

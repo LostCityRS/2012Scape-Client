@@ -47,7 +47,7 @@ public class class897 extends class680 {
 	@ObfuscatedName("aht.u()Lih;")
 	public class259 method13190() {
 		if (this.field9964 == null) {
-			BillboardTypeList var1 = this.field9963.field400;
+			MaterialTypeList var1 = this.field9963.field400;
 			field9970[0] = this.field9971;
 			field9970[1] = this.field9965;
 			field9970[2] = this.field9966;

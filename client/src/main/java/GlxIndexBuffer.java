@@ -2,12 +2,12 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("abc")
-public class GlxIndexBuffer extends class348 implements IndexBuffer {
+public class GlxIndexBuffer extends GlxBuffer implements IndexBuffer {
 
 	@ObfuscatedName("abc.z")
-	public class139 field8816;
+	public DataType field8816;
 
-	public GlxIndexBuffer(GlxToolkit arg0, class139 arg1, boolean arg2) {
+	public GlxIndexBuffer(GlxToolkit arg0, DataType arg1, boolean arg2) {
 		super(arg0, 34963, arg2);
 		this.field8816 = arg1;
 	}
@@ -18,7 +18,7 @@ public class GlxIndexBuffer extends class348 implements IndexBuffer {
 	}
 
 	@ObfuscatedName("abc.u()Ldz;")
-	public class139 method4538() {
+	public DataType method4538() {
 		return this.field8816;
 	}
 

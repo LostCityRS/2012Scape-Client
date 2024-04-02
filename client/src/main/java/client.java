@@ -1039,7 +1039,7 @@ public final class client extends GameShell {
 						}
 						break;
 					case 13:
-						Statics.field2308 = class519.method11189(Integer.parseInt(var5));
+						Statics.field2308 = Language.method11189(Integer.parseInt(var5));
 						break;
 					case 14:
 						if (var5.equalsIgnoreCase(TextUtil.field493)) {
@@ -1172,7 +1172,7 @@ public final class client extends GameShell {
 		Statics.field9561 = new ComType();
 		method13896();
 		Statics.field1210 = new Js5DiskCache();
-		Statics.field848 = new class758();
+		Statics.field848 = new ClientJs5TcpClient();
 		int[] var2 = new int[] { 20, 260 };
 		int[] var3 = new int[] { 1000, 100 };
 		if (var2 == null || var3 == null) {
@@ -1342,7 +1342,7 @@ public final class client extends GameShell {
 			class62.method12621();
 		}
 		if (Statics.method2888(field8923)) {
-			class309.method12645();
+			Loading.method12645();
 			GameShell.method2427();
 		} else if (method12326(field8923)) {
 			field8980.method6128();
@@ -1366,7 +1366,7 @@ public final class client extends GameShell {
 					LoginManager.field540 = LoginManager.field543;
 					LoginManager.field547 = LoginManager.field538;
 					if (Statics.field6776) {
-						class574.method8621(Statics.field6775.field6768, Statics.field6775.field6765);
+						WorldSwitcher.method8621(Statics.field6775.field6768, Statics.field6775.field6765);
 						field8975.method1917();
 						method11307(9);
 					} else {
@@ -1452,7 +1452,7 @@ public final class client extends GameShell {
 			method1703();
 		}
 		if (Statics.method2888(field8923)) {
-			class309.method15611(var8);
+			Loading.method15611(var8);
 		} else if (method3223(field8923)) {
 			method2868();
 		} else if (method8612(field8923)) {
@@ -1534,7 +1534,7 @@ public final class client extends GameShell {
 		if (field9156) {
 			method831();
 		}
-		class309.method7247();
+		Loading.method7247();
 		if (Statics.field5187 != null) {
 			Statics.field5187.method442();
 		}
@@ -1818,7 +1818,7 @@ public final class client extends GameShell {
 				}
 			}
 			if (field8958 == 3) {
-				class587[] var5 = class587.method12194();
+				LoadableResource[] var5 = LoadableResource.method12194();
 				int var6 = var5.length * 4;
 				if (Statics.field3614.method7212(var6)) {
 					Packet var7 = new Packet(var6);
@@ -1938,7 +1938,7 @@ public final class client extends GameShell {
 
 	@ObfuscatedName("iw.fu(ILjava/lang/String;ZS)V")
 	public static void method4567(int arg0, String arg1, boolean arg2) {
-		class309.method7247();
+		Loading.method7247();
 		method11395();
 		method11119();
 		method11054(arg0, arg1, arg2);
@@ -1959,7 +1959,7 @@ public final class client extends GameShell {
 		} else if (field8923 == 1) {
 			method11307(16);
 		} else if (field8923 == 2 || field8923 == 10) {
-			class309.method3502();
+			Loading.method3502();
 		} else if (field8923 == 14) {
 			method11307(17);
 		} else if (field8923 == 16) {
@@ -2005,7 +2005,7 @@ public final class client extends GameShell {
 								var10 = Statics.field2305.field9703 > 256;
 							} catch (Throwable var26) {
 							}
-							class28 var12;
+							Heap var12;
 							if (var10) {
 								var12 = Statics.field5187.method593(146800640);
 							} else {
@@ -2087,7 +2087,7 @@ public final class client extends GameShell {
 		DefaultSprites.method3095();
 		ClientWorldMap.method7184(true);
 		ClientWorldMap.method7071();
-		class309.method3502();
+		Loading.method3502();
 		for (int var0 = 0; var0 < field9044.length; var0++) {
 			if (field9044[var0] != null) {
 			}
@@ -2759,11 +2759,11 @@ public final class client extends GameShell {
 											if (field8923 == 15 && !Statics.method16489() || field8923 == 11 && LoginManager.field538 == 42 || field8923 == 3 && (LoginManager.field537 == 49 || LoginManager.field537 == 52)) {
 												MiniMenu.method3534();
 											}
-											class574.method11538();
+											WorldSwitcher.method11538();
 											if (field9156 && field9157 < MonotonicTime.method5554() - 60000L) {
 												method831();
 											}
-											for (class765 var23 = (class765) field8934.method11649(); var23 != null; var23 = (class765) field8934.method11644()) {
+											for (TimestampMessage var23 = (TimestampMessage) field8934.method11649(); var23 != null; var23 = (TimestampMessage) field8934.method11644()) {
 												if ((long) var23.field9262 < MonotonicTime.method5554() / 1000L - 5L) {
 													if (var23.field9264 > 0) {
 														ChatHistory.method3943(5, 0, "", "", "", var23.field9263 + LocalisedText.field6986.method12206(Statics.field2308));
@@ -6220,7 +6220,7 @@ public final class client extends GameShell {
 			arg0.field840 = null;
 			return true;
 		} else if (ServerProt.field3009 == arg0.field840) {
-			class309.method186();
+			Loading.method186();
 			arg0.field840 = null;
 			return false;
 		} else if (ServerProt.field3085 == arg0.field840) {
@@ -6267,7 +6267,7 @@ public final class client extends GameShell {
 			boolean var71 = var2.method15220() == 1;
 			Statics.field6775 = Statics.field6772;
 			Statics.field6776 = var71;
-			class574.method8621(var69, var70);
+			WorldSwitcher.method8621(var69, var70);
 			Object var72 = null;
 			method11307(0);
 			arg0.field840 = null;
@@ -6318,7 +6318,7 @@ public final class client extends GameShell {
 					} else if (var80.equals(var89.field649)) {
 						if (var89.field647 != var82) {
 							boolean var90 = true;
-							for (class765 var91 = (class765) field8934.method11649(); var91 != null; var91 = (class765) field8934.method11644()) {
+							for (TimestampMessage var91 = (TimestampMessage) field8934.method11649(); var91 != null; var91 = (TimestampMessage) field8934.method11644()) {
 								if (var91.field9263.equals(var80)) {
 									if (var82 != 0 && var91.field9264 == 0) {
 										var91.method6975();
@@ -6330,7 +6330,7 @@ public final class client extends GameShell {
 								}
 							}
 							if (var90) {
-								field8934.method11640(new class765(var80, var82));
+								field8934.method11640(new TimestampMessage(var80, var82));
 							}
 							var89.field647 = var82;
 						}
@@ -6834,11 +6834,11 @@ public final class client extends GameShell {
 				field9181 = (field9181 + 1) % 100;
 				String var223 = class121.method4597(class178.method1205(var2));
 				if (var218 == 2 || var218 == 3) {
-					ChatHistory.method13903(9, 0, TextUtil.method6076(1) + var210, TextUtil.method6076(1) + var211, var210, var223, class523.method8066(var212), -1);
+					ChatHistory.method13903(9, 0, TextUtil.method6076(1) + var210, TextUtil.method6076(1) + var211, var210, var223, Base37.method8066(var212), -1);
 				} else if (var218 == 1) {
-					ChatHistory.method13903(9, 0, TextUtil.method6076(0) + var210, TextUtil.method6076(0) + var211, var210, var223, class523.method8066(var212), -1);
+					ChatHistory.method13903(9, 0, TextUtil.method6076(0) + var210, TextUtil.method6076(0) + var211, var210, var223, Base37.method8066(var212), -1);
 				} else {
-					ChatHistory.method13903(9, 0, var210, var211, var210, var223, class523.method8066(var212), -1);
+					ChatHistory.method13903(9, 0, var210, var211, var210, var223, Base37.method8066(var212), -1);
 				}
 			}
 			arg0.field840 = null;
@@ -7199,7 +7199,7 @@ public final class client extends GameShell {
 			boolean var306 = var2.method15220() == 1;
 			byte[] var307 = new byte[arg0.field835 - 1];
 			var2.method15263(var307, 0, arg0.field835 - 1);
-			class574.method2587(var306, var307);
+			WorldSwitcher.method2587(var306, var307);
 			arg0.field840 = null;
 			return true;
 		} else if (ServerProt.field3049 == arg0.field840) {
@@ -7582,11 +7582,11 @@ public final class client extends GameShell {
 				field9181 = (field9181 + 1) % 100;
 				String var412 = Statics.field3779.method12176(var407).method16749(var2);
 				if (var406 == 2) {
-					ChatHistory.method13903(20, 0, TextUtil.method6076(1) + var398, TextUtil.method6076(1) + var399, var398, var412, class523.method8066(var400), var407);
+					ChatHistory.method13903(20, 0, TextUtil.method6076(1) + var398, TextUtil.method6076(1) + var399, var398, var412, Base37.method8066(var400), var407);
 				} else if (var406 == 1) {
-					ChatHistory.method13903(20, 0, TextUtil.method6076(0) + var398, TextUtil.method6076(0) + var399, var398, var412, class523.method8066(var400), var407);
+					ChatHistory.method13903(20, 0, TextUtil.method6076(0) + var398, TextUtil.method6076(0) + var399, var398, var412, Base37.method8066(var400), var407);
 				} else {
-					ChatHistory.method13903(20, 0, var398, var399, var398, var412, class523.method8066(var400), var407);
+					ChatHistory.method13903(20, 0, var398, var399, var398, var412, Base37.method8066(var400), var407);
 				}
 			}
 			arg0.field840 = null;
@@ -8133,9 +8133,9 @@ public final class client extends GameShell {
 			field9094[var557] = var559;
 			field9092[var557] = var558;
 			field9093[var557] = 1;
-			int var560 = class490.field5134[var557] - 1;
+			int var560 = SkillDefaults.field5134[var557] - 1;
 			for (int var561 = 0; var561 < var560; var561++) {
-				if (var559 >= class490.field5135[var561]) {
+				if (var559 >= SkillDefaults.field5135[var561]) {
 					field9093[var557] = var561 + 2;
 				}
 			}
@@ -10077,7 +10077,7 @@ public final class client extends GameShell {
 		}
 		int var23 = var21 * 100 / var19;
 		int var24 = var20 * 10000 / var19;
-		String var25 = "Cache:" + StringComparator.method11664((long) var24, 2, true, class519.field6376) + "% (" + var23 + "%)";
+		String var25 = "Cache:" + StringComparator.method11664((long) var24, 2, true, Language.field6376) + "% (" + var23 + "%)";
 		Statics.field2163.method862(var25, var3, var4, -256, -1);
 		var4 += 12;
 	}
@@ -11701,7 +11701,7 @@ public final class client extends GameShell {
 		int var8 = -1;
 		String var9 = null;
 		if (arg2 != -1) {
-			class613 var10 = Statics.field4464.method12600(arg2);
+			ParamType var10 = Statics.field4464.method12600(arg2);
 			if (var10 == null || var10.method12586() != arg5) {
 				return;
 			}
@@ -11757,7 +11757,7 @@ public final class client extends GameShell {
 		int var5 = arg1 ? 32768 : 0;
 		int var6 = var5 + (arg1 ? Statics.field3779.field6832 : Statics.field3779.field6825);
 		for (int var7 = var5; var7 < var6; var7++) {
-			class955 var8 = Statics.field3779.method12176(var7);
+			QuickChatPhraseType var8 = Statics.field3779.method12176(var7);
 			if (var8.field10395 && var8.method16750().toLowerCase().indexOf(var2) != -1) {
 				if (var4 >= 50) {
 					Statics.field1539 = -1;

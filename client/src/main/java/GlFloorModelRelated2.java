@@ -93,7 +93,7 @@ public class GlFloorModelRelated2 {
 					int var19 = 0;
 					int var20 = var18 << this.field1143;
 					int var21 = var18 + 1 << this.field1143;
-					class963 var22 = this.field1141.field8226;
+					GpuPacket var22 = this.field1141.field8226;
 					var22.field9626 = 0;
 					for (int var23 = var16; var23 < var17; var23++) {
 						if (var23 - arg1 >= -arg2 && var23 - arg1 <= arg2) {

@@ -357,7 +357,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 	public class232 field8352;
 
 	@ObfuscatedName("yk.ex")
-	public final class231[] field8355 = new class231[2];
+	public final GpuPostProcessEffect[] field8355 = new GpuPostProcessEffect[2];
 
 	@ObfuscatedName("yk.eb")
 	public class680 field8386;
@@ -538,7 +538,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 		return NativeLibraries.method11710().method6800("jaclib");
 	}
 
-	public GpuToolkit(BillboardTypeList arg0, Js5 arg1, int arg2, int arg3) {
+	public GpuToolkit(MaterialTypeList arg0, Js5 arg1, int arg2, int arg3) {
 		super(arg0);
 		new Stream();
 		this.field8394 = new GpuModel[7];
@@ -599,7 +599,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 		this.field8312 = this.method13552(1, 1, false, var2, 0, 0);
 		var2[0] = -16777216;
 		this.field8359 = this.method13552(1, 1, false, var2, 0, 0);
-		this.method502(new class917(262144));
+		this.method502(new GpuHeap(262144));
 		this.field8392 = this.method13585(new class243[] { new class243(new class237[] { class237.field2495, class237.field2483 }) });
 		this.method13585(new class243[] { new class243(new class237[] { class237.field2495, class237.field2488 }) });
 		this.field8343 = this.method13585(new class243[] { new class243(class237.field2495), new class243(class237.field2488), new class243(class237.field2483), new class243(class237.field2480) });
@@ -653,7 +653,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 		}
 		this.field8352 = new class232(this, var2, var3);
 		if (!this.field8242) {
-			this.field8355[1] = new class742(this);
+			this.field8355[1] = new GpuColourGradingBloomEffect(this);
 			this.field8352.method4338(this.field8355[1]);
 		}
 		if (this.field8240 != null) {
@@ -827,7 +827,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 		this.method13583();
 		this.field8336.method4352();
 		for (Node var1 = this.field8362.method11563(); var1 != null; var1 = this.field8362.method11567()) {
-			((class917) var1).method16230();
+			((GpuHeap) var1).method16230();
 		}
 		ColourUtils.method2790(false, true);
 		for (int var2 = 0; var2 < this.field8344.length; var2++) {
@@ -972,10 +972,10 @@ public abstract class GpuToolkit extends RendererToolkit {
 
 	@ObfuscatedName("yk.dl(FFFFFF)V")
 	public final void method543(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5) {
-		class742.field8795 = arg0;
-		class742.field8792 = arg1;
-		class742.field8789 = arg2;
-		class742.field8803 = arg5;
+		GpuColourGradingBloomEffect.field8795 = arg0;
+		GpuColourGradingBloomEffect.field8792 = arg1;
+		GpuColourGradingBloomEffect.field8789 = arg2;
+		GpuColourGradingBloomEffect.field8803 = arg5;
 	}
 
 	@ObfuscatedName("yk.dj(IIII)V")
@@ -989,15 +989,15 @@ public abstract class GpuToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yk.bi(I)Lv;")
-	public final class28 method593(int arg0) {
-		class917 var2 = new class917(arg0);
+	public final Heap method593(int arg0) {
+		GpuHeap var2 = new GpuHeap(arg0);
 		this.field8362.method11558(var2);
 		return var2;
 	}
 
 	@ObfuscatedName("yk.bx(Lv;)V")
-	public final void method502(class28 arg0) {
-		this.field8338 = ((class917) arg0).field10174;
+	public final void method502(Heap arg0) {
+		this.field8338 = ((GpuHeap) arg0).field10174;
 	}
 
 	@ObfuscatedName("yk.or(IZ)Ljaclib/memory/heap/NativeHeapBuffer;")
@@ -1050,7 +1050,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 
 	@ObfuscatedName("yk.co(Lvm;[Lzv;Z)Ll;")
 	public final FontType method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
-		return new class690(this, arg0, arg1, arg2);
+		return new GpuFont(this, arg0, arg1, arg2);
 	}
 
 	@ObfuscatedName("yk.cq(II[I[I)Lta;")
@@ -2117,7 +2117,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 	public abstract boolean method13488();
 
 	@ObfuscatedName("yk.y(Ljava/lang/String;)Lec;")
-	public abstract Shader method13490(String arg0);
+	public abstract GpuShader method13490(String arg0);
 
 	@ObfuscatedName("yk.pd()V")
 	public abstract void method13493();
@@ -2144,7 +2144,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 	public abstract void method13541();
 
 	@ObfuscatedName("yk.qy(Lcy;Ldz;II)Lii;")
-	public abstract GpuTextureRelated1 method13542(class124 arg0, class139 arg1, int arg2, int arg3);
+	public abstract GpuTextureRelated1 method13542(class124 arg0, DataType arg1, int arg2, int arg3);
 
 	@ObfuscatedName("yk.qq()V")
 	public abstract void method13543();
@@ -2153,13 +2153,13 @@ public abstract class GpuToolkit extends RendererToolkit {
 	public abstract void method13545();
 
 	@ObfuscatedName("yk.qr(Lcy;Ldz;)Z")
-	public abstract boolean method13546(class124 arg0, class139 arg1);
+	public abstract boolean method13546(class124 arg0, DataType arg1);
 
 	@ObfuscatedName("yk.qw(Lcy;Ldz;)Z")
-	public abstract boolean method13547(class124 arg0, class139 arg1);
+	public abstract boolean method13547(class124 arg0, DataType arg1);
 
 	@ObfuscatedName("yk.qc(Lcy;Ldz;II)Lhc;")
-	public abstract GpuTexture method13550(class124 arg0, class139 arg1, int arg2, int arg3);
+	public abstract GpuTexture method13550(class124 arg0, DataType arg1, int arg2, int arg3);
 
 	@ObfuscatedName("yk.qh(IIZ[III)Lhc;")
 	public abstract GpuTexture method13552(int arg0, int arg1, boolean arg2, int[] arg3, int arg4, int arg5);

@@ -148,7 +148,7 @@ public class GlFloorModelRelated1 extends Node {
 	@ObfuscatedName("acs.m([II)V")
 	public void method14862(int[] arg0, int arg1) {
 		int var3 = 0;
-		class963 var4 = this.field9350.field8226;
+		GpuPacket var4 = this.field9350.field8226;
 		var4.field9626 = 0;
 		if (this.field9350.field8149) {
 			for (int var5 = 0; var5 < arg1; var5++) {

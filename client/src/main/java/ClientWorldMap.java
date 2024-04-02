@@ -54,7 +54,7 @@ public class ClientWorldMap extends class408 {
 	}
 
 	@ObfuscatedName("og.bp(Lra;Lma;I)V")
-	public static final void method7164(RendererToolkit arg0, BillboardTypeList arg1) {
+	public static final void method7164(RendererToolkit arg0, MaterialTypeList arg1) {
 		if (Statics.field4292 == null) {
 			return;
 		}
@@ -277,7 +277,7 @@ public class ClientWorldMap extends class408 {
 	}
 
 	@ObfuscatedName("zb.bb(Lra;Lma;IIIIB)V")
-	public static void method13877(RendererToolkit arg0, BillboardTypeList arg1, int arg2, int arg3, int arg4, int arg5) {
+	public static void method13877(RendererToolkit arg0, MaterialTypeList arg1, int arg2, int arg3, int arg4, int arg5) {
 		if (field9753 < 100) {
 			method7164(arg0, arg1);
 		}
@@ -335,7 +335,7 @@ public class ClientWorldMap extends class408 {
 			return;
 		}
 		for (class806 var4 = (class806) arg1.method11563(); var4 != null; var4 = (class806) arg1.method11567()) {
-			class443 var5 = Statics.field4290.method7862(var4.field9564);
+			MapElementType var5 = Statics.field4290.method7862(var4.field9564);
 			if (method1371(var5)) {
 				boolean var6 = method1358(arg0, var4, var5, arg2, arg3);
 				if (var6) {
@@ -346,7 +346,7 @@ public class ClientWorldMap extends class408 {
 	}
 
 	@ObfuscatedName("z.bw(Lpw;I)Z")
-	public static boolean method1371(class443 arg0) {
+	public static boolean method1371(MapElementType arg0) {
 		if (arg0 == null) {
 			return false;
 		} else if (!arg0.field4797) {
@@ -361,7 +361,7 @@ public class ClientWorldMap extends class408 {
 	}
 
 	@ObfuscatedName("d.bo(Lra;Ladw;Lpw;III)Z")
-	public static boolean method1358(RendererToolkit arg0, class806 arg1, class443 arg2, int arg3, int arg4) {
+	public static boolean method1358(RendererToolkit arg0, class806 arg1, MapElementType arg2, int arg3, int arg4) {
 		int var5 = Integer.MAX_VALUE;
 		int var6 = Integer.MIN_VALUE;
 		int var7 = Integer.MAX_VALUE;
@@ -490,7 +490,7 @@ public class ClientWorldMap extends class408 {
 	}
 
 	@ObfuscatedName("acr.bh(Lra;Ladw;Lpw;I)V")
-	public static void method14746(RendererToolkit arg0, class806 arg1, class443 arg2) {
+	public static void method14746(RendererToolkit arg0, class806 arg1, MapElementType arg2) {
 		Sprite var3 = arg2.method7841(arg0);
 		if (var3 == null) {
 			return;
@@ -623,7 +623,7 @@ public class ClientWorldMap extends class408 {
 	}
 
 	@ObfuscatedName("nf.bu(Lra;Ladw;Lpw;IIIILas;B)V")
-	public static void method6644(RendererToolkit arg0, class806 arg1, class443 arg2, int arg3, int arg4, int arg5, int arg6, class56 arg7) {
+	public static void method6644(RendererToolkit arg0, class806 arg1, MapElementType arg2, int arg3, int arg4, int arg5, int arg6, class56 arg7) {
 		int var8 = arg4 - arg6 / 2 - 5;
 		int var9 = arg5 + 2;
 		if (arg2.field4801 != 0) {
@@ -689,7 +689,7 @@ public class ClientWorldMap extends class408 {
 			var15 = Statics.field10208 * 5;
 		}
 		for (class806 var16 = (class806) field4301.method11563(); var16 != null; var16 = (class806) field4301.method11567()) {
-			class443 var17 = Statics.field4290.method7862(var16.field9564);
+			MapElementType var17 = Statics.field4290.method7862(var16.field9564);
 			if (method1371(var17)) {
 				if (field9755 == var16.field9564) {
 					int var18 = var16.field9566 * var6 / Statics.field4285 + var8;
@@ -754,7 +754,7 @@ public class ClientWorldMap extends class408 {
 			return;
 		}
 		for (class771 var4 = (class771) Statics.field5267.method11563(); var4 != null; var4 = (class771) Statics.field5267.method11567()) {
-			class443 var5 = Statics.field4290.method7862(var4.field9303.field9564);
+			MapElementType var5 = Statics.field4290.method7862(var4.field9303.field9564);
 			if (var4.method14803(arg0, arg1)) {
 				if (var5.field4778 != null) {
 					if (var5.field4778[4] != null) {
@@ -968,7 +968,7 @@ public class ClientWorldMap extends class408 {
 		if (var0 == null) {
 			return null;
 		} else {
-			class443 var1 = Statics.field4290.method7862(var0.field9564);
+			MapElementType var1 = Statics.field4290.method7862(var0.field9564);
 			return var1 != null && var1.field4802 && var1.method7835(Statics.field4299) ? var0 : method11468();
 		}
 	}
@@ -979,7 +979,7 @@ public class ClientWorldMap extends class408 {
 			return null;
 		}
 		for (class806 var0 = (class806) field9767.next(); var0 != null; var0 = (class806) field9767.next()) {
-			class443 var1 = Statics.field4290.method7862(var0.field9564);
+			MapElementType var1 = Statics.field4290.method7862(var0.field9564);
 			if (var1 != null && var1.field4802 && var1.method7835(Statics.field4299)) {
 				return var0;
 			}

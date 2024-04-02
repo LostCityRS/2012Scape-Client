@@ -13,7 +13,7 @@ public class class294 implements class463 {
 	@ObfuscatedName("jw.a")
 	public WeightedCache field3313 = new WeightedCache(64);
 
-	public class294(ModeGame arg0, class519 arg1, Js5 arg2) {
+	public class294(ModeGame arg0, Language arg1, Js5 arg2) {
 		this.field3314 = arg2;
 		if (this.field3314 == null) {
 			this.field3312 = 0;

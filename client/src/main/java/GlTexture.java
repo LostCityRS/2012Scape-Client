@@ -18,7 +18,7 @@ public abstract class GlTexture {
 	public final class124 field1050;
 
 	@ObfuscatedName("bg.z")
-	public final class139 field1051;
+	public final DataType field1051;
 
 	@ObfuscatedName("bg.n")
 	public boolean field1047;
@@ -32,7 +32,7 @@ public abstract class GlTexture {
 	@ObfuscatedName("bg.p")
 	public static final int[] field1053 = new int[1];
 
-	public GlTexture(GlToolkit arg0, int arg1, class124 arg2, class139 arg3, int arg4, boolean arg5) {
+	public GlTexture(GlToolkit arg0, int arg1, class124 arg2, DataType arg3, int arg4, boolean arg5) {
 		this.field1054 = arg0;
 		this.field1049 = arg1;
 		this.field1050 = arg2;

@@ -10,7 +10,7 @@ public class class529 {
 	@ObfuscatedName("sr.j")
 	public final WeightedCache field6413 = new WeightedCache(64);
 
-	public class529(ModeGame arg0, class519 arg1, Js5 arg2) {
+	public class529(ModeGame arg0, Language arg1, Js5 arg2) {
 		this.field6414 = arg2;
 		if (this.field6414 != null) {
 			this.field6414.method5637(class161.field1650.field1668);

@@ -17,7 +17,7 @@ public class class737 extends class300 implements class225 {
 	public final int field8781;
 
 	public class737(DxToolkit arg0, class124 arg1, int arg2, int arg3, int arg4, boolean arg5, byte[] arg6) {
-		super(arg0, arg1, class139.field1501, false, arg2 * arg3 * arg4);
+		super(arg0, arg1, DataType.field1501, false, arg2 * arg3 * arg4);
 		this.field8779 = arg2;
 		this.field8780 = arg3;
 		this.field8781 = arg4;

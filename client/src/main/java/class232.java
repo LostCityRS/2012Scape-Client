@@ -49,7 +49,7 @@ public class class232 {
 	public int field2438;
 
 	@ObfuscatedName("hh.p")
-	public class139 field2439;
+	public DataType field2439;
 
 	@ObfuscatedName("hh.w")
 	public boolean field2434;
@@ -71,7 +71,7 @@ public class class232 {
 
 	public class232(GpuToolkit arg0, int arg1, int arg2) {
 		this.field2431 = arg0;
-		this.field2439 = class139.field1501;
+		this.field2439 = DataType.field1501;
 		this.field2436 = arg1;
 		this.field2438 = arg2;
 	}
@@ -104,13 +104,13 @@ public class class232 {
 		this.method4319();
 		switch(this.field2444) {
 			case 0:
-				this.field2439 = class139.field1501;
+				this.field2439 = DataType.field1501;
 				break;
 			case 1:
-				this.field2439 = class139.field1505;
+				this.field2439 = DataType.field1505;
 				break;
 			case 2:
-				this.field2439 = class139.field1506;
+				this.field2439 = DataType.field1506;
 				break;
 			default:
 				throw new RuntimeException();
@@ -130,18 +130,18 @@ public class class232 {
 		this.field2437 = this.field2431.method637(this.field2436, this.field2438);
 		int var1 = this.field2441.size();
 		for (int var2 = 0; var2 < var1; var2++) {
-			class231 var3 = (class231) this.field2441.elementAt(var2);
+			GpuPostProcessEffect var3 = (GpuPostProcessEffect) this.field2441.elementAt(var2);
 			var3.method4283(this.field2436, this.field2438);
 		}
 	}
 
 	@ObfuscatedName("hh.s(Lho;)Z")
-	public boolean method4338(class231 arg0) {
+	public boolean method4338(GpuPostProcessEffect arg0) {
 		return this.method4330(this.field2441.size(), arg0);
 	}
 
 	@ObfuscatedName("hh.c(ILho;)Z")
-	public boolean method4330(int arg0, class231 arg1) {
+	public boolean method4330(int arg0, GpuPostProcessEffect arg1) {
 		if (!arg1.method4279() && !arg1.method4287()) {
 			this.method4318(arg1);
 			return true;
@@ -157,7 +157,7 @@ public class class232 {
 	}
 
 	@ObfuscatedName("hh.m(Lho;)V")
-	public void method4318(class231 arg0) {
+	public void method4318(GpuPostProcessEffect arg0) {
 		arg0.method4290();
 		arg0.field2423 = false;
 		this.field2441.removeElement(arg0);
@@ -222,7 +222,7 @@ public class class232 {
 		int var1 = this.field2441.size();
 		this.field2430.method4418();
 		for (int var2 = 0; var2 < var1; var2++) {
-			class231 var3 = (class231) this.field2441.elementAt(var2);
+			GpuPostProcessEffect var3 = (GpuPostProcessEffect) this.field2441.elementAt(var2);
 			int var4 = var3.method4286();
 			boolean var5 = var1 - 1 == var2;
 			for (int var6 = 0; var6 < var4; var6++) {
@@ -275,7 +275,7 @@ public class class232 {
 		this.field2437.method168();
 		int var1 = this.field2441.size();
 		for (int var2 = 0; var2 < var1; var2++) {
-			class231 var3 = (class231) this.field2441.elementAt(var2);
+			GpuPostProcessEffect var3 = (GpuPostProcessEffect) this.field2441.elementAt(var2);
 			var3.method4290();
 		}
 	}

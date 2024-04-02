@@ -123,7 +123,7 @@ public class Statics {
 	public static Canvas field1231;
 
 	@ObfuscatedName("ct.gb")
-	public static class578 field1244;
+	public static EnumTypeList field1244;
 
 	@ObfuscatedName("cc.r")
 	public static class377 field1279;
@@ -252,7 +252,7 @@ public class Statics {
 	public static class937 field1735;
 
 	@ObfuscatedName("ej.bw")
-	public static class487 field1736;
+	public static MiniMenuDefaults field1736;
 
 	@ObfuscatedName("ew.x")
 	public static IfType[] field1756;
@@ -312,7 +312,7 @@ public class Statics {
 	public static FontMetrics field2136;
 
 	@ObfuscatedName("fl.gh")
-	public static class387 field2137;
+	public static HardwarePlatformLoader field2137;
 
 	@ObfuscatedName("fj.i")
 	public static FontType field2163;
@@ -321,7 +321,7 @@ public class Statics {
 	public static int[] field2187;
 
 	@ObfuscatedName("fk.hf")
-	public static class489 field2190;
+	public static CutsceneDefaults field2190;
 
 	@ObfuscatedName("fh.d")
 	public static int field2204;
@@ -348,7 +348,7 @@ public class Statics {
 	public static class817 field2305;
 
 	@ObfuscatedName("gk.bm")
-	public static class519 field2308;
+	public static Language field2308;
 
 	@ObfuscatedName("ge.o")
 	public static String field2324;
@@ -465,10 +465,10 @@ public class Statics {
 	public static int field3210;
 
 	@ObfuscatedName("ji.hl")
-	public static class493 field3226;
+	public static WearposDefaults field3226;
 
 	@ObfuscatedName("js.hu")
-	public static class341 field3262;
+	public static QuickChatCatTypeList field3262;
 
 	@ObfuscatedName("js.bs")
 	public static class56 field3263;
@@ -531,7 +531,7 @@ public class Statics {
 	public static int field3493;
 
 	@ObfuscatedName("ke.u")
-	public static class587[] field3496;
+	public static LoadableResource[] field3496;
 
 	@ObfuscatedName("ke.nd")
 	public static boolean field3497;
@@ -582,13 +582,13 @@ public class Statics {
 	public static BASTypeList field3769;
 
 	@ObfuscatedName("lr.gl")
-	public static class600 field3770;
+	public static CursorTypeList field3770;
 
 	@ObfuscatedName("la.gx")
 	public static NPCTypeList field3774;
 
 	@ObfuscatedName("lf.ht")
-	public static class584 field3779;
+	public static QuickChatPhraseTypeList field3779;
 
 	@ObfuscatedName("mx.j")
 	public static BasicCamera field3780;
@@ -717,7 +717,7 @@ public class Statics {
 	public static EffectAnimTypeList field4213;
 
 	@ObfuscatedName("ne.hq")
-	public static class601 field4214;
+	public static StructTypeList field4214;
 
 	@ObfuscatedName("ne.ej")
 	public static Socket field4215;
@@ -750,7 +750,7 @@ public class Statics {
 	public static int[] field4267;
 
 	@ObfuscatedName("om.c")
-	public static class609 field4268;
+	public static MSITypeList field4268;
 
 	@ObfuscatedName("om.b")
 	public static float field4269;
@@ -801,7 +801,7 @@ public class Statics {
 	public static byte[] field4289;
 
 	@ObfuscatedName("om.s")
-	public static class444 field4290;
+	public static MapElementTypeList field4290;
 
 	@ObfuscatedName("om.ar")
 	public static byte[] field4291;
@@ -858,7 +858,7 @@ public class Statics {
 	public static Js5NetResourceProvider[] field4456;
 
 	@ObfuscatedName("ot.he")
-	public static class614 field4464;
+	public static ParamTypeList field4464;
 
 	@ObfuscatedName("ot.ae")
 	public static int field4465;
@@ -897,7 +897,7 @@ public class Statics {
 	public static int field4677;
 
 	@ObfuscatedName("pp.ho")
-	public static class419 field4678;
+	public static SkyBoxTypeList field4678;
 
 	@ObfuscatedName("pq.q")
 	public static int field4683;
@@ -933,7 +933,7 @@ public class Statics {
 	public static Js5 field4824;
 
 	@ObfuscatedName("pf.hj")
-	public static class492 field4825;
+	public static GraphicsDefaults field4825;
 
 	@ObfuscatedName("pk.h")
 	public static class782 field4835;
@@ -942,13 +942,13 @@ public class Statics {
 	public static int field4855;
 
 	@ObfuscatedName("qx.f")
-	public static class459[] field4869;
+	public static GWCLocation[] field4869;
 
 	@ObfuscatedName("qx.m")
 	public static int field4871;
 
 	@ObfuscatedName("qx.c")
-	public static class832[] field4873;
+	public static GWCWorld[] field4873;
 
 	@ObfuscatedName("qx.t")
 	public static int field4875;
@@ -969,10 +969,10 @@ public class Statics {
 	public static boolean field4930;
 
 	@ObfuscatedName("j.gj")
-	public static class623 field495;
+	public static InvTypeList field495;
 
 	@ObfuscatedName("ql.hk")
-	public static class480 field4959;
+	public static QuestTypeList field4959;
 
 	@ObfuscatedName("j.bp")
 	public static class545 field496;
@@ -1125,7 +1125,7 @@ public class Statics {
 	public static int field563;
 
 	@ObfuscatedName("f.hy")
-	public static class510 field566;
+	public static SeqTypeList field566;
 
 	@ObfuscatedName("d.as")
 	public static int field567;
@@ -1182,7 +1182,7 @@ public class Statics {
 	public static Sprite field6357;
 
 	@ObfuscatedName("sl.hh")
-	public static class187 field6360;
+	public static SkyDecorTypeList field6360;
 
 	@ObfuscatedName("sf.g")
 	public static Sprite[] field6361;
@@ -1302,7 +1302,7 @@ public class Statics {
 	public static Js5 field6702;
 
 	@ObfuscatedName("ub.gs")
-	public static class417 field6705;
+	public static HeadbarTypeList field6705;
 
 	@ObfuscatedName("ux.fs")
 	public static Js5 field6712;
@@ -1353,7 +1353,7 @@ public class Statics {
 	public static class292 field6784;
 
 	@ObfuscatedName("ut.x")
-	public static BillboardTypeList field6785;
+	public static MaterialTypeList field6785;
 
 	@ObfuscatedName("un.d")
 	public static LoadingScreenRenderer field6789;
@@ -1554,7 +1554,7 @@ public class Statics {
 	public static int field7616;
 
 	@ObfuscatedName("yy.gd")
-	public static class205 field7650;
+	public static IDKTypeList field7650;
 
 	@ObfuscatedName("ao.ss")
 	public static class559 field769;
@@ -1569,7 +1569,7 @@ public class Statics {
 	public static short field784;
 
 	@ObfuscatedName("at.gu")
-	public static class606 field785;
+	public static LightTypeList field785;
 
 	@ObfuscatedName("yz.bw")
 	public static int field7855;
@@ -1629,7 +1629,7 @@ public class Statics {
 	public static int field8459;
 
 	@ObfuscatedName("zi.cg")
-	public static BillboardTypeList field8465;
+	public static MaterialTypeList field8465;
 
 	@ObfuscatedName("zi.om")
 	public static int field8466;
@@ -1641,7 +1641,7 @@ public class Statics {
 	public static Js5TcpClient field848;
 
 	@ObfuscatedName("zm.s")
-	public static class390 field8481;
+	public static Timer field8481;
 
 	@ObfuscatedName("ad.ft")
 	public static Js5 field849;
@@ -1650,10 +1650,10 @@ public class Statics {
 	public static Sprite field8491;
 
 	@ObfuscatedName("zp.gy")
-	public static class444 field8499;
+	public static MapElementTypeList field8499;
 
 	@ObfuscatedName("ad.gt")
-	public static class609 field850;
+	public static MSITypeList field850;
 
 	@ObfuscatedName("zj.hx")
 	public static class621 field8514;
@@ -1668,7 +1668,7 @@ public class Statics {
 	public static Sprite field8519;
 
 	@ObfuscatedName("aak.q")
-	public static class510 field8530;
+	public static SeqTypeList field8530;
 
 	@ObfuscatedName("aak.ac")
 	public static int field8531;
@@ -1844,11 +1844,11 @@ public class Statics {
 	}
 
 	@ObfuscatedName("jj.u(I)Lnk;")
-	public static class390 method4777() {
+	public static Timer method4777() {
 		try {
-			return new class762();
+			return new MillisTimer();
 		} catch (Throwable var1) {
-			return new class761();
+			return new NanoTimer();
 		}
 	}
 
@@ -2057,7 +2057,7 @@ public class Statics {
 			while (arg0 != 0L) {
 				long var6 = arg0;
 				arg0 /= 37L;
-				var5.append(class523.field6393[(int) (var6 - arg0 * 37L)]);
+				var5.append(Base37.field6393[(int) (var6 - arg0 * 37L)]);
 			}
 			return var5.reverse().toString();
 		}
@@ -2100,8 +2100,8 @@ public class Statics {
 	}
 
 	@ObfuscatedName("sn.u(I)[Lsn;")
-	public static class519[] method11191() {
-		return new class519[] { class519.field6376, class519.field6377, class519.field6375, class519.field6384, class519.field6373, class519.field6374 };
+	public static Language[] method11191() {
+		return new Language[] { Language.field6376, Language.field6377, Language.field6375, Language.field6384, Language.field6373, Language.field6374 };
 	}
 
 	@ObfuscatedName("fj.u(Lls;Lls;Lls;Laih;Lmg;I)Z")
@@ -2125,8 +2125,8 @@ public class Statics {
 	}
 
 	@ObfuscatedName("aay.u(I)[Loc;")
-	public static class420[] method14028() {
-		return new class420[] { class420.field4468, class420.field4467 };
+	public static SkyBoxFillMode[] method14028() {
+		return new SkyBoxFillMode[] { SkyBoxFillMode.field4468, SkyBoxFillMode.field4467 };
 	}
 
 	@ObfuscatedName("dc.a([BIII)Ljava/lang/String;")
@@ -2371,7 +2371,7 @@ public class Statics {
 	@ObfuscatedName("uh.s(B)V")
 	public static void method12022() {
 		if (field6779.field6768 != -1) {
-			class574.method8621(field6779.field6768, field6779.field6765);
+			WorldSwitcher.method8621(field6779.field6768, field6779.field6765);
 		}
 	}
 
@@ -2683,7 +2683,7 @@ public class Statics {
 									if (var56 >= 0) {
 										boolean var59 = false;
 										if (var56 >= 0) {
-											class443 var60 = field8499.method7862(var56);
+											MapElementType var60 = field8499.method7862(var56);
 											if (var60 != null && var60.field4774) {
 												var59 = true;
 											}
@@ -2733,7 +2733,7 @@ public class Statics {
 						if (var72 >= 0 && var72 < var2 && var73 >= 0 && var73 < var3) {
 							MiniMap.field758.method11558(new IntNode(var70));
 						} else {
-							class443 var74 = field8499.method7862(var68.field4253[var70]);
+							MapElementType var74 = field8499.method7862(var68.field4253[var70]);
 							if (var74.field4788 != null && var74.field4792 + var72 >= 0 && var74.field4790 + var72 < var2 && var74.field4773 + var73 >= 0 && var74.field4791 + var73 < var3) {
 								MiniMap.field758.method11558(new IntNode(var70));
 							}
@@ -4218,7 +4218,7 @@ public class Statics {
 			return;
 		}
 		if (arg0 != -1) {
-			class599 var1 = field3770.method12378(arg0);
+			CursorType var1 = field3770.method12378(arg0);
 			SpriteData var2 = var1.method12363();
 			if (var2 == null) {
 				arg0 = -1;
@@ -4551,7 +4551,7 @@ public class Statics {
 											if (client.field9156 && client.field9157 < MonotonicTime.method5554() - 60000L) {
 												client.method831();
 											}
-											for (class765 var39 = (class765) client.field8934.method11649(); var39 != null; var39 = (class765) client.field8934.method11644()) {
+											for (TimestampMessage var39 = (TimestampMessage) client.field8934.method11649(); var39 != null; var39 = (TimestampMessage) client.field8934.method11644()) {
 												if ((long) var39.field9262 < MonotonicTime.method5554() / 1000L - 5L) {
 													if (var39.field9264 > 0) {
 														ChatHistory.method3943(5, 0, "", "", "", var39.field9263 + LocalisedText.field6986.method12206(field2308));
@@ -5107,7 +5107,7 @@ public class Statics {
 		arg2.field5216 -= 2;
 		int var3 = arg2.field5215[arg2.field5216];
 		int var4 = arg2.field5215[arg2.field5216 + 1];
-		class613 var5 = field4464.method12600(var3);
+		ParamType var5 = field4464.method12600(var3);
 		if (var5.field7287 == var4) {
 			arg0.method3129(var3);
 		} else {
@@ -5137,7 +5137,7 @@ public class Statics {
 		arg0.field5216 -= 2;
 		int var3 = arg0.field5215[arg0.field5216];
 		int var4 = arg0.field5215[arg0.field5216 + 1];
-		class613 var5 = field4464.method12600(var3);
+		ParamType var5 = field4464.method12600(var3);
 		if (var5.field7287 == var4) {
 			var2.method3129(var3);
 		} else {
@@ -5522,7 +5522,7 @@ public class Statics {
 		if (var2 == -1) {
 			throw new RuntimeException();
 		}
-		class579 var4 = field1244.method12116(var2);
+		EnumType var4 = field1244.method12116(var2);
 		if (var4.field6806 != var1) {
 			throw new RuntimeException();
 		}
@@ -5696,43 +5696,43 @@ public class Statics {
 		}
 		String var2 = var1.toLowerCase();
 		byte var3 = 0;
-		if (var2.startsWith(LocalisedText.field7024.method12206(class519.field6376))) {
+		if (var2.startsWith(LocalisedText.field7024.method12206(Language.field6376))) {
 			var3 = 0;
-			var1 = var1.substring(LocalisedText.field7024.method12206(class519.field6376).length());
-		} else if (var2.startsWith(LocalisedText.field7019.method12206(class519.field6376))) {
+			var1 = var1.substring(LocalisedText.field7024.method12206(Language.field6376).length());
+		} else if (var2.startsWith(LocalisedText.field7019.method12206(Language.field6376))) {
 			var3 = 1;
-			var1 = var1.substring(LocalisedText.field7019.method12206(class519.field6376).length());
-		} else if (var2.startsWith(LocalisedText.field6915.method12206(class519.field6376))) {
+			var1 = var1.substring(LocalisedText.field7019.method12206(Language.field6376).length());
+		} else if (var2.startsWith(LocalisedText.field6915.method12206(Language.field6376))) {
 			var3 = 2;
-			var1 = var1.substring(LocalisedText.field6915.method12206(class519.field6376).length());
-		} else if (var2.startsWith(LocalisedText.field6869.method12206(class519.field6376))) {
+			var1 = var1.substring(LocalisedText.field6915.method12206(Language.field6376).length());
+		} else if (var2.startsWith(LocalisedText.field6869.method12206(Language.field6376))) {
 			var3 = 3;
-			var1 = var1.substring(LocalisedText.field6869.method12206(class519.field6376).length());
-		} else if (var2.startsWith(LocalisedText.field7022.method12206(class519.field6376))) {
+			var1 = var1.substring(LocalisedText.field6869.method12206(Language.field6376).length());
+		} else if (var2.startsWith(LocalisedText.field7022.method12206(Language.field6376))) {
 			var3 = 4;
-			var1 = var1.substring(LocalisedText.field7022.method12206(class519.field6376).length());
-		} else if (var2.startsWith(LocalisedText.field7006.method12206(class519.field6376))) {
+			var1 = var1.substring(LocalisedText.field7022.method12206(Language.field6376).length());
+		} else if (var2.startsWith(LocalisedText.field7006.method12206(Language.field6376))) {
 			var3 = 5;
-			var1 = var1.substring(LocalisedText.field7006.method12206(class519.field6376).length());
-		} else if (var2.startsWith(LocalisedText.field6985.method12206(class519.field6376))) {
+			var1 = var1.substring(LocalisedText.field7006.method12206(Language.field6376).length());
+		} else if (var2.startsWith(LocalisedText.field6985.method12206(Language.field6376))) {
 			var3 = 6;
-			var1 = var1.substring(LocalisedText.field6985.method12206(class519.field6376).length());
-		} else if (var2.startsWith(LocalisedText.field6888.method12206(class519.field6376))) {
+			var1 = var1.substring(LocalisedText.field6985.method12206(Language.field6376).length());
+		} else if (var2.startsWith(LocalisedText.field6888.method12206(Language.field6376))) {
 			var3 = 7;
-			var1 = var1.substring(LocalisedText.field6888.method12206(class519.field6376).length());
-		} else if (var2.startsWith(LocalisedText.field7026.method12206(class519.field6376))) {
+			var1 = var1.substring(LocalisedText.field6888.method12206(Language.field6376).length());
+		} else if (var2.startsWith(LocalisedText.field7026.method12206(Language.field6376))) {
 			var3 = 8;
-			var1 = var1.substring(LocalisedText.field7026.method12206(class519.field6376).length());
-		} else if (var2.startsWith(LocalisedText.field6926.method12206(class519.field6376))) {
+			var1 = var1.substring(LocalisedText.field7026.method12206(Language.field6376).length());
+		} else if (var2.startsWith(LocalisedText.field6926.method12206(Language.field6376))) {
 			var3 = 9;
-			var1 = var1.substring(LocalisedText.field6926.method12206(class519.field6376).length());
-		} else if (var2.startsWith(LocalisedText.field7028.method12206(class519.field6376))) {
+			var1 = var1.substring(LocalisedText.field6926.method12206(Language.field6376).length());
+		} else if (var2.startsWith(LocalisedText.field7028.method12206(Language.field6376))) {
 			var3 = 10;
-			var1 = var1.substring(LocalisedText.field7028.method12206(class519.field6376).length());
-		} else if (var2.startsWith(LocalisedText.field7029.method12206(class519.field6376))) {
+			var1 = var1.substring(LocalisedText.field7028.method12206(Language.field6376).length());
+		} else if (var2.startsWith(LocalisedText.field7029.method12206(Language.field6376))) {
 			var3 = 11;
-			var1 = var1.substring(LocalisedText.field7029.method12206(class519.field6376).length());
-		} else if (field2308 != class519.field6376) {
+			var1 = var1.substring(LocalisedText.field7029.method12206(Language.field6376).length());
+		} else if (field2308 != Language.field6376) {
 			if (var2.startsWith(LocalisedText.field7024.method12206(field2308))) {
 				var3 = 0;
 				var1 = var1.substring(LocalisedText.field7024.method12206(field2308).length());
@@ -5773,22 +5773,22 @@ public class Statics {
 		}
 		String var4 = var1.toLowerCase();
 		byte var5 = 0;
-		if (var4.startsWith(LocalisedText.field7030.method12206(class519.field6376))) {
+		if (var4.startsWith(LocalisedText.field7030.method12206(Language.field6376))) {
 			var5 = 1;
-			var1 = var1.substring(LocalisedText.field7030.method12206(class519.field6376).length());
-		} else if (var4.startsWith(LocalisedText.field6940.method12206(class519.field6376))) {
+			var1 = var1.substring(LocalisedText.field7030.method12206(Language.field6376).length());
+		} else if (var4.startsWith(LocalisedText.field6940.method12206(Language.field6376))) {
 			var5 = 2;
-			var1 = var1.substring(LocalisedText.field6940.method12206(class519.field6376).length());
-		} else if (var4.startsWith(LocalisedText.field7032.method12206(class519.field6376))) {
+			var1 = var1.substring(LocalisedText.field6940.method12206(Language.field6376).length());
+		} else if (var4.startsWith(LocalisedText.field7032.method12206(Language.field6376))) {
 			var5 = 3;
-			var1 = var1.substring(LocalisedText.field7032.method12206(class519.field6376).length());
-		} else if (var4.startsWith(LocalisedText.field7033.method12206(class519.field6376))) {
+			var1 = var1.substring(LocalisedText.field7032.method12206(Language.field6376).length());
+		} else if (var4.startsWith(LocalisedText.field7033.method12206(Language.field6376))) {
 			var5 = 4;
-			var1 = var1.substring(LocalisedText.field7033.method12206(class519.field6376).length());
-		} else if (var4.startsWith(LocalisedText.field6866.method12206(class519.field6376))) {
+			var1 = var1.substring(LocalisedText.field7033.method12206(Language.field6376).length());
+		} else if (var4.startsWith(LocalisedText.field6866.method12206(Language.field6376))) {
 			var5 = 5;
-			var1 = var1.substring(LocalisedText.field6866.method12206(class519.field6376).length());
-		} else if (field2308 != class519.field6376) {
+			var1 = var1.substring(LocalisedText.field6866.method12206(Language.field6376).length());
+		} else if (field2308 != Language.field6376) {
 			if (var4.startsWith(LocalisedText.field7030.method12206(field2308))) {
 				var5 = 1;
 				var1 = var1.substring(LocalisedText.field7030.method12206(field2308).length());

@@ -207,7 +207,7 @@ public class PreLoadingScreen implements LoadingScreen {
 				Image var37 = Statics.field1231.createImage(var36, this.field3378 - var27 - var25);
 				int var38 = var37.getWidth(null);
 				Graphics var39 = var37.getGraphics();
-				int var40 = this.field3374 * class309.method3587() / 10 % var29;
+				int var40 = this.field3374 * Loading.method3587() / 10 % var29;
 				for (int var41 = var40 - var29; var41 < var38; var41 += var29) {
 					var39.drawImage(this.field3362, var41, 0, null);
 				}

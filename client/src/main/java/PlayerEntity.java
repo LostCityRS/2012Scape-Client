@@ -138,7 +138,7 @@ public class PlayerEntity extends PathingEntity {
 		int var9 = -1;
 		this.field10061 = 0;
 		int[] var10 = new int[Statics.field3226.field5171.length];
-		class593[] var11 = new class593[Statics.field3226.field5171.length];
+		ObjTypeCustomisation[] var11 = new ObjTypeCustomisation[Statics.field3226.field5171.length];
 		ObjType[] var12 = new ObjType[Statics.field3226.field5171.length];
 		for (int var13 = 0; var13 < Statics.field3226.field5171.length; var13++) {
 			if (Statics.field3226.field5171[var13] != 1) {
@@ -173,7 +173,7 @@ public class PlayerEntity extends PathingEntity {
 			for (int var21 = 0; var21 < Statics.field3226.field5171.length; var21++) {
 				if (Statics.field3226.field5171[var21] == 0) {
 					if ((var19 & 0x1 << var20) != 0) {
-						var11[var21] = class593.method15930(var12[var21], arg0);
+						var11[var21] = ObjTypeCustomisation.method15930(var12[var21], arg0);
 					}
 					var20++;
 				}

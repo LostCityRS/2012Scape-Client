@@ -5,10 +5,10 @@ import deob.ObfuscatedName;
 public class LinkQueue {
 
 	@ObfuscatedName("tf.u")
-	public class398 field6649 = new class398();
+	public Link field6649 = new Link();
 
 	@ObfuscatedName("tf.j")
-	public class398 field6650;
+	public Link field6650;
 
 	public LinkQueue() {
 		this.field6649.field4223 = this.field6649;
@@ -18,7 +18,7 @@ public class LinkQueue {
 	@ObfuscatedName("tf.u(I)V")
 	public void method11653() {
 		while (true) {
-			class398 var1 = this.field6649.field4223;
+			Link var1 = this.field6649.field4223;
 			if (this.field6649 == var1) {
 				this.field6650 = null;
 				return;
@@ -28,7 +28,7 @@ public class LinkQueue {
 	}
 
 	@ObfuscatedName("tf.j(Lnq;I)V")
-	public void method11640(class398 arg0) {
+	public void method11640(Link arg0) {
 		if (arg0.field4224 != null) {
 			arg0.method6975();
 		}
@@ -39,7 +39,7 @@ public class LinkQueue {
 	}
 
 	@ObfuscatedName("tf.a(Lnq;B)V")
-	public void method11641(class398 arg0) {
+	public void method11641(Link arg0) {
 		if (arg0.field4224 != null) {
 			arg0.method6975();
 		}
@@ -50,7 +50,7 @@ public class LinkQueue {
 	}
 
 	@ObfuscatedName("ae.s(Lnq;Lnq;I)V")
-	public static void method1968(class398 arg0, class398 arg1) {
+	public static void method1968(Link arg0, Link arg1) {
 		if (arg0.field4224 != null) {
 			arg0.method6975();
 		}
@@ -61,8 +61,8 @@ public class LinkQueue {
 	}
 
 	@ObfuscatedName("tf.c(I)Lnq;")
-	public class398 method11642() {
-		class398 var1 = this.field6649.field4223;
+	public Link method11642() {
+		Link var1 = this.field6649.field4223;
 		if (this.field6649 == var1) {
 			return null;
 		} else {
@@ -72,8 +72,8 @@ public class LinkQueue {
 	}
 
 	@ObfuscatedName("tf.m(I)Lnq;")
-	public class398 method11649() {
-		class398 var1 = this.field6649.field4223;
+	public Link method11649() {
+		Link var1 = this.field6649.field4223;
 		if (this.field6649 == var1) {
 			this.field6650 = null;
 			return null;
@@ -84,8 +84,8 @@ public class LinkQueue {
 	}
 
 	@ObfuscatedName("tf.t(B)Lnq;")
-	public class398 method11644() {
-		class398 var1 = this.field6650;
+	public Link method11644() {
+		Link var1 = this.field6650;
 		if (this.field6649 == var1) {
 			this.field6650 = null;
 			return null;

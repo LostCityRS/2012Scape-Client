@@ -809,7 +809,7 @@ public class ObjType implements class464 {
 	}
 
 	@ObfuscatedName("ue.n(ILsn;I)Ljava/lang/String;")
-	public static String method11975(int arg0, class519 arg1) {
+	public static String method11975(int arg0, Language arg1) {
 		if (arg0 < 100000) {
 			return "<col=ffff00>" + arg0 + "</col>";
 		} else if (arg0 < 10000000) {
@@ -820,7 +820,7 @@ public class ObjType implements class464 {
 	}
 
 	@ObfuscatedName("vn.o(ZLvq;B)Z")
-	public final boolean method12246(boolean arg0, class593 arg1) {
+	public final boolean method12246(boolean arg0, ObjTypeCustomisation arg1) {
 		int var3;
 		int var4;
 		int var5;
@@ -860,7 +860,7 @@ public class ObjType implements class464 {
 	}
 
 	@ObfuscatedName("vn.q(ZLvq;I)Ldw;")
-	public final ModelUnlit method12245(boolean arg0, class593 arg1) {
+	public final ModelUnlit method12245(boolean arg0, ObjTypeCustomisation arg1) {
 		int var3;
 		int var4;
 		int var5;
@@ -942,7 +942,7 @@ public class ObjType implements class464 {
 	}
 
 	@ObfuscatedName("vn.p(ZLvq;B)Z")
-	public final boolean method12275(boolean arg0, class593 arg1) {
+	public final boolean method12275(boolean arg0, ObjTypeCustomisation arg1) {
 		int var3;
 		int var4;
 		if (arg0) {
@@ -974,7 +974,7 @@ public class ObjType implements class464 {
 	}
 
 	@ObfuscatedName("vn.w(ZLvq;I)Ldw;")
-	public final ModelUnlit method12249(boolean arg0, class593 arg1) {
+	public final ModelUnlit method12249(boolean arg0, ObjTypeCustomisation arg1) {
 		int var3;
 		int var4;
 		if (arg0) {

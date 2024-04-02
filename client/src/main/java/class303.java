@@ -10,7 +10,7 @@ public class class303 implements class296 {
 	public final DxToolkit field3342;
 
 	@ObfuscatedName("jl.j")
-	public final class139 field3343;
+	public final DataType field3343;
 
 	@ObfuscatedName("jl.a")
 	public final int field3344;
@@ -21,7 +21,7 @@ public class class303 implements class296 {
 	@ObfuscatedName("jl.c")
 	public long field3346;
 
-	public class303(DxToolkit arg0, class139 arg1, int arg2, int arg3, int arg4) {
+	public class303(DxToolkit arg0, DataType arg1, int arg2, int arg3, int arg4) {
 		this.field3342 = arg0;
 		this.field3344 = arg2;
 		this.field3345 = arg3;

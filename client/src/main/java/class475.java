@@ -10,7 +10,7 @@ public class class475 {
 	@ObfuscatedName("qv.j")
 	public WeightedCache field5039 = new WeightedCache(64);
 
-	public class475(ModeGame arg0, class519 arg1, Js5 arg2) {
+	public class475(ModeGame arg0, Language arg1, Js5 arg2) {
 		this.field5038 = arg2;
 		if (this.field5038 != null) {
 			this.field5038.method5637(class161.field1665.field1668);

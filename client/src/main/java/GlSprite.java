@@ -34,7 +34,7 @@ public class GlSprite extends Sprite {
 
 	public GlSprite(GlToolkit arg0, int arg1, int arg2, boolean arg3) {
 		this.field7626 = arg0;
-		this.field7625 = GlGraphicRelated.method15981(arg0, arg3 ? class124.field1296 : class124.field1298, class139.field1501, arg1, arg2);
+		this.field7625 = GlGraphicRelated.method15981(arg0, arg3 ? class124.field1296 : class124.field1298, DataType.field1501, arg1, arg2);
 	}
 
 	public GlSprite(GlToolkit arg0, int arg1, int arg2, int arg3, int arg4) {

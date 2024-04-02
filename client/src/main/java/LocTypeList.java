@@ -8,7 +8,7 @@ public class LocTypeList {
 	public final ModeGame field6557;
 
 	@ObfuscatedName("tz.j")
-	public final class519 field6552;
+	public final Language field6552;
 
 	@ObfuscatedName("tz.a")
 	public boolean field6553;
@@ -43,7 +43,7 @@ public class LocTypeList {
 	@ObfuscatedName("tz.q")
 	public class570 field6564 = new class570(null, null);
 
-	public LocTypeList(ModeGame arg0, class519 arg1, boolean arg2, Js5 arg3, Js5 arg4) {
+	public LocTypeList(ModeGame arg0, Language arg1, boolean arg2, Js5 arg3, Js5 arg4) {
 		this.field6557 = arg0;
 		this.field6552 = arg1;
 		this.field6553 = arg2;

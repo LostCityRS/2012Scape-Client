@@ -10,7 +10,7 @@ public class class571 {
 	@ObfuscatedName("ui.j")
 	public final WeightedCache field6758 = new WeightedCache(64);
 
-	public class571(ModeGame arg0, class519 arg1, Js5 arg2) {
+	public class571(ModeGame arg0, Language arg1, Js5 arg2) {
 		this.field6759 = arg2;
 		if (this.field6759 != null) {
 			this.field6759.method5637(class161.field1649.field1668);

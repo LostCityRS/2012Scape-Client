@@ -585,7 +585,7 @@ public class MapLoader {
 					if (var9 < this.field3627) {
 						int var10 = this.field3635[var5][var9][var8] & 0xFF;
 						if (var10 > 0) {
-							class564 var11 = this.field3668.method11895(var10 - 1);
+							FloorUnderlayType var11 = this.field3668.method11895(var10 - 1);
 							this.field3634[var8] += var11.field6718;
 							this.field3639[var8] += var11.field6714;
 							this.field3640[var8] += var11.field6720;
@@ -597,7 +597,7 @@ public class MapLoader {
 					if (var12 >= 0) {
 						int var13 = this.field3635[var5][var12][var8] & 0xFF;
 						if (var13 > 0) {
-							class564 var14 = this.field3668.method11895(var13 - 1);
+							FloorUnderlayType var14 = this.field3668.method11895(var13 - 1);
 							this.field3634[var8] -= var14.field6718;
 							this.field3639[var8] -= var14.field6714;
 							this.field3640[var8] -= var14.field6720;
@@ -666,12 +666,12 @@ public class MapLoader {
 				byte var10 = this.field3621[arg2][var7][var8];
 				int var11 = this.field3636[arg2][var7][var8] & 0xFF;
 				int var12 = this.field3635[arg2][var7][var8] & 0xFF;
-				class483 var13 = var11 == 0 ? null : this.field3692.method8503(var11 - 1);
-				class564 var14 = var12 == 0 ? null : this.field3668.method11895(var12 - 1);
+				FloorOverlayType var13 = var11 == 0 ? null : this.field3692.method8503(var11 - 1);
+				FloorUnderlayType var14 = var12 == 0 ? null : this.field3668.method11895(var12 - 1);
 				if (var9 == 0 && var13 == null) {
 					var9 = 12;
 				}
-				class483 var15 = var13;
+				FloorOverlayType var15 = var13;
 				if (var13 != null && var13.field5094 == -1 && var13.field5091 == -1) {
 					var15 = var13;
 					var13 = null;
@@ -814,8 +814,8 @@ public class MapLoader {
 				int var16 = var10[var12][var14] & 0xFF;
 				int var17 = var9[var12][var14] & 0xFF;
 				if (var16 != 0 || var17 != 0) {
-					class483 var18 = var16 == 0 ? null : this.field3692.method8503(var16 - 1);
-					class564 var19 = var17 == 0 ? null : this.field3668.method11895(var17 - 1);
+					FloorOverlayType var18 = var16 == 0 ? null : this.field3692.method8503(var16 - 1);
+					FloorUnderlayType var19 = var17 == 0 ? null : this.field3668.method11895(var17 - 1);
 					if (this.field3669 == 0 && var18 == null) {
 						this.field3669 = 12;
 					}
@@ -825,7 +825,7 @@ public class MapLoader {
 					var11[2] = false;
 					var11[1] = false;
 					var11[0] = false;
-					class483 var23 = var18;
+					FloorOverlayType var23 = var18;
 					if (var18 != null) {
 						if (var18.field5094 == -1 && var18.field5091 == -1) {
 							var23 = var18;
@@ -955,7 +955,7 @@ public class MapLoader {
 	}
 
 	@ObfuscatedName("lq.q(Lra;Lry;Luc;II[[B[[B[[B[ZI)V")
-	public void method5835(RendererToolkit arg0, class483 arg1, class564 arg2, int arg3, int arg4, byte[][] arg5, byte[][] arg6, byte[][] arg7, boolean[] arg8) {
+	public void method5835(RendererToolkit arg0, FloorOverlayType arg1, FloorUnderlayType arg2, int arg3, int arg4, byte[][] arg5, byte[][] arg6, byte[][] arg7, boolean[] arg8) {
 		boolean[] var10 = arg1 != null && arg1.field5097 ? field3675[this.field3669] : field3670[this.field3669];
 		this.method5851(arg0, arg1, arg2, arg3, arg4, this.field3627, this.field3643, arg7, arg5, arg6, arg8);
 		this.field3685 = arg1 != null && arg1.field5094 != arg1.field5091;
@@ -1006,7 +1006,7 @@ public class MapLoader {
 	}
 
 	@ObfuscatedName("lq.p(Lry;Luc;I)V")
-	public void method5872(class483 arg0, class564 arg1) {
+	public void method5872(FloorOverlayType arg0, FloorUnderlayType arg1) {
 		if (this.field3678) {
 			this.field3700 = field3667[this.field3669];
 			this.field3638 = field3673[this.field3669];
@@ -1031,7 +1031,7 @@ public class MapLoader {
 	}
 
 	@ObfuscatedName("lq.w(Lra;IIILry;[Z[I[I[I[I[I[I[I[ILxa;Lxa;Lxa;I)V")
-	public void method5849(RendererToolkit arg0, int arg1, int arg2, int arg3, class483 arg4, boolean[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, int[] arg10, int[] arg11, int[] arg12, int[] arg13, FloorModel arg14, FloorModel arg15, FloorModel arg16) {
+	public void method5849(RendererToolkit arg0, int arg1, int arg2, int arg3, FloorOverlayType arg4, boolean[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, int[] arg10, int[] arg11, int[] arg12, int[] arg13, FloorModel arg14, FloorModel arg15, FloorModel arg16) {
 		this.field3633 = -1;
 		this.field3691 = -1;
 		this.field3617 = 256;
@@ -1154,7 +1154,7 @@ public class MapLoader {
 	}
 
 	@ObfuscatedName("lq.b(Lra;IIIIILuc;IIII[Z[I[I[I[I[I[I[I[I[[ILxa;Lxa;Lxa;B)V")
-	public void method5867(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class564 arg6, int arg7, int arg8, int arg9, int arg10, boolean[] arg11, int[] arg12, int[] arg13, int[] arg14, int[] arg15, int[] arg16, int[] arg17, int[] arg18, int[] arg19, int[][] arg20, FloorModel arg21, FloorModel arg22, FloorModel arg23) {
+	public void method5867(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, FloorUnderlayType arg6, int arg7, int arg8, int arg9, int arg10, boolean[] arg11, int[] arg12, int[] arg13, int[] arg14, int[] arg15, int[] arg16, int[] arg17, int[] arg18, int[] arg19, int[][] arg20, FloorModel arg21, FloorModel arg22, FloorModel arg23) {
 		if (arg6 == null) {
 			return;
 		}
@@ -1167,10 +1167,10 @@ public class MapLoader {
 		if (arg10 == 0) {
 			arg10 = arg7;
 		}
-		class564 var25 = this.field3668.method11895(arg7 - 1);
-		class564 var26 = this.field3668.method11895(arg8 - 1);
-		class564 var27 = this.field3668.method11895(arg9 - 1);
-		class564 var28 = this.field3668.method11895(arg10 - 1);
+		FloorUnderlayType var25 = this.field3668.method11895(arg7 - 1);
+		FloorUnderlayType var26 = this.field3668.method11895(arg8 - 1);
+		FloorUnderlayType var27 = this.field3668.method11895(arg9 - 1);
+		FloorUnderlayType var28 = this.field3668.method11895(arg10 - 1);
 		for (int var29 = 0; var29 < this.field3698; var29++) {
 			boolean var30 = false;
 			byte var31;
@@ -1312,7 +1312,7 @@ public class MapLoader {
 	}
 
 	@ObfuscatedName("lq.x(Lxa;Luc;Lry;IIIIIIII)V")
-	public void method5894(FloorModel arg0, class564 arg1, class483 arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9) {
+	public void method5894(FloorModel arg0, FloorUnderlayType arg1, FloorOverlayType arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9) {
 		int var11 = arg0.method199(arg4, arg5);
 		int var12 = arg0.method199(arg6, arg5);
 		int var13 = arg0.method199(arg6, arg7);
@@ -1335,13 +1335,13 @@ public class MapLoader {
 	}
 
 	@ObfuscatedName("lq.i(Lra;Lry;Luc;IIII[[B[[B[[B[ZI)V")
-	public final void method5851(RendererToolkit arg0, class483 arg1, class564 arg2, int arg3, int arg4, int arg5, int arg6, byte[][] arg7, byte[][] arg8, byte[][] arg9, boolean[] arg10) {
+	public final void method5851(RendererToolkit arg0, FloorOverlayType arg1, FloorUnderlayType arg2, int arg3, int arg4, int arg5, int arg6, byte[][] arg7, byte[][] arg8, byte[][] arg9, boolean[] arg10) {
 		boolean[] var12 = arg1 != null && arg1.field5097 ? field3675[this.field3669] : field3670[this.field3669];
 		if (arg4 > 0) {
 			if (arg3 > 0) {
 				int var13 = arg7[arg3 - 1][arg4 - 1] & 0xFF;
 				if (var13 > 0) {
-					class483 var14 = this.field3692.method8503(var13 - 1);
+					FloorOverlayType var14 = this.field3692.method8503(var13 - 1);
 					if (var14.field5094 != -1 && var14.field5097) {
 						byte var15 = arg8[arg3 - 1][arg4 - 1];
 						int var16 = arg9[arg3 - 1][arg4 - 1] * 2 + 4 & 0x7;
@@ -1360,7 +1360,7 @@ public class MapLoader {
 			if (arg3 < arg5 - 1) {
 				int var18 = arg7[arg3 + 1][arg4 - 1] & 0xFF;
 				if (var18 > 0) {
-					class483 var19 = this.field3692.method8503(var18 - 1);
+					FloorOverlayType var19 = this.field3692.method8503(var18 - 1);
 					if (var19.field5094 != -1 && var19.field5097) {
 						byte var20 = arg8[arg3 + 1][arg4 - 1];
 						int var21 = arg9[arg3 + 1][arg4 - 1] * 2 + 6 & 0x7;
@@ -1381,7 +1381,7 @@ public class MapLoader {
 			if (arg3 > 0) {
 				int var23 = arg7[arg3 - 1][arg4 + 1] & 0xFF;
 				if (var23 > 0) {
-					class483 var24 = this.field3692.method8503(var23 - 1);
+					FloorOverlayType var24 = this.field3692.method8503(var23 - 1);
 					if (var24.field5094 != -1 && var24.field5097) {
 						byte var25 = arg8[arg3 - 1][arg4 + 1];
 						int var26 = arg9[arg3 - 1][arg4 + 1] * 2 + 2 & 0x7;
@@ -1400,7 +1400,7 @@ public class MapLoader {
 			if (arg3 < arg5 - 1) {
 				int var28 = arg7[arg3 + 1][arg4 + 1] & 0xFF;
 				if (var28 > 0) {
-					class483 var29 = this.field3692.method8503(var28 - 1);
+					FloorOverlayType var29 = this.field3692.method8503(var28 - 1);
 					if (var29.field5094 != -1 && var29.field5097) {
 						byte var30 = arg8[arg3 + 1][arg4 + 1];
 						int var31 = arg9[arg3 + 1][arg4 + 1] * 2 & 0x7;
@@ -1420,7 +1420,7 @@ public class MapLoader {
 		if (arg4 > 0) {
 			int var33 = arg7[arg3][arg4 - 1] & 0xFF;
 			if (var33 > 0) {
-				class483 var34 = this.field3692.method8503(var33 - 1);
+				FloorOverlayType var34 = this.field3692.method8503(var33 - 1);
 				if (var34.field5094 != -1) {
 					byte var35 = arg8[arg3][arg4 - 1];
 					byte var36 = arg9[arg3][arg4 - 1];
@@ -1458,7 +1458,7 @@ public class MapLoader {
 		if (arg4 < arg6 - 1) {
 			int var41 = arg7[arg3][arg4 + 1] & 0xFF;
 			if (var41 > 0) {
-				class483 var42 = this.field3692.method8503(var41 - 1);
+				FloorOverlayType var42 = this.field3692.method8503(var41 - 1);
 				if (var42.field5094 != -1) {
 					byte var43 = arg8[arg3][arg4 + 1];
 					byte var44 = arg9[arg3][arg4 + 1];
@@ -1496,7 +1496,7 @@ public class MapLoader {
 		if (arg3 > 0) {
 			int var49 = arg7[arg3 - 1][arg4] & 0xFF;
 			if (var49 > 0) {
-				class483 var50 = this.field3692.method8503(var49 - 1);
+				FloorOverlayType var50 = this.field3692.method8503(var49 - 1);
 				if (var50.field5094 != -1) {
 					byte var51 = arg8[arg3 - 1][arg4];
 					byte var52 = arg9[arg3 - 1][arg4];
@@ -1534,7 +1534,7 @@ public class MapLoader {
 		if (arg3 < arg5 - 1) {
 			int var57 = arg7[arg3 + 1][arg4] & 0xFF;
 			if (var57 > 0) {
-				class483 var58 = this.field3692.method8503(var57 - 1);
+				FloorOverlayType var58 = this.field3692.method8503(var57 - 1);
 				if (var58.field5094 != -1) {
 					byte var59 = arg8[arg3 + 1][arg4];
 					byte var60 = arg9[arg3 + 1][arg4];
@@ -1591,7 +1591,7 @@ public class MapLoader {
 	}
 
 	@ObfuscatedName("kj.v(Lra;Lry;I)I")
-	public static final int method5549(RendererToolkit arg0, class483 arg1) {
+	public static final int method5549(RendererToolkit arg0, FloorOverlayType arg1) {
 		if (arg1.field5091 != -1) {
 			return arg1.field5091;
 		}

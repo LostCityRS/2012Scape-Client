@@ -104,7 +104,7 @@ public final class GlxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahv.y(Ljava/lang/String;)Lec;")
-	public Shader method13490(String arg0) {
+	public GpuShader method13490(String arg0) {
 		byte[] var2 = this.method16091(arg0);
 		if (var2 == null) {
 			return null;
@@ -124,7 +124,7 @@ public final class GlxToolkit extends GpuToolkit {
 		return this.field10028;
 	}
 
-	public GlxToolkit(OpenGL arg0, Canvas arg1, long arg2, BillboardTypeList arg3, Js5 arg4, int arg5) {
+	public GlxToolkit(OpenGL arg0, Canvas arg1, long arg2, MaterialTypeList arg3, Js5 arg4, int arg5) {
 		super(arg3, arg4, arg5, 1);
 		new MapBuffer();
 		new MapBuffer();
@@ -335,18 +335,18 @@ public final class GlxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahv.aj(IILcy;Ldz;I)Lde;")
-	public GraphicsDeletable method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4) {
+	public GraphicsDeletable method468(int arg0, int arg1, class124 arg2, DataType arg3, int arg4) {
 		return new class351(this, arg2, arg3, arg0, arg1, arg4);
 	}
 
 	@ObfuscatedName("ahv.ah(II)Ldo;")
 	public class132 method637(int arg0, int arg1) {
-		return new class351(this, class124.field1300, class139.field1503, arg0, arg1);
+		return new class351(this, class124.field1300, DataType.field1503, arg0, arg1);
 	}
 
 	@ObfuscatedName("ahv.au(III)Ldo;")
 	public class132 method541(int arg0, int arg1, int arg2) {
-		return new class351(this, class124.field1300, class139.field1503, arg0, arg1, arg2);
+		return new class351(this, class124.field1300, DataType.field1503, arg0, arg1, arg2);
 	}
 
 	@ObfuscatedName("ahv.ae(IIII)[I")
@@ -577,17 +577,17 @@ public final class GlxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahv.qr(Lcy;Ldz;)Z")
-	public boolean method13546(class124 arg0, class139 arg1) {
+	public boolean method13546(class124 arg0, DataType arg1) {
 		return true;
 	}
 
 	@ObfuscatedName("ahv.qw(Lcy;Ldz;)Z")
-	public boolean method13547(class124 arg0, class139 arg1) {
+	public boolean method13547(class124 arg0, DataType arg1) {
 		return this.field8384;
 	}
 
 	@ObfuscatedName("ahv.qc(Lcy;Ldz;II)Lhc;")
-	public GpuTexture method13550(class124 arg0, class139 arg1, int arg2, int arg3) {
+	public GpuTexture method13550(class124 arg0, DataType arg1, int arg2, int arg3) {
 		return this.method13542(arg0, arg1, arg2, arg3);
 	}
 
@@ -598,7 +598,7 @@ public final class GlxToolkit extends GpuToolkit {
 		} else if (this.field10025) {
 			return new class746(this, arg0, arg1, arg3, arg4, arg5);
 		} else {
-			class745 var7 = new class745(this, class124.field1296, class139.field1501, class595.method2839(arg0), class595.method2839(arg1));
+			class745 var7 = new class745(this, class124.field1296, DataType.field1501, class595.method2839(arg0), class595.method2839(arg1));
 			var7.method4413(0, 0, arg0, arg1, arg3, arg4, arg5);
 			return var7;
 		}
@@ -611,7 +611,7 @@ public final class GlxToolkit extends GpuToolkit {
 		} else if (this.field10025) {
 			return new class746(this, arg0, arg1, arg2, arg4, arg5, arg6);
 		} else {
-			class745 var8 = new class745(this, arg0, class139.field1501, class595.method2839(arg1), class595.method2839(arg2));
+			class745 var8 = new class745(this, arg0, DataType.field1501, class595.method2839(arg1), class595.method2839(arg2));
 			var8.method4414(0, 0, arg1, arg2, arg4, arg0, arg5, arg6);
 			return var8;
 		}
@@ -624,14 +624,14 @@ public final class GlxToolkit extends GpuToolkit {
 		} else if (this.field10025) {
 			return new class746(this, arg0, arg1, arg2, arg4, arg5, arg6);
 		} else {
-			class745 var8 = new class745(this, arg0, class139.field1506, class595.method2839(arg1), class595.method2839(arg2));
+			class745 var8 = new class745(this, arg0, DataType.field1506, class595.method2839(arg1), class595.method2839(arg2));
 			var8.method14192(0, 0, arg1, arg2, arg4, arg0, arg5, arg6);
 			return var8;
 		}
 	}
 
 	@ObfuscatedName("ahv.qy(Lcy;Ldz;II)Lii;")
-	public GpuTextureRelated1 method13542(class124 arg0, class139 arg1, int arg2, int arg3) {
+	public GpuTextureRelated1 method13542(class124 arg0, DataType arg1, int arg2, int arg3) {
 		if (this.field10006 || class595.method11258(arg2) && class595.method11258(arg3)) {
 			return new class745(this, arg0, arg1, arg2, arg3);
 		} else if (this.field10025) {
@@ -833,7 +833,7 @@ public final class GlxToolkit extends GpuToolkit {
 
 	@ObfuscatedName("ahv.st(Z)Lin;")
 	public final IndexBuffer method13797(boolean arg0) {
-		return new GlxIndexBuffer(this, class139.field1502, arg0);
+		return new GlxIndexBuffer(this, DataType.field1502, arg0);
 	}
 
 	@ObfuscatedName("ahv.sb([Lhu;)Lhy;")
@@ -993,7 +993,7 @@ public final class GlxToolkit extends GpuToolkit {
 			var7 = 0;
 			var8 = arg5;
 		}
-		class139 var9 = arg0.method4538();
+		DataType var9 = arg0.method4538();
 		GlxIndexBuffer var10 = (GlxIndexBuffer) arg0;
 		var10.method5996();
 		OpenGL.glDrawElements(var7, var8, method16090(var9), var10.method5995() + (long) (var9.field1508 * arg4));
@@ -1022,7 +1022,7 @@ public final class GlxToolkit extends GpuToolkit {
 			var6 = 0;
 			var7 = arg4;
 		}
-		class139 var8 = this.field10026.method4538();
+		DataType var8 = this.field10026.method4538();
 		OpenGL.glDrawElements(var6, var7, method16090(var8), this.field10026.method5995() + (long) (var8.field1508 * arg3));
 	}
 
@@ -1146,7 +1146,7 @@ public final class GlxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahv.acx(Ldz;)I")
-	public static final int method16090(class139 arg0) {
+	public static final int method16090(DataType arg0) {
 		switch(arg0.field1507) {
 			case 0:
 				return 5123;
@@ -1194,8 +1194,8 @@ public final class GlxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahv.acz(Lcy;Ldz;)I")
-	public static int method16100(class124 arg0, class139 arg1) {
-		if (class139.field1501 == arg1) {
+	public static int method16100(class124 arg0, DataType arg1) {
+		if (DataType.field1501 == arg1) {
 			switch(arg0.field1305) {
 				case 0:
 					return 6410;
@@ -1216,7 +1216,7 @@ public final class GlxToolkit extends GpuToolkit {
 				case 8:
 					return 6406;
 			}
-		} else if (class139.field1502 == arg1) {
+		} else if (DataType.field1502 == arg1) {
 			switch(arg0.field1305) {
 				case 0:
 					return 36219;
@@ -1236,14 +1236,14 @@ public final class GlxToolkit extends GpuToolkit {
 				case 8:
 					return 32830;
 			}
-		} else if (class139.field1503 == arg1) {
+		} else if (DataType.field1503 == arg1) {
 			switch(arg0.field1305) {
 				case 2:
 					return 33190;
 				default:
 					throw new IllegalArgumentException();
 			}
-		} else if (class139.field1505 == arg1) {
+		} else if (DataType.field1505 == arg1) {
 			switch(arg0.field1305) {
 				case 0:
 					return 34847;
@@ -1262,7 +1262,7 @@ public final class GlxToolkit extends GpuToolkit {
 				case 8:
 					return 34844;
 			}
-		} else if (class139.field1506 == arg1) {
+		} else if (DataType.field1506 == arg1) {
 			switch(arg0.field1305) {
 				case 0:
 					return 34841;
@@ -1286,8 +1286,8 @@ public final class GlxToolkit extends GpuToolkit {
 		}
 	}
 
-	public static int add(class124 arg0, class139 arg1) {
-		if (class139.field1501 == arg1) {
+	public static int add(class124 arg0, DataType arg1) {
+		if (DataType.field1501 == arg1) {
 			switch(arg0.field1305) {
 				case 0:
 					return 6410;
@@ -1308,7 +1308,7 @@ public final class GlxToolkit extends GpuToolkit {
 				case 8:
 					return 6406;
 			}
-		} else if (class139.field1502 == arg1) {
+		} else if (DataType.field1502 == arg1) {
 			switch(arg0.field1305) {
 				case 0:
 					return 36219;
@@ -1328,14 +1328,14 @@ public final class GlxToolkit extends GpuToolkit {
 				case 8:
 					return 32830;
 			}
-		} else if (class139.field1503 == arg1) {
+		} else if (DataType.field1503 == arg1) {
 			switch(arg0.field1305) {
 				case 2:
 					return 33190;
 				default:
 					throw new IllegalArgumentException();
 			}
-		} else if (class139.field1505 == arg1) {
+		} else if (DataType.field1505 == arg1) {
 			switch(arg0.field1305) {
 				case 0:
 					return 34847;
@@ -1354,7 +1354,7 @@ public final class GlxToolkit extends GpuToolkit {
 				case 8:
 					return 34844;
 			}
-		} else if (class139.field1506 == arg1) {
+		} else if (DataType.field1506 == arg1) {
 			switch(arg0.field1305) {
 				case 0:
 					return 34841;

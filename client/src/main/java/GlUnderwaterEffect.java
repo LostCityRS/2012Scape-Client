@@ -21,7 +21,7 @@ public class GlUnderwaterEffect extends GlEffect {
 		super(arg0);
 		this.field7471 = arg1;
 		this.method12791();
-		this.field7474 = new class642(this.field1062, class124.field1297, class139.field1501, 2, new byte[] { 0, -1 }, class124.field1297);
+		this.field7474 = new class642(this.field1062, class124.field1297, DataType.field1501, 2, new byte[] { 0, -1 }, class124.field1297);
 		this.field7474.method12783(false);
 	}
 

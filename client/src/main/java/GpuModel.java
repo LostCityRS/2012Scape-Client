@@ -268,7 +268,7 @@ public class GpuModel extends Model {
 
 	public GpuModel(GpuToolkit arg0, ModelUnlit arg1, int arg2, int arg3, int arg4, int arg5) {
 		this(arg0, arg2, arg5, true, false);
-		BillboardTypeList var7 = arg0.field400;
+		MaterialTypeList var7 = arg0.field400;
 		int[] var8 = new int[arg1.field1342];
 		this.field7993 = new int[arg1.field1315 + 1];
 		for (int var9 = 0; var9 < arg1.field1342; var9++) {
@@ -1869,7 +1869,7 @@ public class GpuModel extends Model {
 
 	@ObfuscatedName("yg.W(SS)V")
 	public void method289(short arg0, short arg1) {
-		BillboardTypeList var3 = this.field7925.field400;
+		MaterialTypeList var3 = this.field7925.field400;
 		for (int var4 = 0; var4 < this.field7947 * -1431655765; var4++) {
 			if (this.field7936[var4] == arg0) {
 				this.field7936[var4] = arg1;

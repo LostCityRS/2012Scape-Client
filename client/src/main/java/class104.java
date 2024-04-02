@@ -8,24 +8,24 @@ public class class104 {
 	public final GlToolkit field1174;
 
 	@ObfuscatedName("cm.j")
-	public final BillboardTypeList field1173;
+	public final MaterialTypeList field1173;
 
 	@ObfuscatedName("cm.a")
 	public final WeightedCache field1172 = new WeightedCache(6291456, 256);
 
-	public class104(GlToolkit arg0, BillboardTypeList arg1) {
+	public class104(GlToolkit arg0, MaterialTypeList arg1) {
 		this.field1174 = arg0;
 		this.field1173 = arg1;
 	}
 
 	@ObfuscatedName("cm.u(I)Lxp;")
-	public class640 method2335(int arg0) {
+	public GlRelated2 method2335(int arg0) {
 		return this.method2324(arg0, -1);
 	}
 
 	@ObfuscatedName("cm.j(II)Lxp;")
-	public class640 method2324(int arg0, int arg1) {
-		class640 var3 = (class640) this.field1172.method7916((long) arg0);
+	public GlRelated2 method2324(int arg0, int arg1) {
+		GlRelated2 var3 = (GlRelated2) this.field1172.method7916((long) arg0);
 		if (var3 != null) {
 			return var3;
 		} else if (this.method2322(arg0, arg1)) {
@@ -33,10 +33,10 @@ public class class104 {
 			if (arg1 == -1) {
 				arg1 = var4.field1252;
 			}
-			class640 var6;
+			GlRelated2 var6;
 			if (var4.field1245 && this.field1174.method600()) {
 				float[] var5 = this.field1173.method888(arg0, 0.7F, arg1, arg1, false);
-				var6 = new class640(this.field1174, 3553, class124.field1296, class139.field1505, arg1, arg1, var4.field1275 != 0, var5, class124.field1296);
+				var6 = new GlRelated2(this.field1174, 3553, class124.field1296, DataType.field1505, arg1, arg1, var4.field1275 != 0, var5, class124.field1296);
 			} else {
 				int[] var7;
 				if (MaterialAlphaMode.field4853 != var4.field1262 && Material.method12638(var4.field1270)) {
@@ -44,7 +44,7 @@ public class class104 {
 				} else {
 					var7 = this.field1173.method887(arg0, 0.7F, arg1, arg1, false);
 				}
-				var6 = new class640(this.field1174, 3553, arg1, arg1, var4.field1275 != 0, var7, 0, 0, false);
+				var6 = new GlRelated2(this.field1174, 3553, arg1, arg1, var4.field1275 != 0, var7, 0, 0, false);
 			}
 			var6.method12765(var4.field1273, var4.field1274);
 			this.field1172.method7918(var6, (long) arg0, arg1 * arg1);

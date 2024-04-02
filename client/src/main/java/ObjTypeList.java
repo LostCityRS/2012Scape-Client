@@ -8,7 +8,7 @@ public class ObjTypeList implements class463 {
 	public final ModeGame field7139;
 
 	@ObfuscatedName("vj.j")
-	public final class519 field7140;
+	public final Language field7140;
 
 	@ObfuscatedName("vj.a")
 	public boolean field7142;
@@ -35,7 +35,7 @@ public class ObjTypeList implements class463 {
 	public final class591 field7148 = new class591();
 
 	@ObfuscatedName("vj.z")
-	public final class614 field7141;
+	public final ParamTypeList field7141;
 
 	@ObfuscatedName("vj.n")
 	public int field7150;
@@ -46,7 +46,7 @@ public class ObjTypeList implements class463 {
 	@ObfuscatedName("vj.q")
 	public final String[] field7152;
 
-	public ObjTypeList(ModeGame arg0, class519 arg1, boolean arg2, class614 arg3, Js5 arg4, Js5 arg5) {
+	public ObjTypeList(ModeGame arg0, Language arg1, boolean arg2, ParamTypeList arg3, Js5 arg4, Js5 arg5) {
 		this.field7139 = arg0;
 		this.field7140 = arg1;
 		this.field7142 = arg2;
@@ -109,7 +109,7 @@ public class ObjTypeList implements class463 {
 			if (var8.field7055 != null) {
 				boolean var9 = false;
 				for (Node var10 = var8.field7055.method11928(); var10 != null; var10 = var8.field7055.method11929()) {
-					class613 var11 = this.field7141.method12600((int) var10.field4228);
+					ParamType var11 = this.field7141.method12600((int) var10.field4228);
 					if (var11.field7289) {
 						var10.method6979();
 					} else {

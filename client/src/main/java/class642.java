@@ -8,7 +8,7 @@ public class class642 extends GlTexture {
 	@ObfuscatedName("xe.w")
 	public final int field7449;
 
-	public class642(GlToolkit arg0, class124 arg1, class139 arg2, int arg3, byte[] arg4, class124 arg5) {
+	public class642(GlToolkit arg0, class124 arg1, DataType arg2, int arg3, byte[] arg4, class124 arg5) {
 		super(arg0, 3552, arg1, arg2, arg3, false);
 		this.field7449 = arg3;
 		this.field1054.method13315(this);

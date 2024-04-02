@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("acp")
-public class CoverMarkerClickbox extends class398 {
+public class CoverMarkerClickbox extends Link {
 
 	@ObfuscatedName("acp.a")
 	public static LinkQueue field9248 = new LinkQueue();

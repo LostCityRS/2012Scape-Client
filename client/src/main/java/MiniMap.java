@@ -103,7 +103,7 @@ public class MiniMap {
 		if (var1.field6508 == -1) {
 			return true;
 		} else {
-			class608 var2 = Statics.field850.method12491(var1.field6508);
+			MSIType var2 = Statics.field850.method12491(var1.field6508);
 			return var2.field7192 == -1 ? true : var2.method12485();
 		}
 	}
@@ -190,7 +190,7 @@ public class MiniMap {
 
 	@ObfuscatedName("fk.f(Lra;Ltg;IIII)V")
 	public static void method3634(RendererToolkit arg0, LocType arg1, int arg2, int arg3, int arg4) {
-		class608 var5 = Statics.field850.method12491(arg1.field6508);
+		MSIType var5 = Statics.field850.method12491(arg1.field6508);
 		if (var5.field7192 == -1) {
 			return;
 		}
@@ -418,7 +418,7 @@ public class MiniMap {
 
 	@ObfuscatedName("an.q(Lra;Lta;Lew;IIIIII)V")
 	public static void method1712(RendererToolkit arg0, class11 arg1, ComType arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
-		class443 var8 = Statics.field8499.method7862(arg7);
+		MapElementType var8 = Statics.field8499.method7862(arg7);
 		if (var8 == null || !var8.field4776 || !var8.method7835(Statics.field2669)) {
 			return;
 		}

@@ -9,7 +9,7 @@ import jagdx.class0;
 @ObfuscatedName("abw")
 public class class744 extends class743 implements GpuTextureRelated1 {
 
-	public class744(DxToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
+	public class744(DxToolkit arg0, class124 arg1, DataType arg2, int arg3, int arg4) {
 		super(arg0, arg1, arg2, arg3, arg4, 1025, 0);
 	}
 

@@ -11,25 +11,25 @@ public class class908 extends class736 {
 	public final class221 field10106;
 
 	@ObfuscatedName("ahw.ai")
-	public class918 field10116;
+	public GpuProgramUniform field10116;
 
 	@ObfuscatedName("ahw.ao")
-	public class918 field10108;
+	public GpuProgramUniform field10108;
 
 	@ObfuscatedName("ahw.al")
-	public class918 field10109;
+	public GpuProgramUniform field10109;
 
 	@ObfuscatedName("ahw.at")
 	public final Matrix4x4 field10107 = new Matrix4x4();
 
 	@ObfuscatedName("ahw.ax")
-	public class918 field10110;
+	public GpuProgramUniform field10110;
 
 	@ObfuscatedName("ahw.aw")
 	public final Matrix4x4 field10112 = new Matrix4x4();
 
 	@ObfuscatedName("ahw.aa")
-	public class918 field10113;
+	public GpuProgramUniform field10113;
 
 	@ObfuscatedName("ahw.am")
 	public final Vector3 field10114 = new Vector3();
@@ -38,43 +38,43 @@ public class class908 extends class736 {
 	public int field10115;
 
 	@ObfuscatedName("ahw.az")
-	public class918 field10111;
+	public GpuProgramUniform field10111;
 
 	@ObfuscatedName("ahw.ak")
 	public final Vector4 field10135 = new Vector4();
 
 	@ObfuscatedName("ahw.av")
-	public class918 field10118;
+	public GpuProgramUniform field10118;
 
 	@ObfuscatedName("ahw.aj")
 	public final Vector4 field10119 = new Vector4();
 
 	@ObfuscatedName("ahw.ah")
-	public class918 field10120;
+	public GpuProgramUniform field10120;
 
 	@ObfuscatedName("ahw.au")
 	public final Vector4 field10121 = new Vector4();
 
 	@ObfuscatedName("ahw.ae")
-	public class918 field10122;
+	public GpuProgramUniform field10122;
 
 	@ObfuscatedName("ahw.ac")
 	public final Vector4 field10123 = new Vector4();
 
 	@ObfuscatedName("ahw.aq")
-	public class918 field10124;
+	public GpuProgramUniform field10124;
 
 	@ObfuscatedName("ahw.ab")
 	public final Vector3 field10125 = new Vector3();
 
 	@ObfuscatedName("ahw.bq")
-	public class918 field10126;
+	public GpuProgramUniform field10126;
 
 	@ObfuscatedName("ahw.bz")
 	public final Vector4 field10131 = new Vector4();
 
 	@ObfuscatedName("ahw.bv")
-	public class918 field10128;
+	public GpuProgramUniform field10128;
 
 	@ObfuscatedName("ahw.bj")
 	public final Vector3 field10129 = new Vector3();
@@ -98,7 +98,7 @@ public class class908 extends class736 {
 	public boolean field10105;
 
 	@ObfuscatedName("ahw.bn")
-	public class168 field10136;
+	public GpuProgram field10136;
 
 	public class908(GpuToolkit arg0, class221 arg1, boolean arg2) throws ShaderException {
 		super(arg0);

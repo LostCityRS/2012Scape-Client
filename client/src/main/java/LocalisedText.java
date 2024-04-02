@@ -520,14 +520,14 @@ public class LocalisedText {
 	public final Map field7036 = new HashMap(7);
 
 	public LocalisedText(String arg0, String arg1, String arg2, String arg3) {
-		this.field7036.put(class519.field6376, arg0);
-		this.field7036.put(class519.field6374, arg1);
-		this.field7036.put(class519.field6375, arg2);
-		this.field7036.put(class519.field6384, arg3);
+		this.field7036.put(Language.field6376, arg0);
+		this.field7036.put(Language.field6374, arg1);
+		this.field7036.put(Language.field6375, arg2);
+		this.field7036.put(Language.field6384, arg3);
 	}
 
 	@ObfuscatedName("vt.u(Lsn;I)Ljava/lang/String;")
-	public String method12206(class519 arg0) {
+	public String method12206(Language arg0) {
 		return (String) this.field7036.get(arg0);
 	}
 }

@@ -10,7 +10,7 @@ public class class432 implements class463 {
 	@ObfuscatedName("pd.a")
 	public WeightedCache field4665 = new WeightedCache(64);
 
-	public class432(ModeGame arg0, class519 arg1, Js5 arg2) {
+	public class432(ModeGame arg0, Language arg1, Js5 arg2) {
 		this.field4664 = arg2;
 		if (this.field4664 != null) {
 			int var4 = this.field4664.method5638() - 1;

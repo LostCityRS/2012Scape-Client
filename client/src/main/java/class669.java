@@ -8,7 +8,7 @@ public class class669 extends class11 {
 	public final GlGraphicRelated field7651;
 
 	public class669(GlToolkit arg0, int arg1, int arg2, byte[] arg3) {
-		this.field7651 = GlGraphicRelated.method15975(arg0, class124.field1297, class139.field1501, arg1, arg2, false, arg3, class124.field1297);
+		this.field7651 = GlGraphicRelated.method15975(arg0, class124.field1297, DataType.field1501, arg1, arg2, false, arg3, class124.field1297);
 		this.field7651.method12765(false, false);
 	}
 

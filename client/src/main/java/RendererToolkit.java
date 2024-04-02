@@ -16,7 +16,7 @@ public abstract class RendererToolkit {
 	public final int field397;
 
 	@ObfuscatedName("ra.f")
-	public final BillboardTypeList field400;
+	public final MaterialTypeList field400;
 
 	@ObfuscatedName("ra.v")
 	public int field411 = -1;
@@ -34,7 +34,7 @@ public abstract class RendererToolkit {
 	public final class674[] field407 = new class674[4];
 
 	@ObfuscatedName("sh.u(ILjava/awt/Canvas;Lma;Lls;II)Lra;")
-	public static RendererToolkit method11222(int arg0, Canvas arg1, BillboardTypeList arg2, Js5 arg3, int arg4) {
+	public static RendererToolkit method11222(int arg0, Canvas arg1, MaterialTypeList arg2, Js5 arg3, int arg4) {
 		int var5 = 0;
 		int var6 = 0;
 		if (arg1 != null) {
@@ -46,7 +46,7 @@ public abstract class RendererToolkit {
 	}
 
 	@ObfuscatedName("uj.j(ILjava/awt/Canvas;Lma;Lls;IIII)Lra;")
-	public static synchronized RendererToolkit method11995(int arg0, Canvas arg1, BillboardTypeList arg2, Js5 arg3, int arg4, int arg5, int arg6) {
+	public static synchronized RendererToolkit method11995(int arg0, Canvas arg1, MaterialTypeList arg2, Js5 arg3, int arg4, int arg5, int arg6) {
 		if (arg0 == 0) {
 			return PureJavaToolkitFactory.method13911(arg1, arg2, arg5, arg6);
 		} else if (arg0 == 2) {
@@ -72,7 +72,7 @@ public abstract class RendererToolkit {
 		return arg0 == 0 || arg0 == 2;
 	}
 
-	public RendererToolkit(BillboardTypeList arg0) {
+	public RendererToolkit(MaterialTypeList arg0) {
 		this.field400 = arg0;
 		int var2 = -1;
 		for (int var3 = 0; var3 < 8; var3++) {
@@ -340,7 +340,7 @@ public abstract class RendererToolkit {
 	public abstract class674 method467();
 
 	@ObfuscatedName("ra.aj(IILcy;Ldz;I)Lde;")
-	public abstract GraphicsDeletable method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4);
+	public abstract GraphicsDeletable method468(int arg0, int arg1, class124 arg2, DataType arg3, int arg4);
 
 	@ObfuscatedName("ra.db(Z)V")
 	public abstract void method471(boolean arg0);
@@ -385,7 +385,7 @@ public abstract class RendererToolkit {
 	public abstract int method500(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
 
 	@ObfuscatedName("ra.bx(Lv;)V")
-	public abstract void method502(class28 arg0);
+	public abstract void method502(Heap arg0);
 
 	@ObfuscatedName("ra.dw(ILdk;)V")
 	public abstract void method503(int arg0, WaterFogData arg1);
@@ -487,7 +487,7 @@ public abstract class RendererToolkit {
 	public abstract void method587();
 
 	@ObfuscatedName("ra.bi(I)Lv;")
-	public abstract class28 method593(int arg0);
+	public abstract Heap method593(int arg0);
 
 	@ObfuscatedName("ra.cy()Z")
 	public abstract boolean method600();

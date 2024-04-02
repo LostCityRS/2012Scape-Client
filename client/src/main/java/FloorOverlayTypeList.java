@@ -16,17 +16,17 @@ public class FloorOverlayTypeList {
 	@ObfuscatedName("rd.s")
 	public int field5108 = 0;
 
-	public FloorOverlayTypeList(ModeGame arg0, class519 arg1, Js5 arg2) {
+	public FloorOverlayTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
 		this.field5106 = arg2;
 		this.field5105 = this.field5106.method5637(class161.field1629.field1668);
 	}
 
 	@ObfuscatedName("rd.u(IS)Lry;")
-	public class483 method8503(int arg0) {
+	public FloorOverlayType method8503(int arg0) {
 		WeightedCache var2 = this.field5107;
-		class483 var3;
+		FloorOverlayType var3;
 		synchronized (this.field5107) {
-			var3 = (class483) this.field5107.method7916((long) arg0);
+			var3 = (FloorOverlayType) this.field5107.method7916((long) arg0);
 		}
 		if (var3 != null) {
 			return var3;
@@ -36,7 +36,7 @@ public class FloorOverlayTypeList {
 		synchronized (this.field5106) {
 			var6 = this.field5106.method5627(class161.field1629.field1668, arg0);
 		}
-		class483 var8 = new class483();
+		FloorOverlayType var8 = new FloorOverlayType();
 		var8.field5088 = this;
 		var8.field5089 = arg0;
 		if (var6 != null) {

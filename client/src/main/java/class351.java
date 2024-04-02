@@ -6,7 +6,7 @@ import jaggl.OpenGL;
 public class class351 implements GraphicsDeletable, class132, class349 {
 
 	@ObfuscatedName("lx.u")
-	public final class139 field3752;
+	public final DataType field3752;
 
 	@ObfuscatedName("lx.j")
 	public final class124 field3753;
@@ -23,7 +23,7 @@ public class class351 implements GraphicsDeletable, class132, class349 {
 	@ObfuscatedName("lx.m")
 	public int field3757;
 
-	public class351(GlxToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
+	public class351(GlxToolkit arg0, class124 arg1, DataType arg2, int arg3, int arg4) {
 		this.field3753 = arg1;
 		this.field3752 = arg2;
 		this.field3756 = arg3;
@@ -36,7 +36,7 @@ public class class351 implements GraphicsDeletable, class132, class349 {
 		OpenGL.glRenderbufferStorageEXT(36161, GlxToolkit.method16100(this.field3753, this.field3752), arg3, arg4);
 	}
 
-	public class351(GlxToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5) {
+	public class351(GlxToolkit arg0, class124 arg1, DataType arg2, int arg3, int arg4, int arg5) {
 		this.field3753 = arg1;
 		this.field3752 = arg2;
 		this.field3756 = arg3;

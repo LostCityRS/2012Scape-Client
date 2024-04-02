@@ -5,10 +5,10 @@ import deob.ObfuscatedName;
 public final class class728 extends SpriteShader {
 
 	@ObfuscatedName("aat.d")
-	public Shader field8709;
+	public GpuShader field8709;
 
 	@ObfuscatedName("aat.r")
-	public final class168[] field8702 = new class168[3];
+	public final GpuProgram[] field8702 = new GpuProgram[3];
 
 	@ObfuscatedName("aat.g")
 	public final int[][] field8698 = new int[3][7];
@@ -30,13 +30,13 @@ public final class class728 extends SpriteShader {
 	@ObfuscatedName("aat.l(I)Z")
 	public boolean method14075() throws ShaderException {
 		this.field8709 = this.field2278.method13490("Sprite");
-		class918 var1 = this.field8709.method3357("WVPMatrix");
-		class918 var2 = this.field8709.method3357("SpriteSampler");
-		class918 var3 = this.field8709.method3357("MaskSampler");
-		class918 var4 = this.field8709.method3357("MulColour");
-		class918 var5 = this.field8709.method3357("AddColour");
-		class918 var6 = this.field8709.method3357("SpriteTexCoordMatrix");
-		class918 var7 = this.field8709.method3357("MaskTexCoordMatrix");
+		GpuProgramUniform var1 = this.field8709.method3357("WVPMatrix");
+		GpuProgramUniform var2 = this.field8709.method3357("SpriteSampler");
+		GpuProgramUniform var3 = this.field8709.method3357("MaskSampler");
+		GpuProgramUniform var4 = this.field8709.method3357("MulColour");
+		GpuProgramUniform var5 = this.field8709.method3357("AddColour");
+		GpuProgramUniform var6 = this.field8709.method3357("SpriteTexCoordMatrix");
+		GpuProgramUniform var7 = this.field8709.method3357("MaskTexCoordMatrix");
 		this.field8702[0] = this.field8709.method3330("Normal");
 		this.field8702[1] = this.field8709.method3330("Masked");
 		this.field8702[2] = this.field8709.method3330("AlphaTex");

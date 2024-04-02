@@ -122,7 +122,7 @@ public class DxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahh.aba(Ljava/awt/Canvas;Lma;Lls;Ljava/lang/Integer;)Lra;")
-	public static RendererToolkit method16047(Canvas arg0, BillboardTypeList arg1, Js5 arg2, Integer arg3) {
+	public static RendererToolkit method16047(Canvas arg0, MaterialTypeList arg1, Js5 arg2, Integer arg3) {
 		DxToolkit var4 = null;
 		try {
 			byte var5 = 0;
@@ -191,7 +191,7 @@ public class DxToolkit extends GpuToolkit {
 		}
 	}
 
-	public DxToolkit(int arg0, int arg1, long arg2, long arg3, D3DPRESENT_PARAMETERS arg4, D3DCAPS arg5, BillboardTypeList arg6, Js5 arg7, int arg8) {
+	public DxToolkit(int arg0, int arg1, long arg2, long arg3, D3DPRESENT_PARAMETERS arg4, D3DCAPS arg5, MaterialTypeList arg6, Js5 arg7, int arg8) {
 		super(arg6, arg7, arg8, 0);
 		try {
 			this.field9989 = arg0;
@@ -404,18 +404,18 @@ public class DxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahh.aj(IILcy;Ldz;I)Lde;")
-	public GraphicsDeletable method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4) {
+	public GraphicsDeletable method468(int arg0, int arg1, class124 arg2, DataType arg3, int arg4) {
 		return new class302(this, arg2, arg3, arg0, arg1, arg4);
 	}
 
 	@ObfuscatedName("ahh.ah(II)Ldo;")
 	public class132 method637(int arg0, int arg1) {
-		return new class303(this, class139.field1503, arg0, arg1, 0);
+		return new class303(this, DataType.field1503, arg0, arg1, 0);
 	}
 
 	@ObfuscatedName("ahh.au(III)Ldo;")
 	public class132 method541(int arg0, int arg1, int arg2) {
-		return new class303(this, class139.field1503, arg0, arg1, arg2);
+		return new class303(this, DataType.field1503, arg0, arg1, arg2);
 	}
 
 	@ObfuscatedName("ahh.acc(Ljz;)Ladt;")
@@ -608,19 +608,19 @@ public class DxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahh.qr(Lcy;Ldz;)Z")
-	public boolean method13546(class124 arg0, class139 arg1) {
+	public boolean method13546(class124 arg0, DataType arg1) {
 		D3DDISPLAYMODE var3 = new D3DDISPLAYMODE();
 		return class0.method19(IDirect3D.GetAdapterDisplayMode(this.field9974, this.field9989, var3)) && class0.method19(IDirect3D.CheckDeviceFormat(this.field9974, this.field9989, this.field9973, var3.Format, 0, 3, method16037(arg0, arg1)));
 	}
 
 	@ObfuscatedName("ahh.qw(Lcy;Ldz;)Z")
-	public boolean method13547(class124 arg0, class139 arg1) {
+	public boolean method13547(class124 arg0, DataType arg1) {
 		D3DDISPLAYMODE var3 = new D3DDISPLAYMODE();
 		return class0.method19(IDirect3D.GetAdapterDisplayMode(this.field9974, this.field9989, var3)) && class0.method19(IDirect3D.CheckDeviceFormat(this.field9974, this.field9989, this.field9973, var3.Format, 0, 4, method16037(arg0, arg1)));
 	}
 
 	@ObfuscatedName("ahh.qc(Lcy;Ldz;II)Lhc;")
-	public GpuTexture method13550(class124 arg0, class139 arg1, int arg2, int arg3) {
+	public GpuTexture method13550(class124 arg0, DataType arg1, int arg2, int arg3) {
 		return new class743(this, arg0, arg1, arg2, arg3);
 	}
 
@@ -640,7 +640,7 @@ public class DxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahh.qy(Lcy;Ldz;II)Lii;")
-	public GpuTextureRelated1 method13542(class124 arg0, class139 arg1, int arg2, int arg3) {
+	public GpuTextureRelated1 method13542(class124 arg0, DataType arg1, int arg2, int arg3) {
 		return new class744(this, arg0, arg1, arg2, arg3);
 	}
 
@@ -924,7 +924,7 @@ public class DxToolkit extends GpuToolkit {
 
 	@ObfuscatedName("ahh.st(Z)Lin;")
 	public final IndexBuffer method13797(boolean arg0) {
-		return new class295(this, class139.field1502, arg0);
+		return new class295(this, DataType.field1502, arg0);
 	}
 
 	@ObfuscatedName("ahh.sz(Z)Lhe;")
@@ -984,13 +984,13 @@ public class DxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahh.y(Ljava/lang/String;)Lec;")
-	public Shader method13490(String arg0) {
+	public GpuShader method13490(String arg0) {
 		byte[] var2 = this.method16036(arg0);
 		if (var2 == null) {
 			return null;
 		} else {
 			ShaderData var3 = this.method13492(var2);
-			return new class717(this, var3);
+			return new DxProgramManager(this, var3);
 		}
 	}
 
@@ -1004,7 +1004,7 @@ public class DxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahh.acf(Lcy;Ldz;)I")
-	public static final int method16037(class124 arg0, class139 arg1) {
+	public static final int method16037(class124 arg0, DataType arg1) {
 		switch(arg1.field1507) {
 			case 2:
 				switch(arg0.field1305) {
@@ -1042,10 +1042,10 @@ public class DxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahh.acj(Ldz;)I")
-	public static final int method16022(class139 arg0) {
-		if (class139.field1502 == arg0) {
+	public static final int method16022(DataType arg0) {
+		if (DataType.field1502 == arg0) {
 			return 80;
-		} else if (class139.field1503 == arg0) {
+		} else if (DataType.field1503 == arg0) {
 			return 77;
 		} else {
 			throw new IllegalArgumentException("");

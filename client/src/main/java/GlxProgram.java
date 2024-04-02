@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import jaggl.OpenGL;
 
 @ObfuscatedName("aan")
-public class GlxProgram extends class168 {
+public class GlxProgram extends GpuProgram {
 
 	@ObfuscatedName("aan.t")
 	public GlxToolkit field8580;
@@ -163,11 +163,11 @@ public class GlxProgram extends class168 {
 		int var3 = 0;
 		int var4 = 0;
 		for (int var5 = 0; var5 < this.field8570.method3361(); var5++) {
-			class918 var6 = this.field8570.method3362(var5);
+			GpuProgramUniform var6 = this.field8570.method3362(var5);
 			if (var6 != null) {
 				var6.method16248(var1);
 				class170 var7 = var6.method16234();
-				int var8 = ((class993) var6).field10571[var1];
+				int var8 = ((GlxProgramUniform) var6).field10571[var1];
 				if (class170.field2067 == var7 || class170.field2014 == var7 || class170.field1948 == var7 || class170.field2003 == var7 || class170.field1971 == var7) {
 					var3 = Math.max(var8, var3);
 				} else {
@@ -176,11 +176,11 @@ public class GlxProgram extends class168 {
 			}
 		}
 		for (int var9 = 0; var9 < this.field8570.method3337(); var9++) {
-			class918 var10 = this.field8570.method3359(var9);
+			GpuProgramUniform var10 = this.field8570.method3359(var9);
 			if (var10 != null) {
 				var10.method16248(var1);
 				class170 var11 = var10.method16234();
-				int var12 = ((class993) var10).field10571[var1];
+				int var12 = ((GlxProgramUniform) var10).field10571[var1];
 				if (class170.field2067 == var11 || class170.field2014 == var11 || class170.field1948 == var11 || class170.field2003 == var11 || class170.field1971 == var11) {
 					var3 = Math.max(var12, var3);
 				} else {
@@ -203,8 +203,8 @@ public class GlxProgram extends class168 {
 	}
 
 	@ObfuscatedName("aan.a(Laig;F)V")
-	public void method3231(class918 arg0, float arg1) {
-		int var3 = ((class993) arg0).method16994();
+	public void method3231(GpuProgramUniform arg0, float arg1) {
+		int var3 = ((GlxProgramUniform) arg0).method16994();
 		if (var3 == -1 || this.field8578[var3] == arg1) {
 			return;
 		}
@@ -216,8 +216,8 @@ public class GlxProgram extends class168 {
 	}
 
 	@ObfuscatedName("aan.t(Laig;FF)V")
-	public void method3267(class918 arg0, float arg1, float arg2) {
-		int var4 = ((class993) arg0).method16994();
+	public void method3267(GpuProgramUniform arg0, float arg1, float arg2) {
+		int var4 = ((GlxProgramUniform) arg0).method16994();
 		if (var4 == -1 || this.field8578[var4] == arg1 && this.field8583[var4] == arg2) {
 			return;
 		}
@@ -230,8 +230,8 @@ public class GlxProgram extends class168 {
 	}
 
 	@ObfuscatedName("aan.l(Laig;FFF)V")
-	public void method3233(class918 arg0, float arg1, float arg2, float arg3) {
-		int var5 = ((class993) arg0).method16994();
+	public void method3233(GpuProgramUniform arg0, float arg1, float arg2, float arg3) {
+		int var5 = ((GlxProgramUniform) arg0).method16994();
 		if (var5 == -1 || this.field8578[var5] == arg1 && this.field8583[var5] == arg2 && this.field8567[var5] == arg3) {
 			return;
 		}
@@ -245,8 +245,8 @@ public class GlxProgram extends class168 {
 	}
 
 	@ObfuscatedName("aan.f(Laig;FFFF)V")
-	public void method3234(class918 arg0, float arg1, float arg2, float arg3, float arg4) {
-		int var6 = ((class993) arg0).method16994();
+	public void method3234(GpuProgramUniform arg0, float arg1, float arg2, float arg3, float arg4) {
+		int var6 = ((GlxProgramUniform) arg0).method16994();
 		if (var6 == -1 || this.field8578[var6] == arg1 && this.field8583[var6] == arg2 && this.field8567[var6] == arg3 && this.field8581[var6] == arg4) {
 			return;
 		}
@@ -261,34 +261,34 @@ public class GlxProgram extends class168 {
 	}
 
 	@ObfuscatedName("aan.d(Laig;[FI)V")
-	public void method3235(class918 arg0, float[] arg1, int arg2) {
-		int var4 = ((class993) arg0).method16994();
+	public void method3235(GpuProgramUniform arg0, float[] arg1, int arg2) {
+		int var4 = ((GlxProgramUniform) arg0).method16994();
 		if (var4 != -1) {
 			OpenGL.glUniform4fv(var4, arg2, arg1, 0);
 		}
 	}
 
 	@ObfuscatedName("aan.z(Laig;Lka;)V")
-	public void method3232(class918 arg0, Matrix4x4 arg1) {
+	public void method3232(GpuProgramUniform arg0, Matrix4x4 arg1) {
 		assert arg0.method16234() == class170.field1985;
-		int var3 = ((class993) arg0).method16994();
+		int var3 = ((GlxProgramUniform) arg0).method16994();
 		if (var3 != -1) {
 			OpenGL.glUniform2fv(var3, 4, arg1.method5458(field8577), 0);
 		}
 	}
 
 	@ObfuscatedName("aan.n(Laig;Lka;)V")
-	public void method3237(class918 arg0, Matrix4x4 arg1) {
+	public void method3237(GpuProgramUniform arg0, Matrix4x4 arg1) {
 		assert arg0.method16234() == class170.field1987;
-		int var3 = ((class993) arg0).method16994();
+		int var3 = ((GlxProgramUniform) arg0).method16994();
 		if (var3 != -1) {
 			OpenGL.glUniform4fv(var3, 4, arg1.method5408(field8577), 0);
 		}
 	}
 
 	@ObfuscatedName("aan.o(Laig;ILip;)V")
-	public void method3271(class918 arg0, int arg1, class254 arg2) {
-		int var4 = ((class993) arg0).method16994();
+	public void method3271(GpuProgramUniform arg0, int arg1, class254 arg2) {
+		int var4 = ((GlxProgramUniform) arg0).method16994();
 		if (var4 == -1) {
 			return;
 		}

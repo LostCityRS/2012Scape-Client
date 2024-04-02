@@ -29,7 +29,7 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.u(Lls;Lrd;Lux;Ltz;Lph;Lwd;Lug;)V")
-	public static void method7080(Js5 arg0, FloorOverlayTypeList arg1, FloorUnderlayTypeList arg2, LocTypeList arg3, class444 arg4, class609 arg5, VarIntDomain arg6) {
+	public static void method7080(Js5 arg0, FloorOverlayTypeList arg1, FloorUnderlayTypeList arg2, LocTypeList arg3, MapElementTypeList arg4, MSITypeList arg5, VarIntDomain arg6) {
 		Statics.field4264 = arg0;
 		Statics.field4278 = arg1;
 		Statics.field4265 = arg2;
@@ -105,15 +105,15 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.l(Lma;II)V")
-	public static void method7087(BillboardTypeList arg0, int arg1, int arg2) {
+	public static void method7087(MaterialTypeList arg0, int arg1, int arg2) {
 		for (int var3 = 0; var3 < Statics.field4278.field5105; var3++) {
 			Statics.field4267[var3 + 1] = method7088(arg0, var3, arg1, arg2);
 		}
 	}
 
 	@ObfuscatedName("om.f(Lma;III)I")
-	public static int method7088(BillboardTypeList arg0, int arg1, int arg2, int arg3) {
-		class483 var4 = Statics.field4278.method8503(arg1);
+	public static int method7088(MaterialTypeList arg0, int arg1, int arg2, int arg3) {
+		FloorOverlayType var4 = Statics.field4278.method8503(arg1);
 		if (var4 == null) {
 			return 0;
 		}
@@ -407,7 +407,7 @@ public class class408 {
 				if (var11 < Statics.field4285) {
 					int var14 = arg0[Statics.field4285 * var13 + var11] & 0xFF;
 					if (var14 > 0) {
-						class564 var15 = Statics.field4265.method11895(var14 - 1);
+						FloorUnderlayType var15 = Statics.field4265.method11895(var14 - 1);
 						var5[var13] += var15.field6718;
 						var6[var13] += var15.field6714;
 						var7[var13] += var15.field6720;
@@ -418,7 +418,7 @@ public class class408 {
 				if (var12 >= 0) {
 					int var16 = arg0[Statics.field4285 * var13 + var12] & 0xFF;
 					if (var16 > 0) {
-						class564 var17 = Statics.field4265.method11895(var16 - 1);
+						FloorUnderlayType var17 = Statics.field4265.method11895(var16 - 1);
 						var5[var13] -= var17.field6718;
 						var6[var13] -= var17.field6714;
 						var7[var13] -= var17.field6720;
@@ -790,7 +790,7 @@ public class class408 {
 			LocType var8 = Statics.field4266.method11471(arg5[var7]);
 			int var9 = var8.field6508;
 			if (var9 != -1) {
-				class608 var10 = Statics.field4268.method12491(var9);
+				MSIType var10 = Statics.field4268.method12491(var9);
 				Sprite var11 = var10.method12484(arg0, var8.field6509 ? arg6[var7] >> 6 & 0x3 : 0, var8.field6511 ? var8.field6486 : false);
 				if (var11 != null) {
 					int var12 = arg3 * var11.method1042() >> 2;
@@ -842,7 +842,7 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.r(Lra;Ladw;Lpw;)V")
-	public static void method7102(RendererToolkit arg0, class806 arg1, class443 arg2) {
+	public static void method7102(RendererToolkit arg0, class806 arg1, MapElementType arg2) {
 		if (arg2.field4788 == null) {
 			return;
 		}

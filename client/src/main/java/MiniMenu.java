@@ -110,7 +110,7 @@ public class MiniMenu {
 	}
 
 	@ObfuscatedName("cc.c(Lpr;Ladv;I)Z")
-	public static boolean method2554(class445 arg0, BasicMouseEvent arg1) {
+	public static boolean method2554(Binding arg0, BasicMouseEvent arg1) {
 		return arg0 != null && arg0.method7884(arg1, client.field9072, client.field8953, Statics.field2131);
 	}
 
@@ -482,7 +482,7 @@ public class MiniMenu {
 	@ObfuscatedName("l.x(Lew;III)V")
 	public static void method881(ComType arg0, int arg1, int arg2) {
 		if (client.field9117) {
-			class613 var3 = Statics.field7366 == -1 ? null : Statics.field4464.method12600(Statics.field7366);
+			ParamType var3 = Statics.field7366 == -1 ? null : Statics.field4464.method12600(Statics.field7366);
 			if (client.method14331(arg0).method14931() && (Statics.field4822 & 0x20) != 0 && (var3 == null || arg0.method3132(Statics.field7366, var3.field7287) != var3.field7287)) {
 				Statics.method8140(client.field9103, client.field9151 + " " + TextUtil.field491 + " " + arg0.field1795, Statics.field477, 58, arg0.field1903, 0L, arg0.field1765, arg0.field1764, true, false, (long) (arg0.field1765 << 32 | arg0.field1764), false);
 			}
@@ -730,7 +730,7 @@ public class MiniMenu {
 											var76 = Statics.field1736.field5128;
 										}
 										if (client.field9117 && Statics.field2119.field9807 == var29.field4563.field9807) {
-											class613 var77 = Statics.field7366 == -1 ? null : Statics.field4464.method12600(Statics.field7366);
+											ParamType var77 = Statics.field7366 == -1 ? null : Statics.field4464.method12600(Statics.field7366);
 											if ((Statics.field4822 & 0x1) != 0 && (var77 == null || var75.method12250(Statics.field7366, var77.field7287) != var77.field7287)) {
 												Statics.method8140(client.field9103, client.field9151 + " " + TextUtil.field491 + " " + TextUtil.method3978(var76) + var75.field7125, Statics.field477, 17, -1, (long) var74.field9311, var32, var33, true, false, (long) var73, false);
 											}
@@ -780,7 +780,7 @@ public class MiniMenu {
 						}
 					} while (var84 == null);
 					if (client.field9117 && Statics.field2119.field9807 == var29.field4563.field9807) {
-						class613 var85 = Statics.field7366 == -1 ? null : Statics.field4464.method12600(Statics.field7366);
+						ParamType var85 = Statics.field7366 == -1 ? null : Statics.field4464.method12600(Statics.field7366);
 						if ((Statics.field4822 & 0x4) != 0 && (var85 == null || var84.method11444(Statics.field7366, var85.field7287) != var85.field7287)) {
 							Statics.method8140(client.field9103, client.field9151 + " " + TextUtil.field491 + " " + TextUtil.method3978(65535) + var84.field6490, Statics.field477, 2, -1, method14745(var83, var32, var33), var32, var33, true, false, (long) var83.hashCode(), false);
 						}
@@ -1464,7 +1464,7 @@ public class MiniMenu {
 		StringBuilder var1 = new StringBuilder();
 		int var2 = Statics.field4161;
 		for (int var3 = 0; var3 < arg0.length; var3++) {
-			class481 var4 = Statics.field4959.method8401(arg0[var3]);
+			QuestType var4 = Statics.field4959.method8401(arg0[var3]);
 			if (var4.field5079 != -1) {
 				Sprite var5 = (Sprite) field620.method7916((long) var4.field5079);
 				if (var5 == null) {
@@ -1538,7 +1538,7 @@ public class MiniMenu {
 			var3 = var3 + method2609(arg0.field10072, Statics.field2119.field10047) + TextUtil.field489 + var4 + arg0.field10072 + TextUtil.field487;
 		}
 		if (client.field9117 && !arg1) {
-			class613 var5 = Statics.field7366 == -1 ? null : Statics.field4464.method12600(Statics.field7366);
+			ParamType var5 = Statics.field7366 == -1 ? null : Statics.field4464.method12600(Statics.field7366);
 			if ((Statics.field4822 & 0x2) != 0 && (var5 == null || var2.method12514(Statics.field7366, var5.field7287) != var5.field7287)) {
 				Statics.method8140(client.field9103, client.field9151 + " " + TextUtil.field491 + " " + TextUtil.method3978(16776960) + var3, Statics.field477, 8, -1, (long) arg0.field8593, 0, 0, true, false, (long) arg0.field8593, false);
 			}

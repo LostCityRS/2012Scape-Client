@@ -6,7 +6,7 @@ import jaggl.OpenGL;
 public class class749 extends class347 implements class259 {
 
 	public class749(GlxToolkit arg0, int arg1, boolean arg2, int[][] arg3) {
-		super(arg0, 34067, class124.field1296, class139.field1501, arg1 * arg1 * 6, arg2);
+		super(arg0, 34067, class124.field1296, DataType.field1501, arg1 * arg1 * 6, arg2);
 		this.field3733.method13557(this);
 		if (arg2) {
 			for (int var5 = 0; var5 < 6; var5++) {

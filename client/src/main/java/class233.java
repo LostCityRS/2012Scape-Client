@@ -8,12 +8,12 @@ public class class233 {
 	public final GpuToolkit field2447;
 
 	@ObfuscatedName("hm.j")
-	public final BillboardTypeList field2446;
+	public final MaterialTypeList field2446;
 
 	@ObfuscatedName("hm.a")
 	public WeightedCache field2448 = new WeightedCache(6291456, 256);
 
-	public class233(GpuToolkit arg0, BillboardTypeList arg1) {
+	public class233(GpuToolkit arg0, MaterialTypeList arg1) {
 		this.field2447 = arg0;
 		this.field2446 = arg1;
 	}

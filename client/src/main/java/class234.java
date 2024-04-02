@@ -141,7 +141,7 @@ public class class234 {
 		this.field2456 = var2;
 		int var7 = 0;
 		int var8 = this.field2454 * var3 + this.field2452;
-		if (!this.field2451.method13546(class124.field1297, class139.field1501)) {
+		if (!this.field2451.method13546(class124.field1297, DataType.field1501)) {
 			if (this.field2462 == null) {
 				this.field2462 = new int[16384];
 			}

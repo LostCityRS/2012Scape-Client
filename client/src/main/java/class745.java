@@ -11,7 +11,7 @@ public class class745 extends class347 implements GpuTextureRelated1 {
 	@ObfuscatedName("abb.w")
 	public final int field8812;
 
-	public class745(GlxToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
+	public class745(GlxToolkit arg0, class124 arg1, DataType arg2, int arg3, int arg4) {
 		super(arg0, 3553, arg1, arg2, arg3 * arg4, false);
 		this.field8813 = arg3;
 		this.field8812 = arg4;
@@ -20,7 +20,7 @@ public class class745 extends class347 implements GpuTextureRelated1 {
 	}
 
 	public class745(GlxToolkit arg0, int arg1, int arg2, boolean arg3, int[] arg4, int arg5, int arg6) {
-		super(arg0, 3553, class124.field1296, class139.field1501, arg1 * arg2, arg3);
+		super(arg0, 3553, class124.field1296, DataType.field1501, arg1 * arg2, arg3);
 		this.field8813 = arg1;
 		this.field8812 = arg2;
 		this.field3733.method13557(this);
@@ -34,7 +34,7 @@ public class class745 extends class347 implements GpuTextureRelated1 {
 	}
 
 	public class745(GlxToolkit arg0, class124 arg1, int arg2, int arg3, boolean arg4, byte[] arg5, int arg6, int arg7) {
-		super(arg0, 3553, arg1, class139.field1501, arg2 * arg3, arg4);
+		super(arg0, 3553, arg1, DataType.field1501, arg2 * arg3, arg4);
 		this.field8813 = arg2;
 		this.field8812 = arg3;
 		this.field3733.method13557(this);
@@ -60,7 +60,7 @@ public class class745 extends class347 implements GpuTextureRelated1 {
 	}
 
 	public class745(GlxToolkit arg0, class124 arg1, int arg2, int arg3, boolean arg4, float[] arg5, int arg6, int arg7) {
-		super(arg0, 3553, arg1, class139.field1506, arg2 * arg3, arg4);
+		super(arg0, 3553, arg1, DataType.field1506, arg2 * arg3, arg4);
 		this.field8813 = arg2;
 		this.field8812 = arg3;
 		this.field3733.method13557(this);

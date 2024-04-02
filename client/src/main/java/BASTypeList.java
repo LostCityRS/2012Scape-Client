@@ -14,9 +14,9 @@ public class BASTypeList {
 	public static final BASType field4733 = new BASType();
 
 	@ObfuscatedName("pn.s")
-	public final class493 field4735;
+	public final WearposDefaults field4735;
 
-	public BASTypeList(ModeGame arg0, class519 arg1, Js5 arg2, class493 arg3) {
+	public BASTypeList(ModeGame arg0, Language arg1, Js5 arg2, WearposDefaults arg3) {
 		this.field4734 = arg2;
 		this.field4734.method5637(class161.field1657.field1668);
 		this.field4735 = arg3;

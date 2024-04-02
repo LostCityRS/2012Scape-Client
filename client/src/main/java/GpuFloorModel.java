@@ -184,7 +184,7 @@ public class GpuFloorModel extends FloorModel {
 
 	@ObfuscatedName("yn.u(II[I[I[I[I[I[I[I[ILdk;Z)V")
 	public void method193(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, WaterFogData arg10, boolean arg11) {
-		BillboardTypeList var13 = this.field7722.field400;
+		MaterialTypeList var13 = this.field7722.field400;
 		if (arg5 != null && this.field7738 == null) {
 			this.field7738 = new int[this.field387][this.field386][];
 		}

@@ -173,11 +173,11 @@ public abstract class Camera {
 		} else if (LookatMode.field2167 == arg0) {
 			this.field2222 = new LookatPoint(this);
 		} else if (LookatMode.field2164 == arg0) {
-			this.field2222 = new class975(this);
+			this.field2222 = new LookatSpline_Sub1(this);
 		} else if (LookatMode.field2168 == arg0) {
-			this.field2222 = new class976(this);
+			this.field2222 = new LookatSpline_Sub2(this);
 		} else if (LookatMode.field2170 == arg0) {
-			this.field2222 = new class872(this);
+			this.field2222 = new Lookat_Sub1(this);
 		}
 		return this.field2222;
 	}
@@ -193,9 +193,9 @@ public abstract class Camera {
 		} else if (PositionMode.field2192 == arg0) {
 			this.field2224 = new PositionPoint(this);
 		} else if (PositionMode.field2191 == arg0) {
-			this.field2224 = new class905(this);
+			this.field2224 = new PositionSpline_Sub1(this);
 		} else if (PositionMode.field2194 == arg0) {
-			this.field2224 = new class906(this);
+			this.field2224 = new PositionSpline_Sub2(this);
 		}
 		return this.field2224;
 	}

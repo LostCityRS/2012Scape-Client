@@ -4,10 +4,10 @@ import jagdx.IDirect3DDevice;
 import jagdx.IUnknown;
 
 @ObfuscatedName("aae")
-public final class DxProgram extends class168 {
+public final class DxProgram extends GpuProgram {
 
 	@ObfuscatedName("aae.s")
-	public class717 field8555;
+	public DxProgramManager field8555;
 
 	@ObfuscatedName("aae.c")
 	public boolean field8558;
@@ -36,7 +36,7 @@ public final class DxProgram extends class168 {
 	@ObfuscatedName("aae.p")
 	public final boolean[] field8554;
 
-	public DxProgram(DxToolkit arg0, class717 arg1, class167 arg2) {
+	public DxProgram(DxToolkit arg0, DxProgramManager arg1, class167 arg2) {
 		this(arg0, arg2);
 		this.field8559 = arg0;
 		this.field8555 = arg1;
@@ -78,18 +78,18 @@ public final class DxProgram extends class168 {
 		int var3 = this.field8555.method3361();
 		int var4 = this.field8555.method3337();
 		for (int var5 = 0; var5 < var3; var5++) {
-			class918 var6 = this.field8555.method3362(var5);
+			GpuProgramUniform var6 = this.field8555.method3362(var5);
 			var6.method16248(var1);
 		}
 		for (int var7 = 0; var7 < var4; var7++) {
-			class918 var8 = this.field8555.method3359(var7);
+			GpuProgramUniform var8 = this.field8555.method3359(var7);
 			var8.method16248(var1);
 		}
 		int var9 = 0;
 		int var10 = 0;
 		int var11 = this.field8555.method3345(this);
 		for (int var12 = 0; var12 < var3 + var4; var12++) {
-			class992 var13 = (class992) (var12 < var3 ? this.field8555.method3362(var12) : this.field8555.method3359(var12 - var3));
+			DxProgramUniform var13 = (DxProgramUniform) (var12 < var3 ? this.field8555.method3362(var12) : this.field8555.method3359(var12 - var3));
 			class170 var14 = var13.method16234();
 			int var15 = 1;
 			if (class170.field1977 == var14) {
@@ -142,9 +142,9 @@ public final class DxProgram extends class168 {
 	}
 
 	@ObfuscatedName("aae.a(Laig;F)V")
-	public void method3231(class918 arg0, float arg1) {
-		int var3 = ((class992) arg0).method16988();
-		int var4 = ((class992) arg0).method16989();
+	public void method3231(GpuProgramUniform arg0, float arg1) {
+		int var3 = ((DxProgramUniform) arg0).method16988();
+		int var4 = ((DxProgramUniform) arg0).method16989();
 		if (arg0.method16234() != class170.field2067 && arg0.method16234() != class170.field2014) {
 			throw new OpenGLError(arg0, "");
 		}
@@ -161,9 +161,9 @@ public final class DxProgram extends class168 {
 	}
 
 	@ObfuscatedName("aae.t(Laig;FF)V")
-	public void method3267(class918 arg0, float arg1, float arg2) {
-		int var4 = ((class992) arg0).method16988();
-		int var5 = ((class992) arg0).method16989();
+	public void method3267(GpuProgramUniform arg0, float arg1, float arg2) {
+		int var4 = ((DxProgramUniform) arg0).method16988();
+		int var5 = ((DxProgramUniform) arg0).method16989();
 		if (arg0.method16234() != class170.field1948) {
 			throw new OpenGLError(arg0, "");
 		}
@@ -182,9 +182,9 @@ public final class DxProgram extends class168 {
 	}
 
 	@ObfuscatedName("aae.l(Laig;FFF)V")
-	public void method3233(class918 arg0, float arg1, float arg2, float arg3) {
-		int var5 = ((class992) arg0).method16988();
-		int var6 = ((class992) arg0).method16989();
+	public void method3233(GpuProgramUniform arg0, float arg1, float arg2, float arg3) {
+		int var5 = ((DxProgramUniform) arg0).method16988();
+		int var6 = ((DxProgramUniform) arg0).method16989();
 		if (arg0.method16234() != class170.field2003) {
 			throw new OpenGLError(arg0, "");
 		}
@@ -206,9 +206,9 @@ public final class DxProgram extends class168 {
 	}
 
 	@ObfuscatedName("aae.f(Laig;FFFF)V")
-	public void method3234(class918 arg0, float arg1, float arg2, float arg3, float arg4) {
-		int var6 = ((class992) arg0).method16988();
-		int var7 = ((class992) arg0).method16989();
+	public void method3234(GpuProgramUniform arg0, float arg1, float arg2, float arg3, float arg4) {
+		int var6 = ((DxProgramUniform) arg0).method16988();
+		int var7 = ((DxProgramUniform) arg0).method16989();
 		if (arg0.method16234() != class170.field1971) {
 			throw new OpenGLError(arg0, "");
 		}
@@ -232,9 +232,9 @@ public final class DxProgram extends class168 {
 	}
 
 	@ObfuscatedName("aae.z(Laig;Lka;)V")
-	public void method3232(class918 arg0, Matrix4x4 arg1) {
-		int var3 = ((class992) arg0).method16988();
-		int var4 = ((class992) arg0).method16989();
+	public void method3232(GpuProgramUniform arg0, Matrix4x4 arg1) {
+		int var3 = ((DxProgramUniform) arg0).method16988();
+		int var4 = ((DxProgramUniform) arg0).method16989();
 		if (arg0.method16234() != class170.field1985) {
 			throw new OpenGLError(arg0, "");
 		}
@@ -247,9 +247,9 @@ public final class DxProgram extends class168 {
 	}
 
 	@ObfuscatedName("aae.n(Laig;Lka;)V")
-	public void method3237(class918 arg0, Matrix4x4 arg1) {
-		int var3 = ((class992) arg0).method16988();
-		int var4 = ((class992) arg0).method16989();
+	public void method3237(GpuProgramUniform arg0, Matrix4x4 arg1) {
+		int var3 = ((DxProgramUniform) arg0).method16988();
+		int var4 = ((DxProgramUniform) arg0).method16989();
 		if (arg0.method16234() != class170.field1987) {
 			throw new OpenGLError(arg0, "");
 		}
@@ -262,9 +262,9 @@ public final class DxProgram extends class168 {
 	}
 
 	@ObfuscatedName("aae.d(Laig;[FI)V")
-	public void method3235(class918 arg0, float[] arg1, int arg2) {
-		int var4 = ((class992) arg0).method16988();
-		int var5 = ((class992) arg0).method16989();
+	public void method3235(GpuProgramUniform arg0, float[] arg1, int arg2) {
+		int var4 = ((DxProgramUniform) arg0).method16988();
+		int var5 = ((DxProgramUniform) arg0).method16989();
 		if (arg0.method16234() != class170.field1977) {
 			throw new OpenGLError(arg0, "");
 		}
@@ -277,7 +277,7 @@ public final class DxProgram extends class168 {
 	}
 
 	@ObfuscatedName("aae.o(Laig;ILip;)V")
-	public void method3271(class918 arg0, int arg1, class254 arg2) {
+	public void method3271(GpuProgramUniform arg0, int arg1, class254 arg2) {
 		this.field8559.method13629(arg1);
 		this.field8559.method13557(arg2);
 	}

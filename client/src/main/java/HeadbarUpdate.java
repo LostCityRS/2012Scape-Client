@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("acr")
-public class HeadbarUpdate extends class398 {
+public class HeadbarUpdate extends Link {
 
 	@ObfuscatedName("acr.a")
 	public int field9271;

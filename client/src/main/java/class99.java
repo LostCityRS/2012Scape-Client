@@ -9,7 +9,7 @@ public class class99 {
 	public float[] field1128 = new float[16];
 
 	@ObfuscatedName("bu.j")
-	public class963 field1120 = new class963(786336);
+	public GpuPacket field1120 = new GpuPacket(786336);
 
 	@ObfuscatedName("bu.a")
 	public GlInterfaceRelated field1121;

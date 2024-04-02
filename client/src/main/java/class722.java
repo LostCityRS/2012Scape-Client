@@ -5,13 +5,13 @@ import deob.ObfuscatedName;
 public class class722 extends ModelShader {
 
 	@ObfuscatedName("aam.g")
-	public Shader field8682;
+	public GpuShader field8682;
 
 	@ObfuscatedName("aam.aq")
 	public final Matrix4x4 field8671 = new Matrix4x4();
 
 	@ObfuscatedName("aam.ab")
-	public final class168[] field8686 = new class168[19];
+	public final GpuProgram[] field8686 = new GpuProgram[19];
 
 	@ObfuscatedName("aam.bq")
 	public final int[][] field8687 = new int[19][17];
@@ -27,23 +27,23 @@ public class class722 extends ModelShader {
 	@ObfuscatedName("aam.r(I)Z")
 	public boolean method14042() throws ShaderException {
 		this.field8682 = this.field2270.method13490("Model");
-		class918 var1 = this.field8682.method3357("DiffuseSampler");
-		class918 var2 = this.field8682.method3357("EnvironmentSampler");
-		class918 var3 = this.field8682.method3357("PointLightsPosAndRadiusSq");
-		class918 var4 = this.field8682.method3357("PointLightsDiffuseColour");
-		class918 var5 = this.field8682.method3357("WVPMatrix");
-		class918 var6 = this.field8682.method3357("TexCoordMatrix");
-		class918 var7 = this.field8682.method3357("HeightFogPlane");
-		class918 var8 = this.field8682.method3357("HeightFogColour");
-		class918 var9 = this.field8682.method3357("DistanceFogPlane");
-		class918 var10 = this.field8682.method3357("DistanceFogColour");
-		class918 var11 = this.field8682.method3357("SunDir");
-		class918 var12 = this.field8682.method3357("SunColour");
-		class918 var13 = this.field8682.method3357("AntiSunColour");
-		class918 var14 = this.field8682.method3357("AmbientColour");
-		class918 var15 = this.field8682.method3357("EyePos");
-		class918 var16 = this.field8682.method3357("SpecularExponent");
-		class918 var17 = this.field8682.method3357("WorldMatrix");
+		GpuProgramUniform var1 = this.field8682.method3357("DiffuseSampler");
+		GpuProgramUniform var2 = this.field8682.method3357("EnvironmentSampler");
+		GpuProgramUniform var3 = this.field8682.method3357("PointLightsPosAndRadiusSq");
+		GpuProgramUniform var4 = this.field8682.method3357("PointLightsDiffuseColour");
+		GpuProgramUniform var5 = this.field8682.method3357("WVPMatrix");
+		GpuProgramUniform var6 = this.field8682.method3357("TexCoordMatrix");
+		GpuProgramUniform var7 = this.field8682.method3357("HeightFogPlane");
+		GpuProgramUniform var8 = this.field8682.method3357("HeightFogColour");
+		GpuProgramUniform var9 = this.field8682.method3357("DistanceFogPlane");
+		GpuProgramUniform var10 = this.field8682.method3357("DistanceFogColour");
+		GpuProgramUniform var11 = this.field8682.method3357("SunDir");
+		GpuProgramUniform var12 = this.field8682.method3357("SunColour");
+		GpuProgramUniform var13 = this.field8682.method3357("AntiSunColour");
+		GpuProgramUniform var14 = this.field8682.method3357("AmbientColour");
+		GpuProgramUniform var15 = this.field8682.method3357("EyePos");
+		GpuProgramUniform var16 = this.field8682.method3357("SpecularExponent");
+		GpuProgramUniform var17 = this.field8682.method3357("WorldMatrix");
 		this.field8686[0] = this.field8682.method3330("Unlit");
 		this.field8686[1] = this.field8682.method3330("Unlit_IgnoreAlpha");
 		this.field8686[17] = this.field8682.method3330("UnderwaterGround");

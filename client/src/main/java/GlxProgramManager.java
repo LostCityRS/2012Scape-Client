@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import jaggl.OpenGL;
 
 @ObfuscatedName("aap")
-public class GlxProgramManager extends Shader {
+public class GlxProgramManager extends GpuShader {
 
 	@ObfuscatedName("aap.f")
 	public final GlxToolkit field8590;
@@ -20,12 +20,12 @@ public class GlxProgramManager extends Shader {
 	}
 
 	@ObfuscatedName("aap.c(Lyk;Lei;)Leo;")
-	public class168 method3404(GpuToolkit arg0, class167 arg1) {
+	public GpuProgram method3404(GpuToolkit arg0, class167 arg1) {
 		return new GlxProgram((GlxToolkit) arg0, this, arg1);
 	}
 
 	@ObfuscatedName("aap.z(Leo;)Z")
-	public boolean method3335(class168 arg0) {
+	public boolean method3335(GpuProgram arg0) {
 		if (this.field8588 == arg0) {
 			return true;
 		} else if (arg0.method3272()) {
@@ -47,8 +47,8 @@ public class GlxProgramManager extends Shader {
 	}
 
 	@ObfuscatedName("aap.q(Ley;)Laig;")
-	public class918 method3338(class174 arg0) {
-		return new class993(this, arg0);
+	public GpuProgramUniform method3338(class174 arg0) {
+		return new GlxProgramUniform(this, arg0);
 	}
 
 	@ObfuscatedName("aap.u()V")

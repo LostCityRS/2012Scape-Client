@@ -119,7 +119,7 @@ public class PureJavaToolkit extends RendererToolkit {
 	@ObfuscatedName("yt.bs")
 	public int field8035;
 
-	public PureJavaToolkit(Canvas arg0, BillboardTypeList arg1, int arg2, int arg3) {
+	public PureJavaToolkit(Canvas arg0, MaterialTypeList arg1, int arg2, int arg3) {
 		this(arg1);
 		try {
 			this.method459(arg0, arg2, arg3);
@@ -131,7 +131,7 @@ public class PureJavaToolkit extends RendererToolkit {
 		}
 	}
 
-	public PureJavaToolkit(BillboardTypeList arg0) {
+	public PureJavaToolkit(MaterialTypeList arg0) {
 		super(arg0);
 		this.field8025 = false;
 		this.field8000 = false;
@@ -1826,17 +1826,17 @@ public class PureJavaToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yt.bi(I)Lv;")
-	public class28 method593(int arg0) {
+	public Heap method593(int arg0) {
 		return null;
 	}
 
 	@ObfuscatedName("yt.bx(Lv;)V")
-	public void method502(class28 arg0) {
+	public void method502(Heap arg0) {
 	}
 
 	@ObfuscatedName("yt.bb(IIZZ)Lce;")
 	public Sprite method658(int arg0, int arg1, boolean arg2, boolean arg3) {
-		return arg2 ? new class887(this, arg0, arg1) : new class886(this, arg0, arg1);
+		return arg2 ? new class887(this, arg0, arg1) : new PureJavaSpriteNormal(this, arg0, arg1);
 	}
 
 	@ObfuscatedName("yt.be([IIIIIZ)Lce;")
@@ -1848,11 +1848,11 @@ public class PureJavaToolkit extends RendererToolkit {
 				int var11 = arg0[var8++] >>> 24;
 				if (var11 != 0 && var11 != 255) {
 					var7 = true;
-					return var7 ? new class887(this, arg0, arg1, arg2, arg3, arg4, arg5) : new class886(this, arg0, arg1, arg2, arg3, arg4, arg5);
+					return var7 ? new class887(this, arg0, arg1, arg2, arg3, arg4, arg5) : new PureJavaSpriteNormal(this, arg0, arg1, arg2, arg3, arg4, arg5);
 				}
 			}
 		}
-		return var7 ? new class887(this, arg0, arg1, arg2, arg3, arg4, arg5) : new class886(this, arg0, arg1, arg2, arg3, arg4, arg5);
+		return var7 ? new class887(this, arg0, arg1, arg2, arg3, arg4, arg5) : new PureJavaSpriteNormal(this, arg0, arg1, arg2, arg3, arg4, arg5);
 	}
 
 	@ObfuscatedName("yt.bo(Lds;Z)Lce;")
@@ -1879,7 +1879,7 @@ public class PureJavaToolkit extends RendererToolkit {
 			if (arg0.method2720()) {
 				var12 = new class887(this, var13, var3, var4);
 			} else {
-				var12 = new class886(this, var13, var3, var4);
+				var12 = new PureJavaSpriteNormal(this, var13, var3, var4);
 			}
 		}
 		var12.method1036(arg0.method2722(), arg0.method2724(), arg0.method2732(), arg0.method2734());
@@ -1904,7 +1904,7 @@ public class PureJavaToolkit extends RendererToolkit {
 		if (arg4) {
 			return new class887(this, var6, arg2, arg3);
 		} else {
-			return new class886(this, var6, arg2, arg3);
+			return new PureJavaSpriteNormal(this, var6, arg2, arg3);
 		}
 	}
 
@@ -1970,14 +1970,14 @@ public class PureJavaToolkit extends RendererToolkit {
 		}
 		if (arg2) {
 			if (var6) {
-				return new class686(this, arg0, arg1, var4, var5);
+				return new TranslucentFont(this, arg0, arg1, var4, var5);
 			} else {
-				return new class688(this, arg0, arg1, var4, var5);
+				return new OpaqueFont(this, arg0, arg1, var4, var5);
 			}
 		} else if (var6) {
 			throw new IllegalArgumentException("");
 		} else {
-			return new class687(this, arg0, arg1, var4, var5);
+			return new FontRelated1(this, arg0, arg1, var4, var5);
 		}
 	}
 
@@ -2603,7 +2603,7 @@ public class PureJavaToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yt.aj(IILcy;Ldz;I)Lde;")
-	public GraphicsDeletable method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4) {
+	public GraphicsDeletable method468(int arg0, int arg1, class124 arg2, DataType arg3, int arg4) {
 		return this.method13212(arg0, arg1);
 	}
 

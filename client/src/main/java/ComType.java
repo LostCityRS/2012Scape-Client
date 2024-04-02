@@ -967,7 +967,7 @@ public class ComType {
 	}
 
 	@ObfuscatedName("ew.p(Lra;ILpn;Lgq;Lwi;Lvj;Lst;Lug;Ltt;Lqc;I)Lqa;")
-	public Model method3174(RendererToolkit arg0, int arg1, BASTypeList arg2, class205 arg3, NPCTypeList arg4, ObjTypeList arg5, class510 arg6, VarIntDomain arg7, AnimationNode arg8, PlayerModel arg9) {
+	public Model method3174(RendererToolkit arg0, int arg1, BASTypeList arg2, IDKTypeList arg3, NPCTypeList arg4, ObjTypeList arg5, SeqTypeList arg6, VarIntDomain arg7, AnimationNode arg8, PlayerModel arg9) {
 		field1761 = false;
 		if (this.field1806 == 0) {
 			return null;
@@ -1099,7 +1099,7 @@ public class ComType {
 	}
 
 	@ObfuscatedName("ew.b(Lot;Lfj;I)Lmq;")
-	public class366 method3181(class419 arg0, class187 arg1) {
+	public class366 method3181(SkyBoxTypeList arg0, SkyDecorTypeList arg1) {
 		if (this.field1906 == -1) {
 			return null;
 		}

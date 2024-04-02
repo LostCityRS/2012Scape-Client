@@ -56,11 +56,11 @@ public class GpuSprite extends Sprite {
 		this.field7646 = arg1;
 		this.field7638 = arg2;
 		if (arg4) {
-			GpuTextureRelated1 var6 = arg0.method13542(arg3 ? class124.field1296 : class124.field1298, class139.field1501, arg1, arg2);
+			GpuTextureRelated1 var6 = arg0.method13542(arg3 ? class124.field1296 : class124.field1298, DataType.field1501, arg1, arg2);
 			this.field7636 = var6.method4534(0);
 			this.field7639 = var6;
 		} else {
-			this.field7639 = arg0.method13550(arg3 ? class124.field1296 : class124.field1298, class139.field1501, arg1, arg2);
+			this.field7639 = arg0.method13550(arg3 ? class124.field1296 : class124.field1298, DataType.field1501, arg1, arg2);
 			this.field7636 = null;
 		}
 		this.field7639.method4412(true, true);

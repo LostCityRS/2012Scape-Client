@@ -8,7 +8,7 @@ public class class270 {
 	public int field2655;
 
 	@ObfuscatedName("is.j")
-	public class955 field2656;
+	public QuickChatPhraseType field2656;
 
 	@ObfuscatedName("is.a")
 	public int[] field2657;

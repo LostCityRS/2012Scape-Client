@@ -12,7 +12,7 @@ public abstract class class300 implements DeletableResource {
 	public final class124 field3327;
 
 	@ObfuscatedName("jq.a")
-	public final class139 field3329;
+	public final DataType field3329;
 
 	@ObfuscatedName("jq.s")
 	public boolean field3328;
@@ -20,7 +20,7 @@ public abstract class class300 implements DeletableResource {
 	@ObfuscatedName("jq.c")
 	public long field3325 = 0L;
 
-	public class300(DxToolkit arg0, class124 arg1, class139 arg2, boolean arg3, int arg4) {
+	public class300(DxToolkit arg0, class124 arg1, DataType arg2, boolean arg3, int arg4) {
 		this.field3326 = arg0;
 		this.field3327 = arg1;
 		this.field3329 = arg2;

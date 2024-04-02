@@ -9,13 +9,13 @@ public class class102 {
 	public final GlToolkit field1148;
 
 	@ObfuscatedName("co.j")
-	public class890 field1149;
+	public GlFramebuffer field1149;
 
 	@ObfuscatedName("co.a")
-	public class890 field1165;
+	public GlFramebuffer field1165;
 
 	@ObfuscatedName("co.s")
-	public class890 field1151;
+	public GlFramebuffer field1151;
 
 	@ObfuscatedName("co.c")
 	public int field1154 = 0;
@@ -48,13 +48,13 @@ public class class102 {
 	public boolean field1156 = true;
 
 	@ObfuscatedName("co.p")
-	public class640[] field1162 = new class640[2];
+	public GlRelated2[] field1162 = new GlRelated2[2];
 
 	@ObfuscatedName("co.w")
 	public class656 field1163;
 
 	@ObfuscatedName("co.b")
-	public class640 field1166;
+	public GlRelated2 field1166;
 
 	@ObfuscatedName("co.x")
 	public class656 field1152;
@@ -66,14 +66,14 @@ public class class102 {
 	public int field1167 = 0;
 
 	@ObfuscatedName("co.k")
-	public class139 field1161 = class139.field1501;
+	public DataType field1161 = DataType.field1501;
 
 	public class102(GlToolkit arg0) {
 		this.field1148 = arg0;
 		if (this.field1148.field8176 && this.field1148.field8208) {
-			this.field1151 = this.field1149 = new class890(this.field1148);
+			this.field1151 = this.field1149 = new GlFramebuffer(this.field1148);
 			if (this.field1148.field8080 > 1 && this.field1148.field8122 && this.field1148.field8200) {
-				this.field1151 = this.field1165 = new class890(this.field1148);
+				this.field1151 = this.field1165 = new GlFramebuffer(this.field1148);
 			}
 		}
 	}
@@ -89,7 +89,7 @@ public class class102 {
 		this.field1163 = null;
 		if (!this.field1157.method11585()) {
 			for (Node var1 = this.field1157.method11563(); var1 != this.field1157.field6647; var1 = var1.field4226) {
-				((class776) var1).method14820();
+				((GlPostProcessEffect) var1).method14820();
 			}
 		}
 		this.field1155 = 1;
@@ -129,12 +129,12 @@ public class class102 {
 		}
 		if (this.field1159) {
 			if (this.field1165 != null) {
-				this.field1152 = new class656(this.field1148, class124.field1300, class139.field1503, this.field1150, this.field1155, this.field1148.field8080);
+				this.field1152 = new class656(this.field1148, class124.field1300, DataType.field1503, this.field1150, this.field1155, this.field1148.field8080);
 			}
 			if (this.field1168) {
-				this.field1166 = new class640(this.field1148, 34037, class124.field1300, class139.field1503, this.field1150, this.field1155);
+				this.field1166 = new GlRelated2(this.field1148, 34037, class124.field1300, DataType.field1503, this.field1150, this.field1155);
 			} else if (this.field1152 == null) {
-				this.field1152 = new class656(this.field1148, class124.field1300, class139.field1503, this.field1150, this.field1155);
+				this.field1152 = new class656(this.field1148, class124.field1300, DataType.field1503, this.field1150, this.field1155);
 			}
 			this.field1159 = false;
 			this.field1160 = true;
@@ -144,8 +144,8 @@ public class class102 {
 			if (this.field1165 != null) {
 				this.field1163 = new class656(this.field1148, class124.field1296, this.field1161, this.field1150, this.field1155, this.field1148.field8080);
 			}
-			this.field1162[0] = new class640(this.field1148, 34037, class124.field1296, this.field1161, this.field1150, this.field1155);
-			this.field1162[1] = this.field1167 > 1 ? new class640(this.field1148, 34037, class124.field1296, this.field1161, this.field1150, this.field1155) : null;
+			this.field1162[0] = new GlRelated2(this.field1148, 34037, class124.field1296, this.field1161, this.field1150, this.field1155);
+			this.field1162[1] = this.field1167 > 1 ? new GlRelated2(this.field1148, 34037, class124.field1296, this.field1161, this.field1150, this.field1155) : null;
 			this.field1158 = false;
 			this.field1160 = true;
 			this.field1156 = true;
@@ -202,7 +202,7 @@ public class class102 {
 			this.field1150 = arg2;
 			this.field1155 = arg3;
 			for (Node var5 = this.field1157.method11563(); var5 != this.field1157.field6647; var5 = var5.field4226) {
-				((class776) var5).method14821(this.field1150, this.field1155);
+				((GlPostProcessEffect) var5).method14821(this.field1150, this.field1155);
 			}
 			this.field1158 = true;
 			this.field1159 = true;
@@ -238,9 +238,9 @@ public class class102 {
 		this.field1148.method753();
 		int var1 = 0;
 		int var2 = 1;
-		class776 var4;
-		for (class776 var3 = (class776) this.field1157.method11563(); var3 != null; var3 = var4) {
-			var4 = (class776) this.field1157.method11567();
+		GlPostProcessEffect var4;
+		for (GlPostProcessEffect var3 = (GlPostProcessEffect) this.field1157.method11563(); var3 != null; var3 = var4) {
+			var4 = (GlPostProcessEffect) this.field1157.method11567();
 			int var5 = var3.method14832();
 			for (int var6 = 0; var6 < var5; var6++) {
 				var3.method14822(var6, this.field1162[var1], this.field1166);
@@ -287,7 +287,7 @@ public class class102 {
 	}
 
 	@ObfuscatedName("co.m(Lacd;)Z")
-	public boolean method2301(class776 arg0) {
+	public boolean method2301(GlPostProcessEffect arg0) {
 		if (this.field1151 != null) {
 			if (arg0.method14840() || arg0.method14844()) {
 				this.field1157.method11558(arg0);
@@ -306,7 +306,7 @@ public class class102 {
 	}
 
 	@ObfuscatedName("co.t(Lacd;)V")
-	public void method2302(class776 arg0) {
+	public void method2302(GlPostProcessEffect arg0) {
 		arg0.field9321 = false;
 		arg0.method14820();
 		arg0.method6979();
@@ -317,9 +317,9 @@ public class class102 {
 	public void method2303() {
 		int var1 = 0;
 		boolean var2 = false;
-		class139 var3 = class139.field1501;
-		for (class776 var4 = (class776) this.field1157.method11563(); var4 != null; var4 = (class776) this.field1157.method11567()) {
-			class139 var5 = var4.method14826();
+		DataType var3 = DataType.field1501;
+		for (GlPostProcessEffect var4 = (GlPostProcessEffect) this.field1157.method11563(); var4 != null; var4 = (GlPostProcessEffect) this.field1157.method11567()) {
+			DataType var5 = var4.method14826();
 			if (var5.field1508 > var3.field1508) {
 				var3 = var5;
 			}

@@ -10,7 +10,7 @@ public class DxToolkitFactory {
 	}
 
 	@ObfuscatedName("jy.u(Ljava/awt/Canvas;Lma;Lls;I)Lra;")
-	public static RendererToolkit method4912(Canvas arg0, BillboardTypeList arg1, Js5 arg2, int arg3) {
+	public static RendererToolkit method4912(Canvas arg0, MaterialTypeList arg1, Js5 arg2, int arg3) {
 		try {
 			boolean var4 = GpuToolkit.method13494();
 			if (!var4) {

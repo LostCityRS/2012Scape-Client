@@ -5,22 +5,22 @@ import deob.ObfuscatedName;
 public class class724 extends ParticleShader {
 
 	@ObfuscatedName("aaf.c")
-	public Shader field8691;
+	public GpuShader field8691;
 
 	@ObfuscatedName("aaf.m")
-	public class918 field8690;
+	public GpuProgramUniform field8690;
 
 	@ObfuscatedName("aaf.t")
 	public final Matrix4x4 field8693 = new Matrix4x4();
 
 	@ObfuscatedName("aaf.l")
-	public class918 field8689;
+	public GpuProgramUniform field8689;
 
 	@ObfuscatedName("aaf.f")
-	public class918 field8692;
+	public GpuProgramUniform field8692;
 
 	@ObfuscatedName("aaf.d")
-	public class918 field8694;
+	public GpuProgramUniform field8694;
 
 	public class724(GpuToolkit arg0) throws ShaderException {
 		super(arg0);

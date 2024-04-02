@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aca")
-public class TextCoord extends class398 {
+public class TextCoord extends Link {
 
 	@ObfuscatedName("aca.a")
 	public int field9257;

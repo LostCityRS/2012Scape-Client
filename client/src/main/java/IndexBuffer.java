@@ -11,5 +11,5 @@ public interface IndexBuffer extends GpuBuffer, DeletableResource {
 	void method4535(int arg0);
 
 	@ObfuscatedName("in.u()Ldz;")
-	class139 method4538();
+    DataType method4538();
 }

@@ -9,7 +9,7 @@ public class class103 {
 	public final GlToolkit field1170;
 
 	@ObfuscatedName("cb.a")
-	public class79 field1171;
+	public GlProgram field1171;
 
 	public class103(GlToolkit arg0) {
 		this.field1170 = arg0;
@@ -20,7 +20,7 @@ public class class103 {
 		if (this.field1170.field8176 && this.field1170.field8213 && this.field1171 == null) {
 			class82 var1 = class82.method2080(this.field1170, 35632, "uniform float rcpRelief;\nuniform vec2 sampleSize;\nuniform sampler3D heightMap;\nvoid main() {\nfloat dx = texture3D(heightMap, vec3(-sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r;\nfloat dy = texture3D(heightMap, vec3(0.0, -sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(0.0, sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r;\ngl_FragColor = vec4(0.5+normalize(vec3(dx, dy, rcpRelief))*0.5, texture3D(heightMap, gl_TexCoord[0].xyz).r);\n}\n");
 			if (var1 != null) {
-				this.field1171 = class79.method2027(this.field1170, new class82[] { var1 });
+				this.field1171 = GlProgram.method2027(this.field1170, new class82[] { var1 });
 			}
 		}
 		return this.field1171 != null;
@@ -31,8 +31,8 @@ public class class103 {
 		if (!this.method2318()) {
 			return false;
 		}
-		class890 var4 = this.field1170.field8152;
-		class656 var5 = new class656(this.field1170, class124.field1296, class139.field1501, arg0.field7438, arg0.field7437);
+		GlFramebuffer var4 = this.field1170.field8152;
+		class656 var5 = new class656(this.field1170, class124.field1296, DataType.field1501, arg0.field7438, arg0.field7437);
 		boolean var6 = false;
 		this.field1170.method464(var4);
 		var4.method1206(0, var5);

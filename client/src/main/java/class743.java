@@ -25,11 +25,11 @@ public class class743 extends class300 implements GpuTexture {
 	@ObfuscatedName("abu.z")
 	public boolean field8811;
 
-	public class743(DxToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
+	public class743(DxToolkit arg0, class124 arg1, DataType arg2, int arg3, int arg4) {
 		this(arg0, arg1, arg2, arg3, arg4, 0, 1);
 	}
 
-	public class743(DxToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5, int arg6) {
+	public class743(DxToolkit arg0, class124 arg1, DataType arg2, int arg3, int arg4, int arg5, int arg6) {
 		super(arg0, arg1, arg2, false, arg3 * arg4);
 		if (this.field3326.field10002) {
 			this.field8806 = arg3;
@@ -46,7 +46,7 @@ public class class743 extends class300 implements GpuTexture {
 	}
 
 	public class743(DxToolkit arg0, int arg1, int arg2, boolean arg3, int[] arg4, int arg5, int arg6) {
-		super(arg0, class124.field1296, class139.field1501, arg3 && arg0.field9994, arg1 * arg2);
+		super(arg0, class124.field1296, DataType.field1501, arg3 && arg0.field9994, arg1 * arg2);
 		if (this.field3326.field10002) {
 			this.field8806 = arg1;
 			this.field8810 = arg2;
@@ -78,7 +78,7 @@ public class class743 extends class300 implements GpuTexture {
 	}
 
 	public class743(DxToolkit arg0, class124 arg1, int arg2, int arg3, boolean arg4, byte[] arg5, int arg6, int arg7) {
-		super(arg0, arg1, class139.field1501, arg4 && arg0.field9994, arg2 * arg3);
+		super(arg0, arg1, DataType.field1501, arg4 && arg0.field9994, arg2 * arg3);
 		if (this.field3326.field10002) {
 			this.field8806 = arg2;
 			this.field8810 = arg3;
@@ -96,9 +96,9 @@ public class class743 extends class300 implements GpuTexture {
 			}
 		}
 		if (arg4) {
-			this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, this.field8806, this.field8810, 0, 1024, DxToolkit.method16037(this.field3327, class139.field1501), 1);
+			this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, this.field8806, this.field8810, 0, 1024, DxToolkit.method16037(this.field3327, DataType.field1501), 1);
 		} else {
-			this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, this.field8806, this.field8810, 1, 0, DxToolkit.method16037(this.field3327, class139.field1501), 1);
+			this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, this.field8806, this.field8810, 1, 0, DxToolkit.method16037(this.field3327, DataType.field1501), 1);
 		}
 		if (arg7 == 0) {
 			arg7 = this.field8806;
@@ -122,7 +122,7 @@ public class class743 extends class300 implements GpuTexture {
 	}
 
 	public class743(DxToolkit arg0, class124 arg1, int arg2, int arg3, boolean arg4, float[] arg5, int arg6, int arg7) {
-		super(arg0, arg1, class139.field1501, arg4 && arg0.field9994, arg2 * arg3);
+		super(arg0, arg1, DataType.field1501, arg4 && arg0.field9994, arg2 * arg3);
 		if (this.field3326.field10002) {
 			this.field8806 = arg2;
 			this.field8810 = arg3;
@@ -140,9 +140,9 @@ public class class743 extends class300 implements GpuTexture {
 			}
 		}
 		if (arg4) {
-			this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, this.field8806, this.field8810, 0, 1024, DxToolkit.method16037(this.field3327, class139.field1506), 1);
+			this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, this.field8806, this.field8810, 0, 1024, DxToolkit.method16037(this.field3327, DataType.field1506), 1);
 		} else {
-			this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, this.field8806, this.field8810, 1, 0, DxToolkit.method16037(this.field3327, class139.field1506), 1);
+			this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, this.field8806, this.field8810, 1, 0, DxToolkit.method16037(this.field3327, DataType.field1506), 1);
 		}
 		if (arg7 == 0) {
 			arg7 = this.field8806;
@@ -206,7 +206,7 @@ public class class743 extends class300 implements GpuTexture {
 
 	@ObfuscatedName("abu.d(IIII[III)V")
 	public void method4413(int arg0, int arg1, int arg2, int arg3, int[] arg4, int arg5, int arg6) {
-		if (class124.field1296 != this.field3327 || class139.field1501 != this.field3329) {
+		if (class124.field1296 != this.field3327 || DataType.field1501 != this.field3329) {
 			throw new RuntimeException();
 		}
 		if (arg6 == 0) {
@@ -220,7 +220,7 @@ public class class743 extends class300 implements GpuTexture {
 
 	@ObfuscatedName("abu.z(IIII[BLcy;II)V")
 	public void method4414(int arg0, int arg1, int arg2, int arg3, byte[] arg4, class124 arg5, int arg6, int arg7) {
-		if (this.field3327 != arg5 || class139.field1501 != this.field3329) {
+		if (this.field3327 != arg5 || DataType.field1501 != this.field3329) {
 			throw new RuntimeException();
 		}
 		if (arg7 == 0) {
@@ -234,7 +234,7 @@ public class class743 extends class300 implements GpuTexture {
 
 	@ObfuscatedName("abu.n(IIII[II)V")
 	public void method4415(int arg0, int arg1, int arg2, int arg3, int[] arg4, int arg5) {
-		if (class124.field1296 != this.field3327 || class139.field1501 != this.field3329) {
+		if (class124.field1296 != this.field3327 || DataType.field1501 != this.field3329) {
 			throw new RuntimeException();
 		}
 		ByteBuffer var7 = this.field3326.field8244;

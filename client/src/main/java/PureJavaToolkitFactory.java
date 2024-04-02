@@ -10,7 +10,7 @@ public class PureJavaToolkitFactory {
 	}
 
 	@ObfuscatedName("aab.u(Ljava/awt/Canvas;Lma;IIB)Lra;")
-	public static RendererToolkit method13911(Canvas arg0, BillboardTypeList arg1, int arg2, int arg3) {
+	public static RendererToolkit method13911(Canvas arg0, MaterialTypeList arg1, int arg2, int arg3) {
 		return new PureJavaToolkit(arg0, arg1, arg2, arg3);
 	}
 }

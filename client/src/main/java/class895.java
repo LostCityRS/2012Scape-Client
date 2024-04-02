@@ -16,7 +16,7 @@ public class class895 extends class679 {
 
 	public class895(GlToolkit arg0, int arg1) {
 		this.field9950 = arg0;
-		this.field9951 = new class641(arg0, class124.field1296, class139.field1501, arg1);
+		this.field9951 = new class641(arg0, class124.field1296, DataType.field1501, arg1);
 	}
 
 	@ObfuscatedName("ahy.s()I")
@@ -32,7 +32,7 @@ public class class895 extends class679 {
 	@ObfuscatedName("ahy.c(Lxl;Lxl;F)Z")
 	public boolean method16015(class641 arg0, class641 arg1, float arg2) {
 		boolean var4 = true;
-		class890 var5 = this.field9950.field8152;
+		GlFramebuffer var5 = this.field9950.field8152;
 		this.field9950.method453(field9949);
 		this.field9950.method753();
 		this.field9950.method13324();

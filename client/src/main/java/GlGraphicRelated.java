@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("agx")
-public class GlGraphicRelated extends class640 {
+public class GlGraphicRelated extends GlRelated2 {
 
 	@ObfuscatedName("agx.x")
 	public final int field9910;
@@ -23,7 +23,7 @@ public class GlGraphicRelated extends class640 {
 	public final boolean field9914;
 
 	@ObfuscatedName("agx.ac(Lyq;Lcy;Ldz;II)Lagx;")
-	public static GlGraphicRelated method15981(GlToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
+	public static GlGraphicRelated method15981(GlToolkit arg0, class124 arg1, DataType arg2, int arg3, int arg4) {
 		if (arg0.field8151 || class595.method11258(arg3) && class595.method11258(arg4)) {
 			return new GlGraphicRelated(arg0, 3553, arg1, arg2, arg3, arg4);
 		} else if (arg0.field8208) {
@@ -45,7 +45,7 @@ public class GlGraphicRelated extends class640 {
 	}
 
 	@ObfuscatedName("agx.ab(Lyq;Lcy;Ldz;IIZ[BLcy;)Lagx;")
-	public static GlGraphicRelated method15975(GlToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4, boolean arg5, byte[] arg6, class124 arg7) {
+	public static GlGraphicRelated method15975(GlToolkit arg0, class124 arg1, DataType arg2, int arg3, int arg4, boolean arg5, byte[] arg6, class124 arg7) {
 		if (arg0.field8151 || class595.method11258(arg3) && class595.method11258(arg4)) {
 			return new GlGraphicRelated(arg0, 3553, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 		} else if (arg0.field8208) {
@@ -66,7 +66,7 @@ public class GlGraphicRelated extends class640 {
 		}
 	}
 
-	public GlGraphicRelated(GlToolkit arg0, int arg1, class124 arg2, class139 arg3, int arg4, int arg5) {
+	public GlGraphicRelated(GlToolkit arg0, int arg1, class124 arg2, DataType arg3, int arg4, int arg5) {
 		super(arg0, arg1, arg2, arg3, arg4, arg5);
 		this.field9910 = arg4;
 		this.field9909 = arg5;
@@ -98,7 +98,7 @@ public class GlGraphicRelated extends class640 {
 		this.field9914 = false;
 	}
 
-	public GlGraphicRelated(GlToolkit arg0, int arg1, class124 arg2, class139 arg3, int arg4, int arg5, boolean arg6, byte[] arg7, class124 arg8) {
+	public GlGraphicRelated(GlToolkit arg0, int arg1, class124 arg2, DataType arg3, int arg4, int arg5, boolean arg6, byte[] arg7, class124 arg8) {
 		super(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, true);
 		this.field9910 = arg4;
 		this.field9909 = arg5;
@@ -130,7 +130,7 @@ public class GlGraphicRelated extends class640 {
 		this.field9914 = false;
 	}
 
-	public GlGraphicRelated(GlToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5, int arg6) {
+	public GlGraphicRelated(GlToolkit arg0, class124 arg1, DataType arg2, int arg3, int arg4, int arg5, int arg6) {
 		super(arg0, 3553, arg1, arg2, arg5, arg6);
 		this.field9910 = arg3;
 		this.field9909 = arg4;
@@ -142,7 +142,7 @@ public class GlGraphicRelated extends class640 {
 	}
 
 	public GlGraphicRelated(GlToolkit arg0, int arg1, int arg2, int arg3, int arg4, int[] arg5) {
-		super(arg0, 3553, class124.field1296, class139.field1501, arg3, arg4);
+		super(arg0, 3553, class124.field1296, DataType.field1501, arg3, arg4);
 		this.field9910 = arg1;
 		this.field9909 = arg2;
 		this.method12766(0, arg4 - arg2, arg1, arg2, arg5, 0, 0, true);
@@ -153,7 +153,7 @@ public class GlGraphicRelated extends class640 {
 		this.method12765(false, false);
 	}
 
-	public GlGraphicRelated(GlToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5, int arg6, byte[] arg7, class124 arg8) {
+	public GlGraphicRelated(GlToolkit arg0, class124 arg1, DataType arg2, int arg3, int arg4, int arg5, int arg6, byte[] arg7, class124 arg8) {
 		super(arg0, 3553, arg1, arg2, arg5, arg6);
 		this.field9910 = arg3;
 		this.field9909 = arg4;

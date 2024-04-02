@@ -14,7 +14,7 @@ public class class639 extends GlTexture {
 	@ObfuscatedName("xk.x")
 	public final int field7439;
 
-	public class639(GlToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5) {
+	public class639(GlToolkit arg0, class124 arg1, DataType arg2, int arg3, int arg4, int arg5) {
 		super(arg0, 32879, arg1, arg2, arg3 * arg4 * arg5, false);
 		this.field7438 = arg3;
 		this.field7437 = arg4;
@@ -24,7 +24,7 @@ public class class639 extends GlTexture {
 		this.method2055(true);
 	}
 
-	public class639(GlToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5, byte[] arg6, class124 arg7) {
+	public class639(GlToolkit arg0, class124 arg1, DataType arg2, int arg3, int arg4, int arg5, byte[] arg6, class124 arg7) {
 		super(arg0, 32879, arg1, arg2, arg3 * arg4 * arg5, false);
 		this.field7438 = arg3;
 		this.field7437 = arg4;

@@ -18,7 +18,7 @@ public abstract class class347 implements class254 {
 	public final class124 field3736;
 
 	@ObfuscatedName("lm.d")
-	public final class139 field3731;
+	public final DataType field3731;
 
 	@ObfuscatedName("lm.z")
 	public boolean field3728;
@@ -32,7 +32,7 @@ public abstract class class347 implements class254 {
 	@ObfuscatedName("lm.q")
 	public static final int[] field3740 = new int[1];
 
-	public class347(GlxToolkit arg0, int arg1, class124 arg2, class139 arg3, int arg4, boolean arg5) {
+	public class347(GlxToolkit arg0, int arg1, class124 arg2, DataType arg3, int arg4, boolean arg5) {
 		this.field3733 = arg0;
 		this.field3737 = arg1;
 		this.field3736 = arg2;

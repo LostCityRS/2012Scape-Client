@@ -47,7 +47,7 @@ public class class896 extends class679 {
 	@ObfuscatedName("ahk.u()Lxl;")
 	public class641 method13186() {
 		if (this.field9953 == null) {
-			BillboardTypeList var1 = this.field9961.field400;
+			MaterialTypeList var1 = this.field9961.field400;
 			field9957[0] = this.field9952;
 			field9957[1] = this.field9955;
 			field9957[2] = this.field9956;
@@ -92,7 +92,7 @@ public class class896 extends class679 {
 					field9959[var7] = var10;
 				}
 			}
-			this.field9953 = new class641(this.field9961, class124.field1298, class139.field1501, var3, var2, field9959);
+			this.field9953 = new class641(this.field9961, class124.field1298, DataType.field1501, var3, var2, field9959);
 		}
 		return this.field9953;
 	}

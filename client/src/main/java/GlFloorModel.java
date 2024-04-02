@@ -147,7 +147,7 @@ public class GlFloorModel extends FloorModel {
 
 	@ObfuscatedName("yj.u(II[I[I[I[I[I[I[I[ILdk;Z)V")
 	public void method193(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, WaterFogData arg10, boolean arg11) {
-		BillboardTypeList var13 = this.field7688.field400;
+		MaterialTypeList var13 = this.field7688.field400;
 		if (arg5 != null && this.field7702 == null) {
 			this.field7702 = new int[this.field387][this.field386][];
 		}
@@ -616,7 +616,7 @@ public class GlFloorModel extends FloorModel {
 			this.field7688.field8229 = new int[var8];
 		}
 		if (this.field7688.field8226.field9629.length < this.field7694 * 2) {
-			this.field7688.field8226 = new class963(this.field7694 * 2);
+			this.field7688.field8226 = new GpuPacket(this.field7694 * 2);
 		}
 		int var9 = arg0 - arg2;
 		int var10 = var9;
@@ -740,12 +740,12 @@ public class GlFloorModel extends FloorModel {
 		}
 		this.field7688.method13305(this.field7708, this.field7710, this.field7715, this.field7701);
 		if (this.field7688.field8226.field9629.length < this.field7694 * 2) {
-			this.field7688.field8226 = new class963(this.field7694 * 2);
+			this.field7688.field8226 = new GpuPacket(this.field7694 * 2);
 		} else {
 			this.field7688.field8226.field9626 = 0;
 		}
 		int var10 = 0;
-		class963 var11 = this.field7688.field8226;
+		GpuPacket var11 = this.field7688.field8226;
 		if (this.field7688.field8149) {
 			for (int var12 = arg4; var12 < arg6; var12++) {
 				int var13 = this.field387 * var12 + arg3;

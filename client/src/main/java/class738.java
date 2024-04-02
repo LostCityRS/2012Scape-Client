@@ -15,7 +15,7 @@ public class class738 extends class347 implements class225 {
 	public final int field8784;
 
 	public class738(GlxToolkit arg0, class124 arg1, int arg2, int arg3, int arg4, boolean arg5, byte[] arg6) {
-		super(arg0, 32879, arg1, class139.field1501, arg2 * arg3 * arg4, arg5);
+		super(arg0, 32879, arg1, DataType.field1501, arg2 * arg3 * arg4, arg5);
 		this.field8782 = arg2;
 		this.field8783 = arg3;
 		this.field8784 = arg4;

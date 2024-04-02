@@ -13,7 +13,7 @@ public class class626 {
 	@ObfuscatedName("wz.a")
 	public WeightedCache field7346 = new WeightedCache(64);
 
-	public class626(ModeGame arg0, class519 arg1, Js5 arg2) {
+	public class626(ModeGame arg0, Language arg1, Js5 arg2) {
 		this.field7344 = arg2;
 		if (this.field7344 == null) {
 			this.field7345 = 0;

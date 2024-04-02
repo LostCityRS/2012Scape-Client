@@ -94,7 +94,7 @@ public class ja extends RendererToolkit implements class10 {
 	@ObfuscatedName("ja.bt")
 	public boolean field449 = false;
 
-	public ja(Canvas arg0, BillboardTypeList arg1, int arg2, int arg3) {
+	public ja(Canvas arg0, MaterialTypeList arg1, int arg2, int arg3) {
 		super(arg1);
 		try {
 			if (!NativeLibraries.method11710().method6800("sw3d")) {
@@ -413,14 +413,14 @@ public class ja extends RendererToolkit implements class10 {
 	}
 
 	@ObfuscatedName("ja.bi(I)Lv;")
-	public class28 method593(int arg0) {
+	public Heap method593(int arg0) {
 		ba var2 = new ba(this, arg0);
 		this.field438.method11558(var2);
 		return var2;
 	}
 
 	@ObfuscatedName("ja.bx(Lv;)V")
-	public void method502(class28 arg0) {
+	public void method502(Heap arg0) {
 		this.field437 = (ba) arg0;
 		this.method971(arg0);
 	}
@@ -651,7 +651,7 @@ public class ja extends RendererToolkit implements class10 {
 	}
 
 	@ObfuscatedName("ja.aj(IILcy;Ldz;I)Lde;")
-	public GraphicsDeletable method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4) {
+	public GraphicsDeletable method468(int arg0, int arg1, class124 arg2, DataType arg3, int arg4) {
 		return this.method991(arg0, arg1);
 	}
 
@@ -666,7 +666,7 @@ public class ja extends RendererToolkit implements class10 {
 	}
 
 	@ObfuscatedName("ja.q(Lma;II)V")
-	public native void method966(BillboardTypeList arg0, int arg1, int arg2);
+	public native void method966(MaterialTypeList arg0, int arg1, int arg2);
 
 	@ObfuscatedName("ja.YA(IIIIII)V")
 	public native void method967(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
@@ -681,7 +681,7 @@ public class ja extends RendererToolkit implements class10 {
 	public native void method970(int arg0);
 
 	@ObfuscatedName("ja.n(Lv;)V")
-	public native void method971(class28 arg0);
+	public native void method971(Heap arg0);
 
 	@ObfuscatedName("ja.Q(I[I[F)V")
 	public native void method972(int arg0, int[] arg1, float[] arg2);

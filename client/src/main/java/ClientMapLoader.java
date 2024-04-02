@@ -59,7 +59,7 @@ public class ClientMapLoader extends MapLoader {
 						for (int var9 = 0; var9 < var8; var9++) {
 							class427 var10 = new class427(arg0, this.field3619.field4510, arg1, 2);
 							if (var10.field4594 == 31) {
-								class607 var11 = Statics.field785.method12453(arg1.method15239());
+								LightType var11 = Statics.field785.method12453(arg1.method15239());
 								var10.method7577(var11.field7188, var11.field7191, var11.field7189, var11.field7190);
 							}
 							if (arg0.method768() > 0) {
@@ -237,7 +237,7 @@ public class ClientMapLoader extends MapLoader {
 						for (int var16 = 0; var16 < var15; var16++) {
 							class427 var17 = new class427(arg0, this.field3619.field4510, arg1, 2);
 							if (var17.field4594 == 31) {
-								class607 var18 = Statics.field785.method12453(arg1.method15239());
+								LightType var18 = Statics.field785.method12453(arg1.method15239());
 								var17.method7577(var18.field7188, var18.field7191, var18.field7189, var18.field7190);
 							}
 							if (arg0.method768() > 0) {

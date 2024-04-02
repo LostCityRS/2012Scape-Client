@@ -955,8 +955,8 @@ public class LoginManager {
 		arg0.method15223(Statics.field8734.method5622());
 		arg0.method15223(Statics.field663.method5622());
 		arg0.method15223(Statics.field2670.method5622());
-		arg0.method15223(class309.method6307());
-		arg0.method15223(class309.method4671());
+		arg0.method15223(Loading.method6307());
+		arg0.method15223(Loading.method4671());
 		arg0.method15223(Statics.field4824.method5622());
 		arg0.method15223(Statics.field2117.method5622());
 		arg0.method15223(Statics.field6435.method5622());

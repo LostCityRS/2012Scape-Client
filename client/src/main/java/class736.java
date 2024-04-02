@@ -5,55 +5,55 @@ import deob.ObfuscatedName;
 public abstract class class736 extends class222 {
 
 	@ObfuscatedName("abf.j")
-	public Shader field8778;
+	public GpuShader field8778;
 
 	@ObfuscatedName("abf.a")
-	public class918 field8750;
+	public GpuProgramUniform field8750;
 
 	@ObfuscatedName("abf.s")
-	public class918 field8749;
+	public GpuProgramUniform field8749;
 
 	@ObfuscatedName("abf.c")
-	public class918 field8752;
+	public GpuProgramUniform field8752;
 
 	@ObfuscatedName("abf.m")
-	public class918 field8753;
+	public GpuProgramUniform field8753;
 
 	@ObfuscatedName("abf.t")
-	public class918 field8754;
+	public GpuProgramUniform field8754;
 
 	@ObfuscatedName("abf.l")
-	public class918 field8767;
+	public GpuProgramUniform field8767;
 
 	@ObfuscatedName("abf.f")
-	public class918 field8756;
+	public GpuProgramUniform field8756;
 
 	@ObfuscatedName("abf.d")
-	public class918 field8774;
+	public GpuProgramUniform field8774;
 
 	@ObfuscatedName("abf.z")
-	public class918 field8769;
+	public GpuProgramUniform field8769;
 
 	@ObfuscatedName("abf.n")
-	public class918 field8759;
+	public GpuProgramUniform field8759;
 
 	@ObfuscatedName("abf.o")
-	public class918 field8760;
+	public GpuProgramUniform field8760;
 
 	@ObfuscatedName("abf.q")
-	public class918 field8761;
+	public GpuProgramUniform field8761;
 
 	@ObfuscatedName("abf.p")
-	public class918 field8762;
+	public GpuProgramUniform field8762;
 
 	@ObfuscatedName("abf.w")
-	public class918 field8763;
+	public GpuProgramUniform field8763;
 
 	@ObfuscatedName("abf.b")
-	public class918 field8766;
+	public GpuProgramUniform field8766;
 
 	@ObfuscatedName("abf.x")
-	public class918 field8765;
+	public GpuProgramUniform field8765;
 
 	@ObfuscatedName("abf.ay")
 	public int field8755;
@@ -102,7 +102,7 @@ public abstract class class736 extends class222 {
 		this.field8760 = this.field8778.method3360("sunDirectionOS");
 		if (this.method14135()) {
 			if (this.field8778.method3376() == null) {
-				class168 var2 = this.field8778.method3334();
+				GpuProgram var2 = this.field8778.method3334();
 				if (var2 == null) {
 					throw new ShaderException(this.field8778.method3328() + "");
 				}

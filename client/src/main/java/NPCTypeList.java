@@ -8,7 +8,7 @@ public class NPCTypeList {
 	public final ModeGame field7279;
 
 	@ObfuscatedName("wi.j")
-	public final class519 field7284;
+	public final Language field7284;
 
 	@ObfuscatedName("wi.a")
 	public boolean field7278;
@@ -34,7 +34,7 @@ public class NPCTypeList {
 	@ObfuscatedName("wi.d")
 	public final String[] field7282;
 
-	public NPCTypeList(ModeGame arg0, class519 arg1, boolean arg2, Js5 arg3, Js5 arg4) {
+	public NPCTypeList(ModeGame arg0, Language arg1, boolean arg2, Js5 arg3, Js5 arg4) {
 		this.field7279 = arg0;
 		this.field7284 = arg1;
 		this.field7278 = arg2;

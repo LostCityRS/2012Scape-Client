@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import jaclib.memory.Buffer;
 
 @ObfuscatedName("xi")
-public class class653 extends class95 implements GlInterfaceRelated {
+public class class653 extends GlBufferRelated1 implements GlInterfaceRelated {
 
 	@ObfuscatedName("xi.d")
 	public int field7515;

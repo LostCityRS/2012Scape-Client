@@ -19,7 +19,7 @@ public class EffectAnimTypeList {
 	@ObfuscatedName("rv.c")
 	public int field5248;
 
-	public EffectAnimTypeList(ModeGame arg0, class519 arg1, Js5 arg2, Js5 arg3) {
+	public EffectAnimTypeList(ModeGame arg0, Language arg1, Js5 arg2, Js5 arg3) {
 		this.field5246 = arg2;
 		this.field5244 = arg3;
 		int var5 = this.field5246.method5638() - 1;

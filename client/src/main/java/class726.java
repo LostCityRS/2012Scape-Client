@@ -5,13 +5,13 @@ import deob.ObfuscatedName;
 public class class726 extends class202 {
 
 	@ObfuscatedName("aag.a")
-	public Shader field8696;
+	public GpuShader field8696;
 
 	@ObfuscatedName("aag.s")
-	public class918 field8695;
+	public GpuProgramUniform field8695;
 
 	@ObfuscatedName("aag.c")
-	public class168 field8697;
+	public GpuProgram field8697;
 
 	public class726(GpuToolkit arg0) throws ShaderException {
 		super(arg0);

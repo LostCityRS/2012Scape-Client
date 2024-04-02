@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("acl")
-public class class766 extends class398 {
+public class class766 extends Link {
 
 	@ObfuscatedName("acl.a")
 	public class766 field9265;

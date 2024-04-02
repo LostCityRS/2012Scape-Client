@@ -18,7 +18,7 @@ public class class656 extends SecondaryNode implements class98 {
 	public final int field7519;
 
 	@ObfuscatedName("xc.l")
-	public final class139 field7523;
+	public final DataType field7523;
 
 	@ObfuscatedName("xc.f")
 	public final class124 field7521;
@@ -29,7 +29,7 @@ public class class656 extends SecondaryNode implements class98 {
 	@ObfuscatedName("xc.z")
 	public static final int[] field7517 = new int[1];
 
-	public class656(GlToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
+	public class656(GlToolkit arg0, class124 arg1, DataType arg2, int arg3, int arg4) {
 		this.field7522 = arg0;
 		this.field7518 = arg3;
 		this.field7519 = arg4;
@@ -42,7 +42,7 @@ public class class656 extends SecondaryNode implements class98 {
 		this.field7516 = this.field7521.field1306 * this.field7519 * this.field7518 * this.field7523.field1508;
 	}
 
-	public class656(GlToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5) {
+	public class656(GlToolkit arg0, class124 arg1, DataType arg2, int arg3, int arg4, int arg5) {
 		this.field7522 = arg0;
 		this.field7518 = arg3;
 		this.field7519 = arg4;

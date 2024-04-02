@@ -23,16 +23,16 @@ public final class TimeZones {
 
 	@ObfuscatedName("et.u(Ljava/util/Date;Ljava/lang/String;B)Ljava/lang/String;")
 	public static String method2901(Date arg0, String arg1) {
-		return method2902(arg0, arg1, method2909(), class519.field6376);
+		return method2902(arg0, arg1, method2909(), Language.field6376);
 	}
 
 	@ObfuscatedName("et.j(Ljava/util/Date;Ljava/lang/String;Ljava/util/TimeZone;Lsn;I)Ljava/lang/String;")
-	public static String method2902(Date arg0, String arg1, TimeZone arg2, class519 arg3) {
+	public static String method2902(Date arg0, String arg1, TimeZone arg2, Language arg3) {
 		if (Statics.field1572 == null) {
 			Statics.field1572 = new HashMap(7);
-			class519[] var4 = Statics.method11191();
+			Language[] var4 = Statics.method11191();
 			for (int var5 = 0; var5 < var4.length; var5++) {
-				class519 var6 = var4[var5];
+				Language var6 = var4[var5];
 				Statics.field1572.put(var6, new ConcurrentLinkedQueue());
 			}
 		}

@@ -10,7 +10,7 @@ public class GlToolkitFactory {
 	}
 
 	@ObfuscatedName("cs.u(Ljava/awt/Canvas;Lma;I)Lra;")
-	public static RendererToolkit method2346(Canvas arg0, BillboardTypeList arg1, int arg2) {
+	public static RendererToolkit method2346(Canvas arg0, MaterialTypeList arg1, int arg2) {
 		return new GlToolkit(arg0, arg1, arg2);
 	}
 }

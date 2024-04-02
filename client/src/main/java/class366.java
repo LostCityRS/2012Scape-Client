@@ -38,7 +38,7 @@ public class class366 {
 	public Sprite field3937;
 
 	@ObfuscatedName("mq.o")
-	public class420 field3930;
+	public SkyBoxFillMode field3930;
 
 	@ObfuscatedName("mq.q")
 	public int field3941;
@@ -74,7 +74,7 @@ public class class366 {
 	public int field3949;
 
 	@ObfuscatedName("vq.u(Lls;Lma;B)V")
-	public static void method12289(Js5 arg0, BillboardTypeList arg1) {
+	public static void method12289(Js5 arg0, MaterialTypeList arg1) {
 		Statics.field549 = arg0;
 		Statics.field6785 = arg1;
 	}
@@ -84,7 +84,7 @@ public class class366 {
 		class367.method6406();
 	}
 
-	public class366(int arg0, class367[] arg1, int arg2, int arg3, int arg4, int arg5, class420 arg6, int arg7) {
+	public class366(int arg0, class367[] arg1, int arg2, int arg3, int arg4, int arg5, SkyBoxFillMode arg6, int arg7) {
 		this.field3934 = arg3;
 		this.field3926 = arg4;
 		this.field3936 = arg5;
@@ -264,7 +264,7 @@ public class class366 {
 					while (var19 < 0) {
 						var19 += arg5;
 					}
-					if (class420.field4467 == this.field3930) {
+					if (SkyBoxFillMode.field4467 == this.field3930) {
 						for (int var20 = var19 - arg5; var20 < arg4; var20 += arg5) {
 							this.field3937.method2502(arg2 + var20, arg3 + var18, arg5, arg5, 0, var14 << 24 | 0xFFFFFF, var17);
 						}

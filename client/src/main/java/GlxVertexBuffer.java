@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("abx")
-public class GlxVertexBuffer extends class348 implements VertexBuffer {
+public class GlxVertexBuffer extends GlxBuffer implements VertexBuffer {
 
 	@ObfuscatedName("abx.z")
 	public byte field8785;

@@ -50,7 +50,7 @@ public class NoiseGenerator extends class818 {
 				var10 = 0;
 			}
 			int var11 = var8 & 0xFFF;
-			int var12 = class290.field3290[var11];
+			int var12 = NoiseGenerator3D.field3290[var11];
 			int var13 = this.field10487[var9 & 0xFF] & 0xFF;
 			int var14 = this.field10487[var10 & 0xFF] & 0xFF;
 			if (this.field10493) {
@@ -81,7 +81,7 @@ public class NoiseGenerator extends class818 {
 				var28 = 0;
 			}
 			int var29 = var26 & 0xFFF;
-			int var30 = class290.field3290[var29];
+			int var30 = NoiseGenerator3D.field3290[var29];
 			int var31 = this.field10487[var27 & 0xFF] & 0xFF;
 			int var32 = this.field10487[var28 & 0xFF] & 0xFF;
 			for (int var33 = 0; var33 < Statics.field7038; var33++) {
@@ -103,7 +103,7 @@ public class NoiseGenerator extends class818 {
 					var43 = 0;
 				}
 				int var44 = var41 & 0xFFF;
-				int var45 = class290.field3290[var44];
+				int var45 = NoiseGenerator3D.field3290[var44];
 				int var46 = this.field10487[var42 & 0xFF] & 0xFF;
 				int var47 = this.field10487[var43 & 0xFF] & 0xFF;
 				if (this.field10493 && this.field10491 - 1 == var36) {
@@ -136,7 +136,7 @@ public class NoiseGenerator extends class818 {
 		int var11 = var8 & 0xFF;
 		int var12 = var9 - 4096;
 		int var13 = arg1 - 4096;
-		int var14 = class290.field3290[var9];
+		int var14 = NoiseGenerator3D.field3290[var9];
 		int var15 = this.field10487[arg2 + var10] & 0x3;
 		int var16;
 		if (var15 <= 1) {

@@ -26,13 +26,13 @@ public class class80 {
 	public final int field1037;
 
 	@ObfuscatedName("bt.d")
-	public class108 field1038;
+	public GlBinding field1038;
 
 	@ObfuscatedName("bt.z")
 	public class655 field1036;
 
 	@ObfuscatedName("bt.n")
-	public class640 field1029;
+	public GlRelated2 field1029;
 
 	public class80(GlToolkit arg0, GlFloorModelRelated2 arg1, GlFloorModel arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
 		this.field1031 = arg0;
@@ -99,7 +99,7 @@ public class class80 {
 	}
 
 	@ObfuscatedName("bt.a(Lcf;I)V")
-	public void method2032(class108 arg0, int arg1) {
+	public void method2032(GlBinding arg0, int arg1) {
 		if (arg1 != 0) {
 			this.method2033();
 			this.field1031.method13315(this.field1029);
@@ -159,7 +159,7 @@ public class class80 {
 			var9 += this.field1032.field1139 - 128;
 		}
 		if (this.field1029 == null) {
-			this.field1029 = new class640(this.field1031, 3553, class124.field1297, class139.field1501, 128, 128, false, this.field1031.field8230, class124.field1297, false);
+			this.field1029 = new GlRelated2(this.field1031, 3553, class124.field1297, DataType.field1501, 128, 128, false, this.field1031.field8230, class124.field1297, false);
 			this.field1029.method12765(false, false);
 			this.field1029.method2055(true);
 		} else {

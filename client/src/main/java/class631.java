@@ -14,7 +14,7 @@ public class class631 {
 	@ObfuscatedName("wk.s")
 	public final int field7394;
 
-	public class631(ModeGame arg0, class519 arg1, Js5 arg2) {
+	public class631(ModeGame arg0, Language arg1, Js5 arg2) {
 		this.field7391 = arg2;
 		Packet var4 = new Packet(this.field7391.method5627(0, 0));
 		int var5 = var4.field9629 == null || var4.field9629.length < 1 ? -1 : var4.method15220();

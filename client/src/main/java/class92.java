@@ -5,5 +5,5 @@ import deob.ObfuscatedName;
 public class class92 {
 
 	@ObfuscatedName("bm.u")
-	public class108 field1096;
+	public GlBinding field1096;
 }

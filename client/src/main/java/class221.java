@@ -28,12 +28,12 @@ public class class221 {
 	@ObfuscatedName("gj.u()V")
 	public static void method4126() {
 		if (Statics.field2411 == null) {
-			class913 var0 = new class913();
+			NoiseGenerator3D_Sub2_Sub1 var0 = new NoiseGenerator3D_Sub2_Sub1();
 			byte[] var1 = var0.method16221(128, 128, 16);
 			Statics.field2411 = Statics.method4122(var1, false);
 		}
 		if (Statics.field2407 == null) {
-			class911 var2 = new class911();
+			NoiseGenerator3D_Sub1_Sub2 var2 = new NoiseGenerator3D_Sub1_Sub2();
 			byte[] var3 = var2.method16211(128, 128, 16);
 			Statics.field2407 = Statics.method4122(var3, false);
 		}
@@ -42,10 +42,10 @@ public class class221 {
 	public class221(GpuToolkit arg0) {
 		this.field2404 = arg0;
 		this.field2405 = this.field2404.field8384;
-		if (this.field2405 && !this.field2404.method13547(class124.field1299, class139.field1501)) {
+		if (this.field2405 && !this.field2404.method13547(class124.field1299, DataType.field1501)) {
 			this.field2405 = false;
 		}
-		if (this.field2405 || this.field2404.method13546(class124.field1299, class139.field1501)) {
+		if (this.field2405 || this.field2404.method13546(class124.field1299, DataType.field1501)) {
 			method4126();
 			if (this.field2405) {
 				byte[] var6 = Statics.method2896(Statics.field2411, false);

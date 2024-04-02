@@ -41,7 +41,7 @@ public class AnimationNode {
 	public final class554 field6682;
 
 	@ObfuscatedName("ms.u(Lst;I)V")
-	public static void method6490(class510 arg0) {
+	public static void method6490(SeqTypeList arg0) {
 		Statics.field8530 = arg0;
 	}
 

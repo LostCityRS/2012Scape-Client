@@ -8,7 +8,7 @@ public class SeqType {
 	public static boolean field6319 = false;
 
 	@ObfuscatedName("so.j")
-	public class510 field6317;
+	public SeqTypeList field6317;
 
 	@ObfuscatedName("so.a")
 	public int field6318;

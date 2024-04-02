@@ -8,37 +8,37 @@ public class WaterfallShader extends class736 {
 	public final class221 field10091;
 
 	@ObfuscatedName("ahn.as")
-	public class918 field10102;
+	public GpuProgramUniform field10102;
 
 	@ObfuscatedName("ahn.ai")
-	public class918 field10104;
+	public GpuProgramUniform field10104;
 
 	@ObfuscatedName("ahn.ao")
-	public class168 field10101;
+	public GpuProgram field10101;
 
 	@ObfuscatedName("ahn.al")
-	public class168 field10087;
+	public GpuProgram field10087;
 
 	@ObfuscatedName("ahn.at")
-	public class918 field10092;
+	public GpuProgramUniform field10092;
 
 	@ObfuscatedName("ahn.ax")
 	public final Matrix4x4 field10093 = new Matrix4x4();
 
 	@ObfuscatedName("ahn.aw")
-	public class918 field10094;
+	public GpuProgramUniform field10094;
 
 	@ObfuscatedName("ahn.aa")
 	public final Matrix4x4 field10089 = new Matrix4x4();
 
 	@ObfuscatedName("ahn.am")
-	public class918 field10096;
+	public GpuProgramUniform field10096;
 
 	@ObfuscatedName("ahn.ad")
 	public final float[] field10097 = new float[4];
 
 	@ObfuscatedName("ahn.az")
-	public class918 field10098;
+	public GpuProgramUniform field10098;
 
 	@ObfuscatedName("ahn.ak")
 	public final float[] field10099 = new float[4];

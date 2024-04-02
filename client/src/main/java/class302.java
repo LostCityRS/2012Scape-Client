@@ -10,7 +10,7 @@ public class class302 implements class304 {
 	public final DxToolkit field3336;
 
 	@ObfuscatedName("jb.j")
-	public final class139 field3337;
+	public final DataType field3337;
 
 	@ObfuscatedName("jb.a")
 	public final class124 field3339;
@@ -24,7 +24,7 @@ public class class302 implements class304 {
 	@ObfuscatedName("jb.m")
 	public long field3341;
 
-	public class302(DxToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5) {
+	public class302(DxToolkit arg0, class124 arg1, DataType arg2, int arg3, int arg4, int arg5) {
 		this.field3336 = arg0;
 		this.field3338 = arg3;
 		this.field3340 = arg4;

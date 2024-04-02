@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class HeadbarType {
 
 	@ObfuscatedName("oe.u")
-	public class417 field4439;
+	public HeadbarTypeList field4439;
 
 	@ObfuscatedName("oe.a")
 	public int field4446 = 255;

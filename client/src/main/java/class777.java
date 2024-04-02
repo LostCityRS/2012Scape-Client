@@ -32,7 +32,7 @@ public class class777 extends Node {
 	public int field9336;
 
 	@ObfuscatedName("acq.o")
-	public final class108 field9322;
+	public final GlBinding field9322;
 
 	@ObfuscatedName("acq.q")
 	public final GlInterfaceRelated field9332;
@@ -56,7 +56,7 @@ public class class777 extends Node {
 	public Packet field9338;
 
 	@ObfuscatedName("acq.k")
-	public class963 field9339;
+	public GpuPacket field9339;
 
 	@ObfuscatedName("acq.h")
 	public IterableMap field9340;
@@ -118,7 +118,7 @@ public class class777 extends Node {
 		}
 		if (this.field9336 > 0) {
 			this.field9338 = new Packet(this.field9336 * 2);
-			this.field9339 = new class963(this.field9336 * 16);
+			this.field9339 = new GpuPacket(this.field9336 * 16);
 			this.field9340 = new IterableMap(class595.method2839(this.field9336));
 			int var21 = 0;
 			int var22 = 0;

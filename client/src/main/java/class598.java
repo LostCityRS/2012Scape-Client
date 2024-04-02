@@ -13,7 +13,7 @@ public class class598 {
 	@ObfuscatedName("vb.a")
 	public final WeightedCache field7159 = new WeightedCache(64);
 
-	public class598(ModeGame arg0, class519 arg1, Js5 arg2) {
+	public class598(ModeGame arg0, Language arg1, Js5 arg2) {
 		this.field7161 = arg2;
 		this.field7160 = this.field7161.method5637(class161.field1644.field1668);
 	}

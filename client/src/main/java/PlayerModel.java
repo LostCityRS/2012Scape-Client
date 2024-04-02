@@ -11,7 +11,7 @@ public class PlayerModel {
 	public int[] field5001;
 
 	@ObfuscatedName("qc.m")
-	public class593[] field5011;
+	public ObjTypeCustomisation[] field5011;
 
 	@ObfuscatedName("qc.t")
 	public int[] field5000;
@@ -38,7 +38,7 @@ public class PlayerModel {
 	public static WeightedCache field4998 = new WeightedCache(5);
 
 	@ObfuscatedName("qc.u(I[I[Lvq;[IZIB)V")
-	public void method8230(int arg0, int[] arg1, class593[] arg2, int[] arg3, boolean arg4, int arg5) {
+	public void method8230(int arg0, int[] arg1, ObjTypeCustomisation[] arg2, int[] arg3, boolean arg4, int arg5) {
 		if (this.field5002 != arg0) {
 			this.field5002 = arg0;
 		}
@@ -51,7 +51,7 @@ public class PlayerModel {
 	}
 
 	@ObfuscatedName("qc.j(IILgq;S)V")
-	public void method8231(int arg0, int arg1, class205 arg2) {
+	public void method8231(int arg0, int arg1, IDKTypeList arg2) {
 		int var4 = field5003[arg0];
 		if (arg2.method3909(arg1) != null) {
 			this.field5001[var4] = arg1 | Integer.MIN_VALUE;
@@ -141,7 +141,7 @@ public class PlayerModel {
 	}
 
 	@ObfuscatedName("qc.t(Lra;ILpn;Lgq;Lwi;Lvj;Lst;Lug;Ltt;Ltt;[Ltt;[IIZLrt;B)Lqa;")
-	public Model method8244(RendererToolkit arg0, int arg1, BASTypeList arg2, class205 arg3, NPCTypeList arg4, ObjTypeList arg5, class510 arg6, VarIntDomain arg7, AnimationNode arg8, AnimationNode arg9, AnimationNode[] arg10, int[] arg11, int arg12, boolean arg13, class493 arg14) {
+	public Model method8244(RendererToolkit arg0, int arg1, BASTypeList arg2, IDKTypeList arg3, NPCTypeList arg4, ObjTypeList arg5, SeqTypeList arg6, VarIntDomain arg7, AnimationNode arg8, AnimationNode arg9, AnimationNode[] arg10, int[] arg11, int arg12, boolean arg13, WearposDefaults arg14) {
 		if (this.field5006 != -1) {
 			return arg4.method12565(this.field5006).method12510(arg0, arg1, arg2, arg7, arg8, arg9, arg10, arg11, arg12, null);
 		}
@@ -248,7 +248,7 @@ public class PlayerModel {
 					ModelUnlit[] var47 = new ModelUnlit[var19.length];
 					for (int var48 = 0; var48 < var19.length; var48++) {
 						int var49 = var19[var48];
-						class593 var50 = null;
+						ObjTypeCustomisation var50 = null;
 						boolean var51 = var48 == 5 && var20 || var48 == 3 && var21;
 						if ((var49 & 0x40000000) != 0) {
 							if (!var51 && this.field5011 != null && this.field5011[var48] != null) {
@@ -312,7 +312,7 @@ public class PlayerModel {
 					break;
 				}
 				int var40 = var19[var39];
-				class593 var41 = null;
+				ObjTypeCustomisation var41 = null;
 				boolean var42 = false;
 				if (var20) {
 					if (arg14.field5173 == var39) {
@@ -404,7 +404,7 @@ public class PlayerModel {
 	}
 
 	@ObfuscatedName("qc.l(Lra;ILgq;Lwi;Lvj;Lst;Lug;Ltt;I)Lqa;")
-	public Model method8237(RendererToolkit arg0, int arg1, class205 arg2, NPCTypeList arg3, ObjTypeList arg4, class510 arg5, VarIntDomain arg6, AnimationNode arg7) {
+	public Model method8237(RendererToolkit arg0, int arg1, IDKTypeList arg2, NPCTypeList arg3, ObjTypeList arg4, SeqTypeList arg5, VarIntDomain arg6, AnimationNode arg7) {
 		if (this.field5006 != -1) {
 			return arg3.method12565(this.field5006).method12512(arg0, arg1, arg6, arg7, null);
 		}
@@ -421,7 +421,7 @@ public class PlayerModel {
 			boolean var14 = false;
 			for (int var15 = 0; var15 < this.field5001.length; var15++) {
 				int var16 = this.field5001[var15];
-				class593 var17 = null;
+				ObjTypeCustomisation var17 = null;
 				if ((var16 & 0x40000000) != 0) {
 					if (this.field5011 != null && this.field5011[var15] != null) {
 						var17 = this.field5011[var15];
@@ -440,7 +440,7 @@ public class PlayerModel {
 			int var19 = 0;
 			for (int var20 = 0; var20 < this.field5001.length; var20++) {
 				int var21 = this.field5001[var20];
-				class593 var22 = null;
+				ObjTypeCustomisation var22 = null;
 				if ((var21 & 0x40000000) != 0) {
 					if (this.field5011 != null && this.field5011[var20] != null) {
 						var22 = this.field5011[var20];
@@ -482,7 +482,7 @@ public class PlayerModel {
 	}
 
 	@ObfuscatedName("qc.f(Lra;ILgq;Lst;Ltt;IIII)Lqa;")
-	public Model method8257(RendererToolkit arg0, int arg1, class205 arg2, class510 arg3, AnimationNode arg4, int arg5, int arg6, int arg7) {
+	public Model method8257(RendererToolkit arg0, int arg1, IDKTypeList arg2, SeqTypeList arg3, AnimationNode arg4, int arg5, int arg6, int arg7) {
 		int var9 = arg4 == null ? arg1 : arg1 | arg4.method11779();
 		long var10 = (long) arg7 << 32 | (long) (arg6 << 16) | (long) arg5;
 		WeightedCache var12 = field4998;

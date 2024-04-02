@@ -238,7 +238,7 @@ public class PureJavaModel extends Model {
 		this.field7777 = arg2;
 		this.field7778 = arg3;
 		this.field7779 = arg4;
-		BillboardTypeList var7 = this.field7839.field400;
+		MaterialTypeList var7 = this.field7839.field400;
 		this.field7780 = arg1.field1328;
 		this.field7781 = arg1.field1315;
 		this.field7807 = arg1.field1316;

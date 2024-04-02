@@ -121,7 +121,7 @@ public class GlModel extends Model {
 	public class92 field7892;
 
 	@ObfuscatedName("yz.au")
-	public class108 field7893;
+	public GlBinding field7893;
 
 	@ObfuscatedName("yz.ae")
 	public GlInterfaceRelated field7894;
@@ -223,7 +223,7 @@ public class GlModel extends Model {
 		if (GlModelFlags.method2179(arg2, arg5)) {
 			this.field7892 = new class92();
 		}
-		BillboardTypeList var7 = arg0.field400;
+		MaterialTypeList var7 = arg0.field400;
 		int[] var8 = new int[arg1.field1342];
 		this.field7906 = new int[arg1.field1315 + 1];
 		for (int var9 = 0; var9 < arg1.field1342; var9++) {
@@ -1781,7 +1781,7 @@ public class GlModel extends Model {
 
 	@ObfuscatedName("yz.W(SS)V")
 	public void method289(short arg0, short arg1) {
-		BillboardTypeList var3 = this.field7891.field400;
+		MaterialTypeList var3 = this.field7891.field400;
 		for (int var4 = 0; var4 < this.field7883 * -1431655765; var4++) {
 			if (this.field7897[var4] == arg0) {
 				this.field7897[var4] = arg1;
@@ -3265,11 +3265,11 @@ public class GlModel extends Model {
 	@ObfuscatedName("yz.ge(Z)V")
 	public void method13095(boolean arg0) {
 		if (this.field7891.field8226.field9629.length < this.field7877 * 6) {
-			this.field7891.field8226 = new class963((this.field7877 + 100) * 6);
+			this.field7891.field8226 = new GpuPacket((this.field7877 + 100) * 6);
 		} else {
 			this.field7891.field8226.field9626 = 0;
 		}
-		class963 var2 = this.field7891.field8226;
+		GpuPacket var2 = this.field7891.field8226;
 		if (this.field7891.field8149) {
 			for (int var3 = 0; var3 < this.field7877; var3++) {
 				var2.method15287(this.field7882[var3]);
@@ -3338,11 +3338,11 @@ public class GlModel extends Model {
 			return;
 		}
 		if (this.field7891.field8226.field9629.length < this.field7870 * var6) {
-			this.field7891.field8226 = new class963((this.field7870 + 100) * var6);
+			this.field7891.field8226 = new GpuPacket((this.field7870 + 100) * var6);
 		} else {
 			this.field7891.field8226.field9626 = 0;
 		}
-		class963 var11 = this.field7891.field8226;
+		GpuPacket var11 = this.field7891.field8226;
 		if (var4) {
 			if (this.field7891.field8149) {
 				for (int var12 = 0; var12 < this.field7864; var12++) {

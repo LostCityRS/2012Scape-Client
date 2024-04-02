@@ -10,17 +10,17 @@ public class FloorUnderlayTypeList {
 	@ObfuscatedName("ux.j")
 	public final WeightedCache field6711 = new WeightedCache(128);
 
-	public FloorUnderlayTypeList(ModeGame arg0, class519 arg1, Js5 arg2) {
+	public FloorUnderlayTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
 		this.field6710 = arg2;
 		this.field6710.method5637(class161.field1640.field1668);
 	}
 
 	@ObfuscatedName("ux.u(IB)Luc;")
-	public class564 method11895(int arg0) {
+	public FloorUnderlayType method11895(int arg0) {
 		WeightedCache var2 = this.field6711;
-		class564 var3;
+		FloorUnderlayType var3;
 		synchronized (this.field6711) {
-			var3 = (class564) this.field6711.method7916((long) arg0);
+			var3 = (FloorUnderlayType) this.field6711.method7916((long) arg0);
 		}
 		if (var3 != null) {
 			return var3;
@@ -30,7 +30,7 @@ public class FloorUnderlayTypeList {
 		synchronized (this.field6710) {
 			var6 = this.field6710.method5627(class161.field1640.field1668, arg0);
 		}
-		class564 var8 = new class564();
+		FloorUnderlayType var8 = new FloorUnderlayType();
 		if (var6 != null) {
 			var8.method11909(new Packet(var6));
 		}

@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("pf")
-public class class450 implements class445 {
+public class class450 implements Binding {
 
 	@ObfuscatedName("pf.u")
 	public final int[] field4823;

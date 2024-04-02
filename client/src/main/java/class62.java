@@ -442,7 +442,7 @@ public class class62 {
 						return;
 					}
 					String var11 = var8.substring(var9 + 1).trim() + ".runescape.com";
-					class574.method1716(var11, var6);
+					WorldSwitcher.method1716(var11, var6);
 					method1958("Success");
 					return;
 				}

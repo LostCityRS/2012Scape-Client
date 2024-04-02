@@ -21,12 +21,12 @@ public class class295 implements IndexBuffer {
 	public final boolean field3319;
 
 	@ObfuscatedName("jg.c")
-	public final class139 field3317;
+	public final DataType field3317;
 
 	@ObfuscatedName("jg.m")
 	public long field3320 = 0L;
 
-	public class295(DxToolkit arg0, class139 arg1, boolean arg2) {
+	public class295(DxToolkit arg0, DataType arg1, boolean arg2) {
 		this.field3318 = arg0;
 		this.field3317 = arg1;
 		this.field3319 = arg2;
@@ -39,7 +39,7 @@ public class class295 implements IndexBuffer {
 	}
 
 	@ObfuscatedName("jg.u()Ldz;")
-	public class139 method4538() {
+	public DataType method4538() {
 		return this.field3317;
 	}
 
@@ -60,7 +60,7 @@ public class class295 implements IndexBuffer {
 		} else {
 			var3 = 1;
 		}
-		this.field3320 = IDirect3DDevice.CreateIndexBuffer(this.field3318.field9975, this.field3316, var2, class139.field1502 == this.field3317 ? 101 : 102, var3);
+		this.field3320 = IDirect3DDevice.CreateIndexBuffer(this.field3318.field9975, this.field3316, var2, DataType.field1502 == this.field3317 ? 101 : 102, var3);
 		this.field3321 = this.field3316;
 	}
 

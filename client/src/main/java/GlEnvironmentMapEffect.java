@@ -69,9 +69,9 @@ public class GlEnvironmentMapEffect extends GlEffect {
 				}
 			}
 			this.field7507 = new class641[3];
-			this.field7507[0] = new class641(this.field1062, class124.field1297, class139.field1501, 128, false, var3, class124.field1297);
-			this.field7507[1] = new class641(this.field1062, class124.field1297, class139.field1501, 128, false, var4, class124.field1297);
-			this.field7507[2] = new class641(this.field1062, class124.field1297, class139.field1501, 128, false, var2, class124.field1297);
+			this.field7507[0] = new class641(this.field1062, class124.field1297, DataType.field1501, 128, false, var3, class124.field1297);
+			this.field7507[1] = new class641(this.field1062, class124.field1297, DataType.field1501, 128, false, var4, class124.field1297);
+			this.field7507[2] = new class641(this.field1062, class124.field1297, DataType.field1501, 128, false, var2, class124.field1297);
 			this.method12797();
 		}
 	}

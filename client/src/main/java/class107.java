@@ -9,9 +9,9 @@ public class class107 implements class98 {
 	public final int field1190;
 
 	@ObfuscatedName("cn.j")
-	public final class640 field1189;
+	public final GlRelated2 field1189;
 
-	public class107(class640 arg0, int arg1) {
+	public class107(GlRelated2 arg0, int arg1) {
 		this.field1190 = arg1;
 		this.field1189 = arg0;
 	}

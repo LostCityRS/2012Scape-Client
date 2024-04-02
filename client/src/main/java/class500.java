@@ -30,7 +30,7 @@ public final class class500 {
 
 	@ObfuscatedName("fl.t(Lrn;I)V")
 	public static void method3566(ClientScriptState arg0) {
-		class481 var1 = Statics.field4959.method8401(arg0.field5215[--arg0.field5216]);
+		QuestType var1 = Statics.field4959.method8401(arg0.field5215[--arg0.field5216]);
 		arg0.field5215[++arg0.field5216 - 1] = var1.field5076 == null ? 0 : var1.field5076.length;
 	}
 
@@ -52,7 +52,7 @@ public final class class500 {
 
 	@ObfuscatedName("dh.n(Lrn;B)V")
 	public static void method2707(ClientScriptState arg0) {
-		class481 var1 = Statics.field4959.method8401(arg0.field5215[--arg0.field5216]);
+		QuestType var1 = Statics.field4959.method8401(arg0.field5215[--arg0.field5216]);
 		arg0.field5215[++arg0.field5216 - 1] = var1.field5068 == null ? 0 : var1.field5068.length;
 	}
 
@@ -76,7 +76,7 @@ public final class class500 {
 
 	@ObfuscatedName("ac.w(Lrn;I)V")
 	public static void method1982(ClientScriptState arg0) {
-		class481 var1 = Statics.field4959.method8401(arg0.field5215[--arg0.field5216]);
+		QuestType var1 = Statics.field4959.method8401(arg0.field5215[--arg0.field5216]);
 		arg0.field5215[++arg0.field5216 - 1] = var1.field5062 == null ? 0 : var1.field5062.length;
 	}
 
@@ -94,7 +94,7 @@ public final class class500 {
 
 	@ObfuscatedName("uw.i(Lrn;I)V")
 	public static void method11880(ClientScriptState arg0) {
-		class481 var1 = Statics.field4959.method8401(arg0.field5215[--arg0.field5216]);
+		QuestType var1 = Statics.field4959.method8401(arg0.field5215[--arg0.field5216]);
 		arg0.field5215[++arg0.field5216 - 1] = var1.field5074 == null ? 0 : var1.field5074.length;
 	}
 
@@ -130,7 +130,7 @@ public final class class500 {
 		arg0.field5216 -= 2;
 		int var1 = arg0.field5215[arg0.field5216];
 		int var2 = arg0.field5215[arg0.field5216 + 1];
-		class613 var3 = Statics.field4464.method12600(var2);
+		ParamType var3 = Statics.field4464.method12600(var2);
 		if (!var3.method12586()) {
 			int var5 = var3.field7287;
 			if (var1 == -1) {
