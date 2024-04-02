@@ -1,0 +1,21 @@
+
+import deob.ObfuscatedName;
+
+@ObfuscatedName("n")
+public class class39 {
+
+	@ObfuscatedName("n.u")
+	public int field570;
+
+	@ObfuscatedName("n.j")
+	public int field572;
+
+	@ObfuscatedName("n.a")
+	public int field569;
+
+	@ObfuscatedName("n.s")
+	public boolean field571;
+
+	@ObfuscatedName("n.c")
+	public boolean field568;
+}

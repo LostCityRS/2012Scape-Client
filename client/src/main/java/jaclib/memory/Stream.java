@@ -39,7 +39,12 @@ public final class Stream {
 		this.method35(arg0, arg1, arg2);
 	}
 
-	@ObfuscatedName("jaclib/memory/Stream.u(Ljaclib/memory/Buffer;II)V")
+    @ObfuscatedName("jaclib/memory/Stream.l()Z")
+    public static final boolean method42() {
+        return field367;
+    }
+
+    @ObfuscatedName("jaclib/memory/Stream.u(Ljaclib/memory/Buffer;II)V")
 	public void method35(Buffer arg0, int arg1, int arg2) {
 		this.method41();
 		this.field362 = arg0;
