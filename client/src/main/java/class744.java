@@ -9,7 +9,7 @@ import jagdx.class0;
 @ObfuscatedName("abw")
 public class class744 extends class743 implements class257 {
 
-	public class744(class898 arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
+	public class744(DxToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
 		super(arg0, arg1, arg2, arg3, arg4, 1025, 0);
 	}
 
@@ -92,7 +92,7 @@ public class class744 extends class743 implements class257 {
 	}
 
 	@ObfuscatedName("abw.ae(Lhd;)V")
-	public void method4525(class241 arg0) {
+	public void method4525(GpuTextureRelated arg0) {
 		super.method4525(arg0);
 	}
 

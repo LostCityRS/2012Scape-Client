@@ -25,12 +25,12 @@ public class i extends FloorModel implements class10 {
 	}
 
 	@ObfuscatedName("i.u(II[I[I[I[I[I[I[I[ILdk;Z)V")
-	public final void method193(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, class137 arg10, boolean arg11) {
+	public final void method193(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, WaterFogData arg10, boolean arg11) {
 		this.method1178(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10.field1475, arg10.field1471, arg10.field1474, arg11);
 	}
 
 	@ObfuscatedName("i.j(II[I[I[I[I[I[I[I[I[I[I[ILdk;Z)V")
-	public void method219(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, int[] arg10, int[] arg11, int[] arg12, class137 arg13, boolean arg14) {
+	public void method219(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, int[] arg10, int[] arg11, int[] arg12, WaterFogData arg13, boolean arg14) {
 		boolean var16 = false;
 		if (arg9 != null) {
 			int[] var17 = arg9;
@@ -134,7 +134,7 @@ public class i extends FloorModel implements class10 {
 	}
 
 	@ObfuscatedName("i.l(Lna;IIIIZ)Z")
-	public boolean method203(class30 arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+	public boolean method203(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
 		return true;
 	}
 
@@ -157,10 +157,10 @@ public class i extends FloorModel implements class10 {
 	public native void method195();
 
 	@ObfuscatedName("i.w(IILna;)Lna;")
-	public native class30 method200(int arg0, int arg1, class30 arg2);
+	public native HardShadow method200(int arg0, int arg1, HardShadow arg2);
 
 	@ObfuscatedName("i.NA(Lna;IIIIZ)V")
-	public native void method194(class30 arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
+	public native void method194(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
 
 	@ObfuscatedName("i.A(IIIIII[I)V")
 	public native void method1179(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int[] arg6);
@@ -172,5 +172,5 @@ public class i extends FloorModel implements class10 {
 	public native void method1180(float[] arg0);
 
 	@ObfuscatedName("i.UA(Lna;IIIIZ)V")
-	public native void method209(class30 arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
+	public native void method209(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
 }

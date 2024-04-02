@@ -58,29 +58,29 @@ public abstract class FloorModel {
 	public abstract void method192(int arg0, int arg1, int arg2);
 
 	@ObfuscatedName("xa.u(II[I[I[I[I[I[I[I[ILdk;Z)V")
-	public abstract void method193(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, class137 arg10, boolean arg11);
+	public abstract void method193(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, WaterFogData arg10, boolean arg11);
 
 	@ObfuscatedName("xa.NA(Lna;IIIIZ)V")
-	public abstract void method194(class30 arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
+	public abstract void method194(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
 
 	@ObfuscatedName("xa.SA()V")
 	public abstract void method195();
 
 	@ObfuscatedName("xa.w(IILna;)Lna;")
-	public abstract class30 method200(int arg0, int arg1, class30 arg2);
+	public abstract HardShadow method200(int arg0, int arg1, HardShadow arg2);
 
 	@ObfuscatedName("xa.l(Lna;IIIIZ)Z")
-	public abstract boolean method203(class30 arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
+	public abstract boolean method203(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
 
 	@ObfuscatedName("xa.f(Lacg;[I)V")
 	public abstract void method204(Light arg0, int[] arg1);
 
 	@ObfuscatedName("xa.UA(Lna;IIIIZ)V")
-	public abstract void method209(class30 arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
+	public abstract void method209(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
 
 	@ObfuscatedName("xa.a(III[[ZZI)V")
 	public abstract void method212(int arg0, int arg1, int arg2, boolean[][] arg3, boolean arg4, int arg5);
 
 	@ObfuscatedName("xa.j(II[I[I[I[I[I[I[I[I[I[I[ILdk;Z)V")
-	public abstract void method219(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, int[] arg10, int[] arg11, int[] arg12, class137 arg13, boolean arg14);
+	public abstract void method219(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, int[] arg10, int[] arg11, int[] arg12, WaterFogData arg13, boolean arg14);
 }

@@ -49,13 +49,13 @@ public final class class149 {
 				this.field1558.method16149(Statics.field3774.method12565(this.field1560));
 				this.field1558.method13979(this.field1558.field10075.field7213);
 				this.field1558.field8636 = this.field1558.field10075.field7241 << 3;
-				this.field1558.field8600 = ++class144.field1530 - 1;
+				this.field1558.field8600 = ++CutsceneManager.field1530 - 1;
 			} else {
 				this.field1562 = new PlayerEntity(client.field8980.method6098(), 25);
 				this.field1562.method16116(Statics.field416);
 				this.field1562.field8593 = this.field1559;
 				this.field1562.field8618 = client.field9213;
-				this.field1562.field8600 = ++class144.field1530 - 1;
+				this.field1562.field8600 = ++CutsceneManager.field1530 - 1;
 			}
 		}
 		if (this.field1560 >= 0) {

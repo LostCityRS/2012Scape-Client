@@ -54,7 +54,7 @@ public class class822 extends class408 {
 	}
 
 	@ObfuscatedName("og.bp(Lra;Lma;I)V")
-	public static final void method7164(RendererToolkit arg0, class16 arg1) {
+	public static final void method7164(RendererToolkit arg0, BillboardTypeList arg1) {
 		if (Statics.field4292 == null) {
 			return;
 		}
@@ -77,7 +77,7 @@ public class class822 extends class408 {
 			int var3 = -1;
 			int var4 = -1;
 			Vector3 var5 = Statics.field2119.method8565().field3464;
-			class453 var6 = client.field8980.method6214();
+			CoordGrid var6 = client.field8980.method6214();
 			if (Statics.field4292.method16705(Statics.field2119.field9807, ((int) var5.field3475 >> 9) + var6.field4836, ((int) var5.field3477 >> 9) + var6.field4838, var2)) {
 				var3 = var2[1] - Statics.field4283;
 				var4 = var2[2] - Statics.field4284;
@@ -156,9 +156,9 @@ public class class822 extends class408 {
 				if (!Statics.field4264.method5648(Statics.field4292.field10362 + "_staticelements")) {
 					return;
 				}
-				Statics.field4281 = class406.method2791(Statics.field4264, Statics.field4292.field10362 + "_staticelements", client.field9142);
+				Statics.field4281 = WorldMapRelated.method2791(Statics.field4264, Statics.field4292.field10362 + "_staticelements", client.field9142);
 			} else {
-				Statics.field4281 = new class406(0);
+				Statics.field4281 = new WorldMapRelated(0);
 			}
 			method7093();
 			field9753 = 70;
@@ -277,7 +277,7 @@ public class class822 extends class408 {
 	}
 
 	@ObfuscatedName("zb.bb(Lra;Lma;IIIIB)V")
-	public static void method13877(RendererToolkit arg0, class16 arg1, int arg2, int arg3, int arg4, int arg5) {
+	public static void method13877(RendererToolkit arg0, BillboardTypeList arg1, int arg2, int arg3, int arg4, int arg5) {
 		if (field9753 < 100) {
 			method7164(arg0, arg1);
 		}
@@ -674,7 +674,7 @@ public class class822 extends class408 {
 		int var12 = Statics.field6354 * var6 / Statics.field4285 + var8;
 		int var13 = var7 + var9 - Statics.field7054 * var7 / Statics.field4282 - var11;
 		int var14 = -1996554240;
-		if (client.field9163 == class527.field6402) {
+		if (client.field9163 == ModeGame.field6402) {
 			var14 = -1996488705;
 		}
 		arg0.method489(var12, var13, var10, var11, var14, 1);
@@ -775,14 +775,14 @@ public class class822 extends class408 {
 				}
 				if (!var4.field9303.field9570) {
 					var4.field9303.field9570 = true;
-					class502.method1372(class619.field7304, var4.field9303.field9564, var5.field4775);
+					ScriptRunner.method1372(ClientTriggerType.field7304, var4.field9303.field9564, var5.field4775);
 				}
 				if (var4.field9303.field9570) {
-					class502.method1372(class619.field7311, var4.field9303.field9564, var5.field4775);
+					ScriptRunner.method1372(ClientTriggerType.field7311, var4.field9303.field9564, var5.field4775);
 				}
 			} else if (var4.field9303.field9570) {
 				var4.field9303.field9570 = false;
-				class502.method1372(class619.field7319, var4.field9303.field9564, var5.field4775);
+				ScriptRunner.method1372(ClientTriggerType.field7319, var4.field9303.field9564, var5.field4775);
 			}
 		}
 	}
@@ -790,15 +790,15 @@ public class class822 extends class408 {
 	@ObfuscatedName("ze.co(IIII)V")
 	public static void method13878(int arg0, int arg1, int arg2) {
 		if (arg0 == 1008) {
-			class502.method1372(class619.field7317, arg1, arg2);
+			ScriptRunner.method1372(ClientTriggerType.field7317, arg1, arg2);
 		} else if (arg0 == 1009) {
-			class502.method1372(class619.field7306, arg1, arg2);
+			ScriptRunner.method1372(ClientTriggerType.field7306, arg1, arg2);
 		} else if (arg0 == 1010) {
-			class502.method1372(class619.field7301, arg1, arg2);
+			ScriptRunner.method1372(ClientTriggerType.field7301, arg1, arg2);
 		} else if (arg0 == 1011) {
-			class502.method1372(class619.field7302, arg1, arg2);
+			ScriptRunner.method1372(ClientTriggerType.field7302, arg1, arg2);
 		} else if (arg0 == 1012) {
-			class502.method1372(class619.field7303, arg1, arg2);
+			ScriptRunner.method1372(ClientTriggerType.field7303, arg1, arg2);
 		}
 	}
 
@@ -847,7 +847,7 @@ public class class822 extends class408 {
 	}
 
 	@ObfuscatedName("uh.cx(I)Lajo;")
-	public static class951 method12024() {
+	public static WorldMapAreaMetadata method12024() {
 		return Statics.field4292;
 	}
 

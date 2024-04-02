@@ -30,7 +30,7 @@ public class BasicCamera extends Camera {
 		if (this.field2221 != var5) {
 			try {
 				this.method3692(var5, true);
-			} catch (class884 var20) {
+			} catch (CameraException var20) {
 				var20.printStackTrace();
 			}
 		}
@@ -38,7 +38,7 @@ public class BasicCamera extends Camera {
 		if (this.field2234 != var7) {
 			try {
 				this.method3693(var7, true);
-			} catch (class884 var19) {
+			} catch (CameraException var19) {
 				var19.printStackTrace();
 			}
 		}
@@ -88,7 +88,7 @@ public class BasicCamera extends Camera {
 						boolean var16 = true;
 						Iterator var17 = this.field2225.iterator();
 						while (var17.hasNext()) {
-							class948 var18 = (class948) var17.next();
+							CameraEffect var18 = (CameraEffect) var17.next();
 							if (var18.field10351 == var14) {
 								var18.method16671(arg0);
 								var16 = false;
@@ -96,7 +96,7 @@ public class BasicCamera extends Camera {
 							}
 						}
 						if (var16) {
-							this.method3709(class948.method15441(var14, var15, arg0));
+							this.method3709(CameraEffect.method15441(var14, var15, arg0));
 						}
 					}
 				}

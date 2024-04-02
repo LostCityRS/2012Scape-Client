@@ -105,13 +105,13 @@ public class PureJavaToolkit extends RendererToolkit {
 	public int field8030;
 
 	@ObfuscatedName("yt.bt")
-	public class66[] field8031;
+	public PureJavaToolkitContext[] field8031;
 
 	@ObfuscatedName("yt.bg")
-	public class451 field8032;
+	public WeightedCache field8032;
 
 	@ObfuscatedName("yt.bl")
-	public class451 field8033;
+	public WeightedCache field8033;
 
 	@ObfuscatedName("yt.bk")
 	public class118 field8034;
@@ -119,7 +119,7 @@ public class PureJavaToolkit extends RendererToolkit {
 	@ObfuscatedName("yt.bs")
 	public int field8035;
 
-	public PureJavaToolkit(Canvas arg0, class16 arg1, int arg2, int arg3) {
+	public PureJavaToolkit(Canvas arg0, BillboardTypeList arg1, int arg2, int arg3) {
 		this(arg1);
 		try {
 			this.method459(arg0, arg2, arg3);
@@ -131,7 +131,7 @@ public class PureJavaToolkit extends RendererToolkit {
 		}
 	}
 
-	public PureJavaToolkit(class16 arg0) {
+	public PureJavaToolkit(BillboardTypeList arg0) {
 		super(arg0);
 		this.field8025 = false;
 		this.field8000 = false;
@@ -145,17 +145,17 @@ public class PureJavaToolkit extends RendererToolkit {
 		this.field8019 = new float[6][4];
 		this.field8028 = 1.0F;
 		this.field8006 = 0.0F;
-		this.field8033 = new class451(16);
+		this.field8033 = new WeightedCache(16);
 		this.field8035 = -1;
 		try {
-			this.field8032 = new class451(6291456, 256);
+			this.field8032 = new WeightedCache(6291456, 256);
 			this.field8029 = new Matrix4x3();
 			this.field8016 = new Matrix4x4();
 			this.field8017 = new Matrix4x4();
 			this.field8018 = new Matrix4x4();
 			this.method13205(1);
 			this.method13204(0);
-			class482.method8092(true, true);
+			ColourUtils.method8092(true, true);
 			this.field8000 = true;
 			this.field7999 = (int) MonotonicTime.method5554();
 		} catch (Throwable var3) {
@@ -166,8 +166,8 @@ public class PureJavaToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yt.t()Lcg;")
-	public class122 method456() {
-		return new class122(0, "Pure Java", 1, "CPU", 0L);
+	public ToolkitInfo method456() {
+		return new ToolkitInfo(0, "Pure Java", 1, "CPU", 0L);
 	}
 
 	@ObfuscatedName("yt.f(II)V")
@@ -185,7 +185,7 @@ public class PureJavaToolkit extends RendererToolkit {
 	@ObfuscatedName("yt.w()V")
 	public void method443() {
 		if (this.field8000) {
-			class482.method2790(true, false);
+			ColourUtils.method2790(true, false);
 			this.field8000 = false;
 		}
 		this.field8025 = true;
@@ -199,7 +199,7 @@ public class PureJavaToolkit extends RendererToolkit {
 				var3.field9316 += var2;
 				int var4 = var3.field9316 / 50;
 				if (var4 > 0) {
-					class120 var5 = this.field400.method889(var3.field9314);
+					Material var5 = this.field400.method889(var3.field9314);
 					float var6 = (float) var5.field1252;
 					var3.method14815((int) ((float) var2 / 1000.0F * (float) var5.field1268 / 64.0F * var6), (int) ((float) var2 / 1000.0F * (float) var5.field1261 / 64.0F * var6));
 					var3.field9316 -= var4 * 50;
@@ -224,23 +224,23 @@ public class PureJavaToolkit extends RendererToolkit {
 
 	@ObfuscatedName("yt.n(I)[I")
 	public int[] method13241(int arg0) {
-		class451 var2 = this.field8032;
+		WeightedCache var2 = this.field8032;
 		class775 var3;
 		synchronized (this.field8032) {
 			var3 = (class775) this.field8032.method7916((long) arg0 | Long.MIN_VALUE);
 			if (var3 == null) {
-				class120 var4 = this.field400.method889(arg0);
+				Material var4 = this.field400.method889(arg0);
 				int var5 = var4.field1252;
 				if (!this.field400.method898(arg0, class455.field4848, 0.7F, var5, var5, true)) {
 					return null;
 				}
 				int[] var6;
-				if (class456.field4853 == var4.field1262) {
+				if (MaterialAlphaMode.field4853 == var4.field1262) {
 					var6 = this.field400.method887(arg0, 0.7F, var5, var5, true);
 				} else {
 					var6 = this.field400.method886(arg0, 0.7F, var5, var5, true);
 				}
-				var3 = new class775(arg0, var5, var6, class456.field4852 != var4.field1262);
+				var3 = new class775(arg0, var5, var6, MaterialAlphaMode.field4852 != var4.field1262);
 				this.field8032.method7918(var3, (long) arg0 | Long.MIN_VALUE, var5 * var5);
 			}
 		}
@@ -250,7 +250,7 @@ public class PureJavaToolkit extends RendererToolkit {
 
 	@ObfuscatedName("yt.q(I)Z")
 	public boolean method13192(int arg0) {
-		class120 var2 = this.field400.method889(arg0);
+		Material var2 = this.field400.method889(arg0);
 		return this.field400.method898(arg0, class455.field4848, 0.7F, var2.field1252, var2.field1252, true);
 	}
 
@@ -260,7 +260,7 @@ public class PureJavaToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yt.k(I)Lpu;")
-	public class456 method13194(int arg0) {
+	public MaterialAlphaMode method13194(int arg0) {
 		return this.field400.method889(arg0).field1262;
 	}
 
@@ -440,7 +440,7 @@ public class PureJavaToolkit extends RendererToolkit {
 
 	@ObfuscatedName("yt.RA(Z)V")
 	public void method526(boolean arg0) {
-		class66 var2 = this.method13206(Thread.currentThread());
+		PureJavaToolkitContext var2 = this.method13206(Thread.currentThread());
 		var2.field874 = arg0;
 	}
 
@@ -467,8 +467,8 @@ public class PureJavaToolkit extends RendererToolkit {
 		this.field8028 = arg1 - arg0;
 		this.field8006 = arg0 + arg1 - 1.0F;
 		for (int var3 = 0; var3 < this.field8030; var3++) {
-			class66 var4 = this.field8031[var3];
-			class77 var5 = var4.field868;
+			PureJavaToolkitContext var4 = this.field8031[var3];
+			PureJavaRasteriser var5 = var4.field868;
 			var5.field996 = this.field8028;
 			var5.field995 = this.field8006;
 		}
@@ -483,8 +483,8 @@ public class PureJavaToolkit extends RendererToolkit {
 		this.field8007 = (float) this.field8020 + var3;
 		this.field8010 = (float) this.field8004 + var4;
 		for (int var5 = 0; var5 < this.field8030; var5++) {
-			class66 var6 = this.field8031[var5];
-			class77 var7 = var6.field868;
+			PureJavaToolkitContext var6 = this.field8031[var5];
+			PureJavaRasteriser var7 = var6.field868;
 			var7.field992 = var3;
 			var7.field990 = var4;
 			var7.field991 = this.field8007 - (float) this.field8005;
@@ -1743,8 +1743,8 @@ public class PureJavaToolkit extends RendererToolkit {
 		if (this.field8001 == null) {
 			return;
 		}
-		class66 var8 = this.method13206(Thread.currentThread());
-		class77 var9 = var8.field868;
+		PureJavaToolkitContext var8 = this.method13206(Thread.currentThread());
+		PureJavaRasteriser var9 = var8.field868;
 		int var10 = arg2 - arg0;
 		int var11 = arg3 - arg1;
 		int var12 = var10 >= 0 ? var10 : -var10;
@@ -1856,12 +1856,12 @@ public class PureJavaToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yt.bo(Lds;Z)Lce;")
-	public class118 method517(class140 arg0, boolean arg1) {
+	public class118 method517(SpriteData arg0, boolean arg1) {
 		int var3 = arg0.method2721();
 		int var4 = arg0.method2763();
 		class665 var12;
 		if (arg1 && !arg0.method2720() && arg0.method2749()) {
-			class685 var5 = (class685) arg0;
+			PalettedSpriteData var5 = (PalettedSpriteData) arg0;
 			int[] var6 = new int[var5.field8410.length];
 			byte[] var7 = new byte[var3 * var4];
 			for (int var8 = 0; var8 < var4; var8++) {
@@ -1957,7 +1957,7 @@ public class PureJavaToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yt.co(Lvm;[Lzv;Z)Ll;")
-	public class15 method712(class603 arg0, class685[] arg1, boolean arg2) {
+	public class15 method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
 		int[] var4 = new int[arg1.length];
 		int[] var5 = new int[arg1.length];
 		boolean var6 = false;
@@ -1983,8 +1983,8 @@ public class PureJavaToolkit extends RendererToolkit {
 
 	@ObfuscatedName("yt.cw(I)V")
 	public void method673(int arg0) {
-		class676.field7823 = arg0;
-		class676.field7832 = arg0;
+		PureJavaModel.field7823 = arg0;
+		PureJavaModel.field7832 = arg0;
 		if (this.field8030 > 1) {
 			throw new IllegalStateException();
 		}
@@ -1993,8 +1993,8 @@ public class PureJavaToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yt.cx(Ldw;IIII)Lqa;")
-	public Model method625(class129 arg0, int arg1, int arg2, int arg3, int arg4) {
-		return new class676(this, arg0, arg1, arg3, arg4, arg2);
+	public Model method625(ModelUnlit arg0, int arg1, int arg2, int arg3, int arg4) {
+		return new PureJavaModel(this, arg0, arg1, arg3, arg4, arg2);
 	}
 
 	@ObfuscatedName("yt.cn(II)I")
@@ -2015,13 +2015,13 @@ public class PureJavaToolkit extends RendererToolkit {
 
 	@ObfuscatedName("yt.cb()Lka;")
 	public Matrix4x4 method781() {
-		class66 var1 = this.method13206(Thread.currentThread());
+		PureJavaToolkitContext var1 = this.method13206(Thread.currentThread());
 		return var1.field875;
 	}
 
 	@ObfuscatedName("yt.cm()Lkc;")
 	public Matrix4x3 method516() {
-		class66 var1 = this.method13206(Thread.currentThread());
+		PureJavaToolkitContext var1 = this.method13206(Thread.currentThread());
 		return var1.field877;
 	}
 
@@ -2047,14 +2047,14 @@ public class PureJavaToolkit extends RendererToolkit {
 	@ObfuscatedName("yt.ob(I)V")
 	public void method13205(int arg0) {
 		this.field8030 = arg0;
-		this.field8031 = new class66[this.field8030];
+		this.field8031 = new PureJavaToolkitContext[this.field8030];
 		for (int var2 = 0; var2 < this.field8030; var2++) {
-			this.field8031[var2] = new class66(this);
+			this.field8031[var2] = new PureJavaToolkitContext(this);
 		}
 	}
 
 	@ObfuscatedName("yt.ox(Ljava/lang/Runnable;)Lak;")
-	public class66 method13206(Runnable arg0) {
+	public PureJavaToolkitContext method13206(Runnable arg0) {
 		for (int var2 = 0; var2 < this.field8030; var2++) {
 			if (this.field8031[var2].field897 == arg0) {
 				return this.field8031[var2];
@@ -2070,7 +2070,7 @@ public class PureJavaToolkit extends RendererToolkit {
 
 	@ObfuscatedName("yt.oe(ZZZLdp;)V")
 	public void method13207(boolean arg0, boolean arg1, boolean arg2, ParticleList arg3) {
-		class66 var5 = this.method13206(Thread.currentThread());
+		PureJavaToolkitContext var5 = this.method13206(Thread.currentThread());
 		for (class914 var6 = (class914) arg3.field1311.method11670(); var6 != null; var6 = (class914) arg3.field1311.method11671()) {
 			int var7 = var6.field10145 >> 12;
 			int var8 = var6.field10146 >> 12;
@@ -2128,7 +2128,7 @@ public class PureJavaToolkit extends RendererToolkit {
 			return;
 		}
 		if (arg8 != 65535) {
-			class120 var13 = this.field400.method889(arg8);
+			Material var13 = this.field400.method889(arg8);
 			if (!var13.field1250) {
 				if (this.field8035 != arg8) {
 					class118 var14 = (class118) this.field8033.method7916((long) arg8);
@@ -2144,7 +2144,7 @@ public class PureJavaToolkit extends RendererToolkit {
 					this.field8035 = arg8;
 					this.field8034 = var14;
 				}
-				((class665) this.field8034).method12923(arg0, arg1, arg2, arg3 - arg6, arg4 - arg7, arg5, arg6 << 1, arg7 << 1, arg10, arg9, arg11, 1, class456.field4853 != var13.field1262);
+				((class665) this.field8034).method12923(arg0, arg1, arg2, arg3 - arg6, arg4 - arg7, arg5, arg6 << 1, arg7 << 1, arg10, arg9, arg11, 1, MaterialAlphaMode.field4853 != var13.field1262);
 				return;
 			}
 		}
@@ -2403,7 +2403,7 @@ public class PureJavaToolkit extends RendererToolkit {
 	@ObfuscatedName("yt.c(III)V")
 	public void method532(int arg0, int arg1, int arg2) {
 		for (int var4 = 0; var4 < this.field8031.length; var4++) {
-			class66 var5 = this.field8031[var4];
+			PureJavaToolkitContext var5 = this.field8031[var4];
 			var5.field869 = arg0 & 0xFFFFFF;
 			int var6 = var5.field869 >>> 16 & 0xFF;
 			if (var6 < 2) {
@@ -2442,7 +2442,7 @@ public class PureJavaToolkit extends RendererToolkit {
 		float var3 = this.field8017.field3480[10] * var1 + this.field8017.field3480[14];
 		float var4 = var3 - var2;
 		for (int var5 = 0; var5 < this.field8030; var5++) {
-			class66 var6 = this.field8031[var5];
+			PureJavaToolkitContext var6 = this.field8031[var5];
 			var6.field867 = var2;
 			var6.field864 = var4;
 		}
@@ -2489,7 +2489,7 @@ public class PureJavaToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yt.dw(ILdk;)V")
-	public void method503(int arg0, class137 arg1) {
+	public void method503(int arg0, WaterFogData arg1) {
 		for (int var3 = 0; var3 < this.field8031.length; var3++) {
 			this.field8031[var3].field870 = this.field8031[var3].field869;
 			this.field8031[var3].field872 = arg0;
@@ -2500,8 +2500,8 @@ public class PureJavaToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yt.di(ILdk;)V")
-	public void method547(int arg0, class137 arg1) {
-		class66 var3 = this.method13206(Thread.currentThread());
+	public void method547(int arg0, WaterFogData arg1) {
+		PureJavaToolkitContext var3 = this.method13206(Thread.currentThread());
 		var3.field872 = arg0;
 		var3.field869 = arg1.field1475;
 		var3.field873 = arg1.field1471;
@@ -2522,8 +2522,8 @@ public class PureJavaToolkit extends RendererToolkit {
 		if (!var14 && !var15) {
 			return;
 		}
-		class66 var16 = this.method13206(Thread.currentThread());
-		class77 var17 = var16.field868;
+		PureJavaToolkitContext var16 = this.method13206(Thread.currentThread());
+		PureJavaRasteriser var17 = var16.field868;
 		var17.field1006 = false;
 		int var18 = arg0 - this.field8005;
 		int var19 = arg3 - this.field8005;

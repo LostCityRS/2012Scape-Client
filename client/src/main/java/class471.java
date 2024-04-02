@@ -32,10 +32,10 @@ public class class471 {
 	public static final int[] field5003 = new int[] { 8, 11, 4, 6, 9, 7, 10, 0 };
 
 	@ObfuscatedName("qc.p")
-	public static class451 field5012 = new class451(260);
+	public static WeightedCache field5012 = new WeightedCache(260);
 
 	@ObfuscatedName("qc.w")
-	public static class451 field4998 = new class451(5);
+	public static WeightedCache field4998 = new WeightedCache(5);
 
 	@ObfuscatedName("qc.u(I[I[Lvq;[IZIB)V")
 	public void method8230(int arg0, int[] arg1, class593[] arg2, int[] arg3, boolean arg4, int arg5) {
@@ -141,7 +141,7 @@ public class class471 {
 	}
 
 	@ObfuscatedName("qc.t(Lra;ILpn;Lgq;Lwi;Lvj;Lst;Lug;Ltt;Ltt;[Ltt;[IIZLrt;B)Lqa;")
-	public Model method8244(RendererToolkit arg0, int arg1, BASTypeList arg2, class205 arg3, NPCTypeList arg4, ObjTypeList arg5, class510 arg6, class567 arg7, AnimationNode arg8, AnimationNode arg9, AnimationNode[] arg10, int[] arg11, int arg12, boolean arg13, class493 arg14) {
+	public Model method8244(RendererToolkit arg0, int arg1, BASTypeList arg2, class205 arg3, NPCTypeList arg4, ObjTypeList arg5, class510 arg6, VarIntDomain arg7, AnimationNode arg8, AnimationNode arg9, AnimationNode[] arg10, int[] arg11, int arg12, boolean arg13, class493 arg14) {
 		if (this.field5006 != -1) {
 			return arg4.method12565(this.field5006).method12510(arg0, arg1, arg2, arg7, arg8, arg9, arg10, arg11, arg12, null);
 		}
@@ -216,7 +216,7 @@ public class class471 {
 				}
 			}
 		}
-		class451 var33 = field5012;
+		WeightedCache var33 = field5012;
 		Model var34;
 		synchronized (field5012) {
 			var34 = (Model) field5012.method7916(var17);
@@ -235,7 +235,7 @@ public class class471 {
 				if (var39 >= var19.length) {
 					if (var38) {
 						if (this.field5008 != -1L) {
-							class451 var45 = field5012;
+							WeightedCache var45 = field5012;
 							synchronized (field5012) {
 								var34 = (Model) field5012.method7916(this.field5008);
 							}
@@ -245,7 +245,7 @@ public class class471 {
 						}
 						return null;
 					}
-					class129[] var47 = new class129[var19.length];
+					ModelUnlit[] var47 = new ModelUnlit[var19.length];
 					for (int var48 = 0; var48 < var19.length; var48++) {
 						int var49 = var19[var48];
 						class593 var50 = null;
@@ -254,12 +254,12 @@ public class class471 {
 							if (!var51 && this.field5011 != null && this.field5011[var48] != null) {
 								var50 = this.field5011[var48];
 							}
-							class129 var52 = arg5.method12316(var49 & 0x3FFFFFFF).method12245(this.field5005, var50);
+							ModelUnlit var52 = arg5.method12316(var49 & 0x3FFFFFFF).method12245(this.field5005, var50);
 							if (var52 != null) {
 								var47[var48] = var52;
 							}
 						} else if ((var49 & Integer.MIN_VALUE) != 0) {
-							class129 var53 = arg3.method3909(var49 & 0x3FFFFFFF).method3890();
+							ModelUnlit var53 = arg3.method3909(var49 & 0x3FFFFFFF).method3890();
 							if (var53 != null) {
 								var47[var48] = var53;
 							}
@@ -291,7 +291,7 @@ public class class471 {
 							}
 						}
 					}
-					class129 var61 = new class129(var47, var47.length);
+					ModelUnlit var61 = new ModelUnlit(var47, var47.length);
 					int var62 = var16 | 0x4000;
 					var34 = arg0.method625(var61, var62, Statics.field3537, 64, 850);
 					for (int var63 = 0; var63 < 10; var63++) {
@@ -303,7 +303,7 @@ public class class471 {
 					}
 					if (arg13) {
 						var34.method252(var16);
-						class451 var65 = field5012;
+						WeightedCache var65 = field5012;
 						synchronized (field5012) {
 							field5012.method7937(var34, var17);
 						}
@@ -404,12 +404,12 @@ public class class471 {
 	}
 
 	@ObfuscatedName("qc.l(Lra;ILgq;Lwi;Lvj;Lst;Lug;Ltt;I)Lqa;")
-	public Model method8237(RendererToolkit arg0, int arg1, class205 arg2, NPCTypeList arg3, ObjTypeList arg4, class510 arg5, class567 arg6, AnimationNode arg7) {
+	public Model method8237(RendererToolkit arg0, int arg1, class205 arg2, NPCTypeList arg3, ObjTypeList arg4, class510 arg5, VarIntDomain arg6, AnimationNode arg7) {
 		if (this.field5006 != -1) {
 			return arg3.method12565(this.field5006).method12512(arg0, arg1, arg6, arg7, null);
 		}
 		int var9 = arg7 == null ? arg1 : arg1 | arg7.method11779();
-		class451 var10 = field4998;
+		WeightedCache var10 = field4998;
 		Model var11;
 		synchronized (field4998) {
 			var11 = (Model) field4998.method7916(this.field5007);
@@ -436,7 +436,7 @@ public class class471 {
 			if (var14) {
 				return null;
 			}
-			class129[] var18 = new class129[this.field5001.length];
+			ModelUnlit[] var18 = new ModelUnlit[this.field5001.length];
 			int var19 = 0;
 			for (int var20 = 0; var20 < this.field5001.length; var20++) {
 				int var21 = this.field5001[var20];
@@ -445,18 +445,18 @@ public class class471 {
 					if (this.field5011 != null && this.field5011[var20] != null) {
 						var22 = this.field5011[var20];
 					}
-					class129 var23 = arg4.method12316(var21 & 0x3FFFFFFF).method12249(this.field5005, var22);
+					ModelUnlit var23 = arg4.method12316(var21 & 0x3FFFFFFF).method12249(this.field5005, var22);
 					if (var23 != null) {
 						var18[var19++] = var23;
 					}
 				} else if ((var21 & Integer.MIN_VALUE) != 0) {
-					class129 var24 = arg2.method3909(var21 & 0x3FFFFFFF).method3892();
+					ModelUnlit var24 = arg2.method3909(var21 & 0x3FFFFFFF).method3892();
 					if (var24 != null) {
 						var18[var19++] = var24;
 					}
 				}
 			}
-			class129 var25 = new class129(var18, var19);
+			ModelUnlit var25 = new ModelUnlit(var18, var19);
 			int var26 = var9 | 0x4000;
 			var11 = arg0.method625(var25, var26, Statics.field3537, 64, 768);
 			for (int var27 = 0; var27 < 10; var27++) {
@@ -467,7 +467,7 @@ public class class471 {
 				}
 			}
 			var11.method252(var9);
-			class451 var29 = field4998;
+			WeightedCache var29 = field4998;
 			synchronized (field4998) {
 				field4998.method7937(var11, this.field5007);
 			}
@@ -485,7 +485,7 @@ public class class471 {
 	public Model method8257(RendererToolkit arg0, int arg1, class205 arg2, class510 arg3, AnimationNode arg4, int arg5, int arg6, int arg7) {
 		int var9 = arg4 == null ? arg1 : arg1 | arg4.method11779();
 		long var10 = (long) arg7 << 32 | (long) (arg6 << 16) | (long) arg5;
-		class451 var12 = field4998;
+		WeightedCache var12 = field4998;
 		Model var13;
 		synchronized (field4998) {
 			var13 = (Model) field4998.method7916(var10);
@@ -494,24 +494,24 @@ public class class471 {
 			if (var13 != null) {
 				var9 = arg0.method520(var9, var13.method329());
 			}
-			class129[] var16 = new class129[3];
+			ModelUnlit[] var16 = new ModelUnlit[3];
 			int var17 = 0;
 			if (!arg2.method3909(arg5).method3891() || !arg2.method3909(arg6).method3891() || !arg2.method3909(arg7).method3891()) {
 				return null;
 			}
-			class129 var18 = arg2.method3909(arg5).method3892();
+			ModelUnlit var18 = arg2.method3909(arg5).method3892();
 			if (var18 != null) {
 				var16[var17++] = var18;
 			}
-			class129 var19 = arg2.method3909(arg6).method3892();
+			ModelUnlit var19 = arg2.method3909(arg6).method3892();
 			if (var19 != null) {
 				var16[var17++] = var19;
 			}
-			class129 var20 = arg2.method3909(arg7).method3892();
+			ModelUnlit var20 = arg2.method3909(arg7).method3892();
 			if (var20 != null) {
 				var16[var17++] = var20;
 			}
-			class129 var21 = new class129(var16, var17);
+			ModelUnlit var21 = new ModelUnlit(var16, var17);
 			int var22 = var9 | 0x4000;
 			var13 = arg0.method625(var21, var22, Statics.field3537, 64, 768);
 			for (int var23 = 0; var23 < 10; var23++) {
@@ -522,7 +522,7 @@ public class class471 {
 				}
 			}
 			var13.method252(var9);
-			class451 var25 = field4998;
+			WeightedCache var25 = field4998;
 			synchronized (field4998) {
 				field4998.method7937(var13, var10);
 			}
@@ -538,7 +538,7 @@ public class class471 {
 
 	@ObfuscatedName("fd.d(I)I")
 	public static int method3503() {
-		class451 var0 = field5012;
+		WeightedCache var0 = field5012;
 		synchronized (field5012) {
 			return field5012.method7926();
 		}
@@ -546,11 +546,11 @@ public class class471 {
 
 	@ObfuscatedName("c.n(I)V")
 	public static void method1323() {
-		class451 var0 = field5012;
+		WeightedCache var0 = field5012;
 		synchronized (field5012) {
 			field5012.method7922();
 		}
-		class451 var2 = field4998;
+		WeightedCache var2 = field4998;
 		synchronized (field4998) {
 			field4998.method7922();
 		}
@@ -558,11 +558,11 @@ public class class471 {
 
 	@ObfuscatedName("jr.o(IB)V")
 	public static void method4781(int arg0) {
-		class451 var1 = field5012;
+		WeightedCache var1 = field5012;
 		synchronized (field5012) {
 			field5012.method7921(arg0);
 		}
-		class451 var3 = field4998;
+		WeightedCache var3 = field4998;
 		synchronized (field4998) {
 			field4998.method7921(arg0);
 		}

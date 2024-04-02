@@ -9,14 +9,14 @@ public class class35 {
 	}
 
 	@ObfuscatedName("ty.u(Lls;B)V")
-	public static void method11376(class334 arg0) {
+	public static void method11376(Js5 arg0) {
 		Statics.field551 = arg0.method5688("p11_full");
 		Statics.field552 = arg0.method5688("p12_full");
 		Statics.field557 = arg0.method5688("b12_full");
 	}
 
 	@ObfuscatedName("qs.j(Lls;I)V")
-	public static void method8388(class334 arg0) {
+	public static void method8388(Js5 arg0) {
 		Statics.field5179 = arg0.method5688("headicons_pk");
 		Statics.field553 = arg0.method5688("headicons_prayer");
 		Statics.field554 = arg0.method5688("hint_headicons");
@@ -47,7 +47,7 @@ public class class35 {
 	}
 
 	@ObfuscatedName("un.c(Lls;B)I")
-	public static int method12092(class334 arg0) {
+	public static int method12092(Js5 arg0) {
 		int var1 = 0;
 		if (arg0.method5630(Statics.field5179)) {
 			var1++;
@@ -94,56 +94,56 @@ public class class35 {
 	}
 
 	@ObfuscatedName("afb.t(Lra;Lls;I)V")
-	public static void method15812(RendererToolkit arg0, class334 arg1) {
-		class140[] var2 = class125.method2591(arg1, Statics.field5179, 0);
+	public static void method15812(RendererToolkit arg0, Js5 arg1) {
+		SpriteData[] var2 = SpriteDataProvider.method2591(arg1, Statics.field5179, 0);
 		Statics.field2209 = new class118[var2.length];
 		for (int var3 = 0; var3 < var2.length; var3++) {
 			Statics.field2209[var3] = arg0.method517(var2[var3], true);
 		}
-		class140[] var4 = class125.method2591(arg1, Statics.field553, 0);
+		SpriteData[] var4 = SpriteDataProvider.method2591(arg1, Statics.field553, 0);
 		Statics.field9904 = new class118[var4.length];
 		for (int var5 = 0; var5 < var4.length; var5++) {
 			Statics.field9904[var5] = arg0.method517(var4[var5], true);
 		}
-		class140[] var6 = class125.method2591(arg1, Statics.field554, 0);
+		SpriteData[] var6 = SpriteDataProvider.method2591(arg1, Statics.field554, 0);
 		Statics.field6361 = new class118[var6.length];
 		for (int var7 = 0; var7 < var6.length; var7++) {
 			Statics.field6361[var7] = arg0.method517(var6[var7], true);
 		}
-		class140[] var8 = class125.method2591(arg1, Statics.field3489, 0);
+		SpriteData[] var8 = SpriteDataProvider.method2591(arg1, Statics.field3489, 0);
 		Statics.field3311 = new class118[var8.length];
 		for (int var9 = 0; var9 < var8.length; var9++) {
 			Statics.field3311[var9] = arg0.method517(var8[var9], true);
 		}
-		class140[] var10 = class125.method2591(arg1, Statics.field555, 0);
+		SpriteData[] var10 = SpriteDataProvider.method2591(arg1, Statics.field555, 0);
 		Statics.field9826 = new class118[var10.length];
 		byte var11 = 25;
 		for (int var12 = 0; var12 < var10.length; var12++) {
 			var10[var12].method2719(-var11 + (int) (Math.random() * (double) var11 * 2.0D), -var11 + (int) (Math.random() * (double) var11 * 2.0D), -var11 + (int) (Math.random() * (double) var11 * 2.0D));
 			Statics.field9826[var12] = arg0.method517(var10[var12], true);
 		}
-		class140[] var13 = class125.method2591(arg1, Statics.field556, 0);
+		SpriteData[] var13 = SpriteDataProvider.method2591(arg1, Statics.field556, 0);
 		Statics.field2618 = new class118[var13.length];
 		for (int var14 = 0; var14 < var13.length; var14++) {
 			Statics.field2618[var14] = arg0.method517(var13[var14], true);
 		}
-		class140[] var15 = class125.method2591(arg1, Statics.field550, 0);
+		SpriteData[] var15 = SpriteDataProvider.method2591(arg1, Statics.field550, 0);
 		Statics.field561 = new class118[var15.length];
 		byte var16 = 12;
 		for (int var17 = 0; var17 < var15.length; var17++) {
 			var15[var17].method2719(-var16 + (int) (Math.random() * (double) var16 * 2.0D), -var16 + (int) (Math.random() * (double) var16 * 2.0D), -var16 + (int) (Math.random() * (double) var16 * 2.0D));
 			Statics.field561[var17] = arg0.method517(var15[var17], true);
 		}
-		class140[] var18 = class125.method2591(arg1, Statics.field6816, 0);
+		SpriteData[] var18 = SpriteDataProvider.method2591(arg1, Statics.field6816, 0);
 		Statics.field8538 = new class118[var18.length];
 		byte var19 = 12;
 		for (int var20 = 0; var20 < var18.length; var20++) {
 			var18[var20].method2719(-var19 + (int) (Math.random() * (double) var19 * 2.0D), -var19 + (int) (Math.random() * (double) var19 * 2.0D), -var19 + (int) (Math.random() * (double) var19 * 2.0D));
 			Statics.field8538[var20] = arg0.method517(var18[var20], true);
 		}
-		Statics.field7290 = arg0.method517(class125.method2590(arg1, Statics.field4683, 0), true);
-		Statics.field6385 = arg0.method517(class125.method2590(arg1, Statics.field558, 0), true);
-		class140[] var21 = class125.method2591(arg1, Statics.field6648, 0);
+		Statics.field7290 = arg0.method517(SpriteDataProvider.method2590(arg1, Statics.field4683, 0), true);
+		Statics.field6385 = arg0.method517(SpriteDataProvider.method2590(arg1, Statics.field558, 0), true);
+		SpriteData[] var21 = SpriteDataProvider.method2591(arg1, Statics.field6648, 0);
 		Statics.field4878 = new class118[var21.length];
 		for (int var22 = 0; var22 < var21.length; var22++) {
 			Statics.field4878[var22] = arg0.method517(var21[var22], true);

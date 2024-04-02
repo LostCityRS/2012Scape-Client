@@ -8,7 +8,7 @@ public class class769 extends Node {
 	public static final IterableMap field9273 = new IterableMap(32);
 
 	@ObfuscatedName("acx.c")
-	public static final class451 field9274 = new class451(10);
+	public static final WeightedCache field9274 = new WeightedCache(10);
 
 	@ObfuscatedName("acx.t")
 	public int[] field9276 = new int[] { -1 };
@@ -214,7 +214,7 @@ public class class769 extends Node {
 			if (var16) {
 				return null;
 			}
-			class129[] var18 = new class129[var10.length];
+			ModelUnlit[] var18 = new ModelUnlit[var10.length];
 			for (int var19 = 0; var19 < var10.length; var19++) {
 				if (var10[var19] != -1) {
 					var18[var19] = Statics.field3492.method12316(var10[var19]).method12245(arg4, null);
@@ -238,7 +238,7 @@ public class class769 extends Node {
 					}
 				}
 			}
-			class129 var27 = new class129(var18, var18.length);
+			ModelUnlit var27 = new ModelUnlit(var18, var18.length);
 			if (arg5 != null) {
 				var15 = var8 | 0x4000;
 			}

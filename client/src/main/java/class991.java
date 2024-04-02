@@ -283,7 +283,7 @@ public class class991 extends class914 {
 				var8.field2705 = new int[var8.field2698.length];
 				for (int var80 = 0; var80 < var8.field2698.length; var80++) {
 					class274.method2938(var8.field2698[var80]);
-					var8.field2705[var80] = ((class802) class274.field2745.method11923((long) var8.field2698[var80])).field9556;
+					var8.field2705[var80] = ((IntNode) class274.field2745.method11923((long) var8.field2698[var80])).field9556;
 				}
 			}
 			for (int var81 = 0; var81 < var8.field2705.length; var81++) {

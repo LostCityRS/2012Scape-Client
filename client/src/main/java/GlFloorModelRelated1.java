@@ -20,7 +20,7 @@ public class GlFloorModelRelated1 extends Node {
 	public final float field9341;
 
 	@ObfuscatedName("acs.l")
-	public final class137 field9345;
+	public final WaterFogData field9345;
 
 	@ObfuscatedName("acs.f")
 	public GlRelated1 field9349;
@@ -37,7 +37,7 @@ public class GlFloorModelRelated1 extends Node {
 	@ObfuscatedName("acs.o")
 	public Stream field9344;
 
-	public GlFloorModelRelated1(GlFloorModel arg0, int arg1, int arg2, class137 arg3) {
+	public GlFloorModelRelated1(GlFloorModel arg0, int arg1, int arg2, WaterFogData arg3) {
 		this.field9342 = arg0;
 		this.field9350 = this.field9342.field7688;
 		this.field9343 = arg1;
@@ -67,7 +67,7 @@ public class GlFloorModelRelated1 extends Node {
 	@ObfuscatedName("acs.s(IIIF)V")
 	public void method14860(int arg0, int arg1, int arg2, float arg3) {
 		if (this.field9343 != -1) {
-			class120 var5 = this.field9350.field400.method889(this.field9343);
+			Material var5 = this.field9350.field400.method889(this.field9343);
 			int var6 = var5.field1266 & 0xFF;
 			if (var6 != 0 && var5.field1270 != 4) {
 				int var7;

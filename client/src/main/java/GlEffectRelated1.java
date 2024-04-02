@@ -36,7 +36,7 @@ public class GlEffectRelated1 {
 		}
 		class103 var5 = arg0.field8090;
 		if (var5.method2318() && Statics.field1089 == null) {
-			byte[] var6 = class401.method6999(128, 128, 16, 8, new class820(419684), 4.0F, 4.0F, 16.0F, 0.5F, 0.6F);
+			byte[] var6 = WaterRelated5.method6999(128, 128, 16, 8, new class820(419684), 4.0F, 4.0F, 16.0F, 0.5F, 0.6F);
 			Statics.field1089 = Statics.method4122(var6, false);
 		}
 	}

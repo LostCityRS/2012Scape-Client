@@ -518,7 +518,7 @@ public class LocType {
 				if (var35) {
 					var37 = new ObjectNode(arg0.method15337());
 				} else {
-					var37 = new class802(arg0.method15379());
+					var37 = new IntNode(arg0.method15379());
 				}
 				this.field6543.method11927(var37, (long) var36);
 			}
@@ -553,7 +553,7 @@ public class LocType {
 			return true;
 		}
 		boolean var2 = true;
-		class334 var3 = this.field6473.field6555;
+		Js5 var3 = this.field6473.field6555;
 		synchronized (this.field6473.field6555) {
 			for (int var4 = 0; var4 < this.field6475.length; var4++) {
 				if (this.field6475[var4] == arg0) {
@@ -574,7 +574,7 @@ public class LocType {
 			return true;
 		}
 		boolean var1 = true;
-		class334 var2 = this.field6473.field6555;
+		Js5 var2 = this.field6473.field6555;
 		synchronized (this.field6473.field6555) {
 			for (int var3 = 0; var3 < this.field6471.length; var3++) {
 				for (int var4 = 0; var4 < this.field6471[var3].length; var4++) {
@@ -614,17 +614,17 @@ public class LocType {
 		}
 		boolean var17 = this.field6494 != 0 && (arg4 != null || arg5 != null);
 		boolean var18 = this.field6550 != 0 || this.field6521 != 0 || this.field6498 != 0;
-		class451 var19 = this.field6473.field6559;
+		WeightedCache var19 = this.field6473.field6559;
 		class570 var20;
 		synchronized (this.field6473.field6559) {
 			var20 = (class570) this.field6473.field6559.method7916(var14);
 		}
 		Model var22 = (Model) (var20 == null ? null : var20.field6757);
-		class30 var23 = null;
+		HardShadow var23 = null;
 		if (var22 != null && arg0.method519(var22.method329(), var16) == 0) {
-			var23 = (class30) var20.field6756;
+			var23 = (HardShadow) var20.field6756;
 			if (arg9 && var23 == null && !var17 && !var18) {
-				var23 = (class30) (var20.field6756 = var22.method273(null));
+				var23 = (HardShadow) (var20.field6756 = var22.method273(null));
 			}
 		} else {
 			if (var22 != null) {
@@ -646,7 +646,7 @@ public class LocType {
 			}
 			var22.method252(var16);
 			class570 var25 = new class570(var22, var23);
-			class451 var26 = this.field6473.field6559;
+			WeightedCache var26 = this.field6473.field6559;
 			synchronized (this.field6473.field6559) {
 				this.field6473.field6559.method7937(var25, var14);
 			}
@@ -702,7 +702,7 @@ public class LocType {
 		if (class542.field6572.field6590 == arg2 && arg3 > 3) {
 			arg1 |= 0x5;
 		}
-		class451 var17 = this.field6473.field6560;
+		WeightedCache var17 = this.field6473.field6560;
 		Model var18;
 		synchronized (this.field6473.field6560) {
 			var18 = (Model) this.field6473.field6560.method7916(var15);
@@ -715,7 +715,7 @@ public class LocType {
 			if (var18 == null) {
 				return null;
 			}
-			class451 var20 = this.field6473.field6560;
+			WeightedCache var20 = this.field6473.field6560;
 			synchronized (this.field6473.field6560) {
 				this.field6473.field6560.method7937(var18, var15);
 			}
@@ -803,7 +803,7 @@ public class LocType {
 				for (int var17 = 0; var17 < var14; var17++) {
 					var15 = var15 * 67783L + (long) var13[var17];
 				}
-				class451 var18 = this.field6473.field6558;
+				WeightedCache var18 = this.field6473.field6558;
 				synchronized (this.field6473.field6558) {
 					var10 = (Model) this.field6473.field6558.method7916(var15);
 				}
@@ -820,20 +820,20 @@ public class LocType {
 					if (var10 != null) {
 						var20 = arg0.method520(var20, var10.method329());
 					}
-					class129 var21 = null;
-					class129[] var22 = this.field6473.field6562;
+					ModelUnlit var21 = null;
+					ModelUnlit[] var22 = this.field6473.field6562;
 					synchronized (this.field6473.field6562) {
 						int var23 = 0;
 						while (true) {
 							if (var23 >= var14) {
 								if (var14 > 1) {
-									var21 = new class129(this.field6473.field6562, var14);
+									var21 = new ModelUnlit(this.field6473.field6562, var14);
 								}
 								break;
 							}
-							class334 var24 = this.field6473.field6555;
+							Js5 var24 = this.field6473.field6555;
 							synchronized (this.field6473.field6555) {
-								var21 = class129.method2664(this.field6473.field6555, var13[var23], 0);
+								var21 = ModelUnlit.method2664(this.field6473.field6555, var13[var23], 0);
 							}
 							if (var21 == null) {
 								return null;
@@ -848,7 +848,7 @@ public class LocType {
 						}
 					}
 					var10 = arg0.method625(var21, var20, this.field6473.field6551, var6, var7);
-					class451 var27 = this.field6473.field6558;
+					WeightedCache var27 = this.field6473.field6558;
 					synchronized (this.field6473.field6558) {
 						this.field6473.field6558.method7937(var10, var15);
 					}
@@ -920,7 +920,7 @@ public class LocType {
 	}
 
 	@ObfuscatedName("tg.f(Lug;B)Ltg;")
-	public final LocType method11431(class567 arg0) {
+	public final LocType method11431(VarIntDomain arg0) {
 		int var2 = -1;
 		if (this.field6528 != -1) {
 			var2 = arg0.method1646(this.field6528);
@@ -940,7 +940,7 @@ public class LocType {
 		if (this.field6543 == null) {
 			return arg1;
 		} else {
-			class802 var3 = (class802) this.field6543.method11923((long) arg0);
+			IntNode var3 = (IntNode) this.field6543.method11923((long) arg0);
 			return var3 == null ? arg1 : var3.field9556;
 		}
 	}

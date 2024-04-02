@@ -6,7 +6,7 @@ import java.util.Iterator;
 public class class551 implements Iterator {
 
 	@ObfuscatedName("tp.u")
-	public class552 field6661;
+	public DualIterableQueue field6661;
 
 	@ObfuscatedName("tp.j")
 	public SecondaryNode field6660;
@@ -14,7 +14,7 @@ public class class551 implements Iterator {
 	@ObfuscatedName("tp.a")
 	public SecondaryNode field6659 = null;
 
-	public class551(class552 arg0) {
+	public class551(DualIterableQueue arg0) {
 		this.field6661 = arg0;
 		this.field6660 = this.field6661.field6662.field9552;
 		this.field6659 = null;

@@ -10,17 +10,17 @@ public class class823 extends class411 {
 	public Socket field9770;
 
 	@ObfuscatedName("aey.j")
-	public class409 field9769;
+	public SocketStreamReader field9769;
 
 	@ObfuscatedName("aey.a")
-	public class412 field9768;
+	public SocketStreamWriter field9768;
 
 	public class823(Socket arg0, int arg1) throws IOException {
 		this.field9770 = arg0;
 		this.field9770.setSoTimeout(30000);
 		this.field9770.setTcpNoDelay(true);
-		this.field9769 = new class409(this.field9770.getInputStream(), arg1);
-		this.field9768 = new class412(this.field9770.getOutputStream(), arg1);
+		this.field9769 = new SocketStreamReader(this.field9770.getInputStream(), arg1);
+		this.field9768 = new SocketStreamWriter(this.field9770.getOutputStream(), arg1);
 	}
 
 	@ObfuscatedName("aey.j(II)Z")

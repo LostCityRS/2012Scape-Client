@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aa")
-public class aa extends class30 implements class10 {
+public class aa extends HardShadow implements class10 {
 
 	public long nativeid;
 

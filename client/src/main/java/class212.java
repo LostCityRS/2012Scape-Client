@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("gr")
-public class class212 implements class214 {
+public class class212 implements LoadingScreenElement {
 
 	@ObfuscatedName("gr.u")
 	public final class260 field2326;

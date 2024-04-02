@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class483 {
 
 	@ObfuscatedName("ry.j")
-	public class484 field5088;
+	public FloorOverlayTypeList field5088;
 
 	@ObfuscatedName("ry.a")
 	public int field5089;
@@ -110,6 +110,6 @@ public class class483 {
 
 	@ObfuscatedName("lt.s(IB)I")
 	public static int method5934(int arg0) {
-		return arg0 == 16711935 ? -1 : class482.method16884(arg0);
+		return arg0 == 16711935 ? -1 : ColourUtils.method16884(arg0);
 	}
 }

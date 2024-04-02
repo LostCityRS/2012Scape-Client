@@ -40,7 +40,7 @@ public class HintTrail {
 
 	@ObfuscatedName("nj.u(Lra;S)Lqa;")
 	public Model method6950(RendererToolkit arg0) {
-		class129 var2 = class129.method2664(Statics.field4560, this.field4217, 0);
+		ModelUnlit var2 = ModelUnlit.method2664(Statics.field4560, this.field4217, 0);
 		if (var2 == null) {
 			return null;
 		} else {
@@ -79,11 +79,11 @@ public class HintTrail {
 	@ObfuscatedName("nj.s(Loo;I)V")
 	public void method6953(Scene arg0) {
 		this.field4219 = new LinkedList();
-		class338 var2 = client.field8980.method6100();
-		class453 var3 = client.field8980.method6214();
-		class453 var4 = new class453(Statics.field7324, this.field4216[0], this.field4220[0]);
+		SceneLevelTileFlags var2 = client.field8980.method6100();
+		CoordGrid var3 = client.field8980.method6214();
+		CoordGrid var4 = new CoordGrid(Statics.field7324, this.field4216[0], this.field4220[0]);
 		for (int var5 = 1; var5 < this.field4218; var5++) {
-			class453 var6 = new class453(Statics.field7324, this.field4216[var5], this.field4220[var5]);
+			CoordGrid var6 = new CoordGrid(Statics.field7324, this.field4216[var5], this.field4220[var5]);
 			while (var4.field4836 != var6.field4836 || var4.field4838 != var6.field4838) {
 				if (var4.field4836 < var6.field4836) {
 					var4.field4836++;

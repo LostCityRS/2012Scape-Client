@@ -6,7 +6,7 @@ import java.util.Random;
 public abstract class class15 {
 
 	@ObfuscatedName("l.u")
-	public class603 field418;
+	public FontMetrics field418;
 
 	@ObfuscatedName("l.j")
 	public RendererToolkit field417;
@@ -38,7 +38,7 @@ public abstract class class15 {
 	@ObfuscatedName("l.o")
 	public static String[] field420 = new String[100];
 
-	public class15(RendererToolkit arg0, class603 arg1) {
+	public class15(RendererToolkit arg0, FontMetrics arg1) {
 		this.field417 = arg0;
 		this.field418 = arg1;
 	}

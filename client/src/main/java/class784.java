@@ -29,7 +29,7 @@ public class class784 extends Node {
 	public int[] field9407 = new int[128];
 
 	@ObfuscatedName("aaf.u(Lls;IB)Lacu;")
-	public static class784 method14060(class334 arg0, int arg1) {
+	public static class784 method14060(Js5 arg0, int arg1) {
 		byte[] var2 = arg0.method5635(arg1);
 		return var2 == null ? null : new class784(var2);
 	}

@@ -126,21 +126,21 @@ public class class416 {
 
 	@ObfuscatedName("oe.t(Lra;B)V")
 	public void method7318(RendererToolkit arg0) {
-		class334 var2 = this.field4439.field4451;
+		Js5 var2 = this.field4439.field4451;
 		if (this.field4441 >= 0 && this.field4439.field4454.method7916((long) this.field4441) == null && var2.method5630(this.field4441)) {
-			class140 var3 = class125.method2598(var2, this.field4441);
+			SpriteData var3 = SpriteDataProvider.method2598(var2, this.field4441);
 			this.field4439.field4454.method7937(arg0.method517(var3, true), (long) this.field4441);
 		}
 		if (this.field4447 >= 0 && this.field4439.field4454.method7916((long) this.field4447) == null && var2.method5630(this.field4447)) {
-			class140 var4 = class125.method2598(var2, this.field4447);
+			SpriteData var4 = SpriteDataProvider.method2598(var2, this.field4447);
 			this.field4439.field4454.method7937(arg0.method517(var4, true), (long) this.field4447);
 		}
 		if (this.field4448 >= 0 && this.field4439.field4454.method7916((long) this.field4448) == null && var2.method5630(this.field4448)) {
-			class140 var5 = class125.method2598(var2, this.field4448);
+			SpriteData var5 = SpriteDataProvider.method2598(var2, this.field4448);
 			this.field4439.field4454.method7937(arg0.method517(var5, true), (long) this.field4448);
 		}
 		if (this.field4449 >= 0 && this.field4439.field4454.method7916((long) this.field4449) == null && var2.method5630(this.field4449)) {
-			class140 var6 = class125.method2598(var2, this.field4449);
+			SpriteData var6 = SpriteDataProvider.method2598(var2, this.field4449);
 			this.field4439.field4454.method7937(arg0.method517(var6, true), (long) this.field4449);
 		}
 	}

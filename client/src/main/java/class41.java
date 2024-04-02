@@ -14,9 +14,9 @@ public class class41 {
 		byte var5 = 7;
 		for (int var6 = 63; var6 >= 0; var6--) {
 			int var7 = (var6 & 0x3F) << 10 | (var5 & 0x7) << 7 | var4 & 0x7F;
-			class482.method8092(false, true);
+			ColourUtils.method8092(false, true);
 			int var8 = Statics.field5084[var7];
-			class482.method2790(false, true);
+			ColourUtils.method2790(false, true);
 			arg0.method489(arg1, (arg3.field1929 * (63 - var6) >> 6) + arg2, arg3.field1863, (arg3.field1929 >> 6) + 1, var8 | 0xFF000000, 0);
 		}
 	}
@@ -26,9 +26,9 @@ public class class41 {
 		for (int var5 = 7; var5 >= 0; var5--) {
 			for (int var6 = 127; var6 >= 0; var6--) {
 				int var7 = (arg4 & 0x3F) << 10 | (var5 & 0x7) << 7 | var6 & 0x7F;
-				class482.method8092(false, true);
+				ColourUtils.method8092(false, true);
 				int var8 = Statics.field5084[var7];
-				class482.method2790(false, true);
+				ColourUtils.method2790(false, true);
 				arg0.method489((arg3.field1863 * var6 >> 7) + arg1, (arg3.field1929 * (7 - var5) >> 3) + arg2, (arg3.field1863 >> 7) + 1, (arg3.field1929 >> 3) + 1, var8 | 0xFF000000, 0);
 			}
 		}

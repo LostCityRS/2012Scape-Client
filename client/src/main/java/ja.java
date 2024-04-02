@@ -94,7 +94,7 @@ public class ja extends RendererToolkit implements class10 {
 	@ObfuscatedName("ja.bt")
 	public boolean field449 = false;
 
-	public ja(Canvas arg0, class16 arg1, int arg2, int arg3) {
+	public ja(Canvas arg0, BillboardTypeList arg1, int arg2, int arg3) {
 		super(arg1);
 		try {
 			if (!NativeLibraries.method11710().method6800("sw3d")) {
@@ -102,7 +102,7 @@ public class ja extends RendererToolkit implements class10 {
 			}
 			class111.method2360();
 			this.method966(this.field400, this.field400.method894(), 0);
-			class482.method8092(false, true);
+			ColourUtils.method8092(false, true);
 			this.field449 = true;
 			this.field441 = new Matrix4x4();
 			new Vector3();
@@ -121,7 +121,7 @@ public class ja extends RendererToolkit implements class10 {
 			}
 			int var5 = this.field400.method894();
 			for (short var6 = 0; var6 < var5; var6++) {
-				class120 var7 = this.field400.method889(var6);
+				Material var7 = this.field400.method889(var6);
 				if (var7 != null) {
 					this.method974(var6, var7.field1260, var7.field1262.method6339(), var7.field1270, var7.field1248, var7.field1264, var7.field1252 == 64, var7.field1266, var7.field1267, var7.field1268, var7.field1261, var7.field1250, var7.field1265, var7.field1276, var7.field1273, var7.field1274, var7.field1275, var7.field1245, var7.field1277, var7.field1278);
 				}
@@ -167,8 +167,8 @@ public class ja extends RendererToolkit implements class10 {
 	}
 
 	@ObfuscatedName("ja.t()Lcg;")
-	public class122 method456() {
-		return new class122(0, "SSE", 1, "CPU", 0L);
+	public ToolkitInfo method456() {
+		return new ToolkitInfo(0, "SSE", 1, "CPU", 0L);
 	}
 
 	@ObfuscatedName("ja.f(II)V")
@@ -201,7 +201,7 @@ public class ja extends RendererToolkit implements class10 {
 		this.field438.method11557();
 		this.method969();
 		if (this.field449) {
-			class482.method2790(false, true);
+			ColourUtils.method2790(false, true);
 			this.field449 = false;
 		}
 		this.method992();
@@ -436,7 +436,7 @@ public class ja extends RendererToolkit implements class10 {
 	}
 
 	@ObfuscatedName("ja.bo(Lds;Z)Lce;")
-	public class118 method517(class140 arg0, boolean arg1) {
+	public class118 method517(SpriteData arg0, boolean arg1) {
 		fa var3 = new fa(this, arg0.method2735(false), 0, arg0.method2721(), arg0.method2721(), arg0.method2763(), false);
 		var3.method1036(arg0.method2722(), arg0.method2724(), arg0.method2732(), arg0.method2734());
 		return var3;
@@ -453,7 +453,7 @@ public class ja extends RendererToolkit implements class10 {
 	}
 
 	@ObfuscatedName("ja.co(Lvm;[Lzv;Z)Ll;")
-	public class15 method712(class603 arg0, class685[] arg1, boolean arg2) {
+	public class15 method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
 		int[] var4 = new int[arg1.length];
 		int[] var5 = new int[arg1.length];
 		boolean var6 = false;
@@ -488,7 +488,7 @@ public class ja extends RendererToolkit implements class10 {
 	}
 
 	@ObfuscatedName("ja.cx(Ldw;IIII)Lqa;")
-	public Model method625(class129 arg0, int arg1, int arg2, int arg3, int arg4) {
+	public Model method625(ModelUnlit arg0, int arg1, int arg2, int arg3, int arg4) {
 		return new h(this, this.field437, arg0, arg1, arg2, arg3, arg4);
 	}
 
@@ -631,12 +631,12 @@ public class ja extends RendererToolkit implements class10 {
 	}
 
 	@ObfuscatedName("ja.di(ILdk;)V")
-	public final void method547(int arg0, class137 arg1) {
+	public final void method547(int arg0, WaterFogData arg1) {
 		this.method989(arg0, arg1.field1475, arg1.field1471, arg1.field1474);
 	}
 
 	@ObfuscatedName("ja.dw(ILdk;)V")
-	public final void method503(int arg0, class137 arg1) {
+	public final void method503(int arg0, WaterFogData arg1) {
 		this.method990(arg0, arg1.field1475, arg1.field1471, arg1.field1474);
 	}
 
@@ -666,7 +666,7 @@ public class ja extends RendererToolkit implements class10 {
 	}
 
 	@ObfuscatedName("ja.q(Lma;II)V")
-	public native void method966(class16 arg0, int arg1, int arg2);
+	public native void method966(BillboardTypeList arg0, int arg1, int arg2);
 
 	@ObfuscatedName("ja.YA(IIIIII)V")
 	public native void method967(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);

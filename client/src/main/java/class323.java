@@ -5,12 +5,12 @@ import deob.ObfuscatedName;
 public class class323 implements class586 {
 
 	@ObfuscatedName("kf.u")
-	public final class334 field3486;
+	public final Js5 field3486;
 
 	@ObfuscatedName("kf.j")
 	public final String field3487;
 
-	public class323(class334 arg0, String arg1) {
+	public class323(Js5 arg0, String arg1) {
 		this.field3486 = arg0;
 		this.field3487 = arg1;
 	}

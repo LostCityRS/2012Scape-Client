@@ -31,14 +31,14 @@ public class class477 {
 
 	@ObfuscatedName("zx.u(I)V")
 	public static void method13902() {
-		if (class837.method2792()) {
-			class837.method6260(new class476());
+		if (NativeMouse.method2792()) {
+			NativeMouse.method6260(new class476());
 		}
 	}
 
 	@ObfuscatedName("aiw.j(I)V")
 	public static void method16253() {
-		class837.method12637();
+		NativeMouse.method12637();
 	}
 
 	@ObfuscatedName("lw.a(I)V")

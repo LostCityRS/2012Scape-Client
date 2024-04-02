@@ -6,7 +6,7 @@ import jaggl.OpenGL;
 public class class988 extends class891 {
 
 	@ObfuscatedName("akc.s")
-	public final class899 field10544;
+	public final GlxToolkit field10544;
 
 	@ObfuscatedName("akc.c")
 	public int field10545;
@@ -29,7 +29,7 @@ public class class988 extends class891 {
 	@ObfuscatedName("akc.z")
 	public final class349[] field10546 = new class349[4];
 
-	public class988(class899 arg0) {
+	public class988(GlxToolkit arg0) {
 		super(arg0);
 		this.field10544 = arg0;
 		int[] var2 = new int[1];

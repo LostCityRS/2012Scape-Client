@@ -6,7 +6,7 @@ import java.util.Random;
 public class class631 {
 
 	@ObfuscatedName("wk.j")
-	public final class334 field7391;
+	public final Js5 field7391;
 
 	@ObfuscatedName("wk.a")
 	public final class630[] field7393;
@@ -14,7 +14,7 @@ public class class631 {
 	@ObfuscatedName("wk.s")
 	public final int field7394;
 
-	public class631(class527 arg0, class519 arg1, class334 arg2) {
+	public class631(ModeGame arg0, class519 arg1, Js5 arg2) {
 		this.field7391 = arg2;
 		Packet var4 = new Packet(this.field7391.method5627(0, 0));
 		int var5 = var4.field9629 == null || var4.field9629.length < 1 ? -1 : var4.method15220();
@@ -100,9 +100,9 @@ public class class631 {
 	}
 
 	@ObfuscatedName("wk.j(II)Lwb;")
-	public class632 method12708(int arg0) {
+	public LoadingScreenType method12708(int arg0) {
 		byte[] var2 = this.field7391.method5627(arg0, 0);
-		class632 var3 = new class632();
+		LoadingScreenType var3 = new LoadingScreenType();
 		var3.method12719(new Packet(var2));
 		return var3;
 	}

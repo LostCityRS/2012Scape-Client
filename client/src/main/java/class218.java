@@ -86,30 +86,30 @@ public class class218 {
 			if (this.field2351 == null) {
 				this.field2351 = new long[arg0];
 			} else {
-				class531.method11334(this.field2351, 0, this.field2351 = new long[arg0], 0, this.field2346);
+				ArrayUtil.method11334(this.field2351, 0, this.field2351 = new long[arg0], 0, this.field2346);
 			}
 		}
 		if (this.field2373) {
 			if (this.field2355 == null) {
 				this.field2355 = new String[arg0];
 			} else {
-				class531.method11338(this.field2355, 0, this.field2355 = new String[arg0], 0, this.field2346);
+				ArrayUtil.method11338(this.field2355, 0, this.field2355 = new String[arg0], 0, this.field2346);
 			}
 		}
 		if (this.field2358 == null) {
 			this.field2358 = new byte[arg0];
 		} else {
-			class531.method11330(this.field2358, 0, this.field2358 = new byte[arg0], 0, this.field2346);
+			ArrayUtil.method11330(this.field2358, 0, this.field2358 = new byte[arg0], 0, this.field2346);
 		}
 		if (this.field2372 == null) {
 			this.field2372 = new int[arg0];
 		} else {
-			class531.method11351(this.field2372, 0, this.field2372 = new int[arg0], 0, this.field2346);
+			ArrayUtil.method11351(this.field2372, 0, this.field2372 = new int[arg0], 0, this.field2346);
 		}
 		if (this.field2361 == null) {
 			this.field2361 = new int[arg0];
 		} else {
-			class531.method11351(this.field2361, 0, this.field2361 = new int[arg0], 0, this.field2346);
+			ArrayUtil.method11351(this.field2361, 0, this.field2361 = new int[arg0], 0, this.field2346);
 		}
 	}
 
@@ -119,7 +119,7 @@ public class class218 {
 			if (this.field2365 == null) {
 				this.field2365 = new long[arg0];
 			} else {
-				class531.method11334(this.field2365, 0, this.field2365 = new long[arg0], 0, this.field2356);
+				ArrayUtil.method11334(this.field2365, 0, this.field2365 = new long[arg0], 0, this.field2356);
 			}
 		}
 		if (!this.field2373) {
@@ -128,7 +128,7 @@ public class class218 {
 		if (this.field2367 == null) {
 			this.field2367 = new String[arg0];
 		} else {
-			class531.method11338(this.field2367, 0, this.field2367 = new String[arg0], 0, this.field2356);
+			ArrayUtil.method11338(this.field2367, 0, this.field2367 = new String[arg0], 0, this.field2356);
 		}
 	}
 
@@ -157,7 +157,7 @@ public class class218 {
 			return null;
 		} else {
 			Node var2 = this.field2368.method11923((long) arg0);
-			return var2 != null && var2 instanceof class802 ? Integer.valueOf(((class802) var2).field9556) : null;
+			return var2 != null && var2 instanceof IntNode ? Integer.valueOf(((IntNode) var2).field9556) : null;
 		}
 	}
 
@@ -167,9 +167,9 @@ public class class218 {
 			return null;
 		}
 		Node var4 = this.field2368.method11923((long) arg0);
-		if (var4 != null && var4 instanceof class802) {
+		if (var4 != null && var4 instanceof IntNode) {
 			int var5 = arg2 == 31 ? -1 : (0x1 << arg2 + 1) - 1;
-			return Integer.valueOf((((class802) var4).field9556 & var5) >>> arg1);
+			return Integer.valueOf((((IntNode) var4).field9556 & var5) >>> arg1);
 		} else {
 			return null;
 		}
@@ -205,7 +205,7 @@ public class class218 {
 				var1[var2] = this.field2355[var2];
 				this.field2359[var2] = var2++;
 			}
-			class485.method8077(var1, this.field2359);
+			Algorithms.method8077(var1, this.field2359);
 		}
 		return this.field2359;
 	}
@@ -259,14 +259,14 @@ public class class218 {
 			this.field2363 = -1;
 			return;
 		}
-		class531.method11330(this.field2358, arg0 + 1, this.field2358, arg0, this.field2346 - arg0);
-		class531.method11351(this.field2372, arg0 + 1, this.field2372, arg0, this.field2346 - arg0);
-		class531.method11351(this.field2361, arg0 + 1, this.field2361, arg0, this.field2346 - arg0);
+		ArrayUtil.method11330(this.field2358, arg0 + 1, this.field2358, arg0, this.field2346 - arg0);
+		ArrayUtil.method11351(this.field2372, arg0 + 1, this.field2372, arg0, this.field2346 - arg0);
+		ArrayUtil.method11351(this.field2361, arg0 + 1, this.field2361, arg0, this.field2346 - arg0);
 		if (this.field2351 != null) {
-			class531.method11334(this.field2351, arg0 + 1, this.field2351, arg0, this.field2346 - arg0);
+			ArrayUtil.method11334(this.field2351, arg0 + 1, this.field2351, arg0, this.field2346 - arg0);
 		}
 		if (this.field2355 != null) {
-			class531.method11338(this.field2355, arg0 + 1, this.field2355, arg0, this.field2346 - arg0);
+			ArrayUtil.method11338(this.field2355, arg0 + 1, this.field2355, arg0, this.field2346 - arg0);
 		}
 		if (this.field2364 == arg0 || this.field2363 == arg0) {
 			this.method4050();
@@ -333,10 +333,10 @@ public class class218 {
 			return;
 		}
 		if (this.field2365 != null) {
-			class531.method11334(this.field2365, arg0 + 1, this.field2365, arg0, this.field2356 - arg0);
+			ArrayUtil.method11334(this.field2365, arg0 + 1, this.field2365, arg0, this.field2356 - arg0);
 		}
 		if (this.field2367 != null) {
-			class531.method11338(this.field2367, arg0 + 1, this.field2367, arg0, this.field2356 - arg0);
+			ArrayUtil.method11338(this.field2367, arg0 + 1, this.field2367, arg0, this.field2356 - arg0);
 		}
 	}
 
@@ -379,8 +379,8 @@ public class class218 {
 		} else {
 			Node var3 = this.field2368.method11923((long) arg0);
 			if (var3 != null) {
-				if (var3 instanceof class802) {
-					class802 var4 = (class802) var3;
+				if (var3 instanceof IntNode) {
+					IntNode var4 = (IntNode) var3;
 					if (var4.field9556 == arg1) {
 						return false;
 					}
@@ -390,7 +390,7 @@ public class class218 {
 				var3.method6979();
 			}
 		}
-		this.field2368.method11927(new class802(arg1), (long) arg0);
+		this.field2368.method11927(new IntNode(arg1), (long) arg0);
 		return true;
 	}
 
@@ -406,8 +406,8 @@ public class class218 {
 		} else {
 			Node var10 = this.field2368.method11923((long) arg0);
 			if (var10 != null) {
-				if (var10 instanceof class802) {
-					class802 var11 = (class802) var10;
+				if (var10 instanceof IntNode) {
+					IntNode var11 = (IntNode) var10;
 					if ((var11.field9556 & var7) == var9) {
 						return false;
 					}
@@ -418,7 +418,7 @@ public class class218 {
 				var10.method6979();
 			}
 		}
-		this.field2368.method11927(new class802(var9), (long) arg0);
+		this.field2368.method11927(new IntNode(var9), (long) arg0);
 		return true;
 	}
 
@@ -577,7 +577,7 @@ public class class218 {
 			int var9 = var7 >>> 30;
 			if (var9 == 0) {
 				int var10 = arg0.method15379();
-				this.field2368.method11927(new class802(var10), (long) var8);
+				this.field2368.method11927(new IntNode(var10), (long) var8);
 			} else if (var9 == 1) {
 				long var11 = arg0.method15246();
 				this.field2368.method11927(new class801(var11), (long) var8);

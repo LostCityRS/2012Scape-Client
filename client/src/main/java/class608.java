@@ -47,7 +47,7 @@ public class class608 {
 		if (var6 != null) {
 			return var6;
 		} else if (this.field7193.field7199.method5630(this.field7192)) {
-			class140 var7 = class125.method2590(this.field7193.field7199, this.field7192, 0);
+			SpriteData var7 = SpriteDataProvider.method2590(this.field7193.field7199, this.field7192, 0);
 			if (var7 != null) {
 				var7.method2776();
 				if (arg2) {

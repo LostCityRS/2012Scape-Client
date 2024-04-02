@@ -2,21 +2,21 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("gb")
-public class class215 implements class214 {
+public class class215 implements LoadingScreenElement {
 
 	@ObfuscatedName("gb.u")
 	public final class268 field2337;
 
 	@ObfuscatedName("gb.j")
-	public final class334 field2335;
+	public final Js5 field2335;
 
 	@ObfuscatedName("gb.a")
-	public final class334 field2336;
+	public final Js5 field2336;
 
 	@ObfuscatedName("gb.s")
 	public class15 field2334;
 
-	public class215(class334 arg0, class334 arg1, class268 arg2) {
+	public class215(Js5 arg0, Js5 arg1, class268 arg2) {
 		this.field2337 = arg2;
 		this.field2335 = arg0;
 		this.field2336 = arg1;
@@ -24,8 +24,8 @@ public class class215 implements class214 {
 
 	@ObfuscatedName("gb.u(B)V")
 	public void method3936() {
-		class603 var1 = class603.method14876(this.field2336, this.field2337.field2644);
-		this.field2334 = Statics.field5187.method712(var1, (class685[]) class125.method2593(this.field2335, this.field2337.field2644), true);
+		FontMetrics var1 = FontMetrics.method14876(this.field2336, this.field2337.field2644);
+		this.field2334 = Statics.field5187.method712(var1, (PalettedSpriteData[]) SpriteDataProvider.method2593(this.field2335, this.field2337.field2644), true);
 	}
 
 	@ObfuscatedName("gb.j(ZI)V")

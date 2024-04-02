@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aao")
-public final class class723 extends class201 {
+public final class class723 extends ParticleShader {
 
 	public class723(GpuToolkit arg0) {
 		super(arg0);

@@ -24,8 +24,8 @@ public class class309 {
 	@ObfuscatedName("ta.u(B)V")
 	public static void method186() {
 		field3421 = true;
-		Statics.field6391 = class33.field533;
-		Statics.field4814 = class33.field534;
+		Statics.field6391 = LoginManager.field533;
+		Statics.field4814 = LoginManager.field534;
 		client.method13897(false);
 		Statics.field3420 = null;
 		Statics.field3562 = null;
@@ -42,7 +42,7 @@ public class class309 {
 		if (Statics.field6789 == null) {
 			method3460();
 		}
-		class307 var0 = Statics.field1208;
+		LoadingStage var0 = Statics.field1208;
 		int var1 = method1610();
 		if (Statics.field1208 == var0) {
 			Statics.field2324 = Statics.field1208.field3405.method12206(Statics.field2308);
@@ -52,12 +52,12 @@ public class class309 {
 			if (Statics.field1208.field3409) {
 				Statics.field2324 = Statics.field2324 + Statics.field4455 + "%";
 			}
-		} else if (Statics.field1208 == class307.field3403) {
+		} else if (Statics.field1208 == LoadingStage.field3403) {
 			Statics.field6789 = null;
 			client.method11307(6);
 			if (field3421) {
 				field3421 = false;
-				class33.method12220(Statics.field6391, Statics.field4814);
+				LoginManager.method12220(Statics.field6391, Statics.field4814);
 			}
 		} else {
 			Statics.field2324 = var0.field3397.method12206(Statics.field2308);
@@ -96,7 +96,7 @@ public class class309 {
 	@ObfuscatedName("em.a(I)V")
 	public static void method3460() {
 		if (Statics.field1208 != null) {
-			Statics.field6789 = new class305();
+			Statics.field6789 = new LoadingScreenRenderer();
 			Statics.field6789.method4956(Statics.field1931, Statics.field1208.field3405.method12206(Statics.field2308), Statics.field1208.field3410, Statics.field1208);
 			Statics.field2668 = new Thread(Statics.field6789, "");
 			Statics.field2668.start();
@@ -123,9 +123,9 @@ public class class309 {
 		if (Statics.field3422 == null) {
 			return;
 		}
-		class310[] var0 = Statics.field3422;
+		LoadingScreen[] var0 = Statics.field3422;
 		for (int var1 = 0; var1 < var0.length; var1++) {
-			class310 var2 = var0[var1];
+			LoadingScreen var2 = var0[var1];
 			var2.method5006();
 		}
 	}
@@ -151,20 +151,20 @@ public class class309 {
 				}
 			}
 		}
-		if (Statics.field1208 == class307.field3390) {
+		if (Statics.field1208 == LoadingStage.field3390) {
 			if (Statics.field3562 == null) {
-				Statics.field3562 = new class331(Statics.field848, Statics.field1210, class51.field665, class51.field668);
+				Statics.field3562 = new Js5Client(Statics.field848, Statics.field1210, class51.field665, class51.field668);
 			}
 			if (!Statics.field3562.method5587()) {
 				return 0;
 			}
 			client.method11054(0, null, true);
-			Statics.field5109 = !class308.method4590();
+			Statics.field5109 = !MainLoadingScreen.method4590();
 			Statics.field4761 = client.method7706(Statics.field5109 ? class162.field1700 : class162.field1718, false, 1, true);
 			Statics.field1937 = client.method7706(class162.field1719, false, 1, true);
 			Statics.field8745 = client.method7706(class162.field1691, false, 1, true);
 		}
-		if (Statics.field1208 == class307.field3394) {
+		if (Statics.field1208 == LoadingStage.field3394) {
 			boolean var1 = Statics.field1937.method5662();
 			int var2 = Statics.field4456[class162.field1719.method3089()].method14244();
 			int var3 = var2 + Statics.field4456[Statics.field5109 ? class162.field1700.method3089() : class162.field1718.method3089()].method14244();
@@ -182,25 +182,25 @@ public class class309 {
 			if (var7.length == 0) {
 				var7 = Statics.field7348.method12706(0);
 			}
-			class210 var8 = new class210(Statics.field4761, Statics.field8745);
+			LoadingScreenElementFActory var8 = new LoadingScreenElementFActory(Statics.field4761, Statics.field8745);
 			if (var7.length > 0) {
-				Statics.field3422 = new class310[var7.length];
+				Statics.field3422 = new LoadingScreen[var7.length];
 				for (int var9 = 0; var9 < Statics.field3422.length; var9++) {
-					Statics.field3422[var9] = new class308(Statics.field7348.method12708(var7[var9].field7396), var7[var9].field7397, var7[var9].field7398, var8);
+					Statics.field3422[var9] = new MainLoadingScreen(Statics.field7348.method12708(var7[var9].field7396), var7[var9].field7397, var7[var9].field7398, var8);
 				}
 			}
 		}
-		if (Statics.field1208 == class307.field3388) {
+		if (Statics.field1208 == LoadingStage.field3388) {
 			Statics.field6784 = new class292(Statics.field4761, Statics.field8745, class35.method6244());
 		}
-		if (Statics.field1208 == class307.field3407) {
+		if (Statics.field1208 == LoadingStage.field3407) {
 			int var10 = Statics.field6784.method4839();
 			int var11 = Statics.field6784.method4841();
 			if (var10 < var11) {
 				return var10 * 100 / var11;
 			}
 		}
-		if (Statics.field1208 == class307.field3386) {
+		if (Statics.field1208 == LoadingStage.field3386) {
 			if (Statics.field3422 != null && Statics.field3422.length > 0) {
 				if (Statics.field3422[0].method4981() < 100) {
 					return 0;
@@ -213,7 +213,7 @@ public class class309 {
 			class35.method2931(Statics.field5187);
 			client.method11307(2);
 		}
-		if (Statics.field1208 == class307.field3389) {
+		if (Statics.field1208 == LoadingStage.field3389) {
 			Statics.field7387 = client.method7706(class162.field1694, false, 1, false);
 			Statics.field7567 = client.method7706(class162.field1708, false, 1, false);
 			Statics.field6690 = client.method7706(class162.field1716, false, 1, false);
@@ -249,7 +249,7 @@ public class class309 {
 			Statics.field2670 = client.method7706(class162.field1717, true, 1, true);
 			Statics.field2117 = client.method7706(class162.field1722, true, 2, false);
 		}
-		if (Statics.field1208 == class307.field3392) {
+		if (Statics.field1208 == LoadingStage.field3392) {
 			int var12 = 0;
 			for (int var13 = 0; var13 < Statics.field4456.length; var13++) {
 				if (Statics.field4456[var13] != null) {
@@ -265,7 +265,7 @@ public class class309 {
 			class35.method8388(Statics.field7387);
 			Statics.field6784 = new class292(Statics.field7387, Statics.field8745, class35.method6244());
 		}
-		if (Statics.field1208 == class307.field3393) {
+		if (Statics.field1208 == LoadingStage.field3393) {
 			byte[] var14 = Statics.field849.method5635(class491.field5143.field5145);
 			if (var14 == null) {
 				return 0;
@@ -274,11 +274,11 @@ public class class309 {
 			Statics.method4790();
 			client.method11307(10);
 		}
-		if (Statics.field1208 == class307.field3391 && Statics.field2137 == null) {
+		if (Statics.field1208 == LoadingStage.field3391 && Statics.field2137 == null) {
 			Statics.field2137 = new class387(Statics.field663);
 			NativeLibraries.method5010(Statics.field2137);
 		}
-		if (Statics.field1208 == class307.field3395) {
+		if (Statics.field1208 == LoadingStage.field3395) {
 			int var15 = class326.method6562();
 			if (var15 < 100) {
 				return var15;
@@ -295,7 +295,7 @@ public class class309 {
 			Statics.field1736 = new class487(Statics.field849);
 			Statics.field2190 = new class489(Statics.field849);
 		}
-		if (Statics.field1208 == class307.field3396) {
+		if (Statics.field1208 == LoadingStage.field3396) {
 			if (Statics.field4825.field5156 != -1 && !Statics.field4560.method5629(Statics.field4825.field5156, 0)) {
 				return 99;
 			}
@@ -304,9 +304,9 @@ public class class309 {
 			Statics.field3769 = new BASTypeList(client.field9163, Statics.field2308, Statics.field7435, Statics.field3226);
 			Statics.field3770 = new class600(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
 			Statics.field1244 = new class578(client.field9163, Statics.field2308, Statics.field6451);
-			Statics.field3615 = new class484(client.field9163, Statics.field2308, Statics.field7435);
-			Statics.field4450 = new class563(client.field9163, Statics.field2308, Statics.field7435);
-			Statics.field5037 = new class442(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
+			Statics.field3615 = new FloorOverlayTypeList(client.field9163, Statics.field2308, Statics.field7435);
+			Statics.field4450 = new FloorUnderlayTypeList(client.field9163, Statics.field2308, Statics.field7435);
+			Statics.field5037 = new HitmarkTypeList(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
 			Statics.field6705 = new class417(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
 			Statics.field7650 = new class205(client.field9163, Statics.field2308, Statics.field7435, Statics.field4560);
 			Statics.field495 = new class623(client.field9163, Statics.field2308, Statics.field7435);
@@ -322,7 +322,7 @@ public class class309 {
 			Statics.field566 = new class510(client.field9163, Statics.field2308, Statics.field3897, Statics.field7567, Statics.field6690);
 			Statics.field4678 = new class419(client.field9163, Statics.field2308, Statics.field7435);
 			Statics.field6360 = new class187(client.field9163, Statics.field2308, Statics.field7435);
-			Statics.field4213 = new class506(client.field9163, Statics.field2308, Statics.field2070, Statics.field4560);
+			Statics.field4213 = new EffectAnimTypeList(client.field9163, Statics.field2308, Statics.field2070, Statics.field4560);
 			Statics.field4214 = new class601(client.field9163, Statics.field2308, Statics.field7435, true);
 			Statics.field8514 = new class621(client.field9163, Statics.field2308, Statics.field7435);
 			Statics.field8455 = new class598(client.field9163, Statics.field2308, Statics.field7435);
@@ -333,7 +333,7 @@ public class class309 {
 			Statics.field7390 = new class626(client.field9163, Statics.field2308, Statics.field7435);
 			Statics.field1202 = new class475(client.field9163, Statics.field2308, Statics.field7435);
 			Statics.method3529(Statics.field2653, Statics.field4560, Statics.field7387, Statics.field8745);
-			class272.method8409(Statics.field8734);
+			BillboardType.method8409(Statics.field8734);
 			Statics.field3262 = new class341(Statics.field2308, Statics.field6343, Statics.field6712);
 			Statics.field3779 = new class584(Statics.field2308, Statics.field6343, Statics.field6712, new class271());
 			Statics.field2669 = new class49();
@@ -346,17 +346,17 @@ public class class309 {
 			Statics.field8481 = Statics.method4777();
 			Statics.field2305 = new class817(true);
 		}
-		if (Statics.field1208 == class307.field3387) {
+		if (Statics.field1208 == LoadingStage.field3387) {
 			int var17 = class35.method12092(Statics.field7387) + Statics.field6784.method4840(true);
 			int var18 = class35.method1589() + Statics.field6784.method4841();
 			if (var17 < var18) {
 				return var17 * 100 / var18;
 			}
 		}
-		if (Statics.field1208 == class307.field3408) {
+		if (Statics.field1208 == LoadingStage.field3408) {
 			class408.method7080(Statics.field4059, Statics.field3615, Statics.field4450, client.field8980.method6103(), Statics.field8499, Statics.field850, Statics.field2669);
 		}
-		if (Statics.field1208 == class307.field3399) {
+		if (Statics.field1208 == LoadingStage.field3399) {
 			Statics.field6666 = new int[Statics.field8455.field7160];
 			Statics.field2210 = new boolean[Statics.field8455.field7160];
 			Statics.field3498 = new String[Statics.field8514.field7322];
@@ -375,7 +375,7 @@ public class class309 {
 			Statics.field3523.method5636(true, true);
 			client.field8938 = true;
 		}
-		if (Statics.field1208 == class307.field3400) {
+		if (Statics.field1208 == LoadingStage.field3400) {
 			if (!ComType.method6404(Statics.field4825.field5162, null)) {
 				return 0;
 			}
@@ -390,10 +390,10 @@ public class class309 {
 				return 0;
 			}
 		}
-		if (Statics.field1208 == class307.field3401) {
+		if (Statics.field1208 == LoadingStage.field3401) {
 			client.method12035(true);
 		}
-		if (Statics.field1208 == class307.field3402) {
+		if (Statics.field1208 == LoadingStage.field3402) {
 			Statics.field6789.method4975();
 			try {
 				Statics.field2668.join();
@@ -406,7 +406,7 @@ public class class309 {
 			Statics.field1937 = null;
 			Statics.field7348 = null;
 			Statics.field3422 = null;
-			class308.method6065();
+			MainLoadingScreen.method6065();
 			client.field8911 = Statics.field4961.field9669.method15877() == 1;
 			Statics.field4961.method15448(Statics.field4961.field9669, 1);
 			if (client.field8911) {
@@ -430,7 +430,7 @@ public class class309 {
 			Statics.field6784.method4837(client.field8914);
 			class35.method2931(Statics.field5187);
 			class35.method15812(Statics.field5187, Statics.field7387);
-			class42.method3288(Statics.field8538);
+			MiniMenu.method3288(Statics.field8538);
 		}
 		return method4789();
 	}

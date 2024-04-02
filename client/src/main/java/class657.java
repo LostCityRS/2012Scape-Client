@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("xz")
-public class class657 extends PrimaryLayerEntity implements class113 {
+public class class657 extends PrimaryLayerEntity implements Location {
 
 	@ObfuscatedName("xz.z")
 	public class116 field7524;

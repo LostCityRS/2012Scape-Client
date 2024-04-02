@@ -6,7 +6,7 @@ import jagdx.IUnknown;
 public abstract class class300 implements DeleteableResource {
 
 	@ObfuscatedName("jq.u")
-	public final class898 field3326;
+	public final DxToolkit field3326;
 
 	@ObfuscatedName("jq.j")
 	public final class124 field3327;
@@ -20,7 +20,7 @@ public abstract class class300 implements DeleteableResource {
 	@ObfuscatedName("jq.c")
 	public long field3325 = 0L;
 
-	public class300(class898 arg0, class124 arg1, class139 arg2, boolean arg3, int arg4) {
+	public class300(DxToolkit arg0, class124 arg1, class139 arg2, boolean arg3, int arg4) {
 		this.field3326 = arg0;
 		this.field3327 = arg1;
 		this.field3329 = arg2;
@@ -34,7 +34,7 @@ public abstract class class300 implements DeleteableResource {
 	}
 
 	@ObfuscatedName("jq.ae(Lhd;)V")
-	public void method4525(class241 arg0) {
+	public void method4525(GpuTextureRelated arg0) {
 	}
 
 	@ObfuscatedName("jq.s()V")

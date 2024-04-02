@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import java.io.IOException;
 
 @ObfuscatedName("abs")
-public class class758 extends class337 {
+public class class758 extends Js5TcpClient {
 
 	@ObfuscatedName("abs.b")
 	public class411 field8882;
@@ -42,14 +42,14 @@ public class class758 extends class337 {
 			return this.method5764() == 0 && this.method5739() == 0;
 		}
 		try {
-			for (class1003 var5 = (class1003) this.field3594.method11756(); var5 != null; var5 = (class1003) this.field3594.method11744()) {
+			for (Js5NetRequest var5 = (Js5NetRequest) this.field3594.method11756(); var5 != null; var5 = (Js5NetRequest) this.field3594.method11744()) {
 				this.field3597.field9626 = 0;
 				this.field3597.method15308(1);
 				this.field3597.method15234(var5.field9554);
 				this.field8882.method7193(this.field3597.field9629, 0, this.field3597.field9629.length);
 				this.field3595.method11728(var5);
 			}
-			for (class1003 var6 = (class1003) this.field3605.method11756(); var6 != null; var6 = (class1003) this.field3605.method11744()) {
+			for (Js5NetRequest var6 = (Js5NetRequest) this.field3605.method11756(); var6 != null; var6 = (Js5NetRequest) this.field3605.method11744()) {
 				this.field3597.field9626 = 0;
 				this.field3597.method15308(0);
 				this.field3597.method15234(var6.field9554);
@@ -94,12 +94,12 @@ public class class758 extends class337 {
 							boolean var17 = (var14 & 0x80) != 0;
 							long var18 = ((long) var12 << 32) + (long) var13;
 							Object var20 = null;
-							class1003 var21;
+							Js5NetRequest var21;
 							if (var17) {
-								for (var21 = (class1003) this.field3596.method11756(); var21 != null && var21.field9554 != var18; var21 = (class1003) this.field3596.method11744()) {
+								for (var21 = (Js5NetRequest) this.field3596.method11756(); var21 != null && var21.field9554 != var18; var21 = (Js5NetRequest) this.field3596.method11744()) {
 								}
 							} else {
-								for (var21 = (class1003) this.field3595.method11756(); var21 != null && var21.field9554 != var18; var21 = (class1003) this.field3595.method11744()) {
+								for (var21 = (Js5NetRequest) this.field3595.method11756(); var21 != null && var21.field9554 != var18; var21 = (Js5NetRequest) this.field3595.method11744()) {
 								}
 							}
 							if (var21 == null) {
@@ -175,10 +175,10 @@ public class class758 extends class337 {
 		this.field3590.field9626 = 0;
 		this.field3592 = null;
 		while (true) {
-			class1003 var4 = (class1003) this.field3595.method11729();
+			Js5NetRequest var4 = (Js5NetRequest) this.field3595.method11729();
 			if (var4 == null) {
 				while (true) {
-					class1003 var5 = (class1003) this.field3596.method11729();
+					Js5NetRequest var5 = (Js5NetRequest) this.field3596.method11729();
 					if (var5 == null) {
 						if (this.field3601 != 0) {
 							try {

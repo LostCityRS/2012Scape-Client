@@ -5,9 +5,9 @@ import deob.ObfuscatedName;
 public class class968 extends class816 {
 
 	@ObfuscatedName("ajh.m")
-	public final class505 field10479;
+	public final ObjReference field10479;
 
-	public class968(int arg0, int arg1, class505 arg2) {
+	public class968(int arg0, int arg1, ObjReference arg2) {
 		super(arg0, arg1);
 		this.field10479 = arg2;
 	}
@@ -18,7 +18,7 @@ public class class968 extends class816 {
 		if (var1 == null) {
 			return false;
 		} else {
-			class502.method7276(class619.field7316, this.field9679, -1, this.field10479, var1);
+			ScriptRunner.method7276(ClientTriggerType.field7316, this.field9679, -1, this.field10479, var1);
 			return true;
 		}
 	}

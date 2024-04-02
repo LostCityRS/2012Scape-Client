@@ -50,16 +50,16 @@ public class ComType {
 	public static int field1751 = 1409;
 
 	@ObfuscatedName("ew.r")
-	public static class451 field1757 = new class451(3000000, 200);
+	public static WeightedCache field1757 = new WeightedCache(3000000, 200);
 
 	@ObfuscatedName("ew.g")
-	public static class451 field1768 = new class451(8);
+	public static WeightedCache field1768 = new WeightedCache(8);
 
 	@ObfuscatedName("ew.y")
-	public static class451 field1745 = new class451(4);
+	public static WeightedCache field1745 = new WeightedCache(4);
 
 	@ObfuscatedName("ew.e")
-	public static class451 field1760 = new class451(50);
+	public static WeightedCache field1760 = new WeightedCache(50);
 
 	@ObfuscatedName("ew.af")
 	public static boolean field1761 = false;
@@ -572,7 +572,7 @@ public class ComType {
 	}
 
 	@ObfuscatedName("adf.a(II)Lej;")
-	public static class164 method14993(int arg0) {
+	public static IfType method14993(int arg0) {
 		return Statics.field1756[arg0 >> 16];
 	}
 
@@ -603,7 +603,7 @@ public class ComType {
 	}
 
 	@ObfuscatedName("gm.m(I[ILej;ZI)Lej;")
-	public static class164 method3971(int arg0, int[] arg1, class164 arg2, boolean arg3) {
+	public static IfType method3971(int arg0, int[] arg1, IfType arg2, boolean arg3) {
 		if (!Statics.field1928.method5631(arg0)) {
 			return null;
 		}
@@ -617,7 +617,7 @@ public class ComType {
 			var5 = arg2.field1732;
 		}
 		if (arg2 == null) {
-			arg2 = new class164(arg3, var5);
+			arg2 = new IfType(arg3, var5);
 		} else {
 			arg2.field1732 = var5;
 			arg2.field1734 = arg3;
@@ -843,7 +843,7 @@ public class ComType {
 			for (int var23 = 0; var23 < var22; var23++) {
 				int var24 = arg0.method15241();
 				int var25 = arg0.method15379();
-				this.field1902.method11927(new class802(var25), (long) var24);
+				this.field1902.method11927(new IntNode(var25), (long) var24);
 			}
 			int var26 = arg0.method15220();
 			for (int var27 = 0; var27 < var26; var27++) {
@@ -922,7 +922,7 @@ public class ComType {
 		if (var4 != null) {
 			return var4;
 		}
-		class140 var5 = class125.method2590(Statics.field1600, this.field1797, 0);
+		SpriteData var5 = SpriteDataProvider.method2590(Statics.field1600, this.field1797, 0);
 		if (var5 == null) {
 			field1761 = true;
 			return null;
@@ -953,21 +953,21 @@ public class ComType {
 	}
 
 	@ObfuscatedName("ew.o(Lje;Ljd;I)Ll;")
-	public class15 method3116(class292 arg0, class291 arg1) {
+	public class15 method3116(class292 arg0, FontFactory arg1) {
 		class15 var3 = (class15) arg0.method4859(arg1, this.field1793, false, this.field1833);
 		field1761 = var3 == null;
 		return var3;
 	}
 
 	@ObfuscatedName("ew.q(Lje;Ljd;I)Lvm;")
-	public class603 method3188(class292 arg0, class291 arg1) {
-		class603 var3 = arg0.method4843(arg1, this.field1793);
+	public FontMetrics method3188(class292 arg0, FontFactory arg1) {
+		FontMetrics var3 = arg0.method4843(arg1, this.field1793);
 		field1761 = var3 == null;
 		return var3;
 	}
 
 	@ObfuscatedName("ew.p(Lra;ILpn;Lgq;Lwi;Lvj;Lst;Lug;Ltt;Lqc;I)Lqa;")
-	public Model method3174(RendererToolkit arg0, int arg1, BASTypeList arg2, class205 arg3, NPCTypeList arg4, ObjTypeList arg5, class510 arg6, class567 arg7, AnimationNode arg8, class471 arg9) {
+	public Model method3174(RendererToolkit arg0, int arg1, BASTypeList arg2, class205 arg3, NPCTypeList arg4, ObjTypeList arg5, class510 arg6, VarIntDomain arg7, AnimationNode arg8, class471 arg9) {
 		field1761 = false;
 		if (this.field1806 == 0) {
 			return null;
@@ -1004,7 +1004,7 @@ public class ComType {
 				if (var31 != null) {
 					arg1 = arg0.method520(arg1, var31.method329());
 				}
-				class129 var32 = class129.method2664(Statics.field1191, this.field1838, 0);
+				ModelUnlit var32 = ModelUnlit.method2664(Statics.field1191, this.field1838, 0);
 				if (var32 == null) {
 					field1761 = true;
 					return null;
@@ -1227,7 +1227,7 @@ public class ComType {
 				return var4;
 			}
 		}
-		class140 var5 = class125.method2590(Statics.field1600, this.field1797, 0);
+		SpriteData var5 = SpriteDataProvider.method2590(Statics.field1600, this.field1797, 0);
 		if (var5 == null) {
 			return null;
 		}
@@ -1268,7 +1268,7 @@ public class ComType {
 		if (this.field1902 == null) {
 			return arg1;
 		} else {
-			class802 var3 = (class802) this.field1902.method11923((long) arg0);
+			IntNode var3 = (IntNode) this.field1902.method11923((long) arg0);
 			return var3 == null ? arg1 : var3.field9556;
 		}
 	}
@@ -1287,12 +1287,12 @@ public class ComType {
 	public void method3127(int arg0, int arg1) {
 		if (this.field1902 == null) {
 			this.field1902 = new IterableMap(16);
-			this.field1902.method11927(new class802(arg1), (long) arg0);
+			this.field1902.method11927(new IntNode(arg1), (long) arg0);
 			return;
 		}
-		class802 var3 = (class802) this.field1902.method11923((long) arg0);
+		IntNode var3 = (IntNode) this.field1902.method11923((long) arg0);
 		if (var3 == null) {
-			this.field1902.method11927(new class802(arg1), (long) arg0);
+			this.field1902.method11927(new IntNode(arg1), (long) arg0);
 		} else {
 			var3.field9556 = arg1;
 		}

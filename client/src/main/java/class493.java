@@ -19,7 +19,7 @@ public class class493 {
 	@ObfuscatedName("rt.l")
 	public int[] field5172;
 
-	public class493(class334 arg0) {
+	public class493(Js5 arg0) {
 		byte[] var2 = arg0.method5635(class491.field5142.field5145);
 		this.method8620(new Packet(var2));
 		if (this.field5171 == null) {

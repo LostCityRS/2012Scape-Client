@@ -304,7 +304,7 @@ public class GlToolkit extends RendererToolkit {
 	public int field8143;
 
 	@ObfuscatedName("yq.fx")
-	public class137 field8177;
+	public WaterFogData field8177;
 
 	@ObfuscatedName("yq.fy")
 	public class108 field8203;
@@ -427,10 +427,10 @@ public class GlToolkit extends RendererToolkit {
 	public float field8073 = -1.0F;
 
 	@ObfuscatedName("yq.gx")
-	public class677[] field8115 = new class677[7];
+	public GlModel[] field8115 = new GlModel[7];
 
 	@ObfuscatedName("yq.gv")
-	public class677[] field8188 = new class677[7];
+	public GlModel[] field8188 = new GlModel[7];
 
 	@ObfuscatedName("yq.he")
 	public class890 field8152;
@@ -465,7 +465,7 @@ public class GlToolkit extends RendererToolkit {
 	@ObfuscatedName("yq.hb")
 	public final byte[] field8230 = new byte[16384];
 
-	public GlToolkit(Canvas arg0, class16 arg1, int arg2) {
+	public GlToolkit(Canvas arg0, BillboardTypeList arg1, int arg2) {
 		super(arg1);
 		try {
 			this.field8080 = arg2;
@@ -539,7 +539,7 @@ public class GlToolkit extends RendererToolkit {
 						throw new RuntimeException("");
 					}
 				}
-				class482.method8092(false, true);
+				ColourUtils.method8092(false, true);
 				this.field8178 = true;
 				this.field8083 = new class104(this, this.field400);
 				this.method13475();
@@ -655,8 +655,8 @@ public class GlToolkit extends RendererToolkit {
 		new class640(this, 3553, class124.field1296, class139.field1501, 1, 1);
 		new class640(this, 3553, class124.field1296, class139.field1501, 1, 1);
 		for (int var1 = 0; var1 < 7; var1++) {
-			this.field8115[var1] = new class677(this);
-			this.field8188[var1] = new class677(this);
+			this.field8115[var1] = new GlModel(this);
+			this.field8188[var1] = new GlModel(this);
 		}
 		if (this.field8176) {
 			this.field8152 = new class890(this);
@@ -723,7 +723,7 @@ public class GlToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yq.t()Lcg;")
-	public class122 method456() {
+	public ToolkitInfo method456() {
 		int var1 = -1;
 		if (this.field8036.indexOf("nvidia") != -1) {
 			var1 = 4318;
@@ -732,7 +732,7 @@ public class GlToolkit extends RendererToolkit {
 		} else if (this.field8036.indexOf("ati") != -1) {
 			var1 = 4098;
 		}
-		return new class122(var1, "OpenGL", this.field8192, this.field8084, 0L);
+		return new ToolkitInfo(var1, "OpenGL", this.field8192, this.field8084, 0L);
 	}
 
 	@ObfuscatedName("yq.f(II)V")
@@ -760,7 +760,7 @@ public class GlToolkit extends RendererToolkit {
 			this.field8093.method2297();
 		}
 		if (this.field8178) {
-			class482.method2790(false, true);
+			ColourUtils.method2790(false, true);
 			this.field8178 = false;
 		}
 	}
@@ -1438,7 +1438,7 @@ public class GlToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yq.bo(Lds;Z)Lce;")
-	public class118 method517(class140 arg0, boolean arg1) {
+	public class118 method517(SpriteData arg0, boolean arg1) {
 		int[] var3 = arg0.method2735(false);
 		class118 var4 = this.method506(var3, 0, arg0.method2721(), arg0.method2721(), arg0.method2763());
 		var4.method1036(arg0.method2722(), arg0.method2724(), arg0.method2732(), arg0.method2734());
@@ -1486,7 +1486,7 @@ public class GlToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yq.co(Lvm;[Lzv;Z)Ll;")
-	public class15 method712(class603 arg0, class685[] arg1, boolean arg2) {
+	public class15 method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
 		return new class689(this, arg0, arg1, arg2);
 	}
 
@@ -1495,8 +1495,8 @@ public class GlToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yq.cx(Ldw;IIII)Lqa;")
-	public Model method625(class129 arg0, int arg1, int arg2, int arg3, int arg4) {
-		return new class677(this, arg0, arg1, arg3, arg4, arg2);
+	public Model method625(ModelUnlit arg0, int arg1, int arg2, int arg3, int arg4) {
+		return new GlModel(this, arg0, arg1, arg3, arg4, arg2);
 	}
 
 	@ObfuscatedName("yq.cn(II)I")
@@ -1530,14 +1530,14 @@ public class GlToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yq.dw(ILdk;)V")
-	public void method503(int arg0, class137 arg1) {
+	public void method503(int arg0, WaterFogData arg1) {
 		this.field8143 = arg0;
 		this.field8177 = arg1;
 		this.field8174 = true;
 	}
 
 	@ObfuscatedName("yq.di(ILdk;)V")
-	public void method547(int arg0, class137 arg1) {
+	public void method547(int arg0, WaterFogData arg1) {
 		if (!this.field8174) {
 			throw new RuntimeException("");
 		}
@@ -2276,7 +2276,7 @@ public class GlToolkit extends RendererToolkit {
 				this.method13362();
 			} else {
 				var4 = this.field8083.method2335(arg0);
-				class120 var9 = this.field400.method889(arg0);
+				Material var9 = this.field400.method889(arg0);
 				if (var9.field1268 == 0 && var9.field1261 == 0) {
 					this.method13362();
 				} else {
@@ -2563,7 +2563,7 @@ public class GlToolkit extends RendererToolkit {
 		int var2 = 0;
 		int var3 = arg0 & Integer.MAX_VALUE;
 		while (!this.field8039.method11585()) {
-			class802 var4 = (class802) this.field8039.method11560();
+			IntNode var4 = (IntNode) this.field8039.method11560();
 			field8228[var2++] = (int) var4.field4228;
 			this.field8157 -= var4.field9556;
 			if (var2 == 1000) {
@@ -2576,7 +2576,7 @@ public class GlToolkit extends RendererToolkit {
 			var2 = 0;
 		}
 		while (!this.field8198.method11585()) {
-			class802 var5 = (class802) this.field8198.method11560();
+			IntNode var5 = (IntNode) this.field8198.method11560();
 			field8228[var2++] = (int) var5.field4228;
 			this.field8096 -= var5.field9556;
 			if (var2 == 1000) {
@@ -2589,7 +2589,7 @@ public class GlToolkit extends RendererToolkit {
 			var2 = 0;
 		}
 		while (!this.field8102.method11585()) {
-			class802 var6 = (class802) this.field8102.method11560();
+			IntNode var6 = (IntNode) this.field8102.method11560();
 			field8228[var2++] = var6.field9556;
 			if (var2 == 1000) {
 				OpenGL.glDeleteFramebuffersEXT(var2, field8228, 0);
@@ -2601,7 +2601,7 @@ public class GlToolkit extends RendererToolkit {
 			var2 = 0;
 		}
 		while (!this.field8103.method11585()) {
-			class802 var7 = (class802) this.field8103.method11560();
+			IntNode var7 = (IntNode) this.field8103.method11560();
 			field8228[var2++] = (int) var7.field4228;
 			this.field8098 -= var7.field9556;
 			if (var2 == 1000) {
@@ -2614,7 +2614,7 @@ public class GlToolkit extends RendererToolkit {
 			boolean var8 = false;
 		}
 		while (!this.field8099.method11585()) {
-			class802 var9 = (class802) this.field8099.method11560();
+			IntNode var9 = (IntNode) this.field8099.method11560();
 			OpenGL.glDeleteLists((int) var9.field4228, var9.field9556);
 		}
 		while (!this.field8194.method11585()) {
@@ -2626,7 +2626,7 @@ public class GlToolkit extends RendererToolkit {
 			OpenGL.glDeleteShader((int) var11.field4228);
 		}
 		while (!this.field8099.method11585()) {
-			class802 var12 = (class802) this.field8099.method11560();
+			IntNode var12 = (IntNode) this.field8099.method11560();
 			OpenGL.glDeleteLists((int) var12.field4228, var12.field9556);
 		}
 		this.field8083.method2326();
@@ -2639,27 +2639,27 @@ public class GlToolkit extends RendererToolkit {
 
 	@ObfuscatedName("yq.qo(II)V")
 	public final synchronized void method13328(int arg0, int arg1) {
-		class802 var3 = new class802(arg1);
+		IntNode var3 = new IntNode(arg1);
 		var3.field4228 = arg0;
 		this.field8039.method11558(var3);
 	}
 
 	@ObfuscatedName("yq.qr(II)V")
 	public final synchronized void method13329(int arg0, int arg1) {
-		class802 var3 = new class802(arg1);
+		IntNode var3 = new IntNode(arg1);
 		var3.field4228 = arg0;
 		this.field8198.method11558(var3);
 	}
 
 	@ObfuscatedName("yq.qw(I)V")
 	public final synchronized void method13330(int arg0) {
-		class802 var2 = new class802(arg0);
+		IntNode var2 = new IntNode(arg0);
 		this.field8102.method11558(var2);
 	}
 
 	@ObfuscatedName("yq.ql(II)V")
 	public final synchronized void method13331(int arg0, int arg1) {
-		class802 var3 = new class802(arg1);
+		IntNode var3 = new IntNode(arg1);
 		var3.field4228 = arg0;
 		this.field8103.method11558(var3);
 	}

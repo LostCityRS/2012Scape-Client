@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class273 {
 
 	@ObfuscatedName("iu.c")
-	public static class451 field2676 = new class451(64);
+	public static WeightedCache field2676 = new WeightedCache(64);
 
 	@ObfuscatedName("iu.m")
 	public short field2677;
@@ -206,7 +206,7 @@ public class class273 {
 	public int field2729;
 
 	@ObfuscatedName("pp.u(Lls;I)V")
-	public static void method7704(class334 arg0) {
+	public static void method7704(Js5 arg0) {
 		Statics.field2675 = arg0;
 	}
 

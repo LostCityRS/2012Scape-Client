@@ -12,23 +12,23 @@ public class class155 {
 	}
 
 	@ObfuscatedName("gr.j(Lls;IIIZI)V")
-	public static void method3986(class334 arg0, int arg1, int arg2, int arg3, boolean arg4) {
+	public static void method3986(Js5 arg0, int arg1, int arg2, int arg3, boolean arg4) {
 		method11947(arg0, arg1, arg2, arg3, arg4, 0L);
 	}
 
 	@ObfuscatedName("mk.a(Lls;IIIZLaih;B)V")
-	public static void method6359(class334 arg0, int arg1, int arg2, int arg3, boolean arg4, class937 arg5) {
+	public static void method6359(Js5 arg0, int arg1, int arg2, int arg3, boolean arg4, class937 arg5) {
 		method3986(arg0, arg1, arg2, arg3, arg4);
 		Statics.field4262 = arg5;
 	}
 
 	@ObfuscatedName("uo.s(Lls;IIIZJ)V")
-	public static void method11947(class334 arg0, int arg1, int arg2, int arg3, boolean arg4, long arg5) {
+	public static void method11947(Js5 arg0, int arg1, int arg2, int arg3, boolean arg4, long arg5) {
 		method6986(arg0, arg1, arg2, arg3, arg4, arg5, 0);
 	}
 
 	@ObfuscatedName("nz.c(Lls;IIIZJII)V")
-	public static void method6986(class334 arg0, int arg1, int arg2, int arg3, boolean arg4, long arg5, int arg6) {
+	public static void method6986(Js5 arg0, int arg1, int arg2, int arg3, boolean arg4, long arg5, int arg6) {
 		field1583 = 1;
 		Statics.field6702 = arg0;
 		Statics.field7042 = arg1;
@@ -78,7 +78,7 @@ public class class155 {
 	}
 
 	@ObfuscatedName("tv.d(ILls;IIIZI)V")
-	public static void method11764(int arg0, class334 arg1, int arg2, int arg3, int arg4, boolean arg5) {
+	public static void method11764(int arg0, Js5 arg1, int arg2, int arg3, int arg4, boolean arg5) {
 		field1583 = 1;
 		Statics.field6702 = arg1;
 		Statics.field7042 = arg2;
@@ -104,7 +104,7 @@ public class class155 {
 	}
 
 	@ObfuscatedName("aic.n(ILls;IIIZLer;B)V")
-	public static void method16250(int arg0, class334 arg1, int arg2, int arg3, int arg4, boolean arg5, class156 arg6) {
+	public static void method16250(int arg0, Js5 arg1, int arg2, int arg3, int arg4, boolean arg5, class156 arg6) {
 		if (arg0 <= 0) {
 			if (arg6 != null) {
 				arg6.method2988();

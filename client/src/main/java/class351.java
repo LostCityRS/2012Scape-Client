@@ -18,12 +18,12 @@ public class class351 implements class136, class132, class349 {
 	public final int field3755;
 
 	@ObfuscatedName("lx.c")
-	public final class899 field3754;
+	public final GlxToolkit field3754;
 
 	@ObfuscatedName("lx.m")
 	public int field3757;
 
-	public class351(class899 arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
+	public class351(GlxToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
 		this.field3753 = arg1;
 		this.field3752 = arg2;
 		this.field3756 = arg3;
@@ -33,10 +33,10 @@ public class class351 implements class136, class132, class349 {
 		OpenGL.glGenRenderbuffersEXT(1, var6, 0);
 		this.field3757 = var6[0];
 		OpenGL.glBindRenderbufferEXT(36161, this.field3757);
-		OpenGL.glRenderbufferStorageEXT(36161, class899.method16100(this.field3753, this.field3752), arg3, arg4);
+		OpenGL.glRenderbufferStorageEXT(36161, GlxToolkit.method16100(this.field3753, this.field3752), arg3, arg4);
 	}
 
-	public class351(class899 arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5) {
+	public class351(GlxToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5) {
 		this.field3753 = arg1;
 		this.field3752 = arg2;
 		this.field3756 = arg3;
@@ -46,7 +46,7 @@ public class class351 implements class136, class132, class349 {
 		OpenGL.glGenRenderbuffersEXT(1, var7, 0);
 		this.field3757 = var7[0];
 		OpenGL.glBindRenderbufferEXT(36161, this.field3757);
-		OpenGL.glRenderbufferStorageMultisampleEXT(36161, arg5, class899.method16100(this.field3753, this.field3752), arg3, arg4);
+		OpenGL.glRenderbufferStorageMultisampleEXT(36161, arg5, GlxToolkit.method16100(this.field3753, this.field3752), arg3, arg4);
 	}
 
 	@ObfuscatedName("lx.u()I")

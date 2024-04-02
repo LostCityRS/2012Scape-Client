@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class ObjTypeList implements class463 {
 
 	@ObfuscatedName("vj.u")
-	public final class527 field7139;
+	public final ModeGame field7139;
 
 	@ObfuscatedName("vj.j")
 	public final class519 field7140;
@@ -14,19 +14,19 @@ public class ObjTypeList implements class463 {
 	public boolean field7142;
 
 	@ObfuscatedName("vj.s")
-	public final class334 field7143;
+	public final Js5 field7143;
 
 	@ObfuscatedName("vj.c")
-	public final class334 field7149;
+	public final Js5 field7149;
 
 	@ObfuscatedName("vj.m")
 	public int field7144;
 
 	@ObfuscatedName("vj.t")
-	public final class451 field7145 = new class451(64);
+	public final WeightedCache field7145 = new WeightedCache(64);
 
 	@ObfuscatedName("vj.l")
-	public final class451 field7146 = new class451(50);
+	public final WeightedCache field7146 = new WeightedCache(50);
 
 	@ObfuscatedName("vj.f")
 	public final class458 field7147 = new class458(250);
@@ -46,7 +46,7 @@ public class ObjTypeList implements class463 {
 	@ObfuscatedName("vj.q")
 	public final String[] field7152;
 
-	public ObjTypeList(class527 arg0, class519 arg1, boolean arg2, class614 arg3, class334 arg4, class334 arg5) {
+	public ObjTypeList(ModeGame arg0, class519 arg1, boolean arg2, class614 arg3, Js5 arg4, Js5 arg5) {
 		this.field7139 = arg0;
 		this.field7140 = arg1;
 		this.field7142 = arg2;
@@ -59,7 +59,7 @@ public class ObjTypeList implements class463 {
 			int var7 = this.field7143.method5638() - 1;
 			this.field7144 = var7 * class161.field1675.method3071() + this.field7143.method5637(var7);
 		}
-		if (class527.field6407 == this.field7139) {
+		if (ModeGame.field6407 == this.field7139) {
 			this.field7151 = new String[] { null, null, class588.field6875.method12206(this.field7140), null, null, class588.field6874.method12206(this.field7140) };
 		} else {
 			this.field7151 = new String[] { null, null, class588.field6875.method12206(this.field7140), null, null, null };
@@ -69,7 +69,7 @@ public class ObjTypeList implements class463 {
 
 	@ObfuscatedName("vj.u(II)Lvn;")
 	public ObjType method12316(int arg0) {
-		class451 var2 = this.field7145;
+		WeightedCache var2 = this.field7145;
 		ObjType var3;
 		synchronized (this.field7145) {
 			var3 = (ObjType) this.field7145.method7916((long) arg0);
@@ -77,7 +77,7 @@ public class ObjTypeList implements class463 {
 		if (var3 != null) {
 			return var3;
 		}
-		class334 var5 = this.field7143;
+		Js5 var5 = this.field7143;
 		byte[] var6;
 		synchronized (this.field7143) {
 			var6 = this.field7143.method5627(class161.field1675.method3073(arg0), class161.field1675.method3075(arg0));
@@ -121,7 +121,7 @@ public class ObjTypeList implements class463 {
 				}
 			}
 		}
-		class451 var12 = this.field7145;
+		WeightedCache var12 = this.field7145;
 		synchronized (this.field7145) {
 			this.field7145.method7937(var8, (long) arg0);
 			return var8;
@@ -195,7 +195,7 @@ public class ObjTypeList implements class463 {
 	@ObfuscatedName("vj.c(IB)V")
 	public void method12295(int arg0) {
 		this.field7150 = arg0;
-		class451 var2 = this.field7146;
+		WeightedCache var2 = this.field7146;
 		synchronized (this.field7146) {
 			this.field7146.method7922();
 		}
@@ -203,11 +203,11 @@ public class ObjTypeList implements class463 {
 
 	@ObfuscatedName("vj.m(I)V")
 	public void method12296() {
-		class451 var1 = this.field7145;
+		WeightedCache var1 = this.field7145;
 		synchronized (this.field7145) {
 			this.field7145.method7922();
 		}
-		class451 var3 = this.field7146;
+		WeightedCache var3 = this.field7146;
 		synchronized (this.field7146) {
 			this.field7146.method7922();
 		}
@@ -227,7 +227,7 @@ public class ObjTypeList implements class463 {
 
 	@ObfuscatedName("vj.l(I)V")
 	public void method12298() {
-		class451 var1 = this.field7146;
+		WeightedCache var1 = this.field7146;
 		synchronized (this.field7146) {
 			this.field7146.method7922();
 		}
@@ -235,11 +235,11 @@ public class ObjTypeList implements class463 {
 
 	@ObfuscatedName("vj.f(II)V")
 	public void method12291(int arg0) {
-		class451 var2 = this.field7145;
+		WeightedCache var2 = this.field7145;
 		synchronized (this.field7145) {
 			this.field7145.method7921(arg0);
 		}
-		class451 var4 = this.field7146;
+		WeightedCache var4 = this.field7146;
 		synchronized (this.field7146) {
 			this.field7146.method7921(arg0);
 		}
@@ -251,11 +251,11 @@ public class ObjTypeList implements class463 {
 
 	@ObfuscatedName("vj.d(S)V")
 	public void method12300() {
-		class451 var1 = this.field7145;
+		WeightedCache var1 = this.field7145;
 		synchronized (this.field7145) {
 			this.field7145.method7925();
 		}
-		class451 var3 = this.field7146;
+		WeightedCache var3 = this.field7146;
 		synchronized (this.field7146) {
 			this.field7146.method7925();
 		}

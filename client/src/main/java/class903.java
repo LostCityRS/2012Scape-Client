@@ -76,8 +76,8 @@ public class class903 extends PathingEntity {
 
 	@ObfuscatedName("ahs.gb(Lwq;I)V")
 	public void method16149(NPCType arg0) {
-		if (this.field10075 != arg0 && class42.field585 && class42.method11169(this.field8593)) {
-			class42.method3561();
+		if (this.field10075 != arg0 && MiniMenu.field585 && MiniMenu.method11169(this.field8593)) {
+			MiniMenu.method3561();
 		}
 		this.field10075 = arg0;
 		if (this.field10075 != null) {
@@ -474,7 +474,7 @@ public class class903 extends PathingEntity {
 
 	@ObfuscatedName("ahs.u(I)Ladu;")
 	public CoordFine method3684() {
-		class453 var1 = client.field8980.method6214();
+		CoordGrid var1 = client.field8980.method6214();
 		return CoordFine.method8611(this.field9807, (int) this.method8565().field3464.field3475 + var1.field4836 * 512, -((int) this.method8565().field3464.field3476), (int) this.method8565().field3464.field3477 + var1.field4838 * 512);
 	}
 

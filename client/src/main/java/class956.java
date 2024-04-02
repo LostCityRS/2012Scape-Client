@@ -35,7 +35,7 @@ public class class956 extends SecondaryNode {
 			if (var6) {
 				var8 = new ObjectNode(arg0.method15337());
 			} else {
-				var8 = new class802(arg0.method15379());
+				var8 = new IntNode(arg0.method15379());
 			}
 			this.field10396.method11927(var8, (long) var7);
 		}
@@ -46,7 +46,7 @@ public class class956 extends SecondaryNode {
 		if (this.field10396 == null) {
 			return arg1;
 		} else {
-			class802 var3 = (class802) this.field10396.method11923((long) arg0);
+			IntNode var3 = (IntNode) this.field10396.method11923((long) arg0);
 			return var3 == null ? arg1 : var3.field9556;
 		}
 	}

@@ -17,12 +17,12 @@ public class class689 extends class15 {
 	@ObfuscatedName("zc.b")
 	public final boolean field8443;
 
-	public class689(GlToolkit arg0, class603 arg1, class685[] arg2, boolean arg3) {
+	public class689(GlToolkit arg0, FontMetrics arg1, PalettedSpriteData[] arg2, boolean arg3) {
 		super(arg0, arg1);
 		this.field8440 = arg0;
 		int var5 = 0;
 		for (int var6 = 0; var6 < 256; var6++) {
-			class685 var7 = arg2[var6];
+			PalettedSpriteData var7 = arg2[var6];
 			if (var7.field8409 > var5) {
 				var5 = var7.field8409;
 			}
@@ -34,7 +34,7 @@ public class class689 extends class15 {
 		if (arg3) {
 			byte[] var9 = new byte[var8 * var8];
 			for (int var10 = 0; var10 < 256; var10++) {
-				class685 var11 = arg2[var10];
+				PalettedSpriteData var11 = arg2[var10];
 				int var12 = var11.field8409;
 				int var13 = var11.field8415;
 				int var14 = var10 % 16 * var5;
@@ -64,7 +64,7 @@ public class class689 extends class15 {
 		} else {
 			int[] var24 = new int[var8 * var8];
 			for (int var25 = 0; var25 < 256; var25++) {
-				class685 var26 = arg2[var25];
+				PalettedSpriteData var26 = arg2[var25];
 				int[] var27 = var26.field8410;
 				byte[] var28 = var26.field8416;
 				byte[] var29 = var26.field8408;
@@ -104,7 +104,7 @@ public class class689 extends class15 {
 		float var41 = this.field8441.field9912 / (float) this.field8441.field9910;
 		float var42 = this.field8441.field9911 / (float) this.field8441.field9909;
 		for (int var43 = 0; var43 < 256; var43++) {
-			class685 var44 = arg2[var43];
+			PalettedSpriteData var44 = arg2[var43];
 			int var45 = var44.field8409;
 			int var46 = var44.field8415;
 			int var47 = var44.field8412;

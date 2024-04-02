@@ -9,7 +9,7 @@ public class class821 extends class403 {
 	public final byte[][] field9749 = new byte[10][];
 
 	@ObfuscatedName("aeh.x")
-	public final class334 field9747;
+	public final Js5 field9747;
 
 	@ObfuscatedName("aeh.i")
 	public final int field9748;
@@ -26,7 +26,7 @@ public class class821 extends class403 {
 	@ObfuscatedName("aeh.r")
 	public final Packet field9752 = new Packet(null);
 
-	public class821(int arg0, class334 arg1, int arg2) {
+	public class821(int arg0, Js5 arg1, int arg2) {
 		super(arg0);
 		this.field9747 = arg1;
 		this.field9748 = arg2;

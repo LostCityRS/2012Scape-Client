@@ -14,11 +14,11 @@ public class class966 extends class816 {
 
 	@ObfuscatedName("ajq.u(B)Z")
 	public boolean method15469() {
-		class113 var1 = this.field10477.method8725();
+		Location var1 = this.field10477.method8725();
 		if (var1 == null) {
 			return false;
 		} else {
-			class502.method1972(class619.field7305, this.field9679, -1, var1);
+			ScriptRunner.method1972(ClientTriggerType.field7305, this.field9679, -1, var1);
 			return true;
 		}
 	}

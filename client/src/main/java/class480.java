@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class480 {
 
 	@ObfuscatedName("qg.u")
-	public final class334 field5054;
+	public final Js5 field5054;
 
 	@ObfuscatedName("qg.j")
 	public int field5053;
@@ -13,7 +13,7 @@ public class class480 {
 	@ObfuscatedName("qg.a")
 	public class481[] field5055;
 
-	public class480(class527 arg0, class519 arg1, class334 arg2, boolean arg3) {
+	public class480(ModeGame arg0, class519 arg1, Js5 arg2, boolean arg3) {
 		this.field5054 = arg2;
 		if (this.field5054 == null) {
 			this.field5053 = 0;
@@ -23,7 +23,7 @@ public class class480 {
 		if (arg3) {
 			this.field5055 = new class481[this.field5053];
 			for (int var5 = 0; var5 < this.field5053; var5++) {
-				class334 var6 = this.field5054;
+				Js5 var6 = this.field5054;
 				byte[] var7;
 				synchronized (this.field5054) {
 					var7 = this.field5054.method5627(class161.field1660.field1668, var5);
@@ -45,7 +45,7 @@ public class class480 {
 	}
 
 	@ObfuscatedName("qg.j(Lug;B)I")
-	public int method8402(class567 arg0) {
+	public int method8402(VarIntDomain arg0) {
 		int var2 = 0;
 		for (int var3 = 0; var3 < this.field5053; var3++) {
 			class481 var4 = this.method8401(var3);

@@ -414,7 +414,7 @@ public class class796 extends Node {
 	}
 
 	@ObfuscatedName("adr.l(Lls;)Z")
-	public static boolean method15064(class334 arg0) {
+	public static boolean method15064(Js5 arg0) {
 		if (!field9479) {
 			byte[] var1 = arg0.method5627(0, 0);
 			if (var1 == null) {
@@ -426,7 +426,7 @@ public class class796 extends Node {
 	}
 
 	@ObfuscatedName("adr.f(Lls;II)Ladr;")
-	public static class796 method15065(class334 arg0, int arg1, int arg2) {
+	public static class796 method15065(Js5 arg0, int arg1, int arg2) {
 		if (!method15064(arg0)) {
 			arg0.method5629(arg1, arg2);
 			return null;
@@ -445,7 +445,7 @@ public class class796 extends Node {
 	}
 
 	@ObfuscatedName("adr.d(Lls;I)Ladr;")
-	public static class796 method15066(class334 arg0, int arg1) {
+	public static class796 method15066(Js5 arg0, int arg1) {
 		if (!method15064(arg0)) {
 			arg0.method5630(arg1);
 			return null;

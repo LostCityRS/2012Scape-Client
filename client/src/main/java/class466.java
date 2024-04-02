@@ -38,7 +38,7 @@ public class class466 {
 	}
 
 	@ObfuscatedName("vt.u(Lls;B)V")
-	public static void method12208(class334 arg0) {
+	public static void method12208(Js5 arg0) {
 		field4922 = 0;
 		field4921 = 0;
 		Statics.field4686 = new LinkedList();

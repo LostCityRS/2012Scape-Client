@@ -2,10 +2,10 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aaf")
-public class class724 extends class201 {
+public class class724 extends ParticleShader {
 
 	@ObfuscatedName("aaf.c")
-	public class172 field8691;
+	public Shader field8691;
 
 	@ObfuscatedName("aaf.m")
 	public class918 field8690;

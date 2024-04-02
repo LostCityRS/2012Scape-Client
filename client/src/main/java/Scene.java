@@ -1041,7 +1041,7 @@ public class Scene {
 		}
 		if (this.field4508 != null) {
 			this.method7404(true);
-			this.field4489.method503(-1, new class137(1583160, 40, 127, 63, 0, 0, 0));
+			this.field4489.method503(-1, new WaterFogData(1583160, 40, 127, 63, 0, 0, 0));
 			this.method7503(true, arg4, arg10, arg11, arg16);
 			this.field4489.method548();
 			this.method7404(false);
@@ -1288,7 +1288,7 @@ public class Scene {
 				var7 = (int) var6.field3475 >> this.field4510;
 				var8 = (int) var6.field3477 >> this.field4510;
 			}
-			class137 var9 = new class137();
+			WaterFogData var9 = new WaterFogData();
 			var9.field1475 = this.method7411(var7, var8);
 			var9.field1471 = this.method7410(var7, var8);
 			var9.field1474 = this.method7489(var7, var8);
@@ -1310,7 +1310,7 @@ public class Scene {
 	}
 
 	@ObfuscatedName("oo.ae(Lna;III[ZS)Z")
-	public boolean method7445(class30 arg0, int arg1, int arg2, int arg3, boolean[] arg4) {
+	public boolean method7445(HardShadow arg0, int arg1, int arg2, int arg3, boolean[] arg4) {
 		boolean var6 = false;
 		if (this.field4502 != this.field4498) {
 			int var7 = this.field4527[arg1].method196(arg2, arg3);
@@ -1333,7 +1333,7 @@ public class Scene {
 	}
 
 	@ObfuscatedName("oo.ac(Lna;III[ZI)V")
-	public void method7451(class30 arg0, int arg1, int arg2, int arg3, boolean[] arg4) {
+	public void method7451(HardShadow arg0, int arg1, int arg2, int arg3, boolean[] arg4) {
 		if (this.field4502 == this.field4498) {
 			return;
 		}
@@ -1350,7 +1350,7 @@ public class Scene {
 
 	@ObfuscatedName("oo.aq(III)V")
 	public void method7452(int arg0, int arg1) {
-		class30 var3 = null;
+		HardShadow var3 = null;
 		for (int var4 = arg0; var4 < arg1; var4++) {
 			FloorModel var5 = this.field4527[var4];
 			if (var5 != null) {

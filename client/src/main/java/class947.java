@@ -14,7 +14,7 @@ public class class947 extends SecondaryNode {
 	public class138[] field10350;
 
 	@ObfuscatedName("aha.u(Lls;Lls;II)V")
-	public static void method16191(class334 arg0, class334 arg1, int arg2) {
+	public static void method16191(Js5 arg0, Js5 arg1, int arg2) {
 		Statics.field674 = arg0;
 		Statics.field10347 = arg1;
 	}
@@ -29,7 +29,7 @@ public class class947 extends SecondaryNode {
 			return true;
 		}
 		if (this.field10348 == null) {
-			class334 var1 = Statics.field674;
+			Js5 var1 = Statics.field674;
 			synchronized (Statics.field674) {
 				if (!Statics.field674.method5631(this.field10349)) {
 					return false;
@@ -47,7 +47,7 @@ public class class947 extends SecondaryNode {
 			Packet var8 = new Packet(var7);
 			var8.field9626 = 1;
 			int var9 = var8.method15239();
-			class334 var10 = Statics.field10347;
+			Js5 var10 = Statics.field10347;
 			synchronized (Statics.field10347) {
 				var5 &= Statics.field10347.method5630(var9);
 			}
@@ -56,7 +56,7 @@ public class class947 extends SecondaryNode {
 			return false;
 		}
 		IterableQueue var12 = new IterableQueue();
-		class334 var13 = Statics.field674;
+		Js5 var13 = Statics.field674;
 		int[] var15;
 		synchronized (Statics.field674) {
 			int var14 = Statics.field674.method5637(this.field10349);
@@ -76,7 +76,7 @@ public class class947 extends SecondaryNode {
 				}
 			}
 			if (var21 == null) {
-				class334 var23 = Statics.field10347;
+				Js5 var23 = Statics.field10347;
 				synchronized (Statics.field10347) {
 					var21 = new class779(var20, Statics.field10347.method5635(var20));
 				}

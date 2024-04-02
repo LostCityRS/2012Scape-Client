@@ -29,7 +29,7 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.u(Lls;Lrd;Lux;Ltz;Lph;Lwd;Lug;)V")
-	public static void method7080(class334 arg0, class484 arg1, class563 arg2, LocTypeList arg3, class444 arg4, class609 arg5, class567 arg6) {
+	public static void method7080(Js5 arg0, FloorOverlayTypeList arg1, FloorUnderlayTypeList arg2, LocTypeList arg3, class444 arg4, class609 arg5, VarIntDomain arg6) {
 		Statics.field4264 = arg0;
 		Statics.field4278 = arg1;
 		Statics.field4265 = arg2;
@@ -42,11 +42,11 @@ public class class408 {
 		int[] var8 = Statics.field4264.method5683(var7);
 		if (var8 != null) {
 			for (int var9 = 0; var9 < var8.length; var9++) {
-				class951 var10 = class951.method13263(Statics.field4264, var7, var8[var9]);
+				WorldMapAreaMetadata var10 = WorldMapAreaMetadata.method13263(Statics.field4264, var7, var8[var9]);
 				field4272.method11927(var10, (long) var10.field10370);
 			}
 		}
-		class482.method8092(true, false);
+		ColourUtils.method8092(true, false);
 	}
 
 	@ObfuscatedName("om.j()V")
@@ -75,12 +75,12 @@ public class class408 {
 
 	@ObfuscatedName("om.s(I)V")
 	public static void method7122(int arg0) {
-		Statics.field4292 = (class951) field4272.method11923((long) arg0);
+		Statics.field4292 = (WorldMapAreaMetadata) field4272.method11923((long) arg0);
 	}
 
 	@ObfuscatedName("om.c(II)Lajo;")
-	public static class951 method7084(int arg0, int arg1) {
-		for (class951 var2 = (class951) field4272.method11928(); var2 != null; var2 = (class951) field4272.method11929()) {
+	public static WorldMapAreaMetadata method7084(int arg0, int arg1) {
+		for (WorldMapAreaMetadata var2 = (WorldMapAreaMetadata) field4272.method11928(); var2 != null; var2 = (WorldMapAreaMetadata) field4272.method11929()) {
 			if (var2.field10361 && var2.method16717(arg0, arg1)) {
 				return var2;
 			}
@@ -89,14 +89,14 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.m(I)Lajo;")
-	public static class951 method7117(int arg0) {
-		return (class951) field4272.method11923((long) arg0);
+	public static WorldMapAreaMetadata method7117(int arg0) {
+		return (WorldMapAreaMetadata) field4272.method11923((long) arg0);
 	}
 
 	@ObfuscatedName("om.t(II)Ltv;")
-	public static class552 method7086(int arg0, int arg1) {
-		class552 var2 = new class552();
-		for (class951 var3 = (class951) field4272.method11928(); var3 != null; var3 = (class951) field4272.method11929()) {
+	public static DualIterableQueue method7086(int arg0, int arg1) {
+		DualIterableQueue var2 = new DualIterableQueue();
+		for (WorldMapAreaMetadata var3 = (WorldMapAreaMetadata) field4272.method11928(); var3 != null; var3 = (WorldMapAreaMetadata) field4272.method11929()) {
 			if (var3.field10361 && var3.method16717(arg0, arg1)) {
 				var2.method11728(var3);
 			}
@@ -105,14 +105,14 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.l(Lma;II)V")
-	public static void method7087(class16 arg0, int arg1, int arg2) {
+	public static void method7087(BillboardTypeList arg0, int arg1, int arg2) {
 		for (int var3 = 0; var3 < Statics.field4278.field5105; var3++) {
 			Statics.field4267[var3 + 1] = method7088(arg0, var3, arg1, arg2);
 		}
 	}
 
 	@ObfuscatedName("om.f(Lma;III)I")
-	public static int method7088(class16 arg0, int arg1, int arg2, int arg3) {
+	public static int method7088(BillboardTypeList arg0, int arg1, int arg2, int arg3) {
 		class483 var4 = Statics.field4278.method8503(arg1);
 		if (var4 == null) {
 			return 0;
@@ -131,9 +131,9 @@ public class class408 {
 				var7 = 127;
 			}
 			int var8 = (arg2 + var6 & 0xFC00) + (var6 & 0x380) + var7;
-			var9 = Statics.field5083[class482.method3444(class482.method4740(var8, 96)) & 0xFFFF] | 0xFF000000;
+			var9 = Statics.field5083[ColourUtils.method3444(ColourUtils.method4740(var8, 96)) & 0xFFFF] | 0xFF000000;
 		} else if (var5 >= 0) {
-			var9 = Statics.field5083[class482.method3444(class482.method4740(arg0.method889(var5).field1260, 96)) & 0xFFFF] | 0xFF000000;
+			var9 = Statics.field5083[ColourUtils.method3444(ColourUtils.method4740(arg0.method889(var5).field1260, 96)) & 0xFFFF] | 0xFF000000;
 		} else if (var4.field5094 == -1) {
 			var9 = 0;
 		} else {
@@ -145,7 +145,7 @@ public class class408 {
 				var11 = 127;
 			}
 			int var12 = (arg2 + var10 & 0xFC00) + (var10 & 0x380) + var11;
-			var9 = Statics.field5083[class482.method3444(class482.method4740(var12, 96)) & 0xFFFF] | 0xFF000000;
+			var9 = Statics.field5083[ColourUtils.method3444(ColourUtils.method4740(var12, 96)) & 0xFFFF] | 0xFF000000;
 		}
 		return var9;
 	}
@@ -456,7 +456,7 @@ public class class408 {
 							arg1[var26] = 0;
 							arg2[var26] = 0;
 						} else {
-							int var27 = var21 == 0 ? 0 : class482.method6323(var18 * 256 / var21, var19 / var22, var20 / var22);
+							int var27 = var21 == 0 ? 0 : ColourUtils.method6323(var18 * 256 / var21, var19 / var22, var20 / var22);
 							int var28 = (var27 & 0x7F) + arg4;
 							if (var28 < 0) {
 								var28 = 0;
@@ -465,7 +465,7 @@ public class class408 {
 							}
 							int var29 = (arg3 + var27 & 0xFC00) + (var27 & 0x380) + var28;
 							int var30 = Statics.field4285 * var23 + var10;
-							int var31 = Statics.field5083[class482.method3444(Statics.method14030(var29, 96)) & 0xFFFF];
+							int var31 = Statics.field5083[ColourUtils.method3444(Statics.method14030(var29, 96)) & 0xFFFF];
 							arg1[var30] = (byte) (var31 >> 16 & 0xFF);
 							arg2[var30] = (short) (var31 & 0xFFFF);
 						}

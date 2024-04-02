@@ -7,7 +7,7 @@ import jaggl.OpenGL;
 public abstract class class348 implements GpuBuffer {
 
 	@ObfuscatedName("lj.a")
-	public final class899 field3744;
+	public final GlxToolkit field3744;
 
 	@ObfuscatedName("lj.s")
 	public final int field3743;
@@ -30,7 +30,7 @@ public abstract class class348 implements GpuBuffer {
 	@ObfuscatedName("lj.d")
 	public static final int[] field3751 = new int[1];
 
-	public class348(class899 arg0, int arg1, boolean arg2) {
+	public class348(GlxToolkit arg0, int arg1, boolean arg2) {
 		this.field3744 = arg0;
 		this.field3743 = arg1;
 		this.field3746 = arg2;

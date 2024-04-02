@@ -2,13 +2,13 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("gc")
-public abstract class class208 implements class214 {
+public abstract class class208 implements LoadingScreenElement {
 
 	@ObfuscatedName("gc.u")
-	public final class334 field2310;
+	public final Js5 field2310;
 
 	@ObfuscatedName("gc.j")
-	public final class334 field2313;
+	public final Js5 field2313;
 
 	@ObfuscatedName("gc.a")
 	public final class262 field2311;
@@ -22,7 +22,7 @@ public abstract class class208 implements class214 {
 	@ObfuscatedName("gc.m")
 	public long field2314;
 
-	public class208(class334 arg0, class334 arg1, class262 arg2) {
+	public class208(Js5 arg0, Js5 arg1, class262 arg2) {
 		this.field2310 = arg0;
 		this.field2313 = arg1;
 		this.field2311 = arg2;
@@ -43,8 +43,8 @@ public abstract class class208 implements class214 {
 
 	@ObfuscatedName("gc.u(B)V")
 	public void method3936() {
-		class603 var1 = class603.method14876(this.field2313, this.field2311.field2609);
-		this.field2312 = Statics.field5187.method712(var1, (class685[]) class125.method2593(this.field2310, this.field2311.field2609), true);
+		FontMetrics var1 = FontMetrics.method14876(this.field2313, this.field2311.field2609);
+		this.field2312 = Statics.field5187.method712(var1, (PalettedSpriteData[]) SpriteDataProvider.method2593(this.field2310, this.field2311.field2609), true);
 	}
 
 	@ObfuscatedName("gc.a(I)Z")

@@ -54,7 +54,7 @@ public class class521 {
 			var2.field9467.method15287(arg0);
 			client.field8975.method1913(var2);
 		} else {
-			class502.method1372(class619.field7307, arg0, -1);
+			ScriptRunner.method1372(ClientTriggerType.field7307, arg0, -1);
 		}
 	}
 

@@ -5,10 +5,10 @@ import deob.ObfuscatedName;
 public class class584 {
 
 	@ObfuscatedName("vx.u")
-	public final class334 field6827;
+	public final Js5 field6827;
 
 	@ObfuscatedName("vx.j")
-	public final class334 field6826;
+	public final Js5 field6826;
 
 	@ObfuscatedName("vx.a")
 	public int field6825 = 0;
@@ -17,12 +17,12 @@ public class class584 {
 	public int field6832 = 0;
 
 	@ObfuscatedName("vx.c")
-	public final class451 field6829 = new class451(64);
+	public final WeightedCache field6829 = new WeightedCache(64);
 
 	@ObfuscatedName("vx.l")
 	public class472 field6830 = null;
 
-	public class584(class519 arg0, class334 arg1, class334 arg2, class472 arg3) {
+	public class584(class519 arg0, Js5 arg1, Js5 arg2, class472 arg3) {
 		this.field6827 = arg1;
 		this.field6826 = arg2;
 		this.field6830 = arg3;

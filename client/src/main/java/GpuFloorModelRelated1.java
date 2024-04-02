@@ -18,7 +18,7 @@ public class GpuFloorModelRelated1 extends Node {
 	public final float field9441;
 
 	@ObfuscatedName("add.l")
-	public class137 field9440;
+	public WaterFogData field9440;
 
 	@ObfuscatedName("add.f")
 	public VertexBuffer field9446;
@@ -41,7 +41,7 @@ public class GpuFloorModelRelated1 extends Node {
 	@ObfuscatedName("add.p")
 	public long field9443;
 
-	public GpuFloorModelRelated1(GpuFloorModel arg0, int arg1, int arg2, class137 arg3) {
+	public GpuFloorModelRelated1(GpuFloorModel arg0, int arg1, int arg2, WaterFogData arg3) {
 		this.field9437 = arg0;
 		this.field9439 = this.field9437.field7722;
 		this.field9438 = arg1;
@@ -50,7 +50,7 @@ public class GpuFloorModelRelated1 extends Node {
 		this.field9436 = new int[this.field9437.field387 * this.field9437.field386];
 		byte var5 = 10;
 		if (arg1 >= 0) {
-			class120 var6 = this.field9439.field400.method889(arg1);
+			Material var6 = this.field9439.field400.method889(arg1);
 			if (var6.field1270 > 0) {
 				var5 = var6.field1270;
 			}
@@ -81,7 +81,7 @@ public class GpuFloorModelRelated1 extends Node {
 	@ObfuscatedName("add.s(IIIF)V")
 	public void method15005(int arg0, int arg1, int arg2, float arg3) {
 		if (this.field9438 != -1) {
-			class120 var5 = this.field9439.field400.method889(this.field9438);
+			Material var5 = this.field9439.field400.method889(this.field9438);
 			int var6 = var5.field1266 & 0xFF;
 			if (var6 != 0 && var5.field1270 != 4) {
 				int var7;

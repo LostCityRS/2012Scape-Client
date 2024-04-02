@@ -2,25 +2,25 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ge")
-public class class211 implements class214 {
+public class class211 implements LoadingScreenElement {
 
 	@ObfuscatedName("ge.u")
 	public final class267 field2322;
 
 	@ObfuscatedName("ge.j")
-	public final class334 field2321;
+	public final Js5 field2321;
 
 	@ObfuscatedName("ge.a")
 	public class118 field2323;
 
-	public class211(class334 arg0, class267 arg1) {
+	public class211(Js5 arg0, class267 arg1) {
 		this.field2321 = arg0;
 		this.field2322 = arg1;
 	}
 
 	@ObfuscatedName("ge.u(B)V")
 	public void method3936() {
-		this.field2323 = class308.method1624(this.field2321, this.field2322.field2630);
+		this.field2323 = MainLoadingScreen.method1624(this.field2321, this.field2322.field2630);
 	}
 
 	@ObfuscatedName("ge.j(ZI)V")

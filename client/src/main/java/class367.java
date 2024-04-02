@@ -178,7 +178,7 @@ public class class367 {
 
 	@ObfuscatedName("mh.m(Lra;Lmh;)V")
 	public void method6411(RendererToolkit arg0, class367 arg1) {
-		class129 var3 = class129.method2664(Statics.field549, this.field3960, 0);
+		ModelUnlit var3 = ModelUnlit.method2664(Statics.field549, this.field3960, 0);
 		if (var3 == null) {
 			return;
 		}
@@ -308,7 +308,7 @@ public class class367 {
 		if (Statics.field3977 != null) {
 			return;
 		}
-		class129 var1 = new class129(580, 1104, 1);
+		ModelUnlit var1 = new ModelUnlit(580, 1104, 1);
 		var1.method2653((short) 0, (short) 32767, (short) 0, (short) 1024, (short) 1024, (short) 1024, (byte) 0, (byte) 0, (byte) 0);
 		var1.method2625(0, 128, 0);
 		var1.method2625(0, -128, 0);

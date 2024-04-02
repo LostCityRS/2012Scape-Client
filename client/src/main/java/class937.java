@@ -139,7 +139,7 @@ public class class937 extends class793 {
 	}
 
 	@ObfuscatedName("aih.ai(Lacw;Lls;Lmd;II)Z")
-	public synchronized boolean method16375(class782 arg0, class334 arg1, class377 arg2, int arg3) {
+	public synchronized boolean method16375(class782 arg0, Js5 arg1, class377 arg2, int arg3) {
 		arg0.method14906();
 		boolean var5 = true;
 		int[] var6 = null;

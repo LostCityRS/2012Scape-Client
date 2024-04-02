@@ -7,7 +7,7 @@ public class class489 {
 	@ObfuscatedName("rj.u")
 	public class445 field5132;
 
-	public class489(class334 arg0) {
+	public class489(Js5 arg0) {
 		byte[] var2 = arg0.method5635(class491.field5139.field5145);
 		this.method8594(new Packet(var2));
 	}

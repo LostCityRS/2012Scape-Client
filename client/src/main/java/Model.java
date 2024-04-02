@@ -125,7 +125,7 @@ public abstract class Model {
 	}
 
 	@ObfuscatedName("qa.d(Ldw;[II)Ldt;")
-	public class143 method349(class129 arg0, int[] arg1, int arg2) {
+	public ModelRelated1 method349(ModelUnlit arg0, int[] arg1, int arg2) {
 		int[] var4 = null;
 		int[] var5 = null;
 		int[] var6 = null;
@@ -222,7 +222,7 @@ public abstract class Model {
 				}
 			}
 		}
-		return new class143(this, var4, var5, var6, var7);
+		return new ModelRelated1(this, var4, var5, var6, var7);
 	}
 
 	@ObfuscatedName("qa.z(IIIIFFF)[F")
@@ -682,7 +682,7 @@ public abstract class Model {
 	public abstract boolean method272(int arg0, int arg1, Matrix4x3 arg2, boolean arg3, int arg4);
 
 	@ObfuscatedName("qa.ga(Lna;)Lna;")
-	public abstract class30 method273(class30 arg0);
+	public abstract HardShadow method273(HardShadow arg0);
 
 	@ObfuscatedName("qa.N()I")
 	public abstract int method274();

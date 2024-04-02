@@ -10,7 +10,7 @@ public class class748 extends class300 implements class259 {
 	@ObfuscatedName("abi.m")
 	public final int field8817;
 
-	public class748(class898 arg0, int arg1, boolean arg2, int[][] arg3) {
+	public class748(DxToolkit arg0, int arg1, boolean arg2, int[][] arg3) {
 		super(arg0, class124.field1296, class139.field1501, arg2 && arg0.field9995, arg1 * arg1 * 6);
 		this.field8817 = arg1;
 		if (this.field3328) {
@@ -37,7 +37,7 @@ public class class748 extends class300 implements class259 {
 	}
 
 	@ObfuscatedName("abi.ae(Lhd;)V")
-	public void method4525(class241 arg0) {
+	public void method4525(GpuTextureRelated arg0) {
 		super.method4525(arg0);
 	}
 }

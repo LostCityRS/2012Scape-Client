@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public final class class728 extends class203 {
 
 	@ObfuscatedName("aat.d")
-	public class172 field8709;
+	public Shader field8709;
 
 	@ObfuscatedName("aat.r")
 	public final class168[] field8702 = new class168[3];
@@ -17,10 +17,10 @@ public final class class728 extends class203 {
 	public int[] field8713;
 
 	@ObfuscatedName("aat.e")
-	public class311 field8714 = new class311(1.0F, 1.0F, 1.0F, 1.0F);
+	public Vector4 field8714 = new Vector4(1.0F, 1.0F, 1.0F, 1.0F);
 
 	@ObfuscatedName("aat.ay")
-	public class311 field8704 = new class311(0.0F, 0.0F, 0.0F, 0.0F);
+	public Vector4 field8704 = new Vector4(0.0F, 0.0F, 0.0F, 0.0F);
 
 	public class728(GpuToolkit arg0) throws ShaderException {
 		super(arg0);

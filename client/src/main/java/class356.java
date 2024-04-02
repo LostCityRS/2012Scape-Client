@@ -15,9 +15,9 @@ public class class356 {
 		if (!client.method1608(client.field8923)) {
 			return;
 		}
-		class64[] var1 = client.field9011;
+		ServerConnection[] var1 = client.field9011;
 		for (int var2 = 0; var2 < var1.length; var2++) {
-			class64 var3 = var1[var2];
+			ServerConnection var3 = var1[var2];
 			var3.field839++;
 			if (var3.field839 < 50 && !arg0) {
 				return;

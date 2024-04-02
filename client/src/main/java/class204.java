@@ -117,7 +117,7 @@ public class class204 implements class464 {
 			return true;
 		}
 		boolean var1 = true;
-		class334 var2 = this.field2296.field2299;
+		Js5 var2 = this.field2296.field2299;
 		synchronized (this.field2296.field2299) {
 			for (int var3 = 0; var3 < this.field2287.length; var3++) {
 				if (!this.field2296.field2299.method5629(this.field2287[var3], 0)) {
@@ -129,19 +129,19 @@ public class class204 implements class464 {
 	}
 
 	@ObfuscatedName("gp.s(I)Ldw;")
-	public class129 method3890() {
+	public ModelUnlit method3890() {
 		if (this.field2287 == null) {
 			return null;
 		}
-		class129[] var1 = new class129[this.field2287.length];
-		class334 var2 = this.field2296.field2299;
+		ModelUnlit[] var1 = new ModelUnlit[this.field2287.length];
+		Js5 var2 = this.field2296.field2299;
 		synchronized (this.field2296.field2299) {
 			int var3 = 0;
 			while (true) {
 				if (var3 >= this.field2287.length) {
 					break;
 				}
-				var1[var3] = class129.method2664(this.field2296.field2299, this.field2287[var3], 0);
+				var1[var3] = ModelUnlit.method2664(this.field2296.field2299, this.field2287[var3], 0);
 				var3++;
 			}
 		}
@@ -150,11 +150,11 @@ public class class204 implements class464 {
 				var1[var5].method2634(2);
 			}
 		}
-		class129 var6;
+		ModelUnlit var6;
 		if (var1.length == 1) {
 			var6 = var1[0];
 		} else {
-			var6 = new class129(var1, var1.length);
+			var6 = new ModelUnlit(var1, var1.length);
 		}
 		if (var6 == null) {
 			return null;
@@ -175,7 +175,7 @@ public class class204 implements class464 {
 	@ObfuscatedName("gp.c(I)Z")
 	public boolean method3891() {
 		boolean var1 = true;
-		class334 var2 = this.field2296.field2299;
+		Js5 var2 = this.field2296.field2299;
 		synchronized (this.field2296.field2299) {
 			for (int var3 = 0; var3 < 5; var3++) {
 				if (this.field2294[var3] != -1 && !this.field2296.field2299.method5629(this.field2294[var3], 0)) {
@@ -187,10 +187,10 @@ public class class204 implements class464 {
 	}
 
 	@ObfuscatedName("gp.m(I)Ldw;")
-	public class129 method3892() {
-		class129[] var1 = new class129[5];
+	public ModelUnlit method3892() {
+		ModelUnlit[] var1 = new ModelUnlit[5];
 		int var2 = 0;
-		class334 var3 = this.field2296.field2299;
+		Js5 var3 = this.field2296.field2299;
 		synchronized (this.field2296.field2299) {
 			int var4 = 0;
 			while (true) {
@@ -198,7 +198,7 @@ public class class204 implements class464 {
 					break;
 				}
 				if (this.field2294[var4] != -1) {
-					var1[var2++] = class129.method2664(this.field2296.field2299, this.field2294[var4], 0);
+					var1[var2++] = ModelUnlit.method2664(this.field2296.field2299, this.field2294[var4], 0);
 				}
 				var4++;
 			}
@@ -208,7 +208,7 @@ public class class204 implements class464 {
 				var1[var6].method2634(2);
 			}
 		}
-		class129 var7 = new class129(var1, var2);
+		ModelUnlit var7 = new ModelUnlit(var1, var2);
 		if (this.field2288 != null) {
 			for (int var8 = 0; var8 < this.field2288.length; var8++) {
 				var7.method2661(this.field2288[var8], this.field2290[var8]);

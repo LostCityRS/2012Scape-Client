@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ye")
-public class class661 extends WallLayerEntity implements class113 {
+public class class661 extends WallLayerEntity implements Location {
 
 	@ObfuscatedName("ye.z")
 	public static final int[] field7558 = new int[] { 1, 2, 4, 8 };
@@ -17,7 +17,7 @@ public class class661 extends WallLayerEntity implements class113 {
 	public Model field7557;
 
 	@ObfuscatedName("ye.p")
-	public class30 field7555;
+	public HardShadow field7555;
 
 	@ObfuscatedName("ye.w")
 	public EntityBounds field7554;
@@ -63,11 +63,11 @@ public class class661 extends WallLayerEntity implements class113 {
 		class570 var15 = this.method12887(arg1, var14, this.field7562);
 		if (var15 != null) {
 			this.field7557 = (Model) var15.field6757;
-			this.field7555 = (class30) var15.field6756;
+			this.field7555 = (HardShadow) var15.field6756;
 			if (this.field7563 || arg3.field6472) {
 				this.field7557 = this.field7557.method295((byte) 0, var14, false);
 				if (arg3.field6472) {
-					class357 var16 = client.field8980.method6094();
+					LocTint var16 = client.field8980.method6094();
 					this.field7557.method290(var16.field3783, var16.field3782, var16.field3781, var16.field3784);
 				}
 			}
@@ -223,10 +223,10 @@ public class class661 extends WallLayerEntity implements class113 {
 	@ObfuscatedName("ye.m(Lra;I)V")
 	public void method2406(RendererToolkit arg0) {
 		Object var2 = null;
-		class30 var4;
+		HardShadow var4;
 		if (this.field7555 == null && this.field7562) {
 			class570 var3 = this.method12887(arg0, 262144, true);
-			var4 = (class30) (var3 == null ? null : var3.field6756);
+			var4 = (HardShadow) (var3 == null ? null : var3.field6756);
 		} else {
 			var4 = this.field7555;
 			this.field7555 = null;
@@ -240,10 +240,10 @@ public class class661 extends WallLayerEntity implements class113 {
 	@ObfuscatedName("ye.t(Lra;I)V")
 	public void method2412(RendererToolkit arg0) {
 		Object var2 = null;
-		class30 var4;
+		HardShadow var4;
 		if (this.field7555 == null && this.field7562) {
 			class570 var3 = this.method12887(arg0, 262144, true);
-			var4 = (class30) (var3 == null ? null : var3.field6756);
+			var4 = (HardShadow) (var3 == null ? null : var3.field6756);
 		} else {
 			var4 = this.field7555;
 			this.field7555 = null;

@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class499 {
 
 	@ObfuscatedName("re.u")
-	public class954 field5191;
+	public ClientScript field5191;
 
 	@ObfuscatedName("re.j")
 	public int field5189 = -1;

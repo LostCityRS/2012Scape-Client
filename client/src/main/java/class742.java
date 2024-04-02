@@ -17,7 +17,7 @@ public class class742 extends class231 {
 	public static float field8803 = 1.0F;
 
 	@ObfuscatedName("abr.l")
-	public class172 field8793;
+	public Shader field8793;
 
 	@ObfuscatedName("abr.f")
 	public class168 field8794;

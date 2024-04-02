@@ -37,7 +37,7 @@ public class class791 extends Node {
 	public int field9461 = 0;
 
 	@ObfuscatedName("adn.q")
-	public class258 field9449;
+	public IndexBuffer field9449;
 
 	@ObfuscatedName("adn.p")
 	public VertexBuffer field9459;

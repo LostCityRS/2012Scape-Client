@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 @ObfuscatedName("aal")
 public class class730 extends class208 {
 
-	public class730(class334 arg0, class334 arg1, class752 arg2) {
+	public class730(Js5 arg0, Js5 arg1, class752 arg2) {
 		super(arg0, arg1, arg2);
 	}
 

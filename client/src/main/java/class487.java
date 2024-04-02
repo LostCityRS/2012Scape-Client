@@ -34,7 +34,7 @@ public class class487 {
 	@ObfuscatedName("rx.d")
 	public boolean field5124;
 
-	public class487(class334 arg0) {
+	public class487(Js5 arg0) {
 		byte[] var2 = arg0.method5635(class491.field5137.field5145);
 		this.method8582(new Packet(var2));
 	}

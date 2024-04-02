@@ -82,15 +82,15 @@ public class class58 {
 	public static boolean method7787(int arg0, int arg1, int arg2) {
 		Scene var3 = client.field8980.method6098();
 		boolean var4 = true;
-		class113 var5 = (class113) var3.method7433(arg0, arg1, arg2);
+		Location var5 = (Location) var3.method7433(arg0, arg1, arg2);
 		if (var5 != null) {
 			var4 &= method16491(var5);
 		}
-		class113 var6 = (class113) var3.method7437(arg0, arg1, arg2, client.field9216);
+		Location var6 = (Location) var3.method7437(arg0, arg1, arg2, client.field9216);
 		if (var6 != null) {
 			var4 &= method16491(var6);
 		}
-		class113 var7 = (class113) var3.method7517(arg0, arg1, arg2);
+		Location var7 = (Location) var3.method7517(arg0, arg1, arg2);
 		if (var7 != null) {
 			var4 &= method16491(var7);
 		}
@@ -98,7 +98,7 @@ public class class58 {
 	}
 
 	@ObfuscatedName("aiq.t(Lca;B)Z")
-	public static boolean method16491(class113 arg0) {
+	public static boolean method16491(Location arg0) {
 		LocType var1 = client.field8980.method6103().method11471(arg0.method2401());
 		if (var1.field6508 == -1) {
 			return true;
@@ -111,7 +111,7 @@ public class class58 {
 	@ObfuscatedName("qr.l(Lra;IIIIIIII)V")
 	public static void method8094(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
 		Scene var8 = client.field8980.method6098();
-		class113 var9 = (class113) var8.method7433(arg1, arg2, arg3);
+		Location var9 = (Location) var8.method7433(arg1, arg2, arg3);
 		if (var9 != null) {
 			LocType var10 = client.field8980.method6103().method11471(var9.method2401());
 			int var11 = var9.method2391() & 0x3;
@@ -158,7 +158,7 @@ public class class58 {
 				method3634(arg0, var10, var11, arg4, arg5);
 			}
 		}
-		class113 var14 = (class113) var8.method7437(arg1, arg2, arg3, client.field9216);
+		Location var14 = (Location) var8.method7437(arg1, arg2, arg3, client.field9216);
 		if (var14 != null) {
 			LocType var15 = client.field8980.method6103().method11471(var14.method2401());
 			int var16 = var14.method2391() & 0x3;
@@ -177,7 +177,7 @@ public class class58 {
 				}
 			}
 		}
-		class113 var19 = (class113) var8.method7517(arg1, arg2, arg3);
+		Location var19 = (Location) var8.method7517(arg1, arg2, arg3);
 		if (var19 == null) {
 			return;
 		}
@@ -241,7 +241,7 @@ public class class58 {
 		} else if (field762 == 2 || field762 == 5 || Statics.field6357 == null) {
 			arg0.method684(-16777216, var5, arg2, arg3);
 		} else {
-			class453 var6 = client.field8980.method6214();
+			CoordGrid var6 = client.field8980.method6214();
 			int var7;
 			int var8;
 			int var9;
@@ -261,8 +261,8 @@ public class class58 {
 			int var12 = var7 / 128 + 48;
 			int var13 = client.field8980.method6193() * 4 + 48 - var8 / 128;
 			Statics.field6357.method2512((float) arg1.field1863 / 2.0F + (float) arg2, (float) arg1.field1929 / 2.0F + (float) arg3, (float) var12, (float) var13, var10, var9 << 2, var5, arg2, arg3);
-			class406 var14 = client.field8980.method6093();
-			for (class802 var15 = (class802) field758.method11563(); var15 != null; var15 = (class802) field758.method11567()) {
+			WorldMapRelated var14 = client.field8980.method6093();
+			for (IntNode var15 = (IntNode) field758.method11563(); var15 != null; var15 = (IntNode) field758.method11567()) {
 				int var16 = var15.field9556;
 				int var17 = (var14.field4254[var16] >> 14 & 0x3FFF) - var6.field4836;
 				int var18 = (var14.field4254[var16] & 0x3FFF) - var6.field4838;
@@ -503,7 +503,7 @@ public class class58 {
 			var32 = var31.method1045();
 		}
 		class15 var33 = Statics.field2163;
-		class603 var34 = Statics.field559;
+		FontMetrics var34 = Statics.field559;
 		if (var8.field4777 == 1) {
 			var33 = Statics.field560;
 			var34 = Statics.field9813;
@@ -555,7 +555,7 @@ public class class58 {
 	}
 
 	@ObfuscatedName("aam.b(Lew;Lta;IIIIILjava/lang/String;Ll;Lvm;II)V")
-	public static void method14046(ComType arg0, class11 arg1, int arg2, int arg3, int arg4, int arg5, int arg6, String arg7, class15 arg8, class603 arg9, int arg10) {
+	public static void method14046(ComType arg0, class11 arg1, int arg2, int arg3, int arg4, int arg5, int arg6, String arg7, class15 arg8, FontMetrics arg9, int arg10) {
 		int var11;
 		if (Statics.field2671 == 5) {
 			var11 = (int) client.field9021 & 0x3FFF;

@@ -20,7 +20,7 @@ public class class46 {
 			class869 var1 = (class869) Statics.field3780.method3692(LookatMode.field2169, false);
 			var0.method14091(Statics.field1307.method3722());
 			var1.method15923(new Quaternion(0.0F, 0.0F, 0.0F));
-		} catch (class884 var3) {
+		} catch (CameraException var3) {
 		}
 		Statics.field643 = Statics.field7136.method7254();
 		Statics.field7432 = Statics.field7136.method7255();
@@ -52,7 +52,7 @@ public class class46 {
 			float var8 = (float) (Math.atan((double) ((float) var5 / 2.0F / var6)) * 2.0D);
 			try {
 				Statics.field3780.method3739(var7, var8);
-			} catch (class884 var18) {
+			} catch (CameraException var18) {
 			}
 		}
 		if (Statics.field7136.method7251()) {

@@ -5,9 +5,9 @@ import deob.ObfuscatedName;
 public class class324 implements class586 {
 
 	@ObfuscatedName("kj.u")
-	public final class334 field3488;
+	public final Js5 field3488;
 
-	public class324(class334 arg0) {
+	public class324(Js5 arg0) {
 		this.field3488 = arg0;
 	}
 

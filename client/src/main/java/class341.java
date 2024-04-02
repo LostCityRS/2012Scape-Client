@@ -5,15 +5,15 @@ import deob.ObfuscatedName;
 public class class341 {
 
 	@ObfuscatedName("lt.u")
-	public final class334 field3704;
+	public final Js5 field3704;
 
 	@ObfuscatedName("lt.j")
-	public final class334 field3705;
+	public final Js5 field3705;
 
 	@ObfuscatedName("lt.a")
-	public final class451 field3706 = new class451(64);
+	public final WeightedCache field3706 = new WeightedCache(64);
 
-	public class341(class519 arg0, class334 arg1, class334 arg2) {
+	public class341(class519 arg0, Js5 arg1, Js5 arg2) {
 		this.field3704 = arg1;
 		this.field3705 = arg2;
 		if (this.field3704 != null) {

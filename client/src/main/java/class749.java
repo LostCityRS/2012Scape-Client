@@ -5,7 +5,7 @@ import jaggl.OpenGL;
 @ObfuscatedName("abk")
 public class class749 extends class347 implements class259 {
 
-	public class749(class899 arg0, int arg1, boolean arg2, int[][] arg3) {
+	public class749(GlxToolkit arg0, int arg1, boolean arg2, int[][] arg3) {
 		super(arg0, 34067, class124.field1296, class139.field1501, arg1 * arg1 * 6, arg2);
 		this.field3733.method13557(this);
 		if (arg2) {
@@ -14,7 +14,7 @@ public class class749 extends class347 implements class259 {
 			}
 		} else {
 			for (int var6 = 0; var6 < 6; var6++) {
-				OpenGL.glTexImage2Di(var6 + 34069, 0, class899.method16100(this.field3736, this.field3731), arg1, arg1, 0, class899.method16093(this.field3736), this.field3733.field10024, arg3[var6], 0);
+				OpenGL.glTexImage2Di(var6 + 34069, 0, GlxToolkit.method16100(this.field3736, this.field3731), arg1, arg1, 0, GlxToolkit.method16093(this.field3736), this.field3733.field10024, arg3[var6], 0);
 			}
 		}
 	}
@@ -25,7 +25,7 @@ public class class749 extends class347 implements class259 {
 	}
 
 	@ObfuscatedName("abk.ae(Lhd;)V")
-	public void method4525(class241 arg0) {
+	public void method4525(GpuTextureRelated arg0) {
 		super.method4525(arg0);
 	}
 

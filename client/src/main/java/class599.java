@@ -38,12 +38,12 @@ public class class599 {
 	}
 
 	@ObfuscatedName("vv.a(B)Lds;")
-	public synchronized class140 method12363() {
-		class140 var1 = (class140) this.field7162.field7168.method7916((long) this.field7164);
+	public synchronized SpriteData method12363() {
+		SpriteData var1 = (SpriteData) this.field7162.field7168.method7916((long) this.field7164);
 		if (var1 != null) {
 			return var1;
 		}
-		class140 var2 = class125.method2590(this.field7162.field7167, this.field7164, 0);
+		SpriteData var2 = SpriteDataProvider.method2590(this.field7162.field7167, this.field7164, 0);
 		if (var2 != null) {
 			this.field7162.field7168.method7937(var2, (long) this.field7164);
 		}

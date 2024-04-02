@@ -18,7 +18,7 @@ public class class965 extends class816 {
 		if (var1 == null) {
 			return false;
 		} else {
-			class502.method2842(class619.field7313, this.field9679, -1, (PathingEntity) var1.field9550, this.field10476);
+			ScriptRunner.method2842(ClientTriggerType.field7313, this.field9679, -1, (PathingEntity) var1.field9550, this.field10476);
 			return true;
 		}
 	}

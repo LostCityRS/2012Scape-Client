@@ -33,35 +33,35 @@ public class class57 {
 		boolean var0 = true;
 		if (Statics.field753 == null) {
 			if (Statics.field7387.method5630(Statics.field749)) {
-				Statics.field753 = class125.method2598(Statics.field7387, Statics.field749);
+				Statics.field753 = SpriteDataProvider.method2598(Statics.field7387, Statics.field749);
 			} else {
 				var0 = false;
 			}
 		}
 		if (Statics.field5243 == null) {
 			if (Statics.field7387.method5630(Statics.field3716)) {
-				Statics.field5243 = class125.method2598(Statics.field7387, Statics.field3716);
+				Statics.field5243 = SpriteDataProvider.method2598(Statics.field7387, Statics.field3716);
 			} else {
 				var0 = false;
 			}
 		}
 		if (Statics.field8719 == null) {
 			if (Statics.field7387.method5630(Statics.field7347)) {
-				Statics.field8719 = class125.method2598(Statics.field7387, Statics.field7347);
+				Statics.field8719 = SpriteDataProvider.method2598(Statics.field7387, Statics.field7347);
 			} else {
 				var0 = false;
 			}
 		}
 		if (Statics.field10224 == null) {
 			if (Statics.field8745.method5630(Statics.field635)) {
-				Statics.field10224 = class603.method14876(Statics.field8745, Statics.field635);
+				Statics.field10224 = FontMetrics.method14876(Statics.field8745, Statics.field635);
 			} else {
 				var0 = false;
 			}
 		}
 		if (Statics.field4566 == null) {
 			if (Statics.field7387.method5630(Statics.field635)) {
-				Statics.field4566 = (class685[]) class125.method2593(Statics.field7387, Statics.field635);
+				Statics.field4566 = (PalettedSpriteData[]) SpriteDataProvider.method2593(Statics.field7387, Statics.field635);
 			} else {
 				var0 = false;
 			}

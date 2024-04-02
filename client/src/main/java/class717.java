@@ -2,18 +2,18 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aaz")
-public final class class717 extends class172 {
+public final class class717 extends Shader {
 
 	@ObfuscatedName("aaz.f")
-	public final class898 field8586;
+	public final DxToolkit field8586;
 
 	@ObfuscatedName("aaz.d")
-	public class715 field8585;
+	public DxProgram field8585;
 
 	@ObfuscatedName("aaz.z")
 	public boolean field8587;
 
-	public class717(class898 arg0, class173 arg1) {
+	public class717(DxToolkit arg0, ShaderData arg1) {
 		super(arg0, arg1);
 		this.field8586 = arg0;
 		this.field8587 = false;
@@ -21,7 +21,7 @@ public final class class717 extends class172 {
 
 	@ObfuscatedName("aaz.c(Lyk;Lei;)Leo;")
 	public class168 method3404(GpuToolkit arg0, class167 arg1) {
-		return new class715((class898) arg0, this, arg1);
+		return new DxProgram((DxToolkit) arg0, this, arg1);
 	}
 
 	@ObfuscatedName("aaz.z(Leo;)Z")
@@ -29,7 +29,7 @@ public final class class717 extends class172 {
 		if (this.field8585 == arg0) {
 			return true;
 		} else if (arg0.method3272()) {
-			this.field8585 = (class715) arg0;
+			this.field8585 = (DxProgram) arg0;
 			this.field2079 = this.method3345(arg0);
 			if (this.field2079 == -1) {
 				throw new IllegalArgumentException();

@@ -38,7 +38,7 @@ public class class52 {
 			Canvas var2 = new Canvas();
 			var2.setSize(36, 32);
 			Statics.field672 = RendererToolkit.method11222(0, var2, Statics.field8465, Statics.field2670, 0);
-			Statics.field673 = Statics.field672.method712(class603.method12156(Statics.field8745, Statics.field551, 0), (class685[]) class125.method2591(Statics.field7387, Statics.field551, 0), true);
+			Statics.field673 = Statics.field672.method712(FontMetrics.method12156(Statics.field8745, Statics.field551, 0), (PalettedSpriteData[]) SpriteDataProvider.method2591(Statics.field7387, Statics.field551, 0), true);
 		}
 		for (class772 var3 = (class772) field671.method11563(); var3 != null; var3 = (class772) field671.method11567()) {
 			Statics.field3492.method12294(Statics.field672, arg0, var3.field9309, var3.field9304, var3.field9305, var3.field9307, false, false, var3.field9308, Statics.field673, var3.field9306 ? Statics.field2119.field10044 : null);

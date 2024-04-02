@@ -40,7 +40,7 @@ public class class252 {
 	public VertexDeclaration field2570;
 
 	@ObfuscatedName("hg.n")
-	public class258 field2571;
+	public IndexBuffer field2571;
 
 	@ObfuscatedName("hg.o")
 	public int[] field2566 = new int[4];

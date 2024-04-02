@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class LocTypeList {
 
 	@ObfuscatedName("tz.u")
-	public final class527 field6557;
+	public final ModeGame field6557;
 
 	@ObfuscatedName("tz.j")
 	public final class519 field6552;
@@ -14,22 +14,22 @@ public class LocTypeList {
 	public boolean field6553;
 
 	@ObfuscatedName("tz.s")
-	public final class334 field6554;
+	public final Js5 field6554;
 
 	@ObfuscatedName("tz.c")
-	public final class334 field6555;
+	public final Js5 field6555;
 
 	@ObfuscatedName("tz.t")
-	public class451 field6561 = new class451(256);
+	public WeightedCache field6561 = new WeightedCache(256);
 
 	@ObfuscatedName("tz.l")
-	public final class451 field6558 = new class451(500);
+	public final WeightedCache field6558 = new WeightedCache(500);
 
 	@ObfuscatedName("tz.f")
-	public final class451 field6559 = new class451(30);
+	public final WeightedCache field6559 = new WeightedCache(30);
 
 	@ObfuscatedName("tz.d")
-	public final class451 field6560 = new class451(50);
+	public final WeightedCache field6560 = new WeightedCache(50);
 
 	@ObfuscatedName("tz.z")
 	public int field6551;
@@ -38,12 +38,12 @@ public class LocTypeList {
 	public final String[] field6563;
 
 	@ObfuscatedName("tz.o")
-	public class129[] field6562 = new class129[4];
+	public ModelUnlit[] field6562 = new ModelUnlit[4];
 
 	@ObfuscatedName("tz.q")
 	public class570 field6564 = new class570(null, null);
 
-	public LocTypeList(class527 arg0, class519 arg1, boolean arg2, class334 arg3, class334 arg4) {
+	public LocTypeList(ModeGame arg0, class519 arg1, boolean arg2, Js5 arg3, Js5 arg4) {
 		this.field6557 = arg0;
 		this.field6552 = arg1;
 		this.field6553 = arg2;
@@ -54,7 +54,7 @@ public class LocTypeList {
 			class161.field1631.method3071();
 			this.field6554.method5637(var6);
 		}
-		if (class527.field6407 == this.field6557) {
+		if (ModeGame.field6407 == this.field6557) {
 			this.field6563 = new String[] { null, null, null, null, null, class588.field6874.method12206(this.field6552) };
 		} else {
 			this.field6563 = new String[] { null, null, null, null, null, null };
@@ -63,7 +63,7 @@ public class LocTypeList {
 
 	@ObfuscatedName("tz.u(II)Ltg;")
 	public LocType method11471(int arg0) {
-		class451 var2 = this.field6561;
+		WeightedCache var2 = this.field6561;
 		LocType var3;
 		synchronized (this.field6561) {
 			var3 = (LocType) this.field6561.method7916((long) arg0);
@@ -71,7 +71,7 @@ public class LocTypeList {
 		if (var3 != null) {
 			return var3;
 		}
-		class334 var5 = this.field6554;
+		Js5 var5 = this.field6554;
 		byte[] var6;
 		synchronized (this.field6554) {
 			var6 = this.field6554.method5627(class161.field1631.method3073(arg0), class161.field1631.method3075(arg0));
@@ -92,7 +92,7 @@ public class LocTypeList {
 			var8.field6505 = null;
 			var8.field6545 = null;
 		}
-		class451 var9 = this.field6561;
+		WeightedCache var9 = this.field6561;
 		synchronized (this.field6561) {
 			this.field6561.method7937(var8, (long) arg0);
 			return var8;
@@ -110,15 +110,15 @@ public class LocTypeList {
 	@ObfuscatedName("tz.a(II)V")
 	public void method11473(int arg0) {
 		this.field6551 = arg0;
-		class451 var2 = this.field6558;
+		WeightedCache var2 = this.field6558;
 		synchronized (this.field6558) {
 			this.field6558.method7922();
 		}
-		class451 var4 = this.field6559;
+		WeightedCache var4 = this.field6559;
 		synchronized (this.field6559) {
 			this.field6559.method7922();
 		}
-		class451 var6 = this.field6560;
+		WeightedCache var6 = this.field6560;
 		synchronized (this.field6560) {
 			this.field6560.method7922();
 		}
@@ -126,46 +126,46 @@ public class LocTypeList {
 
 	@ObfuscatedName("tz.s(II)V")
 	public void method11474(int arg0) {
-		this.field6561 = new class451(arg0);
+		this.field6561 = new WeightedCache(arg0);
 	}
 
 	@ObfuscatedName("tz.c(I)V")
 	public void method11479() {
-		class451 var1 = this.field6561;
+		WeightedCache var1 = this.field6561;
 		synchronized (this.field6561) {
 			this.field6561.method7922();
 		}
-		class451 var3 = this.field6558;
+		WeightedCache var3 = this.field6558;
 		synchronized (this.field6558) {
 			this.field6558.method7922();
 		}
-		class451 var5 = this.field6559;
+		WeightedCache var5 = this.field6559;
 		synchronized (this.field6559) {
 			this.field6559.method7922();
 		}
-		class451 var7 = this.field6560;
+		WeightedCache var7 = this.field6560;
 		synchronized (this.field6560) {
 			this.field6560.method7922();
 		}
-		this.field6562 = new class129[4];
+		this.field6562 = new ModelUnlit[4];
 		this.field6564 = new class570(null, null);
 	}
 
 	@ObfuscatedName("tz.m(IB)V")
 	public void method11487(int arg0) {
-		class451 var2 = this.field6561;
+		WeightedCache var2 = this.field6561;
 		synchronized (this.field6561) {
 			this.field6561.method7921(arg0);
 		}
-		class451 var4 = this.field6558;
+		WeightedCache var4 = this.field6558;
 		synchronized (this.field6558) {
 			this.field6558.method7921(arg0);
 		}
-		class451 var6 = this.field6559;
+		WeightedCache var6 = this.field6559;
 		synchronized (this.field6559) {
 			this.field6559.method7921(arg0);
 		}
-		class451 var8 = this.field6560;
+		WeightedCache var8 = this.field6560;
 		synchronized (this.field6560) {
 			this.field6560.method7921(arg0);
 		}
@@ -173,19 +173,19 @@ public class LocTypeList {
 
 	@ObfuscatedName("tz.t(I)V")
 	public void method11477() {
-		class451 var1 = this.field6561;
+		WeightedCache var1 = this.field6561;
 		synchronized (this.field6561) {
 			this.field6561.method7925();
 		}
-		class451 var3 = this.field6558;
+		WeightedCache var3 = this.field6558;
 		synchronized (this.field6558) {
 			this.field6558.method7925();
 		}
-		class451 var5 = this.field6559;
+		WeightedCache var5 = this.field6559;
 		synchronized (this.field6559) {
 			this.field6559.method7925();
 		}
-		class451 var7 = this.field6560;
+		WeightedCache var7 = this.field6560;
 		synchronized (this.field6560) {
 			this.field6560.method7925();
 		}

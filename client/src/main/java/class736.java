@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public abstract class class736 extends class222 {
 
 	@ObfuscatedName("abf.j")
-	public class172 field8778;
+	public Shader field8778;
 
 	@ObfuscatedName("abf.a")
 	public class918 field8750;

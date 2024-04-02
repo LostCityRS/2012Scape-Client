@@ -5,17 +5,17 @@ import deob.ObfuscatedName;
 public abstract class class537 {
 
 	@ObfuscatedName("tb.s")
-	public class815 field6462;
+	public ClientOptions field6462;
 
 	@ObfuscatedName("tb.c")
 	public int field6461;
 
-	public class537(class815 arg0) {
+	public class537(ClientOptions arg0) {
 		this.field6462 = arg0;
 		this.field6461 = this.method11386();
 	}
 
-	public class537(int arg0, class815 arg1) {
+	public class537(int arg0, ClientOptions arg1) {
 		this.field6461 = arg0;
 		this.field6462 = arg1;
 	}

@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("yf")
-public class class663 extends WallLayerEntity implements class113 {
+public class class663 extends WallLayerEntity implements Location {
 
 	@ObfuscatedName("yf.z")
 	public class116 field7576;

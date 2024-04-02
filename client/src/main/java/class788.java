@@ -41,7 +41,7 @@ public class class788 extends Node {
 		if (this.field9429 == null) {
 			this.field9429 = new class217[arg0];
 		} else {
-			class531.method11338(this.field9429, 0, this.field9429 = new class217[arg0], 0, this.field9430);
+			ArrayUtil.method11338(this.field9429, 0, this.field9429 = new class217[arg0], 0, this.field9430);
 		}
 	}
 
@@ -59,7 +59,7 @@ public class class788 extends Node {
 				var1[var2] = this.field9429[var2].field2343;
 				this.field9431[var2] = var2++;
 			}
-			class485.method8077(var1, this.field9431);
+			Algorithms.method8077(var1, this.field9431);
 		}
 		return this.field9431;
 	}
@@ -79,7 +79,7 @@ public class class788 extends Node {
 		if (this.field9430 == 0) {
 			this.field9429 = null;
 		} else {
-			class531.method11338(this.field9429, arg0 + 1, this.field9429, arg0, this.field9430 - arg0);
+			ArrayUtil.method11338(this.field9429, arg0 + 1, this.field9429, arg0, this.field9430 - arg0);
 		}
 		this.field9431 = null;
 	}

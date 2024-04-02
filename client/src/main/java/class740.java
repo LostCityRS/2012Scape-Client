@@ -8,12 +8,12 @@ import java.nio.ByteBuffer;
 public class class740 extends VertexDeclaration {
 
 	@ObfuscatedName("abj.j")
-	public class898 field8787;
+	public DxToolkit field8787;
 
 	@ObfuscatedName("abj.a")
 	public long field8786 = 0L;
 
-	public class740(class898 arg0, class243[] arg1) {
+	public class740(DxToolkit arg0, class243[] arg1) {
 		super(arg1);
 		this.field8787 = arg0;
 		byte var3 = 0;

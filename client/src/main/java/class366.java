@@ -74,7 +74,7 @@ public class class366 {
 	public int field3949;
 
 	@ObfuscatedName("vq.u(Lls;Lma;B)V")
-	public static void method12289(class334 arg0, class16 arg1) {
+	public static void method12289(Js5 arg0, BillboardTypeList arg1) {
 		Statics.field549 = arg0;
 		Statics.field6785 = arg1;
 	}
@@ -164,7 +164,7 @@ public class class366 {
 						this.field3931[++this.field3932 - 1] = var7;
 					}
 				}
-				class485.method15811(var5, this.field3931, 0, this.field3932 - 1);
+				Algorithms.method15811(var5, this.field3931, 0, this.field3932 - 1);
 			}
 			this.field3938 = true;
 		}
@@ -195,7 +195,7 @@ public class class366 {
 			boolean var2 = Statics.field549.method5631(this.field3942);
 			if (var2) {
 				arg0.method530(16777215, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F);
-				class129 var3 = class129.method2664(Statics.field549, this.field3942, 0);
+				ModelUnlit var3 = ModelUnlit.method2664(Statics.field549, this.field3942, 0);
 				this.field3943 = arg0.method625(var3, 1099776, 0, 255, 1);
 				byte[] var4 = this.field3943.method334();
 				if (var4 == null) {
@@ -245,14 +245,14 @@ public class class366 {
 			if (this.field3927 == -1 || this.field3928 == 0) {
 				arg0.method489(arg2, arg3, arg4, arg5, var14 << 24 | arg9, 1);
 			} else {
-				class120 var15 = Statics.field6785.method889(this.field3927);
-				if (this.field3937 == null && Statics.field6785.method898(this.field3927, class456.field4853 == var15.field1262 ? class455.field4848 : class455.field4849, 0.7F, this.field3928, this.field3928, false)) {
-					int[] var16 = class456.field4853 == var15.field1262 ? Statics.field6785.method887(this.field3927, 0.7F, this.field3928, this.field3928, false) : Statics.field6785.method886(this.field3927, 0.7F, this.field3928, this.field3928, false);
+				Material var15 = Statics.field6785.method889(this.field3927);
+				if (this.field3937 == null && Statics.field6785.method898(this.field3927, MaterialAlphaMode.field4853 == var15.field1262 ? class455.field4848 : class455.field4849, 0.7F, this.field3928, this.field3928, false)) {
+					int[] var16 = MaterialAlphaMode.field4853 == var15.field1262 ? Statics.field6785.method887(this.field3927, 0.7F, this.field3928, this.field3928, false) : Statics.field6785.method886(this.field3927, 0.7F, this.field3928, this.field3928, false);
 					this.field3941 = var16[0];
 					this.field3940 = var16[var16.length - 1];
 					this.field3937 = arg0.method506(var16, 0, var15.field1252, var15.field1252, var15.field1252);
 				}
-				int var17 = var14 == 255 ? (class456.field4853 == var15.field1262 ? 1 : 0) : 1;
+				int var17 = var14 == 255 ? (MaterialAlphaMode.field4853 == var15.field1262 ? 1 : 0) : 1;
 				if (var17 == 1 && arg10) {
 					arg0.method489(arg2, arg3, arg4, arg5, arg9, 0);
 				}

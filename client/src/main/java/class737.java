@@ -16,12 +16,12 @@ public class class737 extends class300 implements class225 {
 	@ObfuscatedName("abp.l")
 	public final int field8781;
 
-	public class737(class898 arg0, class124 arg1, int arg2, int arg3, int arg4, boolean arg5, byte[] arg6) {
+	public class737(DxToolkit arg0, class124 arg1, int arg2, int arg3, int arg4, boolean arg5, byte[] arg6) {
 		super(arg0, arg1, class139.field1501, false, arg2 * arg3 * arg4);
 		this.field8779 = arg2;
 		this.field8780 = arg3;
 		this.field8781 = arg4;
-		this.field3325 = IDirect3DDevice.CreateVolumeTexture(this.field3326.field9975, arg2, arg3, arg4, 1, 0, class898.method16037(arg1, this.field3329), 1);
+		this.field3325 = IDirect3DDevice.CreateVolumeTexture(this.field3326.field9975, arg2, arg3, arg4, 1, 0, DxToolkit.method16037(arg1, this.field3329), 1);
 		ByteBuffer var8 = this.field3326.field8244;
 		var8.clear();
 		var8.put(arg6);
@@ -39,7 +39,7 @@ public class class737 extends class300 implements class225 {
 	}
 
 	@ObfuscatedName("abp.ae(Lhd;)V")
-	public void method4525(class241 arg0) {
+	public void method4525(GpuTextureRelated arg0) {
 		super.method4525(arg0);
 	}
 

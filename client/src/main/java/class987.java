@@ -8,7 +8,7 @@ import jagdx.class0;
 public class class987 extends class891 {
 
 	@ObfuscatedName("akh.s")
-	public final class898 field10536;
+	public final DxToolkit field10536;
 
 	@ObfuscatedName("akh.c")
 	public int field10541;
@@ -28,7 +28,7 @@ public class class987 extends class891 {
 	@ObfuscatedName("akh.d")
 	public final class304[] field10535 = new class304[4];
 
-	public class987(class898 arg0) {
+	public class987(DxToolkit arg0) {
 		super(arg0);
 		this.field10536 = arg0;
 	}

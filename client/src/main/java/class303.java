@@ -7,7 +7,7 @@ import jagdx.IUnknown;
 public class class303 implements class296 {
 
 	@ObfuscatedName("jl.u")
-	public final class898 field3342;
+	public final DxToolkit field3342;
 
 	@ObfuscatedName("jl.j")
 	public final class139 field3343;
@@ -21,12 +21,12 @@ public class class303 implements class296 {
 	@ObfuscatedName("jl.c")
 	public long field3346;
 
-	public class303(class898 arg0, class139 arg1, int arg2, int arg3, int arg4) {
+	public class303(DxToolkit arg0, class139 arg1, int arg2, int arg3, int arg4) {
 		this.field3342 = arg0;
 		this.field3344 = arg2;
 		this.field3345 = arg3;
 		this.field3343 = arg1;
-		this.field3346 = IDirect3DDevice.CreateDepthStencilSurface(this.field3342.field9975, arg2, arg3, class898.method16022(this.field3343), arg4, 0, false);
+		this.field3346 = IDirect3DDevice.CreateDepthStencilSurface(this.field3342.field9975, arg2, arg3, DxToolkit.method16022(this.field3343), arg4, 0, false);
 		this.field3342.method13586(this);
 	}
 

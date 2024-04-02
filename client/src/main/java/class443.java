@@ -231,7 +231,7 @@ public class class443 {
 				if (var12) {
 					var14 = new ObjectNode(arg0.method15337());
 				} else {
-					var14 = new class802(arg0.method15379());
+					var14 = new IntNode(arg0.method15379());
 				}
 				this.field4804.method11927(var14, (long) var13);
 			}
@@ -258,7 +258,7 @@ public class class443 {
 	}
 
 	@ObfuscatedName("pw.s(Lug;B)Z")
-	public boolean method7835(class567 arg0) {
+	public boolean method7835(VarIntDomain arg0) {
 		int var2;
 		if (this.field4784 == -1) {
 			if (this.field4783 == -1) {
@@ -292,7 +292,7 @@ public class class443 {
 		if (var5 != null) {
 			return var5;
 		} else if (this.field4798.field4806.method5630(var3)) {
-			class140 var6 = class125.method2590(this.field4798.field4806, var3, 0);
+			SpriteData var6 = SpriteDataProvider.method2590(this.field4798.field4806, var3, 0);
 			if (var6 != null) {
 				var5 = arg0.method517(var6, true);
 				this.field4798.field4810.method7937(var5, (long) var4);
@@ -310,7 +310,7 @@ public class class443 {
 			return var2;
 		}
 		this.field4798.field4806.method5630(this.field4780);
-		class140 var3 = class125.method2590(this.field4798.field4806, this.field4780, 0);
+		SpriteData var3 = SpriteDataProvider.method2590(this.field4798.field4806, this.field4780, 0);
 		if (var3 != null) {
 			var2 = arg0.method517(var3, true);
 			this.field4798.field4810.method7937(var2, (long) (this.field4780 | 0x20000 | arg0.field397 << 29));
@@ -323,7 +323,7 @@ public class class443 {
 		if (this.field4804 == null) {
 			return arg1;
 		} else {
-			class802 var3 = (class802) this.field4804.method11923((long) arg0);
+			IntNode var3 = (IntNode) this.field4804.method11923((long) arg0);
 			return var3 == null ? arg1 : var3.field9556;
 		}
 	}

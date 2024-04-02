@@ -146,8 +146,8 @@ public class GlFloorModel extends FloorModel {
 	}
 
 	@ObfuscatedName("yj.u(II[I[I[I[I[I[I[I[ILdk;Z)V")
-	public void method193(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, class137 arg10, boolean arg11) {
-		class16 var13 = this.field7688.field400;
+	public void method193(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, WaterFogData arg10, boolean arg11) {
+		BillboardTypeList var13 = this.field7688.field400;
 		if (arg5 != null && this.field7702 == null) {
 			this.field7702 = new int[this.field387][this.field386][];
 		}
@@ -197,7 +197,7 @@ public class GlFloorModel extends FloorModel {
 	}
 
 	@ObfuscatedName("yj.j(II[I[I[I[I[I[I[I[I[I[I[ILdk;Z)V")
-	public void method219(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, int[] arg10, int[] arg11, int[] arg12, class137 arg13, boolean arg14) {
+	public void method219(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, int[] arg10, int[] arg11, int[] arg12, WaterFogData arg13, boolean arg14) {
 		int var16 = arg9.length;
 		int[] var17 = new int[var16 * 3];
 		int[] var18 = new int[var16 * 3];
@@ -577,7 +577,7 @@ public class GlFloorModel extends FloorModel {
 				var101[var102] = var103.field4228;
 				var103.method14861(this.field7709);
 			}
-			class485.method11178(var101, this.field7703);
+			Algorithms.method11178(var101, this.field7703);
 			if (this.field7704 != null) {
 				this.field7704.method2276();
 			}
@@ -786,18 +786,18 @@ public class GlFloorModel extends FloorModel {
 	}
 
 	@ObfuscatedName("yj.w(IILna;)Lna;")
-	public class30 method200(int arg0, int arg1, class30 arg2) {
+	public HardShadow method200(int arg0, int arg1, HardShadow arg2) {
 		if ((this.field7711[arg0][arg1] & 0x1) == 0) {
 			return null;
 		}
 		int var4 = this.field385 >> this.field7688.field8092;
-		class998 var5 = (class998) arg2;
-		class998 var6;
+		GlHardShadow var5 = (GlHardShadow) arg2;
+		GlHardShadow var6;
 		if (var5 != null && var5.method17110(var4, var4)) {
 			var6 = var5;
 			var5.method17118();
 		} else {
-			var6 = new class998(this.field7688, var4, var4);
+			var6 = new GlHardShadow(this.field7688, var4, var4);
 		}
 		var6.method17115(0, 0, var4, var4);
 		this.method12975(var6, arg0, arg1);
@@ -805,7 +805,7 @@ public class GlFloorModel extends FloorModel {
 	}
 
 	@ObfuscatedName("yj.x(Laln;II)V")
-	public void method12975(class998 arg0, int arg1, int arg2) {
+	public void method12975(GlHardShadow arg0, int arg1, int arg2) {
 		int[] var4 = this.field7699[arg1][arg2];
 		int[] var5 = this.field7718[arg1][arg2];
 		int var6 = var4.length;
@@ -834,7 +834,7 @@ public class GlFloorModel extends FloorModel {
 	}
 
 	@ObfuscatedName("yj.l(Lna;IIIIZ)Z")
-	public boolean method203(class30 arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+	public boolean method203(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
 		if (this.field7704 == null || arg0 == null) {
 			return false;
 		} else {
@@ -845,7 +845,7 @@ public class GlFloorModel extends FloorModel {
 	}
 
 	@ObfuscatedName("yj.UA(Lna;IIIIZ)V")
-	public void method209(class30 arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+	public void method209(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
 		if (this.field7704 != null && arg0 != null) {
 			int var7 = arg1 - (this.field7688.field8164 * arg2 >> 8) >> this.field7688.field8092;
 			int var8 = arg3 - (this.field7688.field8165 * arg2 >> 8) >> this.field7688.field8092;
@@ -854,7 +854,7 @@ public class GlFloorModel extends FloorModel {
 	}
 
 	@ObfuscatedName("yj.NA(Lna;IIIIZ)V")
-	public void method194(class30 arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+	public void method194(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
 		if (this.field7704 != null && arg0 != null) {
 			int var7 = arg1 - (this.field7688.field8164 * arg2 >> 8) >> this.field7688.field8092;
 			int var8 = arg3 - (this.field7688.field8165 * arg2 >> 8) >> this.field7688.field8092;

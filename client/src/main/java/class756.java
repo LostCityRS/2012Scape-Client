@@ -11,7 +11,7 @@ import java.awt.Canvas;
 public class class756 extends class894 implements class298 {
 
 	@ObfuscatedName("abg.u")
-	public final class898 field8848;
+	public final DxToolkit field8848;
 
 	@ObfuscatedName("abg.j")
 	public final Canvas field8844;
@@ -40,7 +40,7 @@ public class class756 extends class894 implements class298 {
 	@ObfuscatedName("abg.d")
 	public D3DPRESENT_PARAMETERS field8852;
 
-	public class756(class898 arg0, Canvas arg1, int arg2, int arg3, boolean arg4) {
+	public class756(DxToolkit arg0, Canvas arg1, int arg2, int arg3, boolean arg4) {
 		super(arg0);
 		this.field8844 = arg1;
 		this.field8848 = arg0;
@@ -63,7 +63,7 @@ public class class756 extends class894 implements class298 {
 			this.field8850 = IDirect3DDevice.GetSwapChain(this.field8848.field9975, 0);
 			this.field8851 = IDirect3DSwapChain.GetBackBuffer(this.field8850, 0, 0);
 			this.field8846 = IDirect3DDevice.GetDepthStencilSurface(this.field8848.field9975);
-		} else if (class898.method16034(this.field8848.field9989, this.field8848.field9973, this.field8848.field9974, this.field8848.field8383, this.field8852)) {
+		} else if (DxToolkit.method16034(this.field8848.field9989, this.field8848.field9973, this.field8848.field9974, this.field8848.field8383, this.field8852)) {
 			int var1 = this.field8852.AutoDepthStencilFormat;
 			this.field8850 = IDirect3DDevice.CreateAdditionalSwapChain(this.field8848.field9975, this.field8852);
 			this.field8851 = IDirect3DSwapChain.GetBackBuffer(this.field8850, 0, 0);

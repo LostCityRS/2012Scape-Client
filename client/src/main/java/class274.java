@@ -14,7 +14,7 @@ public class class274 {
 	public static IterableMap field2745 = new IterableMap(16);
 
 	@ObfuscatedName("ic.q")
-	public static class451 field2758 = new class451(64);
+	public static WeightedCache field2758 = new WeightedCache(64);
 
 	@ObfuscatedName("ic.p")
 	public int field2748;
@@ -59,7 +59,7 @@ public class class274 {
 	public int field2772;
 
 	@ObfuscatedName("fo.u(Lls;B)V")
-	public static void method3618(class334 arg0) {
+	public static void method3618(Js5 arg0) {
 		Statics.field2757 = arg0;
 	}
 
@@ -77,7 +77,7 @@ public class class274 {
 		}
 		var3.method4675();
 		if (var3.field2760 == 2 && field2745.method11923((long) arg0) == null) {
-			field2745.method11927(new class802(field2764), (long) arg0);
+			field2745.method11927(new IntNode(field2764), (long) arg0);
 			field2756[++field2764 - 1] = var3;
 		}
 		field2758.method7937(var3, (long) arg0);

@@ -18,7 +18,7 @@ public class h extends Model implements class10 {
 	@ObfuscatedName("h.m")
 	public ModelParticleEffector[] field471;
 
-	public h(ja arg0, ba arg1, class129 arg2, int arg3, int arg4, int arg5, int arg6) {
+	public h(ja arg0, ba arg1, ModelUnlit arg2, int arg3, int arg4, int arg5, int arg6) {
 		this.field474 = arg0;
 		this.field472 = arg1;
 		this.field473 = arg2.field1347;
@@ -39,8 +39,8 @@ public class h extends Model implements class10 {
 		int[] var15 = new int[var14 * 8];
 		int var16 = 0;
 		for (int var17 = 0; var17 < var14; var17++) {
-			class141 var18 = arg2.field1349[var17];
-			class272 var19 = class272.method3666(var18.field1512);
+			ModelBillboard var18 = arg2.field1349[var17];
+			BillboardType var19 = BillboardType.method3666(var18.field1512);
 			var15[var16++] = var18.field1513;
 			var15[var16++] = var19.field2658;
 			var15[var16++] = var19.field2662;
@@ -50,7 +50,7 @@ public class h extends Model implements class10 {
 			var15[var16++] = var19.field2667 ? -1 : 0;
 		}
 		for (int var20 = 0; var20 < var14; var20++) {
-			class141 var21 = arg2.field1349[var20];
+			ModelBillboard var21 = arg2.field1349[var20];
 			var15[var16++] = var21.field1511;
 		}
 		this.method1128(this.field474, this.field472, arg2.field1328, arg2.field1315, arg2.field1316, arg2.field1320, arg2.field1318, arg2.field1313, arg2.field1321, arg2.field1342, arg2.field1322, arg2.field1323, arg2.field1324, arg2.field1345, arg2.field1326, arg2.field1332, arg2.field1348, arg2.field1329, arg2.field1330, arg2.field1331, arg2.field1319, arg2.field1333, arg2.field1334, arg2.field1335, arg2.field1336, arg2.field1337, arg2.field1338, arg2.field1339, arg2.field1340, arg2.field1341, arg2.field1327, arg2.field1325, arg2.field1317, arg2.field1343, arg2.field1344, var11, var8, var9, arg3, arg4, arg5, arg6, var15);
@@ -306,7 +306,7 @@ public class h extends Model implements class10 {
 	public native void method397(int arg0);
 
 	@ObfuscatedName("h.ga(Lna;)Lna;")
-	public native class30 method273(class30 arg0);
+	public native HardShadow method273(HardShadow arg0);
 
 	@ObfuscatedName("h.ea()Z")
 	public native boolean method421();

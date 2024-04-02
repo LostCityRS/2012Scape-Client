@@ -41,25 +41,25 @@ public class class908 extends class736 {
 	public class918 field10111;
 
 	@ObfuscatedName("ahw.ak")
-	public final class311 field10135 = new class311();
+	public final Vector4 field10135 = new Vector4();
 
 	@ObfuscatedName("ahw.av")
 	public class918 field10118;
 
 	@ObfuscatedName("ahw.aj")
-	public final class311 field10119 = new class311();
+	public final Vector4 field10119 = new Vector4();
 
 	@ObfuscatedName("ahw.ah")
 	public class918 field10120;
 
 	@ObfuscatedName("ahw.au")
-	public final class311 field10121 = new class311();
+	public final Vector4 field10121 = new Vector4();
 
 	@ObfuscatedName("ahw.ae")
 	public class918 field10122;
 
 	@ObfuscatedName("ahw.ac")
-	public final class311 field10123 = new class311();
+	public final Vector4 field10123 = new Vector4();
 
 	@ObfuscatedName("ahw.aq")
 	public class918 field10124;
@@ -71,7 +71,7 @@ public class class908 extends class736 {
 	public class918 field10126;
 
 	@ObfuscatedName("ahw.bz")
-	public final class311 field10131 = new class311();
+	public final Vector4 field10131 = new Vector4();
 
 	@ObfuscatedName("ahw.bv")
 	public class918 field10128;

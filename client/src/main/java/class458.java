@@ -14,7 +14,7 @@ public class class458 {
 	public IterableMap field4856;
 
 	@ObfuscatedName("qd.s")
-	public class552 field4858 = new class552();
+	public DualIterableQueue field4858 = new DualIterableQueue();
 
 	public class458(int arg0) {
 		this.field4857 = arg0;
@@ -107,7 +107,7 @@ public class class458 {
 			} else if (++var2.field9554 > (long) arg0) {
 				SoftCacheEntry var3 = new SoftCacheEntry(var2.field10375, var2.method16728(), var2.field10374);
 				this.field4856.method11927(var3, var2.field4228);
-				class552.method2355(var3, var2);
+				DualIterableQueue.method2355(var3, var2);
 				var2.method6979();
 				var2.method15142();
 			}

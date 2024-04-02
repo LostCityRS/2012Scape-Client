@@ -48,7 +48,7 @@ public class class55 {
 		byte var4 = (byte) (var3 >> 28);
 		int var5 = var3 >> 14 & 0x3FFF;
 		int var6 = var3 & 0x3FFF;
-		class453 var7 = client.field8980.method6214();
+		CoordGrid var7 = client.field8980.method6214();
 		var2.field8642[0] = var5 - var7.field4836;
 		var2.field8643[0] = var6 - var7.field4838;
 		var2.method8552((float) ((var2.field8642[0] << 9) + (var2.method13954() << 8)), var2.method8545().field3464.field3476, (float) ((var2.field8643[0] << 9) + (var2.method13954() << 8)));

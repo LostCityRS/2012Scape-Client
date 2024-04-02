@@ -47,7 +47,7 @@ public class class896 extends class679 {
 	@ObfuscatedName("ahk.u()Lxl;")
 	public class641 method13186() {
 		if (this.field9953 == null) {
-			class16 var1 = this.field9961.field400;
+			BillboardTypeList var1 = this.field9961.field400;
 			field9957[0] = this.field9952;
 			field9957[1] = this.field9955;
 			field9957[2] = this.field9956;
@@ -60,7 +60,7 @@ public class class896 extends class679 {
 				if (field9957[var4] < 0) {
 					return null;
 				}
-				class120 var5 = var1.method889(field9957[var4]);
+				Material var5 = var1.method889(field9957[var4]);
 				int var6 = var5.field1252;
 				if (var6 > var3) {
 					var3 = var6;
@@ -75,7 +75,7 @@ public class class896 extends class679 {
 			for (int var7 = 0; var7 < 6; var7++) {
 				field9959[var7] = var1.method886(field9957[var7], 1.0F, var3, var3, false);
 				if (var3 * var3 != field9959[var7].length) {
-					class120 var8 = var1.method889(field9957[var7]);
+					Material var8 = var1.method889(field9957[var7]);
 					int var9 = var3 / var8.field1252;
 					int[] var10 = new int[var3 * var3];
 					for (int var11 = 0; var11 < var8.field1252; var11++) {

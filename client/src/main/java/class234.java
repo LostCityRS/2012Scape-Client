@@ -27,7 +27,7 @@ public class class234 {
 	public final int field2449;
 
 	@ObfuscatedName("hq.d")
-	public class258 field2458;
+	public IndexBuffer field2458;
 
 	@ObfuscatedName("hq.z")
 	public class239 field2459;
@@ -96,12 +96,12 @@ public class class234 {
 	}
 
 	@ObfuscatedName("hq.u(Lfq;)V")
-	public void method4363(class200 arg0) {
+	public void method4363(ModelShader arg0) {
 		this.method4371(arg0, this.field2458, 0, this.field2449);
 	}
 
 	@ObfuscatedName("hq.j(Lfq;Lin;II)V")
-	public void method4371(class200 arg0, class258 arg1, int arg2, int arg3) {
+	public void method4371(ModelShader arg0, IndexBuffer arg1, int arg2, int arg3) {
 		if (arg3 <= 0) {
 			return;
 		}

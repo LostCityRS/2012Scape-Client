@@ -188,7 +188,7 @@ public class class509 {
 					if (var22) {
 						var24 = new ObjectNode(arg0.method15337());
 					} else {
-						var24 = new class802(arg0.method15379());
+						var24 = new IntNode(arg0.method15379());
 					}
 					this.field6322.method11927(var24, (long) var23);
 				}
@@ -236,7 +236,7 @@ public class class509 {
 		if (this.field6322 == null) {
 			return arg1;
 		} else {
-			class802 var3 = (class802) this.field6322.method11923((long) arg0);
+			IntNode var3 = (IntNode) this.field6322.method11923((long) arg0);
 			return var3 == null ? arg1 : var3.field9556;
 		}
 	}

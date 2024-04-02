@@ -22,7 +22,7 @@ public class class731 extends class208 {
 	@ObfuscatedName("aai.n")
 	public class118 field8722;
 
-	public class731(class334 arg0, class334 arg1, class750 arg2) {
+	public class731(Js5 arg0, Js5 arg1, class750 arg2) {
 		super(arg0, arg1, arg2);
 	}
 
@@ -30,12 +30,12 @@ public class class731 extends class208 {
 	public void method3936() {
 		super.method3936();
 		class750 var1 = (class750) this.field2311;
-		this.field8725 = class308.method1624(this.field2310, var1.field8822);
-		this.field8721 = class308.method1624(this.field2310, var1.field8820);
-		this.field8720 = class308.method1624(this.field2310, var1.field8821);
-		this.field8723 = class308.method1624(this.field2310, var1.field8824);
-		this.field8724 = class308.method1624(this.field2310, var1.field8823);
-		this.field8722 = class308.method1624(this.field2310, var1.field8819);
+		this.field8725 = MainLoadingScreen.method1624(this.field2310, var1.field8822);
+		this.field8721 = MainLoadingScreen.method1624(this.field2310, var1.field8820);
+		this.field8720 = MainLoadingScreen.method1624(this.field2310, var1.field8821);
+		this.field8723 = MainLoadingScreen.method1624(this.field2310, var1.field8824);
+		this.field8724 = MainLoadingScreen.method1624(this.field2310, var1.field8823);
+		this.field8722 = MainLoadingScreen.method1624(this.field2310, var1.field8819);
 	}
 
 	@ObfuscatedName("aai.f(ZIIS)V")

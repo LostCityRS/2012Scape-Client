@@ -2,15 +2,15 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("gk")
-public class class207 implements class214 {
+public class class207 implements LoadingScreenElement {
 
 	@ObfuscatedName("gk.u")
 	public final class261 field2306;
 
 	@ObfuscatedName("gk.j")
-	public final class213 field2307;
+	public final LoadingScreenNewsManager field2307;
 
-	public class207(class213 arg0, class261 arg1) {
+	public class207(LoadingScreenNewsManager arg0, class261 arg1) {
 		this.field2306 = arg1;
 		this.field2307 = arg0;
 	}
@@ -26,7 +26,7 @@ public class class207 implements class214 {
 
 	@ObfuscatedName("gk.j(ZI)V")
 	public void method3932(boolean arg0) {
-		class209 var2 = this.field2307.method3991(this.field2306.field2600);
+		LoadingScreenNewsEntry var2 = this.field2307.method3991(this.field2306.field2600);
 		if (var2 == null) {
 			return;
 		}
@@ -51,7 +51,7 @@ public class class207 implements class214 {
 		return arg0.method836(arg1, arg2 + arg4, arg3 + arg4, this.field2306.field2598 - arg4 * 2, this.field2306.field2601 - arg4 * 2, this.field2306.field2595, this.field2306.field2596, 0, 0, 0, null, null, null, 0, 0);
 	}
 
-	public static final void add(class503 arg0, byte arg1) {
+	public static final void add(ClientScriptState arg0, byte arg1) {
 		arg0.field5216 -= 2;
 		int var2 = arg0.field5215[arg0.field5216];
 		int var3 = arg0.field5215[arg0.field5216 + 1];

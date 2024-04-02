@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class EffectAnimType {
 
 	@ObfuscatedName("se.u")
-	public class506 field5256;
+	public EffectAnimTypeList field5256;
 
 	@ObfuscatedName("se.j")
 	public int field5250;
@@ -175,7 +175,7 @@ public class EffectAnimType {
 		if (this.field5259 != 128 || this.field5265 != 0) {
 			var11 |= 0x5;
 		}
-		class451 var13 = this.field5256.field5245;
+		WeightedCache var13 = this.field5256.field5245;
 		Model var14;
 		synchronized (this.field5256.field5245) {
 			var14 = (Model) this.field5256.field5245.method7916((long) (this.field5250 |= arg0.field397 << 29));
@@ -191,7 +191,7 @@ public class EffectAnimType {
 			if (this.field5255 != null) {
 				var16 |= 0x8000;
 			}
-			class129 var17 = class129.method2664(this.field5256.field5244, this.field5251, 0);
+			ModelUnlit var17 = ModelUnlit.method2664(this.field5256.field5244, this.field5251, 0);
 			if (var17 == null) {
 				return null;
 			}
@@ -210,7 +210,7 @@ public class EffectAnimType {
 				}
 			}
 			var14.method252(var11);
-			class451 var20 = this.field5256.field5245;
+			WeightedCache var20 = this.field5256.field5245;
 			synchronized (this.field5256.field5245) {
 				this.field5256.field5245.method7937(var14, (long) (this.field5250 |= arg0.field397 << 29));
 			}

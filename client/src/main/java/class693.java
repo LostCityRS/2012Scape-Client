@@ -10,6 +10,6 @@ public class class693 extends CutsceneAction {
 
 	@ObfuscatedName("zz.j(I)V")
 	public void method2873() {
-		class144.method14961(true);
+		CutsceneManager.method14961(true);
 	}
 }

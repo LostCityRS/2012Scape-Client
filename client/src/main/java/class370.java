@@ -14,7 +14,7 @@ public class class370 {
 	public int field3993;
 
 	@ObfuscatedName("mr.u(Lls;II)Lmr;")
-	public static class370 method6466(class334 arg0, int arg1, int arg2) {
+	public static class370 method6466(Js5 arg0, int arg1, int arg2) {
 		byte[] var3 = arg0.method5627(arg1, arg2);
 		return var3 == null ? null : new class370(new Packet(var3));
 	}

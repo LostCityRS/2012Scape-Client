@@ -5,18 +5,18 @@ import deob.ObfuscatedName;
 public class class417 {
 
 	@ObfuscatedName("ow.u")
-	public final class334 field4452;
+	public final Js5 field4452;
 
 	@ObfuscatedName("ow.j")
-	public final class334 field4451;
+	public final Js5 field4451;
 
 	@ObfuscatedName("ow.a")
-	public final class451 field4453 = new class451(64);
+	public final WeightedCache field4453 = new WeightedCache(64);
 
 	@ObfuscatedName("ow.s")
-	public class451 field4454 = new class451(20);
+	public WeightedCache field4454 = new WeightedCache(20);
 
-	public class417(class527 arg0, class519 arg1, class334 arg2, class334 arg3) {
+	public class417(ModeGame arg0, class519 arg1, Js5 arg2, Js5 arg3) {
 		this.field4451 = arg3;
 		this.field4452 = arg2;
 		this.field4452.method5637(class161.field1680.field1668);
@@ -24,7 +24,7 @@ public class class417 {
 
 	@ObfuscatedName("ow.u(IB)Loe;")
 	public class416 method7334(int arg0) {
-		class451 var2 = this.field4453;
+		WeightedCache var2 = this.field4453;
 		class416 var3;
 		synchronized (this.field4453) {
 			var3 = (class416) this.field4453.method7916((long) arg0);
@@ -32,7 +32,7 @@ public class class417 {
 		if (var3 != null) {
 			return var3;
 		}
-		class334 var5 = this.field4452;
+		Js5 var5 = this.field4452;
 		byte[] var6;
 		synchronized (this.field4452) {
 			var6 = this.field4452.method5627(class161.field1680.field1668, arg0);
@@ -42,7 +42,7 @@ public class class417 {
 		if (var6 != null) {
 			var8.method7302(new Packet(var6));
 		}
-		class451 var9 = this.field4453;
+		WeightedCache var9 = this.field4453;
 		synchronized (this.field4453) {
 			this.field4453.method7937(var8, (long) arg0);
 			return var8;
@@ -51,11 +51,11 @@ public class class417 {
 
 	@ObfuscatedName("ow.j(I)V")
 	public void method7329() {
-		class451 var1 = this.field4453;
+		WeightedCache var1 = this.field4453;
 		synchronized (this.field4453) {
 			this.field4453.method7922();
 		}
-		class451 var3 = this.field4454;
+		WeightedCache var3 = this.field4454;
 		synchronized (this.field4454) {
 			this.field4454.method7922();
 		}
@@ -63,11 +63,11 @@ public class class417 {
 
 	@ObfuscatedName("ow.a(II)V")
 	public void method7327(int arg0) {
-		class451 var2 = this.field4453;
+		WeightedCache var2 = this.field4453;
 		synchronized (this.field4453) {
 			this.field4453.method7921(arg0);
 		}
-		class451 var4 = this.field4454;
+		WeightedCache var4 = this.field4454;
 		synchronized (this.field4454) {
 			this.field4454.method7921(arg0);
 		}
@@ -75,11 +75,11 @@ public class class417 {
 
 	@ObfuscatedName("ow.s(I)V")
 	public void method7331() {
-		class451 var1 = this.field4453;
+		WeightedCache var1 = this.field4453;
 		synchronized (this.field4453) {
 			this.field4453.method7925();
 		}
-		class451 var3 = this.field4454;
+		WeightedCache var3 = this.field4454;
 		synchronized (this.field4454) {
 			this.field4454.method7925();
 		}

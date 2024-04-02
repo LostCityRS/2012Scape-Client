@@ -8,12 +8,12 @@ public class class233 {
 	public final GpuToolkit field2447;
 
 	@ObfuscatedName("hm.j")
-	public final class16 field2446;
+	public final BillboardTypeList field2446;
 
 	@ObfuscatedName("hm.a")
-	public class451 field2448 = new class451(6291456, 256);
+	public WeightedCache field2448 = new WeightedCache(6291456, 256);
 
-	public class233(GpuToolkit arg0, class16 arg1) {
+	public class233(GpuToolkit arg0, BillboardTypeList arg1) {
 		this.field2447 = arg0;
 		this.field2446 = arg1;
 	}
@@ -30,7 +30,7 @@ public class class233 {
 		if (var5 != null) {
 			return var5;
 		} else if (this.method4350(arg0, arg1)) {
-			class120 var6 = this.field2446.method889(arg0);
+			Material var6 = this.field2446.method889(arg0);
 			if (arg1 == -1) {
 				arg1 = var6.field1252;
 			}
@@ -40,7 +40,7 @@ public class class233 {
 				var8 = this.field2447.method13697(class124.field1296, arg1, arg1, true, var7);
 			} else {
 				int[] var9;
-				if (class456.field4853 != var6.field1262 && class120.method12638(var6.field1270)) {
+				if (MaterialAlphaMode.field4853 != var6.field1262 && Material.method12638(var6.field1270)) {
 					var9 = this.field2446.method886(arg0, 0.7F, arg1, arg1, true);
 				} else {
 					var9 = this.field2446.method887(arg0, 0.7F, arg1, arg1, false);
@@ -57,13 +57,13 @@ public class class233 {
 
 	@ObfuscatedName("hm.a(II)Z")
 	public boolean method4350(int arg0, int arg1) {
-		class120 var3 = this.field2446.method889(arg0);
+		Material var3 = this.field2446.method889(arg0);
 		if (arg1 == -1) {
 			arg1 = var3.field1252;
 		}
 		if (var3.field1245 && this.field2447.method600()) {
 			return this.field2446.method898(arg0, class455.field4850, 0.7F, arg1, arg1, false);
-		} else if (class456.field4853 != var3.field1262 && class120.method12638(var3.field1270)) {
+		} else if (MaterialAlphaMode.field4853 != var3.field1262 && Material.method12638(var3.field1270)) {
 			return this.field2446.method898(arg0, class455.field4849, 0.7F, arg1, arg1, true);
 		} else {
 			return this.field2446.method898(arg0, class455.field4848, 0.7F, arg1, arg1, false);

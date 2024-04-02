@@ -6,7 +6,7 @@ import jaggl.OpenGL;
 public abstract class class347 implements class254 {
 
 	@ObfuscatedName("lm.m")
-	public final class899 field3733;
+	public final GlxToolkit field3733;
 
 	@ObfuscatedName("lm.t")
 	public int field3734;
@@ -24,7 +24,7 @@ public abstract class class347 implements class254 {
 	public boolean field3728;
 
 	@ObfuscatedName("lm.n")
-	public class241 field3739 = class241.field2501;
+	public GpuTextureRelated field3739 = GpuTextureRelated.field2501;
 
 	@ObfuscatedName("lm.o")
 	public final int field3729;
@@ -32,7 +32,7 @@ public abstract class class347 implements class254 {
 	@ObfuscatedName("lm.q")
 	public static final int[] field3740 = new int[1];
 
-	public class347(class899 arg0, int arg1, class124 arg2, class139 arg3, int arg4, boolean arg5) {
+	public class347(GlxToolkit arg0, int arg1, class124 arg2, class139 arg3, int arg4, boolean arg5) {
 		this.field3733 = arg0;
 		this.field3737 = arg1;
 		this.field3736 = arg2;
@@ -61,7 +61,7 @@ public abstract class class347 implements class254 {
 	}
 
 	@ObfuscatedName("lm.ae(Lhd;)V")
-	public void method4525(class241 arg0) {
+	public void method4525(GpuTextureRelated arg0) {
 		if (this.field3739 != arg0) {
 			this.field3739 = arg0;
 			this.method5972();
@@ -71,7 +71,7 @@ public abstract class class347 implements class254 {
 	@ObfuscatedName("lm.bg()V")
 	public void method5972() {
 		this.field3733.method13557(this);
-		if (class241.field2501 == this.field3739) {
+		if (GpuTextureRelated.field2501 == this.field3739) {
 			OpenGL.glTexParameteri(this.field3737, 10241, this.field3728 ? 9987 : 9729);
 			OpenGL.glTexParameteri(this.field3737, 10240, 9729);
 		} else {
@@ -105,7 +105,7 @@ public abstract class class347 implements class254 {
 			int[] var9 = arg3;
 			int[] var10 = new int[var7 * var8];
 			while (true) {
-				OpenGL.glTexImage2Di(arg0, var5, class899.method16100(this.field3736, this.field3731), arg1, arg2, 0, 32993, this.field3733.field10024, var9, 0);
+				OpenGL.glTexImage2Di(arg0, var5, GlxToolkit.method16100(this.field3736, this.field3731), arg1, arg2, 0, 32993, this.field3733.field10024, var9, 0);
 				if (var6 <= 1) {
 					return;
 				}
@@ -167,7 +167,7 @@ public abstract class class347 implements class254 {
 			byte[] var10 = arg3;
 			byte[] var11 = new byte[var8 * var9 * var5];
 			while (true) {
-				OpenGL.glTexImage2Dub(arg0, var6, class899.method16100(this.field3736, this.field3731), arg1, arg2, 0, class899.method16093(this.field3736), 5121, var10, 0);
+				OpenGL.glTexImage2Dub(arg0, var6, GlxToolkit.method16100(this.field3736, this.field3731), arg1, arg2, 0, GlxToolkit.method16093(this.field3736), 5121, var10, 0);
 				if (var7 <= 1) {
 					return;
 				}
@@ -221,7 +221,7 @@ public abstract class class347 implements class254 {
 			float[] var10 = arg3;
 			float[] var11 = new float[var8 * var9 * var5];
 			while (true) {
-				OpenGL.glTexImage2Df(arg0, var6, class899.method16100(this.field3736, this.field3731), arg1, arg2, 0, class899.method16093(this.field3736), 5126, var10, 0);
+				OpenGL.glTexImage2Df(arg0, var6, GlxToolkit.method16100(this.field3736, this.field3731), arg1, arg2, 0, GlxToolkit.method16093(this.field3736), 5126, var10, 0);
 				if (var7 <= 1) {
 					return;
 				}

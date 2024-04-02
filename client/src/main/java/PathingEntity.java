@@ -182,7 +182,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 	public Model[] field8651;
 
 	@ObfuscatedName("aay.bb")
-	public class164 field8652;
+	public IfType field8652;
 
 	@ObfuscatedName("aay.be")
 	public int field8653;
@@ -541,7 +541,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 		int var11 = -1;
 		int var12 = 0;
 		if (arg0 >= 0) {
-			class441 var13 = Statics.field5037.method7826(arg0);
+			HitmarkType var13 = Statics.field5037.method7826(arg0);
 			var11 = var13.field4743;
 			var12 = var13.field4750;
 		}
@@ -894,7 +894,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 			return false;
 		} else {
 			this.field8653 = arg0;
-			class502.method11374(this.field8652.field1732);
+			ScriptRunner.method11374(this.field8652.field1732);
 			return true;
 		}
 	}

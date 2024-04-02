@@ -414,7 +414,7 @@ public class ObjType implements class464 {
 				if (var24) {
 					var26 = new ObjectNode(arg0.method15337());
 				} else {
-					var26 = new class802(arg0.method15379());
+					var26 = new IntNode(arg0.method15379());
 				}
 				this.field7055.method11927(var26, (long) var25);
 			}
@@ -555,7 +555,7 @@ public class ObjType implements class464 {
 		if (arg4 != null) {
 			var12 = arg1 | arg4.method11779();
 		}
-		class451 var13 = this.field7061.field7146;
+		WeightedCache var13 = this.field7061.field7146;
 		Model var14;
 		synchronized (this.field7061.field7146) {
 			var14 = (Model) this.field7061.field7146.method7916((long) (this.field7062 | arg0.field397 << 29));
@@ -580,7 +580,7 @@ public class ObjType implements class464 {
 			if (this.field7084 != 128) {
 				var16 |= 0x4;
 			}
-			class129 var17 = class129.method2664(this.field7061.field7149, this.field7063, 0);
+			ModelUnlit var17 = ModelUnlit.method2664(this.field7061.field7149, this.field7063, 0);
 			if (var17 == null) {
 				return null;
 			}
@@ -615,7 +615,7 @@ public class ObjType implements class464 {
 				}
 			}
 			var14.method252(var12);
-			class451 var22 = this.field7061.field7146;
+			WeightedCache var22 = this.field7061.field7146;
 			synchronized (this.field7061.field7146) {
 				this.field7061.field7146.method7937(var14, (long) (this.field7062 | arg0.field397 << 29));
 			}
@@ -651,7 +651,7 @@ public class ObjType implements class464 {
 
 	@ObfuscatedName("vn.f(Lra;Lra;IIIZILl;Lqc;B)[I")
 	public int[] method12276(RendererToolkit arg0, RendererToolkit arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6, class15 arg7, class471 arg8) {
-		class129 var10 = class129.method2664(this.field7061.field7149, this.field7063, 0);
+		ModelUnlit var10 = ModelUnlit.method2664(this.field7061.field7149, this.field7063, 0);
 		if (var10 == null) {
 			return null;
 		}
@@ -860,7 +860,7 @@ public class ObjType implements class464 {
 	}
 
 	@ObfuscatedName("vn.q(ZLvq;I)Ldw;")
-	public final class129 method12245(boolean arg0, class593 arg1) {
+	public final ModelUnlit method12245(boolean arg0, class593 arg1) {
 		int var3;
 		int var4;
 		int var5;
@@ -886,7 +886,7 @@ public class ObjType implements class464 {
 		if (var3 == -1) {
 			return null;
 		}
-		class129 var6 = class129.method2664(this.field7061.field7149, var3, 0);
+		ModelUnlit var6 = ModelUnlit.method2664(this.field7061.field7149, var3, 0);
 		if (var6 == null) {
 			return null;
 		}
@@ -894,20 +894,20 @@ public class ObjType implements class464 {
 			var6.method2634(2);
 		}
 		if (var4 != -1) {
-			class129 var7 = class129.method2664(this.field7061.field7149, var4, 0);
+			ModelUnlit var7 = ModelUnlit.method2664(this.field7061.field7149, var4, 0);
 			if (var7.field1314 < 13) {
 				var7.method2634(2);
 			}
 			if (var5 == -1) {
-				class129[] var10 = new class129[] { var6, var7 };
-				var6 = new class129(var10, 2);
+				ModelUnlit[] var10 = new ModelUnlit[] { var6, var7 };
+				var6 = new ModelUnlit(var10, 2);
 			} else {
-				class129 var8 = class129.method2664(this.field7061.field7149, var5, 0);
+				ModelUnlit var8 = ModelUnlit.method2664(this.field7061.field7149, var5, 0);
 				if (var8.field1314 < 13) {
 					var8.method2634(2);
 				}
-				class129[] var9 = new class129[] { var6, var7, var8 };
-				var6 = new class129(var9, 3);
+				ModelUnlit[] var9 = new ModelUnlit[] { var6, var7, var8 };
+				var6 = new ModelUnlit(var9, 3);
 			}
 		}
 		if (!arg0 && (this.field7095 != 0 || this.field7094 != 0 || this.field7124 != 0)) {
@@ -974,7 +974,7 @@ public class ObjType implements class464 {
 	}
 
 	@ObfuscatedName("vn.w(ZLvq;I)Ldw;")
-	public final class129 method12249(boolean arg0, class593 arg1) {
+	public final ModelUnlit method12249(boolean arg0, class593 arg1) {
 		int var3;
 		int var4;
 		if (arg0) {
@@ -995,17 +995,17 @@ public class ObjType implements class464 {
 		if (var3 == -1) {
 			return null;
 		}
-		class129 var5 = class129.method2664(this.field7061.field7149, var3, 0);
+		ModelUnlit var5 = ModelUnlit.method2664(this.field7061.field7149, var3, 0);
 		if (var5.field1314 < 13) {
 			var5.method2634(2);
 		}
 		if (var4 != -1) {
-			class129 var6 = class129.method2664(this.field7061.field7149, var4, 0);
+			ModelUnlit var6 = ModelUnlit.method2664(this.field7061.field7149, var4, 0);
 			if (var6.field1314 < 13) {
 				var6.method2634(2);
 			}
-			class129[] var7 = new class129[] { var5, var6 };
-			var5 = new class129(var7, 2);
+			ModelUnlit[] var7 = new ModelUnlit[] { var5, var6 };
+			var5 = new ModelUnlit(var7, 2);
 		}
 		if (this.field7103 != null) {
 			short[] var8;
@@ -1037,7 +1037,7 @@ public class ObjType implements class464 {
 		if (this.field7055 == null) {
 			return arg1;
 		} else {
-			class802 var3 = (class802) this.field7055.method11923((long) arg0);
+			IntNode var3 = (IntNode) this.field7055.method11923((long) arg0);
 			return var3 == null ? arg1 : var3.field9556;
 		}
 	}

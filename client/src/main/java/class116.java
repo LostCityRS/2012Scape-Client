@@ -50,7 +50,7 @@ public class class116 {
 	public boolean field1225;
 
 	@ObfuscatedName("ck.w")
-	public class30 field1224;
+	public HardShadow field1224;
 
 	@ObfuscatedName("ck.b")
 	public boolean field1227 = false;
@@ -105,7 +105,7 @@ public class class116 {
 	public final Model method2437(RendererToolkit arg0, int arg1, boolean arg2, boolean arg3) {
 		LocType var5 = this.field1215.method11471(this.field1219);
 		if (var5.field6534 != null) {
-			var5 = var5.method11431(client.field8988 == 0 ? class144.field1538 : Statics.field2669);
+			var5 = var5.method11431(client.field8988 == 0 ? CutsceneManager.field1538 : Statics.field2669);
 		}
 		if (var5 == null) {
 			this.method2441(arg0);
@@ -176,7 +176,7 @@ public class class116 {
 			} else {
 				this.field1222 = var10 = (Model) var11.field6757;
 				if (arg3) {
-					this.field1224 = (class30) var11.field6756;
+					this.field1224 = (HardShadow) var11.field6756;
 					this.field1228 = null;
 					var7.method7445(this.field1224, this.field1213, (int) var6.field3475, (int) var6.field3477, null);
 					this.field1227 = true;
@@ -196,7 +196,7 @@ public class class116 {
 		if ((this.field1229 == null || this.field1229.field4945) && (var9 != null || var10 != null)) {
 			LocType var11 = this.field1215.method11471(this.field1219);
 			if (var11.field6534 != null) {
-				var11 = var11.method11431(client.field8988 == 0 ? class144.field1538 : Statics.field2669);
+				var11 = var11.method11431(client.field8988 == 0 ? CutsceneManager.field1538 : Statics.field2669);
 			}
 			if (var11 != null) {
 				this.field1229 = ParticleSystem.method8123(client.field9213, true);
@@ -259,7 +259,7 @@ public class class116 {
 			LocType var6 = this.field1215.method11471(this.field1219);
 			LocType var7 = var6;
 			if (var6.field6534 != null) {
-				var6 = var6.method11431(client.field8988 == 0 ? class144.field1538 : Statics.field2669);
+				var6 = var6.method11431(client.field8988 == 0 ? CutsceneManager.field1538 : Statics.field2669);
 			}
 			if (var6 == null) {
 				return;

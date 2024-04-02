@@ -7,13 +7,13 @@ import java.util.Map;
 public class class292 {
 
 	@ObfuscatedName("je.u")
-	public final class334 field3301;
+	public final Js5 field3301;
 
 	@ObfuscatedName("je.j")
-	public final class334 field3302;
+	public final Js5 field3302;
 
 	@ObfuscatedName("je.a")
-	public final class451 field3303 = new class451(20);
+	public final WeightedCache field3303 = new WeightedCache(20);
 
 	@ObfuscatedName("je.s")
 	public final int[] field3304;
@@ -21,7 +21,7 @@ public class class292 {
 	@ObfuscatedName("je.c")
 	public Map field3305 = null;
 
-	public class292(class334 arg0, class334 arg1, int[] arg2) {
+	public class292(Js5 arg0, Js5 arg1, int[] arg2) {
 		this.field3301 = arg0;
 		this.field3302 = arg1;
 		if (arg2 == null) {
@@ -32,11 +32,11 @@ public class class292 {
 	}
 
 	@ObfuscatedName("je.u(Ljd;I)V")
-	public void method4837(class291 arg0) {
+	public void method4837(FontFactory arg0) {
 		this.field3305 = new HashMap(this.field3304.length);
 		for (int var2 = 0; var2 < this.field3304.length; var2++) {
 			int var3 = this.field3304[var2];
-			class603 var4 = class603.method14876(this.field3302, var3);
+			FontMetrics var4 = FontMetrics.method14876(this.field3302, var3);
 			byte[] var5 = this.field3301.method5635(var3);
 			Object var6 = arg0.method1321(var5, var4, true);
 			this.field3305.put(var2, new class570(var6, var4));
@@ -80,19 +80,19 @@ public class class292 {
 	}
 
 	@ObfuscatedName("je.m(Ljd;IZZI)Ljava/lang/Object;")
-	public Object method4859(class291 arg0, int arg1, boolean arg2, boolean arg3) {
+	public Object method4859(FontFactory arg0, int arg1, boolean arg2, boolean arg3) {
 		class570 var5 = this.method4844(arg0, arg1, arg2, arg3);
 		return var5 == null ? null : var5.field6757;
 	}
 
 	@ObfuscatedName("je.t(Ljd;IS)Lvm;")
-	public class603 method4843(class291 arg0, int arg1) {
+	public FontMetrics method4843(FontFactory arg0, int arg1) {
 		class570 var3 = this.method4844(arg0, arg1, true, true);
-		return var3 == null ? null : (class603) var3.field6756;
+		return var3 == null ? null : (FontMetrics) var3.field6756;
 	}
 
 	@ObfuscatedName("je.l(Ljd;IZZI)Luz;")
-	public class570 method4844(class291 arg0, int arg1, boolean arg2, boolean arg3) {
+	public class570 method4844(FontFactory arg0, int arg1, boolean arg2, boolean arg3) {
 		if (arg1 == -1) {
 			return null;
 		}
@@ -106,7 +106,7 @@ public class class292 {
 		class570 var6 = (class570) this.field3303.method7916((long) (arg1 << 1 | (arg3 ? 1 : 0)));
 		if (var6 != null) {
 			if (arg2 && var6.field6756 == null) {
-				class603 var7 = class603.method14876(this.field3302, arg1);
+				FontMetrics var7 = FontMetrics.method14876(this.field3302, arg1);
 				if (var7 == null) {
 					return null;
 				}
@@ -118,7 +118,7 @@ public class class292 {
 		if (var8 == null) {
 			return null;
 		}
-		class603 var9 = class603.method14876(this.field3302, arg1);
+		FontMetrics var9 = FontMetrics.method14876(this.field3302, arg1);
 		if (var9 == null) {
 			return null;
 		}

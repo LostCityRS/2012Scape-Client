@@ -136,8 +136,8 @@ public class GlFloorModelRelated2 {
 	}
 
 	@ObfuscatedName("cl.a(Lna;II)V")
-	public void method2281(class30 arg0, int arg1, int arg2) {
-		class998 var4 = (class998) arg0;
+	public void method2281(HardShadow arg0, int arg1, int arg2) {
+		GlHardShadow var4 = (GlHardShadow) arg0;
 		int var5 = var4.field10578 + 1 + arg1;
 		int var6 = var4.field10575 + 1 + arg2;
 		int var7 = this.field1139 * var6 + var5;
@@ -179,8 +179,8 @@ public class GlFloorModelRelated2 {
 	}
 
 	@ObfuscatedName("cl.s(Lna;II)V")
-	public void method2287(class30 arg0, int arg1, int arg2) {
-		class998 var4 = (class998) arg0;
+	public void method2287(HardShadow arg0, int arg1, int arg2) {
+		GlHardShadow var4 = (GlHardShadow) arg0;
 		int var5 = var4.field10578 + 1 + arg1;
 		int var6 = var4.field10575 + 1 + arg2;
 		int var7 = this.field1139 * var6 + var5;
@@ -222,8 +222,8 @@ public class GlFloorModelRelated2 {
 	}
 
 	@ObfuscatedName("cl.c(Lna;II)Z")
-	public boolean method2279(class30 arg0, int arg1, int arg2) {
-		class998 var4 = (class998) arg0;
+	public boolean method2279(HardShadow arg0, int arg1, int arg2) {
+		GlHardShadow var4 = (GlHardShadow) arg0;
 		int var5 = var4.field10578 + 1 + arg1;
 		int var6 = var4.field10575 + 1 + arg2;
 		int var7 = this.field1139 * var6 + var5;

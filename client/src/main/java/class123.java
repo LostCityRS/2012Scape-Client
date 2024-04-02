@@ -6,29 +6,29 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 @ObfuscatedName("cj")
-public class class123 implements class16 {
+public class class123 implements BillboardTypeList {
 
 	@ObfuscatedName("cj.u")
-	public class334 field1292;
+	public Js5 field1292;
 
 	@ObfuscatedName("cj.j")
-	public class334 field1293;
+	public Js5 field1293;
 
 	@ObfuscatedName("cj.a")
-	public class120[] field1291;
+	public Material[] field1291;
 
 	@ObfuscatedName("cj.s")
 	public int field1294;
 
-	public class123(class334 arg0, class334 arg1, class334 arg2) {
+	public class123(Js5 arg0, Js5 arg1, Js5 arg2) {
 		this.field1292 = arg1;
 		this.field1293 = arg2;
 		Packet var4 = new Packet(arg0.method5627(0, 0));
 		this.field1294 = var4.method15239();
-		this.field1291 = new class120[this.field1294];
+		this.field1291 = new Material[this.field1294];
 		for (int var5 = 0; var5 < this.field1294; var5++) {
 			if (var4.method15220() == 1) {
-				this.field1291[var5] = new class120();
+				this.field1291[var5] = new Material();
 			}
 		}
 		for (int var6 = 0; var6 < this.field1294; var6++) {
@@ -38,7 +38,7 @@ public class class123 implements class16 {
 		}
 		for (int var7 = 0; var7 < this.field1294; var7++) {
 			if (this.field1291[var7] != null) {
-				this.field1291[var7].field1252 = class120.method1839(var4.method15220());
+				this.field1291[var7].field1252 = Material.method1839(var4.method15220());
 			}
 		}
 		for (int var8 = 0; var8 < this.field1294; var8++) {
@@ -123,7 +123,7 @@ public class class123 implements class16 {
 		}
 		for (int var24 = 0; var24 < this.field1294; var24++) {
 			if (this.field1291[var24] != null) {
-				this.field1291[var24].field1262 = (class456) SerializableEnums.method8032(class456.method7322(), var4.method15220());
+				this.field1291[var24].field1262 = (MaterialAlphaMode) SerializableEnums.method8032(MaterialAlphaMode.method7322(), var4.method15220());
 			}
 		}
 	}
@@ -209,7 +209,7 @@ public class class123 implements class16 {
 	}
 
 	@ObfuscatedName("cj.m(II)Lcu;")
-	public class120 method889(int arg0) {
+	public Material method889(int arg0) {
 		return this.field1291[arg0];
 	}
 

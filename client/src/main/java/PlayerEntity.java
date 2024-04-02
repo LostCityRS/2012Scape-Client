@@ -626,7 +626,7 @@ public class PlayerEntity extends PathingEntity {
 
 	@ObfuscatedName("ahg.u(I)Ladu;")
 	public CoordFine method3684() {
-		class453 var1 = client.field8980.method6214();
+		CoordGrid var1 = client.field8980.method6214();
 		return CoordFine.method8611(this.field9807, (int) this.method8565().field3464.field3475 + var1.field4836 * 512, -((int) this.method8565().field3464.field3476), (int) this.method8565().field3464.field3477 + var1.field4838 * 512);
 	}
 

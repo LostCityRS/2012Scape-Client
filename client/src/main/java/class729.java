@@ -7,7 +7,7 @@ public class class729 extends class206 {
 	@ObfuscatedName("aac.s")
 	public int field8717 = 0;
 
-	public class729(class334 arg0, class753 arg1) {
+	public class729(Js5 arg0, class753 arg1) {
 		super(arg0, arg1);
 	}
 

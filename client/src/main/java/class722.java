@@ -2,10 +2,10 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aam")
-public class class722 extends class200 {
+public class class722 extends ModelShader {
 
 	@ObfuscatedName("aam.g")
-	public class172 field8682;
+	public Shader field8682;
 
 	@ObfuscatedName("aam.aq")
 	public final Matrix4x4 field8671 = new Matrix4x4();

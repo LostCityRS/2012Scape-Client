@@ -35,7 +35,7 @@ public class class60 {
 	public int field774;
 
 	@ObfuscatedName("at.z")
-	public static class451 field782 = new class451(4);
+	public static WeightedCache field782 = new WeightedCache(4);
 
 	@ObfuscatedName("rx.u(Lra;IIIIIB)Lqa;")
 	public static Model method8588(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
@@ -43,7 +43,7 @@ public class class60 {
 		Model var8 = (Model) field782.method7916(var6);
 		short var9 = 2055;
 		if (var8 == null) {
-			class129 var10 = class129.method2664(Statics.field4560, arg5, 0);
+			ModelUnlit var10 = ModelUnlit.method2664(Statics.field4560, arg5, 0);
 			if (var10 == null) {
 				return null;
 			}

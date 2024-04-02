@@ -126,12 +126,12 @@ public class PositionEntity extends Position {
 
 	@ObfuscatedName("aav.g(I)F")
 	public float method14116() {
-		return class362.method7588(this.field8737);
+		return CameraHelpers.method7588(this.field8737);
 	}
 
 	@ObfuscatedName("aav.y(B)F")
 	public float method14103() {
-		return class362.method1721(this.field8737);
+		return CameraHelpers.method1721(this.field8737);
 	}
 
 	@ObfuscatedName("aav.c(Lfi;III)V")

@@ -16,7 +16,7 @@ public abstract class RendererToolkit {
 	public final int field397;
 
 	@ObfuscatedName("ra.f")
-	public final class16 field400;
+	public final BillboardTypeList field400;
 
 	@ObfuscatedName("ra.v")
 	public int field411 = -1;
@@ -34,7 +34,7 @@ public abstract class RendererToolkit {
 	public final class674[] field407 = new class674[4];
 
 	@ObfuscatedName("sh.u(ILjava/awt/Canvas;Lma;Lls;II)Lra;")
-	public static RendererToolkit method11222(int arg0, Canvas arg1, class16 arg2, class334 arg3, int arg4) {
+	public static RendererToolkit method11222(int arg0, Canvas arg1, BillboardTypeList arg2, Js5 arg3, int arg4) {
 		int var5 = 0;
 		int var6 = 0;
 		if (arg1 != null) {
@@ -46,17 +46,17 @@ public abstract class RendererToolkit {
 	}
 
 	@ObfuscatedName("uj.j(ILjava/awt/Canvas;Lma;Lls;IIII)Lra;")
-	public static synchronized RendererToolkit method11995(int arg0, Canvas arg1, class16 arg2, class334 arg3, int arg4, int arg5, int arg6) {
+	public static synchronized RendererToolkit method11995(int arg0, Canvas arg1, BillboardTypeList arg2, Js5 arg3, int arg4, int arg5, int arg6) {
 		if (arg0 == 0) {
-			return class68.method13911(arg1, arg2, arg5, arg6);
+			return PureJavaToolkitFactory.method13911(arg1, arg2, arg5, arg6);
 		} else if (arg0 == 2) {
-			return class110.method1619(arg1, arg2, arg5, arg6);
+			return SoftwareToolkitFactory.method1619(arg1, arg2, arg5, arg6);
 		} else if (arg0 == 1) {
-			return class109.method2346(arg1, arg2, arg4);
+			return GlToolkitFactory.method2346(arg1, arg2, arg4);
 		} else if (arg0 == 5) {
-			return class350.method6008(arg1, arg2, arg3, arg4);
+			return GlxToolkitFactory.method6008(arg1, arg2, arg3, arg4);
 		} else if (arg0 == 3) {
-			return class297.method4912(arg1, arg2, arg3, arg4);
+			return DxToolkitFactory.method4912(arg1, arg2, arg3, arg4);
 		} else {
 			throw new IllegalArgumentException("");
 		}
@@ -72,7 +72,7 @@ public abstract class RendererToolkit {
 		return arg0 == 0 || arg0 == 2;
 	}
 
-	public RendererToolkit(class16 arg0) {
+	public RendererToolkit(BillboardTypeList arg0) {
 		this.field400 = arg0;
 		int var2 = -1;
 		for (int var3 = 0; var3 < 8; var3++) {
@@ -334,7 +334,7 @@ public abstract class RendererToolkit {
 	public abstract boolean method455();
 
 	@ObfuscatedName("ra.t()Lcg;")
-	public abstract class122 method456();
+	public abstract ToolkitInfo method456();
 
 	@ObfuscatedName("ra.av()Lyu;")
 	public abstract class674 method467();
@@ -388,7 +388,7 @@ public abstract class RendererToolkit {
 	public abstract void method502(class28 arg0);
 
 	@ObfuscatedName("ra.dw(ILdk;)V")
-	public abstract void method503(int arg0, class137 arg1);
+	public abstract void method503(int arg0, WaterFogData arg1);
 
 	@ObfuscatedName("ra.ba(II)V")
 	public abstract void method505(int arg0, int arg1);
@@ -406,7 +406,7 @@ public abstract class RendererToolkit {
 	public abstract Matrix4x3 method516();
 
 	@ObfuscatedName("ra.bo(Lds;Z)Lce;")
-	public abstract class118 method517(class140 arg0, boolean arg1);
+	public abstract class118 method517(SpriteData arg0, boolean arg1);
 
 	@ObfuscatedName("ra.cn(II)I")
 	public abstract int method519(int arg0, int arg1);
@@ -460,7 +460,7 @@ public abstract class RendererToolkit {
 	public abstract void method545();
 
 	@ObfuscatedName("ra.di(ILdk;)V")
-	public abstract void method547(int arg0, class137 arg1);
+	public abstract void method547(int arg0, WaterFogData arg1);
 
 	@ObfuscatedName("ra.O()V")
 	public abstract void method548();
@@ -496,7 +496,7 @@ public abstract class RendererToolkit {
 	public abstract void method601(int arg0, int arg1, int arg2, int arg3, int arg4);
 
 	@ObfuscatedName("ra.cx(Ldw;IIII)Lqa;")
-	public abstract Model method625(class129 arg0, int arg1, int arg2, int arg3, int arg4);
+	public abstract Model method625(ModelUnlit arg0, int arg1, int arg2, int arg3, int arg4);
 
 	@ObfuscatedName("ra.i()Z")
 	public abstract boolean method629();
@@ -523,7 +523,7 @@ public abstract class RendererToolkit {
 	public abstract int[] method691(int arg0, int arg1, int arg2, int arg3);
 
 	@ObfuscatedName("ra.co(Lvm;[Lzv;Z)Ll;")
-	public abstract class15 method712(class603 arg0, class685[] arg1, boolean arg2);
+	public abstract class15 method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2);
 
 	@ObfuscatedName("ra.cp(Ldp;)V")
 	public abstract void method733(ParticleList arg0);

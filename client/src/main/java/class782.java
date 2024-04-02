@@ -11,7 +11,7 @@ public class class782 extends Node {
 	public byte[] field9381;
 
 	@ObfuscatedName("acw.u(Lls;II)Lacw;")
-	public static class782 method14909(class334 arg0, int arg1, int arg2) {
+	public static class782 method14909(Js5 arg0, int arg1, int arg2) {
 		byte[] var3 = arg0.method5627(arg1, arg2);
 		return var3 == null ? null : new class782(new Packet(var3));
 	}

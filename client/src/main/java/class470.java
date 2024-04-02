@@ -44,18 +44,18 @@ public class class470 {
 		this.method8202();
 	}
 
-	public class470(Packet arg0, class469 arg1) {
+	public class470(Packet arg0, EnvironmentManager arg1) {
 		this.method8205(arg0, arg1);
 	}
 
 	@ObfuscatedName("qf.u(I)V")
 	public void method8202() {
-		this.field4991 = class469.field4983;
+		this.field4991 = EnvironmentManager.field4983;
 		this.field4990 = Vector3.method5294(-50.0F, -60.0F, -50.0F);
 		this.field4987 = 1.1523438F;
 		this.field4988 = 0.69921875F;
 		this.field4996 = 1.2F;
-		this.field4989 = class469.field4982;
+		this.field4989 = EnvironmentManager.field4982;
 		this.field4997 = 0;
 		this.field4993 = Statics.field4971;
 		this.field4992 = 1.0F;
@@ -82,14 +82,14 @@ public class class470 {
 
 	@ObfuscatedName("qf.a(Lra;Lqf;Lqf;FB)V")
 	public void method8218(RendererToolkit arg0, class470 arg1, class470 arg2, float arg3) {
-		this.field4991 = class482.method15824(arg1.field4991, arg2.field4991, arg3 * 255.0F);
+		this.field4991 = ColourUtils.method15824(arg1.field4991, arg2.field4991, arg3 * 255.0F);
 		this.field4988 = (arg2.field4988 - arg1.field4988) * arg3 + arg1.field4988;
 		this.field4996 = (arg2.field4996 - arg1.field4996) * arg3 + arg1.field4996;
 		this.field4987 = (arg2.field4987 - arg1.field4987) * arg3 + arg1.field4987;
 		this.field4994 = (arg2.field4994 - arg1.field4994) * arg3 + arg1.field4994;
 		this.field4992 = (arg2.field4992 - arg1.field4992) * arg3 + arg1.field4992;
 		this.field4995 = (arg2.field4995 - arg1.field4995) * arg3 + arg1.field4995;
-		this.field4989 = class482.method15824(arg1.field4989, arg2.field4989, arg3 * 255.0F);
+		this.field4989 = ColourUtils.method15824(arg1.field4989, arg2.field4989, arg3 * 255.0F);
 		this.field4997 = (int) ((float) (arg2.field4997 - arg1.field4997) * arg3 + (float) arg1.field4997);
 		if (arg1.field4993 != arg2.field4993) {
 			this.field4993 = arg0.method537(arg1.field4993, arg2.field4993, arg3, this.field4993);
@@ -111,11 +111,11 @@ public class class470 {
 	}
 
 	@ObfuscatedName("qf.s(Laet;Lqp;I)V")
-	public void method8205(Packet arg0, class469 arg1) {
+	public void method8205(Packet arg0, EnvironmentManager arg1) {
 		int var3 = arg0.method15220();
 		if (Statics.field4961.field9650.method15667() == 1 && Statics.field5187.method768() > 0) {
 			if ((var3 & 0x1) == 0) {
-				this.field4991 = class469.field4983;
+				this.field4991 = EnvironmentManager.field4983;
 			} else {
 				this.field4991 = arg0.method15379();
 			}
@@ -147,7 +147,7 @@ public class class470 {
 			if ((var3 & 0x8) != 0) {
 				arg0.method15239();
 			}
-			this.field4991 = class469.field4983;
+			this.field4991 = EnvironmentManager.field4983;
 			this.field4996 = 1.2F;
 			this.field4988 = 0.69921875F;
 			this.field4987 = 1.1523438F;
@@ -158,7 +158,7 @@ public class class470 {
 			this.field4990 = Vector3.method5294((float) arg0.method15240(), (float) arg0.method15240(), (float) arg0.method15240());
 		}
 		if ((var3 & 0x20) == 0) {
-			this.field4989 = class469.field4982;
+			this.field4989 = EnvironmentManager.field4982;
 		} else {
 			this.field4989 = arg0.method15379();
 		}
@@ -188,7 +188,7 @@ public class class470 {
 	}
 
 	@ObfuscatedName("qf.m(Laet;Lqp;I)V")
-	public void method8207(Packet arg0, class469 arg1) {
+	public void method8207(Packet arg0, EnvironmentManager arg1) {
 		int var3 = arg0.method15239();
 		int var4 = arg0.method15240();
 		int var5 = arg0.method15240();

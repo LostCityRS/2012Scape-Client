@@ -15,7 +15,7 @@ public class class242 {
 	public VertexDeclaration field2505;
 
 	@ObfuscatedName("hw.s")
-	public class258 field2516;
+	public IndexBuffer field2516;
 
 	@ObfuscatedName("hw.c")
 	public final int field2507 = 64;
@@ -130,7 +130,7 @@ public class class242 {
 			var14 += 2;
 		}
 		arg0.method13588(this.field2516);
-		class201 var16 = arg0.field8314;
+		ParticleShader var16 = arg0.field8314;
 		var16.method3875(Matrix4x4.field3479);
 		var16.field2273.method5453();
 		var16.field2272 = -1;
@@ -142,7 +142,7 @@ public class class242 {
 	}
 
 	@ObfuscatedName("hw.s(Lyk;Lacl;IIILft;)V")
-	public void method4480(GpuToolkit arg0, class766 arg1, int arg2, int arg3, int arg4, class201 arg5) {
+	public void method4480(GpuToolkit arg0, class766 arg1, int arg2, int arg3, int arg4, ParticleShader arg5) {
 		class766 var7 = arg1.field9265;
 		int var8 = 0;
 		int var9 = -2;
@@ -339,7 +339,7 @@ public class class242 {
 		arg0.method13587(0, this.field2506);
 		arg0.method13587(1, this.field2517);
 		arg0.method13688(this.field2505);
-		class201 var48 = arg0.field8314;
+		ParticleShader var48 = arg0.field8314;
 		var48.method3871(var3);
 	}
 }

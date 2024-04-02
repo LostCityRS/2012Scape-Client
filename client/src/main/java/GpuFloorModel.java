@@ -183,8 +183,8 @@ public class GpuFloorModel extends FloorModel {
 	}
 
 	@ObfuscatedName("yn.u(II[I[I[I[I[I[I[I[ILdk;Z)V")
-	public void method193(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, class137 arg10, boolean arg11) {
-		class16 var13 = this.field7722.field400;
+	public void method193(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, WaterFogData arg10, boolean arg11) {
+		BillboardTypeList var13 = this.field7722.field400;
 		if (arg5 != null && this.field7738 == null) {
 			this.field7738 = new int[this.field387][this.field386][];
 		}
@@ -234,7 +234,7 @@ public class GpuFloorModel extends FloorModel {
 	}
 
 	@ObfuscatedName("yn.j(II[I[I[I[I[I[I[I[I[I[I[ILdk;Z)V")
-	public void method219(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, int[] arg10, int[] arg11, int[] arg12, class137 arg13, boolean arg14) {
+	public void method219(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, int[] arg10, int[] arg11, int[] arg12, WaterFogData arg13, boolean arg14) {
 		int var16 = arg9.length;
 		int[] var17 = new int[var16 * 3];
 		int[] var18 = new int[var16 * 3];
@@ -399,7 +399,7 @@ public class GpuFloorModel extends FloorModel {
 			var27[var28] = var29.field4228;
 			this.field7742[var28] = var29;
 		}
-		class485.method11178(var27, this.field7742);
+		Algorithms.method11178(var27, this.field7742);
 		this.method12981();
 	}
 
@@ -700,9 +700,9 @@ public class GpuFloorModel extends FloorModel {
 			var20.method14995(this.field7762, this.field7761);
 		}
 		int var21 = var18.position();
-		class200 var22 = this.field7722.field8345;
+		ModelShader var22 = this.field7722.field8345;
 		if (var21 != 0) {
-			class258 var23 = this.field7722.method13559(var21 / 2);
+			IndexBuffer var23 = this.field7722.method13559(var21 / 2);
 			var23.method4452(0, var21, this.field7722.field8245);
 			this.field7722.method13598();
 			this.field7722.method13587(0, this.field7726);
@@ -738,8 +738,8 @@ public class GpuFloorModel extends FloorModel {
 							var22.field2268 = this.field7722.field8312;
 						} else {
 							var22.field2268 = this.field7722.field8336.method4359(var26.field9438);
-							class120 var28 = this.field7722.field400.method889(var26.field9438);
-							var27 = !class120.method12638(var28.field1270);
+							Material var28 = this.field7722.field400.method889(var26.field9438);
+							var27 = !Material.method12638(var28.field1270);
 						}
 						this.field7722.method13587(1, var26.field9446);
 						this.field7722.method13688(this.field7729);
@@ -774,7 +774,7 @@ public class GpuFloorModel extends FloorModel {
 						if (var31.field9438 == -1) {
 							var22.field2268 = this.field7722.field8312;
 						} else {
-							class120 var34 = this.field7722.field400.method889(var31.field9438);
+							Material var34 = this.field7722.field400.method889(var31.field9438);
 							var33 = var34.field1270;
 							var22.field2268 = this.field7722.field8336.method4359(var31.field9438);
 							var22.method3862(var34);
@@ -809,7 +809,7 @@ public class GpuFloorModel extends FloorModel {
 									var35.field10107.method5412(this.field7722.field8279);
 									var35.field10112.method5435(1.0F / ((float) var31.field9440.field1470 * var31.field9441), 1.0F / ((float) var31.field9440.field1470 * var31.field9441), 1.0F, 1.0F);
 									var35.field10114.method5373(this.field7722.field8322.field3480[12], this.field7722.field8322.field3480[13], this.field7722.field8322.field3480[14]);
-									class120 var36 = this.field7722.field400.method889(var31.field9438);
+									Material var36 = this.field7722.field400.method889(var31.field9438);
 									var35.field10115 = var36.field1248;
 									var35.field10132 = var31.field9445;
 									var35.field10117 = var31.field9442 - var31.field9445 + 1;
@@ -832,7 +832,7 @@ public class GpuFloorModel extends FloorModel {
 								}
 								break;
 							case 6:
-								var22.method3849(!class120.method12638(var33));
+								var22.method3849(!Material.method12638(var33));
 								break;
 							case 7:
 								var22.field2258.method5373(this.field7722.field8322.field3480[12], this.field7722.field8322.field3480[13], this.field7722.field8322.field3480[14]);
@@ -860,7 +860,7 @@ public class GpuFloorModel extends FloorModel {
 		if (this.field7746 <= 0) {
 			return;
 		}
-		class258 var9 = this.field7722.method13559(this.field7743);
+		IndexBuffer var9 = this.field7722.method13559(this.field7743);
 		int var10 = 0;
 		int var11 = 32767;
 		int var12 = -32768;
@@ -893,7 +893,7 @@ public class GpuFloorModel extends FloorModel {
 			return;
 		}
 		this.field7722.method13598();
-		class200 var20 = this.field7722.field8345;
+		ModelShader var20 = this.field7722.field8345;
 		this.field7722.method13587(0, this.field7726);
 		this.field7722.method13587(1, this.field7757);
 		this.field7722.method13688(this.field7729);
@@ -932,18 +932,18 @@ public class GpuFloorModel extends FloorModel {
 	}
 
 	@ObfuscatedName("yn.w(IILna;)Lna;")
-	public class30 method200(int arg0, int arg1, class30 arg2) {
+	public HardShadow method200(int arg0, int arg1, HardShadow arg2) {
 		if ((this.field7748[arg0][arg1] & 0x1) == 0) {
 			return null;
 		}
 		int var4 = this.field385 >> this.field7722.field8326;
-		class999 var5 = (class999) arg2;
-		class999 var6;
+		GpuHardShadow var5 = (GpuHardShadow) arg2;
+		GpuHardShadow var6;
 		if (var5 != null && var5.method17123(var4, var4)) {
 			var6 = var5;
 			var5.method17126();
 		} else {
-			var6 = new class999(this.field7722, var4, var4);
+			var6 = new GpuHardShadow(this.field7722, var4, var4);
 		}
 		var6.method17141(0, 0, var4, var4);
 		this.method12983(var6, arg0, arg1);
@@ -951,7 +951,7 @@ public class GpuFloorModel extends FloorModel {
 	}
 
 	@ObfuscatedName("yn.ad(Lalk;II)V")
-	public void method12983(class999 arg0, int arg1, int arg2) {
+	public void method12983(GpuHardShadow arg0, int arg1, int arg2) {
 		int[] var4 = this.field7735[arg1][arg2];
 		int[] var5 = this.field7736[arg1][arg2];
 		int var6 = var4.length;
@@ -978,7 +978,7 @@ public class GpuFloorModel extends FloorModel {
 	}
 
 	@ObfuscatedName("yn.l(Lna;IIIIZ)Z")
-	public boolean method203(class30 arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+	public boolean method203(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
 		if (this.field7740 == null || arg0 == null) {
 			return false;
 		} else {
@@ -989,7 +989,7 @@ public class GpuFloorModel extends FloorModel {
 	}
 
 	@ObfuscatedName("yn.UA(Lna;IIIIZ)V")
-	public void method209(class30 arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+	public void method209(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
 		if (this.field7740 != null && arg0 != null) {
 			int var7 = arg1 - (this.field7722.field8327 * arg2 >> 8) >> this.field7722.field8326;
 			int var8 = arg3 - (this.field7722.field8371 * arg2 >> 8) >> this.field7722.field8326;
@@ -998,7 +998,7 @@ public class GpuFloorModel extends FloorModel {
 	}
 
 	@ObfuscatedName("yn.NA(Lna;IIIIZ)V")
-	public void method194(class30 arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+	public void method194(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
 		if (this.field7740 != null && arg0 != null) {
 			int var7 = arg1 - (this.field7722.field8327 * arg2 >> 8) >> this.field7722.field8326;
 			int var8 = arg3 - (this.field7722.field8371 * arg2 >> 8) >> this.field7722.field8326;

@@ -178,7 +178,7 @@ public class class481 {
 				if (var20) {
 					var22 = new ObjectNode(arg0.method15337());
 				} else {
-					var22 = new class802(arg0.method15379());
+					var22 = new IntNode(arg0.method15379());
 				}
 				this.field5069.method11927(var22, (long) var21);
 			}
@@ -197,7 +197,7 @@ public class class481 {
 		if (this.field5069 == null) {
 			return arg1;
 		} else {
-			class802 var3 = (class802) this.field5069.method11923((long) arg0);
+			IntNode var3 = (IntNode) this.field5069.method11923((long) arg0);
 			return var3 == null ? arg1 : var3.field9556;
 		}
 	}
@@ -213,7 +213,7 @@ public class class481 {
 	}
 
 	@ObfuscatedName("qb.m(Lug;I)Z")
-	public boolean method8448(class567 arg0) {
+	public boolean method8448(VarIntDomain arg0) {
 		if (this.field5060 != null) {
 			for (int var2 = 0; var2 < this.field5060.length; var2++) {
 				if (arg0.method1664(this.field5060[var2][0]) >= this.field5060[var2][1]) {
@@ -232,7 +232,7 @@ public class class481 {
 	}
 
 	@ObfuscatedName("qb.t(Lug;I)Z")
-	public boolean method8429(class567 arg0) {
+	public boolean method8429(VarIntDomain arg0) {
 		if (this.field5060 != null) {
 			for (int var2 = 0; var2 < this.field5060.length; var2++) {
 				if (arg0.method1664(this.field5060[var2][0]) >= this.field5060[var2][2]) {
@@ -251,7 +251,7 @@ public class class481 {
 	}
 
 	@ObfuscatedName("qb.l(Lug;[II)Z")
-	public boolean method8428(class567 arg0, int[] arg1) {
+	public boolean method8428(VarIntDomain arg0, int[] arg1) {
 		if (this.field5064.method8402(arg0) < this.field5067) {
 			return false;
 		}
@@ -289,7 +289,7 @@ public class class481 {
 	}
 
 	@ObfuscatedName("qb.f(Lug;I)Z")
-	public boolean method8420(class567 arg0) {
+	public boolean method8420(VarIntDomain arg0) {
 		return this.field5064.method8402(arg0) >= this.field5067;
 	}
 
@@ -303,7 +303,7 @@ public class class481 {
 	}
 
 	@ObfuscatedName("qb.z(Lug;II)Z")
-	public boolean method8423(class567 arg0, int arg1) {
+	public boolean method8423(VarIntDomain arg0, int arg1) {
 		if (this.field5076 == null || arg1 < 0 || arg1 >= this.field5076.length) {
 			return false;
 		} else {
@@ -312,7 +312,7 @@ public class class481 {
 	}
 
 	@ObfuscatedName("qb.n(Lug;IB)Z")
-	public boolean method8411(class567 arg0, int arg1) {
+	public boolean method8411(VarIntDomain arg0, int arg1) {
 		if (this.field5062 == null || arg1 < 0 || arg1 >= this.field5062.length) {
 			return false;
 		} else {
@@ -322,7 +322,7 @@ public class class481 {
 	}
 
 	@ObfuscatedName("qb.o(Lug;IB)Z")
-	public boolean method8424(class567 arg0, int arg1) {
+	public boolean method8424(VarIntDomain arg0, int arg1) {
 		if (this.field5074 == null || arg1 < 0 || arg1 >= this.field5074.length) {
 			return false;
 		} else {

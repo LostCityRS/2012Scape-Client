@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("e")
-public class class49 implements class567 {
+public class class49 implements VarIntDomain {
 
 	@ObfuscatedName("e.u")
 	public static int[] field659 = new int[32];

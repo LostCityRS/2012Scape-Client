@@ -22,11 +22,11 @@ public class class990 extends class894 {
 	@ObfuscatedName("ake.m")
 	public int field10557;
 
-	public class990(class899 arg0, Canvas arg1) {
+	public class990(GlxToolkit arg0, Canvas arg1) {
 		this(arg0, arg1, arg0.field10029.prepareSurface(arg1));
 	}
 
-	public class990(class899 arg0, Canvas arg1, long arg2) {
+	public class990(GlxToolkit arg0, Canvas arg1, long arg2) {
 		super(arg0);
 		this.field10556 = arg1;
 		this.field10554 = arg0.field10029;

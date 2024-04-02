@@ -9,7 +9,7 @@ import jagdx.class0;
 public class class301 implements VertexBuffer {
 
 	@ObfuscatedName("jk.u")
-	public final class898 field3332;
+	public final DxToolkit field3332;
 
 	@ObfuscatedName("jk.j")
 	public int field3331;
@@ -26,7 +26,7 @@ public class class301 implements VertexBuffer {
 	@ObfuscatedName("jk.m")
 	public long field3335 = 0L;
 
-	public class301(class898 arg0, boolean arg1) {
+	public class301(DxToolkit arg0, boolean arg1) {
 		this.field3332 = arg0;
 		this.field3334 = arg1;
 		this.field3332.method13586(this);

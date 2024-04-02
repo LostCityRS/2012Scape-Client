@@ -6,7 +6,7 @@ public class ea extends class15 implements class10 {
 
 	public long nativeid;
 
-	public ea(ja arg0, ba arg1, class603 arg2, class685[] arg3, class118[] arg4) {
+	public ea(ja arg0, ba arg1, FontMetrics arg2, PalettedSpriteData[] arg3, class118[] arg4) {
 		super(arg0, arg2);
 		byte[][] var6 = new byte[arg3.length][];
 		int[] var7 = new int[arg3.length];
@@ -14,7 +14,7 @@ public class ea extends class15 implements class10 {
 		int[] var9 = new int[arg3.length];
 		int[] var10 = new int[arg3.length];
 		for (int var11 = 0; var11 < arg3.length; var11++) {
-			class685 var12 = arg3[var11];
+			PalettedSpriteData var12 = arg3[var11];
 			if (var12.field8416 == null) {
 				byte[] var13 = var12.field8408;
 				byte[] var14 = var6[var11] = new byte[var13.length];

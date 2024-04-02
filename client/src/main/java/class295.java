@@ -6,10 +6,10 @@ import jagdx.IUnknown;
 import jagdx.class0;
 
 @ObfuscatedName("jg")
-public class class295 implements class258 {
+public class class295 implements IndexBuffer {
 
 	@ObfuscatedName("jg.u")
-	public final class898 field3318;
+	public final DxToolkit field3318;
 
 	@ObfuscatedName("jg.j")
 	public int field3316;
@@ -26,7 +26,7 @@ public class class295 implements class258 {
 	@ObfuscatedName("jg.m")
 	public long field3320 = 0L;
 
-	public class295(class898 arg0, class139 arg1, boolean arg2) {
+	public class295(DxToolkit arg0, class139 arg1, boolean arg2) {
 		this.field3318 = arg0;
 		this.field3317 = arg1;
 		this.field3319 = arg2;

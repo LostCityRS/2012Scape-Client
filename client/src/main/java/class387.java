@@ -13,7 +13,7 @@ import java.util.Vector;
 public class class387 implements class617 {
 
 	@ObfuscatedName("nb.u")
-	public final class334 field4159;
+	public final Js5 field4159;
 
 	@ObfuscatedName("nb.j")
 	public final String field4158;
@@ -24,7 +24,7 @@ public class class387 implements class617 {
 	@ObfuscatedName("nb.s")
 	public Hashtable field4160 = new Hashtable();
 
-	public class387(class334 arg0) {
+	public class387(Js5 arg0) {
 		this.field4159 = arg0;
 		String var2 = "";
 		if (class616.field7296.startsWith("win") || class616.field7296.startsWith("windows 7")) {

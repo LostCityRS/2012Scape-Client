@@ -254,7 +254,7 @@ public class class395 {
 			return;
 		}
 		Vector3 var0 = Vector3.method5290(Statics.field2119.method8565().field3464);
-		class453 var1 = client.field8980.method6214();
+		CoordGrid var1 = client.field8980.method6214();
 		var0.field3475 += var1.field4836 << 9;
 		var0.field3477 += var1.field4838 << 9;
 		var0.method5346((float) field4196.field4190, var0.field3476, (float) field4196.field4189);

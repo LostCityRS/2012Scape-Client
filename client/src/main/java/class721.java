@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aad")
-public class class721 extends class200 {
+public class class721 extends ModelShader {
 
 	public class721(GpuToolkit arg0) {
 		super(arg0);

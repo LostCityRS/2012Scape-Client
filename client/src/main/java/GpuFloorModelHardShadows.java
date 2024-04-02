@@ -57,7 +57,7 @@ public class GpuFloorModelHardShadows {
 	}
 
 	@ObfuscatedName("hx.j(Lfq;III[[ZZ)V")
-	public void method4375(class200 arg0, int arg1, int arg2, int arg3, boolean[][] arg4, boolean arg5) {
+	public void method4375(ModelShader arg0, int arg1, int arg2, int arg3, boolean[][] arg4, boolean arg5) {
 		this.field2469.method526(false);
 		float var7 = 1.0F / (float) (this.field2469.field8263 * 128);
 		if (arg5) {
@@ -122,7 +122,7 @@ public class GpuFloorModelHardShadows {
 			}
 			if (var17.position() != 0) {
 				int var32 = var17.position();
-				class258 var33 = this.field2469.method13559(var32 / 2);
+				IndexBuffer var33 = this.field2469.method13559(var32 / 2);
 				var33.method4452(0, var32, this.field2469.field8245);
 				int var34 = 0;
 				int var35 = 0;
@@ -144,8 +144,8 @@ public class GpuFloorModelHardShadows {
 	}
 
 	@ObfuscatedName("hx.a(Lna;II)V")
-	public void method4381(class30 arg0, int arg1, int arg2) {
-		class999 var4 = (class999) arg0;
+	public void method4381(HardShadow arg0, int arg1, int arg2) {
+		GpuHardShadow var4 = (GpuHardShadow) arg0;
 		int var5 = var4.field10586 + 1 + arg1;
 		int var6 = var4.field10585 + 1 + arg2;
 		int var7 = this.field2466 * var6 + var5;
@@ -187,8 +187,8 @@ public class GpuFloorModelHardShadows {
 	}
 
 	@ObfuscatedName("hx.s(Lna;II)V")
-	public void method4377(class30 arg0, int arg1, int arg2) {
-		class999 var4 = (class999) arg0;
+	public void method4377(HardShadow arg0, int arg1, int arg2) {
+		GpuHardShadow var4 = (GpuHardShadow) arg0;
 		int var5 = var4.field10586 + 1 + arg1;
 		int var6 = var4.field10585 + 1 + arg2;
 		int var7 = this.field2466 * var6 + var5;
@@ -230,8 +230,8 @@ public class GpuFloorModelHardShadows {
 	}
 
 	@ObfuscatedName("hx.c(Lna;II)Z")
-	public boolean method4378(class30 arg0, int arg1, int arg2) {
-		class999 var4 = (class999) arg0;
+	public boolean method4378(HardShadow arg0, int arg1, int arg2) {
+		GpuHardShadow var4 = (GpuHardShadow) arg0;
 		int var5 = var4.field10586 + 1 + arg1;
 		int var6 = var4.field10585 + 1 + arg2;
 		int var7 = this.field2466 * var6 + var5;

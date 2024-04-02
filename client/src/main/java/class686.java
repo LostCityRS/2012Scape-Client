@@ -22,7 +22,7 @@ public class class686 extends class15 {
 	@ObfuscatedName("zu.i")
 	public int[] field8422;
 
-	public class686(PureJavaToolkit arg0, class603 arg1, class685[] arg2, int[] arg3, int[] arg4) {
+	public class686(PureJavaToolkit arg0, FontMetrics arg1, PalettedSpriteData[] arg2, int[] arg3, int[] arg4) {
 		super(arg0, arg1);
 		this.field8419 = arg0;
 		this.field8419 = arg0;
@@ -32,7 +32,7 @@ public class class686 extends class15 {
 		this.field8421 = new int[arg2.length];
 		this.field8422 = new int[arg2.length];
 		for (int var6 = 0; var6 < arg2.length; var6++) {
-			class685 var7 = arg2[var6];
+			PalettedSpriteData var7 = arg2[var6];
 			if (var7.field8416 == null) {
 				byte[] var8 = var7.field8408;
 				byte[] var9 = this.field8418[var6] = new byte[var8.length];

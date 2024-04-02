@@ -11,15 +11,15 @@ public class class745 extends class347 implements class257 {
 	@ObfuscatedName("abb.w")
 	public final int field8812;
 
-	public class745(class899 arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
+	public class745(GlxToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
 		super(arg0, 3553, arg1, arg2, arg3 * arg4, false);
 		this.field8813 = arg3;
 		this.field8812 = arg4;
 		this.field3733.method13557(this);
-		OpenGL.glTexImage2Dub(this.field3737, 0, class899.method16100(this.field3736, this.field3731), arg3, arg4, 0, class899.method16093(this.field3736), class899.method16090(this.field3731), null, 0);
+		OpenGL.glTexImage2Dub(this.field3737, 0, GlxToolkit.method16100(this.field3736, this.field3731), arg3, arg4, 0, GlxToolkit.method16093(this.field3736), GlxToolkit.method16090(this.field3731), null, 0);
 	}
 
-	public class745(class899 arg0, int arg1, int arg2, boolean arg3, int[] arg4, int arg5, int arg6) {
+	public class745(GlxToolkit arg0, int arg1, int arg2, boolean arg3, int[] arg4, int arg5, int arg6) {
 		super(arg0, 3553, class124.field1296, class139.field1501, arg1 * arg2, arg3);
 		this.field8813 = arg1;
 		this.field8812 = arg2;
@@ -33,7 +33,7 @@ public class class745 extends class347 implements class257 {
 		}
 	}
 
-	public class745(class899 arg0, class124 arg1, int arg2, int arg3, boolean arg4, byte[] arg5, int arg6, int arg7) {
+	public class745(GlxToolkit arg0, class124 arg1, int arg2, int arg3, boolean arg4, byte[] arg5, int arg6, int arg7) {
 		super(arg0, 3553, arg1, class139.field1501, arg2 * arg3, arg4);
 		this.field8813 = arg2;
 		this.field8812 = arg3;
@@ -51,7 +51,7 @@ public class class745 extends class347 implements class257 {
 				if (this.field3736 == class124.field1295) {
 					OpenGL.glCompressedTexImage2Dub(this.field3737, 0, 33779, arg2, arg3, 0, arg2 * arg3, arg5, arg6);
 				} else {
-					OpenGL.glTexImage2Dub(this.field3737, 0, class899.method16100(this.field3736, this.field3731), arg2, arg3, 0, class899.method16093(this.field3736), 5121, arg5, arg6);
+					OpenGL.glTexImage2Dub(this.field3737, 0, GlxToolkit.method16100(this.field3736, this.field3731), arg2, arg3, 0, GlxToolkit.method16093(this.field3736), 5121, arg5, arg6);
 				}
 			}
 			OpenGL.glPixelStorei(3314, 0);
@@ -59,7 +59,7 @@ public class class745 extends class347 implements class257 {
 		OpenGL.glPixelStorei(3317, 4);
 	}
 
-	public class745(class899 arg0, class124 arg1, int arg2, int arg3, boolean arg4, float[] arg5, int arg6, int arg7) {
+	public class745(GlxToolkit arg0, class124 arg1, int arg2, int arg3, boolean arg4, float[] arg5, int arg6, int arg7) {
 		super(arg0, 3553, arg1, class139.field1506, arg2 * arg3, arg4);
 		this.field8813 = arg2;
 		this.field8812 = arg3;
@@ -68,7 +68,7 @@ public class class745 extends class347 implements class257 {
 			this.method5978(this.field3737, arg2, arg3, arg5);
 		} else {
 			OpenGL.glPixelStorei(3314, arg7);
-			OpenGL.glTexImage2Df(this.field3737, 0, class899.method16100(this.field3736, this.field3731), arg2, arg3, 0, class899.method16093(this.field3736), 5126, arg5, arg6 * 4);
+			OpenGL.glTexImage2Df(this.field3737, 0, GlxToolkit.method16100(this.field3736, this.field3731), arg2, arg3, 0, GlxToolkit.method16093(this.field3736), 5126, arg5, arg6 * 4);
 			OpenGL.glPixelStorei(3314, 0);
 		}
 	}
@@ -128,7 +128,7 @@ public class class745 extends class347 implements class257 {
 		this.field3733.method13557(this);
 		OpenGL.glPixelStorei(3317, 1);
 		OpenGL.glPixelStorei(3314, arg7);
-		OpenGL.glTexSubImage2Dub(this.field3737, 0, arg0, arg1, arg2, arg3, class899.method16093(arg5), 5121, arg4, arg6);
+		OpenGL.glTexSubImage2Dub(this.field3737, 0, arg0, arg1, arg2, arg3, GlxToolkit.method16093(arg5), 5121, arg4, arg6);
 		OpenGL.glPixelStorei(3314, 0);
 		OpenGL.glPixelStorei(3317, 4);
 	}
@@ -137,7 +137,7 @@ public class class745 extends class347 implements class257 {
 	public void method14192(int arg0, int arg1, int arg2, int arg3, float[] arg4, class124 arg5, int arg6, int arg7) {
 		this.field3733.method13557(this);
 		OpenGL.glPixelStorei(3314, arg7);
-		OpenGL.glTexSubImage2Df(this.field3737, 0, arg0, arg1, arg2, arg3, class899.method16093(arg5), 5121, arg4, arg6);
+		OpenGL.glTexSubImage2Df(this.field3737, 0, arg0, arg1, arg2, arg3, GlxToolkit.method16093(arg5), 5121, arg4, arg6);
 		OpenGL.glPixelStorei(3314, 0);
 	}
 
@@ -167,7 +167,7 @@ public class class745 extends class347 implements class257 {
 	}
 
 	@ObfuscatedName("abb.ae(Lhd;)V")
-	public void method4525(class241 arg0) {
+	public void method4525(GpuTextureRelated arg0) {
 		super.method4525(arg0);
 	}
 

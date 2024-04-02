@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class157 {
 
 	@ObfuscatedName("eq.s")
-	public final class334 field1594;
+	public final Js5 field1594;
 
 	@ObfuscatedName("eq.c")
 	public final int field1591;
@@ -22,7 +22,7 @@ public class class157 {
 	@ObfuscatedName("eq.f")
 	public int field1596 = 0;
 
-	public class157(class334 arg0, int arg1) {
+	public class157(Js5 arg0, int arg1) {
 		this.field1594 = arg0;
 		this.field1591 = arg1;
 		this.field1588 = new class937();

@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public interface class254 {
 
 	@ObfuscatedName("ip.ae(Lhd;)V")
-	void method4525(class241 arg0);
+	void method4525(GpuTextureRelated arg0);
 
 	@ObfuscatedName("ip.au()V")
 	void method4527();

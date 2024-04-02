@@ -447,7 +447,7 @@ public class NPCType {
 				if (var33) {
 					var35 = new ObjectNode(arg0.method15337());
 				} else {
-					var35 = new class802(arg0.method15379());
+					var35 = new IntNode(arg0.method15379());
 				}
 				this.field7265.method11927(var35, (long) var34);
 			}
@@ -462,7 +462,7 @@ public class NPCType {
 		if (this.field7248 != -1) {
 			return;
 		}
-		if (class527.field6407 == this.field7210.field7279) {
+		if (ModeGame.field6407 == this.field7210.field7279) {
 			this.field7248 = 1;
 		} else {
 			this.field7248 = 0;
@@ -470,12 +470,12 @@ public class NPCType {
 	}
 
 	@ObfuscatedName("wq.s(Lra;ILpn;Lug;Ltt;Ltt;[Ltt;[IILwf;I)Lqa;")
-	public final Model method12510(RendererToolkit arg0, int arg1, BASTypeList arg2, class567 arg3, AnimationNode arg4, AnimationNode arg5, AnimationNode[] arg6, int[] arg7, int arg8, class610 arg9) {
+	public final Model method12510(RendererToolkit arg0, int arg1, BASTypeList arg2, VarIntDomain arg3, AnimationNode arg4, AnimationNode arg5, AnimationNode[] arg6, int[] arg7, int arg8, class610 arg9) {
 		return this.method12541(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.field7217, true);
 	}
 
 	@ObfuscatedName("wq.c(Lra;ILpn;Lug;Ltt;Ltt;[Ltt;[IILwf;IZB)Lqa;")
-	public final Model method12541(RendererToolkit arg0, int arg1, BASTypeList arg2, class567 arg3, AnimationNode arg4, AnimationNode arg5, AnimationNode[] arg6, int[] arg7, int arg8, class610 arg9, int arg10, boolean arg11) {
+	public final Model method12541(RendererToolkit arg0, int arg1, BASTypeList arg2, VarIntDomain arg3, AnimationNode arg4, AnimationNode arg5, AnimationNode[] arg6, int[] arg7, int arg8, class610 arg9, int arg10, boolean arg11) {
 		if (this.field7244 != null) {
 			NPCType var13 = this.method12516(arg3);
 			return var13 == null ? null : var13.method12541(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
@@ -507,7 +507,7 @@ public class NPCType {
 		if (arg9 != null) {
 			var18 |= arg9.field7203 << 24;
 		}
-		class451 var20 = this.field7210.field7285;
+		WeightedCache var20 = this.field7210.field7285;
 		Model var21;
 		synchronized (this.field7210.field7285) {
 			var21 = (Model) this.field7210.field7285.method7916(var18);
@@ -534,7 +534,7 @@ public class NPCType {
 			}
 			int[] var25 = arg9 == null || arg9.field7204 == null ? this.field7214 : arg9.field7204;
 			boolean var26 = false;
-			class334 var27 = this.field7210.field7280;
+			Js5 var27 = this.field7210.field7280;
 			synchronized (this.field7210.field7280) {
 				for (int var28 = 0; var28 < var25.length; var28++) {
 					if (var25[var28] != -1 && !this.field7210.field7280.method5629(var25[var28], 0)) {
@@ -545,12 +545,12 @@ public class NPCType {
 			if (var26) {
 				return null;
 			}
-			class129[] var30 = new class129[var25.length];
+			ModelUnlit[] var30 = new ModelUnlit[var25.length];
 			for (int var31 = 0; var31 < var25.length; var31++) {
 				if (var25[var31] != -1) {
-					class334 var32 = this.field7210.field7280;
+					Js5 var32 = this.field7210.field7280;
 					synchronized (this.field7210.field7280) {
-						var30[var31] = class129.method2664(this.field7210.field7280, var25[var31], 0);
+						var30[var31] = ModelUnlit.method2664(this.field7210.field7280, var25[var31], 0);
 					}
 					if (var30[var31] != null) {
 						if (var30[var31].field1314 < 13) {
@@ -588,11 +588,11 @@ public class NPCType {
 					}
 				}
 			}
-			class129 var41;
+			ModelUnlit var41;
 			if (var30.length == 1) {
 				var41 = var30[0];
 			} else {
-				var41 = new class129(var30, var30.length);
+				var41 = new ModelUnlit(var30, var30.length);
 			}
 			var21 = arg0.method625(var41, var24, this.field7210.field7276, this.field7239 + 64, this.field7240 * 5 + 850);
 			if (this.field7218 != null) {
@@ -625,7 +625,7 @@ public class NPCType {
 				var21.method290(this.field7225, this.field7226, this.field7255, this.field7228 & 0xFF);
 			}
 			var21.method252(var14);
-			class451 var46 = this.field7210.field7285;
+			WeightedCache var46 = this.field7210.field7285;
 			synchronized (this.field7210.field7285) {
 				this.field7210.field7285.method7937(var21, var18);
 			}
@@ -695,7 +695,7 @@ public class NPCType {
 	}
 
 	@ObfuscatedName("wq.m(Lra;ILug;Ltt;Lwf;B)Lqa;")
-	public final Model method12512(RendererToolkit arg0, int arg1, class567 arg2, AnimationNode arg3, class610 arg4) {
+	public final Model method12512(RendererToolkit arg0, int arg1, VarIntDomain arg2, AnimationNode arg3, class610 arg4) {
 		if (this.field7244 != null) {
 			NPCType var6 = this.method12516(arg2);
 			return var6 == null ? null : var6.method12512(arg0, arg1, arg2, arg3, arg4);
@@ -710,7 +710,7 @@ public class NPCType {
 			if (arg4 != null) {
 				var8 |= arg4.field7203 << 24;
 			}
-			class451 var10 = this.field7210.field7283;
+			WeightedCache var10 = this.field7210.field7283;
 			Model var11;
 			synchronized (this.field7210.field7283) {
 				var11 = (Model) this.field7210.field7283.method7916(var8);
@@ -731,7 +731,7 @@ public class NPCType {
 				}
 				int[] var14 = arg4 == null || arg4.field7204 == null ? this.field7215 : arg4.field7204;
 				boolean var15 = false;
-				class334 var16 = this.field7210.field7280;
+				Js5 var16 = this.field7210.field7280;
 				synchronized (this.field7210.field7280) {
 					int var17 = 0;
 					while (true) {
@@ -747,11 +747,11 @@ public class NPCType {
 				if (var15) {
 					return null;
 				}
-				class129[] var19 = new class129[var14.length];
-				class334 var20 = this.field7210.field7280;
+				ModelUnlit[] var19 = new ModelUnlit[var14.length];
+				Js5 var20 = this.field7210.field7280;
 				synchronized (this.field7210.field7280) {
 					for (int var21 = 0; var21 < var14.length; var21++) {
-						var19[var21] = class129.method2664(this.field7210.field7280, var14[var21], 0);
+						var19[var21] = ModelUnlit.method2664(this.field7210.field7280, var14[var21], 0);
 					}
 				}
 				for (int var23 = 0; var23 < var14.length; var23++) {
@@ -759,11 +759,11 @@ public class NPCType {
 						var19[var23].method2634(2);
 					}
 				}
-				class129 var24;
+				ModelUnlit var24;
 				if (var19.length == 1) {
 					var24 = var19[0];
 				} else {
-					var24 = new class129(var19, var19.length);
+					var24 = new ModelUnlit(var19, var19.length);
 				}
 				var11 = arg0.method625(var24, var13, this.field7210.field7276, 64, 768);
 				if (this.field7218 != null) {
@@ -796,7 +796,7 @@ public class NPCType {
 					var11.method290(this.field7225, this.field7226, this.field7255, this.field7228 & 0xFF);
 				}
 				var11.method252(var7);
-				class451 var29 = this.field7210.field7283;
+				WeightedCache var29 = this.field7210.field7283;
 				synchronized (this.field7210.field7283) {
 					this.field7210.field7283.method7937(var11, var8);
 				}
@@ -831,7 +831,7 @@ public class NPCType {
 		if (this.field7265 == null) {
 			return arg1;
 		} else {
-			class802 var3 = (class802) this.field7265.method11923((long) arg0);
+			IntNode var3 = (IntNode) this.field7265.method11923((long) arg0);
 			return var3 == null ? arg1 : var3.field9556;
 		}
 	}
@@ -847,7 +847,7 @@ public class NPCType {
 	}
 
 	@ObfuscatedName("wq.d(Lug;I)Lwq;")
-	public final NPCType method12516(class567 arg0) {
+	public final NPCType method12516(VarIntDomain arg0) {
 		int var2 = -1;
 		if (this.field7245 != -1) {
 			var2 = arg0.method1646(this.field7245);
@@ -863,7 +863,7 @@ public class NPCType {
 	}
 
 	@ObfuscatedName("wq.z(Lug;B)Z")
-	public boolean method12517(class567 arg0) {
+	public boolean method12517(VarIntDomain arg0) {
 		if (this.field7244 == null) {
 			return true;
 		}

@@ -7,14 +7,14 @@ public class class732 extends class208 {
 	@ObfuscatedName("aau.t")
 	public class118 field8728;
 
-	public class732(class334 arg0, class334 arg1, class751 arg2) {
+	public class732(Js5 arg0, Js5 arg1, class751 arg2) {
 		super(arg0, arg1, arg2);
 	}
 
 	@ObfuscatedName("aau.u(B)V")
 	public void method3936() {
 		super.method3936();
-		this.field8728 = class308.method1624(this.field2310, ((class751) this.field2311).field8826);
+		this.field8728 = MainLoadingScreen.method1624(this.field2310, ((class751) this.field2311).field8826);
 	}
 
 	@ObfuscatedName("aau.d(ZIII)V")

@@ -5,10 +5,10 @@ import deob.ObfuscatedName;
 public class class377 {
 
 	@ObfuscatedName("md.u")
-	public class334 field4056;
+	public Js5 field4056;
 
 	@ObfuscatedName("md.j")
-	public class334 field4053;
+	public Js5 field4053;
 
 	@ObfuscatedName("md.a")
 	public IterableMap field4055 = new IterableMap(256);
@@ -19,7 +19,7 @@ public class class377 {
 	@ObfuscatedName("md.c")
 	public IterableMap field4054 = new IterableMap(256);
 
-	public class377(class334 arg0, class334 arg1) {
+	public class377(Js5 arg0, Js5 arg1) {
 		this.field4056 = arg0;
 		this.field4053 = arg1;
 	}

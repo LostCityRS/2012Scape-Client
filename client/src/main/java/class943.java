@@ -17,10 +17,10 @@ public class class943 extends SecondaryNode {
 	public String field10300;
 
 	@ObfuscatedName("aif.as")
-	public static class552 field10323 = new class552();
+	public static DualIterableQueue field10323 = new DualIterableQueue();
 
 	@ObfuscatedName("aif.ai")
-	public static class552 field10317 = new class552();
+	public static DualIterableQueue field10317 = new DualIterableQueue();
 
 	@ObfuscatedName("aif.ao")
 	public static IterableMap field10326 = new IterableMap(16);

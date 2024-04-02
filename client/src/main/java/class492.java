@@ -58,7 +58,7 @@ public class class492 {
 	@ObfuscatedName("rh.h")
 	public int field5167 = -1;
 
-	public class492(class334 arg0) {
+	public class492(Js5 arg0) {
 		byte[] var2 = arg0.method5635(class491.field5141.field5145);
 		this.method8613(new Packet(var2));
 	}

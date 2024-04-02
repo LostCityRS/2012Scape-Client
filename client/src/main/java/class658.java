@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("xm")
-public class class658 extends GroundDecorLayerEntity implements class113 {
+public class class658 extends GroundDecorLayerEntity implements Location {
 
 	@ObfuscatedName("xm.z")
 	public class116 field7530;

@@ -23,9 +23,9 @@ public class class699 extends CutsceneAction {
 
 	@ObfuscatedName("zm.j(I)V")
 	public void method2873() {
-		class802 var1 = (class802) class144.field1529.method11923(this.field8483);
+		IntNode var1 = (IntNode) CutsceneManager.field1529.method11923(this.field8483);
 		if (var1 == null) {
-			class144.field1529.method11927(new class802(this.field8482), this.field8483);
+			CutsceneManager.field1529.method11927(new IntNode(this.field8482), this.field8483);
 		} else {
 			var1.field9556 = this.field8482;
 		}

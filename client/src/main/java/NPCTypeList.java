@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class NPCTypeList {
 
 	@ObfuscatedName("wi.u")
-	public final class527 field7279;
+	public final ModeGame field7279;
 
 	@ObfuscatedName("wi.j")
 	public final class519 field7284;
@@ -14,19 +14,19 @@ public class NPCTypeList {
 	public boolean field7278;
 
 	@ObfuscatedName("wi.s")
-	public final class334 field7277;
+	public final Js5 field7277;
 
 	@ObfuscatedName("wi.c")
-	public final class334 field7280;
+	public final Js5 field7280;
 
 	@ObfuscatedName("wi.m")
-	public final class451 field7281 = new class451(64);
+	public final WeightedCache field7281 = new WeightedCache(64);
 
 	@ObfuscatedName("wi.t")
-	public final class451 field7285 = new class451(50);
+	public final WeightedCache field7285 = new WeightedCache(50);
 
 	@ObfuscatedName("wi.l")
-	public final class451 field7283 = new class451(5);
+	public final WeightedCache field7283 = new WeightedCache(5);
 
 	@ObfuscatedName("wi.f")
 	public int field7276;
@@ -34,7 +34,7 @@ public class NPCTypeList {
 	@ObfuscatedName("wi.d")
 	public final String[] field7282;
 
-	public NPCTypeList(class527 arg0, class519 arg1, boolean arg2, class334 arg3, class334 arg4) {
+	public NPCTypeList(ModeGame arg0, class519 arg1, boolean arg2, Js5 arg3, Js5 arg4) {
 		this.field7279 = arg0;
 		this.field7284 = arg1;
 		this.field7278 = arg2;
@@ -45,7 +45,7 @@ public class NPCTypeList {
 			class161.field1682.method3071();
 			this.field7277.method5637(var6);
 		}
-		if (class527.field6407 == this.field7279) {
+		if (ModeGame.field6407 == this.field7279) {
 			this.field7282 = new String[] { null, null, null, null, null, class588.field6874.method12206(this.field7284) };
 		} else {
 			this.field7282 = new String[] { null, null, null, null, null, null };
@@ -54,7 +54,7 @@ public class NPCTypeList {
 
 	@ObfuscatedName("wi.u(IB)Lwq;")
 	public NPCType method12565(int arg0) {
-		class451 var2 = this.field7281;
+		WeightedCache var2 = this.field7281;
 		NPCType var3;
 		synchronized (this.field7281) {
 			var3 = (NPCType) this.field7281.method7916((long) arg0);
@@ -62,7 +62,7 @@ public class NPCTypeList {
 		if (var3 != null) {
 			return var3;
 		}
-		class334 var5 = this.field7277;
+		Js5 var5 = this.field7277;
 		byte[] var6;
 		synchronized (this.field7277) {
 			var6 = this.field7277.method5627(class161.field1682.method3073(arg0), class161.field1682.method3075(arg0));
@@ -75,7 +75,7 @@ public class NPCTypeList {
 			var8.method12507(new Packet(var6));
 		}
 		var8.method12509();
-		class451 var9 = this.field7281;
+		WeightedCache var9 = this.field7281;
 		synchronized (this.field7281) {
 			this.field7281.method7937(var8, (long) arg0);
 			return var8;
@@ -93,11 +93,11 @@ public class NPCTypeList {
 	@ObfuscatedName("wi.a(II)V")
 	public void method12557(int arg0) {
 		this.field7276 = arg0;
-		class451 var2 = this.field7285;
+		WeightedCache var2 = this.field7285;
 		synchronized (this.field7285) {
 			this.field7285.method7922();
 		}
-		class451 var4 = this.field7283;
+		WeightedCache var4 = this.field7283;
 		synchronized (this.field7283) {
 			this.field7283.method7922();
 		}
@@ -105,15 +105,15 @@ public class NPCTypeList {
 
 	@ObfuscatedName("wi.s(B)V")
 	public void method12558() {
-		class451 var1 = this.field7281;
+		WeightedCache var1 = this.field7281;
 		synchronized (this.field7281) {
 			this.field7281.method7922();
 		}
-		class451 var3 = this.field7285;
+		WeightedCache var3 = this.field7285;
 		synchronized (this.field7285) {
 			this.field7285.method7922();
 		}
-		class451 var5 = this.field7283;
+		WeightedCache var5 = this.field7283;
 		synchronized (this.field7283) {
 			this.field7283.method7922();
 		}
@@ -121,11 +121,11 @@ public class NPCTypeList {
 
 	@ObfuscatedName("wi.c(S)V")
 	public void method12559() {
-		class451 var1 = this.field7285;
+		WeightedCache var1 = this.field7285;
 		synchronized (this.field7285) {
 			this.field7285.method7922();
 		}
-		class451 var3 = this.field7283;
+		WeightedCache var3 = this.field7283;
 		synchronized (this.field7283) {
 			this.field7283.method7922();
 		}
@@ -133,15 +133,15 @@ public class NPCTypeList {
 
 	@ObfuscatedName("wi.m(II)V")
 	public void method12556(int arg0) {
-		class451 var2 = this.field7281;
+		WeightedCache var2 = this.field7281;
 		synchronized (this.field7281) {
 			this.field7281.method7921(arg0);
 		}
-		class451 var4 = this.field7285;
+		WeightedCache var4 = this.field7285;
 		synchronized (this.field7285) {
 			this.field7285.method7921(arg0);
 		}
-		class451 var6 = this.field7283;
+		WeightedCache var6 = this.field7283;
 		synchronized (this.field7283) {
 			this.field7283.method7921(arg0);
 		}
@@ -149,15 +149,15 @@ public class NPCTypeList {
 
 	@ObfuscatedName("wi.t(I)V")
 	public void method12555() {
-		class451 var1 = this.field7281;
+		WeightedCache var1 = this.field7281;
 		synchronized (this.field7281) {
 			this.field7281.method7925();
 		}
-		class451 var3 = this.field7285;
+		WeightedCache var3 = this.field7285;
 		synchronized (this.field7285) {
 			this.field7285.method7925();
 		}
-		class451 var5 = this.field7283;
+		WeightedCache var5 = this.field7283;
 		synchronized (this.field7283) {
 			this.field7283.method7925();
 		}

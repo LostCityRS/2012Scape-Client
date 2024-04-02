@@ -5,9 +5,9 @@ import deob.ObfuscatedName;
 public class class882 extends Exception {
 
 	// $FF: synthetic field
-	public final class173 this$0;
+	public final ShaderData this$0;
 
-	public class882(class173 arg0, int arg1, int arg2) {
+	public class882(ShaderData arg0, int arg1, int arg2) {
 		super("");
 		this.this$0 = arg0;
 	}

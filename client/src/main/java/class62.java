@@ -372,7 +372,7 @@ public class class62 {
 				return;
 			}
 			if (arg0.equals("renderer")) {
-				class122 var3 = Statics.field5187.method456();
+				ToolkitInfo var3 = Statics.field5187.method456();
 				method1958("Toolkit ID: " + Statics.field4961.field9661.method15781());
 				method1958("Vendor: " + var3.field1285);
 				method1958("Name: " + var3.field1288);
@@ -386,7 +386,7 @@ public class class62 {
 				return;
 			}
 			if (arg0.equalsIgnoreCase("getcamerapos")) {
-				class453 var4 = client.field8980.method6214();
+				CoordGrid var4 = client.field8980.method6214();
 				method1958("Pos: " + Statics.field2119.field9807 + "," + ((Statics.field6769 >> 9) + var4.field4836 >> 6) + "," + ((Statics.field8424 >> 9) + var4.field4838 >> 6) + "," + ((Statics.field6769 >> 9) + var4.field4836 & 0x3F) + "," + ((Statics.field8424 >> 9) + var4.field4838 & 0x3F) + " Height: " + (client.method8663(Statics.field6769, Statics.field8424, Statics.field2119.field9807) - Statics.field8423));
 				method1958("Look: " + Statics.field2119.field9807 + "," + (Statics.field2799 + var4.field4836 >> 6) + "," + (Statics.field4855 + var4.field4838 >> 6) + "," + (Statics.field2799 + var4.field4836 & 0x3F) + "," + (Statics.field4855 + var4.field4838 & 0x3F) + " Height: " + (client.method8663(Statics.field2799, Statics.field4855, Statics.field2119.field9807) - Statics.field9680));
 				return;
@@ -515,9 +515,9 @@ public class class62 {
 					return;
 				}
 				if (arg0.equalsIgnoreCase("breakcon")) {
-					class64[] var12 = client.field9011;
+					ServerConnection[] var12 = client.field9011;
 					for (int var13 = 0; var13 < var12.length; var13++) {
-						class64 var14 = var12[var13];
+						ServerConnection var14 = var12[var13];
 						if (var14.method1927() != null) {
 							var14.method1927().method7203();
 						}
@@ -538,14 +538,14 @@ public class class62 {
 				if (arg0.startsWith("directlogin")) {
 					String[] var17 = StringTools.method11508(arg0.substring(12), ' ');
 					if (var17.length == 2) {
-						class33.method12220(var17[0], var17[1]);
+						LoginManager.method12220(var17[0], var17[1]);
 					}
 					return;
 				}
 				if (arg0.startsWith("snlogin ")) {
 					String[] var18 = StringTools.method11508(arg0.substring(8), ' ');
 					int var19 = Integer.parseInt(var18[0]);
-					class33.method11156(var19);
+					LoginManager.method11156(var19);
 					return;
 				}
 				if (arg0.startsWith("setoutput ")) {
@@ -594,7 +594,7 @@ public class class62 {
 					method14213(var25);
 				}
 				if (client.field8923 == 1 || client.field8923 == 15) {
-					class64 var26 = client.method4104();
+					ServerConnection var26 = client.method4104();
 					ClientMessage var27 = ClientMessage.method14781(ClientProt.field2951, var26.field834);
 					var27.field9467.method15308(arg0.length() + 3);
 					var27.field9467.method15308(arg1 ? 1 : 0);
@@ -710,7 +710,7 @@ public class class62 {
 	@ObfuscatedName("r.x(I)V")
 	public static void method1623() {
 		if (Statics.field4961.field9667.method15884() == 1) {
-			Statics.field8656.method6053(new class358(class360.field3842, null));
+			Statics.field8656.method6053(new RebuildRequest(RebuildType.field3842, null));
 		} else {
 			client.field8980.method6102();
 			class58.method7992();

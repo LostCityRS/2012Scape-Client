@@ -17,7 +17,7 @@ public class class574 {
 	public static int field6783 = 0;
 
 	@ObfuscatedName("uu.o")
-	public static class495 field6781 = null;
+	public static PingRequest field6781 = null;
 
 	@ObfuscatedName("uu.q")
 	public static boolean field6774 = false;

@@ -7,7 +7,7 @@ import jagdx.IUnknown;
 public class class302 implements class304 {
 
 	@ObfuscatedName("jb.u")
-	public final class898 field3336;
+	public final DxToolkit field3336;
 
 	@ObfuscatedName("jb.j")
 	public final class139 field3337;
@@ -24,13 +24,13 @@ public class class302 implements class304 {
 	@ObfuscatedName("jb.m")
 	public long field3341;
 
-	public class302(class898 arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5) {
+	public class302(DxToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5) {
 		this.field3336 = arg0;
 		this.field3338 = arg3;
 		this.field3340 = arg4;
 		this.field3339 = arg1;
 		this.field3337 = arg2;
-		this.field3341 = IDirect3DDevice.CreateRenderTarget(this.field3336.field9975, arg3, arg4, class898.method16037(this.field3339, this.field3337), arg5, 0, false);
+		this.field3341 = IDirect3DDevice.CreateRenderTarget(this.field3336.field9975, arg3, arg4, DxToolkit.method16037(this.field3339, this.field3337), arg5, 0, false);
 		this.field3336.method13586(this);
 	}
 

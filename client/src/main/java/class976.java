@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aka")
-public class class976 extends class871 {
+public class class976 extends LookatSpline {
 
 	@ObfuscatedName("aka.c")
 	public float field10514;

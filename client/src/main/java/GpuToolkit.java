@@ -21,7 +21,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 	public class615 field8232 = new class615();
 
 	@ObfuscatedName("yk.ao")
-	public final class334 field8310;
+	public final Js5 field8310;
 
 	@ObfuscatedName("yk.al")
 	public boolean field8242;
@@ -333,7 +333,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 	public final class222[] field8344 = new class222[16];
 
 	@ObfuscatedName("yk.eh")
-	public class200 field8345;
+	public ModelShader field8345;
 
 	@ObfuscatedName("yk.ed")
 	public class203 field8346;
@@ -342,7 +342,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 	public class202 field8347;
 
 	@ObfuscatedName("yk.es")
-	public class201 field8314;
+	public ParticleShader field8314;
 
 	@ObfuscatedName("yk.ej")
 	public class908 field8349;
@@ -351,7 +351,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 	public class908 field8350;
 
 	@ObfuscatedName("yk.el")
-	public class907 field8277;
+	public WaterfallShader field8277;
 
 	@ObfuscatedName("yk.ei")
 	public class232 field8352;
@@ -372,7 +372,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 	public int field8236;
 
 	@ObfuscatedName("yk.ey")
-	public class137 field8360;
+	public WaterFogData field8360;
 
 	@ObfuscatedName("yk.ek")
 	public boolean field8361;
@@ -471,13 +471,13 @@ public abstract class GpuToolkit extends RendererToolkit {
 	public VertexDeclaration field8392;
 
 	@ObfuscatedName("yk.gz")
-	public class258 field8393;
+	public IndexBuffer field8393;
 
 	@ObfuscatedName("yk.gk")
-	public class678[] field8394;
+	public GpuModel[] field8394;
 
 	@ObfuscatedName("yk.gc")
-	public class678[] field8395;
+	public GpuModel[] field8395;
 
 	@ObfuscatedName("yk.gm")
 	public Matrix4x4 field8396;
@@ -522,12 +522,12 @@ public abstract class GpuToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yk.ma([B)Lem;")
-	public class173 method13492(byte[] arg0) {
+	public ShaderData method13492(byte[] arg0) {
 		if (arg0 == null) {
 			return null;
 		}
 		try {
-			return new class173(arg0);
+			return new ShaderData(arg0);
 		} catch (Exception var3) {
 			return null;
 		}
@@ -538,11 +538,11 @@ public abstract class GpuToolkit extends RendererToolkit {
 		return NativeLibraries.method11710().method6800("jaclib");
 	}
 
-	public GpuToolkit(class16 arg0, class334 arg1, int arg2, int arg3) {
+	public GpuToolkit(BillboardTypeList arg0, Js5 arg1, int arg2, int arg3) {
 		super(arg0);
 		new Stream();
-		this.field8394 = new class678[7];
-		this.field8395 = new class678[7];
+		this.field8394 = new GpuModel[7];
+		this.field8395 = new GpuModel[7];
 		this.field8396 = new Matrix4x4();
 		this.field8397 = new Matrix4x3();
 		this.field8399 = -1;
@@ -550,7 +550,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 			this.field8310 = arg1;
 			this.field8383 = arg2;
 			this.field8348 = arg3;
-			class482.method8092(false, true);
+			ColourUtils.method8092(false, true);
 			if (this.field400 == null) {
 				this.field8336 = null;
 			} else {
@@ -605,8 +605,8 @@ public abstract class GpuToolkit extends RendererToolkit {
 		this.field8343 = this.method13585(new class243[] { new class243(class237.field2495), new class243(class237.field2488), new class243(class237.field2483), new class243(class237.field2480) });
 		this.field8298 = this.method13585(new class243[] { new class243(class237.field2495), new class243(class237.field2488), new class243(class237.field2483) });
 		for (int var3 = 0; var3 < 7; var3++) {
-			this.field8394[var3] = new class678(this, 0, 0, false, false);
-			this.field8395[var3] = new class678(this, 0, 0, true, true);
+			this.field8394[var3] = new GpuModel(this, 0, 0, false, false);
+			this.field8395[var3] = new GpuModel(this, 0, 0, true, true);
 		}
 		this.method13496();
 		this.field8393 = this.method13797(true);
@@ -630,7 +630,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 			this.field8314 = new class724(this);
 			this.field8349 = new class908(this, this.field8248, false);
 			this.field8350 = new class908(this, this.field8248, true);
-			this.field8277 = new class907(this, this.field8248);
+			this.field8277 = new WaterfallShader(this, this.field8248);
 		} catch (Exception var4) {
 			var4.printStackTrace();
 			this.field8345 = new class721(this);
@@ -829,7 +829,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 		for (Node var1 = this.field8362.method11563(); var1 != null; var1 = this.field8362.method11567()) {
 			((class917) var1).method16230();
 		}
-		class482.method2790(false, true);
+		ColourUtils.method2790(false, true);
 		for (int var2 = 0; var2 < this.field8344.length; var2++) {
 			if (this.field8344[var2] != null) {
 				this.field8344[var2].method4135();
@@ -1006,7 +1006,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yk.od(I)Lin;")
-	public final class258 method13559(int arg0) {
+	public final IndexBuffer method13559(int arg0) {
 		if (this.field8393.method4451() < arg0 * 2) {
 			this.field8393.method4535(arg0);
 		}
@@ -1024,7 +1024,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yk.bo(Lds;Z)Lce;")
-	public final class118 method517(class140 arg0, boolean arg1) {
+	public final class118 method517(SpriteData arg0, boolean arg1) {
 		class118 var4;
 		if (arg0.method2721() == 0 || arg0.method2763() == 0) {
 			var4 = this.method506(new int[] { 0 }, 0, 1, 1, 1);
@@ -1049,7 +1049,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yk.co(Lvm;[Lzv;Z)Ll;")
-	public final class15 method712(class603 arg0, class685[] arg1, boolean arg2) {
+	public final class15 method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
 		return new class690(this, arg0, arg1, arg2);
 	}
 
@@ -1063,8 +1063,8 @@ public abstract class GpuToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yk.cx(Ldw;IIII)Lqa;")
-	public final Model method625(class129 arg0, int arg1, int arg2, int arg3, int arg4) {
-		return new class678(this, arg0, arg1, arg3, arg4, arg2);
+	public final Model method625(ModelUnlit arg0, int arg1, int arg2, int arg3, int arg4) {
+		return new GpuModel(this, arg0, arg1, arg3, arg4, arg2);
 	}
 
 	@ObfuscatedName("yk.cn(II)I")
@@ -1786,19 +1786,19 @@ public abstract class GpuToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yk.rz()Ldk;")
-	public class137 method13573() {
+	public WaterFogData method13573() {
 		return this.field8360;
 	}
 
 	@ObfuscatedName("yk.dw(ILdk;)V")
-	public final void method503(int arg0, class137 arg1) {
+	public final void method503(int arg0, WaterFogData arg1) {
 		this.field8236 = arg0;
 		this.field8360 = arg1;
 		this.field8274 = true;
 	}
 
 	@ObfuscatedName("yk.di(ILdk;)V")
-	public final void method547(int arg0, class137 arg1) {
+	public final void method547(int arg0, WaterFogData arg1) {
 		if (!this.field8274) {
 			throw new RuntimeException("");
 		}
@@ -1916,7 +1916,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 		int var8 = arg2 - 1;
 		int var9 = arg3 - 1;
 		byte var7 = 0;
-		if (this instanceof class899) {
+		if (this instanceof GlxToolkit) {
 			var7 = -1;
 		}
 		this.method825(arg0, arg1 + var7, arg0 + var8, arg1 + var7, arg4, arg5);
@@ -2117,7 +2117,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 	public abstract boolean method13488();
 
 	@ObfuscatedName("yk.y(Ljava/lang/String;)Lec;")
-	public abstract class172 method13490(String arg0);
+	public abstract Shader method13490(String arg0);
 
 	@ObfuscatedName("yk.pd()V")
 	public abstract void method13493();
@@ -2210,10 +2210,10 @@ public abstract class GpuToolkit extends RendererToolkit {
 	public abstract void method13587(int arg0, VertexBuffer arg1);
 
 	@ObfuscatedName("yk.sf(Lin;)V")
-	public abstract void method13588(class258 arg0);
+	public abstract void method13588(IndexBuffer arg0);
 
 	@ObfuscatedName("yk.su(Lin;Lir;IIII)V")
-	public abstract void method13595(class258 arg0, class255 arg1, int arg2, int arg3, int arg4, int arg5);
+	public abstract void method13595(IndexBuffer arg0, class255 arg1, int arg2, int arg3, int arg4, int arg5);
 
 	@ObfuscatedName("yk.sh(Lir;IIII)V")
 	public abstract void method13596(class255 arg0, int arg1, int arg2, int arg3, int arg4);
@@ -2261,7 +2261,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 	public abstract void method13779();
 
 	@ObfuscatedName("yk.st(Z)Lin;")
-	public abstract class258 method13797(boolean arg0);
+	public abstract IndexBuffer method13797(boolean arg0);
 
 	@ObfuscatedName("yk.qx()V")
 	public abstract void method13842();

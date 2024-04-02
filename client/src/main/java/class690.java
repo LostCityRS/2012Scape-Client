@@ -23,12 +23,12 @@ public class class690 extends class15 {
 	@ObfuscatedName("zf.i")
 	public int field8449;
 
-	public class690(GpuToolkit arg0, class603 arg1, class685[] arg2, boolean arg3) {
+	public class690(GpuToolkit arg0, FontMetrics arg1, PalettedSpriteData[] arg2, boolean arg3) {
 		super(arg0, arg1);
 		this.field8447 = arg0;
 		this.field8449 = 0;
 		for (int var5 = 0; var5 < 256; var5++) {
-			class685 var6 = arg2[var5];
+			PalettedSpriteData var6 = arg2[var5];
 			if (var6.field8409 > this.field8449) {
 				this.field8449 = var6.field8409;
 			}
@@ -40,7 +40,7 @@ public class class690 extends class15 {
 		if (arg3) {
 			byte[] var7 = new byte[this.field8444 * this.field8444];
 			for (int var8 = 0; var8 < 256; var8++) {
-				class685 var9 = arg2[var8];
+				PalettedSpriteData var9 = arg2[var8];
 				int var10 = var9.field8409;
 				int var11 = var9.field8415;
 				int var12 = var8 % 16 * this.field8449;
@@ -73,7 +73,7 @@ public class class690 extends class15 {
 		} else {
 			int[] var24 = new int[this.field8444 * this.field8444];
 			for (int var25 = 0; var25 < 256; var25++) {
-				class685 var26 = arg2[var25];
+				PalettedSpriteData var26 = arg2[var25];
 				int[] var27 = var26.field8410;
 				byte[] var28 = var26.field8416;
 				byte[] var29 = var26.field8408;
@@ -107,7 +107,7 @@ public class class690 extends class15 {
 			}
 			this.field8445 = arg0.method13548(this.field8444, this.field8444, false, var24);
 		}
-		this.field8445.method4525(class241.field2502);
+		this.field8445.method4525(GpuTextureRelated.field2502);
 		this.field8446 = arg0.method13584(false);
 		this.field8446.method4269(20480, 20);
 		ByteBuffer var41 = this.field8447.field8244;
@@ -115,7 +115,7 @@ public class class690 extends class15 {
 		float var42 = this.field8445.method4437((float) this.field8444) / (float) this.field8444;
 		float var43 = this.field8445.method4439((float) this.field8444) / (float) this.field8444;
 		for (int var44 = 0; var44 < 256; var44++) {
-			class685 var45 = arg2[var44];
+			PalettedSpriteData var45 = arg2[var44];
 			int var46 = var45.field8409;
 			int var47 = var45.field8415;
 			int var48 = var45.field8412;
@@ -150,7 +150,7 @@ public class class690 extends class15 {
 		this.field8446.method4452(0, var41.position(), this.field8447.field8245);
 		arg0.method13739(12);
 		for (int var56 = 0; var56 < 256; var56++) {
-			class685 var57 = arg2[var56];
+			PalettedSpriteData var57 = arg2[var56];
 			this.field8448[var56 * 2] = (byte) var57.field8413;
 			this.field8448[var56 * 2 + 1] = (byte) var57.field8412;
 		}

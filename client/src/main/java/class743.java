@@ -25,11 +25,11 @@ public class class743 extends class300 implements class239 {
 	@ObfuscatedName("abu.z")
 	public boolean field8811;
 
-	public class743(class898 arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
+	public class743(DxToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
 		this(arg0, arg1, arg2, arg3, arg4, 0, 1);
 	}
 
-	public class743(class898 arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5, int arg6) {
+	public class743(DxToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5, int arg6) {
 		super(arg0, arg1, arg2, false, arg3 * arg4);
 		if (this.field3326.field10002) {
 			this.field8806 = arg3;
@@ -42,10 +42,10 @@ public class class743 extends class300 implements class239 {
 			this.field8808 = (float) arg3 / (float) this.field8806;
 			this.field8809 = (float) arg4 / (float) this.field8810;
 		}
-		this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, arg3, arg4, 0, arg5, class898.method16037(this.field3327, this.field3329), arg6);
+		this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, arg3, arg4, 0, arg5, DxToolkit.method16037(this.field3327, this.field3329), arg6);
 	}
 
-	public class743(class898 arg0, int arg1, int arg2, boolean arg3, int[] arg4, int arg5, int arg6) {
+	public class743(DxToolkit arg0, int arg1, int arg2, boolean arg3, int[] arg4, int arg5, int arg6) {
 		super(arg0, class124.field1296, class139.field1501, arg3 && arg0.field9994, arg1 * arg2);
 		if (this.field3326.field10002) {
 			this.field8806 = arg1;
@@ -77,7 +77,7 @@ public class class743 extends class300 implements class239 {
 		IDirect3DTexture.Upload(this.field3325, 0, 0, 0, this.field8806, this.field8810, this.field3327.field1306 * arg6, 0, this.field3326.field8245);
 	}
 
-	public class743(class898 arg0, class124 arg1, int arg2, int arg3, boolean arg4, byte[] arg5, int arg6, int arg7) {
+	public class743(DxToolkit arg0, class124 arg1, int arg2, int arg3, boolean arg4, byte[] arg5, int arg6, int arg7) {
 		super(arg0, arg1, class139.field1501, arg4 && arg0.field9994, arg2 * arg3);
 		if (this.field3326.field10002) {
 			this.field8806 = arg2;
@@ -96,9 +96,9 @@ public class class743 extends class300 implements class239 {
 			}
 		}
 		if (arg4) {
-			this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, this.field8806, this.field8810, 0, 1024, class898.method16037(this.field3327, class139.field1501), 1);
+			this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, this.field8806, this.field8810, 0, 1024, DxToolkit.method16037(this.field3327, class139.field1501), 1);
 		} else {
-			this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, this.field8806, this.field8810, 1, 0, class898.method16037(this.field3327, class139.field1501), 1);
+			this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, this.field8806, this.field8810, 1, 0, DxToolkit.method16037(this.field3327, class139.field1501), 1);
 		}
 		if (arg7 == 0) {
 			arg7 = this.field8806;
@@ -121,7 +121,7 @@ public class class743 extends class300 implements class239 {
 		}
 	}
 
-	public class743(class898 arg0, class124 arg1, int arg2, int arg3, boolean arg4, float[] arg5, int arg6, int arg7) {
+	public class743(DxToolkit arg0, class124 arg1, int arg2, int arg3, boolean arg4, float[] arg5, int arg6, int arg7) {
 		super(arg0, arg1, class139.field1501, arg4 && arg0.field9994, arg2 * arg3);
 		if (this.field3326.field10002) {
 			this.field8806 = arg2;
@@ -140,9 +140,9 @@ public class class743 extends class300 implements class239 {
 			}
 		}
 		if (arg4) {
-			this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, this.field8806, this.field8810, 0, 1024, class898.method16037(this.field3327, class139.field1506), 1);
+			this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, this.field8806, this.field8810, 0, 1024, DxToolkit.method16037(this.field3327, class139.field1506), 1);
 		} else {
-			this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, this.field8806, this.field8810, 1, 0, class898.method16037(this.field3327, class139.field1506), 1);
+			this.field3325 = IDirect3DDevice.CreateTexture(this.field3326.field9975, this.field8806, this.field8810, 1, 0, DxToolkit.method16037(this.field3327, class139.field1506), 1);
 		}
 		if (arg7 == 0) {
 			arg7 = this.field8806;
@@ -194,7 +194,7 @@ public class class743 extends class300 implements class239 {
 	}
 
 	@ObfuscatedName("abu.ae(Lhd;)V")
-	public void method4525(class241 arg0) {
+	public void method4525(GpuTextureRelated arg0) {
 		super.method4525(arg0);
 	}
 

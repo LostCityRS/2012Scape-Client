@@ -139,7 +139,7 @@ public abstract class Camera {
 		}
 		Iterator var4 = this.field2225.iterator();
 		while (var4.hasNext()) {
-			class948 var5 = (class948) var4.next();
+			CameraEffect var5 = (CameraEffect) var4.next();
 			var5.method16667(arg0);
 		}
 	}
@@ -161,17 +161,17 @@ public abstract class Camera {
 	}
 
 	@ObfuscatedName("fe.c(Lfo;ZI)Ltd;")
-	public Lookat method3692(LookatMode arg0, boolean arg1) throws class884 {
+	public Lookat method3692(LookatMode arg0, boolean arg1) throws CameraException {
 		if (CameraControlMode.field2202 == this.field2219 && !arg1) {
-			throw new class884();
+			throw new CameraException();
 		}
 		this.field2221 = arg0;
 		if (LookatMode.field2165 == arg0) {
-			this.field2222 = new class870(this);
+			this.field2222 = new LookatEntity(this);
 		} else if (LookatMode.field2169 == arg0) {
 			this.field2222 = new class869(this);
 		} else if (LookatMode.field2167 == arg0) {
-			this.field2222 = new class868(this);
+			this.field2222 = new LookatPoint(this);
 		} else if (LookatMode.field2164 == arg0) {
 			this.field2222 = new class975(this);
 		} else if (LookatMode.field2168 == arg0) {
@@ -183,9 +183,9 @@ public abstract class Camera {
 	}
 
 	@ObfuscatedName("fe.m(Lfg;ZI)Lgo;")
-	public Position method3693(PositionMode arg0, boolean arg1) throws class884 {
+	public Position method3693(PositionMode arg0, boolean arg1) throws CameraException {
 		if (CameraControlMode.field2202 == this.field2219 && !arg1) {
-			throw new class884();
+			throw new CameraException();
 		}
 		this.field2234 = arg0;
 		if (PositionMode.field2193 == arg0) {
@@ -210,64 +210,64 @@ public abstract class Camera {
 	}
 
 	@ObfuscatedName("fe.l(FI)V")
-	public void method3695(float arg0) throws class884 {
+	public void method3695(float arg0) throws CameraException {
 		if (!this.method3715()) {
-			throw new class884();
+			throw new CameraException();
 		}
 	}
 
 	@ObfuscatedName("fe.f(FB)V")
-	public void method3696(float arg0) throws class884 {
+	public void method3696(float arg0) throws CameraException {
 		if (!this.method3715()) {
-			throw new class884();
+			throw new CameraException();
 		}
 		this.field2228 = arg0;
 	}
 
 	@ObfuscatedName("fe.d(Lfu;B)V")
-	public void method3697(CameraLinearMovementMode arg0) throws class884 {
+	public void method3697(CameraLinearMovementMode arg0) throws CameraException {
 		if (!this.method3715()) {
-			throw new class884();
+			throw new CameraException();
 		}
 		this.field2226 = arg0;
 	}
 
 	@ObfuscatedName("fe.z(Lko;I)V")
-	public void method3698(Vector3 arg0) throws class884 {
+	public void method3698(Vector3 arg0) throws CameraException {
 		if (!this.method3715() || !this.field2226.field2200) {
-			throw new class884();
+			throw new CameraException();
 		}
 		this.field2232.method5334(arg0);
 	}
 
 	@ObfuscatedName("fe.n(Lko;I)V")
-	public void method3755(Vector3 arg0) throws class884 {
+	public void method3755(Vector3 arg0) throws CameraException {
 		if (!this.method3715() || !this.field2226.field2200) {
-			throw new class884();
+			throw new CameraException();
 		}
 		this.field2233.method5334(arg0);
 	}
 
 	@ObfuscatedName("fe.o(Lko;B)V")
-	public void method3700(Vector3 arg0) throws class884 {
+	public void method3700(Vector3 arg0) throws CameraException {
 		if (!this.method3715() || !this.field2226.field2200) {
-			throw new class884();
+			throw new CameraException();
 		}
 		this.field2229.method5334(arg0);
 	}
 
 	@ObfuscatedName("fe.q(Lko;B)V")
-	public void method3771(Vector3 arg0) throws class884 {
+	public void method3771(Vector3 arg0) throws CameraException {
 		if (!this.method3715() || !this.field2226.field2200) {
-			throw new class884();
+			throw new CameraException();
 		}
 		this.field2230.method5334(arg0);
 	}
 
 	@ObfuscatedName("fe.p(Lko;FI)V")
-	public void method3702(Vector3 arg0, float arg1) throws class884 {
+	public void method3702(Vector3 arg0, float arg1) throws CameraException {
 		if (!this.method3715() || this.field2226.field2200) {
-			throw new class884();
+			throw new CameraException();
 		}
 		this.field2246.method5334(arg0);
 		this.field2235.method5334(arg0);
@@ -276,75 +276,75 @@ public abstract class Camera {
 	}
 
 	@ObfuscatedName("fe.w(Lko;FB)V")
-	public void method3768(Vector3 arg0, float arg1) throws class884 {
+	public void method3768(Vector3 arg0, float arg1) throws CameraException {
 		if (!this.method3715() || this.field2226.field2200) {
-			throw new class884();
+			throw new CameraException();
 		}
 		this.field2246.method5334(arg0);
 		this.field2245 = arg1;
 	}
 
 	@ObfuscatedName("fe.b(Lko;FI)V")
-	public void method3687(Vector3 arg0, float arg1) throws class884 {
+	public void method3687(Vector3 arg0, float arg1) throws CameraException {
 		if (!this.method3715() || this.field2226.field2200) {
-			throw new class884();
+			throw new CameraException();
 		}
 		this.field2235.method5334(arg0);
 		this.field2237 = arg1;
 	}
 
 	@ObfuscatedName("fe.x(FFS)V")
-	public void method3705(float arg0, float arg1) throws class884 {
+	public void method3705(float arg0, float arg1) throws CameraException {
 		if (!this.method3715()) {
-			throw new class884();
+			throw new CameraException();
 		}
 		this.field2223 = arg0;
 		this.field2239 = arg1;
 	}
 
 	@ObfuscatedName("fe.i(FFB)V")
-	public void method3739(float arg0, float arg1) throws class884 {
+	public void method3739(float arg0, float arg1) throws CameraException {
 		if (!this.method3715()) {
-			throw new class884();
+			throw new CameraException();
 		}
 		this.field2218 = arg0;
 		this.field2241 = arg1;
 	}
 
 	@ObfuscatedName("fe.v(ZZB)V")
-	public void method3707(boolean arg0, boolean arg1) throws class884 {
+	public void method3707(boolean arg0, boolean arg1) throws CameraException {
 		if (!this.method3715()) {
-			throw new class884();
+			throw new CameraException();
 		}
 		this.field2242 = arg0;
 		this.field2243 = arg1;
 	}
 
 	@ObfuscatedName("fe.k(IFI)V")
-	public void method3708(int arg0, float arg1) throws class884 {
+	public void method3708(int arg0, float arg1) throws CameraException {
 		if (!this.method3715() || !this.field2226.field2200) {
-			throw new class884();
+			throw new CameraException();
 		}
 		this.field2244 = arg0;
 		this.field2236 = arg1;
 	}
 
 	@ObfuscatedName("fe.h(Laja;I)V")
-	public void method3709(class948 arg0) {
+	public void method3709(CameraEffect arg0) {
 		this.field2225.method11927(arg0, (long) arg0.field10351);
 	}
 
 	@ObfuscatedName("fe.r(II)V")
 	public void method3710(int arg0) {
-		class948 var2 = (class948) this.field2225.method11923((long) arg0);
+		CameraEffect var2 = (CameraEffect) this.field2225.method11923((long) arg0);
 		if (var2 != null) {
 			var2.method6979();
 		}
 	}
 
 	@ObfuscatedName("fe.g(IB)Laja;")
-	public class948 method3711(int arg0) {
-		return (class948) this.field2225.method11923((long) arg0);
+	public CameraEffect method3711(int arg0) {
+		return (CameraEffect) this.field2225.method11923((long) arg0);
 	}
 
 	@ObfuscatedName("fe.y(I)V")
@@ -377,7 +377,7 @@ public abstract class Camera {
 		}
 		Iterator var6 = this.field2225.iterator();
 		while (var6.hasNext()) {
-			class948 var7 = (class948) var6.next();
+			CameraEffect var7 = (CameraEffect) var6.next();
 			var7.method16668(arg0, arg1, arg2);
 		}
 	}
