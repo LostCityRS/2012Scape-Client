@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 import java.util.Iterator;
 
 @ObfuscatedName("oo")
-public class class423 {
+public class Scene {
 
 	@ObfuscatedName("oo.u")
 	public static boolean field4504 = true;
@@ -178,7 +178,7 @@ public class class423 {
 	public boolean[] field4540;
 
 	@ObfuscatedName("oo.bt")
-	public class421 field4541;
+	public class421 pickableEntities;
 
 	@ObfuscatedName("oo.bg")
 	public boolean[][] field4542;
@@ -192,7 +192,7 @@ public class class423 {
 	@ObfuscatedName("oo.bs")
 	public boolean[][] field4507;
 
-	public class423(class14 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, boolean arg6, boolean arg7) {
+	public Scene(class14 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, boolean arg6, boolean arg7) {
 		this.field4489 = arg0;
 		this.field4491 = this.field4489.method768() > 0;
 		this.field4510 = arg1;
@@ -235,7 +235,7 @@ public class class423 {
 		this.field4544 = new boolean[this.field4531 + this.field4531 + 1][this.field4531 + this.field4531 + 1];
 		this.field4542 = new boolean[this.field4531 + this.field4531 + 2][this.field4531 + this.field4531 + 2];
 		this.field4543 = new int[this.field4531 + this.field4531 + 2];
-		this.field4541 = new class421(false);
+		this.pickableEntities = new class421(false);
 	}
 
 	@ObfuscatedName("oo.u(II)V")
@@ -278,23 +278,23 @@ public class class423 {
 				for (class430 var6 = var5.field4554; var6 != null; var6 = var6.field4641) {
 					class974 var7 = var6.field4642;
 					if (var7.field10510 == arg0 && var7.field10509 == arg1) {
-						var7.field9807--;
+						var7.level--;
 					}
 				}
 				if (var5.field4552 != null) {
-					var5.field4552.field9807--;
+					var5.field4552.level--;
 				}
 				if (var5.field4548 != null) {
-					var5.field4548.field9807--;
+					var5.field4548.level--;
 				}
 				if (var5.field4550 != null) {
-					var5.field4550.field9807--;
+					var5.field4550.level--;
 				}
 				if (var5.field4546 != null) {
-					var5.field4546.field9807--;
+					var5.field4546.level--;
 				}
 				if (var5.field4551 != null) {
-					var5.field4551.field9807--;
+					var5.field4551.level--;
 				}
 			}
 		}
@@ -510,7 +510,7 @@ public class class423 {
 		short var7 = 0;
 		for (int var8 = arg0.field10510; var8 <= arg0.field10508; var8++) {
 			for (int var9 = arg0.field10509; var9 <= arg0.field10511; var9++) {
-				class424 var10 = this.method7406(arg0.field9807, var8, var9);
+				class424 var10 = this.method7406(arg0.level, var8, var9);
 				if (var10 != null) {
 					class430 var11 = class430.method11871(arg0);
 					class430 var12 = var10.field4554;
@@ -702,7 +702,7 @@ public class class423 {
 	public void method7439(class974 arg0, boolean arg1) {
 		for (int var3 = arg0.field10510; var3 <= arg0.field10508; var3++) {
 			for (int var4 = arg0.field10509; var4 <= arg0.field10511; var4++) {
-				class424 var5 = this.field4497[arg0.field9807][var3][var4];
+				class424 var5 = this.field4497[arg0.level][var3][var4];
 				if (var5 != null) {
 					class430 var6 = var5.field4554;
 					class430 var7 = null;
@@ -1027,8 +1027,8 @@ public class class423 {
 			this.field4493.field4613 = false;
 		}
 		class466.method3619(this, this.field4489);
-		if (!this.field4541.field4473) {
-			Iterator var34 = this.field4541.field4471.iterator();
+		if (!this.pickableEntities.field4473) {
+			Iterator var34 = this.pickableEntities.field4471.iterator();
 			while (var34.hasNext()) {
 				class425 var35 = (class425) var34.next();
 				var34.remove();
@@ -1242,7 +1242,7 @@ public class class423 {
 			for (int var10 = var8; var10 <= var6; var10++) {
 				for (int var11 = var9; var11 <= var7; var11++) {
 					if (arg0.field9809 < this.field4494 && var10 >= this.field4486 && var10 < this.field4484 && var11 >= this.field4532 && var11 < this.field4533) {
-						if ((arg2 == null || arg0.field9807 < arg3 || arg2[arg0.field9807][var10][var11] != arg4) && arg0.method15635() && !arg0.method15634(this.field4489)) {
+						if ((arg2 == null || arg0.level < arg3 || arg2[arg0.level][var10][var11] != arg4) && arg0.method15635() && !arg0.method15634(this.field4489)) {
 							return false;
 						}
 						if (!arg1 && var10 >= this.field4521 - 16 && var10 <= this.field4521 + 16 && var11 >= this.field4503 - 16 && var11 <= this.field4503 + 16) {
@@ -1259,7 +1259,7 @@ public class class423 {
 			int var14 = (int) var12.field3477 >> this.field4510;
 			if (arg0.field9809 >= this.field4494 || var13 < this.field4486 || var13 >= this.field4484 || var14 < this.field4532 || var14 >= this.field4533) {
 				return true;
-			} else if ((arg2 == null || arg0.field9807 < arg3 || arg2[arg0.field9807][var13][var14] != arg4) && arg0.method15635() && !arg0.method15634(this.field4489)) {
+			} else if ((arg2 == null || arg0.level < arg3 || arg2[arg0.level][var13][var14] != arg4) && arg0.method15635() && !arg0.method15634(this.field4489)) {
 				return false;
 			} else {
 				if (!arg1 && var13 >= this.field4521 - 16 && var13 <= this.field4521 + 16 && var14 >= this.field4503 - 16 && var14 <= this.field4503 + 16) {
@@ -1304,7 +1304,7 @@ public class class423 {
 		}
 		if (var10.field4564) {
 			var10.field4563 = arg0;
-			this.field4541.method7390(var10);
+			this.pickableEntities.method7390(var10);
 		} else {
 			class425.method2573(var10);
 		}

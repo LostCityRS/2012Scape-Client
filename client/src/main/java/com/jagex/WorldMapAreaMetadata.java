@@ -3,7 +3,7 @@ package com.jagex;
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ajo")
-public class class951 extends class800 {
+public class WorldMapAreaMetadata extends class800 {
 
 	@ObfuscatedName("ajo.t")
 	public int field10370;
@@ -41,7 +41,7 @@ public class class951 extends class800 {
 	@ObfuscatedName("ajo.x")
 	public boolean field10361 = true;
 
-	public class951(int arg0, String arg1, String arg2, int arg3, int arg4, boolean arg5, int arg6, int arg7) {
+	public WorldMapAreaMetadata(int arg0, String arg1, String arg2, int arg3, int arg4, boolean arg5, int arg6, int arg7) {
 		this.field10370 = arg0;
 		this.field10362 = arg1;
 		this.field10372 = arg2;
@@ -122,9 +122,9 @@ public class class951 extends class800 {
 	}
 
 	@ObfuscatedName("yt.m(Lls;III)Lajo;")
-	public static class951 method13263(class334 arg0, int arg1, int arg2) {
+	public static WorldMapAreaMetadata method13263(class334 arg0, int arg1, int arg2) {
 		Packet var3 = new Packet(arg0.getFile(arg1, arg2));
-		class951 var4 = new class951(arg2, var3.gjstr(), var3.gjstr(), var3.g4s(), var3.g4s(), var3.g1() == 1, var3.g1(), var3.g1());
+		WorldMapAreaMetadata var4 = new WorldMapAreaMetadata(arg2, var3.gjstr(), var3.gjstr(), var3.g4s(), var3.g4s(), var3.g1() == 1, var3.g1(), var3.g1());
 		int var5 = var3.g1();
 		for (int var6 = 0; var6 < var5; var6++) {
 			var4.field10363.method11558(new class807(var3.g1(), var3.g2(), var3.g2(), var3.g2(), var3.g2(), var3.g2(), var3.g2(), var3.g2(), var3.g2()));

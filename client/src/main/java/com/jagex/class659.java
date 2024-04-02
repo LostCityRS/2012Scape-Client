@@ -7,7 +7,7 @@ import deob.Statics;
 public class class659 extends class974 implements Location {
 
 	@ObfuscatedName("yp.z")
-	public class541 field7540;
+	public LocTypeList field7540;
 
 	@ObfuscatedName("yp.n")
 	public class13 field7537;
@@ -39,7 +39,7 @@ public class class659 extends class974 implements Location {
 	@ObfuscatedName("yp.k")
 	public boolean field10512;
 
-	public class659(class423 arg0, class14 arg1, class541 arg2, class540 arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11, int arg12, int arg13, int arg14, int arg15, boolean arg16) {
+	public class659(Scene arg0, class14 arg1, LocTypeList arg2, LocType arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11, int arg12, int arg13, int arg14, int arg15, boolean arg16) {
 		super(arg0, arg4, arg5, arg6, arg7, arg8, arg10, arg11, arg12, arg13, arg3.field6527 == 1, method1416(arg14, arg15));
 		this.field7540 = arg2;
 		this.field9810 = arg3.field6474;
@@ -49,7 +49,7 @@ public class class659 extends class974 implements Location {
 		this.field7538 = (byte) arg15;
 		this.field7536 = arg3.field6493 != 0 && !arg9;
 		this.field7533 = arg16;
-		this.field10512 = arg1.method449() && arg3.field6541 && !this.field7539 && Statics.field4961.field9651.method15747() != 0;
+		this.field10512 = arg1.method449() && arg3.field6541 && !this.field7539 && Statics.preferences.field9651.method15747() != 0;
 		int var18 = 2048;
 		if (this.field7533) {
 			var18 |= 0x10000;
@@ -64,7 +64,7 @@ public class class659 extends class974 implements Location {
 			if (this.field7533 || arg3.field6472) {
 				this.field7537 = this.field7537.method295((byte) 0, var18, false);
 				if (arg3.field6472) {
-					class357 var20 = client.field8980.method6094();
+					LocTint var20 = client.world.method6094();
 					this.field7537.method290(var20.field3783, var20.field3782, var20.field3781, var20.field3784);
 				}
 			}
@@ -112,7 +112,7 @@ public class class659 extends class974 implements Location {
 
 	@ObfuscatedName("yp.cx(Lra;IZI)Luz;")
 	public class570 method12864(class14 arg0, int arg1, boolean arg2) {
-		class540 var4 = this.field7540.method11471(this.field9810);
+		LocType var4 = this.field7540.method11471(this.field9810);
 		class12 var5;
 		class12 var6;
 		if (this.field7539) {

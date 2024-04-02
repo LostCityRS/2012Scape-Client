@@ -27,7 +27,7 @@ public class class215 implements class214 {
 	@ObfuscatedName("gb.u(B)V")
 	public void method3936() {
 		class603 var1 = class603.method14876(this.field2336, this.field2337.field2644);
-		this.field2334 = Statics.field5187.method712(var1, (class685[]) class125.method2593(this.field2335, this.field2337.field2644), true);
+		this.field2334 = Statics.toolkit.method712(var1, (class685[]) class125.method2593(this.field2335, this.field2337.field2644), true);
 	}
 
 	@ObfuscatedName("gb.j(ZI)V")

@@ -486,7 +486,7 @@ public class class42 {
 		if (client.field9117) {
 			class613 var3 = Statics.field7366 == -1 ? null : Statics.field4464.method12600(Statics.field7366);
 			if (client.method14331(arg0).method14931() && (Statics.field4822 & 0x20) != 0 && (var3 == null || arg0.method3132(Statics.field7366, var3.field7287) != var3.field7287)) {
-				Statics.method8140(client.field9103, client.field9151 + " " + class32.field491 + " " + arg0.field1795, Statics.field477, 58, arg0.field1903, 0L, arg0.id, arg0.parentLayer, true, false, (long) (arg0.id << 32 | arg0.parentLayer), false);
+				Statics.method8140(client.field9103, client.field9151 + " " + TextUtil.field491 + " " + arg0.field1795, Statics.field477, 58, arg0.field1903, 0L, arg0.id, arg0.parentLayer, true, false, (long) (arg0.id << 32 | arg0.parentLayer), false);
 			}
 		}
 		for (int var4 = 9; var4 >= 5; var4--) {
@@ -520,11 +520,11 @@ public class class42 {
 		if (arg0 instanceof class903) {
 			class903 var1 = (class903) arg0;
 			if (var1.field10075 != null) {
-				method3201(var1, Statics.field2119.field9807 != var1.field9807);
+				method3201(var1, Statics.localPlayerEntity.level != var1.level);
 			}
 		} else if (arg0 instanceof class902) {
 			class902 var2 = (class902) arg0;
-			Statics.method13909(var2, Statics.field2119.field9807 != var2.field9807);
+			Statics.method13909(var2, Statics.localPlayerEntity.level != var2.level);
 		}
 	}
 
@@ -533,7 +533,7 @@ public class class42 {
 		if (arg1 < 0 || arg2 < 0 || field610 == null) {
 			return;
 		}
-		class453 var3 = client.field8980.method6214();
+		CoordGrid var3 = client.world.method6214();
 		class320 var4 = arg0.method781();
 		arg0.method784(field610);
 		arg0.method524(field612);
@@ -544,7 +544,7 @@ public class class42 {
 		var4.method5387();
 		int var5 = arg1 - field606;
 		int var6 = arg2 - field607;
-		if (client.field8980.method6098() != null && (!client.field9117 || (Statics.field4822 & 0x40) != 0)) {
+		if (client.world.getScene() != null && (!client.field9117 || (Statics.field4822 & 0x40) != 0)) {
 			int var7 = -1;
 			int var8 = -1;
 			float var9 = (float) var5 * 2.0F / (float) field614 - 1.0F;
@@ -563,10 +563,10 @@ public class class42 {
 				float var19 = var16 - var13;
 				int var20 = (int) (var17 * var18 + var11);
 				int var21 = (int) (var17 * var19 + var13);
-				var7 = var20 + (Statics.field2119.method13954() - 1 << 8) >> 9;
-				var8 = var21 + (Statics.field2119.method13954() - 1 << 8) >> 9;
-				byte var22 = Statics.field2119.field9807;
-				if (var22 < 3 && (client.field8980.method6100().field3606[1][var20 >> 9][var21 >> 9] & 0x2) != 0) {
+				var7 = var20 + (Statics.localPlayerEntity.method13954() - 1 << 8) >> 9;
+				var8 = var21 + (Statics.localPlayerEntity.method13954() - 1 << 8) >> 9;
+				byte var22 = Statics.localPlayerEntity.level;
+				if (var22 < 3 && (client.world.getSceneLevelTileFlags().field3606[1][var20 >> 9][var21 >> 9] & 0x2) != 0) {
 					int var91 = var22 + 1;
 				}
 			}
@@ -576,7 +576,7 @@ public class class42 {
 					if (var23 == null) {
 						client.method11223();
 					} else {
-						Statics.method8140(client.field9103, " " + class32.field491 + " ", Statics.field477, 59, -1, 0L, var7, var8, true, false, (long) (var7 << 32 | var8), true);
+						Statics.method8140(client.field9103, " " + TextUtil.field491 + " ", Statics.field477, 59, -1, 0L, var7, var8, true, false, (long) (var7 << 32 | var8), true);
 					}
 				} else {
 					if (Statics.field6371) {
@@ -586,7 +586,7 @@ public class class42 {
 				}
 			}
 		}
-		class421 var24 = client.field8980.method6098().field4541;
+		class421 var24 = client.world.getScene().pickableEntities;
 		int var25 = arg1;
 		int var26 = arg2;
 		List var27 = var24.field4471;
@@ -595,7 +595,7 @@ public class class42 {
 			int var32;
 			int var33;
 			Location var83;
-			class540 var84;
+			LocType var84;
 			String[] var86;
 			do {
 				class425 var29;
@@ -610,7 +610,7 @@ public class class42 {
 												return;
 											}
 											var29 = (class425) var28.next();
-										} while (!client.field8940 && Statics.field2119.field9807 != var29.field4563.field9807);
+										} while (!client.field8940 && Statics.localPlayerEntity.level != var29.field4563.level);
 									} while (!var29.method7568(arg0, var25, var26));
 									boolean var30 = false;
 									boolean var31 = false;
@@ -640,7 +640,7 @@ public class class42 {
 													int var44 = (int) var43.field3475 - (var42.field10075.field7213 - 1 << 8);
 													int var45 = (int) var43.field3477 - (var42.field10075.field7213 - 1 << 8);
 													if (var44 >= var38 && var42.field10075.field7213 <= var35.method13954() - (var44 - var38 >> 9) && var45 >= var39 && var42.field10075.field7213 <= var35.method13954() - (var45 - var39 >> 9)) {
-														method3201(var42, Statics.field2119.field9807 != var29.field4563.field9807);
+														method3201(var42, Statics.localPlayerEntity.level != var29.field4563.level);
 														var42.field8635 = client.field9213;
 													}
 												}
@@ -655,14 +655,14 @@ public class class42 {
 												int var51 = (int) var50.field3475 - (var49.method13954() - 1 << 8);
 												int var52 = (int) var50.field3477 - (var49.method13954() - 1 << 8);
 												if (var51 >= var38 && var49.method13954() <= var35.method13954() - (var51 - var38 >> 9) && var52 >= var39 && var49.method13954() <= var35.method13954() - (var52 - var39 >> 9)) {
-													Statics.method13909(var49, Statics.field2119.field9807 != var29.field4563.field9807);
+													Statics.method13909(var49, Statics.localPlayerEntity.level != var29.field4563.level);
 													var49.field8635 = client.field9213;
 												}
 											}
 										}
 									}
 									if (client.field9213 != var35.field8635) {
-										Statics.method13909(var35, Statics.field2119.field9807 != var29.field4563.field9807);
+										Statics.method13909(var35, Statics.localPlayerEntity.level != var29.field4563.level);
 										var35.field8635 = client.field9213;
 										break;
 									}
@@ -687,7 +687,7 @@ public class class42 {
 												int var61 = (int) var60.field3475 - (var59.field10075.field7213 - 1 << 8);
 												int var62 = (int) var60.field3477 - (var59.field10075.field7213 - 1 << 8);
 												if (var61 >= var55 && var59.field10075.field7213 <= var53.field10075.field7213 - (var61 - var55 >> 9) && var62 >= var56 && var59.field10075.field7213 <= var53.field10075.field7213 - (var62 - var56 >> 9)) {
-													method3201(var59, Statics.field2119.field9807 != var29.field4563.field9807);
+													method3201(var59, Statics.localPlayerEntity.level != var29.field4563.level);
 													var59.field8635 = client.field9213;
 												}
 											}
@@ -702,22 +702,22 @@ public class class42 {
 											int var68 = (int) var67.field3475 - (var66.method13954() - 1 << 8);
 											int var69 = (int) var67.field3477 - (var66.method13954() - 1 << 8);
 											if (var68 >= var55 && var66.method13954() <= var53.field10075.field7213 - (var68 - var55 >> 9) && var69 >= var56 && var66.method13954() <= var53.field10075.field7213 - (var69 - var56 >> 9)) {
-												Statics.method13909(var66, Statics.field2119.field9807 != var29.field4563.field9807);
+												Statics.method13909(var66, Statics.localPlayerEntity.level != var29.field4563.level);
 												var66.field8635 = client.field9213;
 											}
 										}
 									}
 								}
 								if (client.field9213 != var53.field8635) {
-									method3201(var53, Statics.field2119.field9807 != var29.field4563.field9807);
+									method3201(var53, Statics.localPlayerEntity.level != var29.field4563.level);
 									var53.field8635 = client.field9213;
 									break;
 								}
 							}
 							if (var29.field4563 instanceof ObjStackEntity) {
-								int var70 = var3.field4836 + var32;
-								int var71 = var3.field4838 + var33;
-								class774 var72 = (class774) client.field9088.method11923((long) (var29.field4563.field9807 << 28 | var71 << 14 | var70));
+								int var70 = var3.x + var32;
+								int var71 = var3.z + var33;
+								class774 var72 = (class774) client.field9088.method11923((long) (var29.field4563.level << 28 | var71 << 14 | var70));
 								if (var72 != null) {
 									int var73 = 0;
 									class773 var74 = (class773) var72.field9313.method11565();
@@ -731,13 +731,13 @@ public class class42 {
 										} else {
 											var76 = Statics.field1736.field5128;
 										}
-										if (client.field9117 && Statics.field2119.field9807 == var29.field4563.field9807) {
+										if (client.field9117 && Statics.localPlayerEntity.level == var29.field4563.level) {
 											class613 var77 = Statics.field7366 == -1 ? null : Statics.field4464.method12600(Statics.field7366);
 											if ((Statics.field4822 & 0x1) != 0 && (var77 == null || var75.method12250(Statics.field7366, var77.field7287) != var77.field7287)) {
-												Statics.method8140(client.field9103, client.field9151 + " " + class32.field491 + " " + class32.method3978(var76) + var75.field7125, Statics.field477, 17, -1, (long) var74.field9311, var32, var33, true, false, (long) var73, false);
+												Statics.method8140(client.field9103, client.field9151 + " " + TextUtil.field491 + " " + TextUtil.method3978(var76) + var75.field7125, Statics.field477, 17, -1, (long) var74.field9311, var32, var33, true, false, (long) var73, false);
 											}
 										}
-										if (Statics.field2119.field9807 == var29.field4563.field9807) {
+										if (Statics.localPlayerEntity.level == var29.field4563.level) {
 											String[] var78 = var75.field7082;
 											for (int var79 = var78.length - 1; var79 >= 0; var79--) {
 												if (var78[var79] != null) {
@@ -765,7 +765,7 @@ public class class42 {
 													if (var82 != -1) {
 														var81 = var82;
 													}
-													Statics.method8140(var78[var79], class32.method3978(var76) + var75.field7125, var81, var80, -1, (long) var74.field9311, var32, var33, true, false, (long) var73, false);
+													Statics.method8140(var78[var79], TextUtil.method3978(var76) + var75.field7125, var81, var80, -1, (long) var74.field9311, var32, var33, true, false, (long) var73, false);
 												}
 											}
 										}
@@ -776,18 +776,18 @@ public class class42 {
 							}
 						} while (!(var29.field4563 instanceof Location));
 						var83 = (Location) var29.field4563;
-						var84 = client.field8980.method6103().method11471(var83.method2401());
+						var84 = client.world.getLocTypeList().method11471(var83.method2401());
 						if (var84.field6534 != null) {
 							var84 = var84.method11431(Statics.field2669);
 						}
 					} while (var84 == null);
-					if (client.field9117 && Statics.field2119.field9807 == var29.field4563.field9807) {
+					if (client.field9117 && Statics.localPlayerEntity.level == var29.field4563.level) {
 						class613 var85 = Statics.field7366 == -1 ? null : Statics.field4464.method12600(Statics.field7366);
 						if ((Statics.field4822 & 0x4) != 0 && (var85 == null || var84.method11444(Statics.field7366, var85.field7287) != var85.field7287)) {
-							Statics.method8140(client.field9103, client.field9151 + " " + class32.field491 + " " + class32.method3978(65535) + var84.field6490, Statics.field477, 2, -1, method14745(var83, var32, var33), var32, var33, true, false, (long) var83.hashCode(), false);
+							Statics.method8140(client.field9103, client.field9151 + " " + TextUtil.field491 + " " + TextUtil.method3978(65535) + var84.field6490, Statics.field477, 2, -1, method14745(var83, var32, var33), var32, var33, true, false, (long) var83.hashCode(), false);
 						}
 					}
-				} while (Statics.field2119.field9807 != var29.field4563.field9807);
+				} while (Statics.localPlayerEntity.level != var29.field4563.level);
 				var86 = var84.field6505;
 			} while (var86 == null);
 			for (int var87 = var86.length - 1; var87 >= 0; var87--) {
@@ -816,7 +816,7 @@ public class class42 {
 					if (var90 != -1) {
 						var89 = var90;
 					}
-					Statics.method8140(var86[var87], class32.method3978(65535) + var84.field6490, var89, var88, -1, method14745(var83, var32, var33), var32, var33, true, false, (long) var83.hashCode(), false);
+					Statics.method8140(var86[var87], TextUtil.method3978(65535) + var84.field6490, var89, var88, -1, method14745(var83, var32, var33), var32, var33, true, false, (long) var83.hashCode(), false);
 				}
 			}
 		}
@@ -826,7 +826,7 @@ public class class42 {
 	public static long method14745(Location arg0, int arg1, int arg2) {
 		long var3 = 4194304L;
 		long var5 = Long.MIN_VALUE;
-		class540 var7 = client.field8980.method6103().method11471(arg0.method2401());
+		LocType var7 = client.world.getLocTypeList().method11471(arg0.method2401());
 		long var8 = (long) (arg1 | arg2 << 7 | arg0.method2390() << 14 | arg0.method2391() << 20 | 0x40000000);
 		if (var7.field6493 == 0) {
 			var8 |= var5;
@@ -1190,7 +1190,7 @@ public class class42 {
 		}
 		String var1;
 		if (client.field9117 && field588 < 2) {
-			var1 = client.field9103 + class588.field6984.method12206(Statics.field2308) + client.field9151 + " " + class32.field491;
+			var1 = client.field9103 + class588.field6984.method12206(Statics.field2308) + client.field9151 + " " + TextUtil.field491;
 		} else if (method12751() && field588 > 2) {
 			var1 = method12186(Statics.field6655);
 		} else {
@@ -1205,7 +1205,7 @@ public class class42 {
 			}
 		}
 		if (field588 > 2) {
-			var1 = var1 + class32.method3978(16777215) + " / " + (field588 - 2) + class588.field6993.method12206(Statics.field2308);
+			var1 = var1 + TextUtil.method3978(16777215) + " / " + (field588 - 2) + class588.field6993.method12206(Statics.field2308);
 		}
 		if (field597 == null) {
 			return;
@@ -1472,7 +1472,7 @@ public class class42 {
 				if (var5 == null) {
 					class140 var6 = class125.method2590(Statics.field7387, var4.field5079, 0);
 					if (var6 != null) {
-						var5 = Statics.field5187.method517(var6, true);
+						var5 = Statics.toolkit.method517(var6, true);
 						field620.method7937(var5, (long) var4.field5079);
 					}
 				}
@@ -1537,12 +1537,12 @@ public class class42 {
 		}
 		if (arg0.field10072 != 0) {
 			String var4 = client.field9163 == class527.field6402 ? class588.field6998.method12206(Statics.field2308) : class588.field6996.method12206(Statics.field2308);
-			var3 = var3 + method2609(arg0.field10072, Statics.field2119.field10047) + class32.field489 + var4 + arg0.field10072 + class32.field487;
+			var3 = var3 + method2609(arg0.field10072, Statics.localPlayerEntity.field10047) + TextUtil.field489 + var4 + arg0.field10072 + TextUtil.field487;
 		}
 		if (client.field9117 && !arg1) {
 			class613 var5 = Statics.field7366 == -1 ? null : Statics.field4464.method12600(Statics.field7366);
 			if ((Statics.field4822 & 0x2) != 0 && (var5 == null || var2.method12514(Statics.field7366, var5.field7287) != var5.field7287)) {
-				Statics.method8140(client.field9103, client.field9151 + " " + class32.field491 + " " + class32.method3978(16776960) + var3, Statics.field477, 8, -1, (long) arg0.field8593, 0, 0, true, false, (long) arg0.field8593, false);
+				Statics.method8140(client.field9103, client.field9151 + " " + TextUtil.field491 + " " + TextUtil.method3978(16776960) + var3, Statics.field477, 8, -1, (long) arg0.field8593, 0, 0, true, false, (long) arg0.field8593, false);
 			}
 		}
 		if (arg1) {
@@ -1581,7 +1581,7 @@ public class class42 {
 				if (var10 != -1) {
 					var9 = var10;
 				}
-				Statics.method8140(var6[var7], class32.method3978(16776960) + var3, var6[var7].equalsIgnoreCase(class588.field6991.method12206(Statics.field2308)) ? var2.field7222 : var9, var8, -1, (long) arg0.field8593, 0, 0, true, false, (long) arg0.field8593, false);
+				Statics.method8140(var6[var7], TextUtil.method3978(16776960) + var3, var6[var7].equalsIgnoreCase(class588.field6991.method12206(Statics.field2308)) ? var2.field7222 : var9, var8, -1, (long) arg0.field8593, 0, 0, true, false, (long) arg0.field8593, false);
 			}
 		}
 		if (var2.field7248 != 1) {
@@ -1590,7 +1590,7 @@ public class class42 {
 		for (int var11 = 0; var11 < var6.length; var11++) {
 			if (var6[var11] != null && (var6[var11].equalsIgnoreCase(class588.field6991.method12206(Statics.field2308)) || var6[var11].equalsIgnoreCase(class588.field6874.method12206(Statics.field2308)))) {
 				short var12 = 0;
-				if (arg0.field10072 > Statics.field2119.field10047) {
+				if (arg0.field10072 > Statics.localPlayerEntity.field10047) {
 					var12 = 2000;
 				}
 				short var13 = 0;
@@ -1620,7 +1620,7 @@ public class class42 {
 				if (var15 != -1) {
 					var14 = var15;
 				}
-				Statics.method8140(var6[var11], class32.method3978(16776960) + var3, var6[var11].equalsIgnoreCase(class588.field6991.method12206(Statics.field2308)) ? var2.field7222 : var14, var13, -1, (long) arg0.field8593, 0, 0, true, false, (long) arg0.field8593, false);
+				Statics.method8140(var6[var11], TextUtil.method3978(16776960) + var3, var6[var11].equalsIgnoreCase(class588.field6991.method12206(Statics.field2308)) ? var2.field7222 : var14, var13, -1, (long) arg0.field8593, 0, 0, true, false, (long) arg0.field8593, false);
 			}
 		}
 	}
@@ -1640,23 +1640,23 @@ public class class42 {
 	public static String method2609(int arg0, int arg1) {
 		int var2 = arg1 - arg0;
 		if (var2 < -9) {
-			return class32.method3978(16711680);
+			return TextUtil.method3978(16711680);
 		} else if (var2 < -6) {
-			return class32.method3978(16723968);
+			return TextUtil.method3978(16723968);
 		} else if (var2 < -3) {
-			return class32.method3978(16740352);
+			return TextUtil.method3978(16740352);
 		} else if (var2 < 0) {
-			return class32.method3978(16756736);
+			return TextUtil.method3978(16756736);
 		} else if (var2 > 9) {
-			return class32.method3978(65280);
+			return TextUtil.method3978(65280);
 		} else if (var2 > 6) {
-			return class32.method3978(4259584);
+			return TextUtil.method3978(4259584);
 		} else if (var2 > 3) {
-			return class32.method3978(8453888);
+			return TextUtil.method3978(8453888);
 		} else if (var2 > 0) {
-			return class32.method3978(12648192);
+			return TextUtil.method3978(12648192);
 		} else {
-			return class32.method3978(16776960);
+			return TextUtil.method3978(16776960);
 		}
 	}
 
@@ -1669,9 +1669,9 @@ public class class42 {
 		if (arg2 == 1) {
 			var3 = class792.method14781(class280.field2890, client.field8975.randomOut);
 		}
-		class453 var4 = client.field8980.method6214();
-		var3.field9467.p2(var4.field4838 + arg1);
-		var3.field9467.p2_alt3(var4.field4836 + arg0);
+		CoordGrid var4 = client.world.method6214();
+		var3.field9467.p2(var4.z + arg1);
+		var3.field9467.p2_alt3(var4.x + arg0);
 		var3.field9467.p1(method3496() ? 1 : 0);
 		class58.field763 = arg0;
 		class58.field764 = arg1;
@@ -1707,16 +1707,16 @@ public class class42 {
 		float var11 = 0.0F;
 		float var12 = 0.0F;
 		float var13 = 0.0F;
-		class423 var14 = client.field8980.method6098();
+		Scene var14 = client.world.getScene();
 		while (var7 < 1.1F) {
 			float var15 = var7 * var8 + arg0;
 			float var16 = var7 * var9 + arg1;
 			float var17 = var7 * var10 + arg2;
 			int var18 = (int) var15 >> 9;
 			int var19 = (int) var17 >> 9;
-			if (var18 > 0 && var19 > 0 && var18 < client.field8980.method6220() && var19 < client.field8980.method6193()) {
-				int var20 = Statics.field2119.field9807;
-				if (var20 < 3 && (client.field8980.method6100().field3606[1][var18][var19] & 0x2) != 0) {
+			if (var18 > 0 && var19 > 0 && var18 < client.world.getSizeX() && var19 < client.world.getSizeZ()) {
+				int var20 = Statics.localPlayerEntity.level;
+				if (var20 < 3 && (client.world.getSceneLevelTileFlags().field3606[1][var18][var19] & 0x2) != 0) {
 					var20++;
 				}
 				int var21 = var14.field4527[var20].method196((int) var15, (int) var17);

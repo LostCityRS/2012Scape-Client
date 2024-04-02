@@ -54,7 +54,7 @@ public class class396 {
 	}
 
 	@ObfuscatedName("nj.j(Loo;I)V")
-	public void method6951(class423 arg0) {
+	public void method6951(Scene arg0) {
 		if (arg0 == null || this.field4218 <= 0) {
 			return;
 		}
@@ -67,46 +67,46 @@ public class class396 {
 	}
 
 	@ObfuscatedName("nj.a(Loo;S)V")
-	public void method6952(class423 arg0) {
+	public void method6952(Scene arg0) {
 		if (arg0 == null || this.field4219 == null) {
 			return;
 		}
 		Iterator var2 = this.field4219.iterator();
 		while (var2.hasNext()) {
 			class1011 var3 = (class1011) var2.next();
-			arg0.method7430(var3.field9807, var3.field10510, var3.field10509, new class397(var3));
+			arg0.method7430(var3.level, var3.field10510, var3.field10509, new class397(var3));
 		}
 	}
 
 	@ObfuscatedName("nj.s(Loo;I)V")
-	public void method6953(class423 arg0) {
+	public void method6953(Scene arg0) {
 		this.field4219 = new LinkedList();
-		SceneLevelTileFlags var2 = client.field8980.method6100();
-		class453 var3 = client.field8980.method6214();
-		class453 var4 = new class453(Statics.field7324, this.field4216[0], this.field4220[0]);
+		SceneLevelTileFlags var2 = client.world.getSceneLevelTileFlags();
+		CoordGrid var3 = client.world.method6214();
+		CoordGrid var4 = new CoordGrid(Statics.currentPlayerLevel, this.field4216[0], this.field4220[0]);
 		for (int var5 = 1; var5 < this.field4218; var5++) {
-			class453 var6 = new class453(Statics.field7324, this.field4216[var5], this.field4220[var5]);
-			while (var4.field4836 != var6.field4836 || var4.field4838 != var6.field4838) {
-				if (var4.field4836 < var6.field4836) {
-					var4.field4836++;
-				} else if (var4.field4836 > var6.field4836) {
-					var4.field4836--;
+			CoordGrid var6 = new CoordGrid(Statics.currentPlayerLevel, this.field4216[var5], this.field4220[var5]);
+			while (var4.x != var6.x || var4.z != var6.z) {
+				if (var4.x < var6.x) {
+					var4.x++;
+				} else if (var4.x > var6.x) {
+					var4.x--;
 				}
-				if (var4.field4838 < var6.field4838) {
-					var4.field4838++;
-				} else if (var4.field4838 > var6.field4838) {
-					var4.field4838--;
+				if (var4.z < var6.z) {
+					var4.z++;
+				} else if (var4.z > var6.z) {
+					var4.z--;
 				}
-				int var7 = Statics.field7324;
-				int var8 = var4.field4836 - var3.field4836;
-				int var9 = var4.field4838 - var3.field4838;
+				int var7 = Statics.currentPlayerLevel;
+				int var8 = var4.x - var3.x;
+				int var9 = var4.z - var3.z;
 				if (var8 >= 0 && var8 < arg0.field4495 && var9 >= 0 && var9 < arg0.field4496) {
 					int var10 = (var8 << 9) + 256;
 					int var11 = (var9 << 9) + 256;
 					if (var2.method5794(var8, var9)) {
 						var7++;
 					}
-					this.field4219.add(new class1011(arg0, this, Statics.field7324, var7, var10, client.method8663(var10, var11, Statics.field7324), var11));
+					this.field4219.add(new class1011(arg0, this, Statics.currentPlayerLevel, var7, var10, client.method8663(var10, var11, Statics.currentPlayerLevel), var11));
 				}
 			}
 			var4 = var6;

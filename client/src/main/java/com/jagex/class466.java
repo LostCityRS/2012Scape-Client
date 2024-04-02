@@ -70,7 +70,7 @@ public class class466 {
 	}
 
 	@ObfuscatedName("fo.a(Loo;Lra;B)V")
-	public static void method3619(class423 arg0, class14 arg1) {
+	public static void method3619(Scene arg0, class14 arg1) {
 		Iterator var2 = Statics.field4686.iterator();
 		while (var2.hasNext()) {
 			class467 var3 = (class467) var2.next();

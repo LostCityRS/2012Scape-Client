@@ -11,7 +11,7 @@ public class class1011 extends class974 {
 	@ObfuscatedName("alb.g")
 	public class13 field10647;
 
-	public class1011(class423 arg0, class396 arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
+	public class1011(Scene arg0, class396 arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
 		super(arg0, arg2, arg3, arg4, arg5, arg6, arg4 >> 9, arg4 >> 9, arg6 >> 9, arg6 >> 9, false, (byte) 0);
 		this.field10648 = arg1;
 	}
@@ -58,7 +58,7 @@ public class class1011 extends class974 {
 			class314 var3 = this.method8558();
 			class315 var4 = this.method8565();
 			var2.method5115(var3);
-			class424 var5 = this.field9808.field4497[this.field9807][(int) var4.field3464.field3475 >> 9][(int) var4.field3464.field3477 >> 9];
+			class424 var5 = this.field9808.field4497[this.level][(int) var4.field3464.field3475 >> 9][(int) var4.field3464.field3477 >> 9];
 			if (var5 != null && var5.field4552 != null) {
 				var2.method5116(0.0F, (float) -var5.field4552.field10495, 0.0F);
 			}

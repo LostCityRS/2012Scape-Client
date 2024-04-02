@@ -60,25 +60,25 @@ public class class574 {
 
 	@ObfuscatedName("rt.j(ILjava/lang/String;I)Z")
 	public static boolean method8621(int arg0, String arg1) {
-		Statics.field6772 = new class573();
-		Statics.field6772.field6768 = arg0;
-		Statics.field6772.field6765 = arg1;
+		Statics.currentWorld = new class573();
+		Statics.currentWorld.field6768 = arg0;
+		Statics.currentWorld.field6765 = arg1;
 		if (Statics.field6683 != class515.field6368) {
-			Statics.field6772.field6764 = Statics.field6772.field6768 + 40000;
-			Statics.field6772.field6766 = Statics.field6772.field6768 + 50000;
+			Statics.currentWorld.field6764 = Statics.currentWorld.field6768 + 40000;
+			Statics.currentWorld.field6766 = Statics.currentWorld.field6768 + 50000;
 		}
 		return true;
 	}
 
 	@ObfuscatedName("an.a(Ljava/lang/String;II)V")
 	public static void method1716(String arg0, int arg1) {
-		if (Statics.field6782 == null) {
-			Statics.field6782 = new class573();
+		if (Statics.currentLobby == null) {
+			Statics.currentLobby = new class573();
 		}
-		Statics.field6782.field6765 = arg0;
-		Statics.field6782.field6768 = arg1 + 1099;
-		Statics.field6782.field6764 = Statics.field6782.field6768 + 40000;
-		Statics.field6782.field6766 = Statics.field6782.field6768 + 50000;
+		Statics.currentLobby.field6765 = arg0;
+		Statics.currentLobby.field6768 = arg1 + 1099;
+		Statics.currentLobby.field6764 = Statics.currentLobby.field6768 + 40000;
+		Statics.currentLobby.field6766 = Statics.currentLobby.field6768 + 50000;
 	}
 
 	@ObfuscatedName("cy.c(Z[BI)V")
@@ -117,7 +117,7 @@ public class class574 {
 
 	@ObfuscatedName("rc.l(S)Laex;")
 	public static class832 method8609() {
-		return class461.method3630(Statics.field6772.field6768);
+		return class461.method3630(Statics.currentWorld.field6768);
 	}
 
 	@ObfuscatedName("jj.f(IZIZI)V")

@@ -25,7 +25,7 @@ public class class815 extends class399 {
 	public class839 field9642;
 
 	@ObfuscatedName("aeg.q")
-	public class852 field9643;
+	public class852 buildArea;
 
 	@ObfuscatedName("aeg.p")
 	public class859 field9644;
@@ -160,7 +160,7 @@ public class class815 extends class399 {
 				this.field9665 = new class856(this.field9637.method15829(), this);
 				this.field9673 = new class855(arg0.g1(), this);
 				this.field9642 = new class839(arg0.g1(), this);
-				this.field9643 = new class852(arg0.g1(), this);
+				this.buildArea = new class852(arg0.g1(), this);
 				if (var2 >= 27) {
 					this.field9644 = new class859(arg0.g1(), this);
 				}
@@ -226,8 +226,8 @@ public class class815 extends class399 {
 		if (arg0 || this.field9642 == null) {
 			this.field9642 = new class839(this);
 		}
-		if (arg0 || this.field9643 == null) {
-			this.field9643 = new class852(this);
+		if (arg0 || this.buildArea == null) {
+			this.buildArea = new class852(this);
 		}
 		if (arg0 || this.field9644 == null) {
 			this.field9644 = new class859(this);
@@ -398,7 +398,7 @@ public class class815 extends class399 {
 			arg0.g1();
 		}
 		if (arg1 >= 9) {
-			this.field9643 = new class852(arg0.g1(), this);
+			this.buildArea = new class852(arg0.g1(), this);
 		}
 		if (arg1 >= 10) {
 			this.field9673 = new class855(arg0.g1(), this);
@@ -439,7 +439,7 @@ public class class815 extends class399 {
 		var1.p1(this.field9637.method15829());
 		var1.p1(this.field9673.method15816());
 		var1.p1(this.field9642.method15672());
-		var1.p1(this.field9643.method15792());
+		var1.p1(this.buildArea.getValue());
 		var1.p1(this.field9644.method15853());
 		var1.p1(this.field9645.method15679());
 		var1.p1(this.field9646.method15696());
@@ -492,7 +492,7 @@ public class class815 extends class399 {
 		this.field9665.method15826();
 		this.field9673.method15818();
 		this.field9642.method15673();
-		this.field9643.method15789();
+		this.buildArea.method15789();
 		this.field9644.method15851();
 		this.field9645.method15677();
 		this.field9646.method15695();

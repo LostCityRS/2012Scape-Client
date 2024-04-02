@@ -114,7 +114,7 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
 			Statics.field10526 = Statics.field6387;
 			this.method6652(arg1, arg2, arg3, arg4, arg5, arg6);
 		} catch (Throwable var10) {
-			class983.report(null, var10);
+			JagException.report(null, var10);
 			this.method6675("crash");
 		}
 	}
@@ -562,7 +562,7 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
 		} catch (ThreadDeath var7) {
 			throw var7;
 		} catch (Throwable var8) {
-			class983.report(this.method6701(), var8);
+			JagException.report(this.method6701(), var8);
 			this.method6675("crash");
 		} finally {
 			this.method6664(true);

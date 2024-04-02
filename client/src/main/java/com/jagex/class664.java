@@ -7,7 +7,7 @@ import deob.Statics;
 public class class664 extends class970 implements Location {
 
 	@ObfuscatedName("yw.z")
-	public class541 field7588;
+	public LocTypeList field7588;
 
 	@ObfuscatedName("yw.n")
 	public class13 field7580;
@@ -36,7 +36,7 @@ public class class664 extends class970 implements Location {
 	@ObfuscatedName("yw.v")
 	public boolean field7586;
 
-	public class664(class423 arg0, class14 arg1, class541 arg2, class540 arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, boolean arg11) {
+	public class664(Scene arg0, class14 arg1, LocTypeList arg2, LocType arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, boolean arg11) {
 		super(arg0, arg6, arg7, arg8, arg4, arg5, arg3.field6477);
 		this.field7588 = arg2;
 		this.field9810 = arg3.field6474;
@@ -44,7 +44,7 @@ public class class664 extends class970 implements Location {
 		this.field7584 = (byte) arg10;
 		this.field7579 = arg3.field6493 != 0 && !arg9;
 		this.field7587 = arg11;
-		this.field7586 = arg1.method449() && arg3.field6541 && !this.field7585 && Statics.field4961.field9651.method15747() != 0;
+		this.field7586 = arg1.method449() && arg3.field6541 && !this.field7585 && Statics.preferences.field9651.method15747() != 0;
 		int var13 = 2048;
 		if (this.field7587) {
 			var13 |= 0x10000;
@@ -59,7 +59,7 @@ public class class664 extends class970 implements Location {
 			if (this.field7587 || arg3.field6472) {
 				this.field7580 = this.field7580.method295((byte) 0, var13, false);
 				if (arg3.field6472) {
-					class357 var15 = client.field8980.method6094();
+					LocTint var15 = client.world.method6094();
 					this.field7580.method290(var15.field3783, var15.field3782, var15.field3781, var15.field3784);
 				}
 			}
@@ -98,7 +98,7 @@ public class class664 extends class970 implements Location {
 
 	@ObfuscatedName("yw.bm(Lra;IZI)Luz;")
 	public class570 method12906(class14 arg0, int arg1, boolean arg2) {
-		class540 var4 = this.field7588.method11471(this.field9810);
+		LocType var4 = this.field7588.method11471(this.field9810);
 		class12 var5;
 		class12 var6;
 		if (this.field7585) {

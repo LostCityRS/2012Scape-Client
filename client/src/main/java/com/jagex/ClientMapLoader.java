@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 import deob.Statics;
 
 @ObfuscatedName("abo")
-public class class759 extends class340 {
+public class ClientMapLoader extends class340 {
 
 	@ObfuscatedName("abo.cr")
 	public static boolean field8895 = false;
@@ -28,12 +28,12 @@ public class class759 extends class340 {
 	public int field8893 = 99;
 
 	@ObfuscatedName("abo.cc")
-	public class469 field8883;
+	public EnvironmentManager field8883;
 
 	@ObfuscatedName("abo.cg")
-	public class541 field8894;
+	public LocTypeList field8894;
 
-	public class759(class423 arg0, class541 arg1, int arg2, int arg3, int arg4, boolean arg5, SceneLevelTileFlags arg6, class469 arg7) {
+	public ClientMapLoader(Scene arg0, LocTypeList arg1, int arg2, int arg3, int arg4, boolean arg5, SceneLevelTileFlags arg6, EnvironmentManager arg7) {
 		super(arg0, arg2, arg3, arg4, arg5, Statics.field3615, Statics.field4450, arg6);
 		this.field8894 = arg1;
 		this.field8883 = arg7;
@@ -356,7 +356,7 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("md.ct(Ltz;[BIIIIB)I")
-	public static final int method6583(class541 arg0, byte[] arg1, int arg2, int arg3, int arg4, int arg5) {
+	public static final int method6583(LocTypeList arg0, byte[] arg1, int arg2, int arg3, int arg4, int arg5) {
 		int var6 = 0;
 		Packet var7 = new Packet(arg1);
 		int var8 = -1;
@@ -381,8 +381,8 @@ public class class759 extends class340 {
 					int var17 = arg2 + var15;
 					int var18 = arg3 + var14;
 					if (var17 > 0 && var18 > 0 && var17 < arg4 - 1 && var18 < arg5 - 1) {
-						class540 var19 = arg0.method11471(var8);
-						if (class542.field6589.field6590 != var16 || Statics.field4961.field9671.method15725() != 0 || var19.field6493 != 0 || var19.field6491 == 1 || var19.field6523) {
+						LocType var19 = arg0.method11471(var8);
+						if (class542.field6589.field6590 != var16 || Statics.preferences.field9671.method15725() != 0 || var19.field6493 != 0 || var19.field6491 == 1 || var19.field6523) {
 							if (!var19.method11442()) {
 								var6++;
 							}
@@ -400,8 +400,8 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("rj.cu(Ltz;III)Z")
-	public static final boolean method8598(class541 arg0, int arg1, int arg2) {
-		class540 var3 = arg0.method11471(arg1);
+	public static final boolean method8598(LocTypeList arg0, int arg1, int arg2) {
+		LocType var3 = arg0.method11471(arg1);
 		if (arg2 == 11) {
 			arg2 = 10;
 		}
@@ -477,7 +477,7 @@ public class class759 extends class340 {
 				int var20 = var19 >> 2;
 				int var21 = var19 & 0x3;
 				if (arg5 == var18 && var17 >= arg6 && var17 < arg6 + 8 && var16 >= arg7 && var16 < arg7 + 8) {
-					class540 var22 = this.field8894.method11471(var12);
+					LocType var22 = this.field8894.method11471(var12);
 					int var23 = arg3 + class339.method14717(var17 & 0x7, var16 & 0x7, arg8, var22.field6489, var22.field6503, var21);
 					int var24 = arg4 + class339.method7051(var17 & 0x7, var16 & 0x7, arg8, var22.field6489, var22.field6503, var21);
 					if (var23 > 0 && var24 > 0 && var23 < this.field3627 - 1 && var24 < this.field3643 - 1) {
@@ -503,8 +503,8 @@ public class class759 extends class340 {
 		if (arg2 < this.field8893) {
 			this.field8893 = arg2;
 		}
-		class540 var11 = this.field8894.method11471(arg5);
-		if (Statics.field4961.field9659.method15686() == 0 && var11.field6522) {
+		LocType var11 = this.field8894.method11471(arg5);
+		if (Statics.preferences.field9659.method15686() == 0 && var11.field6522) {
 			return;
 		}
 		int var12;
@@ -547,7 +547,7 @@ public class class759 extends class340 {
 			return;
 		}
 		if (class542.field6589.field6590 == arg7) {
-			if (Statics.field4961.field9671.method15725() != 0 || var11.field6493 != 0 || var11.field6491 == 1 || var11.field6523) {
+			if (Statics.preferences.field9671.method15725() != 0 || var11.field6493 != 0 || var11.field6491 == 1 || var11.field6523) {
 				class970 var25;
 				if (var23) {
 					class664 var24 = new class664(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg6, var22);
@@ -618,7 +618,7 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("abo.cy(Lra;IIZLtg;IIIIIIIIZLxa;Lmv;III)Z")
-	public boolean method14285(class14 arg0, int arg1, int arg2, boolean arg3, class540 arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, boolean arg13, class12 arg14, class361 arg15, int arg16, int arg17) {
+	public boolean method14285(class14 arg0, int arg1, int arg2, boolean arg3, LocType arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, boolean arg13, class12 arg14, class361 arg15, int arg16, int arg17) {
 		if (class542.field6591.field6590 == arg1) {
 			int var19 = arg4.field6497;
 			if (field8884 && arg4.field6497 == -1) {
@@ -805,7 +805,7 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("abo.cz(Lra;IIZLtg;IIIIIIIIB)Z")
-	public boolean method14275(class14 arg0, int arg1, int arg2, boolean arg3, class540 arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12) {
+	public boolean method14275(class14 arg0, int arg1, int arg2, boolean arg3, LocType arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12) {
 		if (class542.field6577.field6590 == arg1) {
 			class971 var15;
 			if (arg3) {
@@ -908,7 +908,7 @@ public class class759 extends class340 {
 		if (var7 == null) {
 			return;
 		}
-		class540 var8 = this.field8894.method11471(var7.method2401());
+		LocType var8 = this.field8894.method11471(var7.method2401());
 		int var9 = var7.method2390();
 		int var10 = var7.method2391();
 		if (var8.method11443()) {

@@ -28,10 +28,10 @@ public class Loading {
 		field3421 = true;
 		Statics.field6391 = class33.username;
 		Statics.field4814 = class33.password;
-		client.method13897(false);
+		client.logout(false);
 		Statics.field3420 = null;
 		Statics.field3562 = null;
-		client.method11307(12);
+		client.setState(12);
 	}
 
 	@ObfuscatedName("wo.j(I)V")
@@ -56,7 +56,7 @@ public class Loading {
 			}
 		} else if (Statics.field1208 == LoadingStage.field3403) {
 			Statics.field6789 = null;
-			client.method11307(6);
+			client.setState(6);
 			if (field3421) {
 				field3421 = false;
 				class33.method12220(Statics.field6391, Statics.field4814);
@@ -143,10 +143,10 @@ public class Loading {
 
 	@ObfuscatedName("k.l(I)I")
 	public static int method1610() {
-		if (Statics.field4961.field9669.method15877() == 0) {
+		if (Statics.preferences.field9669.method15877() == 0) {
 			for (int var0 = 0; var0 < client.field8950; var0++) {
 				if (client.field8951[var0].method7298() == 's' || client.field8951[var0].method7298() == 'S') {
-					Statics.field4961.method15448(Statics.field4961.field9669, 1);
+					Statics.preferences.method15448(Statics.preferences.field9669, 1);
 					client.field8912 = true;
 					class558.method12023(class628.field7363);
 					break;
@@ -178,7 +178,7 @@ public class Loading {
 			Statics.field9896 = Statics.field4761.method5622();
 			Statics.field1625 = Statics.field1937.method5622();
 			class35.method11376(Statics.field4761);
-			int var6 = Statics.field4961.field9668.method15859();
+			int var6 = Statics.preferences.field9668.method15859();
 			Statics.field7348 = new class631(client.field9163, Statics.field2308, Statics.field1937);
 			class633[] var7 = Statics.field7348.method12706(var6);
 			if (var7.length == 0) {
@@ -212,8 +212,8 @@ public class Loading {
 				}
 			}
 			Statics.field6784.method4837(client.field8914);
-			class35.method2931(Statics.field5187);
-			client.method11307(2);
+			class35.method2931(Statics.toolkit);
+			client.setState(2);
 		}
 		if (Statics.field1208 == LoadingStage.field3389) {
 			Statics.field7387 = client.method7706(class162.field1694, false, 1, false);
@@ -274,7 +274,7 @@ public class Loading {
 			}
 			method3560(var14);
 			Statics.method4790();
-			client.method11307(10);
+			client.setState(10);
 		}
 		if (Statics.field1208 == LoadingStage.field3391 && Statics.field2137 == null) {
 			Statics.field2137 = new class387(Statics.field663);
@@ -313,9 +313,9 @@ public class Loading {
 			Statics.field7650 = new class205(client.field9163, Statics.field2308, Statics.field7435, Statics.field4560);
 			Statics.field495 = new class623(client.field9163, Statics.field2308, Statics.field7435);
 			Statics.field785 = new class606(client.field9163, Statics.field2308, Statics.field7435);
-			Statics.field10355 = new class541(client.field9163, Statics.field2308, true, Statics.field1565, Statics.field4560);
-			client.field8980.method6159(Statics.field10355);
-			Statics.field8656.method6038(new class541(client.field9163, Statics.field2308, true, Statics.field1565, Statics.field4560));
+			Statics.field10355 = new LocTypeList(client.field9163, Statics.field2308, true, Statics.field1565, Statics.field4560);
+			client.world.setLocTytpeList(Statics.field10355);
+			Statics.field8656.method6038(new LocTypeList(client.field9163, Statics.field2308, true, Statics.field1565, Statics.field4560));
 			Statics.field8499 = new class444(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
 			Statics.field850 = new class609(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
 			Statics.field3774 = new class612(client.field9163, Statics.field2308, true, Statics.field5080, Statics.field4560);
@@ -356,7 +356,7 @@ public class Loading {
 			}
 		}
 		if (Statics.field1208 == LoadingStage.field3408) {
-			class408.method7080(Statics.field4059, Statics.field3615, Statics.field4450, client.field8980.method6103(), Statics.field8499, Statics.field850, Statics.field2669);
+			class408.method7080(Statics.field4059, Statics.field3615, Statics.field4450, client.world.getLocTypeList(), Statics.field8499, Statics.field850, Statics.field2669);
 		}
 		if (Statics.field1208 == LoadingStage.field3399) {
 			Statics.field6666 = new int[Statics.field8455.field7160];
@@ -409,12 +409,12 @@ public class Loading {
 			Statics.field7348 = null;
 			Statics.field3422 = null;
 			class308.method6065();
-			client.field8911 = Statics.field4961.field9669.method15877() == 1;
-			Statics.field4961.method15448(Statics.field4961.field9669, 1);
+			client.field8911 = Statics.preferences.field9669.method15877() == 1;
+			Statics.preferences.method15448(Statics.preferences.field9669, 1);
 			if (client.field8911) {
-				Statics.field4961.method15448(Statics.field4961.field9670, 0);
-			} else if (Statics.field4961.field9670.field9844 && Statics.field2305.field9703 < 512 && Statics.field2305.field9703 != 0) {
-				Statics.field4961.method15448(Statics.field4961.field9670, 0);
+				Statics.preferences.method15448(Statics.preferences.field9670, 0);
+			} else if (Statics.preferences.field9670.field9844 && Statics.field2305.field9703 < 512 && Statics.field2305.field9703 != 0) {
+				Statics.preferences.method15448(Statics.preferences.field9670, 0);
 			}
 			Statics.method1245();
 			if (client.field8911) {
@@ -423,15 +423,15 @@ public class Loading {
 					class558.method12023(class628.field7356);
 				}
 			} else {
-				Statics.method5600(Statics.field4961.field9670.method15781(), false);
-				if (Statics.field4961.field9670.method15781() == 0) {
+				Statics.method5600(Statics.preferences.field9670.method15781(), false);
+				if (Statics.preferences.field9670.method15781() == 0) {
 					class558.method12023(class628.field7364);
 				}
 			}
-			client.method7282(Statics.field4961.field9663.method15766(), -1, -1, false);
+			client.method7282(Statics.preferences.field9663.method15766(), -1, -1, false);
 			Statics.field6784.method4837(client.field8914);
-			class35.method2931(Statics.field5187);
-			class35.method15812(Statics.field5187, Statics.field7387);
+			class35.method2931(Statics.toolkit);
+			class35.method15812(Statics.toolkit, Statics.field7387);
 			class42.method3288(Statics.field8538);
 		}
 		return method4789();

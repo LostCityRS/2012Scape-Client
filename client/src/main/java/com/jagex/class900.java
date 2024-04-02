@@ -27,10 +27,10 @@ public class class900 extends class703 {
 		int var1 = this.field10035 * 512 + 256;
 		int var2 = this.field10034 * 512 + 256;
 		int var3 = this.field10033;
-		if (var3 < 3 && client.field8980.method6100().method5794(this.field10035, this.field10034)) {
+		if (var3 < 3 && client.world.getSceneLevelTileFlags().method5794(this.field10035, this.field10034)) {
 			var3++;
 		}
-		class1010 var4 = new class1010(client.field8980.method6098(), this.field8498, 0, this.field10033, var3, var1, client.method8663(var1, var2, this.field10033) - this.field8497, var2, this.field10035, this.field10035, this.field10034, this.field10034, this.field8496, false, 0);
+		class1010 var4 = new class1010(client.world.getScene(), this.field8498, 0, this.field10033, var3, var1, client.method8663(var1, var2, this.field10033) - this.field8497, var2, this.field10035, this.field10035, this.field10034, this.field10034, this.field8496, false, 0);
 		client.field9090.pushNode(new class942(var4), (long) (this.field10035 << 16 | this.field10034));
 	}
 }

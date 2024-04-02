@@ -7,7 +7,7 @@ import deob.Statics;
 public class class116 {
 
 	@ObfuscatedName("ck.u")
-	public class541 field1215;
+	public LocTypeList field1215;
 
 	@ObfuscatedName("ck.j")
 	public byte field1212;
@@ -66,7 +66,7 @@ public class class116 {
 	@ObfuscatedName("ck.v")
 	public class539 field1230;
 
-	public class116(class14 arg0, class541 arg1, class540 arg2, int arg3, int arg4, int arg5, int arg6, class836 arg7, boolean arg8, int arg9) {
+	public class116(class14 arg0, LocTypeList arg1, LocType arg2, int arg3, int arg4, int arg5, int arg6, class836 arg7, boolean arg8, int arg9) {
 		this.field1215 = arg1;
 		this.field1219 = arg2.field6474;
 		this.field1226 = arg3;
@@ -105,7 +105,7 @@ public class class116 {
 
 	@ObfuscatedName("ck.c(Lra;IZZI)Lqa;")
 	public final class13 method2437(class14 arg0, int arg1, boolean arg2, boolean arg3) {
-		class540 var5 = this.field1215.method11471(this.field1219);
+		LocType var5 = this.field1215.method11471(this.field1219);
 		if (var5.field6534 != null) {
 			var5 = var5.method11431(client.field8988 == 0 ? class144.field1538 : Statics.field2669);
 		}
@@ -121,14 +121,14 @@ public class class116 {
 		}
 		this.method2432(this.field1217);
 		if (arg3) {
-			arg3 &= this.field1225 & !this.field1227 & Statics.field4961.field9651.method15747() != 0;
+			arg3 &= this.field1225 & !this.field1227 & Statics.preferences.field9651.method15747() != 0;
 		}
 		if (arg2 && !arg3) {
 			this.field1214 = var5.field6474;
 			return null;
 		}
 		Vector3 var6 = this.field1217.method8565().field3464;
-		class423 var7 = client.field8980.method6098();
+		Scene var7 = client.world.getScene();
 		if (arg3) {
 			var7.method7451(this.field1224, this.field1213, (int) var6.field3475, (int) var6.field3477, this.field1228);
 			this.field1227 = false;
@@ -196,7 +196,7 @@ public class class116 {
 		class134[] var9 = arg1.method276();
 		class119[] var10 = arg1.method413();
 		if ((this.field1229 == null || this.field1229.field4945) && (var9 != null || var10 != null)) {
-			class540 var11 = this.field1215.method11471(this.field1219);
+			LocType var11 = this.field1215.method11471(this.field1219);
 			if (var11.field6534 != null) {
 				var11 = var11.method11431(client.field8988 == 0 ? class144.field1538 : Statics.field2669);
 			}
@@ -230,7 +230,7 @@ public class class116 {
 	public void method2441(class14 arg0) {
 		if (this.field1224 != null) {
 			Vector3 var2 = this.field1217.method8565().field3464;
-			client.field8980.method6098().method7451(this.field1224, this.field1213, (int) var2.field3475, (int) var2.field3477, this.field1228);
+			client.world.getScene().method7451(this.field1224, this.field1213, (int) var2.field3475, (int) var2.field3477, this.field1228);
 			this.field1228 = null;
 			this.field1224 = null;
 		}
@@ -241,7 +241,7 @@ public class class116 {
 		if (!this.field1220.method11767()) {
 			this.method2439(false, -1, 0);
 		} else if (this.field1220.method11787(client.field9213 - this.field1221)) {
-			if (Statics.field4961.field9651.method15747() == 2) {
+			if (Statics.preferences.field9651.method15747() == 2) {
 				this.field1227 = false;
 			}
 			if (this.field1220.method11784()) {
@@ -258,8 +258,8 @@ public class class116 {
 		int var4 = arg1;
 		boolean var5 = false;
 		if (arg1 == -1) {
-			class540 var6 = this.field1215.method11471(this.field1219);
-			class540 var7 = var6;
+			LocType var6 = this.field1215.method11471(this.field1219);
+			LocType var7 = var6;
 			if (var6.field6534 != null) {
 				var6 = var6.method11431(client.field8988 == 0 ? class144.field1538 : Statics.field2669);
 			}

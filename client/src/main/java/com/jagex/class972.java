@@ -11,9 +11,9 @@ public abstract class class972 extends class836 {
 	@ObfuscatedName("akr.e")
 	public short field10507;
 
-	public class972(class423 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
+	public class972(Scene arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
 		super(arg0);
-		this.field9807 = (byte) arg4;
+		this.level = (byte) arg4;
 		this.field9809 = (byte) arg5;
 		this.field10507 = (short) arg6;
 		this.method8551(new Vector3((float) arg1, (float) arg2, (float) arg3));

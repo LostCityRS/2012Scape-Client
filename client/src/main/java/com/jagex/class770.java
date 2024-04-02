@@ -69,7 +69,7 @@ public final class class770 extends class399 {
 			var7.field9293 = arg3;
 			var7.field9291 = arg1;
 			var7.field9280 = arg2;
-			if (arg1 >= 0 && arg2 >= 0 && arg1 < client.field8980.method6220() && arg2 < client.field8980.method6193()) {
+			if (arg1 >= 0 && arg2 >= 0 && arg1 < client.world.getSizeX() && arg2 < client.world.getSizeZ()) {
 				method3598(var7);
 			}
 			field9278.method11558(var7);
@@ -112,7 +112,7 @@ public final class class770 extends class399 {
 				var0.method6979();
 			} else {
 				var0.field9289 = true;
-				if (var0.field9291 >= 0 && var0.field9280 >= 0 && var0.field9291 < client.field8980.method6220() && var0.field9280 < client.field8980.method6193()) {
+				if (var0.field9291 >= 0 && var0.field9280 >= 0 && var0.field9291 < client.world.getSizeX() && var0.field9280 < client.world.getSizeZ()) {
 					method3598(var0);
 				}
 			}
@@ -128,7 +128,7 @@ public final class class770 extends class399 {
 
 	@ObfuscatedName("fy.s(Lach;I)V")
 	public static final void method3598(class770 arg0) {
-		class423 var1 = client.field8980.method6098();
+		Scene var1 = client.world.getScene();
 		if (var1 == null) {
 			return;
 		}
@@ -169,7 +169,7 @@ public final class class770 extends class399 {
 	@ObfuscatedName("iz.m(Lach;ZI)V")
 	public static final void method4624(class770 arg0, boolean arg1) {
 		if (arg0.field9290) {
-			if (arg0.field9282 < 0 || class759.method8598(client.field8980.method6103(), arg0.field9282, arg0.field9284)) {
+			if (arg0.field9282 < 0 || ClientMapLoader.method8598(client.world.getLocTypeList(), arg0.field9282, arg0.field9284)) {
 				if (arg1) {
 					method12070(arg0.field9281, arg0.field9293, arg0.field9291, arg0.field9280, null);
 				} else {
@@ -177,7 +177,7 @@ public final class class770 extends class399 {
 				}
 				arg0.method6979();
 			}
-		} else if (arg0.field9289 && arg0.field9291 >= 1 && arg0.field9280 >= 1 && arg0.field9291 <= client.field8980.method6220() - 2 && arg0.field9280 <= client.field8980.method6193() - 2 && (arg0.field9285 < 0 || class759.method8598(client.field8980.method6103(), arg0.field9285, arg0.field9287))) {
+		} else if (arg0.field9289 && arg0.field9291 >= 1 && arg0.field9280 >= 1 && arg0.field9291 <= client.world.getSizeX() - 2 && arg0.field9280 <= client.world.getSizeZ() - 2 && (arg0.field9285 < 0 || ClientMapLoader.method8598(client.world.getLocTypeList(), arg0.field9285, arg0.field9287))) {
 			if (arg1) {
 				method12070(arg0.field9281, arg0.field9293, arg0.field9291, arg0.field9280, arg0.field9288);
 			} else {
@@ -194,34 +194,34 @@ public final class class770 extends class399 {
 
 	@ObfuscatedName("sd.t(IIIIIIIIB)V")
 	public static final void method11120(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
-		if (arg2 < 1 || arg3 < 1 || arg2 > client.field8980.method6220() - 2 || arg3 > client.field8980.method6193() - 2) {
+		if (arg2 < 1 || arg3 < 1 || arg2 > client.world.getSizeX() - 2 || arg3 > client.world.getSizeZ() - 2) {
 			return;
 		}
 		int var8 = arg0;
-		if (arg0 < 3 && client.field8980.method6100().method5794(arg2, arg3)) {
+		if (arg0 < 3 && client.world.getSceneLevelTileFlags().method5794(arg2, arg3)) {
 			var8 = arg0 + 1;
 		}
-		if (client.field8980.method6098() == null) {
+		if (client.world.getScene() == null) {
 			return;
 		}
-		client.field8980.method6157().method14280(Statics.field5187, arg0, arg1, arg2, arg3, client.field8980.method6101(arg0));
+		client.world.getMapLoader().method14280(Statics.toolkit, arg0, arg1, arg2, arg3, client.world.method6101(arg0));
 		if (arg4 >= 0) {
-			int var9 = Statics.field4961.field9671.method15725();
-			Statics.field4961.method15448(Statics.field4961.field9671, 1);
-			client.field8980.method6157().method14304(Statics.field5187, var8, arg0, arg2, arg3, arg4, arg5, arg6, client.field8980.method6101(arg0), arg7);
-			Statics.field4961.method15448(Statics.field4961.field9671, var9);
+			int var9 = Statics.preferences.field9671.method15725();
+			Statics.preferences.method15448(Statics.preferences.field9671, 1);
+			client.world.getMapLoader().method14304(Statics.toolkit, var8, arg0, arg2, arg3, arg4, arg5, arg6, client.world.method6101(arg0), arg7);
+			Statics.preferences.method15448(Statics.preferences.field9671, var9);
 		}
 	}
 
 	@ObfuscatedName("ut.l(IIIILto;I)V")
 	public static final void method12070(int arg0, int arg1, int arg2, int arg3, class539 arg4) {
-		if (arg2 < 1 || arg3 < 1 || arg2 > client.field8980.method6220() - 2 || arg3 > client.field8980.method6193() - 2) {
+		if (arg2 < 1 || arg3 < 1 || arg2 > client.world.getSizeX() - 2 || arg3 > client.world.getSizeZ() - 2) {
 			return;
 		}
-		if (client.field8980.method6098() == null) {
+		if (client.world.getScene() == null) {
 			return;
 		}
-		Location var5 = client.field8980.method6157().method14289(arg0, arg1, arg2, arg3);
+		Location var5 = client.world.getMapLoader().method14289(arg0, arg1, arg2, arg3);
 		if (var5 == null) {
 			return;
 		}

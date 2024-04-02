@@ -201,7 +201,7 @@ public class ServerProt {
 	public static final ServerProt field3039 = new ServerProt(64, 25);
 
 	@ObfuscatedName("jx.bc")
-	public static final ServerProt field3040 = new ServerProt(65, -2);
+	public static final ServerProt NPC_INFO = new ServerProt(65, -2);
 
 	@ObfuscatedName("jx.br")
 	public static final ServerProt field3013 = new ServerProt(66, 6);
@@ -348,7 +348,7 @@ public class ServerProt {
 	public static final ServerProt field3012 = new ServerProt(113, 5);
 
 	@ObfuscatedName("jx.de")
-	public static final ServerProt field3097 = new ServerProt(114, -2);
+	public static final ServerProt WORLDLIST_FETCH_REPLY = new ServerProt(114, -2);
 
 	@ObfuscatedName("jx.dk")
 	public static final ServerProt field3090 = new ServerProt(115, 10);
@@ -465,7 +465,7 @@ public class ServerProt {
 	public static final ServerProt field3089 = new ServerProt(152, 6);
 
 	@ObfuscatedName("jx.ey")
-	public static final ServerProt field3128 = new ServerProt(153, -2);
+	public static final ServerProt REBUILD_REGION = new ServerProt(153, -2);
 
 	@ObfuscatedName("jx.ek")
 	public static final ServerProt field3129 = new ServerProt(154, 1);
@@ -494,19 +494,34 @@ public class ServerProt {
 	@ObfuscatedName("jx.fn")
 	public static final ServerProt field3137 = new ServerProt(162, -2);
 
+	public static final ServerProt EXTRA_PACKET = new ServerProt(163, 1);
+
 	@ObfuscatedName("jx.fl")
-	public final int field3138;
+	public final int id;
 
 	@ObfuscatedName("jx.ff")
-	public final int field3139;
+	public final int size;
 
 	@ObfuscatedName("acz.u(B)[Ljx;")
-	public static ServerProt[] method14807() {
-		return new ServerProt[] { field3099, field2976, field3025, field3127, field2979, field3008, field2981, field2982, field2983, field2984, field2985, field2986, field2987, field2988, field2989, field2990, field2991, field2992, field2993, field2994, field2995, field2996, field2997, field2998, field3000, field3045, field3077, field3002, field3003, field3004, field3005, field3118, field3007, field3052, field3009, field3010, field3011, field3051, field2999, field3068, field3015, field3016, field3017, field3018, field3019, field3020, field3111, field3022, field3023, field3024, field3081, field3026, field3057, field3028, field3029, field3106, field3063, field3092, field3033, field3034, field3041, field2978, field3037, field3038, field3039, field3040, field3013, field3042, field3112, field3044, field3001, field3046, field3047, field3048, field3049, field3050, field3133, field3125, field3053, field3054, field3055, field3056, field3030, field3058, field3059, field3060, field3061, field3062, field3116, field3064, field3065, field2980, field3067, field3066, field3069, field3119, field3071, field3070, field3109, field2977, field3080, field3076, field3031, field3078, field3079, field3014, field3043, field3122, field3083, field3084, field3085, field3086, field3087, field3012, field3097, field3090, field3091, field3035, field3093, field3094, field3082, field3096, field3075, field3098, field3073, field3032, field3101, field3102, field3103, field3104, field3105, field3124, field3107, field3108, field3072, field3110, field3088, field3006, field3113, field3114, field3115, field3021, field3117, field3074, field3036, field3120, field3121, field3095, field3123, field3100, field3126, field2975, field3089, field3128, field3129, field3130, field3131, field3132, field3027, field3134, field3135, field3136, field3137 };
+	public static ServerProt[] values() {
+		return new ServerProt[] {
+			field3099, field2976, field3025, field3127, field2979, field3008, field2981, field2982, field2983, field2984, field2985, field2986, field2987, field2988, field2989, field2990,
+			field2991, field2992, field2993, field2994, field2995, field2996, field2997, field2998, field3000, field3045, field3077, field3002, field3003, field3004, field3005, field3118,
+			field3007, field3052, field3009, field3010, field3011, field3051, field2999, field3068, field3015, field3016, field3017, field3018, field3019, field3020, field3111, field3022,
+			field3023, field3024, field3081, field3026, field3057, field3028, field3029, field3106, field3063, field3092, field3033, field3034, field3041, field2978, field3037, field3038,
+			field3039, NPC_INFO, field3013, field3042, field3112, field3044, field3001, field3046, field3047, field3048, field3049, field3050, field3133, field3125, field3053, field3054,
+			field3055, field3056, field3030, field3058, field3059, field3060, field3061, field3062, field3116, field3064, field3065, field2980, field3067, field3066, field3069, field3119,
+			field3071, field3070, field3109, field2977, field3080, field3076, field3031, field3078, field3079, field3014, field3043, field3122, field3083, field3084, field3085, field3086,
+			field3087, field3012, WORLDLIST_FETCH_REPLY, field3090, field3091, field3035, field3093, field3094, field3082, field3096, field3075, field3098, field3073, field3032, field3101, field3102,
+			field3103, field3104, field3105, field3124, field3107, field3108, field3072, field3110, field3088, field3006, field3113, field3114, field3115, field3021, field3117, field3074,
+			field3036, field3120, field3121, field3095, field3123, field3100, field3126, field2975, field3089, REBUILD_REGION, field3129, field3130, field3131, field3132, field3027, field3134,
+			field3135, field3136, field3137,
+			EXTRA_PACKET
+		};
 	}
 
 	public ServerProt(int arg0, int arg1) {
-		this.field3138 = arg0;
-		this.field3139 = arg1;
+		this.id = arg0;
+		this.size = arg1;
 	}
 }

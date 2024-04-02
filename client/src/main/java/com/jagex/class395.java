@@ -41,7 +41,7 @@ public class class395 {
 	@ObfuscatedName("wu.a(I)V")
 	public static void method12701() {
 		Statics.method12330();
-		class374.method6512(22050, Statics.field4961.field9676.method15891() == 1, 2);
+		class374.method6512(22050, Statics.preferences.field9676.method15891() == 1, 2);
 		Statics.field5198 = class374.method6494(Statics.field1231, 0, 22050);
 		method3658(true, method6082(null));
 		Statics.field3536 = class374.method6494(Statics.field1231, 1, 2048);
@@ -113,13 +113,13 @@ public class class395 {
 						int var3 = 8192;
 						int var13;
 						if (var1.field4177 == 0) {
-							var13 = var1.field4181 * (var1.field4186 == 3 ? Statics.field4961.field9653.method15899() : Statics.field4961.field9654.method15899()) >> 2;
+							var13 = var1.field4181 * (var1.field4186 == 3 ? Statics.preferences.field9653.method15899() : Statics.preferences.field9654.method15899()) >> 2;
 						} else {
 							int var4 = var1.field4177 >> 24 & 0x3;
-							if (Statics.field2119.field9807 == var4) {
+							if (Statics.localPlayerEntity.level == var4) {
 								int var5 = (var1.field4177 & 0xFF) << 9;
-								int var6 = Statics.field2119.method13954() << 8;
-								Vector3 var7 = Statics.field2119.method8565().field3464;
+								int var6 = Statics.localPlayerEntity.method13954() << 8;
+								Vector3 var7 = Statics.localPlayerEntity.method8565().field3464;
 								int var8 = var1.field4177 >> 16 & 0xFF;
 								int var9 = (var8 << 9) + 256 - (int) var7.field3475 + var6;
 								int var10 = var1.field4177 >> 8 & 0xFF;
@@ -132,7 +132,7 @@ public class class395 {
 								if (var12 < 0) {
 									var12 = 0;
 								}
-								var13 = (var5 - var12) * Statics.field4961.field9672.method15899() * var1.field4181 / var5 >> 2;
+								var13 = (var5 - var12) * Statics.preferences.field9672.method15899() * var1.field4181 / var5 >> 2;
 								if (var1.field4180 != -1) {
 									int var14 = var1.field4180;
 									int var15 = var1.field4187;
@@ -183,16 +183,16 @@ public class class395 {
 			}
 		}
 		if (field4203 && !class155.method13899()) {
-			if (Statics.field4961.field9674.method15899() != 0 && field4202 != -1) {
+			if (Statics.preferences.field9674.method15899() != 0 && field4202 != -1) {
 				if (Statics.field2327 == null) {
-					class155.method3986(Statics.field9367, field4202, 0, Statics.field4961.field9674.method15899(), false);
+					class155.method3986(Statics.field9367, field4202, 0, Statics.preferences.field9674.method15899(), false);
 				} else {
-					class155.method6359(Statics.field9367, field4202, 0, Statics.field4961.field9674.method15899(), false, Statics.field2327);
+					class155.method6359(Statics.field9367, field4202, 0, Statics.preferences.field9674.method15899(), false, Statics.field2327);
 				}
 			}
 			field4203 = false;
 			Statics.field2327 = null;
-		} else if (Statics.field4961.field9674.method15899() != 0 && field4202 != -1 && !class155.method13899()) {
+		} else if (Statics.preferences.field9674.method15899() != 0 && field4202 != -1 && !class155.method13899()) {
 			class792 var21 = class792.method14781(class280.field2868, client.field8975.randomOut);
 			var21.field9467.p4(field4202);
 			client.field8975.method1913(var21);
@@ -202,7 +202,7 @@ public class class395 {
 
 	@ObfuscatedName("aat.n(IIIIIB)Lnp;")
 	public static class393 method14082(int arg0, int arg1, int arg2, int arg3, int arg4) {
-		if (Statics.field4961.field9654.method15899() == 0 || arg1 == 0 || field4209 >= 50 || arg0 == -1) {
+		if (Statics.preferences.field9654.method15899() == 0 || arg1 == 0 || field4209 >= 50 || arg0 == -1) {
 			return null;
 		} else {
 			class393 var5 = new class393((byte) 1, arg0, arg1, arg2, arg3, 0, arg4, null);
@@ -213,7 +213,7 @@ public class class395 {
 
 	@ObfuscatedName("d.o(IIIIIIB)Lnp;")
 	public static class393 method1356(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
-		if (Statics.field4961.field9654.method15899() == 0 || arg1 == 0 || field4209 >= 50 || arg0 == -1) {
+		if (Statics.preferences.field9654.method15899() == 0 || arg1 == 0 || field4209 >= 50 || arg0 == -1) {
 			return null;
 		} else {
 			class393 var6 = new class393((byte) 1, arg0, arg1, arg2, arg3, arg4, arg5, null);
@@ -224,7 +224,7 @@ public class class395 {
 
 	@ObfuscatedName("an.q(IIIIZII)Lnp;")
 	public static class393 method1717(int arg0, int arg1, int arg2, int arg3, boolean arg4, int arg5) {
-		if ((arg4 ? Statics.field4961.field9653.method15899() : Statics.field4961.field9654.method15899()) == 0 || arg1 == 0 || field4209 >= 50 || arg0 == -1) {
+		if ((arg4 ? Statics.preferences.field9653.method15899() : Statics.preferences.field9654.method15899()) == 0 || arg1 == 0 || field4209 >= 50 || arg0 == -1) {
 			return null;
 		} else {
 			class393 var6 = new class393((byte) (arg4 ? 3 : 2), arg0, arg1, arg2, arg3, 0, arg5, null);
@@ -235,7 +235,7 @@ public class class395 {
 
 	@ObfuscatedName("xh.p(IIIIIZIB)Lnp;")
 	public static class393 method12739(int arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6) {
-		if ((arg5 ? Statics.field4961.field9653.method15899() : Statics.field4961.field9654.method15899()) == 0 || arg1 == 0 || field4209 >= 50 || arg0 == -1) {
+		if ((arg5 ? Statics.preferences.field9653.method15899() : Statics.preferences.field9654.method15899()) == 0 || arg1 == 0 || field4209 >= 50 || arg0 == -1) {
 			return null;
 		} else {
 			class393 var7 = new class393((byte) (arg5 ? 3 : 2), arg0, arg1, arg2, arg3, arg4, arg6, null);
@@ -255,10 +255,10 @@ public class class395 {
 		if (field4196 == null) {
 			return;
 		}
-		Vector3 var0 = Vector3.method5290(Statics.field2119.method8565().field3464);
-		class453 var1 = client.field8980.method6214();
-		var0.field3475 += var1.field4836 << 9;
-		var0.field3477 += var1.field4838 << 9;
+		Vector3 var0 = Vector3.method5290(Statics.localPlayerEntity.method8565().field3464);
+		CoordGrid var1 = client.world.method6214();
+		var0.field3475 += var1.x << 9;
+		var0.field3477 += var1.z << 9;
 		var0.method5346((float) field4196.field4190, var0.field3476, (float) field4196.field4189);
 		float var2 = var0.method5338();
 		var0.method5291();
@@ -295,7 +295,7 @@ public class class395 {
 			client.field8975.method1913(var3);
 			return;
 		}
-		int var4 = arg1 * Statics.field4961.field9674.method15899() >> 8;
+		int var4 = arg1 * Statics.preferences.field9674.method15899() >> 8;
 		if (arg0 == -1 && !field4203) {
 			class155.method8662();
 		} else if (arg0 != -1 && (field4202 != arg0 || !class155.method13899()) && var4 != 0 && !field4203) {
@@ -311,7 +311,7 @@ public class class395 {
 
 	@ObfuscatedName("js.v(Leq;IB)V")
 	public static void method4800(class157 arg0, int arg1) {
-		int var2 = arg1 * Statics.field4961.field9674.method15899() >> 8;
+		int var2 = arg1 * Statics.preferences.field9674.method15899() >> 8;
 		if (arg0 == null) {
 			class155.method8662();
 		} else {
@@ -322,7 +322,7 @@ public class class395 {
 
 	@ObfuscatedName("lb.k(IIIB)V")
 	public static void method5596(int arg0, int arg1, int arg2) {
-		int var3 = arg2 * Statics.field4961.field9674.method15899() >> 8;
+		int var3 = arg2 * Statics.preferences.field9674.method15899() >> 8;
 		if (var3 == 0 || arg0 == -1) {
 			return;
 		}

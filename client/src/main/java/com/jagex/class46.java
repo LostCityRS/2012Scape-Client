@@ -97,6 +97,6 @@ public class class46 {
 		}
 		class810 var17 = new class810(0, (int) var2.field3475, (int) var2.field3476, (int) var2.field3477);
 		var0.method14091(var17);
-		Statics.field3780.method3727(0.02F, client.field8980.method6101(Statics.field7324), client.field8980.method6157().field3697);
+		Statics.field3780.method3727(0.02F, client.world.method6101(Statics.currentPlayerLevel), client.world.getMapLoader().field3697);
 	}
 }

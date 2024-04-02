@@ -374,8 +374,8 @@ public class class62 {
 				return;
 			}
 			if (arg0.equals("renderer")) {
-				class122 var3 = Statics.field5187.method456();
-				method1958("Toolkit ID: " + Statics.field4961.field9661.method15781());
+				class122 var3 = Statics.toolkit.method456();
+				method1958("Toolkit ID: " + Statics.preferences.field9661.method15781());
 				method1958("Vendor: " + var3.field1285);
 				method1958("Name: " + var3.field1288);
 				method1958("Version: " + var3.field1281);
@@ -388,9 +388,9 @@ public class class62 {
 				return;
 			}
 			if (arg0.equalsIgnoreCase("getcamerapos")) {
-				class453 var4 = client.field8980.method6214();
-				method1958("Pos: " + Statics.field2119.field9807 + "," + ((Statics.field6769 >> 9) + var4.field4836 >> 6) + "," + ((Statics.field8424 >> 9) + var4.field4838 >> 6) + "," + ((Statics.field6769 >> 9) + var4.field4836 & 0x3F) + "," + ((Statics.field8424 >> 9) + var4.field4838 & 0x3F) + " Height: " + (client.method8663(Statics.field6769, Statics.field8424, Statics.field2119.field9807) - Statics.field8423));
-				method1958("Look: " + Statics.field2119.field9807 + "," + (Statics.field2799 + var4.field4836 >> 6) + "," + (Statics.field4855 + var4.field4838 >> 6) + "," + (Statics.field2799 + var4.field4836 & 0x3F) + "," + (Statics.field4855 + var4.field4838 & 0x3F) + " Height: " + (client.method8663(Statics.field2799, Statics.field4855, Statics.field2119.field9807) - Statics.field9680));
+				CoordGrid var4 = client.world.method6214();
+				method1958("Pos: " + Statics.localPlayerEntity.level + "," + ((Statics.cameraX >> 9) + var4.x >> 6) + "," + ((Statics.cameraZ >> 9) + var4.z >> 6) + "," + ((Statics.cameraX >> 9) + var4.x & 0x3F) + "," + ((Statics.cameraZ >> 9) + var4.z & 0x3F) + " Height: " + (client.method8663(Statics.cameraX, Statics.cameraZ, Statics.localPlayerEntity.level) - Statics.field8423));
+				method1958("Look: " + Statics.localPlayerEntity.level + "," + (Statics.field2799 + var4.x >> 6) + "," + (Statics.field4855 + var4.z >> 6) + "," + (Statics.field2799 + var4.x & 0x3F) + "," + (Statics.field4855 + var4.z & 0x3F) + " Height: " + (client.method8663(Statics.field2799, Statics.field4855, Statics.localPlayerEntity.level) - Statics.field9680));
 				return;
 			}
 		} catch (Exception var33) {
@@ -450,9 +450,9 @@ public class class62 {
 				}
 				if (arg0.equalsIgnoreCase("tk0")) {
 					Statics.method5600(0, false);
-					if (Statics.field4961.field9661.method15781() == 0) {
+					if (Statics.preferences.field9661.method15781() == 0) {
 						method1958("Success");
-						Statics.field4961.method15448(Statics.field4961.field9670, 0);
+						Statics.preferences.method15448(Statics.preferences.field9670, 0);
 						Statics.method1245();
 						client.field8932 = false;
 					} else {
@@ -462,9 +462,9 @@ public class class62 {
 				}
 				if (arg0.equalsIgnoreCase("tk1")) {
 					Statics.method5600(1, false);
-					if (Statics.field4961.field9661.method15781() == 1) {
+					if (Statics.preferences.field9661.method15781() == 1) {
 						method1958("Success");
-						Statics.field4961.method15448(Statics.field4961.field9670, 1);
+						Statics.preferences.method15448(Statics.preferences.field9670, 1);
 						Statics.method1245();
 						client.field8932 = false;
 					} else {
@@ -474,9 +474,9 @@ public class class62 {
 				}
 				if (arg0.equalsIgnoreCase("tk2")) {
 					Statics.method5600(2, false);
-					if (Statics.field4961.field9661.method15781() == 2) {
+					if (Statics.preferences.field9661.method15781() == 2) {
 						method1958("Success");
-						Statics.field4961.method15448(Statics.field4961.field9670, 2);
+						Statics.preferences.method15448(Statics.preferences.field9670, 2);
 						Statics.method1245();
 						client.field8932 = false;
 					} else {
@@ -486,9 +486,9 @@ public class class62 {
 				}
 				if (arg0.equalsIgnoreCase("tk3")) {
 					Statics.method5600(3, false);
-					if (Statics.field4961.field9661.method15781() == 3) {
+					if (Statics.preferences.field9661.method15781() == 3) {
 						method1958("Success");
-						Statics.field4961.method15448(Statics.field4961.field9670, 3);
+						Statics.preferences.method15448(Statics.preferences.field9670, 3);
 						Statics.method1245();
 						client.field8932 = false;
 					} else {
@@ -498,9 +498,9 @@ public class class62 {
 				}
 				if (arg0.equalsIgnoreCase("tk5")) {
 					Statics.method5600(5, false);
-					if (Statics.field4961.field9661.method15781() == 5) {
+					if (Statics.preferences.field9661.method15781() == 5) {
 						method1958("Success");
-						Statics.field4961.method15448(Statics.field4961.field9670, 5);
+						Statics.preferences.method15448(Statics.preferences.field9670, 5);
 						Statics.method1245();
 						client.field8932 = false;
 					} else {
@@ -517,11 +517,11 @@ public class class62 {
 					return;
 				}
 				if (arg0.equalsIgnoreCase("breakcon")) {
-					class64[] var12 = client.field9011;
+					ServerConnection[] var12 = client.field9011;
 					for (int var13 = 0; var13 < var12.length; var13++) {
-						class64 var14 = var12[var13];
-						if (var14.method1927() != null) {
-							var14.method1927().method7203();
+						ServerConnection var14 = var12[var13];
+						if (var14.getStream() != null) {
+							var14.getStream().method7203();
 						}
 					}
 					Statics.field848.method5747();
@@ -596,7 +596,7 @@ public class class62 {
 					method14213(var25);
 				}
 				if (client.state == 1 || client.state == 15) {
-					class64 var26 = client.method4104();
+					ServerConnection var26 = client.method4104();
 					class792 var27 = class792.method14781(class280.field2951, var26.randomOut);
 					var27.field9467.p1(arg0.length() + 3);
 					var27.field9467.p1(arg1 ? 1 : 0);
@@ -627,7 +627,7 @@ public class class62 {
 				} else if (arg0 == 9) {
 					method1958("" + GameShell.field4121);
 				} else if (arg0 == 19) {
-					class428 var1 = client.field8980.method6098().field4493;
+					class428 var1 = client.world.getScene().field4493;
 					var1.field4624 = !var1.field4624;
 				} else if (arg0 == 29) {
 					client.field8926 = true;
@@ -661,7 +661,7 @@ public class class62 {
 				} else if (arg0 == 24) {
 					method1958(Statics.field2137.method6802() ? "Success" : "Failure");
 				} else if (arg0 == 13) {
-					Statics.field6772.method12026();
+					Statics.currentWorld.configureSocketType();
 				} else if (arg0 == 14) {
 					Statics.field848.method5777();
 				} else if (arg0 == 21) {
@@ -673,15 +673,15 @@ public class class62 {
 				} else if (arg0 == 8) {
 					method1623();
 				} else if (arg0 == 28) {
-					client.field8980.field3789 = class153.method5554();
-					client.field8980.field3833 = true;
+					client.world.field3789 = class153.method5554();
+					client.world.field3833 = true;
 					method1623();
 				} else if (arg0 == 22) {
-					Vector3 var10 = Statics.field2119.method8565().field3464;
+					Vector3 var10 = Statics.localPlayerEntity.method8565().field3464;
 					method1958(((int) var10.field3475 >> 9) + " " + ((int) var10.field3477 >> 9));
 				} else if (arg0 == 26) {
-					Vector3 var11 = Statics.field2119.method8565().field3464;
-					method1958("" + client.field8980.method6098().field4498[Statics.field2119.field9807].method199((int) var11.field3475 >> 9, (int) var11.field3477 >> 9));
+					Vector3 var11 = Statics.localPlayerEntity.method8565().field3464;
+					method1958("" + client.world.getScene().field4498[Statics.localPlayerEntity.level].method199((int) var11.field3475 >> 9, (int) var11.field3477 >> 9));
 				} else if (arg0 == 1) {
 					method1958(class165.field1757.method7924() + " " + class165.field1757.method7923());
 					method1958(class165.field1760.method7924() + " " + class165.field1760.method7923());
@@ -690,18 +690,18 @@ public class class62 {
 					client.method5025(false);
 				} else if (arg0 == 27) {
 					client.field9169 = !client.field9169;
-					Statics.field5187.method471(client.field9169);
+					Statics.toolkit.method471(client.field9169);
 					Statics.method12860();
 					return;
 				} else if (arg0 == 23) {
 					client.field8943 = 0;
-					client.field8980.method6102();
+					client.world.method6102();
 				} else if (arg0 == 20) {
 					client.field8943 = 1;
-					client.field8980.method6102();
+					client.world.method6102();
 				} else if (arg0 == 5) {
 					client.field8943 = 2;
-					client.field8980.method6102();
+					client.world.method6102();
 				}
 			} catch (Exception var13) {
 				method1958(class588.field6867.method12206(Statics.field2308));
@@ -711,10 +711,10 @@ public class class62 {
 
 	@ObfuscatedName("r.x(I)V")
 	public static void method1623() {
-		if (Statics.field4961.field9667.method15884() == 1) {
-			Statics.field8656.method6053(new class358(class360.field3842, null));
+		if (Statics.preferences.field9667.method15884() == 1) {
+			Statics.field8656.method6053(new RebuildRequest(RebuildType.field3842, null));
 		} else {
-			client.field8980.method6102();
+			client.world.method6102();
 			class58.method7992();
 		}
 	}

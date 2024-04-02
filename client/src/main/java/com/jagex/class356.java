@@ -16,15 +16,15 @@ public class class356 {
 		if (!client.method1608(client.state)) {
 			return;
 		}
-		class64[] var1 = client.field9011;
+		ServerConnection[] var1 = client.field9011;
 		for (int var2 = 0; var2 < var1.length; var2++) {
-			class64 var3 = var1[var2];
+			ServerConnection var3 = var1[var2];
 			var3.field839++;
 			if (var3.field839 < 50 && !arg0) {
 				return;
 			}
 			var3.field839 = 0;
-			if (!var3.field846 && var3.method1927() != null) {
+			if (!var3.field846 && var3.getStream() != null) {
 				class792 var4 = class792.method14781(class280.field2873, var3.randomOut);
 				var3.method1913(var4);
 				try {

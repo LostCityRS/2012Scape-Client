@@ -322,7 +322,7 @@ public class class991 extends class914 {
 	}
 
 	@ObfuscatedName("akp.l(Loo;Lra;J)V")
-	public void method16987(class423 arg0, class14 arg1, long arg2) {
+	public void method16987(Scene arg0, class14 arg1, long arg2) {
 		int var5 = this.field10145 >> arg0.field4510 + 12;
 		int var6 = this.field10147 >> arg0.field4510 + 12;
 		int var7 = this.field10146 >> 12;

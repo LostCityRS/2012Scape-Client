@@ -33,7 +33,7 @@ public class class573 {
 	}
 
 	@ObfuscatedName("uf.j(I)V")
-	public void method12026() {
+	public void configureSocketType() {
 		if (!this.field6767) {
 			this.field6767 = true;
 			this.field6763 = true;

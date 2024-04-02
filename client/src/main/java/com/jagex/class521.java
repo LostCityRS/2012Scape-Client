@@ -99,7 +99,7 @@ public class class521 {
 				try {
 					var0.field9618.method7006();
 				} catch (Exception var4) {
-					class983.report("" + var0.field9624, var4);
+					JagException.report("" + var0.field9624, var4);
 					method2930(var0.field9624);
 				}
 				if (!var0.field9623 && !var0.field9622) {

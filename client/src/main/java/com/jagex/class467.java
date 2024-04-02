@@ -273,7 +273,7 @@ public class class467 {
 	}
 
 	@ObfuscatedName("qw.q(Loo;Lra;)V")
-	public void method8133(class423 arg0, class14 arg1) {
+	public void method8133(Scene arg0, class14 arg1) {
 		this.field4940.field1311.method11676();
 		Iterator var3 = this.field4937.iterator();
 		while (var3.hasNext()) {

@@ -41,21 +41,21 @@ public class class55 {
 	}
 
 	@ObfuscatedName("ww.u(Lajl;B)V")
-	public static final void method12667(PacketBit arg0) {
+	public static final void receivePlayerPositions(PacketBit arg0) {
 		arg0.bits();
 		int var1 = client.field9071;
-		class902 var2 = Statics.field2119 = client.field9070[var1] = new class902(client.field8980.method6098());
+		class902 var2 = Statics.localPlayerEntity = client.field9070[var1] = new class902(client.world.getScene());
 		var2.field8593 = var1;
 		int var3 = arg0.gBit(30);
 		byte var4 = (byte) (var3 >> 28);
 		int var5 = var3 >> 14 & 0x3FFF;
 		int var6 = var3 & 0x3FFF;
-		class453 var7 = client.field8980.method6214();
-		var2.field8642[0] = var5 - var7.field4836;
-		var2.field8643[0] = var6 - var7.field4838;
+		CoordGrid var7 = client.world.method6214();
+		var2.field8642[0] = var5 - var7.x;
+		var2.field8643[0] = var6 - var7.z;
 		var2.method8552((float) ((var2.field8642[0] << 9) + (var2.method13954() << 8)), var2.method8545().field3464.field3476, (float) ((var2.field8643[0] << 9) + (var2.method13954() << 8)));
-		Statics.field7324 = var2.field9807 = var2.field9809 = var4;
-		if (client.field8980.method6100().method5794(var2.field8642[0], var2.field8643[0])) {
+		Statics.currentPlayerLevel = var2.level = var2.field9809 = var4;
+		if (client.world.getSceneLevelTileFlags().method5794(var2.field8642[0], var2.field8643[0])) {
 			var2.field9809++;
 		}
 		if (field731[var1] != null) {
@@ -431,7 +431,7 @@ public class class55 {
 		}
 		if ((arg3 & 0x400) != 0) {
 			String var60 = arg0.gjstr();
-			if (Statics.field2119 == arg2) {
+			if (Statics.localPlayerEntity == arg2) {
 				class175.method3943(2, 0, arg2.method16120(true), arg2.method16121(false), arg2.field10063, var60);
 			}
 			arg2.method16127(var60, 0, 0);
@@ -470,7 +470,7 @@ public class class55 {
 			return;
 		}
 		if (var4 == 127) {
-			arg2.method16123(arg2.field10052, arg2.field10064);
+			arg2.tele(arg2.field10052, arg2.field10064);
 			return;
 		}
 		byte var73;

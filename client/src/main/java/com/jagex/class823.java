@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.net.Socket;
 
 @ObfuscatedName("aey")
-public class class823 extends class411 {
+public class class823 extends Stream {
 
 	@ObfuscatedName("aey.u")
 	public Socket field9770;
@@ -25,7 +25,7 @@ public class class823 extends class411 {
 	}
 
 	@ObfuscatedName("aey.j(II)Z")
-	public boolean method7212(int arg0) throws IOException {
+	public boolean getAvailable(int arg0) throws IOException {
 		return this.field9769.method7158(arg0);
 	}
 
@@ -35,7 +35,7 @@ public class class823 extends class411 {
 	}
 
 	@ObfuscatedName("aey.s([BIII)I")
-	public int method7196(byte[] arg0, int arg1, int arg2) throws IOException {
+	public int read(byte[] arg0, int arg1, int arg2) throws IOException {
 		return this.field9769.method7148(arg0, arg1, arg2);
 	}
 

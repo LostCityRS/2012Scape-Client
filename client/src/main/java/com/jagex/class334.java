@@ -338,7 +338,7 @@ public final class class334 {
 			try {
 				var12 = Statics.method1598(var10);
 			} catch (RuntimeException var48) {
-				throw class983.method15876(var48, (arg2 != null) + " " + arg0 + " " + var10.length + " " + Packet.getcrc(var10, var10.length) + " " + Packet.getcrc(var10, var10.length - 2) + " " + this.field3572.field3548[arg0] + " " + this.field3572.field3546);
+				throw JagException.method15876(var48, (arg2 != null) + " " + arg0 + " " + var10.length + " " + Packet.getcrc(var10, var10.length) + " " + Packet.getcrc(var10, var10.length - 2) + " " + this.field3572.field3548[arg0] + " " + this.field3572.field3546);
 			}
 			if (this.field3574) {
 				this.field3564[arg0] = null;

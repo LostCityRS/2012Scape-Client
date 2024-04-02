@@ -48,7 +48,7 @@ public class class147 {
 		if (this.field1552 < 0) {
 			return true;
 		}
-		class540 var1 = Statics.field10355.method11471(this.field1552);
+		LocType var1 = Statics.field10355.method11471(this.field1552);
 		boolean var2 = var1.method11411(this.field1551.field6590);
 		int[] var3 = var1.method11422();
 		if (var3 != null) {

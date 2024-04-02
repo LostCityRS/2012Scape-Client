@@ -45,7 +45,7 @@ public class ObjStackEntity extends class973 {
 	@ObfuscatedName("ali.ar")
 	public int field10617;
 
-	public ObjStackEntity(class423 arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+	public ObjStackEntity(Scene arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
 		super(arg0, arg1, arg2, arg3, arg4, arg5);
 		this.method15642(3);
 		this.method17149();
@@ -56,7 +56,7 @@ public class ObjStackEntity extends class973 {
 		this.field10614 = (int) (Math.random() * 4.0D) + 32;
 		this.field10615 = (int) (Math.random() * 2.0D) + 3;
 		this.field10616 = (int) (Math.random() * 3.0D) + 16;
-		if (Statics.field4961.field9659.method15686() == 1) {
+		if (Statics.preferences.field9659.method15686() == 1) {
 			this.field10617 = (int) (Math.random() * 10.0D);
 		} else {
 			this.field10617 = (int) (Math.random() * 20.0D);
@@ -86,8 +86,8 @@ public class ObjStackEntity extends class973 {
 	@ObfuscatedName("ali.bi(Lra;B)Loz;")
 	public class425 method12812(class14 arg0) {
 		Vector3 var2 = Vector3.method5290(this.method8565().field3464);
-		class430 var3 = this.field9808.method7438(this.field9807, (int) var2.field3475 >> 9, (int) var2.field3477 >> 9);
-		class970 var4 = this.field9808.method7517(this.field9807, (int) var2.field3475 >> 9, (int) var2.field3477 >> 9);
+		class430 var3 = this.field9808.method7438(this.level, (int) var2.field3475 >> 9, (int) var2.field3477 >> 9);
+		class970 var4 = this.field9808.method7517(this.level, (int) var2.field3475 >> 9, (int) var2.field3477 >> 9);
 		int var5 = 0;
 		if (var3 != null && var3.field4642.field10512) {
 			var5 = var3.field4642.method12809();

@@ -30,23 +30,23 @@ public class class43 {
 		if (client.state != 14) {
 			return;
 		}
-		class792 var1 = class792.method14781(class280.field2859, client.field8959.randomOut);
+		class792 var1 = class792.method14781(class280.field2859, client.lobbyConnection.randomOut);
 		var1.field9467.p2(0);
 		int var2 = var1.field9467.pos;
 		var1.field9467.pjstr(arg0);
 		var1.field9467.pos += 7;
 		var1.field9467.tinyenc(Statics.field630, var2, var1.field9467.pos);
 		var1.field9467.psize2(var1.field9467.pos - var2);
-		client.field8959.method1913(var1);
+		client.lobbyConnection.method1913(var1);
 		Statics.field9312 = class536.field6453;
 	}
 
 	@ObfuscatedName("gz.m(II)V")
 	public static void method3942(int arg0) {
 		if (client.state == 14) {
-			class792 var1 = class792.method14781(class280.field2917, client.field8959.randomOut);
+			class792 var1 = class792.method14781(class280.field2917, client.lobbyConnection.randomOut);
 			var1.field9467.p1(arg0);
-			client.field8959.method1913(var1);
+			client.lobbyConnection.method1913(var1);
 		}
 	}
 
@@ -92,8 +92,8 @@ public class class43 {
 				Statics.method5540();
 			}
 			if (Statics.field633 == class36.field564) {
-				client.field8959.method1911(class411.method12184(Statics.field6782.method12025(), 15000), Statics.field6782.field6765);
-				client.field8959.method1935();
+				client.lobbyConnection.method1911(Stream.method12184(Statics.currentLobby.method12025(), 15000), Statics.currentLobby.field6765);
+				client.lobbyConnection.clearWriteQueue();
 				class792 var1 = class792.method4876();
 				var1.field9467.p1(LoginProt.field2959.field2970);
 				var1.field9467.p2(0);
@@ -118,40 +118,40 @@ public class class43 {
 				var1.field9467.pos += 7;
 				var1.field9467.tinyenc(Statics.field630, var3, var1.field9467.pos);
 				var1.field9467.psize2(var1.field9467.pos - var2);
-				client.field8959.method1913(var1);
-				client.field8959.method1912();
+				client.lobbyConnection.method1913(var1);
+				client.lobbyConnection.method1912();
 				Statics.field633 = class36.field565;
 			}
 			if (Statics.field633 == class36.field565) {
-				if (client.field8959.method1927() == null) {
+				if (client.lobbyConnection.getStream() == null) {
 					Statics.method5540();
 					return;
 				}
-				if (!client.field8959.method1927().method7212(1)) {
+				if (!client.lobbyConnection.getStream().getAvailable(1)) {
 					return;
 				}
-				client.field8959.method1927().method7196(client.field8959.in.data, 0, 1);
-				Statics.field629 = (class534) class518.method8032(class534.method8658(), client.field8959.in.data[0] & 0xFF);
+				client.lobbyConnection.getStream().read(client.lobbyConnection.in.data, 0, 1);
+				Statics.field629 = (class534) class518.method8032(class534.method8658(), client.lobbyConnection.in.data[0] & 0xFF);
 				if (Statics.field629 == class534.field6424) {
-					client.field8959.randomOut = new Isaac(Statics.field630);
+					client.lobbyConnection.randomOut = new Isaac(Statics.field630);
 					int[] var5 = new int[4];
 					for (int var6 = 0; var6 < 4; var6++) {
 						var5[var6] = Statics.field630[var6] + 50;
 					}
-					client.field8959.randomIn = new Isaac(var5);
+					client.lobbyConnection.randomIn = new Isaac(var5);
 					new Isaac(var5);
-					client.field8959.in.setSeed(client.field8959.randomIn);
-					client.method11307(14);
-					client.field8959.method1935();
-					client.field8959.in.pos = 0;
-					client.field8959.field843 = null;
-					client.field8959.field844 = null;
-					client.field8959.field831 = null;
-					client.field8959.field837 = 0;
+					client.lobbyConnection.in.setSeed(client.lobbyConnection.randomIn);
+					client.setState(14);
+					client.lobbyConnection.clearWriteQueue();
+					client.lobbyConnection.in.pos = 0;
+					client.lobbyConnection.lastPacketType0 = null;
+					client.lobbyConnection.lastPacketType1 = null;
+					client.lobbyConnection.lastPacketType2 = null;
+					client.lobbyConnection.idleNetCycles = 0;
 				} else {
-					client.field8959.closeGracefully();
+					client.lobbyConnection.closeGracefully();
 				}
-				client.field8959.packetType = null;
+				client.lobbyConnection.packetType = null;
 				Statics.field633 = null;
 			}
 		} catch (IOException var8) {

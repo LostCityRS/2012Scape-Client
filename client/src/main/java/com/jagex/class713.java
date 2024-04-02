@@ -94,7 +94,7 @@ public class class713 extends class150 {
 			Vector3 var5 = var4.method8565().field3464;
 			var1 = (int) var5.field3475;
 			var2 = (int) var5.field3477;
-			var3 = var4.field9807;
+			var3 = var4.level;
 		}
 		int var6;
 		int var7;
@@ -107,11 +107,11 @@ public class class713 extends class150 {
 			var6 = (int) var9.field3475;
 			var7 = (int) var9.field3477;
 			if (var3 < 0) {
-				var3 = var8.field9807;
+				var3 = var8.level;
 			}
 		}
 		int var10 = this.field8553 << 2;
-		class1009 var11 = new class1009(client.field8980.method6098(), this.field8550, var3, var3, var1, var2, this.field8544 << 2, client.field9213, client.field9213 + this.field8542, this.field8552, var10, this.field8539 + 1, this.field8541 + 1, this.field8549 << 2, false, 0, 0);
+		class1009 var11 = new class1009(client.world.getScene(), this.field8550, var3, var3, var1, var2, this.field8544 << 2, client.field9213, client.field9213 + this.field8542, this.field8552, var10, this.field8539 + 1, this.field8541 + 1, this.field8549 << 2, false, 0, 0);
 		var11.method17162(var6, var7, this.field8549 << 2, client.field9213 + this.field8542);
 		client.field9007.method11558(new class945(var11));
 	}

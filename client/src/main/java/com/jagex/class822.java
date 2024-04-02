@@ -78,9 +78,9 @@ public class class822 extends class408 {
 			int[] var2 = new int[3];
 			int var3 = -1;
 			int var4 = -1;
-			Vector3 var5 = Statics.field2119.method8565().field3464;
-			class453 var6 = client.field8980.method6214();
-			if (Statics.field4292.method16705(Statics.field2119.field9807, ((int) var5.field3475 >> 9) + var6.field4836, ((int) var5.field3477 >> 9) + var6.field4838, var2)) {
+			Vector3 var5 = Statics.localPlayerEntity.method8565().field3464;
+			CoordGrid var6 = client.world.method6214();
+			if (Statics.field4292.method16705(Statics.localPlayerEntity.level, ((int) var5.field3475 >> 9) + var6.x, ((int) var5.field3477 >> 9) + var6.z, var2)) {
 				var3 = var2[1] - Statics.field4283;
 				var4 = var2[2] - Statics.field4284;
 			}
@@ -158,9 +158,9 @@ public class class822 extends class408 {
 				if (!Statics.field4264.method5648(Statics.field4292.field10362 + "_staticelements")) {
 					return;
 				}
-				Statics.field4281 = class406.method2791(Statics.field4264, Statics.field4292.field10362 + "_staticelements", client.field9142);
+				Statics.field4281 = WorldMapRelated.method2791(Statics.field4264, Statics.field4292.field10362 + "_staticelements", client.field9142);
 			} else {
-				Statics.field4281 = new class406(0);
+				Statics.field4281 = new WorldMapRelated(0);
 			}
 			method7093();
 			field9753 = 70;
@@ -806,10 +806,10 @@ public class class822 extends class408 {
 
 	@ObfuscatedName("ru.cb(IIIZB)V")
 	public static void method8626(int arg0, int arg1, int arg2, boolean arg3) {
-		if (Statics.field4961.field9661.method15781() == 0) {
+		if (Statics.preferences.field9661.method15781() == 0) {
 			method7184(false);
 		} else {
-			field9764 = Statics.field4961.field9661.method15781();
+			field9764 = Statics.preferences.field9661.method15781();
 			Statics.method5600(0, true);
 		}
 		field9759 = arg1;
@@ -825,7 +825,7 @@ public class class822 extends class408 {
 			return;
 		}
 		Statics.method5600(field9764, false);
-		if (Statics.field4961.field9661.method15781() != field9764) {
+		if (Statics.preferences.field9661.method15781() != field9764) {
 			switch(field9764) {
 				case 1:
 					class558.method12023(class628.field7359);
@@ -849,7 +849,7 @@ public class class822 extends class408 {
 	}
 
 	@ObfuscatedName("uh.cx(I)Lajo;")
-	public static class951 method12024() {
+	public static WorldMapAreaMetadata method12024() {
 		return Statics.field4292;
 	}
 

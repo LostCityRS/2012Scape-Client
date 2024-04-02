@@ -11,7 +11,7 @@ import java.io.StringWriter;
 import java.net.URL;
 
 @ObfuscatedName("akf")
-public class class983 extends RuntimeException {
+public class JagException extends RuntimeException {
 
 	@ObfuscatedName("akf.m")
 	public String field10531;
@@ -19,7 +19,7 @@ public class class983 extends RuntimeException {
 	@ObfuscatedName("akf.l")
 	public Throwable field10529;
 
-	public class983(Throwable arg0, String arg1) {
+	public JagException(Throwable arg0, String arg1) {
 		this.field10531 = arg1;
 		this.field10529 = arg0;
 		this.initCause(arg0);
@@ -60,13 +60,14 @@ public class class983 extends RuntimeException {
 	}
 
 	@ObfuscatedName("aff.j(Ljava/lang/Throwable;Ljava/lang/String;)Lakf;")
-	public static class983 method15876(Throwable arg0, String arg1) {
-		class983 var2;
-		if (arg0 instanceof class983) {
-			var2 = (class983) arg0;
+	public static JagException method15876(Throwable arg0, String arg1) {
+		arg0.printStackTrace();
+		JagException var2;
+		if (arg0 instanceof JagException) {
+			var2 = (JagException) arg0;
 			var2.field10531 = var2.field10531 + ' ' + arg1;
 		} else {
-			var2 = new class983(arg0, arg1);
+			var2 = new JagException(arg0, arg1);
 		}
 		return var2;
 	}
@@ -75,8 +76,8 @@ public class class983 extends RuntimeException {
 	public static String method6882(Throwable arg0) throws IOException {
 		arg0.printStackTrace();
 		String var2;
-		if (arg0 instanceof class983) {
-			class983 var1 = (class983) arg0;
+		if (arg0 instanceof JagException) {
+			JagException var1 = (JagException) arg0;
 			var2 = var1.field10531 + " | ";
 			arg0 = var1.field10529;
 		} else {

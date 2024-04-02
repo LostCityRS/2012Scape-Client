@@ -192,7 +192,7 @@ public abstract class PathingEntity extends class974 implements class198 {
 	@ObfuscatedName("aay.bw")
 	public int field8630;
 
-	public PathingEntity(class423 arg0, int arg1) {
+	public PathingEntity(Scene arg0, int arg1) {
 		super(arg0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, (byte) 0);
 		this.field8594 = 1;
 		this.field8622 = -32768;
@@ -240,7 +240,7 @@ public abstract class PathingEntity extends class974 implements class198 {
 		this.field8633 = new class977[Statics.field3226.field5171.length];
 	}
 
-	public PathingEntity(class423 arg0) {
+	public PathingEntity(Scene arg0) {
 		this(arg0, 10);
 	}
 
@@ -474,7 +474,7 @@ public abstract class PathingEntity extends class974 implements class198 {
 			this.field8640.method8105((long) client.field9213);
 		}
 		if (this.field8640 != null) {
-			this.field8640.method8110(this.field9807, this.field10510, this.field10508, this.field10509, this.field10511);
+			this.field8640.method8110(this.level, this.field10510, this.field10508, this.field10509, this.field10511);
 		}
 	}
 
@@ -656,8 +656,8 @@ public abstract class PathingEntity extends class974 implements class198 {
 		class315 var3 = this.method8565();
 		int var4 = (int) var3.field3464.field3475 >> 9;
 		int var5 = (int) var3.field3464.field3477 >> 9;
-		if (this.field9808 != null && var4 >= 1 && var5 >= 1 && var4 <= client.field8980.method6220() - 1 && var5 <= client.field8980.method6193() - 1) {
-			class424 var6 = this.field9808.field4497[this.field9807][var4][var5];
+		if (this.field9808 != null && var4 >= 1 && var5 >= 1 && var4 <= client.world.getSizeX() - 1 && var5 <= client.world.getSizeZ() - 1) {
+			class424 var6 = this.field9808.field4497[this.level][var4][var5];
 			if (var6 != null && var6.field4552 != null) {
 				return var6.field4552.field10495 + var2;
 			}
@@ -797,22 +797,22 @@ public abstract class PathingEntity extends class974 implements class198 {
 		int var12 = -arg2 / 2;
 		int var13 = var9 * var12 + var10 * var11 >> 14;
 		int var14 = var10 * var12 - var9 * var11 >> 14;
-		int var15 = client.method12385((int) var6.field3475 + var13, (int) var6.field3477 + var14, var7, var8, this.field9807);
+		int var15 = client.method12385((int) var6.field3475 + var13, (int) var6.field3477 + var14, var7, var8, this.level);
 		int var16 = arg1 / 2;
 		int var17 = -arg2 / 2;
 		int var18 = var9 * var17 + var10 * var16 >> 14;
 		int var19 = var10 * var17 - var9 * var16 >> 14;
-		int var20 = client.method12385((int) var6.field3475 + var18, (int) var6.field3477 + var19, var7, var8, this.field9807);
+		int var20 = client.method12385((int) var6.field3475 + var18, (int) var6.field3477 + var19, var7, var8, this.level);
 		int var21 = -arg1 / 2;
 		int var22 = arg2 / 2;
 		int var23 = var9 * var22 + var10 * var21 >> 14;
 		int var24 = var10 * var22 - var9 * var21 >> 14;
-		int var25 = client.method12385((int) var6.field3475 + var23, (int) var6.field3477 + var24, var7, var8, this.field9807);
+		int var25 = client.method12385((int) var6.field3475 + var23, (int) var6.field3477 + var24, var7, var8, this.level);
 		int var26 = arg1 / 2;
 		int var27 = arg2 / 2;
 		int var28 = var9 * var27 + var10 * var26 >> 14;
 		int var29 = var10 * var27 - var9 * var26 >> 14;
-		int var30 = client.method12385((int) var6.field3475 + var28, (int) var6.field3477 + var29, var7, var8, this.field9807);
+		int var30 = client.method12385((int) var6.field3475 + var28, (int) var6.field3477 + var29, var7, var8, this.level);
 		int var31 = var15 < var20 ? var15 : var20;
 		int var32 = var25 < var30 ? var25 : var30;
 		int var33 = var20 < var30 ? var20 : var30;

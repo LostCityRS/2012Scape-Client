@@ -3,7 +3,7 @@ package com.jagex;
 import deob.ObfuscatedName;
 
 @ObfuscatedName("tz")
-public class class541 {
+public class LocTypeList {
 
 	@ObfuscatedName("tz.u")
 	public final class527 field6557;
@@ -44,7 +44,7 @@ public class class541 {
 	@ObfuscatedName("tz.q")
 	public class570 field6564 = new class570(null, null);
 
-	public class541(class527 arg0, class519 arg1, boolean arg2, class334 arg3, class334 arg4) {
+	public LocTypeList(class527 arg0, class519 arg1, boolean arg2, class334 arg3, class334 arg4) {
 		this.field6557 = arg0;
 		this.field6552 = arg1;
 		this.field6553 = arg2;
@@ -63,11 +63,11 @@ public class class541 {
 	}
 
 	@ObfuscatedName("tz.u(II)Ltg;")
-	public class540 method11471(int arg0) {
+	public LocType method11471(int arg0) {
 		WeightedCache var2 = this.field6561;
-		class540 var3;
+		LocType var3;
 		synchronized (this.field6561) {
-			var3 = (class540) this.field6561.method7916((long) arg0);
+			var3 = (LocType) this.field6561.method7916((long) arg0);
 		}
 		if (var3 != null) {
 			return var3;
@@ -77,14 +77,14 @@ public class class541 {
 		synchronized (this.field6554) {
 			var6 = this.field6554.getFile(class161.field1631.method3073(arg0), class161.field1631.method3075(arg0));
 		}
-		class540 var8 = new class540();
+		LocType var8 = new LocType();
 		var8.field6474 = arg0;
 		var8.field6473 = this;
 		var8.field6505 = (String[]) this.field6563.clone();
 		if (var6 != null) {
-			var8.method11408(new Packet(var6));
+			var8.decode(new Packet(var6));
 		}
-		var8.method11410();
+		var8.postDecode();
 		if (var8.field6481) {
 			var8.field6491 = 0;
 			var8.field6492 = false;

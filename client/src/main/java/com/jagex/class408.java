@@ -31,7 +31,7 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.u(Lls;Lrd;Lux;Ltz;Lph;Lwd;Lug;)V")
-	public static void method7080(class334 arg0, class484 arg1, class563 arg2, class541 arg3, class444 arg4, class609 arg5, class567 arg6) {
+	public static void method7080(class334 arg0, class484 arg1, class563 arg2, LocTypeList arg3, class444 arg4, class609 arg5, class567 arg6) {
 		Statics.field4264 = arg0;
 		Statics.field4278 = arg1;
 		Statics.field4265 = arg2;
@@ -44,7 +44,7 @@ public class class408 {
 		int[] var8 = Statics.field4264.method5683(var7);
 		if (var8 != null) {
 			for (int var9 = 0; var9 < var8.length; var9++) {
-				class951 var10 = class951.method13263(Statics.field4264, var7, var8[var9]);
+				WorldMapAreaMetadata var10 = WorldMapAreaMetadata.method13263(Statics.field4264, var7, var8[var9]);
 				field4272.pushNode(var10, (long) var10.field10370);
 			}
 		}
@@ -77,12 +77,12 @@ public class class408 {
 
 	@ObfuscatedName("om.s(I)V")
 	public static void method7122(int arg0) {
-		Statics.field4292 = (class951) field4272.method11923((long) arg0);
+		Statics.field4292 = (WorldMapAreaMetadata) field4272.method11923((long) arg0);
 	}
 
 	@ObfuscatedName("om.c(II)Lajo;")
-	public static class951 method7084(int arg0, int arg1) {
-		for (class951 var2 = (class951) field4272.method11928(); var2 != null; var2 = (class951) field4272.method11929()) {
+	public static WorldMapAreaMetadata method7084(int arg0, int arg1) {
+		for (WorldMapAreaMetadata var2 = (WorldMapAreaMetadata) field4272.method11928(); var2 != null; var2 = (WorldMapAreaMetadata) field4272.method11929()) {
 			if (var2.field10361 && var2.method16717(arg0, arg1)) {
 				return var2;
 			}
@@ -91,14 +91,14 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.m(I)Lajo;")
-	public static class951 method7117(int arg0) {
-		return (class951) field4272.method11923((long) arg0);
+	public static WorldMapAreaMetadata method7117(int arg0) {
+		return (WorldMapAreaMetadata) field4272.method11923((long) arg0);
 	}
 
 	@ObfuscatedName("om.t(II)Ltv;")
 	public static class552 method7086(int arg0, int arg1) {
 		class552 var2 = new class552();
-		for (class951 var3 = (class951) field4272.method11928(); var3 != null; var3 = (class951) field4272.method11929()) {
+		for (WorldMapAreaMetadata var3 = (WorldMapAreaMetadata) field4272.method11928(); var3 != null; var3 = (WorldMapAreaMetadata) field4272.method11929()) {
 			if (var3.field10361 && var3.method16717(arg0, arg1)) {
 				var2.method11728(var3);
 			}
@@ -321,10 +321,10 @@ public class class408 {
 						class805 var3 = (class805) var2;
 						if (var3 != null) {
 							for (int var4 = 0; var4 < var3.field9562.length; var4++) {
-								class540 var5 = Statics.field4266.method11471(var3.field9562[var4]);
+								LocType var5 = Statics.field4266.method11471(var3.field9562[var4]);
 								int var6 = var5.field6495;
 								if (var5.field6534 != null) {
-									class540 var7 = var5.method11431(Statics.field4299);
+									LocType var7 = var5.method11431(Statics.field4299);
 									if (var7 != null) {
 										var6 = var7.field6495;
 									}
@@ -339,10 +339,10 @@ public class class408 {
 						}
 					} else {
 						Integer var9 = (Integer) var2;
-						class540 var10 = Statics.field4266.method11471(var9);
+						LocType var10 = Statics.field4266.method11471(var9);
 						int var11 = var10.field6495;
 						if (var10.field6534 != null) {
-							class540 var12 = var10.method11431(Statics.field4299);
+							LocType var12 = var10.method11431(Statics.field4299);
 							if (var12 != null) {
 								var11 = var12.field6495;
 							}
@@ -372,10 +372,10 @@ public class class408 {
 								var19 = (class405) var18.next();
 							} while (var19.field4251 == null);
 							for (int var20 = 0; var20 < var19.field4251.length; var20++) {
-								class540 var21 = Statics.field4266.method11471(var19.field4251[var20]);
+								LocType var21 = Statics.field4266.method11471(var19.field4251[var20]);
 								int var22 = var21.field6495;
 								if (var21.field6534 != null) {
-									class540 var23 = var21.method11431(Statics.field4299);
+									LocType var23 = var21.method11431(Statics.field4299);
 									if (var23 != null) {
 										var22 = var23.field6495;
 									}
@@ -726,7 +726,7 @@ public class class408 {
 		for (int var16 = 0; var16 < arg8.length; var16++) {
 			int var17 = arg9[var16] & 0x3F;
 			if (class542.field6591.field6590 == var17 || class542.field6569.field6590 == var17 || class542.field6570.field6590 == var17 || class542.field6567.field6590 == var17) {
-				class540 var18 = Statics.field4266.method11471(arg8[var16]);
+				LocType var18 = Statics.field4266.method11471(arg8[var16]);
 				if (var18.field6508 == -1) {
 					int var19 = -3355444;
 					if (var18.field6493 == 1) {
@@ -789,7 +789,7 @@ public class class408 {
 			return;
 		}
 		for (int var7 = 0; var7 < arg5.length; var7++) {
-			class540 var8 = Statics.field4266.method11471(arg5[var7]);
+			LocType var8 = Statics.field4266.method11471(arg5[var7]);
 			int var9 = var8.field6508;
 			if (var9 != -1) {
 				class608 var10 = Statics.field4268.method12491(var9);

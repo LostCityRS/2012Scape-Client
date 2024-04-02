@@ -7,7 +7,7 @@ import java.io.IOException;
 public class class758 extends class337 {
 
 	@ObfuscatedName("abs.b")
-	public class411 field8882;
+	public Stream field8882;
 
 	@ObfuscatedName("abs.m(I)V")
 	public void method5741() {
@@ -77,7 +77,7 @@ public class class758 extends class337 {
 					if (var10 > var8) {
 						var10 = var8;
 					}
-					this.field8882.method7196(this.field3590.data, this.field3590.pos, var10);
+					this.field8882.read(this.field3590.data, this.field3590.pos, var10);
 					if (this.field3601 != 0) {
 						for (int var11 = 0; var11 < var10; var11++) {
 							this.field3590.data[this.field3590.pos + var11] ^= this.field3601;
@@ -131,7 +131,7 @@ public class class758 extends class337 {
 					if (var24 > var8) {
 						var24 = var8;
 					}
-					this.field8882.method7196(this.field3592.field10599.data, this.field3592.field10599.pos, var24);
+					this.field8882.read(this.field3592.field10599.data, this.field3592.field10599.pos, var24);
 					if (this.field3601 != 0) {
 						for (int var25 = 0; var25 < var24; var25++) {
 							this.field3592.field10599.data[this.field3592.field10599.pos + var25] ^= this.field3601;
@@ -170,7 +170,7 @@ public class class758 extends class337 {
 			}
 			this.field8882 = null;
 		}
-		this.field8882 = (class411) arg0;
+		this.field8882 = (Stream) arg0;
 		this.method14261();
 		this.method5744(arg1);
 		this.field3590.pos = 0;

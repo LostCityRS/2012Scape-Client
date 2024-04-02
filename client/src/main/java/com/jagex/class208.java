@@ -46,7 +46,7 @@ public abstract class class208 implements class214 {
 	@ObfuscatedName("gc.u(B)V")
 	public void method3936() {
 		class603 var1 = class603.method14876(this.field2313, this.field2311.field2609);
-		this.field2312 = Statics.field5187.method712(var1, (class685[]) class125.method2593(this.field2310, this.field2311.field2609), true);
+		this.field2312 = Statics.toolkit.method712(var1, (class685[]) class125.method2593(this.field2310, this.field2311.field2609), true);
 	}
 
 	@ObfuscatedName("gc.a(I)Z")

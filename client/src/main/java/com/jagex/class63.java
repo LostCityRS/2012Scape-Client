@@ -51,10 +51,10 @@ public class class63 {
 			var2 = 1;
 			arg0.method15941(64);
 		}
-		if (Statics.field4961.field9661.method15781() == 0) {
-			Statics.field4961.method15449(Statics.field4961.field9661, true);
+		if (Statics.preferences.field9661.method15781() == 0) {
+			Statics.preferences.method15449(Statics.preferences.field9661, true);
 		} else {
-			Statics.field4961.method15448(Statics.field4961.field9670, 0);
+			Statics.preferences.method15448(Statics.preferences.field9670, 0);
 			Statics.method5600(0, false);
 		}
 		Statics.method1245();
@@ -78,10 +78,10 @@ public class class63 {
 			method1886(true);
 			var2 = 1;
 		}
-		if (Statics.field4961.field9661.method15781() == 2) {
-			Statics.field4961.method15449(Statics.field4961.field9661, true);
+		if (Statics.preferences.field9661.method15781() == 2) {
+			Statics.preferences.method15449(Statics.preferences.field9661, true);
 		} else {
-			Statics.field4961.method15448(Statics.field4961.field9670, 2);
+			Statics.preferences.method15448(Statics.preferences.field9670, 2);
 			Statics.method5600(2, false);
 		}
 		Statics.method1245();
@@ -105,10 +105,10 @@ public class class63 {
 			method1886(true);
 			var3 = 1;
 		}
-		if (Statics.field4961.field9661.method15781() == arg1) {
-			Statics.field4961.method15449(Statics.field4961.field9661, true);
+		if (Statics.preferences.field9661.method15781() == arg1) {
+			Statics.preferences.method15449(Statics.preferences.field9661, true);
 		} else {
-			Statics.field4961.method15448(Statics.field4961.field9670, arg1);
+			Statics.preferences.method15448(Statics.preferences.field9670, arg1);
 			Statics.method5600(arg1, false);
 		}
 		Statics.method1245();
@@ -117,134 +117,134 @@ public class class63 {
 
 	@ObfuscatedName("lh.l(I)V")
 	public static void method5717() {
-		Statics.field4961.method15448(Statics.field4961.field9660, 2);
-		Statics.field4961.method15448(Statics.field4961.field9655, 2);
-		Statics.field4961.method15448(Statics.field4961.field9671, 1);
-		Statics.field4961.method15448(Statics.field4961.field9647, 1);
-		Statics.field4961.method15448(Statics.field4961.field9649, 1);
-		Statics.field4961.method15448(Statics.field4961.field9645, 1);
-		Statics.field4961.method15448(Statics.field4961.field9658, 1);
-		Statics.field4961.method15448(Statics.field4961.field9659, 1);
-		Statics.field4961.method15448(Statics.field4961.field9651, 2);
-		Statics.field4961.method15448(Statics.field4961.field9650, 1);
-		Statics.field4961.method15448(Statics.field4961.field9666, 2);
-		Statics.field4961.method15448(Statics.field4961.field9646, 1);
-		Statics.field4961.method15448(Statics.field4961.field9637, 0);
-		Statics.field4961.method15448(Statics.field4961.field9665, 0);
-		Statics.field4961.method15448(Statics.field4961.field9648, 2);
-		Statics.field4961.method15448(Statics.field4961.field9643, BuildAreaSize.field2139.id);
-		Statics.field4961.method15448(Statics.field4961.field9673, 0);
-		if (Statics.field5187 != null && Statics.field5187.method450() && Statics.field5187.method600()) {
-			Statics.field5187.method558();
+		Statics.preferences.method15448(Statics.preferences.field9660, 2);
+		Statics.preferences.method15448(Statics.preferences.field9655, 2);
+		Statics.preferences.method15448(Statics.preferences.field9671, 1);
+		Statics.preferences.method15448(Statics.preferences.field9647, 1);
+		Statics.preferences.method15448(Statics.preferences.field9649, 1);
+		Statics.preferences.method15448(Statics.preferences.field9645, 1);
+		Statics.preferences.method15448(Statics.preferences.field9658, 1);
+		Statics.preferences.method15448(Statics.preferences.field9659, 1);
+		Statics.preferences.method15448(Statics.preferences.field9651, 2);
+		Statics.preferences.method15448(Statics.preferences.field9650, 1);
+		Statics.preferences.method15448(Statics.preferences.field9666, 2);
+		Statics.preferences.method15448(Statics.preferences.field9646, 1);
+		Statics.preferences.method15448(Statics.preferences.field9637, 0);
+		Statics.preferences.method15448(Statics.preferences.field9665, 0);
+		Statics.preferences.method15448(Statics.preferences.field9648, 2);
+		Statics.preferences.method15448(Statics.preferences.buildArea, BuildAreaSize.field2139.id);
+		Statics.preferences.method15448(Statics.preferences.field9673, 0);
+		if (Statics.toolkit != null && Statics.toolkit.method450() && Statics.toolkit.method600()) {
+			Statics.toolkit.method558();
 		}
-		Statics.field4961.method15448(Statics.field4961.field9657, 1);
+		Statics.preferences.method15448(Statics.preferences.field9657, 1);
 		method7165();
-		Statics.field4961.method15448(Statics.field4961.field9677, 0);
-		Statics.field4961.method15448(Statics.field4961.field9633, 4);
+		Statics.preferences.method15448(Statics.preferences.field9677, 0);
+		Statics.preferences.method15448(Statics.preferences.field9633, 4);
 		client.method13901();
-		client.field8980.method6139().method8154();
+		client.world.getEnvironmentManager().method8154();
 		client.field9165 = true;
 	}
 
 	@ObfuscatedName("lq.f(I)V")
 	public static void method5928() {
-		Statics.field4961.method15448(Statics.field4961.field9660, 2);
-		Statics.field4961.method15448(Statics.field4961.field9655, 2);
-		Statics.field4961.method15448(Statics.field4961.field9671, 1);
-		Statics.field4961.method15448(Statics.field4961.field9647, 1);
-		Statics.field4961.method15448(Statics.field4961.field9649, 1);
-		Statics.field4961.method15448(Statics.field4961.field9645, 1);
-		Statics.field4961.method15448(Statics.field4961.field9658, 1);
-		Statics.field4961.method15448(Statics.field4961.field9659, 1);
-		Statics.field4961.method15448(Statics.field4961.field9651, 1);
-		Statics.field4961.method15448(Statics.field4961.field9650, 1);
-		Statics.field4961.method15448(Statics.field4961.field9666, 0);
-		Statics.field4961.method15448(Statics.field4961.field9646, 1);
-		Statics.field4961.method15448(Statics.field4961.field9637, 0);
-		Statics.field4961.method15448(Statics.field4961.field9665, 0);
-		Statics.field4961.method15448(Statics.field4961.field9648, 1);
-		Statics.field4961.method15448(Statics.field4961.field9643, BuildAreaSize.field2139.id);
-		Statics.field4961.method15448(Statics.field4961.field9673, 0);
-		if (Statics.field5187 != null && Statics.field5187.method450() && Statics.field5187.method600()) {
-			Statics.field5187.method558();
+		Statics.preferences.method15448(Statics.preferences.field9660, 2);
+		Statics.preferences.method15448(Statics.preferences.field9655, 2);
+		Statics.preferences.method15448(Statics.preferences.field9671, 1);
+		Statics.preferences.method15448(Statics.preferences.field9647, 1);
+		Statics.preferences.method15448(Statics.preferences.field9649, 1);
+		Statics.preferences.method15448(Statics.preferences.field9645, 1);
+		Statics.preferences.method15448(Statics.preferences.field9658, 1);
+		Statics.preferences.method15448(Statics.preferences.field9659, 1);
+		Statics.preferences.method15448(Statics.preferences.field9651, 1);
+		Statics.preferences.method15448(Statics.preferences.field9650, 1);
+		Statics.preferences.method15448(Statics.preferences.field9666, 0);
+		Statics.preferences.method15448(Statics.preferences.field9646, 1);
+		Statics.preferences.method15448(Statics.preferences.field9637, 0);
+		Statics.preferences.method15448(Statics.preferences.field9665, 0);
+		Statics.preferences.method15448(Statics.preferences.field9648, 1);
+		Statics.preferences.method15448(Statics.preferences.buildArea, BuildAreaSize.field2139.id);
+		Statics.preferences.method15448(Statics.preferences.field9673, 0);
+		if (Statics.toolkit != null && Statics.toolkit.method450() && Statics.toolkit.method600()) {
+			Statics.toolkit.method558();
 		}
-		Statics.field4961.method15448(Statics.field4961.field9657, 1);
+		Statics.preferences.method15448(Statics.preferences.field9657, 1);
 		method7165();
-		Statics.field4961.method15448(Statics.field4961.field9677, 1);
-		Statics.field4961.method15448(Statics.field4961.field9633, 3);
+		Statics.preferences.method15448(Statics.preferences.field9677, 1);
+		Statics.preferences.method15448(Statics.preferences.field9633, 3);
 		client.method13901();
-		client.field8980.method6139().method8154();
+		client.world.getEnvironmentManager().method8154();
 		client.field9165 = true;
 	}
 
 	@ObfuscatedName("oi.d(I)V")
 	public static void method7359() {
-		Statics.field4961.method15448(Statics.field4961.field9660, 1);
-		Statics.field4961.method15448(Statics.field4961.field9655, 1);
-		Statics.field4961.method15448(Statics.field4961.field9671, 1);
-		Statics.field4961.method15448(Statics.field4961.field9647, 1);
-		Statics.field4961.method15448(Statics.field4961.field9649, 0);
-		Statics.field4961.method15448(Statics.field4961.field9645, 0);
-		Statics.field4961.method15448(Statics.field4961.field9658, 0);
-		Statics.field4961.method15448(Statics.field4961.field9651, 0);
-		Statics.field4961.method15448(Statics.field4961.field9659, 0);
-		Statics.field4961.method15448(Statics.field4961.field9650, 0);
-		Statics.field4961.method15448(Statics.field4961.field9666, 0);
-		Statics.field4961.method15448(Statics.field4961.field9646, 0);
-		Statics.field4961.method15448(Statics.field4961.field9637, 0);
-		Statics.field4961.method15448(Statics.field4961.field9665, 0);
-		Statics.field4961.method15448(Statics.field4961.field9648, 0);
-		Statics.field4961.method15448(Statics.field4961.field9643, BuildAreaSize.field2139.id);
-		Statics.field4961.method15448(Statics.field4961.field9673, 0);
-		if (Statics.field5187 != null && Statics.field5187.method450() && Statics.field5187.method600()) {
-			Statics.field5187.method558();
+		Statics.preferences.method15448(Statics.preferences.field9660, 1);
+		Statics.preferences.method15448(Statics.preferences.field9655, 1);
+		Statics.preferences.method15448(Statics.preferences.field9671, 1);
+		Statics.preferences.method15448(Statics.preferences.field9647, 1);
+		Statics.preferences.method15448(Statics.preferences.field9649, 0);
+		Statics.preferences.method15448(Statics.preferences.field9645, 0);
+		Statics.preferences.method15448(Statics.preferences.field9658, 0);
+		Statics.preferences.method15448(Statics.preferences.field9651, 0);
+		Statics.preferences.method15448(Statics.preferences.field9659, 0);
+		Statics.preferences.method15448(Statics.preferences.field9650, 0);
+		Statics.preferences.method15448(Statics.preferences.field9666, 0);
+		Statics.preferences.method15448(Statics.preferences.field9646, 0);
+		Statics.preferences.method15448(Statics.preferences.field9637, 0);
+		Statics.preferences.method15448(Statics.preferences.field9665, 0);
+		Statics.preferences.method15448(Statics.preferences.field9648, 0);
+		Statics.preferences.method15448(Statics.preferences.buildArea, BuildAreaSize.field2139.id);
+		Statics.preferences.method15448(Statics.preferences.field9673, 0);
+		if (Statics.toolkit != null && Statics.toolkit.method450() && Statics.toolkit.method600()) {
+			Statics.toolkit.method558();
 		}
-		Statics.field4961.method15448(Statics.field4961.field9657, 0);
+		Statics.preferences.method15448(Statics.preferences.field9657, 0);
 		method7165();
-		Statics.field4961.method15448(Statics.field4961.field9677, 2);
-		Statics.field4961.method15448(Statics.field4961.field9633, 2);
+		Statics.preferences.method15448(Statics.preferences.field9677, 2);
+		Statics.preferences.method15448(Statics.preferences.field9633, 2);
 		client.method13901();
-		client.field8980.method6139().method8154();
+		client.world.getEnvironmentManager().method8154();
 		client.field9165 = true;
 	}
 
 	@ObfuscatedName("aw.z(ZI)V")
 	public static void method1886(boolean arg0) {
-		Statics.field4961.method15448(Statics.field4961.field9660, 1);
-		Statics.field4961.method15448(Statics.field4961.field9655, 1);
-		Statics.field4961.method15448(Statics.field4961.field9671, 0);
-		Statics.field4961.method15448(Statics.field4961.field9646, 0);
-		Statics.field4961.method15448(Statics.field4961.field9647, 0);
-		Statics.field4961.method15448(Statics.field4961.field9649, 0);
-		Statics.field4961.method15448(Statics.field4961.field9645, 0);
-		Statics.field4961.method15448(Statics.field4961.field9658, 0);
-		Statics.field4961.method15448(Statics.field4961.field9651, 0);
-		Statics.field4961.method15448(Statics.field4961.field9659, 0);
-		Statics.field4961.method15448(Statics.field4961.field9650, 0);
-		Statics.field4961.method15448(Statics.field4961.field9666, 0);
-		Statics.field4961.method15448(Statics.field4961.field9637, 0);
-		Statics.field4961.method15448(Statics.field4961.field9665, 0);
-		Statics.field4961.method15448(Statics.field4961.field9648, 0);
-		Statics.field4961.method15448(Statics.field4961.field9643, BuildAreaSize.field2139.id);
-		Statics.field4961.method15448(Statics.field4961.field9673, 0);
-		if (Statics.field5187 != null && Statics.field5187.method450() && Statics.field5187.method600()) {
-			Statics.field5187.method558();
+		Statics.preferences.method15448(Statics.preferences.field9660, 1);
+		Statics.preferences.method15448(Statics.preferences.field9655, 1);
+		Statics.preferences.method15448(Statics.preferences.field9671, 0);
+		Statics.preferences.method15448(Statics.preferences.field9646, 0);
+		Statics.preferences.method15448(Statics.preferences.field9647, 0);
+		Statics.preferences.method15448(Statics.preferences.field9649, 0);
+		Statics.preferences.method15448(Statics.preferences.field9645, 0);
+		Statics.preferences.method15448(Statics.preferences.field9658, 0);
+		Statics.preferences.method15448(Statics.preferences.field9651, 0);
+		Statics.preferences.method15448(Statics.preferences.field9659, 0);
+		Statics.preferences.method15448(Statics.preferences.field9650, 0);
+		Statics.preferences.method15448(Statics.preferences.field9666, 0);
+		Statics.preferences.method15448(Statics.preferences.field9637, 0);
+		Statics.preferences.method15448(Statics.preferences.field9665, 0);
+		Statics.preferences.method15448(Statics.preferences.field9648, 0);
+		Statics.preferences.method15448(Statics.preferences.buildArea, BuildAreaSize.field2139.id);
+		Statics.preferences.method15448(Statics.preferences.field9673, 0);
+		if (Statics.toolkit != null && Statics.toolkit.method450() && Statics.toolkit.method600()) {
+			Statics.toolkit.method558();
 		}
-		Statics.field4961.method15448(Statics.field4961.field9657, 0);
+		Statics.preferences.method15448(Statics.preferences.field9657, 0);
 		method7165();
-		Statics.field4961.method15448(Statics.field4961.field9677, 2);
-		Statics.field4961.method15448(Statics.field4961.field9633, 1);
+		Statics.preferences.method15448(Statics.preferences.field9677, 2);
+		Statics.preferences.method15448(Statics.preferences.field9633, 1);
 		client.method13901();
-		client.field8980.method6139().method8154();
+		client.world.getEnvironmentManager().method8154();
 		client.field9165 = true;
 	}
 
 	@ObfuscatedName("og.n(I)V")
 	public static void method7165() {
 		if (GameShell.field4144 > 1) {
-			Statics.field4961.method15448(Statics.field4961.field9652, 4);
+			Statics.preferences.method15448(Statics.preferences.field9652, 4);
 		} else {
-			Statics.field4961.method15448(Statics.field4961.field9652, 2);
+			Statics.preferences.method15448(Statics.preferences.field9652, 2);
 		}
 	}
 }

@@ -13,7 +13,7 @@ public class class428 {
 	public boolean field4613 = true;
 
 	@ObfuscatedName("od.m")
-	public class423 field4605;
+	public Scene field4605;
 
 	@ObfuscatedName("od.t")
 	public class422 field4606;
@@ -87,7 +87,7 @@ public class class428 {
 	@ObfuscatedName("od.ap")
 	public boolean field4615 = true;
 
-	public class428(class423 arg0) {
+	public class428(Scene arg0) {
 		this.field4608 = arg0.field4499;
 		this.field4612 = arg0.field4499;
 		this.field4605 = arg0;

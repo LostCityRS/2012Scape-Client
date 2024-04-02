@@ -151,7 +151,7 @@ public class class477 {
 		class792 var7 = class792.method14781(class280.field2888, client.field8975.randomOut);
 		var7.field9467.p1(0);
 		int var8 = var7.field9467.pos;
-		Packet var9 = Statics.field4961.method15447();
+		Packet var9 = Statics.preferences.method15447();
 		var7.field9467.pdata(var9.data, 0, var9.pos);
 		var7.field9467.psize1(var7.field9467.pos - var8);
 		client.field8975.method1913(var7);

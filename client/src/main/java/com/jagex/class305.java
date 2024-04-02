@@ -116,7 +116,7 @@ public class class305 implements Runnable {
 						this.field3349.method4982(this.field3348);
 					} else {
 						long var4 = class153.method5554();
-						if (Statics.field5187 == null || this.field3350 == null || this.field3350.method4983() == 0 || this.field3347 < var4 - (long) this.field3350.method4983()) {
+						if (Statics.toolkit == null || this.field3350 == null || this.field3350.method4983() == 0 || this.field3347 < var4 - (long) this.field3350.method4983()) {
 							if (this.field3350 != null) {
 								this.field3348 = true;
 								this.field3350.method4985();
@@ -124,42 +124,42 @@ public class class305 implements Runnable {
 							}
 							if (this.field3348) {
 								client.method3536();
-								if (Statics.field5187 != null) {
-									Statics.field5187.method505(1, 0);
+								if (Statics.toolkit != null) {
+									Statics.toolkit.method505(1, 0);
 								}
 							}
-							this.field3349.method4982(this.field3348 || Statics.field5187 != null && Statics.field5187.method447());
+							this.field3349.method4982(this.field3348 || Statics.toolkit != null && Statics.toolkit.method447());
 						} else {
 							int var6 = (int) ((var4 - this.field3347) * 255L / (long) this.field3350.method4983());
 							int var7 = 255 - var6;
 							int var8 = var6 << 24 | 0xFFFFFF;
 							int var9 = var7 << 24 | 0xFFFFFF;
 							client.method3536();
-							Statics.field5187.method505(1, 0);
-							class118 var10 = Statics.field5187.method777(Statics.field4125, Statics.field4677, true);
-							class674 var11 = Statics.field5187.method467();
+							Statics.toolkit.method505(1, 0);
+							class118 var10 = Statics.toolkit.method777(Statics.field4125, Statics.field4677, true);
+							class674 var11 = Statics.toolkit.method467();
 							var11.method1206(0, var10.method1049());
-							Statics.field5187.method464(var11);
+							Statics.toolkit.method464(var11);
 							this.field3350.method4982(true);
-							Statics.field5187.method696(var11);
+							Statics.toolkit.method696(var11);
 							var10.method1054(0, 0, 0, var9, 1);
-							Statics.field5187.method464(var11);
-							Statics.field5187.method505(1, 0);
+							Statics.toolkit.method464(var11);
+							Statics.toolkit.method505(1, 0);
 							this.field3349.method4982(true);
-							Statics.field5187.method696(var11);
+							Statics.toolkit.method696(var11);
 							var10.method1054(0, 0, 0, var8, 1);
 						}
 						try {
-							if (Statics.field5187 != null && !(this.field3349 instanceof class306)) {
-								Statics.field5187.method466();
+							if (Statics.toolkit != null && !(this.field3349 instanceof class306)) {
+								Statics.toolkit.method466();
 							}
 						} catch (class881 var18) {
-							class983.report(var18.getMessage() + Statics.field1543.method6701(), var18);
+							JagException.report(var18.getMessage() + Statics.field1543.method6701(), var18);
 							Statics.method5600(0, true);
 						}
 					}
 					this.field3348 = false;
-					if (Statics.field5187 != null && !(this.field3349 instanceof class306) && this.field3356.field3404 < LoadingStage.field3401.field3404) {
+					if (Statics.toolkit != null && !(this.field3349 instanceof class306) && this.field3356.field3404 < LoadingStage.field3401.field3404) {
 						client.method13896();
 					}
 				} catch (Exception var19) {

@@ -46,20 +46,20 @@ public class class731 extends class208 {
 			return;
 		}
 		int[] var4 = new int[4];
-		Statics.field5187.method453(var4);
-		Statics.field5187.method659(arg1, arg2, this.field2311.field2602 + arg1, this.field2311.field2607 + arg2);
+		Statics.toolkit.method453(var4);
+		Statics.toolkit.method659(arg1, arg2, this.field2311.field2602 + arg1, this.field2311.field2607 + arg2);
 		int var5 = this.field8720.method1042();
 		int var6 = this.field8720.method1047();
 		int var7 = this.field8723.method1042();
 		int var8 = this.field8723.method1047();
 		this.field8720.method2500(arg1, (this.field2311.field2607 - var6) / 2 + arg2);
 		this.field8723.method2500(this.field2311.field2602 + arg1 - var7, (this.field2311.field2607 - var8) / 2 + arg2);
-		Statics.field5187.method659(arg1, arg2, this.field2311.field2602 + arg1, arg2 + this.field8724.method1047());
+		Statics.toolkit.method659(arg1, arg2, this.field2311.field2602 + arg1, arg2 + this.field8724.method1047());
 		this.field8724.method2511(arg1 + var5, arg2, this.field2311.field2602 - var5 - var7, this.field2311.field2607);
 		int var9 = this.field8722.method1047();
-		Statics.field5187.method659(arg1, this.field2311.field2607 + arg2 - var9, this.field2311.field2602 + arg1, this.field2311.field2607 + arg2);
+		Statics.toolkit.method659(arg1, this.field2311.field2607 + arg2 - var9, this.field2311.field2602 + arg1, this.field2311.field2607 + arg2);
 		this.field8722.method2511(arg1 + var5, this.field2311.field2607 + arg2 - var9, this.field2311.field2602 - var5 - var7, this.field2311.field2607);
-		Statics.field5187.method659(var4[0], var4[1], var4[2], var4[3]);
+		Statics.toolkit.method659(var4[0], var4[1], var4[2], var4[3]);
 	}
 
 	@ObfuscatedName("aai.d(ZIII)V")
@@ -72,12 +72,12 @@ public class class731 extends class208 {
 		int var9 = var7 - var6;
 		int var10 = this.method3956() * var8 / 10000;
 		int[] var11 = new int[4];
-		Statics.field5187.method453(var11);
-		Statics.field5187.method659(var4, var6, var4 + var10, var7);
+		Statics.toolkit.method453(var11);
+		Statics.toolkit.method659(var4, var6, var4 + var10, var7);
 		this.method14085(var4, var6, var8, var9);
-		Statics.field5187.method659(var4 + var10, var6, var5, var7);
+		Statics.toolkit.method659(var4 + var10, var6, var5, var7);
 		this.field8721.method2511(var4, var6, var8, var9);
-		Statics.field5187.method659(var11[0], var11[1], var11[2], var11[3]);
+		Statics.toolkit.method659(var11[0], var11[1], var11[2], var11[3]);
 	}
 
 	@ObfuscatedName("aai.i(IIIII)V")

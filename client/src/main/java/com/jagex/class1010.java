@@ -27,7 +27,7 @@ public class class1010 extends class974 {
 	@ObfuscatedName("alf.ar")
 	public int field10645 = 0;
 
-	public class1010(class423 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, boolean arg13, int arg14) {
+	public class1010(Scene arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, boolean arg13, int arg14) {
 		super(arg0, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, false, (byte) 0);
 		this.field10640 = arg1;
 		this.field10646 = arg12;
@@ -90,7 +90,7 @@ public class class1010 extends class974 {
 	@ObfuscatedName("alf.c(Lra;III)Lqa;")
 	public class13 method17190(class14 arg0, int arg1, int arg2) {
 		class507 var4 = Statics.field4213.method11082(arg2);
-		class12 var5 = this.field9808.field4527[this.field9807];
+		class12 var5 = this.field9808.field4527[this.level];
 		class12 var6 = this.field9809 < 3 ? this.field9808.field4527[this.field9809 + 1] : null;
 		Vector3 var7 = this.method8565().field3464;
 		return this.field10642 == null || this.field10642.method11784() ? var4.method11103(arg0, arg1, true, var5, var6, (int) var7.field3475, (int) var7.field3476, (int) var7.field3477, null, (byte) 2) : var4.method11103(arg0, arg1, true, var5, var6, (int) var7.field3475, (int) var7.field3476, (int) var7.field3477, this.field10642, (byte) 2);
@@ -137,7 +137,7 @@ public class class1010 extends class974 {
 		}
 		if (this.field10641 != null) {
 			this.field10641.method8106(arg0, (long) client.field9213, var4, var5, false);
-			this.field10641.method8110(this.field9807, this.field10510, this.field10508, this.field10509, this.field10511);
+			this.field10641.method8110(this.level, this.field10510, this.field10508, this.field10509, this.field10511);
 		}
 	}
 

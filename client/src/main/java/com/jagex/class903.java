@@ -54,12 +54,12 @@ public class class903 extends PathingEntity {
 	@ObfuscatedName("ahs.cp")
 	public int field10084;
 
-	public class903(class423 arg0) {
+	public class903(Scene arg0) {
 		super(arg0);
 		this.method16160();
 	}
 
-	public class903(class423 arg0, int arg1) {
+	public class903(Scene arg0, int arg1) {
 		super(arg0, arg1);
 		this.method16160();
 	}
@@ -69,7 +69,7 @@ public class class903 extends PathingEntity {
 		this.field10081 = (int) (Math.random() * 4.0D) + 32;
 		this.field10082 = (int) (Math.random() * 2.0D) + 3;
 		this.field10083 = (int) (Math.random() * 3.0D) + 16;
-		if (Statics.field4961.field9659.method15686() == 1) {
+		if (Statics.preferences.field9659.method15686() == 1) {
 			this.field10084 = (int) (Math.random() * 6.0D);
 		} else {
 			this.field10084 = (int) (Math.random() * 12.0D);
@@ -105,7 +105,7 @@ public class class903 extends PathingEntity {
 		class315 var3 = this.method8565();
 		class314 var4 = arg0.method516();
 		int var5 = this.field8638.method1387();
-		class424 var6 = this.field9808.field4497[this.field9807][(int) var3.field3464.field3475 >> 9][(int) var3.field3464.field3477 >> 9];
+		class424 var6 = this.field9808.field4497[this.level][(int) var3.field3464.field3475 >> 9][(int) var3.field3464.field3477 >> 9];
 		if (var6 == null || var6.field4552 == null) {
 			this.field8604 = (int) ((float) this.field8604 - (float) this.field8604 / 10.0F);
 		} else {
@@ -118,7 +118,7 @@ public class class903 extends PathingEntity {
 		class611 var9 = this.field10075.field7244 == null ? this.field10075 : this.field10075.method12516(Statics.field2669);
 		this.field8650 = false;
 		class425 var10 = null;
-		if (Statics.field4961.field9658.method15709() == 1 && var9.field7249 && var8.field4714) {
+		if (Statics.preferences.field9658.method15709() == 1 && var9.field7249 && var8.field4714) {
 			class553 var11 = this.field8597.method11767() && this.field8597.method11776() ? this.field8597 : null;
 			class874 var12 = this.field8616.method11767() && (!this.field8616.field9899 || var11 == null) ? this.field8616 : null;
 			class13 var13 = class48.method1417(arg0, var5, this.field8601, this.field8644, this.field8603, this.field10075.field7213, this.field8651[0], this.field10075.field7236 & 0xFFFF, this.field10075.field7251 & 0xFFFF, this.field10075.field7252 & 0xFF, this.field10075.field7253 & 0xFF, var12 == null ? var11 : var12);
@@ -281,8 +281,8 @@ public class class903 extends PathingEntity {
 
 	@ObfuscatedName("ahs.ga(IIIZII)V")
 	public void method16153(int arg0, int arg1, int arg2, boolean arg3, int arg4) {
-		this.field9807 = this.field9809 = (byte) arg0;
-		if (client.field8980.method6100().method5794(arg1, arg2)) {
+		this.level = this.field9809 = (byte) arg0;
+		if (client.world.getSceneLevelTileFlags().method5794(arg1, arg2)) {
 			this.field9809++;
 		}
 		if (this.field8597.method11767() && this.field8597.method11804().field6330 == 1) {
@@ -476,8 +476,8 @@ public class class903 extends PathingEntity {
 
 	@ObfuscatedName("ahs.u(I)Ladu;")
 	public class810 method3684() {
-		class453 var1 = client.field8980.method6214();
-		return class810.method8611(this.field9807, (int) this.method8565().field3464.field3475 + var1.field4836 * 512, -((int) this.method8565().field3464.field3476), (int) this.method8565().field3464.field3477 + var1.field4838 * 512);
+		CoordGrid var1 = client.world.method6214();
+		return class810.method8611(this.level, (int) this.method8565().field3464.field3475 + var1.x * 512, -((int) this.method8565().field3464.field3476), (int) this.method8565().field3464.field3477 + var1.z * 512);
 	}
 
 	@ObfuscatedName("ahs.j(I)Lkn;")

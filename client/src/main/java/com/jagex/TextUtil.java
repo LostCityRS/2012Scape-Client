@@ -3,13 +3,13 @@ package com.jagex;
 import deob.ObfuscatedName;
 
 @ObfuscatedName("j")
-public class class32 {
+public class TextUtil {
 
 	@ObfuscatedName("j.u")
 	public static String field493 = "true";
 
 	@ObfuscatedName("j.j")
-	public static String field488 = ",";
+	public static String COMMA = ",";
 
 	@ObfuscatedName("j.a")
 	public static String field489 = " (";
@@ -29,7 +29,7 @@ public class class32 {
 	@ObfuscatedName("j.l")
 	public static String field490 = "</col>";
 
-	public class32() throws Throwable {
+	public TextUtil() throws Throwable {
 		throw new Error();
 	}
 

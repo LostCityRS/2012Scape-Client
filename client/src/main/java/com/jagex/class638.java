@@ -19,7 +19,7 @@ public class class638 extends class372 implements Runnable {
 				GameShell.method1840(null);
 			}
 		} catch (Exception var7) {
-			class983.report(null, var7);
+			JagException.report(null, var7);
 		} finally {
 			this.field4009 = false;
 		}

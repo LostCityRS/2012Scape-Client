@@ -17,9 +17,9 @@ public class class662 extends class971 implements Location {
 	@ObfuscatedName("yh.q")
 	public boolean field7571 = true;
 
-	public class662(class423 arg0, class14 arg1, class541 arg2, class540 arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11, int arg12, int arg13, int arg14) {
+	public class662(Scene arg0, class14 arg1, LocTypeList arg2, LocType arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11, int arg12, int arg13, int arg14) {
 		super(arg0, arg6, arg7, arg8, arg4, arg5, arg10, arg11);
-		this.field7570 = new class116(arg1, arg2, arg3, arg12, arg13, this.field9807, arg5, this, arg9, arg14);
+		this.field7570 = new class116(arg1, arg2, arg3, arg12, arg13, this.level, arg5, this, arg9, arg14);
 		this.field7568 = arg3.field6493 != 0 && !arg9;
 		this.method15642(1);
 	}

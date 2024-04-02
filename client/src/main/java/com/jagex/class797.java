@@ -43,7 +43,7 @@ public class class797 extends class399 {
 	public int field9546;
 
 	@ObfuscatedName("adg.b")
-	public class540 field9525;
+	public LocType field9525;
 
 	@ObfuscatedName("adg.x")
 	public class903 field9527;
@@ -150,7 +150,7 @@ public class class797 extends class399 {
 		int var1 = this.field9536;
 		boolean var2 = this.field9537;
 		if (this.field9525 != null) {
-			class540 var3 = this.field9525.method11431(client.field8988 == 0 ? class144.field1538 : Statics.field2669);
+			LocType var3 = this.field9525.method11431(client.field8988 == 0 ? class144.field1538 : Statics.field2669);
 			if (var3 == null) {
 				this.field9536 = -1;
 				this.field9537 = false;
@@ -217,7 +217,7 @@ public class class797 extends class399 {
 	}
 
 	@ObfuscatedName("acn.s(IIIILtg;Lahs;Lahg;I)V")
-	public static void method14954(int arg0, int arg1, int arg2, int arg3, class540 arg4, class903 arg5, class902 arg6) {
+	public static void method14954(int arg0, int arg1, int arg2, int arg3, LocType arg4, class903 arg5, class902 arg6) {
 		class797 var7 = new class797();
 		var7.field9517 = arg0;
 		var7.field9518 = arg1 << 9;
@@ -286,7 +286,7 @@ public class class797 extends class399 {
 	}
 
 	@ObfuscatedName("z.c(IIILtg;I)V")
-	public static void method1370(int arg0, int arg1, int arg2, class540 arg3) {
+	public static void method1370(int arg0, int arg1, int arg2, LocType arg3) {
 		for (class797 var4 = (class797) field9514.method11563(); var4 != null; var4 = (class797) field9514.method11567()) {
 			if (var4.field9517 == arg0 && arg1 << 9 == var4.field9518 && arg2 << 9 == var4.field9519 && var4.field9525.field6474 == arg3.field6474) {
 				if (var4.field9540 != null) {
@@ -334,7 +334,7 @@ public class class797 extends class399 {
 	public static void method1807(class902 arg0) {
 		class797 var1 = (class797) field9516.method11923((long) arg0.field8593);
 		if (var1 == null) {
-			method14954(arg0.field9807, arg0.field8642[0], arg0.field8643[0], 0, null, null, arg0);
+			method14954(arg0.level, arg0.field8642[0], arg0.field8643[0], 0, null, null, arg0);
 		} else {
 			var1.method15106();
 		}
@@ -433,7 +433,7 @@ public class class797 extends class399 {
 			var5.field9547 = (int) var12.field3475 + (var5.field9527.method13954() << 8);
 			var5.field9519 = (int) var12.field3477;
 			var5.field9521 = (int) var12.field3477 + (var5.field9527.method13954() << 8);
-			var5.field9517 = var5.field9527.field9807;
+			var5.field9517 = var5.field9527.level;
 			method4977(var5, arg0, arg1, arg2, arg3);
 		}
 		for (class797 var13 = (class797) field9516.method11928(); var13 != null; var13 = (class797) field9516.method11929()) {
@@ -479,7 +479,7 @@ public class class797 extends class399 {
 			var13.field9547 = (int) var19.field3475 + (var13.field9513.method13954() << 8);
 			var13.field9519 = (int) var19.field3477;
 			var13.field9521 = (int) var19.field3477 + (var13.field9513.method13954() << 8);
-			var13.field9517 = var13.field9513.field9807;
+			var13.field9517 = var13.field9513.level;
 			method4977(var13, arg0, arg1, arg2, arg3);
 		}
 	}
@@ -490,7 +490,7 @@ public class class797 extends class399 {
 			return;
 		}
 		int var5 = 0;
-		int var6 = arg0.field9546 * 512 * Statics.field4961.field9672.method15899() >> 8;
+		int var6 = arg0.field9546 * 512 * Statics.preferences.field9672.method15899() >> 8;
 		if (arg2 > arg0.field9547) {
 			var5 += arg2 - arg0.field9547;
 		} else if (arg2 < arg0.field9518) {
@@ -501,7 +501,7 @@ public class class797 extends class399 {
 		} else if (arg3 < arg0.field9519) {
 			var5 += arg0.field9519 - arg3;
 		}
-		if (arg0.field9523 == 0 || var5 - 256 > arg0.field9523 || Statics.field4961.field9672.method15899() == 0 || arg0.field9517 != arg1) {
+		if (arg0.field9523 == 0 || var5 - 256 > arg0.field9523 || Statics.preferences.field9672.method15899() == 0 || arg0.field9517 != arg1) {
 			if (arg0.field9540 != null) {
 				Statics.field4201.method16445(arg0.field9540);
 				arg0.field9540 = null;
@@ -529,7 +529,7 @@ public class class797 extends class399 {
 		if (var9 > 0 && var7 > 0) {
 			var8 = (var7 - var9) * var6 / var7;
 		}
-		Statics.field2119.method13954();
+		Statics.localPlayerEntity.method13954();
 		int var10 = 8192;
 		int var11 = (arg0.field9547 + arg0.field9518) / 2 - arg2;
 		int var12 = (arg0.field9521 + arg0.field9519) / 2 - arg3;

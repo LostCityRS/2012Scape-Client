@@ -23,9 +23,9 @@ public class class663 extends class972 implements Location {
 	@ObfuscatedName("yf.w")
 	public boolean field7573 = true;
 
-	public class663(class423 arg0, class14 arg1, class541 arg2, class540 arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11, int arg12) {
+	public class663(Scene arg0, class14 arg1, LocTypeList arg2, LocType arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11, int arg12) {
 		super(arg0, arg6, arg7, arg8, arg4, arg5, method12063(arg10, arg11));
-		this.field7576 = new class116(arg1, arg2, arg3, arg10, arg11, this.field9807, arg5, this, arg9, arg12);
+		this.field7576 = new class116(arg1, arg2, arg3, arg10, arg11, this.level, arg5, this, arg9, arg12);
 		this.field7577 = arg3.field6493 != 0 && !arg9;
 		this.method15642(1);
 	}

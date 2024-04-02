@@ -11,9 +11,9 @@ public abstract class class971 extends class836 {
 	@ObfuscatedName("akv.x")
 	public short field10497;
 
-	public class971(class423 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
+	public class971(Scene arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
 		super(arg0);
-		this.field9807 = (byte) arg4;
+		this.level = (byte) arg4;
 		this.field9809 = (byte) arg5;
 		this.field10496 = (short) arg6;
 		this.field10497 = (short) arg7;

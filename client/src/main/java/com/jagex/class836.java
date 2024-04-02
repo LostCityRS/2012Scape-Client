@@ -6,13 +6,13 @@ import deob.ObfuscatedName;
 public abstract class class836 extends class486 {
 
 	@ObfuscatedName("aes.z")
-	public class423 field9808;
+	public Scene field9808;
 
 	@ObfuscatedName("aes.n")
 	public class836 field9806;
 
 	@ObfuscatedName("aes.o")
-	public byte field9807;
+	public byte level;
 
 	@ObfuscatedName("aes.q")
 	public byte field9809;
@@ -23,7 +23,7 @@ public abstract class class836 extends class486 {
 	@ObfuscatedName("aes.w")
 	public class142[] field9811;
 
-	public class836(class423 arg0) {
+	public class836(Scene arg0) {
 		this.field9808 = arg0;
 	}
 
@@ -34,7 +34,7 @@ public abstract class class836 extends class486 {
 
 	@ObfuscatedName("aes.fi(II[Lacg;I)I")
 	public int method15637(int arg0, int arg1, class780[] arg2) {
-		long var4 = this.field9808.field4526[this.field9807][arg0][arg1];
+		long var4 = this.field9808.field4526[this.level][arg0][arg1];
 		long var6 = 0L;
 		int var8 = 0;
 		while (var6 <= 48L) {

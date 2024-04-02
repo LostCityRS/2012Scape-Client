@@ -8,9 +8,9 @@ public abstract class class970 extends class836 {
 	@ObfuscatedName("akm.b")
 	public short field10495;
 
-	public class970(class423 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
+	public class970(Scene arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
 		super(arg0);
-		this.field9807 = (byte) arg4;
+		this.level = (byte) arg4;
 		this.field9809 = (byte) arg5;
 		this.field10495 = (short) arg6;
 		this.method8551(new Vector3((float) arg1, (float) arg2, (float) arg3));

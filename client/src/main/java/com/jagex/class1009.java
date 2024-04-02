@@ -72,7 +72,7 @@ public class class1009 extends class974 {
 	@ObfuscatedName("alv.ak")
 	public int field10639 = 0;
 
-	public class1009(class423 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, int arg13, boolean arg14, int arg15, int arg16) {
+	public class1009(Scene arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, int arg13, boolean arg14, int arg15, int arg16) {
 		super(arg0, arg2, arg3, arg4, client.method8663(arg4, arg5, arg2) - arg6, arg5, arg4 >> 9, arg4 >> 9, arg5 >> 9, arg5 >> 9, false, (byte) 0);
 		this.field10630 = arg1;
 		this.field10625 = arg7;
@@ -130,7 +130,7 @@ public class class1009 extends class974 {
 				var5.field3477 += (float) this.field10635 * var7 / var8;
 			}
 			if (this.field10619) {
-				var5.field3476 = client.method8663((int) var5.field3475, (int) var5.field3477, this.field9807) - this.field10628;
+				var5.field3476 = client.method8663((int) var5.field3475, (int) var5.field3477, this.level) - this.field10628;
 			}
 			this.method8551(var5);
 		}
@@ -160,7 +160,7 @@ public class class1009 extends class974 {
 		} else if (this.field10624 < 0) {
 			int var2 = -this.field10624 - 1;
 			if (client.field9071 == var2) {
-				var1 = Statics.field2119;
+				var1 = Statics.localPlayerEntity;
 			} else {
 				var1 = client.field9070[var2];
 			}
@@ -175,7 +175,7 @@ public class class1009 extends class974 {
 			return;
 		}
 		Vector3 var5 = var1.method8565().field3464;
-		this.method8552(var5.field3475, (float) (client.method8663((int) var5.field3475, (int) var5.field3477, this.field9807) - this.field10628), var5.field3477);
+		this.method8552(var5.field3475, (float) (client.method8663((int) var5.field3475, (int) var5.field3477, this.level) - this.field10628), var5.field3477);
 		if (this.field10627 < 0) {
 			return;
 		}
@@ -217,7 +217,7 @@ public class class1009 extends class974 {
 		var2.field3464.field3475 = (float) ((double) var2.field3464.field3475 + (double) arg0 * this.field10618);
 		var2.field3464.field3477 = (float) ((double) var2.field3464.field3477 + (double) arg0 * this.field10631);
 		if (this.field10619) {
-			var2.field3464.field3476 = client.method8663((int) var2.field3464.field3475, (int) var2.field3464.field3477, this.field9807) - this.field10628;
+			var2.field3464.field3476 = client.method8663((int) var2.field3464.field3475, (int) var2.field3464.field3477, this.level) - this.field10628;
 		} else if (this.field10623 == -1) {
 			var2.field3464.field3476 = (float) ((double) var2.field3464.field3476 + (double) arg0 * this.field10633);
 		} else {
@@ -289,7 +289,7 @@ public class class1009 extends class974 {
 		}
 		if (this.field10632 != null) {
 			this.field10632.method8106(arg0, (long) client.field9213, var4, var5, false);
-			this.field10632.method8110(this.field9807, this.field10510, this.field10508, this.field10509, this.field10511);
+			this.field10632.method8110(this.level, this.field10510, this.field10508, this.field10509, this.field10511);
 		}
 	}
 

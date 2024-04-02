@@ -274,7 +274,7 @@ public class class465 {
 	}
 
 	@ObfuscatedName("qo.a(Loo;Lra;J)V")
-	public void method8071(class423 arg0, class14 arg1, long arg2) {
+	public void method8071(Scene arg0, class14 arg1, long arg2) {
 		for (class991 var5 = (class991) this.field4904.method11649(); var5 != null; var5 = (class991) this.field4904.method11644()) {
 			var5.method16987(arg0, arg1, arg2);
 		}

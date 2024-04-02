@@ -46,18 +46,18 @@ public class class470 {
 		this.method8202();
 	}
 
-	public class470(Packet arg0, class469 arg1) {
+	public class470(Packet arg0, EnvironmentManager arg1) {
 		this.method8205(arg0, arg1);
 	}
 
 	@ObfuscatedName("qf.u(I)V")
 	public void method8202() {
-		this.field4991 = class469.field4983;
+		this.field4991 = EnvironmentManager.field4983;
 		this.field4990 = Vector3.method5294(-50.0F, -60.0F, -50.0F);
 		this.field4987 = 1.1523438F;
 		this.field4988 = 0.69921875F;
 		this.field4996 = 1.2F;
-		this.field4989 = class469.field4982;
+		this.field4989 = EnvironmentManager.field4982;
 		this.field4997 = 0;
 		this.field4993 = Statics.field4971;
 		this.field4992 = 1.0F;
@@ -113,11 +113,11 @@ public class class470 {
 	}
 
 	@ObfuscatedName("qf.s(Laet;Lqp;I)V")
-	public void method8205(Packet arg0, class469 arg1) {
+	public void method8205(Packet arg0, EnvironmentManager arg1) {
 		int var3 = arg0.g1();
-		if (Statics.field4961.field9650.method15667() == 1 && Statics.field5187.method768() > 0) {
+		if (Statics.preferences.field9650.method15667() == 1 && Statics.toolkit.method768() > 0) {
 			if ((var3 & 0x1) == 0) {
-				this.field4991 = class469.field4983;
+				this.field4991 = EnvironmentManager.field4983;
 			} else {
 				this.field4991 = arg0.g4s();
 			}
@@ -149,7 +149,7 @@ public class class470 {
 			if ((var3 & 0x8) != 0) {
 				arg0.g2();
 			}
-			this.field4991 = class469.field4983;
+			this.field4991 = EnvironmentManager.field4983;
 			this.field4996 = 1.2F;
 			this.field4988 = 0.69921875F;
 			this.field4987 = 1.1523438F;
@@ -160,7 +160,7 @@ public class class470 {
 			this.field4990 = Vector3.method5294((float) arg0.g2s(), (float) arg0.g2s(), (float) arg0.g2s());
 		}
 		if ((var3 & 0x20) == 0) {
-			this.field4989 = class469.field4982;
+			this.field4989 = EnvironmentManager.field4982;
 		} else {
 			this.field4989 = arg0.g4s();
 		}
@@ -190,7 +190,7 @@ public class class470 {
 	}
 
 	@ObfuscatedName("qf.m(Laet;Lqp;I)V")
-	public void method8207(Packet arg0, class469 arg1) {
+	public void method8207(Packet arg0, EnvironmentManager arg1) {
 		int var3 = arg0.g2();
 		int var4 = arg0.g2s();
 		int var5 = arg0.g2s();

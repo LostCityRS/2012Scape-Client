@@ -47,8 +47,8 @@ public class class308 implements class310 {
 
 	@ObfuscatedName("ki.t(B)V")
 	public void method5006() {
-		if (Statics.field5187 != this.field3418) {
-			this.field3418 = Statics.field5187;
+		if (Statics.toolkit != this.field3418) {
+			this.field3418 = Statics.toolkit;
 			this.field3419 = true;
 		}
 		this.field3418.method505(3, 0);
@@ -101,7 +101,7 @@ public class class308 implements class310 {
 		class118 var2 = (class118) field3415.method7916((long) arg1);
 		if (var2 == null) {
 			if (Statics.field5109) {
-				var2 = Statics.field5187.method517(class125.method2598(arg0, arg1), true);
+				var2 = Statics.toolkit.method517(class125.method2598(arg0, arg1), true);
 			} else {
 				var2 = Statics.method1604(arg0.method5635(arg1));
 			}

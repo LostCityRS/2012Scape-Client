@@ -4,13 +4,13 @@ import deob.ObfuscatedName;
 import java.util.Arrays;
 
 @ObfuscatedName("tg")
-public class class540 {
+public class LocType {
 
 	@ObfuscatedName("tg.j")
 	public static short[] field6530 = new short[256];
 
 	@ObfuscatedName("tg.a")
-	public class541 field6473;
+	public LocTypeList field6473;
 
 	@ObfuscatedName("tg.s")
 	public int field6474;
@@ -241,7 +241,7 @@ public class class540 {
 	public boolean field6472 = false;
 
 	@ObfuscatedName("tg.u(Laet;I)V")
-	public void method11408(Packet arg0) {
+	public void decode(Packet arg0) {
 		while (true) {
 			int var2 = arg0.g1();
 			if (var2 == 0) {
@@ -527,7 +527,7 @@ public class class540 {
 	}
 
 	@ObfuscatedName("tg.a(B)V")
-	public void method11410() {
+	public void postDecode() {
 		if (this.field6493 == -1) {
 			this.field6493 = 0;
 			if (this.field6475 != null && this.field6475.length == 1 && class542.field6572.field6590 == this.field6475[0]) {
@@ -921,7 +921,7 @@ public class class540 {
 	}
 
 	@ObfuscatedName("tg.f(Lug;B)Ltg;")
-	public final class540 method11431(class567 arg0) {
+	public final LocType method11431(class567 arg0) {
 		int var2 = -1;
 		if (this.field6528 != -1) {
 			var2 = arg0.method1646(this.field6528);
@@ -963,7 +963,7 @@ public class class540 {
 		}
 		for (int var1 = 0; var1 < this.field6534.length; var1++) {
 			if (this.field6534[var1] != -1) {
-				class540 var2 = this.field6473.method11471(this.field6534[var1]);
+				LocType var2 = this.field6473.method11471(this.field6534[var1]);
 				if (var2.field6547 != -1 || var2.field6484 != null) {
 					return true;
 				}
