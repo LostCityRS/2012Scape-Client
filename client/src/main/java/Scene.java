@@ -242,7 +242,7 @@ public class Scene {
 	}
 
 	@ObfuscatedName("oo.j(Ll;I)V")
-	public void method7403(class15 arg0) {
+	public void method7403(FontType arg0) {
 	}
 
 	@ObfuscatedName("oo.a(ZI)V")
@@ -682,7 +682,7 @@ public class Scene {
 	}
 
 	@ObfuscatedName("oo.ar(IIILoj;B)Laku;")
-	public PrimaryLayerEntity method7430(int arg0, int arg1, int arg2, class426 arg3) {
+	public PrimaryLayerEntity method7430(int arg0, int arg1, int arg2, PrimaryLayerEntityPredicate arg3) {
 		Tile var5 = this.field4497[arg0][arg1][arg2];
 		if (var5 == null) {
 			return null;
@@ -797,7 +797,7 @@ public class Scene {
 	}
 
 	@ObfuscatedName("oo.al(IIILoj;I)Laku;")
-	public PrimaryLayerEntity method7437(int arg0, int arg1, int arg2, class426 arg3) {
+	public PrimaryLayerEntity method7437(int arg0, int arg1, int arg2, PrimaryLayerEntityPredicate arg3) {
 		Tile var5 = this.field4497[arg0][arg1][arg2];
 		if (var5 == null) {
 			return null;
@@ -1025,7 +1025,7 @@ public class Scene {
 			this.field4533 = this.field4496;
 			this.field4493.field4613 = false;
 		}
-		class466.method3619(this, this.field4489);
+		ParticleSystemRenderer.method3619(this, this.field4489);
 		if (!this.field4541.field4473) {
 			Iterator var34 = this.field4541.field4471.iterator();
 			while (var34.hasNext()) {

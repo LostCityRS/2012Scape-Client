@@ -45,7 +45,7 @@ public class class641 extends GlTexture {
 	}
 
 	@ObfuscatedName("xl.ag(II)Lde;")
-	public class136 method12780(int arg0, int arg1) {
+	public GraphicsDeletable method12780(int arg0, int arg1) {
 		return new class97(this, arg0, arg1);
 	}
 }

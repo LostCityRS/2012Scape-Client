@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("agk")
-public class class886 extends class665 {
+public class class886 extends PureJavaSprite {
 
 	@ObfuscatedName("agk.at")
 	public int[] field9915;
@@ -60,7 +60,7 @@ public class class886 extends class665 {
 	}
 
 	@ObfuscatedName("agk.k()Lde;")
-	public class136 method1049() {
+	public GraphicsDeletable method1049() {
 		return new class71(this.field7590, this.field7599, this.field9915);
 	}
 

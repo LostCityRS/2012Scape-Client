@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afq")
-public class ClientOptionsIdleAnimations extends class537 {
+public class ClientOptionsIdleAnimations extends ClientOption {
 
 	public ClientOptionsIdleAnimations(ClientOptions arg0) {
 		super(arg0);

@@ -107,53 +107,53 @@ public class HitmarkType {
 	}
 
 	@ObfuscatedName("po.s(Lra;B)Lce;")
-	public class118 method7794(RendererToolkit arg0) {
+	public Sprite method7794(RendererToolkit arg0) {
 		if (this.field4746 < 0) {
 			return null;
 		}
-		class118 var2 = (class118) this.field4754.field4759.method7916((long) this.field4746);
+		Sprite var2 = (Sprite) this.field4754.field4759.method7916((long) this.field4746);
 		if (var2 == null) {
 			this.method7798(arg0);
-			var2 = (class118) this.field4754.field4759.method7916((long) this.field4746);
+			var2 = (Sprite) this.field4754.field4759.method7916((long) this.field4746);
 		}
 		return var2;
 	}
 
 	@ObfuscatedName("po.c(Lra;B)Lce;")
-	public class118 method7796(RendererToolkit arg0) {
+	public Sprite method7796(RendererToolkit arg0) {
 		if (this.field4747 < 0) {
 			return null;
 		}
-		class118 var2 = (class118) this.field4754.field4759.method7916((long) this.field4747);
+		Sprite var2 = (Sprite) this.field4754.field4759.method7916((long) this.field4747);
 		if (var2 == null) {
 			this.method7798(arg0);
-			var2 = (class118) this.field4754.field4759.method7916((long) this.field4747);
+			var2 = (Sprite) this.field4754.field4759.method7916((long) this.field4747);
 		}
 		return var2;
 	}
 
 	@ObfuscatedName("po.m(Lra;I)Lce;")
-	public class118 method7797(RendererToolkit arg0) {
+	public Sprite method7797(RendererToolkit arg0) {
 		if (this.field4748 < 0) {
 			return null;
 		}
-		class118 var2 = (class118) this.field4754.field4759.method7916((long) this.field4748);
+		Sprite var2 = (Sprite) this.field4754.field4759.method7916((long) this.field4748);
 		if (var2 == null) {
 			this.method7798(arg0);
-			var2 = (class118) this.field4754.field4759.method7916((long) this.field4748);
+			var2 = (Sprite) this.field4754.field4759.method7916((long) this.field4748);
 		}
 		return var2;
 	}
 
 	@ObfuscatedName("po.t(Lra;B)Lce;")
-	public class118 method7804(RendererToolkit arg0) {
+	public Sprite method7804(RendererToolkit arg0) {
 		if (this.field4749 < 0) {
 			return null;
 		}
-		class118 var2 = (class118) this.field4754.field4759.method7916((long) this.field4749);
+		Sprite var2 = (Sprite) this.field4754.field4759.method7916((long) this.field4749);
 		if (var2 == null) {
 			this.method7798(arg0);
-			var2 = (class118) this.field4754.field4759.method7916((long) this.field4749);
+			var2 = (Sprite) this.field4754.field4759.method7916((long) this.field4749);
 		}
 		return var2;
 	}

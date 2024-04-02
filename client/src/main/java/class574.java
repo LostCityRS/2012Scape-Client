@@ -176,7 +176,7 @@ public class class574 {
 			}
 			return var4 - var5;
 		} else if (arg2 == 2) {
-			return class522.method4794(arg0.method15615().field4860, arg1.method15615().field4860, Statics.field2308);
+			return StringComparator.method4794(arg0.method15615().field4860, arg1.method15615().field4860, Statics.field2308);
 		} else if (arg2 == 3) {
 			if (arg0.field9798.equals("-")) {
 				if (arg1.field9798.equals("-")) {
@@ -189,7 +189,7 @@ public class class574 {
 			} else if (arg1.field9798.equals("-")) {
 				return arg3 ? 1 : -1;
 			} else {
-				return class522.method4794(arg0.field9798, arg1.field9798, Statics.field2308);
+				return StringComparator.method4794(arg0.field9798, arg1.field9798, Statics.field2308);
 			}
 		} else if (arg2 == 4) {
 			return arg0.method8036() ? (arg1.method8036() ? 0 : 1) : (arg1.method8036() ? -1 : 0);

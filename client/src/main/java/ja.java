@@ -426,24 +426,24 @@ public class ja extends RendererToolkit implements class10 {
 	}
 
 	@ObfuscatedName("ja.bb(IIZZ)Lce;")
-	public class118 method658(int arg0, int arg1, boolean arg2, boolean arg3) {
+	public Sprite method658(int arg0, int arg1, boolean arg2, boolean arg3) {
 		return new fa(this, arg0, arg1, arg3);
 	}
 
 	@ObfuscatedName("ja.be([IIIIIZ)Lce;")
-	public class118 method513(int[] arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+	public Sprite method513(int[] arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
 		return new fa(this, arg0, arg1, arg2, arg3, arg4, false);
 	}
 
 	@ObfuscatedName("ja.bo(Lds;Z)Lce;")
-	public class118 method517(SpriteData arg0, boolean arg1) {
+	public Sprite method517(SpriteData arg0, boolean arg1) {
 		fa var3 = new fa(this, arg0.method2735(false), 0, arg0.method2721(), arg0.method2721(), arg0.method2763(), false);
 		var3.method1036(arg0.method2722(), arg0.method2724(), arg0.method2732(), arg0.method2734());
 		return var3;
 	}
 
 	@ObfuscatedName("ja.bh(IIIIZ)Lce;")
-	public class118 method508(int arg0, int arg1, int arg2, int arg3, boolean arg4) {
+	public Sprite method508(int arg0, int arg1, int arg2, int arg3, boolean arg4) {
 		return new fa(this, arg0, arg1, arg2, arg3, !arg4);
 	}
 
@@ -453,7 +453,7 @@ public class ja extends RendererToolkit implements class10 {
 	}
 
 	@ObfuscatedName("ja.co(Lvm;[Lzv;Z)Ll;")
-	public class15 method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
+	public FontType method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
 		int[] var4 = new int[arg1.length];
 		int[] var5 = new int[arg1.length];
 		boolean var6 = false;
@@ -646,12 +646,12 @@ public class ja extends RendererToolkit implements class10 {
 	}
 
 	@ObfuscatedName("ja.ob(II)Lde;")
-	public class136 method991(int arg0, int arg1) {
+	public GraphicsDeletable method991(int arg0, int arg1) {
 		return (fa) this.method658(arg0, arg1, false, true);
 	}
 
 	@ObfuscatedName("ja.aj(IILcy;Ldz;I)Lde;")
-	public class136 method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4) {
+	public GraphicsDeletable method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4) {
 		return this.method991(arg0, arg1);
 	}
 

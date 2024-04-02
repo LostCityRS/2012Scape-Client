@@ -2,11 +2,11 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("m")
-public class m extends class15 implements class10 {
+public class m extends FontType implements class10 {
 
 	public long nativeid;
 
-	public m(ja arg0, ba arg1, FontMetrics arg2, PalettedSpriteData[] arg3, class118[] arg4) {
+	public m(ja arg0, ba arg1, FontMetrics arg2, PalettedSpriteData[] arg3, Sprite[] arg4) {
 		super(arg0, arg2);
 		byte[][] var6 = new byte[arg3.length][];
 		int[] var7 = new int[arg3.length];

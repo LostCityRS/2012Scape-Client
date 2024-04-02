@@ -8,7 +8,7 @@ public abstract class ParticleShader {
 	public GpuToolkit field2274;
 
 	@ObfuscatedName("ft.j")
-	public class239 field2271;
+	public GpuTexture field2271;
 
 	@ObfuscatedName("ft.a")
 	public final Matrix4x4 field2273 = new Matrix4x4();

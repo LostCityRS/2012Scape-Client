@@ -7,14 +7,14 @@ import jagdx.IUnknown;
 import jagdx.class0;
 
 @ObfuscatedName("abw")
-public class class744 extends class743 implements class257 {
+public class class744 extends class743 implements GpuTextureRelated1 {
 
 	public class744(DxToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
 		super(arg0, arg1, arg2, arg3, arg4, 1025, 0);
 	}
 
 	@ObfuscatedName("abw.bf(I)Lde;")
-	public class136 method4534(int arg0) {
+	public GraphicsDeletable method4534(int arg0) {
 		return new class299(this, arg0);
 	}
 

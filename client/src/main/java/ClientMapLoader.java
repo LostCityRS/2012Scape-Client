@@ -43,13 +43,13 @@ public class ClientMapLoader extends MapLoader {
 			return;
 		}
 		boolean var5 = false;
-		class470 var6 = null;
+		Environment var6 = null;
 		while (true) {
 			while (arg1.field9626 < arg1.field9629.length) {
 				int var7 = arg1.method15220();
 				if (var7 == 0) {
 					if (var6 == null) {
-						var6 = new class470(arg1, this.field8883);
+						var6 = new Environment(arg1, this.field8883);
 					} else {
 						var6.method8205(arg1, this.field8883);
 					}
@@ -77,12 +77,12 @@ public class ClientMapLoader extends MapLoader {
 					}
 				} else if (var7 == 2) {
 					if (var6 == null) {
-						var6 = new class470();
+						var6 = new Environment();
 					}
 					var6.method8206(arg1);
 				} else if (var7 == 128) {
 					if (var6 == null) {
-						var6 = new class470();
+						var6 = new Environment();
 					}
 					var6.method8207(arg1, this.field8883);
 				} else if (var7 == 129) {
@@ -219,7 +219,7 @@ public class ClientMapLoader extends MapLoader {
 			return;
 		}
 		boolean var10 = false;
-		class470 var11 = null;
+		Environment var11 = null;
 		int var12 = (arg6 & 0x7) * 8;
 		int var13 = (arg7 & 0x7) * 8;
 		while (true) {
@@ -227,7 +227,7 @@ public class ClientMapLoader extends MapLoader {
 				int var14 = arg1.method15220();
 				if (var14 == 0) {
 					if (var11 == null) {
-						var11 = new class470(arg1, this.field8883);
+						var11 = new Environment(arg1, this.field8883);
 					} else {
 						var11.method8205(arg1, this.field8883);
 					}
@@ -259,12 +259,12 @@ public class ClientMapLoader extends MapLoader {
 					}
 				} else if (var14 == 2) {
 					if (var11 == null) {
-						var11 = new class470();
+						var11 = new Environment();
 					}
 					var11.method8206(arg1);
 				} else if (var14 == 128) {
 					if (var11 == null) {
-						var11 = new class470();
+						var11 = new Environment();
 					}
 					var11.method8207(arg1, this.field8883);
 				} else if (var14 == 129) {
@@ -538,7 +538,7 @@ public class ClientMapLoader extends MapLoader {
 		int var21 = (arg4 << 9) + (var13 << 8);
 		boolean var22 = this.field3632 && !this.field3644 && var11.field6496;
 		if (var11.method11443()) {
-			class797.method14954(arg2, arg3, arg4, arg6, var11, null, null);
+			PositionedSound.method14954(arg2, arg3, arg4, arg6, var11, null, null);
 		}
 		boolean var23 = arg9 == -1 && !var11.method11409() && var11.field6534 == null && !var11.field6544 && !var11.field6548;
 		if (field8895 && (class542.method2616(arg7) && var11.field6497 != 1 || !(!class542.method11327(arg7) || var11.field6497 != 0))) {
@@ -910,7 +910,7 @@ public class ClientMapLoader extends MapLoader {
 		int var9 = var7.method2390();
 		int var10 = var7.method2391();
 		if (var8.method11443()) {
-			class797.method1370(arg1, arg3, arg4, var8);
+			PositionedSound.method1370(arg1, arg3, arg4, var8);
 		}
 		if (var7.method2393()) {
 			var7.method2412(arg0);

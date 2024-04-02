@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("agi")
-public class ClientOptionsVolume extends class537 {
+public class ClientOptionsVolume extends ClientOption {
 
 	public ClientOptionsVolume(ClientOptions arg0) {
 		super(arg0);

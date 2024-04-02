@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ae")
-public class class71 implements class136 {
+public class class71 implements GraphicsDeletable {
 
 	@ObfuscatedName("ae.u")
 	public final int field934;

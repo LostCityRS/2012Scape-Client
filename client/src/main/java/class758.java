@@ -6,7 +6,7 @@ import java.io.IOException;
 public class class758 extends Js5TcpClient {
 
 	@ObfuscatedName("abs.b")
-	public class411 field8882;
+	public Stream field8882;
 
 	@ObfuscatedName("abs.m(I)V")
 	public void method5741() {
@@ -169,7 +169,7 @@ public class class758 extends Js5TcpClient {
 			}
 			this.field8882 = null;
 		}
-		this.field8882 = (class411) arg0;
+		this.field8882 = (Stream) arg0;
 		this.method14261();
 		this.method5744(arg1);
 		this.field3590.field9626 = 0;

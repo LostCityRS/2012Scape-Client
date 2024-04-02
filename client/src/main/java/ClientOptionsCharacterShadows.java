@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afx")
-public class ClientOptionsCharacterShadows extends class537 {
+public class ClientOptionsCharacterShadows extends ClientOption {
 
 	public ClientOptionsCharacterShadows(ClientOptions arg0) {
 		super(arg0);

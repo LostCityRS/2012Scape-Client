@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afm")
-public class ClientOptionsWaterDetail extends class537 {
+public class ClientOptionsWaterDetail extends ClientOption {
 
 	public ClientOptionsWaterDetail(ClientOptions arg0) {
 		super(arg0);

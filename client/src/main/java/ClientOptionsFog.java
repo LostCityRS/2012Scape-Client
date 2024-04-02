@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afd")
-public class ClientOptionsFog extends class537 {
+public class ClientOptionsFog extends ClientOption {
 
 	public ClientOptionsFog(ClientOptions arg0) {
 		super(arg0);

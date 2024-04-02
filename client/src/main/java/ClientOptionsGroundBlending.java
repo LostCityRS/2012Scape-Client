@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afj")
-public class ClientOptionsGroundBlending extends class537 {
+public class ClientOptionsGroundBlending extends ClientOption {
 
 	public ClientOptionsGroundBlending(ClientOptions arg0) {
 		super(arg0);

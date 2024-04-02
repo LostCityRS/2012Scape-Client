@@ -21,7 +21,7 @@ public class class56 {
 	public boolean field743 = false;
 
 	@ObfuscatedName("as.c")
-	public class118[] field739;
+	public Sprite[] field739;
 
 	@ObfuscatedName("as.m")
 	public int[] field744;
@@ -47,7 +47,7 @@ public class class56 {
 
 	public class56(RendererToolkit arg0, int arg1, boolean arg2, Component arg3) {
 		this.field743 = false;
-		this.field739 = new class118[256];
+		this.field739 = new Sprite[256];
 		this.field744 = new int[256];
 		Font var5 = new Font("Helvetica", arg2 ? 1 : 0, arg1);
 		FontMetrics var6 = arg3.getFontMetrics(var5);

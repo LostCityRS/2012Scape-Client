@@ -20,7 +20,7 @@ public class class702 extends CutsceneAction {
 	public class702(Packet arg0) {
 		super(arg0);
 		this.field8493 = arg0.method15239();
-		this.field8495 = new int[class365.method2553().length];
+		this.field8495 = new int[MoveSpeed.method2553().length];
 		this.field8492 = arg0.method15411();
 		Arrays.fill(this.field8495, 0, this.field8495.length, this.field8492);
 		this.field8494 = arg0.method15379();
@@ -38,7 +38,7 @@ public class class702 extends CutsceneAction {
 
 	@ObfuscatedName("zh.s(B)Z")
 	public boolean method2883() {
-		class509 var1 = Statics.field566.method11144(this.field8492);
+		SeqType var1 = Statics.field566.method11144(this.field8492);
 		return var1.method11129();
 	}
 }

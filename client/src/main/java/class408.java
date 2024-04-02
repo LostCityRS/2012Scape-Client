@@ -791,7 +791,7 @@ public class class408 {
 			int var9 = var8.field6508;
 			if (var9 != -1) {
 				class608 var10 = Statics.field4268.method12491(var9);
-				class118 var11 = var10.method12484(arg0, var8.field6509 ? arg6[var7] >> 6 & 0x3 : 0, var8.field6511 ? var8.field6486 : false);
+				Sprite var11 = var10.method12484(arg0, var8.field6509 ? arg6[var7] >> 6 & 0x3 : 0, var8.field6511 ? var8.field6486 : false);
 				if (var11 != null) {
 					int var12 = arg3 * var11.method1042() >> 2;
 					int var13 = arg4 * var11.method1047() >> 2;

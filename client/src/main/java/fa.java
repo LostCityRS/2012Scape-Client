@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("fa")
-public class fa extends class118 implements class10, class136 {
+public class fa extends Sprite implements class10, GraphicsDeletable {
 
 	public long nativeid;
 
@@ -74,7 +74,7 @@ public class fa extends class118 implements class10, class136 {
 	}
 
 	@ObfuscatedName("fa.k()Lde;")
-	public class136 method1049() {
+	public GraphicsDeletable method1049() {
 		return this.field470 ? this : null;
 	}
 

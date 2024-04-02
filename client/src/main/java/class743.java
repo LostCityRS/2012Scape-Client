@@ -5,7 +5,7 @@ import jagdx.IDirect3DTexture;
 import java.nio.ByteBuffer;
 
 @ObfuscatedName("abu")
-public class class743 extends class300 implements class239 {
+public class class743 extends class300 implements GpuTexture {
 
 	@ObfuscatedName("abu.m")
 	public final int field8806;

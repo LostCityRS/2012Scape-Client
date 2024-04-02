@@ -335,7 +335,7 @@ public final class GlxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahv.aj(IILcy;Ldz;I)Lde;")
-	public class136 method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4) {
+	public GraphicsDeletable method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4) {
 		return new class351(this, arg2, arg3, arg0, arg1, arg4);
 	}
 
@@ -587,12 +587,12 @@ public final class GlxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahv.qc(Lcy;Ldz;II)Lhc;")
-	public class239 method13550(class124 arg0, class139 arg1, int arg2, int arg3) {
+	public GpuTexture method13550(class124 arg0, class139 arg1, int arg2, int arg3) {
 		return this.method13542(arg0, arg1, arg2, arg3);
 	}
 
 	@ObfuscatedName("ahv.qh(IIZ[III)Lhc;")
-	public class239 method13552(int arg0, int arg1, boolean arg2, int[] arg3, int arg4, int arg5) {
+	public GpuTexture method13552(int arg0, int arg1, boolean arg2, int[] arg3, int arg4, int arg5) {
 		if (this.field10006 || class595.method11258(arg0) && class595.method11258(arg1)) {
 			return new class745(this, arg0, arg1, arg2, arg3, arg4, arg5);
 		} else if (this.field10025) {
@@ -605,7 +605,7 @@ public final class GlxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahv.qj(Lcy;IIZ[BII)Lhc;")
-	public class239 method13599(class124 arg0, int arg1, int arg2, boolean arg3, byte[] arg4, int arg5, int arg6) {
+	public GpuTexture method13599(class124 arg0, int arg1, int arg2, boolean arg3, byte[] arg4, int arg5, int arg6) {
 		if (this.field10006 || class595.method11258(arg1) && class595.method11258(arg2)) {
 			return new class745(this, arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 		} else if (this.field10025) {
@@ -618,7 +618,7 @@ public final class GlxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahv.qz(Lcy;IIZ[FII)Lhc;")
-	public class239 method13630(class124 arg0, int arg1, int arg2, boolean arg3, float[] arg4, int arg5, int arg6) {
+	public GpuTexture method13630(class124 arg0, int arg1, int arg2, boolean arg3, float[] arg4, int arg5, int arg6) {
 		if (this.field10006 || class595.method11258(arg1) && class595.method11258(arg2)) {
 			return new class745(this, arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 		} else if (this.field10025) {
@@ -631,7 +631,7 @@ public final class GlxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahv.qy(Lcy;Ldz;II)Lii;")
-	public class257 method13542(class124 arg0, class139 arg1, int arg2, int arg3) {
+	public GpuTextureRelated1 method13542(class124 arg0, class139 arg1, int arg2, int arg3) {
 		if (this.field10006 || class595.method11258(arg2) && class595.method11258(arg3)) {
 			return new class745(this, arg0, arg1, arg2, arg3);
 		} else if (this.field10025) {

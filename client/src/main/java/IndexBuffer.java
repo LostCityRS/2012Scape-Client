@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("in")
-public interface IndexBuffer extends GpuBuffer, DeleteableResource {
+public interface IndexBuffer extends GpuBuffer, DeletableResource {
 
 	@ObfuscatedName("in.s()V")
 	void method168();

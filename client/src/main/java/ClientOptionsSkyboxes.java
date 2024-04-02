@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afb")
-public class ClientOptionsSkyboxes extends class537 {
+public class ClientOptionsSkyboxes extends ClientOption {
 
 	public ClientOptionsSkyboxes(ClientOptions arg0) {
 		super(arg0);

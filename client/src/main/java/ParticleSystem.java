@@ -57,11 +57,11 @@ public class ParticleSystem {
 
 	@ObfuscatedName("qw.u(IZ)Lqw;")
 	public static ParticleSystem method8123(int arg0, boolean arg1) {
-		if (class466.field4928 == class466.field4923) {
+		if (ParticleSystemRenderer.field4928 == ParticleSystemRenderer.field4923) {
 			return new ParticleSystem(arg0, arg1);
 		} else {
-			ParticleSystem var2 = Statics.field4927[class466.field4923];
-			class466.field4923 = class466.field4923 + 1 & class130.field1351[class466.field4929];
+			ParticleSystem var2 = Statics.field4927[ParticleSystemRenderer.field4923];
+			ParticleSystemRenderer.field4923 = ParticleSystemRenderer.field4923 + 1 & class130.field1351[ParticleSystemRenderer.field4929];
 			var2.method8099(arg0, arg1);
 			return var2;
 		}
@@ -228,7 +228,7 @@ public class ParticleSystem {
 					this.field4932--;
 					if (var5.method6982()) {
 						var5.method6979();
-						class466.field4920--;
+						ParticleSystemRenderer.field4920--;
 					}
 				}
 			}
@@ -236,10 +236,10 @@ public class ParticleSystem {
 				for (int var7 = 0; var7 < arg0.length && var7 != 8 && this.field4932 != 8; var7++) {
 					if (!field4946[var7]) {
 						class811 var8 = null;
-						if (arg0[var7].method2534().field2760 == 1 && class466.field4920 < 32) {
+						if (arg0[var7].method2534().field2760 == 1 && ParticleSystemRenderer.field4920 < 32) {
 							var8 = new class811(arg0[var7], this);
-							class466.field4924.method11927(var8, (long) arg0[var7].field1243);
-							class466.field4920++;
+							ParticleSystemRenderer.field4924.method11927(var8, (long) arg0[var7].field1243);
+							ParticleSystemRenderer.field4920++;
 						}
 						if (var8 == null) {
 							var8 = new class811(arg0[var7], this);

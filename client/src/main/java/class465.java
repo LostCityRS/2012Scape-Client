@@ -17,7 +17,7 @@ public class class465 {
 	public int field4912 = 0;
 
 	@ObfuscatedName("qo.c")
-	public class548 field4904;
+	public LinkQueue field4904;
 
 	@ObfuscatedName("qo.m")
 	public int field4903;
@@ -69,7 +69,7 @@ public class class465 {
 		if (!arg0.method765() && this.field4901.field2672 != -1) {
 			this.field4901 = class273.method2841(this.field4901.field2672);
 		}
-		this.field4904 = new class548();
+		this.field4904 = new LinkQueue();
 		this.field4912 = (int) ((double) this.field4912 + Math.random() * 64.0D);
 		this.method8069();
 		this.field4909.field4948 = this.field4908.field4948;
@@ -114,9 +114,9 @@ public class class465 {
 	public void method8070(RendererToolkit arg0, long arg1, int arg2, boolean arg3) {
 		if (this.field4907) {
 			arg3 = false;
-		} else if (class466.field4929 < this.field4901.field2722) {
+		} else if (ParticleSystemRenderer.field4929 < this.field4901.field2722) {
 			arg3 = false;
-		} else if (class466.field4926 > class130.field1356[class466.field4929]) {
+		} else if (ParticleSystemRenderer.field4926 > class130.field1356[ParticleSystemRenderer.field4929]) {
 			arg3 = false;
 		} else if (this.field4917) {
 			arg3 = false;
@@ -235,11 +235,11 @@ public class class465 {
 						var48 = -1;
 					}
 					class991 var49;
-					if (class466.field4922 == class466.field4921) {
+					if (ParticleSystemRenderer.field4922 == ParticleSystemRenderer.field4921) {
 						var49 = new class991(this, var39, var40, var41, var24, var25, var26, var42, var43, var47, var44, var48, this.field4901.field2715, this.field4901.field2718);
 					} else {
-						var49 = Statics.field4919[class466.field4922];
-						class466.field4922 = class466.field4922 + 1 & 0x3FF;
+						var49 = Statics.field4919[ParticleSystemRenderer.field4922];
+						ParticleSystemRenderer.field4922 = ParticleSystemRenderer.field4922 + 1 & 0x3FF;
 						var49.method16973(this, var39, var40, var41, var24, var25, var26, var42, var43, var47, var44, var48, this.field4901.field2715, this.field4901.field2718);
 					}
 					if (var22 > 256) {
@@ -268,7 +268,7 @@ public class class465 {
 			this.field4908.field4957 = this.field4909.field4957;
 			this.field4908.field4958 = this.field4909.field4958;
 		}
-		class466.field4925 += this.field4903;
+		ParticleSystemRenderer.field4925 += this.field4903;
 	}
 
 	@ObfuscatedName("qo.a(Loo;Lra;J)V")

@@ -20,7 +20,7 @@ public class PlayerEntity extends PathingEntity {
 	public byte field10043 = 0;
 
 	@ObfuscatedName("ahg.cq")
-	public class471 field10044;
+	public PlayerModel field10044;
 
 	@ObfuscatedName("ahg.co")
 	public int field10045 = -1;
@@ -212,7 +212,7 @@ public class PlayerEntity extends PathingEntity {
 		int var25 = this.field10039;
 		this.field10039 = arg0.method15220();
 		if (this.field10039 == 0) {
-			class797.method7377(this);
+			PositionedSound.method7377(this);
 		} else {
 			int var26 = this.field10054;
 			int var27 = this.field10059;
@@ -225,11 +225,11 @@ public class PlayerEntity extends PathingEntity {
 			this.field10057 = arg0.method15239();
 			this.field10060 = arg0.method15220();
 			if (this.field10051 != var3 || this.field10039 != var25 || this.field10054 != var26 || this.field10059 != var27 || this.field10056 != var28 || this.field10057 != var29 || this.field10060 != var30) {
-				class797.method1807(this);
+				PositionedSound.method1807(this);
 			}
 		}
 		if (this.field10044 == null) {
-			this.field10044 = new class471();
+			this.field10044 = new PlayerModel();
 		}
 		int var31 = this.field10044.field5006;
 		int[] var32 = this.field10044.field5000;
@@ -291,7 +291,7 @@ public class PlayerEntity extends PathingEntity {
 			BASType var9 = this.method13959();
 			if (var9.field4714 && (this.field10044.field5006 == -1 || Statics.field3774.method12565(this.field10044.field5006).field7249)) {
 				AnimationNode var10 = this.field8597.method11767() && this.field8597.method11776() ? this.field8597 : null;
-				class874 var11 = this.field8616.method11767() && (!this.field8616.field9899 || var10 == null) ? this.field8616 : null;
+				EntityWalkAnimationNode var11 = this.field8616.method11767() && (!this.field8616.field9899 || var10 == null) ? this.field8616 : null;
 				Model var12 = class48.method1417(arg0, var5, this.field8601, this.field8644, this.field8603, 1, this.field8651[0], 0, 0, 160, 240, var11 == null ? var10 : var11);
 				if (var12 != null) {
 					if (this.field9811 == null || this.field9811.length < this.field8651.length + 1) {
@@ -307,12 +307,12 @@ public class PlayerEntity extends PathingEntity {
 		}
 		if (Statics.field2119 == this) {
 			for (int var13 = client.field8936.length - 1; var13 >= 0; var13--) {
-				class60 var14 = client.field8936[var13];
+				HintArrow var14 = client.field8936[var13];
 				if (var14 != null && var14.field779 != -1) {
 					if (var14.field776 == 1) {
 						ObjectNode var15 = (ObjectNode) client.field8964.method11923((long) var14.field772);
 						if (var15 != null) {
-							class903 var16 = (class903) var15.field9550;
+							NpcEntity var16 = (NpcEntity) var15.field9550;
 							Vector3 var17 = Vector3.method5377(var16.method8565().field3464, Statics.field2119.method8565().field3464);
 							int var18 = (int) var17.field3475;
 							int var19 = (int) var17.field3477;
@@ -388,7 +388,7 @@ public class PlayerEntity extends PathingEntity {
 			return;
 		}
 		int var13 = (int) (Math.atan2((double) arg3, (double) arg4) * 2607.5945876176133D - (double) this.field8638.method1387()) & 0x3FFF;
-		Model var14 = class60.method8588(arg0, var13, this.field8601, this.field8644, this.field8603, arg5);
+		Model var14 = HintArrow.method8588(arg0, var13, this.field8601, this.field8644, this.field8603, arg5);
 		if (var14 != null) {
 			arg0.method526(false);
 			var14.method271(arg1, null, 0);
@@ -401,7 +401,7 @@ public class PlayerEntity extends PathingEntity {
 		int var3 = arg1;
 		BASType var4 = this.method13959();
 		AnimationNode var5 = this.field8597.method11767() && !this.field8597.method11776() ? this.field8597 : null;
-		class874 var6 = !this.field8616.method11767() || this.field10050 || this.field8616.field9899 && var5 != null ? null : this.field8616;
+		EntityWalkAnimationNode var6 = !this.field8616.method11767() || this.field10050 || this.field8616.field9899 && var5 != null ? null : this.field8616;
 		int var7 = var4.field4712;
 		int var8 = var4.field4713;
 		if (var7 != 0 || var8 != 0 || var4.field4725 != 0 || var4.field4728 != 0) {
@@ -413,7 +413,7 @@ public class PlayerEntity extends PathingEntity {
 			arg1 |= 0x80000;
 		}
 		Model var11 = this.field8651[0] = this.field10044.method8244(arg0, arg1, Statics.field3769, Statics.field7650, Statics.field3774, Statics.field3492, Statics.field566, Statics.field2669, var5, var6, this.field8633, this.field8654, var9, true, Statics.field3226);
-		int var12 = class471.method3503();
+		int var12 = PlayerModel.method3503();
 		if (GameShell.field4152 < 96 && var12 > 50) {
 			class59.method16899();
 		}
@@ -502,8 +502,8 @@ public class PlayerEntity extends PathingEntity {
 		if (arg0 < 0 || arg0 >= client.field8980.method6220() || arg1 < 0 || arg1 >= client.field8980.method6193()) {
 			this.method16123(arg0, arg1);
 		} else if (this.field8642[0] >= 0 && this.field8642[0] < client.field8980.method6220() && this.field8643[0] >= 0 && this.field8643[0] < client.field8980.method6193()) {
-			if (class365.field3922.field3924 == arg2) {
-				client.method6031(this, arg0, arg1, class365.field3922.field3924);
+			if (MoveSpeed.field3922.field3924 == arg2) {
+				client.method6031(this, arg0, arg1, MoveSpeed.field3922.field3924);
 			}
 			this.method16124(arg0, arg1, arg2);
 		} else {
@@ -607,7 +607,7 @@ public class PlayerEntity extends PathingEntity {
 	}
 
 	@ObfuscatedName("ahg.cs(S)Lcd;")
-	public class117 method13963() {
+	public EntityChatLine method13963() {
 		if (this.field8629 != null) {
 			if (this.field8629.field1232 == null) {
 				return null;

@@ -258,12 +258,12 @@ public abstract class RendererToolkit {
 	}
 
 	@ObfuscatedName("ra.bm(IIZI)Lce;")
-	public class118 method777(int arg0, int arg1, boolean arg2) {
+	public Sprite method777(int arg0, int arg1, boolean arg2) {
 		return this.method658(arg0, arg1, arg2, false);
 	}
 
 	@ObfuscatedName("ra.bw([IIIIIB)Lce;")
-	public class118 method506(int[] arg0, int arg1, int arg2, int arg3, int arg4) {
+	public Sprite method506(int[] arg0, int arg1, int arg2, int arg3, int arg4) {
 		return this.method513(arg0, arg1, arg2, arg3, arg4, true);
 	}
 
@@ -340,7 +340,7 @@ public abstract class RendererToolkit {
 	public abstract class674 method467();
 
 	@ObfuscatedName("ra.aj(IILcy;Ldz;I)Lde;")
-	public abstract class136 method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4);
+	public abstract GraphicsDeletable method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4);
 
 	@ObfuscatedName("ra.db(Z)V")
 	public abstract void method471(boolean arg0);
@@ -394,10 +394,10 @@ public abstract class RendererToolkit {
 	public abstract void method505(int arg0, int arg1);
 
 	@ObfuscatedName("ra.bh(IIIIZ)Lce;")
-	public abstract class118 method508(int arg0, int arg1, int arg2, int arg3, boolean arg4);
+	public abstract Sprite method508(int arg0, int arg1, int arg2, int arg3, boolean arg4);
 
 	@ObfuscatedName("ra.be([IIIIIZ)Lce;")
-	public abstract class118 method513(int[] arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
+	public abstract Sprite method513(int[] arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
 
 	@ObfuscatedName("ra.dj(IIII)V")
 	public abstract void method514(int arg0, int arg1, int arg2, int arg3);
@@ -406,7 +406,7 @@ public abstract class RendererToolkit {
 	public abstract Matrix4x3 method516();
 
 	@ObfuscatedName("ra.bo(Lds;Z)Lce;")
-	public abstract class118 method517(SpriteData arg0, boolean arg1);
+	public abstract Sprite method517(SpriteData arg0, boolean arg1);
 
 	@ObfuscatedName("ra.cn(II)I")
 	public abstract int method519(int arg0, int arg1);
@@ -508,7 +508,7 @@ public abstract class RendererToolkit {
 	public abstract void method653(int arg0, int arg1) throws class881;
 
 	@ObfuscatedName("ra.bb(IIZZ)Lce;")
-	public abstract class118 method658(int arg0, int arg1, boolean arg2, boolean arg3);
+	public abstract Sprite method658(int arg0, int arg1, boolean arg2, boolean arg3);
 
 	@ObfuscatedName("ra.r(IIII)V")
 	public abstract void method659(int arg0, int arg1, int arg2, int arg3);
@@ -523,7 +523,7 @@ public abstract class RendererToolkit {
 	public abstract int[] method691(int arg0, int arg1, int arg2, int arg3);
 
 	@ObfuscatedName("ra.co(Lvm;[Lzv;Z)Ll;")
-	public abstract class15 method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2);
+	public abstract FontType method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2);
 
 	@ObfuscatedName("ra.cp(Ldp;)V")
 	public abstract void method733(ParticleList arg0);

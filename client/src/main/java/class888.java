@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("agr")
-public class class888 extends class665 {
+public class class888 extends PureJavaSprite {
 
 	@ObfuscatedName("agr.at")
 	public byte[] field9917;
@@ -27,7 +27,7 @@ public class class888 extends class665 {
 	}
 
 	@ObfuscatedName("agr.k()Lde;")
-	public class136 method1049() {
+	public GraphicsDeletable method1049() {
 		throw new IllegalStateException();
 	}
 

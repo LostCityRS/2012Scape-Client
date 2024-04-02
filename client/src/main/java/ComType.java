@@ -302,7 +302,7 @@ public class ComType {
 	public boolean field1860 = false;
 
 	@ObfuscatedName("ew.dw")
-	public class785 field1841 = class785.field9419;
+	public ServerKeyProperties field1841 = ServerKeyProperties.field9419;
 
 	@ObfuscatedName("ew.di")
 	public boolean field1842 = false;
@@ -817,7 +817,7 @@ public class ComType {
 		this.field1859 = arg0.method15220();
 		this.field1914 = arg0.method15337();
 		int var21 = -1;
-		if (class785.method15568(var7) != 0) {
+		if (ServerKeyProperties.method15568(var7) != 0) {
 			var21 = arg0.method15239();
 			if (var21 == 65535) {
 				var21 = -1;
@@ -837,7 +837,7 @@ public class ComType {
 				this.field1786 = -1;
 			}
 		}
-		this.field1841 = new class785(var7, var21);
+		this.field1841 = new ServerKeyProperties(var7, var21);
 		if (var2 >= 0) {
 			int var22 = arg0.method15220();
 			for (int var23 = 0; var23 < var22; var23++) {
@@ -915,10 +915,10 @@ public class ComType {
 	}
 
 	@ObfuscatedName("ew.n(Lra;I)Lce;")
-	public class118 method3151(RendererToolkit arg0) {
+	public Sprite method3151(RendererToolkit arg0) {
 		field1761 = false;
 		long var2 = ((this.field1803 ? 1L : 0L) << 39) + ((long) this.field1800 << 36) + ((this.field1804 ? 1L : 0L) << 35) + (long) this.field1797 + ((this.field1770 ? 1L : 0L) << 38) + ((long) this.field1801 << 40);
-		class118 var4 = (class118) field1757.method7916(var2);
+		Sprite var4 = (Sprite) field1757.method7916(var2);
 		if (var4 != null) {
 			return var4;
 		}
@@ -947,14 +947,14 @@ public class ComType {
 		if (this.field1801 != 0) {
 			var5.method2731(this.field1801 | 0xFF000000);
 		}
-		class118 var6 = arg0.method517(var5, true);
+		Sprite var6 = arg0.method517(var5, true);
 		field1757.method7918(var6, var2, var6.method1061() * var6.method1045() * 4);
 		return var6;
 	}
 
 	@ObfuscatedName("ew.o(Lje;Ljd;I)Ll;")
-	public class15 method3116(class292 arg0, FontFactory arg1) {
-		class15 var3 = (class15) arg0.method4859(arg1, this.field1793, false, this.field1833);
+	public FontType method3116(class292 arg0, FontFactory arg1) {
+		FontType var3 = (FontType) arg0.method4859(arg1, this.field1793, false, this.field1833);
 		field1761 = var3 == null;
 		return var3;
 	}
@@ -967,7 +967,7 @@ public class ComType {
 	}
 
 	@ObfuscatedName("ew.p(Lra;ILpn;Lgq;Lwi;Lvj;Lst;Lug;Ltt;Lqc;I)Lqa;")
-	public Model method3174(RendererToolkit arg0, int arg1, BASTypeList arg2, class205 arg3, NPCTypeList arg4, ObjTypeList arg5, class510 arg6, VarIntDomain arg7, AnimationNode arg8, class471 arg9) {
+	public Model method3174(RendererToolkit arg0, int arg1, BASTypeList arg2, class205 arg3, NPCTypeList arg4, ObjTypeList arg5, class510 arg6, VarIntDomain arg7, AnimationNode arg8, PlayerModel arg9) {
 		field1761 = false;
 		if (this.field1806 == 0) {
 			return null;
@@ -1215,9 +1215,9 @@ public class ComType {
 	}
 
 	@ObfuscatedName("ew.e(Lra;B)Les;")
-	public class163 method3124(RendererToolkit arg0) {
+	public Graphic method3124(RendererToolkit arg0) {
 		long var2 = (long) this.field1764 << 32 | (long) this.field1765 & 0xFFFFFFFFL;
-		class163 var4 = (class163) field1768.method7916(var2);
+		Graphic var4 = (Graphic) field1768.method7916(var2);
 		if (var4 != null) {
 			if (this.field1797 != var4.field1731) {
 				field1768.method7917(var2);
@@ -1257,7 +1257,7 @@ public class ComType {
 		if (var15 == null) {
 			return null;
 		} else {
-			class163 var16 = new class163(var6, var7, var9, var8, var15, this.field1797);
+			Graphic var16 = new Graphic(var6, var7, var9, var8, var15, this.field1797);
 			field1768.method7937(var16, var2);
 			return var16;
 		}

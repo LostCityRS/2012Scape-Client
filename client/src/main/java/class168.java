@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("eo")
-public abstract class class168 implements DeleteableResource {
+public abstract class class168 implements DeletableResource {
 
 	@ObfuscatedName("eo.u")
 	public String field1940 = null;

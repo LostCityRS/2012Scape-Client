@@ -45,7 +45,7 @@ public class class29 extends class674 {
 	}
 
 	@ObfuscatedName("o.x(ILde;)V")
-	public void method1206(int arg0, class136 arg1) {
+	public void method1206(int arg0, GraphicsDeletable arg1) {
 		if (arg0 != 0) {
 			throw new RuntimeException();
 		} else if (this.field481 == null || arg1 == null || this.field481.method164() == arg1.method164() && this.field481.method165() == arg1.method165()) {

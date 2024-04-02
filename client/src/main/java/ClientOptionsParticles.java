@@ -2,16 +2,16 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afa")
-public class ClientOptionsParticles extends class537 {
+public class ClientOptionsParticles extends ClientOption {
 
 	public ClientOptionsParticles(ClientOptions arg0) {
 		super(arg0);
-		class466.method4754(this.field6461);
+		ParticleSystemRenderer.method4754(this.field6461);
 	}
 
 	public ClientOptionsParticles(int arg0, ClientOptions arg1) {
 		super(arg0, arg1);
-		class466.method4754(this.field6461);
+		ParticleSystemRenderer.method4754(this.field6461);
 	}
 
 	@ObfuscatedName("afa.z(I)V")
@@ -42,7 +42,7 @@ public class ClientOptionsParticles extends class537 {
 	@ObfuscatedName("afa.s(II)V")
 	public void method11389(int arg0) {
 		this.field6461 = arg0;
-		class466.method4754(this.field6461);
+		ParticleSystemRenderer.method4754(this.field6461);
 	}
 
 	@ObfuscatedName("afa.o(I)I")

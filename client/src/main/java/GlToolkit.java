@@ -337,7 +337,7 @@ public class GlToolkit extends RendererToolkit {
 	public class679 field8187;
 
 	@ObfuscatedName("yq.fb")
-	public class885 field8204;
+	public GlGraphicRelated field8204;
 
 	@ObfuscatedName("yq.fw")
 	public String field8036;
@@ -961,7 +961,7 @@ public class GlToolkit extends RendererToolkit {
 		float var10;
 		float var11;
 		if (this.field8204 == null || this.field8204.field7440 < arg2 || this.field8204.field7441 < arg3) {
-			this.field8204 = class885.method15975(this, class124.field1297, class139.field1501, arg2, arg3, false, arg6, class124.field1297);
+			this.field8204 = GlGraphicRelated.method15975(this, class124.field1297, class139.field1501, arg2, arg3, false, arg6, class124.field1297);
 			this.field8204.method12765(false, false);
 			var10 = this.field8204.field9911;
 			var11 = this.field8204.field9912;
@@ -1184,7 +1184,7 @@ public class GlToolkit extends RendererToolkit {
 	@ObfuscatedName("yq.bn(IIIIIILta;II)V")
 	public void method440(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class11 arg6, int arg7, int arg8) {
 		class669 var10 = (class669) arg6;
-		class885 var11 = var10.field7651;
+		GlGraphicRelated var11 = var10.field7651;
 		this.method13309();
 		this.method13315(var10.field7651);
 		this.method13327(arg5);
@@ -1213,7 +1213,7 @@ public class GlToolkit extends RendererToolkit {
 			return;
 		}
 		class669 var13 = (class669) arg6;
-		class885 var14 = var13.field7651;
+		GlGraphicRelated var14 = var13.field7651;
 		this.method13309();
 		this.method13315(var13.field7651);
 		this.method13327(arg5);
@@ -1433,26 +1433,26 @@ public class GlToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yq.bb(IIZZ)Lce;")
-	public class118 method658(int arg0, int arg1, boolean arg2, boolean arg3) {
-		return new class666(this, arg0, arg1, arg2);
+	public Sprite method658(int arg0, int arg1, boolean arg2, boolean arg3) {
+		return new GlSprite(this, arg0, arg1, arg2);
 	}
 
 	@ObfuscatedName("yq.bo(Lds;Z)Lce;")
-	public class118 method517(SpriteData arg0, boolean arg1) {
+	public Sprite method517(SpriteData arg0, boolean arg1) {
 		int[] var3 = arg0.method2735(false);
-		class118 var4 = this.method506(var3, 0, arg0.method2721(), arg0.method2721(), arg0.method2763());
+		Sprite var4 = this.method506(var3, 0, arg0.method2721(), arg0.method2721(), arg0.method2763());
 		var4.method1036(arg0.method2722(), arg0.method2724(), arg0.method2732(), arg0.method2734());
 		return var4;
 	}
 
 	@ObfuscatedName("yq.be([IIIIIZ)Lce;")
-	public class118 method513(int[] arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
-		return new class666(this, arg3, arg4, arg0, arg1, arg2);
+	public Sprite method513(int[] arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+		return new GlSprite(this, arg3, arg4, arg0, arg1, arg2);
 	}
 
 	@ObfuscatedName("yq.bh(IIIIZ)Lce;")
-	public class118 method508(int arg0, int arg1, int arg2, int arg3, boolean arg4) {
-		return new class666(this, arg0, arg1, arg2, arg3);
+	public Sprite method508(int arg0, int arg1, int arg2, int arg3, boolean arg4) {
+		return new GlSprite(this, arg0, arg1, arg2, arg3);
 	}
 
 	@ObfuscatedName("yq.cq(II[I[I)Lta;")
@@ -1463,7 +1463,7 @@ public class GlToolkit extends RendererToolkit {
 	@ObfuscatedName("yq.DA(ILta;II)V")
 	public void method684(int arg0, class11 arg1, int arg2, int arg3) {
 		class669 var5 = (class669) arg1;
-		class885 var6 = var5.field7651;
+		GlGraphicRelated var6 = var5.field7651;
 		this.method13309();
 		this.method13315(var5.field7651);
 		this.method13327(1);
@@ -1486,7 +1486,7 @@ public class GlToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yq.co(Lvm;[Lzv;Z)Ll;")
-	public class15 method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
+	public FontType method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
 		return new class689(this, arg0, arg1, arg2);
 	}
 
@@ -2114,7 +2114,7 @@ public class GlToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yq.aj(IILcy;Ldz;I)Lde;")
-	public class136 method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4) {
+	public GraphicsDeletable method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4) {
 		return new class656(this, arg2, arg3, arg0, arg1, arg4);
 	}
 

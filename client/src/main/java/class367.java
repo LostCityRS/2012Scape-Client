@@ -44,7 +44,7 @@ public class class367 {
 	public int field3966;
 
 	@ObfuscatedName("mh.x")
-	public class118 field3967;
+	public Sprite field3967;
 
 	@ObfuscatedName("mh.i")
 	public int field3968;

@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afv")
-public class ClientOptionsDrawDistance extends class537 {
+public class ClientOptionsDrawDistance extends ClientOption {
 
 	public ClientOptionsDrawDistance(ClientOptions arg0) {
 		super(arg0);

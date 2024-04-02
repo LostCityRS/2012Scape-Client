@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import jaggl.OpenGL;
 
 @ObfuscatedName("abl")
-public class class746 extends class347 implements class257 {
+public class class746 extends class347 implements GpuTextureRelated1 {
 
 	@ObfuscatedName("abl.p")
 	public final int field8815;
@@ -133,7 +133,7 @@ public class class746 extends class347 implements class257 {
 	}
 
 	@ObfuscatedName("abl.bf(I)Lde;")
-	public class136 method4534(int arg0) {
+	public GraphicsDeletable method4534(int arg0) {
 		return new class345(this, arg0);
 	}
 

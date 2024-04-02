@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afz")
-public class ClientOptionsSceneryShadows extends class537 {
+public class ClientOptionsSceneryShadows extends ClientOption {
 
 	public ClientOptionsSceneryShadows(ClientOptions arg0) {
 		super(arg0);

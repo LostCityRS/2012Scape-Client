@@ -22,7 +22,7 @@ public class class711 extends CutsceneAction {
 
 	@ObfuscatedName("aak.j(I)V")
 	public void method2873() {
-		class149 var1 = Statics.field1537[this.field8529];
+		CutsceneEntity var1 = Statics.field1537[this.field8529];
 		class151 var2 = Statics.field5181[this.field8528];
 		var2.method2891(var1, this.field8527);
 	}

@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aea")
-public class ClientOptionsLightingDetail extends class537 {
+public class ClientOptionsLightingDetail extends ClientOption {
 
 	public ClientOptionsLightingDetail(ClientOptions arg0) {
 		super(arg0);

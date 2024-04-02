@@ -56,10 +56,10 @@ public class ClientScriptState {
 	public class270 field5213;
 
 	@ObfuscatedName("rn.x")
-	public class218 field5226;
+	public ClanSettings field5226;
 
 	@ObfuscatedName("rn.i")
-	public class788 field5217;
+	public ClanChannel field5217;
 
 	@ObfuscatedName("rn.v")
 	public PathingEntity field5228;

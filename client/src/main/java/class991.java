@@ -224,7 +224,7 @@ public class class991 extends class914 {
 		}
 		if (var8.field2674 != null) {
 			for (int var57 = 0; var57 < var8.field2674.length; var57++) {
-				class811 var58 = (class811) class466.field4924.method11923((long) var8.field2674[var57]);
+				class811 var58 = (class811) ParticleSystemRenderer.field4924.method11923((long) var8.field2674[var57]);
 				while (var58 != null) {
 					class274 var59 = var58.field9602;
 					double var60 = (double) (var4 - var58.field9601);
@@ -232,7 +232,7 @@ public class class991 extends class914 {
 					double var64 = (double) (var6 - var58.field9599);
 					double var66 = var64 * var64 + var60 * var60 + var62 * var62;
 					if (var66 > (double) var59.field2771) {
-						var58 = (class811) class466.field4924.method11924();
+						var58 = (class811) ParticleSystemRenderer.field4924.method11924();
 					} else {
 						double var68 = Math.sqrt(var66);
 						if (var68 == 0.0D) {
@@ -240,7 +240,7 @@ public class class991 extends class914 {
 						}
 						double var70 = ((double) var58.field9605 * var64 + (double) var58.field9604 * var60 + (double) var59.field2763 * var62) * 65535.0D / ((double) var59.field2770 * var68);
 						if (var70 < (double) var59.field2772) {
-							var58 = (class811) class466.field4924.method11924();
+							var58 = (class811) ParticleSystemRenderer.field4924.method11924();
 						} else {
 							double var72 = 0.0D;
 							if (var59.field2759 == 1) {
@@ -272,7 +272,7 @@ public class class991 extends class914 {
 								this.field10146 = (int) ((double) this.field10146 + ((double) var59.field2763 - var72) * (double) arg1);
 								this.field10147 = (int) ((double) this.field10147 + ((double) var58.field9605 - var72) * (double) arg1);
 							}
-							var58 = (class811) class466.field4924.method11924();
+							var58 = (class811) ParticleSystemRenderer.field4924.method11924();
 						}
 					}
 				}
@@ -427,8 +427,8 @@ public class class991 extends class914 {
 	@ObfuscatedName("akp.f()V")
 	public void method16977() {
 		this.field10561.field4902.field4933[this.field10558] = null;
-		Statics.field4919[class466.field4921] = this;
-		class466.field4921 = class466.field4921 + 1 & 0x3FF;
+		Statics.field4919[ParticleSystemRenderer.field4921] = this;
+		ParticleSystemRenderer.field4921 = ParticleSystemRenderer.field4921 + 1 & 0x3FF;
 		this.method6975();
 		this.method14730();
 	}

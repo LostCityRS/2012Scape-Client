@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aft")
-public class ClientOptionsLoadingScreen extends class537 {
+public class ClientOptionsLoadingScreen extends ClientOption {
 
 	public ClientOptionsLoadingScreen(ClientOptions arg0) {
 		super(arg0);

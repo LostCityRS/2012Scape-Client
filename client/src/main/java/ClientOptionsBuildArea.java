@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afk")
-public class ClientOptionsBuildArea extends class537 {
+public class ClientOptionsBuildArea extends ClientOption {
 
 	public ClientOptionsBuildArea(ClientOptions arg0) {
 		super(arg0);

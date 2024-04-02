@@ -73,7 +73,7 @@ public class class987 extends class891 {
 	}
 
 	@ObfuscatedName("akh.x(ILde;)V")
-	public void method1206(int arg0, class136 arg1) {
+	public void method1206(int arg0, GraphicsDeletable arg1) {
 		int var3 = 0x1 << arg0;
 		class304 var4 = (class304) arg1;
 		if (arg1 == null) {

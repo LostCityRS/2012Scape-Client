@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afr")
-public class ClientOptionsAntiAliasing extends class537 {
+public class ClientOptionsAntiAliasing extends ClientOption {
 
 	public ClientOptionsAntiAliasing(ClientOptions arg0) {
 		super(arg0);

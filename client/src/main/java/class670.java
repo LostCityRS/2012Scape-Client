@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class670 extends class11 {
 
 	@ObfuscatedName("yv.u")
-	public final class239 field7652;
+	public final GpuTexture field7652;
 
 	public class670(GpuToolkit arg0, int arg1, int arg2, byte[] arg3) {
 		this.field7652 = arg0.method13549(class124.field1297, arg1, arg2, false, arg3);

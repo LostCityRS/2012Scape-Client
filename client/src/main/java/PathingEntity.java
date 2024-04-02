@@ -41,7 +41,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 	public int field8604;
 
 	@ObfuscatedName("aay.y")
-	public class117 field8629;
+	public EntityChatLine field8629;
 
 	@ObfuscatedName("aay.e")
 	public byte field8606;
@@ -62,7 +62,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 	public int[] field8623;
 
 	@ObfuscatedName("aay.ag")
-	public class548 field8612;
+	public LinkQueue field8612;
 
 	@ObfuscatedName("aay.as")
 	public int field8624;
@@ -74,7 +74,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 	public int[] field8615;
 
 	@ObfuscatedName("aay.al")
-	public class874 field8616;
+	public EntityWalkAnimationNode field8616;
 
 	@ObfuscatedName("aay.at")
 	public AnimationNode field8597;
@@ -125,7 +125,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 	public int field8618;
 
 	@ObfuscatedName("aay.bq")
-	public final class977[] field8633;
+	public final UnknownEntityAnimationNode[] field8633;
 
 	@ObfuscatedName("aay.bz")
 	public int[] field8654;
@@ -205,10 +205,10 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 		this.field8609 = new int[Statics.field4825.field5147];
 		this.field8610 = new int[Statics.field4825.field5147];
 		this.field8623 = new int[Statics.field4825.field5147];
-		this.field8612 = new class548();
+		this.field8612 = new LinkQueue();
 		this.field8624 = -1;
 		this.field8615 = null;
-		this.field8616 = new class874(this, false);
+		this.field8616 = new EntityWalkAnimationNode(this, false);
 		this.field8597 = new EntityAnimationNode(this, false);
 		this.field8626 = -1;
 		this.field8632 = -1;
@@ -235,7 +235,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 		for (int var3 = 0; var3 < 4; var3++) {
 			this.field8641[var3] = new class115(this);
 		}
-		this.field8633 = new class977[Statics.field3226.field5171.length];
+		this.field8633 = new UnknownEntityAnimationNode[Statics.field3226.field5171.length];
 	}
 
 	public PathingEntity(Scene arg0) {
@@ -484,7 +484,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 			if (arg0 == var8) {
 				EffectAnimType var9 = Statics.field4213.method11082(arg0);
 				if (var9.field5264 && var9.field5252 != -1) {
-					class509 var10 = Statics.field566.method11144(var9.field5252);
+					SeqType var10 = Statics.field566.method11144(var9.field5252);
 					int var11 = var10.field6331;
 					if (var11 == 0) {
 						return;
@@ -498,8 +498,8 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 				EffectAnimType var12 = Statics.field4213.method11082(arg0);
 				EffectAnimType var13 = Statics.field4213.method11082(var8);
 				if (var12.field5252 != -1 && var13.field5252 != -1) {
-					class509 var14 = Statics.field566.method11144(var12.field5252);
-					class509 var15 = Statics.field566.method11144(var13.field5252);
+					SeqType var14 = Statics.field566.method11144(var12.field5252);
+					SeqType var15 = Statics.field566.method11144(var13.field5252);
 					if (var14.field6325 < var15.field6325) {
 						return;
 					}
@@ -595,12 +595,12 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 
 	@ObfuscatedName("aay.x(IIIIIII)V")
 	public final void method13944(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
-		class416 var7 = Statics.field6705.method7334(arg0);
-		class767 var8 = null;
-		class767 var9 = null;
+		HeadbarType var7 = Statics.field6705.method7334(arg0);
+		Headbar var8 = null;
+		Headbar var9 = null;
 		int var10 = var7.field4442;
 		int var11 = 0;
-		for (class767 var12 = (class767) this.field8612.method11649(); var12 != null; var12 = (class767) this.field8612.method11644()) {
+		for (Headbar var12 = (Headbar) this.field8612.method11649(); var12 != null; var12 = (Headbar) this.field8612.method11644()) {
 			var11++;
 			if (var12.field9268 == var7) {
 				var12.method14733(arg1 + arg3, arg4, arg5, arg2);
@@ -617,11 +617,11 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 		if (var9 == null && var11 >= Statics.field4825.field5160) {
 			return;
 		}
-		class767 var13 = new class767(var7);
+		Headbar var13 = new Headbar(var7);
 		if (var8 == null) {
 			this.field8612.method11641(var13);
 		} else {
-			class548.method1968(var13, var8);
+			LinkQueue.method1968(var13, var8);
 		}
 		var13.method14733(arg1 + arg3, arg4, arg5, arg2);
 		if (var11 >= Statics.field4825.field5160) {
@@ -631,8 +631,8 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 
 	@ObfuscatedName("aay.i(II)V")
 	public final void method13990(int arg0) {
-		class416 var2 = Statics.field6705.method7334(arg0);
-		for (class767 var3 = (class767) this.field8612.method11649(); var3 != null; var3 = (class767) this.field8612.method11644()) {
+		HeadbarType var2 = Statics.field6705.method7334(arg0);
+		for (Headbar var3 = (Headbar) this.field8612.method11649(); var3 != null; var3 = (Headbar) this.field8612.method11644()) {
 			if (var3.field9268 == var2) {
 				var3.method6975();
 				return;
@@ -863,7 +863,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 	@ObfuscatedName("aay.cr(Ljava/lang/String;IIII)V")
 	public void method13998(String arg0, int arg1, int arg2, int arg3) {
 		if (this.field8629 == null) {
-			this.field8629 = new class117();
+			this.field8629 = new EntityChatLine();
 		}
 		this.field8629.field1232 = arg0;
 		this.field8629.field1233 = arg1;
@@ -945,7 +945,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 	public abstract int method13961();
 
 	@ObfuscatedName("aay.cs(S)Lcd;")
-	public abstract class117 method13963();
+	public abstract EntityChatLine method13963();
 
 	@ObfuscatedName("aay.dk(S)I")
 	public abstract int method13970();

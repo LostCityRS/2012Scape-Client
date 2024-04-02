@@ -6,7 +6,7 @@ import java.io.IOException;
 public class ServerConnection {
 
 	@ObfuscatedName("ad.j")
-	public class411 field827;
+	public Stream field827;
 
 	@ObfuscatedName("ad.a")
 	public IterableQueue field829 = new IterableQueue();
@@ -121,7 +121,7 @@ public class ServerConnection {
 	}
 
 	@ObfuscatedName("ad.c(Lov;Ljava/lang/String;I)V")
-	public void method1911(class411 arg0, String arg1) {
+	public void method1911(Stream arg0, String arg1) {
 		this.field827 = arg0;
 		this.field847.method1233(arg1);
 	}
@@ -142,7 +142,7 @@ public class ServerConnection {
 	}
 
 	@ObfuscatedName("ad.l(I)Lov;")
-	public class411 method1927() {
+	public Stream method1927() {
 		return this.field827;
 	}
 }

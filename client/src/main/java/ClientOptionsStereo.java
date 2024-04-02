@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afu")
-public class ClientOptionsStereo extends class537 {
+public class ClientOptionsStereo extends ClientOption {
 
 	public ClientOptionsStereo(ClientOptions arg0) {
 		super(arg0);

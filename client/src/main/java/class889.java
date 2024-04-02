@@ -34,7 +34,7 @@ public class class889 extends class674 {
 	}
 
 	@ObfuscatedName("age.x(ILde;)V")
-	public void method1206(int arg0, class136 arg1) {
+	public void method1206(int arg0, GraphicsDeletable arg1) {
 		if (arg0 != 0) {
 			throw new RuntimeException();
 		}

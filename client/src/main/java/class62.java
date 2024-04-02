@@ -66,7 +66,7 @@ public class class62 {
 		for (int var0 = 0; var0 < Statics.field792.length; var0++) {
 			Statics.field792[var0] = "";
 		}
-		method1958(class588.field6975.method12206(Statics.field2308));
+		method1958(LocalisedText.field6975.method12206(Statics.field2308));
 	}
 
 	@ObfuscatedName("aji.s(S)V")
@@ -392,7 +392,7 @@ public class class62 {
 				return;
 			}
 		} catch (Exception var33) {
-			method1958(class588.field6867.method12206(Statics.field2308));
+			method1958(LocalisedText.field6867.method12206(Statics.field2308));
 			return;
 		}
 		if (Statics.field6683 != ModeWhere.field6368 || client.field9074 >= 2) {
@@ -603,12 +603,12 @@ public class class62 {
 					var26.method1913(var27);
 				}
 			} catch (Exception var32) {
-				method1958(class588.field6867.method12206(Statics.field2308));
+				method1958(LocalisedText.field6867.method12206(Statics.field2308));
 				return;
 			}
 		}
 		if (client.field8923 != 1 && client.field8923 != 15) {
-			method1958(class588.field6894.method12206(Statics.field2308) + arg0);
+			method1958(LocalisedText.field6894.method12206(Statics.field2308) + arg0);
 		}
 	}
 
@@ -702,7 +702,7 @@ public class class62 {
 					client.field8980.method6102();
 				}
 			} catch (Exception var13) {
-				method1958(class588.field6867.method12206(Statics.field2308));
+				method1958(LocalisedText.field6867.method12206(Statics.field2308));
 			}
 		}
 	}
@@ -713,7 +713,7 @@ public class class62 {
 			Statics.field8656.method6053(new RebuildRequest(RebuildType.field3842, null));
 		} else {
 			client.field8980.method6102();
-			class58.method7992();
+			MiniMap.method7992();
 		}
 	}
 }

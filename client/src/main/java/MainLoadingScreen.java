@@ -95,8 +95,8 @@ public class MainLoadingScreen implements LoadingScreen {
 	}
 
 	@ObfuscatedName("g.j(Lls;II)Lce;")
-	public static class118 method1624(Js5 arg0, int arg1) {
-		class118 var2 = (class118) field3415.method7916((long) arg1);
+	public static Sprite method1624(Js5 arg0, int arg1) {
+		Sprite var2 = (Sprite) field3415.method7916((long) arg1);
 		if (var2 == null) {
 			if (Statics.field5109) {
 				var2 = Statics.field5187.method517(SpriteDataProvider.method2598(arg0, arg1), true);

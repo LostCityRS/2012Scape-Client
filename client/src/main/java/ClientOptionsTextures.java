@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afg")
-public class ClientOptionsTextures extends class537 {
+public class ClientOptionsTextures extends ClientOption {
 
 	public ClientOptionsTextures(ClientOptions arg0) {
 		super(arg0);

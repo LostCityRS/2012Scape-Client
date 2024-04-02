@@ -23,11 +23,11 @@ public class class417 {
 	}
 
 	@ObfuscatedName("ow.u(IB)Loe;")
-	public class416 method7334(int arg0) {
+	public HeadbarType method7334(int arg0) {
 		WeightedCache var2 = this.field4453;
-		class416 var3;
+		HeadbarType var3;
 		synchronized (this.field4453) {
-			var3 = (class416) this.field4453.method7916((long) arg0);
+			var3 = (HeadbarType) this.field4453.method7916((long) arg0);
 		}
 		if (var3 != null) {
 			return var3;
@@ -37,7 +37,7 @@ public class class417 {
 		synchronized (this.field4452) {
 			var6 = this.field4452.method5627(class161.field1680.field1668, arg0);
 		}
-		class416 var8 = new class416();
+		HeadbarType var8 = new HeadbarType();
 		var8.field4439 = this;
 		if (var6 != null) {
 			var8.method7302(new Packet(var6));

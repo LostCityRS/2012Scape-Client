@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afl")
-public class ClientOptionsBloom extends class537 {
+public class ClientOptionsBloom extends ClientOption {
 
 	public ClientOptionsBloom(ClientOptions arg0) {
 		super(arg0);

@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("dg")
-public interface class131 extends DeleteableResource {
+public interface class131 extends DeletableResource {
 
 	@ObfuscatedName("dg.a()I")
 	int method165();

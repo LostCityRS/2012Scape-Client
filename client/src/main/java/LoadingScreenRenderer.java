@@ -134,7 +134,7 @@ public class LoadingScreenRenderer implements Runnable {
 							int var9 = var7 << 24 | 0xFFFFFF;
 							client.method3536();
 							Statics.field5187.method505(1, 0);
-							class118 var10 = Statics.field5187.method777(Statics.field4125, Statics.field4677, true);
+							Sprite var10 = Statics.field5187.method777(Statics.field4125, Statics.field4677, true);
 							class674 var11 = Statics.field5187.method467();
 							var11.method1206(0, var10.method1049());
 							Statics.field5187.method464(var11);

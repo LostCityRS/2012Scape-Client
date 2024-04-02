@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afo")
-public class ClientOptionsMaxScreenSize extends class537 {
+public class ClientOptionsMaxScreenSize extends ClientOption {
 
 	public ClientOptionsMaxScreenSize(ClientOptions arg0) {
 		super(arg0);

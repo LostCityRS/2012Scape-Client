@@ -144,6 +144,6 @@ public final class IterableMap implements Iterable {
 	}
 
 	public Iterator iterator() {
-		return new class566(this);
+		return new IterableMapIterator(this);
 	}
 }

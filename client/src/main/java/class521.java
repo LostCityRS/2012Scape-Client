@@ -74,14 +74,14 @@ public class class521 {
 	}
 
 	@ObfuscatedName("jf.m(Lra;II)Lce;")
-	public static class118 method4742(RendererToolkit arg0, int arg1) {
+	public static Sprite method4742(RendererToolkit arg0, int arg1) {
 		class813 var2 = (class813) field6388.method11923((long) arg1);
 		if (var2 != null) {
 			class958 var3 = var2.field9618.method7029();
 			var2.field9620 = true;
 			if (var3 != null) {
 				field6390.field6386 = arg0;
-				return (class118) var3.method16817(field6390);
+				return (Sprite) var3.method16817(field6390);
 			}
 		}
 		return null;

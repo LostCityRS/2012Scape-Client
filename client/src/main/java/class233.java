@@ -19,14 +19,14 @@ public class class233 {
 	}
 
 	@ObfuscatedName("hm.u(I)Lhc;")
-	public class239 method4359(int arg0) {
+	public GpuTexture method4359(int arg0) {
 		return this.method4349(arg0, -1);
 	}
 
 	@ObfuscatedName("hm.j(II)Lhc;")
-	public class239 method4349(int arg0, int arg1) {
+	public GpuTexture method4349(int arg0, int arg1) {
 		long var3 = (long) (arg1 << 16 | arg0);
-		class239 var5 = (class239) this.field2448.method7916(var3);
+		GpuTexture var5 = (GpuTexture) this.field2448.method7916(var3);
 		if (var5 != null) {
 			return var5;
 		} else if (this.method4350(arg0, arg1)) {
@@ -34,7 +34,7 @@ public class class233 {
 			if (arg1 == -1) {
 				arg1 = var6.field1252;
 			}
-			class239 var8;
+			GpuTexture var8;
 			if (var6.field1245 && this.field2447.method600()) {
 				float[] var7 = this.field2446.method888(arg0, 0.7F, arg1, arg1, false);
 				var8 = this.field2447.method13697(class124.field1296, arg1, arg1, true, var7);

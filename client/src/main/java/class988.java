@@ -48,7 +48,7 @@ public class class988 extends class891 {
 	}
 
 	@ObfuscatedName("akc.x(ILde;)V")
-	public void method1206(int arg0, class136 arg1) {
+	public void method1206(int arg0, GraphicsDeletable arg1) {
 		int var3 = 0x1 << arg0;
 		class349 var4 = (class349) arg1;
 		if (arg1 == null) {

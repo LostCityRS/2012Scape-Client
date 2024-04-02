@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afi")
-public class ClientOptionsPreset extends class537 {
+public class ClientOptionsPreset extends ClientOption {
 
 	public ClientOptionsPreset(ClientOptions arg0) {
 		super(arg0);

@@ -169,7 +169,7 @@ public abstract class Camera {
 		if (LookatMode.field2165 == arg0) {
 			this.field2222 = new LookatEntity(this);
 		} else if (LookatMode.field2169 == arg0) {
-			this.field2222 = new class869(this);
+			this.field2222 = new LookatOrientation(this);
 		} else if (LookatMode.field2167 == arg0) {
 			this.field2222 = new LookatPoint(this);
 		} else if (LookatMode.field2164 == arg0) {

@@ -30,7 +30,7 @@ public class class234 {
 	public IndexBuffer field2458;
 
 	@ObfuscatedName("hq.z")
-	public class239 field2459;
+	public GpuTexture field2459;
 
 	@ObfuscatedName("hq.n")
 	public int field2453;

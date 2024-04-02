@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("agd")
-public class ClientOptionsCustomCursors extends class537 {
+public class ClientOptionsCustomCursors extends ClientOption {
 
 	public ClientOptionsCustomCursors(ClientOptions arg0) {
 		super(arg0);

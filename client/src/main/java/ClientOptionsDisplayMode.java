@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afs")
-public class ClientOptionsDisplayMode extends class537 {
+public class ClientOptionsDisplayMode extends ClientOption {
 
 	@ObfuscatedName("afs.m")
 	public boolean field9845 = true;

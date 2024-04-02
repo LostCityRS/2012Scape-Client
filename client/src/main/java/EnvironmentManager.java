@@ -17,7 +17,7 @@ public class EnvironmentManager {
 	public final RendererToolkit field4973;
 
 	@ObfuscatedName("qp.p")
-	public final class470[][] field4968;
+	public final Environment[][] field4968;
 
 	@ObfuscatedName("qp.w")
 	public int field4975 = 0;
@@ -32,16 +32,16 @@ public class EnvironmentManager {
 	public boolean field4970 = false;
 
 	@ObfuscatedName("qp.v")
-	public final class470 field4976;
+	public final Environment field4976;
 
 	@ObfuscatedName("qp.k")
-	public final class470 field4965;
+	public final Environment field4965;
 
 	@ObfuscatedName("qp.h")
-	public final class470 field4981;
+	public final Environment field4981;
 
 	@ObfuscatedName("qp.r")
-	public final class470 field4962;
+	public final Environment field4962;
 
 	@ObfuscatedName("qp.g")
 	public final Vector3 field4980 = new Vector3(-50.0F, -60.0F, -50.0F);
@@ -54,15 +54,15 @@ public class EnvironmentManager {
 
 	public EnvironmentManager(RendererToolkit arg0, int arg1, int arg2) {
 		this.field4973 = arg0;
-		this.field4968 = new class470[arg1][arg2];
+		this.field4968 = new Environment[arg1][arg2];
 		if (Statics.field9860 != null) {
 			Statics.field4971 = this.method8185(Statics.field9860[0], Statics.field9860[1], Statics.field9860[2], Statics.field9860[3], Statics.field9860[4], Statics.field9860[5]);
 		}
 		Statics.field5193 = null;
-		this.field4976 = new class470();
-		this.field4965 = new class470();
-		this.field4981 = new class470();
-		this.field4962 = new class470();
+		this.field4976 = new Environment();
+		this.field4965 = new Environment();
+		this.field4981 = new Environment();
+		this.field4962 = new Environment();
 		this.method8154();
 	}
 
@@ -90,7 +90,7 @@ public class EnvironmentManager {
 	}
 
 	@ObfuscatedName("qp.j(I)Lqf;")
-	public class470 method8174() {
+	public Environment method8174() {
 		return this.field4965;
 	}
 
@@ -135,7 +135,7 @@ public class EnvironmentManager {
 	}
 
 	@ObfuscatedName("qp.t(IILqf;I)V")
-	public void method8149(int arg0, int arg1, class470 arg2) {
+	public void method8149(int arg0, int arg1, Environment arg2) {
 		this.field4968[arg0][arg1] = arg2;
 	}
 
@@ -150,7 +150,7 @@ public class EnvironmentManager {
 
 	@ObfuscatedName("qp.f(IIB)V")
 	public void method8159(int arg0, int arg1) {
-		class470 var3 = this.field4968[arg0][arg1];
+		Environment var3 = this.field4968[arg0][arg1];
 		if (var3 != null) {
 			this.field4980.method5334(var3.field4990);
 		}
@@ -159,7 +159,7 @@ public class EnvironmentManager {
 
 	@ObfuscatedName("qp.d(IIIB)V")
 	public void method8152(int arg0, int arg1, int arg2) {
-		class470 var4 = this.field4968[arg0][arg1];
+		Environment var4 = this.field4968[arg0][arg1];
 		if (var4 == null) {
 			var4 = this.field4976;
 		}

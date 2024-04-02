@@ -72,7 +72,7 @@ public class HintTrail {
 		Iterator var2 = this.field4219.iterator();
 		while (var2.hasNext()) {
 			HintTrailPoint var3 = (HintTrailPoint) var2.next();
-			arg0.method7430(var3.field9807, var3.field10510, var3.field10509, new class397(var3));
+			arg0.method7430(var3.field9807, var3.field10510, var3.field10509, new HintTrailPointPrimaryLayerEntityPredicate(var3));
 		}
 	}
 

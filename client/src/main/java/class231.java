@@ -45,7 +45,7 @@ public abstract class class231 {
 	public abstract void method4283(int arg0, int arg1);
 
 	@ObfuscatedName("ho.m(ILyu;Lhc;Ldo;Lhc;)V")
-	public abstract void method4284(int arg0, class674 arg1, class239 arg2, class132 arg3, class239 arg4);
+	public abstract void method4284(int arg0, class674 arg1, GpuTexture arg2, class132 arg3, GpuTexture arg4);
 
 	@ObfuscatedName("ho.t(I)V")
 	public abstract void method4285(int arg0);

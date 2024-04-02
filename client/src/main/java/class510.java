@@ -24,11 +24,11 @@ public class class510 {
 	}
 
 	@ObfuscatedName("st.u(II)Lso;")
-	public class509 method11144(int arg0) {
+	public SeqType method11144(int arg0) {
 		WeightedCache var2 = this.field6341;
-		class509 var3;
+		SeqType var3;
 		synchronized (this.field6341) {
-			var3 = (class509) this.field6341.method7916((long) arg0);
+			var3 = (SeqType) this.field6341.method7916((long) arg0);
 		}
 		if (var3 != null) {
 			return var3;
@@ -38,7 +38,7 @@ public class class510 {
 		synchronized (this.field6342) {
 			var6 = this.field6342.method5627(class161.field1637.method3073(arg0), class161.field1637.method3075(arg0));
 		}
-		class509 var8 = new class509();
+		SeqType var8 = new SeqType();
 		var8.field6318 = arg0;
 		var8.field6317 = this;
 		if (var6 != null) {

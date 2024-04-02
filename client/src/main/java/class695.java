@@ -24,7 +24,7 @@ public class class695 extends CutsceneAction {
 
 	@ObfuscatedName("zt.s(B)Z")
 	public boolean method2883() {
-		class509 var1 = Statics.field566.method11144(this.field8468);
+		SeqType var1 = Statics.field566.method11144(this.field8468);
 		return var1.method11129();
 	}
 }

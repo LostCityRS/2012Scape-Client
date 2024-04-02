@@ -60,11 +60,11 @@ public class ObjTypeList implements class463 {
 			this.field7144 = var7 * class161.field1675.method3071() + this.field7143.method5637(var7);
 		}
 		if (ModeGame.field6407 == this.field7139) {
-			this.field7151 = new String[] { null, null, class588.field6875.method12206(this.field7140), null, null, class588.field6874.method12206(this.field7140) };
+			this.field7151 = new String[] { null, null, LocalisedText.field6875.method12206(this.field7140), null, null, LocalisedText.field6874.method12206(this.field7140) };
 		} else {
-			this.field7151 = new String[] { null, null, class588.field6875.method12206(this.field7140), null, null, null };
+			this.field7151 = new String[] { null, null, LocalisedText.field6875.method12206(this.field7140), null, null, null };
 		}
-		this.field7152 = new String[] { null, null, null, null, class588.field6876.method12206(this.field7140) };
+		this.field7152 = new String[] { null, null, null, null, LocalisedText.field6876.method12206(this.field7140) };
 	}
 
 	@ObfuscatedName("vj.u(II)Lvn;")
@@ -129,7 +129,7 @@ public class ObjTypeList implements class463 {
 	}
 
 	@ObfuscatedName("vj.j(Lra;IIIIILqc;I)Lce;")
-	public class118 method12293(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class471 arg6) {
+	public Sprite method12293(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, PlayerModel arg6) {
 		this.field7148.field7047 = arg0.field397;
 		this.field7148.field7052 = arg1;
 		this.field7148.field7049 = arg2;
@@ -137,13 +137,13 @@ public class ObjTypeList implements class463 {
 		this.field7148.field7048 = arg4;
 		this.field7148.field7051 = arg5;
 		this.field7148.field7053 = arg6 != null;
-		return (class118) this.field7147.method8006(this.field7148);
+		return (Sprite) this.field7147.method8006(this.field7148);
 	}
 
 	@ObfuscatedName("vj.a(Lra;Lra;IIIIZZILl;Lqc;I)Lce;")
-	public class118 method12294(RendererToolkit arg0, RendererToolkit arg1, int arg2, int arg3, int arg4, int arg5, boolean arg6, boolean arg7, int arg8, class15 arg9, class471 arg10) {
+	public Sprite method12294(RendererToolkit arg0, RendererToolkit arg1, int arg2, int arg3, int arg4, int arg5, boolean arg6, boolean arg7, int arg8, FontType arg9, PlayerModel arg10) {
 		if (!arg7) {
-			class118 var12 = this.method12293(arg1, arg2, arg3, arg4, arg5, arg8, arg10);
+			Sprite var12 = this.method12293(arg1, arg2, arg3, arg4, arg5, arg8, arg10);
 			if (var12 != null) {
 				return var12;
 			}
@@ -164,7 +164,7 @@ public class ObjTypeList implements class463 {
 		if (var16 == null) {
 			return null;
 		}
-		class118 var17;
+		Sprite var17;
 		if (arg7) {
 			var17 = arg0.method506(var16, 0, 36, 36, 32);
 		} else {

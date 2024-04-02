@@ -11,13 +11,13 @@ public class class221 {
 	public boolean field2405;
 
 	@ObfuscatedName("gj.m")
-	public class239[] field2406 = null;
+	public GpuTexture[] field2406 = null;
 
 	@ObfuscatedName("gj.t")
 	public class225 field2401 = null;
 
 	@ObfuscatedName("gj.l")
-	public class239[] field2408 = null;
+	public GpuTexture[] field2408 = null;
 
 	@ObfuscatedName("gj.f")
 	public class225 field2413 = null;
@@ -53,12 +53,12 @@ public class class221 {
 				byte[] var7 = Statics.method2896(Statics.field2407, false);
 				this.field2413 = this.field2404.method13554(class124.field1299, 128, 128, 16, true, var7);
 			} else {
-				this.field2406 = new class239[16];
+				this.field2406 = new GpuTexture[16];
 				for (int var2 = 0; var2 < 16; var2++) {
 					byte[] var3 = class533.method5943(Statics.field2411, var2 * 32768, 32768);
 					this.field2406[var2] = this.field2404.method13549(class124.field1299, 128, 128, true, var3);
 				}
-				this.field2408 = new class239[16];
+				this.field2408 = new GpuTexture[16];
 				for (int var4 = 0; var4 < 16; var4++) {
 					byte[] var5 = class533.method5943(Statics.field2407, var4 * 32768, 32768);
 					this.field2408[var4] = this.field2404.method13549(class124.field1299, 128, 128, true, var5);

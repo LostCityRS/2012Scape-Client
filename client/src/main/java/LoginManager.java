@@ -284,9 +284,9 @@ public class LoginManager {
 			}
 			if (field531 == 12) {
 				if (Statics.field500 == 223) {
-					Statics.field501.method1911(class411.method12184(Statics.field6772.method12025(), 15000), Statics.field6772.field6765);
+					Statics.field501.method1911(Stream.method12184(Statics.field6772.method12025(), 15000), Statics.field6772.field6765);
 				} else {
-					Statics.field501.method1911(class411.method12184(Statics.field6782.method12025(), 15000), Statics.field6782.field6765);
+					Statics.field501.method1911(Stream.method12184(Statics.field6782.method12025(), 15000), Statics.field6782.field6765);
 				}
 				Statics.field501.method1935();
 				ClientMessage var1 = ClientMessage.method4876();
@@ -360,7 +360,7 @@ public class LoginManager {
 				Statics.field501.field832.field9626 = 0;
 				String var6 = Statics.field501.field832.method15366();
 				Statics.field501.field832.field9626 = 0;
-				String var7 = class284.field3152.method4757();
+				String var7 = JavascriptFunction.field3152.method4757();
 				if (!client.field8903 || !class383.method1814(var6, 1, var7)) {
 					class383.method5599(var6, true, Statics.field4961.field9661.method15781() == 5, var7, client.field8915, client.field9218);
 				}
@@ -764,7 +764,7 @@ public class LoginManager {
 					}
 				}
 				if (Statics.field6683 == ModeWhere.field6368) {
-					class284.field3141.method4761();
+					JavascriptFunction.field3141.method4761();
 				}
 				if (Statics.field500 != 223) {
 					field531 = 7;
@@ -806,7 +806,7 @@ public class LoginManager {
 				field531 = 7;
 				method7972(2);
 				method3965();
-				class55.method12667(Statics.field501.field832);
+				ReceivePlayerPositions.method12667(Statics.field501.field832);
 				int var38 = var37 - Statics.field501.field832.field9626;
 				PacketBit var39 = new PacketBit(var38);
 				System.arraycopy(Statics.field501.field832.field9629, Statics.field501.field832.field9626, var39.field9629, 0, var38);
@@ -840,7 +840,7 @@ public class LoginManager {
 				field531 = 7;
 				method7972(15);
 				Statics.method1237();
-				class55.method12667(Statics.field501.field832);
+				ReceivePlayerPositions.method12667(Statics.field501.field832);
 				if (Statics.field501.field832.field9626 != var40) {
 					throw new RuntimeException(Statics.field501.field832.field9626 + " " + var40);
 				}
@@ -1013,7 +1013,7 @@ public class LoginManager {
 		client.field9087 = (int) (Math.random() * 120.0D) - 60;
 		client.field8976 = (int) (Math.random() * 30.0D) - 20;
 		client.field9021 = (int) (Math.random() * 160.0D) - 80 & 0x3FFF;
-		class58.method7163();
+		MiniMap.method7163();
 		for (int var1 = 0; var1 < 2048; var1++) {
 			client.field9070[var1] = null;
 		}
@@ -1047,9 +1047,9 @@ public class LoginManager {
 		if (client.field8941 != -1) {
 			ComType.method13890(client.field8941);
 		}
-		for (class816 var3 = (class816) client.field9075.method11928(); var3 != null; var3 = (class816) client.field9075.method11929()) {
+		for (SubIfType var3 = (SubIfType) client.field9075.method11928(); var3 != null; var3 = (SubIfType) client.field9075.method11929()) {
 			if (!var3.method6982()) {
-				var3 = (class816) client.field9075.method11928();
+				var3 = (SubIfType) client.field9075.method11928();
 				if (var3 == null) {
 					break;
 				}
@@ -1065,18 +1065,18 @@ public class LoginManager {
 			client.field9086[var4] = false;
 			client.field9084[var4] = -1;
 		}
-		class769.method8048();
+		ClientInvCache.method8048();
 		client.field9226 = true;
 		for (int var5 = 0; var5 < 100; var5++) {
 			client.field9204[var5] = true;
 		}
 		for (int var6 = 0; var6 < 6; var6++) {
-			client.field9184[var6] = new class352();
+			client.field9184[var6] = new StockMarketSlot();
 		}
 		client.field8980.method6139().method8154();
 		client.field9028 = true;
 		Statics.field2744 = LocType.field6530 = NPCType.field7209 = ObjType.field7118 = new short[256];
-		Statics.field2400 = class588.field6994.method12206(Statics.field2308);
+		Statics.field2400 = LocalisedText.field6994.method12206(Statics.field2308);
 		Statics.field4961.method15448(Statics.field4961.field9655, Statics.field4961.field9660.method15735());
 		client.field9023 = 0;
 		MiniMenu.method11300();

@@ -486,7 +486,7 @@ public class ObjType implements class464 {
 				this.field7083[var3] = arg1.field7083[var3];
 			}
 		}
-		this.field7083[4] = class588.field6931.method12206(this.field7061.field7140);
+		this.field7083[4] = LocalisedText.field6931.method12206(this.field7061.field7140);
 	}
 
 	@ObfuscatedName("vn.m(Lvn;Lvn;B)V")
@@ -535,11 +535,11 @@ public class ObjType implements class464 {
 				this.field7083[var3] = arg1.field7083[var3];
 			}
 		}
-		this.field7083[4] = class588.field6879.method12206(this.field7061.field7140);
+		this.field7083[4] = LocalisedText.field6879.method12206(this.field7061.field7140);
 	}
 
 	@ObfuscatedName("vn.t(Lra;IILqc;Ltt;IIIII)Lqa;")
-	public final Model method12241(RendererToolkit arg0, int arg1, int arg2, class471 arg3, AnimationNode arg4, int arg5, int arg6, int arg7, int arg8) {
+	public final Model method12241(RendererToolkit arg0, int arg1, int arg2, PlayerModel arg3, AnimationNode arg4, int arg5, int arg6, int arg7, int arg8) {
 		if (this.field7105 != null && arg2 > 1) {
 			int var10 = -1;
 			for (int var11 = 0; var11 < 10; var11++) {
@@ -650,7 +650,7 @@ public class ObjType implements class464 {
 	}
 
 	@ObfuscatedName("vn.f(Lra;Lra;IIIZILl;Lqc;B)[I")
-	public int[] method12276(RendererToolkit arg0, RendererToolkit arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6, class15 arg7, class471 arg8) {
+	public int[] method12276(RendererToolkit arg0, RendererToolkit arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6, FontType arg7, PlayerModel arg8) {
 		ModelUnlit var10 = ModelUnlit.method2664(this.field7061.field7149, this.field7063, 0);
 		if (var10 == null) {
 			return null;
@@ -694,7 +694,7 @@ public class ObjType implements class464 {
 		if (var16) {
 			var17.method245(this.field7084, this.field7112, this.field7113);
 		}
-		class118 var18 = null;
+		Sprite var18 = null;
 		if (this.field7108 != -1) {
 			var18 = this.field7061.method12294(arg0, arg1, this.field7107, 10, 1, 0, true, true, 0, arg7, arg8);
 			if (var18 == null) {
@@ -813,9 +813,9 @@ public class ObjType implements class464 {
 		if (arg0 < 100000) {
 			return "<col=ffff00>" + arg0 + "</col>";
 		} else if (arg0 < 10000000) {
-			return "<col=ffffff>" + arg0 / 1000 + class588.field7005.method12206(arg1) + "</col>";
+			return "<col=ffffff>" + arg0 / 1000 + LocalisedText.field7005.method12206(arg1) + "</col>";
 		} else {
-			return "<col=00ff80>" + arg0 / 1000000 + class588.field7001.method12206(arg1) + "</col>";
+			return "<col=00ff80>" + arg0 / 1000000 + LocalisedText.field7001.method12206(arg1) + "</col>";
 		}
 	}
 

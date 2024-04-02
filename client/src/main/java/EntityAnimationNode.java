@@ -13,7 +13,7 @@ public class EntityAnimationNode extends AnimationNode {
 	}
 
 	@ObfuscatedName("agn.e(Lso;II)V")
-	public void method11789(class509 arg0, int arg1) {
+	public void method11789(SeqType arg0, int arg1) {
 		Statics.method12343(arg0, arg1, this.field9901);
 	}
 }

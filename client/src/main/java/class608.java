@@ -41,9 +41,9 @@ public class class608 {
 	}
 
 	@ObfuscatedName("vc.a(Lra;IZI)Lce;")
-	public class118 method12484(RendererToolkit arg0, int arg1, boolean arg2) {
+	public Sprite method12484(RendererToolkit arg0, int arg1, boolean arg2) {
 		long var4 = (long) (this.field7192 | arg1 << 16 | (arg2 ? 262144 : 0) | arg0.field397 << 19);
-		class118 var6 = (class118) this.field7193.field7202.method7916(var4);
+		Sprite var6 = (Sprite) this.field7193.field7202.method7916(var4);
 		if (var6 != null) {
 			return var6;
 		} else if (this.field7193.field7199.method5630(this.field7192)) {
@@ -57,7 +57,7 @@ public class class608 {
 					var7.method2733();
 				}
 			}
-			class118 var9 = arg0.method517(var7, true);
+			Sprite var9 = arg0.method517(var7, true);
 			if (var9 != null) {
 				this.field7193.field7202.method7937(var9, var4);
 			}

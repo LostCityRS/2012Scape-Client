@@ -473,7 +473,7 @@ public class ClientOptions extends Node {
 	}
 
 	@ObfuscatedName("aeg.c(Ltb;II)V")
-	public void method15448(class537 arg0, int arg1) {
+	public void method15448(ClientOption arg0, int arg1) {
 		arg0.method11388(arg1);
 		this.method15444();
 	}

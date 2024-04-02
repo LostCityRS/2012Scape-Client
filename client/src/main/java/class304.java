@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("kr")
-public interface class304 extends class136 {
+public interface class304 extends GraphicsDeletable {
 
 	@ObfuscatedName("kr.o()V")
 	void method4905();

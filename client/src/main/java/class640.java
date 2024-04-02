@@ -188,7 +188,7 @@ public class class640 extends GlTexture {
 	}
 
 	@ObfuscatedName("xp.at(I)Lde;")
-	public class136 method12762(int arg0) {
+	public GraphicsDeletable method12762(int arg0) {
 		return new class107(this, arg0);
 	}
 }

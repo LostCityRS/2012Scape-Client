@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("zu")
-public class class686 extends class15 {
+public class class686 extends FontType {
 
 	@ObfuscatedName("zu.q")
 	public PureJavaToolkit field8419;

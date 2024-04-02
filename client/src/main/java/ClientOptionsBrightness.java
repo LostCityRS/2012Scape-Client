@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aed")
-public class ClientOptionsBrightness extends class537 {
+public class ClientOptionsBrightness extends ClientOption {
 
 	public ClientOptionsBrightness(ClientOptions arg0) {
 		super(arg0);

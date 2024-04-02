@@ -5,22 +5,22 @@ import deob.ObfuscatedName;
 public class class731 extends class208 {
 
 	@ObfuscatedName("aai.t")
-	public class118 field8725;
+	public Sprite field8725;
 
 	@ObfuscatedName("aai.l")
-	public class118 field8721;
+	public Sprite field8721;
 
 	@ObfuscatedName("aai.f")
-	public class118 field8720;
+	public Sprite field8720;
 
 	@ObfuscatedName("aai.d")
-	public class118 field8723;
+	public Sprite field8723;
 
 	@ObfuscatedName("aai.z")
-	public class118 field8724;
+	public Sprite field8724;
 
 	@ObfuscatedName("aai.n")
-	public class118 field8722;
+	public Sprite field8722;
 
 	public class731(Js5 arg0, Js5 arg1, class750 arg2) {
 		super(arg0, arg1, arg2);

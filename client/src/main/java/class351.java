@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import jaggl.OpenGL;
 
 @ObfuscatedName("lx")
-public class class351 implements class136, class132, class349 {
+public class class351 implements GraphicsDeletable, class132, class349 {
 
 	@ObfuscatedName("lx.u")
 	public final class139 field3752;

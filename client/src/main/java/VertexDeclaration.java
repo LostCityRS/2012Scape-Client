@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("hy")
-public abstract class VertexDeclaration implements DeleteableResource {
+public abstract class VertexDeclaration implements DeletableResource {
 
 	@ObfuscatedName("hy.u")
 	public final class243[] field2422;

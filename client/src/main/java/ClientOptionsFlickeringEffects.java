@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afp")
-public class ClientOptionsFlickeringEffects extends class537 {
+public class ClientOptionsFlickeringEffects extends ClientOption {
 
 	public ClientOptionsFlickeringEffects(ClientOptions arg0) {
 		super(arg0);

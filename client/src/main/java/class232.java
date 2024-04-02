@@ -16,25 +16,25 @@ public class class232 {
 	public class674 field2435;
 
 	@ObfuscatedName("hh.s")
-	public class257 field2428;
+	public GpuTextureRelated1 field2428;
 
 	@ObfuscatedName("hh.c")
-	public class257 field2429;
+	public GpuTextureRelated1 field2429;
 
 	@ObfuscatedName("hh.m")
-	public class257 field2430;
+	public GpuTextureRelated1 field2430;
 
 	@ObfuscatedName("hh.t")
-	public class136 field2442;
+	public GraphicsDeletable field2442;
 
 	@ObfuscatedName("hh.l")
-	public class136 field2432;
+	public GraphicsDeletable field2432;
 
 	@ObfuscatedName("hh.f")
-	public class136 field2433;
+	public GraphicsDeletable field2433;
 
 	@ObfuscatedName("hh.d")
-	public class136 field2425;
+	public GraphicsDeletable field2425;
 
 	@ObfuscatedName("hh.z")
 	public class132 field2437;
@@ -231,17 +231,17 @@ public class class232 {
 				} else {
 					this.field2435.method1206(0, this.field2432);
 				}
-				class257 var7 = this.field2428;
+				GpuTextureRelated1 var7 = this.field2428;
 				if (var6 == 0) {
 					var7 = this.field2430;
 				}
 				var3.method4284(var6, this.field2435, var7, this.field2437, this.field2430);
 				this.method4314();
 				var3.method4285(var6);
-				class257 var8 = this.field2428;
+				GpuTextureRelated1 var8 = this.field2428;
 				this.field2428 = this.field2429;
 				this.field2429 = var8;
-				class136 var9 = this.field2442;
+				GraphicsDeletable var9 = this.field2442;
 				this.field2442 = this.field2432;
 				this.field2432 = var9;
 			}

@@ -30,6 +30,6 @@ public class class900 extends class703 {
 			var3++;
 		}
 		SpotAnimation var4 = new SpotAnimation(client.field8980.method6098(), this.field8498, 0, this.field10033, var3, var1, client.method8663(var1, var2, this.field10033) - this.field8497, var2, this.field10035, this.field10035, this.field10034, this.field10034, this.field8496, false, 0);
-		client.field9090.method11927(new class942(var4), (long) (this.field10035 << 16 | this.field10034));
+		client.field9090.method11927(new SpotAnimationEntityNode(var4), (long) (this.field10035 << 16 | this.field10034));
 	}
 }

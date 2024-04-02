@@ -114,7 +114,7 @@ public class PureJavaToolkit extends RendererToolkit {
 	public WeightedCache field8033;
 
 	@ObfuscatedName("yt.bk")
-	public class118 field8034;
+	public Sprite field8034;
 
 	@ObfuscatedName("yt.bs")
 	public int field8035;
@@ -1835,12 +1835,12 @@ public class PureJavaToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yt.bb(IIZZ)Lce;")
-	public class118 method658(int arg0, int arg1, boolean arg2, boolean arg3) {
+	public Sprite method658(int arg0, int arg1, boolean arg2, boolean arg3) {
 		return arg2 ? new class887(this, arg0, arg1) : new class886(this, arg0, arg1);
 	}
 
 	@ObfuscatedName("yt.be([IIIIIZ)Lce;")
-	public class118 method513(int[] arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+	public Sprite method513(int[] arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
 		boolean var7 = false;
 		int var8 = arg1;
 		for (int var9 = 0; var9 < arg4; var9++) {
@@ -1856,10 +1856,10 @@ public class PureJavaToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yt.bo(Lds;Z)Lce;")
-	public class118 method517(SpriteData arg0, boolean arg1) {
+	public Sprite method517(SpriteData arg0, boolean arg1) {
 		int var3 = arg0.method2721();
 		int var4 = arg0.method2763();
-		class665 var12;
+		PureJavaSprite var12;
 		if (arg1 && !arg0.method2720() && arg0.method2749()) {
 			PalettedSpriteData var5 = (PalettedSpriteData) arg0;
 			int[] var6 = new int[var5.field8410.length];
@@ -1887,7 +1887,7 @@ public class PureJavaToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yt.bh(IIIIZ)Lce;")
-	public class118 method508(int arg0, int arg1, int arg2, int arg3, boolean arg4) {
+	public Sprite method508(int arg0, int arg1, int arg2, int arg3, boolean arg4) {
 		if (this.field8001 == null) {
 			throw new IllegalStateException("");
 		}
@@ -1957,7 +1957,7 @@ public class PureJavaToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yt.co(Lvm;[Lzv;Z)Ll;")
-	public class15 method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
+	public FontType method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
 		int[] var4 = new int[arg1.length];
 		int[] var5 = new int[arg1.length];
 		boolean var6 = false;
@@ -2105,7 +2105,7 @@ public class PureJavaToolkit extends RendererToolkit {
 			return;
 		}
 		if (this.field8035 != var9) {
-			class118 var12 = (class118) this.field8033.method7916((long) var9);
+			Sprite var12 = (Sprite) this.field8033.method7916((long) var9);
 			if (var12 == null) {
 				int[] var13 = this.method13241(var9);
 				if (var13 == null) {
@@ -2119,7 +2119,7 @@ public class PureJavaToolkit extends RendererToolkit {
 			this.field8034 = var12;
 		}
 		var11++;
-		((class665) this.field8034).method12923(arg0, arg1, arg2, arg4 - arg7, arg5 - arg7, arg6, var11, var11, 0, arg3.field10144, 1, 1, false);
+		((PureJavaSprite) this.field8034).method12923(arg0, arg1, arg2, arg4 - arg7, arg5 - arg7, arg6, var11, var11, 0, arg3.field10144, 1, 1, false);
 	}
 
 	@ObfuscatedName("yt.oi(ZZZIIFIIIIII)V")
@@ -2131,7 +2131,7 @@ public class PureJavaToolkit extends RendererToolkit {
 			Material var13 = this.field400.method889(arg8);
 			if (!var13.field1250) {
 				if (this.field8035 != arg8) {
-					class118 var14 = (class118) this.field8033.method7916((long) arg8);
+					Sprite var14 = (Sprite) this.field8033.method7916((long) arg8);
 					if (var14 == null) {
 						int[] var15 = this.method13241(arg8);
 						if (var15 == null) {
@@ -2144,7 +2144,7 @@ public class PureJavaToolkit extends RendererToolkit {
 					this.field8035 = arg8;
 					this.field8034 = var14;
 				}
-				((class665) this.field8034).method12923(arg0, arg1, arg2, arg3 - arg6, arg4 - arg7, arg5, arg6 << 1, arg7 << 1, arg10, arg9, arg11, 1, MaterialAlphaMode.field4853 != var13.field1262);
+				((PureJavaSprite) this.field8034).method12923(arg0, arg1, arg2, arg3 - arg6, arg4 - arg7, arg5, arg6 << 1, arg7 << 1, arg10, arg9, arg11, 1, MaterialAlphaMode.field4853 != var13.field1262);
 				return;
 			}
 		}
@@ -2598,12 +2598,12 @@ public class PureJavaToolkit extends RendererToolkit {
 	}
 
 	@ObfuscatedName("yt.oy(II)Lde;")
-	public class136 method13212(int arg0, int arg1) {
+	public GraphicsDeletable method13212(int arg0, int arg1) {
 		return new class71(arg0, arg1);
 	}
 
 	@ObfuscatedName("yt.aj(IILcy;Ldz;I)Lde;")
-	public class136 method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4) {
+	public GraphicsDeletable method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4) {
 		return this.method13212(arg0, arg1);
 	}
 

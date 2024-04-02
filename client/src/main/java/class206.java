@@ -11,7 +11,7 @@ public class class206 implements LoadingScreenElement {
 	public final Js5 field2302;
 
 	@ObfuscatedName("gz.a")
-	public class118 field2301;
+	public Sprite field2301;
 
 	public class206(Js5 arg0, class269 arg1) {
 		this.field2302 = arg0;

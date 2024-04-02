@@ -285,10 +285,10 @@ public class class443 {
 	}
 
 	@ObfuscatedName("pw.c(Lra;ZI)Lce;")
-	public class118 method7847(RendererToolkit arg0, boolean arg1) {
+	public Sprite method7847(RendererToolkit arg0, boolean arg1) {
 		int var3 = arg1 ? this.field4769 : this.field4764;
 		int var4 = var3 | arg0.field397 << 29;
-		class118 var5 = (class118) this.field4798.field4810.method7916((long) var4);
+		Sprite var5 = (Sprite) this.field4798.field4810.method7916((long) var4);
 		if (var5 != null) {
 			return var5;
 		} else if (this.field4798.field4806.method5630(var3)) {
@@ -304,8 +304,8 @@ public class class443 {
 	}
 
 	@ObfuscatedName("pw.m(Lra;B)Lce;")
-	public class118 method7841(RendererToolkit arg0) {
-		class118 var2 = (class118) this.field4798.field4810.method7916((long) (this.field4780 | 0x20000 | arg0.field397 << 29));
+	public Sprite method7841(RendererToolkit arg0) {
+		Sprite var2 = (Sprite) this.field4798.field4810.method7916((long) (this.field4780 | 0x20000 | arg0.field397 << 29));
 		if (var2 != null) {
 			return var2;
 		}

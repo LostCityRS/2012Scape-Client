@@ -25,7 +25,7 @@ public class class252 {
 	public float[] field2572 = new float[this.field2563 * 16];
 
 	@ObfuscatedName("hg.t")
-	public class239[] field2567 = new class239[this.field2563];
+	public GpuTexture[] field2567 = new GpuTexture[this.field2563];
 
 	@ObfuscatedName("hg.l")
 	public int[] field2560 = new int[this.field2563];
@@ -116,7 +116,7 @@ public class class252 {
 				}
 			}
 			this.field2565.method4454();
-			class239 var24 = this.field2567[var5];
+			GpuTexture var24 = this.field2567[var5];
 			int var25 = 1;
 			int var26 = 0;
 			for (int var27 = var5 + 1; var27 < var11; var27++) {
@@ -140,7 +140,7 @@ public class class252 {
 	}
 
 	@ObfuscatedName("hg.a(FFFFFFFFLhc;I)V")
-	public void method4497(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, float arg6, float arg7, class239 arg8, int arg9) {
+	public void method4497(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, float arg6, float arg7, GpuTexture arg8, int arg9) {
 		if ((arg9 & 0xFF000000) == 0) {
 			return;
 		}
@@ -202,7 +202,7 @@ public class class252 {
 	}
 
 	@ObfuscatedName("hg.s(FFFFFFFFFFFFFFFFLhc;I)V")
-	public void method4498(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, float arg6, float arg7, float arg8, float arg9, float arg10, float arg11, float arg12, float arg13, float arg14, float arg15, class239 arg16, int arg17) {
+	public void method4498(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, float arg6, float arg7, float arg8, float arg9, float arg10, float arg11, float arg12, float arg13, float arg14, float arg15, GpuTexture arg16, int arg17) {
 		if ((arg17 & 0xFF000000) == 0) {
 			return;
 		}
@@ -286,7 +286,7 @@ public class class252 {
 			var1[var2] = this.field2572[var2];
 		}
 		this.field2572 = var1;
-		class239[] var3 = new class239[this.field2563];
+		GpuTexture[] var3 = new GpuTexture[this.field2563];
 		int[] var4 = new int[this.field2563];
 		for (int var5 = 0; var5 < this.field2564; var5++) {
 			var3[var5] = this.field2567[var5];

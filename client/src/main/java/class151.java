@@ -24,7 +24,7 @@ public class class151 {
 	}
 
 	@ObfuscatedName("dq.u(Ldn;IS)V")
-	public void method2891(class149 arg0, int arg1) {
+	public void method2891(CutsceneEntity arg0, int arg1) {
 		int var3 = this.field1570[0];
 		arg0.method2853(arg1, var3 >>> 16, var3 & 0xFFFF);
 		PathingEntity var4 = arg0.method2854();
@@ -34,11 +34,11 @@ public class class151 {
 			int var7 = this.field1570[var5];
 			var4.field8642[var4.field8628] = var7 >> 16;
 			var4.field8643[var4.field8628] = var7 & 0xFFFF;
-			byte var8 = class365.field3921.field3924;
+			byte var8 = MoveSpeed.field3921.field3924;
 			if (var6 == 0) {
-				var8 = class365.field3920.field3924;
+				var8 = MoveSpeed.field3920.field3924;
 			} else if (var6 == 2) {
-				var8 = class365.field3922.field3924;
+				var8 = MoveSpeed.field3922.field3924;
 			}
 			var4.field8645[var4.field8628] = var8;
 			var4.field8628++;

@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aff")
-public class ClientOptionsCpuUsage extends class537 {
+public class ClientOptionsCpuUsage extends ClientOption {
 
 	public ClientOptionsCpuUsage(ClientOptions arg0) {
 		super(arg0);

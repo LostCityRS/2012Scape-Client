@@ -23,7 +23,7 @@ public class class554 {
 	public boolean field6684 = false;
 
 	@ObfuscatedName("tu.u(Lst;Lso;II[IB)Z")
-	public final boolean method11837(class510 arg0, class509 arg1, int arg2, int arg3, int[] arg4) {
+	public final boolean method11837(class510 arg0, SeqType arg1, int arg2, int arg3, int[] arg4) {
 		if (this.field6684) {
 			return true;
 		} else if (arg2 >= arg4.length) {

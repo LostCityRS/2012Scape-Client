@@ -3,13 +3,13 @@ import deob.ObfuscatedName;
 import jaggl.OpenGL;
 
 @ObfuscatedName("zc")
-public class class689 extends class15 {
+public class class689 extends FontType {
 
 	@ObfuscatedName("zc.q")
 	public final GlToolkit field8440;
 
 	@ObfuscatedName("zc.p")
-	public final class885 field8441;
+	public final GlGraphicRelated field8441;
 
 	@ObfuscatedName("zc.w")
 	public final GlRenderList field8442;
@@ -59,7 +59,7 @@ public class class689 extends class15 {
 					}
 				}
 			}
-			this.field8441 = class885.method15975(arg0, class124.field1297, class139.field1501, var8, var8, false, var9, class124.field1297);
+			this.field8441 = GlGraphicRelated.method15975(arg0, class124.field1297, class139.field1501, var8, var8, false, var9, class124.field1297);
 			this.field8443 = true;
 		} else {
 			int[] var24 = new int[var8 * var8];
@@ -96,7 +96,7 @@ public class class689 extends class15 {
 					}
 				}
 			}
-			this.field8441 = class885.method15974(arg0, var8, var8, false, var24, 0, 0);
+			this.field8441 = GlGraphicRelated.method15974(arg0, var8, var8, false, var24, 0, 0);
 			this.field8443 = false;
 		}
 		this.field8441.method2055(false);
@@ -152,7 +152,7 @@ public class class689 extends class15 {
 	@ObfuscatedName("zc.b(CIIIZLta;II)V")
 	public void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, class11 arg5, int arg6, int arg7) {
 		class669 var9 = (class669) arg5;
-		class885 var10 = var9.field7651;
+		GlGraphicRelated var10 = var9.field7651;
 		this.field8440.method13341();
 		this.field8440.method13315(this.field8441);
 		if (this.field8443 || arg4) {

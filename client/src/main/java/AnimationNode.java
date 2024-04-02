@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class AnimationNode {
 
 	@ObfuscatedName("tt.s")
-	public class509 field6671;
+	public SeqType field6671;
 
 	@ObfuscatedName("tt.c")
 	public int field6672;
@@ -74,7 +74,7 @@ public class AnimationNode {
 	}
 
 	@ObfuscatedName("tt.s(I)Lso;")
-	public final class509 method11804() {
+	public final SeqType method11804() {
 		return this.field6671;
 	}
 
@@ -248,7 +248,7 @@ public class AnimationNode {
 			this.method11789(this.field6671, this.field6670);
 		}
 		int var2 = this.field6672 + arg0;
-		boolean var3 = this.field6671.field6333 | class509.field6319;
+		boolean var3 = this.field6671.field6333 | SeqType.field6319;
 		if (var2 > 100 && this.field6671.field6336 > 0) {
 			int var4 = this.field6671.field6329.length - this.field6671.field6336;
 			while (this.field6670 < var4 && var2 > this.field6671.field6321[this.field6670]) {
@@ -320,7 +320,7 @@ public class AnimationNode {
 	}
 
 	@ObfuscatedName("tt.e(Lso;II)V")
-	public void method11789(class509 arg0, int arg1) {
+	public void method11789(SeqType arg0, int arg1) {
 	}
 
 	@ObfuscatedName("tt.ay(B)Z")

@@ -324,7 +324,7 @@ public class World {
 	public void method6102() {
 		if (this.field3813) {
 			this.method6112();
-			class822.method7184(true);
+			ClientWorldMap.method7184(true);
 			World var1 = client.field8980;
 			this.field3820 = var1.field3820;
 			this.field3821 = var1.field3821;
@@ -741,7 +741,7 @@ public class World {
 		this.field3798 = arg1;
 		if (!this.field3813) {
 			client.method11307(arg2);
-			Statics.method2579(class588.field6938.method12206(Statics.field2308), true, Statics.field5187, Statics.field560, Statics.field9813);
+			Statics.method2579(LocalisedText.field6938.method12206(Statics.field2308), true, Statics.field5187, Statics.field560, Statics.field9813);
 		}
 		if (this.field3795 == null) {
 			this.field3824 = new CoordGrid(0, 0, 0);
@@ -764,7 +764,7 @@ public class World {
 			for (int var4 = 0; var4 < client.field8966; var4++) {
 				ObjectNode var5 = client.field8965[var4];
 				if (var5 != null) {
-					class903 var6 = (class903) var5.field9550;
+					NpcEntity var6 = (NpcEntity) var5.field9550;
 					for (int var7 = 0; var7 < var6.field8642.length; var7++) {
 						var6.field8642[var7] -= var2;
 						var6.field8643[var7] -= var3;
@@ -784,7 +784,7 @@ public class World {
 			for (int var12 = 0; var12 < client.field8966; var12++) {
 				ObjectNode var13 = client.field8965[var12];
 				if (var13 != null) {
-					class903 var14 = (class903) var13.field9550;
+					NpcEntity var14 = (NpcEntity) var13.field9550;
 					Vector3 var15 = Vector3.method5290(var14.method8565().field3464);
 					var15.field3475 -= var2 * 512;
 					var15.field3477 -= var3 * 512;
@@ -837,9 +837,9 @@ public class World {
 				var24.method5291();
 			}
 		}
-		class60[] var25 = client.field8936;
+		HintArrow[] var25 = client.field8936;
 		for (int var26 = 0; var26 < var25.length; var26++) {
-			class60 var27 = var25[var26];
+			HintArrow var27 = var25[var26];
 			if (var27 != null) {
 				var27.field778 = var27.field778 * 262144 - var2 * 262144;
 				var27.field777 = var27.field777 * 262144 - var3 * 512;
@@ -859,7 +859,7 @@ public class World {
 				var29.method6979();
 			}
 		}
-		for (class774 var30 = (class774) client.field9088.method11928(); var30 != null; var30 = (class774) client.field9088.method11929()) {
+		for (ObjStackList var30 = (ObjStackList) client.field9088.method11928(); var30 != null; var30 = (ObjStackList) client.field9088.method11929()) {
 			int var31 = (int) (var30.field4228 >> 28 & 0x3L);
 			int var32 = (int) (var30.field4228 & 0x3FFFL);
 			int var33 = var32 - this.field3795.field4836;
@@ -875,12 +875,12 @@ public class World {
 				}
 			}
 		}
-		if (class58.field763 != 0) {
-			class58.field763 -= var2;
-			class58.field764 -= var3;
+		if (MiniMap.field763 != 0) {
+			MiniMap.field763 -= var2;
+			MiniMap.field764 -= var3;
 		}
 		class395.method2387();
-		class797.method6259(false);
+		PositionedSound.method6259(false);
 		if (arg0 == 16) {
 			client.field9154 -= var2 * 512;
 			client.field9019 -= var3 * 512;
@@ -903,7 +903,7 @@ public class World {
 			}
 		}
 		MiniMenu.method11300();
-		class58.method7992();
+		MiniMap.method7992();
 		client.field9090.method11925();
 		client.field9007.method11557();
 		client.field9091.method11653();
@@ -1022,7 +1022,7 @@ public class World {
 			return false;
 		}
 		if (!this.field3813 && RebuildStage.field3777 != this.field3834) {
-			Statics.method2579(class588.field6938.method12206(Statics.field2308) + TextUtil.field492 + "(100%)", true, Statics.field5187, Statics.field560, Statics.field9813);
+			Statics.method2579(LocalisedText.field6938.method12206(Statics.field2308) + TextUtil.field492 + "(100%)", true, Statics.field5187, Statics.field560, Statics.field9813);
 		}
 		this.field3834 = RebuildStage.field3778;
 		if (!this.field3813) {
@@ -1207,7 +1207,7 @@ public class World {
 		for (int var23 = 0; var23 < 4; var23++) {
 			for (int var24 = 0; var24 < this.field3799; var24++) {
 				for (int var25 = 0; var25 < this.field3826; var25++) {
-					client.method15178(var23, var24, var25);
+					client.sortObjStacks(var23, var24, var25);
 				}
 			}
 		}
@@ -1254,7 +1254,7 @@ public class World {
 				client.field8975.method1913(var34);
 			}
 		}
-		class822.method7071();
+		ClientWorldMap.method7071();
 		if (this.field3833) {
 			class62.method1958(Long.toString(MonotonicTime.method5554() - this.field3789));
 			this.field3833 = false;
@@ -1431,7 +1431,7 @@ public class World {
 					NPCType var14 = Statics.field3774.method12565(var5.method15239());
 					ObjectNode var15 = (ObjectNode) client.field8964.method11923((long) var7);
 					if (var15 == null && (var14.field7220 & 0x1) > 0 && var12 >= 0 && var14.field7213 + var12 < this.field3799 && var13 >= 0 && var14.field7213 + var13 < this.field3826) {
-						class903 var16 = new class903(this.field3791);
+						NpcEntity var16 = new NpcEntity(this.field3791);
 						var16.field8593 = var7;
 						ObjectNode var17 = new ObjectNode(var16);
 						client.field8964.method11927(var17, (long) var7);

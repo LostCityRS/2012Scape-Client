@@ -3,13 +3,13 @@ import deob.ObfuscatedName;
 import java.nio.ByteBuffer;
 
 @ObfuscatedName("zf")
-public class class690 extends class15 {
+public class class690 extends FontType {
 
 	@ObfuscatedName("zf.q")
 	public final GpuToolkit field8447;
 
 	@ObfuscatedName("zf.p")
-	public final class239 field8445;
+	public final GpuTexture field8445;
 
 	@ObfuscatedName("zf.w")
 	public final VertexBuffer field8446;
@@ -166,7 +166,7 @@ public class class690 extends class15 {
 		}
 		this.field8447.method13610();
 		this.field8447.method13592(1);
-		class203 var8 = this.field8447.field8346;
+		SpriteShader var8 = this.field8447.field8346;
 		var8.field2284 = this.field8445;
 		var8.method3881(0, arg3);
 		float var9 = (float) this.field8447.method457().method921();

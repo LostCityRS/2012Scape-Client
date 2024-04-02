@@ -25,8 +25,8 @@ public class class341 {
 	}
 
 	@ObfuscatedName("lt.u(IB)Lajx;")
-	public class950 method5933(int arg0) {
-		class950 var2 = (class950) this.field3706.method7916((long) arg0);
+	public QuickChatCatType method5933(int arg0) {
+		QuickChatCatType var2 = (QuickChatCatType) this.field3706.method7916((long) arg0);
 		if (var2 != null) {
 			return var2;
 		}
@@ -36,7 +36,7 @@ public class class341 {
 		} else {
 			var3 = this.field3704.method5627(0, arg0);
 		}
-		class950 var4 = new class950();
+		QuickChatCatType var4 = new QuickChatCatType();
 		if (var3 != null) {
 			var4.method16690(new Packet(var3));
 		}

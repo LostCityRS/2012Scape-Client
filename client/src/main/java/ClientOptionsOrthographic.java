@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("afc")
-public class ClientOptionsOrthographic extends class537 {
+public class ClientOptionsOrthographic extends ClientOption {
 
 	public ClientOptionsOrthographic(int arg0, ClientOptions arg1) {
 		super(arg0, arg1);

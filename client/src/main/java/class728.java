@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aat")
-public final class class728 extends class203 {
+public final class class728 extends SpriteShader {
 
 	@ObfuscatedName("aat.d")
 	public Shader field8709;

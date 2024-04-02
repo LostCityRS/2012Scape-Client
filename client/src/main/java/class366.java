@@ -35,7 +35,7 @@ public class class366 {
 	public final int field3936;
 
 	@ObfuscatedName("mq.n")
-	public class118 field3937;
+	public Sprite field3937;
 
 	@ObfuscatedName("mq.o")
 	public class420 field3930;

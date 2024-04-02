@@ -175,7 +175,7 @@ public class class309 {
 			}
 			Statics.field9896 = Statics.field4761.method5622();
 			Statics.field1625 = Statics.field1937.method5622();
-			class35.method11376(Statics.field4761);
+			DefaultSprites.method11376(Statics.field4761);
 			int var6 = Statics.field4961.field9668.method15859();
 			Statics.field7348 = new class631(client.field9163, Statics.field2308, Statics.field1937);
 			class633[] var7 = Statics.field7348.method12706(var6);
@@ -191,7 +191,7 @@ public class class309 {
 			}
 		}
 		if (Statics.field1208 == LoadingStage.field3388) {
-			Statics.field6784 = new class292(Statics.field4761, Statics.field8745, class35.method6244());
+			Statics.field6784 = new class292(Statics.field4761, Statics.field8745, DefaultSprites.method6244());
 		}
 		if (Statics.field1208 == LoadingStage.field3407) {
 			int var10 = Statics.field6784.method4839();
@@ -210,7 +210,7 @@ public class class309 {
 				}
 			}
 			Statics.field6784.method4837(client.field8914);
-			class35.method2931(Statics.field5187);
+			DefaultSprites.method2931(Statics.field5187);
 			client.method11307(2);
 		}
 		if (Statics.field1208 == LoadingStage.field3389) {
@@ -262,8 +262,8 @@ public class class309 {
 				}
 				return (var12 - field3424) * 100 / (100 - field3424);
 			}
-			class35.method8388(Statics.field7387);
-			Statics.field6784 = new class292(Statics.field7387, Statics.field8745, class35.method6244());
+			DefaultSprites.method8388(Statics.field7387);
+			Statics.field6784 = new class292(Statics.field7387, Statics.field8745, DefaultSprites.method6244());
 		}
 		if (Statics.field1208 == LoadingStage.field3393) {
 			byte[] var14 = Statics.field849.method5635(class491.field5143.field5145);
@@ -339,7 +339,7 @@ public class class309 {
 			Statics.field2669 = new class49();
 			client.method13901();
 			AnimationNode.method6490(Statics.field566);
-			class466.method12208(Statics.field8655);
+			ParticleSystemRenderer.method12208(Statics.field8655);
 			class366.method12289(Statics.field4560, Statics.field8465);
 			class177 var16 = new class177(Statics.field3523.method5645("huffman", ""));
 			class178.method15896(var16);
@@ -347,8 +347,8 @@ public class class309 {
 			Statics.field2305 = new class817(true);
 		}
 		if (Statics.field1208 == LoadingStage.field3387) {
-			int var17 = class35.method12092(Statics.field7387) + Statics.field6784.method4840(true);
-			int var18 = class35.method1589() + Statics.field6784.method4841();
+			int var17 = DefaultSprites.method12092(Statics.field7387) + Statics.field6784.method4840(true);
+			int var18 = DefaultSprites.method1589() + Statics.field6784.method4841();
 			if (var17 < var18) {
 				return var17 * 100 / var18;
 			}
@@ -428,8 +428,8 @@ public class class309 {
 			}
 			client.method7282(Statics.field4961.field9663.method15766(), -1, -1, false);
 			Statics.field6784.method4837(client.field8914);
-			class35.method2931(Statics.field5187);
-			class35.method15812(Statics.field5187, Statics.field7387);
+			DefaultSprites.method2931(Statics.field5187);
+			DefaultSprites.method15812(Statics.field5187, Statics.field7387);
 			MiniMenu.method3288(Statics.field8538);
 		}
 		return method4789();

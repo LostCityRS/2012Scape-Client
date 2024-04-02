@@ -126,11 +126,11 @@ public class class742 extends class231 {
 	}
 
 	@ObfuscatedName("abr.m(ILyu;Lhc;Ldo;Lhc;)V")
-	public void method4284(int arg0, class674 arg1, class239 arg2, class132 arg3, class239 arg4) {
+	public void method4284(int arg0, class674 arg1, GpuTexture arg2, class132 arg3, GpuTexture arg4) {
 		float var6 = this.field2424.method13750();
 		float var7 = (float) arg1.method921();
 		float var8 = (float) arg1.method922();
-		class239 var9 = arg2;
+		GpuTexture var9 = arg2;
 		float var10 = var6 * 2.0F / var7;
 		float var11 = -var6 * 2.0F / var8;
 		float[] var12 = new float[] { var10 + -1.0F, var11 + 1.0F, 0.0F, 0.0F, var10 + -1.0F, var11 + -3.0F, 0.0F, 2.0F, var10 + 3.0F, var11 + 1.0F, 2.0F, 0.0F };

@@ -404,7 +404,7 @@ public class DxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahh.aj(IILcy;Ldz;I)Lde;")
-	public class136 method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4) {
+	public GraphicsDeletable method468(int arg0, int arg1, class124 arg2, class139 arg3, int arg4) {
 		return new class302(this, arg2, arg3, arg0, arg1, arg4);
 	}
 
@@ -620,27 +620,27 @@ public class DxToolkit extends GpuToolkit {
 	}
 
 	@ObfuscatedName("ahh.qc(Lcy;Ldz;II)Lhc;")
-	public class239 method13550(class124 arg0, class139 arg1, int arg2, int arg3) {
+	public GpuTexture method13550(class124 arg0, class139 arg1, int arg2, int arg3) {
 		return new class743(this, arg0, arg1, arg2, arg3);
 	}
 
 	@ObfuscatedName("ahh.qh(IIZ[III)Lhc;")
-	public class239 method13552(int arg0, int arg1, boolean arg2, int[] arg3, int arg4, int arg5) {
+	public GpuTexture method13552(int arg0, int arg1, boolean arg2, int[] arg3, int arg4, int arg5) {
 		return new class743(this, arg0, arg1, arg2, arg3, arg4, arg5);
 	}
 
 	@ObfuscatedName("ahh.qj(Lcy;IIZ[BII)Lhc;")
-	public class239 method13599(class124 arg0, int arg1, int arg2, boolean arg3, byte[] arg4, int arg5, int arg6) {
+	public GpuTexture method13599(class124 arg0, int arg1, int arg2, boolean arg3, byte[] arg4, int arg5, int arg6) {
 		return new class743(this, arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 	}
 
 	@ObfuscatedName("ahh.qz(Lcy;IIZ[FII)Lhc;")
-	public class239 method13630(class124 arg0, int arg1, int arg2, boolean arg3, float[] arg4, int arg5, int arg6) {
+	public GpuTexture method13630(class124 arg0, int arg1, int arg2, boolean arg3, float[] arg4, int arg5, int arg6) {
 		return new class743(this, arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 	}
 
 	@ObfuscatedName("ahh.qy(Lcy;Ldz;II)Lii;")
-	public class257 method13542(class124 arg0, class139 arg1, int arg2, int arg3) {
+	public GpuTextureRelated1 method13542(class124 arg0, class139 arg1, int arg2, int arg3) {
 		return new class744(this, arg0, arg1, arg2, arg3);
 	}
 

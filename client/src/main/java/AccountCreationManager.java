@@ -90,7 +90,7 @@ public class AccountCreationManager {
 				Statics.method5540();
 			}
 			if (Statics.field633 == CreateConnectStage.field564) {
-				client.field8959.method1911(class411.method12184(Statics.field6782.method12025(), 15000), Statics.field6782.field6765);
+				client.field8959.method1911(Stream.method12184(Statics.field6782.method12025(), 15000), Statics.field6782.field6765);
 				client.field8959.method1935();
 				ClientMessage var1 = ClientMessage.method4876();
 				var1.field9467.method15308(class281.field2959.field2970);

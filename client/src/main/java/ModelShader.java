@@ -14,7 +14,7 @@ public abstract class ModelShader {
 	public float[] field2251 = new float[16];
 
 	@ObfuscatedName("fq.c")
-	public class239 field2268;
+	public GpuTexture field2268;
 
 	@ObfuscatedName("fq.m")
 	public class259 field2253;

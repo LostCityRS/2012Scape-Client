@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class732 extends class208 {
 
 	@ObfuscatedName("aau.t")
-	public class118 field8728;
+	public Sprite field8728;
 
 	public class732(Js5 arg0, Js5 arg1, class751 arg2) {
 		super(arg0, arg1, arg2);

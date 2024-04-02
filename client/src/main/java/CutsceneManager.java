@@ -59,9 +59,9 @@ public class CutsceneManager {
 				Statics.field10534[var6] = new class146(var2);
 			}
 			int var7 = var2.method15277();
-			Statics.field1537 = new class149[var7];
+			Statics.field1537 = new CutsceneEntity[var7];
 			for (int var8 = 0; var8 < var7; var8++) {
-				Statics.field1537[var8] = new class149(var2, var8);
+				Statics.field1537[var8] = new CutsceneEntity(var2, var8);
 			}
 			int var9 = var2.method15277();
 			Statics.field1528 = new class147[var9];
@@ -82,9 +82,9 @@ public class CutsceneManager {
 		}
 		if (Statics.field10188 == class145.field1540) {
 			boolean var15 = true;
-			class149[] var16 = Statics.field1537;
+			CutsceneEntity[] var16 = Statics.field1537;
 			for (int var17 = 0; var17 < var16.length; var17++) {
-				class149 var18 = var16[var17];
+				CutsceneEntity var18 = var16[var17];
 				if (!var18.method2860()) {
 					var15 = false;
 				}
