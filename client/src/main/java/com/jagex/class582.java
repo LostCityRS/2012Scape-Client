@@ -2,7 +2,7 @@ package com.jagex;
 
 import deob.ObfuscatedName;
 import java.applet.Applet;
-import netscape.javascript.JSObject;
+// import netscape.javascript.JSObject;
 
 @ObfuscatedName("uy")
 public class class582 {
@@ -13,11 +13,11 @@ public class class582 {
 
 	@ObfuscatedName("uy.j(Ljava/applet/Applet;Ljava/lang/String;B)Ljava/lang/Object;")
 	public static Object method12167(Applet arg0, String arg1) throws Throwable {
-		return JSObject.getWindow(arg0).call(arg1, (Object[]) null);
+		return null; // JSObject.getWindow(arg0).call(arg1, (Object[]) null);
 	}
 
 	@ObfuscatedName("uy.a(Ljava/applet/Applet;Ljava/lang/String;[Ljava/lang/Object;I)Ljava/lang/Object;")
 	public static Object method12168(Applet arg0, String arg1, Object[] arg2) throws Throwable {
-		return JSObject.getWindow(arg0).call(arg1, arg2);
+		return null; // JSObject.getWindow(arg0).call(arg1, arg2);
 	}
 }

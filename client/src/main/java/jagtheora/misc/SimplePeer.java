@@ -33,7 +33,7 @@ public abstract class SimplePeer {
 		super.finalize();
 	}
 
-	public static native void init();
+	static native void init();
 
 	public abstract void clear();
 }

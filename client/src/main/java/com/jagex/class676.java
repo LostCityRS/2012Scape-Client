@@ -495,28 +495,27 @@ public class class676 extends class13 {
 							this.method238(this.field7807[var86], this.field7783[var86], this.field7820[var86], var87, var88, var89, var90, var91, var92, var37);
 							var44[2] = var37[0];
 							var45[2] = var37[1];
-							int var10002;
 							if ((var91 & 0x1) == 0) {
 								if (var44[1] - var44[0] > 0.5F) {
-									var10002 = var44[1]--;
+									var44[1]--;
 								} else if (var44[0] - var44[1] > 0.5F) {
-									var10002 = var44[1]++;
+									var44[1]++;
 								}
 								if (var44[2] - var44[0] > 0.5F) {
-									var10002 = var44[2]--;
+									var44[2]--;
 								} else if (var44[0] - var44[2] > 0.5F) {
-									var10002 = var44[2]++;
+									var44[2]++;
 								}
 							} else {
 								if (var45[1] - var45[0] > 0.5F) {
-									var10002 = var45[1]--;
+									var45[1]--;
 								} else if (var45[0] - var45[1] > 0.5F) {
-									var10002 = var45[1]++;
+									var45[1]++;
 								}
 								if (var45[2] - var45[0] > 0.5F) {
-									var10002 = var45[2]--;
+									var45[2]--;
 								} else if (var45[0] - var45[2] > 0.5F) {
-									var10002 = var45[2]++;
+									var45[2]++;
 								}
 							}
 						}
