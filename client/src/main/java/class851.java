@@ -38,7 +38,7 @@ public class class851 extends class537 {
 
 	@ObfuscatedName("afs.j(IB)I")
 	public int method11387(int arg0) {
-		return arg0 == 3 && !class618.method11710().method6803("jagdx") ? 3 : 2;
+		return arg0 == 3 && !NativeLibraries.method11710().method6803("jagdx") ? 3 : 2;
 	}
 
 	@ObfuscatedName("afs.s(II)V")

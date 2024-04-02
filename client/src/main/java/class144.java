@@ -5,10 +5,10 @@ import deob.ObfuscatedName;
 public class class144 {
 
 	@ObfuscatedName("dd.u")
-	public static class547 field1534 = new class547();
+	public static IterableQueue field1534 = new IterableQueue();
 
 	@ObfuscatedName("dd.t")
-	public static class565 field1529 = new class565(32);
+	public static IterableMap field1529 = new IterableMap(32);
 
 	@ObfuscatedName("dd.l")
 	public static int field1530 = 1;
@@ -47,7 +47,7 @@ public class class144 {
 			if (var1 == null) {
 				return false;
 			}
-			class814 var2 = new class814(var1);
+			Packet var2 = new Packet(var1);
 			method7325(var2);
 			int var3 = var2.method15220();
 			for (int var4 = 0; var4 < var3; var4++) {
@@ -74,9 +74,9 @@ public class class144 {
 				Statics.field5181[var12] = new class151(var2);
 			}
 			int var13 = var2.method15277();
-			Statics.field6396 = new class150[var13];
+			Statics.field6396 = new CutsceneAction[var13];
 			for (int var14 = 0; var14 < var13; var14++) {
-				Statics.field6396[var14] = class150.method3928(var2);
+				Statics.field6396[var14] = CutsceneAction.method3928(var2);
 			}
 			Statics.field10188 = class145.field1540;
 		}
@@ -89,9 +89,9 @@ public class class144 {
 					var15 = false;
 				}
 			}
-			class150[] var19 = Statics.field6396;
+			CutsceneAction[] var19 = Statics.field6396;
 			for (int var20 = 0; var20 < var19.length; var20++) {
-				class150 var21 = var19[var20];
+				CutsceneAction var21 = var19[var20];
 				if (!var21.method2883()) {
 					var15 = false;
 				}
@@ -112,7 +112,7 @@ public class class144 {
 	}
 
 	@ObfuscatedName("oe.j(Laet;B)V")
-	public static void method7325(class814 arg0) {
+	public static void method7325(Packet arg0) {
 		while (true) {
 			int var1 = arg0.method15220();
 			switch(var1) {
@@ -172,9 +172,9 @@ public class class144 {
 			return;
 		}
 		if (!arg0) {
-			class150[] var1 = Statics.field6396;
+			CutsceneAction[] var1 = Statics.field6396;
 			for (int var2 = 0; var2 < var1.length; var2++) {
-				class150 var3 = var1[var2];
+				CutsceneAction var3 = var1[var2];
 				var3.method2874();
 			}
 			if (field1536 != -1) {
@@ -191,7 +191,7 @@ public class class144 {
 			class502.method1372(class619.field7312, field1533, -1);
 		}
 		method2911();
-		class792 var4 = class792.method14781(class280.field2953, client.field8975.field834);
+		ClientMessage var4 = ClientMessage.method14781(ClientProt.field2953, client.field8975.field834);
 		var4.field9467.method15308(arg0 ? 1 : 0);
 		client.field8975.method1913(var4);
 	}

@@ -22,7 +22,7 @@ public abstract class class403 {
 	public final OggSyncState field4235;
 
 	@ObfuscatedName("nw.t")
-	public final class565 field4234;
+	public final IterableMap field4234;
 
 	@ObfuscatedName("nw.l")
 	public boolean field4237;
@@ -49,14 +49,14 @@ public abstract class class403 {
 	public boolean field4244;
 
 	public class403(int arg0) {
-		if (!class618.method11710().method6800("jagtheora")) {
+		if (!NativeLibraries.method11710().method6800("jagtheora")) {
 			throw new RuntimeException("");
 		}
 		this.field4232 = new byte[arg0];
 		this.field4235 = new OggSyncState();
 		this.field4236 = new OggPage();
 		this.field4230 = new OggPacket();
-		this.field4234 = new class565(8);
+		this.field4234 = new IterableMap(8);
 	}
 
 	@ObfuscatedName("nw.j(B)Ladp;")
@@ -220,7 +220,7 @@ public abstract class class403 {
 	public boolean method7042() {
 		if (this.field4243 == null) {
 			double var1 = (double) this.field4240.method16812();
-			return var1 == 0.0D || (double) class153.method5554() >= (double) this.field4240.method16816() + 1000.0D / var1;
+			return var1 == 0.0D || (double) MonotonicTime.method5554() >= (double) this.field4240.method16816() + 1000.0D / var1;
 		} else {
 			return !this.field4240.method16810() || this.method7039() > this.field4240.method16809();
 		}

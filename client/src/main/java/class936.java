@@ -8,7 +8,7 @@ public class class936 extends class793 {
 	public class937 field10226;
 
 	@ObfuscatedName("aij.f")
-	public class547 field10227 = new class547();
+	public IterableQueue field10227 = new IterableQueue();
 
 	@ObfuscatedName("aij.d")
 	public class939 field10225 = new class939();

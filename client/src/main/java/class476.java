@@ -15,7 +15,7 @@ public final class class476 implements class494 {
 		int var5 = arg0 & 0xFFFF;
 		Queue var6 = class477.field5041;
 		synchronized (class477.field5041) {
-			class477.field5041.add(class962.method7166(var4, var5, arg1, arg2));
+			class477.field5041.add(NativeMouseEvent.method7166(var4, var5, arg1, arg2));
 		}
 	}
 }

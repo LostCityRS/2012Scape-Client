@@ -11,18 +11,18 @@ public class class219 {
 	public int field2375 = -1;
 
 	@ObfuscatedName("gs.a")
-	public class547 field2376 = new class547();
+	public IterableQueue field2376 = new IterableQueue();
 
-	public class219(class814 arg0) {
+	public class219(Packet arg0) {
 		this.method4110(arg0);
 	}
 
 	@ObfuscatedName("gs.u(Laet;B)V")
-	public void method4110(class814 arg0) {
+	public void method4110(Packet arg0) {
 		this.field2379 = arg0.method15246();
 		this.field2375 = arg0.method15379();
 		for (int var2 = arg0.method15220(); var2 != 0; var2 = arg0.method15220()) {
-			class787 var3;
+			ClanSettingsDeltaEntry var3;
 			if (var2 == 3) {
 				var3 = new class920(this);
 			} else if (var2 == 1) {
@@ -62,7 +62,7 @@ public class class219 {
 		if (this.field2379 != arg0.field2347 || this.field2375 != arg0.field2348) {
 			throw new RuntimeException("");
 		}
-		for (class787 var2 = (class787) this.field2376.method11563(); var2 != null; var2 = (class787) this.field2376.method11567()) {
+		for (ClanSettingsDeltaEntry var2 = (ClanSettingsDeltaEntry) this.field2376.method11563(); var2 != null; var2 = (ClanSettingsDeltaEntry) this.field2376.method11567()) {
 			var2.method14955(arg0);
 		}
 		arg0.field2348++;

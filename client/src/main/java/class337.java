@@ -23,7 +23,7 @@ public abstract class class337 {
 	public long field3599;
 
 	@ObfuscatedName("lo.z")
-	public class814 field3597 = new class814(6);
+	public Packet field3597 = new Packet(6);
 
 	@ObfuscatedName("lo.n")
 	public byte field3601 = 0;
@@ -35,7 +35,7 @@ public abstract class class337 {
 	public volatile int field3591 = 0;
 
 	@ObfuscatedName("lo.p")
-	public class814 field3590 = new class814(10);
+	public Packet field3590 = new Packet(10);
 
 	@ObfuscatedName("lo.w")
 	public class1003 field3592;

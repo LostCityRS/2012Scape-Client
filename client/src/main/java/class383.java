@@ -69,7 +69,7 @@ public class class383 {
 			}
 		} else if (arg1 == 1) {
 			try {
-				Object var6 = class582.method12168(Statics.field6387, arg2, new Object[] { (new URL(Statics.field6387.getCodeBase(), arg0)).toString() });
+				Object var6 = BrowserControl.method12168(Statics.field6387, arg2, new Object[] { (new URL(Statics.field6387.getCodeBase(), arg0)).toString() });
 				return var6 != null;
 			} catch (Throwable var12) {
 				return false;
@@ -83,7 +83,7 @@ public class class383 {
 			}
 		} else if (arg1 == 3) {
 			try {
-				class582.method12167(Statics.field6387, "loggedout");
+				BrowserControl.method12167(Statics.field6387, "loggedout");
 			} catch (Throwable var15) {
 			}
 			try {

@@ -35,7 +35,7 @@ public abstract class class208 implements class214 {
 		this.method3957(arg0, var2, var3);
 		this.method3955(arg0, var2, var3);
 		String var4 = Statics.field6789.method4959();
-		if (class153.method5554() - this.field2314 > 10000L) {
+		if (MonotonicTime.method5554() - this.field2314 > 10000L) {
 			var4 = var4 + " (" + Statics.field6789.method4960().field3404 + ")";
 		}
 		this.field2312.method834(var4, this.field2311.field2602 / 2 + var2, this.field2311.field2610 + this.field2311.field2607 / 2 + var3 + 4, this.field2311.field2606, -1);
@@ -69,7 +69,7 @@ public abstract class class208 implements class214 {
 				long var4 = this.field2314 - Statics.field6789.method4955();
 				if (var4 > 0L) {
 					long var6 = var4 * 10000L / (long) var1 * (long) (var3 - var1);
-					long var8 = (class153.method5554() - this.field2314) * 10000L;
+					long var8 = (MonotonicTime.method5554() - this.field2314) * 10000L;
 					if (var8 < var6) {
 						var2 = (int) ((long) (var3 - var1) * var8 * 100L / var6 + (long) (var1 * 100));
 					} else {
@@ -79,7 +79,7 @@ public abstract class class208 implements class214 {
 			}
 		} else {
 			this.field2309 = var1;
-			this.field2314 = class153.method5554();
+			this.field2314 = MonotonicTime.method5554();
 		}
 		return var2;
 	}

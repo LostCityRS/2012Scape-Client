@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 @ObfuscatedName("akx")
 public class class975 extends class871 {
 
-	public class975(class199 arg0) {
+	public class975(Camera arg0) {
 		super(arg0);
 	}
 

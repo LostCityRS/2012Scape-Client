@@ -2,10 +2,10 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("acx")
-public class class769 extends class399 {
+public class class769 extends Node {
 
 	@ObfuscatedName("acx.s")
-	public static final class565 field9273 = new class565(32);
+	public static final IterableMap field9273 = new IterableMap(32);
 
 	@ObfuscatedName("acx.c")
 	public static final class451 field9274 = new class451(10);
@@ -67,7 +67,7 @@ public class class769 extends class399 {
 		int var5 = 0;
 		for (int var6 = 0; var6 < var4.field9276.length; var6++) {
 			if (var4.field9276[var6] >= 0 && var4.field9276[var6] < Statics.field3492.field7144) {
-				class592 var7 = Statics.field3492.method12316(var4.field9276[var6]);
+				ObjType var7 = Statics.field3492.method12316(var4.field9276[var6]);
 				int var8 = var7.method12250(arg1, Statics.field4464.method12600(arg1).field7287);
 				if (arg2) {
 					var5 += var4.field9275[var6] * var8;
@@ -155,7 +155,7 @@ public class class769 extends class399 {
 
 	@ObfuscatedName("acx.z([II[IZI)J")
 	public long method14760(int[] arg0, int arg1, int[] arg2, boolean arg3) {
-		long[] var5 = class814.field9628;
+		long[] var5 = Packet.field9628;
 		long var6 = -1L;
 		long var8 = var6 >>> 8 ^ var5[(int) ((var6 ^ (long) (arg1 >> 8)) & 0xFFL)];
 		long var10 = var8 >>> 8 ^ var5[(int) ((var8 ^ (long) arg1) & 0xFFL)];
@@ -174,10 +174,10 @@ public class class769 extends class399 {
 	}
 
 	@ObfuscatedName("acx.n(Lra;ILtt;IZLqc;B)Lqa;")
-	public final class13 method14751(class14 arg0, int arg1, class553 arg2, int arg3, boolean arg4, class471 arg5) {
-		class13 var7 = null;
+	public final Model method14751(RendererToolkit arg0, int arg1, AnimationNode arg2, int arg3, boolean arg4, class471 arg5) {
+		Model var7 = null;
 		int var8 = arg1;
-		class439 var9 = null;
+		BASType var9 = null;
 		if (arg3 != -1) {
 			var9 = Statics.field3769.method7784(arg3);
 		}
@@ -198,7 +198,7 @@ public class class769 extends class399 {
 		}
 		long var13 = this.method14760(var10, arg3, arg5 == null ? null : arg5.field5000, arg4);
 		if (field9274 != null) {
-			var7 = (class13) field9274.method7916(var13);
+			var7 = (Model) field9274.method7916(var13);
 		}
 		if (var7 == null || arg0.method519(var7.method329(), var8) != 0) {
 			if (var7 != null) {
@@ -260,7 +260,7 @@ public class class769 extends class399 {
 		if (arg2 == null) {
 			return var7;
 		} else {
-			class13 var30 = var7.method295((byte) 1, var8, true);
+			Model var30 = var7.method295((byte) 1, var8, true);
 			arg2.method11780(var30, 0);
 			return var30;
 		}

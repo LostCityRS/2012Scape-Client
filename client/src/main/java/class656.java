@@ -3,10 +3,10 @@ import deob.ObfuscatedName;
 import jaggl.OpenGL;
 
 @ObfuscatedName("xc")
-public class class656 extends class800 implements class98 {
+public class class656 extends SecondaryNode implements class98 {
 
 	@ObfuscatedName("xc.s")
-	public final class682 field7522;
+	public final GlToolkit field7522;
 
 	@ObfuscatedName("xc.c")
 	public int field7520;
@@ -29,7 +29,7 @@ public class class656 extends class800 implements class98 {
 	@ObfuscatedName("xc.z")
 	public static final int[] field7517 = new int[1];
 
-	public class656(class682 arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
+	public class656(GlToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4) {
 		this.field7522 = arg0;
 		this.field7518 = arg3;
 		this.field7519 = arg4;
@@ -38,11 +38,11 @@ public class class656 extends class800 implements class98 {
 		OpenGL.glGenRenderbuffersEXT(1, field7517, 0);
 		this.field7520 = field7517[0];
 		OpenGL.glBindRenderbufferEXT(36161, this.field7520);
-		OpenGL.glRenderbufferStorageEXT(36161, class682.method13335(this.field7521, this.field7523), this.field7518, this.field7519);
+		OpenGL.glRenderbufferStorageEXT(36161, GlToolkit.method13335(this.field7521, this.field7523), this.field7518, this.field7519);
 		this.field7516 = this.field7521.field1306 * this.field7519 * this.field7518 * this.field7523.field1508;
 	}
 
-	public class656(class682 arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5) {
+	public class656(GlToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5) {
 		this.field7522 = arg0;
 		this.field7518 = arg3;
 		this.field7519 = arg4;
@@ -51,7 +51,7 @@ public class class656 extends class800 implements class98 {
 		OpenGL.glGenRenderbuffersEXT(1, field7517, 0);
 		this.field7520 = field7517[0];
 		OpenGL.glBindRenderbufferEXT(36161, this.field7520);
-		OpenGL.glRenderbufferStorageMultisampleEXT(36161, arg5, class682.method13335(this.field7521, this.field7523), this.field7518, this.field7519);
+		OpenGL.glRenderbufferStorageMultisampleEXT(36161, arg5, GlToolkit.method13335(this.field7521, this.field7523), this.field7518, this.field7519);
 		this.field7516 = this.field7521.field1306 * this.field7519 * this.field7518 * this.field7523.field1508;
 	}
 

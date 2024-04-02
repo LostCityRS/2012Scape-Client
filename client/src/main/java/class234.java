@@ -6,10 +6,10 @@ import java.nio.ByteBuffer;
 public class class234 {
 
 	@ObfuscatedName("hq.a")
-	public final class683 field2451;
+	public final GpuToolkit field2451;
 
 	@ObfuscatedName("hq.s")
-	public final class235 field2457;
+	public final GpuFloorModelHardShadows field2457;
 
 	@ObfuscatedName("hq.c")
 	public final int field2452;
@@ -44,7 +44,7 @@ public class class234 {
 	@ObfuscatedName("hq.p")
 	public byte[] field2463;
 
-	public class234(class683 arg0, class235 arg1, class673 arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
+	public class234(GpuToolkit arg0, GpuFloorModelHardShadows arg1, GpuFloorModel arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
 		this.field2451 = arg0;
 		this.field2457 = arg1;
 		this.field2452 = arg6;

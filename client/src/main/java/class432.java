@@ -36,7 +36,7 @@ public class class432 implements class463 {
 		}
 		class433 var8 = new class433();
 		if (var6 != null) {
-			var8.method7682(new class814(var6));
+			var8.method7682(new Packet(var6));
 		}
 		class451 var9 = this.field4665;
 		synchronized (this.field4665) {

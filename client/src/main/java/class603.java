@@ -36,7 +36,7 @@ public class class603 {
 	}
 
 	public class603(byte[] arg0) {
-		class814 var2 = new class814(arg0);
+		Packet var2 = new Packet(arg0);
 		int var3 = var2.method15220();
 		if (var3 != 0) {
 			throw new RuntimeException("");
@@ -172,7 +172,7 @@ public class class603 {
 						if (!var9.equals("reg")) {
 							if (var9.startsWith("img=") && arg1 != null) {
 								try {
-									int var10 = class526.method5598(var9.substring(4));
+									int var10 = StringTools.method5598(var9.substring(4));
 									var5 += arg1[var10].method1042();
 									var4 = -1;
 								} catch (Exception var12) {
@@ -184,7 +184,7 @@ public class class603 {
 					}
 				}
 				if (var3 == -1) {
-					var5 += this.field7178[class524.method2474(var8) & 0xFF] & 0xFF;
+					var5 += this.field7178[Cp1252.method2474(var8) & 0xFF] & 0xFF;
 					if (this.field7173 != null && var4 != -1) {
 						var5 += this.field7173[var4][var8];
 					}
@@ -232,7 +232,7 @@ public class class603 {
 						if (!var12.equals("reg")) {
 							if (var12.startsWith("img=") && arg2 != null) {
 								try {
-									int var13 = class526.method5598(var12.substring(4));
+									int var13 = StringTools.method5598(var12.substring(4));
 									var7 += arg2[var13].method1042();
 									var6 = -1;
 									if (var7 > var4) {
@@ -248,7 +248,7 @@ public class class603 {
 					}
 				}
 				if (var5 == -1) {
-					var7 += this.field7178[class524.method2474(var11) & 0xFF] & 0xFF;
+					var7 += this.field7178[Cp1252.method2474(var11) & 0xFF] & 0xFF;
 					if (this.field7173 != null && var6 != -1) {
 						var7 += this.field7173[var6][var11];
 					}
@@ -287,7 +287,7 @@ public class class603 {
 		int var13 = 0;
 		int var14 = arg0.length();
 		for (int var15 = 0; var15 < var14; var15++) {
-			int var16 = class524.method2474(arg0.charAt(var15)) & 0xFF;
+			int var16 = Cp1252.method2474(arg0.charAt(var15)) & 0xFF;
 			int var17 = 0;
 			if (var16 == 60) {
 				var11 = var15;
@@ -369,7 +369,7 @@ public class class603 {
 						var12 = 174;
 					} else if (var19.startsWith("img=") && arg3 != null) {
 						try {
-							int var20 = class526.method5598(var19.substring(4));
+							int var20 = StringTools.method5598(var19.substring(4));
 							var17 += arg3[var20].method1042();
 							var12 = -1;
 						} catch (Exception var22) {

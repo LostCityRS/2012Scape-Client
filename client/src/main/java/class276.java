@@ -8,7 +8,7 @@ import java.util.NoSuchElementException;
 public class class276 implements Iterator {
 
 	@ObfuscatedName("if.u")
-	public class978 field2777;
+	public SortedQueue field2777;
 
 	@ObfuscatedName("if.j")
 	public int field2775 = 0;
@@ -16,7 +16,7 @@ public class class276 implements Iterator {
 	@ObfuscatedName("if.a")
 	public int field2776 = this.field2777.field10517;
 
-	public class276(class978 arg0) {
+	public class276(SortedQueue arg0) {
 		this.field2777 = arg0;
 	}
 

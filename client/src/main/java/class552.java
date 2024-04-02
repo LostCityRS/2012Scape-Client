@@ -6,10 +6,10 @@ import java.util.Iterator;
 public class class552 implements Iterable {
 
 	@ObfuscatedName("tv.u")
-	public class800 field6662 = new class800();
+	public SecondaryNode field6662 = new SecondaryNode();
 
 	@ObfuscatedName("tv.j")
-	public class800 field6663;
+	public SecondaryNode field6663;
 
 	public class552() {
 		this.field6662.field9552 = this.field6662;
@@ -24,7 +24,7 @@ public class class552 implements Iterable {
 	}
 
 	@ObfuscatedName("tv.j(Ladi;I)V")
-	public void method11728(class800 arg0) {
+	public void method11728(SecondaryNode arg0) {
 		if (arg0.field9553 != null) {
 			arg0.method15142();
 		}
@@ -35,7 +35,7 @@ public class class552 implements Iterable {
 	}
 
 	@ObfuscatedName("rs.a(Ladi;Ladi;I)V")
-	public static void method8542(class800 arg0, class800 arg1) {
+	public static void method8542(SecondaryNode arg0, SecondaryNode arg1) {
 		if (arg0.field9553 != null) {
 			arg0.method15142();
 		}
@@ -46,7 +46,7 @@ public class class552 implements Iterable {
 	}
 
 	@ObfuscatedName("cr.s(Ladi;Ladi;B)V")
-	public static void method2355(class800 arg0, class800 arg1) {
+	public static void method2355(SecondaryNode arg0, SecondaryNode arg1) {
 		if (arg0.field9553 != null) {
 			arg0.method15142();
 		}
@@ -57,8 +57,8 @@ public class class552 implements Iterable {
 	}
 
 	@ObfuscatedName("tv.c(I)Ladi;")
-	public class800 method11729() {
-		class800 var1 = this.field6662.field9552;
+	public SecondaryNode method11729() {
+		SecondaryNode var1 = this.field6662.field9552;
 		if (this.field6662 == var1) {
 			return null;
 		} else {
@@ -68,13 +68,13 @@ public class class552 implements Iterable {
 	}
 
 	@ObfuscatedName("tv.m(I)Ladi;")
-	public class800 method11756() {
+	public SecondaryNode method11756() {
 		return this.method11731(null);
 	}
 
 	@ObfuscatedName("tv.t(Ladi;I)Ladi;")
-	public class800 method11731(class800 arg0) {
-		class800 var2;
+	public SecondaryNode method11731(SecondaryNode arg0) {
+		SecondaryNode var2;
 		if (arg0 == null) {
 			var2 = this.field6662.field9552;
 		} else {
@@ -90,8 +90,8 @@ public class class552 implements Iterable {
 	}
 
 	@ObfuscatedName("tv.l(I)Ladi;")
-	public class800 method11744() {
-		class800 var1 = this.field6663;
+	public SecondaryNode method11744() {
+		SecondaryNode var1 = this.field6663;
 		if (this.field6662 == var1) {
 			this.field6663 = null;
 			return null;
@@ -104,7 +104,7 @@ public class class552 implements Iterable {
 	@ObfuscatedName("tv.f(I)I")
 	public int method11732() {
 		int var1 = 0;
-		for (class800 var2 = this.field6662.field9552; var2 != this.field6662; var2 = var2.field9552) {
+		for (SecondaryNode var2 = this.field6662.field9552; var2 != this.field6662; var2 = var2.field9552) {
 			var1++;
 		}
 		return var1;

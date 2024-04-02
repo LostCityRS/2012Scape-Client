@@ -210,7 +210,7 @@ public class class716 extends class168 {
 		}
 		this.field8578[var3] = arg1;
 		if (arg0.method16234() != class170.field2067 && arg0.method16234() != class170.field2014) {
-			throw new class1012(arg0, "");
+			throw new OpenGLError(arg0, "");
 		}
 		OpenGL.glUniform1f(var3, arg1);
 	}
@@ -224,7 +224,7 @@ public class class716 extends class168 {
 		this.field8578[var4] = arg1;
 		this.field8583[var4] = arg2;
 		if (arg0.method16234() != class170.field1948) {
-			throw new class1012(arg0, "");
+			throw new OpenGLError(arg0, "");
 		}
 		OpenGL.glUniform2f(var4, arg1, arg2);
 	}
@@ -239,7 +239,7 @@ public class class716 extends class168 {
 		this.field8583[var5] = arg2;
 		this.field8567[var5] = arg3;
 		if (arg0.method16234() != class170.field2003) {
-			throw new class1012(arg0, "");
+			throw new OpenGLError(arg0, "");
 		}
 		OpenGL.glUniform3f(var5, arg1, arg2, arg3);
 	}
@@ -255,7 +255,7 @@ public class class716 extends class168 {
 		this.field8567[var6] = arg3;
 		this.field8581[var6] = arg4;
 		if (arg0.method16234() != class170.field1971) {
-			throw new class1012(arg0, "");
+			throw new OpenGLError(arg0, "");
 		}
 		OpenGL.glUniform4f(var6, arg1, arg2, arg3, arg4);
 	}
@@ -269,7 +269,7 @@ public class class716 extends class168 {
 	}
 
 	@ObfuscatedName("aan.z(Laig;Lka;)V")
-	public void method3232(class918 arg0, class320 arg1) {
+	public void method3232(class918 arg0, Matrix4x4 arg1) {
 		assert arg0.method16234() == class170.field1985;
 		int var3 = ((class993) arg0).method16994();
 		if (var3 != -1) {
@@ -278,7 +278,7 @@ public class class716 extends class168 {
 	}
 
 	@ObfuscatedName("aan.n(Laig;Lka;)V")
-	public void method3237(class918 arg0, class320 arg1) {
+	public void method3237(class918 arg0, Matrix4x4 arg1) {
 		assert arg0.method16234() == class170.field1987;
 		int var3 = ((class993) arg0).method16994();
 		if (var3 != -1) {
@@ -324,17 +324,17 @@ public class class716 extends class168 {
 	}
 
 	@ObfuscatedName("aan.b(ILka;)V")
-	public void method3242(int arg0, class320 arg1) {
+	public void method3242(int arg0, Matrix4x4 arg1) {
 		OpenGL.glUniform3fv(arg0, 3, arg1.method5410(field8577), 0);
 	}
 
 	@ObfuscatedName("aan.x(ILka;)V")
-	public void method3243(int arg0, class320 arg1) {
+	public void method3243(int arg0, Matrix4x4 arg1) {
 		OpenGL.glUniform2fv(arg0, 4, arg1.method5458(field8577), 0);
 	}
 
 	@ObfuscatedName("aan.i(ILka;)V")
-	public void method3284(int arg0, class320 arg1) {
+	public void method3284(int arg0, Matrix4x4 arg1) {
 		OpenGL.glUniform4fv(arg0, 4, arg1.method5408(field8577), 0);
 	}
 

@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class class408 {
 
 	@ObfuscatedName("om.f")
-	public static class565 field4272 = new class565(16);
+	public static IterableMap field4272 = new IterableMap(16);
 
 	@ObfuscatedName("om.d")
 	public static int field4273 = (int) (Math.random() * 11.0D) - 5;
@@ -22,14 +22,14 @@ public class class408 {
 	public static byte[] field4271 = new byte[1];
 
 	@ObfuscatedName("om.i")
-	public static class547 field4301 = new class547();
+	public static IterableQueue field4301 = new IterableQueue();
 
 	public class408() throws Throwable {
 		throw new Error();
 	}
 
 	@ObfuscatedName("om.u(Lls;Lrd;Lux;Ltz;Lph;Lwd;Lug;)V")
-	public static void method7080(class334 arg0, class484 arg1, class563 arg2, class541 arg3, class444 arg4, class609 arg5, class567 arg6) {
+	public static void method7080(class334 arg0, class484 arg1, class563 arg2, LocTypeList arg3, class444 arg4, class609 arg5, class567 arg6) {
 		Statics.field4264 = arg0;
 		Statics.field4278 = arg1;
 		Statics.field4265 = arg2;
@@ -151,8 +151,8 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.d(Lra;II)V")
-	public static void method7120(class14 arg0, int arg1, int arg2) {
-		class814 var3 = new class814(Statics.field4264.method5645(Statics.field4292.field10362, "area"));
+	public static void method7120(RendererToolkit arg0, int arg1, int arg2) {
+		Packet var3 = new Packet(Statics.field4264.method5645(Statics.field4292.field10362, "area"));
 		int var4 = var3.method15220();
 		int[] var5 = new int[var4];
 		for (int var6 = 0; var6 < var4; var6++) {
@@ -232,7 +232,7 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.z(Lra;Laet;IIII[I[I)V")
-	public static void method7085(class14 arg0, class814 arg1, int arg2, int arg3, int arg4, int arg5, int[] arg6, int[] arg7) {
+	public static void method7085(RendererToolkit arg0, Packet arg1, int arg2, int arg3, int arg4, int arg5, int[] arg6, int[] arg7) {
 		int var8 = arg1.method15220();
 		if ((var8 & 0x1) == 0) {
 			boolean var9 = (var8 & 0x2) == 0;
@@ -319,10 +319,10 @@ public class class408 {
 						class805 var3 = (class805) var2;
 						if (var3 != null) {
 							for (int var4 = 0; var4 < var3.field9562.length; var4++) {
-								class540 var5 = Statics.field4266.method11471(var3.field9562[var4]);
+								LocType var5 = Statics.field4266.method11471(var3.field9562[var4]);
 								int var6 = var5.field6495;
 								if (var5.field6534 != null) {
-									class540 var7 = var5.method11431(Statics.field4299);
+									LocType var7 = var5.method11431(Statics.field4299);
 									if (var7 != null) {
 										var6 = var7.field6495;
 									}
@@ -337,10 +337,10 @@ public class class408 {
 						}
 					} else {
 						Integer var9 = (Integer) var2;
-						class540 var10 = Statics.field4266.method11471(var9);
+						LocType var10 = Statics.field4266.method11471(var9);
 						int var11 = var10.field6495;
 						if (var10.field6534 != null) {
-							class540 var12 = var10.method11431(Statics.field4299);
+							LocType var12 = var10.method11431(Statics.field4299);
 							if (var12 != null) {
 								var11 = var12.field6495;
 							}
@@ -370,10 +370,10 @@ public class class408 {
 								var19 = (class405) var18.next();
 							} while (var19.field4251 == null);
 							for (int var20 = 0; var20 < var19.field4251.length; var20++) {
-								class540 var21 = Statics.field4266.method11471(var19.field4251[var20]);
+								LocType var21 = Statics.field4266.method11471(var19.field4251[var20]);
 								int var22 = var21.field6495;
 								if (var21.field6534 != null) {
-									class540 var23 = var21.method11431(Statics.field4299);
+									LocType var23 = var21.method11431(Statics.field4299);
 									if (var23 != null) {
 										var22 = var23.field6495;
 									}
@@ -502,7 +502,7 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.w(Lra;)V")
-	public static void method7095(class14 arg0) {
+	public static void method7095(RendererToolkit arg0) {
 		int var1 = Statics.field4298 - Statics.field4296;
 		int var2 = Statics.field4297 - Statics.field4302;
 		int var3 = (Statics.field4270 - Statics.field4300 << 16) / var1;
@@ -511,7 +511,7 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.b(Lra;IIII)V")
-	public static void method7090(class14 arg0, int arg1, int arg2, int arg3, int arg4) {
+	public static void method7090(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4) {
 		int var5 = Statics.field4298 - Statics.field4296;
 		int var6 = Statics.field4297 - Statics.field4302;
 		if (Statics.field4298 < Statics.field4285) {
@@ -689,7 +689,7 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.x(Lra;IIIIIII[I[BZ)V")
-	public static void method7079(class14 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int[] arg8, byte[] arg9, boolean arg10) {
+	public static void method7079(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int[] arg8, byte[] arg9, boolean arg10) {
 		if (arg10 || arg5 != 0 || arg6 > 0) {
 			if (arg6 == 0) {
 				arg0.method489(arg1, arg2, arg3, arg4, arg5, 0);
@@ -724,7 +724,7 @@ public class class408 {
 		for (int var16 = 0; var16 < arg8.length; var16++) {
 			int var17 = arg9[var16] & 0x3F;
 			if (class542.field6591.field6590 == var17 || class542.field6569.field6590 == var17 || class542.field6570.field6590 == var17 || class542.field6567.field6590 == var17) {
-				class540 var18 = Statics.field4266.method11471(arg8[var16]);
+				LocType var18 = Statics.field4266.method11471(arg8[var16]);
 				if (var18.field6508 == -1) {
 					int var19 = -3355444;
 					if (var18.field6493 == 1) {
@@ -782,12 +782,12 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.i(Lra;IIII[I[B)V")
-	public static void method7098(class14 arg0, int arg1, int arg2, int arg3, int arg4, int[] arg5, byte[] arg6) {
+	public static void method7098(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int[] arg5, byte[] arg6) {
 		if (arg5 == null) {
 			return;
 		}
 		for (int var7 = 0; var7 < arg5.length; var7++) {
-			class540 var8 = Statics.field4266.method11471(arg5[var7]);
+			LocType var8 = Statics.field4266.method11471(arg5[var7]);
 			int var9 = var8.field6508;
 			if (var9 != -1) {
 				class608 var10 = Statics.field4268.method12491(var9);
@@ -819,7 +819,7 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.v(Lra;)Ltq;")
-	public static class547 method7099(class14 arg0) {
+	public static IterableQueue method7099(RendererToolkit arg0) {
 		int var1 = Statics.field4298 - Statics.field4296;
 		int var2 = Statics.field4297 - Statics.field4302;
 		int var3 = (Statics.field4270 - Statics.field4300 << 16) / var1;
@@ -828,7 +828,7 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.k(Lra;IIII)Ltq;")
-	public static class547 method7100(class14 arg0, int arg1, int arg2, int arg3, int arg4) {
+	public static IterableQueue method7100(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4) {
 		for (class806 var5 = (class806) field4301.method11563(); var5 != null; var5 = (class806) field4301.method11567()) {
 			method7101(arg0, var5, arg1, arg2, arg3, arg4);
 		}
@@ -836,13 +836,13 @@ public class class408 {
 	}
 
 	@ObfuscatedName("om.h(Lra;Ladw;IIII)V")
-	public static void method7101(class14 arg0, class806 arg1, int arg2, int arg3, int arg4, int arg5) {
+	public static void method7101(RendererToolkit arg0, class806 arg1, int arg2, int arg3, int arg4, int arg5) {
 		arg1.field9568 = ((arg1.field9566 - Statics.field4296) * arg2 + arg4 >> 16) + Statics.field4300;
 		arg1.field9569 = Statics.field4303 - ((arg1.field9567 - Statics.field4302) * arg3 + arg5 >> 16);
 	}
 
 	@ObfuscatedName("om.r(Lra;Ladw;Lpw;)V")
-	public static void method7102(class14 arg0, class806 arg1, class443 arg2) {
+	public static void method7102(RendererToolkit arg0, class806 arg1, class443 arg2) {
 		if (arg2.field4788 == null) {
 			return;
 		}

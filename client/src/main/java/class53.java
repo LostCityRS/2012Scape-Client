@@ -27,7 +27,7 @@ public class class53 implements Runnable {
 	}
 
 	public void run() {
-		Container var1 = class385.method16494();
+		Container var1 = GameShell.method16494();
 		Frame var2 = null;
 		if (Statics.field1197 == null) {
 			while (var1 != null) {

@@ -9,11 +9,11 @@ public class class489 {
 
 	public class489(class334 arg0) {
 		byte[] var2 = arg0.method5635(class491.field5139.field5145);
-		this.method8594(new class814(var2));
+		this.method8594(new Packet(var2));
 	}
 
 	@ObfuscatedName("rj.u(Laet;I)V")
-	public void method8594(class814 arg0) {
+	public void method8594(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {

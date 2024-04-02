@@ -12,7 +12,7 @@ public class class48 {
 	}
 
 	@ObfuscatedName("p.u(Lra;IIIIILqa;IIIILtt;I)Lqa;")
-	public static class13 method1417(class14 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class13 arg6, int arg7, int arg8, int arg9, int arg10, class553 arg11) {
+	public static Model method1417(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, Model arg6, int arg7, int arg8, int arg9, int arg10, AnimationNode arg11) {
 		if (arg6 == null) {
 			return null;
 		}
@@ -23,9 +23,9 @@ public class class48 {
 		}
 		long var14 = ((long) arg8 << 48) + ((long) arg7 << 32) + (long) ((arg10 << 24) + (arg9 << 16) + arg5);
 		class451 var16 = field654;
-		class13 var17;
+		Model var17;
 		synchronized (field654) {
-			var17 = (class13) field654.method7916(var14);
+			var17 = (Model) field654.method7916(var14);
 		}
 		if (var17 == null || arg0.method519(var17.method329(), var12) != 0) {
 			if (var17 != null) {
@@ -53,8 +53,8 @@ public class class48 {
 				int var27 = var21[var25];
 				for (int var28 = 0; var28 < var19; var28++) {
 					int var29 = (var28 << 14) / var19;
-					int var30 = class312.field3439[var29] * var26 >> 14;
-					int var31 = class312.field3447[var29] * var27 >> 14;
+					int var30 = Trig1.field3439[var29] * var26 >> 14;
+					int var31 = Trig1.field3447[var29] * var27 >> 14;
 					var24[var25][var28] = var22.method2625(var30, 0, var31);
 				}
 			}
@@ -82,7 +82,7 @@ public class class48 {
 		int var41 = arg6.method277();
 		int var42 = arg6.method280();
 		int var43 = arg6.method281();
-		class13 var44;
+		Model var44;
 		if (arg11 == null) {
 			var44 = var17.method295((byte) 3, var12, true);
 			var44.method245(var41 - var40 >> 1, 128, var43 - var42 >> 1);

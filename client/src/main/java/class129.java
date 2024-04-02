@@ -107,10 +107,10 @@ public class class129 {
 	public byte[] field1325;
 
 	@ObfuscatedName("dw.ao")
-	public class134[] field1347;
+	public ModelParticleEmitter[] field1347;
 
 	@ObfuscatedName("dw.al")
-	public class119[] field1346;
+	public ModelParticleEffector[] field1346;
 
 	@ObfuscatedName("dw.at")
 	public class141[] field1349;
@@ -252,10 +252,10 @@ public class class129 {
 			this.field1349 = new class141[var5];
 		}
 		if (var3 > 0) {
-			this.field1347 = new class134[var3];
+			this.field1347 = new ModelParticleEmitter[var3];
 		}
 		if (var4 > 0) {
-			this.field1346 = new class119[var4];
+			this.field1346 = new ModelParticleEffector[var4];
 		}
 		this.field1328 = 0;
 		this.field1342 = 0;
@@ -386,13 +386,13 @@ public class class129 {
 
 	@ObfuscatedName("dw.a([B)V")
 	public void method2621(byte[] arg0) {
-		class814 var2 = new class814(arg0);
-		class814 var3 = new class814(arg0);
-		class814 var4 = new class814(arg0);
-		class814 var5 = new class814(arg0);
-		class814 var6 = new class814(arg0);
-		class814 var7 = new class814(arg0);
-		class814 var8 = new class814(arg0);
+		Packet var2 = new Packet(arg0);
+		Packet var3 = new Packet(arg0);
+		Packet var4 = new Packet(arg0);
+		Packet var5 = new Packet(arg0);
+		Packet var6 = new Packet(arg0);
+		Packet var7 = new Packet(arg0);
+		Packet var8 = new Packet(arg0);
 		var2.field9626 = arg0.length - 23;
 		this.field1328 = var2.method15239();
 		this.field1342 = var2.method15239();
@@ -634,7 +634,7 @@ public class class129 {
 		if (var11) {
 			int var82 = var2.method15220();
 			if (var82 > 0) {
-				this.field1347 = new class134[var82];
+				this.field1347 = new ModelParticleEmitter[var82];
 				for (int var83 = 0; var83 < var82; var83++) {
 					int var84 = var2.method15239();
 					int var85 = var2.method15239();
@@ -644,16 +644,16 @@ public class class129 {
 					} else {
 						var86 = (byte) var17;
 					}
-					this.field1347[var83] = new class134(var84, this.field1322[var85], this.field1323[var85], this.field1324[var85], var86);
+					this.field1347[var83] = new ModelParticleEmitter(var84, this.field1322[var85], this.field1323[var85], this.field1324[var85], var86);
 				}
 			}
 			int var87 = var2.method15220();
 			if (var87 > 0) {
-				this.field1346 = new class119[var87];
+				this.field1346 = new ModelParticleEffector[var87];
 				for (int var88 = 0; var88 < var87; var88++) {
 					int var89 = var2.method15239();
 					int var90 = var2.method15239();
-					this.field1346[var88] = new class119(var89, var90);
+					this.field1346[var88] = new ModelParticleEffector(var89, var90);
 				}
 			}
 		}
@@ -683,7 +683,7 @@ public class class129 {
 	}
 
 	@ObfuscatedName("dw.s(Laet;Laet;)V")
-	public void method2622(class814 arg0, class814 arg1) {
+	public void method2622(Packet arg0, Packet arg1) {
 		short var3 = 0;
 		short var4 = 0;
 		short var5 = 0;
@@ -748,7 +748,7 @@ public class class129 {
 	}
 
 	@ObfuscatedName("dw.c(Laet;Laet;Laet;Laet;Laet;Laet;)V")
-	public void method2628(class814 arg0, class814 arg1, class814 arg2, class814 arg3, class814 arg4, class814 arg5) {
+	public void method2628(Packet arg0, Packet arg1, Packet arg2, Packet arg3, Packet arg4, Packet arg5) {
 		for (int var7 = 0; var7 < this.field1334; var7++) {
 			int var8 = this.field1335[var7] & 0xFF;
 			if (var8 == 0) {
@@ -828,11 +828,11 @@ public class class129 {
 	public void method2624(byte[] arg0) {
 		boolean var2 = false;
 		boolean var3 = false;
-		class814 var4 = new class814(arg0);
-		class814 var5 = new class814(arg0);
-		class814 var6 = new class814(arg0);
-		class814 var7 = new class814(arg0);
-		class814 var8 = new class814(arg0);
+		Packet var4 = new Packet(arg0);
+		Packet var5 = new Packet(arg0);
+		Packet var6 = new Packet(arg0);
+		Packet var7 = new Packet(arg0);
+		Packet var8 = new Packet(arg0);
 		var4.field9626 = arg0.length - 18;
 		this.field1328 = var4.method15239();
 		this.field1342 = var4.method15239();
@@ -1231,8 +1231,8 @@ public class class129 {
 	@ObfuscatedName("dw.w(III)V")
 	public void method2633(int arg0, int arg1, int arg2) {
 		if (arg2 != 0) {
-			int var4 = class312.field3439[arg2];
-			int var5 = class312.field3447[arg2];
+			int var4 = Trig1.field3439[arg2];
+			int var5 = Trig1.field3447[arg2];
 			for (int var6 = 0; var6 < this.field1328; var6++) {
 				int var7 = this.field1320[var6] * var4 + this.field1316[var6] * var5 >> 14;
 				this.field1320[var6] = this.field1320[var6] * var5 - this.field1316[var6] * var4 >> 14;
@@ -1240,8 +1240,8 @@ public class class129 {
 			}
 		}
 		if (arg0 != 0) {
-			int var8 = class312.field3439[arg0];
-			int var9 = class312.field3447[arg0];
+			int var8 = Trig1.field3439[arg0];
+			int var9 = Trig1.field3447[arg0];
 			for (int var10 = 0; var10 < this.field1328; var10++) {
 				int var11 = this.field1320[var10] * var9 - this.field1318[var10] * var8 >> 14;
 				this.field1318[var10] = this.field1320[var10] * var8 + this.field1318[var10] * var9 >> 14;
@@ -1251,8 +1251,8 @@ public class class129 {
 		if (arg1 == 0) {
 			return;
 		}
-		int var12 = class312.field3439[arg1];
-		int var13 = class312.field3447[arg1];
+		int var12 = Trig1.field3439[arg1];
+		int var13 = Trig1.field3447[arg1];
 		for (int var14 = 0; var14 < this.field1328; var14++) {
 			int var15 = this.field1318[var14] * var12 + this.field1316[var14] * var13 >> 14;
 			this.field1318[var14] = this.field1318[var14] * var13 - this.field1316[var14] * var12 >> 14;

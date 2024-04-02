@@ -6,7 +6,7 @@ import jaggl.OpenGL;
 public class class102 {
 
 	@ObfuscatedName("co.u")
-	public final class682 field1148;
+	public final GlToolkit field1148;
 
 	@ObfuscatedName("co.j")
 	public class890 field1149;
@@ -33,7 +33,7 @@ public class class102 {
 	public boolean field1164;
 
 	@ObfuscatedName("co.d")
-	public class547 field1157 = new class547();
+	public IterableQueue field1157 = new IterableQueue();
 
 	@ObfuscatedName("co.z")
 	public boolean field1158 = true;
@@ -68,7 +68,7 @@ public class class102 {
 	@ObfuscatedName("co.k")
 	public class139 field1161 = class139.field1501;
 
-	public class102(class682 arg0) {
+	public class102(GlToolkit arg0) {
 		this.field1148 = arg0;
 		if (this.field1148.field8176 && this.field1148.field8208) {
 			this.field1151 = this.field1149 = new class890(this.field1148);
@@ -88,7 +88,7 @@ public class class102 {
 		this.field1162 = null;
 		this.field1163 = null;
 		if (!this.field1157.method11585()) {
-			for (class399 var1 = this.field1157.method11563(); var1 != this.field1157.field6647; var1 = var1.field4226) {
+			for (Node var1 = this.field1157.method11563(); var1 != this.field1157.field6647; var1 = var1.field4226) {
 				((class776) var1).method14820();
 			}
 		}
@@ -201,7 +201,7 @@ public class class102 {
 		if (this.field1150 != arg2 || this.field1155 != arg3) {
 			this.field1150 = arg2;
 			this.field1155 = arg3;
-			for (class399 var5 = this.field1157.method11563(); var5 != this.field1157.field6647; var5 = var5.field4226) {
+			for (Node var5 = this.field1157.method11563(); var5 != this.field1157.field6647; var5 = var5.field4226) {
 				((class776) var5).method14821(this.field1150, this.field1155);
 			}
 			this.field1158 = true;

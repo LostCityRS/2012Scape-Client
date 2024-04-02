@@ -38,7 +38,7 @@ public class class204 implements class464 {
 	public static final int[] field2289 = new int[] { 7, 8, 9, 10, 11, 12, 13, 15 };
 
 	@ObfuscatedName("gp.u(Laet;I)V")
-	public void method3902(class814 arg0) {
+	public void method3902(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -49,7 +49,7 @@ public class class204 implements class464 {
 	}
 
 	@ObfuscatedName("gp.j(Laet;II)V")
-	public void method3893(class814 arg0, int arg1) {
+	public void method3893(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			arg0.method15220();
 		} else if (arg1 == 2) {

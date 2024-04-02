@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import java.awt.Canvas;
 
 @ObfuscatedName("ja")
-public class ja extends class14 implements class10 {
+public class ja extends RendererToolkit implements class10 {
 
 	public long nativeid = 0L;
 
@@ -14,7 +14,7 @@ public class ja extends class14 implements class10 {
 	public ba field437;
 
 	@ObfuscatedName("ja.ay")
-	public class547 field438 = new class547();
+	public IterableQueue field438 = new IterableQueue();
 
 	@ObfuscatedName("ja.af")
 	public int field453 = 4096;
@@ -23,22 +23,22 @@ public class ja extends class14 implements class10 {
 	public int field440 = 4096;
 
 	@ObfuscatedName("ja.an")
-	public class320 field441;
+	public Matrix4x4 field441;
 
 	@ObfuscatedName("ja.ap")
-	public class314 field442;
+	public Matrix4x3 field442;
 
 	@ObfuscatedName("ja.ag")
-	public class314 field443;
+	public Matrix4x3 field443;
 
 	@ObfuscatedName("ja.as")
-	public class320 field464;
+	public Matrix4x4 field464;
 
 	@ObfuscatedName("ja.ai")
-	public class320 field445;
+	public Matrix4x4 field445;
 
 	@ObfuscatedName("ja.ao")
-	public class320 field436;
+	public Matrix4x4 field436;
 
 	@ObfuscatedName("ja.al")
 	public float field447;
@@ -97,22 +97,22 @@ public class ja extends class14 implements class10 {
 	public ja(Canvas arg0, class16 arg1, int arg2, int arg3) {
 		super(arg1);
 		try {
-			if (!class618.method11710().method6800("sw3d")) {
+			if (!NativeLibraries.method11710().method6800("sw3d")) {
 				throw new RuntimeException("");
 			}
 			class111.method2360();
 			this.method966(this.field400, this.field400.method894(), 0);
 			class482.method8092(false, true);
 			this.field449 = true;
-			this.field441 = new class320();
-			new class317();
-			this.field442 = new class314();
-			new class316();
-			this.field464 = new class320();
-			this.field445 = new class320();
-			this.field436 = new class320();
-			this.method524(new class314());
-			this.method784(new class320());
+			this.field441 = new Matrix4x4();
+			new Vector3();
+			this.field442 = new Matrix4x3();
+			new Quaternion();
+			this.field464 = new Matrix4x4();
+			this.field445 = new Matrix4x4();
+			this.field436 = new Matrix4x4();
+			this.method524(new Matrix4x3());
+			this.method784(new Matrix4x4());
 			this.method985(1);
 			this.method986(0);
 			if (arg0 != null) {
@@ -147,7 +147,7 @@ public class ja extends class14 implements class10 {
 	}
 
 	@ObfuscatedName("ja.of(Ldp;Z)V")
-	public void method1022(class128 arg0, boolean arg1) {
+	public void method1022(ParticleList arg0, boolean arg1) {
 		int var3 = 0;
 		int var4 = 0;
 		int var5 = 0;
@@ -488,7 +488,7 @@ public class ja extends class14 implements class10 {
 	}
 
 	@ObfuscatedName("ja.cx(Ldw;IIII)Lqa;")
-	public class13 method625(class129 arg0, int arg1, int arg2, int arg3, int arg4) {
+	public Model method625(class129 arg0, int arg1, int arg2, int arg3, int arg4) {
 		return new h(this, this.field437, arg0, arg1, arg2, arg3, arg4);
 	}
 
@@ -505,17 +505,17 @@ public class ja extends class14 implements class10 {
 	}
 
 	@ObfuscatedName("ja.cs(II[[I[[IIII)Lxa;")
-	public class12 method521(int arg0, int arg1, int[][] arg2, int[][] arg3, int arg4, int arg5, int arg6) {
+	public FloorModel method521(int arg0, int arg1, int[][] arg2, int[][] arg3, int arg4, int arg5, int arg6) {
 		return new i(this, this.field437, arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 	}
 
 	@ObfuscatedName("ja.cb()Lka;")
-	public class320 method781() {
+	public Matrix4x4 method781() {
 		return this.field441;
 	}
 
 	@ObfuscatedName("ja.cm()Lkc;")
-	public class314 method516() {
+	public Matrix4x3 method516() {
 		return this.field442;
 	}
 
@@ -544,7 +544,7 @@ public class ja extends class14 implements class10 {
 	}
 
 	@ObfuscatedName("ja.cp(Ldp;)V")
-	public void method733(class128 arg0) {
+	public void method733(ParticleList arg0) {
 		if (!arg0.field1311.method11674()) {
 			this.method1022(arg0, false);
 			this.method987().method96(this, field439, field465, field466, field458, arg0.field1311.method11681());
@@ -552,7 +552,7 @@ public class ja extends class14 implements class10 {
 	}
 
 	@ObfuscatedName("ja.ci(Lkc;)V")
-	public void method524(class314 arg0) {
+	public void method524(Matrix4x3 arg0) {
 		this.field443 = arg0;
 		this.field464.method5385(arg0);
 		this.method1001(this.field464.field3480);
@@ -560,24 +560,24 @@ public class ja extends class14 implements class10 {
 	}
 
 	@ObfuscatedName("ja.ca()Lkc;")
-	public class314 method525() {
+	public Matrix4x3 method525() {
 		return this.field443;
 	}
 
 	@ObfuscatedName("ja.ch(Lka;)V")
-	public void method784(class320 arg0) {
+	public void method784(Matrix4x4 arg0) {
 		this.field445 = arg0;
 		this.method977(this.field445.field3480);
 		this.field436.method5383(this.field464, this.field445);
 	}
 
 	@ObfuscatedName("ja.cv()Lka;")
-	public class320 method528() {
+	public Matrix4x4 method528() {
 		return this.field445;
 	}
 
 	@ObfuscatedName("ja.ce(I[Lacg;)V")
-	public void method535(int arg0, class780[] arg1) {
+	public void method535(int arg0, Light[] arg1) {
 		int var3 = 0;
 		for (int var4 = 0; var4 < arg0; var4++) {
 			field461[var3++] = arg1[var4].method14888();

@@ -146,7 +146,7 @@ public final class class715 extends class168 {
 		int var3 = ((class992) arg0).method16988();
 		int var4 = ((class992) arg0).method16989();
 		if (arg0.method16234() != class170.field2067 && arg0.method16234() != class170.field2014) {
-			throw new class1012(arg0, "");
+			throw new OpenGLError(arg0, "");
 		}
 		if (var3 >= 0) {
 			int var5 = var3 * 4;
@@ -165,7 +165,7 @@ public final class class715 extends class168 {
 		int var4 = ((class992) arg0).method16988();
 		int var5 = ((class992) arg0).method16989();
 		if (arg0.method16234() != class170.field1948) {
-			throw new class1012(arg0, "");
+			throw new OpenGLError(arg0, "");
 		}
 		if (var4 >= 0) {
 			int var6 = var4 * 4;
@@ -186,7 +186,7 @@ public final class class715 extends class168 {
 		int var5 = ((class992) arg0).method16988();
 		int var6 = ((class992) arg0).method16989();
 		if (arg0.method16234() != class170.field2003) {
-			throw new class1012(arg0, "");
+			throw new OpenGLError(arg0, "");
 		}
 		if (var5 >= 0) {
 			int var7 = var5 * 4;
@@ -210,7 +210,7 @@ public final class class715 extends class168 {
 		int var6 = ((class992) arg0).method16988();
 		int var7 = ((class992) arg0).method16989();
 		if (arg0.method16234() != class170.field1971) {
-			throw new class1012(arg0, "");
+			throw new OpenGLError(arg0, "");
 		}
 		if (var6 >= 0) {
 			int var8 = var6 * 4;
@@ -232,11 +232,11 @@ public final class class715 extends class168 {
 	}
 
 	@ObfuscatedName("aae.z(Laig;Lka;)V")
-	public void method3232(class918 arg0, class320 arg1) {
+	public void method3232(class918 arg0, Matrix4x4 arg1) {
 		int var3 = ((class992) arg0).method16988();
 		int var4 = ((class992) arg0).method16989();
 		if (arg0.method16234() != class170.field1985) {
-			throw new class1012(arg0, "");
+			throw new OpenGLError(arg0, "");
 		}
 		if (var3 >= 0) {
 			this.method13917(var3, arg1.method5413(field8564), 8);
@@ -247,11 +247,11 @@ public final class class715 extends class168 {
 	}
 
 	@ObfuscatedName("aae.n(Laig;Lka;)V")
-	public void method3237(class918 arg0, class320 arg1) {
+	public void method3237(class918 arg0, Matrix4x4 arg1) {
 		int var3 = ((class992) arg0).method16988();
 		int var4 = ((class992) arg0).method16989();
 		if (arg0.method16234() != class170.field1987) {
-			throw new class1012(arg0, "");
+			throw new OpenGLError(arg0, "");
 		}
 		if (var3 >= 0) {
 			this.method13917(var3, arg1.method5411(field8564), 16);
@@ -266,7 +266,7 @@ public final class class715 extends class168 {
 		int var4 = ((class992) arg0).method16988();
 		int var5 = ((class992) arg0).method16989();
 		if (arg0.method16234() != class170.field1977) {
-			throw new class1012(arg0, "");
+			throw new OpenGLError(arg0, "");
 		}
 		if (var4 >= 0) {
 			this.method13917(var4, arg1, arg2);
@@ -304,7 +304,7 @@ public final class class715 extends class168 {
 	}
 
 	@ObfuscatedName("aae.b(ILka;)V")
-	public void method3242(int arg0, class320 arg1) {
+	public void method3242(int arg0, Matrix4x4 arg1) {
 		int var3 = arg0 >> 16;
 		int var4 = (arg0 & 0xFFFF) * 4;
 		System.arraycopy(arg1.method5411(field8564), 0, this.field8565[var3], var4, 12);
@@ -312,7 +312,7 @@ public final class class715 extends class168 {
 	}
 
 	@ObfuscatedName("aae.x(ILka;)V")
-	public void method3243(int arg0, class320 arg1) {
+	public void method3243(int arg0, Matrix4x4 arg1) {
 		int var3 = arg0 >> 16;
 		int var4 = (arg0 & 0xFFFF) * 4;
 		System.arraycopy(arg1.method5413(field8564), 0, this.field8565[var3], var4, 8);
@@ -320,7 +320,7 @@ public final class class715 extends class168 {
 	}
 
 	@ObfuscatedName("aae.i(ILka;)V")
-	public void method3284(int arg0, class320 arg1) {
+	public void method3284(int arg0, Matrix4x4 arg1) {
 		int var3 = arg0 >> 16;
 		int var4 = (arg0 & 0xFFFF) * 4;
 		System.arraycopy(arg1.method5411(field8564), 0, this.field8565[var3], var4, 16);

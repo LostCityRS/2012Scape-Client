@@ -8,7 +8,7 @@ public class class722 extends class200 {
 	public class172 field8682;
 
 	@ObfuscatedName("aam.aq")
-	public final class320 field8671 = new class320();
+	public final Matrix4x4 field8671 = new Matrix4x4();
 
 	@ObfuscatedName("aam.ab")
 	public final class168[] field8686 = new class168[19];
@@ -19,13 +19,13 @@ public class class722 extends class200 {
 	@ObfuscatedName("aam.bz")
 	public int[] field8688;
 
-	public class722(class683 arg0) throws class883 {
+	public class722(GpuToolkit arg0) throws ShaderException {
 		super(arg0);
 		this.method14042();
 	}
 
 	@ObfuscatedName("aam.r(I)Z")
-	public boolean method14042() throws class883 {
+	public boolean method14042() throws ShaderException {
 		this.field8682 = this.field2270.method13490("Model");
 		class918 var1 = this.field8682.method3357("DiffuseSampler");
 		class918 var2 = this.field8682.method3357("EnvironmentSampler");
@@ -78,7 +78,7 @@ public class class722 extends class200 {
 	}
 
 	@ObfuscatedName("aam.j(Lka;)V")
-	public void method3848(class320 arg0) {
+	public void method3848(Matrix4x4 arg0) {
 		this.field8671.method5412(arg0);
 		this.field8671.method5384(this.field2270.field8279);
 	}

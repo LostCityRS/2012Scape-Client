@@ -24,7 +24,7 @@ public class class356 {
 			}
 			var3.field839 = 0;
 			if (!var3.field846 && var3.method1927() != null) {
-				class792 var4 = class792.method14781(class280.field2873, var3.field834);
+				ClientMessage var4 = ClientMessage.method14781(ClientProt.field2873, var3.field834);
 				var3.method1913(var4);
 				try {
 					var3.method1912();

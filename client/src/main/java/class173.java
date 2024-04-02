@@ -22,7 +22,7 @@ public class class173 {
 
 	@ObfuscatedName("em.u([BI)V")
 	public void method3456(byte[] arg0) throws class882 {
-		class169 var2 = new class169(arg0);
+		ShaderDataReader var2 = new ShaderDataReader(arg0);
 		int var3 = var2.method3294();
 		if (var3 != 4) {
 			throw new class882(this, var3, 4);

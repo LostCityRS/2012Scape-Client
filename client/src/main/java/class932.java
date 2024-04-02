@@ -25,7 +25,7 @@ public class class932 extends class789 {
 	}
 
 	@ObfuscatedName("aiw.u(Laet;B)V")
-	public void method14985(class814 arg0) {
+	public void method14985(Packet arg0) {
 		this.field10214 = arg0.method15239();
 		this.field10213 = arg0.method15238();
 		this.field10215 = arg0.method15239();

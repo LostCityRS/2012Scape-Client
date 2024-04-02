@@ -23,13 +23,13 @@ public class class907 extends class736 {
 	public class918 field10092;
 
 	@ObfuscatedName("ahn.ax")
-	public final class320 field10093 = new class320();
+	public final Matrix4x4 field10093 = new Matrix4x4();
 
 	@ObfuscatedName("ahn.aw")
 	public class918 field10094;
 
 	@ObfuscatedName("ahn.aa")
-	public final class320 field10089 = new class320();
+	public final Matrix4x4 field10089 = new Matrix4x4();
 
 	@ObfuscatedName("ahn.am")
 	public class918 field10096;
@@ -58,7 +58,7 @@ public class class907 extends class736 {
 	@ObfuscatedName("ahn.ae")
 	public int field10088;
 
-	public class907(class683 arg0, class221 arg1) throws class883 {
+	public class907(GpuToolkit arg0, class221 arg1) throws ShaderException {
 		super(arg0);
 		this.field10091 = arg1;
 		if (this.field10091.method4125() && arg0.method13487()) {
@@ -67,7 +67,7 @@ public class class907 extends class736 {
 	}
 
 	@ObfuscatedName("ahn.e()Z")
-	public boolean method14135() throws class883 {
+	public boolean method14135() throws ShaderException {
 		this.field10094 = this.field8778.method3357("WorldMatrix");
 		this.field10092 = this.field8778.method3357("WVPMatrix");
 		this.field10096 = this.field8778.method3357("UGenerationPlane");

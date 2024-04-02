@@ -5,7 +5,7 @@ import jagdx.IUnknown;
 import java.nio.ByteBuffer;
 
 @ObfuscatedName("abj")
-public class class740 extends class230 {
+public class class740 extends VertexDeclaration {
 
 	@ObfuscatedName("abj.j")
 	public class898 field8787;

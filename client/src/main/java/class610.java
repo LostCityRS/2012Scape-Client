@@ -23,7 +23,7 @@ public class class610 {
 		this.field7206 = arg3;
 	}
 
-	public class610(class611 arg0, boolean arg1) {
+	public class610(NPCType arg0, boolean arg1) {
 		if (arg1) {
 			this.field7204 = new int[arg0.field7214.length];
 			System.arraycopy(arg0.field7214, 0, this.field7204, 0, this.field7204.length);

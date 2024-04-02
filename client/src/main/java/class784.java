@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("acu")
-public class class784 extends class399 {
+public class class784 extends Node {
 
 	@ObfuscatedName("acu.s")
 	public int field9411;
@@ -35,7 +35,7 @@ public class class784 extends class399 {
 	}
 
 	public class784(byte[] arg0) {
-		class814 var2 = new class814(arg0);
+		Packet var2 = new Packet(arg0);
 		int var3;
 		for (var3 = 0; var2.field9629[var2.field9626 + var3] != 0; var3++) {
 		}

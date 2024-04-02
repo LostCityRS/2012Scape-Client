@@ -2,12 +2,12 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("zl")
-public class class700 extends class150 {
+public class class700 extends CutsceneAction {
 
 	@ObfuscatedName("zl.j")
 	public final int field8484;
 
-	public class700(class814 arg0) {
+	public class700(Packet arg0) {
 		super(arg0);
 		this.field8484 = arg0.method15239();
 	}

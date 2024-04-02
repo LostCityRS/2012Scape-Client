@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ajx")
-public class class950 extends class800 {
+public class class950 extends SecondaryNode {
 
 	@ObfuscatedName("ajx.t")
 	public String field10357;
@@ -20,7 +20,7 @@ public class class950 extends class800 {
 	public char[] field10360;
 
 	@ObfuscatedName("ajx.u(Laet;I)V")
-	public void method16690(class814 arg0) {
+	public void method16690(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -31,7 +31,7 @@ public class class950 extends class800 {
 	}
 
 	@ObfuscatedName("ajx.j(Laet;II)V")
-	public void method16691(class814 arg0, int arg1) {
+	public void method16691(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			this.field10357 = arg0.method15337();
 		} else if (arg1 == 2) {
@@ -41,7 +41,7 @@ public class class950 extends class800 {
 			for (int var4 = 0; var4 < var3; var4++) {
 				this.field10359[var4] = arg0.method15239();
 				byte var5 = arg0.method15238();
-				this.field10358[var4] = var5 == 0 ? 0 : class524.method16898(var5);
+				this.field10358[var4] = var5 == 0 ? 0 : Cp1252.method16898(var5);
 			}
 		} else if (arg1 == 3) {
 			int var6 = arg0.method15220();
@@ -50,7 +50,7 @@ public class class950 extends class800 {
 			for (int var7 = 0; var7 < var6; var7++) {
 				this.field10356[var7] = arg0.method15239();
 				byte var8 = arg0.method15238();
-				this.field10360[var7] = var8 == 0 ? 0 : class524.method16898(var8);
+				this.field10360[var7] = var8 == 0 ? 0 : Cp1252.method16898(var8);
 			}
 		} else if (arg1 == 4) {
 		}

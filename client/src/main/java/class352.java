@@ -25,7 +25,7 @@ public class class352 {
 	public class352() {
 	}
 
-	public class352(class814 arg0) {
+	public class352(Packet arg0) {
 		this.field3759 = arg0.method15238();
 		this.field3758 = arg0.method15239();
 		this.field3762 = arg0.method15379();

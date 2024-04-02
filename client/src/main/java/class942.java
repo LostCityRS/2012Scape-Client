@@ -2,12 +2,12 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aip")
-public class class942 extends class800 {
+public class class942 extends SecondaryNode {
 
 	@ObfuscatedName("aip.t")
-	public class1010 field10296;
+	public SpotAnimation field10296;
 
-	public class942(class1010 arg0) {
+	public class942(SpotAnimation arg0) {
 		this.field10296 = arg0;
 	}
 }

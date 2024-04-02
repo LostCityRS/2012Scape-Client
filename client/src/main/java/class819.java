@@ -4,7 +4,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 @ObfuscatedName("aek")
-public class class819 extends class399 {
+public class class819 extends Node {
 
 	@ObfuscatedName("aek.s")
 	public int field9740;

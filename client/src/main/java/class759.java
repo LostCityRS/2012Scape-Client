@@ -29,16 +29,16 @@ public class class759 extends class340 {
 	public class469 field8883;
 
 	@ObfuscatedName("abo.cg")
-	public class541 field8894;
+	public LocTypeList field8894;
 
-	public class759(class423 arg0, class541 arg1, int arg2, int arg3, int arg4, boolean arg5, class338 arg6, class469 arg7) {
+	public class759(Scene arg0, LocTypeList arg1, int arg2, int arg3, int arg4, boolean arg5, class338 arg6, class469 arg7) {
 		super(arg0, arg2, arg3, arg4, arg5, Statics.field3615, Statics.field4450, arg6);
 		this.field8894 = arg1;
 		this.field8883 = arg7;
 	}
 
 	@ObfuscatedName("abo.cd(Lra;Laet;IIB)V")
-	public final void method14269(class14 arg0, class814 arg1, int arg2, int arg3) {
+	public final void method14269(RendererToolkit arg0, Packet arg1, int arg2, int arg3) {
 		if (this.field3644) {
 			return;
 		}
@@ -63,7 +63,7 @@ public class class759 extends class340 {
 								var10.method7577(var11.field7188, var11.field7191, var11.field7189, var11.field7190);
 							}
 							if (arg0.method768() > 0) {
-								class780 var12 = var10.field4588;
+								Light var12 = var10.field4588;
 								int var13 = var12.method14888() + (arg2 << 9);
 								int var14 = var12.method14879() + (arg3 << 9);
 								int var15 = var13 >> 9;
@@ -214,7 +214,7 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("abo.ce(Lra;Laet;IIIIIIII)V")
-	public final void method14270(class14 arg0, class814 arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8) {
+	public final void method14270(RendererToolkit arg0, Packet arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8) {
 		if (this.field3644) {
 			return;
 		}
@@ -241,7 +241,7 @@ public class class759 extends class340 {
 								var17.method7577(var18.field7188, var18.field7191, var18.field7189, var18.field7190);
 							}
 							if (arg0.method768() > 0) {
-								class780 var19 = var17.field4588;
+								Light var19 = var17.field4588;
 								int var20 = var19.method14888() >> 9;
 								int var21 = var19.method14879() >> 9;
 								if (var17.field4592 == arg5 && var20 >= var12 && var20 < var12 + 8 && var21 >= var13 && var21 < var13 + 8) {
@@ -354,9 +354,9 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("md.ct(Ltz;[BIIIIB)I")
-	public static final int method6583(class541 arg0, byte[] arg1, int arg2, int arg3, int arg4, int arg5) {
+	public static final int method6583(LocTypeList arg0, byte[] arg1, int arg2, int arg3, int arg4, int arg5) {
 		int var6 = 0;
-		class814 var7 = new class814(arg1);
+		Packet var7 = new Packet(arg1);
 		int var8 = -1;
 		label57: while (true) {
 			int var9 = var7.method15258();
@@ -379,7 +379,7 @@ public class class759 extends class340 {
 					int var17 = arg2 + var15;
 					int var18 = arg3 + var14;
 					if (var17 > 0 && var18 > 0 && var17 < arg4 - 1 && var18 < arg5 - 1) {
-						class540 var19 = arg0.method11471(var8);
+						LocType var19 = arg0.method11471(var8);
 						if (class542.field6589.field6590 != var16 || Statics.field4961.field9671.method15725() != 0 || var19.field6493 != 0 || var19.field6491 == 1 || var19.field6523) {
 							if (!var19.method11442()) {
 								var6++;
@@ -398,8 +398,8 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("rj.cu(Ltz;III)Z")
-	public static final boolean method8598(class541 arg0, int arg1, int arg2) {
-		class540 var3 = arg0.method11471(arg1);
+	public static final boolean method8598(LocTypeList arg0, int arg1, int arg2) {
+		LocType var3 = arg0.method11471(arg1);
 		if (arg2 == 11) {
 			arg2 = 10;
 		}
@@ -410,8 +410,8 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("abo.cc(Lra;[BII[Lmv;B)V")
-	public final void method14271(class14 arg0, byte[] arg1, int arg2, int arg3, class361[] arg4) {
-		class814 var6 = new class814(arg1);
+	public final void method14271(RendererToolkit arg0, byte[] arg1, int arg2, int arg3, class361[] arg4) {
+		Packet var6 = new Packet(arg1);
 		int var7 = -1;
 		while (true) {
 			int var8 = var6.method15258();
@@ -452,8 +452,8 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("abo.cg(Lra;[BIIIIIII[Lmv;I)V")
-	public final void method14272(class14 arg0, byte[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, class361[] arg9) {
-		class814 var11 = new class814(arg1);
+	public final void method14272(RendererToolkit arg0, byte[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, class361[] arg9) {
+		Packet var11 = new Packet(arg1);
 		int var12 = -1;
 		while (true) {
 			int var13 = var11.method15258();
@@ -475,7 +475,7 @@ public class class759 extends class340 {
 				int var20 = var19 >> 2;
 				int var21 = var19 & 0x3;
 				if (arg5 == var18 && var17 >= arg6 && var17 < arg6 + 8 && var16 >= arg7 && var16 < arg7 + 8) {
-					class540 var22 = this.field8894.method11471(var12);
+					LocType var22 = this.field8894.method11471(var12);
 					int var23 = arg3 + class339.method14717(var17 & 0x7, var16 & 0x7, arg8, var22.field6489, var22.field6503, var21);
 					int var24 = arg4 + class339.method7051(var17 & 0x7, var16 & 0x7, arg8, var22.field6489, var22.field6503, var21);
 					if (var23 > 0 && var24 > 0 && var23 < this.field3627 - 1 && var24 < this.field3643 - 1) {
@@ -497,11 +497,11 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("abo.cj(Lra;IIIIIIILmv;IB)V")
-	public final void method14304(class14 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, class361 arg8, int arg9) {
+	public final void method14304(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, class361 arg8, int arg9) {
 		if (arg2 < this.field8893) {
 			this.field8893 = arg2;
 		}
-		class540 var11 = this.field8894.method11471(arg5);
+		LocType var11 = this.field8894.method11471(arg5);
 		if (Statics.field4961.field9659.method15686() == 0 && var11.field6522) {
 			return;
 		}
@@ -532,7 +532,7 @@ public class class759 extends class340 {
 			var16 = arg4;
 			var17 = arg4 + 1;
 		}
-		class12 var18 = this.field3619.field4498[arg1];
+		FloorModel var18 = this.field3619.field4498[arg1];
 		int var19 = var18.method199(var14, var16) + var18.method199(var15, var16) + var18.method199(var14, var17) + var18.method199(var15, var17) >> 2;
 		int var20 = (arg3 << 9) + (var12 << 8);
 		int var21 = (arg4 << 9) + (var13 << 8);
@@ -546,7 +546,7 @@ public class class759 extends class340 {
 		}
 		if (class542.field6589.field6590 == arg7) {
 			if (Statics.field4961.field9671.method15725() != 0 || var11.field6493 != 0 || var11.field6491 == 1 || var11.field6523) {
-				class970 var25;
+				GroundDecorLayerEntity var25;
 				if (var23) {
 					class664 var24 = new class664(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg6, var22);
 					if (var24.method2393()) {
@@ -564,7 +564,7 @@ public class class759 extends class340 {
 		} else if (class542.field6572.field6590 == arg7 || class542.field6588.field6590 == arg7) {
 			class659 var28 = null;
 			int var30;
-			class974 var31;
+			PrimaryLayerEntity var31;
 			if (var23) {
 				class659 var29 = new class659(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg3, arg3 + var12 - 1, arg4, arg4 + var13 - 1, arg7, arg6, var22);
 				var30 = var29.method12865();
@@ -593,7 +593,7 @@ public class class759 extends class340 {
 				arg8.method6264(arg3, arg4, var12, var13, var11.field6492, !var11.field6481);
 			}
 		} else if (class542.method11327(arg7) || class542.method11666(arg7)) {
-			class974 var27;
+			PrimaryLayerEntity var27;
 			if (var23) {
 				class659 var26 = new class659(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg3, arg3 + var12 - 1, arg4, arg4 + var13 - 1, arg7, arg6, var22);
 				if (var26.method2393()) {
@@ -616,13 +616,13 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("abo.cy(Lra;IIZLtg;IIIIIIIIZLxa;Lmv;III)Z")
-	public boolean method14285(class14 arg0, int arg1, int arg2, boolean arg3, class540 arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, boolean arg13, class12 arg14, class361 arg15, int arg16, int arg17) {
+	public boolean method14285(RendererToolkit arg0, int arg1, int arg2, boolean arg3, LocType arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, boolean arg13, FloorModel arg14, class361 arg15, int arg16, int arg17) {
 		if (class542.field6591.field6590 == arg1) {
 			int var19 = arg4.field6497;
 			if (field8884 && arg4.field6497 == -1) {
 				var19 = 1;
 			}
-			class972 var21;
+			WallLayerEntity var21;
 			if (arg3) {
 				class661 var20 = new class661(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2, arg13);
 				if (var20.method2393()) {
@@ -674,7 +674,7 @@ public class class759 extends class340 {
 			}
 			return true;
 		} else if (class542.field6575.field6590 == arg1) {
-			class972 var23;
+			WallLayerEntity var23;
 			if (arg3) {
 				class661 var22 = new class661(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2, arg13);
 				if (var22.method2393()) {
@@ -702,8 +702,8 @@ public class class759 extends class340 {
 			return true;
 		} else if (class542.field6569.field6590 == arg1) {
 			int var24 = arg2 + 1 & 0x3;
-			class972 var27;
-			class972 var28;
+			WallLayerEntity var27;
+			WallLayerEntity var28;
 			if (arg3) {
 				class661 var25 = new class661(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2 + 4, arg13);
 				class661 var26 = new class661(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, var24, arg13);
@@ -743,7 +743,7 @@ public class class759 extends class340 {
 			}
 			return true;
 		} else if (class542.field6570.field6590 == arg1) {
-			class972 var30;
+			WallLayerEntity var30;
 			if (arg3) {
 				class661 var29 = new class661(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2, arg13);
 				if (var29.method2393()) {
@@ -770,7 +770,7 @@ public class class759 extends class340 {
 			}
 			return true;
 		} else if (class542.field6567.field6590 == arg1) {
-			class974 var32;
+			PrimaryLayerEntity var32;
 			if (arg3) {
 				class659 var31 = new class659(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg11, arg11, arg12, arg12, arg1, arg2, arg13);
 				if (var31.method2393()) {
@@ -803,9 +803,9 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("abo.cz(Lra;IIZLtg;IIIIIIIIB)Z")
-	public boolean method14275(class14 arg0, int arg1, int arg2, boolean arg3, class540 arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12) {
+	public boolean method14275(RendererToolkit arg0, int arg1, int arg2, boolean arg3, LocType arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12) {
 		if (class542.field6577.field6590 == arg1) {
-			class971 var15;
+			WallDecorLayerEntity var15;
 			if (arg3) {
 				class660 var14 = new class660(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, 0, 0, arg1, arg2);
 				if (var14.method2393()) {
@@ -823,7 +823,7 @@ public class class759 extends class340 {
 			if (var17 != null) {
 				var16 = this.field8894.method11471(var17.method2401()).field6502 + 1;
 			}
-			class971 var19;
+			WallDecorLayerEntity var19;
 			if (arg3) {
 				class660 var18 = new class660(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, field8890[arg2] * var16, field8886[arg2] * var16, arg1, arg2);
 				if (var18.method2393()) {
@@ -841,7 +841,7 @@ public class class759 extends class340 {
 			if (var21 != null) {
 				var20 = this.field8894.method11471(var21.method2401()).field6502 / 2 + 1;
 			}
-			class971 var23;
+			WallDecorLayerEntity var23;
 			if (arg3) {
 				class660 var22 = new class660(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, field8890[arg2] * var20, field8886[arg2] * var20, arg1, arg2 + 4);
 				if (var22.method2393()) {
@@ -855,7 +855,7 @@ public class class759 extends class340 {
 			return true;
 		} else if (class542.field6581.field6590 == arg1) {
 			int var24 = arg2 + 2 & 0x3;
-			class971 var26;
+			WallDecorLayerEntity var26;
 			if (arg3) {
 				class660 var25 = new class660(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, 0, 0, arg1, var24 + 4);
 				if (var25.method2393()) {
@@ -874,8 +874,8 @@ public class class759 extends class340 {
 			if (var29 != null) {
 				var28 = this.field8894.method11471(var29.method2401()).field6502 / 2 + 1;
 			}
-			class971 var32;
-			class971 var33;
+			WallDecorLayerEntity var32;
+			WallDecorLayerEntity var33;
 			if (arg3) {
 				class660 var30 = new class660(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, field8891[arg2] * var28, field8892[arg2] * var28, arg1, arg2 + 4);
 				class660 var31 = new class660(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, 0, 0, arg1, var27 + 4);
@@ -901,12 +901,12 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("abo.dl(Lra;IIIILmv;B)V")
-	public void method14280(class14 arg0, int arg1, int arg2, int arg3, int arg4, class361 arg5) {
+	public void method14280(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, class361 arg5) {
 		class113 var7 = this.method14289(arg1, arg2, arg3, arg4);
 		if (var7 == null) {
 			return;
 		}
-		class540 var8 = this.field8894.method11471(var7.method2401());
+		LocType var8 = this.field8894.method11471(var7.method2401());
 		int var9 = var7.method2390();
 		int var10 = var7.method2391();
 		if (var8.method11443()) {
@@ -974,7 +974,7 @@ public class class759 extends class340 {
 	}
 
 	@ObfuscatedName("abo.dp(Lra;ZI)V")
-	public final void method14291(class14 arg0, boolean arg1) {
+	public final void method14291(RendererToolkit arg0, boolean arg1) {
 		this.field3619.method7440();
 		if (!arg1) {
 			if (this.field3628 > 1) {

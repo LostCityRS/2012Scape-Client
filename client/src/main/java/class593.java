@@ -22,7 +22,7 @@ public class class593 {
 	@ObfuscatedName("vq.d")
 	public short[] field7135;
 
-	public class593(class592 arg0) {
+	public class593(ObjType arg0) {
 		this.field7130[0] = arg0.field7081;
 		this.field7130[1] = arg0.field7090;
 		this.field7130[2] = arg0.field7093;
@@ -44,7 +44,7 @@ public class class593 {
 	}
 
 	@ObfuscatedName("agg.u(Lvn;Laet;S)Lvq;")
-	public static class593 method15930(class592 arg0, class814 arg1) {
+	public static class593 method15930(ObjType arg0, Packet arg1) {
 		class593 var2 = new class593(arg0);
 		int var3 = arg1.method15220();
 		boolean var4 = (var3 & 0x1) != 0;

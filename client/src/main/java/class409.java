@@ -167,6 +167,6 @@ public class class409 implements Runnable {
 
 	@ObfuscatedName("og.c(B)V")
 	public void method7150() {
-		this.field4305 = new class878();
+		this.field4305 = new BrokenInputStream();
 	}
 }

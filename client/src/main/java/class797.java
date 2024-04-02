@@ -2,19 +2,19 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("adg")
-public class class797 extends class399 {
+public class class797 extends Node {
 
 	@ObfuscatedName("adg.s")
 	public int field9520;
 
 	@ObfuscatedName("adg.m")
-	public static class547 field9514 = new class547();
+	public static IterableQueue field9514 = new IterableQueue();
 
 	@ObfuscatedName("adg.t")
-	public static class547 field9528 = new class547();
+	public static IterableQueue field9528 = new IterableQueue();
 
 	@ObfuscatedName("adg.l")
-	public static class565 field9516 = new class565(16);
+	public static IterableMap field9516 = new IterableMap(16);
 
 	@ObfuscatedName("adg.f")
 	public int field9517;
@@ -41,13 +41,13 @@ public class class797 extends class399 {
 	public int field9546;
 
 	@ObfuscatedName("adg.b")
-	public class540 field9525;
+	public LocType field9525;
 
 	@ObfuscatedName("adg.x")
 	public class903 field9527;
 
 	@ObfuscatedName("adg.i")
-	public class902 field9513;
+	public PlayerEntity field9513;
 
 	@ObfuscatedName("adg.y")
 	public int field9534 = 0;
@@ -148,7 +148,7 @@ public class class797 extends class399 {
 		int var1 = this.field9536;
 		boolean var2 = this.field9537;
 		if (this.field9525 != null) {
-			class540 var3 = this.field9525.method11431(client.field8988 == 0 ? class144.field1538 : Statics.field2669);
+			LocType var3 = this.field9525.method11431(client.field8988 == 0 ? class144.field1538 : Statics.field2669);
 			if (var3 == null) {
 				this.field9536 = -1;
 				this.field9537 = false;
@@ -177,7 +177,7 @@ public class class797 extends class399 {
 			int var4 = method5936(this.field9527);
 			if (var1 != var4) {
 				this.field9536 = var4;
-				class611 var5 = this.field9527.field10075;
+				NPCType var5 = this.field9527.field10075;
 				if (var5.field7244 != null) {
 					var5 = var5.method12516(Statics.field2669);
 				}
@@ -215,7 +215,7 @@ public class class797 extends class399 {
 	}
 
 	@ObfuscatedName("acn.s(IIIILtg;Lahs;Lahg;I)V")
-	public static void method14954(int arg0, int arg1, int arg2, int arg3, class540 arg4, class903 arg5, class902 arg6) {
+	public static void method14954(int arg0, int arg1, int arg2, int arg3, LocType arg4, class903 arg5, PlayerEntity arg6) {
 		class797 var7 = new class797();
 		var7.field9517 = arg0;
 		var7.field9518 = arg1 << 9;
@@ -251,7 +251,7 @@ public class class797 extends class399 {
 			field9514.method11558(var7);
 		} else if (arg5 != null) {
 			var7.field9527 = arg5;
-			class611 var10 = arg5.field10075;
+			NPCType var10 = arg5.field10075;
 			if (var10.field7244 != null) {
 				var7.field9530 = true;
 				var10 = var10.method12516(Statics.field2669);
@@ -284,7 +284,7 @@ public class class797 extends class399 {
 	}
 
 	@ObfuscatedName("z.c(IIILtg;I)V")
-	public static void method1370(int arg0, int arg1, int arg2, class540 arg3) {
+	public static void method1370(int arg0, int arg1, int arg2, LocType arg3) {
 		for (class797 var4 = (class797) field9514.method11563(); var4 != null; var4 = (class797) field9514.method11567()) {
 			if (var4.field9517 == arg0 && arg1 << 9 == var4.field9518 && arg2 << 9 == var4.field9519 && var4.field9525.field6474 == arg3.field6474) {
 				if (var4.field9540 != null) {
@@ -316,7 +316,7 @@ public class class797 extends class399 {
 	}
 
 	@ObfuscatedName("ot.t(Lahg;S)V")
-	public static void method7377(class902 arg0) {
+	public static void method7377(PlayerEntity arg0) {
 		class797 var1 = (class797) field9516.method11923((long) arg0.field8593);
 		if (var1 == null) {
 			return;
@@ -329,7 +329,7 @@ public class class797 extends class399 {
 	}
 
 	@ObfuscatedName("ao.l(Lahg;I)V")
-	public static void method1807(class902 arg0) {
+	public static void method1807(PlayerEntity arg0) {
 		class797 var1 = (class797) field9516.method11923((long) arg0.field8593);
 		if (var1 == null) {
 			method14954(arg0.field9807, arg0.field8642[0], arg0.field8643[0], 0, null, null, arg0);
@@ -340,7 +340,7 @@ public class class797 extends class399 {
 
 	@ObfuscatedName("lt.f(Lahs;I)I")
 	public static int method5936(class903 arg0) {
-		class611 var1 = arg0.field10075;
+		NPCType var1 = arg0.field10075;
 		if (var1.field7244 != null) {
 			var1 = var1.method12516(Statics.field2669);
 			if (var1 == null) {
@@ -348,7 +348,7 @@ public class class797 extends class399 {
 			}
 		}
 		int var2 = var1.field7223;
-		class439 var3 = arg0.method13959();
+		BASType var3 = arg0.method13959();
 		int var4 = arg0.field8616.method11812();
 		if (var4 == -1 || arg0.field8616.field9899) {
 			var2 = var1.field7257;
@@ -361,9 +361,9 @@ public class class797 extends class399 {
 	}
 
 	@ObfuscatedName("tv.d(Lahg;I)I")
-	public static int method11761(class902 arg0) {
+	public static int method11761(PlayerEntity arg0) {
 		int var1 = arg0.field10056;
-		class439 var2 = arg0.method13959();
+		BASType var2 = arg0.method13959();
 		int var3 = arg0.field8616.method11812();
 		if (var3 == -1 || arg0.field8616.field9899) {
 			var1 = arg0.field10054;
@@ -382,7 +382,7 @@ public class class797 extends class399 {
 		}
 		for (class797 var5 = (class797) field9528.method11563(); var5 != null; var5 = (class797) field9528.method11567()) {
 			byte var6 = 1;
-			class439 var7 = var5.field9527.method13959();
+			BASType var7 = var5.field9527.method13959();
 			int var8 = var5.field9527.field8616.method11812();
 			if (var8 == -1 || var5.field9527.field8616.field9899) {
 				var6 = 0;
@@ -393,7 +393,7 @@ public class class797 extends class399 {
 			}
 			if (var5.field9534 != var6) {
 				int var9 = method5936(var5.field9527);
-				class611 var10 = var5.field9527.field10075;
+				NPCType var10 = var5.field9527.field10075;
 				if (var10.field7244 != null) {
 					var10 = var10.method12516(Statics.field2669);
 				}
@@ -426,7 +426,7 @@ public class class797 extends class399 {
 					}
 				}
 			}
-			class317 var12 = var5.field9527.method8565().field3464;
+			Vector3 var12 = var5.field9527.method8565().field3464;
 			var5.field9518 = (int) var12.field3475;
 			var5.field9547 = (int) var12.field3475 + (var5.field9527.method13954() << 8);
 			var5.field9519 = (int) var12.field3477;
@@ -436,7 +436,7 @@ public class class797 extends class399 {
 		}
 		for (class797 var13 = (class797) field9516.method11928(); var13 != null; var13 = (class797) field9516.method11929()) {
 			byte var14 = 1;
-			class439 var15 = var13.field9513.method13959();
+			BASType var15 = var13.field9513.method13959();
 			int var16 = var13.field9513.field8616.method11812();
 			if (var16 == -1 || var13.field9513.field8616.field9899) {
 				var14 = 0;
@@ -472,7 +472,7 @@ public class class797 extends class399 {
 					}
 				}
 			}
-			class317 var19 = var13.field9513.method8565().field3464;
+			Vector3 var19 = var13.field9513.method8565().field3464;
 			var13.field9518 = (int) var19.field3475;
 			var13.field9547 = (int) var19.field3475 + (var13.field9513.method13954() << 8);
 			var13.field9519 = (int) var19.field3477;

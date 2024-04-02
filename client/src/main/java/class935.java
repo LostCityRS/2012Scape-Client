@@ -22,7 +22,7 @@ public class class935 extends class789 {
 	}
 
 	@ObfuscatedName("air.u(Laet;B)V")
-	public void method14985(class814 arg0) {
+	public void method14985(Packet arg0) {
 		if (arg0.method15220() != 255) {
 			arg0.field9626--;
 			arg0.method15246();

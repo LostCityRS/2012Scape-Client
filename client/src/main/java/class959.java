@@ -36,7 +36,7 @@ public class class959 extends class803 {
 		if (this.field9558 > 0 && !"SUB".equals(this.field10426)) {
 			return;
 		}
-		class814 var2 = new class814(arg0.getData());
+		Packet var2 = new Packet(arg0.getData());
 		int var3 = var2.method15220();
 		if (this.field9558 <= 8) {
 			if ((var3 | 0x80) == 0) {
@@ -49,7 +49,7 @@ public class class959 extends class803 {
 				if (this.field10422 == 0 || this.field10425 == 0) {
 					throw new IllegalStateException();
 				}
-				class814 var4 = new class814(16);
+				Packet var4 = new Packet(16);
 				var2.method15263(var4.field9629, 0, 16);
 				this.field10427 = var4.method15337();
 				var4.field9626 = 0;

@@ -9,13 +9,13 @@ public class class82 {
 	public static final int[] field1056 = new int[2];
 
 	@ObfuscatedName("bl.s")
-	public final class682 field1059;
+	public final GlToolkit field1059;
 
 	@ObfuscatedName("bl.c")
 	public final int field1060;
 
 	@ObfuscatedName("bl.u(Lyq;ILjava/lang/String;)Lbl;")
-	public static class82 method2080(class682 arg0, int arg1, String arg2) {
+	public static class82 method2080(GlToolkit arg0, int arg1, String arg2) {
 		int var3 = OpenGL.glCreateShader(arg1);
 		OpenGL.glShaderSource(var3, arg2);
 		OpenGL.glCompileShader(var3);
@@ -38,7 +38,7 @@ public class class82 {
 		return new class82(arg0, var3, arg1);
 	}
 
-	public class82(class682 arg0, int arg1, int arg2) {
+	public class82(GlToolkit arg0, int arg1, int arg2) {
 		this.field1059 = arg0;
 		this.field1060 = arg1;
 	}

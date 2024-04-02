@@ -4,12 +4,12 @@ import deob.ObfuscatedName;
 @ObfuscatedName("aao")
 public final class class723 extends class201 {
 
-	public class723(class683 arg0) {
+	public class723(GpuToolkit arg0) {
 		super(arg0);
 	}
 
 	@ObfuscatedName("aao.u(Lka;)V")
-	public void method3875(class320 arg0) {
+	public void method3875(Matrix4x4 arg0) {
 		this.field2274.method13764(arg0, this.field2274.field8258, this.field2274.field8332);
 	}
 

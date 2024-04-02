@@ -36,7 +36,7 @@ public class class579 {
 	public HashMap field6813;
 
 	@ObfuscatedName("ud.u(Laet;I)V")
-	public void method12121(class814 arg0) {
+	public void method12121(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -47,11 +47,11 @@ public class class579 {
 	}
 
 	@ObfuscatedName("ud.j(Laet;II)V")
-	public void method12122(class814 arg0, int arg1) {
+	public void method12122(Packet arg0, int arg1) {
 		if (arg1 == 1) {
-			this.field6807 = class524.method16898(arg0.method15238());
+			this.field6807 = Cp1252.method16898(arg0.method15238());
 		} else if (arg1 == 2) {
-			this.field6806 = class524.method16898(arg0.method15238());
+			this.field6806 = Cp1252.method16898(arg0.method15238());
 		} else if (arg1 == 3) {
 			this.field6808 = arg0.method15337();
 		} else if (arg1 == 4) {

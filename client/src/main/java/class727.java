@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 @ObfuscatedName("aaa")
 public final class class727 extends class203 {
 
-	public class727(class683 arg0) {
+	public class727(GpuToolkit arg0) {
 		super(arg0);
 	}
 
@@ -20,7 +20,7 @@ public final class class727 extends class203 {
 	@ObfuscatedName("aaa.f()V")
 	public void method14069() {
 		this.field2278.method13638(this.field2280);
-		this.field2278.method13764(class320.field3479, class320.field3479, this.field2280);
+		this.field2278.method13764(Matrix4x4.field3479, Matrix4x4.field3479, this.field2280);
 		this.field2278.method13629(0);
 		this.field2278.method13557(this.field2284);
 		this.field2278.method13560(0, class249.field2546);

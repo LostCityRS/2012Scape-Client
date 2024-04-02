@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class158 {
 
 	@ObfuscatedName("en.u")
-	public class814 field1614 = new class814(null);
+	public Packet field1614 = new Packet(null);
 
 	@ObfuscatedName("en.j")
 	public int field1606;

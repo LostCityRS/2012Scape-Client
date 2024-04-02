@@ -13,7 +13,7 @@ public class class900 extends class703 {
 	@ObfuscatedName("ahj.t")
 	public final int field10033;
 
-	public class900(class814 arg0) {
+	public class900(Packet arg0) {
 		super(arg0);
 		int var2 = arg0.method15379();
 		this.field10035 = var2 >>> 16;
@@ -29,7 +29,7 @@ public class class900 extends class703 {
 		if (var3 < 3 && client.field8980.method6100().method5794(this.field10035, this.field10034)) {
 			var3++;
 		}
-		class1010 var4 = new class1010(client.field8980.method6098(), this.field8498, 0, this.field10033, var3, var1, client.method8663(var1, var2, this.field10033) - this.field8497, var2, this.field10035, this.field10035, this.field10034, this.field10034, this.field8496, false, 0);
+		SpotAnimation var4 = new SpotAnimation(client.field8980.method6098(), this.field8498, 0, this.field10033, var3, var1, client.method8663(var1, var2, this.field10033) - this.field8497, var2, this.field10035, this.field10035, this.field10034, this.field10034, this.field8496, false, 0);
 		client.field9090.method11927(new class942(var4), (long) (this.field10035 << 16 | this.field10034));
 	}
 }

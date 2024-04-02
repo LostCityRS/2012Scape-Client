@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("eo")
-public abstract class class168 implements class227 {
+public abstract class class168 implements DeleteableResource {
 
 	@ObfuscatedName("eo.u")
 	public String field1940 = null;
@@ -22,7 +22,7 @@ public abstract class class168 implements class227 {
 	public abstract void method3231(class918 arg0, float arg1);
 
 	@ObfuscatedName("eo.z(Laig;Lka;)V")
-	public abstract void method3232(class918 arg0, class320 arg1);
+	public abstract void method3232(class918 arg0, Matrix4x4 arg1);
 
 	@ObfuscatedName("eo.l(Laig;FFF)V")
 	public abstract void method3233(class918 arg0, float arg1, float arg2, float arg3);
@@ -34,7 +34,7 @@ public abstract class class168 implements class227 {
 	public abstract void method3235(class918 arg0, float[] arg1, int arg2);
 
 	@ObfuscatedName("eo.n(Laig;Lka;)V")
-	public abstract void method3237(class918 arg0, class320 arg1);
+	public abstract void method3237(class918 arg0, Matrix4x4 arg1);
 
 	@ObfuscatedName("eo.q(IFFF)V")
 	public abstract void method3239(int arg0, float arg1, float arg2, float arg3);
@@ -46,10 +46,10 @@ public abstract class class168 implements class227 {
 	public abstract void method3241(int arg0, float[] arg1, int arg2);
 
 	@ObfuscatedName("eo.b(ILka;)V")
-	public abstract void method3242(int arg0, class320 arg1);
+	public abstract void method3242(int arg0, Matrix4x4 arg1);
 
 	@ObfuscatedName("eo.x(ILka;)V")
-	public abstract void method3243(int arg0, class320 arg1);
+	public abstract void method3243(int arg0, Matrix4x4 arg1);
 
 	@ObfuscatedName("eo.v(IILip;)V")
 	public abstract void method3245(int arg0, int arg1, class254 arg2);
@@ -64,5 +64,5 @@ public abstract class class168 implements class227 {
 	public abstract boolean method3272();
 
 	@ObfuscatedName("eo.i(ILka;)V")
-	public abstract void method3284(int arg0, class320 arg1);
+	public abstract void method3284(int arg0, Matrix4x4 arg1);
 }

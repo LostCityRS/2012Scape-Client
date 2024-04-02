@@ -26,7 +26,7 @@ public class class58 {
 	public static int[] field761 = new int[1003];
 
 	@ObfuscatedName("ao.l")
-	public static class547 field758 = new class547();
+	public static IterableQueue field758 = new IterableQueue();
 
 	@ObfuscatedName("ao.f")
 	public static int field763 = -1;
@@ -69,9 +69,9 @@ public class class58 {
 	}
 
 	@ObfuscatedName("ff.s(Lra;I)V")
-	public static void method3580(class14 arg0) {
+	public static void method3580(RendererToolkit arg0) {
 		if (field765 != Statics.field2119.field9807 && client.field8980.method6098() != null) {
-			class153.method5554();
+			MonotonicTime.method5554();
 			if (Statics.method2581(arg0, Statics.field2119.field9807)) {
 				field765 = Statics.field2119.field9807;
 			}
@@ -80,7 +80,7 @@ public class class58 {
 
 	@ObfuscatedName("pn.m(IIII)Z")
 	public static boolean method7787(int arg0, int arg1, int arg2) {
-		class423 var3 = client.field8980.method6098();
+		Scene var3 = client.field8980.method6098();
 		boolean var4 = true;
 		class113 var5 = (class113) var3.method7433(arg0, arg1, arg2);
 		if (var5 != null) {
@@ -99,7 +99,7 @@ public class class58 {
 
 	@ObfuscatedName("aiq.t(Lca;B)Z")
 	public static boolean method16491(class113 arg0) {
-		class540 var1 = client.field8980.method6103().method11471(arg0.method2401());
+		LocType var1 = client.field8980.method6103().method11471(arg0.method2401());
 		if (var1.field6508 == -1) {
 			return true;
 		} else {
@@ -109,11 +109,11 @@ public class class58 {
 	}
 
 	@ObfuscatedName("qr.l(Lra;IIIIIIII)V")
-	public static void method8094(class14 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
-		class423 var8 = client.field8980.method6098();
+	public static void method8094(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
+		Scene var8 = client.field8980.method6098();
 		class113 var9 = (class113) var8.method7433(arg1, arg2, arg3);
 		if (var9 != null) {
-			class540 var10 = client.field8980.method6103().method11471(var9.method2401());
+			LocType var10 = client.field8980.method6103().method11471(var9.method2401());
 			int var11 = var9.method2391() & 0x3;
 			int var12 = var9.method2390();
 			if (var10.field6508 == -1) {
@@ -160,7 +160,7 @@ public class class58 {
 		}
 		class113 var14 = (class113) var8.method7437(arg1, arg2, arg3, client.field9216);
 		if (var14 != null) {
-			class540 var15 = client.field8980.method6103().method11471(var14.method2401());
+			LocType var15 = client.field8980.method6103().method11471(var14.method2401());
 			int var16 = var14.method2391() & 0x3;
 			int var17 = var14.method2390();
 			if (var15.field6508 != -1) {
@@ -181,7 +181,7 @@ public class class58 {
 		if (var19 == null) {
 			return;
 		}
-		class540 var20 = client.field8980.method6103().method11471(var19.method2401());
+		LocType var20 = client.field8980.method6103().method11471(var19.method2401());
 		int var21 = var19.method2391() & 0x3;
 		if (var20.field6508 != -1) {
 			method3634(arg0, var20, var21, arg4, arg5);
@@ -189,7 +189,7 @@ public class class58 {
 	}
 
 	@ObfuscatedName("fk.f(Lra;Ltg;IIII)V")
-	public static void method3634(class14 arg0, class540 arg1, int arg2, int arg3, int arg4) {
+	public static void method3634(RendererToolkit arg0, LocType arg1, int arg2, int arg3, int arg4) {
 		class608 var5 = Statics.field850.method12491(arg1.field6508);
 		if (var5.field7192 == -1) {
 			return;
@@ -225,7 +225,7 @@ public class class58 {
 	}
 
 	@ObfuscatedName("fh.d(Lra;Lew;III)V")
-	public static void method3655(class14 arg0, class165 arg1, int arg2, int arg3) {
+	public static void method3655(RendererToolkit arg0, ComType arg1, int arg2, int arg3) {
 		if (Statics.field2119 == null) {
 			return;
 		}
@@ -252,7 +252,7 @@ public class class58 {
 				var9 = (int) -client.field9021 & 0x3FFF;
 				var10 = 4096;
 			} else {
-				class317 var11 = Statics.field2119.method8565().field3464;
+				Vector3 var11 = Statics.field2119.method8565().field3464;
 				var7 = (int) var11.field3475;
 				var8 = (int) var11.field3477;
 				var9 = client.field9087 + (int) -client.field9021 & 0x3FFF;
@@ -273,7 +273,7 @@ public class class58 {
 			for (int var21 = 0; var21 < field767; var21++) {
 				int var22 = field759[var21] * 4 + 2 - var7 / 128;
 				int var23 = field757[var21] * 4 + 2 - var8 / 128;
-				class540 var24 = client.field8980.method6103().method11471(field761[var21]);
+				LocType var24 = client.field8980.method6103().method11471(field761[var21]);
 				if (var24.field6534 != null) {
 					var24 = var24.method11431(Statics.field2669);
 					if (var24 == null || var24.field6495 == -1) {
@@ -309,18 +309,18 @@ public class class58 {
 	}
 
 	@ObfuscatedName("ci.z(Lra;IILew;Lta;III)V")
-	public static void method2388(class14 arg0, int arg1, int arg2, class165 arg3, class11 arg4, int arg5, int arg6) {
+	public static void method2388(RendererToolkit arg0, int arg1, int arg2, ComType arg3, class11 arg4, int arg5, int arg6) {
 		for (int var7 = 0; var7 < client.field9104; var7++) {
-			class798 var8 = (class798) client.field8964.method11923((long) client.field9056[var7]);
+			ObjectNode var8 = (ObjectNode) client.field8964.method11923((long) client.field9056[var7]);
 			if (var8 != null) {
 				class903 var9 = (class903) var8.field9550;
 				if (var9.method16154() && Statics.field2119.field9807 == var9.field9807) {
-					class611 var10 = var9.field10075;
+					NPCType var10 = var9.field10075;
 					if (var10 != null && var10.field7244 != null) {
 						var10 = var10.method12516(Statics.field2669);
 					}
 					if (var10 != null && var10.field7232 && var10.field7271) {
-						class317 var11 = var9.method8565().field3464;
+						Vector3 var11 = var9.method8565().field3464;
 						int var12 = (int) var11.field3475 / 128 - arg1 / 128;
 						int var13 = (int) var11.field3477 / 128 - arg2 / 128;
 						if (var10.field7268 == -1) {
@@ -335,13 +335,13 @@ public class class58 {
 	}
 
 	@ObfuscatedName("b.n(IILew;Lta;III)V")
-	public static void method1592(int arg0, int arg1, class165 arg2, class11 arg3, int arg4, int arg5) {
+	public static void method1592(int arg0, int arg1, ComType arg2, class11 arg3, int arg4, int arg5) {
 		int var6 = class55.field732;
 		int[] var7 = class55.field727;
 		for (int var8 = 0; var8 < var6; var8++) {
-			class902 var9 = client.field9070[var7[var8]];
+			PlayerEntity var9 = client.field9070[var7[var8]];
 			if (var9 != null && var9.method16125() && !var9.field10066 && Statics.field2119 != var9 && Statics.field2119.field9807 == var9.field9807) {
-				class317 var10 = var9.method8565().field3464;
+				Vector3 var10 = var9.method8565().field3464;
 				int var11 = (int) var10.field3475 / 128 - arg0 / 128;
 				int var12 = (int) var10.field3477 / 128 - arg1 / 128;
 				boolean var13 = false;
@@ -381,16 +381,16 @@ public class class58 {
 	}
 
 	@ObfuscatedName("ck.o(IILew;Les;IIB)V")
-	public static void method2472(int arg0, int arg1, class165 arg2, class163 arg3, int arg4, int arg5) {
+	public static void method2472(int arg0, int arg1, ComType arg2, class163 arg3, int arg4, int arg5) {
 		class60[] var6 = client.field8936;
 		for (int var7 = 0; var7 < var6.length; var7++) {
 			class60 var8 = var6[var7];
 			if (var8 != null && var8.field776 != 0 && client.field9213 % 20 < 10) {
 				if (var8.field776 == 1) {
-					class798 var9 = (class798) client.field8964.method11923((long) var8.field772);
+					ObjectNode var9 = (ObjectNode) client.field8964.method11923((long) var8.field772);
 					if (var9 != null) {
 						class903 var10 = (class903) var9.field9550;
-						class317 var11 = var10.method8565().field3464;
+						Vector3 var11 = var10.method8565().field3464;
 						int var12 = (int) var11.field3475 / 128 - arg0 / 128;
 						int var13 = (int) var11.field3477 / 128 - arg1 / 128;
 						method4656(arg2, arg3, arg4, arg5, var12, var13, var8.field773, 360000L);
@@ -404,9 +404,9 @@ public class class58 {
 					method4656(arg2, arg3, arg4, arg5, var14, var15, var8.field773, var18);
 				}
 				if (var8.field776 == 10 && var8.field772 >= 0 && var8.field772 < client.field9070.length) {
-					class902 var20 = client.field9070[var8.field772];
+					PlayerEntity var20 = client.field9070[var8.field772];
 					if (var20 != null) {
-						class317 var21 = var20.method8565().field3464;
+						Vector3 var21 = var20.method8565().field3464;
 						int var22 = (int) var21.field3475 / 128 - arg0 / 128;
 						int var23 = (int) var21.field3477 / 128 - arg1 / 128;
 						method4656(arg2, arg3, arg4, arg5, var22, var23, var8.field773, 360000L);
@@ -417,7 +417,7 @@ public class class58 {
 	}
 
 	@ObfuscatedName("an.q(Lra;Lta;Lew;IIIIII)V")
-	public static void method1712(class14 arg0, class11 arg1, class165 arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
+	public static void method1712(RendererToolkit arg0, class11 arg1, ComType arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
 		class443 var8 = Statics.field8499.method7862(arg7);
 		if (var8 == null || !var8.field4776 || !var8.method7835(Statics.field2669)) {
 			return;
@@ -431,8 +431,8 @@ public class class58 {
 				} else {
 					var11 = client.field9087 + (int) client.field9021 & 0x3FFF;
 				}
-				int var12 = class312.field3439[var11];
-				int var13 = class312.field3447[var11];
+				int var12 = Trig1.field3439[var11];
+				int var13 = Trig1.field3447[var11];
 				if (Statics.field2671 != 5) {
 					var12 = var12 * 256 / (client.field8976 + 256);
 					var13 = var13 * 256 / (client.field8976 + 256);
@@ -516,7 +516,7 @@ public class class58 {
 	}
 
 	@ObfuscatedName("ik.p(Lew;Les;IIIIIJ)V")
-	public static void method4656(class165 arg0, class163 arg1, int arg2, int arg3, int arg4, int arg5, int arg6, long arg7) {
+	public static void method4656(ComType arg0, class163 arg1, int arg2, int arg3, int arg4, int arg5, int arg6, long arg7) {
 		int var9 = arg4 * arg4 + arg5 * arg5;
 		if ((long) var9 > arg7) {
 			return;
@@ -527,8 +527,8 @@ public class class58 {
 		} else {
 			var10 = client.field9087 + (int) client.field9021 & 0x3FFF;
 		}
-		int var11 = class312.field3439[var10];
-		int var12 = class312.field3447[var10];
+		int var11 = Trig1.field3439[var10];
+		int var12 = Trig1.field3447[var10];
 		if (Statics.field2671 != 5) {
 			var11 = var11 * 256 / (client.field8976 + 256);
 			var12 = var12 * 256 / (client.field8976 + 256);
@@ -555,7 +555,7 @@ public class class58 {
 	}
 
 	@ObfuscatedName("aam.b(Lew;Lta;IIIIILjava/lang/String;Ll;Lvm;II)V")
-	public static void method14046(class165 arg0, class11 arg1, int arg2, int arg3, int arg4, int arg5, int arg6, String arg7, class15 arg8, class603 arg9, int arg10) {
+	public static void method14046(ComType arg0, class11 arg1, int arg2, int arg3, int arg4, int arg5, int arg6, String arg7, class15 arg8, class603 arg9, int arg10) {
 		int var11;
 		if (Statics.field2671 == 5) {
 			var11 = (int) client.field9021 & 0x3FFF;
@@ -567,8 +567,8 @@ public class class58 {
 		if (var13 > var12 * var12) {
 			return;
 		}
-		int var14 = class312.field3439[var11];
-		int var15 = class312.field3447[var11];
+		int var14 = Trig1.field3439[var11];
+		int var15 = Trig1.field3447[var11];
 		if (Statics.field2671 != 5) {
 			var14 = var14 * 256 / (client.field8976 + 256);
 			var15 = var15 * 256 / (client.field8976 + 256);

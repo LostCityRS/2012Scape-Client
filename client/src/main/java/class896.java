@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class896 extends class679 {
 
 	@ObfuscatedName("ahk.u")
-	public final class682 field9961;
+	public final GlToolkit field9961;
 
 	@ObfuscatedName("ahk.j")
 	public class641 field9953;
@@ -34,7 +34,7 @@ public class class896 extends class679 {
 	@ObfuscatedName("ahk.d")
 	public static final int[][] field9959 = new int[6][];
 
-	public class896(class682 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
+	public class896(GlToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
 		this.field9961 = arg0;
 		this.field9956 = arg3;
 		this.field9954 = arg4;

@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class221 {
 
 	@ObfuscatedName("gj.s")
-	public class683 field2404;
+	public GpuToolkit field2404;
 
 	@ObfuscatedName("gj.c")
 	public boolean field2405;
@@ -39,7 +39,7 @@ public class class221 {
 		}
 	}
 
-	public class221(class683 arg0) {
+	public class221(GpuToolkit arg0) {
 		this.field2404 = arg0;
 		this.field2405 = this.field2404.field8384;
 		if (this.field2405 && !this.field2404.method13547(class124.field1299, class139.field1501)) {

@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aif")
-public class class943 extends class800 {
+public class class943 extends SecondaryNode {
 
 	@ObfuscatedName("aif.t")
 	public int field10321;
@@ -23,7 +23,7 @@ public class class943 extends class800 {
 	public static class552 field10317 = new class552();
 
 	@ObfuscatedName("aif.ao")
-	public static class565 field10326 = new class565(16);
+	public static IterableMap field10326 = new IterableMap(16);
 
 	@ObfuscatedName("qv.u(IJ)Laif;")
 	public static class943 method8304(int arg0, long arg1) {
@@ -49,7 +49,7 @@ public class class943 extends class800 {
 			if (var1 == null) {
 				return null;
 			}
-			if (var1.method16510() > class153.method5554()) {
+			if (var1.method16510() > MonotonicTime.method5554()) {
 				return null;
 			}
 			var1.method6979();
@@ -342,7 +342,7 @@ public class class943 extends class800 {
 
 	@ObfuscatedName("aif.bz(I)V")
 	public void method16506() {
-		this.field9554 = this.field9554 & Long.MIN_VALUE | class153.method5554() + 500L;
+		this.field9554 = this.field9554 & Long.MIN_VALUE | MonotonicTime.method5554() + 500L;
 		field10317.method11728(this);
 	}
 

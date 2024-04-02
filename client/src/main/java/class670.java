@@ -7,18 +7,18 @@ public class class670 extends class11 {
 	@ObfuscatedName("yv.u")
 	public final class239 field7652;
 
-	public class670(class683 arg0, int arg1, int arg2, byte[] arg3) {
+	public class670(GpuToolkit arg0, int arg1, int arg2, byte[] arg3) {
 		this.field7652 = arg0.method13549(class124.field1297, arg1, arg2, false, arg3);
 		this.field7652.method4412(false, false);
 	}
 
-	public class670(class683 arg0, int arg1, int arg2, int[] arg3) {
+	public class670(GpuToolkit arg0, int arg1, int arg2, int[] arg3) {
 		this.field7652 = arg0.method13548(arg1, arg2, false, arg3);
 		this.field7652.method4412(false, false);
 	}
 
 	@ObfuscatedName("yv.u(Lyk;II[I[I)Lyv;")
-	public static class670 method12944(class683 arg0, int arg1, int arg2, int[] arg3, int[] arg4) {
+	public static class670 method12944(GpuToolkit arg0, int arg1, int arg2, int[] arg3, int[] arg4) {
 		if (!arg0.method13546(class124.field1297, class139.field1501)) {
 			int[] var9 = new int[arg1 * arg2];
 			for (int var10 = 0; var10 < arg2; var10++) {

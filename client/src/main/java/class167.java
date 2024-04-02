@@ -20,7 +20,7 @@ public class class167 {
 	public class171[] field1936;
 
 	@ObfuscatedName("ei.u(Lef;B)V")
-	public void method3216(class169 arg0) {
+	public void method3216(ShaderDataReader arg0) {
 		this.field1935 = arg0.method3295();
 		this.field1933 = arg0.method3295();
 		this.field1934 = arg0.method3295();

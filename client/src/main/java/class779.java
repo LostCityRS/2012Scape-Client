@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aco")
-public class class779 extends class399 {
+public class class779 extends Node {
 
 	@ObfuscatedName("aco.q")
 	public int field9357;
@@ -24,7 +24,7 @@ public class class779 extends class399 {
 
 	public class779(int arg0, byte[] arg1) {
 		this.field9357 = arg0;
-		class814 var3 = new class814(arg1);
+		Packet var3 = new Packet(arg1);
 		this.field9362 = var3.method15239();
 		this.field9365 = new int[this.field9362];
 		this.field9364 = new int[this.field9362][];

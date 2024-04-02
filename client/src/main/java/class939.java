@@ -5,10 +5,10 @@ import deob.ObfuscatedName;
 public class class939 extends class793 {
 
 	@ObfuscatedName("aiu.l")
-	public class547 field10280 = new class547();
+	public IterableQueue field10280 = new IterableQueue();
 
 	@ObfuscatedName("aiu.f")
-	public class547 field10279 = new class547();
+	public IterableQueue field10279 = new IterableQueue();
 
 	@ObfuscatedName("aiu.d")
 	public int field10278 = 0;
@@ -39,11 +39,11 @@ public class class939 extends class793 {
 	}
 
 	@ObfuscatedName("aiu.as(Lnz;Lade;)V")
-	public void method16448(class399 arg0, class794 arg1) {
+	public void method16448(Node arg0, class794 arg1) {
 		while (this.field10279.field6647 != arg0 && ((class794) arg0).field9476 <= arg1.field9476) {
 			arg0 = arg0.field4226;
 		}
-		class547.method2546(arg1, arg0);
+		IterableQueue.method2546(arg1, arg0);
 		this.field10281 = ((class794) this.field10279.field6647.field4226).field9476;
 	}
 
@@ -51,7 +51,7 @@ public class class939 extends class793 {
 	public void method16447(class794 arg0) {
 		arg0.method6979();
 		arg0.method15053();
-		class399 var2 = this.field10279.field6647.field4226;
+		Node var2 = this.field10279.field6647.field4226;
 		if (this.field10279.field6647 == var2) {
 			this.field10281 = -1;
 		} else {

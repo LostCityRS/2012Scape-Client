@@ -37,7 +37,7 @@ public class class309 {
 		if (Statics.field3420 == null) {
 			Statics.field3420 = Statics.method5013();
 			Statics.field1208 = Statics.field3420[0];
-			Statics.field1931 = class153.method5554();
+			Statics.field1931 = MonotonicTime.method5554();
 		}
 		if (Statics.field6789 == null) {
 			method3460();
@@ -66,7 +66,7 @@ public class class309 {
 			}
 			Statics.field4455 = var0.field3398;
 			if (Statics.field1208.field3406 || var0.field3406) {
-				Statics.field1931 = class153.method5554();
+				Statics.field1931 = MonotonicTime.method5554();
 			}
 		}
 		if (Statics.field6789 == null) {
@@ -276,7 +276,7 @@ public class class309 {
 		}
 		if (Statics.field1208 == class307.field3391 && Statics.field2137 == null) {
 			Statics.field2137 = new class387(Statics.field663);
-			class618.method5010(Statics.field2137);
+			NativeLibraries.method5010(Statics.field2137);
 		}
 		if (Statics.field1208 == class307.field3395) {
 			int var15 = class326.method6562();
@@ -301,7 +301,7 @@ public class class309 {
 			}
 			Statics.field8465 = new class123(Statics.field7572, Statics.field808, Statics.field6435);
 			Statics.field4464 = new class614(client.field9163, Statics.field2308, Statics.field7435);
-			Statics.field3769 = new class440(client.field9163, Statics.field2308, Statics.field7435, Statics.field3226);
+			Statics.field3769 = new BASTypeList(client.field9163, Statics.field2308, Statics.field7435, Statics.field3226);
 			Statics.field3770 = new class600(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
 			Statics.field1244 = new class578(client.field9163, Statics.field2308, Statics.field6451);
 			Statics.field3615 = new class484(client.field9163, Statics.field2308, Statics.field7435);
@@ -311,13 +311,13 @@ public class class309 {
 			Statics.field7650 = new class205(client.field9163, Statics.field2308, Statics.field7435, Statics.field4560);
 			Statics.field495 = new class623(client.field9163, Statics.field2308, Statics.field7435);
 			Statics.field785 = new class606(client.field9163, Statics.field2308, Statics.field7435);
-			Statics.field10355 = new class541(client.field9163, Statics.field2308, true, Statics.field1565, Statics.field4560);
+			Statics.field10355 = new LocTypeList(client.field9163, Statics.field2308, true, Statics.field1565, Statics.field4560);
 			client.field8980.method6159(Statics.field10355);
-			Statics.field8656.method6038(new class541(client.field9163, Statics.field2308, true, Statics.field1565, Statics.field4560));
+			Statics.field8656.method6038(new LocTypeList(client.field9163, Statics.field2308, true, Statics.field1565, Statics.field4560));
 			Statics.field8499 = new class444(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
 			Statics.field850 = new class609(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
-			Statics.field3774 = new class612(client.field9163, Statics.field2308, true, Statics.field5080, Statics.field4560);
-			Statics.field3492 = new class594(client.field9163, Statics.field2308, true, Statics.field4464, Statics.field5130, Statics.field4560);
+			Statics.field3774 = new NPCTypeList(client.field9163, Statics.field2308, true, Statics.field5080, Statics.field4560);
+			Statics.field3492 = new ObjTypeList(client.field9163, Statics.field2308, true, Statics.field4464, Statics.field5130, Statics.field4560);
 			Statics.field4959 = new class480(client.field9163, Statics.field2308, Statics.field7435, true);
 			Statics.field566 = new class510(client.field9163, Statics.field2308, Statics.field3897, Statics.field7567, Statics.field6690);
 			Statics.field4678 = new class419(client.field9163, Statics.field2308, Statics.field7435);
@@ -338,7 +338,7 @@ public class class309 {
 			Statics.field3779 = new class584(Statics.field2308, Statics.field6343, Statics.field6712, new class271());
 			Statics.field2669 = new class49();
 			client.method13901();
-			class553.method6490(Statics.field566);
+			AnimationNode.method6490(Statics.field566);
 			class466.method12208(Statics.field8655);
 			class366.method12289(Statics.field4560, Statics.field8465);
 			class177 var16 = new class177(Statics.field3523.method5645("huffman", ""));
@@ -376,12 +376,12 @@ public class class309 {
 			client.field8938 = true;
 		}
 		if (Statics.field1208 == class307.field3400) {
-			if (!class165.method6404(Statics.field4825.field5162, null)) {
+			if (!ComType.method6404(Statics.field4825.field5162, null)) {
 				return 0;
 			}
 			boolean var20 = true;
 			for (int var21 = 0; var21 < Statics.field1756[Statics.field4825.field5162].field1732.length; var21++) {
-				class165 var22 = Statics.field1756[Statics.field4825.field5162].field1732[var21];
+				ComType var22 = Statics.field1756[Statics.field4825.field5162].field1732[var21];
 				if (var22.field1766 == 5 && var22.field1797 != -1 && !Statics.field7387.method5629(var22.field1797, 0)) {
 					var20 = false;
 				}
@@ -437,7 +437,7 @@ public class class309 {
 
 	@ObfuscatedName("pd.f([BB)V")
 	public static void method7678(byte[] arg0) {
-		class814 var1 = new class814(arg0);
+		Packet var1 = new Packet(arg0);
 		while (true) {
 			int var2 = var1.method15220();
 			if (var2 == 0) {
@@ -457,7 +457,7 @@ public class class309 {
 
 	@ObfuscatedName("fn.d([BI)V")
 	public static void method3560(byte[] arg0) {
-		class814 var1 = new class814(arg0);
+		Packet var1 = new Packet(arg0);
 		while (true) {
 			int var2 = var1.method15220();
 			if (var2 == 0) {
@@ -474,9 +474,9 @@ public class class309 {
 
 	@ObfuscatedName("dn.z(I)V")
 	public static void method2862() {
-		class576 var0 = null;
+		FileOnDisk var0 = null;
 		try {
-			var0 = class385.method4031("2", client.field9163.field6404, false);
+			var0 = GameShell.method4031("2", client.field9163.field6404, false);
 			byte[] var1 = new byte[(int) var0.method12077()];
 			int var3;
 			for (int var2 = 0; var2 < var1.length; var2 += var3) {
@@ -485,7 +485,7 @@ public class class309 {
 					throw new IOException();
 				}
 			}
-			method3665(new class814(var1));
+			method3665(new Packet(var1));
 		} catch (Exception var7) {
 		}
 		try {
@@ -497,7 +497,7 @@ public class class309 {
 	}
 
 	@ObfuscatedName("fi.n(Laet;I)V")
-	public static void method3665(class814 arg0) {
+	public static void method3665(Packet arg0) {
 		if (arg0.field9629.length - arg0.field9626 < 1) {
 			return;
 		}

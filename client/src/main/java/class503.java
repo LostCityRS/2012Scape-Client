@@ -62,13 +62,13 @@ public class class503 {
 	public class788 field5217;
 
 	@ObfuscatedName("rn.v")
-	public class719 field5228;
+	public PathingEntity field5228;
 
 	@ObfuscatedName("rn.k")
 	public class113 field5229;
 
 	@ObfuscatedName("rn.h")
-	public class1008 field5234;
+	public ObjStackEntity field5234;
 
 	@ObfuscatedName("rn.r")
 	public int field5231 = 0;

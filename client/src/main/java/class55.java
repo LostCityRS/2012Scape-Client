@@ -11,7 +11,7 @@ public class class55 {
 	public static byte[] field730 = new byte[2048];
 
 	@ObfuscatedName("ag.c")
-	public static class814[] field731 = new class814[2048];
+	public static Packet[] field731 = new Packet[2048];
 
 	@ObfuscatedName("ag.m")
 	public static int field732 = 0;
@@ -39,10 +39,10 @@ public class class55 {
 	}
 
 	@ObfuscatedName("ww.u(Lajl;B)V")
-	public static final void method12667(class964 arg0) {
+	public static final void method12667(PacketBit arg0) {
 		arg0.method16862();
 		int var1 = client.field9071;
-		class902 var2 = Statics.field2119 = client.field9070[var1] = new class902(client.field8980.method6098());
+		PlayerEntity var2 = Statics.field2119 = client.field9070[var1] = new PlayerEntity(client.field8980.method6098());
 		var2.field8593 = var1;
 		int var3 = arg0.method16863(30);
 		byte var4 = (byte) (var3 >> 28);
@@ -83,7 +83,7 @@ public class class55 {
 	}
 
 	@ObfuscatedName("ao.j(Lajl;II)V")
-	public static final void method1805(class964 arg0, int arg1) {
+	public static final void method1805(PacketBit arg0, int arg1) {
 		field728 = 0;
 		method11491(arg0);
 		method15865(arg0);
@@ -93,7 +93,7 @@ public class class55 {
 	}
 
 	@ObfuscatedName("tz.a(Lajl;I)V")
-	public static final void method11491(class964 arg0) {
+	public static final void method11491(PacketBit arg0) {
 		int var1 = 0;
 		arg0.method16862();
 		for (int var2 = 0; var2 < field732; var2++) {
@@ -187,7 +187,7 @@ public class class55 {
 		field736 = 0;
 		for (int var14 = 1; var14 < 2048; var14++) {
 			field729[var14] = (byte) (field729[var14] >> 1);
-			class902 var15 = client.field9070[var14];
+			PlayerEntity var15 = client.field9070[var14];
 			if (var15 == null) {
 				field735[++field736 - 1] = var14;
 			} else {
@@ -197,7 +197,7 @@ public class class55 {
 	}
 
 	@ObfuscatedName("un.s(Lajl;I)I")
-	public static int method12094(class964 arg0) {
+	public static int method12094(PacketBit arg0) {
 		int var1 = arg0.method16863(2);
 		int var2;
 		if (var1 == 0) {
@@ -213,10 +213,10 @@ public class class55 {
 	}
 
 	@ObfuscatedName("aft.t(Lajl;B)V")
-	public static final void method15865(class964 arg0) {
+	public static final void method15865(PacketBit arg0) {
 		for (int var1 = 0; var1 < field728; var1++) {
 			int var2 = field738[var1];
-			class902 var3 = client.field9070[var2];
+			PlayerEntity var3 = client.field9070[var2];
 			int var4 = arg0.method15220();
 			if ((var4 & 0x8) != 0) {
 				var4 += arg0.method15220() << 8;
@@ -229,7 +229,7 @@ public class class55 {
 	}
 
 	@ObfuscatedName("sz.l(Lajl;ILahg;II)V")
-	public static final void method11159(class964 arg0, int arg1, class902 arg2, int arg3) {
+	public static final void method11159(PacketBit arg0, int arg1, PlayerEntity arg2, int arg3) {
 		byte var4 = class365.field3923.field3924;
 		if ((arg3 & 0x1000) != 0) {
 			arg2.field10065 = arg0.method15220() == 1;
@@ -342,7 +342,7 @@ public class class55 {
 		if ((arg3 & 0x20) != 0) {
 			int var38 = arg0.method15220();
 			byte[] var39 = new byte[var38];
-			class814 var40 = new class814(var39);
+			Packet var40 = new Packet(var39);
 			arg0.method15292(var39, 0, var38);
 			field731[arg1] = var40;
 			arg2.method16116(var40);

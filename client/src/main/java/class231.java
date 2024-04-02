@@ -5,12 +5,12 @@ import deob.ObfuscatedName;
 public abstract class class231 {
 
 	@ObfuscatedName("ho.u")
-	public final class683 field2424;
+	public final GpuToolkit field2424;
 
 	@ObfuscatedName("ho.j")
 	public boolean field2423;
 
-	public class231(class683 arg0) {
+	public class231(GpuToolkit arg0) {
 		this.field2424 = arg0;
 	}
 

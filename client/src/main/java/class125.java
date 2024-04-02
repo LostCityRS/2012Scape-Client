@@ -38,7 +38,7 @@ public class class125 {
 
 	@ObfuscatedName("cz.c([B)[Lds;")
 	public static class140[] method2594(byte[] arg0) {
-		class814 var1 = new class814(arg0);
+		Packet var1 = new Packet(arg0);
 		var1.field9626 = arg0.length - 2;
 		int var2 = var1.method15239();
 		if (var2 != 65535) {

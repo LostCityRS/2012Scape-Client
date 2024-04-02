@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("vz")
-public class class591 implements class457 {
+public class class591 implements CacheKey {
 
 	@ObfuscatedName("vz.u")
 	public int field7047;
@@ -27,7 +27,7 @@ public class class591 implements class457 {
 
 	@ObfuscatedName("vz.u()J")
 	public long method7998() {
-		long[] var1 = class814.field9628;
+		long[] var1 = Packet.field9628;
 		long var2 = -1L;
 		long var4 = var2 >>> 8 ^ var1[(int) ((var2 ^ (long) this.field7047) & 0xFFL)];
 		long var6 = var4 >>> 8 ^ var1[(int) ((var4 ^ (long) (this.field7052 >> 8)) & 0xFFL)];
@@ -46,7 +46,7 @@ public class class591 implements class457 {
 	}
 
 	@ObfuscatedName("vz.j(Lqu;)Z")
-	public boolean method7994(class457 arg0) {
+	public boolean method7994(CacheKey arg0) {
 		if (!(arg0 instanceof class591)) {
 			return false;
 		}

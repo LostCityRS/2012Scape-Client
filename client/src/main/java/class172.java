@@ -28,7 +28,7 @@ public abstract class class172 {
 	@ObfuscatedName("ec.l")
 	public static final class181 field2076 = new class166();
 
-	public class172(class683 arg0, class173 arg1) {
+	public class172(GpuToolkit arg0, class173 arg1) {
 		this.field2080 = arg1.field2086;
 		this.field2074 = arg1.field2088.length;
 		this.field2075 = new class182(this.field2074, field2076);
@@ -52,19 +52,19 @@ public abstract class class172 {
 	}
 
 	@ObfuscatedName("ec.m(Ljava/lang/String;I)Leo;")
-	public class168 method3330(String arg0) throws class985 {
+	public class168 method3330(String arg0) throws ProgramNotFoundException {
 		class168[] var2 = this.field2073;
 		for (int var3 = 0; var3 < var2.length; var3++) {
 			class168 var4 = var2[var3];
 			String var5 = var4.method3244();
 			if (var5 != null && var5.equals(arg0)) {
 				if (!var4.method3272()) {
-					throw new class985(arg0);
+					throw new ProgramNotFoundException(arg0);
 				}
 				return var4;
 			}
 		}
-		throw new class985(arg0);
+		throw new ProgramNotFoundException(arg0);
 	}
 
 	@ObfuscatedName("ec.t(B)I")
@@ -130,7 +130,7 @@ public abstract class class172 {
 	}
 
 	@ObfuscatedName("ec.i(Laig;Lko;I)V")
-	public final void method3420(class918 arg0, class317 arg1) {
+	public final void method3420(class918 arg0, Vector3 arg1) {
 		this.field2073[this.field2079].method3233(arg0, arg1.field3475, arg1.field3476, arg1.field3477);
 	}
 
@@ -154,12 +154,12 @@ public abstract class class172 {
 	}
 
 	@ObfuscatedName("ec.r(Laig;Lka;I)V")
-	public final void method3356(class918 arg0, class320 arg1) {
+	public final void method3356(class918 arg0, Matrix4x4 arg1) {
 		this.field2073[this.field2079].method3232(arg0, arg1);
 	}
 
 	@ObfuscatedName("ec.g(Laig;Lka;I)V")
-	public final void method3371(class918 arg0, class320 arg1) {
+	public final void method3371(class918 arg0, Matrix4x4 arg1) {
 		this.field2073[this.field2079].method3237(arg0, arg1);
 	}
 
@@ -179,7 +179,7 @@ public abstract class class172 {
 	}
 
 	@ObfuscatedName("ec.af(ILko;B)V")
-	public final void method3351(int arg0, class317 arg1) {
+	public final void method3351(int arg0, Vector3 arg1) {
 		this.field2073[this.field2079].method3239(arg0, arg1.field3475, arg1.field3476, arg1.field3477);
 	}
 
@@ -189,17 +189,17 @@ public abstract class class172 {
 	}
 
 	@ObfuscatedName("ec.an(ILka;I)V")
-	public final void method3346(int arg0, class320 arg1) {
+	public final void method3346(int arg0, Matrix4x4 arg1) {
 		this.field2073[this.field2079].method3242(arg0, arg1);
 	}
 
 	@ObfuscatedName("ec.ap(ILka;B)V")
-	public final void method3354(int arg0, class320 arg1) {
+	public final void method3354(int arg0, Matrix4x4 arg1) {
 		this.field2073[this.field2079].method3243(arg0, arg1);
 	}
 
 	@ObfuscatedName("ec.ag(ILka;B)V")
-	public final void method3355(int arg0, class320 arg1) {
+	public final void method3355(int arg0, Matrix4x4 arg1) {
 		this.field2073[this.field2079].method3284(arg0, arg1);
 	}
 
@@ -209,10 +209,10 @@ public abstract class class172 {
 	}
 
 	@ObfuscatedName("ec.ai(Ljava/lang/String;I)Laig;")
-	public class918 method3357(String arg0) throws class984 {
+	public class918 method3357(String arg0) throws UniformNotFoundException {
 		class918 var2 = (class918) this.field2075.method3550(arg0);
 		if (var2 == null) {
-			throw new class984(arg0);
+			throw new UniformNotFoundException(arg0);
 		}
 		return var2;
 	}
@@ -259,7 +259,7 @@ public abstract class class172 {
 	public abstract class918 method3338(class174 arg0);
 
 	@ObfuscatedName("ec.c(Lyk;Lei;)Leo;")
-	public abstract class168 method3404(class683 arg0, class167 arg1);
+	public abstract class168 method3404(GpuToolkit arg0, class167 arg1);
 
 	@ObfuscatedName("ec.j()V")
 	public abstract void method3416();

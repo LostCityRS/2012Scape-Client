@@ -6,13 +6,13 @@ import java.nio.ByteBuffer;
 public class class690 extends class15 {
 
 	@ObfuscatedName("zf.q")
-	public final class683 field8447;
+	public final GpuToolkit field8447;
 
 	@ObfuscatedName("zf.p")
 	public final class239 field8445;
 
 	@ObfuscatedName("zf.w")
-	public final class228 field8446;
+	public final VertexBuffer field8446;
 
 	@ObfuscatedName("zf.b")
 	public byte[] field8448 = new byte[512];
@@ -23,7 +23,7 @@ public class class690 extends class15 {
 	@ObfuscatedName("zf.i")
 	public int field8449;
 
-	public class690(class683 arg0, class603 arg1, class685[] arg2, boolean arg3) {
+	public class690(GpuToolkit arg0, class603 arg1, class685[] arg2, boolean arg3) {
 		super(arg0, arg1);
 		this.field8447 = arg0;
 		this.field8449 = 0;

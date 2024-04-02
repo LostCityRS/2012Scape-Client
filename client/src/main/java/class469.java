@@ -14,7 +14,7 @@ public class class469 {
 	public static int field4972 = 5138;
 
 	@ObfuscatedName("qp.q")
-	public final class14 field4973;
+	public final RendererToolkit field4973;
 
 	@ObfuscatedName("qp.p")
 	public final class470[][] field4968;
@@ -44,7 +44,7 @@ public class class469 {
 	public final class470 field4962;
 
 	@ObfuscatedName("qp.g")
-	public final class317 field4980 = new class317(-50.0F, -60.0F, -50.0F);
+	public final Vector3 field4980 = new Vector3(-50.0F, -60.0F, -50.0F);
 
 	@ObfuscatedName("qp.y")
 	public final class451 field4984 = new class451(8);
@@ -52,7 +52,7 @@ public class class469 {
 	@ObfuscatedName("qp.e")
 	public final class451 field4985 = new class451(8);
 
-	public class469(class14 arg0, int arg1, int arg2) {
+	public class469(RendererToolkit arg0, int arg1, int arg2) {
 		this.field4973 = arg0;
 		this.field4968 = new class470[arg1][arg2];
 		if (Statics.field9860 != null) {
@@ -171,7 +171,7 @@ public class class469 {
 			return;
 		}
 		this.field4962.method8211(var4);
-		this.field4977 = class153.method5554();
+		this.field4977 = MonotonicTime.method5554();
 		this.field4975 = this.field4978 = arg2;
 		if (this.field4975 == 0) {
 			return;
@@ -193,7 +193,7 @@ public class class469 {
 		if (this.field4978 < 0) {
 			return;
 		}
-		long var1 = class153.method5554();
+		long var1 = MonotonicTime.method5554();
 		this.field4978 = (int) ((long) (this.field4978 * -1653075315) - (var1 - this.field4977) * -1653075315L) * 1911488581;
 		if (this.field4978 > 0) {
 			this.field4965.method8218(this.field4973, this.field4981, this.field4962, (float) (this.field4975 - this.field4978) / (float) this.field4975);

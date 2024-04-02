@@ -3,17 +3,17 @@ import deob.ObfuscatedName;
 import jaclib.memory.Buffer;
 
 @ObfuscatedName("xi")
-public class class653 extends class95 implements class90 {
+public class class653 extends class95 implements GlInterfaceRelated {
 
 	@ObfuscatedName("xi.d")
 	public int field7515;
 
-	public class653(class682 arg0, int arg1, byte[] arg2, int arg3, boolean arg4) {
+	public class653(GlToolkit arg0, int arg1, byte[] arg2, int arg3, boolean arg4) {
 		super(arg0, 34962, arg2, arg3, arg4);
 		this.field7515 = arg1;
 	}
 
-	public class653(class682 arg0, int arg1, Buffer arg2, int arg3, boolean arg4) {
+	public class653(GlToolkit arg0, int arg1, Buffer arg2, int arg3, boolean arg4) {
 		super(arg0, 34962, arg2, arg3, arg4);
 		this.field7515 = arg1;
 	}

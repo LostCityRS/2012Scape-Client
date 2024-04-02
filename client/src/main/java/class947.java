@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aje")
-public class class947 extends class800 {
+public class class947 extends SecondaryNode {
 
 	@ObfuscatedName("aje.f")
 	public int field10349;
@@ -44,7 +44,7 @@ public class class947 extends class800 {
 		boolean var5 = true;
 		for (int var6 = 0; var6 < this.field10348.length; var6++) {
 			byte[] var7 = this.field10348[var6];
-			class814 var8 = new class814(var7);
+			Packet var8 = new Packet(var7);
 			var8.field9626 = 1;
 			int var9 = var8.method15239();
 			class334 var10 = Statics.field10347;
@@ -55,7 +55,7 @@ public class class947 extends class800 {
 		if (!var5) {
 			return false;
 		}
-		class547 var12 = new class547();
+		IterableQueue var12 = new IterableQueue();
 		class334 var13 = Statics.field674;
 		int[] var15;
 		synchronized (Statics.field674) {
@@ -65,7 +65,7 @@ public class class947 extends class800 {
 		}
 		for (int var17 = 0; var17 < var15.length; var17++) {
 			byte[] var18 = this.field10348[var17];
-			class814 var19 = new class814(var18);
+			Packet var19 = new Packet(var18);
 			var19.field9626 = 1;
 			int var20 = var19.method15239();
 			class779 var21 = null;

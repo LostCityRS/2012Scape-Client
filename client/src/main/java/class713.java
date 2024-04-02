@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aah")
-public class class713 extends class150 {
+public class class713 extends CutsceneAction {
 
 	@ObfuscatedName("aah.s")
 	public final int field8547;
@@ -43,7 +43,7 @@ public class class713 extends class150 {
 	@ObfuscatedName("aah.w")
 	public final int field8553;
 
-	public class713(class814 arg0, int arg1, int arg2) {
+	public class713(Packet arg0, int arg1, int arg2) {
 		super(arg0);
 		if (arg1 == 0) {
 			int var4 = arg0.method15379();
@@ -88,8 +88,8 @@ public class class713 extends class150 {
 			var2 = this.field8551 * 512 + 256;
 			var3 = this.field8547;
 		} else {
-			class719 var4 = Statics.field1537[this.field8539].method2854();
-			class317 var5 = var4.method8565().field3464;
+			PathingEntity var4 = Statics.field1537[this.field8539].method2854();
+			Vector3 var5 = var4.method8565().field3464;
 			var1 = (int) var5.field3475;
 			var2 = (int) var5.field3477;
 			var3 = var4.field9807;
@@ -100,8 +100,8 @@ public class class713 extends class150 {
 			var6 = this.field8546 * 262144 + 256;
 			var7 = this.field8548 * 512 + 256;
 		} else {
-			class719 var8 = Statics.field1537[this.field8541].method2854();
-			class317 var9 = var8.method8565().field3464;
+			PathingEntity var8 = Statics.field1537[this.field8541].method2854();
+			Vector3 var9 = var8.method8565().field3464;
 			var6 = (int) var9.field3475;
 			var7 = (int) var9.field3477;
 			if (var3 < 0) {
@@ -109,14 +109,14 @@ public class class713 extends class150 {
 			}
 		}
 		int var10 = this.field8553 << 2;
-		class1009 var11 = new class1009(client.field8980.method6098(), this.field8550, var3, var3, var1, var2, this.field8544 << 2, client.field9213, client.field9213 + this.field8542, this.field8552, var10, this.field8539 + 1, this.field8541 + 1, this.field8549 << 2, false, 0, 0);
+		ProjectileAnimation var11 = new ProjectileAnimation(client.field8980.method6098(), this.field8550, var3, var3, var1, var2, this.field8544 << 2, client.field9213, client.field9213 + this.field8542, this.field8552, var10, this.field8539 + 1, this.field8541 + 1, this.field8549 << 2, false, 0, 0);
 		var11.method17162(var6, var7, this.field8549 << 2, client.field9213 + this.field8542);
 		client.field9007.method11558(new class945(var11));
 	}
 
 	@ObfuscatedName("aah.s(B)Z")
 	public boolean method2883() {
-		class507 var1 = Statics.field4213.method11082(this.field8550);
+		EffectAnimType var1 = Statics.field4213.method11082(this.field8550);
 		boolean var2 = var1.method11104();
 		class509 var3 = Statics.field566.method11144(var1.field5252);
 		return var2 & var3.method11129();

@@ -14,7 +14,7 @@ public class class270 {
 	public int[] field2657;
 
 	@ObfuscatedName("dl.u(Laet;I)Lis;")
-	public static class270 method2602(class814 arg0) {
+	public static class270 method2602(Packet arg0) {
 		class270 var1 = new class270();
 		var1.field2655 = arg0.method15239();
 		var1.field2656 = Statics.field3779.method12176(var1.field2655);

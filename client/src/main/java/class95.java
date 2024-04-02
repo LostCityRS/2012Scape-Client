@@ -7,7 +7,7 @@ import jaggl.OpenGL;
 public abstract class class95 {
 
 	@ObfuscatedName("bw.a")
-	public final class682 field1113;
+	public final GlToolkit field1113;
 
 	@ObfuscatedName("bw.s")
 	public final int field1108;
@@ -27,7 +27,7 @@ public abstract class class95 {
 	@ObfuscatedName("bw.f")
 	public static final int[] field1112 = new int[1];
 
-	public class95(class682 arg0, int arg1, byte[] arg2, int arg3, boolean arg4) {
+	public class95(GlToolkit arg0, int arg1, byte[] arg2, int arg3, boolean arg4) {
 		this.field1113 = arg0;
 		this.field1108 = arg1;
 		this.field1110 = arg3;
@@ -39,7 +39,7 @@ public abstract class class95 {
 		this.field1113.field8157 += this.field1110;
 	}
 
-	public class95(class682 arg0, int arg1, Buffer arg2, int arg3, boolean arg4) {
+	public class95(GlToolkit arg0, int arg1, Buffer arg2, int arg3, boolean arg4) {
 		this.field1113 = arg0;
 		this.field1108 = arg1;
 		this.field1110 = arg3;

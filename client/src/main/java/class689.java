@@ -6,18 +6,18 @@ import jaggl.OpenGL;
 public class class689 extends class15 {
 
 	@ObfuscatedName("zc.q")
-	public final class682 field8440;
+	public final GlToolkit field8440;
 
 	@ObfuscatedName("zc.p")
 	public final class885 field8441;
 
 	@ObfuscatedName("zc.w")
-	public final class84 field8442;
+	public final GlRenderList field8442;
 
 	@ObfuscatedName("zc.b")
 	public final boolean field8443;
 
-	public class689(class682 arg0, class603 arg1, class685[] arg2, boolean arg3) {
+	public class689(GlToolkit arg0, class603 arg1, class685[] arg2, boolean arg3) {
 		super(arg0, arg1);
 		this.field8440 = arg0;
 		int var5 = 0;
@@ -100,7 +100,7 @@ public class class689 extends class15 {
 			this.field8443 = false;
 		}
 		this.field8441.method2055(false);
-		this.field8442 = new class84(arg0, 256);
+		this.field8442 = new GlRenderList(arg0, 256);
 		float var41 = this.field8441.field9912 / (float) this.field8441.field9910;
 		float var42 = this.field8441.field9911 / (float) this.field8441.field9909;
 		for (int var43 = 0; var43 < 256; var43++) {

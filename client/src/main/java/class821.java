@@ -21,10 +21,10 @@ public class class821 extends class403 {
 	public int field9746;
 
 	@ObfuscatedName("aeh.h")
-	public final class814 field9751 = new class814(null);
+	public final Packet field9751 = new Packet(null);
 
 	@ObfuscatedName("aeh.r")
-	public final class814 field9752 = new class814(null);
+	public final Packet field9752 = new Packet(null);
 
 	public class821(int arg0, class334 arg1, int arg2) {
 		super(arg0);

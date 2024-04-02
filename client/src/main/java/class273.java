@@ -219,7 +219,7 @@ public class class273 {
 		byte[] var2 = Statics.field2675.method5627(0, arg0);
 		class273 var3 = new class273();
 		if (var2 != null) {
-			var3.method4657(new class814(var2));
+			var3.method4657(new Packet(var2));
 		}
 		var3.method4660();
 		field2676.method7937(var3, (long) arg0);
@@ -227,7 +227,7 @@ public class class273 {
 	}
 
 	@ObfuscatedName("iu.a(Laet;B)V")
-	public void method4657(class814 arg0) {
+	public void method4657(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -238,7 +238,7 @@ public class class273 {
 	}
 
 	@ObfuscatedName("iu.s(Laet;II)V")
-	public void method4659(class814 arg0, int arg1) {
+	public void method4659(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			this.field2677 = (short) arg0.method15239();
 			this.field2678 = (short) arg0.method15239();

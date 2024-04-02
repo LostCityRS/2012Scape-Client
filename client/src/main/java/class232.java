@@ -7,7 +7,7 @@ import java.util.Vector;
 public class class232 {
 
 	@ObfuscatedName("hh.u")
-	public class683 field2431;
+	public GpuToolkit field2431;
 
 	@ObfuscatedName("hh.j")
 	public class674 field2426;
@@ -58,10 +58,10 @@ public class class232 {
 	public Vector field2441 = new Vector();
 
 	@ObfuscatedName("hh.x")
-	public class228 field2440;
+	public VertexBuffer field2440;
 
 	@ObfuscatedName("hh.i")
-	public class230 field2443;
+	public VertexDeclaration field2443;
 
 	@ObfuscatedName("hh.v")
 	public int field2444 = 0;
@@ -69,7 +69,7 @@ public class class232 {
 	@ObfuscatedName("hh.k")
 	public int field2445 = 0;
 
-	public class232(class683 arg0, int arg1, int arg2) {
+	public class232(GpuToolkit arg0, int arg1, int arg2) {
 		this.field2431 = arg0;
 		this.field2439 = class139.field1501;
 		this.field2436 = arg1;

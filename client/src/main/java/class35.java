@@ -37,7 +37,7 @@ public class class35 {
 	}
 
 	@ObfuscatedName("eu.s(Lra;I)V")
-	public static void method2931(class14 arg0) {
+	public static void method2931(RendererToolkit arg0) {
 		Statics.field2163 = (class15) Statics.field6784.method4859(client.field8914, Statics.field551, true, true);
 		Statics.field559 = Statics.field6784.method4843(client.field8914, Statics.field551);
 		Statics.field560 = (class15) Statics.field6784.method4859(client.field8914, Statics.field552, true, true);
@@ -94,7 +94,7 @@ public class class35 {
 	}
 
 	@ObfuscatedName("afb.t(Lra;Lls;I)V")
-	public static void method15812(class14 arg0, class334 arg1) {
+	public static void method15812(RendererToolkit arg0, class334 arg1) {
 		class140[] var2 = class125.method2591(arg1, Statics.field5179, 0);
 		Statics.field2209 = new class118[var2.length];
 		for (int var3 = 0; var3 < var2.length; var3++) {

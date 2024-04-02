@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class686 extends class15 {
 
 	@ObfuscatedName("zu.q")
-	public class681 field8419;
+	public PureJavaToolkit field8419;
 
 	@ObfuscatedName("zu.p")
 	public byte[][] field8418;
@@ -22,7 +22,7 @@ public class class686 extends class15 {
 	@ObfuscatedName("zu.i")
 	public int[] field8422;
 
-	public class686(class681 arg0, class603 arg1, class685[] arg2, int[] arg3, int[] arg4) {
+	public class686(PureJavaToolkit arg0, class603 arg1, class685[] arg2, int[] arg3, int[] arg4) {
 		super(arg0, arg1);
 		this.field8419 = arg0;
 		this.field8419 = arg0;

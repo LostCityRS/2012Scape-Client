@@ -5,5 +5,5 @@ import deob.ObfuscatedName;
 public interface class426 {
 
 	@ObfuscatedName("oj.u(Laku;I)Z")
-	boolean method1360(class974 arg0);
+	boolean method1360(PrimaryLayerEntity arg0);
 }

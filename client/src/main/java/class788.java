@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import java.util.BitSet;
 
 @ObfuscatedName("adh")
-public class class788 extends class399 {
+public class class788 extends Node {
 
 	@ObfuscatedName("adh.s")
 	public boolean field9433;
@@ -45,7 +45,7 @@ public class class788 extends class399 {
 		}
 	}
 
-	public class788(class814 arg0) {
+	public class788(Packet arg0) {
 		this.method14967(arg0);
 	}
 
@@ -95,7 +95,7 @@ public class class788 extends class399 {
 	}
 
 	@ObfuscatedName("adh.m(Laet;I)V")
-	public void method14967(class814 arg0) {
+	public void method14967(Packet arg0) {
 		int var2 = arg0.method15220();
 		if ((var2 & 0x1) != 0) {
 			this.field9433 = true;

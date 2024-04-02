@@ -12,7 +12,7 @@ public class class1000 extends class948 {
 		this.field10587 = arg1;
 	}
 
-	public class1000(int arg0, class814 arg1) {
+	public class1000(int arg0, Packet arg1) {
 		super(arg0);
 		this.field10587 = arg1.method15324();
 	}
@@ -27,12 +27,12 @@ public class class1000 extends class948 {
 	}
 
 	@ObfuscatedName("ale.a(Lfi;Lkc;Lka;B)V")
-	public void method16668(class195 arg0, class314 arg1, class320 arg2) {
+	public void method16668(Vector3i arg0, Matrix4x3 arg1, Matrix4x4 arg2) {
 		arg1.method5178(0.0F, 0.0F, 1.0F, this.field10587);
 	}
 
 	@ObfuscatedName("ale.s(Laet;I)V")
-	public void method16671(class814 arg0) {
+	public void method16671(Packet arg0) {
 		this.field10587 = arg0.method15324();
 	}
 }

@@ -22,13 +22,13 @@ public final class class728 extends class203 {
 	@ObfuscatedName("aat.ay")
 	public class311 field8704 = new class311(0.0F, 0.0F, 0.0F, 0.0F);
 
-	public class728(class683 arg0) throws class883 {
+	public class728(GpuToolkit arg0) throws ShaderException {
 		super(arg0);
 		this.method14075();
 	}
 
 	@ObfuscatedName("aat.l(I)Z")
-	public boolean method14075() throws class883 {
+	public boolean method14075() throws ShaderException {
 		this.field8709 = this.field2278.method13490("Sprite");
 		class918 var1 = this.field8709.method3357("WVPMatrix");
 		class918 var2 = this.field8709.method3357("SpriteSampler");

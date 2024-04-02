@@ -15,7 +15,7 @@ public class class354 implements Runnable {
 	public class359 field3773 = new class359(true);
 
 	@ObfuscatedName("la.u(Ltz;I)V")
-	public void method6038(class541 arg0) {
+	public void method6038(LocTypeList arg0) {
 		this.field3773.method6159(arg0);
 	}
 

@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("agl")
-public class class873 extends class553 {
+public class class873 extends AnimationNode {
 
 	public class873() {
 		super(true);

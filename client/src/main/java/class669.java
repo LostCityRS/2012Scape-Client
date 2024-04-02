@@ -7,13 +7,13 @@ public class class669 extends class11 {
 	@ObfuscatedName("ys.u")
 	public final class885 field7651;
 
-	public class669(class682 arg0, int arg1, int arg2, byte[] arg3) {
+	public class669(GlToolkit arg0, int arg1, int arg2, byte[] arg3) {
 		this.field7651 = class885.method15975(arg0, class124.field1297, class139.field1501, arg1, arg2, false, arg3, class124.field1297);
 		this.field7651.method12765(false, false);
 	}
 
 	@ObfuscatedName("ys.u(Lyq;II[I[I)Lys;")
-	public static class669 method12942(class682 arg0, int arg1, int arg2, int[] arg3, int[] arg4) {
+	public static class669 method12942(GlToolkit arg0, int arg1, int arg2, int[] arg3, int[] arg4) {
 		byte[] var5 = new byte[arg1 * arg2];
 		for (int var6 = 0; var6 < arg2; var6++) {
 			int var7 = arg1 * var6 + arg3[var6];

@@ -62,28 +62,28 @@ public abstract class class736 extends class222 {
 	public int[] field8775;
 
 	@ObfuscatedName("abf.ar")
-	public static final class320 field8777 = new class320();
+	public static final Matrix4x4 field8777 = new Matrix4x4();
 
 	@ObfuscatedName("abf.an")
-	public class320[] field8770;
+	public Matrix4x4[] field8770;
 
 	@ObfuscatedName("abf.ap")
 	public float[] field8764 = new float[3];
 
-	public class736(class683 arg0) {
+	public class736(GpuToolkit arg0) {
 		super(arg0);
-		new class314();
-		this.field8770 = new class320[this.field2414.field8337];
+		new Matrix4x3();
+		this.field8770 = new Matrix4x4[this.field2414.field8337];
 		for (int var2 = 0; var2 < this.field2414.field8337; var2++) {
-			this.field8770[var2] = new class320();
+			this.field8770[var2] = new Matrix4x4();
 		}
 	}
 
 	@ObfuscatedName("abf.y(Ljava/lang/String;)Z")
-	public boolean method14134(String arg0) throws class883 {
+	public boolean method14134(String arg0) throws ShaderException {
 		this.field8778 = this.field2414.method13490(arg0);
 		if (this.field8778 == null) {
-			throw new class883("");
+			throw new ShaderException("");
 		}
 		this.field8750 = this.field8778.method3360("textureMatrix");
 		this.field8749 = this.field8778.method3360("modelMatrix");
@@ -104,7 +104,7 @@ public abstract class class736 extends class222 {
 			if (this.field8778.method3376() == null) {
 				class168 var2 = this.field8778.method3334();
 				if (var2 == null) {
-					throw new class883(this.field8778.method3328() + "");
+					throw new ShaderException(this.field8778.method3328() + "");
 				}
 				this.field8778.method3335(var2);
 			}
@@ -155,7 +155,7 @@ public abstract class class736 extends class222 {
 	}
 
 	@ObfuscatedName("abf.af(Lka;)V")
-	public void method14151(class320 arg0) {
+	public void method14151(Matrix4x4 arg0) {
 		if (this.field8778 == null || !this.field8778.method3327() || this.field2414.method13556() != 0) {
 			return;
 		}
@@ -213,11 +213,11 @@ public abstract class class736 extends class222 {
 	}
 
 	@ObfuscatedName("abf.an(ILkc;)V")
-	public void method14139(int arg0, class314 arg1) {
+	public void method14139(int arg0, Matrix4x3 arg1) {
 		if (this.field8759 == null) {
 			return;
 		}
-		class320 var3 = this.field2414.method13522();
+		Matrix4x4 var3 = this.field2414.method13522();
 		float[] var4 = new float[] { var3.field3480[12], var3.field3480[13], var3.field3480[14] };
 		float[] var5 = new float[] { 0.0F, 0.0F, 0.0F };
 		var3.method5470(var5);
@@ -228,7 +228,7 @@ public abstract class class736 extends class222 {
 	}
 
 	@ObfuscatedName("abf.ap(ILkc;)V")
-	public void method14140(int arg0, class314 arg1) {
+	public void method14140(int arg0, Matrix4x3 arg1) {
 		if (this.field8760 != null) {
 			float[] var3 = new float[] { this.field2414.field8272[0], this.field2414.field8272[1], this.field2414.field8272[2] };
 			arg1.method5184(var3);
@@ -270,8 +270,8 @@ public abstract class class736 extends class222 {
 	}
 
 	@ObfuscatedName("abf.ai(Lkc;)V")
-	public void method14143(class314 arg0) {
-		class320 var2 = this.field2414.field8264;
+	public void method14143(Matrix4x3 arg0) {
+		Matrix4x4 var2 = this.field2414.field8264;
 		var2.method5385(arg0);
 		int var3 = this.field8778.method3401();
 		if (this.field8749 != null) {
@@ -294,7 +294,7 @@ public abstract class class736 extends class222 {
 
 	@ObfuscatedName("abf.t()V")
 	public void method4136() {
-		this.method14143(class314.field3455);
+		this.method14143(Matrix4x3.field3455);
 	}
 
 	@ObfuscatedName("abf.ao(I)V")
@@ -304,5 +304,5 @@ public abstract class class736 extends class222 {
 	}
 
 	@ObfuscatedName("abf.e()Z")
-	public abstract boolean method14135() throws class883;
+	public abstract boolean method14135() throws ShaderException;
 }

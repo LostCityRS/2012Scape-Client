@@ -36,11 +36,11 @@ public class class487 {
 
 	public class487(class334 arg0) {
 		byte[] var2 = arg0.method5635(class491.field5137.field5145);
-		this.method8582(new class814(var2));
+		this.method8582(new Packet(var2));
 	}
 
 	@ObfuscatedName("rx.u(Laet;I)V")
-	public void method8582(class814 arg0) {
+	public void method8582(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {

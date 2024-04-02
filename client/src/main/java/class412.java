@@ -153,6 +153,6 @@ public class class412 implements Runnable {
 
 	@ObfuscatedName("os.s(B)V")
 	public void method7220() {
-		this.field4317 = new class879();
+		this.field4317 = new BrokenOutputStream();
 	}
 }

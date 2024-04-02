@@ -58,10 +58,10 @@ public class class574 {
 
 	@ObfuscatedName("rt.j(ILjava/lang/String;I)Z")
 	public static boolean method8621(int arg0, String arg1) {
-		Statics.field6772 = new class573();
+		Statics.field6772 = new ServerAddress();
 		Statics.field6772.field6768 = arg0;
 		Statics.field6772.field6765 = arg1;
-		if (Statics.field6683 != class515.field6368) {
+		if (Statics.field6683 != ModeWhere.field6368) {
 			Statics.field6772.field6764 = Statics.field6772.field6768 + 40000;
 			Statics.field6772.field6766 = Statics.field6772.field6768 + 50000;
 		}
@@ -71,7 +71,7 @@ public class class574 {
 	@ObfuscatedName("an.a(Ljava/lang/String;II)V")
 	public static void method1716(String arg0, int arg1) {
 		if (Statics.field6782 == null) {
-			Statics.field6782 = new class573();
+			Statics.field6782 = new ServerAddress();
 		}
 		Statics.field6782.field6765 = arg0;
 		Statics.field6782.field6768 = arg1 + 1099;
@@ -82,7 +82,7 @@ public class class574 {
 	@ObfuscatedName("cy.c(Z[BI)V")
 	public static void method2587(boolean arg0, byte[] arg1) {
 		if (Statics.field6778 == null) {
-			Statics.field6778 = new class814(20000);
+			Statics.field6778 = new Packet(20000);
 		}
 		Statics.field6778.method15276(arg1, 0, arg1.length);
 		if (!arg0) {
@@ -98,7 +98,7 @@ public class class574 {
 			}
 		}
 		field6777 = false;
-		Statics.field6356 = class153.method5554();
+		Statics.field6356 = MonotonicTime.method5554();
 		Statics.field6778 = null;
 	}
 

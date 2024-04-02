@@ -4,7 +4,7 @@ import jagtheora.ogg.OggPacket;
 import jagtheora.ogg.OggStreamState;
 
 @ObfuscatedName("adp")
-public abstract class class803 extends class399 {
+public abstract class class803 extends Node {
 
 	@ObfuscatedName("adp.s")
 	public final OggStreamState field9557;

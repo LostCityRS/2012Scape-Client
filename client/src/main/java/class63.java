@@ -28,7 +28,7 @@ public class class63 {
 	public static void method6480(class876 arg0) {
 		arg0.method15939(0);
 		byte var2;
-		if (class385.field4152 >= 96) {
+		if (GameShell.field4152 >= 96) {
 			int var1 = class50.method4552();
 			if (var1 <= 100) {
 				method5717();
@@ -239,7 +239,7 @@ public class class63 {
 
 	@ObfuscatedName("og.n(I)V")
 	public static void method7165() {
-		if (class385.field4144 > 1) {
+		if (GameShell.field4144 > 1) {
 			Statics.field4961.method15448(Statics.field4961.field9652, 4);
 		} else {
 			Statics.field4961.method15448(Statics.field4961.field9652, 2);

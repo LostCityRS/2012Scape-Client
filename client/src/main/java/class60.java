@@ -38,9 +38,9 @@ public class class60 {
 	public static class451 field782 = new class451(4);
 
 	@ObfuscatedName("rx.u(Lra;IIIIIB)Lqa;")
-	public static class13 method8588(class14 arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+	public static Model method8588(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
 		long var6 = (long) arg5;
-		class13 var8 = (class13) field782.method7916(var6);
+		Model var8 = (Model) field782.method7916(var6);
 		short var9 = 2055;
 		if (var8 == null) {
 			class129 var10 = class129.method2664(Statics.field4560, arg5, 0);
@@ -53,7 +53,7 @@ public class class60 {
 			var8 = arg0.method625(var10, var9, Statics.field783, 64, 768);
 			field782.method7937(var8, var6);
 		}
-		class13 var11 = var8.method295((byte) 6, var9, true);
+		Model var11 = var8.method295((byte) 6, var9, true);
 		if (arg1 != 0) {
 			var11.method246(arg1);
 		}

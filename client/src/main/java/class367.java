@@ -130,12 +130,12 @@ public class class367 {
 	}
 
 	@ObfuscatedName("mh.a(Lra;Lmh;)Z")
-	public boolean method6422(class14 arg0, class367 arg1) {
+	public boolean method6422(RendererToolkit arg0, class367 arg1) {
 		return this.field3967 != null || this.method6410(arg0, arg1);
 	}
 
 	@ObfuscatedName("mh.s(Lra;IIIIIIIIII)V")
-	public void method6409(class14 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10) {
+	public void method6409(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10) {
 		if (this.field3967 == null) {
 			return;
 		}
@@ -160,7 +160,7 @@ public class class367 {
 	}
 
 	@ObfuscatedName("mh.c(Lra;Lmh;)Z")
-	public boolean method6410(class14 arg0, class367 arg1) {
+	public boolean method6410(RendererToolkit arg0, class367 arg1) {
 		if (this.field3967 == null) {
 			if (this.field3954 == 0) {
 				if (Statics.field6785.method898(this.field3960, class455.field4848, 0.7F, this.field3972, this.field3972, false)) {
@@ -177,7 +177,7 @@ public class class367 {
 	}
 
 	@ObfuscatedName("mh.m(Lra;Lmh;)V")
-	public void method6411(class14 arg0, class367 arg1) {
+	public void method6411(RendererToolkit arg0, class367 arg1) {
 		class129 var3 = class129.method2664(Statics.field549, this.field3960, 0);
 		if (var3 == null) {
 			return;
@@ -202,16 +202,16 @@ public class class367 {
 		}
 		if (this.field3962 != 0) {
 			int var7 = -this.field3962 & 0x3FFF;
-			int var8 = class312.field3439[var7];
-			int var9 = class312.field3447[var7];
+			int var8 = Trig1.field3439[var7];
+			int var9 = Trig1.field3447[var7];
 			int var10 = var5 * var9 - var6 * var8 >> 14;
 			var6 = var5 * var8 + var6 * var9 >> 14;
 			var5 = var10;
 		}
 		if (this.field3963 != 0) {
 			int var11 = -this.field3963 & 0x3FFF;
-			int var12 = class312.field3439[var11];
-			int var13 = class312.field3447[var11];
+			int var12 = Trig1.field3439[var11];
+			int var13 = Trig1.field3447[var11];
 			int var14 = var4 * var13 + var6 * var12 >> 14;
 			var6 = var6 * var13 - var4 * var12 >> 14;
 			var4 = var14;
@@ -219,18 +219,18 @@ public class class367 {
 		arg0.method529(1.0F);
 		arg0.method530(this.field3952, 1.0F, 1.0F, (float) var4, (float) var5, (float) var6);
 		var3.method2633(this.field3968 & 0x3FFF, this.field3975 & 0x3FFF, this.field3970 & 0x3FFF);
-		class13 var15 = arg0.method625(var3, 2048, 0, 64, 768);
+		Model var15 = arg0.method625(var3, 2048, 0, 64, 768);
 		int var16 = var15.method277() - var15.method358();
 		int var17 = var15.method279() - var15.method278();
 		int var18 = var16 > var17 ? var16 : var17;
 		int var19 = this.field3972 * 1024 / var18;
-		class320 var20 = arg0.method528();
-		class320 var21 = arg0.method781();
+		Matrix4x4 var20 = arg0.method528();
+		Matrix4x4 var21 = arg0.method781();
 		var21.method5398((float) (this.field3972 / 2), (float) (this.field3972 / 2), (float) var19, (float) var19, 50.0F, 50000.0F, (float) arg0.method457().method921(), (float) arg0.method457().method922(), 1024.0F);
 		arg0.method784(var21);
-		class314 var22 = new class314();
+		Matrix4x3 var22 = new Matrix4x3();
 		arg0.method524(var22);
-		class314 var23 = arg0.method516();
+		Matrix4x3 var23 = arg0.method516();
 		var23.method5114(0.0F, 0.0F, (float) (50 - var15.method280()));
 		var15.method271(var23, null, 1);
 		this.field3967 = arg0.method508(0, 0, this.field3972, this.field3972, true);
@@ -240,7 +240,7 @@ public class class367 {
 	}
 
 	@ObfuscatedName("mh.t(Lra;Lmh;)V")
-	public void method6408(class14 arg0, class367 arg1) {
+	public void method6408(RendererToolkit arg0, class367 arg1) {
 		method6413(arg0);
 		method6412(arg0);
 		arg0.method453(field3980);
@@ -262,20 +262,20 @@ public class class367 {
 			}
 		}
 		if (this.field3962 != 0) {
-			int var6 = class312.field3439[this.field3962];
-			int var7 = class312.field3447[this.field3962];
+			int var6 = Trig1.field3439[this.field3962];
+			int var7 = Trig1.field3447[this.field3962];
 			int var8 = var4 * var7 - var5 * var6 >> 14;
 			var5 = var4 * var6 + var5 * var7 >> 14;
 			var4 = var8;
 		}
 		if (this.field3963 != 0) {
-			int var9 = class312.field3439[this.field3963];
-			int var10 = class312.field3447[this.field3963];
+			int var9 = Trig1.field3439[this.field3963];
+			int var10 = Trig1.field3447[this.field3963];
 			int var11 = var3 * var10 + var5 * var9 >> 14;
 			var5 = var5 * var10 - var3 * var9 >> 14;
 			var3 = var11;
 		}
-		class13 var12 = Statics.field3977.method295((byte) 0, 51200, true);
+		Model var12 = Statics.field3977.method295((byte) 0, 51200, true);
 		var12.method289((short) 0, (short) this.field3960);
 		arg0.method529(1.0F);
 		arg0.method530(16777215, 1.0F, 1.0F, (float) var3, (float) var4, (float) var5);
@@ -283,12 +283,12 @@ public class class367 {
 		if (this.field3952 != 0) {
 			var13 = var13 * 13 / 16;
 		}
-		class320 var14 = arg0.method528();
-		class320 var15 = arg0.method781();
+		Matrix4x4 var14 = arg0.method528();
+		Matrix4x4 var15 = arg0.method781();
 		var15.method5398((float) (this.field3972 / 2), (float) (this.field3972 / 2), (float) var13, (float) var13, 50.0F, 50000.0F, (float) arg0.method457().method921(), (float) arg0.method457().method922(), 1024.0F);
 		arg0.method784(var15);
-		arg0.method524(new class314());
-		class314 var16 = new class314();
+		arg0.method524(new Matrix4x3());
+		Matrix4x3 var16 = new Matrix4x3();
 		var16.method5114(0.0F, 0.0F, (float) (50 - var12.method280()));
 		var12.method271(var16, null, 1);
 		int var17 = this.field3972 * 13 / 16;
@@ -304,7 +304,7 @@ public class class367 {
 	}
 
 	@ObfuscatedName("mh.l(Lra;)V")
-	public static void method6413(class14 arg0) {
+	public static void method6413(RendererToolkit arg0) {
 		if (Statics.field3977 != null) {
 			return;
 		}
@@ -314,13 +314,13 @@ public class class367 {
 		var1.method2625(0, -128, 0);
 		for (int var2 = 0; var2 <= 24; var2++) {
 			int var3 = var2 * 8192 / 24;
-			int var4 = class312.field3439[var3];
-			int var5 = class312.field3447[var3];
+			int var4 = Trig1.field3439[var3];
+			int var5 = Trig1.field3447[var3];
 			for (int var6 = 1; var6 < 24; var6++) {
 				int var7 = var6 * 8192 / 24;
-				int var8 = class312.field3447[var7] >> 7;
-				int var9 = class312.field3439[var7] * var4 >> 21;
-				int var10 = class312.field3439[var7] * var5 >> 21;
+				int var8 = Trig1.field3447[var7] >> 7;
+				int var9 = Trig1.field3439[var7] * var4 >> 21;
+				int var10 = Trig1.field3439[var7] * var5 >> 21;
 				var1.method2625(var10, var8, -var9);
 			}
 			if (var2 > 0) {
@@ -346,7 +346,7 @@ public class class367 {
 	}
 
 	@ObfuscatedName("mh.f(Lra;)V")
-	public static void method6412(class14 arg0) {
+	public static void method6412(RendererToolkit arg0) {
 		if (Statics.field3979 != null) {
 			return;
 		}

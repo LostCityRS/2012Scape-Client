@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("oc")
-public class class420 implements class517 {
+public class class420 implements SerializableEnum {
 
 	@ObfuscatedName("oc.u")
 	public static final class420 field4468 = new class420(0);

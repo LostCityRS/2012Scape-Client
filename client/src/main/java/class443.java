@@ -122,10 +122,10 @@ public class class443 {
 	public int field4775 = -1;
 
 	@ObfuscatedName("pw.az")
-	public class565 field4804;
+	public IterableMap field4804;
 
 	@ObfuscatedName("pw.u(Laet;I)V")
-	public void method7836(class814 arg0) {
+	public void method7836(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -136,7 +136,7 @@ public class class443 {
 	}
 
 	@ObfuscatedName("pw.j(Laet;II)V")
-	public void method7837(class814 arg0, int arg1) {
+	public void method7837(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			this.field4764 = arg0.method15411();
 		} else if (arg1 == 2) {
@@ -222,14 +222,14 @@ public class class443 {
 			int var9 = arg0.method15220();
 			if (this.field4804 == null) {
 				int var10 = class595.method2839(var9);
-				this.field4804 = new class565(var10);
+				this.field4804 = new IterableMap(var10);
 			}
 			for (int var11 = 0; var11 < var9; var11++) {
 				boolean var12 = arg0.method15220() == 1;
 				int var13 = arg0.method15241();
-				class399 var14;
+				Node var14;
 				if (var12) {
-					var14 = new class798(arg0.method15337());
+					var14 = new ObjectNode(arg0.method15337());
 				} else {
 					var14 = new class802(arg0.method15379());
 				}
@@ -285,7 +285,7 @@ public class class443 {
 	}
 
 	@ObfuscatedName("pw.c(Lra;ZI)Lce;")
-	public class118 method7847(class14 arg0, boolean arg1) {
+	public class118 method7847(RendererToolkit arg0, boolean arg1) {
 		int var3 = arg1 ? this.field4769 : this.field4764;
 		int var4 = var3 | arg0.field397 << 29;
 		class118 var5 = (class118) this.field4798.field4810.method7916((long) var4);
@@ -304,7 +304,7 @@ public class class443 {
 	}
 
 	@ObfuscatedName("pw.m(Lra;B)Lce;")
-	public class118 method7841(class14 arg0) {
+	public class118 method7841(RendererToolkit arg0) {
 		class118 var2 = (class118) this.field4798.field4810.method7916((long) (this.field4780 | 0x20000 | arg0.field397 << 29));
 		if (var2 != null) {
 			return var2;
@@ -333,7 +333,7 @@ public class class443 {
 		if (this.field4804 == null) {
 			return arg1;
 		} else {
-			class798 var3 = (class798) this.field4804.method11923((long) arg0);
+			ObjectNode var3 = (ObjectNode) this.field4804.method11923((long) arg0);
 			return var3 == null ? arg1 : (String) var3.field9550;
 		}
 	}

@@ -9,22 +9,22 @@ public class class64 {
 	public class411 field827;
 
 	@ObfuscatedName("ad.a")
-	public class547 field829 = new class547();
+	public IterableQueue field829 = new IterableQueue();
 
 	@ObfuscatedName("ad.s")
 	public int field826 = 0;
 
 	@ObfuscatedName("ad.c")
-	public class814 field830 = new class814(1600);
+	public Packet field830 = new Packet(1600);
 
 	@ObfuscatedName("ad.m")
-	public class568 field834;
+	public Isaac field834;
 
 	@ObfuscatedName("ad.t")
-	public class964 field832 = new class964(15000);
+	public PacketBit field832 = new PacketBit(15000);
 
 	@ObfuscatedName("ad.l")
-	public class568 field833;
+	public Isaac field833;
 
 	@ObfuscatedName("ad.f")
 	public class283 field840 = null;
@@ -66,7 +66,7 @@ public class class64 {
 	public boolean field846 = false;
 
 	@ObfuscatedName("ad.h")
-	public class31 field847 = new class31();
+	public PingProvider field847 = new PingProvider();
 
 	public class64() {
 		Thread var1 = new Thread(this.field847);
@@ -87,7 +87,7 @@ public class class64 {
 		}
 		this.field830.field9626 = 0;
 		while (true) {
-			class792 var1 = (class792) this.field829.method11563();
+			ClientMessage var1 = (ClientMessage) this.field829.method11563();
 			if (var1 == null || var1.field9465 > this.field830.field9629.length - this.field830.field9626) {
 				this.field827.method7193(this.field830.field9629, 0, this.field830.field9626);
 				this.field845 += this.field830.field9626;
@@ -103,7 +103,7 @@ public class class64 {
 	}
 
 	@ObfuscatedName("ad.a(Lada;B)V")
-	public final void method1913(class792 arg0) {
+	public final void method1913(ClientMessage arg0) {
 		this.field829.method11558(arg0);
 		arg0.field9465 = arg0.field9467.field9626;
 		arg0.field9467.field9626 = 0;

@@ -35,7 +35,7 @@ public class class416 {
 	public int field4449 = -1;
 
 	@ObfuscatedName("oe.u(Laet;S)V")
-	public void method7302(class814 arg0) {
+	public void method7302(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -46,7 +46,7 @@ public class class416 {
 	}
 
 	@ObfuscatedName("oe.j(Laet;II)V")
-	public void method7306(class814 arg0, int arg1) {
+	public void method7306(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			arg0.method15239();
 		} else if (arg1 == 2) {
@@ -73,7 +73,7 @@ public class class416 {
 	}
 
 	@ObfuscatedName("oe.a(Lra;I)Lce;")
-	public class118 method7304(class14 arg0) {
+	public class118 method7304(RendererToolkit arg0) {
 		if (this.field4441 < 0) {
 			return null;
 		}
@@ -86,7 +86,7 @@ public class class416 {
 	}
 
 	@ObfuscatedName("oe.s(Lra;I)Lce;")
-	public class118 method7305(class14 arg0) {
+	public class118 method7305(RendererToolkit arg0) {
 		if (this.field4447 < 0) {
 			return null;
 		}
@@ -99,7 +99,7 @@ public class class416 {
 	}
 
 	@ObfuscatedName("oe.c(Lra;I)Lce;")
-	public class118 method7301(class14 arg0) {
+	public class118 method7301(RendererToolkit arg0) {
 		if (this.field4448 < 0) {
 			return this.method7304(arg0);
 		}
@@ -112,7 +112,7 @@ public class class416 {
 	}
 
 	@ObfuscatedName("oe.m(Lra;I)Lce;")
-	public class118 method7307(class14 arg0) {
+	public class118 method7307(RendererToolkit arg0) {
 		if (this.field4449 < 0) {
 			return this.method7305(arg0);
 		}
@@ -125,7 +125,7 @@ public class class416 {
 	}
 
 	@ObfuscatedName("oe.t(Lra;B)V")
-	public void method7318(class14 arg0) {
+	public void method7318(RendererToolkit arg0) {
 		class334 var2 = this.field4439.field4451;
 		if (this.field4441 >= 0 && this.field4439.field4454.method7916((long) this.field4441) == null && var2.method5630(this.field4441)) {
 			class140 var3 = class125.method2598(var2, this.field4441);

@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aik")
-public class class927 extends class787 {
+public class class927 extends ClanSettingsDeltaEntry {
 
 	// $FF: synthetic field
 	public final class219 this$0;
@@ -27,7 +27,7 @@ public class class927 extends class787 {
 	}
 
 	@ObfuscatedName("aik.u(Laet;I)V")
-	public void method14956(class814 arg0) {
+	public void method14956(Packet arg0) {
 		this.field10201 = arg0.method15220() == 1;
 		this.field10198 = arg0.method15238();
 		this.field10199 = arg0.method15238();

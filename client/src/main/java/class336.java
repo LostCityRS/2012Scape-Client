@@ -102,7 +102,7 @@ public class class336 implements Runnable {
 					var2.field10597 = var2.field10595.method7168((int) var2.field9554);
 				}
 			} catch (Exception var6) {
-				class983.method16252(null, var6);
+				JagException.method16252(null, var6);
 			}
 			var2.field10352 = false;
 		}

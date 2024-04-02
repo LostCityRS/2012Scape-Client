@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class889 extends class674 {
 
 	@ObfuscatedName("age.j")
-	public class681 field9919;
+	public PureJavaToolkit field9919;
 
 	@ObfuscatedName("age.a")
 	public class78 field9920;
@@ -19,7 +19,7 @@ public class class889 extends class674 {
 	@ObfuscatedName("age.m")
 	public int field9923 = 0;
 
-	public class889(class681 arg0) {
+	public class889(PureJavaToolkit arg0) {
 		this.field9919 = arg0;
 	}
 

@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 @ObfuscatedName("xj")
 public class class654 extends class95 implements class108 {
 
-	public class654(class682 arg0, int arg1, byte[] arg2, int arg3, boolean arg4) {
+	public class654(GlToolkit arg0, int arg1, byte[] arg2, int arg3, boolean arg4) {
 		super(arg0, 34963, arg2, arg3, arg4);
 	}
 

@@ -20,7 +20,7 @@ public final class class717 extends class172 {
 	}
 
 	@ObfuscatedName("aaz.c(Lyk;Lei;)Leo;")
-	public class168 method3404(class683 arg0, class167 arg1) {
+	public class168 method3404(GpuToolkit arg0, class167 arg1) {
 		return new class715((class898) arg0, this, arg1);
 	}
 
@@ -53,7 +53,7 @@ public final class class717 extends class172 {
 	@ObfuscatedName("aaz.u()V")
 	public void method3325() {
 		if (this.field8585 == null) {
-			throw new class981();
+			throw new ProgramManagerException();
 		}
 		this.field8586.method16028(this.field8585.field8557);
 		this.field8586.method16029(this.field8585.field8556);

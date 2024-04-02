@@ -7,7 +7,6 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.MediaTracker;
 import java.awt.Toolkit;
-import java.awt.image.ImageObserver;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -103,23 +102,23 @@ public class class306 implements class310 {
 	public void method4982(boolean arg0) {
 		if (!this.field3364 && this.field3360 == null) {
 			try {
-				String[] var2 = class526.method11508(client.field9020, ',');
+				String[] var2 = StringTools.method11508(client.field9020, ',');
 				if (var2.length != 23) {
 					this.field3364 = true;
 				}
 				this.field3373 = Boolean.parseBoolean(var2[0]);
 				this.field3366 = Boolean.parseBoolean(var2[1]);
-				this.field3375 = class526.method5598(var2[2]);
-				this.field3382 = class526.method5598(var2[3]);
-				this.field3377 = class526.method5598(var2[4]);
-				this.field3378 = class526.method5598(var2[5]);
-				this.field3379 = class526.method5598(var2[6]);
-				this.field3380 = class526.method5598(var2[7]);
-				this.field3381 = class526.method5598(var2[8]);
-				this.field3376 = class526.method5598(var2[9]);
+				this.field3375 = StringTools.method5598(var2[2]);
+				this.field3382 = StringTools.method5598(var2[3]);
+				this.field3377 = StringTools.method5598(var2[4]);
+				this.field3378 = StringTools.method5598(var2[5]);
+				this.field3379 = StringTools.method5598(var2[6]);
+				this.field3380 = StringTools.method5598(var2[7]);
+				this.field3381 = StringTools.method5598(var2[8]);
+				this.field3376 = StringTools.method5598(var2[9]);
 				String var3 = var2[10];
-				int var4 = class526.method5598(var2[11]);
-				int var5 = class526.method4773(var2[12].substring(2), 16);
+				int var4 = StringTools.method5598(var2[11]);
+				int var5 = StringTools.method4773(var2[12].substring(2), 16);
 				this.field3360 = new Font(var3, 0, var4);
 				this.field3361 = Statics.field1231.getFontMetrics(this.field3360);
 				this.field3359 = new Color(var5);
@@ -143,7 +142,7 @@ public class class306 implements class310 {
 				this.field3369 = this.method5008(var2[21]);
 				var6.addImage(this.field3369, 8);
 				var6.waitForAll();
-				this.field3374 = class526.method5598(var2[22]);
+				this.field3374 = StringTools.method5598(var2[22]);
 			} catch (Exception var49) {
 				this.field3364 = true;
 			}
@@ -252,12 +251,12 @@ public class class306 implements class310 {
 
 	@ObfuscatedName("kb.c(I)V")
 	public void method4984() {
-		class385.method4801(Statics.field6789.method4974(), Statics.field6789.method4959(), client.field8974[client.field8907], client.field8956[client.field8907], client.field8902[client.field8907]);
+		GameShell.method4801(Statics.field6789.method4974(), Statics.field6789.method4959(), client.field8974[client.field8907], client.field8956[client.field8907], client.field8902[client.field8907]);
 	}
 
 	@ObfuscatedName("kb.m(I)V")
 	public void method4985() {
-		class385.method1947();
+		GameShell.method1947();
 	}
 
 	@ObfuscatedName("kb.t(B)V")

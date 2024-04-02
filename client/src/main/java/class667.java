@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class667 extends class118 {
 
 	@ObfuscatedName("yo.u")
-	public final class683 field7637;
+	public final GpuToolkit field7637;
 
 	@ObfuscatedName("yo.j")
 	public final class239 field7639;
@@ -46,7 +46,7 @@ public class class667 extends class118 {
 	@ObfuscatedName("yo.q")
 	public final boolean field7647;
 
-	public class667(class683 arg0, int arg1, int arg2, boolean arg3, boolean arg4) {
+	public class667(GpuToolkit arg0, int arg1, int arg2, boolean arg3, boolean arg4) {
 		this.field7643 = false;
 		this.field7640 = 0;
 		this.field7641 = 0;
@@ -71,7 +71,7 @@ public class class667 extends class118 {
 		this.field7637.method13739(12);
 	}
 
-	public class667(class683 arg0, int arg1, int arg2, int[] arg3, int arg4, int arg5) {
+	public class667(GpuToolkit arg0, int arg1, int arg2, int[] arg3, int arg4, int arg5) {
 		this.field7643 = false;
 		this.field7640 = 0;
 		this.field7641 = 0;
@@ -90,11 +90,11 @@ public class class667 extends class118 {
 		this.field7637.method13739(12);
 	}
 
-	public class667(class683 arg0, class239 arg1) {
+	public class667(GpuToolkit arg0, class239 arg1) {
 		this(arg0, arg1, arg1.method4409(), arg1.method4449());
 	}
 
-	public class667(class683 arg0, class239 arg1, int arg2, int arg3) {
+	public class667(GpuToolkit arg0, class239 arg1, int arg2, int arg3) {
 		this.field7643 = false;
 		this.field7640 = 0;
 		this.field7641 = 0;
@@ -524,7 +524,7 @@ public class class667 extends class118 {
 			var11.field2280.field3480[12] = arg0 + this.field7637.method13750();
 			var11.field2280.field3480[13] = arg1 + this.field7637.method13750();
 		}
-		class320 var16 = this.field7637.field8264;
+		Matrix4x4 var16 = this.field7637.field8264;
 		var16.method5453();
 		var16.field3480[0] = 2.0F / var12;
 		var16.field3480[5] = 2.0F / var13;

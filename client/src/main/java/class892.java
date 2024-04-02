@@ -6,7 +6,7 @@ import java.awt.Canvas;
 public abstract class class892 extends class675 {
 
 	@ObfuscatedName("ahd.u")
-	public final class681 field9937;
+	public final PureJavaToolkit field9937;
 
 	@ObfuscatedName("ahd.j")
 	public final Canvas field9935;
@@ -27,11 +27,11 @@ public abstract class class892 extends class675 {
 	public boolean field9934;
 
 	@ObfuscatedName("aw.n(Lyt;Ljava/awt/Canvas;IIB)Lahd;")
-	public static class892 method1885(class681 arg0, Canvas arg1, int arg2, int arg3) {
+	public static class892 method1885(PureJavaToolkit arg0, Canvas arg1, int arg2, int arg3) {
 		return new class989(arg0, arg1, arg2, arg3);
 	}
 
-	public class892(class681 arg0, Canvas arg1, int arg2, int arg3) {
+	public class892(PureJavaToolkit arg0, Canvas arg1, int arg2, int arg3) {
 		this.field9935 = arg1;
 		this.field9937 = arg0;
 		this.field9936 = arg2;

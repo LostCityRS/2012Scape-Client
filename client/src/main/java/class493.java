@@ -21,14 +21,14 @@ public class class493 {
 
 	public class493(class334 arg0) {
 		byte[] var2 = arg0.method5635(class491.field5142.field5145);
-		this.method8620(new class814(var2));
+		this.method8620(new Packet(var2));
 		if (this.field5171 == null) {
 			throw new RuntimeException("");
 		}
 	}
 
 	@ObfuscatedName("rt.u(Laet;B)V")
-	public void method8620(class814 arg0) {
+	public void method8620(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {

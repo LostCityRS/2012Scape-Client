@@ -6,22 +6,22 @@ import java.util.Iterator;
 public class class550 implements Iterator {
 
 	@ObfuscatedName("th.u")
-	public class547 field6654;
+	public IterableQueue field6654;
 
 	@ObfuscatedName("th.j")
-	public class399 field6657;
+	public Node field6657;
 
 	@ObfuscatedName("th.a")
-	public class399 field6656 = null;
+	public Node field6656 = null;
 
-	public class550(class547 arg0) {
+	public class550(IterableQueue arg0) {
 		this.field6654 = arg0;
 		this.field6657 = this.field6654.field6647.field4226;
 		this.field6656 = null;
 	}
 
 	@ObfuscatedName("th.f(Ltq;I)V")
-	public void method11691(class547 arg0) {
+	public void method11691(IterableQueue arg0) {
 		this.field6654 = arg0;
 		this.field6657 = this.field6654.field6647.field4226;
 		this.field6656 = null;
@@ -34,13 +34,13 @@ public class class550 implements Iterator {
 	}
 
 	@ObfuscatedName("th.z(B)Lnz;")
-	public class399 method11701() {
+	public Node method11701() {
 		this.method11692();
-		return (class399) this.next();
+		return (Node) this.next();
 	}
 
 	public Object next() {
-		class399 var1 = this.field6657;
+		Node var1 = this.field6657;
 		if (this.field6654.field6647 == var1) {
 			var1 = null;
 			this.field6657 = null;

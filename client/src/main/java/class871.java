@@ -2,10 +2,10 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("agw")
-public abstract class class871 extends class546 {
+public abstract class class871 extends Lookat {
 
 	@ObfuscatedName("agw.j")
-	public class322 field9894;
+	public Spline field9894;
 
 	@ObfuscatedName("agw.a")
 	public float field9895 = 0.0F;
@@ -13,12 +13,12 @@ public abstract class class871 extends class546 {
 	@ObfuscatedName("agw.s")
 	public float field9893 = 0.0F;
 
-	public class871(class199 arg0) {
+	public class871(Camera arg0) {
 		super(arg0);
 	}
 
 	@ObfuscatedName("agw.b(Lkz;IS)V")
-	public void method15935(class322 arg0, int arg1) {
+	public void method15935(Spline arg0, int arg1) {
 		this.field9894 = arg0;
 		this.field9895 = 0.0F;
 		this.field9893 = 0.0F;
@@ -43,26 +43,26 @@ public abstract class class871 extends class546 {
 	}
 
 	@ObfuscatedName("agw.a(S)Lko;")
-	public class317 method11550() {
-		return class317.method5290(this.field9894.method5528(this.field9895));
+	public Vector3 method11550() {
+		return Vector3.method5290(this.field9894.method5528(this.field9895));
 	}
 
 	@ObfuscatedName("agw.s(Lfi;Lkc;III)V")
-	public void method11543(class195 arg0, class314 arg1, int arg2, int arg3) {
-		class317 var5 = class317.method5290(this.field6645.method3720());
+	public void method11543(Vector3i arg0, Matrix4x3 arg1, int arg2, int arg3) {
+		Vector3 var5 = Vector3.method5290(this.field6645.method3720());
 		var5.field3475 -= arg2;
 		var5.field3477 -= arg3;
-		class317 var6 = class317.method5290(this.field9894.method5528(this.field9895));
+		Vector3 var6 = Vector3.method5290(this.field9894.method5528(this.field9895));
 		var6.field3475 -= arg2;
 		var6.field3477 -= arg3;
 		float var7 = this.field9894.method5518(this.field9895);
-		class317 var8 = class317.method5377(var6, var5);
+		Vector3 var8 = Vector3.method5377(var6, var5);
 		var8.method5313();
-		class316 var9 = new class316();
+		Quaternion var9 = new Quaternion();
 		var9.method5215(var8, var7);
-		class317 var10 = class317.method5294(0.0F, 1.0F, 0.0F);
-		class317 var11 = class317.method5308(var8, var10);
-		class317 var12 = class317.method5308(var11, var8);
+		Vector3 var10 = Vector3.method5294(0.0F, 1.0F, 0.0F);
+		Vector3 var11 = Vector3.method5308(var8, var10);
+		Vector3 var12 = Vector3.method5308(var11, var8);
 		var12.method5318(var9);
 		var5.field3476 *= -1.0F;
 		var6.field3476 *= -1.0F;
@@ -73,8 +73,8 @@ public abstract class class871 extends class546 {
 	}
 
 	@ObfuscatedName("agw.c(Laet;I)V")
-	public void method11542(class814 arg0) {
-		this.field9894 = new class322(arg0);
+	public void method11542(Packet arg0) {
+		this.field9894 = new Spline(arg0);
 		this.field9895 = 0.0F;
 		this.field9893 = 0.0F;
 	}

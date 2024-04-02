@@ -6,7 +6,7 @@ import jagdx.IUnknown;
 import jagdx.class0;
 
 @ObfuscatedName("jk")
-public class class301 implements class228 {
+public class class301 implements VertexBuffer {
 
 	@ObfuscatedName("jk.u")
 	public final class898 field3332;

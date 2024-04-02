@@ -53,7 +53,7 @@ public abstract class class918 extends class786 {
 	@ObfuscatedName("aig.c(B)I")
 	public int method16236() {
 		if (class170.field1977 != this.field10176) {
-			throw new class1012(this, this.field10176.toString().toLowerCase());
+			throw new OpenGLError(this, this.field10176.toString().toLowerCase());
 		}
 		return this.field10175;
 	}

@@ -12,7 +12,7 @@ public class class450 implements class445 {
 	}
 
 	@ObfuscatedName("pf.u(Ladv;[Lox;ILoq;I)Z")
-	public boolean method7884(class809 arg0, class415[] arg1, int arg2, class413 arg3) {
+	public boolean method7884(BasicMouseEvent arg0, KeyboardEvent[] arg1, int arg2, Keyboard arg3) {
 		int[] var5 = this.field4823;
 		for (int var6 = 0; var6 < var5.length; var6++) {
 			int var7 = var5[var6];

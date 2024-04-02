@@ -5,5 +5,5 @@ import deob.ObfuscatedName;
 public interface class445 {
 
 	@ObfuscatedName("pr.u(Ladv;[Lox;ILoq;I)Z")
-	boolean method7884(class809 arg0, class415[] arg1, int arg2, class413 arg3);
+	boolean method7884(BasicMouseEvent arg0, KeyboardEvent[] arg1, int arg2, Keyboard arg3);
 }

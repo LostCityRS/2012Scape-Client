@@ -2,15 +2,15 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("acd")
-public abstract class class776 extends class399 {
+public abstract class class776 extends Node {
 
 	@ObfuscatedName("acd.s")
-	public final class682 field9320;
+	public final GlToolkit field9320;
 
 	@ObfuscatedName("acd.c")
 	public boolean field9321;
 
-	public class776(class682 arg0) {
+	public class776(GlToolkit arg0) {
 		this.field9320 = arg0;
 	}
 

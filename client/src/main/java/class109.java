@@ -10,7 +10,7 @@ public class class109 {
 	}
 
 	@ObfuscatedName("cs.u(Ljava/awt/Canvas;Lma;I)Lra;")
-	public static class14 method2346(Canvas arg0, class16 arg1, int arg2) {
-		return new class682(arg0, arg1, arg2);
+	public static RendererToolkit method2346(Canvas arg0, class16 arg1, int arg2) {
+		return new GlToolkit(arg0, arg1, arg2);
 	}
 }

@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("abx")
-public class class739 extends class348 implements class228 {
+public class class739 extends class348 implements VertexBuffer {
 
 	@ObfuscatedName("abx.z")
 	public byte field8785;

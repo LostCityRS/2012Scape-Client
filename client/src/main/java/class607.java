@@ -17,7 +17,7 @@ public class class607 {
 	public int field7191 = 2048;
 
 	@ObfuscatedName("vy.u(Laet;I)V")
-	public void method12467(class814 arg0) {
+	public void method12467(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -28,7 +28,7 @@ public class class607 {
 	}
 
 	@ObfuscatedName("vy.j(Laet;IB)V")
-	public void method12468(class814 arg0, int arg1) {
+	public void method12468(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			this.field7188 = arg0.method15220();
 		} else if (arg1 == 2) {

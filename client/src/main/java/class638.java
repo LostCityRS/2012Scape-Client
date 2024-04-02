@@ -14,11 +14,11 @@ public class class638 extends class372 implements Runnable {
 						var2.method6496();
 					}
 				}
-				class154.method7052(10L);
-				class385.method1840(null);
+				PreciseSleep.method7052(10L);
+				GameShell.method1840(null);
 			}
 		} catch (Exception var7) {
-			class983.method16252(null, var7);
+			JagException.method16252(null, var7);
 		} finally {
 			this.field4009 = false;
 		}

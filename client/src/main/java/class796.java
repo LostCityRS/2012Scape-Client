@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import java.io.IOException;
 
 @ObfuscatedName("adr")
-public class class796 extends class399 {
+public class class796 extends Node {
 
 	@ObfuscatedName("adr.s")
 	public byte[][] field9496;
@@ -100,7 +100,7 @@ public class class796 extends class399 {
 
 	@ObfuscatedName("adr.c([B)V")
 	public void method15061(byte[] arg0) throws IOException {
-		class814 var2 = new class814(arg0);
+		Packet var2 = new Packet(arg0);
 		this.field9495 = var2.method15379();
 		this.field9480 = var2.method15379();
 		this.field9487 = var2.method15379();
@@ -470,7 +470,7 @@ public class class796 extends class399 {
 	@ObfuscatedName("adr.z()Laly;")
 	public class996 method15099() {
 		class373.method4778(this);
-		return this.method15071() && (this.field9510 <= this.field9495 || this.field9512 <= this.field9495 / class385.method2809()) ? null : new class996(this.field9495, this, this.field9509, this.field9487, this.field9482, this.field9483);
+		return this.method15071() && (this.field9510 <= this.field9495 || this.field9512 <= this.field9495 / GameShell.method2809()) ? null : new class996(this.field9495, this, this.field9509, this.field9487, this.field9482, this.field9483);
 	}
 
 	@ObfuscatedName("adr.n(I)I")

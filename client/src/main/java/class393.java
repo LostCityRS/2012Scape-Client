@@ -43,7 +43,7 @@ public class class393 {
 	@ObfuscatedName("np.w")
 	public int field4187 = -1;
 
-	public class393(byte arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, class836 arg7) {
+	public class393(byte arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, GraphEntity arg7) {
 		this.field4186 = arg0;
 		this.field4173 = arg1;
 		this.field4178 = arg2;
@@ -51,8 +51,8 @@ public class class393 {
 		this.field4181 = arg4;
 		this.field4177 = arg5;
 		this.field4182 = arg6;
-		if (arg7 != null && arg7 instanceof class974) {
-			class974 var9 = (class974) arg7;
+		if (arg7 != null && arg7 instanceof PrimaryLayerEntity) {
+			PrimaryLayerEntity var9 = (PrimaryLayerEntity) arg7;
 			this.field4180 = var9.field10510;
 			this.field4187 = var9.field10509;
 		}

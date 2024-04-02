@@ -9,7 +9,7 @@ public abstract class class15 {
 	public class603 field418;
 
 	@ObfuscatedName("l.j")
-	public class14 field417;
+	public RendererToolkit field417;
 
 	@ObfuscatedName("l.c")
 	public static int field421 = -1;
@@ -38,7 +38,7 @@ public abstract class class15 {
 	@ObfuscatedName("l.o")
 	public static String[] field420 = new String[100];
 
-	public class15(class14 arg0, class603 arg1) {
+	public class15(RendererToolkit arg0, class603 arg1) {
 		this.field417 = arg0;
 		this.field418 = arg1;
 	}
@@ -268,22 +268,22 @@ public abstract class class15 {
 	public void method844(String arg0) {
 		try {
 			if (arg0.startsWith("col=")) {
-				field424 = field424 & 0xFF000000 | class526.method4773(arg0.substring(4), 16) & 0xFFFFFF;
+				field424 = field424 & 0xFF000000 | StringTools.method4773(arg0.substring(4), 16) & 0xFFFFFF;
 			} else if (arg0.equals("/col")) {
 				field424 = field424 & 0xFF000000 | field423 & 0xFFFFFF;
 			}
 			if (arg0.startsWith("argb=")) {
-				field424 = class526.method4773(arg0.substring(5), 16);
+				field424 = StringTools.method4773(arg0.substring(5), 16);
 			} else if (arg0.equals("/argb")) {
 				field424 = field423;
 			} else if (arg0.startsWith("str=")) {
-				field421 = field424 & 0xFF000000 | class526.method4773(arg0.substring(4), 16);
+				field421 = field424 & 0xFF000000 | StringTools.method4773(arg0.substring(4), 16);
 			} else if (arg0.equals("str")) {
 				field421 = field424 & 0xFF000000 | 0x800000;
 			} else if (arg0.equals("/str")) {
 				field421 = -1;
 			} else if (arg0.startsWith("u=")) {
-				field422 = field424 & 0xFF000000 | class526.method4773(arg0.substring(2), 16);
+				field422 = field424 & 0xFF000000 | StringTools.method4773(arg0.substring(2), 16);
 			} else if (arg0.equals("u")) {
 				field422 = field424 & 0xFF000000;
 			} else if (arg0.equals("/u")) {
@@ -291,7 +291,7 @@ public abstract class class15 {
 			} else if (arg0.equalsIgnoreCase("shad=-1")) {
 				field426 = 0;
 			} else if (arg0.startsWith("shad=")) {
-				field426 = field424 & 0xFF000000 | class526.method4773(arg0.substring(5), 16);
+				field426 = field424 & 0xFF000000 | StringTools.method4773(arg0.substring(5), 16);
 			} else if (arg0.equals("shad")) {
 				field426 = field424 & 0xFF000000;
 			} else if (arg0.equals("/shad")) {
@@ -329,7 +329,7 @@ public abstract class class15 {
 		int var11 = -1;
 		int var12 = arg0.length();
 		for (int var13 = 0; var13 < var12; var13++) {
-			char var14 = (char) (class524.method2474(arg0.charAt(var13)) & 0xFF);
+			char var14 = (char) (Cp1252.method2474(arg0.charAt(var13)) & 0xFF);
 			if (var14 == '<') {
 				var10 = var13;
 			} else {
@@ -354,7 +354,7 @@ public abstract class class15 {
 						if (!var15.equals("reg")) {
 							if (var15.startsWith("img=")) {
 								try {
-									int var16 = class526.method5598(var15.substring(4));
+									int var16 = StringTools.method5598(var15.substring(4));
 									class118 var17 = arg3[var16];
 									int var18 = arg4 == null ? var17.method1047() : arg4[var16];
 									if ((field424 & -16777216) == -16777216) {
@@ -417,7 +417,7 @@ public abstract class class15 {
 		int var11 = 0;
 		int var12 = arg0.length();
 		for (int var13 = 0; var13 < var12; var13++) {
-			char var14 = (char) (class524.method2474(arg0.charAt(var13)) & 0xFF);
+			char var14 = (char) (Cp1252.method2474(arg0.charAt(var13)) & 0xFF);
 			if (var14 == '<') {
 				var9 = var13;
 			} else {
@@ -455,7 +455,7 @@ public abstract class class15 {
 										var17 = arg6[var11];
 									}
 									var11++;
-									int var18 = class526.method5598(var15.substring(4));
+									int var18 = StringTools.method5598(var15.substring(4));
 									class118 var19 = arg3[var18];
 									int var20 = arg4 == null ? var19.method1047() : arg4[var18];
 									var19.method1054(arg1 + var16, this.field418.field7175 + var8 - var20 + var17, 1, -1, 1);

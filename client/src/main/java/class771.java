@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("acz")
-public class class771 extends class399 {
+public class class771 extends Node {
 
 	@ObfuscatedName("acz.s")
 	public int field9295 = Integer.MAX_VALUE;

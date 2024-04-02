@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aez")
-public class class833 extends class800 implements class464 {
+public class class833 extends SecondaryNode implements class464 {
 
 	@ObfuscatedName("aez.t")
 	public int field9804 = 0;
@@ -17,7 +17,7 @@ public class class833 extends class800 implements class464 {
 	public int field9802 = 0;
 
 	@ObfuscatedName("aez.u(Laet;I)V")
-	public void method15624(class814 arg0) {
+	public void method15624(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -28,7 +28,7 @@ public class class833 extends class800 implements class464 {
 	}
 
 	@ObfuscatedName("aez.j(Laet;II)V")
-	public void method15621(class814 arg0, int arg1) {
+	public void method15621(Packet arg0, int arg1) {
 		if (arg1 == 2) {
 			this.field9802 = arg0.method15239();
 		} else if (arg1 == 4) {

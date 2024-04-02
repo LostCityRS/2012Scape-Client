@@ -10,7 +10,7 @@ public class class888 extends class665 {
 	@ObfuscatedName("agr.ax")
 	public int[] field9918;
 
-	public class888(class681 arg0, byte[] arg1, int[] arg2, int arg3, int arg4) {
+	public class888(PureJavaToolkit arg0, byte[] arg1, int[] arg2, int arg3, int arg4) {
 		super(arg0, arg3, arg4);
 		this.field9917 = arg1;
 		this.field9918 = arg2;

@@ -17,11 +17,11 @@ public interface class113 {
 	int method2401();
 
 	@ObfuscatedName("ca.m(Lra;I)V")
-	void method2406(class14 arg0);
+	void method2406(RendererToolkit arg0);
 
 	@ObfuscatedName("ca.s(I)V")
 	void method2409();
 
 	@ObfuscatedName("ca.t(Lra;I)V")
-	void method2412(class14 arg0);
+	void method2412(RendererToolkit arg0);
 }

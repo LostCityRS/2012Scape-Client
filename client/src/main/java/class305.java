@@ -53,7 +53,7 @@ public class class305 implements Runnable {
 	public synchronized void method4973(class310 arg0) {
 		this.field3350 = this.field3349;
 		this.field3349 = arg0;
-		this.field3347 = class153.method5554();
+		this.field3347 = MonotonicTime.method5554();
 	}
 
 	@ObfuscatedName("kh.c(JLjava/lang/String;ILky;I)V")
@@ -106,14 +106,14 @@ public class class305 implements Runnable {
 
 	public void run() {
 		while (!this.field3353) {
-			long var1 = class153.method5554();
+			long var1 = MonotonicTime.method5554();
 			synchronized (this) {
 				try {
 					this.field3352++;
 					if (this.field3349 instanceof class306) {
 						this.field3349.method4982(this.field3348);
 					} else {
-						long var4 = class153.method5554();
+						long var4 = MonotonicTime.method5554();
 						if (Statics.field5187 == null || this.field3350 == null || this.field3350.method4983() == 0 || this.field3347 < var4 - (long) this.field3350.method4983()) {
 							if (this.field3350 != null) {
 								this.field3348 = true;
@@ -152,7 +152,7 @@ public class class305 implements Runnable {
 								Statics.field5187.method466();
 							}
 						} catch (class881 var18) {
-							class983.method16252(var18.getMessage() + Statics.field1543.method6701(), var18);
+							JagException.method16252(var18.getMessage() + Statics.field1543.method6701(), var18);
 							Statics.method5600(0, true);
 						}
 					}
@@ -164,10 +164,10 @@ public class class305 implements Runnable {
 					continue;
 				}
 			}
-			long var15 = class153.method5554();
+			long var15 = MonotonicTime.method5554();
 			int var17 = (int) (20L - (var15 - var1));
 			if (var17 > 0) {
-				class154.method7052((long) var17);
+				PreciseSleep.method7052((long) var17);
 			}
 		}
 	}

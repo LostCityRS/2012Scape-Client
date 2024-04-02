@@ -16,7 +16,7 @@ import jagdx.class7;
 import java.awt.Canvas;
 
 @ObfuscatedName("ahh")
-public class class898 extends class683 {
+public class class898 extends GpuToolkit {
 
 	@ObfuscatedName("ahh.gf")
 	public final int field9989;
@@ -34,7 +34,7 @@ public class class898 extends class683 {
 	public final D3DPRESENT_PARAMETERS field9976;
 
 	@ObfuscatedName("ahh.ga")
-	public class547 field9977 = new class547();
+	public IterableQueue field9977 = new IterableQueue();
 
 	@ObfuscatedName("ahh.gs")
 	public int field9978 = 0;
@@ -70,7 +70,7 @@ public class class898 extends class683 {
 	public int[] field9988;
 
 	@ObfuscatedName("ahh.hy")
-	public class320 field9996;
+	public Matrix4x4 field9996;
 
 	@ObfuscatedName("ahh.ho")
 	public class715 field9990;
@@ -122,7 +122,7 @@ public class class898 extends class683 {
 	}
 
 	@ObfuscatedName("ahh.aba(Ljava/awt/Canvas;Lma;Lls;Ljava/lang/Integer;)Lra;")
-	public static class14 method16047(Canvas arg0, class16 arg1, class334 arg2, Integer arg3) {
+	public static RendererToolkit method16047(Canvas arg0, class16 arg1, class334 arg2, Integer arg3) {
 		class898 var4 = null;
 		try {
 			byte var5 = 0;
@@ -176,7 +176,7 @@ public class class898 extends class683 {
 				}
 				var4 = new class898(var5, var6, var7, var14, var10, var9, arg1, arg2, arg3);
 				if (!var4.field401.containsKey(arg0)) {
-					class14.method16838(arg0);
+					RendererToolkit.method16838(arg0);
 					var4.method460(arg0, new class756(var4, arg0, arg0.getWidth(), arg0.getHeight(), true));
 				}
 				var4.method462(arg0);
@@ -219,10 +219,10 @@ public class class898 extends class683 {
 			this.field9987 = new class241[this.field8337];
 			this.field10001 = new boolean[this.field8337];
 			this.field9988 = new int[this.field8337];
-			class314 var12 = new class314();
+			Matrix4x3 var12 = new Matrix4x3();
 			var12.method5112(1.0F, -1.0F, 0.5F);
 			var12.method5116(0.0F, 0.0F, 0.5F);
-			this.field9996 = new class320();
+			this.field9996 = new Matrix4x4();
 			this.field9996.method5385(var12);
 			IDirect3DDevice.BeginScene(this.field9975);
 		} catch (Throwable var14) {
@@ -234,7 +234,7 @@ public class class898 extends class683 {
 
 	@ObfuscatedName("ahh.oi()V")
 	public void method13499() {
-		for (class798 var1 = (class798) this.field9977.method11563(); var1 != null; var1 = (class798) this.field9977.method11567()) {
+		for (ObjectNode var1 = (ObjectNode) this.field9977.method11563(); var1 != null; var1 = (ObjectNode) this.field9977.method11567()) {
 			class298 var2 = (class298) var1.field9550;
 			var2.method4914();
 			if (this.field412 == var2) {
@@ -246,7 +246,7 @@ public class class898 extends class683 {
 
 	@ObfuscatedName("ahh.ow()V")
 	public void method13583() {
-		for (class798 var1 = (class798) this.field9977.method11563(); var1 != null; var1 = (class798) this.field9977.method11567()) {
+		for (ObjectNode var1 = (ObjectNode) this.field9977.method11563(); var1 != null; var1 = (ObjectNode) this.field9977.method11567()) {
 			class298 var2 = (class298) var1.field9550;
 			var2.method944();
 		}
@@ -419,8 +419,8 @@ public class class898 extends class683 {
 	}
 
 	@ObfuscatedName("ahh.acc(Ljz;)Ladt;")
-	public class798 method16024(class298 arg0) {
-		for (class798 var2 = (class798) this.field9977.method11563(); var2 != null; var2 = (class798) this.field9977.method11567()) {
+	public ObjectNode method16024(class298 arg0) {
+		for (ObjectNode var2 = (ObjectNode) this.field9977.method11563(); var2 != null; var2 = (ObjectNode) this.field9977.method11567()) {
 			if (var2.field9550 == arg0) {
 				return var2;
 			}
@@ -431,12 +431,12 @@ public class class898 extends class683 {
 	@ObfuscatedName("ahh.acp(Ljz;)V")
 	public void method16025(class298 arg0) {
 		if (this.method16024(arg0) == null) {
-			this.field9977.method11558(new class798(arg0));
+			this.field9977.method11558(new ObjectNode(arg0));
 		}
 	}
 
 	public void add(class298 arg0) {
-		class798 var2 = this.method16024(arg0);
+		ObjectNode var2 = this.method16024(arg0);
 		if (var2 != null) {
 			var2.method6979();
 		}
@@ -444,7 +444,7 @@ public class class898 extends class683 {
 
 	@ObfuscatedName("ahh.aca(Ljz;)V")
 	public void method16026(class298 arg0) {
-		class798 var2 = this.method16024(arg0);
+		ObjectNode var2 = this.method16024(arg0);
 		if (var2 != null) {
 			var2.method6979();
 		}
@@ -509,14 +509,14 @@ public class class898 extends class683 {
 	}
 
 	@ObfuscatedName("ahh.of(Lka;Lka;Lka;)V")
-	public void method13764(class320 arg0, class320 arg1, class320 arg2) {
+	public void method13764(Matrix4x4 arg0, Matrix4x4 arg1, Matrix4x4 arg2) {
 		IDirect3DDevice.SetTransform(this.field9975, 256, arg0.field3480);
 		IDirect3DDevice.SetTransform(this.field9975, 2, arg1.field3480);
 		IDirect3DDevice.SetTransform(this.field9975, 3, arg2.field3480);
 	}
 
 	@ObfuscatedName("ahh.ph(Lka;)V")
-	public void method13638(class320 arg0) {
+	public void method13638(Matrix4x4 arg0) {
 		arg0.method5384(this.field9996);
 	}
 
@@ -590,7 +590,7 @@ public class class898 extends class683 {
 	public void method13545() {
 		int var1;
 		for (var1 = 0; var1 < this.field8324; var1++) {
-			class780 var2 = this.field8365[var1];
+			Light var2 = this.field8365[var1];
 			int var3 = var1 + 2;
 			int var4 = var2.method14881();
 			float var5 = var2.method14893() / 255.0F;
@@ -928,23 +928,23 @@ public class class898 extends class683 {
 	}
 
 	@ObfuscatedName("ahh.sz(Z)Lhe;")
-	public final class228 method13584(boolean arg0) {
+	public final VertexBuffer method13584(boolean arg0) {
 		return new class301(this, arg0);
 	}
 
 	@ObfuscatedName("ahh.sb([Lhu;)Lhy;")
-	public class230 method13585(class243[] arg0) {
+	public VertexDeclaration method13585(class243[] arg0) {
 		return new class740(this, arg0);
 	}
 
 	@ObfuscatedName("ahh.sa(Lhy;)V")
-	public void method13688(class230 arg0) {
+	public void method13688(VertexDeclaration arg0) {
 		class740 var2 = (class740) arg0;
 		IDirect3DDevice.SetVertexDeclaration(this.field9975, var2.field8786);
 	}
 
 	@ObfuscatedName("ahh.sl(ILhe;)V")
-	public void method13587(int arg0, class228 arg1) {
+	public void method13587(int arg0, VertexBuffer arg1) {
 		class301 var3 = (class301) arg1;
 		IDirect3DDevice.SetStreamSource(this.field9975, arg0, var3.field3335, 0, var3.method4934());
 	}

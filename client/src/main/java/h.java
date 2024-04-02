@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("h")
-public class h extends class13 implements class10 {
+public class h extends Model implements class10 {
 
 	public long nativeid;
 
@@ -13,10 +13,10 @@ public class h extends class13 implements class10 {
 	public ba field472;
 
 	@ObfuscatedName("h.c")
-	public class134[] field473;
+	public ModelParticleEmitter[] field473;
 
 	@ObfuscatedName("h.m")
-	public class119[] field471;
+	public ModelParticleEffector[] field471;
 
 	public h(ja arg0, ba arg1, class129 arg2, int arg3, int arg4, int arg5, int arg6) {
 		this.field474 = arg0;
@@ -69,12 +69,12 @@ public class h extends class13 implements class10 {
 	}
 
 	@ObfuscatedName("h.ax(Lkc;)V")
-	public void method294(class314 arg0) {
+	public void method294(Matrix4x3 arg0) {
 		this.method1135(ja.field463, arg0);
 		int var2 = 0;
 		if (this.field473 != null) {
 			for (int var3 = 0; var3 < this.field473.length; var3++) {
-				class134 var4 = this.field473[var3];
+				ModelParticleEmitter var4 = this.field473[var3];
 				var4.field1378 = ja.field463[var2++];
 				var4.field1379 = ja.field463[var2++];
 				var4.field1380 = ja.field463[var2++];
@@ -90,13 +90,13 @@ public class h extends class13 implements class10 {
 			return;
 		}
 		for (int var5 = 0; var5 < this.field471.length; var5++) {
-			class119 var6 = this.field471[var5];
-			class119 var7 = var6;
+			ModelParticleEffector var6 = this.field471[var5];
+			ModelParticleEffector var7 = var6;
 			if (var6.field1238 != null) {
 				var7 = var6.field1238;
 			}
 			if (var6.field1237 == null) {
-				var6.field1237 = new class320();
+				var6.field1237 = new Matrix4x4();
 			}
 			var6.field1237.method5385(arg0);
 			var7.field1240 = ja.field463[var2++];
@@ -106,12 +106,12 @@ public class h extends class13 implements class10 {
 	}
 
 	@ObfuscatedName("h.gp([ILkc;)V")
-	public void method1135(int[] arg0, class314 arg1) {
+	public void method1135(int[] arg0, Matrix4x3 arg1) {
 		this.field474.method987().method89(this, arg0, arg1);
 	}
 
 	@ObfuscatedName("h.q(BIZ)Lqa;")
-	public class13 method295(byte arg0, int arg1, boolean arg2) {
+	public Model method295(byte arg0, int arg1, boolean arg2) {
 		return this.field474.method987().method90(this, arg0, arg1, arg2);
 	}
 
@@ -151,14 +151,14 @@ public class h extends class13 implements class10 {
 	}
 
 	@ObfuscatedName("h.ag(Lkc;IZ)V")
-	public void method239(class314 arg0, int arg1, boolean arg2) {
-		class320 var4 = this.field474.method987().field376;
+	public void method239(Matrix4x3 arg0, int arg1, boolean arg2) {
+		Matrix4x4 var4 = this.field474.method987().field376;
 		var4.method5385(arg0);
 		this.method1130(var4.field3480, arg1, arg2);
 	}
 
 	@ObfuscatedName("h.as(Lkc;Ldy;I)V")
-	public void method271(class314 arg0, class142 arg1, int arg2) {
+	public void method271(Matrix4x3 arg0, ScreenBoundingBox arg1, int arg2) {
 		if (arg1 == null) {
 			this.field474.method987().method102(this, arg0, null, arg2);
 			return;
@@ -174,7 +174,7 @@ public class h extends class13 implements class10 {
 	}
 
 	@ObfuscatedName("h.ai(IILkc;ZI)Z")
-	public boolean method272(int arg0, int arg1, class314 arg2, boolean arg3, int arg4) {
+	public boolean method272(int arg0, int arg1, Matrix4x3 arg2, boolean arg3, int arg4) {
 		return this.field474.method987().method104(this, arg0, arg1, arg2, arg3);
 	}
 
@@ -189,17 +189,17 @@ public class h extends class13 implements class10 {
 	}
 
 	@ObfuscatedName("h.aw()[Ldx;")
-	public class134[] method276() {
+	public ModelParticleEmitter[] method276() {
 		return this.field473;
 	}
 
 	@ObfuscatedName("h.am()[Lct;")
-	public class119[] method413() {
+	public ModelParticleEffector[] method413() {
 		return this.field471;
 	}
 
 	@ObfuscatedName("h.ad(Lqa;IIIZ)V")
-	public void method297(class13 arg0, int arg1, int arg2, int arg3, boolean arg4) {
+	public void method297(Model arg0, int arg1, int arg2, int arg3, boolean arg4) {
 		this.field474.method987().method100(this, arg0, arg1, arg2, arg3, arg4);
 	}
 
@@ -318,7 +318,7 @@ public class h extends class13 implements class10 {
 	public native void method1142(long arg0, int arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, boolean arg7);
 
 	@ObfuscatedName("h.pa(IILxa;Lxa;III)V")
-	public native void method255(int arg0, int arg1, class12 arg2, class12 arg3, int arg4, int arg5, int arg6);
+	public native void method255(int arg0, int arg1, FloorModel arg2, FloorModel arg3, int arg4, int arg5, int arg6);
 
 	@ObfuscatedName("h.p(I)V")
 	public native void method282(int arg0);

@@ -6,12 +6,12 @@ import jaclib.memory.Buffer;
 public class class96 {
 
 	@ObfuscatedName("bo.u")
-	public final class682 field1115;
+	public final GlToolkit field1115;
 
 	@ObfuscatedName("bo.j")
 	public Buffer field1114;
 
-	public class96(class682 arg0, byte[] arg1, int arg2) {
+	public class96(GlToolkit arg0, byte[] arg1, int arg2) {
 		this.field1115 = arg0;
 		this.field1114 = this.field1115.field8094.method70(arg2, false);
 		if (arg1 != null) {
@@ -19,7 +19,7 @@ public class class96 {
 		}
 	}
 
-	public class96(class682 arg0, Buffer arg1) {
+	public class96(GlToolkit arg0, Buffer arg1) {
 		this.field1115 = arg0;
 		this.field1114 = arg1;
 	}

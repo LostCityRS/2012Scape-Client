@@ -14,7 +14,7 @@ public class class968 extends class816 {
 
 	@ObfuscatedName("ajh.u(B)Z")
 	public boolean method15469() {
-		class1008 var1 = this.field10479.method11076();
+		ObjStackEntity var1 = this.field10479.method11076();
 		if (var1 == null) {
 			return false;
 		} else {

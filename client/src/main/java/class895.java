@@ -6,7 +6,7 @@ import jaggl.OpenGL;
 public class class895 extends class679 {
 
 	@ObfuscatedName("ahy.u")
-	public final class682 field9950;
+	public final GlToolkit field9950;
 
 	@ObfuscatedName("ahy.j")
 	public class641 field9951;
@@ -14,7 +14,7 @@ public class class895 extends class679 {
 	@ObfuscatedName("ahy.a")
 	public static final int[] field9949 = new int[4];
 
-	public class895(class682 arg0, int arg1) {
+	public class895(GlToolkit arg0, int arg1) {
 		this.field9950 = arg0;
 		this.field9951 = new class641(arg0, class124.field1296, class139.field1501, arg1);
 	}

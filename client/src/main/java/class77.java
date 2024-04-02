@@ -50,7 +50,7 @@ public class class77 {
 	public int field994;
 
 	@ObfuscatedName("bv.w")
-	public class681 field999;
+	public PureJavaToolkit field999;
 
 	@ObfuscatedName("bv.b")
 	public class66 field1000;
@@ -118,7 +118,7 @@ public class class77 {
 	@ObfuscatedName("bv.ax")
 	public float field1021 = 0.0F;
 
-	public class77(class681 arg0, class66 arg1) {
+	public class77(PureJavaToolkit arg0, class66 arg1) {
 		this.field999 = arg0;
 		this.field1000 = arg1;
 		this.field1001 = this.field999.field8002;

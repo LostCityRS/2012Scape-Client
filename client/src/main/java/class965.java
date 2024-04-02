@@ -14,11 +14,11 @@ public class class965 extends class816 {
 
 	@ObfuscatedName("aji.u(B)Z")
 	public boolean method15469() {
-		class798 var1 = (class798) client.field8964.method11923((long) this.field10476);
+		ObjectNode var1 = (ObjectNode) client.field8964.method11923((long) this.field10476);
 		if (var1 == null) {
 			return false;
 		} else {
-			class502.method2842(class619.field7313, this.field9679, -1, (class719) var1.field9550, this.field10476);
+			class502.method2842(class619.field7313, this.field9679, -1, (PathingEntity) var1.field9550, this.field10476);
 			return true;
 		}
 	}

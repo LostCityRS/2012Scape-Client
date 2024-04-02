@@ -2,9 +2,9 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("zz")
-public class class693 extends class150 {
+public class class693 extends CutsceneAction {
 
-	public class693(class814 arg0) {
+	public class693(Packet arg0) {
 		super(arg0);
 	}
 

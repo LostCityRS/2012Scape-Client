@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class521 {
 
 	@ObfuscatedName("sh.j")
-	public static class565 field6388 = new class565(4);
+	public static IterableMap field6388 = new IterableMap(4);
 
 	@ObfuscatedName("sh.a")
 	public static final class520 field6390 = new class520();
@@ -50,7 +50,7 @@ public class class521 {
 	@ObfuscatedName("kg.s(IZI)V")
 	public static void method5563(int arg0, boolean arg1) {
 		if (arg1) {
-			class792 var2 = class792.method14781(class280.field2867, client.field8975.field834);
+			ClientMessage var2 = ClientMessage.method14781(ClientProt.field2867, client.field8975.field834);
 			var2.field9467.method15287(arg0);
 			client.field8975.method1913(var2);
 		} else {
@@ -74,7 +74,7 @@ public class class521 {
 	}
 
 	@ObfuscatedName("jf.m(Lra;II)Lce;")
-	public static class118 method4742(class14 arg0, int arg1) {
+	public static class118 method4742(RendererToolkit arg0, int arg1) {
 		class813 var2 = (class813) field6388.method11923((long) arg1);
 		if (var2 != null) {
 			class958 var3 = var2.field9618.method7029();
@@ -97,7 +97,7 @@ public class class521 {
 				try {
 					var0.field9618.method7006();
 				} catch (Exception var4) {
-					class983.method16252("" + var0.field9624, var4);
+					JagException.method16252("" + var0.field9624, var4);
 					method2930(var0.field9624);
 				}
 				if (!var0.field9623 && !var0.field9622) {

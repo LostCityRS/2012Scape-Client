@@ -91,7 +91,7 @@ public class class991 extends class914 {
 		int var4 = this.field10145 >> 12;
 		int var5 = this.field10146 >> 12;
 		int var6 = this.field10147 >> 12;
-		class467 var7 = this.field10561.field4902;
+		ParticleSystem var7 = this.field10561.field4902;
 		class273 var8 = this.field10561.field4901;
 		if (var8.field2712 != 0) {
 			if (this.field10560 - this.field10562 <= var8.field2734) {
@@ -320,7 +320,7 @@ public class class991 extends class914 {
 	}
 
 	@ObfuscatedName("akp.l(Loo;Lra;J)V")
-	public void method16987(class423 arg0, class14 arg1, long arg2) {
+	public void method16987(Scene arg0, RendererToolkit arg1, long arg2) {
 		int var5 = this.field10145 >> arg0.field4510 + 12;
 		int var6 = this.field10147 >> arg0.field4510 + 12;
 		int var7 = this.field10146 >> 12;
@@ -328,11 +328,11 @@ public class class991 extends class914 {
 			this.method16977();
 			return;
 		}
-		class467 var8 = this.field10561.field4902;
+		ParticleSystem var8 = this.field10561.field4902;
 		class273 var9 = this.field10561.field4901;
-		class12[] var10 = arg0.field4498;
+		FloorModel[] var10 = arg0.field4498;
 		int var11 = var8.field4943;
-		class424 var12 = arg0.field4497[var8.field4943][var5][var6];
+		Tile var12 = arg0.field4497[var8.field4943][var5][var6];
 		if (var12 != null) {
 			var11 = var12.field4549;
 		}
@@ -369,10 +369,10 @@ public class class991 extends class914 {
 		} else if (arg0.field4494 - 1 == var15 && var10[var15].method199(var5, var6) - var7 > 0x8 << arg0.field4510) {
 			this.method16977();
 		} else {
-			class424 var16 = arg0.field4497[var15][var5][var6];
+			Tile var16 = arg0.field4497[var15][var5][var6];
 			if (var16 == null) {
 				if (var15 == 0 || arg0.field4497[0][var5][var6] == null) {
-					var16 = arg0.field4497[0][var5][var6] = new class424(0);
+					var16 = arg0.field4497[0][var5][var6] = new Tile(0);
 				}
 				boolean var17 = arg0.field4497[0][var5][var6].field4547 != null;
 				if (var15 == 3 && var17) {
@@ -381,7 +381,7 @@ public class class991 extends class914 {
 				}
 				for (int var18 = 1; var18 <= var15; var18++) {
 					if (arg0.field4497[var18][var5][var6] == null) {
-						var16 = arg0.field4497[var18][var5][var6] = new class424(var18);
+						var16 = arg0.field4497[var18][var5][var6] = new Tile(var18);
 						if (var17) {
 							var16.field4549++;
 						}
@@ -392,28 +392,28 @@ public class class991 extends class914 {
 				int var19 = this.field10145 >> 12;
 				int var20 = this.field10147 >> 12;
 				if (var16.field4548 != null) {
-					class429 var21 = var16.field4548.method12810(arg1);
+					EntityBounds var21 = var16.field4548.method12810(arg1);
 					if (var21 != null && var21.method7645(var19, var7, var20)) {
 						this.method16977();
 						return;
 					}
 				}
 				if (var16.field4550 != null) {
-					class429 var22 = var16.field4550.method12810(arg1);
+					EntityBounds var22 = var16.field4550.method12810(arg1);
 					if (var22 != null && var22.method7645(var19, var7, var20)) {
 						this.method16977();
 						return;
 					}
 				}
 				if (var16.field4552 != null) {
-					class429 var23 = var16.field4552.method12810(arg1);
+					EntityBounds var23 = var16.field4552.method12810(arg1);
 					if (var23 != null && var23.method7645(var19, var7, var20)) {
 						this.method16977();
 						return;
 					}
 				}
-				for (class430 var24 = var16.field4554; var24 != null; var24 = var24.field4641) {
-					class429 var25 = var24.field4642.method12810(arg1);
+				for (PrimaryLayerEntityList var24 = var16.field4554; var24 != null; var24 = var24.field4641) {
+					EntityBounds var25 = var24.field4642.method12810(arg1);
 					if (var25 != null && var25.method7645(var19, var7, var20)) {
 						this.method16977();
 						return;

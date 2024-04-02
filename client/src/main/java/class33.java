@@ -169,7 +169,7 @@ public class class33 {
 		Statics.field500 = 154;
 		Statics.field501 = client.field8959;
 		if (client.field8909 != null) {
-			class814 var0 = new class814(client.field8909);
+			Packet var0 = new Packet(client.field8909);
 			field506 = var0.method15246();
 			field544 = var0.method15246();
 		}
@@ -193,7 +193,7 @@ public class class33 {
 		Statics.field500 = 223;
 		Statics.field501 = client.field8975;
 		if (client.field8909 != null) {
-			class814 var0 = new class814(client.field8909);
+			Packet var0 = new Packet(client.field8909);
 			field506 = var0.method15246();
 			field544 = var0.method15246();
 		}
@@ -289,7 +289,7 @@ public class class33 {
 					Statics.field501.method1911(class411.method12184(Statics.field6782.method12025(), 15000), Statics.field6782.field6765);
 				}
 				Statics.field501.method1935();
-				class792 var1 = class792.method4876();
+				ClientMessage var1 = ClientMessage.method4876();
 				if (field504) {
 					var1.field9467.method15308(class281.field2969.field2970);
 					var1.field9467.method15287(0);
@@ -299,7 +299,7 @@ public class class33 {
 					if (Statics.field500 == 223) {
 						var1.field9467.method15308(client.field8923 == 9 ? 1 : 0);
 					}
-					class814 var3 = method8625();
+					Packet var3 = method8625();
 					var3.method15308(field499);
 					var3.method15287((int) (Math.random() * 9.9999999E7D));
 					var3.method15308(Statics.field2308.method6339());
@@ -390,8 +390,8 @@ public class class33 {
 			if (field531 == 82) {
 				Statics.field501.field832.field9626 = 0;
 				Statics.field501.method1935();
-				class792 var8 = class792.method4876();
-				class964 var9 = var8.field9467;
+				ClientMessage var8 = ClientMessage.method4876();
+				PacketBit var9 = var8.field9467;
 				if (Statics.field500 == 223) {
 					class281 var10;
 					if (field504) {
@@ -408,7 +408,7 @@ public class class33 {
 						var9.method15223(1);
 						var9.method15308(client.field8923 == 9 ? 1 : 0);
 						int var13 = var9.field9626;
-						class814 var14 = method5564();
+						Packet var14 = method5564();
 						var9.method15276(var14.field9629, 0, var14.field9626);
 						var12 = var9.field9626;
 						var9.method15308(field506 == -1L ? 1 : 0);
@@ -422,14 +422,14 @@ public class class33 {
 					var9.method15287(Statics.field4125);
 					var9.method15287(Statics.field4677);
 					var9.method15308(Statics.field4961.field9665.method15829());
-					class385.method3615(var9);
+					GameShell.method3615(var9);
 					var9.method15228(client.field8947);
 					var9.method15223(client.field9043);
-					class814 var15 = Statics.field4961.method15447();
+					Packet var15 = Statics.field4961.method15447();
 					var9.method15308(var15.field9626);
 					var9.method15276(var15.field9629, 0, var15.field9626);
 					client.field8932 = true;
-					class814 var16 = new class814(Statics.field2305.method15476());
+					Packet var16 = new Packet(Statics.field2305.method15476());
 					Statics.field2305.method15475(var16);
 					var9.method15276(var16.field9629, 0, var16.field9629.length);
 					var9.method15223(client.field9023);
@@ -463,7 +463,7 @@ public class class33 {
 					if (!field504) {
 						var9.method15223(742);
 						var9.method15223(1);
-						class814 var20 = method5564();
+						Packet var20 = method5564();
 						var9.method15276(var20.field9629, 0, var20.field9626);
 						var19 = var9.field9626;
 						var9.method15308(field506 == -1L ? 1 : 0);
@@ -475,12 +475,12 @@ public class class33 {
 					}
 					var9.method15308(client.field9163.field6408);
 					var9.method15308(Statics.field2308.method6339());
-					class385.method3615(var9);
+					GameShell.method3615(var9);
 					var9.method15228(client.field8947);
-					class814 var21 = Statics.field4961.method15447();
+					Packet var21 = Statics.field4961.method15447();
 					var9.method15308(var21.field9626);
 					var9.method15276(var21.field9629, 0, var21.field9626);
-					class814 var22 = new class814(Statics.field2305.method15476());
+					Packet var22 = new Packet(Statics.field2305.method15476());
 					Statics.field2305.method15475(var22);
 					var9.method15276(var22.field9629, 0, var22.field9629.length);
 					var9.method15228(Statics.field6817);
@@ -493,12 +493,12 @@ public class class33 {
 				}
 				Statics.field501.method1913(var8);
 				Statics.field501.method1912();
-				Statics.field501.field834 = new class568(Statics.field541);
+				Statics.field501.field834 = new Isaac(Statics.field541);
 				for (int var23 = 0; var23 < 4; var23++) {
 					Statics.field541[var23] += 50;
 				}
-				Statics.field501.field833 = new class568(Statics.field541);
-				new class568(Statics.field541);
+				Statics.field501.field833 = new Isaac(Statics.field541);
+				new Isaac(Statics.field541);
 				Statics.field501.field832.method16876(Statics.field501.field833);
 				Statics.field541 = null;
 				field531 = 96;
@@ -566,8 +566,8 @@ public class class33 {
 			}
 			if (field531 == 113) {
 				Statics.field501.method1935();
-				class792 var25 = class792.method4876();
-				class964 var26 = var25.field9467;
+				ClientMessage var25 = ClientMessage.method4876();
+				PacketBit var26 = var25.field9467;
 				var26.method16876(Statics.field501.field834);
 				var26.method16864(class281.field2968.field2970);
 				Statics.field501.method1913(var25);
@@ -653,7 +653,7 @@ public class class33 {
 				byte[] var28 = new byte[Statics.field10389 + 1];
 				Statics.field501.field832.method16861(var28, 0, Statics.field10389);
 				Statics.field501.field832.field9626 = 0;
-				class814 var29 = new class814(var28);
+				Packet var29 = new Packet(var28);
 				String var30 = var29.method15337();
 				class383.method3613(var30, true, Statics.field4961.field9661.method15781() == 5, client.field8915, client.field9218);
 				method7972(Statics.field1025);
@@ -676,7 +676,7 @@ public class class33 {
 				return;
 			}
 			if (field531 == 145) {
-				class964 var31 = Statics.field501.field832;
+				PacketBit var31 = Statics.field501.field832;
 				if (Statics.field500 == 223) {
 					if (!Statics.field501.method1927().method7212(Statics.field8459)) {
 						return;
@@ -709,7 +709,7 @@ public class class33 {
 					client.field9077 = var31.method15220() == 1;
 					client.field9078 = var31.method15220() == 1;
 					Statics.field6701 = var31.method15246();
-					Statics.field3384 = Statics.field6701 - class153.method5554() - var31.method15245();
+					Statics.field3384 = Statics.field6701 - MonotonicTime.method5554() - var31.method15245();
 					int var32 = var31.method15220();
 					client.field8998 = (var32 & 0x1) != 0;
 					Statics.field628 = (var32 & 0x2) != 0;
@@ -720,7 +720,7 @@ public class class33 {
 					Statics.field5056 = var31.method15239();
 					Statics.field4225 = var31.method15239();
 					Statics.field8466 = var31.method15379();
-					Statics.field771 = new class44(Statics.field8466);
+					Statics.field771 = new HostNameProvider(Statics.field8466);
 					(new Thread(Statics.field771)).start();
 					Statics.field1685 = var31.method15220();
 					Statics.field1599 = var31.method15239();
@@ -730,17 +730,17 @@ public class class33 {
 					Statics.field563 = var31.method15220();
 					Statics.field8537 = var31.method15379();
 					client.field9079 = var31.method15220() == 1;
-					Statics.field6779 = new class573();
+					Statics.field6779 = new ServerAddress();
 					Statics.field6779.field6768 = var31.method15239();
 					if (Statics.field6779.field6768 == 65535) {
 						Statics.field6779.field6768 = -1;
 					}
 					Statics.field6779.field6765 = var31.method15366();
-					if (Statics.field6683 != class515.field6368) {
+					if (Statics.field6683 != ModeWhere.field6368) {
 						Statics.field6779.field6764 = Statics.field6779.field6768 + 40000;
 						Statics.field6779.field6766 = Statics.field6779.field6768 + 50000;
 					}
-					if (Statics.field6683 != class515.field6363 && (Statics.field6683 != class515.field6362 || client.field9074 < 2) && Statics.field6772.method12027(Statics.field6773)) {
+					if (Statics.field6683 != ModeWhere.field6363 && (Statics.field6683 != ModeWhere.field6362 || client.field9074 < 2) && Statics.field6772.method12027(Statics.field6773)) {
 						Statics.method12022();
 					}
 				} else {
@@ -748,7 +748,7 @@ public class class33 {
 				}
 				if (client.field9054 && !client.field9078 || client.field8998) {
 					try {
-						class582.method12167(Statics.field6387, "zap");
+						BrowserControl.method12167(Statics.field6387, "zap");
 					} catch (Throwable var44) {
 						if (client.field9193) {
 							try {
@@ -759,11 +759,11 @@ public class class33 {
 					}
 				} else {
 					try {
-						class582.method12167(Statics.field6387, "unzap");
+						BrowserControl.method12167(Statics.field6387, "unzap");
 					} catch (Throwable var42) {
 					}
 				}
-				if (Statics.field6683 == class515.field6368) {
+				if (Statics.field6683 == ModeWhere.field6368) {
 					class284.field3141.method4761();
 				}
 				if (Statics.field500 != 223) {
@@ -784,7 +784,7 @@ public class class33 {
 				field531 = 173;
 			}
 			if (field531 == 173) {
-				class964 var36 = Statics.field501.field832;
+				PacketBit var36 = Statics.field501.field832;
 				var36.field9626 = 0;
 				if (var36.method16859()) {
 					if (!Statics.field501.method1927().method7212(1)) {
@@ -808,7 +808,7 @@ public class class33 {
 				method3965();
 				class55.method12667(Statics.field501.field832);
 				int var38 = var37 - Statics.field501.field832.field9626;
-				class964 var39 = new class964(var38);
+				PacketBit var39 = new PacketBit(var38);
 				System.arraycopy(Statics.field501.field832.field9629, Statics.field501.field832.field9626, var39.field9629, 0, var38);
 				Statics.field501.field832.field9626 += var38;
 				if (class283.field3128 == Statics.field501.field840) {
@@ -871,8 +871,8 @@ public class class33 {
 	}
 
 	@ObfuscatedName("ru.r(I)Laet;")
-	public static class814 method8625() {
-		class814 var0 = new class814(518);
+	public static Packet method8625() {
+		Packet var0 = new Packet(518);
 		Statics.field541 = new int[4];
 		Statics.field541[0] = (int) (Math.random() * 9.9999999E7D);
 		Statics.field541[1] = (int) (Math.random() * 9.9999999E7D);
@@ -887,8 +887,8 @@ public class class33 {
 	}
 
 	@ObfuscatedName("kg.g(S)Laet;")
-	public static class814 method5564() {
-		class814 var0 = method8625();
+	public static Packet method5564() {
+		Packet var0 = method8625();
 		var0.method15420(0L);
 		var0.method15228(field534);
 		var0.method15420(field544);
@@ -922,7 +922,7 @@ public class class33 {
 	}
 
 	@ObfuscatedName("jw.ay(Lajl;I)V")
-	public static void method4896(class964 arg0) {
+	public static void method4896(PacketBit arg0) {
 		arg0.method15223(Statics.field7567.method5622());
 		arg0.method15223(Statics.field6690.method5622());
 		arg0.method15223(Statics.field7435.method5622());
@@ -1025,8 +1025,8 @@ public class class33 {
 		client.field9090.method11925();
 		client.field9091.method11653();
 		client.field9088.method11925();
-		class770.field9278 = new class547();
-		class770.field9292 = new class547();
+		class770.field9278 = new IterableQueue();
+		class770.field9292 = new IterableQueue();
 		Statics.field2669.method1647();
 		Statics.method12620();
 		Statics.field1577 = 0;
@@ -1045,7 +1045,7 @@ public class class33 {
 			}
 		}
 		if (client.field8941 != -1) {
-			class165.method13890(client.field8941);
+			ComType.method13890(client.field8941);
 		}
 		for (class816 var3 = (class816) client.field9075.method11928(); var3 != null; var3 = (class816) client.field9075.method11929()) {
 			if (!var3.method6982()) {
@@ -1057,7 +1057,7 @@ public class class33 {
 			client.method7069(var3, true, false);
 		}
 		client.field8941 = -1;
-		client.field9075 = new class565(8);
+		client.field9075 = new IterableMap(8);
 		Statics.method4591();
 		client.field9108 = null;
 		for (int var4 = 0; var4 < 8; var4++) {
@@ -1075,7 +1075,7 @@ public class class33 {
 		}
 		client.field8980.method6139().method8154();
 		client.field9028 = true;
-		Statics.field2744 = class540.field6530 = class611.field7209 = class592.field7118 = new short[256];
+		Statics.field2744 = LocType.field6530 = NPCType.field7209 = ObjType.field7118 = new short[256];
 		Statics.field2400 = class588.field6994.method12206(Statics.field2308);
 		Statics.field4961.method15448(Statics.field4961.field9655, Statics.field4961.field9660.method15735());
 		client.field9023 = 0;

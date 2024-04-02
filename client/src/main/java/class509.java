@@ -71,13 +71,13 @@ public class class509 {
 	public int[] field6337;
 
 	@ObfuscatedName("so.r")
-	public class565 field6322;
+	public IterableMap field6322;
 
 	@ObfuscatedName("so.g")
 	public int field6339 = -1;
 
 	@ObfuscatedName("so.u(Laet;I)V")
-	public void method11122(class814 arg0) {
+	public void method11122(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -88,7 +88,7 @@ public class class509 {
 	}
 
 	@ObfuscatedName("so.j(Laet;II)V")
-	public void method11123(class814 arg0, int arg1) {
+	public void method11123(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			int var3 = arg0.method15239();
 			this.field6321 = new int[var3];
@@ -179,14 +179,14 @@ public class class509 {
 				int var19 = arg0.method15220();
 				if (this.field6322 == null) {
 					int var20 = class595.method2839(var19);
-					this.field6322 = new class565(var20);
+					this.field6322 = new IterableMap(var20);
 				}
 				for (int var21 = 0; var21 < var19; var21++) {
 					boolean var22 = arg0.method15220() == 1;
 					int var23 = arg0.method15241();
-					class399 var24;
+					Node var24;
 					if (var22) {
-						var24 = new class798(arg0.method15337());
+						var24 = new ObjectNode(arg0.method15337());
 					} else {
 						var24 = new class802(arg0.method15379());
 					}
@@ -246,7 +246,7 @@ public class class509 {
 		if (this.field6322 == null) {
 			return arg1;
 		} else {
-			class798 var3 = (class798) this.field6322.method11923((long) arg0);
+			ObjectNode var3 = (ObjectNode) this.field6322.method11923((long) arg0);
 			return var3 == null ? arg1 : (String) var3.field9550;
 		}
 	}

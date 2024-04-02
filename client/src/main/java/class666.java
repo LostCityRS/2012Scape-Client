@@ -9,7 +9,7 @@ public class class666 extends class118 {
 	public final class885 field7625;
 
 	@ObfuscatedName("yl.j")
-	public final class682 field7626;
+	public final GlToolkit field7626;
 
 	@ObfuscatedName("yl.a")
 	public class885 field7627;
@@ -32,17 +32,17 @@ public class class666 extends class118 {
 	@ObfuscatedName("yl.f")
 	public int field7629 = 0;
 
-	public class666(class682 arg0, int arg1, int arg2, boolean arg3) {
+	public class666(GlToolkit arg0, int arg1, int arg2, boolean arg3) {
 		this.field7626 = arg0;
 		this.field7625 = class885.method15981(arg0, arg3 ? class124.field1296 : class124.field1298, class139.field1501, arg1, arg2);
 	}
 
-	public class666(class682 arg0, int arg1, int arg2, int arg3, int arg4) {
+	public class666(GlToolkit arg0, int arg1, int arg2, int arg3, int arg4) {
 		this.field7626 = arg0;
 		this.field7625 = class885.method15976(arg0, arg1, arg2, arg3, arg4);
 	}
 
-	public class666(class682 arg0, int arg1, int arg2, int[] arg3, int arg4, int arg5) {
+	public class666(GlToolkit arg0, int arg1, int arg2, int[] arg3, int arg4, int arg5) {
 		this.field7626 = arg0;
 		this.field7625 = class885.method15974(arg0, arg1, arg2, false, arg3, arg5, arg4);
 	}

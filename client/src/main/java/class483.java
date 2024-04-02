@@ -53,7 +53,7 @@ public class class483 {
 	public int field5098 = 64;
 
 	@ObfuscatedName("ry.u(Laet;I)V")
-	public void method8494(class814 arg0) {
+	public void method8494(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -64,7 +64,7 @@ public class class483 {
 	}
 
 	@ObfuscatedName("ry.j(Laet;II)V")
-	public void method8488(class814 arg0, int arg1) {
+	public void method8488(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			this.field5094 = method5934(arg0.method15241());
 		} else if (arg1 == 2) {

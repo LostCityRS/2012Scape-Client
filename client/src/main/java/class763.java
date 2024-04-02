@@ -11,7 +11,7 @@ public class class763 extends class398 {
 	public static int field9249 = 0;
 
 	@ObfuscatedName("acp.c")
-	public class719 field9250;
+	public PathingEntity field9250;
 
 	@ObfuscatedName("acp.m")
 	public int field9251;

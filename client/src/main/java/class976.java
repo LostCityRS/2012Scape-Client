@@ -10,7 +10,7 @@ public class class976 extends class871 {
 	@ObfuscatedName("aka.m")
 	public float field10515;
 
-	public class976(class199 arg0) {
+	public class976(Camera arg0) {
 		super(arg0);
 	}
 

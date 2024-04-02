@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("zs")
-public class class697 extends class150 {
+public class class697 extends CutsceneAction {
 
 	@ObfuscatedName("zs.j")
 	public final int field8474;
@@ -19,7 +19,7 @@ public class class697 extends class150 {
 	@ObfuscatedName("zs.m")
 	public final int field8476;
 
-	public class697(class814 arg0) {
+	public class697(Packet arg0) {
 		super(arg0);
 		this.field8474 = arg0.method15239();
 		int var2 = arg0.method15220();
@@ -49,7 +49,7 @@ public class class697 extends class150 {
 
 	@ObfuscatedName("zs.j(I)V")
 	public void method2873() {
-		class719 var1 = Statics.field1537[this.field8474].method2854();
+		PathingEntity var1 = Statics.field1537[this.field8474].method2854();
 		var1.method13953(this.field8473, this.field8472, this.field8475, this.field8476, client.field9213, 0);
 	}
 }

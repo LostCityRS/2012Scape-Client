@@ -31,7 +31,7 @@ public class class406 {
 		int var7 = 0;
 		while (true) {
 			while (var6 < var5.field4255) {
-				class814 var8 = new class814(arg0.method5627(var3, var4[var7++]));
+				Packet var8 = new Packet(arg0.method5627(var3, var4[var7++]));
 				int var9 = var8.method15379();
 				int var10 = var8.method15239();
 				int var11 = var8.method15220();

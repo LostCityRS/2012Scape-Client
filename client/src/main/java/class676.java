@@ -2,10 +2,10 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("yx")
-public class class676 extends class13 {
+public class class676 extends Model {
 
 	@ObfuscatedName("yx.a")
-	public class681 field7839;
+	public PureJavaToolkit field7839;
 
 	@ObfuscatedName("yx.s")
 	public boolean field7765 = false;
@@ -137,10 +137,10 @@ public class class676 extends class13 {
 	public boolean field7799 = false;
 
 	@ObfuscatedName("yx.bj")
-	public class134[] field7817;
+	public ModelParticleEmitter[] field7817;
 
 	@ObfuscatedName("yx.bf")
-	public class119[] field7818;
+	public ModelParticleEffector[] field7818;
 
 	@ObfuscatedName("yx.bt")
 	public int field7782;
@@ -229,11 +229,11 @@ public class class676 extends class13 {
 	@ObfuscatedName("yx.cn")
 	public class676[] field7847;
 
-	public class676(class681 arg0) {
+	public class676(PureJavaToolkit arg0) {
 		this.field7839 = arg0;
 	}
 
-	public class676(class681 arg0, class129 arg1, int arg2, int arg3, int arg4, int arg5) {
+	public class676(PureJavaToolkit arg0, class129 arg1, int arg2, int arg3, int arg4, int arg5) {
 		this.field7839 = arg0;
 		this.field7777 = arg2;
 		this.field7778 = arg3;
@@ -943,7 +943,7 @@ public class class676 extends class13 {
 	}
 
 	@ObfuscatedName("yx.ad(Lqa;IIIZ)V")
-	public void method297(class13 arg0, int arg1, int arg2, int arg3, boolean arg4) {
+	public void method297(Model arg0, int arg1, int arg2, int arg3, boolean arg4) {
 		class676 var6 = (class676) arg0;
 		if ((this.field7777 & 0x10000) != 65536) {
 			throw new IllegalStateException("");
@@ -1025,7 +1025,7 @@ public class class676 extends class13 {
 	}
 
 	@ObfuscatedName("yx.q(BIZ)Lqa;")
-	public class13 method295(byte arg0, int arg1, boolean arg2) {
+	public Model method295(byte arg0, int arg1, boolean arg2) {
 		this.method13000(Thread.currentThread());
 		boolean var4 = false;
 		class676 var5;
@@ -1041,7 +1041,7 @@ public class class676 extends class13 {
 	}
 
 	@ObfuscatedName("yx.ge(Lyx;Lyx;IZZ)Lqa;")
-	public class13 method13066(class676 arg0, class676 arg1, int arg2, boolean arg3, boolean arg4) {
+	public Model method13066(class676 arg0, class676 arg1, int arg2, boolean arg3, boolean arg4) {
 		arg0.field7826 = this.field7826;
 		if (this.field7826) {
 			arg0.field7829 = this.field7829;
@@ -1342,8 +1342,8 @@ public class class676 extends class13 {
 		} else if (arg0 == 12288) {
 			this.method13013();
 		} else {
-			int var2 = class312.field3439[arg0];
-			int var3 = class312.field3447[arg0];
+			int var2 = Trig1.field3439[arg0];
+			int var3 = Trig1.field3447[arg0];
 			synchronized (this) {
 				for (int var5 = 0; var5 < this.field7780; var5++) {
 					int var6 = this.field7820[var5] * var2 + this.field7807[var5] * var3 >> 14;
@@ -1371,8 +1371,8 @@ public class class676 extends class13 {
 			this.method13075();
 			return;
 		} else {
-			int var2 = class312.field3439[arg0];
-			int var3 = class312.field3447[arg0];
+			int var2 = Trig1.field3439[arg0];
+			int var3 = Trig1.field3447[arg0];
 			synchronized (this) {
 				for (int var5 = 0; var5 < this.field7781; var5++) {
 					int var6 = this.field7820[var5] * var2 + this.field7807[var5] * var3 >> 14;
@@ -1536,8 +1536,8 @@ public class class676 extends class13 {
 		if ((this.field7777 & 0x6) != 6) {
 			throw new IllegalStateException();
 		}
-		int var2 = class312.field3439[arg0];
-		int var3 = class312.field3447[arg0];
+		int var2 = Trig1.field3439[arg0];
+		int var3 = Trig1.field3447[arg0];
 		synchronized (this) {
 			for (int var5 = 0; var5 < this.field7780; var5++) {
 				int var6 = this.field7783[var5] * var3 - this.field7820[var5] * var2 >> 14;
@@ -1553,8 +1553,8 @@ public class class676 extends class13 {
 		if ((this.field7777 & 0x3) != 3) {
 			throw new IllegalStateException();
 		}
-		int var2 = class312.field3439[arg0];
-		int var3 = class312.field3447[arg0];
+		int var2 = Trig1.field3439[arg0];
+		int var3 = Trig1.field3447[arg0];
 		synchronized (this) {
 			for (int var5 = 0; var5 < this.field7780; var5++) {
 				int var6 = this.field7807[var5] * var3 + this.field7783[var5] * var2 >> 14;
@@ -1657,7 +1657,7 @@ public class class676 extends class13 {
 	}
 
 	@ObfuscatedName("yx.pa(IILxa;Lxa;III)V")
-	public void method255(int arg0, int arg1, class12 arg2, class12 arg3, int arg4, int arg5, int arg6) {
+	public void method255(int arg0, int arg1, FloorModel arg2, FloorModel arg3, int arg4, int arg5, int arg6) {
 		if (arg0 == 3) {
 			if ((this.field7777 & 0x7) != 7) {
 				throw new IllegalStateException();
@@ -1986,22 +1986,22 @@ public class class676 extends class13 {
 							this.field7783[var32] -= this.field7816;
 							this.field7820[var32] -= this.field7815;
 							if (arg4 != 0) {
-								int var33 = class312.field3439[arg4];
-								int var34 = class312.field3447[arg4];
+								int var33 = Trig1.field3439[arg4];
+								int var34 = Trig1.field3447[arg4];
 								int var35 = this.field7807[var32] * var34 + this.field7783[var32] * var33 + 16383 >> 14;
 								this.field7783[var32] = this.field7783[var32] * var34 - this.field7807[var32] * var33 + 16383 >> 14;
 								this.field7807[var32] = var35;
 							}
 							if (arg2 != 0) {
-								int var36 = class312.field3439[arg2];
-								int var37 = class312.field3447[arg2];
+								int var36 = Trig1.field3439[arg2];
+								int var37 = Trig1.field3447[arg2];
 								int var38 = this.field7783[var32] * var37 - this.field7820[var32] * var36 + 16383 >> 14;
 								this.field7820[var32] = this.field7820[var32] * var37 + this.field7783[var32] * var36 + 16383 >> 14;
 								this.field7783[var32] = var38;
 							}
 							if (arg3 != 0) {
-								int var39 = class312.field3439[arg3];
-								int var40 = class312.field3447[arg3];
+								int var39 = Trig1.field3439[arg3];
+								int var40 = Trig1.field3447[arg3];
 								int var41 = this.field7820[var32] * var39 + this.field7807[var32] * var40 + 16383 >> 14;
 								this.field7820[var32] = this.field7820[var32] * var40 - this.field7807[var32] * var39 + 16383 >> 14;
 								this.field7807[var32] = var41;
@@ -2017,22 +2017,22 @@ public class class676 extends class13 {
 							this.field7783[var43] -= this.field7816;
 							this.field7820[var43] -= this.field7815;
 							if (arg2 != 0) {
-								int var44 = class312.field3439[arg2];
-								int var45 = class312.field3447[arg2];
+								int var44 = Trig1.field3439[arg2];
+								int var45 = Trig1.field3447[arg2];
 								int var46 = this.field7783[var43] * var45 - this.field7820[var43] * var44 + 16383 >> 14;
 								this.field7820[var43] = this.field7820[var43] * var45 + this.field7783[var43] * var44 + 16383 >> 14;
 								this.field7783[var43] = var46;
 							}
 							if (arg4 != 0) {
-								int var47 = class312.field3439[arg4];
-								int var48 = class312.field3447[arg4];
+								int var47 = Trig1.field3439[arg4];
+								int var48 = Trig1.field3447[arg4];
 								int var49 = this.field7807[var43] * var48 + this.field7783[var43] * var47 + 16383 >> 14;
 								this.field7783[var43] = this.field7783[var43] * var48 - this.field7807[var43] * var47 + 16383 >> 14;
 								this.field7807[var43] = var49;
 							}
 							if (arg3 != 0) {
-								int var50 = class312.field3439[arg3];
-								int var51 = class312.field3447[arg3];
+								int var50 = Trig1.field3439[arg3];
+								int var51 = Trig1.field3447[arg3];
 								int var52 = this.field7820[var43] * var50 + this.field7807[var43] * var51 + 16383 >> 14;
 								this.field7820[var43] = this.field7820[var43] * var51 - this.field7807[var43] * var50 + 16383 >> 14;
 								this.field7807[var43] = var52;
@@ -2260,22 +2260,22 @@ public class class676 extends class13 {
 								this.field7783[var97] -= this.field7816;
 								this.field7820[var97] -= this.field7815;
 								if (arg4 != 0) {
-									int var98 = class312.field3439[arg4];
-									int var99 = class312.field3447[arg4];
+									int var98 = Trig1.field3439[arg4];
+									int var99 = Trig1.field3447[arg4];
 									int var100 = this.field7807[var97] * var99 + this.field7783[var97] * var98 + 16383 >> 14;
 									this.field7783[var97] = this.field7783[var97] * var99 - this.field7807[var97] * var98 + 16383 >> 14;
 									this.field7807[var97] = var100;
 								}
 								if (arg2 != 0) {
-									int var101 = class312.field3439[arg2];
-									int var102 = class312.field3447[arg2];
+									int var101 = Trig1.field3439[arg2];
+									int var102 = Trig1.field3447[arg2];
 									int var103 = this.field7783[var97] * var102 - this.field7820[var97] * var101 + 16383 >> 14;
 									this.field7820[var97] = this.field7820[var97] * var102 + this.field7783[var97] * var101 + 16383 >> 14;
 									this.field7783[var97] = var103;
 								}
 								if (arg3 != 0) {
-									int var104 = class312.field3439[arg3];
-									int var105 = class312.field3447[arg3];
+									int var104 = Trig1.field3439[arg3];
+									int var105 = Trig1.field3447[arg3];
 									int var106 = this.field7820[var97] * var104 + this.field7807[var97] * var105 + 16383 >> 14;
 									this.field7820[var97] = this.field7820[var97] * var105 - this.field7807[var97] * var104 + 16383 >> 14;
 									this.field7807[var97] = var106;
@@ -2315,12 +2315,12 @@ public class class676 extends class13 {
 					this.field7799 = false;
 				}
 				int[] var45 = new int[9];
-				int var46 = class312.field3447[arg2];
-				int var47 = class312.field3439[arg2];
-				int var48 = class312.field3447[arg3];
-				int var49 = class312.field3439[arg3];
-				int var50 = class312.field3447[arg4];
-				int var51 = class312.field3439[arg4];
+				int var46 = Trig1.field3447[arg2];
+				int var47 = Trig1.field3439[arg2];
+				int var48 = Trig1.field3447[arg3];
+				int var49 = Trig1.field3439[arg3];
+				int var50 = Trig1.field3447[arg4];
+				int var51 = Trig1.field3439[arg4];
 				int var52 = var47 * var50 + 8192 >> 14;
 				int var53 = var47 * var51 + 8192 >> 14;
 				var45[0] = var48 * var50 + var49 * var53 + 8192 >> 14;
@@ -2637,22 +2637,22 @@ public class class676 extends class13 {
 				this.field7783[var8] -= this.field7816;
 				this.field7820[var8] -= this.field7815;
 				if (arg3 != 0) {
-					int var9 = class312.field3439[arg3];
-					int var10 = class312.field3447[arg3];
+					int var9 = Trig1.field3439[arg3];
+					int var10 = Trig1.field3447[arg3];
 					int var11 = this.field7807[var8] * var10 + this.field7783[var8] * var9 + 16383 >> 14;
 					this.field7783[var8] = this.field7783[var8] * var10 - this.field7807[var8] * var9 + 16383 >> 14;
 					this.field7807[var8] = var11;
 				}
 				if (arg1 != 0) {
-					int var12 = class312.field3439[arg1];
-					int var13 = class312.field3447[arg1];
+					int var12 = Trig1.field3439[arg1];
+					int var13 = Trig1.field3447[arg1];
 					int var14 = this.field7783[var8] * var13 - this.field7820[var8] * var12 + 16383 >> 14;
 					this.field7820[var8] = this.field7820[var8] * var13 + this.field7783[var8] * var12 + 16383 >> 14;
 					this.field7783[var8] = var14;
 				}
 				if (arg2 != 0) {
-					int var15 = class312.field3439[arg2];
-					int var16 = class312.field3447[arg2];
+					int var15 = Trig1.field3439[arg2];
+					int var16 = Trig1.field3447[arg2];
 					int var17 = this.field7820[var8] * var15 + this.field7807[var8] * var16 + 16383 >> 14;
 					this.field7820[var8] = this.field7820[var8] * var16 - this.field7807[var8] * var15 + 16383 >> 14;
 					this.field7807[var8] = var17;
@@ -2740,17 +2740,17 @@ public class class676 extends class13 {
 	}
 
 	@ObfuscatedName("yx.ag(Lkc;IZ)V")
-	public void method239(class314 arg0, int arg1, boolean arg2) {
+	public void method239(Matrix4x3 arg0, int arg1, boolean arg2) {
 		if (this.field7821 == null) {
 			return;
 		}
 		class66 var4 = this.field7839.method13206(Thread.currentThread());
-		class314 var5 = var4.field878;
+		Matrix4x3 var5 = var4.field878;
 		var5.method5115(arg0);
 		if (arg2) {
 			var5.method5102();
 		}
-		class320 var6 = var4.field879;
+		Matrix4x4 var6 = var4.field879;
 		var6.method5385(var5);
 		float[] var7 = new float[3];
 		for (int var8 = 0; var8 < this.field7781; var8++) {
@@ -2764,20 +2764,20 @@ public class class676 extends class13 {
 	}
 
 	@ObfuscatedName("yx.as(Lkc;Ldy;I)V")
-	public void method271(class314 arg0, class142 arg1, int arg2) {
+	public void method271(Matrix4x3 arg0, ScreenBoundingBox arg1, int arg2) {
 		this.method13010(arg0, arg1, arg2);
 	}
 
 	@ObfuscatedName("yx.gd(Lkc;Ldy;I)V")
-	public void method13010(class314 arg0, class142 arg1, int arg2) {
+	public void method13010(Matrix4x3 arg0, ScreenBoundingBox arg1, int arg2) {
 		if (this.field7781 < 1) {
 			return;
 		}
 		class66 var4 = this.field7839.method13206(Thread.currentThread());
-		class320 var5 = var4.field879;
+		Matrix4x4 var5 = var4.field879;
 		var5.method5385(arg0);
-		class320 var6 = this.field7839.field8016;
-		class320 var7 = this.field7839.field8017;
+		Matrix4x4 var6 = this.field7839.field8016;
+		Matrix4x4 var7 = this.field7839.field8017;
 		if (!this.field7826) {
 			this.method13001();
 		}
@@ -2824,7 +2824,7 @@ public class class676 extends class13 {
 			}
 		}
 		this.method12999(var4);
-		class320 var29 = this.field7785.field880;
+		Matrix4x4 var29 = this.field7785.field880;
 		var29.method5412(var5);
 		var29.method5384(this.field7839.field8018);
 		if ((arg2 & 0x2) == 0) {
@@ -3166,7 +3166,7 @@ public class class676 extends class13 {
 		short var5 = this.field7789[arg3];
 		short var6 = this.field7790[arg3];
 		short var7 = this.field7838[arg3];
-		class320 var8 = this.field7839.field8017;
+		Matrix4x4 var8 = this.field7839.field8017;
 		float var9 = var8.field3480[10];
 		float var10 = var8.field3480[14];
 		float var11 = var8.field3480[11];
@@ -3228,11 +3228,11 @@ public class class676 extends class13 {
 	}
 
 	@ObfuscatedName("yx.ai(IILkc;ZI)Z")
-	public boolean method272(int arg0, int arg1, class314 arg2, boolean arg3, int arg4) {
+	public boolean method272(int arg0, int arg1, Matrix4x3 arg2, boolean arg3, int arg4) {
 		this.method12999(this.field7839.method13206(Thread.currentThread()));
-		class320 var6 = this.field7785.field879;
+		Matrix4x4 var6 = this.field7785.field879;
 		var6.method5385(arg2);
-		class320 var7 = this.field7785.field880;
+		Matrix4x4 var7 = this.field7785.field880;
 		var7.method5412(var6);
 		var7.method5384(this.field7839.field8018);
 		boolean var8 = false;
@@ -3347,14 +3347,14 @@ public class class676 extends class13 {
 	}
 
 	@ObfuscatedName("yx.ax(Lkc;)V")
-	public void method294(class314 arg0) {
+	public void method294(Matrix4x3 arg0) {
 		this.method12999(this.field7839.method13206(Thread.currentThread()));
-		class320 var2 = this.field7785.field879;
+		Matrix4x4 var2 = this.field7785.field879;
 		var2.method5385(arg0);
 		if (this.field7817 != null) {
 			for (int var3 = 0; var3 < this.field7817.length; var3++) {
-				class134 var4 = this.field7817[var3];
-				class134 var5 = var4;
+				ModelParticleEmitter var4 = this.field7817[var3];
+				ModelParticleEmitter var5 = var4;
 				if (var4.field1372 != null) {
 					var5 = var4.field1372;
 				}
@@ -3373,13 +3373,13 @@ public class class676 extends class13 {
 			return;
 		}
 		for (int var6 = 0; var6 < this.field7818.length; var6++) {
-			class119 var7 = this.field7818[var6];
-			class119 var8 = var7;
+			ModelParticleEffector var7 = this.field7818[var6];
+			ModelParticleEffector var8 = var7;
 			if (var7.field1238 != null) {
 				var8 = var7.field1238;
 			}
 			if (var7.field1237 == null) {
-				var7.field1237 = new class320(var2);
+				var7.field1237 = new Matrix4x4(var2);
 			} else {
 				var7.field1237.method5412(var2);
 			}
@@ -3640,12 +3640,12 @@ public class class676 extends class13 {
 	}
 
 	@ObfuscatedName("yx.aw()[Ldx;")
-	public class134[] method276() {
+	public ModelParticleEmitter[] method276() {
 		return this.field7817;
 	}
 
 	@ObfuscatedName("yx.am()[Lct;")
-	public class119[] method413() {
+	public ModelParticleEffector[] method413() {
 		return this.field7818;
 	}
 

@@ -74,9 +74,9 @@ public class class218 {
 	public String[] field2367;
 
 	@ObfuscatedName("ga.y")
-	public class565 field2368;
+	public IterableMap field2368;
 
-	public class218(class814 arg0) {
+	public class218(Packet arg0) {
 		this.method4048(arg0);
 	}
 
@@ -156,7 +156,7 @@ public class class218 {
 		if (this.field2368 == null) {
 			return null;
 		} else {
-			class399 var2 = this.field2368.method11923((long) arg0);
+			Node var2 = this.field2368.method11923((long) arg0);
 			return var2 != null && var2 instanceof class802 ? Integer.valueOf(((class802) var2).field9556) : null;
 		}
 	}
@@ -166,7 +166,7 @@ public class class218 {
 		if (this.field2368 == null) {
 			return null;
 		}
-		class399 var4 = this.field2368.method11923((long) arg0);
+		Node var4 = this.field2368.method11923((long) arg0);
 		if (var4 != null && var4 instanceof class802) {
 			int var5 = arg2 == 31 ? -1 : (0x1 << arg2 + 1) - 1;
 			return Integer.valueOf((((class802) var4).field9556 & var5) >>> arg1);
@@ -180,7 +180,7 @@ public class class218 {
 		if (this.field2368 == null) {
 			return null;
 		} else {
-			class399 var2 = this.field2368.method11923((long) arg0);
+			Node var2 = this.field2368.method11923((long) arg0);
 			return var2 != null && var2 instanceof class801 ? Long.valueOf(((class801) var2).field9555) : null;
 		}
 	}
@@ -190,8 +190,8 @@ public class class218 {
 		if (this.field2368 == null) {
 			return null;
 		} else {
-			class399 var2 = this.field2368.method11923((long) arg0);
-			return var2 != null && var2 instanceof class798 ? (String) ((class798) var2).field9550 : null;
+			Node var2 = this.field2368.method11923((long) arg0);
+			return var2 != null && var2 instanceof ObjectNode ? (String) ((ObjectNode) var2).field9550 : null;
 		}
 	}
 
@@ -375,9 +375,9 @@ public class class218 {
 	@ObfuscatedName("ga.b(IIB)Z")
 	public boolean method4060(int arg0, int arg1) {
 		if (this.field2368 == null) {
-			this.field2368 = new class565(4);
+			this.field2368 = new IterableMap(4);
 		} else {
-			class399 var3 = this.field2368.method11923((long) arg0);
+			Node var3 = this.field2368.method11923((long) arg0);
 			if (var3 != null) {
 				if (var3 instanceof class802) {
 					class802 var4 = (class802) var3;
@@ -402,9 +402,9 @@ public class class218 {
 		int var8 = arg1 << arg2;
 		int var9 = var8 & var7;
 		if (this.field2368 == null) {
-			this.field2368 = new class565(4);
+			this.field2368 = new IterableMap(4);
 		} else {
-			class399 var10 = this.field2368.method11923((long) arg0);
+			Node var10 = this.field2368.method11923((long) arg0);
 			if (var10 != null) {
 				if (var10 instanceof class802) {
 					class802 var11 = (class802) var10;
@@ -425,9 +425,9 @@ public class class218 {
 	@ObfuscatedName("ga.i(IJ)Z")
 	public boolean method4062(int arg0, long arg1) {
 		if (this.field2368 == null) {
-			this.field2368 = new class565(4);
+			this.field2368 = new IterableMap(4);
 		} else {
-			class399 var4 = this.field2368.method11923((long) arg0);
+			Node var4 = this.field2368.method11923((long) arg0);
 			if (var4 != null) {
 				if (var4 instanceof class801) {
 					class801 var5 = (class801) var4;
@@ -452,31 +452,31 @@ public class class218 {
 			arg1 = arg1.substring(0, 80);
 		}
 		if (this.field2368 == null) {
-			this.field2368 = new class565(4);
+			this.field2368 = new IterableMap(4);
 		} else {
-			class399 var3 = this.field2368.method11923((long) arg0);
+			Node var3 = this.field2368.method11923((long) arg0);
 			if (var3 != null) {
-				if (var3 instanceof class798) {
-					class798 var4 = (class798) var3;
+				if (var3 instanceof ObjectNode) {
+					ObjectNode var4 = (ObjectNode) var3;
 					if (var4.field9550 instanceof String) {
 						if (arg1.equals(var4.field9550)) {
 							return false;
 						}
 						var4.method6979();
 						var4.method6979();
-						this.field2368.method11927(new class798(arg1), var4.field4228);
+						this.field2368.method11927(new ObjectNode(arg1), var4.field4228);
 						return true;
 					}
 				}
 				var3.method6979();
 			}
 		}
-		this.field2368.method11927(new class798(arg1), (long) arg0);
+		this.field2368.method11927(new ObjectNode(arg1), (long) arg0);
 		return true;
 	}
 
 	@ObfuscatedName("ga.k(Laet;I)V")
-	public void method4048(class814 arg0) {
+	public void method4048(Packet arg0) {
 		int var2 = arg0.method15220();
 		if (var2 < 1 || var2 > 5) {
 			throw new RuntimeException("" + var2);
@@ -570,7 +570,7 @@ public class class218 {
 		if (var6 <= 0) {
 			return;
 		}
-		this.field2368 = new class565(var6 < 16 ? class595.method2839(var6) : 16);
+		this.field2368 = new IterableMap(var6 < 16 ? class595.method2839(var6) : 16);
 		while (var6-- > 0) {
 			int var7 = arg0.method15379();
 			int var8 = var7 & 0x3FFFFFFF;
@@ -583,7 +583,7 @@ public class class218 {
 				this.field2368.method11927(new class801(var11), (long) var8);
 			} else if (var9 == 2) {
 				String var13 = arg0.method15337();
-				this.field2368.method11927(new class798(var13), (long) var8);
+				this.field2368.method11927(new ObjectNode(var13), (long) var8);
 			}
 		}
 	}

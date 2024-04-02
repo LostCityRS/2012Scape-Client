@@ -8,7 +8,7 @@ import java.awt.Dimension;
 public class class893 extends class675 {
 
 	@ObfuscatedName("ahz.u")
-	public final class682 field9946;
+	public final GlToolkit field9946;
 
 	@ObfuscatedName("ahz.j")
 	public final Canvas field9941;
@@ -28,11 +28,11 @@ public class class893 extends class675 {
 	@ObfuscatedName("ahz.t")
 	public boolean field9947;
 
-	public class893(class682 arg0, Canvas arg1) {
+	public class893(GlToolkit arg0, Canvas arg1) {
 		this(arg0, arg1, arg0.field8079.prepareSurface(arg1));
 	}
 
-	public class893(class682 arg0, Canvas arg1, long arg2) {
+	public class893(GlToolkit arg0, Canvas arg1, long arg2) {
 		this.field9947 = false;
 		this.field9946 = arg0;
 		this.field9941 = arg1;

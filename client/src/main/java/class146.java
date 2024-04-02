@@ -25,7 +25,7 @@ public class class146 {
 	@ObfuscatedName("dr.t")
 	public final int[] field1550;
 
-	public class146(class814 arg0) {
+	public class146(Packet arg0) {
 		int var2 = arg0.method15277();
 		this.field1546 = new int[var2];
 		this.field1545 = new int[var2];

@@ -32,7 +32,7 @@ public class class564 {
 	public int field6721;
 
 	@ObfuscatedName("uc.u(Laet;B)V")
-	public void method11909(class814 arg0) {
+	public void method11909(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -43,7 +43,7 @@ public class class564 {
 	}
 
 	@ObfuscatedName("uc.j(Laet;II)V")
-	public void method11918(class814 arg0, int arg1) {
+	public void method11918(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			this.field6716 = arg0.method15241();
 			this.method11916(this.field6716);

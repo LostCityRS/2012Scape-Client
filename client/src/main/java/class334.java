@@ -14,7 +14,7 @@ public final class class334 {
 	public Object[][] field3565;
 
 	@ObfuscatedName("ls.s")
-	public static class636 field3566 = new class636();
+	public static GZip field3566 = new GZip();
 
 	@ObfuscatedName("ls.c")
 	public boolean field3574;
@@ -329,14 +329,14 @@ public final class class334 {
 				var10 = Statics.method2896(this.field3564[arg0], false);
 			} else {
 				var10 = Statics.method2896(this.field3564[arg0], true);
-				class814 var11 = new class814(var10);
+				Packet var11 = new Packet(var10);
 				var11.method15336(arg2, 5, var11.field9629.length);
 			}
 			byte[] var12;
 			try {
 				var12 = Statics.method1598(var10);
 			} catch (RuntimeException var48) {
-				throw class983.method15876(var48, (arg2 != null) + " " + arg0 + " " + var10.length + " " + class814.method7834(var10, var10.length) + " " + class814.method7834(var10, var10.length - 2) + " " + this.field3572.field3548[arg0] + " " + this.field3572.field3546);
+				throw JagException.method15876(var48, (arg2 != null) + " " + arg0 + " " + var10.length + " " + Packet.method7834(var10, var10.length) + " " + Packet.method7834(var10, var10.length - 2) + " " + this.field3572.field3548[arg0] + " " + this.field3572.field3546);
 			}
 			if (this.field3574) {
 				this.field3564[arg0] = null;
@@ -358,7 +358,7 @@ public final class class334 {
 				int var50 = var30 - 1;
 				int var31 = var12[var50] & 0xFF;
 				int var32 = var50 - var4 * var31 * 4;
-				class814 var33 = new class814(var12);
+				Packet var33 = new Packet(var12);
 				int var34 = 0;
 				int var35 = 0;
 				var33.field9626 = var32;
@@ -408,7 +408,7 @@ public final class class334 {
 				int var49 = var14 - 1;
 				int var15 = var12[var49] & 0xFF;
 				int var16 = var49 - var4 * var15 * 4;
-				class814 var17 = new class814(var12);
+				Packet var17 = new Packet(var12);
 				int[] var18 = new int[var4];
 				var17.field9626 = var16;
 				for (int var19 = 0; var19 < var15; var19++) {
@@ -456,7 +456,7 @@ public final class class334 {
 	public int method5688(String arg0) {
 		if (this.method5689()) {
 			String var2 = arg0.toLowerCase();
-			int var3 = this.field3572.field3560.method3564(class526.method5016(var2));
+			int var3 = this.field3572.field3560.method3564(StringTools.method5016(var2));
 			return this.method5623(var3) ? var3 : -1;
 		} else {
 			return -1;
@@ -477,7 +477,7 @@ public final class class334 {
 	public boolean method5680(String arg0) {
 		if (this.method5689()) {
 			String var2 = arg0.toLowerCase();
-			int var3 = this.field3572.field3560.method3564(class526.method5016(var2));
+			int var3 = this.field3572.field3560.method3564(StringTools.method5016(var2));
 			return var3 >= 0;
 		} else {
 			return false;
@@ -491,11 +491,11 @@ public final class class334 {
 		}
 		String var3 = arg0.toLowerCase();
 		String var4 = arg1.toLowerCase();
-		int var5 = this.field3572.field3560.method3564(class526.method5016(var3));
+		int var5 = this.field3572.field3560.method3564(StringTools.method5016(var3));
 		if (var5 < 0) {
 			return false;
 		} else {
-			int var6 = this.field3572.field3558[var5].method3564(class526.method5016(var4));
+			int var6 = this.field3572.field3558[var5].method3564(StringTools.method5016(var4));
 			return var6 >= 0;
 		}
 	}
@@ -507,9 +507,9 @@ public final class class334 {
 		}
 		String var3 = arg0.toLowerCase();
 		String var4 = arg1.toLowerCase();
-		int var5 = this.field3572.field3560.method3564(class526.method5016(var3));
+		int var5 = this.field3572.field3560.method3564(StringTools.method5016(var3));
 		if (this.method5623(var5)) {
-			int var6 = this.field3572.field3558[var5].method3564(class526.method5016(var4));
+			int var6 = this.field3572.field3558[var5].method3564(StringTools.method5016(var4));
 			return this.method5627(var5, var6);
 		} else {
 			return null;
@@ -523,9 +523,9 @@ public final class class334 {
 		}
 		String var3 = arg0.toLowerCase();
 		String var4 = arg1.toLowerCase();
-		int var5 = this.field3572.field3560.method3564(class526.method5016(var3));
+		int var5 = this.field3572.field3560.method3564(StringTools.method5016(var3));
 		if (this.method5623(var5)) {
-			int var6 = this.field3572.field3558[var5].method3564(class526.method5016(var4));
+			int var6 = this.field3572.field3558[var5].method3564(StringTools.method5016(var4));
 			return this.method5629(var5, var6);
 		} else {
 			return false;
@@ -542,7 +542,7 @@ public final class class334 {
 	public boolean method5648(String arg0) {
 		if (this.method5689()) {
 			String var2 = arg0.toLowerCase();
-			int var3 = this.field3572.field3560.method3564(class526.method5016(var2));
+			int var3 = this.field3572.field3560.method3564(StringTools.method5016(var2));
 			return this.method5631(var3);
 		} else {
 			return false;
@@ -553,7 +553,7 @@ public final class class334 {
 	public void method5649(String arg0) {
 		if (this.method5689()) {
 			String var2 = arg0.toLowerCase();
-			int var3 = this.field3572.field3560.method3564(class526.method5016(var2));
+			int var3 = this.field3572.field3560.method3564(StringTools.method5016(var2));
 			this.method5660(var3);
 		}
 	}
@@ -562,7 +562,7 @@ public final class class334 {
 	public int method5650(String arg0) {
 		if (this.method5689()) {
 			String var2 = arg0.toLowerCase();
-			int var3 = this.field3572.field3560.method3564(class526.method5016(var2));
+			int var3 = this.field3572.field3560.method3564(StringTools.method5016(var2));
 			return this.method5669(var3);
 		} else {
 			return 0;

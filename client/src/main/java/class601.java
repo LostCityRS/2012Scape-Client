@@ -26,7 +26,7 @@ public class class601 {
 				}
 				class956 var9 = new class956();
 				if (var7 != null) {
-					var9.method16778(new class814(var7));
+					var9.method16778(new Packet(var7));
 				}
 				this.field7170[var5] = var9;
 			}

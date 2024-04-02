@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public final class class114 {
 
 	@ObfuscatedName("ch.u")
-	public class565 field1199;
+	public IterableMap field1199;
 
 	@ObfuscatedName("ch.j")
 	public final int field1200;
@@ -24,7 +24,7 @@ public final class class114 {
 	@ObfuscatedName("ch.j(III)V")
 	public void method2418(int arg0, int arg1) {
 		if (this.field1199 == null) {
-			this.field1199 = new class565(this.field1200);
+			this.field1199 = new IterableMap(this.field1200);
 		}
 		class802 var3 = (class802) this.field1199.method11923((long) arg0);
 		if (var3 == null) {

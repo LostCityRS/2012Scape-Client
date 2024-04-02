@@ -11,7 +11,7 @@ public class class940 extends class793 {
 	public final int field10282;
 
 	@ObfuscatedName("aiq.z")
-	public final class547 field10285 = new class547();
+	public final IterableQueue field10285 = new IterableQueue();
 
 	@ObfuscatedName("aiq.n")
 	public int field10286 = 0;

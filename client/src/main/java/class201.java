@@ -5,18 +5,18 @@ import deob.ObfuscatedName;
 public abstract class class201 {
 
 	@ObfuscatedName("ft.u")
-	public class683 field2274;
+	public GpuToolkit field2274;
 
 	@ObfuscatedName("ft.j")
 	public class239 field2271;
 
 	@ObfuscatedName("ft.a")
-	public final class320 field2273 = new class320();
+	public final Matrix4x4 field2273 = new Matrix4x4();
 
 	@ObfuscatedName("ft.s")
 	public int field2272;
 
-	public class201(class683 arg0) {
+	public class201(GpuToolkit arg0) {
 		this.field2274 = arg0;
 	}
 
@@ -27,5 +27,5 @@ public abstract class class201 {
 	public abstract void method3872();
 
 	@ObfuscatedName("ft.u(Lka;)V")
-	public abstract void method3875(class320 arg0);
+	public abstract void method3875(Matrix4x4 arg0);
 }

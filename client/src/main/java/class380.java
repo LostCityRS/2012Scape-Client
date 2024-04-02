@@ -278,7 +278,7 @@ public class class380 {
 	}
 
 	@ObfuscatedName("mu.a(Laet;)V")
-	public final void method6600(class814 arg0) {
+	public final void method6600(Packet arg0) {
 		this.field4074 = new class371();
 		this.field4074.method6470(arg0);
 		this.field4070 = new class371();

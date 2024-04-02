@@ -4,13 +4,13 @@ import deob.ObfuscatedName;
 @ObfuscatedName("aas")
 public class class725 extends class202 {
 
-	public class725(class683 arg0) {
+	public class725(GpuToolkit arg0) {
 		super(arg0);
 	}
 
 	@ObfuscatedName("aas.u()V")
 	public void method3878() {
-		this.field2276.method13764(class320.field3479, class320.field3479, class320.field3479);
+		this.field2276.method13764(Matrix4x4.field3479, Matrix4x4.field3479, Matrix4x4.field3479);
 		this.field2276.method13629(0);
 		this.field2276.method13557(this.field2275);
 		this.field2276.method13560(0, class249.field2546);

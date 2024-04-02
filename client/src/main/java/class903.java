@@ -2,10 +2,10 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ahs")
-public class class903 extends class719 {
+public class class903 extends PathingEntity {
 
 	@ObfuscatedName("ahs.bo")
-	public class611 field10075;
+	public NPCType field10075;
 
 	@ObfuscatedName("ahs.bh")
 	public int field10080 = -1;
@@ -52,12 +52,12 @@ public class class903 extends class719 {
 	@ObfuscatedName("ahs.cp")
 	public int field10084;
 
-	public class903(class423 arg0) {
+	public class903(Scene arg0) {
 		super(arg0);
 		this.method16160();
 	}
 
-	public class903(class423 arg0, int arg1) {
+	public class903(Scene arg0, int arg1) {
 		super(arg0, arg1);
 		this.method16160();
 	}
@@ -75,7 +75,7 @@ public class class903 extends class719 {
 	}
 
 	@ObfuscatedName("ahs.gb(Lwq;I)V")
-	public void method16149(class611 arg0) {
+	public void method16149(NPCType arg0) {
 		if (this.field10075 != arg0 && class42.field585 && class42.method11169(this.field8593)) {
 			class42.method3561();
 		}
@@ -90,20 +90,20 @@ public class class903 extends class719 {
 	}
 
 	@ObfuscatedName("ahs.br(Lra;I)Lok;")
-	public class429 method12810(class14 arg0) {
+	public EntityBounds method12810(RendererToolkit arg0) {
 		return null;
 	}
 
 	@ObfuscatedName("ahs.bi(Lra;B)Loz;")
-	public class425 method12812(class14 arg0) {
+	public PickableEntity method12812(RendererToolkit arg0) {
 		if (this.field10075 == null || !this.method16151(arg0, 526336)) {
 			return null;
 		}
-		class314 var2 = this.method8558();
-		class315 var3 = this.method8565();
-		class314 var4 = arg0.method516();
+		Matrix4x3 var2 = this.method8558();
+		ScaleRotTrans var3 = this.method8565();
+		Matrix4x3 var4 = arg0.method516();
 		int var5 = this.field8638.method1387();
-		class424 var6 = this.field9808.field4497[this.field9807][(int) var3.field3464.field3475 >> 9][(int) var3.field3464.field3477 >> 9];
+		Tile var6 = this.field9808.field4497[this.field9807][(int) var3.field3464.field3475 >> 9][(int) var3.field3464.field3477 >> 9];
 		if (var6 == null || var6.field4552 == null) {
 			this.field8604 = (int) ((float) this.field8604 - (float) this.field8604 / 10.0F);
 		} else {
@@ -112,19 +112,19 @@ public class class903 extends class719 {
 		}
 		var4.method5115(var2);
 		var4.method5116(0.0F, (float) (-20 - this.field8604), 0.0F);
-		class439 var8 = this.method13959();
-		class611 var9 = this.field10075.field7244 == null ? this.field10075 : this.field10075.method12516(Statics.field2669);
+		BASType var8 = this.method13959();
+		NPCType var9 = this.field10075.field7244 == null ? this.field10075 : this.field10075.method12516(Statics.field2669);
 		this.field8650 = false;
-		class425 var10 = null;
+		PickableEntity var10 = null;
 		if (Statics.field4961.field9658.method15709() == 1 && var9.field7249 && var8.field4714) {
-			class553 var11 = this.field8597.method11767() && this.field8597.method11776() ? this.field8597 : null;
+			AnimationNode var11 = this.field8597.method11767() && this.field8597.method11776() ? this.field8597 : null;
 			class874 var12 = this.field8616.method11767() && (!this.field8616.field9899 || var11 == null) ? this.field8616 : null;
-			class13 var13 = class48.method1417(arg0, var5, this.field8601, this.field8644, this.field8603, this.field10075.field7213, this.field8651[0], this.field10075.field7236 & 0xFFFF, this.field10075.field7251 & 0xFFFF, this.field10075.field7252 & 0xFF, this.field10075.field7253 & 0xFF, var12 == null ? var11 : var12);
+			Model var13 = class48.method1417(arg0, var5, this.field8601, this.field8644, this.field8603, this.field10075.field7213, this.field8651[0], this.field10075.field7236 & 0xFFFF, this.field10075.field7251 & 0xFFFF, this.field10075.field7252 & 0xFF, this.field10075.field7253 & 0xFF, var12 == null ? var11 : var12);
 			if (var13 != null) {
 				if (this.field9811 == null || this.field9811.length < this.field8651.length + 1) {
 					this.method15642(this.field8651.length + 1);
 				}
-				var10 = class425.method12205(this.method16155());
+				var10 = PickableEntity.method12205(this.method16155());
 				this.field8650 = true;
 				arg0.method526(false);
 				var13.method271(var4, this.field9811[this.field8651.length], 0);
@@ -135,7 +135,7 @@ public class class903 extends class719 {
 			this.method15642(this.field8651.length);
 		}
 		if (var10 == null) {
-			var10 = class425.method12205(this.method16155());
+			var10 = PickableEntity.method12205(this.method16155());
 		}
 		this.method14023(arg0, this.field8651, var4, false);
 		for (int var14 = 0; var14 < this.field8651.length; var14++) {
@@ -147,7 +147,7 @@ public class class903 extends class719 {
 			}
 		}
 		if (this.field8640 != null) {
-			class128 var15 = this.field8640.method8112();
+			ParticleList var15 = this.field8640.method8112();
 			arg0.method733(var15);
 		}
 		for (int var16 = 0; var16 < this.field8651.length; var16++) {
@@ -161,10 +161,10 @@ public class class903 extends class719 {
 	}
 
 	@ObfuscatedName("ahs.go(Lra;II)Z")
-	public boolean method16151(class14 arg0, int arg1) {
+	public boolean method16151(RendererToolkit arg0, int arg1) {
 		int var3 = arg1;
-		class439 var4 = this.method13959();
-		class553 var5 = this.field8597.method11767() && !this.field8597.method11776() ? this.field8597 : null;
+		BASType var4 = this.method13959();
+		AnimationNode var5 = this.field8597.method11767() && !this.field8597.method11776() ? this.field8597 : null;
 		class874 var6 = this.field8616.method11767() && (!this.field8616.field9899 || var5 == null) ? this.field8616 : null;
 		int var7 = var4.field4712;
 		int var8 = var4.field4713;
@@ -176,7 +176,7 @@ public class class903 extends class719 {
 			arg1 |= 0x80000;
 		}
 		int var10 = this.field8638.method1387();
-		class13 var11 = this.field8651[0] = this.field10075.method12541(arg0, arg1, Statics.field3769, Statics.field2669, var5, var6, this.field8633, this.field8654, var10, this.field10073, this.method13960(), false);
+		Model var11 = this.field8651[0] = this.field10075.method12541(arg0, arg1, Statics.field3769, Statics.field2669, var5, var6, this.field8633, this.field8654, var10, this.field10073, this.method13960(), false);
 		if (var11 == null) {
 			return false;
 		}
@@ -205,11 +205,11 @@ public class class903 extends class719 {
 	}
 
 	@ObfuscatedName("ahs.bx(Lra;B)V")
-	public void method12851(class14 arg0) {
+	public void method12851(RendererToolkit arg0) {
 		if (this.field10075 == null || !this.field8613 && !this.method16151(arg0, 0)) {
 			return;
 		}
-		class314 var2 = arg0.method516();
+		Matrix4x3 var2 = arg0.method516();
 		var2.method5115(this.method8558());
 		var2.method5116(0.0F, -5.0F, 0.0F);
 		this.method14023(arg0, this.field8651, var2, this.field8613);
@@ -219,7 +219,7 @@ public class class903 extends class719 {
 	}
 
 	@ObfuscatedName("ahs.gi(Lmz;II)V")
-	public final void method16152(class364 arg0, int arg1) {
+	public final void method16152(CompassPoint arg0, int arg1) {
 		int var3 = this.field8642[0];
 		int var4 = this.field8643[0];
 		switch(arg0.field3916) {
@@ -257,7 +257,7 @@ public class class903 extends class719 {
 		}
 		for (int var5 = 0; var5 < this.field8641.length; var5++) {
 			if (this.field8641[var5].field1204 != -1) {
-				class507 var6 = Statics.field4213.method11082(this.field8641[var5].field1204);
+				EffectAnimType var6 = Statics.field4213.method11082(this.field8641[var5].field1204);
 				if (var6.field5264 && var6.field5252 != -1 && Statics.field566.method11144(var6.field5252).field6330 == 1) {
 					this.field8641[var5].field1203.method11769(-1);
 					this.field8641[var5].field1204 = -1;
@@ -289,7 +289,7 @@ public class class903 extends class719 {
 		}
 		for (int var6 = 0; var6 < this.field8641.length; var6++) {
 			if (this.field8641[var6].field1204 != -1) {
-				class507 var7 = Statics.field4213.method11082(this.field8641[var6].field1204);
+				EffectAnimType var7 = Statics.field4213.method11082(this.field8641[var6].field1204);
 				if (var7.field5264 && var7.field5252 != -1 && Statics.field566.method11144(var7.field5252).field6330 == 1) {
 					this.field8641[var6].field1203.method11769(-1);
 					this.field8641[var6].field1204 = -1;
@@ -319,7 +319,7 @@ public class class903 extends class719 {
 		this.field8648 = 0;
 		this.field8642[0] = arg1;
 		this.field8643[0] = arg2;
-		class317 var11 = class317.method5290(this.method8565().field3464);
+		Vector3 var11 = Vector3.method5290(this.method8565().field3464);
 		var11.field3475 = (this.field8642[0] << 9) + (arg4 << 8);
 		var11.field3477 = (this.field8643[0] << 9) + (arg4 << 8);
 		this.method8551(var11);
@@ -340,7 +340,7 @@ public class class903 extends class719 {
 			return this.field10069;
 		}
 		if (this.field10075.field7244 != null) {
-			class611 var1 = this.field10075.method12516(Statics.field2669);
+			NPCType var1 = this.field10075.method12516(Statics.field2669);
 			if (var1 != null && var1.field7217 != -1) {
 				return var1.field7217;
 			}
@@ -351,7 +351,7 @@ public class class903 extends class719 {
 	@ObfuscatedName("ahs.cx(I)I")
 	public int method13961() {
 		if (this.field10075.field7244 != null) {
-			class611 var1 = this.field10075.method12516(Statics.field2669);
+			NPCType var1 = this.field10075.method12516(Statics.field2669);
 			if (var1 != null && var1.field7242 != -1) {
 				return var1.field7242;
 			}
@@ -362,7 +362,7 @@ public class class903 extends class719 {
 	@ObfuscatedName("ahs.bp(I)I")
 	public int method12811() {
 		if (this.field10075.field7244 != null) {
-			class611 var1 = this.field10075.method12516(Statics.field2669);
+			NPCType var1 = this.field10075.method12516(Statics.field2669);
 			if (var1 != null && var1.field7266 != -1) {
 				return var1.field7266;
 			}
@@ -381,11 +381,11 @@ public class class903 extends class719 {
 	}
 
 	@ObfuscatedName("ahs.bb(Lra;III)Z")
-	public boolean method12814(class14 arg0, int arg1, int arg2) {
+	public boolean method12814(RendererToolkit arg0, int arg1, int arg2) {
 		if (this.field10075 == null || !this.method16151(arg0, 131072)) {
 			return false;
 		}
-		class314 var4 = this.method8558();
+		Matrix4x3 var4 = this.method8558();
 		boolean var5 = false;
 		for (int var6 = 0; var6 < this.field8651.length; var6++) {
 			if (this.field8651[var6] != null) {
@@ -426,7 +426,7 @@ public class class903 extends class719 {
 	}
 
 	@ObfuscatedName("ahs.bw(Lra;Laes;IIIZI)V")
-	public final void method12816(class14 arg0, class836 arg1, int arg2, int arg3, int arg4, boolean arg5) {
+	public final void method12816(RendererToolkit arg0, GraphEntity arg1, int arg2, int arg3, int arg4, boolean arg5) {
 		throw new IllegalStateException();
 	}
 
@@ -463,7 +463,7 @@ public class class903 extends class719 {
 
 	@ObfuscatedName("ahs.gy(Ljava/lang/String;III)V")
 	public void method16148(String arg0, int arg1, int arg2) {
-		int var4 = class385.method2809() * Statics.field4825.field5163;
+		int var4 = GameShell.method2809() * Statics.field4825.field5163;
 		this.method13998(arg0, arg1, arg2, var4);
 	}
 
@@ -473,20 +473,20 @@ public class class903 extends class719 {
 	}
 
 	@ObfuscatedName("ahs.u(I)Ladu;")
-	public class810 method3684() {
+	public CoordFine method3684() {
 		class453 var1 = client.field8980.method6214();
-		return class810.method8611(this.field9807, (int) this.method8565().field3464.field3475 + var1.field4836 * 512, -((int) this.method8565().field3464.field3476), (int) this.method8565().field3464.field3477 + var1.field4838 * 512);
+		return CoordFine.method8611(this.field9807, (int) this.method8565().field3464.field3475 + var1.field4836 * 512, -((int) this.method8565().field3464.field3476), (int) this.method8565().field3464.field3477 + var1.field4838 * 512);
 	}
 
 	@ObfuscatedName("ahs.j(I)Lkn;")
-	public class316 method3680() {
-		class316 var1 = class316.method5206();
-		var1.method5217(class312.method5096(this.field8638.field574), 0.0F, 0.0F);
+	public Quaternion method3680() {
+		Quaternion var1 = Quaternion.method5206();
+		var1.method5217(Trig1.method5096(this.field8638.field574), 0.0F, 0.0F);
 		return var1;
 	}
 
 	@ObfuscatedName("ahs.a(I)Lko;")
-	public class317 method3683() {
-		return class317.method5288();
+	public Vector3 method3683() {
+		return Vector3.method5288();
 	}
 }

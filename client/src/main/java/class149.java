@@ -17,12 +17,12 @@ public final class class149 {
 	public class903 field1558 = null;
 
 	@ObfuscatedName("dn.m")
-	public class902 field1562 = null;
+	public PlayerEntity field1562 = null;
 
 	@ObfuscatedName("dn.t")
 	public int[] field1564;
 
-	public class149(class814 arg0, int arg1) {
+	public class149(Packet arg0, int arg1) {
 		this.field1559 = arg1;
 		int var3 = arg0.method15220();
 		switch(var3) {
@@ -51,7 +51,7 @@ public final class class149 {
 				this.field1558.field8636 = this.field1558.field10075.field7241 << 3;
 				this.field1558.field8600 = ++class144.field1530 - 1;
 			} else {
-				this.field1562 = new class902(client.field8980.method6098(), 25);
+				this.field1562 = new PlayerEntity(client.field8980.method6098(), 25);
 				this.field1562.method16116(Statics.field416);
 				this.field1562.field8593 = this.field1559;
 				this.field1562.field8618 = client.field9213;
@@ -86,7 +86,7 @@ public final class class149 {
 	}
 
 	@ObfuscatedName("dn.s(B)Laay;")
-	public class719 method2854() {
+	public PathingEntity method2854() {
 		return this.field1558 == null ? this.field1562 : this.field1558;
 	}
 
@@ -95,10 +95,10 @@ public final class class149 {
 		if (this.field1560 < 0) {
 			return true;
 		}
-		class611 var1 = Statics.field3774.method12565(this.field1560);
+		NPCType var1 = Statics.field3774.method12565(this.field1560);
 		boolean var2 = var1.method12513();
 		if (this.field1564 == null) {
-			class439 var3 = Statics.field3769.method7784(var1.field7217);
+			BASType var3 = Statics.field3769.method7784(var1.field7217);
 			this.field1564 = var3.method7754();
 		}
 		int[] var4 = this.field1564;

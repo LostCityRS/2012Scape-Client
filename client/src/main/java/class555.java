@@ -13,7 +13,7 @@ public class class555 implements class557 {
 
 	@ObfuscatedName("tj.u(I)V")
 	public void method11847() {
-		class792 var1 = class792.method14781(class280.field2850, client.field8975.field834);
+		ClientMessage var1 = ClientMessage.method14781(ClientProt.field2850, client.field8975.field834);
 		var1.field9467.method15269(this.field6691.method6339());
 		client.field8975.method1913(var1);
 	}

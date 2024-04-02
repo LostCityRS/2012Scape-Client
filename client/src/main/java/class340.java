@@ -17,7 +17,7 @@ public class class340 {
 	public int field3688;
 
 	@ObfuscatedName("lq.c")
-	public class423 field3619;
+	public Scene field3619;
 
 	@ObfuscatedName("lq.t")
 	public int field3629 = 0;
@@ -223,7 +223,7 @@ public class class340 {
 	@ObfuscatedName("lq.cs")
 	public int[] field3693 = null;
 
-	public class340(class423 arg0, int arg1, int arg2, int arg3, boolean arg4, class484 arg5, class563 arg6, class338 arg7) {
+	public class340(Scene arg0, int arg1, int arg2, int arg3, boolean arg4, class484 arg5, class563 arg6, class338 arg7) {
 		this.field3619 = arg0;
 		this.field3628 = arg1;
 		this.field3627 = arg2;
@@ -306,7 +306,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("lq.c(Laet;IIII[Lmv;I)V")
-	public final void method5838(class814 arg0, int arg1, int arg2, int arg3, int arg4, class361[] arg5) {
+	public final void method5838(Packet arg0, int arg1, int arg2, int arg3, int arg4, class361[] arg5) {
 		if (!this.field3644) {
 			for (int var7 = 0; var7 < 4; var7++) {
 				class361 var8 = arg5[var7];
@@ -333,7 +333,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("lq.m(Laet;IIIIIII[Lmv;B)V")
-	public final void method5839(class814 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, class361[] arg8) {
+	public final void method5839(Packet arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, class361[] arg8) {
 		int var10 = (arg5 & 0x7) * 8;
 		int var11 = (arg6 & 0x7) * 8;
 		if (!this.field3644) {
@@ -431,7 +431,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("lq.t(Laet;IIIIIIIIZB)V")
-	public final void method5843(class814 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9) {
+	public final void method5843(Packet arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9) {
 		if (arg8 == 1) {
 			arg5 = 1;
 		} else if (arg8 == 2) {
@@ -516,7 +516,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("lq.f(Lra;[[[I[Lmv;S)V")
-	public void method5842(class14 arg0, int[][][] arg1, class361[] arg2) {
+	public void method5842(RendererToolkit arg0, int[][][] arg1, class361[] arg2) {
 		if (!this.field3644) {
 			for (int var4 = 0; var4 < 4; var4++) {
 				for (int var5 = 0; var5 < this.field3627; var5++) {
@@ -561,7 +561,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("lq.d(Lra;Lxa;Lxa;B)V")
-	public final void method5833(class14 arg0, class12 arg1, class12 arg2) {
+	public final void method5833(RendererToolkit arg0, FloorModel arg1, FloorModel arg2) {
 		int[][] var4 = new int[this.field3627][this.field3643];
 		if (this.field3634 == null || this.field3643 != this.field3634.length) {
 			this.field3634 = new int[this.field3643];
@@ -659,7 +659,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("lq.z(Lra;Lxa;I[[ILxa;Lxa;B)V")
-	public void method5897(class14 arg0, class12 arg1, int arg2, int[][] arg3, class12 arg4, class12 arg5) {
+	public void method5897(RendererToolkit arg0, FloorModel arg1, int arg2, int[][] arg3, FloorModel arg4, FloorModel arg5) {
 		for (int var7 = 0; var7 < this.field3627; var7++) {
 			for (int var8 = 0; var8 < this.field3643; var8++) {
 				byte var9 = this.field3703[arg2][var7][var8];
@@ -799,7 +799,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("lq.n(Lra;Lxa;I[[ILxa;Lxa;B)V")
-	public void method5845(class14 arg0, class12 arg1, int arg2, int[][] arg3, class12 arg4, class12 arg5) {
+	public void method5845(RendererToolkit arg0, FloorModel arg1, int arg2, int[][] arg3, FloorModel arg4, FloorModel arg5) {
 		byte[][] var7 = this.field3703[arg2];
 		byte[][] var8 = this.field3621[arg2];
 		byte[][] var9 = this.field3635[arg2];
@@ -893,7 +893,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("lq.o(IIIIILxa;[[BB)I")
-	public int method5905(int arg0, int arg1, int arg2, int arg3, int arg4, class12 arg5, byte[][] arg6) {
+	public int method5905(int arg0, int arg1, int arg2, int arg3, int arg4, FloorModel arg5, byte[][] arg6) {
 		if (this.field3669 != 0 && this.field3669 != 12 || arg1 <= 0 || arg2 <= 0 || arg1 >= this.field3627 || arg2 >= this.field3643) {
 			return this.field3688;
 		}
@@ -955,7 +955,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("lq.q(Lra;Lry;Luc;II[[B[[B[[B[ZI)V")
-	public void method5835(class14 arg0, class483 arg1, class564 arg2, int arg3, int arg4, byte[][] arg5, byte[][] arg6, byte[][] arg7, boolean[] arg8) {
+	public void method5835(RendererToolkit arg0, class483 arg1, class564 arg2, int arg3, int arg4, byte[][] arg5, byte[][] arg6, byte[][] arg7, boolean[] arg8) {
 		boolean[] var10 = arg1 != null && arg1.field5097 ? field3675[this.field3669] : field3670[this.field3669];
 		this.method5851(arg0, arg1, arg2, arg3, arg4, this.field3627, this.field3643, arg7, arg5, arg6, arg8);
 		this.field3685 = arg1 != null && arg1.field5094 != arg1.field5091;
@@ -1031,7 +1031,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("lq.w(Lra;IIILry;[Z[I[I[I[I[I[I[I[ILxa;Lxa;Lxa;I)V")
-	public void method5849(class14 arg0, int arg1, int arg2, int arg3, class483 arg4, boolean[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, int[] arg10, int[] arg11, int[] arg12, int[] arg13, class12 arg14, class12 arg15, class12 arg16) {
+	public void method5849(RendererToolkit arg0, int arg1, int arg2, int arg3, class483 arg4, boolean[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, int[] arg10, int[] arg11, int[] arg12, int[] arg13, FloorModel arg14, FloorModel arg15, FloorModel arg16) {
 		this.field3633 = -1;
 		this.field3691 = -1;
 		this.field3617 = 256;
@@ -1154,7 +1154,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("lq.b(Lra;IIIIILuc;IIII[Z[I[I[I[I[I[I[I[I[[ILxa;Lxa;Lxa;B)V")
-	public void method5867(class14 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class564 arg6, int arg7, int arg8, int arg9, int arg10, boolean[] arg11, int[] arg12, int[] arg13, int[] arg14, int[] arg15, int[] arg16, int[] arg17, int[] arg18, int[] arg19, int[][] arg20, class12 arg21, class12 arg22, class12 arg23) {
+	public void method5867(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class564 arg6, int arg7, int arg8, int arg9, int arg10, boolean[] arg11, int[] arg12, int[] arg13, int[] arg14, int[] arg15, int[] arg16, int[] arg17, int[] arg18, int[] arg19, int[][] arg20, FloorModel arg21, FloorModel arg22, FloorModel arg23) {
 		if (arg6 == null) {
 			return;
 		}
@@ -1312,7 +1312,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("lq.x(Lxa;Luc;Lry;IIIIIIII)V")
-	public void method5894(class12 arg0, class564 arg1, class483 arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9) {
+	public void method5894(FloorModel arg0, class564 arg1, class483 arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9) {
 		int var11 = arg0.method199(arg4, arg5);
 		int var12 = arg0.method199(arg6, arg5);
 		int var13 = arg0.method199(arg6, arg7);
@@ -1335,7 +1335,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("lq.i(Lra;Lry;Luc;IIII[[B[[B[[B[ZI)V")
-	public final void method5851(class14 arg0, class483 arg1, class564 arg2, int arg3, int arg4, int arg5, int arg6, byte[][] arg7, byte[][] arg8, byte[][] arg9, boolean[] arg10) {
+	public final void method5851(RendererToolkit arg0, class483 arg1, class564 arg2, int arg3, int arg4, int arg5, int arg6, byte[][] arg7, byte[][] arg8, byte[][] arg9, boolean[] arg10) {
 		boolean[] var12 = arg1 != null && arg1.field5097 ? field3675[this.field3669] : field3670[this.field3669];
 		if (arg4 > 0) {
 			if (arg3 > 0) {
@@ -1591,7 +1591,7 @@ public class class340 {
 	}
 
 	@ObfuscatedName("kj.v(Lra;Lry;I)I")
-	public static final int method5549(class14 arg0, class483 arg1) {
+	public static final int method5549(RendererToolkit arg0, class483 arg1) {
 		if (arg1.field5091 != -1) {
 			return arg1.field5091;
 		}
@@ -1645,7 +1645,7 @@ public class class340 {
 
 	@ObfuscatedName("lp.g(IIIII)I")
 	public static final int method6029(int arg0, int arg1, int arg2, int arg3) {
-		int var4 = 65536 - class312.field3447[arg2 * 8192 / arg3] >> 1;
+		int var4 = 65536 - Trig1.field3447[arg2 * 8192 / arg3] >> 1;
 		return ((65536 - var4) * arg0 >> 16) + (arg1 * var4 >> 16);
 	}
 

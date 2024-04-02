@@ -53,7 +53,7 @@ public class class332 {
 	public int[] field3561;
 
 	public class332(byte[] arg0, int arg1, byte[] arg2) {
-		this.field3546 = class814.method7834(arg0, arg0.length);
+		this.field3546 = Packet.method7834(arg0, arg0.length);
 		if (this.field3546 != arg1) {
 			throw new RuntimeException();
 		}
@@ -73,7 +73,7 @@ public class class332 {
 
 	@ObfuscatedName("lb.u([BI)V")
 	public void method5594(byte[] arg0) {
-		class814 var2 = new class814(Statics.method1598(arg0));
+		Packet var2 = new Packet(Statics.method1598(arg0));
 		int var3 = var2.method15220();
 		if (var3 < 5 || var3 > 7) {
 			throw new RuntimeException();

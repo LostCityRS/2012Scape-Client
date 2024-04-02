@@ -21,7 +21,7 @@ public class class331 {
 	public class1003 field3542;
 
 	@ObfuscatedName("li.m")
-	public class814 field3538;
+	public Packet field3538;
 
 	@ObfuscatedName("li.t")
 	public class757[] field3544;
@@ -50,7 +50,7 @@ public class class331 {
 		if (this.field3542.field10352) {
 			return false;
 		}
-		class814 var1 = new class814(this.field3542.method16685());
+		Packet var1 = new Packet(this.field3542.method16685());
 		var1.field9626 = 5;
 		int var2 = var1.method15220();
 		var1.field9626 += var2 * 72;

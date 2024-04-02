@@ -11,10 +11,10 @@ public class class247 {
 	public boolean field2535;
 
 	@ObfuscatedName("hf.a")
-	public class228 field2536;
+	public VertexBuffer field2536;
 
 	@ObfuscatedName("hf.s")
-	public class228 field2537;
+	public VertexBuffer field2537;
 
 	public class247(boolean arg0) {
 		this.field2535 = arg0;

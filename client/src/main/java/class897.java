@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class897 extends class680 {
 
 	@ObfuscatedName("aht.u")
-	public final class683 field9963;
+	public final GpuToolkit field9963;
 
 	@ObfuscatedName("aht.j")
 	public class259 field9964;
@@ -34,7 +34,7 @@ public class class897 extends class680 {
 	@ObfuscatedName("aht.d")
 	public static final int[][] field9962 = new int[6][];
 
-	public class897(class683 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
+	public class897(GpuToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
 		this.field9963 = arg0;
 		this.field9966 = arg3;
 		this.field9967 = arg4;

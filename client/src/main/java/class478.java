@@ -6,7 +6,7 @@ import java.util.Iterator;
 public abstract class class478 {
 
 	@ObfuscatedName("qs.u")
-	public final class547 field5050 = new class547();
+	public final IterableQueue field5050 = new IterableQueue();
 
 	@ObfuscatedName("qs.j")
 	public long field5047 = -1L;
@@ -23,7 +23,7 @@ public abstract class class478 {
 	@ObfuscatedName("qs.u(I)V")
 	public void method8371() {
 		if (this.method8358()) {
-			class792 var1 = null;
+			ClientMessage var1 = null;
 			int var2 = 0;
 			int var3 = 0;
 			int var4 = 0;
@@ -33,7 +33,7 @@ public abstract class class478 {
 					if (!var5.hasNext()) {
 						break label102;
 					}
-					class809 var6 = (class809) var5.next();
+					BasicMouseEvent var6 = (BasicMouseEvent) var5.next();
 					if (var1 != null && var1.field9467.field9626 - var2 >= 252 - (this.method8355() + 6)) {
 						break label102;
 					}
@@ -130,12 +130,12 @@ public abstract class class478 {
 	}
 
 	@ObfuscatedName("qs.a(Ladv;B)V")
-	public void method8370(class809 arg0) {
+	public void method8370(BasicMouseEvent arg0) {
 		this.field5050.method11558(arg0);
 	}
 
 	@ObfuscatedName("qs.s(Ladv;IB)I")
-	public int method8354(class809 arg0, int arg1) {
+	public int method8354(BasicMouseEvent arg0, int arg1) {
 		long var3;
 		if (this.field5047 == -1L) {
 			var3 = arg1;
@@ -153,7 +153,7 @@ public abstract class class478 {
 	public abstract int method8355();
 
 	@ObfuscatedName("qs.m(Laet;Ladv;B)V")
-	public abstract void method8356(class814 arg0, class809 arg1);
+	public abstract void method8356(Packet arg0, BasicMouseEvent arg1);
 
 	@ObfuscatedName("qs.t(B)V")
 	public abstract void method8357();
@@ -162,5 +162,5 @@ public abstract class class478 {
 	public abstract boolean method8358();
 
 	@ObfuscatedName("qs.f(I)Lada;")
-	public abstract class792 method8375();
+	public abstract ClientMessage method8375();
 }

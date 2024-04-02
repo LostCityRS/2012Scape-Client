@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import jaggl.OpenGL;
 
 @ObfuscatedName("xk")
-public class class639 extends class81 {
+public class class639 extends GlTexture {
 
 	@ObfuscatedName("xk.w")
 	public final int field7438;
@@ -14,24 +14,24 @@ public class class639 extends class81 {
 	@ObfuscatedName("xk.x")
 	public final int field7439;
 
-	public class639(class682 arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5) {
+	public class639(GlToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5) {
 		super(arg0, 32879, arg1, arg2, arg3 * arg4 * arg5, false);
 		this.field7438 = arg3;
 		this.field7437 = arg4;
 		this.field7439 = arg5;
 		this.field1054.method13315(this);
-		OpenGL.glTexImage3Dub(this.field1049, 0, class682.method13335(this.field1050, this.field1051), this.field7438, this.field7437, this.field7439, 0, class682.method13334(this.field1050), 5121, null, 0);
+		OpenGL.glTexImage3Dub(this.field1049, 0, GlToolkit.method13335(this.field1050, this.field1051), this.field7438, this.field7437, this.field7439, 0, GlToolkit.method13334(this.field1050), 5121, null, 0);
 		this.method2055(true);
 	}
 
-	public class639(class682 arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5, byte[] arg6, class124 arg7) {
+	public class639(GlToolkit arg0, class124 arg1, class139 arg2, int arg3, int arg4, int arg5, byte[] arg6, class124 arg7) {
 		super(arg0, 32879, arg1, arg2, arg3 * arg4 * arg5, false);
 		this.field7438 = arg3;
 		this.field7437 = arg4;
 		this.field7439 = arg5;
 		this.field1054.method13315(this);
 		OpenGL.glPixelStorei(3317, 1);
-		OpenGL.glTexImage3Dub(this.field1049, 0, class682.method13335(this.field1050, this.field1051), this.field7438, this.field7437, this.field7439, 0, class682.method13334(arg7), 5121, arg6, 0);
+		OpenGL.glTexImage3Dub(this.field1049, 0, GlToolkit.method13335(this.field1050, this.field1051), this.field7438, this.field7437, this.field7439, 0, GlToolkit.method13334(arg7), 5121, arg6, 0);
 		OpenGL.glPixelStorei(3317, 4);
 		this.method2055(true);
 	}

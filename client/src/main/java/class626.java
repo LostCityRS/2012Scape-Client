@@ -39,7 +39,7 @@ public class class626 {
 		}
 		class627 var8 = new class627();
 		if (var6 != null) {
-			var8.method12682(new class814(var6));
+			var8.method12682(new Packet(var6));
 		}
 		class451 var9 = this.field7346;
 		synchronized (this.field7346) {

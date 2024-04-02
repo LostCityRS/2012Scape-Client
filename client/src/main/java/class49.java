@@ -14,7 +14,7 @@ public class class49 implements class567 {
 	public int[] field661 = new int[Statics.field6667.field3312];
 
 	@ObfuscatedName("e.l")
-	public class565 field662 = new class565(128);
+	public IterableMap field662 = new IterableMap(128);
 
 	static {
 		int var0 = 2;
@@ -26,7 +26,7 @@ public class class49 implements class567 {
 
 	@ObfuscatedName("e.u(ZB)I")
 	public int method1640(boolean arg0) {
-		long var2 = class153.method5554();
+		long var2 = MonotonicTime.method5554();
 		for (class801 var4 = (class801) (arg0 ? this.field662.method11928() : this.field662.method11929()); var4 != null; var4 = (class801) this.field662.method11929()) {
 			if ((var4.field9555 & 0x3FFFFFFFFFFFFFFFL) < var2) {
 				if ((var4.field9555 & 0x4000000000000000L) != 0L) {
@@ -47,7 +47,7 @@ public class class49 implements class567 {
 			this.field657[var1] = 0;
 			this.field661[var1] = 0;
 		}
-		this.field662 = new class565(128);
+		this.field662 = new IterableMap(128);
 	}
 
 	@ObfuscatedName("e.a(III)V")
@@ -55,10 +55,10 @@ public class class49 implements class567 {
 		this.field661[arg0] = arg1;
 		class801 var3 = (class801) this.field662.method11923((long) arg0);
 		if (var3 == null) {
-			class801 var4 = new class801(class153.method5554() + 500L);
+			class801 var4 = new class801(MonotonicTime.method5554() + 500L);
 			this.field662.method11927(var4, (long) arg0);
 		} else {
-			var3.field9555 = class153.method5554() + 500L;
+			var3.field9555 = MonotonicTime.method5554() + 500L;
 		}
 	}
 
@@ -70,7 +70,7 @@ public class class49 implements class567 {
 			class801 var4 = new class801(4611686018427387905L);
 			this.field662.method11927(var4, (long) arg0);
 		} else if (var3.field9555 != 4611686018427387905L) {
-			var3.field9555 = class153.method5554() + 500L | 0x4000000000000000L;
+			var3.field9555 = MonotonicTime.method5554() + 500L | 0x4000000000000000L;
 		}
 	}
 

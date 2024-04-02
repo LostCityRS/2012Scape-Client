@@ -20,7 +20,7 @@ public class class446 implements class445 {
 	}
 
 	@ObfuscatedName("pc.u(Ladv;[Lox;ILoq;I)Z")
-	public boolean method7884(class809 arg0, class415[] arg1, int arg2, class413 arg3) {
+	public boolean method7884(BasicMouseEvent arg0, KeyboardEvent[] arg1, int arg2, Keyboard arg3) {
 		if (arg0 != null) {
 			if (this.field4811 != arg0.method15181()) {
 				return false;
@@ -42,7 +42,7 @@ public class class446 implements class445 {
 	}
 
 	@ObfuscatedName("ar.a(Laet;B)Lpc;")
-	public static class446 method1698(class814 arg0) {
+	public static class446 method1698(Packet arg0) {
 		int var1 = arg0.method15220();
 		int var2 = arg0.method15220();
 		int var3 = arg0.method15220();

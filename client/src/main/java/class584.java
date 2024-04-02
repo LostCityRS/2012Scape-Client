@@ -49,7 +49,7 @@ public class class584 {
 		class955 var4 = new class955();
 		var4.field10394 = this;
 		if (var3 != null) {
-			var4.method16746(new class814(var3));
+			var4.method16746(new Packet(var3));
 		}
 		if (arg0 >= 32768) {
 			var4.method16754();

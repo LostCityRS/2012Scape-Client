@@ -10,10 +10,10 @@ public final class class410 {
 	public static byte[] field4316 = new byte[520];
 
 	@ObfuscatedName("on.j")
-	public class577 field4313 = null;
+	public BufferedFile field4313 = null;
 
 	@ObfuscatedName("on.a")
-	public class577 field4314 = null;
+	public BufferedFile field4314 = null;
 
 	@ObfuscatedName("on.s")
 	public int field4315;
@@ -21,7 +21,7 @@ public final class class410 {
 	@ObfuscatedName("on.c")
 	public int field4312 = 65000;
 
-	public class410(int arg0, class577 arg1, class577 arg2, int arg3) {
+	public class410(int arg0, BufferedFile arg1, BufferedFile arg2, int arg3) {
 		this.field4315 = arg0;
 		this.field4313 = arg1;
 		this.field4314 = arg2;
@@ -30,7 +30,7 @@ public final class class410 {
 
 	@ObfuscatedName("on.u(II)[B")
 	public byte[] method7168(int arg0) {
-		class577 var2 = this.field4313;
+		BufferedFile var2 = this.field4313;
 		synchronized (this.field4313) {
 			Object var10000;
 			try {
@@ -112,7 +112,7 @@ public final class class410 {
 
 	@ObfuscatedName("on.j(I[BII)Z")
 	public boolean method7169(int arg0, byte[] arg1, int arg2) {
-		class577 var4 = this.field4313;
+		BufferedFile var4 = this.field4313;
 		synchronized (this.field4313) {
 			if (arg2 < 0 || arg2 > this.field4312) {
 				throw new IllegalArgumentException();
@@ -127,7 +127,7 @@ public final class class410 {
 
 	@ObfuscatedName("on.a(I[BIZB)Z")
 	public boolean method7170(int arg0, byte[] arg1, int arg2, boolean arg3) {
-		class577 var5 = this.field4313;
+		BufferedFile var5 = this.field4313;
 		synchronized (this.field4313) {
 			try {
 				int var6;

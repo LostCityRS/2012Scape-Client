@@ -17,7 +17,7 @@ public class class608 {
 	public boolean field7195 = false;
 
 	@ObfuscatedName("vc.u(Laet;B)V")
-	public void method12486(class814 arg0) {
+	public void method12486(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -28,7 +28,7 @@ public class class608 {
 	}
 
 	@ObfuscatedName("vc.j(Laet;II)V")
-	public void method12483(class814 arg0, int arg1) {
+	public void method12483(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			this.field7192 = arg0.method15411();
 		} else if (arg1 == 2) {
@@ -41,7 +41,7 @@ public class class608 {
 	}
 
 	@ObfuscatedName("vc.a(Lra;IZI)Lce;")
-	public class118 method12484(class14 arg0, int arg1, boolean arg2) {
+	public class118 method12484(RendererToolkit arg0, int arg1, boolean arg2) {
 		long var4 = (long) (this.field7192 | arg1 << 16 | (arg2 ? 262144 : 0) | arg0.field397 << 19);
 		class118 var6 = (class118) this.field7193.field7202.method7916(var4);
 		if (var6 != null) {

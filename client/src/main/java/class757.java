@@ -42,7 +42,7 @@ public class class757 extends class333 {
 	public int field8867 = 0;
 
 	@ObfuscatedName("abt.w")
-	public class565 field8868 = new class565(16);
+	public IterableMap field8868 = new IterableMap(16);
 
 	@ObfuscatedName("abt.b")
 	public boolean field8857;
@@ -54,10 +54,10 @@ public class class757 extends class333 {
 	public int field8871 = 0;
 
 	@ObfuscatedName("abt.v")
-	public class547 field8872;
+	public IterableQueue field8872;
 
 	@ObfuscatedName("abt.k")
-	public class547 field8873 = new class547();
+	public IterableQueue field8873 = new IterableQueue();
 
 	@ObfuscatedName("abt.h")
 	public boolean field8874;
@@ -75,7 +75,7 @@ public class class757 extends class333 {
 			this.field8870 = false;
 		} else {
 			this.field8870 = true;
-			this.field8872 = new class547();
+			this.field8872 = new IterableQueue();
 		}
 		this.field8869 = arg2;
 		this.field8853 = arg3;
@@ -339,7 +339,7 @@ public class class757 extends class333 {
 		if (this.field8872 == null || this.method5604() == null) {
 			return;
 		}
-		for (class399 var1 = this.field8873.method11563(); var1 != null; var1 = this.field8873.method11567()) {
+		for (Node var1 = this.field8873.method11563(); var1 != null; var1 = this.field8873.method11567()) {
 			int var2 = (int) var1.field4228;
 			if (var2 < 0 || var2 >= this.field8862.field3553 || this.field8862.field3557[var2] == 0) {
 				var1.method6979();
@@ -365,7 +365,7 @@ public class class757 extends class333 {
 			}
 			if (this.field8870) {
 				boolean var1 = true;
-				for (class399 var2 = this.field8872.method11563(); var2 != null; var2 = this.field8872.method11567()) {
+				for (Node var2 = this.field8872.method11563(); var2 != null; var2 = this.field8872.method11567()) {
 					int var3 = (int) var2.field4228;
 					if (this.field8866[var3] == 0) {
 						this.method14237(var3, 1);
@@ -388,7 +388,7 @@ public class class757 extends class333 {
 							this.method14237(this.field8871, 1);
 						}
 						if (this.field8866[this.field8871] == 0) {
-							class399 var4 = new class399();
+							Node var4 = new Node();
 							var4.field4228 = (long) (this.field8871 * -2001188995) * 1012378069L;
 							this.field8872.method11558(var4);
 							var1 = false;
@@ -402,7 +402,7 @@ public class class757 extends class333 {
 				}
 			} else if (this.field8857) {
 				boolean var5 = true;
-				for (class399 var6 = this.field8872.method11563(); var6 != null; var6 = this.field8872.method11567()) {
+				for (Node var6 = this.field8872.method11563(); var6 != null; var6 = this.field8872.method11567()) {
 					int var7 = (int) var6.field4228;
 					if (this.field8866[var7] != 1) {
 						this.method14237(var7, 2);
@@ -425,7 +425,7 @@ public class class757 extends class333 {
 							this.method14237(this.field8871, 2);
 						}
 						if (this.field8866[this.field8871] != 1) {
-							class399 var8 = new class399();
+							Node var8 = new Node();
 							var8.field4228 = (long) (this.field8871 * -2001188995) * 1012378069L;
 							this.field8872.method11558(var8);
 							var5 = false;
@@ -441,7 +441,7 @@ public class class757 extends class333 {
 				this.field8872 = null;
 			}
 		}
-		if (!this.field8874 || class153.method5554() < this.field8875) {
+		if (!this.field8874 || MonotonicTime.method5554() < this.field8875) {
 			return;
 		}
 		for (class949 var9 = (class949) this.field8868.method11928(); var9 != null; var9 = (class949) this.field8868.method11929()) {
@@ -456,7 +456,7 @@ public class class757 extends class333 {
 				}
 			}
 		}
-		this.field8875 = class153.method5554() + 1000L;
+		this.field8875 = MonotonicTime.method5554() + 1000L;
 	}
 
 	@ObfuscatedName("abt.x(I)I")
@@ -474,7 +474,7 @@ public class class757 extends class333 {
 		if (this.field8862 == null) {
 			return 0;
 		} else if (this.field8870) {
-			class399 var1 = this.field8872.method11563();
+			Node var1 = this.field8872.method11563();
 			return var1 == null ? 0 : (int) var1.field4228;
 		} else {
 			return this.field8862.field3549;
@@ -486,7 +486,7 @@ public class class757 extends class333 {
 		if (this.field8855 != null) {
 			this.field8857 = true;
 			if (this.field8872 == null) {
-				this.field8872 = new class547();
+				this.field8872 = new IterableQueue();
 			}
 		}
 	}
@@ -496,12 +496,12 @@ public class class757 extends class333 {
 		if (this.field8855 == null) {
 			return;
 		}
-		for (class399 var2 = this.field8873.method11563(); var2 != null; var2 = this.field8873.method11567()) {
+		for (Node var2 = this.field8873.method11563(); var2 != null; var2 = this.field8873.method11567()) {
 			if (var2.field4228 == (long) arg0) {
 				return;
 			}
 		}
-		class399 var3 = new class399();
+		Node var3 = new Node();
 		var3.field4228 = arg0;
 		this.field8873.method11558(var3);
 	}

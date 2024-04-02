@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class937 extends class793 {
 
 	@ObfuscatedName("aih.l")
-	public class565 field10239;
+	public IterableMap field10239;
 
 	@ObfuscatedName("aih.f")
 	public int field10229 = 256;
@@ -101,7 +101,7 @@ public class class937 extends class793 {
 	public boolean field10238;
 
 	public class937() {
-		this.field10239 = new class565(128);
+		this.field10239 = new IterableMap(128);
 		this.method16266(-1, 256);
 		this.method16287(true);
 	}
@@ -146,7 +146,7 @@ public class class937 extends class793 {
 		if (arg3 > 0) {
 			var6 = new int[] { arg3 };
 		}
-		for (class798 var7 = (class798) arg0.field9382.method11928(); var7 != null; var7 = (class798) arg0.field9382.method11929()) {
+		for (ObjectNode var7 = (ObjectNode) arg0.field9382.method11928(); var7 != null; var7 = (ObjectNode) arg0.field9382.method11929()) {
 			int var8 = (int) var7.field4228;
 			class784 var9 = (class784) this.field10239.method11923((long) var8);
 			if (var9 == null) {

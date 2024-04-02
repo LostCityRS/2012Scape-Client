@@ -42,7 +42,7 @@ public class class510 {
 		var8.field6318 = arg0;
 		var8.field6317 = this;
 		if (var6 != null) {
-			var8.method11122(new class814(var6));
+			var8.method11122(new Packet(var6));
 		}
 		var8.method11124();
 		class451 var9 = this.field6341;

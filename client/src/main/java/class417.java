@@ -40,7 +40,7 @@ public class class417 {
 		class416 var8 = new class416();
 		var8.field4439 = this;
 		if (var6 != null) {
-			var8.method7302(new class814(var6));
+			var8.method7302(new Packet(var6));
 		}
 		class451 var9 = this.field4453;
 		synchronized (this.field4453) {

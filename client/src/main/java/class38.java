@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public final class class38 implements class426 {
 
 	@ObfuscatedName("z.u(Laku;I)Z")
-	public boolean method1360(class974 arg0) {
+	public boolean method1360(PrimaryLayerEntity arg0) {
 		return arg0 instanceof class113;
 	}
 }

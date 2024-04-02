@@ -20,7 +20,7 @@ public class class418 {
 	public int field4461 = -1;
 
 	@ObfuscatedName("oi.u(Laet;B)V")
-	public void method7354(class814 arg0) {
+	public void method7354(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -31,7 +31,7 @@ public class class418 {
 	}
 
 	@ObfuscatedName("oi.j(Laet;II)V")
-	public void method7355(class814 arg0, int arg1) {
+	public void method7355(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			this.field4459 = arg0.method15239();
 		} else if (arg1 == 2) {
@@ -42,7 +42,7 @@ public class class418 {
 		} else if (arg1 == 3) {
 			this.field4458 = arg0.method15220();
 		} else if (arg1 == 4) {
-			this.field4460 = (class420) class518.method8032(Statics.method14028(), arg0.method15220());
+			this.field4460 = (class420) SerializableEnums.method8032(Statics.method14028(), arg0.method15220());
 		} else if (arg1 == 5) {
 			this.field4461 = arg0.method15411();
 		}

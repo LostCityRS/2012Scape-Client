@@ -30,7 +30,7 @@ public class class480 {
 				}
 				class481 var9 = new class481();
 				if (var7 != null) {
-					var9.method8412(new class814(var7));
+					var9.method8412(new Packet(var7));
 				}
 				var9.method8438();
 				this.field5055[var5] = var9;

@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import jagdx.IUnknown;
 
 @ObfuscatedName("jq")
-public abstract class class300 implements class227 {
+public abstract class class300 implements DeleteableResource {
 
 	@ObfuscatedName("jq.u")
 	public final class898 field3326;

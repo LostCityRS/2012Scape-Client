@@ -28,11 +28,11 @@ public class class506 {
 	}
 
 	@ObfuscatedName("rv.u(II)Lse;")
-	public class507 method11082(int arg0) {
+	public EffectAnimType method11082(int arg0) {
 		class451 var2 = this.field5247;
-		class507 var3;
+		EffectAnimType var3;
 		synchronized (this.field5247) {
-			var3 = (class507) this.field5247.method7916((long) arg0);
+			var3 = (EffectAnimType) this.field5247.method7916((long) arg0);
 		}
 		if (var3 != null) {
 			return var3;
@@ -42,11 +42,11 @@ public class class506 {
 		synchronized (this.field5246) {
 			var6 = this.field5246.method5627(class161.field1638.method3073(arg0), class161.field1638.method3075(arg0));
 		}
-		class507 var8 = new class507();
+		EffectAnimType var8 = new EffectAnimType();
 		var8.field5256 = this;
 		var8.field5250 = arg0;
 		if (var6 != null) {
-			var8.method11100(new class814(var6));
+			var8.method11100(new Packet(var6));
 		}
 		class451 var9 = this.field5247;
 		synchronized (this.field5247) {

@@ -6,12 +6,12 @@ import jaggl.OpenGL;
 public class class103 {
 
 	@ObfuscatedName("cb.j")
-	public final class682 field1170;
+	public final GlToolkit field1170;
 
 	@ObfuscatedName("cb.a")
 	public class79 field1171;
 
-	public class103(class682 arg0) {
+	public class103(GlToolkit arg0) {
 		this.field1170 = arg0;
 	}
 

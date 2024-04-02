@@ -4,16 +4,16 @@ import java.nio.ByteBuffer;
 import sun.misc.Unsafe;
 
 @ObfuscatedName("adn")
-public class class791 extends class399 {
+public class class791 extends Node {
 
 	@ObfuscatedName("adn.s")
-	public final class683 field9460;
+	public final GpuToolkit field9460;
 
 	@ObfuscatedName("adn.c")
-	public final class673 field9448;
+	public final GpuFloorModel field9448;
 
 	@ObfuscatedName("adn.m")
-	public final class780 field9450;
+	public final Light field9450;
 
 	@ObfuscatedName("adn.t")
 	public int field9451;
@@ -40,7 +40,7 @@ public class class791 extends class399 {
 	public class258 field9449;
 
 	@ObfuscatedName("adn.p")
-	public class228 field9459;
+	public VertexBuffer field9459;
 
 	@ObfuscatedName("adn.w")
 	public float[][] field9457;
@@ -52,12 +52,12 @@ public class class791 extends class399 {
 	public float[][] field9462;
 
 	@ObfuscatedName("adn.i")
-	public class565 field9463;
+	public IterableMap field9463;
 
 	@ObfuscatedName("adn.v")
 	public ByteBuffer field9464;
 
-	public class791(class683 arg0, class673 arg1, class780 arg2, int[] arg3) {
+	public class791(GpuToolkit arg0, GpuFloorModel arg1, Light arg2, int[] arg3) {
 		this.field9460 = arg0;
 		this.field9450 = arg2;
 		this.field9448 = arg1;
@@ -113,7 +113,7 @@ public class class791 extends class399 {
 			}
 		}
 		if (this.field9456 > 0) {
-			this.field9463 = new class565(class595.method2839(this.field9456));
+			this.field9463 = new IterableMap(class595.method2839(this.field9456));
 			this.field9464 = this.field9460.field8244;
 			this.field9464.clear();
 			this.field9464.position(2097152);
@@ -207,7 +207,7 @@ public class class791 extends class399 {
 		int var11 = this.field9448.method196(var9, var10);
 		if ((arg4 & 0x7F) == 0 || (arg5 & 0x7F) == 0) {
 			var7 = ((long) var10 & 0xFFFFL) << 16 | (long) var9 & 0xFFFFL;
-			class399 var12 = this.field9463.method11923(var7);
+			Node var12 = this.field9463.method11923(var7);
 			if (var12 != null) {
 				Unsafe var13 = this.field9460.field8247;
 				var13.putShort(this.field9460.field8245 + 2097152L + (long) (this.field9461 * 2), ((class799) var12).field9551);

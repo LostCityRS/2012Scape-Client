@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aha")
-public class class906 extends class735 {
+public class class906 extends PositionSpline {
 
 	@ObfuscatedName("aha.c")
 	public float field10085;
@@ -10,7 +10,7 @@ public class class906 extends class735 {
 	@ObfuscatedName("aha.m")
 	public float field10086;
 
-	public class906(class199 arg0) {
+	public class906(Camera arg0) {
 		super(arg0);
 	}
 

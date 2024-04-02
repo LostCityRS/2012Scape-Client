@@ -14,7 +14,7 @@ public class class433 implements class464 {
 	public int field4670;
 
 	@ObfuscatedName("pe.u(Laet;I)V")
-	public void method7682(class814 arg0) {
+	public void method7682(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -25,7 +25,7 @@ public class class433 implements class464 {
 	}
 
 	@ObfuscatedName("pe.j(Laet;II)V")
-	public void method7680(class814 arg0, int arg1) {
+	public void method7680(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			this.field4669 = arg0.method15239();
 			this.field4668 = arg0.method15220();

@@ -20,7 +20,7 @@ public class class718 extends class172 {
 	}
 
 	@ObfuscatedName("aap.c(Lyk;Lei;)Leo;")
-	public class168 method3404(class683 arg0, class167 arg1) {
+	public class168 method3404(GpuToolkit arg0, class167 arg1) {
 		return new class716((class899) arg0, this, arg1);
 	}
 
@@ -57,7 +57,7 @@ public class class718 extends class172 {
 			return;
 		}
 		if (this.field8588 == null) {
-			throw new class981();
+			throw new ProgramManagerException();
 		}
 		OpenGL.glUseProgram(this.field8589);
 		this.field8590.field10027 = this.field8588;

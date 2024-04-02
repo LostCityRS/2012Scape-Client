@@ -11,13 +11,13 @@ public class class377 {
 	public class334 field4053;
 
 	@ObfuscatedName("md.a")
-	public class565 field4055 = new class565(256);
+	public IterableMap field4055 = new IterableMap(256);
 
 	@ObfuscatedName("md.s")
-	public class565 field4057 = new class565(256);
+	public IterableMap field4057 = new IterableMap(256);
 
 	@ObfuscatedName("md.c")
-	public class565 field4054 = new class565(256);
+	public IterableMap field4054 = new IterableMap(256);
 
 	public class377(class334 arg0, class334 arg1) {
 		this.field4056 = arg0;

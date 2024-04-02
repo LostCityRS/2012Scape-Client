@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class427 {
 
 	@ObfuscatedName("or.r")
-	public class780 field4588;
+	public Light field4588;
 
 	@ObfuscatedName("or.g")
 	public boolean field4587;
@@ -37,7 +37,7 @@ public class class427 {
 	@ObfuscatedName("or.as")
 	public int field4599;
 
-	public class427(class14 arg0, int arg1, class814 arg2, int arg3) {
+	public class427(RendererToolkit arg0, int arg1, Packet arg2, int arg3) {
 		if (Statics.field1598 == null) {
 			method5967();
 		}
@@ -75,7 +75,7 @@ public class class427 {
 	}
 
 	@ObfuscatedName("or.u(Lra;IIIIII)V")
-	public void method7576(class14 arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+	public void method7576(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
 		this.field4588 = arg0.method534(arg1, arg2, arg3, arg4, arg5, 1.0F);
 	}
 
@@ -197,7 +197,7 @@ public class class427 {
 			int var3 = this.field4596 * arg0 / 50 + this.field4572 & 0x7FF;
 			switch(this.field4595) {
 				case 1:
-					var4 = (class312.field3439[var3 << 3] >> 4) + 1024;
+					var4 = (Trig1.field3439[var3 << 3] >> 4) + 1024;
 					break;
 				case 2:
 					var4 = var3;

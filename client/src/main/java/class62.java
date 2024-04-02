@@ -1,6 +1,6 @@
 
 import deob.ObfuscatedName;
-import java.awt.datatransfer.ClipboardOwner;
+
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.Transferable;
@@ -108,7 +108,7 @@ public class class62 {
 				method1958("Pausing for " + var2 + " seconds...");
 				Statics.field4817 = arg0;
 				field802 = var1 + 1;
-				Statics.field3306 = class153.method5554() + (long) (var2 * 1000);
+				Statics.field3306 = MonotonicTime.method5554() + (long) (var2 * 1000);
 				return;
 			}
 			field798 = arg0[var1];
@@ -121,7 +121,7 @@ public class class62 {
 		if (field793 * 36 < 102) {
 			field793 = field793 * 36 + 6;
 		}
-		if (field802 != -1 && Statics.field3306 < class153.method5554()) {
+		if (field802 != -1 && Statics.field3306 < MonotonicTime.method5554()) {
 			for (int var0 = field802; var0 < Statics.field4817.length; var0++) {
 				if (Statics.field4817[var0].startsWith("pause")) {
 					int var1 = 5;
@@ -131,7 +131,7 @@ public class class62 {
 					}
 					method1958("Pausing for " + var1 + " seconds...");
 					field802 = var0 + 1;
-					Statics.field3306 = class153.method5554() + (long) (var1 * 1000);
+					Statics.field3306 = MonotonicTime.method5554() + (long) (var1 * 1000);
 					return;
 				}
 				field798 = Statics.field4817[var0];
@@ -150,7 +150,7 @@ public class class62 {
 			client.field9002 = 0;
 		}
 		for (int var3 = 0; var3 < client.field8950; var3++) {
-			class415 var4 = client.field8951[var3];
+			KeyboardEvent var4 = client.field8951[var3];
 			int var5 = var4.method7286();
 			char var6 = var4.method7298();
 			int var7 = var4.method7285();
@@ -176,7 +176,7 @@ public class class62 {
 						if (var10 != null) {
 							String var11 = (String) var10.getTransferData(DataFlavor.stringFlavor);
 							if (var11 != null) {
-								String[] var12 = class526.method11508(var11, '\n');
+								String[] var12 = StringTools.method11508(var11, '\n');
 								method14213(var12);
 							}
 						}
@@ -204,7 +204,7 @@ public class class62 {
 				field799--;
 				method7737();
 				field806 = field798.length();
-			} else if (class526.method8060(var6) || "\\/.:, _-+[]~@".indexOf(var6) != -1) {
+			} else if (StringTools.method8060(var6) || "\\/.:, _-+[]~@".indexOf(var6) != -1) {
 				field798 = field798.substring(0, field806) + client.field8951[var3].method7298() + field798.substring(field806);
 				field806++;
 			}
@@ -260,12 +260,12 @@ public class class62 {
 		if (Statics.field792 == null) {
 			method11854();
 		}
-		client.field9214.setTime(new Date(class153.method5554()));
+		client.field9214.setTime(new Date(MonotonicTime.method5554()));
 		int var1 = client.field9214.get(11);
 		int var2 = client.field9214.get(12);
 		int var3 = client.field9214.get(13);
 		String var4 = Integer.toString(var1 / 10) + var1 % 10 + ":" + var2 / 10 + var2 % 10 + ":" + var3 / 10 + var3 % 10;
-		String[] var5 = class526.method11508(arg0, '\n');
+		String[] var5 = StringTools.method11508(arg0, '\n');
 		for (int var6 = 0; var6 < var5.length; var6++) {
 			for (int var7 = field796; var7 > 0; var7--) {
 				Statics.field792[var7] = Statics.field792[var7 - 1];
@@ -273,7 +273,7 @@ public class class62 {
 			Statics.field792[0] = var4 + ": " + var5[var6];
 			if (Statics.field804 != null) {
 				try {
-					Statics.field804.write(class524.method7652(Statics.field792[0] + "\n"));
+					Statics.field804.write(Cp1252.method7652(Statics.field792[0] + "\n"));
 				} catch (IOException var9) {
 				}
 			}
@@ -287,7 +287,7 @@ public class class62 {
 	}
 
 	@ObfuscatedName("va.o(Lra;B)V")
-	public static void method12188(class14 arg0) {
+	public static void method12188(RendererToolkit arg0) {
 		arg0.method659(0, 0, Statics.field4125, 350);
 		arg0.method489(0, 0, Statics.field4125, 350, field793 * 36 << 24 | 0x332277, 1);
 		int var1 = 350 / Statics.field794;
@@ -300,7 +300,7 @@ public class class62 {
 			}
 			arg0.method489(Statics.field4125 - 16, var4, 12, var3, field793 * 36 << 24 | 0x332277, 2);
 			for (int var5 = field797; var5 < field797 + var1 && var5 < field796; var5++) {
-				String[] var6 = class526.method11508(Statics.field792[var5], '\b');
+				String[] var6 = StringTools.method11508(Statics.field792[var5], '\b');
 				int var7 = (Statics.field4125 - 8 - 16) / var6.length;
 				for (int var8 = 0; var8 < var6.length; var8++) {
 					int var9 = var7 * var8 + 8;
@@ -382,7 +382,7 @@ public class class62 {
 				return;
 			}
 			if (arg0.equals("heap")) {
-				method1958("Heap: " + class385.field4152 + "MB");
+				method1958("Heap: " + GameShell.field4152 + "MB");
 				return;
 			}
 			if (arg0.equalsIgnoreCase("getcamerapos")) {
@@ -395,7 +395,7 @@ public class class62 {
 			method1958(class588.field6867.method12206(Statics.field2308));
 			return;
 		}
-		if (Statics.field6683 != class515.field6368 || client.field9074 >= 2) {
+		if (Statics.field6683 != ModeWhere.field6368 || client.field9074 >= 2) {
 			try {
 				if (arg0.equalsIgnoreCase("wm1")) {
 					client.method7282(1, -1, -1, false);
@@ -415,7 +415,7 @@ public class class62 {
 					}
 					return;
 				}
-				if (class560.field6700 && arg0.equalsIgnoreCase("wm3")) {
+				if (Fullscreen.field6700 && arg0.equalsIgnoreCase("wm3")) {
 					client.method7282(3, 1024, 768, false);
 					if (client.method12476() == 3) {
 						method1958("Success");
@@ -536,14 +536,14 @@ public class class62 {
 					return;
 				}
 				if (arg0.startsWith("directlogin")) {
-					String[] var17 = class526.method11508(arg0.substring(12), ' ');
+					String[] var17 = StringTools.method11508(arg0.substring(12), ' ');
 					if (var17.length == 2) {
 						class33.method12220(var17[0], var17[1]);
 					}
 					return;
 				}
 				if (arg0.startsWith("snlogin ")) {
-					String[] var18 = class526.method11508(arg0.substring(8), ' ');
+					String[] var18 = StringTools.method11508(arg0.substring(8), ' ');
 					int var19 = Integer.parseInt(var18[0]);
 					class33.method11156(var19);
 					return;
@@ -551,7 +551,7 @@ public class class62 {
 				if (arg0.startsWith("setoutput ")) {
 					File var20 = new File(arg0.substring(10));
 					if (var20.exists()) {
-						var20 = new File(arg0.substring(10) + "." + class153.method5554() + ".log");
+						var20 = new File(arg0.substring(10) + "." + MonotonicTime.method5554() + ".log");
 						if (var20.exists()) {
 							method1958("file already exists!");
 							return;
@@ -590,12 +590,12 @@ public class class62 {
 						method1958("Failed to read file");
 						return;
 					}
-					String[] var25 = class526.method11508(Statics.method12093(Statics.method8318(var24), '\r', ""), '\n');
+					String[] var25 = StringTools.method11508(Statics.method12093(Statics.method8318(var24), '\r', ""), '\n');
 					method14213(var25);
 				}
 				if (client.field8923 == 1 || client.field8923 == 15) {
 					class64 var26 = client.method4104();
-					class792 var27 = class792.method14781(class280.field2951, var26.field834);
+					ClientMessage var27 = ClientMessage.method14781(ClientProt.field2951, var26.field834);
 					var27.field9467.method15308(arg0.length() + 3);
 					var27.field9467.method15308(arg1 ? 1 : 0);
 					var27.field9467.method15308(arg2 ? 1 : 0);
@@ -623,7 +623,7 @@ public class class62 {
 				if (arg0 == 25) {
 					method16885();
 				} else if (arg0 == 9) {
-					method1958("" + class385.field4121);
+					method1958("" + GameShell.field4121);
 				} else if (arg0 == 19) {
 					class428 var1 = client.field8980.method6098().field4493;
 					var1.field4624 = !var1.field4624;
@@ -667,22 +667,22 @@ public class class62 {
 				} else if (arg0 == 11) {
 					Statics.field1231.setLocation(50, 50);
 				} else if (arg0 == 17) {
-					Statics.field1231.setLocation(class385.field4147, class385.field4127);
+					Statics.field1231.setLocation(GameShell.field4147, GameShell.field4127);
 				} else if (arg0 == 8) {
 					method1623();
 				} else if (arg0 == 28) {
-					client.field8980.field3789 = class153.method5554();
+					client.field8980.field3789 = MonotonicTime.method5554();
 					client.field8980.field3833 = true;
 					method1623();
 				} else if (arg0 == 22) {
-					class317 var10 = Statics.field2119.method8565().field3464;
+					Vector3 var10 = Statics.field2119.method8565().field3464;
 					method1958(((int) var10.field3475 >> 9) + " " + ((int) var10.field3477 >> 9));
 				} else if (arg0 == 26) {
-					class317 var11 = Statics.field2119.method8565().field3464;
+					Vector3 var11 = Statics.field2119.method8565().field3464;
 					method1958("" + client.field8980.method6098().field4498[Statics.field2119.field9807].method199((int) var11.field3475 >> 9, (int) var11.field3477 >> 9));
 				} else if (arg0 == 1) {
-					method1958(class165.field1757.method7924() + " " + class165.field1757.method7923());
-					method1958(class165.field1760.method7924() + " " + class165.field1760.method7923());
+					method1958(ComType.field1757.method7924() + " " + ComType.field1757.method7923());
+					method1958(ComType.field1760.method7924() + " " + ComType.field1760.method7923());
 					method1958(Statics.field3492.field7147.method8000() + " " + Statics.field3492.field7147.method8008());
 				} else if (arg0 == 10) {
 					client.method5025(false);

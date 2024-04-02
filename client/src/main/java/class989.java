@@ -3,7 +3,6 @@ import deob.ObfuscatedName;
 import java.awt.Canvas;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
@@ -18,7 +17,7 @@ public final class class989 extends class892 {
 	@ObfuscatedName("akl.l")
 	public Image field10552;
 
-	public class989(class681 arg0, Canvas arg1, int arg2, int arg3) {
+	public class989(PureJavaToolkit arg0, Canvas arg1, int arg2, int arg3) {
 		super(arg0, arg1, arg2, arg3);
 		new Rectangle();
 		this.method16008();

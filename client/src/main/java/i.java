@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("i")
-public class i extends class12 implements class10 {
+public class i extends FloorModel implements class10 {
 
 	public long nativeid;
 
@@ -10,7 +10,7 @@ public class i extends class12 implements class10 {
 	public ja field475;
 
 	@ObfuscatedName("i.t")
-	public class547 field476 = new class547();
+	public IterableQueue field476 = new IterableQueue();
 
 	public i(ja arg0, ba arg1, int arg2, int arg3, int[][] arg4, int[][] arg5, int arg6, int arg7, int arg8) {
 		super(arg2, arg3, arg6, arg4);
@@ -111,7 +111,7 @@ public class i extends class12 implements class10 {
 	public void method212(int arg0, int arg1, int arg2, boolean[][] arg3, boolean arg4, int arg5) {
 		int var7 = 0;
 		float[] var8 = new float[this.field476.method11613()];
-		for (class780 var9 = (class780) this.field476.method11563(); var9 != null; var9 = (class780) this.field476.method11567()) {
+		for (Light var9 = (Light) this.field476.method11563(); var9 != null; var9 = (Light) this.field476.method11567()) {
 			var8[var7++] = var9.method14893();
 		}
 		this.method1180(var8);
@@ -139,7 +139,7 @@ public class i extends class12 implements class10 {
 	}
 
 	@ObfuscatedName("i.f(Lacg;[I)V")
-	public void method204(class780 arg0, int[] arg1) {
+	public void method204(Light arg0, int[] arg1) {
 		this.field476.method11558(arg0);
 		this.method1179(arg0.hashCode(), arg0.method14888(), arg0.method14882(), arg0.method14879(), arg0.method14880(), arg0.method14881(), arg1);
 	}

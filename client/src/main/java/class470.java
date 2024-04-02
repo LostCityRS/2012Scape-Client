@@ -17,7 +17,7 @@ public class class470 {
 	public float field4996;
 
 	@ObfuscatedName("qf.c")
-	public class317 field4990;
+	public Vector3 field4990;
 
 	@ObfuscatedName("qf.m")
 	public int field4989;
@@ -44,14 +44,14 @@ public class class470 {
 		this.method8202();
 	}
 
-	public class470(class814 arg0, class469 arg1) {
+	public class470(Packet arg0, class469 arg1) {
 		this.method8205(arg0, arg1);
 	}
 
 	@ObfuscatedName("qf.u(I)V")
 	public void method8202() {
 		this.field4991 = class469.field4983;
-		this.field4990 = class317.method5294(-50.0F, -60.0F, -50.0F);
+		this.field4990 = Vector3.method5294(-50.0F, -60.0F, -50.0F);
 		this.field4987 = 1.1523438F;
 		this.field4988 = 0.69921875F;
 		this.field4996 = 1.2F;
@@ -81,7 +81,7 @@ public class class470 {
 	}
 
 	@ObfuscatedName("qf.a(Lra;Lqf;Lqf;FB)V")
-	public void method8218(class14 arg0, class470 arg1, class470 arg2, float arg3) {
+	public void method8218(RendererToolkit arg0, class470 arg1, class470 arg2, float arg3) {
 		this.field4991 = class482.method15824(arg1.field4991, arg2.field4991, arg3 * 255.0F);
 		this.field4988 = (arg2.field4988 - arg1.field4988) * arg3 + arg1.field4988;
 		this.field4996 = (arg2.field4996 - arg1.field4996) * arg3 + arg1.field4996;
@@ -111,7 +111,7 @@ public class class470 {
 	}
 
 	@ObfuscatedName("qf.s(Laet;Lqp;I)V")
-	public void method8205(class814 arg0, class469 arg1) {
+	public void method8205(Packet arg0, class469 arg1) {
 		int var3 = arg0.method15220();
 		if (Statics.field4961.field9650.method15667() == 1 && Statics.field5187.method768() > 0) {
 			if ((var3 & 0x1) == 0) {
@@ -153,9 +153,9 @@ public class class470 {
 			this.field4987 = 1.1523438F;
 		}
 		if ((var3 & 0x10) == 0) {
-			this.field4990 = class317.method5294(-50.0F, -60.0F, -50.0F);
+			this.field4990 = Vector3.method5294(-50.0F, -60.0F, -50.0F);
 		} else {
-			this.field4990 = class317.method5294((float) arg0.method15240(), (float) arg0.method15240(), (float) arg0.method15240());
+			this.field4990 = Vector3.method5294((float) arg0.method15240(), (float) arg0.method15240(), (float) arg0.method15240());
 		}
 		if ((var3 & 0x20) == 0) {
 			this.field4989 = class469.field4982;
@@ -181,14 +181,14 @@ public class class470 {
 	}
 
 	@ObfuscatedName("qf.c(Laet;S)V")
-	public void method8206(class814 arg0) {
+	public void method8206(Packet arg0) {
 		this.field4992 = (float) (arg0.method15220() * 8) / 255.0F;
 		this.field4995 = (float) (arg0.method15220() * 8) / 255.0F;
 		this.field4994 = (float) (arg0.method15220() * 8) / 255.0F;
 	}
 
 	@ObfuscatedName("qf.m(Laet;Lqp;I)V")
-	public void method8207(class814 arg0, class469 arg1) {
+	public void method8207(Packet arg0, class469 arg1) {
 		int var3 = arg0.method15239();
 		int var4 = arg0.method15240();
 		int var5 = arg0.method15240();

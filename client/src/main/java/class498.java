@@ -98,6 +98,6 @@ public class class498 {
 
 	@ObfuscatedName("jv.s([BI)Lajg;")
 	public static class954 method4724(byte[] arg0) {
-		return new class954(new class814(arg0));
+		return new class954(new Packet(arg0));
 	}
 }

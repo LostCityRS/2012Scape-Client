@@ -9,7 +9,7 @@ public class class404 {
 	}
 
 	@ObfuscatedName("is.u(Lra;[[[BIIIIIIIIIIS)V")
-	public static void method4630(class14 arg0, byte[][][] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11) {
+	public static void method4630(RendererToolkit arg0, byte[][][] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11) {
 		if (arg9 == 0 || arg2 == 0) {
 			return;
 		}

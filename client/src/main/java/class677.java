@@ -4,10 +4,10 @@ import jaclib.memory.Stream;
 import jaggl.OpenGL;
 
 @ObfuscatedName("yz")
-public class class677 extends class13 {
+public class class677 extends Model {
 
 	@ObfuscatedName("yz.d")
-	public final class682 field7891;
+	public final GlToolkit field7891;
 
 	@ObfuscatedName("yz.z")
 	public int field7905;
@@ -106,16 +106,16 @@ public class class677 extends class13 {
 	public short[] field7887;
 
 	@ObfuscatedName("yz.az")
-	public class93 field7888;
+	public GlRelated1 field7888;
 
 	@ObfuscatedName("yz.ak")
-	public class93 field7889;
+	public GlRelated1 field7889;
 
 	@ObfuscatedName("yz.av")
-	public class93 field7890;
+	public GlRelated1 field7890;
 
 	@ObfuscatedName("yz.aj")
-	public class93 field7885;
+	public GlRelated1 field7885;
 
 	@ObfuscatedName("yz.ah")
 	public class92 field7892;
@@ -124,7 +124,7 @@ public class class677 extends class13 {
 	public class108 field7893;
 
 	@ObfuscatedName("yz.ae")
-	public class90 field7894;
+	public GlInterfaceRelated field7894;
 
 	@ObfuscatedName("yz.ac")
 	public boolean field7900 = true;
@@ -166,10 +166,10 @@ public class class677 extends class13 {
 	public short[] field7907;
 
 	@ObfuscatedName("yz.bn")
-	public class134[] field7908;
+	public ModelParticleEmitter[] field7908;
 
 	@ObfuscatedName("yz.ba")
-	public class119[] field7909;
+	public ModelParticleEffector[] field7909;
 
 	@ObfuscatedName("yz.bd")
 	public int field7910;
@@ -195,30 +195,30 @@ public class class677 extends class13 {
 	@ObfuscatedName("yz.be")
 	public static final int[] field7918 = new int[8];
 
-	public class677(class682 arg0) {
+	public class677(GlToolkit arg0) {
 		this.field7891 = arg0;
-		this.field7888 = new class93(null, 5126, 3, 0);
-		this.field7885 = new class93(null, 5126, 2, 0);
-		this.field7890 = new class93(null, 5126, 3, 0);
-		this.field7889 = new class93(null, 5121, 4, 0);
+		this.field7888 = new GlRelated1(null, 5126, 3, 0);
+		this.field7885 = new GlRelated1(null, 5126, 2, 0);
+		this.field7890 = new GlRelated1(null, 5126, 3, 0);
+		this.field7889 = new GlRelated1(null, 5121, 4, 0);
 		this.field7892 = new class92();
 	}
 
-	public class677(class682 arg0, class129 arg1, int arg2, int arg3, int arg4, int arg5) {
+	public class677(GlToolkit arg0, class129 arg1, int arg2, int arg3, int arg4, int arg5) {
 		this.field7891 = arg0;
 		this.field7905 = arg2;
 		this.field7857 = arg5;
 		if (class83.method2097(arg2, arg5)) {
-			this.field7888 = new class93(null, 5126, 3, 0);
+			this.field7888 = new GlRelated1(null, 5126, 3, 0);
 		}
 		if (class83.method2099(arg2, arg5)) {
-			this.field7885 = new class93(null, 5126, 2, 0);
+			this.field7885 = new GlRelated1(null, 5126, 2, 0);
 		}
 		if (class83.method2098(arg2, arg5)) {
-			this.field7890 = new class93(null, 5126, 3, 0);
+			this.field7890 = new GlRelated1(null, 5126, 3, 0);
 		}
 		if (class83.method2161(arg2, arg5)) {
-			this.field7889 = new class93(null, 5121, 4, 0);
+			this.field7889 = new GlRelated1(null, 5121, 4, 0);
 		}
 		if (class83.method2179(arg2, arg5)) {
 			this.field7892 = new class92();
@@ -802,7 +802,7 @@ public class class677 extends class13 {
 	}
 
 	@ObfuscatedName("yz.q(BIZ)Lqa;")
-	public class13 method295(byte arg0, int arg1, boolean arg2) {
+	public Model method295(byte arg0, int arg1, boolean arg2) {
 		boolean var4 = false;
 		class677 var5;
 		class677 var6;
@@ -817,7 +817,7 @@ public class class677 extends class13 {
 	}
 
 	@ObfuscatedName("yz.gp(Lyz;Lyz;IZZ)Lqa;")
-	public class13 method13080(class677 arg0, class677 arg1, int arg2, boolean arg3, boolean arg4) {
+	public Model method13080(class677 arg0, class677 arg1, int arg2, boolean arg3, boolean arg4) {
 		arg0.field7858 = 0;
 		arg0.field7905 = arg2;
 		arg0.field7857 = this.field7857;
@@ -1228,8 +1228,8 @@ public class class677 extends class13 {
 
 	@ObfuscatedName("yz.f(I)V")
 	public void method246(int arg0) {
-		int var2 = class312.field3439[arg0];
-		int var3 = class312.field3447[arg0];
+		int var2 = Trig1.field3439[arg0];
+		int var3 = Trig1.field3447[arg0];
 		for (int var4 = 0; var4 < this.field7864; var4++) {
 			int var5 = this.field7904[var4] * var2 + this.field7865[var4] * var3 >> 14;
 			this.field7904[var4] = this.field7904[var4] * var3 - this.field7865[var4] * var2 >> 14;
@@ -1243,8 +1243,8 @@ public class class677 extends class13 {
 
 	@ObfuscatedName("yz.S(I)V")
 	public void method249(int arg0) {
-		int var2 = class312.field3439[arg0];
-		int var3 = class312.field3447[arg0];
+		int var2 = Trig1.field3439[arg0];
+		int var3 = Trig1.field3447[arg0];
 		for (int var4 = 0; var4 < this.field7864; var4++) {
 			int var5 = this.field7904[var4] * var2 + this.field7865[var4] * var3 >> 14;
 			this.field7904[var4] = this.field7904[var4] * var3 - this.field7865[var4] * var2 >> 14;
@@ -1269,8 +1269,8 @@ public class class677 extends class13 {
 
 	@ObfuscatedName("yz.t(I)V")
 	public void method397(int arg0) {
-		int var2 = class312.field3439[arg0];
-		int var3 = class312.field3447[arg0];
+		int var2 = Trig1.field3439[arg0];
+		int var3 = Trig1.field3447[arg0];
 		for (int var4 = 0; var4 < this.field7864; var4++) {
 			int var5 = this.field7866[var4] * var3 - this.field7904[var4] * var2 >> 14;
 			this.field7904[var4] = this.field7904[var4] * var3 + this.field7866[var4] * var2 >> 14;
@@ -1284,8 +1284,8 @@ public class class677 extends class13 {
 
 	@ObfuscatedName("yz.EA(I)V")
 	public void method284(int arg0) {
-		int var2 = class312.field3439[arg0];
-		int var3 = class312.field3447[arg0];
+		int var2 = Trig1.field3439[arg0];
+		int var3 = Trig1.field3447[arg0];
 		for (int var4 = 0; var4 < this.field7864; var4++) {
 			int var5 = this.field7866[var4] * var2 + this.field7865[var4] * var3 >> 14;
 			this.field7866[var4] = this.field7866[var4] * var3 - this.field7865[var4] * var2 >> 14;
@@ -1364,7 +1364,7 @@ public class class677 extends class13 {
 	}
 
 	@ObfuscatedName("yz.pa(IILxa;Lxa;III)V")
-	public void method255(int arg0, int arg1, class12 arg2, class12 arg3, int arg4, int arg5, int arg6) {
+	public void method255(int arg0, int arg1, FloorModel arg2, FloorModel arg3, int arg4, int arg5, int arg6) {
 		if (!this.field7898) {
 			this.method13082();
 		}
@@ -1554,7 +1554,7 @@ public class class677 extends class13 {
 	}
 
 	@ObfuscatedName("yz.ad(Lqa;IIIZ)V")
-	public void method297(class13 arg0, int arg1, int arg2, int arg3, boolean arg4) {
+	public void method297(Model arg0, int arg1, int arg2, int arg3, boolean arg4) {
 		class677 var6 = (class677) arg0;
 		if (this.field7883 * -1431655765 == 0 || var6.field7883 * -1431655765 == 0) {
 			return;
@@ -1971,22 +1971,22 @@ public class class677 extends class13 {
 								this.field7866[var94] -= Statics.field7920;
 								this.field7904[var94] -= Statics.field7921;
 								if (arg4 != 0) {
-									int var95 = class312.field3439[arg4];
-									int var96 = class312.field3447[arg4];
+									int var95 = Trig1.field3439[arg4];
+									int var96 = Trig1.field3447[arg4];
 									int var97 = this.field7866[var94] * var95 + this.field7865[var94] * var96 + 16383 >> 14;
 									this.field7866[var94] = this.field7866[var94] * var96 - this.field7865[var94] * var95 + 16383 >> 14;
 									this.field7865[var94] = var97;
 								}
 								if (arg2 != 0) {
-									int var98 = class312.field3439[arg2];
-									int var99 = class312.field3447[arg2];
+									int var98 = Trig1.field3439[arg2];
+									int var99 = Trig1.field3447[arg2];
 									int var100 = this.field7866[var94] * var99 - this.field7904[var94] * var98 + 16383 >> 14;
 									this.field7904[var94] = this.field7904[var94] * var99 + this.field7866[var94] * var98 + 16383 >> 14;
 									this.field7866[var94] = var100;
 								}
 								if (arg3 != 0) {
-									int var101 = class312.field3439[arg3];
-									int var102 = class312.field3447[arg3];
+									int var101 = Trig1.field3439[arg3];
+									int var102 = Trig1.field3447[arg3];
 									int var103 = this.field7904[var94] * var101 + this.field7865[var94] * var102 + 16383 >> 14;
 									this.field7904[var94] = this.field7904[var94] * var102 - this.field7865[var94] * var101 + 16383 >> 14;
 									this.field7865[var94] = var103;
@@ -2014,22 +2014,22 @@ public class class677 extends class13 {
 											break;
 										}
 										if (arg4 != 0) {
-											int var113 = class312.field3439[arg4];
-											int var114 = class312.field3447[arg4];
+											int var113 = Trig1.field3439[arg4];
+											int var114 = Trig1.field3447[arg4];
 											int var115 = this.field7872[var112] * var113 + this.field7856[var112] * var114 + 16383 >> 14;
 											this.field7872[var112] = (short) (this.field7872[var112] * var114 - this.field7856[var112] * var113 + 16383 >> 14);
 											this.field7856[var112] = (short) var115;
 										}
 										if (arg2 != 0) {
-											int var116 = class312.field3439[arg2];
-											int var117 = class312.field3447[arg2];
+											int var116 = Trig1.field3439[arg2];
+											int var117 = Trig1.field3447[arg2];
 											int var118 = this.field7872[var112] * var117 - this.field7873[var112] * var116 + 16383 >> 14;
 											this.field7873[var112] = (short) (this.field7873[var112] * var117 + this.field7872[var112] * var116 + 16383 >> 14);
 											this.field7872[var112] = (short) var118;
 										}
 										if (arg3 != 0) {
-											int var119 = class312.field3439[arg3];
-											int var120 = class312.field3447[arg3];
+											int var119 = Trig1.field3439[arg3];
+											int var120 = Trig1.field3447[arg3];
 											int var121 = this.field7873[var112] * var119 + this.field7856[var112] * var120 + 16383 >> 14;
 											this.field7873[var112] = (short) (this.field7873[var112] * var120 - this.field7856[var112] * var119 + 16383 >> 14);
 											this.field7856[var112] = (short) var121;
@@ -2066,12 +2066,12 @@ public class class677 extends class13 {
 					Statics.field7922 = false;
 				}
 				int[] var42 = new int[9];
-				int var43 = class312.field3447[arg2];
-				int var44 = class312.field3439[arg2];
-				int var45 = class312.field3447[arg3];
-				int var46 = class312.field3439[arg3];
-				int var47 = class312.field3447[arg4];
-				int var48 = class312.field3439[arg4];
+				int var43 = Trig1.field3447[arg2];
+				int var44 = Trig1.field3439[arg2];
+				int var45 = Trig1.field3447[arg3];
+				int var46 = Trig1.field3439[arg3];
+				int var47 = Trig1.field3447[arg4];
+				int var48 = Trig1.field3439[arg4];
 				int var49 = var44 * var47 + 8192 >> 14;
 				int var50 = var44 * var48 + 8192 >> 14;
 				var42[0] = var45 * var47 + var46 * var50 + 8192 >> 14;
@@ -2385,22 +2385,22 @@ public class class677 extends class13 {
 				this.field7866[var8] -= Statics.field7920;
 				this.field7904[var8] -= Statics.field7921;
 				if (arg3 != 0) {
-					int var9 = class312.field3439[arg3];
-					int var10 = class312.field3447[arg3];
+					int var9 = Trig1.field3439[arg3];
+					int var10 = Trig1.field3447[arg3];
 					int var11 = this.field7866[var8] * var9 + this.field7865[var8] * var10 + 16383 >> 14;
 					this.field7866[var8] = this.field7866[var8] * var10 - this.field7865[var8] * var9 + 16383 >> 14;
 					this.field7865[var8] = var11;
 				}
 				if (arg1 != 0) {
-					int var12 = class312.field3439[arg1];
-					int var13 = class312.field3447[arg1];
+					int var12 = Trig1.field3439[arg1];
+					int var13 = Trig1.field3447[arg1];
 					int var14 = this.field7866[var8] * var13 - this.field7904[var8] * var12 + 16383 >> 14;
 					this.field7904[var8] = this.field7904[var8] * var13 + this.field7866[var8] * var12 + 16383 >> 14;
 					this.field7866[var8] = var14;
 				}
 				if (arg2 != 0) {
-					int var15 = class312.field3439[arg2];
-					int var16 = class312.field3447[arg2];
+					int var15 = Trig1.field3439[arg2];
+					int var16 = Trig1.field3447[arg2];
 					int var17 = this.field7904[var8] * var15 + this.field7865[var8] * var16 + 16383 >> 14;
 					this.field7904[var8] = this.field7904[var8] * var16 - this.field7865[var8] * var15 + 16383 >> 14;
 					this.field7865[var8] = var17;
@@ -2553,22 +2553,22 @@ public class class677 extends class13 {
 							this.field7866[var30] -= Statics.field7920;
 							this.field7904[var30] -= Statics.field7921;
 							if (arg4 != 0) {
-								int var31 = class312.field3439[arg4];
-								int var32 = class312.field3447[arg4];
+								int var31 = Trig1.field3439[arg4];
+								int var32 = Trig1.field3447[arg4];
 								int var33 = this.field7866[var30] * var31 + this.field7865[var30] * var32 + 16383 >> 14;
 								this.field7866[var30] = this.field7866[var30] * var32 - this.field7865[var30] * var31 + 16383 >> 14;
 								this.field7865[var30] = var33;
 							}
 							if (arg2 != 0) {
-								int var34 = class312.field3439[arg2];
-								int var35 = class312.field3447[arg2];
+								int var34 = Trig1.field3439[arg2];
+								int var35 = Trig1.field3447[arg2];
 								int var36 = this.field7866[var30] * var35 - this.field7904[var30] * var34 + 16383 >> 14;
 								this.field7904[var30] = this.field7904[var30] * var35 + this.field7866[var30] * var34 + 16383 >> 14;
 								this.field7866[var30] = var36;
 							}
 							if (arg3 != 0) {
-								int var37 = class312.field3439[arg3];
-								int var38 = class312.field3447[arg3];
+								int var37 = Trig1.field3439[arg3];
+								int var38 = Trig1.field3447[arg3];
 								int var39 = this.field7904[var30] * var37 + this.field7865[var30] * var38 + 16383 >> 14;
 								this.field7904[var30] = this.field7904[var30] * var38 - this.field7865[var30] * var37 + 16383 >> 14;
 								this.field7865[var30] = var39;
@@ -2584,22 +2584,22 @@ public class class677 extends class13 {
 							this.field7866[var41] -= Statics.field7920;
 							this.field7904[var41] -= Statics.field7921;
 							if (arg2 != 0) {
-								int var42 = class312.field3439[arg2];
-								int var43 = class312.field3447[arg2];
+								int var42 = Trig1.field3439[arg2];
+								int var43 = Trig1.field3447[arg2];
 								int var44 = this.field7866[var41] * var43 - this.field7904[var41] * var42 + 16383 >> 14;
 								this.field7904[var41] = this.field7904[var41] * var43 + this.field7866[var41] * var42 + 16383 >> 14;
 								this.field7866[var41] = var44;
 							}
 							if (arg4 != 0) {
-								int var45 = class312.field3439[arg4];
-								int var46 = class312.field3447[arg4];
+								int var45 = Trig1.field3439[arg4];
+								int var46 = Trig1.field3447[arg4];
 								int var47 = this.field7866[var41] * var45 + this.field7865[var41] * var46 + 16383 >> 14;
 								this.field7866[var41] = this.field7866[var41] * var46 - this.field7865[var41] * var45 + 16383 >> 14;
 								this.field7865[var41] = var47;
 							}
 							if (arg3 != 0) {
-								int var48 = class312.field3439[arg3];
-								int var49 = class312.field3447[arg3];
+								int var48 = Trig1.field3439[arg3];
+								int var49 = Trig1.field3447[arg3];
 								int var50 = this.field7904[var41] * var48 + this.field7865[var41] * var49 + 16383 >> 14;
 								this.field7904[var41] = this.field7904[var41] * var49 - this.field7865[var41] * var48 + 16383 >> 14;
 								this.field7865[var41] = var50;
@@ -2626,22 +2626,22 @@ public class class677 extends class13 {
 									break;
 								}
 								if (arg4 != 0) {
-									int var60 = class312.field3439[arg4];
-									int var61 = class312.field3447[arg4];
+									int var60 = Trig1.field3439[arg4];
+									int var61 = Trig1.field3447[arg4];
 									int var62 = this.field7872[var59] * var60 + this.field7856[var59] * var61 + 16383 >> 14;
 									this.field7872[var59] = (short) (this.field7872[var59] * var61 - this.field7856[var59] * var60 + 16383 >> 14);
 									this.field7856[var59] = (short) var62;
 								}
 								if (arg2 != 0) {
-									int var63 = class312.field3439[arg2];
-									int var64 = class312.field3447[arg2];
+									int var63 = Trig1.field3439[arg2];
+									int var64 = Trig1.field3447[arg2];
 									int var65 = this.field7872[var59] * var64 - this.field7873[var59] * var63 + 16383 >> 14;
 									this.field7873[var59] = (short) (this.field7873[var59] * var64 + this.field7872[var59] * var63 + 16383 >> 14);
 									this.field7872[var59] = (short) var65;
 								}
 								if (arg3 != 0) {
-									int var66 = class312.field3439[arg3];
-									int var67 = class312.field3447[arg3];
+									int var66 = Trig1.field3439[arg3];
+									int var67 = Trig1.field3447[arg3];
 									int var68 = this.field7873[var59] * var66 + this.field7856[var59] * var67 + 16383 >> 14;
 									this.field7873[var59] = (short) (this.field7873[var59] * var67 - this.field7856[var59] * var66 + 16383 >> 14);
 									this.field7856[var59] = (short) var68;
@@ -2801,11 +2801,11 @@ public class class677 extends class13 {
 	}
 
 	@ObfuscatedName("yz.ag(Lkc;IZ)V")
-	public void method239(class314 arg0, int arg1, boolean arg2) {
+	public void method239(Matrix4x3 arg0, int arg1, boolean arg2) {
 		if (this.field7869 == null) {
 			return;
 		}
-		class314 var4 = arg0;
+		Matrix4x3 var4 = arg0;
 		if (arg2) {
 			var4 = this.field7891.field8077;
 			var4.method5170(arg0);
@@ -2822,23 +2822,23 @@ public class class677 extends class13 {
 	}
 
 	@ObfuscatedName("yz.am()[Lct;")
-	public class119[] method413() {
+	public ModelParticleEffector[] method413() {
 		return this.field7909;
 	}
 
 	@ObfuscatedName("yz.aw()[Ldx;")
-	public class134[] method276() {
+	public ModelParticleEmitter[] method276() {
 		return this.field7908;
 	}
 
 	@ObfuscatedName("yz.ax(Lkc;)V")
-	public void method294(class314 arg0) {
-		class320 var2 = this.field7891.field8132;
+	public void method294(Matrix4x3 arg0) {
+		Matrix4x4 var2 = this.field7891.field8132;
 		var2.method5385(arg0);
 		if (this.field7908 != null) {
 			for (int var3 = 0; var3 < this.field7908.length; var3++) {
-				class134 var4 = this.field7908[var3];
-				class134 var5 = var4;
+				ModelParticleEmitter var4 = this.field7908[var3];
+				ModelParticleEmitter var5 = var4;
 				if (var4.field1372 != null) {
 					var5 = var4.field1372;
 				}
@@ -2857,13 +2857,13 @@ public class class677 extends class13 {
 			return;
 		}
 		for (int var6 = 0; var6 < this.field7909.length; var6++) {
-			class119 var7 = this.field7909[var6];
-			class119 var8 = var7;
+			ModelParticleEffector var7 = this.field7909[var6];
+			ModelParticleEffector var8 = var7;
 			if (var7.field1238 != null) {
 				var8 = var7.field1238;
 			}
 			if (var7.field1237 == null) {
-				var7.field1237 = new class320(var2);
+				var7.field1237 = new Matrix4x4(var2);
 			} else {
 				var7.field1237.method5412(var2);
 			}
@@ -2874,8 +2874,8 @@ public class class677 extends class13 {
 	}
 
 	@ObfuscatedName("yz.ai(IILkc;ZI)Z")
-	public boolean method272(int arg0, int arg1, class314 arg2, boolean arg3, int arg4) {
-		class320 var6 = this.field7891.field8132;
+	public boolean method272(int arg0, int arg1, Matrix4x3 arg2, boolean arg3, int arg4) {
+		Matrix4x4 var6 = this.field7891.field8132;
 		var6.method5385(arg2);
 		var6.method5384(this.field7891.field8120);
 		boolean var7 = false;
@@ -3093,16 +3093,16 @@ public class class677 extends class13 {
 	}
 
 	@ObfuscatedName("yz.as(Lkc;Ldy;I)V")
-	public void method271(class314 arg0, class142 arg1, int arg2) {
+	public void method271(Matrix4x3 arg0, ScreenBoundingBox arg1, int arg2) {
 		if ((arg2 & 0x2) != 0) {
 			OpenGL.glPolygonMode(1032, 6913);
 		}
 		if (this.field7870 == 0) {
 			return;
 		}
-		class320 var4 = this.field7891.field8118;
-		class320 var5 = this.field7891.field8132;
-		class320 var6 = this.field7891.field8133;
+		Matrix4x4 var4 = this.field7891.field8118;
+		Matrix4x4 var5 = this.field7891.field8132;
+		Matrix4x4 var6 = this.field7891.field8133;
 		var5.method5385(arg0);
 		var6.method5412(var5);
 		var6.method5384(this.field7891.field8120);
@@ -3229,11 +3229,11 @@ public class class677 extends class13 {
 	}
 
 	@ObfuscatedName("yz.gh(Lka;)V")
-	public void method13085(class320 arg0) {
+	public void method13085(Matrix4x4 arg0) {
 		if (this.field7903 == null) {
 			return;
 		}
-		class320 var2 = this.field7891.field8087;
+		Matrix4x4 var2 = this.field7891.field8087;
 		this.field7891.method13281();
 		this.field7891.method526(!this.field7913);
 		this.field7891.method13322(false);
@@ -3587,7 +3587,7 @@ public class class677 extends class13 {
 			}
 		}
 		var11.field9626 = this.field7870 * var6;
-		class90 var80;
+		GlInterfaceRelated var80;
 		if (arg0) {
 			if (this.field7894 == null) {
 				this.field7894 = this.field7891.method13301(var6, var11.field9629, var11.field9626, true);

@@ -39,7 +39,7 @@ public class class294 implements class463 {
 		}
 		class293 var8 = new class293();
 		if (var6 != null) {
-			var8.method4870(new class814(var6));
+			var8.method4870(new Packet(var6));
 		}
 		class451 var9 = this.field3313;
 		synchronized (this.field3313) {

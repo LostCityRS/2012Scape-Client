@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aim")
-public class class919 extends class787 {
+public class class919 extends ClanSettingsDeltaEntry {
 
 	// $FF: synthetic field
 	public final class219 this$0;
@@ -20,7 +20,7 @@ public class class919 extends class787 {
 	}
 
 	@ObfuscatedName("aim.u(Laet;I)V")
-	public void method14956(class814 arg0) {
+	public void method14956(Packet arg0) {
 		if (arg0.method15220() != 255) {
 			arg0.field9626--;
 			this.field10180 = arg0.method15246();

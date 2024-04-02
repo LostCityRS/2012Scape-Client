@@ -11,14 +11,14 @@ public class class220 {
 	public long field2392 = -1L;
 
 	@ObfuscatedName("gd.a")
-	public class547 field2394 = new class547();
+	public IterableQueue field2394 = new IterableQueue();
 
-	public class220(class814 arg0) {
+	public class220(Packet arg0) {
 		this.method4116(arg0);
 	}
 
 	@ObfuscatedName("gd.u(Laet;I)V")
-	public void method4116(class814 arg0) {
+	public void method4116(Packet arg0) {
 		this.field2393 = arg0.method15246();
 		this.field2392 = arg0.method15246();
 		for (int var2 = arg0.method15220(); var2 != 0; var2 = arg0.method15220()) {

@@ -52,7 +52,7 @@ public class class261 implements class264 {
 	}
 
 	@ObfuscatedName("cu.u(Laet;B)Liw;")
-	public static class261 method2548(class814 arg0) {
+	public static class261 method2548(Packet arg0) {
 		int var1 = arg0.method15220();
 		class265 var2 = class265.method15177()[arg0.method15220()];
 		class263 var3 = class263.method3623()[arg0.method15220()];

@@ -12,16 +12,16 @@ public class class99 {
 	public class963 field1120 = new class963(786336);
 
 	@ObfuscatedName("bu.a")
-	public class90 field1121;
+	public GlInterfaceRelated field1121;
 
 	@ObfuscatedName("bu.s")
-	public class93 field1135;
+	public GlRelated1 field1135;
 
 	@ObfuscatedName("bu.c")
-	public class93 field1123;
+	public GlRelated1 field1123;
 
 	@ObfuscatedName("bu.m")
-	public class93 field1124;
+	public GlRelated1 field1124;
 
 	@ObfuscatedName("bu.t")
 	public final int field1125 = 64;
@@ -57,15 +57,15 @@ public class class99 {
 	public int field1133 = 0;
 
 	@ObfuscatedName("bu.u(Lyq;)V")
-	public void method2263(class682 arg0) {
+	public void method2263(GlToolkit arg0) {
 		this.field1121 = arg0.method13301(24, null, 196584, true);
-		this.field1124 = new class93(this.field1121, 5126, 2, 0);
-		this.field1135 = new class93(this.field1121, 5126, 3, 8);
-		this.field1123 = new class93(this.field1121, 5121, 4, 20);
+		this.field1124 = new GlRelated1(this.field1121, 5126, 2, 0);
+		this.field1135 = new GlRelated1(this.field1121, 5126, 3, 8);
+		this.field1123 = new GlRelated1(this.field1121, 5121, 4, 20);
 	}
 
 	@ObfuscatedName("bu.j(Lyq;Ldp;)V")
-	public void method2264(class682 arg0, class128 arg1) {
+	public void method2264(GlToolkit arg0, ParticleList arg1) {
 		if (arg0.field8116 == null) {
 			return;
 		}
@@ -159,7 +159,7 @@ public class class99 {
 	}
 
 	@ObfuscatedName("bu.a(Lyq;I)V")
-	public void method2265(class682 arg0, int arg1) {
+	public void method2265(GlToolkit arg0, int arg1) {
 		OpenGL.glGetFloatv(2982, this.field1128, 0);
 		float var3 = this.field1128[0];
 		float var4 = this.field1128[4];
@@ -396,7 +396,7 @@ public class class99 {
 	}
 
 	@ObfuscatedName("bu.s(Lyq;)V")
-	public void method2274(class682 arg0) {
+	public void method2274(GlToolkit arg0) {
 		Statics.field1134 = arg0.field8158;
 		arg0.method13311();
 		OpenGL.glDisable(16384);
@@ -406,7 +406,7 @@ public class class99 {
 	}
 
 	@ObfuscatedName("bu.c(Lyq;)V")
-	public void method2272(class682 arg0) {
+	public void method2272(GlToolkit arg0) {
 		arg0.method13325(true);
 		OpenGL.glEnable(16384);
 		OpenGL.glEnable(16385);

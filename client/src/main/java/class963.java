@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import jaclib.memory.Stream;
 
 @ObfuscatedName("ajy")
-public class class963 extends class814 {
+public class class963 extends Packet {
 
 	public class963(int arg0) {
 		super(arg0);

@@ -44,7 +44,7 @@ public class class262 implements class264 {
 	}
 
 	@ObfuscatedName("dl.u(Laet;I)Liq;")
-	public static class262 method2603(class814 arg0) {
+	public static class262 method2603(Packet arg0) {
 		class265 var1 = class265.method15177()[arg0.method15220()];
 		class263 var2 = class263.method3623()[arg0.method15220()];
 		int var3 = arg0.method15240();

@@ -6,18 +6,18 @@ import java.util.Iterator;
 public class class566 implements Iterator {
 
 	@ObfuscatedName("uk.u")
-	public class565 field6730;
+	public IterableMap field6730;
 
 	@ObfuscatedName("uk.j")
-	public class399 field6729;
+	public Node field6729;
 
 	@ObfuscatedName("uk.a")
 	public int field6731;
 
 	@ObfuscatedName("uk.s")
-	public class399 field6728 = null;
+	public Node field6728 = null;
 
-	public class566(class565 arg0) {
+	public class566(IterableMap arg0) {
 		this.field6730 = arg0;
 		this.method11950();
 	}
@@ -30,19 +30,19 @@ public class class566 implements Iterator {
 	}
 
 	@ObfuscatedName("uk.d(B)Lnz;")
-	public class399 method11955() {
+	public Node method11955() {
 		this.method11950();
-		return (class399) this.next();
+		return (Node) this.next();
 	}
 
 	public Object next() {
 		if (this.field6730.field6725[this.field6731 - 1] != this.field6729) {
-			class399 var1 = this.field6729;
+			Node var1 = this.field6729;
 			this.field6729 = var1.field4226;
 			this.field6728 = var1;
 			return var1;
 		}
-		class399 var2;
+		Node var2;
 		do {
 			if (this.field6731 >= this.field6730.field6722) {
 				return null;

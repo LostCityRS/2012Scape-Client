@@ -9,13 +9,13 @@ public class class79 {
 	public static final int[] field1027 = new int[2];
 
 	@ObfuscatedName("bf.j")
-	public final class682 field1026;
+	public final GlToolkit field1026;
 
 	@ObfuscatedName("bf.a")
 	public final int field1028;
 
 	@ObfuscatedName("bf.u(Lyq;[Lbl;)Lbf;")
-	public static class79 method2027(class682 arg0, class82[] arg1) {
+	public static class79 method2027(GlToolkit arg0, class82[] arg1) {
 		for (int var2 = 0; var2 < arg1.length; var2++) {
 			if (arg1[var2] == null || arg1[var2].field1060 <= 0) {
 				return null;
@@ -45,7 +45,7 @@ public class class79 {
 		return new class79(arg0, var3, arg1);
 	}
 
-	public class79(class682 arg0, int arg1, class82[] arg2) {
+	public class79(GlToolkit arg0, int arg1, class82[] arg2) {
 		this.field1026 = arg0;
 		this.field1028 = arg1;
 	}

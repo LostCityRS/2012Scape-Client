@@ -9,17 +9,17 @@ public class class133 {
 	}
 
 	@ObfuscatedName("db.u(Lra;[II)V")
-	public static void method2697(class14 arg0, int[] arg1, int arg2) {
+	public static void method2697(RendererToolkit arg0, int[] arg1, int arg2) {
 		method2680(arg0, arg1, 0, arg1.length, arg2, null, null);
 	}
 
 	@ObfuscatedName("db.j(Lra;[II[I[I)V")
-	public static void method2679(class14 arg0, int[] arg1, int arg2, int[] arg3, int[] arg4) {
+	public static void method2679(RendererToolkit arg0, int[] arg1, int arg2, int[] arg3, int[] arg4) {
 		method2680(arg0, arg1, 0, arg1.length, arg2, arg3, arg4);
 	}
 
 	@ObfuscatedName("db.a(Lra;[IIII[I[I)V")
-	public static void method2680(class14 arg0, int[] arg1, int arg2, int arg3, int arg4, int[] arg5, int[] arg6) {
+	public static void method2680(RendererToolkit arg0, int[] arg1, int arg2, int arg3, int arg4, int[] arg5, int[] arg6) {
 		int[] var7 = new int[4];
 		arg0.method453(var7);
 		if (arg5 != null && var7[3] - var7[1] != arg5.length) {

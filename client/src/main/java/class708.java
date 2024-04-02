@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("zd")
-public class class708 extends class150 {
+public class class708 extends CutsceneAction {
 
 	@ObfuscatedName("zd.j")
 	public final int field8516;
@@ -10,7 +10,7 @@ public class class708 extends class150 {
 	@ObfuscatedName("zd.a")
 	public final int field8517;
 
-	public class708(class814 arg0) {
+	public class708(Packet arg0) {
 		super(arg0);
 		this.field8516 = arg0.method15239();
 		this.field8517 = arg0.method15220();

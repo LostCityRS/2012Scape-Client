@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class115 {
 
 	@ObfuscatedName("cv.u")
-	public final class553 field1203;
+	public final AnimationNode field1203;
 
 	@ObfuscatedName("cv.j")
 	public int field1204 = -1;
@@ -19,7 +19,7 @@ public class class115 {
 	@ObfuscatedName("cv.c")
 	public int field1206;
 
-	public class115(class719 arg0) {
-		this.field1203 = new class875(arg0, false);
+	public class115(PathingEntity arg0) {
+		this.field1203 = new EntityAnimationNode(arg0, false);
 	}
 }

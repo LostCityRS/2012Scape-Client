@@ -2,9 +2,9 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ahf")
-public class class905 extends class735 {
+public class class905 extends PositionSpline {
 
-	public class905(class199 arg0) {
+	public class905(Camera arg0) {
 		super(arg0);
 	}
 

@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("adk")
-public class class804 extends class399 {
+public class class804 extends Node {
 
 	@ObfuscatedName("adk.s")
 	public final short[][] field9559;

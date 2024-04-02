@@ -50,7 +50,7 @@ public class class477 {
 	}
 
 	@ObfuscatedName("is.s(Ladv;I)V")
-	public static void method4631(class809 arg0) {
+	public static void method4631(BasicMouseEvent arg0) {
 		if (client.method1608(client.field8923)) {
 			field5040.method8370(arg0);
 		} else {
@@ -70,7 +70,7 @@ public class class477 {
 			}
 			while (true) {
 				while (true) {
-					class962 var2 = (class962) field5041.poll();
+					NativeMouseEvent var2 = (NativeMouseEvent) field5041.poll();
 					if (var2 == null) {
 						return;
 					}
@@ -80,7 +80,7 @@ public class class477 {
 							int var3 = var2.method15181();
 							if (var2.method15181() == -1) {
 								field5045.method8370(var2);
-							} else if (class809.method3926(var3)) {
+							} else if (BasicMouseEvent.method3926(var3)) {
 								field5045.method15627(var2);
 							}
 						}
@@ -97,7 +97,7 @@ public class class477 {
 		Queue var0 = field5041;
 		synchronized (field5041) {
 			while (true) {
-				class962 var1 = (class962) field5041.poll();
+				NativeMouseEvent var1 = (NativeMouseEvent) field5041.poll();
 				if (var1 == null) {
 					return;
 				}
@@ -112,10 +112,10 @@ public class class477 {
 		field5040.method8371();
 		field5045.method8371();
 		if (client.field8953 > 0) {
-			class792 var0 = class792.method14781(class280.field2878, client.field8975.field834);
+			ClientMessage var0 = ClientMessage.method14781(ClientProt.field2878, client.field8975.field834);
 			var0.field9467.method15287(client.field8953 * 4);
 			for (int var1 = 0; var1 < client.field8953; var1++) {
-				class415 var2 = client.field9072[var1];
+				KeyboardEvent var2 = client.field9072[var1];
 				long var3 = var2.method7287() - field5044;
 				if (var3 > 16777215L) {
 					var3 = 16777215L;
@@ -132,24 +132,24 @@ public class class477 {
 		if (client.field9028 && field5043 <= 0) {
 			field5043 = 20;
 			client.field9028 = false;
-			class792 var5 = class792.method14781(class280.field2882, client.field8975.field834);
+			ClientMessage var5 = ClientMessage.method14781(ClientProt.field2882, client.field8975.field834);
 			var5.field9467.method15279((int) client.field9171 >> 3);
 			var5.field9467.method15279((int) client.field9021 >> 3);
 			client.field8975.method1913(var5);
 		}
 		if (Statics.field578 != field5042) {
 			field5042 = Statics.field578;
-			class792 var6 = class792.method14781(class280.field2925, client.field8975.field834);
+			ClientMessage var6 = ClientMessage.method14781(ClientProt.field2925, client.field8975.field834);
 			var6.field9467.method15308(Statics.field578 ? 1 : 0);
 			client.field8975.method1913(var6);
 		}
 		if (client.field8932) {
 			return;
 		}
-		class792 var7 = class792.method14781(class280.field2888, client.field8975.field834);
+		ClientMessage var7 = ClientMessage.method14781(ClientProt.field2888, client.field8975.field834);
 		var7.field9467.method15308(0);
 		int var8 = var7.field9467.field9626;
-		class814 var9 = Statics.field4961.method15447();
+		Packet var9 = Statics.field4961.method15447();
 		var7.field9467.method15276(var9.field9629, 0, var9.field9626);
 		var7.field9467.method15251(var7.field9467.field9626 - var8);
 		client.field8975.method1913(var7);

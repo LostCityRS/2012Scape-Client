@@ -38,7 +38,7 @@ public class class213 implements Runnable {
 
 	public void run() {
 		try {
-			int var1 = Statics.field6683 == class515.field6368 ? 80 : Statics.field6773.field6768 + 7000;
+			int var1 = Statics.field6683 == ModeWhere.field6368 ? 80 : Statics.field6773.field6768 + 7000;
 			BufferedReader var2 = new BufferedReader(new InputStreamReader(new DataInputStream((new URL("http://" + Statics.field6773.field6765 + ":" + var1 + "/news.ws?game=" + client.field9163.field6408)).openStream())));
 			String var3 = var2.readLine();
 			ArrayList var4 = new ArrayList();

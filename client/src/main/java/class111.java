@@ -11,7 +11,7 @@ public class class111 {
 	public static boolean field1193 = false;
 
 	@ObfuscatedName("cp.a")
-	public static final class547 field1194 = new class547();
+	public static final IterableQueue field1194 = new IterableQueue();
 
 	public class111() throws Throwable {
 		throw new Error();
@@ -23,7 +23,7 @@ public class class111 {
 			return;
 		}
 		if (field1192 > 0) {
-			class798 var1 = new class798(arg0);
+			ObjectNode var1 = new ObjectNode(arg0);
 			field1194.method11558(var1);
 		} else {
 			arg0.method92(false);
@@ -33,7 +33,7 @@ public class class111 {
 	@ObfuscatedName("cp.j(B)V")
 	public static synchronized void method2359() {
 		while (true) {
-			class798 var0 = (class798) field1194.method11560();
+			ObjectNode var0 = (ObjectNode) field1194.method11560();
 			if (var0 == null) {
 				return;
 			}

@@ -41,25 +41,25 @@ public class class822 extends class408 {
 	public static boolean field9758 = false;
 
 	@ObfuscatedName("aeq.be")
-	public static class565 field9765 = new class565(8);
+	public static IterableMap field9765 = new IterableMap(8);
 
 	@ObfuscatedName("aeq.bw")
-	public static class565 field9766 = new class565(8);
+	public static IterableMap field9766 = new IterableMap(8);
 
 	@ObfuscatedName("aeq.bo")
-	public static class550 field9767 = new class550(new class547());
+	public static class550 field9767 = new class550(new IterableQueue());
 
 	public class822() throws Throwable {
 		throw new Error();
 	}
 
 	@ObfuscatedName("og.bp(Lra;Lma;I)V")
-	public static final void method7164(class14 arg0, class16 arg1) {
+	public static final void method7164(RendererToolkit arg0, class16 arg1) {
 		if (Statics.field4292 == null) {
 			return;
 		}
-		class153.method5554();
-		class153.method5554();
+		MonotonicTime.method5554();
+		MonotonicTime.method5554();
 		if (field9753 < 10) {
 			if (!Statics.field4264.method5648(Statics.field4292.field10362)) {
 				field9753 = Statics.field4059.method5650(Statics.field4292.field10362) / 10;
@@ -76,7 +76,7 @@ public class class822 extends class408 {
 			int[] var2 = new int[3];
 			int var3 = -1;
 			int var4 = -1;
-			class317 var5 = Statics.field2119.method8565().field3464;
+			Vector3 var5 = Statics.field2119.method8565().field3464;
 			class453 var6 = client.field8980.method6214();
 			if (Statics.field4292.method16705(Statics.field2119.field9807, ((int) var5.field3475 >> 9) + var6.field4836, ((int) var5.field3477 >> 9) + var6.field4838, var2)) {
 				var3 = var2[1] - Statics.field4283;
@@ -124,7 +124,7 @@ public class class822 extends class408 {
 			Statics.field4275 = class404.method6983(Statics.field4276);
 			method12997();
 			method7106();
-			Statics.field5267 = new class547();
+			Statics.field5267 = new IterableQueue();
 			field4273 += (int) (Math.random() * 5.0D) - 2;
 			if (field4273 < -8) {
 				field4273 = -8;
@@ -150,7 +150,7 @@ public class class822 extends class408 {
 			method7120(arg0, field4273, field4274);
 			field9753 = 60;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else if (field9753 == 60) {
 			if (Statics.field4264.method5680(Statics.field4292.field10362 + "_staticelements")) {
 				if (!Statics.field4264.method5648(Statics.field4292.field10362 + "_staticelements")) {
@@ -163,47 +163,47 @@ public class class822 extends class408 {
 			method7093();
 			field9753 = 70;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else if (field9753 == 70) {
 			Statics.field4684 = new class56(arg0, 11, true, Statics.field1231);
 			field9753 = 73;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else if (field9753 == 73) {
 			Statics.field6790 = new class56(arg0, 12, true, Statics.field1231);
 			field9753 = 76;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else if (field9753 == 76) {
 			Statics.field1578 = new class56(arg0, 14, true, Statics.field1231);
 			field9753 = 79;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else if (field9753 == 79) {
 			Statics.field9549 = new class56(arg0, 17, true, Statics.field1231);
 			field9753 = 82;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else if (field9753 == 82) {
 			Statics.field3263 = new class56(arg0, 19, true, Statics.field1231);
 			field9753 = 85;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else if (field9753 == 85) {
 			Statics.field1388 = new class56(arg0, 22, true, Statics.field1231);
 			field9753 = 88;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else if (field9753 == 88) {
 			Statics.field7158 = new class56(arg0, 26, true, Statics.field1231);
 			field9753 = 91;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 		} else {
 			Statics.field4325 = new class56(arg0, 30, true, Statics.field1231);
 			field9753 = 100;
 			class356.method8512(true);
-			class385.method2427();
+			GameShell.method2427();
 			System.gc();
 		}
 	}
@@ -277,7 +277,7 @@ public class class822 extends class408 {
 	}
 
 	@ObfuscatedName("zb.bb(Lra;Lma;IIIIB)V")
-	public static void method13877(class14 arg0, class16 arg1, int arg2, int arg3, int arg4, int arg5) {
+	public static void method13877(RendererToolkit arg0, class16 arg1, int arg2, int arg3, int arg4, int arg5) {
 		if (field9753 < 100) {
 			method7164(arg0, arg1);
 		}
@@ -302,7 +302,7 @@ public class class822 extends class408 {
 		Statics.field6344 = (int) ((float) (arg5 * 2) / Statics.field4279);
 		method7094(Statics.field4283 + var9, Statics.field4284 + var10, Statics.field4283 + var11, Statics.field4284 + var12, arg2, arg3, arg2 + arg4, arg3 + arg5 + 1);
 		method7095(arg0);
-		class547 var13 = method7099(arg0);
+		IterableQueue var13 = method7099(arg0);
 		method2356(arg0, var13, 0, 0);
 		if (Statics.field4469 > 0) {
 			Statics.field10208--;
@@ -316,7 +316,7 @@ public class class822 extends class408 {
 		}
 		int var14 = arg2 + arg4 - 5;
 		int var15 = arg3 + arg5 - 8;
-		Statics.field560.method862("Fps:" + class385.field4121, var14, var15, 16776960, -1);
+		Statics.field560.method862("Fps:" + GameShell.field4121, var14, var15, 16776960, -1);
 		int var19 = var15 - 15;
 		Runtime var16 = Runtime.getRuntime();
 		int var17 = (int) ((var16.totalMemory() - var16.freeMemory()) / 1024L);
@@ -329,7 +329,7 @@ public class class822 extends class408 {
 	}
 
 	@ObfuscatedName("cr.be(Lra;Ltq;III)V")
-	public static void method2356(class14 arg0, class547 arg1, int arg2, int arg3) {
+	public static void method2356(RendererToolkit arg0, IterableQueue arg1, int arg2, int arg3) {
 		Statics.field5267.method11557();
 		if (field9758) {
 			return;
@@ -361,7 +361,7 @@ public class class822 extends class408 {
 	}
 
 	@ObfuscatedName("d.bo(Lra;Ladw;Lpw;III)Z")
-	public static boolean method1358(class14 arg0, class806 arg1, class443 arg2, int arg3, int arg4) {
+	public static boolean method1358(RendererToolkit arg0, class806 arg1, class443 arg2, int arg3, int arg4) {
 		int var5 = Integer.MAX_VALUE;
 		int var6 = Integer.MIN_VALUE;
 		int var7 = Integer.MAX_VALUE;
@@ -490,7 +490,7 @@ public class class822 extends class408 {
 	}
 
 	@ObfuscatedName("acr.bh(Lra;Ladw;Lpw;I)V")
-	public static void method14746(class14 arg0, class806 arg1, class443 arg2) {
+	public static void method14746(RendererToolkit arg0, class806 arg1, class443 arg2) {
 		class118 var3 = arg2.method7841(arg0);
 		if (var3 == null) {
 			return;
@@ -623,7 +623,7 @@ public class class822 extends class408 {
 	}
 
 	@ObfuscatedName("nf.bu(Lra;Ladw;Lpw;IIIILas;B)V")
-	public static void method6644(class14 arg0, class806 arg1, class443 arg2, int arg3, int arg4, int arg5, int arg6, class56 arg7) {
+	public static void method6644(RendererToolkit arg0, class806 arg1, class443 arg2, int arg3, int arg4, int arg5, int arg6, class56 arg7) {
 		int var8 = arg4 - arg6 / 2 - 5;
 		int var9 = arg5 + 2;
 		if (arg2.field4801 != 0) {
@@ -647,7 +647,7 @@ public class class822 extends class408 {
 	}
 
 	@ObfuscatedName("if.cl(Lra;IIIII)V")
-	public static final void method4707(class14 arg0, int arg1, int arg2, int arg3, int arg4) {
+	public static final void method4707(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4) {
 		arg0.method659(arg1, arg2, arg1 + arg3, arg2 + arg4);
 		arg0.method496(arg1, arg2, arg3, arg4, -16777216);
 		if (field9753 < 100) {

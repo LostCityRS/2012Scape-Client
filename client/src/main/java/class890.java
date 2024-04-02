@@ -6,7 +6,7 @@ import jaggl.OpenGL;
 public class class890 extends class674 {
 
 	@ObfuscatedName("agc.a")
-	public final class682 field9924;
+	public final GlToolkit field9924;
 
 	@ObfuscatedName("agc.s")
 	public int field9932;
@@ -29,7 +29,7 @@ public class class890 extends class674 {
 	@ObfuscatedName("agc.d")
 	public final class98[] field9926 = new class98[4];
 
-	public class890(class682 arg0) {
+	public class890(GlToolkit arg0) {
 		if (!arg0.field8176) {
 			throw new IllegalStateException("");
 		}

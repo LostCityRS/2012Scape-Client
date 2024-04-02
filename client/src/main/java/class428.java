@@ -1,4 +1,3 @@
-
 import deob.ObfuscatedName;
 
 @ObfuscatedName("od")
@@ -11,7 +10,7 @@ public class class428 {
 	public boolean field4613 = true;
 
 	@ObfuscatedName("od.m")
-	public class423 field4605;
+	public Scene field4605;
 
 	@ObfuscatedName("od.t")
 	public class422 field4606;
@@ -85,7 +84,7 @@ public class class428 {
 	@ObfuscatedName("od.ap")
 	public boolean field4615 = true;
 
-	public class428(class423 arg0) {
+	public class428(Scene arg0) {
 		this.field4608 = arg0.field4499;
 		this.field4612 = arg0.field4499;
 		this.field4605 = arg0;
@@ -112,9 +111,9 @@ public class class428 {
 	@ObfuscatedName("od.u(IIIIII)V")
 	public void method7615(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
 		if (arg0 != 8 && arg0 != 16) {
-			class424 var7 = this.field4605.field4497[arg1][arg2][arg3];
+			Tile var7 = this.field4605.field4497[arg1][arg2][arg3];
 			if (var7 == null) {
-				this.field4605.field4497[arg1][arg2][arg3] = var7 = new class424(arg1);
+				this.field4605.field4497[arg1][arg2][arg3] = var7 = new Tile(arg1);
 			}
 			if (arg0 == 1) {
 				var7.field4555 = (short) arg4;
@@ -148,7 +147,7 @@ public class class428 {
 	@ObfuscatedName("od.j(IIII)V")
 	public void method7601(int arg0, int arg1, int arg2, int arg3) {
 		if (arg0 != 8 && arg0 != 16) {
-			class424 var5 = this.field4605.field4497[arg1][arg2][arg3];
+			Tile var5 = this.field4605.field4497[arg1][arg2][arg3];
 			if (var5 != null) {
 				if (arg0 == 1) {
 					var5.field4555 = 0;
@@ -185,7 +184,7 @@ public class class428 {
 		for (int var2 = 0; var2 < this.field4605.field4494; var2++) {
 			for (int var3 = 0; var3 < this.field4605.field4495; var3++) {
 				for (int var4 = 0; var4 < this.field4605.field4496; var4++) {
-					class424 var5 = this.field4605.field4497[var2][var4][var3];
+					Tile var5 = this.field4605.field4497[var2][var4][var3];
 					if (var5 != null) {
 						if (var5.field4555 > 0) {
 							var5.field4555 = (short) (var5.field4555 * -1);
@@ -200,20 +199,20 @@ public class class428 {
 		for (int var6 = 0; var6 < this.field4605.field4494; var6++) {
 			for (int var7 = 0; var7 < this.field4605.field4495; var7++) {
 				for (int var8 = 0; var8 < this.field4605.field4496; var8++) {
-					class424 var9 = this.field4605.field4497[var6][var8][var7];
+					Tile var9 = this.field4605.field4497[var6][var8][var7];
 					if (var9 != null) {
 						boolean var10 = this.field4605.field4497[0][var8][var7] != null && this.field4605.field4497[0][var8][var7].field4547 != null;
 						if (var9.field4555 < 0) {
 							int var11 = var7;
 							int var12 = var7;
 							int var14 = var6;
-							class424 var15 = this.field4605.field4497[var6][var8][var7 - 1];
+							Tile var15 = this.field4605.field4497[var6][var8][var7 - 1];
 							int var16 = this.field4605.field4527[var6].method199(var8, var7);
 							while (var11 > 0 && var15 != null && var15.field4555 < 0 && var9.field4555 == var15.field4555 && var9.field4556 == var15.field4556 && var16 == this.field4605.field4527[var6].method199(var8, var11 - 1) && (var11 - 1 <= 0 || var16 == this.field4605.field4527[var6].method199(var8, var11 - 2)) && var12 - var11 <= 10) {
 								var11--;
 								var15 = this.field4605.field4497[var6][var8][var11 - 1];
 							}
-							for (class424 var17 = this.field4605.field4497[var6][var8][var12 + 1]; var12 < this.field4605.field4496 && var17 != null && var17.field4555 < 0 && var9.field4555 == var17.field4555 && var9.field4556 == var17.field4556 && var16 == this.field4605.field4527[var6].method199(var8, var12 + 1) && (var12 + 1 >= this.field4605.field4496 || var16 == this.field4605.field4527[var6].method199(var8, var12 + 2)) && var12 - var11 <= 10; var17 = this.field4605.field4497[var6][var8][var12 + 1]) {
+							for (Tile var17 = this.field4605.field4497[var6][var8][var12 + 1]; var12 < this.field4605.field4496 && var17 != null && var17.field4555 < 0 && var9.field4555 == var17.field4555 && var9.field4556 == var17.field4556 && var16 == this.field4605.field4527[var6].method199(var8, var12 + 1) && (var12 + 1 >= this.field4605.field4496 || var16 == this.field4605.field4527[var6].method199(var8, var12 + 2)) && var12 - var11 <= 10; var17 = this.field4605.field4497[var6][var8][var12 + 1]) {
 								var12++;
 							}
 							int var18 = var6 - var6 + 1;
@@ -235,13 +234,13 @@ public class class428 {
 							int var28 = var8;
 							int var29 = var8;
 							int var31 = var6;
-							class424 var32 = this.field4605.field4497[var6][var8 - 1][var7];
+							Tile var32 = this.field4605.field4497[var6][var8 - 1][var7];
 							int var33 = this.field4605.field4527[var6].method199(var8, var7);
 							while (var28 > 0 && var32 != null && var32.field4557 < 0 && var9.field4557 == var32.field4557 && var9.field4558 == var32.field4558 && var33 == this.field4605.field4527[var6].method199(var28 - 1, var7) && (var28 - 1 <= 0 || var33 == this.field4605.field4527[var6].method199(var28 - 2, var7)) && var29 - var28 <= 10) {
 								var28--;
 								var32 = this.field4605.field4497[var6][var28 - 1][var7];
 							}
-							for (class424 var34 = this.field4605.field4497[var6][var29 + 1][var7]; var29 < this.field4605.field4495 && var34 != null && var34.field4557 < 0 && var9.field4557 == var34.field4557 && var9.field4558 == var34.field4558 && var33 == this.field4605.field4527[var6].method199(var29 + 1, var7) && (var29 + 1 >= this.field4605.field4495 || var33 == this.field4605.field4527[var6].method199(var29 + 2, var7)) && var29 - var28 <= 10; var34 = this.field4605.field4497[var6][var29 + 1][var7]) {
+							for (Tile var34 = this.field4605.field4497[var6][var29 + 1][var7]; var29 < this.field4605.field4495 && var34 != null && var34.field4557 < 0 && var9.field4557 == var34.field4557 && var9.field4558 == var34.field4558 && var33 == this.field4605.field4527[var6].method199(var29 + 1, var7) && (var29 + 1 >= this.field4605.field4495 || var33 == this.field4605.field4527[var6].method199(var29 + 2, var7)) && var29 - var28 <= 10; var34 = this.field4605.field4497[var6][var29 + 1][var7]) {
 								var29++;
 							}
 							int var35 = var6 - var6 + 1;
@@ -272,7 +271,7 @@ public class class428 {
 	}
 
 	@ObfuscatedName("od.m(Lra;I)V")
-	public void method7591(class14 arg0, int arg1) {
+	public void method7591(RendererToolkit arg0, int arg1) {
 		Statics.field4625 = arg0;
 		if (!this.field4624 || !this.field4613) {
 			this.field4617 = 0;
@@ -329,7 +328,7 @@ public class class428 {
 	}
 
 	@ObfuscatedName("od.t(Lra;Lpv;I)V")
-	public void method7596(class14 arg0, class431 arg1, int arg2) {
+	public void method7596(RendererToolkit arg0, class431 arg1, int arg2) {
 		Statics.field4625 = arg0;
 		if (this.field4619 != null && arg1.field4652 >= arg2) {
 			for (int var4 = 0; var4 < this.field4619.length; var4++) {
@@ -516,7 +515,7 @@ public class class428 {
 	}
 
 	@ObfuscatedName("od.z(Lakr;III)Z")
-	public boolean method7600(class972 arg0, int arg1, int arg2, int arg3) {
+	public boolean method7600(WallLayerEntity arg0, int arg1, int arg2, int arg3) {
 		if (!this.field4624 || !this.field4613) {
 			return false;
 		} else if (this.field4606.field4481 < 101) {
@@ -582,7 +581,7 @@ public class class428 {
 	}
 
 	@ObfuscatedName("od.o(IIIIILok;)Z")
-	public boolean method7602(int arg0, int arg1, int arg2, int arg3, int arg4, class429 arg5) {
+	public boolean method7602(int arg0, int arg1, int arg2, int arg3, int arg4, EntityBounds arg5) {
 		if (!this.field4624 || !this.field4613) {
 			return false;
 		} else if (this.field4606.field4481 < 101) {
@@ -608,7 +607,7 @@ public class class428 {
 	}
 
 	@ObfuscatedName("od.q(Lok;)Z")
-	public final boolean method7603(class429 arg0) {
+	public final boolean method7603(EntityBounds arg0) {
 		return arg0 == null ? false : this.method7604(arg0.field4639, arg0.field4637, arg0.field4634, arg0.field4636 - arg0.field4639, arg0.field4633 - arg0.field4637, arg0.field4640 - arg0.field4634);
 	}
 

@@ -53,7 +53,7 @@ public class class915 extends class776 {
 	@ObfuscatedName("ahu.e")
 	public class79 field10172;
 
-	public class915(class682 arg0) {
+	public class915(GlToolkit arg0) {
 		super(arg0);
 	}
 

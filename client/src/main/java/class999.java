@@ -19,7 +19,7 @@ public class class999 extends class30 {
 	@ObfuscatedName("alk.n")
 	public final byte[] field10581;
 
-	public class999(class683 arg0, int arg1, int arg2) {
+	public class999(GpuToolkit arg0, int arg1, int arg2) {
 		this.field10581 = new byte[arg1 * arg2];
 	}
 

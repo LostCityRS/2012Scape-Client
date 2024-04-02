@@ -53,7 +53,7 @@ public class class366 {
 	public int field3942;
 
 	@ObfuscatedName("mq.v")
-	public class13 field3943;
+	public Model field3943;
 
 	@ObfuscatedName("mq.k")
 	public byte[] field3944;
@@ -140,7 +140,7 @@ public class class366 {
 	}
 
 	@ObfuscatedName("mq.l(Lra;III)Z")
-	public boolean method6366(class14 arg0, int arg1, int arg2) {
+	public boolean method6366(RendererToolkit arg0, int arg1, int arg2) {
 		if (this.field3933 != arg1) {
 			this.field3933 = arg1;
 			int var4 = class595.method1962(arg1);
@@ -190,7 +190,7 @@ public class class366 {
 	}
 
 	@ObfuscatedName("mq.f(Lra;B)V")
-	public void method6372(class14 arg0) {
+	public void method6372(RendererToolkit arg0) {
 		try {
 			boolean var2 = Statics.field549.method5631(this.field3942);
 			if (var2) {
@@ -210,12 +210,12 @@ public class class366 {
 	}
 
 	@ObfuscatedName("mq.d(Lra;IIIIIIIIIB)V")
-	public void method6368(class14 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9) {
+	public void method6368(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9) {
 		this.method6369(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, 0, arg9, true, false);
 	}
 
 	@ObfuscatedName("mq.z(Lra;IIIIIIIIIZZB)V")
-	public void method6369(class14 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, boolean arg10, boolean arg11) {
+	public void method6369(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, boolean arg10, boolean arg11) {
 		int var13 = 0;
 		if (this.field3945) {
 			var13 = this.field3947;
@@ -236,7 +236,7 @@ public class class366 {
 	}
 
 	@ObfuscatedName("mq.n(Lra;IIIIIIIIIZZIB)V")
-	public void method6370(class14 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, boolean arg10, boolean arg11, int arg12) {
+	public void method6370(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, boolean arg10, boolean arg11, int arg12) {
 		int var14 = 255 - arg12;
 		arg0.method510();
 		if (this.field3943 == null) {
@@ -290,8 +290,8 @@ public class class366 {
 				}
 			}
 		} else if (arg11) {
-			class320 var23 = arg0.method528();
-			class320 var24 = arg0.method528();
+			Matrix4x4 var23 = arg0.method528();
+			Matrix4x4 var24 = arg0.method528();
 			var23.field3480[2] = var23.field3480[3];
 			var23.field3480[6] = var23.field3480[7];
 			var23.field3480[10] = var23.field3480[11];
@@ -313,15 +313,15 @@ public class class366 {
 	}
 
 	@ObfuscatedName("mq.o(Lra;IIIII)V")
-	public void method6375(class14 arg0, int arg1, int arg2, int arg3, int arg4) {
-		class314 var6 = arg0.method525();
-		class314 var7 = new class314();
+	public void method6375(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4) {
+		Matrix4x3 var6 = arg0.method525();
+		Matrix4x3 var7 = new Matrix4x3();
 		var7.method5114(0.0F, 0.0F, 0.0F);
-		var7.method5178(0.0F, -1.0F, 0.0F, class312.method5096(-arg2 & 0x3FFF));
-		var7.method5178(-1.0F, 0.0F, 0.0F, class312.method5096(-arg1 & 0x3FFF));
-		var7.method5178(0.0F, 0.0F, -1.0F, class312.method5096(-arg3 & 0x3FFF));
+		var7.method5178(0.0F, -1.0F, 0.0F, Trig1.method5096(-arg2 & 0x3FFF));
+		var7.method5178(-1.0F, 0.0F, 0.0F, Trig1.method5096(-arg1 & 0x3FFF));
+		var7.method5178(0.0F, 0.0F, -1.0F, Trig1.method5096(-arg3 & 0x3FFF));
 		arg0.method524(var7);
-		class314 var8 = new class314();
+		Matrix4x3 var8 = new Matrix4x3();
 		if (this.field3939 != arg4) {
 			this.field3943.method288((byte) arg4, this.field3944);
 			this.field3939 = arg4;

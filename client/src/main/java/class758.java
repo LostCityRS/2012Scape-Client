@@ -23,7 +23,7 @@ public class class758 extends class337 {
 	@ObfuscatedName("abs.t(I)Z")
 	public boolean method5742() {
 		if (this.field8882 != null) {
-			long var1 = class153.method5554();
+			long var1 = MonotonicTime.method5554();
 			int var3 = (int) (var1 - this.field3599);
 			this.field3599 = var1;
 			if (var3 > 200) {
@@ -107,7 +107,7 @@ public class class758 extends class337 {
 							}
 							int var22 = var16 == 0 ? 5 : 9;
 							this.field3592 = var21;
-							this.field3592.field10599 = new class814(var15 + var22 + this.field3592.field10598);
+							this.field3592.field10599 = new Packet(var15 + var22 + this.field3592.field10598);
 							this.field3592.field10599.method15308(var16);
 							this.field3592.field10599.method15223(var15);
 							this.field3592.field10600 = 10;
@@ -198,7 +198,7 @@ public class class758 extends class337 {
 							}
 						}
 						this.field3598 = 0;
-						this.field3599 = class153.method5554();
+						this.field3599 = MonotonicTime.method5554();
 						return;
 					}
 					this.field3605.method11728(var5);

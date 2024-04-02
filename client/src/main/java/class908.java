@@ -20,19 +20,19 @@ public class class908 extends class736 {
 	public class918 field10109;
 
 	@ObfuscatedName("ahw.at")
-	public final class320 field10107 = new class320();
+	public final Matrix4x4 field10107 = new Matrix4x4();
 
 	@ObfuscatedName("ahw.ax")
 	public class918 field10110;
 
 	@ObfuscatedName("ahw.aw")
-	public final class320 field10112 = new class320();
+	public final Matrix4x4 field10112 = new Matrix4x4();
 
 	@ObfuscatedName("ahw.aa")
 	public class918 field10113;
 
 	@ObfuscatedName("ahw.am")
-	public final class317 field10114 = new class317();
+	public final Vector3 field10114 = new Vector3();
 
 	@ObfuscatedName("ahw.ad")
 	public int field10115;
@@ -65,7 +65,7 @@ public class class908 extends class736 {
 	public class918 field10124;
 
 	@ObfuscatedName("ahw.ab")
-	public final class317 field10125 = new class317();
+	public final Vector3 field10125 = new Vector3();
 
 	@ObfuscatedName("ahw.bq")
 	public class918 field10126;
@@ -77,7 +77,7 @@ public class class908 extends class736 {
 	public class918 field10128;
 
 	@ObfuscatedName("ahw.bj")
-	public final class317 field10129 = new class317();
+	public final Vector3 field10129 = new Vector3();
 
 	@ObfuscatedName("ahw.bf")
 	public int field10132;
@@ -100,9 +100,9 @@ public class class908 extends class736 {
 	@ObfuscatedName("ahw.bn")
 	public class168 field10136;
 
-	public class908(class683 arg0, class221 arg1, boolean arg2) throws class883 {
+	public class908(GpuToolkit arg0, class221 arg1, boolean arg2) throws ShaderException {
 		super(arg0);
-		new class320();
+		new Matrix4x4();
 		this.field10106 = arg1;
 		this.field10105 = arg2;
 		if (arg0.method13487() && arg0.method13488()) {
@@ -113,7 +113,7 @@ public class class908 extends class736 {
 	}
 
 	@ObfuscatedName("ahw.e()Z")
-	public boolean method14135() throws class883 {
+	public boolean method14135() throws ShaderException {
 		if (!this.field10106.method4127()) {
 			return false;
 		}
@@ -140,8 +140,8 @@ public class class908 extends class736 {
 	}
 
 	@ObfuscatedName("ahw.af(Lka;)V")
-	public void method14151(class320 arg0) {
-		class320 var2 = new class320();
+	public void method14151(Matrix4x4 arg0) {
+		Matrix4x4 var2 = new Matrix4x4();
 		var2.method5435(this.field10127, this.field10127, 1.0F, 1.0F);
 		var2.method5383(arg0, var2);
 		super.method14151(var2);

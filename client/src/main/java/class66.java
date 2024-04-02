@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class66 {
 
 	@ObfuscatedName("ak.u")
-	public class681 field882;
+	public PureJavaToolkit field882;
 
 	@ObfuscatedName("ak.j")
 	public Runnable field897;
@@ -38,22 +38,22 @@ public class class66 {
 	public boolean field874 = true;
 
 	@ObfuscatedName("ak.o")
-	public class320 field875 = new class320();
+	public Matrix4x4 field875 = new Matrix4x4();
 
 	@ObfuscatedName("ak.q")
-	public class314 field877 = new class314();
+	public Matrix4x3 field877 = new Matrix4x3();
 
 	@ObfuscatedName("ak.p")
 	public class77 field868;
 
 	@ObfuscatedName("ak.w")
-	public class314 field878 = new class314();
+	public Matrix4x3 field878 = new Matrix4x3();
 
 	@ObfuscatedName("ak.b")
-	public class320 field879 = new class320();
+	public Matrix4x4 field879 = new Matrix4x4();
 
 	@ObfuscatedName("ak.x")
-	public class320 field880 = new class320();
+	public Matrix4x4 field880 = new Matrix4x4();
 
 	@ObfuscatedName("ak.i")
 	public int[] field881 = new int[class676.field7823];
@@ -139,7 +139,7 @@ public class class66 {
 	@ObfuscatedName("ak.aj")
 	public float[] field908 = new float[3];
 
-	public class66(class681 arg0) {
+	public class66(PureJavaToolkit arg0) {
 		this.field882 = arg0;
 		this.field868 = new class77(arg0, this);
 		for (int var2 = 0; var2 < 7; var2++) {

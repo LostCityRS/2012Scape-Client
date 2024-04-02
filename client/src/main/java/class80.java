@@ -5,10 +5,10 @@ import deob.ObfuscatedName;
 public class class80 {
 
 	@ObfuscatedName("bt.a")
-	public final class682 field1031;
+	public final GlToolkit field1031;
 
 	@ObfuscatedName("bt.s")
-	public final class100 field1032;
+	public final GlFloorModelRelated2 field1032;
 
 	@ObfuscatedName("bt.c")
 	public final int field1035;
@@ -34,7 +34,7 @@ public class class80 {
 	@ObfuscatedName("bt.n")
 	public class640 field1029;
 
-	public class80(class682 arg0, class100 arg1, class672 arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
+	public class80(GlToolkit arg0, GlFloorModelRelated2 arg1, GlFloorModel arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
 		this.field1031 = arg0;
 		this.field1032 = arg1;
 		this.field1035 = arg6;
@@ -54,7 +54,7 @@ public class class80 {
 		}
 		this.field1037 = var10;
 		if (var10 > 0) {
-			class814 var17 = new class814(var10 * 2);
+			Packet var17 = new Packet(var10 * 2);
 			if (this.field1031.field8149) {
 				for (int var18 = 0; var18 < var9; var18++) {
 					int var19 = arg2.field387 * (var12 + var18) + var11;

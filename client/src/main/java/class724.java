@@ -11,7 +11,7 @@ public class class724 extends class201 {
 	public class918 field8690;
 
 	@ObfuscatedName("aaf.t")
-	public final class320 field8693 = new class320();
+	public final Matrix4x4 field8693 = new Matrix4x4();
 
 	@ObfuscatedName("aaf.l")
 	public class918 field8689;
@@ -22,13 +22,13 @@ public class class724 extends class201 {
 	@ObfuscatedName("aaf.d")
 	public class918 field8694;
 
-	public class724(class683 arg0) throws class883 {
+	public class724(GpuToolkit arg0) throws ShaderException {
 		super(arg0);
 		this.method14058();
 	}
 
 	@ObfuscatedName("aaf.d(I)Z")
-	public boolean method14058() throws class883 {
+	public boolean method14058() throws ShaderException {
 		this.field8691 = this.field2274.method13490("Particle");
 		this.field8689 = this.field8691.method3357("WVPMatrix");
 		this.field8690 = this.field8691.method3357("DiffuseSampler");
@@ -39,7 +39,7 @@ public class class724 extends class201 {
 	}
 
 	@ObfuscatedName("aaf.u(Lka;)V")
-	public void method3875(class320 arg0) {
+	public void method3875(Matrix4x4 arg0) {
 		this.field8693.method5412(arg0);
 		this.field8693.method5384(this.field2274.field8279);
 	}

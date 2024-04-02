@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public class class1003 extends class949 {
 
 	@ObfuscatedName("alp.d")
-	public class814 field10599;
+	public Packet field10599;
 
 	@ObfuscatedName("alp.z")
 	public int field10600;

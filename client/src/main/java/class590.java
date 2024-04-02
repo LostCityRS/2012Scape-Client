@@ -14,7 +14,7 @@ import java.lang.reflect.Method;
 public class class590 {
 
 	@ObfuscatedName("vo.u")
-	public static class547 field7044 = new class547();
+	public static IterableQueue field7044 = new IterableQueue();
 
 	public class590() throws Throwable {
 		throw new Error();
@@ -22,7 +22,7 @@ public class class590 {
 
 	@ObfuscatedName("ux.u(I)V")
 	public static void method11905() {
-		field7044 = new class547();
+		field7044 = new IterableQueue();
 	}
 
 	@ObfuscatedName("eb.j(I)Z")
@@ -32,7 +32,7 @@ public class class590 {
 	}
 
 	@ObfuscatedName("kw.a(Lajl;I)V")
-	public static void method5552(class964 arg0) {
+	public static void method5552(PacketBit arg0) {
 		class819 var1 = (class819) field7044.method11563();
 		if (var1 == null) {
 			return;
@@ -118,7 +118,7 @@ public class class590 {
 	}
 
 	@ObfuscatedName("dc.s(Laet;II)V")
-	public static void method2794(class814 arg0, int arg1) {
+	public static void method2794(Packet arg0, int arg1) {
 		class819 var2 = new class819();
 		var2.field9741 = arg0.method15220();
 		var2.field9740 = arg0.method15379();

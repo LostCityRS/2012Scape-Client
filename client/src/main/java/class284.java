@@ -63,12 +63,12 @@ public class class284 {
 
 	@ObfuscatedName("jj.j([Ljava/lang/Object;B)Ljava/lang/Object;")
 	public Object method4758(Object[] arg0) throws Throwable {
-		return class582.method12168(Statics.field6387, this.method4757(), arg0);
+		return BrowserControl.method12168(Statics.field6387, this.method4757(), arg0);
 	}
 
 	@ObfuscatedName("jj.a(I)Ljava/lang/Object;")
 	public Object method4759() throws Throwable {
-		return class582.method12167(Statics.field6387, this.method4757());
+		return BrowserControl.method12167(Statics.field6387, this.method4757());
 	}
 
 	@ObfuscatedName("jj.s([Ljava/lang/Object;B)V")

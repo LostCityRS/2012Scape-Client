@@ -18,7 +18,7 @@ public class class461 {
 
 	@ObfuscatedName("lr.j([BI)Z")
 	public static boolean method6034(byte[] arg0) {
-		class814 var1 = new class814(arg0);
+		Packet var1 = new Packet(arg0);
 		int var2 = var1.method15220();
 		if (var2 != 2) {
 			return false;
@@ -32,7 +32,7 @@ public class class461 {
 	}
 
 	@ObfuscatedName("ge.a(Laet;I)V")
-	public static void method3980(class814 arg0) {
+	public static void method3980(Packet arg0) {
 		int var1 = arg0.method15277();
 		Statics.field4869 = new class459[var1];
 		for (int var2 = 0; var2 < var1; var2++) {
@@ -58,7 +58,7 @@ public class class461 {
 	}
 
 	@ObfuscatedName("ai.s(Laet;I)V")
-	public static void method1768(class814 arg0) {
+	public static void method1768(Packet arg0) {
 		for (int var1 = 0; var1 < Statics.field4876; var1++) {
 			int var2 = arg0.method15277();
 			int var3 = arg0.method15239();

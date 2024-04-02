@@ -55,7 +55,7 @@ public class class742 extends class231 {
 	@ObfuscatedName("abr.v")
 	public boolean field8791;
 
-	public class742(class683 arg0) {
+	public class742(GpuToolkit arg0) {
 		super(arg0);
 	}
 
@@ -91,9 +91,9 @@ public class class742 extends class231 {
 			this.field8796 = this.field8793.method3330("blur");
 			this.field8797 = this.field8793.method3330("composite");
 			this.field8798 = this.field8793.method3330("techDefault");
-		} catch (class984 var3) {
+		} catch (UniformNotFoundException var3) {
 			return false;
-		} catch (class985 var4) {
+		} catch (ProgramNotFoundException var4) {
 			return false;
 		}
 		if (!this.field8794.method3272()) {

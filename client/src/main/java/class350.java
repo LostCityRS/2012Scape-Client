@@ -11,13 +11,13 @@ public class class350 {
 	}
 
 	@ObfuscatedName("lz.u(Ljava/awt/Canvas;Lma;Lls;I)Lra;")
-	public static class14 method6008(Canvas arg0, class16 arg1, class334 arg2, int arg3) {
+	public static RendererToolkit method6008(Canvas arg0, class16 arg1, class334 arg2, int arg3) {
 		try {
-			boolean var4 = class683.method13494();
+			boolean var4 = GpuToolkit.method13494();
 			if (!var4) {
 				throw new RuntimeException("");
-			} else if (class618.method11710().method6800("jaggl")) {
-				class14.method16838(arg0);
+			} else if (NativeLibraries.method11710().method6800("jaggl")) {
+				RendererToolkit.method16838(arg0);
 				OpenGL var5 = new OpenGL();
 				long var6 = var5.init(arg0, 8, 8, 8, 24, 0, arg3);
 				if (var6 == 0L) {

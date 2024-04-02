@@ -10,7 +10,7 @@ public class class151 {
 	@ObfuscatedName("dq.s")
 	public final int[] field1570;
 
-	public class151(class814 arg0) {
+	public class151(Packet arg0) {
 		int var2 = arg0.method15277();
 		this.field1569 = new int[var2];
 		this.field1570 = new int[var2];
@@ -27,7 +27,7 @@ public class class151 {
 	public void method2891(class149 arg0, int arg1) {
 		int var3 = this.field1570[0];
 		arg0.method2853(arg1, var3 >>> 16, var3 & 0xFFFF);
-		class719 var4 = arg0.method2854();
+		PathingEntity var4 = arg0.method2854();
 		var4.field8628 = 0;
 		for (int var5 = this.field1569.length - 1; var5 >= 0; var5--) {
 			int var6 = this.field1569[var5];

@@ -80,7 +80,7 @@ public class class381 {
 	}
 
 	@ObfuscatedName("ng.c(Laet;Lmt;)V")
-	public final void method6623(class814 arg0, class371 arg1) {
+	public final void method6623(Packet arg0, class371 arg1) {
 		int var3 = arg0.method15220();
 		this.field4097[0] = var3 >> 4;
 		this.field4097[1] = var3 & 0xF;

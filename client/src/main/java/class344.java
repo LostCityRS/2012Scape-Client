@@ -10,10 +10,10 @@ public final class class344 {
 	public final Map field3717;
 
 	@ObfuscatedName("lc.j")
-	public final class978 field3718;
+	public final SortedQueue field3718;
 
 	@ObfuscatedName("lc.a")
-	public final class978 field3719;
+	public final SortedQueue field3719;
 
 	@ObfuscatedName("lc.s")
 	public final long field3720;
@@ -34,14 +34,14 @@ public final class class344 {
 		this.field3721 = arg2;
 		if (this.field3722 == -1) {
 			this.field3717 = new HashMap(64);
-			this.field3718 = new class978(64);
+			this.field3718 = new SortedQueue(64);
 			this.field3719 = null;
 		} else if (this.field3721 == null) {
 			throw new IllegalArgumentException("");
 		} else {
 			this.field3717 = new HashMap(this.field3722);
-			this.field3718 = new class978(this.field3722);
-			this.field3719 = new class978(this.field3722);
+			this.field3718 = new SortedQueue(this.field3722);
+			this.field3719 = new SortedQueue(this.field3722);
 		}
 	}
 

@@ -2,10 +2,10 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("adb")
-public class class811 extends class399 {
+public class class811 extends Node {
 
 	@ObfuscatedName("adb.s")
-	public final class119 field9600;
+	public final ModelParticleEffector field9600;
 
 	@ObfuscatedName("adb.c")
 	public final class274 field9602;
@@ -28,7 +28,7 @@ public class class811 extends class399 {
 	@ObfuscatedName("adb.z")
 	public static float[] field9606 = new float[3];
 
-	public class811(class119 arg0, class467 arg1) {
+	public class811(ModelParticleEffector arg0, ParticleSystem arg1) {
 		this.field9600 = arg0;
 		this.field9602 = this.field9600.method2534();
 		this.method15214();

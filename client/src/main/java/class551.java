@@ -9,10 +9,10 @@ public class class551 implements Iterator {
 	public class552 field6661;
 
 	@ObfuscatedName("tp.j")
-	public class800 field6660;
+	public SecondaryNode field6660;
 
 	@ObfuscatedName("tp.a")
-	public class800 field6659 = null;
+	public SecondaryNode field6659 = null;
 
 	public class551(class552 arg0) {
 		this.field6661 = arg0;
@@ -27,13 +27,13 @@ public class class551 implements Iterator {
 	}
 
 	@ObfuscatedName("tp.d(I)Ladi;")
-	public class800 method11715() {
+	public SecondaryNode method11715() {
 		this.method11713();
-		return (class800) this.next();
+		return (SecondaryNode) this.next();
 	}
 
 	public Object next() {
-		class800 var1 = this.field6660;
+		SecondaryNode var1 = this.field6660;
 		if (this.field6661.field6662 == var1) {
 			var1 = null;
 			this.field6660 = null;

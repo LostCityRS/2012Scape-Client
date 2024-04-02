@@ -4,10 +4,10 @@ import java.nio.ByteBuffer;
 import sun.misc.Unsafe;
 
 @ObfuscatedName("yg")
-public class class678 extends class13 {
+public class class678 extends Model {
 
 	@ObfuscatedName("yg.c")
-	public final class683 field7925;
+	public final GpuToolkit field7925;
 
 	@ObfuscatedName("yg.m")
 	public int field7923;
@@ -172,10 +172,10 @@ public class class678 extends class13 {
 	public short[] field7979;
 
 	@ObfuscatedName("yg.bl")
-	public class134[] field7985;
+	public ModelParticleEmitter[] field7985;
 
 	@ObfuscatedName("yg.bk")
-	public class119[] field7981;
+	public ModelParticleEffector[] field7981;
 
 	@ObfuscatedName("yg.bs")
 	public int field7938;
@@ -222,7 +222,7 @@ public class class678 extends class13 {
 	@ObfuscatedName("yg.bh")
 	public boolean field7996;
 
-	public class678(class683 arg0, int arg1, int arg2, boolean arg3, boolean arg4) {
+	public class678(GpuToolkit arg0, int arg1, int arg2, boolean arg3, boolean arg4) {
 		this.field7930 = 0;
 		this.field7959 = 0;
 		this.field7937 = 0;
@@ -266,7 +266,7 @@ public class class678 extends class13 {
 		}
 	}
 
-	public class678(class683 arg0, class129 arg1, int arg2, int arg3, int arg4, int arg5) {
+	public class678(GpuToolkit arg0, class129 arg1, int arg2, int arg3, int arg4, int arg5) {
 		this(arg0, arg2, arg5, true, false);
 		class16 var7 = arg0.field400;
 		int[] var8 = new int[arg1.field1342];
@@ -895,7 +895,7 @@ public class class678 extends class13 {
 	}
 
 	@ObfuscatedName("yg.q(BIZ)Lqa;")
-	public class13 method295(byte arg0, int arg1, boolean arg2) {
+	public Model method295(byte arg0, int arg1, boolean arg2) {
 		boolean var4 = false;
 		class678 var5;
 		class678 var6;
@@ -910,7 +910,7 @@ public class class678 extends class13 {
 	}
 
 	@ObfuscatedName("yg.gp(Lyg;Lyg;IZZ)Lqa;")
-	public class13 method13121(class678 arg0, class678 arg1, int arg2, boolean arg3, boolean arg4) {
+	public Model method13121(class678 arg0, class678 arg1, int arg2, boolean arg3, boolean arg4) {
 		arg0.field7923 = arg2;
 		arg0.field7952 = this.field7952;
 		arg0.field7928 = this.field7928;
@@ -1364,8 +1364,8 @@ public class class678 extends class13 {
 
 	@ObfuscatedName("yg.f(I)V")
 	public void method246(int arg0) {
-		int var2 = class312.field3439[arg0];
-		int var3 = class312.field3447[arg0];
+		int var2 = Trig1.field3439[arg0];
+		int var3 = Trig1.field3447[arg0];
 		for (int var4 = 0; var4 < this.field7959; var4++) {
 			int var5 = this.field7934[var4] * var2 + this.field7932[var4] * var3 >> 14;
 			this.field7934[var4] = this.field7934[var4] * var3 - this.field7932[var4] * var2 >> 14;
@@ -1377,8 +1377,8 @@ public class class678 extends class13 {
 
 	@ObfuscatedName("yg.S(I)V")
 	public void method249(int arg0) {
-		int var2 = class312.field3439[arg0];
-		int var3 = class312.field3447[arg0];
+		int var2 = Trig1.field3439[arg0];
+		int var3 = Trig1.field3447[arg0];
 		for (int var4 = 0; var4 < this.field7959; var4++) {
 			int var5 = this.field7934[var4] * var2 + this.field7932[var4] * var3 >> 14;
 			this.field7934[var4] = this.field7934[var4] * var3 - this.field7932[var4] * var2 >> 14;
@@ -1396,8 +1396,8 @@ public class class678 extends class13 {
 
 	@ObfuscatedName("yg.t(I)V")
 	public void method397(int arg0) {
-		int var2 = class312.field3439[arg0];
-		int var3 = class312.field3447[arg0];
+		int var2 = Trig1.field3439[arg0];
+		int var3 = Trig1.field3447[arg0];
 		for (int var4 = 0; var4 < this.field7959; var4++) {
 			int var5 = this.field7931[var4] * var3 - this.field7934[var4] * var2 >> 14;
 			this.field7934[var4] = this.field7934[var4] * var3 + this.field7931[var4] * var2 >> 14;
@@ -1409,8 +1409,8 @@ public class class678 extends class13 {
 
 	@ObfuscatedName("yg.EA(I)V")
 	public void method284(int arg0) {
-		int var2 = class312.field3439[arg0];
-		int var3 = class312.field3447[arg0];
+		int var2 = Trig1.field3439[arg0];
+		int var3 = Trig1.field3447[arg0];
 		for (int var4 = 0; var4 < this.field7959; var4++) {
 			int var5 = this.field7932[var4] * var3 + this.field7931[var4] * var2 >> 14;
 			this.field7931[var4] = this.field7931[var4] * var3 - this.field7932[var4] * var2 >> 14;
@@ -1474,7 +1474,7 @@ public class class678 extends class13 {
 	}
 
 	@ObfuscatedName("yg.pa(IILxa;Lxa;III)V")
-	public void method255(int arg0, int arg1, class12 arg2, class12 arg3, int arg4, int arg5, int arg6) {
+	public void method255(int arg0, int arg1, FloorModel arg2, FloorModel arg3, int arg4, int arg5, int arg6) {
 		if (!this.field7968) {
 			this.method13128();
 		}
@@ -1662,7 +1662,7 @@ public class class678 extends class13 {
 	}
 
 	@ObfuscatedName("yg.ad(Lqa;IIIZ)V")
-	public void method297(class13 arg0, int arg1, int arg2, int arg3, boolean arg4) {
+	public void method297(Model arg0, int arg1, int arg2, int arg3, boolean arg4) {
 		class678 var6 = (class678) arg0;
 		if (this.field7947 * -1431655765 == 0 || var6.field7947 * -1431655765 == 0) {
 			return;
@@ -2055,22 +2055,22 @@ public class class678 extends class13 {
 								this.field7931[var94] -= this.field7926;
 								this.field7934[var94] -= this.field7995;
 								if (arg4 != 0) {
-									int var95 = class312.field3439[arg4];
-									int var96 = class312.field3447[arg4];
+									int var95 = Trig1.field3439[arg4];
+									int var96 = Trig1.field3447[arg4];
 									int var97 = this.field7932[var94] * var96 + this.field7931[var94] * var95 + 16383 >> 14;
 									this.field7931[var94] = this.field7931[var94] * var96 - this.field7932[var94] * var95 + 16383 >> 14;
 									this.field7932[var94] = var97;
 								}
 								if (arg2 != 0) {
-									int var98 = class312.field3439[arg2];
-									int var99 = class312.field3447[arg2];
+									int var98 = Trig1.field3439[arg2];
+									int var99 = Trig1.field3447[arg2];
 									int var100 = this.field7931[var94] * var99 - this.field7934[var94] * var98 + 16383 >> 14;
 									this.field7934[var94] = this.field7934[var94] * var99 + this.field7931[var94] * var98 + 16383 >> 14;
 									this.field7931[var94] = var100;
 								}
 								if (arg3 != 0) {
-									int var101 = class312.field3439[arg3];
-									int var102 = class312.field3447[arg3];
+									int var101 = Trig1.field3439[arg3];
+									int var102 = Trig1.field3447[arg3];
 									int var103 = this.field7934[var94] * var101 + this.field7932[var94] * var102 + 16383 >> 14;
 									this.field7934[var94] = this.field7934[var94] * var102 - this.field7932[var94] * var101 + 16383 >> 14;
 									this.field7932[var94] = var103;
@@ -2098,22 +2098,22 @@ public class class678 extends class13 {
 											break;
 										}
 										if (arg4 != 0) {
-											int var113 = class312.field3439[arg4];
-											int var114 = class312.field3447[arg4];
+											int var113 = Trig1.field3439[arg4];
+											int var114 = Trig1.field3447[arg4];
 											int var115 = this.field7960[var112] * var113 + this.field7924[var112] * var114 + 16383 >> 14;
 											this.field7960[var112] = (short) (this.field7960[var112] * var114 - this.field7924[var112] * var113 + 16383 >> 14);
 											this.field7924[var112] = (short) var115;
 										}
 										if (arg2 != 0) {
-											int var116 = class312.field3439[arg2];
-											int var117 = class312.field3447[arg2];
+											int var116 = Trig1.field3439[arg2];
+											int var117 = Trig1.field3447[arg2];
 											int var118 = this.field7960[var112] * var117 - this.field7942[var112] * var116 + 16383 >> 14;
 											this.field7942[var112] = (short) (this.field7960[var112] * var116 + this.field7942[var112] * var117 + 16383 >> 14);
 											this.field7960[var112] = (short) var118;
 										}
 										if (arg3 != 0) {
-											int var119 = class312.field3439[arg3];
-											int var120 = class312.field3447[arg3];
+											int var119 = Trig1.field3439[arg3];
+											int var120 = Trig1.field3447[arg3];
 											int var121 = this.field7942[var112] * var119 + this.field7924[var112] * var120 + 16383 >> 14;
 											this.field7942[var112] = (short) (this.field7942[var112] * var120 - this.field7924[var112] * var119 + 16383 >> 14);
 											this.field7924[var112] = (short) var121;
@@ -2145,12 +2145,12 @@ public class class678 extends class13 {
 					this.field7996 = false;
 				}
 				int[] var42 = new int[9];
-				int var43 = class312.field3447[arg2];
-				int var44 = class312.field3439[arg2];
-				int var45 = class312.field3447[arg3];
-				int var46 = class312.field3439[arg3];
-				int var47 = class312.field3447[arg4];
-				int var48 = class312.field3439[arg4];
+				int var43 = Trig1.field3447[arg2];
+				int var44 = Trig1.field3439[arg2];
+				int var45 = Trig1.field3447[arg3];
+				int var46 = Trig1.field3439[arg3];
+				int var47 = Trig1.field3447[arg4];
+				int var48 = Trig1.field3439[arg4];
 				int var49 = var44 * var47 + 8192 >> 14;
 				int var50 = var44 * var48 + 8192 >> 14;
 				var42[0] = var45 * var47 + var46 * var50 + 8192 >> 14;
@@ -2468,22 +2468,22 @@ public class class678 extends class13 {
 				this.field7931[var8] -= this.field7926;
 				this.field7934[var8] -= this.field7995;
 				if (arg3 != 0) {
-					int var9 = class312.field3439[arg3];
-					int var10 = class312.field3447[arg3];
+					int var9 = Trig1.field3439[arg3];
+					int var10 = Trig1.field3447[arg3];
 					int var11 = this.field7932[var8] * var10 + this.field7931[var8] * var9 + 16383 >> 14;
 					this.field7931[var8] = this.field7931[var8] * var10 - this.field7932[var8] * var9 + 16383 >> 14;
 					this.field7932[var8] = var11;
 				}
 				if (arg1 != 0) {
-					int var12 = class312.field3439[arg1];
-					int var13 = class312.field3447[arg1];
+					int var12 = Trig1.field3439[arg1];
+					int var13 = Trig1.field3447[arg1];
 					int var14 = this.field7931[var8] * var13 - this.field7934[var8] * var12 + 16383 >> 14;
 					this.field7934[var8] = this.field7934[var8] * var13 + this.field7931[var8] * var12 + 16383 >> 14;
 					this.field7931[var8] = var14;
 				}
 				if (arg2 != 0) {
-					int var15 = class312.field3439[arg2];
-					int var16 = class312.field3447[arg2];
+					int var15 = Trig1.field3439[arg2];
+					int var16 = Trig1.field3447[arg2];
 					int var17 = this.field7934[var8] * var15 + this.field7932[var8] * var16 + 16383 >> 14;
 					this.field7934[var8] = this.field7934[var8] * var16 - this.field7932[var8] * var15 + 16383 >> 14;
 					this.field7932[var8] = var17;
@@ -2632,22 +2632,22 @@ public class class678 extends class13 {
 							this.field7931[var30] -= this.field7926;
 							this.field7934[var30] -= this.field7995;
 							if (arg4 != 0) {
-								int var31 = class312.field3439[arg4];
-								int var32 = class312.field3447[arg4];
+								int var31 = Trig1.field3439[arg4];
+								int var32 = Trig1.field3447[arg4];
 								int var33 = this.field7932[var30] * var32 + this.field7931[var30] * var31 + 16383 >> 14;
 								this.field7931[var30] = this.field7931[var30] * var32 - this.field7932[var30] * var31 + 16383 >> 14;
 								this.field7932[var30] = var33;
 							}
 							if (arg2 != 0) {
-								int var34 = class312.field3439[arg2];
-								int var35 = class312.field3447[arg2];
+								int var34 = Trig1.field3439[arg2];
+								int var35 = Trig1.field3447[arg2];
 								int var36 = this.field7931[var30] * var35 - this.field7934[var30] * var34 + 16383 >> 14;
 								this.field7934[var30] = this.field7934[var30] * var35 + this.field7931[var30] * var34 + 16383 >> 14;
 								this.field7931[var30] = var36;
 							}
 							if (arg3 != 0) {
-								int var37 = class312.field3439[arg3];
-								int var38 = class312.field3447[arg3];
+								int var37 = Trig1.field3439[arg3];
+								int var38 = Trig1.field3447[arg3];
 								int var39 = this.field7934[var30] * var37 + this.field7932[var30] * var38 + 16383 >> 14;
 								this.field7934[var30] = this.field7934[var30] * var38 - this.field7932[var30] * var37 + 16383 >> 14;
 								this.field7932[var30] = var39;
@@ -2663,22 +2663,22 @@ public class class678 extends class13 {
 							this.field7931[var41] -= this.field7926;
 							this.field7934[var41] -= this.field7995;
 							if (arg2 != 0) {
-								int var42 = class312.field3439[arg2];
-								int var43 = class312.field3447[arg2];
+								int var42 = Trig1.field3439[arg2];
+								int var43 = Trig1.field3447[arg2];
 								int var44 = this.field7931[var41] * var43 - this.field7934[var41] * var42 + 16383 >> 14;
 								this.field7934[var41] = this.field7934[var41] * var43 + this.field7931[var41] * var42 + 16383 >> 14;
 								this.field7931[var41] = var44;
 							}
 							if (arg4 != 0) {
-								int var45 = class312.field3439[arg4];
-								int var46 = class312.field3447[arg4];
+								int var45 = Trig1.field3439[arg4];
+								int var46 = Trig1.field3447[arg4];
 								int var47 = this.field7932[var41] * var46 + this.field7931[var41] * var45 + 16383 >> 14;
 								this.field7931[var41] = this.field7931[var41] * var46 - this.field7932[var41] * var45 + 16383 >> 14;
 								this.field7932[var41] = var47;
 							}
 							if (arg3 != 0) {
-								int var48 = class312.field3439[arg3];
-								int var49 = class312.field3447[arg3];
+								int var48 = Trig1.field3439[arg3];
+								int var49 = Trig1.field3447[arg3];
 								int var50 = this.field7934[var41] * var48 + this.field7932[var41] * var49 + 16383 >> 14;
 								this.field7934[var41] = this.field7934[var41] * var49 - this.field7932[var41] * var48 + 16383 >> 14;
 								this.field7932[var41] = var50;
@@ -2705,22 +2705,22 @@ public class class678 extends class13 {
 									break;
 								}
 								if (arg4 != 0) {
-									int var60 = class312.field3439[arg4];
-									int var61 = class312.field3447[arg4];
+									int var60 = Trig1.field3439[arg4];
+									int var61 = Trig1.field3447[arg4];
 									int var62 = this.field7960[var59] * var60 + this.field7924[var59] * var61 + 16383 >> 14;
 									this.field7960[var59] = (short) (this.field7960[var59] * var61 - this.field7924[var59] * var60 + 16383 >> 14);
 									this.field7924[var59] = (short) var62;
 								}
 								if (arg2 != 0) {
-									int var63 = class312.field3439[arg2];
-									int var64 = class312.field3447[arg2];
+									int var63 = Trig1.field3439[arg2];
+									int var64 = Trig1.field3447[arg2];
 									int var65 = this.field7960[var59] * var64 - this.field7942[var59] * var63 + 16383 >> 14;
 									this.field7942[var59] = (short) (this.field7960[var59] * var63 + this.field7942[var59] * var64 + 16383 >> 14);
 									this.field7960[var59] = (short) var65;
 								}
 								if (arg3 != 0) {
-									int var66 = class312.field3439[arg3];
-									int var67 = class312.field3447[arg3];
+									int var66 = Trig1.field3439[arg3];
+									int var67 = Trig1.field3447[arg3];
 									int var68 = this.field7942[var59] * var66 + this.field7924[var59] * var67 + 16383 >> 14;
 									this.field7942[var59] = (short) (this.field7942[var59] * var67 - this.field7924[var59] * var66 + 16383 >> 14);
 									this.field7924[var59] = (short) var68;
@@ -2877,11 +2877,11 @@ public class class678 extends class13 {
 	}
 
 	@ObfuscatedName("yg.ag(Lkc;IZ)V")
-	public void method239(class314 arg0, int arg1, boolean arg2) {
+	public void method239(Matrix4x3 arg0, int arg1, boolean arg2) {
 		if (this.field7978 == null) {
 			return;
 		}
-		class314 var4 = arg0;
+		Matrix4x3 var4 = arg0;
 		if (arg2) {
 			var4 = this.field7925.field8351;
 			var4.method5170(arg0);
@@ -2898,23 +2898,23 @@ public class class678 extends class13 {
 	}
 
 	@ObfuscatedName("yg.am()[Lct;")
-	public class119[] method413() {
+	public ModelParticleEffector[] method413() {
 		return this.field7981;
 	}
 
 	@ObfuscatedName("yg.aw()[Ldx;")
-	public class134[] method276() {
+	public ModelParticleEmitter[] method276() {
 		return this.field7985;
 	}
 
 	@ObfuscatedName("yg.ax(Lkc;)V")
-	public void method294(class314 arg0) {
-		class320 var2 = this.field7925.field8264;
+	public void method294(Matrix4x3 arg0) {
+		Matrix4x4 var2 = this.field7925.field8264;
 		var2.method5385(arg0);
 		if (this.field7985 != null) {
 			for (int var3 = 0; var3 < this.field7985.length; var3++) {
-				class134 var4 = this.field7985[var3];
-				class134 var5 = var4;
+				ModelParticleEmitter var4 = this.field7985[var3];
+				ModelParticleEmitter var5 = var4;
 				if (var4.field1372 != null) {
 					var5 = var4.field1372;
 				}
@@ -2933,13 +2933,13 @@ public class class678 extends class13 {
 			return;
 		}
 		for (int var6 = 0; var6 < this.field7981.length; var6++) {
-			class119 var7 = this.field7981[var6];
-			class119 var8 = var7;
+			ModelParticleEffector var7 = this.field7981[var6];
+			ModelParticleEffector var8 = var7;
 			if (var7.field1238 != null) {
 				var8 = var7.field1238;
 			}
 			if (var7.field1237 == null) {
-				var7.field1237 = new class320(var2);
+				var7.field1237 = new Matrix4x4(var2);
 			} else {
 				var7.field1237.method5412(var2);
 			}
@@ -2950,13 +2950,13 @@ public class class678 extends class13 {
 	}
 
 	@ObfuscatedName("yg.ai(IILkc;ZI)Z")
-	public boolean method272(int arg0, int arg1, class314 arg2, boolean arg3, int arg4) {
+	public boolean method272(int arg0, int arg1, Matrix4x3 arg2, boolean arg3, int arg4) {
 		return this.method13131(arg0, arg1, 0, 0, arg2, arg3, arg4);
 	}
 
 	@ObfuscatedName("yg.ge(IIIILkc;ZI)Z")
-	public boolean method13131(int arg0, int arg1, int arg2, int arg3, class314 arg4, boolean arg5, int arg6) {
-		class320 var8 = this.field7925.field8264;
+	public boolean method13131(int arg0, int arg1, int arg2, int arg3, Matrix4x3 arg4, boolean arg5, int arg6) {
+		Matrix4x4 var8 = this.field7925.field8264;
 		var8.method5385(arg4);
 		var8.method5384(this.field7925.field8318);
 		boolean var9 = false;
@@ -3172,7 +3172,7 @@ public class class678 extends class13 {
 	}
 
 	@ObfuscatedName("yg.as(Lkc;Ldy;I)V")
-	public void method271(class314 arg0, class142 arg1, int arg2) {
+	public void method271(Matrix4x3 arg0, ScreenBoundingBox arg1, int arg2) {
 		if (Statics.field7997 != null) {
 			Statics.field7997.method4273();
 		}
@@ -3182,9 +3182,9 @@ public class class678 extends class13 {
 		if (this.field7937 == 0) {
 			return;
 		}
-		class320 var4 = this.field7925.field8368;
-		class320 var5 = this.field7925.field8264;
-		class320 var6 = this.field7925.field8357;
+		Matrix4x4 var4 = this.field7925.field8368;
+		Matrix4x4 var5 = this.field7925.field8264;
+		Matrix4x4 var6 = this.field7925.field8357;
 		var5.method5385(arg0);
 		var6.method5412(var5);
 		var6.method5384(this.field7925.field8318);
@@ -3276,7 +3276,7 @@ public class class678 extends class13 {
 	}
 
 	@ObfuscatedName("yg.gl(Lkc;)V")
-	public void method13134(class314 arg0) {
+	public void method13134(Matrix4x3 arg0) {
 		if (this.field7948 == 0 || (!this.method13129() || !this.method13135())) {
 			return;
 		}
@@ -3346,7 +3346,7 @@ public class class678 extends class13 {
 		} else {
 			this.field7925.method13587(3, this.field7956.field2536);
 			this.field7925.method13688(this.field7925.field8343);
-			class314 var11 = this.field7925.field8351;
+			Matrix4x3 var11 = this.field7925.field8351;
 			var11.method5115(arg0);
 			var11.method5102();
 			int var12 = 0;
@@ -3360,9 +3360,9 @@ public class class678 extends class13 {
 				var2.field2265.method5373(this.field7925.field8319 * this.field7925.field8316, this.field7925.field8319 * this.field7925.field8317, this.field7925.field8319 * this.field7925.field8237);
 				if (this.field7925.field8323 > 0) {
 					var12 = this.field7925.field8323;
-					class317 var13 = this.field7925.field8266;
+					Vector3 var13 = this.field7925.field8266;
 					for (int var14 = 0; var14 < var12; var14++) {
-						class780 var15 = this.field7925.field8365[var14];
+						Light var15 = this.field7925.field8365[var14];
 						int var16 = var15.method14881();
 						var13.method5334(var15.field9369);
 						var13.method5319(var11);
@@ -3445,12 +3445,12 @@ public class class678 extends class13 {
 	}
 
 	@ObfuscatedName("yg.gb(Lka;)V")
-	public void method13162(class320 arg0) {
+	public void method13162(Matrix4x4 arg0) {
 		if (this.field7983 == null) {
 			return;
 		}
 		this.field7925.method526(!this.field7964);
-		class314 var2 = this.field7925.field8351;
+		Matrix4x3 var2 = this.field7925.field8351;
 		class201 var3 = this.field7925.field8314;
 		for (int var4 = 0; var4 < this.field7938; var4++) {
 			class244 var5 = this.field7983[var4];
@@ -3538,7 +3538,7 @@ public class class678 extends class13 {
 			if (this.field7958.field2537 == null) {
 				this.field7958.field2537 = this.field7925.method13584(this.field7962);
 			}
-			class228 var6 = this.field7958.field2537;
+			VertexBuffer var6 = this.field7958.field2537;
 			var6.method4269(this.field7937 * 12, 12);
 			Unsafe var7 = this.field7925.field8247;
 			if (var7 == null) {
@@ -3571,7 +3571,7 @@ public class class678 extends class13 {
 			if (this.field7927.field2537 == null) {
 				this.field7927.field2537 = this.field7925.method13584(this.field7962);
 			}
-			class228 var19 = this.field7927.field2537;
+			VertexBuffer var19 = this.field7927.field2537;
 			var19.method4269(this.field7937 * 4, 4);
 			Unsafe var20 = this.field7925.field8247;
 			if (var20 == null) {
@@ -3710,7 +3710,7 @@ public class class678 extends class13 {
 			if (this.field7956.field2537 == null) {
 				this.field7956.field2537 = this.field7925.method13584(this.field7962);
 			}
-			class228 var67 = this.field7956.field2537;
+			VertexBuffer var67 = this.field7956.field2537;
 			var67.method4269(this.field7937 * 12, 12);
 			short[] var68;
 			short[] var69;
@@ -3767,7 +3767,7 @@ public class class678 extends class13 {
 			if (this.field7961.field2537 == null) {
 				this.field7961.field2537 = this.field7925.method13584(this.field7962);
 			}
-			class228 var93 = this.field7961.field2537;
+			VertexBuffer var93 = this.field7961.field2537;
 			var93.method4269(this.field7937 * 8, 8);
 			Unsafe var94 = this.field7925.field8247;
 			if (var94 == null) {

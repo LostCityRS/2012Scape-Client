@@ -22,9 +22,9 @@ public class class147 {
 	@ObfuscatedName("df.m")
 	public int field1556;
 
-	public class147(class814 arg0) {
+	public class147(Packet arg0) {
 		this.field1552 = arg0.method15411();
-		this.field1551 = (class542) class518.method8032(class542.method6247(), arg0.method15220());
+		this.field1551 = (class542) SerializableEnums.method8032(class542.method6247(), arg0.method15220());
 	}
 
 	@ObfuscatedName("df.u(IIIIB)V")
@@ -46,7 +46,7 @@ public class class147 {
 		if (this.field1552 < 0) {
 			return true;
 		}
-		class540 var1 = Statics.field10355.method11471(this.field1552);
+		LocType var1 = Statics.field10355.method11471(this.field1552);
 		boolean var2 = var1.method11411(this.field1551.field6590);
 		int[] var3 = var1.method11422();
 		if (var3 != null) {

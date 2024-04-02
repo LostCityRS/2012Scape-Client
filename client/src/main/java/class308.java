@@ -23,7 +23,7 @@ public class class308 implements class310 {
 	public final int field3412;
 
 	@ObfuscatedName("ki.t")
-	public class14 field3418;
+	public RendererToolkit field3418;
 
 	@ObfuscatedName("ki.l")
 	public boolean field3419;
@@ -91,7 +91,7 @@ public class class308 implements class310 {
 
 	@ObfuscatedName("ki.f(J)Z")
 	public boolean method4988(long arg0) {
-		return class153.method5554() >= (long) this.field3416 + arg0;
+		return MonotonicTime.method5554() >= (long) this.field3416 + arg0;
 	}
 
 	@ObfuscatedName("g.j(Lls;II)Lce;")
@@ -111,7 +111,7 @@ public class class308 implements class310 {
 	@ObfuscatedName("id.s(I)Z")
 	public static boolean method4590() {
 		try {
-			class636 var0 = new class636();
+			GZip var0 = new GZip();
 			byte[] var1 = var0.method12747(field3414);
 			Statics.method1604(var1);
 			return true;

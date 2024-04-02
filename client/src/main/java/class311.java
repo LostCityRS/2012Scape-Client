@@ -67,7 +67,7 @@ public class class311 {
 	}
 
 	@ObfuscatedName("ku.t(Lka;)V")
-	public final void method5082(class320 arg0) {
+	public final void method5082(Matrix4x4 arg0) {
 		float var2 = this.field3426;
 		float var3 = this.field3427;
 		float var4 = this.field3428;

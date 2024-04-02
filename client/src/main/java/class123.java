@@ -23,7 +23,7 @@ public class class123 implements class16 {
 	public class123(class334 arg0, class334 arg1, class334 arg2) {
 		this.field1292 = arg1;
 		this.field1293 = arg2;
-		class814 var4 = new class814(arg0.method5627(0, 0));
+		Packet var4 = new Packet(arg0.method5627(0, 0));
 		this.field1294 = var4.method15239();
 		this.field1291 = new class120[this.field1294];
 		for (int var5 = 0; var5 < this.field1294; var5++) {
@@ -123,7 +123,7 @@ public class class123 implements class16 {
 		}
 		for (int var24 = 0; var24 < this.field1294; var24++) {
 			if (this.field1291[var24] != null) {
-				this.field1291[var24].field1262 = (class456) class518.method8032(class456.method7322(), var4.method15220());
+				this.field1291[var24].field1262 = (class456) SerializableEnums.method8032(class456.method7322(), var4.method15220());
 			}
 		}
 	}

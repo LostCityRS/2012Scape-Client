@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ajt")
-public class class955 extends class800 {
+public class class955 extends SecondaryNode {
 
 	@ObfuscatedName("ajt.t")
 	public class584 field10394;
@@ -23,7 +23,7 @@ public class class955 extends class800 {
 	public boolean field10395 = true;
 
 	@ObfuscatedName("ajt.u(Laet;I)V")
-	public void method16746(class814 arg0) {
+	public void method16746(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -34,9 +34,9 @@ public class class955 extends class800 {
 	}
 
 	@ObfuscatedName("ajt.j(Laet;IS)V")
-	public void method16770(class814 arg0, int arg1) {
+	public void method16770(Packet arg0, int arg1) {
 		if (arg1 == 1) {
-			this.field10392 = class526.method11508(arg0.method15337(), '<');
+			this.field10392 = StringTools.method11508(arg0.method15337(), '<');
 		} else if (arg1 == 2) {
 			int var3 = arg0.method15220();
 			this.field10393 = new int[var3];
@@ -64,7 +64,7 @@ public class class955 extends class800 {
 	}
 
 	@ObfuscatedName("ajt.a(Laet;[II)V")
-	public void method16748(class814 arg0, int[] arg1) {
+	public void method16748(Packet arg0, int[] arg1) {
 		if (this.field10390 == null) {
 			return;
 		}
@@ -77,7 +77,7 @@ public class class955 extends class800 {
 	}
 
 	@ObfuscatedName("ajt.s(Laet;I)Ljava/lang/String;")
-	public String method16749(class814 arg0) {
+	public String method16749(Packet arg0) {
 		StringBuilder var2 = new StringBuilder(80);
 		if (this.field10390 != null) {
 			for (int var3 = 0; var3 < this.field10390.length; var3++) {

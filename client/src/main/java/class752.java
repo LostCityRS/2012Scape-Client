@@ -17,7 +17,7 @@ public class class752 extends class262 {
 	}
 
 	@ObfuscatedName("ur.s(Laet;I)Liq;")
-	public static class262 method12157(class814 arg0) {
+	public static class262 method12157(Packet arg0) {
 		class262 var1 = class262.method2603(arg0);
 		int var2 = arg0.method15379();
 		int var3 = arg0.method15379();

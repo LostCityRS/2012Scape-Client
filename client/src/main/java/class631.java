@@ -16,7 +16,7 @@ public class class631 {
 
 	public class631(class527 arg0, class519 arg1, class334 arg2) {
 		this.field7391 = arg2;
-		class814 var4 = new class814(this.field7391.method5627(0, 0));
+		Packet var4 = new Packet(this.field7391.method5627(0, 0));
 		int var5 = var4.field9629 == null || var4.field9629.length < 1 ? -1 : var4.method15220();
 		if (var5 < 4) {
 			this.field7393 = new class630[0];
@@ -103,7 +103,7 @@ public class class631 {
 	public class632 method12708(int arg0) {
 		byte[] var2 = this.field7391.method5627(arg0, 0);
 		class632 var3 = new class632();
-		var3.method12719(new class814(var2));
+		var3.method12719(new Packet(var2));
 		return var3;
 	}
 

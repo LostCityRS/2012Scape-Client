@@ -60,11 +60,11 @@ public class class492 {
 
 	public class492(class334 arg0) {
 		byte[] var2 = arg0.method5635(class491.field5141.field5145);
-		this.method8613(new class814(var2));
+		this.method8613(new Packet(var2));
 	}
 
 	@ObfuscatedName("rh.u(Laet;I)V")
-	public void method8613(class814 arg0) {
+	public void method8613(Packet arg0) {
 		boolean var2 = false;
 		while (true) {
 			while (true) {

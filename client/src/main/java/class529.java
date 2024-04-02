@@ -30,7 +30,7 @@ public class class529 {
 		byte[] var5 = this.field6414.method5627(class161.field1650.field1668, arg0);
 		class528 var6 = new class528();
 		if (var5 != null) {
-			var6.method11304(new class814(var5));
+			var6.method11304(new Packet(var5));
 		}
 		class451 var7 = this.field6413;
 		synchronized (this.field6413) {

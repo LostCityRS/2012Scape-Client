@@ -19,7 +19,7 @@ public class class998 extends class30 {
 	@ObfuscatedName("aln.n")
 	public final byte[] field10580;
 
-	public class998(class682 arg0, int arg1, int arg2) {
+	public class998(GlToolkit arg0, int arg1, int arg2) {
 		this.field10580 = new byte[arg1 * arg2];
 	}
 

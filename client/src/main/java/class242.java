@@ -6,13 +6,13 @@ import java.nio.ByteBuffer;
 public class class242 {
 
 	@ObfuscatedName("hw.u")
-	public class228 field2506;
+	public VertexBuffer field2506;
 
 	@ObfuscatedName("hw.j")
-	public class228 field2517;
+	public VertexBuffer field2517;
 
 	@ObfuscatedName("hw.a")
-	public class230 field2505;
+	public VertexDeclaration field2505;
 
 	@ObfuscatedName("hw.s")
 	public class258 field2516;
@@ -50,7 +50,7 @@ public class class242 {
 	@ObfuscatedName("hw.p")
 	public int field2518 = 0;
 
-	public class242(class683 arg0) {
+	public class242(GpuToolkit arg0) {
 		this.field2505 = arg0.method13585(new class243[] { new class243(new class237[] { class237.field2495, class237.field2488, class237.field2483 }), new class243(class237.field2480) });
 		this.field2506 = arg0.method13584(true);
 		this.field2517 = arg0.method13584(false);
@@ -88,7 +88,7 @@ public class class242 {
 	}
 
 	@ObfuscatedName("hw.u(Lyk;)V")
-	public void method4468(class683 arg0) {
+	public void method4468(GpuToolkit arg0) {
 		this.field2506.method4269(786336, 24);
 	}
 
@@ -98,7 +98,7 @@ public class class242 {
 	}
 
 	@ObfuscatedName("hw.a(Lyk;Ldp;)V")
-	public void method4478(class683 arg0, class128 arg1) {
+	public void method4478(GpuToolkit arg0, ParticleList arg1) {
 		arg0.method526(false);
 		Statics.field2514 = arg0.field8319;
 		float var3 = arg0.field8258.field3480[2];
@@ -131,7 +131,7 @@ public class class242 {
 		}
 		arg0.method13588(this.field2516);
 		class201 var16 = arg0.field8314;
-		var16.method3875(class320.field3479);
+		var16.method3875(Matrix4x4.field3479);
 		var16.field2273.method5453();
 		var16.field2272 = -1;
 		this.method4480(arg0, var10, var14, var8, var15, var16);
@@ -142,7 +142,7 @@ public class class242 {
 	}
 
 	@ObfuscatedName("hw.s(Lyk;Lacl;IIILft;)V")
-	public void method4480(class683 arg0, class766 arg1, int arg2, int arg3, int arg4, class201 arg5) {
+	public void method4480(GpuToolkit arg0, class766 arg1, int arg2, int arg3, int arg4, class201 arg5) {
 		class766 var7 = arg1.field9265;
 		int var8 = 0;
 		int var9 = -2;
@@ -199,9 +199,9 @@ public class class242 {
 	}
 
 	@ObfuscatedName("hw.m(Lyk;I)V")
-	public void method4469(class683 arg0, int arg1) {
+	public void method4469(GpuToolkit arg0, int arg1) {
 		int var3 = 0;
-		class320 var4 = arg0.field8258;
+		Matrix4x4 var4 = arg0.field8258;
 		float var5 = var4.field3480[0];
 		float var6 = var4.field3480[4];
 		float var7 = var4.field3480[8];

@@ -6,31 +6,31 @@ import jaggl.OpenGL;
 import java.awt.Canvas;
 
 @ObfuscatedName("ahv")
-public final class class899 extends class683 {
+public final class class899 extends GpuToolkit {
 
 	@ObfuscatedName("ahv.gf")
 	public OpenGL field10029;
 
 	@ObfuscatedName("ahv.gl")
-	public class547 field10031 = new class547();
+	public IterableQueue field10031 = new IterableQueue();
 
 	@ObfuscatedName("ahv.gb")
-	public class547 field10005 = new class547();
+	public IterableQueue field10005 = new IterableQueue();
 
 	@ObfuscatedName("ahv.go")
-	public class547 field10010 = new class547();
+	public IterableQueue field10010 = new IterableQueue();
 
 	@ObfuscatedName("ahv.gi")
-	public class547 field10007 = new class547();
+	public IterableQueue field10007 = new IterableQueue();
 
 	@ObfuscatedName("ahv.ga")
-	public class547 field10008 = new class547();
+	public IterableQueue field10008 = new IterableQueue();
 
 	@ObfuscatedName("ahv.gs")
-	public class547 field10009 = new class547();
+	public IterableQueue field10009 = new IterableQueue();
 
 	@ObfuscatedName("ahv.gd")
-	public class547 field10004 = new class547();
+	public IterableQueue field10004 = new IterableQueue();
 
 	@ObfuscatedName("ahv.gj")
 	public long field10011;
@@ -140,13 +140,13 @@ public final class class899 extends class683 {
 				throw new RuntimeException("");
 			}
 			String var9 = OpenGL.glGetString(7938);
-			String[] var10 = class526.method11508(var9.replace('.', ' '), ' ');
+			String[] var10 = StringTools.method11508(var9.replace('.', ' '), ' ');
 			if (var10.length < 2) {
 				throw new RuntimeException("");
 			}
 			try {
-				int var11 = class526.method5598(var10[0]);
-				int var12 = class526.method5598(var10[1]);
+				int var11 = StringTools.method5598(var10[0]);
+				int var12 = StringTools.method5598(var10[1]);
 				this.field10023 = var11 * 10 + var12;
 			} catch (NumberFormatException var25) {
 				throw new RuntimeException("");
@@ -188,12 +188,12 @@ public final class class899 extends class683 {
 				int var14 = 0;
 				boolean var15 = false;
 				boolean var16 = false;
-				String[] var17 = class526.method11508(this.field10022.replace('/', ' '), ' ');
+				String[] var17 = StringTools.method11508(this.field10022.replace('/', ' '), ' ');
 				for (int var18 = 0; var18 < var17.length; var18++) {
 					String var19 = var17[var18];
 					try {
 						if (var19.length() > 0) {
-							if (var19.charAt(0) == 'x' && var19.length() >= 3 && class526.method7735(var19.substring(1, 3))) {
+							if (var19.charAt(0) == 'x' && var19.length() >= 3 && StringTools.method7735(var19.substring(1, 3))) {
 								var19 = var19.substring(1);
 								var16 = true;
 							}
@@ -204,8 +204,8 @@ public final class class899 extends class683 {
 									var19 = var19.substring(2);
 									var15 = true;
 								}
-								if (var19.length() >= 4 && class526.method7735(var19.substring(0, 4))) {
-									var14 = class526.method5598(var19.substring(0, 4));
+								if (var19.length() >= 4 && StringTools.method7735(var19.substring(0, 4))) {
+									var14 = StringTools.method5598(var19.substring(0, 4));
 									break;
 								}
 							}
@@ -461,7 +461,7 @@ public final class class899 extends class683 {
 	}
 
 	@ObfuscatedName("ahv.of(Lka;Lka;Lka;)V")
-	public void method13764(class320 arg0, class320 arg1, class320 arg2) {
+	public void method13764(Matrix4x4 arg0, Matrix4x4 arg1, Matrix4x4 arg2) {
 		OpenGL.glMatrixMode(5888);
 		this.field8264.method5383(arg0, arg1);
 		OpenGL.glLoadMatrixf(this.field8264.field3480, 0);
@@ -470,7 +470,7 @@ public final class class899 extends class683 {
 	}
 
 	@ObfuscatedName("ahv.ph(Lka;)V")
-	public void method13638(class320 arg0) {
+	public void method13638(Matrix4x4 arg0) {
 		float[] var2 = arg0.field3480;
 		var2[1] = -var2[1];
 		var2[5] = -var2[5];
@@ -553,7 +553,7 @@ public final class class899 extends class683 {
 		OpenGL.glLoadMatrixf(this.field8258.field3480, 0);
 		int var1;
 		for (var1 = 0; var1 < this.field8324; var1++) {
-			class780 var2 = this.field8365[var1];
+			Light var2 = this.field8365[var1];
 			int var3 = var2.method14881();
 			int var4 = var1 + 16386;
 			float var5 = var2.method14893() / 255.0F;
@@ -827,7 +827,7 @@ public final class class899 extends class683 {
 	}
 
 	@ObfuscatedName("ahv.sz(Z)Lhe;")
-	public final class228 method13584(boolean arg0) {
+	public final VertexBuffer method13584(boolean arg0) {
 		return new class739(this, arg0);
 	}
 
@@ -837,12 +837,12 @@ public final class class899 extends class683 {
 	}
 
 	@ObfuscatedName("ahv.sb([Lhu;)Lhy;")
-	public class230 method13585(class243[] arg0) {
+	public VertexDeclaration method13585(class243[] arg0) {
 		return new class741(arg0);
 	}
 
 	@ObfuscatedName("ahv.sl(ILhe;)V")
-	public void method13587(int arg0, class228 arg1) {
+	public void method13587(int arg0, VertexBuffer arg1) {
 		this.field10017[arg0] = (class739) arg1;
 	}
 
@@ -853,7 +853,7 @@ public final class class899 extends class683 {
 	}
 
 	@ObfuscatedName("ahv.sa(Lhy;)V")
-	public void method13688(class230 arg0) {
+	public void method13688(VertexDeclaration arg0) {
 		class243[] var2 = arg0.field2422;
 		int var3 = 0;
 		boolean var4 = false;
@@ -1086,20 +1086,20 @@ public final class class899 extends class683 {
 			OpenGL.glDeleteLists((int) var9.field4228, var9.field9556);
 		}
 		while (!this.field10009.method11585()) {
-			class399 var10 = this.field10009.method11560();
+			Node var10 = this.field10009.method11560();
 			OpenGL.glDeleteProgram((int) var10.field4228);
 		}
 		while (!this.field10004.method11585()) {
-			class399 var11 = this.field10004.method11560();
+			Node var11 = this.field10004.method11560();
 			OpenGL.glDeleteShader((int) var11.field4228);
 		}
 		while (!this.field10031.method11585()) {
 			class802 var12 = (class802) this.field10031.method11560();
 			OpenGL.glDeleteLists((int) var12.field4228, var12.field9556);
 		}
-		if (this.method552() > 100663296 && class153.method5554() > this.field10011 + 60000L) {
+		if (this.method552() > 100663296 && MonotonicTime.method5554() > this.field10011 + 60000L) {
 			System.gc();
-			this.field10011 = class153.method5554();
+			this.field10011 = MonotonicTime.method5554();
 		}
 		super.method444(var3);
 	}
@@ -1133,14 +1133,14 @@ public final class class899 extends class683 {
 
 	@ObfuscatedName("ahv.acm(J)V")
 	public final synchronized void method16099(long arg0) {
-		class399 var3 = new class399();
+		Node var3 = new Node();
 		var3.field4228 = arg0;
 		this.field10004.method11558(var3);
 	}
 
 	@ObfuscatedName("ahv.acr(I)V")
 	public final synchronized void method16089(int arg0) {
-		class399 var2 = new class399();
+		Node var2 = new Node();
 		var2.field4228 = arg0;
 		this.field10009.method11558(var2);
 	}

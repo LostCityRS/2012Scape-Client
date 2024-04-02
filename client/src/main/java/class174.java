@@ -26,7 +26,7 @@ public class class174 {
 	public int[] field2096;
 
 	@ObfuscatedName("ey.u(Lef;B)V")
-	public void method3468(class169 arg0) {
+	public void method3468(ShaderDataReader arg0) {
 		int var2 = arg0.method3294();
 		this.field2095 = class170.method12201()[var2];
 		if (class170.field1977 == this.field2095) {

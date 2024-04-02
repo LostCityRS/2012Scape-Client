@@ -11,7 +11,7 @@ public final class class451 {
 	public int field4827;
 
 	@ObfuscatedName("pm.a")
-	public class565 field4828;
+	public IterableMap field4828;
 
 	@ObfuscatedName("pm.s")
 	public class552 field4829;
@@ -27,7 +27,7 @@ public final class class451 {
 		int var3;
 		for (var3 = 1; var3 + var3 < arg0 && var3 < arg1; var3 += var3) {
 		}
-		this.field4828 = new class565(var3);
+		this.field4828 = new IterableMap(var3);
 	}
 
 	@ObfuscatedName("pm.u(J)Ljava/lang/Object;")

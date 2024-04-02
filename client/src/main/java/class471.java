@@ -72,7 +72,7 @@ public class class471 {
 	}
 
 	@ObfuscatedName("qc.c(IILvj;I)V")
-	public void method8234(int arg0, int arg1, class594 arg2) {
+	public void method8234(int arg0, int arg1, ObjTypeList arg2) {
 		if (arg1 == -1) {
 			this.field5001[arg0] = 0;
 		} else if (arg2.method12316(arg1) == null) {
@@ -85,7 +85,7 @@ public class class471 {
 
 	@ObfuscatedName("qc.m(I)V")
 	public void method8229() {
-		long[] var1 = class814.field9628;
+		long[] var1 = Packet.field9628;
 		this.field5007 = -1L;
 		this.field5007 = this.field5007 >>> 8 ^ var1[(int) ((this.field5007 ^ (long) (this.field5002 >> 8)) & 0xFFL)];
 		this.field5007 = this.field5007 >>> 8 ^ var1[(int) ((this.field5007 ^ (long) this.field5002) & 0xFFL)];
@@ -141,7 +141,7 @@ public class class471 {
 	}
 
 	@ObfuscatedName("qc.t(Lra;ILpn;Lgq;Lwi;Lvj;Lst;Lug;Ltt;Ltt;[Ltt;[IIZLrt;B)Lqa;")
-	public class13 method8244(class14 arg0, int arg1, class440 arg2, class205 arg3, class612 arg4, class594 arg5, class510 arg6, class567 arg7, class553 arg8, class553 arg9, class553[] arg10, int[] arg11, int arg12, boolean arg13, class493 arg14) {
+	public Model method8244(RendererToolkit arg0, int arg1, BASTypeList arg2, class205 arg3, NPCTypeList arg4, ObjTypeList arg5, class510 arg6, class567 arg7, AnimationNode arg8, AnimationNode arg9, AnimationNode[] arg10, int[] arg11, int arg12, boolean arg13, class493 arg14) {
 		if (this.field5006 != -1) {
 			return arg4.method12565(this.field5006).method12510(arg0, arg1, arg2, arg7, arg8, arg9, arg10, arg11, arg12, null);
 		}
@@ -217,11 +217,11 @@ public class class471 {
 			}
 		}
 		class451 var33 = field5012;
-		class13 var34;
+		Model var34;
 		synchronized (field5012) {
-			var34 = (class13) field5012.method7916(var17);
+			var34 = (Model) field5012.method7916(var17);
 		}
-		class439 var36 = null;
+		BASType var36 = null;
 		if (this.field5002 != -1) {
 			var36 = arg2.method7784(this.field5002);
 		}
@@ -237,7 +237,7 @@ public class class471 {
 						if (this.field5008 != -1L) {
 							class451 var45 = field5012;
 							synchronized (field5012) {
-								var34 = (class13) field5012.method7916(this.field5008);
+								var34 = (Model) field5012.method7916(this.field5008);
 							}
 						}
 						if (var34 != null && arg0.method519(var34.method329(), var16) == 0) {
@@ -351,11 +351,11 @@ public class class471 {
 				var39++;
 			}
 		}
-		class13 var67 = var34.method295((byte) 4, var16, true);
+		Model var67 = var34.method295((byte) 4, var16, true);
 		if (!var28 && !var31) {
 			return var67;
 		}
-		class314[] var68 = null;
+		Matrix4x3[] var68 = null;
 		if (var36 != null) {
 			var68 = var36.method7750();
 		}
@@ -380,8 +380,8 @@ public class class471 {
 				if (arg11[var72] != -1) {
 					int var73 = arg11[var72] - arg12;
 					int var74 = var73 & 0x3FFF;
-					class314 var75 = new class314();
-					var75.method5106(0.0F, 1.0F, 0.0F, class312.method5096(var74));
+					Matrix4x3 var75 = new Matrix4x3();
+					var75.method5106(0.0F, 1.0F, 0.0F, Trig1.method5096(var74));
 					var67.method239(var75, 0x1 << var72, false);
 				}
 			}
@@ -404,15 +404,15 @@ public class class471 {
 	}
 
 	@ObfuscatedName("qc.l(Lra;ILgq;Lwi;Lvj;Lst;Lug;Ltt;I)Lqa;")
-	public class13 method8237(class14 arg0, int arg1, class205 arg2, class612 arg3, class594 arg4, class510 arg5, class567 arg6, class553 arg7) {
+	public Model method8237(RendererToolkit arg0, int arg1, class205 arg2, NPCTypeList arg3, ObjTypeList arg4, class510 arg5, class567 arg6, AnimationNode arg7) {
 		if (this.field5006 != -1) {
 			return arg3.method12565(this.field5006).method12512(arg0, arg1, arg6, arg7, null);
 		}
 		int var9 = arg7 == null ? arg1 : arg1 | arg7.method11779();
 		class451 var10 = field4998;
-		class13 var11;
+		Model var11;
 		synchronized (field4998) {
-			var11 = (class13) field4998.method7916(this.field5007);
+			var11 = (Model) field4998.method7916(this.field5007);
 		}
 		if (var11 == null || arg0.method519(var11.method329(), var9) != 0) {
 			if (var11 != null) {
@@ -475,20 +475,20 @@ public class class471 {
 		if (arg7 == null) {
 			return var11;
 		} else {
-			class13 var31 = var11.method295((byte) 4, var9, true);
+			Model var31 = var11.method295((byte) 4, var9, true);
 			arg7.method11780(var31, 0);
 			return var31;
 		}
 	}
 
 	@ObfuscatedName("qc.f(Lra;ILgq;Lst;Ltt;IIII)Lqa;")
-	public class13 method8257(class14 arg0, int arg1, class205 arg2, class510 arg3, class553 arg4, int arg5, int arg6, int arg7) {
+	public Model method8257(RendererToolkit arg0, int arg1, class205 arg2, class510 arg3, AnimationNode arg4, int arg5, int arg6, int arg7) {
 		int var9 = arg4 == null ? arg1 : arg1 | arg4.method11779();
 		long var10 = (long) arg7 << 32 | (long) (arg6 << 16) | (long) arg5;
 		class451 var12 = field4998;
-		class13 var13;
+		Model var13;
 		synchronized (field4998) {
-			var13 = (class13) field4998.method7916(var10);
+			var13 = (Model) field4998.method7916(var10);
 		}
 		if (var13 == null || arg0.method519(var13.method329(), var9) != 0) {
 			if (var13 != null) {
@@ -530,7 +530,7 @@ public class class471 {
 		if (arg4 == null) {
 			return var13;
 		} else {
-			class13 var27 = var13.method295((byte) 4, var9, true);
+			Model var27 = var13.method295((byte) 4, var9, true);
 			arg4.method11780(var27, 0);
 			return var27;
 		}

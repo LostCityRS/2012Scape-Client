@@ -32,7 +32,7 @@ public class class625 {
 	public static final boolean method11852(char arg0) {
 		if (Character.isISOControl(arg0)) {
 			return false;
-		} else if (class526.method8060(arg0)) {
+		} else if (StringTools.method8060(arg0)) {
 			return true;
 		} else {
 			char[] var1 = field7341;

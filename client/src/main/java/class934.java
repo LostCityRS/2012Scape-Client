@@ -21,7 +21,7 @@ public class class934 extends class789 {
 	}
 
 	@ObfuscatedName("aiy.u(Laet;B)V")
-	public void method14985(class814 arg0) {
+	public void method14985(Packet arg0) {
 		this.field10220 = arg0.method15219();
 		if (this.field10220 != null) {
 			arg0.method15220();

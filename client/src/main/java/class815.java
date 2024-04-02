@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aeg")
-public class class815 extends class399 {
+public class class815 extends Node {
 
 	@ObfuscatedName("aeg.l")
 	public final class527 field9639;
@@ -126,20 +126,20 @@ public class class815 extends class399 {
 
 	public class815(class527 arg0, int arg1) {
 		this.field9639 = arg0;
-		this.field9638 = new class538(class385.field4152, class385.field4144, Statics.field4150.toLowerCase().indexOf("arm") != -1);
+		this.field9638 = new class538(GameShell.field4152, GameShell.field4144, Statics.field4150.toLowerCase().indexOf("arm") != -1);
 		this.field9661 = new class851(arg1, this);
 		this.method15445(true);
 	}
 
-	public class815(class814 arg0, class527 arg1, int arg2) {
+	public class815(Packet arg0, class527 arg1, int arg2) {
 		this.field9639 = arg1;
-		this.field9638 = new class538(class385.field4152, class385.field4144, Statics.field4150.indexOf("arm") != -1);
+		this.field9638 = new class538(GameShell.field4152, GameShell.field4144, Statics.field4150.indexOf("arm") != -1);
 		this.field9661 = new class851(arg2, this);
 		this.method15443(arg0);
 	}
 
 	@ObfuscatedName("aeg.u(Laet;I)V")
-	public void method15443(class814 arg0) {
+	public void method15443(Packet arg0) {
 		if (arg0 == null || arg0.field9629 == null) {
 			this.method15445(true);
 		} else {
@@ -329,7 +329,7 @@ public class class815 extends class399 {
 	}
 
 	@ObfuscatedName("aeg.a(Laet;II)V")
-	public void method15446(class814 arg0, int arg1) {
+	public void method15446(Packet arg0, int arg1) {
 		this.field9642 = new class839(arg0.method15220(), this);
 		arg0.field9626++;
 		this.field9660 = new class846(arg0.method15220() + 1, this);
@@ -431,8 +431,8 @@ public class class815 extends class399 {
 	}
 
 	@ObfuscatedName("aeg.s(I)Laet;")
-	public class814 method15447() {
-		class814 var1 = new class814(40);
+	public Packet method15447() {
+		Packet var1 = new Packet(40);
 		var1.method15308(27);
 		var1.method15308(this.field9637.method15829());
 		var1.method15308(this.field9673.method15816());

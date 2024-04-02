@@ -50,7 +50,7 @@ public class class441 {
 	public int field4755 = 0;
 
 	@ObfuscatedName("po.u(Laet;I)V")
-	public void method7791(class814 arg0) {
+	public void method7791(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -61,7 +61,7 @@ public class class441 {
 	}
 
 	@ObfuscatedName("po.j(Laet;II)V")
-	public void method7792(class814 arg0, int arg1) {
+	public void method7792(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			this.field4744 = arg0.method15411();
 		} else if (arg1 == 2) {
@@ -102,12 +102,12 @@ public class class441 {
 			if (var3 < 0) {
 				return var2;
 			}
-			var2 = var2.substring(0, var3) + class526.method1601(arg0, false) + var2.substring(var3 + 2);
+			var2 = var2.substring(0, var3) + StringTools.method1601(arg0, false) + var2.substring(var3 + 2);
 		}
 	}
 
 	@ObfuscatedName("po.s(Lra;B)Lce;")
-	public class118 method7794(class14 arg0) {
+	public class118 method7794(RendererToolkit arg0) {
 		if (this.field4746 < 0) {
 			return null;
 		}
@@ -120,7 +120,7 @@ public class class441 {
 	}
 
 	@ObfuscatedName("po.c(Lra;B)Lce;")
-	public class118 method7796(class14 arg0) {
+	public class118 method7796(RendererToolkit arg0) {
 		if (this.field4747 < 0) {
 			return null;
 		}
@@ -133,7 +133,7 @@ public class class441 {
 	}
 
 	@ObfuscatedName("po.m(Lra;I)Lce;")
-	public class118 method7797(class14 arg0) {
+	public class118 method7797(RendererToolkit arg0) {
 		if (this.field4748 < 0) {
 			return null;
 		}
@@ -146,7 +146,7 @@ public class class441 {
 	}
 
 	@ObfuscatedName("po.t(Lra;B)Lce;")
-	public class118 method7804(class14 arg0) {
+	public class118 method7804(RendererToolkit arg0) {
 		if (this.field4749 < 0) {
 			return null;
 		}
@@ -159,7 +159,7 @@ public class class441 {
 	}
 
 	@ObfuscatedName("po.l(Lra;I)V")
-	public void method7798(class14 arg0) {
+	public void method7798(RendererToolkit arg0) {
 		class334 var2 = this.field4754.field4757;
 		if (this.field4746 >= 0 && this.field4754.field4759.method7916((long) this.field4746) == null && var2.method5630(this.field4746)) {
 			class140 var3 = class125.method2598(var2, this.field4746);

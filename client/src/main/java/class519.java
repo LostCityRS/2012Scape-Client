@@ -3,25 +3,25 @@ import deob.ObfuscatedName;
 import java.util.Locale;
 
 @ObfuscatedName("sn")
-public class class519 implements class517 {
+public class class519 implements SerializableEnum {
 
 	@ObfuscatedName("sn.u")
-	public static final class519 field6376 = new class519("EN", "en", "English", class515.field6368, 0, "GB");
+	public static final class519 field6376 = new class519("EN", "en", "English", ModeWhere.field6368, 0, "GB");
 
 	@ObfuscatedName("sn.j")
-	public static final class519 field6374 = new class519("DE", "de", "German", class515.field6368, 1, "DE");
+	public static final class519 field6374 = new class519("DE", "de", "German", ModeWhere.field6368, 1, "DE");
 
 	@ObfuscatedName("sn.a")
-	public static final class519 field6375 = new class519("FR", "fr", "French", class515.field6368, 2, "FR");
+	public static final class519 field6375 = new class519("FR", "fr", "French", ModeWhere.field6368, 2, "FR");
 
 	@ObfuscatedName("sn.s")
-	public static final class519 field6384 = new class519("PT", "pt", "Portuguese", class515.field6368, 3, "BR");
+	public static final class519 field6384 = new class519("PT", "pt", "Portuguese", ModeWhere.field6368, 3, "BR");
 
 	@ObfuscatedName("sn.c")
-	public static final class519 field6377 = new class519("NL", "nl", "Dutch", class515.field6369, 4, "NL");
+	public static final class519 field6377 = new class519("NL", "nl", "Dutch", ModeWhere.field6369, 4, "NL");
 
 	@ObfuscatedName("sn.m")
-	public static final class519 field6373 = new class519("ES", "es", "Spanish", class515.field6369, 5, "ES");
+	public static final class519 field6373 = new class519("ES", "es", "Spanish", ModeWhere.field6369, 5, "ES");
 
 	@ObfuscatedName("sn.t")
 	public final String field6379;
@@ -51,7 +51,7 @@ public class class519 implements class517 {
 		}
 	}
 
-	public class519(String arg0, String arg1, String arg2, class515 arg3, int arg4, String arg5) {
+	public class519(String arg0, String arg1, String arg2, ModeWhere arg3, int arg4, String arg5) {
 		this.field6379 = arg0;
 		this.field6378 = arg1;
 		this.field6382 = arg4;

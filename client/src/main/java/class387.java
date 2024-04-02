@@ -83,7 +83,7 @@ public class class387 implements class617 {
 		Object var5 = null;
 		File var6;
 		try {
-			var6 = class389.method8410(var2);
+			var6 = CacheUtil.method8410(var2);
 		} catch (RuntimeException var15) {
 			return -1;
 		}

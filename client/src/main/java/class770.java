@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ach")
-public final class class770 extends class399 {
+public final class class770 extends Node {
 
 	@ObfuscatedName("ach.s")
 	public int field9281;
@@ -44,10 +44,10 @@ public final class class770 extends class399 {
 	public boolean field9290 = false;
 
 	@ObfuscatedName("ach.b")
-	public static class547 field9278 = new class547();
+	public static IterableQueue field9278 = new IterableQueue();
 
 	@ObfuscatedName("ach.x")
-	public static class547 field9292 = new class547();
+	public static IterableQueue field9292 = new IterableQueue();
 
 	@ObfuscatedName("ach.i")
 	public static long field9279 = 1L;
@@ -126,7 +126,7 @@ public final class class770 extends class399 {
 
 	@ObfuscatedName("fy.s(Lach;I)V")
 	public static final void method3598(class770 arg0) {
-		class423 var1 = client.field8980.method6098();
+		Scene var1 = client.field8980.method6098();
 		if (var1 == null) {
 			return;
 		}

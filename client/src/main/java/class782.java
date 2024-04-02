@@ -2,10 +2,10 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("acw")
-public class class782 extends class399 {
+public class class782 extends Node {
 
 	@ObfuscatedName("acw.s")
-	public class565 field9382;
+	public IterableMap field9382;
 
 	@ObfuscatedName("acw.c")
 	public byte[] field9381;
@@ -13,10 +13,10 @@ public class class782 extends class399 {
 	@ObfuscatedName("acw.u(Lls;II)Lacw;")
 	public static class782 method14909(class334 arg0, int arg1, int arg2) {
 		byte[] var3 = arg0.method5627(arg1, arg2);
-		return var3 == null ? null : new class782(new class814(var3));
+		return var3 == null ? null : new class782(new Packet(var3));
 	}
 
-	public class782(class814 arg0) {
+	public class782(Packet arg0) {
 		arg0.field9626 = arg0.field9629.length - 3;
 		int var2 = arg0.method15220();
 		int var3 = arg0.method15239();
@@ -159,7 +159,7 @@ public class class782 extends class399 {
 		int var59 = arg0.field9626;
 		arg0.field9626 += var5 * 3;
 		this.field9381 = new byte[var22];
-		class814 var60 = new class814(this.field9381);
+		Packet var60 = new Packet(this.field9381);
 		var60.method15223(1297377380);
 		var60.method15223(6);
 		var60.method15287(var2 > 1 ? 1 : 0);
@@ -301,7 +301,7 @@ public class class782 extends class399 {
 		if (this.field9382 != null) {
 			return;
 		}
-		this.field9382 = new class565(16);
+		this.field9382 = new IterableMap(16);
 		int[] var1 = new int[16];
 		int[] var2 = new int[16];
 		var2[9] = 128;
@@ -348,9 +348,9 @@ public class class782 extends class399 {
 						int var18 = var9 >> 16 & 0x7F;
 						if (var18 > 0) {
 							int var19 = var2[var16];
-							class798 var20 = (class798) this.field9382.method11923((long) var19);
+							ObjectNode var20 = (ObjectNode) this.field9382.method11923((long) var19);
 							if (var20 == null) {
-								var20 = new class798(new byte[128]);
+								var20 = new ObjectNode(new byte[128]);
 								this.field9382.method11927(var20, (long) var19);
 							}
 							((byte[]) var20.field9550)[var17] = 1;

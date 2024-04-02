@@ -7,7 +7,7 @@ import sun.misc.Unsafe;
 public class class252 {
 
 	@ObfuscatedName("hg.u")
-	public final class683 field2569;
+	public final GpuToolkit field2569;
 
 	@ObfuscatedName("hg.j")
 	public class224 field2561 = class224.field2417;
@@ -34,10 +34,10 @@ public class class252 {
 	public int field2568;
 
 	@ObfuscatedName("hg.d")
-	public class228 field2565;
+	public VertexBuffer field2565;
 
 	@ObfuscatedName("hg.z")
-	public class230 field2570;
+	public VertexDeclaration field2570;
 
 	@ObfuscatedName("hg.n")
 	public class258 field2571;
@@ -45,7 +45,7 @@ public class class252 {
 	@ObfuscatedName("hg.o")
 	public int[] field2566 = new int[4];
 
-	public class252(class683 arg0, int arg1) {
+	public class252(GpuToolkit arg0, int arg1) {
 		this.field2569 = arg0;
 		this.field2565 = this.field2569.method13584(true);
 		this.field2565.method4269(arg1 * 96, 24);

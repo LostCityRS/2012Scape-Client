@@ -5,9 +5,9 @@ import deob.ObfuscatedName;
 public abstract class class891 extends class674 {
 
 	@ObfuscatedName("agq.j")
-	public class683 field9933;
+	public GpuToolkit field9933;
 
-	public class891(class683 arg0) {
+	public class891(GpuToolkit arg0) {
 		this.field9933 = arg0;
 	}
 

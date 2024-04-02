@@ -45,7 +45,7 @@ public class class371 {
 	}
 
 	@ObfuscatedName("mt.u(Laet;)V")
-	public final void method6470(class814 arg0) {
+	public final void method6470(Packet arg0) {
 		this.field3998 = arg0.method15220();
 		this.field4000 = arg0.method15379();
 		this.field4001 = arg0.method15379();
@@ -53,7 +53,7 @@ public class class371 {
 	}
 
 	@ObfuscatedName("mt.j(Laet;)V")
-	public final void method6471(class814 arg0) {
+	public final void method6471(Packet arg0) {
 		this.field3999 = arg0.method15220();
 		this.field4007 = new int[this.field3999];
 		this.field3997 = new int[this.field3999];

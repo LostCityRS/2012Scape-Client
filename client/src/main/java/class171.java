@@ -11,7 +11,7 @@ public class class171 {
 	public String field2071;
 
 	@ObfuscatedName("eb.u(Lef;I)V")
-	public void method3313(class169 arg0) {
+	public void method3313(ShaderDataReader arg0) {
 		this.field2072 = arg0.method3295();
 		this.field2071 = arg0.method3295();
 	}

@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import jaggl.OpenGL;
 
 @ObfuscatedName("xp")
-public class class640 extends class81 {
+public class class640 extends GlTexture {
 
 	@ObfuscatedName("xp.w")
 	public final int field7440;
@@ -11,16 +11,16 @@ public class class640 extends class81 {
 	@ObfuscatedName("xp.b")
 	public final int field7441;
 
-	public class640(class682 arg0, int arg1, class124 arg2, class139 arg3, int arg4, int arg5) {
+	public class640(GlToolkit arg0, int arg1, class124 arg2, class139 arg3, int arg4, int arg5) {
 		super(arg0, arg1, arg2, arg3, arg4 * arg5, false);
 		this.field7440 = arg4;
 		this.field7441 = arg5;
 		this.field1054.method13315(this);
-		OpenGL.glTexImage2Dub(this.field1049, 0, class682.method13335(this.field1050, this.field1051), arg4, arg5, 0, class682.method13334(this.field1050), 5121, null, 0);
+		OpenGL.glTexImage2Dub(this.field1049, 0, GlToolkit.method13335(this.field1050, this.field1051), arg4, arg5, 0, GlToolkit.method13334(this.field1050), 5121, null, 0);
 		this.method2055(true);
 	}
 
-	public class640(class682 arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+	public class640(GlToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
 		super(arg0, arg1, class124.field1298, class139.field1501, arg4 * arg5, false);
 		this.field7440 = arg4;
 		this.field7441 = arg5;
@@ -28,13 +28,13 @@ public class class640 extends class81 {
 		class126 var7 = this.field1054.method457();
 		if (var7 != null) {
 			int var8 = var7.method922() - (arg3 + arg5);
-			int var9 = class682.method13335(this.field1050, this.field1051);
+			int var9 = GlToolkit.method13335(this.field1050, this.field1051);
 			OpenGL.glCopyTexImage2D(this.field1049, 0, var9, arg2, var8, arg4, arg5, 0);
 		}
 		this.method2055(true);
 	}
 
-	public class640(class682 arg0, int arg1, int arg2, int arg3, boolean arg4, int[] arg5, int arg6, int arg7, boolean arg8) {
+	public class640(GlToolkit arg0, int arg1, int arg2, int arg3, boolean arg4, int[] arg5, int arg6, int arg7, boolean arg8) {
 		super(arg0, arg1, class124.field1296, class139.field1501, arg2 * arg3, arg4);
 		this.field7440 = arg2;
 		this.field7441 = arg3;
@@ -51,18 +51,18 @@ public class class640 extends class81 {
 		}
 		this.field1054.method13315(this);
 		if (this.field1049 != 34037 && arg4 && arg6 == 0 && arg7 == 0) {
-			method2053(this.field1049, class682.method13335(this.field1050, this.field1051), this.field7440, this.field7441, 32993, this.field1054.field8215, arg5);
+			method2053(this.field1049, GlToolkit.method13335(this.field1050, this.field1051), this.field7440, this.field7441, 32993, this.field1054.field8215, arg5);
 			this.method2047(true);
 		} else {
 			OpenGL.glPixelStorei(3314, arg6);
-			OpenGL.glTexImage2Di(this.field1049, 0, class682.method13335(this.field1050, this.field1051), this.field7440, this.field7441, 0, 32993, this.field1054.field8215, arg5, arg7 * 4);
+			OpenGL.glTexImage2Di(this.field1049, 0, GlToolkit.method13335(this.field1050, this.field1051), this.field7440, this.field7441, 0, 32993, this.field1054.field8215, arg5, arg7 * 4);
 			OpenGL.glPixelStorei(3314, 0);
 			this.method2047(false);
 		}
 		this.method2055(true);
 	}
 
-	public class640(class682 arg0, int arg1, class124 arg2, class139 arg3, int arg4, int arg5, boolean arg6, byte[] arg7, class124 arg8, boolean arg9) {
+	public class640(GlToolkit arg0, int arg1, class124 arg2, class139 arg3, int arg4, int arg5, boolean arg6, byte[] arg7, class124 arg8, boolean arg9) {
 		super(arg0, arg1, arg2, arg3, arg4 * arg5, arg6);
 		this.field7440 = arg4;
 		this.field7441 = arg5;
@@ -80,26 +80,26 @@ public class class640 extends class81 {
 		this.field1054.method13315(this);
 		OpenGL.glPixelStorei(3317, 1);
 		if (arg6 && this.field1049 != 34037) {
-			method2054(arg1, class682.method13335(this.field1050, this.field1051), arg4, arg5, arg8, arg7);
+			method2054(arg1, GlToolkit.method13335(this.field1050, this.field1051), arg4, arg5, arg8, arg7);
 			this.method2047(true);
 		} else {
-			OpenGL.glTexImage2Dub(this.field1049, 0, class682.method13335(this.field1050, this.field1051), this.field7440, this.field7441, 0, class682.method13334(arg8), 5121, arg7, 0);
+			OpenGL.glTexImage2Dub(this.field1049, 0, GlToolkit.method13335(this.field1050, this.field1051), this.field7440, this.field7441, 0, GlToolkit.method13334(arg8), 5121, arg7, 0);
 			this.method2047(false);
 		}
 		OpenGL.glPixelStorei(3317, 4);
 		this.method2055(true);
 	}
 
-	public class640(class682 arg0, int arg1, class124 arg2, class139 arg3, int arg4, int arg5, boolean arg6, float[] arg7, class124 arg8) {
+	public class640(GlToolkit arg0, int arg1, class124 arg2, class139 arg3, int arg4, int arg5, boolean arg6, float[] arg7, class124 arg8) {
 		super(arg0, arg1, arg2, arg3, arg4 * arg5, arg6);
 		this.field7440 = arg4;
 		this.field7441 = arg5;
 		this.field1054.method13315(this);
 		if (arg6 && this.field1049 != 34037) {
-			method2059(arg1, class682.method13335(this.field1050, this.field1051), arg4, arg5, arg8, arg7);
+			method2059(arg1, GlToolkit.method13335(this.field1050, this.field1051), arg4, arg5, arg8, arg7);
 			this.method2047(true);
 		} else {
-			OpenGL.glTexImage2Df(this.field1049, 0, class682.method13335(this.field1050, this.field1051), this.field7440, this.field7441, 0, class682.method13334(arg8), 5126, arg7, 0);
+			OpenGL.glTexImage2Df(this.field1049, 0, GlToolkit.method13335(this.field1050, this.field1051), this.field7440, this.field7441, 0, GlToolkit.method13334(arg8), 5126, arg7, 0);
 			this.method2047(false);
 		}
 		this.method2055(true);
@@ -138,7 +138,7 @@ public class class640 extends class81 {
 		if (arg2 != arg7) {
 			OpenGL.glPixelStorei(3314, arg7);
 		}
-		OpenGL.glTexSubImage2Dub(this.field1049, 0, arg0, this.field7441 - arg1 - arg3, arg2, arg3, class682.method13334(arg5), 5121, arg4, arg6);
+		OpenGL.glTexSubImage2Dub(this.field1049, 0, arg0, this.field7441 - arg1 - arg3, arg2, arg3, GlToolkit.method13334(arg5), 5121, arg4, arg6);
 		if (arg2 != arg7) {
 			OpenGL.glPixelStorei(3314, 0);
 		}

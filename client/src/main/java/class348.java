@@ -4,7 +4,7 @@ import jaclib.memory.heap.NativeHeapBuffer;
 import jaggl.OpenGL;
 
 @ObfuscatedName("lj")
-public abstract class class348 implements class240 {
+public abstract class class348 implements GpuBuffer {
 
 	@ObfuscatedName("lj.a")
 	public final class899 field3744;

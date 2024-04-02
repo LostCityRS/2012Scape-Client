@@ -11,7 +11,7 @@ public class class597 {
 	public int field7156 = 1;
 
 	@ObfuscatedName("vr.u(Laet;I)V")
-	public void method12349(class814 arg0) {
+	public void method12349(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -22,9 +22,9 @@ public class class597 {
 	}
 
 	@ObfuscatedName("vr.j(Laet;IS)V")
-	public void method12350(class814 arg0, int arg1) {
+	public void method12350(Packet arg0, int arg1) {
 		if (arg1 == 1) {
-			this.field7153 = class524.method16898(arg0.method15238());
+			this.field7153 = Cp1252.method16898(arg0.method15238());
 		} else if (arg1 == 2) {
 			this.field7156 = 0;
 		}

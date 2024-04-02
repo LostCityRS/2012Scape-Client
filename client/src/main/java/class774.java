@@ -2,8 +2,8 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("acf")
-public class class774 extends class399 {
+public class class774 extends Node {
 
 	@ObfuscatedName("acf.s")
-	public class547 field9313 = new class547();
+	public IterableQueue field9313 = new IterableQueue();
 }

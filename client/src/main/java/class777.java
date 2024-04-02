@@ -2,16 +2,16 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("acq")
-public class class777 extends class399 {
+public class class777 extends Node {
 
 	@ObfuscatedName("acq.s")
-	public final class682 field9330;
+	public final GlToolkit field9330;
 
 	@ObfuscatedName("acq.c")
-	public final class672 field9333;
+	public final GlFloorModel field9333;
 
 	@ObfuscatedName("acq.m")
-	public final class780 field9324;
+	public final Light field9324;
 
 	@ObfuscatedName("acq.t")
 	public int field9325;
@@ -35,13 +35,13 @@ public class class777 extends class399 {
 	public final class108 field9322;
 
 	@ObfuscatedName("acq.q")
-	public final class90 field9332;
+	public final GlInterfaceRelated field9332;
 
 	@ObfuscatedName("acq.p")
-	public final class93 field9323;
+	public final GlRelated1 field9323;
 
 	@ObfuscatedName("acq.w")
-	public final class93 field9334;
+	public final GlRelated1 field9334;
 
 	@ObfuscatedName("acq.b")
 	public float[][] field9335;
@@ -53,15 +53,15 @@ public class class777 extends class399 {
 	public float[][] field9337;
 
 	@ObfuscatedName("acq.v")
-	public class814 field9338;
+	public Packet field9338;
 
 	@ObfuscatedName("acq.k")
 	public class963 field9339;
 
 	@ObfuscatedName("acq.h")
-	public class565 field9340;
+	public IterableMap field9340;
 
-	public class777(class682 arg0, class672 arg1, class780 arg2, int[] arg3) {
+	public class777(GlToolkit arg0, GlFloorModel arg1, Light arg2, int[] arg3) {
 		this.field9330 = arg0;
 		this.field9324 = arg2;
 		this.field9333 = arg1;
@@ -117,9 +117,9 @@ public class class777 extends class399 {
 			}
 		}
 		if (this.field9336 > 0) {
-			this.field9338 = new class814(this.field9336 * 2);
+			this.field9338 = new Packet(this.field9336 * 2);
 			this.field9339 = new class963(this.field9336 * 16);
-			this.field9340 = new class565(class595.method2839(this.field9336));
+			this.field9340 = new IterableMap(class595.method2839(this.field9336));
 			int var21 = 0;
 			int var22 = 0;
 			for (int var23 = this.field9327; var23 <= this.field9328; var23++) {
@@ -180,8 +180,8 @@ public class class777 extends class399 {
 			}
 			this.field9322 = this.field9330.method13345(5123, this.field9338.field9629, this.field9338.field9626, false);
 			this.field9332 = this.field9330.method13301(16, this.field9339.field9629, this.field9339.field9626, false);
-			this.field9323 = new class93(this.field9332, 5126, 3, 0);
-			this.field9334 = new class93(this.field9332, 5121, 4, 12);
+			this.field9323 = new GlRelated1(this.field9332, 5126, 3, 0);
+			this.field9334 = new GlRelated1(this.field9332, 5121, 4, 12);
 		} else {
 			this.field9322 = null;
 			this.field9332 = null;

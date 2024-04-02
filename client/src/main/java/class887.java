@@ -7,12 +7,12 @@ public class class887 extends class665 {
 	@ObfuscatedName("agy.at")
 	public int[] field9916;
 
-	public class887(class681 arg0, int arg1, int arg2) {
+	public class887(PureJavaToolkit arg0, int arg1, int arg2) {
 		super(arg0, arg1, arg2);
 		this.field9916 = new int[arg1 * arg2];
 	}
 
-	public class887(class681 arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, boolean arg6) {
+	public class887(PureJavaToolkit arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, boolean arg6) {
 		super(arg0, arg4, arg5);
 		if (arg6) {
 			this.field9916 = new int[arg4 * arg5];
@@ -29,7 +29,7 @@ public class class887 extends class665 {
 		}
 	}
 
-	public class887(class681 arg0, int[] arg1, int arg2, int arg3) {
+	public class887(PureJavaToolkit arg0, int[] arg1, int arg2, int arg3) {
 		super(arg0, arg2, arg3);
 		this.field9916 = arg1;
 	}

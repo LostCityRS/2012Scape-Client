@@ -38,7 +38,7 @@ public class class186 {
 	public int field2160;
 
 	@ObfuscatedName("fy.u(Laet;B)V")
-	public void method3595(class814 arg0) {
+	public void method3595(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -49,7 +49,7 @@ public class class186 {
 	}
 
 	@ObfuscatedName("fy.j(Laet;II)V")
-	public void method3593(class814 arg0, int arg1) {
+	public void method3593(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			this.field2151 = arg0.method15239();
 		} else if (arg1 == 2) {

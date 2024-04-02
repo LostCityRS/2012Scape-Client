@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ajg")
-public class class954 extends class800 {
+public class class954 extends SecondaryNode {
 
 	@ObfuscatedName("ajg.t")
 	public class619 field10388;
@@ -41,9 +41,9 @@ public class class954 extends class800 {
 	public int field10376;
 
 	@ObfuscatedName("ajg.i")
-	public class565[] field10383;
+	public IterableMap[] field10383;
 
-	public class954(class814 arg0) {
+	public class954(Packet arg0) {
 		int var2 = this.method16736(arg0);
 		int var3 = 0;
 		class508[] var4 = class508.method7977();
@@ -55,7 +55,7 @@ public class class954 extends class800 {
 	}
 
 	@ObfuscatedName("ajg.u(Laet;[Lsd;I)Lsd;")
-	public class508 method16735(class814 arg0, class508[] arg1) {
+	public class508 method16735(Packet arg0, class508[] arg1) {
 		int var3 = arg0.method15239();
 		if (var3 < 0 || var3 >= arg1.length) {
 			throw new RuntimeException("");
@@ -64,7 +64,7 @@ public class class954 extends class800 {
 	}
 
 	@ObfuscatedName("ajg.j(Laet;S)I")
-	public int method16736(class814 arg0) {
+	public int method16736(Packet arg0) {
 		arg0.field9626 = arg0.field9629.length - 2;
 		int var2 = arg0.method15239();
 		int var3 = arg0.field9629.length - 2 - var2 - 16;
@@ -78,10 +78,10 @@ public class class954 extends class800 {
 		this.field10376 = arg0.method15239();
 		int var5 = arg0.method15220();
 		if (var5 > 0) {
-			this.field10383 = new class565[var5];
+			this.field10383 = new IterableMap[var5];
 			for (int var6 = 0; var6 < var5; var6++) {
 				int var7 = arg0.method15239();
-				class565 var8 = new class565(class595.method2839(var7));
+				IterableMap var8 = new IterableMap(class595.method2839(var7));
 				this.field10383[var6] = var8;
 				while (var7-- > 0) {
 					int var9 = arg0.method15379();
@@ -97,7 +97,7 @@ public class class954 extends class800 {
 	}
 
 	@ObfuscatedName("ajg.a(Laet;ILsd;I)V")
-	public void method16734(class814 arg0, int arg1, class508 arg2) {
+	public void method16734(Packet arg0, int arg1, class508 arg2) {
 		int var4 = this.field10378.length;
 		if (class508.field5271 == arg2) {
 			if (this.field10380 == null) {

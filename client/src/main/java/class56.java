@@ -45,7 +45,7 @@ public class class56 {
 		}
 	}
 
-	public class56(class14 arg0, int arg1, boolean arg2, Component arg3) {
+	public class56(RendererToolkit arg0, int arg1, boolean arg2, Component arg3) {
 		this.field743 = false;
 		this.field739 = new class118[256];
 		this.field744 = new int[256];
@@ -71,7 +71,7 @@ public class class56 {
 	}
 
 	@ObfuscatedName("as.u(Lra;Ljava/awt/Font;Ljava/awt/FontMetrics;CIZ)V")
-	public void method1744(class14 arg0, Font arg1, FontMetrics arg2, char arg3, int arg4, boolean arg5) {
+	public void method1744(RendererToolkit arg0, Font arg1, FontMetrics arg2, char arg3, int arg4, boolean arg5) {
 		int var7 = arg2.charWidth(arg3);
 		int var8 = var7;
 		if (arg5) {
@@ -148,7 +148,7 @@ public class class56 {
 	}
 
 	@ObfuscatedName("as.c(Lra;Ljava/lang/String;IIIZ)V")
-	public void method1749(class14 arg0, String arg1, int arg2, int arg3, int arg4, boolean arg5) {
+	public void method1749(RendererToolkit arg0, String arg1, int arg2, int arg3, int arg4, boolean arg5) {
 		int var7 = this.method1747(arg1) / 2;
 		arg0.method453(this.field747);
 		if (arg2 - var7 <= this.field747[2] && (arg2 + var7 >= this.field747[0] && (arg3 - this.field745 <= this.field747[3] && this.field746 + arg3 >= this.field747[1]))) {
@@ -157,7 +157,7 @@ public class class56 {
 	}
 
 	@ObfuscatedName("as.m(Lra;Ljava/lang/String;[IIIIZ)V")
-	public void method1748(class14 arg0, String arg1, int[] arg2, int arg3, int arg4, int arg5, boolean arg6) {
+	public void method1748(RendererToolkit arg0, String arg1, int[] arg2, int arg3, int arg4, int arg5, boolean arg6) {
 		if (arg5 == 0) {
 			arg6 = false;
 		}

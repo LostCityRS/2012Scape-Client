@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("acb")
-public class class772 extends class399 {
+public class class772 extends Node {
 
 	@ObfuscatedName("acb.s")
 	public int field9309;

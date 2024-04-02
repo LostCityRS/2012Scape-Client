@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("yf")
-public class class663 extends class972 implements class113 {
+public class class663 extends WallLayerEntity implements class113 {
 
 	@ObfuscatedName("yf.z")
 	public class116 field7576;
@@ -11,7 +11,7 @@ public class class663 extends class972 implements class113 {
 	public boolean field7577;
 
 	@ObfuscatedName("yf.o")
-	public class429 field7575;
+	public EntityBounds field7575;
 
 	@ObfuscatedName("yf.q")
 	public static final int[] field7574 = new int[] { 1, 2, 4, 8 };
@@ -22,7 +22,7 @@ public class class663 extends class972 implements class113 {
 	@ObfuscatedName("yf.w")
 	public boolean field7573 = true;
 
-	public class663(class423 arg0, class14 arg1, class541 arg2, class540 arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11, int arg12) {
+	public class663(Scene arg0, RendererToolkit arg1, LocTypeList arg2, LocType arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11, int arg12) {
 		super(arg0, arg6, arg7, arg8, arg4, arg5, method12063(arg10, arg11));
 		this.field7576 = new class116(arg1, arg2, arg3, arg10, arg11, this.field9807, arg5, this, arg9, arg12);
 		this.field7577 = arg3.field6493 != 0 && !arg9;
@@ -45,7 +45,7 @@ public class class663 extends class972 implements class113 {
 	}
 
 	@ObfuscatedName("yf.br(Lra;I)Lok;")
-	public class429 method12810(class14 arg0) {
+	public EntityBounds method12810(RendererToolkit arg0) {
 		return this.field7575;
 	}
 
@@ -65,47 +65,47 @@ public class class663 extends class972 implements class113 {
 	}
 
 	@ObfuscatedName("yf.bi(Lra;B)Loz;")
-	public class425 method12812(class14 arg0) {
-		class13 var2 = this.field7576.method2437(arg0, 2048, false, true);
+	public PickableEntity method12812(RendererToolkit arg0) {
+		Model var2 = this.field7576.method2437(arg0, 2048, false, true);
 		if (var2 == null) {
 			return null;
 		}
-		class314 var3 = this.method8558();
-		class315 var4 = this.method8565();
-		class425 var5 = class425.method12205(this.field7577);
+		Matrix4x3 var3 = this.method8558();
+		ScaleRotTrans var4 = this.method8565();
+		PickableEntity var5 = PickableEntity.method12205(this.field7577);
 		int var6 = (int) var4.field3464.field3475 >> 9;
 		int var7 = (int) var4.field3464.field3477 >> 9;
 		this.field7576.method2438(arg0, var2, var3, var6, var6, var7, var7, true);
 		var2.method271(var3, this.field9811[0], 0);
 		if (this.field7576.field1229 != null) {
-			class128 var8 = this.field7576.field1229.method8112();
+			ParticleList var8 = this.field7576.field1229.method8112();
 			arg0.method733(var8);
 		}
 		this.field7573 = var2.method292() || this.field7576.field1229 != null;
 		if (this.field7575 == null) {
-			this.field7575 = class836.method15140((int) var4.field3464.field3475, (int) var4.field3464.field3476, (int) var4.field3464.field3477, var2);
+			this.field7575 = GraphEntity.method15140((int) var4.field3464.field3475, (int) var4.field3464.field3476, (int) var4.field3464.field3477, var2);
 		} else {
-			class836.method11162(this.field7575, (int) var4.field3464.field3475, (int) var4.field3464.field3476, (int) var4.field3464.field3477, var2);
+			GraphEntity.method11162(this.field7575, (int) var4.field3464.field3475, (int) var4.field3464.field3476, (int) var4.field3464.field3477, var2);
 		}
 		return var5;
 	}
 
 	@ObfuscatedName("yf.bx(Lra;B)V")
-	public void method12851(class14 arg0) {
-		class13 var2 = this.field7576.method2437(arg0, 262144, true, true);
+	public void method12851(RendererToolkit arg0) {
+		Model var2 = this.field7576.method2437(arg0, 262144, true, true);
 		if (var2 == null) {
 			return;
 		}
-		class314 var3 = this.method8558();
-		class315 var4 = this.method8565();
+		Matrix4x3 var3 = this.method8558();
+		ScaleRotTrans var4 = this.method8565();
 		int var5 = (int) var4.field3464.field3475 >> 9;
 		int var6 = (int) var4.field3464.field3477 >> 9;
 		this.field7576.method2438(arg0, var2, var3, var5, var5, var6, var6, false);
 	}
 
 	@ObfuscatedName("yf.bb(Lra;III)Z")
-	public boolean method12814(class14 arg0, int arg1, int arg2) {
-		class13 var4 = this.field7576.method2437(arg0, 131072, false, false);
+	public boolean method12814(RendererToolkit arg0, int arg1, int arg2) {
+		Model var4 = this.field7576.method2437(arg0, 131072, false, false);
 		return var4 == null ? false : var4.method272(arg1, arg2, this.method8558(), false, 0);
 	}
 
@@ -115,7 +115,7 @@ public class class663 extends class972 implements class113 {
 	}
 
 	@ObfuscatedName("yf.bw(Lra;Laes;IIIZI)V")
-	public final void method12816(class14 arg0, class836 arg1, int arg2, int arg3, int arg4, boolean arg5) {
+	public final void method12816(RendererToolkit arg0, GraphEntity arg1, int arg2, int arg3, int arg4, boolean arg5) {
 		throw new IllegalStateException();
 	}
 
@@ -149,12 +149,12 @@ public class class663 extends class972 implements class113 {
 	}
 
 	@ObfuscatedName("yf.m(Lra;I)V")
-	public void method2406(class14 arg0) {
+	public void method2406(RendererToolkit arg0) {
 		this.field7576.method2440(arg0);
 	}
 
 	@ObfuscatedName("yf.t(Lra;I)V")
-	public void method2412(class14 arg0) {
+	public void method2412(RendererToolkit arg0) {
 		this.field7576.method2441(arg0);
 	}
 }

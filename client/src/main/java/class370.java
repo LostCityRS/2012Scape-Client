@@ -16,10 +16,10 @@ public class class370 {
 	@ObfuscatedName("mr.u(Lls;II)Lmr;")
 	public static class370 method6466(class334 arg0, int arg1, int arg2) {
 		byte[] var3 = arg0.method5627(arg1, arg2);
-		return var3 == null ? null : new class370(new class814(var3));
+		return var3 == null ? null : new class370(new Packet(var3));
 	}
 
-	public class370(class814 arg0) {
+	public class370(Packet arg0) {
 		for (int var2 = 0; var2 < 10; var2++) {
 			int var3 = arg0.method15220();
 			if (var3 != 0) {

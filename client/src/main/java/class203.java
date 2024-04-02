@@ -5,7 +5,7 @@ import deob.ObfuscatedName;
 public abstract class class203 {
 
 	@ObfuscatedName("gn.u")
-	public class683 field2278;
+	public GpuToolkit field2278;
 
 	@ObfuscatedName("gn.j")
 	public class239 field2284;
@@ -14,24 +14,24 @@ public abstract class class203 {
 	public class239 field2279;
 
 	@ObfuscatedName("gn.s")
-	public final class320 field2280 = new class320();
+	public final Matrix4x4 field2280 = new Matrix4x4();
 
 	@ObfuscatedName("gn.c")
-	public final class320 field2281 = new class320();
+	public final Matrix4x4 field2281 = new Matrix4x4();
 
 	@ObfuscatedName("gn.m")
-	public final class320 field2282 = new class320();
+	public final Matrix4x4 field2282 = new Matrix4x4();
 
 	@ObfuscatedName("gn.t")
-	public class228 field2283;
+	public VertexBuffer field2283;
 
 	@ObfuscatedName("gn.l")
 	public int field2277;
 
 	@ObfuscatedName("gn.f")
-	public class230 field2285;
+	public VertexDeclaration field2285;
 
-	public class203(class683 arg0) {
+	public class203(GpuToolkit arg0) {
 		this.field2278 = arg0;
 	}
 

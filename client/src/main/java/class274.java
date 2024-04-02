@@ -11,7 +11,7 @@ public class class274 {
 	public static int field2764 = 0;
 
 	@ObfuscatedName("ic.n")
-	public static class565 field2745 = new class565(16);
+	public static IterableMap field2745 = new IterableMap(16);
 
 	@ObfuscatedName("ic.q")
 	public static class451 field2758 = new class451(64);
@@ -73,7 +73,7 @@ public class class274 {
 		class274 var3 = new class274();
 		var3.field2748 = arg0;
 		if (var2 != null) {
-			var3.method4679(new class814(var2));
+			var3.method4679(new Packet(var2));
 		}
 		var3.method4675();
 		if (var3.field2760 == 2 && field2745.method11923((long) arg0) == null) {
@@ -85,7 +85,7 @@ public class class274 {
 	}
 
 	@ObfuscatedName("ic.a(Laet;I)V")
-	public void method4679(class814 arg0) {
+	public void method4679(Packet arg0) {
 		while (true) {
 			int var2 = arg0.method15220();
 			if (var2 == 0) {
@@ -96,7 +96,7 @@ public class class274 {
 	}
 
 	@ObfuscatedName("ic.s(Laet;II)V")
-	public void method4685(class814 arg0, int arg1) {
+	public void method4685(Packet arg0, int arg1) {
 		if (arg1 == 1) {
 			this.field2761 = arg0.method15239();
 		} else if (arg1 == 2) {
@@ -121,7 +121,7 @@ public class class274 {
 
 	@ObfuscatedName("ic.c(B)V")
 	public void method4675() {
-		this.field2772 = class312.field3447[this.field2761 << 3];
+		this.field2772 = Trig1.field3447[this.field2761 << 3];
 		long var1 = (long) this.field2754;
 		long var3 = (long) this.field2763;
 		long var5 = (long) this.field2765;

@@ -5,13 +5,13 @@ import deob.ObfuscatedName;
 public class class465 {
 
 	@ObfuscatedName("qo.u")
-	public final class134 field4916;
+	public final ModelParticleEmitter field4916;
 
 	@ObfuscatedName("qo.j")
 	public class273 field4901;
 
 	@ObfuscatedName("qo.a")
-	public final class467 field4902;
+	public final ParticleSystem field4902;
 
 	@ObfuscatedName("qo.s")
 	public int field4912 = 0;
@@ -61,7 +61,7 @@ public class class465 {
 	@ObfuscatedName("qo.i")
 	public boolean field4918 = false;
 
-	public class465(class14 arg0, class134 arg1, class467 arg2, long arg3) {
+	public class465(RendererToolkit arg0, ModelParticleEmitter arg1, ParticleSystem arg2, long arg3) {
 		this.field4916 = arg1;
 		this.field4902 = arg2;
 		this.field4905 = arg3;
@@ -111,7 +111,7 @@ public class class465 {
 	}
 
 	@ObfuscatedName("qo.j(Lra;JIZI)V")
-	public void method8070(class14 arg0, long arg1, int arg2, boolean arg3) {
+	public void method8070(RendererToolkit arg0, long arg1, int arg2, boolean arg3) {
 		if (this.field4907) {
 			arg3 = false;
 		} else if (class466.field4929 < this.field4901.field2722) {
@@ -199,12 +199,12 @@ public class class465 {
 					} else {
 						int var27 = this.field4913 + (int) ((double) this.field4914 * Math.random());
 						int var28 = var27 & 0x3FFF;
-						int var29 = class312.field3439[var28];
-						int var30 = class312.field3447[var28];
+						int var29 = Trig1.field3439[var28];
+						int var30 = Trig1.field3447[var28];
 						int var31 = this.field4915 + (int) ((double) this.field4910 * Math.random());
 						int var32 = var31 & 0x1FFF;
-						int var33 = class312.field3439[var32];
-						int var34 = class312.field3447[var32];
+						int var33 = Trig1.field3439[var32];
+						int var34 = Trig1.field3447[var32];
 						byte var35 = 13;
 						var24 = var30 * var33 >> var35;
 						var25 = (var34 << 1) * -1;
@@ -272,7 +272,7 @@ public class class465 {
 	}
 
 	@ObfuscatedName("qo.a(Loo;Lra;J)V")
-	public void method8071(class423 arg0, class14 arg1, long arg2) {
+	public void method8071(Scene arg0, RendererToolkit arg1, long arg2) {
 		for (class991 var5 = (class991) this.field4904.method11649(); var5 != null; var5 = (class991) this.field4904.method11644()) {
 			var5.method16987(arg0, arg1, arg2);
 		}

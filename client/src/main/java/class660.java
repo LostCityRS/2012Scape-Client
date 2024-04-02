@@ -2,19 +2,19 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("yc")
-public class class660 extends class971 implements class113 {
+public class class660 extends WallDecorLayerEntity implements class113 {
 
 	@ObfuscatedName("yc.z")
-	public class541 field7550;
+	public LocTypeList field7550;
 
 	@ObfuscatedName("yc.n")
-	public class13 field7544;
+	public Model field7544;
 
 	@ObfuscatedName("yc.o")
 	public class30 field7547;
 
 	@ObfuscatedName("yc.q")
-	public class429 field7545;
+	public EntityBounds field7545;
 
 	@ObfuscatedName("yc.p")
 	public final int field9810;
@@ -34,7 +34,7 @@ public class class660 extends class971 implements class113 {
 	@ObfuscatedName("yc.v")
 	public boolean field7553;
 
-	public class660(class423 arg0, class14 arg1, class541 arg2, class540 arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11, int arg12, int arg13) {
+	public class660(Scene arg0, RendererToolkit arg1, LocTypeList arg2, LocType arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11, int arg12, int arg13) {
 		super(arg0, arg6, arg7, arg8, arg4, arg5, arg10, arg11);
 		this.field7550 = arg2;
 		this.field9810 = arg3.field6474;
@@ -49,7 +49,7 @@ public class class660 extends class971 implements class113 {
 		}
 		class570 var16 = this.method12879(arg1, var15, this.field7553);
 		if (var16 != null) {
-			this.field7544 = (class13) var16.field6757;
+			this.field7544 = (Model) var16.field6757;
 			this.field7547 = (class30) var16.field6756;
 			if (arg3.field6472) {
 				this.field7544 = this.field7544.method295((byte) 0, var15, false);
@@ -82,20 +82,20 @@ public class class660 extends class971 implements class113 {
 	}
 
 	@ObfuscatedName("yc.bd(Lra;IS)Lqa;")
-	public class13 method12878(class14 arg0, int arg1) {
+	public Model method12878(RendererToolkit arg0, int arg1) {
 		if (this.field7544 != null && arg0.method519(this.field7544.method329(), arg1) == 0) {
 			return this.field7544;
 		} else {
 			class570 var3 = this.method12879(arg0, arg1, false);
-			return var3 == null ? null : (class13) var3.field6757;
+			return var3 == null ? null : (Model) var3.field6757;
 		}
 	}
 
 	@ObfuscatedName("yc.bm(Lra;IZI)Luz;")
-	public class570 method12879(class14 arg0, int arg1, boolean arg2) {
-		class540 var4 = this.field7550.method11471(this.field9810);
-		class12 var5;
-		class12 var6;
+	public class570 method12879(RendererToolkit arg0, int arg1, boolean arg2) {
+		LocType var4 = this.field7550.method11471(this.field9810);
+		FloorModel var5;
+		FloorModel var6;
 		if (this.field7551) {
 			var5 = this.field9808.field4502[this.field9809];
 			var6 = this.field9808.field4527[0];
@@ -107,43 +107,43 @@ public class class660 extends class971 implements class113 {
 				var6 = null;
 			}
 		}
-		class317 var7 = this.method8565().field3464;
+		Vector3 var7 = this.method8565().field3464;
 		return var4.method11447(arg0, arg1, this.field7549, this.field7546, var5, var6, (int) var7.field3475, (int) var7.field3476, (int) var7.field3477, arg2, null);
 	}
 
 	@ObfuscatedName("yc.br(Lra;I)Lok;")
-	public class429 method12810(class14 arg0) {
-		class317 var2 = this.method8565().field3464;
+	public EntityBounds method12810(RendererToolkit arg0) {
+		Vector3 var2 = this.method8565().field3464;
 		if (this.field7545 == null) {
-			this.field7545 = class836.method15140((int) var2.field3475, (int) var2.field3476, (int) var2.field3477, this.method12878(arg0, 0));
+			this.field7545 = GraphEntity.method15140((int) var2.field3475, (int) var2.field3476, (int) var2.field3477, this.method12878(arg0, 0));
 		}
 		return this.field7545;
 	}
 
 	@ObfuscatedName("yc.bi(Lra;B)Loz;")
-	public class425 method12812(class14 arg0) {
+	public PickableEntity method12812(RendererToolkit arg0) {
 		if (this.field7544 == null) {
 			return null;
 		}
-		class314 var2 = arg0.method516();
+		Matrix4x3 var2 = arg0.method516();
 		var2.method5115(this.method8558());
 		var2.method5116((float) this.field10496, 0.0F, (float) this.field10497);
-		class425 var3 = class425.method12205(this.field7552);
+		PickableEntity var3 = PickableEntity.method12205(this.field7552);
 		this.field7544.method271(var2, this.field9811[0], 0);
 		return var3;
 	}
 
 	@ObfuscatedName("yc.bx(Lra;B)V")
-	public void method12851(class14 arg0) {
+	public void method12851(RendererToolkit arg0) {
 	}
 
 	@ObfuscatedName("yc.bb(Lra;III)Z")
-	public boolean method12814(class14 arg0, int arg1, int arg2) {
-		class13 var4 = this.method12878(arg0, 131072);
+	public boolean method12814(RendererToolkit arg0, int arg1, int arg2) {
+		Model var4 = this.method12878(arg0, 131072);
 		if (var4 == null) {
 			return false;
 		} else {
-			class314 var5 = this.method8558();
+			Matrix4x3 var5 = this.method8558();
 			return var4.method272(arg1, arg2, var5, false, 0);
 		}
 	}
@@ -176,7 +176,7 @@ public class class660 extends class971 implements class113 {
 	}
 
 	@ObfuscatedName("yc.m(Lra;I)V")
-	public void method2406(class14 arg0) {
+	public void method2406(RendererToolkit arg0) {
 		Object var2 = null;
 		class30 var4;
 		if (this.field7547 == null && this.field7553) {
@@ -186,14 +186,14 @@ public class class660 extends class971 implements class113 {
 			var4 = this.field7547;
 			this.field7547 = null;
 		}
-		class317 var5 = this.method8565().field3464;
+		Vector3 var5 = this.method8565().field3464;
 		if (var4 != null) {
 			this.field9808.method7445(var4, this.field9809, (int) var5.field3475, (int) var5.field3477, null);
 		}
 	}
 
 	@ObfuscatedName("yc.t(Lra;I)V")
-	public void method2412(class14 arg0) {
+	public void method2412(RendererToolkit arg0) {
 		Object var2 = null;
 		class30 var4;
 		if (this.field7547 == null && this.field7553) {
@@ -203,7 +203,7 @@ public class class660 extends class971 implements class113 {
 			var4 = this.field7547;
 			this.field7547 = null;
 		}
-		class317 var5 = this.method8565().field3464;
+		Vector3 var5 = this.method8565().field3464;
 		if (var4 != null) {
 			this.field9808.method7451(var4, this.field9809, (int) var5.field3475, (int) var5.field3477, null);
 		}
