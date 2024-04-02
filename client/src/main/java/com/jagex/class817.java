@@ -1,0 +1,356 @@
+package com.jagex;
+
+import deob.ObfuscatedName;
+import deob.Statics;
+import jaclib.hardware_info.HardwareInfo;
+import java.util.HashMap;
+
+@ObfuscatedName("aeb")
+public class class817 extends class399 {
+
+	@ObfuscatedName("aeb.f")
+	public int field9698;
+
+	@ObfuscatedName("aeb.d")
+	public boolean field9687;
+
+	@ObfuscatedName("aeb.g")
+	public int field9715;
+
+	@ObfuscatedName("aeb.ar")
+	public int field9706;
+
+	@ObfuscatedName("aeb.an")
+	public int field9707;
+
+	@ObfuscatedName("aeb.ap")
+	public int field9713;
+
+	@ObfuscatedName("aeb.ag")
+	public int field9701;
+
+	@ObfuscatedName("aeb.as")
+	public boolean field9710;
+
+	@ObfuscatedName("aeb.ai")
+	public int field9711;
+
+	@ObfuscatedName("aeb.al")
+	public int field9705;
+
+	@ObfuscatedName("aeb.ax")
+	public int field9703;
+
+	@ObfuscatedName("aeb.aw")
+	public int field9716;
+
+	@ObfuscatedName("aeb.aa")
+	public String field9717;
+
+	@ObfuscatedName("aeb.am")
+	public String field9718;
+
+	@ObfuscatedName("aeb.ad")
+	public String field9719;
+
+	@ObfuscatedName("aeb.az")
+	public String field9720;
+
+	@ObfuscatedName("aeb.ak")
+	public int field9721;
+
+	@ObfuscatedName("aeb.av")
+	public int field9722;
+
+	@ObfuscatedName("aeb.aj")
+	public int field9728;
+
+	@ObfuscatedName("aeb.ah")
+	public int field9724;
+
+	@ObfuscatedName("aeb.au")
+	public String field9725;
+
+	@ObfuscatedName("aeb.ae")
+	public String field9726;
+
+	@ObfuscatedName("aeb.ac")
+	public int[] field9727 = new int[3];
+
+	@ObfuscatedName("aeb.aq")
+	public int field9685;
+
+	public class817(boolean arg0) {
+		if (arg0) {
+			if (Statics.field2247.startsWith("win")) {
+				this.field9698 = 1359406791;
+			} else if (Statics.field2247.startsWith("mac")) {
+				this.field9698 = -1576153714;
+			} else if (Statics.field2247.startsWith("linux")) {
+				this.field9698 = -216746923;
+			} else {
+				this.field9698 = 1142659868;
+			}
+			if (Statics.field4150.startsWith("amd64") || Statics.field4150.startsWith("x86_64")) {
+				this.field9687 = true;
+			} else {
+				this.field9687 = false;
+			}
+			if (this.field9698 * 1715469047 == 1) {
+				if (Statics.field862.indexOf("4.0") != -1) {
+					this.field9715 = -1658872599;
+				} else if (Statics.field862.indexOf("4.1") != -1) {
+					this.field9715 = 977222098;
+				} else if (Statics.field862.indexOf("4.9") != -1) {
+					this.field9715 = -681650501;
+				} else if (Statics.field862.indexOf("5.0") != -1) {
+					this.field9715 = 1954444196;
+				} else if (Statics.field862.indexOf("5.1") != -1) {
+					this.field9715 = 295571597;
+				} else if (Statics.field862.indexOf("5.2") != -1) {
+					this.field9715 = -386078904;
+				} else if (Statics.field862.indexOf("6.0") != -1) {
+					this.field9715 = -1363301002;
+				} else if (Statics.field862.indexOf("6.1") != -1) {
+					this.field9715 = 1272793695;
+				} else if (Statics.field862.indexOf("6.2") != -1) {
+					this.field9715 = -2044951503;
+				}
+			} else if (this.field9698 * 1715469047 == 2) {
+				if (Statics.field862.indexOf("10.4") != -1) {
+					this.field9715 = 1182286388;
+				} else if (Statics.field862.indexOf("10.5") != -1) {
+					this.field9715 = -476586211;
+				} else if (Statics.field862.indexOf("10.6") != -1) {
+					this.field9715 = -2135458810;
+				} else if (Statics.field862.indexOf("10.7") != -1) {
+					this.field9715 = 500635887;
+				}
+			}
+			if (Statics.field3788.toLowerCase().indexOf("sun") != -1) {
+				this.field9706 = -1411545511;
+			} else if (Statics.field3788.toLowerCase().indexOf("microsoft") != -1) {
+				this.field9706 = 1471876274;
+			} else if (Statics.field3788.toLowerCase().indexOf("apple") == -1) {
+				this.field9706 = -1351214748;
+			} else {
+				this.field9706 = 60330763;
+			}
+			int var2 = 2;
+			int var3 = 0;
+			try {
+				while (var2 < Statics.field726.length()) {
+					char var4 = Statics.field726.charAt(var2);
+					if (var4 < '0' || var4 > '9') {
+						break;
+					}
+					var3 = var3 * 10 + (var4 - '0');
+					var2++;
+				}
+			} catch (Exception var48) {
+			}
+			this.field9707 = var3 * 844347057;
+			int var6 = Statics.field726.indexOf(46, 2) + 1;
+			int var7 = 0;
+			try {
+				while (var6 < Statics.field726.length()) {
+					char var8 = Statics.field726.charAt(var6);
+					if (var8 < '0' || var8 > '9') {
+						break;
+					}
+					var7 = var7 * 10 + (var8 - '0');
+					var6++;
+				}
+			} catch (Exception var47) {
+			}
+			this.field9713 = var7 * -1277998469;
+			int var10 = Statics.field726.indexOf(95, 4) + 1;
+			int var11 = 0;
+			try {
+				while (var10 < Statics.field726.length()) {
+					char var12 = Statics.field726.charAt(var10);
+					if (var12 < '0' || var12 > '9') {
+						break;
+					}
+					var11 = var11 * 10 + (var12 - '0');
+					var10++;
+				}
+			} catch (Exception var46) {
+			}
+			this.field9701 = var11 * -564029403;
+			this.field9710 = false;
+			this.field9711 = class385.field4152 * 788818707;
+			if (this.field9707 * -142159279 > 3) {
+				this.field9705 = class385.field4144 * 1975909841;
+			} else {
+				this.field9705 = 0;
+			}
+			try {
+				int[] var14 = HardwareInfo.getCPUInfo();
+				if (var14 != null && var14.length == 3) {
+					this.field9728 = var14[0] * -456120131;
+					this.field9716 = var14[1] * 1154995463;
+					this.field9703 = var14[2] * -1015908181;
+				}
+				int[] var15 = HardwareInfo.getRawCPUInfo();
+				if (var15 != null && var15.length % 5 == 0) {
+					HashMap var16 = new HashMap();
+					for (int var17 = 0; var17 < var15.length / 5; var17++) {
+						int var18 = var15[var17 * 5];
+						int var19 = var15[var17 * 5 + 1];
+						int var20 = var15[var17 * 5 + 2];
+						int var21 = var15[var17 * 5 + 3];
+						int var22 = var15[var17 * 5 + 4];
+						class581 var23 = new class581(var18, var19, var20, var21, var22);
+						var16.put(var18, var23);
+					}
+					class581 var24 = (class581) var16.get(0);
+					if (var24 != null) {
+						class814 var25 = new class814(13);
+						var25.method15274(var24.field6822 * 917593591);
+						var25.method15274(var24.field6820 * 972536319);
+						var25.method15274(var24.field6823 * 811643999);
+						var25.field9626 = 0;
+						this.field9725 = var25.method15337();
+					}
+					class581 var26 = (class581) var16.get(1);
+					if (var26 != null) {
+						this.field9685 = var26.field6821 * 932788485;
+						int var27 = var26.field6822 * 917593591;
+						this.field9724 = (var27 >> 16 & 0xFF) * 1254522697;
+						this.field9727[0] = var26.field6823 * 811643999;
+						this.field9727[1] = var26.field6820 * 972536319;
+					}
+					class581 var28 = (class581) var16.get(-2147483647);
+					if (var28 != null) {
+						this.field9727[2] = var28.field6820 * 972536319;
+					}
+					class814 var29 = new class814(49);
+					for (int var30 = -2147483646; var30 <= -2147483644; var30++) {
+						class581 var31 = (class581) var16.get(var30);
+						if (var31 != null) {
+							var29.method15274(var31.field6821 * 31253031);
+							var29.method15274(var31.field6822 * 917593591);
+							var29.method15274(var31.field6823 * 811643999);
+							var29.method15274(var31.field6820 * 972536319);
+						}
+					}
+					var29.field9626 = 0;
+					this.field9726 = var29.method15337();
+				}
+				String[][] var32 = HardwareInfo.getDXDiagDisplayDevicesProps();
+				if (var32 != null && var32.length > 0 && var32[0] != null) {
+					for (int var33 = 0; var33 < var32[0].length; var33 += 2) {
+						if (var32[0][var33].equalsIgnoreCase("szDescription")) {
+							this.field9717 = var32[0][var33 + 1];
+						} else if (var32[0][var33].equalsIgnoreCase("szDriverDateEnglish")) {
+							String var34 = var32[0][var33 + 1];
+							try {
+								int var35 = var34.indexOf("/");
+								int var36 = var34.indexOf("/", var35 + 1);
+								this.field9722 = Integer.parseInt(var34.substring(0, var35)) * -2093693789;
+								this.field9721 = Integer.parseInt(var34.substring(var36 + 1, var34.indexOf(" ", var36))) * -725607393;
+							} catch (Exception var44) {
+							}
+						}
+					}
+				}
+				String[] var38 = HardwareInfo.getDXDiagSystemProps();
+				if (var38 != null) {
+					String var39 = "";
+					String var40 = "";
+					String var41 = "";
+					for (int var42 = 0; var42 < var38.length; var42 += 2) {
+						if (var38[var42].equalsIgnoreCase("dwDirectXVersionMajor")) {
+							var39 = var38[var42 + 1];
+						} else if (var38[var42].equalsIgnoreCase("dwDirectXVersionMinor")) {
+							var40 = var38[var42 + 1];
+						} else if (var38[var42].equalsIgnoreCase("dwDirectXVersionLetter")) {
+							var41 = var38[var42 + 1];
+						}
+					}
+					this.field9719 = var39 + "." + var40 + var41;
+				}
+			} catch (Throwable var45) {
+				this.field9703 = 0;
+			}
+		}
+		if (this.field9717 == null) {
+			this.field9717 = "";
+		}
+		if (this.field9718 == null) {
+			this.field9718 = "";
+		}
+		if (this.field9719 == null) {
+			this.field9719 = "";
+		}
+		if (this.field9720 == null) {
+			this.field9720 = "";
+		}
+		if (this.field9725 == null) {
+			this.field9725 = "";
+		}
+		if (this.field9726 == null) {
+			this.field9726 = "";
+		}
+		this.method15474();
+	}
+
+	@ObfuscatedName("aeb.u(I)V")
+	public void method15474() {
+		if (this.field9717.length() > 40) {
+			this.field9717 = this.field9717.substring(0, 40);
+		}
+		if (this.field9718.length() > 40) {
+			this.field9718 = this.field9718.substring(0, 40);
+		}
+		if (this.field9719.length() > 10) {
+			this.field9719 = this.field9719.substring(0, 10);
+		}
+		if (this.field9720.length() > 10) {
+			this.field9720 = this.field9720.substring(0, 10);
+		}
+	}
+
+	@ObfuscatedName("aeb.j(Laet;I)V")
+	public void method15475(class814 arg0) {
+		arg0.method15308(6);
+		arg0.method15308(this.field9698 * 1715469047);
+		arg0.method15308(this.field9687 ? 1 : 0);
+		arg0.method15308(this.field9715 * -174392487);
+		arg0.method15308(this.field9706 * -1574870551);
+		arg0.method15308(this.field9707 * -142159279);
+		arg0.method15308(this.field9713 * 2004550835);
+		arg0.method15308(this.field9701 * 537445293);
+		arg0.method15308(this.field9710 ? 1 : 0);
+		arg0.method15287(this.field9711 * 1892223865);
+		arg0.method15308(this.field9705 * 1900929527);
+		arg0.method15222(this.field9703 * -1868185085);
+		arg0.method15287(this.field9716 * 459114679);
+		arg0.method15229(this.field9717);
+		arg0.method15229(this.field9718);
+		arg0.method15229(this.field9719);
+		arg0.method15229(this.field9720);
+		arg0.method15308(this.field9722 * 592580363);
+		arg0.method15287(this.field9721 * 1455972319);
+		arg0.method15229(this.field9725);
+		arg0.method15229(this.field9726);
+		arg0.method15308(this.field9728 * -1827204459);
+		arg0.method15308(this.field9724 * -883776775);
+		for (int var2 = 0; var2 < this.field9727.length; var2++) {
+			arg0.method15223(this.field9727[var2]);
+		}
+		arg0.method15223(this.field9685 * -627169733);
+	}
+
+	@ObfuscatedName("aeb.a(I)I")
+	public int method15476() {
+		byte var1 = 38;
+		int var2 = var1 + class814.method13882(this.field9717);
+		int var3 = var2 + class814.method13882(this.field9718);
+		int var4 = var3 + class814.method13882(this.field9719);
+		int var5 = var4 + class814.method13882(this.field9720);
+		int var6 = var5 + class814.method13882(this.field9725);
+		return var6 + class814.method13882(this.field9726);
+	}
+}

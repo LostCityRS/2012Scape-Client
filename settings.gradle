@@ -1,0 +1,5 @@
+rootProject.name = "2012Scape-Client"
+
+include(
+    "client"
+)
