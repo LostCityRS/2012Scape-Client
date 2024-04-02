@@ -2,30 +2,30 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("a")
-public class class8 implements class10 {
+public class a implements class10 {
 
 	public long nativeid;
 
 	@ObfuscatedName("a.u")
-	public class19 field378;
+	public ja field378;
 
 	@ObfuscatedName("a.j")
 	public Runnable field377;
 
 	@ObfuscatedName("a.a")
-	public class22[] field380 = new class22[7];
+	public h[] field380 = new h[7];
 
 	@ObfuscatedName("a.s")
-	public class22[] field379 = new class22[7];
+	public h[] field379 = new h[7];
 
 	@ObfuscatedName("a.c")
 	public class320 field376;
 
-	public class8(class19 arg0, int arg1, int arg2) {
+	public a(ja arg0, int arg1, int arg2) {
 		this.field378 = arg0;
 		for (int var4 = 0; var4 < 7; var4++) {
-			this.field380[var4] = new class22(this.field378);
-			this.field379[var4] = new class22(this.field378);
+			this.field380[var4] = new h(this.field378);
+			this.field379[var4] = new h(this.field378);
 		}
 		this.field376 = new class320();
 		this.method153(this.nativeid, arg0, arg1, arg2);
@@ -38,16 +38,16 @@ public class class8 implements class10 {
 	}
 
 	@ObfuscatedName("a.j(Lh;BIZ)Lqa;")
-	public class13 method90(class22 arg0, byte arg1, int arg2, boolean arg3) {
+	public class13 method90(h arg0, byte arg1, int arg2, boolean arg3) {
 		boolean var5 = false;
-		class22 var6;
-		class22 var7;
+		h var6;
+		h var7;
 		if (arg1 > 0 && arg1 <= 7) {
 			var6 = this.field379[arg1 - 1];
 			var7 = this.field380[arg1 - 1];
 			var5 = true;
 		} else {
-			var7 = var6 = new class22(this.field378);
+			var7 = var6 = new h(this.field378);
 		}
 		arg0.method1132(var7, var6, arg2, var5, arg3);
 		var7.field473 = arg0.field473;
@@ -83,35 +83,35 @@ public class class8 implements class10 {
 
 	@ObfuscatedName("a.m(Lqa;Lqa;IIIZ)V")
 	public void method100(class13 arg0, class13 arg1, int arg2, int arg3, int arg4, boolean arg5) {
-		this.method118(this.nativeid, ((class22) arg0).nativeid, ((class22) arg1).nativeid, arg2, arg3, arg4, arg5);
+		this.method118(this.nativeid, ((h) arg0).nativeid, ((h) arg1).nativeid, arg2, arg3, arg4, arg5);
 	}
 
 	@ObfuscatedName("a.t(Lqa;Lkc;[II)V")
 	public void method102(class13 arg0, class314 arg1, int[] arg2, int arg3) {
 		this.field376.method5385(arg1);
-		this.method91(this.nativeid, ((class22) arg0).nativeid, this.field376.field3480, arg2, arg3);
+		this.method91(this.nativeid, ((h) arg0).nativeid, this.field376.field3480, arg2, arg3);
 	}
 
 	@ObfuscatedName("a.l(Lqa;IILkc;Z)Z")
 	public boolean method104(class13 arg0, int arg1, int arg2, class314 arg3, boolean arg4) {
 		this.field376.method5385(arg3);
-		return this.method105(this.nativeid, ((class22) arg0).nativeid, arg1, arg2, this.field376.field3480, arg4);
+		return this.method105(this.nativeid, ((h) arg0).nativeid, arg1, arg2, this.field376.field3480, arg4);
 	}
 
 	@ObfuscatedName("a.f(Lqa;[ILkc;)V")
 	public void method89(class13 arg0, int[] arg1, class314 arg2) {
 		this.field376.method5385(arg2);
-		this.method124(this.nativeid, ((class22) arg0).nativeid, arg1, this.field376.field3480);
+		this.method124(this.nativeid, ((h) arg0).nativeid, arg1, this.field376.field3480);
 	}
 
 	@ObfuscatedName("a.d(Lxa;II)V")
 	public void method108(class12 arg0, int arg1, int arg2) {
-		this.method109(this.nativeid, ((class26) arg0).nativeid, arg1, arg2);
+		this.method109(this.nativeid, ((i) arg0).nativeid, arg1, arg2);
 	}
 
 	@ObfuscatedName("a.z(Lxa;IIIIIII[[Z)V")
 	public void method119(class12 arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, boolean[][] arg8) {
-		this.method111(this.nativeid, ((class26) arg0).nativeid, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+		this.method111(this.nativeid, ((i) arg0).nativeid, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 	}
 
 	@ObfuscatedName("a.wa(JJ[F[II)V")

@@ -6,7 +6,7 @@ import java.awt.Container;
 import java.awt.Frame;
 
 @ObfuscatedName("za")
-public class class17 extends class675 implements class10 {
+public class za extends class675 implements class10 {
 
 	public long nativeid;
 
@@ -20,12 +20,12 @@ public class class17 extends class675 implements class10 {
 	public int field432;
 
 	@ObfuscatedName("za.s")
-	public class19 field433;
+	public ja field433;
 
 	@ObfuscatedName("za.c")
 	public static boolean field434 = false;
 
-	public class17(class19 arg0, Canvas arg1, int arg2, int arg3) {
+	public za(ja arg0, Canvas arg1, int arg2, int arg3) {
 		this.field433 = arg0;
 		this.field430 = arg1;
 		this.field431 = arg2;
@@ -140,7 +140,7 @@ public class class17 extends class675 implements class10 {
 	public native void method917(Canvas arg0, int arg1, int arg2);
 
 	@ObfuscatedName("za.n(Lja;Ljava/awt/Canvas;II)V")
-	public native void method924(class19 arg0, Canvas arg1, int arg2, int arg3);
+	public native void method924(ja arg0, Canvas arg1, int arg2, int arg3);
 
 	@ObfuscatedName("za.H(IIIIIIII)V")
 	public native void method953(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7);

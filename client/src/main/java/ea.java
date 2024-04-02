@@ -2,11 +2,11 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ea")
-public class class25 extends class15 implements class10 {
+public class ea extends class15 implements class10 {
 
 	public long nativeid;
 
-	public class25(class19 arg0, class23 arg1, class603 arg2, class685[] arg3, class118[] arg4) {
+	public ea(ja arg0, ba arg1, class603 arg2, class685[] arg3, class118[] arg4) {
 		super(arg0, arg2);
 		byte[][] var6 = new byte[arg3.length][];
 		int[] var7 = new int[arg3.length];
@@ -44,7 +44,7 @@ public class class25 extends class15 implements class10 {
 	}
 
 	@ObfuscatedName("ea.n(Lja;Lba;[[B[I[I[I[I)V")
-	public native void method1170(class19 arg0, class23 arg1, byte[][] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6);
+	public native void method1170(ja arg0, ba arg1, byte[][] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6);
 
 	@ObfuscatedName("ea.UA(CIIIZ)V")
 	public native void method848(char arg0, int arg1, int arg2, int arg3, boolean arg4);

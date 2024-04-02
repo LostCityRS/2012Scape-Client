@@ -99,7 +99,7 @@ public class class428 {
 		this.field4617 = 0;
 		this.field4611 = new int[this.field4605.field4494][this.field4605.field4495 + 1][this.field4605.field4496 + 1];
 		this.field4607 = false;
-		if (this.field4605.field4489 instanceof class19) {
+		if (this.field4605.field4489 instanceof ja) {
 			this.field4624 = false;
 		} else {
 			this.field4624 = true;

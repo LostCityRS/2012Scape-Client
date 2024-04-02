@@ -5,13 +5,13 @@ import deob.ObfuscatedName;
 public class class29 extends class674 {
 
 	@ObfuscatedName("o.j")
-	public class19 field478;
+	public ja field478;
 
 	@ObfuscatedName("o.a")
-	public class20 field479 = null;
+	public fa field479 = null;
 
 	@ObfuscatedName("o.s")
-	public class9 field481 = null;
+	public oa field481 = null;
 
 	@ObfuscatedName("o.c")
 	public int field480 = 0;
@@ -19,7 +19,7 @@ public class class29 extends class674 {
 	@ObfuscatedName("o.m")
 	public int field482 = 0;
 
-	public class29(class19 arg0) {
+	public class29(ja arg0) {
 		this.field478 = arg0;
 	}
 
@@ -49,7 +49,7 @@ public class class29 extends class674 {
 		if (arg0 != 0) {
 			throw new RuntimeException();
 		} else if (this.field481 == null || arg1 == null || this.field481.method164() == arg1.method164() && this.field481.method165() == arg1.method165()) {
-			this.field479 = (class20) arg1;
+			this.field479 = (fa) arg1;
 			if (arg1 != null) {
 				this.field480 = arg1.method164();
 				this.field482 = arg1.method165();
@@ -70,7 +70,7 @@ public class class29 extends class674 {
 		if (this.field479 != null && arg0 != null && (this.field479.method164() != arg0.method164() || this.field479.method165() != arg0.method165())) {
 			throw new RuntimeException();
 		}
-		this.field481 = (class9) arg0;
+		this.field481 = (oa) arg0;
 		if (arg0 != null) {
 			this.field480 = arg0.method164();
 			this.field482 = arg0.method165();

@@ -2,17 +2,17 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("i")
-public class class26 extends class12 implements class10 {
+public class i extends class12 implements class10 {
 
 	public long nativeid;
 
 	@ObfuscatedName("i.m")
-	public class19 field475;
+	public ja field475;
 
 	@ObfuscatedName("i.t")
 	public class547 field476 = new class547();
 
-	public class26(class19 arg0, class23 arg1, int arg2, int arg3, int[][] arg4, int[][] arg5, int arg6, int arg7, int arg8) {
+	public i(ja arg0, ba arg1, int arg2, int arg3, int[][] arg4, int[][] arg5, int arg6, int arg7, int arg8) {
 		super(arg2, arg3, arg6, arg4);
 		this.field475 = arg0;
 		this.method1177(this.field475, arg1, arg2, arg3, this.field389, arg5, arg6, arg7, arg8);
@@ -145,7 +145,7 @@ public class class26 extends class12 implements class10 {
 	}
 
 	@ObfuscatedName("i.G(Lja;Lba;II[[I[[IIII)V")
-	public native void method1177(class19 arg0, class23 arg1, int arg2, int arg3, int[][] arg4, int[][] arg5, int arg6, int arg7, int arg8);
+	public native void method1177(ja arg0, ba arg1, int arg2, int arg3, int[][] arg4, int[][] arg5, int arg6, int arg7, int arg8);
 
 	@ObfuscatedName("i.ma(Z)V")
 	public native void method92(boolean arg0);

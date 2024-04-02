@@ -2,7 +2,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("oa")
-public class class9 implements class132, class10 {
+public class oa implements class132, class10 {
 
 	public long nativeid = 0L;
 
@@ -12,7 +12,7 @@ public class class9 implements class132, class10 {
 	@ObfuscatedName("oa.j")
 	public int field382;
 
-	public class9(int arg0, int arg1) {
+	public oa(int arg0, int arg1) {
 		this.field381 = arg0;
 		this.field382 = arg1;
 		this.method163(arg0, arg1);

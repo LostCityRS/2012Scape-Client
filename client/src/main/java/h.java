@@ -2,15 +2,15 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("h")
-public class class22 extends class13 implements class10 {
+public class h extends class13 implements class10 {
 
 	public long nativeid;
 
 	@ObfuscatedName("h.a")
-	public class19 field474;
+	public ja field474;
 
 	@ObfuscatedName("h.s")
-	public class23 field472;
+	public ba field472;
 
 	@ObfuscatedName("h.c")
 	public class134[] field473;
@@ -18,7 +18,7 @@ public class class22 extends class13 implements class10 {
 	@ObfuscatedName("h.m")
 	public class119[] field471;
 
-	public class22(class19 arg0, class23 arg1, class129 arg2, int arg3, int arg4, int arg5, int arg6) {
+	public h(ja arg0, ba arg1, class129 arg2, int arg3, int arg4, int arg5, int arg6) {
 		this.field474 = arg0;
 		this.field472 = arg1;
 		this.field473 = arg2.field1347;
@@ -56,7 +56,7 @@ public class class22 extends class13 implements class10 {
 		this.method1128(this.field474, this.field472, arg2.field1328, arg2.field1315, arg2.field1316, arg2.field1320, arg2.field1318, arg2.field1313, arg2.field1321, arg2.field1342, arg2.field1322, arg2.field1323, arg2.field1324, arg2.field1345, arg2.field1326, arg2.field1332, arg2.field1348, arg2.field1329, arg2.field1330, arg2.field1331, arg2.field1319, arg2.field1333, arg2.field1334, arg2.field1335, arg2.field1336, arg2.field1337, arg2.field1338, arg2.field1339, arg2.field1340, arg2.field1341, arg2.field1327, arg2.field1325, arg2.field1317, arg2.field1343, arg2.field1344, var11, var8, var9, arg3, arg4, arg5, arg6, var15);
 	}
 
-	public class22(class19 arg0) {
+	public h(ja arg0) {
 		this.field474 = arg0;
 		this.field472 = null;
 		this.method1129(arg0);
@@ -70,20 +70,20 @@ public class class22 extends class13 implements class10 {
 
 	@ObfuscatedName("h.ax(Lkc;)V")
 	public void method294(class314 arg0) {
-		this.method1135(class19.field463, arg0);
+		this.method1135(ja.field463, arg0);
 		int var2 = 0;
 		if (this.field473 != null) {
 			for (int var3 = 0; var3 < this.field473.length; var3++) {
 				class134 var4 = this.field473[var3];
-				var4.field1378 = class19.field463[var2++];
-				var4.field1379 = class19.field463[var2++];
-				var4.field1380 = class19.field463[var2++];
-				var4.field1381 = class19.field463[var2++];
-				var4.field1377 = class19.field463[var2++];
-				var4.field1373 = class19.field463[var2++];
-				var4.field1384 = class19.field463[var2++];
-				var4.field1385 = class19.field463[var2++];
-				var4.field1386 = class19.field463[var2++];
+				var4.field1378 = ja.field463[var2++];
+				var4.field1379 = ja.field463[var2++];
+				var4.field1380 = ja.field463[var2++];
+				var4.field1381 = ja.field463[var2++];
+				var4.field1377 = ja.field463[var2++];
+				var4.field1373 = ja.field463[var2++];
+				var4.field1384 = ja.field463[var2++];
+				var4.field1385 = ja.field463[var2++];
+				var4.field1386 = ja.field463[var2++];
 			}
 		}
 		if (this.field471 == null) {
@@ -99,9 +99,9 @@ public class class22 extends class13 implements class10 {
 				var6.field1237 = new class320();
 			}
 			var6.field1237.method5385(arg0);
-			var7.field1240 = class19.field463[var2++];
-			var7.field1241 = class19.field463[var2++];
-			var7.field1242 = class19.field463[var2++];
+			var7.field1240 = ja.field463[var2++];
+			var7.field1241 = ja.field463[var2++];
+			var7.field1242 = ja.field463[var2++];
 		}
 	}
 
@@ -163,14 +163,14 @@ public class class22 extends class13 implements class10 {
 			this.field474.method987().method102(this, arg0, null, arg2);
 			return;
 		}
-		class19.field460[5] = 0;
-		this.field474.method987().method102(this, arg0, class19.field460, arg2);
-		arg1.field1516 = class19.field460[0];
-		arg1.field1518 = class19.field460[1];
-		arg1.field1519 = class19.field460[2];
-		arg1.field1520 = class19.field460[3];
-		arg1.field1517 = class19.field460[4];
-		arg1.field1521 = class19.field460[5] != 0;
+		ja.field460[5] = 0;
+		this.field474.method987().method102(this, arg0, ja.field460, arg2);
+		arg1.field1516 = ja.field460[0];
+		arg1.field1518 = ja.field460[1];
+		arg1.field1519 = ja.field460[2];
+		arg1.field1520 = ja.field460[3];
+		arg1.field1517 = ja.field460[4];
+		arg1.field1521 = ja.field460[5] != 0;
 	}
 
 	@ObfuscatedName("h.ai(IILkc;ZI)Z")
@@ -204,10 +204,10 @@ public class class22 extends class13 implements class10 {
 	}
 
 	@ObfuscatedName("h.U(Lja;Lba;II[I[I[I[I[SI[S[S[S[B[B[B[B[S[S[IB[SI[B[S[S[S[I[I[I[B[B[I[I[I[IIIIIII[I)V")
-	public native void method1128(class19 arg0, class23 arg1, int arg2, int arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, short[] arg8, int arg9, short[] arg10, short[] arg11, short[] arg12, byte[] arg13, byte[] arg14, byte[] arg15, byte[] arg16, short[] arg17, short[] arg18, int[] arg19, byte arg20, short[] arg21, int arg22, byte[] arg23, short[] arg24, short[] arg25, short[] arg26, int[] arg27, int[] arg28, int[] arg29, byte[] arg30, byte[] arg31, int[] arg32, int[] arg33, int[] arg34, int[] arg35, int arg36, int arg37, int arg38, int arg39, int arg40, int arg41, int[] arg42);
+	public native void method1128(ja arg0, ba arg1, int arg2, int arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, short[] arg8, int arg9, short[] arg10, short[] arg11, short[] arg12, byte[] arg13, byte[] arg14, byte[] arg15, byte[] arg16, short[] arg17, short[] arg18, int[] arg19, byte arg20, short[] arg21, int arg22, byte[] arg23, short[] arg24, short[] arg25, short[] arg26, int[] arg27, int[] arg28, int[] arg29, byte[] arg30, byte[] arg31, int[] arg32, int[] arg33, int[] arg34, int[] arg35, int arg36, int arg37, int arg38, int arg39, int arg40, int arg41, int[] arg42);
 
 	@ObfuscatedName("h.ba(Lja;)V")
-	public native void method1129(class19 arg0);
+	public native void method1129(ja arg0);
 
 	@ObfuscatedName("h.ma(Z)V")
 	public native void method92(boolean arg0);
@@ -282,7 +282,7 @@ public class class22 extends class13 implements class10 {
 	public native boolean method293();
 
 	@ObfuscatedName("h.BA(Lh;Lh;IZZ)V")
-	public native void method1132(class22 arg0, class22 arg1, int arg2, boolean arg3, boolean arg4);
+	public native void method1132(h arg0, h arg1, int arg2, boolean arg3, boolean arg4);
 
 	@ObfuscatedName("h.RA()I")
 	public native int method358();

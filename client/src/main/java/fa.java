@@ -2,23 +2,23 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("fa")
-public class class20 extends class118 implements class10, class136 {
+public class fa extends class118 implements class10, class136 {
 
 	public long nativeid;
 
 	@ObfuscatedName("fa.u")
 	public boolean field470 = false;
 
-	public class20(class19 arg0, int arg1, int arg2, boolean arg3) {
+	public fa(ja arg0, int arg1, int arg2, boolean arg3) {
 		this.field470 = arg3;
 		this.method1069(arg0, arg1, arg2);
 	}
 
-	public class20(class19 arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, boolean arg6) {
+	public fa(ja arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, boolean arg6) {
 		this.method1033(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 	}
 
-	public class20(class19 arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+	public fa(ja arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
 		this.method1034(arg0, arg1, arg2, arg3, arg4, arg5);
 	}
 
@@ -95,7 +95,7 @@ public class class20 extends class118 implements class10, class136 {
 
 	@ObfuscatedName("fa.af(IILta;II)V")
 	public void method1056(int arg0, int arg1, class11 arg2, int arg3, int arg4) {
-		this.method1057(this.nativeid, arg0, arg1, ((class27) arg2).nativeid, arg3, arg4);
+		this.method1057(this.nativeid, arg0, arg1, ((wa) arg2).nativeid, arg3, arg4);
 	}
 
 	@ObfuscatedName("fa.ap(IIIIIIII)V")
@@ -115,7 +115,7 @@ public class class20 extends class118 implements class10, class136 {
 
 	@ObfuscatedName("fa.az(FFFFFFILta;II)V")
 	public void method1044(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, int arg6, class11 arg7, int arg8, int arg9) {
-		this.method1096(this.nativeid, arg0, arg1, arg2, arg3, arg4, arg5, arg6, ((class27) arg7).nativeid, arg8, arg9, this.field470);
+		this.method1096(this.nativeid, arg0, arg1, arg2, arg3, arg4, arg5, arg6, ((wa) arg7).nativeid, arg8, arg9, this.field470);
 	}
 
 	@ObfuscatedName("fa.s()V")
@@ -126,10 +126,10 @@ public class class20 extends class118 implements class10, class136 {
 	public native void method1032(long arg0, float arg1, float arg2, float arg3, float arg4, float arg5, float arg6, int arg7, int arg8, int arg9, int arg10);
 
 	@ObfuscatedName("fa.RA(Lja;[IIIIIZ)V")
-	public native void method1033(class19 arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, boolean arg6);
+	public native void method1033(ja arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, boolean arg6);
 
 	@ObfuscatedName("fa.K(Lja;IIIIZ)V")
-	public native void method1034(class19 arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
+	public native void method1034(ja arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
 
 	@ObfuscatedName("fa.M(JZ)V")
 	public native void method1035(long arg0, boolean arg1);
@@ -162,7 +162,7 @@ public class class20 extends class118 implements class10, class136 {
 	public native void method1066(long arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8);
 
 	@ObfuscatedName("fa.UA(Lja;II)V")
-	public native void method1069(class19 arg0, int arg1, int arg2);
+	public native void method1069(ja arg0, int arg1, int arg2);
 
 	@ObfuscatedName("fa.da(J)I")
 	public native int method1095(long arg0);

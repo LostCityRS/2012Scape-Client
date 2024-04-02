@@ -2,11 +2,11 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aa")
-public class class21 extends class30 implements class10 {
+public class aa extends class30 implements class10 {
 
 	public long nativeid;
 
-	public class21(class19 arg0) {
+	public aa(ja arg0) {
 	}
 
 	public void finalize() {

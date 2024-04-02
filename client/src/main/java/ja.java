@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import java.awt.Canvas;
 
 @ObfuscatedName("ja")
-public class class19 extends class14 implements class10 {
+public class ja extends class14 implements class10 {
 
 	public long nativeid = 0L;
 
@@ -11,7 +11,7 @@ public class class19 extends class14 implements class10 {
 	public boolean field459 = false;
 
 	@ObfuscatedName("ja.e")
-	public class23 field437;
+	public ba field437;
 
 	@ObfuscatedName("ja.ay")
 	public class547 field438 = new class547();
@@ -56,7 +56,7 @@ public class class19 extends class14 implements class10 {
 	public int field457;
 
 	@ObfuscatedName("ja.am")
-	public class8[] field452;
+	public a[] field452;
 
 	@ObfuscatedName("ja.ah")
 	public static int[] field446 = new int[Math.max(Math.max(104, 20), 24573)];
@@ -94,7 +94,7 @@ public class class19 extends class14 implements class10 {
 	@ObfuscatedName("ja.bt")
 	public boolean field449 = false;
 
-	public class19(Canvas arg0, class16 arg1, int arg2, int arg3) {
+	public ja(Canvas arg0, class16 arg1, int arg2, int arg3) {
 		super(arg1);
 		try {
 			if (!class618.method11710().method6800("sw3d")) {
@@ -173,7 +173,7 @@ public class class19 extends class14 implements class10 {
 
 	@ObfuscatedName("ja.f(II)V")
 	public void method653(int arg0, int arg1) throws class881 {
-		class17 var3 = (class17) this.method458();
+		za var3 = (za) this.method458();
 		if (var3 == null) {
 			throw new IllegalStateException();
 		}
@@ -195,7 +195,7 @@ public class class19 extends class14 implements class10 {
 		this.field452 = null;
 		this.field437 = null;
 		this.field441 = null;
-		for (class23 var1 = (class23) this.field438.method11563(); var1 != null; var1 = (class23) this.field438.method11567()) {
+		for (ba var1 = (ba) this.field438.method11563(); var1 != null; var1 = (ba) this.field438.method11567()) {
 			var1.method1153();
 		}
 		this.field438.method11557();
@@ -213,7 +213,7 @@ public class class19 extends class14 implements class10 {
 	public void method444(int arg0) {
 		class111.method2359();
 		this.method970(arg0);
-		for (class23 var2 = (class23) this.field438.method11563(); var2 != null; var2 = (class23) this.field438.method11567()) {
+		for (ba var2 = (ba) this.field438.method11563(); var2 != null; var2 = (ba) this.field438.method11567()) {
 			var2.method1152();
 		}
 	}
@@ -283,7 +283,7 @@ public class class19 extends class14 implements class10 {
 
 	@ObfuscatedName("ja.ak(Ljava/awt/Canvas;II)Lya;")
 	public class675 method735(Canvas arg0, int arg1, int arg2) {
-		return new class17(this, arg0, arg1, arg2);
+		return new za(this, arg0, arg1, arg2);
 	}
 
 	@ObfuscatedName("ja.aq()V")
@@ -414,42 +414,42 @@ public class class19 extends class14 implements class10 {
 
 	@ObfuscatedName("ja.bi(I)Lv;")
 	public class28 method593(int arg0) {
-		class23 var2 = new class23(this, arg0);
+		ba var2 = new ba(this, arg0);
 		this.field438.method11558(var2);
 		return var2;
 	}
 
 	@ObfuscatedName("ja.bx(Lv;)V")
 	public void method502(class28 arg0) {
-		this.field437 = (class23) arg0;
+		this.field437 = (ba) arg0;
 		this.method971(arg0);
 	}
 
 	@ObfuscatedName("ja.bb(IIZZ)Lce;")
 	public class118 method658(int arg0, int arg1, boolean arg2, boolean arg3) {
-		return new class20(this, arg0, arg1, arg3);
+		return new fa(this, arg0, arg1, arg3);
 	}
 
 	@ObfuscatedName("ja.be([IIIIIZ)Lce;")
 	public class118 method513(int[] arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
-		return new class20(this, arg0, arg1, arg2, arg3, arg4, false);
+		return new fa(this, arg0, arg1, arg2, arg3, arg4, false);
 	}
 
 	@ObfuscatedName("ja.bo(Lds;Z)Lce;")
 	public class118 method517(class140 arg0, boolean arg1) {
-		class20 var3 = new class20(this, arg0.method2735(false), 0, arg0.method2721(), arg0.method2721(), arg0.method2763(), false);
+		fa var3 = new fa(this, arg0.method2735(false), 0, arg0.method2721(), arg0.method2721(), arg0.method2763(), false);
 		var3.method1036(arg0.method2722(), arg0.method2724(), arg0.method2732(), arg0.method2734());
 		return var3;
 	}
 
 	@ObfuscatedName("ja.bh(IIIIZ)Lce;")
 	public class118 method508(int arg0, int arg1, int arg2, int arg3, boolean arg4) {
-		return new class20(this, arg0, arg1, arg2, arg3, !arg4);
+		return new fa(this, arg0, arg1, arg2, arg3, !arg4);
 	}
 
 	@ObfuscatedName("ja.cq(II[I[I)Lta;")
 	public class11 method571(int arg0, int arg1, int[] arg2, int[] arg3) {
-		return new class27(this, this.field437, arg0, arg1, arg2, arg3);
+		return new wa(this, this.field437, arg0, arg1, arg2, arg3);
 	}
 
 	@ObfuscatedName("ja.co(Lvm;[Lzv;Z)Ll;")
@@ -466,14 +466,14 @@ public class class19 extends class14 implements class10 {
 		}
 		if (arg2) {
 			if (var6) {
-				return new class25(this, this.field437, arg0, arg1, null);
+				return new ea(this, this.field437, arg0, arg1, null);
 			} else {
-				return new class24(this, this.field437, arg0, arg1, null);
+				return new m(this, this.field437, arg0, arg1, null);
 			}
 		} else if (var6) {
 			throw new IllegalArgumentException("");
 		} else {
-			return new class18(this, this.field437, arg0, arg1, null);
+			return new ia(this, this.field437, arg0, arg1, null);
 		}
 	}
 
@@ -489,7 +489,7 @@ public class class19 extends class14 implements class10 {
 
 	@ObfuscatedName("ja.cx(Ldw;IIII)Lqa;")
 	public class13 method625(class129 arg0, int arg1, int arg2, int arg3, int arg4) {
-		return new class22(this, this.field437, arg0, arg1, arg2, arg3, arg4);
+		return new h(this, this.field437, arg0, arg1, arg2, arg3, arg4);
 	}
 
 	@ObfuscatedName("ja.cn(II)I")
@@ -506,7 +506,7 @@ public class class19 extends class14 implements class10 {
 
 	@ObfuscatedName("ja.cs(II[[I[[IIII)Lxa;")
 	public class12 method521(int arg0, int arg1, int[][] arg2, int[][] arg3, int arg4, int arg5, int arg6) {
-		return new class26(this, this.field437, arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+		return new i(this, this.field437, arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 	}
 
 	@ObfuscatedName("ja.cb()Lka;")
@@ -522,9 +522,9 @@ public class class19 extends class14 implements class10 {
 	@ObfuscatedName("ja.oa(I)V")
 	public void method985(int arg0) {
 		this.field457 = arg0;
-		this.field452 = new class8[this.field457];
+		this.field452 = new a[this.field457];
 		for (int var2 = 0; var2 < this.field457; var2++) {
-			this.field452[var2] = new class8(this, this.field453, this.field440);
+			this.field452[var2] = new a(this, this.field453, this.field440);
 		}
 	}
 
@@ -534,7 +534,7 @@ public class class19 extends class14 implements class10 {
 	}
 
 	@ObfuscatedName("ja.oq()La;")
-	public class8 method987() {
+	public a method987() {
 		for (int var1 = 0; var1 < this.field457; var1++) {
 			if (this.field452[var1].field377 == Thread.currentThread()) {
 				return this.field452[var1];
@@ -647,7 +647,7 @@ public class class19 extends class14 implements class10 {
 
 	@ObfuscatedName("ja.ob(II)Lde;")
 	public class136 method991(int arg0, int arg1) {
-		return (class20) this.method658(arg0, arg1, false, true);
+		return (fa) this.method658(arg0, arg1, false, true);
 	}
 
 	@ObfuscatedName("ja.aj(IILcy;Ldz;I)Lde;")
@@ -657,12 +657,12 @@ public class class19 extends class14 implements class10 {
 
 	@ObfuscatedName("ja.ah(II)Ldo;")
 	public class132 method637(int arg0, int arg1) {
-		return new class9(arg0, arg1);
+		return new oa(arg0, arg1);
 	}
 
 	@ObfuscatedName("ja.au(III)Ldo;")
 	public class132 method541(int arg0, int arg1, int arg2) {
-		return new class9(arg0, arg1);
+		return new oa(arg0, arg1);
 	}
 
 	@ObfuscatedName("ja.q(Lma;II)V")
@@ -711,7 +711,7 @@ public class class19 extends class14 implements class10 {
 	public native void method977(float[] arg0);
 
 	@ObfuscatedName("ja.PA(Lza;)V")
-	public native void method978(class17 arg0);
+	public native void method978(za arg0);
 
 	@ObfuscatedName("ja.k()V")
 	public native void method979();
