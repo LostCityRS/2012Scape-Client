@@ -46,7 +46,7 @@ public class LoadingScreenNewsDisplay implements LoadingScreenElement {
     }
 
     @ObfuscatedName("gk.f(Ll;Ljava/lang/String;IIII)I")
-    public int method3946(FontType arg0, String arg1, int arg2, int arg3, int arg4) {
+    public int method3946(Font arg0, String arg1, int arg2, int arg3, int arg4) {
         return arg0.method836(arg1, arg2 + arg4, arg3 + arg4, this.field2306.field2598 - arg4 * 2, this.field2306.field2601 - arg4 * 2, this.field2306.field2595, this.field2306.field2596, 0, 0, 0, null, null, null, 0, 0);
     }
 

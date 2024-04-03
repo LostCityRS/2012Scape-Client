@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aep")
-public class SubIfType extends Node {
+public class SubInterface extends Node {
 
     @ObfuscatedName("aep.s")
     public final int field9679;
@@ -9,7 +9,7 @@ public class SubIfType extends Node {
     @ObfuscatedName("aep.c")
     public final int field9678;
 
-    public SubIfType(int arg0, int arg1) {
+    public SubInterface(int arg0, int arg1) {
         this.field9679 = arg0;
         this.field9678 = arg1;
     }

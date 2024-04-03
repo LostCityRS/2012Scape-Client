@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ew")
-public class ComType {
+public class Component {
 
     @ObfuscatedName("ew.u")
     public static int field1808 = 0;
@@ -334,7 +334,7 @@ public class ComType {
     public int field1855 = -1;
 
     @ObfuscatedName("ew.dd")
-    public ComType field1759 = null;
+    public Component field1759 = null;
 
     @ObfuscatedName("ew.da")
     public int field1848 = 0;
@@ -511,10 +511,10 @@ public class ComType {
     public AnimationNode field1789;
 
     @ObfuscatedName("ew.ft")
-    public ComType[] field1915;
+    public Component[] field1915;
 
     @ObfuscatedName("ew.gw")
-    public ComType[] field1918;
+    public Component[] field1918;
 
     @ObfuscatedName("ew.gn")
     public boolean field1917 = false;
@@ -559,7 +559,7 @@ public class ComType {
     public NPCTypeCustomisation field1930;
 
     @ObfuscatedName("tk.j(IB)Lew;")
-    public static ComType method11381(int arg0) {
+    public static Component method11381(int arg0) {
         int var1 = arg0 >> 16;
         if (Statics.field1756[var1] == null || Statics.field1756[var1].method3108(arg0) == null) {
             boolean var2 = method6404(var1, null);
@@ -571,13 +571,13 @@ public class ComType {
     }
 
     @ObfuscatedName("adf.a(II)Lej;")
-    public static IfType method14993(int arg0) {
+    public static Interface method14993(int arg0) {
         return Statics.field1756[arg0 >> 16];
     }
 
     @ObfuscatedName("adi.s(III)Lew;")
-    public static ComType method15145(int arg0, int arg1) {
-        ComType var2 = method11381(arg0);
+    public static Component method15145(int arg0, int arg1) {
+        Component var2 = method11381(arg0);
         if (arg1 == -1) {
             return var2;
         } else if (var2 == null || var2.field1915 == null || arg1 >= var2.field1915.length) {
@@ -602,21 +602,21 @@ public class ComType {
     }
 
     @ObfuscatedName("gm.m(I[ILej;ZI)Lej;")
-    public static IfType method3971(int arg0, int[] arg1, IfType arg2, boolean arg3) {
+    public static Interface method3971(int arg0, int[] arg1, Interface arg2, boolean arg3) {
         if (!Statics.field1928.method5631(arg0)) {
             return null;
         }
         int var4 = Statics.field1928.method5637(arg0);
-        ComType[] var5;
+        Component[] var5;
         if (var4 == 0) {
-            var5 = new ComType[0];
+            var5 = new Component[0];
         } else if (arg2 == null) {
-            var5 = new ComType[var4];
+            var5 = new Component[var4];
         } else {
             var5 = arg2.field1732;
         }
         if (arg2 == null) {
-            arg2 = new IfType(arg3, var5);
+            arg2 = new Interface(arg3, var5);
         } else {
             arg2.field1732 = var5;
             arg2.field1734 = arg3;
@@ -625,7 +625,7 @@ public class ComType {
             if (arg2.field1732[var6] == null) {
                 byte[] var7 = Statics.field1928.method5699(arg0, var6, arg1);
                 if (var7 != null) {
-                    ComType var8 = arg2.field1732[var6] = new ComType();
+                    Component var8 = arg2.field1732[var6] = new Component();
                     var8.field1764 = (arg0 << 16) + var6;
                     var8.method3112(new Packet(var7));
                 }
@@ -952,8 +952,8 @@ public class ComType {
     }
 
     @ObfuscatedName("ew.o(Lje;Ljd;I)Ll;")
-    public FontType method3116(FontProvider arg0, FontFactory arg1) {
-        FontType var3 = (FontType) arg0.method4859(arg1, this.field1793, false, this.field1833);
+    public Font method3116(FontProvider arg0, FontFactory arg1) {
+        Font var3 = (Font) arg0.method4859(arg1, this.field1793, false, this.field1833);
         field1761 = var3 == null;
         return var3;
     }

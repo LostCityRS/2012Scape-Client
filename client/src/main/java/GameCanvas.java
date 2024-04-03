@@ -6,9 +6,9 @@ import java.awt.*;
 public final class GameCanvas extends Canvas {
 
     @ObfuscatedName("akt.u")
-    public Component field10522;
+    public java.awt.Component field10522;
 
-    public GameCanvas(Component arg0) {
+    public GameCanvas(java.awt.Component arg0) {
         this.field10522 = arg0;
     }
 

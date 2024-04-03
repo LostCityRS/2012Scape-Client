@@ -242,7 +242,7 @@ public class Scene {
     }
 
     @ObfuscatedName("oo.j(Ll;I)V")
-    public void method7403(FontType arg0) {
+    public void method7403(Font arg0) {
     }
 
     @ObfuscatedName("oo.a(ZI)V")

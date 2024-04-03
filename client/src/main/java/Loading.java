@@ -376,12 +376,12 @@ public class Loading {
             client.field8938 = true;
         }
         if (Statics.field1208 == LoadingStage.field3400) {
-            if (!ComType.method6404(Statics.field4825.field5162, null)) {
+            if (!Component.method6404(Statics.field4825.field5162, null)) {
                 return 0;
             }
             boolean var20 = true;
             for (int var21 = 0; var21 < Statics.field1756[Statics.field4825.field5162].field1732.length; var21++) {
-                ComType var22 = Statics.field1756[Statics.field4825.field5162].field1732[var21];
+                Component var22 = Statics.field1756[Statics.field4825.field5162].field1732[var21];
                 if (var22.field1766 == 5 && var22.field1797 != -1 && !Statics.field7387.method5629(var22.field1797, 0)) {
                     var20 = false;
                 }

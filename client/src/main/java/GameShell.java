@@ -794,7 +794,7 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
         try {
             Graphics var5 = Statics.field1231.getGraphics();
             if (Statics.field2112 == null) {
-                Statics.field2112 = new Font("Helvetica", 1, 13);
+                Statics.field2112 = new java.awt.Font("Helvetica", 1, 13);
             }
             if (arg2 == null) {
                 arg2 = new Color(140, 17, 17);

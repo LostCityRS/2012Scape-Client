@@ -58,7 +58,7 @@ public class za extends Surface implements SoftwareRendererRelated {
     public int method919(int arg0, int arg1) {
         try {
             synchronized (this.field430.getTreeLock()) {
-                Component var4 = this.field430;
+                java.awt.Component var4 = this.field430;
                 int var5 = 0;
                 int var6 = 0;
                 int var7 = 0;

@@ -13,7 +13,7 @@ public abstract class LoadingScreenProgressDisplay implements LoadingScreenEleme
     public final LoadingScreenProgressDisplayConfig field2311;
 
     @ObfuscatedName("gc.s")
-    public FontType field2312;
+    public Font field2312;
 
     @ObfuscatedName("gc.c")
     public int field2309;

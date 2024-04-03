@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aji")
-public class SubInterfaceActiveNpc extends SubIfType {
+public class SubInterfaceActiveNpc extends SubInterface {
 
     @ObfuscatedName("aji.m")
     public final int field10476;

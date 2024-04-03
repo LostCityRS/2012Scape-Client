@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ajh")
-public class SubInterfaceActiveObj extends SubIfType {
+public class SubInterfaceActiveObj extends SubInterface {
 
     @ObfuscatedName("ajh.m")
     public final ObjReference field10479;

@@ -598,7 +598,7 @@ public final class client extends GameShell {
     public static int field9107 = 0;
 
     @ObfuscatedName("client.ps")
-    public static ComType field9108 = null;
+    public static Component field9108 = null;
 
     @ObfuscatedName("client.pn")
     public static int field9109 = 0;
@@ -613,16 +613,16 @@ public final class client extends GameShell {
     public static boolean field9112 = false;
 
     @ObfuscatedName("client.ph")
-    public static ComType field9113 = null;
+    public static Component field9113 = null;
 
     @ObfuscatedName("client.pr")
     public static boolean field9114 = false;
 
     @ObfuscatedName("client.pc")
-    public static ComType field9115 = null;
+    public static Component field9115 = null;
 
     @ObfuscatedName("client.pj")
-    public static ComType field9116 = null;
+    public static Component field9116 = null;
 
     @ObfuscatedName("client.pi")
     public static int field9160 = 0;
@@ -631,7 +631,7 @@ public final class client extends GameShell {
     public static int field8977 = 0;
 
     @ObfuscatedName("client.pf")
-    public static ComType field9119 = null;
+    public static Component field9119 = null;
 
     @ObfuscatedName("client.pk")
     public static boolean field9037 = false;
@@ -1157,7 +1157,7 @@ public final class client extends GameShell {
         Frame var1 = new Frame(" ");
         var1.pack();
         var1.dispose();
-        Statics.field9561 = new ComType();
+        Statics.field9561 = new Component();
         method13896();
         Statics.field1210 = new Js5DiskCache();
         Statics.field848 = new ClientJs5TcpClient();
@@ -1839,11 +1839,11 @@ public final class client extends GameShell {
     public static void method12035(boolean arg0) {
         if (arg0) {
             if (field8941 != -1) {
-                ComType.method13890(field8941);
+                Component.method13890(field8941);
             }
-            for (SubIfType var1 = (SubIfType) field9075.method11928(); var1 != null; var1 = (SubIfType) field9075.method11929()) {
+            for (SubInterface var1 = (SubInterface) field9075.method11928(); var1 != null; var1 = (SubInterface) field9075.method11929()) {
                 if (!var1.method6982()) {
-                    var1 = (SubIfType) field9075.method11928();
+                    var1 = (SubInterface) field9075.method11928();
                     if (var1 == null) {
                         break;
                     }
@@ -1882,11 +1882,11 @@ public final class client extends GameShell {
     public static void method1350(boolean arg0) {
         if (arg0) {
             if (field8941 != -1) {
-                ComType.method13890(field8941);
+                Component.method13890(field8941);
             }
-            for (SubIfType var1 = (SubIfType) field9075.method11928(); var1 != null; var1 = (SubIfType) field9075.method11929()) {
+            for (SubInterface var1 = (SubInterface) field9075.method11928(); var1 != null; var1 = (SubInterface) field9075.method11929()) {
                 if (!var1.method6982()) {
-                    var1 = (SubIfType) field9075.method11928();
+                    var1 = (SubInterface) field9075.method11928();
                     if (var1 == null) {
                         break;
                     }
@@ -1962,7 +1962,7 @@ public final class client extends GameShell {
             if (arg1 != null) {
                 Statics.field5187.method505(1, 0);
                 FontMetrics var3 = FontMetrics.method12156(Statics.field8745, Statics.field552, 0);
-                FontType var4 = Statics.field5187.method712(var3, (PalettedSpriteData[]) SpriteDataProvider.method2591(Statics.field7387, Statics.field552, 0), true);
+                Font var4 = Statics.field5187.method712(var3, (PalettedSpriteData[]) SpriteDataProvider.method2591(Statics.field7387, Statics.field552, 0), true);
                 method3536();
                 Statics.method2579(arg1, true, Statics.field5187, var4, var3);
             }
@@ -1974,7 +1974,7 @@ public final class client extends GameShell {
                     var5 = RendererToolkit.method11222(0, Statics.field1231, Statics.field8465, Statics.field2670, 0);
                     var5.method505(1, 0);
                     FontMetrics var6 = FontMetrics.method12156(Statics.field8745, Statics.field552, 0);
-                    FontType var7 = var5.method712(var6, (PalettedSpriteData[]) SpriteDataProvider.method2591(Statics.field7387, Statics.field552, 0), true);
+                    Font var7 = var5.method712(var6, (PalettedSpriteData[]) SpriteDataProvider.method2591(Statics.field7387, Statics.field552, 0), true);
                     method3536();
                     Statics.method2579(arg1, true, var5, var7, var6);
                 }
@@ -1984,7 +1984,7 @@ public final class client extends GameShell {
                         if (arg1 != null) {
                             var5.method505(1, 0);
                             FontMetrics var8 = FontMetrics.method12156(Statics.field8745, Statics.field552, 0);
-                            FontType var9 = var5.method712(var8, (PalettedSpriteData[]) SpriteDataProvider.method2591(Statics.field7387, Statics.field552, 0), true);
+                            Font var9 = var5.method712(var8, (PalettedSpriteData[]) SpriteDataProvider.method2591(Statics.field7387, Statics.field552, 0), true);
                             method3536();
                             Statics.method2579(arg1, true, var5, var9, var8);
                         }
@@ -2455,7 +2455,7 @@ public final class client extends GameShell {
         if (Statics.field4961.field9659.method15686() == 0) {
             var0 |= 0x40;
         }
-        ComType.method1903(var0);
+        Component.method1903(var0);
         field8980.method6103().method11473(var0);
         Statics.field8656.method6040().method6103().method11473(var0);
         Statics.field3492.method12295(var0);
@@ -2541,7 +2541,7 @@ public final class client extends GameShell {
         Statics.field5037.method7818(5);
         Statics.field6705.method7327(5);
         PlayerModel.method4781(5);
-        ComType.method11405(50);
+        Component.method11405(50);
         Statics.field6784.method4846(50);
         HintArrow.method8096(5);
         SpotShadowFactory.method8061(5);
@@ -2578,7 +2578,7 @@ public final class client extends GameShell {
             Statics.field5037.method7817();
             Statics.field6705.method7329();
             PlayerModel.method1323();
-            ComType.method7973();
+            Component.method7973();
             Statics.field6784.method4849();
             ClientInvCache.method6970();
             if (Statics.field6683 != ModeWhere.field6368) {
@@ -2721,22 +2721,22 @@ public final class client extends GameShell {
         }
         while (true) {
             HookRequest var14;
-            ComType var15;
-            ComType var16;
+            Component var15;
+            Component var16;
             do {
                 var14 = (HookRequest) field9159.method11560();
                 if (var14 == null) {
                     while (true) {
                         HookRequest var17;
-                        ComType var18;
-                        ComType var19;
+                        Component var18;
+                        Component var19;
                         do {
                             var17 = (HookRequest) field9125.method11560();
                             if (var17 == null) {
                                 while (true) {
                                     HookRequest var20;
-                                    ComType var21;
-                                    ComType var22;
+                                    Component var21;
+                                    Component var22;
                                     do {
                                         var20 = (HookRequest) field9089.method11560();
                                         if (var20 == null) {
@@ -2792,7 +2792,7 @@ public final class client extends GameShell {
                                         if (var21.field1765 < 0) {
                                             break;
                                         }
-                                        var22 = ComType.method11381(var21.field1886);
+                                        var22 = Component.method11381(var21.field1886);
                                     } while (var22 == null || var22.field1915 == null || var21.field1765 >= var22.field1915.length || var22.field1915[var21.field1765] != var21);
                                     ScriptRunner.method8605(var20);
                                 }
@@ -2801,7 +2801,7 @@ public final class client extends GameShell {
                             if (var18.field1765 < 0) {
                                 break;
                             }
-                            var19 = ComType.method11381(var18.field1886);
+                            var19 = Component.method11381(var18.field1886);
                         } while (var19 == null || var19.field1915 == null || var18.field1765 >= var19.field1915.length || var19.field1915[var18.field1765] != var18);
                         ScriptRunner.method8605(var17);
                     }
@@ -2810,7 +2810,7 @@ public final class client extends GameShell {
                 if (var15.field1765 < 0) {
                     break;
                 }
-                var16 = ComType.method11381(var15.field1886);
+                var16 = Component.method11381(var15.field1886);
             } while (var16 == null || var16.field1915 == null || var15.field1765 >= var16.field1915.length || var16.field1915[var15.field1765] != var15);
             ScriptRunner.method8605(var14);
         }
@@ -2833,19 +2833,19 @@ public final class client extends GameShell {
                 Statics.field3498[(int) var3] = var1.field10300;
                 field9143[++field9144 - 1 & 0x1F] = (int) var3;
             } else if (var2 == 3) {
-                ComType var5 = ComType.method11381((int) var3);
+                Component var5 = Component.method11381((int) var3);
                 if (!var1.field10300.equals(var5.field1825)) {
                     var5.field1825 = var1.field10300;
                     method12939(var5);
                 }
             } else if (var2 == 22) {
-                ComType var6 = ComType.method11381((int) var3);
+                Component var6 = Component.method11381((int) var3);
                 if (var6.field1860 != (var1.field10321 == 1)) {
                     var6.field1860 = var1.field10321 == 1;
                     method12939(var6);
                 }
             } else if (var2 == 4) {
-                ComType var7 = ComType.method11381((int) var3);
+                Component var7 = Component.method11381((int) var3);
                 int var8 = var1.field10321;
                 int var9 = var1.field10298;
                 int var10 = var1.field10299;
@@ -2857,7 +2857,7 @@ public final class client extends GameShell {
                     method12939(var7);
                 }
             } else if (var2 == 5) {
-                ComType var11 = ComType.method11381((int) var3);
+                Component var11 = Component.method11381((int) var3);
                 if (var1.field10321 != var11.field1747) {
                     if (var1.field10321 == -1) {
                         var11.field1789 = null;
@@ -2876,20 +2876,20 @@ public final class client extends GameShell {
                 int var14 = var12 >> 5 & 0x1F;
                 int var15 = var12 & 0x1F;
                 int var16 = (var15 << 3) + (var13 << 19) + (var14 << 11);
-                ComType var17 = ComType.method11381((int) var3);
+                Component var17 = Component.method11381((int) var3);
                 if (var17.field1792 != var16) {
                     var17.field1792 = var16;
                     method12939(var17);
                 }
             } else if (var2 == 7) {
-                ComType var18 = ComType.method11381((int) var3);
+                Component var18 = Component.method11381((int) var3);
                 boolean var19 = var1.field10321 == 1;
                 if (var18.field1807 != var19) {
                     var18.field1807 = var19;
                     method12939(var18);
                 }
             } else if (var2 == 8) {
-                ComType var20 = ComType.method11381((int) var3);
+                Component var20 = Component.method11381((int) var3);
                 if (var1.field10321 != var20.field1812 || var1.field10298 != var20.field1813 || var1.field10299 != var20.field1818) {
                     var20.field1812 = var1.field10321;
                     var20.field1813 = var1.field10298;
@@ -2904,14 +2904,14 @@ public final class client extends GameShell {
                     method12939(var20);
                 }
             } else if (var2 == 9) {
-                ComType var21 = ComType.method11381((int) var3);
+                Component var21 = Component.method11381((int) var3);
                 if (var1.field10321 != var21.field1903 || var1.field10298 != var21.field1904) {
                     var21.field1903 = var1.field10321;
                     var21.field1904 = var1.field10298;
                     method12939(var21);
                 }
             } else if (var2 == 10) {
-                ComType var22 = ComType.method11381((int) var3);
+                Component var22 = Component.method11381((int) var3);
                 if (var1.field10321 != var22.field1810 || var1.field10298 != var22.field1824 || var1.field10299 != var22.field1814) {
                     var22.field1810 = var1.field10321;
                     var22.field1824 = var1.field10298;
@@ -2919,14 +2919,14 @@ public final class client extends GameShell {
                     method12939(var22);
                 }
             } else if (var2 == 11) {
-                ComType var23 = ComType.method11381((int) var3);
+                Component var23 = Component.method11381((int) var3);
                 var23.field1829 = 0;
                 var23.field1776 = var23.field1772 = var1.field10321;
                 var23.field1769 = 0;
                 var23.field1777 = var23.field1774 = var1.field10298;
                 method12939(var23);
             } else if (var2 == 12) {
-                ComType var24 = ComType.method11381((int) var3);
+                Component var24 = Component.method11381((int) var3);
                 int var25 = var1.field10321;
                 if (var24 != null && var24.field1766 == 0) {
                     if (var25 > var24.field1894 - var24.field1929) {
@@ -2941,30 +2941,30 @@ public final class client extends GameShell {
                     }
                 }
             } else if (var2 == 14) {
-                ComType var26 = ComType.method11381((int) var3);
+                Component var26 = Component.method11381((int) var3);
                 var26.field1797 = var1.field10321;
             } else if (var2 == 15) {
                 MiniMap.field766 = true;
                 MiniMap.field763 = var1.field10321;
                 MiniMap.field764 = var1.field10298;
             } else if (var2 == 16) {
-                ComType var27 = ComType.method11381((int) var3);
+                Component var27 = Component.method11381((int) var3);
                 var27.field1793 = var1.field10321;
             } else if (var2 == 20) {
-                ComType var28 = ComType.method11381((int) var3);
+                Component var28 = Component.method11381((int) var3);
                 var28.field1833 = var1.field10321 == 1;
             } else if (var2 == 21) {
-                ComType var29 = ComType.method11381((int) var3);
+                Component var29 = Component.method11381((int) var3);
                 var29.field1805 = var1.field10321 == 1;
             } else if (var2 == 17) {
-                ComType var30 = ComType.method11381((int) var3);
+                Component var30 = Component.method11381((int) var3);
                 var30.field1737 = var1.field10321;
             } else if (var2 == 18) {
-                ComType var31 = ComType.method11381((int) var3);
+                Component var31 = Component.method11381((int) var3);
                 int var32 = (int) (var3 >> 32);
                 var31.method3158(var32, (short) var1.field10321, (short) var1.field10298);
             } else if (var2 == 19) {
-                ComType var33 = ComType.method11381((int) var3);
+                Component var33 = Component.method11381((int) var3);
                 int var34 = (int) (var3 >> 32);
                 var33.method3131(var34, (short) var1.field10321, (short) var1.field10298);
             }
@@ -5382,13 +5382,13 @@ public final class client extends GameShell {
                                         var84 = field8955[0];
                                     }
                                 }
-                                FontType var98 = Statics.field2163;
-                                FontType var99 = Statics.field2163;
+                                Font var98 = Statics.field2163;
+                                Font var99 = Statics.field2163;
                                 FontMetrics var100 = Statics.field559;
                                 FontMetrics var101 = Statics.field559;
                                 int var102 = var56.field4744;
                                 if (var102 >= 0) {
-                                    FontType var103 = (FontType) Statics.field6784.method4859(field8914, var102, true, var56.field4742);
+                                    Font var103 = (Font) Statics.field6784.method4859(field8914, var102, true, var56.field4742);
                                     FontMetrics var104 = Statics.field6784.method4843(field8914, var102);
                                     if (var103 != null && var104 != null) {
                                         var98 = var103;
@@ -5398,7 +5398,7 @@ public final class client extends GameShell {
                                 if (var59 != null) {
                                     int var105 = var59.field4744;
                                     if (var105 >= 0) {
-                                        FontType var106 = (FontType) Statics.field6784.method4859(field8914, var105, true, var59.field4742);
+                                        Font var106 = (Font) Statics.field6784.method4859(field8914, var105, true, var59.field4742);
                                         FontMetrics var107 = Statics.field6784.method4843(field8914, var105);
                                         if (var106 != null && var107 != null) {
                                             var99 = var106;
@@ -6542,7 +6542,7 @@ public final class client extends GameShell {
             int var142 = var2.method15342();
             int var143 = var2.method15342();
             method2793();
-            method3589(var139, new SubIfType(var141, var140), new int[]{var137, var138, var142, var143}, false);
+            method3589(var139, new SubInterface(var141, var140), new int[]{var137, var138, var142, var143}, false);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3101 == arg0.field840) {
@@ -6565,7 +6565,7 @@ public final class client extends GameShell {
                     var152 = new ServerKeyProperties(var151.field9416, var147);
                     var151.method6979();
                 } else if (var148 == -1) {
-                    var152 = new ServerKeyProperties(ComType.method11381(var146).field1841.field9416, var147);
+                    var152 = new ServerKeyProperties(Component.method11381(var146).field1841.field9416, var147);
                 } else {
                     var152 = new ServerKeyProperties(0, var147);
                 }
@@ -7000,7 +7000,7 @@ public final class client extends GameShell {
                     var263 = new ServerKeyProperties(var255, var262.field9423);
                     var262.method6979();
                 } else if (var259 == -1) {
-                    var263 = new ServerKeyProperties(var255, ComType.method11381(var257).field1841.field9423);
+                    var263 = new ServerKeyProperties(var255, Component.method11381(var257).field1841.field9423);
                 } else {
                     var263 = new ServerKeyProperties(var255, -1);
                 }
@@ -7078,7 +7078,7 @@ public final class client extends GameShell {
         } else if (ServerProt.field3123 == arg0.field840) {
             int var286 = var2.method15331();
             method2793();
-            SubIfType var287 = (SubIfType) field9075.method11923((long) var286);
+            SubInterface var287 = (SubInterface) field9075.method11923((long) var286);
             if (var287 != null) {
                 method7069(var287, true, false);
             }
@@ -8203,8 +8203,8 @@ public final class client extends GameShell {
             int var582 = var2.method15311();
             int var583 = var2.method15342();
             method2793();
-            SubIfType var584 = (SubIfType) field9075.method11923((long) var582);
-            SubIfType var585 = (SubIfType) field9075.method11923((long) var583);
+            SubInterface var584 = (SubInterface) field9075.method11923((long) var582);
+            SubInterface var585 = (SubInterface) field9075.method11923((long) var583);
             if (var585 != null) {
                 method7069(var585, var584 == null || var584.field9679 != var585.field9679, false);
             }
@@ -8212,11 +8212,11 @@ public final class client extends GameShell {
                 var584.method6979();
                 field9075.method11927(var584, (long) var583);
             }
-            ComType var586 = ComType.method11381(var582);
+            Component var586 = Component.method11381(var582);
             if (var586 != null) {
                 method12939(var586);
             }
-            ComType var587 = ComType.method11381(var583);
+            Component var587 = Component.method11381(var583);
             if (var587 != null) {
                 method12939(var587);
                 method12722(Statics.field1756[var587.field1764 >>> 16], var587, true);
@@ -9396,7 +9396,7 @@ public final class client extends GameShell {
         if (!field9117) {
             return;
         }
-        ComType var0 = ComType.method15145(Statics.field4166, field9101);
+        Component var0 = Component.method15145(Statics.field4166, field9101);
         if (var0 != null && var0.field1873 != null) {
             HookRequest var1 = new HookRequest();
             var1.field9609 = var0;
@@ -9412,7 +9412,7 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("rn.kp(Lew;Lew;I)V")
-    public static void method11058(ComType arg0, ComType arg1) {
+    public static void method11058(Component arg0, Component arg1) {
         ClientMessage var2 = ClientMessage.method14781(ClientProt.field2856, field8975.field834);
         var2.field9467.method15279(arg1.field1903);
         var2.field9467.method15293(arg1.field1765);
@@ -9424,12 +9424,12 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("abm.kq(Lew;I)V")
-    public static void method14206(ComType arg0) {
+    public static void method14206(Component arg0) {
         if (!field9117) {
             return;
         }
         if (arg0.field1788 != null) {
-            ComType var1 = ComType.method15145(Statics.field4166, field9101);
+            Component var1 = Component.method15145(Statics.field4166, field9101);
             if (var1 != null) {
                 HookRequest var2 = new HookRequest();
                 var2.field9609 = arg0;
@@ -9450,7 +9450,7 @@ public final class client extends GameShell {
 
     @ObfuscatedName("lh.kc(IIILjava/lang/String;I)V")
     public static void method5716(int arg0, int arg1, int arg2, String arg3) {
-        ComType var4 = ComType.method15145(arg1, arg2);
+        Component var4 = Component.method15145(arg1, arg2);
         if (var4 == null) {
             return;
         }
@@ -9540,7 +9540,7 @@ public final class client extends GameShell {
 
     @ObfuscatedName("ub.ko(IIIIIIIII)V")
     public static final void method11892(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
-        if (ComType.method6404(arg0, null)) {
+        if (Component.method6404(arg0, null)) {
             method2709(Statics.field1756[arg0].method3104(), -1, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg7 < 0);
         } else if (arg7 == -1) {
             for (int var8 = 0; var8 < 100; var8++) {
@@ -9552,10 +9552,10 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("dh.kt([Lew;IIIIIIIIZI)V")
-    public static final void method2709(ComType[] arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9) {
+    public static final void method2709(Component[] arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9) {
         Statics.field5187.method659(arg2, arg3, arg4, arg5);
         for (int var10 = 0; var10 < arg0.length; var10++) {
-            ComType var11 = arg0[var10];
+            Component var11 = arg0[var10];
             if (var11 != null && (var11.field1886 == arg1 || arg1 == -1412584499 && field9115 == var11)) {
                 int var12;
                 if (arg8 == -1) {
@@ -9577,7 +9577,7 @@ public final class client extends GameShell {
                         var15 = 127;
                     }
                     if (field9115 == var11) {
-                        if (arg1 != -1412584499 && (ComType.field1921 == var11.field1859 || ComType.field1808 == var11.field1859 || method14331(var11).method14933())) {
+                        if (arg1 != -1412584499 && (Component.field1921 == var11.field1859 || Component.field1808 == var11.field1859 || method14331(var11).method14933())) {
                             Statics.field4667 = arg0;
                             Statics.field562 = arg6;
                             Statics.field5185 = arg7;
@@ -9606,7 +9606,7 @@ public final class client extends GameShell {
                             var13 = var18;
                             var14 = var19;
                         }
-                        if (ComType.field1808 == var11.field1859) {
+                        if (Component.field1808 == var11.field1859) {
                             var15 = 128;
                         }
                     }
@@ -9633,16 +9633,16 @@ public final class client extends GameShell {
                     }
                     if (var20 < var22 && var21 < var23) {
                         if (var11.field1767 != 0) {
-                            if (ComType.field1847 == var11.field1767 || ComType.field1742 == var11.field1767) {
+                            if (Component.field1847 == var11.field1767 || Component.field1742 == var11.field1767) {
                                 Statics.field5187.method509();
-                                method14742(var13, var14, var11.field1863, var11.field1929, ComType.field1742 == var11.field1767);
+                                method14742(var13, var14, var11.field1863, var11.field1929, Component.field1742 == var11.field1767);
                                 method12995(var12, var20, var21, var22, var23, var13, var14);
                                 Statics.field5187.method490();
                                 Statics.field5187.method659(arg2, arg3, arg4, arg5);
                                 field9204[var12] = true;
                                 continue;
                             }
-                            if (ComType.field1743 == var11.field1767 && field8988 == 2) {
+                            if (Component.field1743 == var11.field1767 && field8988 == 2) {
                                 if (var11.method3124(Statics.field5187) != null) {
                                     AudioRenderer.method3461();
                                     MiniMap.method3655(Statics.field5187, var11, var13, var14);
@@ -9650,15 +9650,15 @@ public final class client extends GameShell {
                                 }
                                 continue;
                             }
-                            if (ComType.field1899 == var11.field1767) {
+                            if (Component.field1899 == var11.field1767) {
                                 WorldMapRenderer.method8599(Statics.field5187, var13, var14, var11);
                                 continue;
                             }
-                            if (ComType.field1751 == var11.field1767) {
+                            if (Component.field1751 == var11.field1767) {
                                 WorldMapRenderer.method3303(Statics.field5187, var13, var14, var11, var11.field1792 % 64);
                                 continue;
                             }
-                            if (ComType.field1744 == var11.field1767) {
+                            if (Component.field1744 == var11.field1767) {
                                 if (var11.method3124(Statics.field5187) != null) {
                                     Statics.field5187.method509();
                                     method11873(var11, var13, var14);
@@ -9666,19 +9666,19 @@ public final class client extends GameShell {
                                 }
                                 continue;
                             }
-                            if (ComType.field1865 == var11.field1767) {
+                            if (Component.field1865 == var11.field1767) {
                                 ClientWorldMap.method13877(Statics.field5187, Statics.field8465, var13, var14, var11.field1863, var11.field1929);
                                 field9204[var12] = true;
                                 Statics.field5187.method659(arg2, arg3, arg4, arg5);
                                 continue;
                             }
-                            if (ComType.field1746 == var11.field1767) {
+                            if (Component.field1746 == var11.field1767) {
                                 ClientWorldMap.method4707(Statics.field5187, var13, var14, var11.field1863, var11.field1929);
                                 field9204[var12] = true;
                                 Statics.field5187.method659(arg2, arg3, arg4, arg5);
                                 continue;
                             }
-                            if (ComType.field1815 == var11.field1767) {
+                            if (Component.field1815 == var11.field1767) {
                                 if (field8926 || field9169) {
                                     method3451(var13, var14, var11);
                                     field9204[var12] = true;
@@ -9687,18 +9687,18 @@ public final class client extends GameShell {
                             }
                         }
                         if (var11.field1766 == 0) {
-                            if (ComType.field1749 == var11.field1767 && Statics.field5187.method600()) {
+                            if (Component.field1749 == var11.field1767 && Statics.field5187.method600()) {
                                 Statics.field5187.method514(0, 0, Statics.field4125, Statics.field4677);
                             }
                             method2709(arg0, var11.field1764, var20, var21, var22, var23, var13 - var11.field1857, var14 - var11.field1739, var12, arg9);
                             if (var11.field1918 != null) {
                                 method2709(var11.field1918, var11.field1764, var20, var21, var22, var23, var13 - var11.field1857, var14 - var11.field1739, var12, arg9);
                             }
-                            SubIfType var26 = (SubIfType) field9075.method11923((long) var11.field1764);
+                            SubInterface var26 = (SubInterface) field9075.method11923((long) var11.field1764);
                             if (var26 != null) {
                                 method11892(var26.field9679, var20, var21, var22, var23, var13, var14, var12);
                             }
-                            if (ComType.field1749 == var11.field1767) {
+                            if (Component.field1749 == var11.field1767) {
                                 if (Statics.field5187.method600()) {
                                     Statics.field5187.method545();
                                 }
@@ -9737,7 +9737,7 @@ public final class client extends GameShell {
                             } else if (var11.field1766 == 4) {
                                 int var32 = 255 - (var15 & 0xFF);
                                 if (var32 != 0) {
-                                    FontType var33 = var11.method3116(Statics.field6784, field8914);
+                                    Font var33 = var11.method3116(Statics.field6784, field8914);
                                     if (var33 != null) {
                                         int var34 = var11.field1792;
                                         String var35 = var11.field1825;
@@ -9773,7 +9773,7 @@ public final class client extends GameShell {
                                         if (field9114) {
                                             Statics.field5187.method659(arg2, arg3, arg4, arg5);
                                         }
-                                    } else if (ComType.field1761) {
+                                    } else if (Component.field1761) {
                                         method12939(var11);
                                     }
                                 }
@@ -9842,7 +9842,7 @@ public final class client extends GameShell {
                                                 var39.method2513(var13, var14, var11.field1863, var11.field1929);
                                             }
                                         }
-                                    } else if (ComType.field1761) {
+                                    } else if (Component.field1761) {
                                         method12939(var11);
                                     }
                                 }
@@ -9872,7 +9872,7 @@ public final class client extends GameShell {
                                         PlayerEntity var56 = field9070[var55];
                                         if (var56 != null && (field9071 == var55 || StringTools.method1347(var56.field10040) == var11.field1832)) {
                                             var50 = var11.method3174(Statics.field5187, var51, Statics.field3769, Statics.field7650, Statics.field3774, Statics.field3492, Statics.field566, Statics.field2669, var11.field1789, var56.field10044);
-                                            if (var50 == null && ComType.field1761) {
+                                            if (var50 == null && Component.field1761) {
                                                 method12939(var11);
                                             }
                                         }
@@ -9892,12 +9892,12 @@ public final class client extends GameShell {
                                     }
                                 } else if (var11.field1789 != null && var11.field1789.method11767()) {
                                     var50 = var11.method3174(Statics.field5187, var51, Statics.field3769, Statics.field7650, Statics.field3774, Statics.field3492, Statics.field566, Statics.field2669, var11.field1789, Statics.field2119.field10044);
-                                    if (var50 == null && ComType.field1761) {
+                                    if (var50 == null && Component.field1761) {
                                         method12939(var11);
                                     }
                                 } else {
                                     var50 = var11.method3174(Statics.field5187, var51, Statics.field3769, Statics.field7650, Statics.field3774, Statics.field3492, Statics.field566, Statics.field2669, null, Statics.field2119.field10044);
-                                    if (var50 == null && ComType.field1761) {
+                                    if (var50 == null && Component.field1761) {
                                         method12939(var11);
                                     }
                                 }
@@ -10014,7 +10014,7 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("ec.kl(IILew;B)V")
-    public static void method3451(int arg0, int arg1, ComType arg2) {
+    public static void method3451(int arg0, int arg1, Component arg2) {
         int var3 = arg2.field1863 + arg0;
         int var4 = arg1 + 15;
         if (!field8926) {
@@ -10091,16 +10091,16 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("jx.kd(Lej;Lew;I)Lew;")
-    public static final ComType method4752(IfType arg0, ComType arg1) {
+    public static final Component method4752(Interface arg0, Component arg1) {
         if (arg1.field1886 != -1) {
             return arg0.method3108(arg1.field1886);
         }
         if (!arg0.field1734) {
             int var2 = arg1.field1764 >>> 16;
             IterableMapIterator var3 = new IterableMapIterator(field9075);
-            for (SubIfType var4 = (SubIfType) var3.method11955(); var4 != null; var4 = (SubIfType) var3.next()) {
+            for (SubInterface var4 = (SubInterface) var3.method11955(); var4 != null; var4 = (SubInterface) var3.next()) {
                 if (var4.field9679 == var2) {
-                    return ComType.method11381((int) var4.field4228);
+                    return Component.method11381((int) var4.field4228);
                 }
             }
         }
@@ -10113,8 +10113,8 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("eo.kf(Lej;Lew;B)V")
-    public static void method3293(IfType arg0, ComType arg1) {
-        ComType var2 = method4752(arg0, arg1);
+    public static void method3293(Interface arg0, Component arg1) {
+        Component var2 = method4752(arg0, arg1);
         int var3;
         int var4;
         if (var2 == null) {
@@ -10129,19 +10129,19 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("wb.kj(Lej;Lew;ZB)V")
-    public static void method12722(IfType arg0, ComType arg1, boolean arg2) {
+    public static void method12722(Interface arg0, Component arg1, boolean arg2) {
         method5831(arg0.field1732, arg1, arg2);
     }
 
     @ObfuscatedName("lu.kw([Lew;Lew;ZI)V")
-    public static void method5831(ComType[] arg0, ComType arg1, boolean arg2) {
+    public static void method5831(Component[] arg0, Component arg1, boolean arg2) {
         int var3 = arg1.field1790 == 0 ? arg1.field1863 : arg1.field1790;
         int var4 = arg1.field1894 == 0 ? arg1.field1929 : arg1.field1894;
         method11323(arg0, arg1.field1764, var3, var4, arg2);
         if (arg1.field1918 != null) {
             method11323(arg1.field1918, arg1.field1764, var3, var4, arg2);
         }
-        SubIfType var5 = (SubIfType) field9075.method11923((long) arg1.field1764);
+        SubInterface var5 = (SubInterface) field9075.method11923((long) arg1.field1764);
         if (var5 != null) {
             method11241(var5.field9679, var3, var4, arg2);
         }
@@ -10167,15 +10167,15 @@ public final class client extends GameShell {
 
     @ObfuscatedName("sq.ke(IIIZB)V")
     public static final void method11241(int arg0, int arg1, int arg2, boolean arg3) {
-        if (ComType.method6404(arg0, null)) {
+        if (Component.method6404(arg0, null)) {
             method11323(Statics.field1756[arg0].field1732, -1, arg1, arg2, arg3);
         }
     }
 
     @ObfuscatedName("sr.km([Lew;IIIZI)V")
-    public static void method11323(ComType[] arg0, int arg1, int arg2, int arg3, boolean arg4) {
+    public static void method11323(Component[] arg0, int arg1, int arg2, int arg3, boolean arg4) {
         for (int var5 = 0; var5 < arg0.length; var5++) {
-            ComType var6 = arg0[var5];
+            Component var6 = arg0[var5];
             if (var6 != null && var6.field1886 == arg1) {
                 method8063(var6, arg2, arg3, arg4);
                 method1742(var6, arg2, arg3);
@@ -10199,7 +10199,7 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("qx.kg(Lew;IIZI)V")
-    public static void method8063(ComType arg0, int arg1, int arg2, boolean arg3) {
+    public static void method8063(Component arg0, int arg1, int arg2, boolean arg3) {
         int var4 = arg0.field1863;
         int var5 = arg0.field1929;
         if (arg0.field1856 == 0) {
@@ -10235,7 +10235,7 @@ public final class client extends GameShell {
                 }
             }
         }
-        if (ComType.field1847 == arg0.field1767) {
+        if (Component.field1847 == arg0.field1767) {
             field9113 = arg0;
         }
         if (arg3 && arg0.field1778 != null && (arg0.field1863 != var4 || arg0.field1929 != var5)) {
@@ -10247,7 +10247,7 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("ag.kk(Lew;III)V")
-    public static void method1742(ComType arg0, int arg1, int arg2) {
+    public static void method1742(Component arg0, int arg1, int arg2) {
         if (arg0.field1829 == 0) {
             arg0.field1776 = arg0.field1772;
         } else if (arg0.field1829 == 1) {
@@ -10332,12 +10332,12 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("afv.lv(Laep;IIIIIIIIII)V")
-    public static final void method15857(SubIfType arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9) {
-        if (!ComType.method6404(arg1, null)) {
+    public static final void method15857(SubInterface arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9) {
+        if (!Component.method6404(arg1, null)) {
             return;
         }
         if (arg0 == null || arg0.method15469()) {
-            IfType var10 = Statics.field1756[arg1];
+            Interface var10 = Statics.field1756[arg1];
             method14330(var10, var10.method3104(), -1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
         } else {
             method7069(arg0, true, false);
@@ -10345,10 +10345,10 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("client.ls(Lej;[Lew;IIIIIIIII)V")
-    public static final void method14330(IfType arg0, ComType[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10) {
+    public static final void method14330(Interface arg0, Component[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10) {
         label998:
         for (int var11 = 0; var11 < arg1.length; var11++) {
-            ComType var12 = arg1[var11];
+            Component var12 = arg1[var11];
             if (var12 != null && var12.field1886 == arg2) {
                 int var13 = var12.field1776 + arg7;
                 int var14 = var12.field1777 + arg8;
@@ -10373,7 +10373,7 @@ public final class client extends GameShell {
                     var17 = var19 < arg5 ? var19 : arg5;
                     var18 = var20 < arg6 ? var20 : arg6;
                 }
-                if (var12.field1766 == 0 || var12.field1861 || method14331(var12).field9416 != 0 || field9116 == var12 || ComType.field1743 == var12.field1767 || ComType.field1748 == var12.field1767 || ComType.field1847 == var12.field1767 || ComType.field1742 == var12.field1767) {
+                if (var12.field1766 == 0 || var12.field1861 || method14331(var12).field9416 != 0 || field9116 == var12 || Component.field1743 == var12.field1767 || Component.field1748 == var12.field1767 || Component.field1847 == var12.field1767 || Component.field1742 == var12.field1767) {
                     if (!method14315(var12)) {
                         if (field9115 == var12 && method12723(field9115)) {
                             field9080 = true;
@@ -10538,19 +10538,19 @@ public final class client extends GameShell {
                                 if (field9115 != null) {
                                     var29 = false;
                                     var28 = false;
-                                } else if (MiniMenu.field585 || ComType.field1865 != var12.field1767 && field9150 > 0) {
+                                } else if (MiniMenu.field585 || Component.field1865 != var12.field1767 && field9150 > 0) {
                                     var29 = false;
                                     var28 = false;
                                     var23 = false;
                                 }
                                 if (var12.field1767 != 0) {
-                                    if (ComType.field1847 == var12.field1767 || ComType.field1742 == var12.field1767) {
+                                    if (Component.field1847 == var12.field1767 || Component.field1742 == var12.field1767) {
                                         field9113 = var12;
                                         Environment var66 = field8980.method6139().method8174();
                                         if (var66.method8210() != null && !Statics.field8656.method6042()) {
                                             var66.method8210().method6366(Statics.field5187, var12.field1929, Statics.field4961.field9657.method15807());
                                         }
-                                        if (ComType.field1847 == var12.field1767 && !MiniMenu.field585 && arg9 >= var15 && arg10 >= var16 && arg9 < var17 && arg10 < var18) {
+                                        if (Component.field1847 == var12.field1767 && !MiniMenu.field585 && arg9 >= var15 && arg10 >= var16 && arg9 < var17 && arg10 < var18) {
                                             MiniMenu.method4866(Statics.field5187, arg9, arg10);
                                             for (CoverMarkerClickbox var67 = (CoverMarkerClickbox) field9046.method11649(); var67 != null; var67 = (CoverMarkerClickbox) field9046.method11644()) {
                                                 if (arg9 >= var67.field9251 && arg9 < var67.field9253 && arg10 >= var67.field9252 && arg10 < var67.field9254) {
@@ -10582,7 +10582,7 @@ public final class client extends GameShell {
                                             var72++;
                                         }
                                     }
-                                    if (ComType.field1743 == var12.field1767) {
+                                    if (Component.field1743 == var12.field1767) {
                                         Graphic var44 = var12.method3124(Statics.field5187);
                                         if (var44 == null || MiniMap.field762 != 0 && MiniMap.field762 != 3 || MiniMenu.field585 || arg9 < var15 || arg10 < var16 || arg9 >= var17 || arg10 >= var18) {
                                             continue;
@@ -10623,7 +10623,7 @@ public final class client extends GameShell {
                                             var56 = ((int) var58.field3477 - var57 >> 9) - (var54 >> 2);
                                         }
                                         if (field9117 && (Statics.field4822 & 0x40) != 0) {
-                                            ComType var59 = ComType.method15145(Statics.field4166, field9101);
+                                            Component var59 = Component.method15145(Statics.field4166, field9101);
                                             if (var59 == null) {
                                                 method11223();
                                             } else {
@@ -10637,7 +10637,7 @@ public final class client extends GameShell {
                                         Statics.method8140(Statics.field2400, "", field9172, 23, -1, 1L, var55, var56, true, false, 0L, true);
                                         continue;
                                     }
-                                    if (ComType.field1865 == var12.field1767) {
+                                    if (Component.field1865 == var12.field1767) {
                                         Statics.field4960 = var12;
                                         if (var23) {
                                             ClientWorldMap.field9754 = true;
@@ -10692,13 +10692,13 @@ public final class client extends GameShell {
                                         field9150 = 0;
                                         continue;
                                     }
-                                    if (ComType.field1746 == var12.field1767) {
+                                    if (Component.field1746 == var12.field1767) {
                                         if (var28) {
                                             ClientWorldMap.method12692(Statics.field7136.method7254() - var13, Statics.field7136.method7255() - var14, var12.field1863, var12.field1929);
                                         }
                                         continue;
                                     }
-                                    if (ComType.field1748 == var12.field1767) {
+                                    if (Component.field1748 == var12.field1767) {
                                         MiniMenu.method4560(var12, var13, var14);
                                         continue;
                                     }
@@ -10991,7 +10991,7 @@ public final class client extends GameShell {
                                 if (var12.field1918 != null) {
                                     method14330(arg0, var12.field1918, var12.field1764, var15, var16, var17, var18, var13 - var12.field1857, var14 - var12.field1739, arg9, arg10);
                                 }
-                                SubIfType var123 = (SubIfType) field9075.method11923((long) var12.field1764);
+                                SubInterface var123 = (SubInterface) field9075.method11923((long) var12.field1764);
                                 if (var123 != null) {
                                     if (field9163 == ModeGame.field6407 && var123.field9678 == 0 && !MiniMenu.field585 && var23 && !field9111) {
                                         MiniMenu.method1401();
@@ -11010,21 +11010,21 @@ public final class client extends GameShell {
 
     @ObfuscatedName("lr.ly(III)V")
     public static final void method6032(int arg0, int arg1) {
-        if (ComType.method6404(arg0, null)) {
+        if (Component.method6404(arg0, null)) {
             method1609(Statics.field1756[arg0].field1732, arg1);
         }
     }
 
     @ObfuscatedName("k.lo([Lew;II)V")
-    public static final void method1609(ComType[] arg0, int arg1) {
+    public static final void method1609(Component[] arg0, int arg1) {
         for (int var2 = 0; var2 < arg0.length; var2++) {
-            ComType var3 = arg0[var2];
+            Component var3 = arg0[var2];
             if (var3 != null) {
                 if (var3.field1766 == 0) {
                     if (var3.field1918 != null) {
                         method1609(var3.field1918, arg1);
                     }
-                    SubIfType var4 = (SubIfType) field9075.method11923((long) var3.field1764);
+                    SubInterface var4 = (SubInterface) field9075.method11923((long) var3.field1764);
                     if (var4 != null) {
                         method6032(var4.field9679, arg1);
                     }
@@ -11037,7 +11037,7 @@ public final class client extends GameShell {
                 }
                 if (arg1 == 1 && var3.field1782 != null) {
                     if (var3.field1765 >= 0) {
-                        ComType var6 = ComType.method11381(var3.field1764);
+                        Component var6 = Component.method11381(var3.field1764);
                         if (var6 == null || var6.field1915 == null || var3.field1765 >= var6.field1915.length || var6.field1915[var3.field1765] != var3) {
                             continue;
                         }
@@ -11052,7 +11052,7 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("qs.lg(Lew;III)V")
-    public static final void method8390(ComType arg0, int arg1, int arg2) {
+    public static final void method8390(Component arg0, int arg1, int arg2) {
         if (field9115 != null || MiniMenu.field585 || (arg0 == null || !method12723(arg0))) {
             return;
         }
@@ -11140,7 +11140,7 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("yy.lq(Lew;I)V")
-    public static void method12939(ComType arg0) {
+    public static void method12939(Component arg0) {
         if (field8960 == arg0.field1927) {
             field9204[arg0.field1926] = true;
         }
@@ -11154,8 +11154,8 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("q.ln(Lew;I)Lew;")
-    public static ComType method1397(ComType arg0) {
-        ComType var1 = method14332(arg0);
+    public static Component method1397(Component arg0) {
+        Component var1 = method14332(arg0);
         if (var1 == null) {
             var1 = arg0.field1759;
         }
@@ -11163,7 +11163,7 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("wb.lw(Lew;B)Z")
-    public static boolean method12723(ComType arg0) {
+    public static boolean method12723(Component arg0) {
         ServerKeyProperties var1 = method14331(arg0);
         if (var1.method14946() > 0) {
             return true;
@@ -11188,12 +11188,12 @@ public final class client extends GameShell {
 
     @ObfuscatedName("lf.ld(I[II)V")
     public static final void method6068(int arg0, int[] arg1) {
-        if (!ComType.method6404(arg0, arg1)) {
+        if (!Component.method6404(arg0, arg1)) {
             return;
         }
-        ComType[] var2 = Statics.field1756[arg0].field1732;
+        Component[] var2 = Statics.field1756[arg0].field1732;
         for (int var3 = 0; var3 < var2.length; var3++) {
-            ComType var4 = var2[var3];
+            Component var4 = var2[var3];
             if (var4 != null && var4.field1789 != null) {
                 var4.field1789.method11785();
             }
@@ -11202,22 +11202,22 @@ public final class client extends GameShell {
 
     @ObfuscatedName("aex.ll(IS)V")
     public static final void method15619(int arg0) {
-        if (ComType.method6404(arg0, null)) {
+        if (Component.method6404(arg0, null)) {
             method15148(Statics.field1756[arg0].field1732, -1);
         }
     }
 
     @ObfuscatedName("ado.lm([Lew;II)V")
-    public static final void method15148(ComType[] arg0, int arg1) {
+    public static final void method15148(Component[] arg0, int arg1) {
         for (int var2 = 0; var2 < arg0.length; var2++) {
-            ComType var3 = arg0[var2];
+            Component var3 = arg0[var2];
             if (var3 != null && var3.field1886 == arg1 && !method14315(var3)) {
                 if (var3.field1766 == 0) {
                     method15148(arg0, var3.field1764);
                     if (var3.field1918 != null) {
                         method15148(var3.field1918, var3.field1764);
                     }
-                    SubIfType var4 = (SubIfType) field9075.method11923((long) var3.field1764);
+                    SubInterface var4 = (SubInterface) field9075.method11923((long) var3.field1764);
                     if (var4 != null) {
                         method15619(var4.field9679);
                     }
@@ -11255,9 +11255,9 @@ public final class client extends GameShell {
     public static final void method8618(boolean arg0) {
         ClientMessage var1 = ClientMessage.method14781(ClientProt.field2906, field8975.field834);
         field8975.method1913(var1);
-        for (SubIfType var2 = (SubIfType) field9075.method11928(); var2 != null; var2 = (SubIfType) field9075.method11929()) {
+        for (SubInterface var2 = (SubInterface) field9075.method11928(); var2 != null; var2 = (SubInterface) field9075.method11929()) {
             if (!var2.method6982()) {
-                var2 = (SubIfType) field9075.method11928();
+                var2 = (SubInterface) field9075.method11928();
                 if (var2 == null) {
                     break;
                 }
@@ -11273,14 +11273,14 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("fx.lx(ILaep;[IZI)Laep;")
-    public static final SubIfType method3589(int arg0, SubIfType arg1, int[] arg2, boolean arg3) {
-        SubIfType var4 = (SubIfType) field9075.method11923((long) arg0);
+    public static final SubInterface method3589(int arg0, SubInterface arg1, int[] arg2, boolean arg3) {
+        SubInterface var4 = (SubInterface) field9075.method11923((long) arg0);
         if (var4 != null) {
             method7069(var4, arg1.field9679 != var4.field9679, arg3);
         }
         field9075.method11927(arg1, (long) arg0);
         method6068(arg1.field9679, arg2);
-        ComType var5 = ComType.method11381(arg0);
+        Component var5 = Component.method11381(arg0);
         if (var5 != null) {
             method12939(var5);
         }
@@ -11302,15 +11302,15 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("of.lp(Laep;ZZB)V")
-    public static final void method7069(SubIfType arg0, boolean arg1, boolean arg2) {
+    public static final void method7069(SubInterface arg0, boolean arg1, boolean arg2) {
         int var3 = arg0.field9679;
         int var4 = (int) arg0.field4228;
         arg0.method6979();
         if (arg1) {
-            ComType.method13890(var3);
+            Component.method13890(var3);
         }
         Statics.method8587(var3);
-        ComType var5 = ComType.method11381(var4);
+        Component var5 = Component.method11381(var4);
         if (var5 != null) {
             method12939(var5);
         }
@@ -11319,9 +11319,9 @@ public final class client extends GameShell {
             method6032(field8941, 1);
         }
         IterableMapIterator var6 = new IterableMapIterator(field9075);
-        for (SubIfType var7 = (SubIfType) var6.method11955(); var7 != null; var7 = (SubIfType) var6.next()) {
+        for (SubInterface var7 = (SubInterface) var6.method11955(); var7 != null; var7 = (SubInterface) var6.next()) {
             if (!var7.method6982()) {
-                var7 = (SubIfType) var6.method11955();
+                var7 = (SubInterface) var6.method11955();
                 if (var7 == null) {
                     break;
                 }
@@ -11336,7 +11336,7 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("up.lr(Lew;III)V")
-    public static void method11873(ComType arg0, int arg1, int arg2) {
+    public static void method11873(Component arg0, int arg1, int arg2) {
         Graphic var3 = arg0.method3124(Statics.field5187);
         if (var3 == null) {
             return;
@@ -11606,13 +11606,13 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("client.mi(Lew;)Lace;")
-    public static ServerKeyProperties method14331(ComType arg0) {
+    public static ServerKeyProperties method14331(Component arg0) {
         ServerKeyProperties var1 = (ServerKeyProperties) field9010.method11923(((long) arg0.field1764 << 32) + (long) arg0.field1765);
         return var1 == null ? arg0.field1841 : var1;
     }
 
     @ObfuscatedName("client.mr(Lew;)Lew;")
-    public static ComType method14332(ComType arg0) {
+    public static Component method14332(Component arg0) {
         ServerKeyProperties var1 = method14331(arg0);
         if (var1.method14933()) {
             return Statics.field9561;
@@ -11622,7 +11622,7 @@ public final class client extends GameShell {
             return null;
         }
         for (int var3 = 0; var3 < var2; var3++) {
-            arg0 = method4752(ComType.method14993(arg0.field1764), arg0);
+            arg0 = method4752(Component.method14993(arg0.field1764), arg0);
             if (arg0 == null) {
                 return Statics.field9561;
             }
@@ -11631,7 +11631,7 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("client.mt(Lew;)Z")
-    public static boolean method14315(ComType arg0) {
+    public static boolean method14315(Component arg0) {
         if (field9111) {
             if (method14331(arg0).field9416 != 0) {
                 return false;
@@ -11644,7 +11644,7 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("ak.mb(Lew;IB)I")
-    public static int method1956(ComType arg0, int arg1) {
+    public static int method1956(Component arg0, int arg1) {
         if (!method14331(arg0).method14948(arg1) && arg0.field1887 == null) {
             return -1;
         } else if (arg0.field1854 == null || arg0.field1854.length <= arg1) {
@@ -11655,7 +11655,7 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("abz.ms(Lew;I)Ljava/lang/String;")
-    public static String method14722(ComType arg0) {
+    public static String method14722(Component arg0) {
         if (method14331(arg0).method14928() == 0) {
             return null;
         } else if (arg0.field1914 == null || arg0.field1914.trim().length() == 0) {

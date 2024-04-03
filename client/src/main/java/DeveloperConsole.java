@@ -680,8 +680,8 @@ public class DeveloperConsole {
                     Vector3 var11 = Statics.field2119.method8565().field3464;
                     method1958("" + client.field8980.method6098().field4498[Statics.field2119.field9807].method199((int) var11.field3475 >> 9, (int) var11.field3477 >> 9));
                 } else if (arg0 == 1) {
-                    method1958(ComType.field1757.method7924() + " " + ComType.field1757.method7923());
-                    method1958(ComType.field1760.method7924() + " " + ComType.field1760.method7923());
+                    method1958(Component.field1757.method7924() + " " + Component.field1757.method7923());
+                    method1958(Component.field1760.method7924() + " " + Component.field1760.method7923());
                     method1958(Statics.field3492.field7147.method8000() + " " + Statics.field3492.field7147.method8008());
                 } else if (arg0 == 10) {
                     client.method5025(false);

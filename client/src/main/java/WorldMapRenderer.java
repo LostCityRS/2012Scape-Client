@@ -8,7 +8,7 @@ public class WorldMapRenderer {
     }
 
     @ObfuscatedName("rj.u(Lra;IILew;I)V")
-    public static void method8599(RendererToolkit arg0, int arg1, int arg2, ComType arg3) {
+    public static void method8599(RendererToolkit arg0, int arg1, int arg2, Component arg3) {
         byte var4 = 63;
         byte var5 = 7;
         for (int var6 = 63; var6 >= 0; var6--) {
@@ -21,7 +21,7 @@ public class WorldMapRenderer {
     }
 
     @ObfuscatedName("ef.j(Lra;IILew;II)V")
-    public static void method3303(RendererToolkit arg0, int arg1, int arg2, ComType arg3, int arg4) {
+    public static void method3303(RendererToolkit arg0, int arg1, int arg2, Component arg3, int arg4) {
         for (int var5 = 7; var5 >= 0; var5--) {
             for (int var6 = 127; var6 >= 0; var6--) {
                 int var7 = (arg4 & 0x3F) << 10 | (var5 & 0x7) << 7 | var6 & 0x7F;

@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import java.util.Random;
 
 @ObfuscatedName("l")
-public abstract class FontType {
+public abstract class Font {
 
     @ObfuscatedName("l.u")
     public FontMetrics field418;
@@ -38,7 +38,7 @@ public abstract class FontType {
     @ObfuscatedName("l.o")
     public static String[] field420 = new String[100];
 
-    public FontType(RendererToolkit arg0, FontMetrics arg1) {
+    public Font(RendererToolkit arg0, FontMetrics arg1) {
         this.field417 = arg0;
         this.field418 = arg1;
     }

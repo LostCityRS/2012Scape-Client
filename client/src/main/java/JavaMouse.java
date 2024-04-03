@@ -31,18 +31,18 @@ public class JavaMouse extends Mouse implements MouseListener, MouseMotionListen
     public IterableQueue field9782 = new IterableQueue();
 
     @ObfuscatedName("aeo.n")
-    public Component field9778;
+    public java.awt.Component field9778;
 
     @ObfuscatedName("aeo.o")
     public boolean field9790;
 
-    public JavaMouse(Component arg0, boolean arg1) {
+    public JavaMouse(java.awt.Component arg0, boolean arg1) {
         this.method15593(arg0);
         this.field9790 = arg1;
     }
 
     @ObfuscatedName("aeo.ap(Ljava/awt/Component;I)V")
-    public void method15593(Component arg0) {
+    public void method15593(java.awt.Component arg0) {
         this.method15594();
         this.field9778 = arg0;
         this.field9778.addMouseListener(this);

@@ -29,7 +29,7 @@ public class PcmPlayer_Sub1 extends PcmPlayer {
     public boolean field8899 = false;
 
     @ObfuscatedName("aba.o(Ljava/awt/Component;)V")
-    public void method6505(Component arg0) {
+    public void method6505(java.awt.Component arg0) {
         Info[] var2 = AudioSystem.getMixerInfo();
         if (var2 != null) {
             Info[] var3 = var2;

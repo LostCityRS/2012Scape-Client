@@ -1049,7 +1049,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.co(Lvm;[Lzv;Z)Ll;")
-    public final FontType method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
+    public final Font method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
         return new GpuFont(this, arg0, arg1, arg2);
     }
 

@@ -1045,11 +1045,11 @@ public class LoginManager {
             }
         }
         if (client.field8941 != -1) {
-            ComType.method13890(client.field8941);
+            Component.method13890(client.field8941);
         }
-        for (SubIfType var3 = (SubIfType) client.field9075.method11928(); var3 != null; var3 = (SubIfType) client.field9075.method11929()) {
+        for (SubInterface var3 = (SubInterface) client.field9075.method11928(); var3 != null; var3 = (SubInterface) client.field9075.method11929()) {
             if (!var3.method6982()) {
-                var3 = (SubIfType) client.field9075.method11928();
+                var3 = (SubInterface) client.field9075.method11928();
                 if (var3 == null) {
                     break;
                 }

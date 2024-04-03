@@ -650,7 +650,7 @@ public class ObjType implements PlayerTypeRelated {
     }
 
     @ObfuscatedName("vn.f(Lra;Lra;IIIZILl;Lqc;B)[I")
-    public int[] method12276(RendererToolkit arg0, RendererToolkit arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6, FontType arg7, PlayerModel arg8) {
+    public int[] method12276(RendererToolkit arg0, RendererToolkit arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6, Font arg7, PlayerModel arg8) {
         ModelUnlit var10 = ModelUnlit.method2664(this.field7061.field7149, this.field7063, 0);
         if (var10 == null) {
             return null;

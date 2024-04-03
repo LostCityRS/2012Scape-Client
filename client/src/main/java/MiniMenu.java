@@ -46,7 +46,7 @@ public class MiniMenu {
     public static WeightedCache field600 = new WeightedCache(30);
 
     @ObfuscatedName("w.ai")
-    public static ComType field597 = null;
+    public static Component field597 = null;
 
     @ObfuscatedName("w.ao")
     public static int field604 = -1;
@@ -480,7 +480,7 @@ public class MiniMenu {
     }
 
     @ObfuscatedName("l.x(Lew;III)V")
-    public static void method881(ComType arg0, int arg1, int arg2) {
+    public static void method881(Component arg0, int arg1, int arg2) {
         if (client.field9117) {
             ParamType var3 = Statics.field7366 == -1 ? null : Statics.field4464.method12600(Statics.field7366);
             if (client.method14331(arg0).method14931() && (Statics.field4822 & 0x20) != 0 && (var3 == null || arg0.method3132(Statics.field7366, var3.field7287) != var3.field7287)) {
@@ -570,7 +570,7 @@ public class MiniMenu {
             }
             if (var7 != -1 && var8 != -1) {
                 if (client.field9117 && (Statics.field4822 & 0x40) != 0) {
-                    ComType var23 = ComType.method15145(Statics.field4166, client.field9101);
+                    Component var23 = Component.method15145(Statics.field4166, client.field9101);
                     if (var23 == null) {
                         client.method11223();
                     } else {
@@ -973,7 +973,7 @@ public class MiniMenu {
     }
 
     @ObfuscatedName("ig.as(Lew;III)V")
-    public static void method4560(ComType arg0, int arg1, int arg2) {
+    public static void method4560(Component arg0, int arg1, int arg2) {
         field597 = arg0;
         field604 = arg1;
         field593 = arg2;
@@ -1082,11 +1082,11 @@ public class MiniMenu {
         if (Statics.field1756[var2] == null || Statics.field1756[var2].field1732[var3] == null) {
             return false;
         }
-        ComType var4 = Statics.field1756[var2].field1732[var3];
+        Component var4 = Statics.field1756[var2].field1732[var3];
         if (arg1 == -1 && var4.field1766 == 0) {
             for (MiniMenuEntry var5 = (MiniMenuEntry) field595.method11563(); var5 != null; var5 = (MiniMenuEntry) field595.method11567()) {
                 if (var5.field10340 == 58 || var5.field10340 == 1007 || var5.field10340 == 25 || var5.field10340 == 57 || var5.field10340 == 30) {
-                    for (ComType var6 = ComType.method11381(var5.field10335); var6 != null; var6 = client.method4752(Statics.field1756[var6.field1764 >> 16], var6)) {
+                    for (Component var6 = Component.method11381(var5.field10335); var6 != null; var6 = client.method4752(Statics.field1756[var6.field1764 >> 16], var6)) {
                         if (var4.field1764 == var6.field1764) {
                             return true;
                         }
@@ -1208,7 +1208,7 @@ public class MiniMenu {
         if (field597 == null) {
             return;
         }
-        FontType var4 = field597.method3116(Statics.field6784, client.field8914);
+        Font var4 = field597.method3116(Statics.field6784, client.field8914);
         if (var4 == null) {
             var4 = Statics.field670;
         }
@@ -1224,7 +1224,7 @@ public class MiniMenu {
     }
 
     @ObfuscatedName("x.ae(IIIIIIILajz;Ll;Lvm;III)V")
-    public static void method1599(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, MiniMenuSubMenu arg7, FontType arg8, FontMetrics arg9, int arg10, int arg11) {
+    public static void method1599(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, MiniMenuSubMenu arg7, Font arg8, FontMetrics arg9, int arg10, int arg11) {
         if (arg0 > arg2 && arg0 < arg2 + arg4 && arg1 > arg6 - arg9.field7176 - 1 && arg1 < arg9.field7177 + arg6) {
             arg10 = arg11;
         }
@@ -1272,7 +1272,7 @@ public class MiniMenu {
     }
 
     @ObfuscatedName("ta.aq(Lra;IIIIILl;Lvm;Ljava/lang/String;I)V")
-    public static void method190(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, FontType arg6, FontMetrics arg7, String arg8) {
+    public static void method190(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, Font arg6, FontMetrics arg7, String arg8) {
         int var9 = 255 - Statics.field6566 - field615;
         if (var9 < 0) {
             var9 = 0;
@@ -1337,7 +1337,7 @@ public class MiniMenu {
         int var4 = Statics.field611 - 3;
         byte var5 = 20;
         if (Statics.field10523 == null || Statics.field2136 == null) {
-            Statics.field10523 = (FontType) Statics.field6784.method4859(client.field8914, Statics.field1387, true, true);
+            Statics.field10523 = (Font) Statics.field6784.method4859(client.field8914, Statics.field1387, true, true);
             Statics.field2136 = Statics.field6784.method4843(client.field8914, Statics.field1387);
             if (Statics.field10523 != null && Statics.field2136 != null) {
                 method3561();
@@ -1352,7 +1352,7 @@ public class MiniMenu {
                 return;
             }
         }
-        FontType var7;
+        Font var7;
         if (Statics.field10523 == null || Statics.field2136 == null) {
             var7 = Statics.field670;
         } else {
@@ -1624,7 +1624,7 @@ public class MiniMenu {
     }
 
     @ObfuscatedName("el.bc(Lew;II)Ljava/lang/String;")
-    public static String method3213(ComType arg0, int arg1) {
+    public static String method3213(Component arg0, int arg1) {
         if (!client.method14331(arg0).method14948(arg1) && arg0.field1887 == null) {
             return null;
         } else if (arg0.field1852 == null || arg0.field1852.length <= arg1 || arg0.field1852[arg1] == null || arg0.field1852[arg1].trim().length() == 0) {

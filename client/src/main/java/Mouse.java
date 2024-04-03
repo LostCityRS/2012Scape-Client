@@ -6,7 +6,7 @@ import java.awt.*;
 public abstract class Mouse {
 
     @ObfuscatedName("qp.u(Ljava/awt/Component;ZB)Lob;")
-    public static Mouse method8198(Component arg0, boolean arg1) {
+    public static Mouse method8198(java.awt.Component arg0, boolean arg1) {
         return new JavaMouse(arg0, arg1);
     }
 

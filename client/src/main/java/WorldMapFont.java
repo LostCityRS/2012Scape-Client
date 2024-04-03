@@ -41,18 +41,18 @@ public class WorldMapFont {
         }
     }
 
-    public WorldMapFont(RendererToolkit arg0, int arg1, boolean arg2, Component arg3) {
+    public WorldMapFont(RendererToolkit arg0, int arg1, boolean arg2, java.awt.Component arg3) {
         this.field743 = false;
         this.field739 = new Sprite[256];
         this.field744 = new int[256];
-        Font var5 = new Font("Helvetica", arg2 ? 1 : 0, arg1);
+        java.awt.Font var5 = new java.awt.Font("Helvetica", arg2 ? 1 : 0, arg1);
         FontMetrics var6 = arg3.getFontMetrics(var5);
         for (int var7 = 0; var7 < field740; var7++) {
             this.method1744(arg0, var5, var6, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"£$%^&*()-_=+[{]};:'@#~,<.>/?\\| ÄËÏÖÜäëïöüÿßÁÀÉÈÍÌÓÒÚÙáàéèíìóòúùÂÊÎÔÛâêîôûÆæãÃõÕçÇ".charAt(var7), var7, false);
         }
         if (arg2 && this.field743) {
             this.field743 = false;
-            Font var8 = new Font("Helvetica", 0, arg1);
+            java.awt.Font var8 = new java.awt.Font("Helvetica", 0, arg1);
             FontMetrics var9 = arg3.getFontMetrics(var8);
             for (int var10 = 0; var10 < field740; var10++) {
                 this.method1744(arg0, var8, var9, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"£$%^&*()-_=+[{]};:'@#~,<.>/?\\| ÄËÏÖÜäëïöüÿßÁÀÉÈÍÌÓÒÚÙáàéèíìóòúùÂÊÎÔÛâêîôûÆæãÃõÕçÇ".charAt(var10), var10, false);
@@ -67,7 +67,7 @@ public class WorldMapFont {
     }
 
     @ObfuscatedName("as.u(Lra;Ljava/awt/Font;Ljava/awt/FontMetrics;CIZ)V")
-    public void method1744(RendererToolkit arg0, Font arg1, FontMetrics arg2, char arg3, int arg4, boolean arg5) {
+    public void method1744(RendererToolkit arg0, java.awt.Font arg1, FontMetrics arg2, char arg3, int arg4, boolean arg5) {
         int var7 = arg2.charWidth(arg3);
         int var8 = var7;
         if (arg5) {

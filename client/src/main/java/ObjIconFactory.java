@@ -13,7 +13,7 @@ public class ObjIconFactory {
     }
 
     @ObfuscatedName("ro.u(Lra;Lew;B)V")
-    public static void method8730(RendererToolkit arg0, ComType arg1) {
+    public static void method8730(RendererToolkit arg0, Component arg1) {
         boolean var2 = Statics.field3492.method12293(arg0, arg1.field1903, arg1.field1904, arg1.field1800, arg1.field1801 | 0xFF000000, arg1.field1823, arg1.field1913 ? Statics.field2119.field10044 : null) == null;
         if (var2) {
             field671.method11558(new ObjIconRequest(arg1.field1903, arg1.field1904, arg1.field1800, arg1.field1801 | 0xFF000000, arg1.field1823, arg1.field1913));

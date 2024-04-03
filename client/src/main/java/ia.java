@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ia")
-public class ia extends FontType implements SoftwareRendererRelated {
+public class ia extends Font implements SoftwareRendererRelated {
 
     public long nativeid;
 

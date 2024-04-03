@@ -224,7 +224,7 @@ public class MiniMap {
     }
 
     @ObfuscatedName("fh.d(Lra;Lew;III)V")
-    public static void method3655(RendererToolkit arg0, ComType arg1, int arg2, int arg3) {
+    public static void method3655(RendererToolkit arg0, Component arg1, int arg2, int arg3) {
         if (Statics.field2119 == null) {
             return;
         }
@@ -308,7 +308,7 @@ public class MiniMap {
     }
 
     @ObfuscatedName("ci.z(Lra;IILew;Lta;III)V")
-    public static void method2388(RendererToolkit arg0, int arg1, int arg2, ComType arg3, GraphicsRelated arg4, int arg5, int arg6) {
+    public static void method2388(RendererToolkit arg0, int arg1, int arg2, Component arg3, GraphicsRelated arg4, int arg5, int arg6) {
         for (int var7 = 0; var7 < client.field9104; var7++) {
             ObjectNode var8 = (ObjectNode) client.field8964.method11923((long) client.field9056[var7]);
             if (var8 != null) {
@@ -334,7 +334,7 @@ public class MiniMap {
     }
 
     @ObfuscatedName("b.n(IILew;Lta;III)V")
-    public static void method1592(int arg0, int arg1, ComType arg2, GraphicsRelated arg3, int arg4, int arg5) {
+    public static void method1592(int arg0, int arg1, Component arg2, GraphicsRelated arg3, int arg4, int arg5) {
         int var6 = ReceivePlayerPositions.field732;
         int[] var7 = ReceivePlayerPositions.field727;
         for (int var8 = 0; var8 < var6; var8++) {
@@ -380,7 +380,7 @@ public class MiniMap {
     }
 
     @ObfuscatedName("ck.o(IILew;Les;IIB)V")
-    public static void method2472(int arg0, int arg1, ComType arg2, Graphic arg3, int arg4, int arg5) {
+    public static void method2472(int arg0, int arg1, Component arg2, Graphic arg3, int arg4, int arg5) {
         HintArrow[] var6 = client.field8936;
         for (int var7 = 0; var7 < var6.length; var7++) {
             HintArrow var8 = var6[var7];
@@ -416,7 +416,7 @@ public class MiniMap {
     }
 
     @ObfuscatedName("an.q(Lra;Lta;Lew;IIIIII)V")
-    public static void method1712(RendererToolkit arg0, GraphicsRelated arg1, ComType arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
+    public static void method1712(RendererToolkit arg0, GraphicsRelated arg1, Component arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
         MapElementType var8 = Statics.field8499.method7862(arg7);
         if (var8 == null || !var8.field4776 || !var8.method7835(Statics.field2669)) {
             return;
@@ -501,7 +501,7 @@ public class MiniMap {
         if (var31 != null) {
             var32 = var31.method1045();
         }
-        FontType var33 = Statics.field2163;
+        Font var33 = Statics.field2163;
         FontMetrics var34 = Statics.field559;
         if (var8.field4777 == 1) {
             var33 = Statics.field560;
@@ -515,7 +515,7 @@ public class MiniMap {
     }
 
     @ObfuscatedName("ik.p(Lew;Les;IIIIIJ)V")
-    public static void method4656(ComType arg0, Graphic arg1, int arg2, int arg3, int arg4, int arg5, int arg6, long arg7) {
+    public static void method4656(Component arg0, Graphic arg1, int arg2, int arg3, int arg4, int arg5, int arg6, long arg7) {
         int var9 = arg4 * arg4 + arg5 * arg5;
         if ((long) var9 > arg7) {
             return;
@@ -554,7 +554,7 @@ public class MiniMap {
     }
 
     @ObfuscatedName("aam.b(Lew;Lta;IIIIILjava/lang/String;Ll;Lvm;II)V")
-    public static void method14046(ComType arg0, GraphicsRelated arg1, int arg2, int arg3, int arg4, int arg5, int arg6, String arg7, FontType arg8, FontMetrics arg9, int arg10) {
+    public static void method14046(Component arg0, GraphicsRelated arg1, int arg2, int arg3, int arg4, int arg5, int arg6, String arg7, Font arg8, FontMetrics arg9, int arg10) {
         int var11;
         if (Statics.field2671 == 5) {
             var11 = (int) client.field9021 & 0x3FFF;

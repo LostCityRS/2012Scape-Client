@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ajd")
-public class SubInterfaceActivePlayer extends SubIfType {
+public class SubInterfaceActivePlayer extends SubInterface {
 
     @ObfuscatedName("ajd.m")
     public final int field10478;

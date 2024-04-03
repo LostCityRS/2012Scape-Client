@@ -1486,7 +1486,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.co(Lvm;[Lzv;Z)Ll;")
-    public FontType method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
+    public Font method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
         return new GlFont(this, arg0, arg1, arg2);
     }
 

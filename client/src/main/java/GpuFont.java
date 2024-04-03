@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import java.nio.ByteBuffer;
 
 @ObfuscatedName("zf")
-public class GpuFont extends FontType {
+public class GpuFont extends Font {
 
     @ObfuscatedName("zf.q")
     public final GpuToolkit field8447;

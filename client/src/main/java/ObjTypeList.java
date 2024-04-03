@@ -140,7 +140,7 @@ public class ObjTypeList implements PlayerTypeListRelated {
     }
 
     @ObfuscatedName("vj.a(Lra;Lra;IIIIZZILl;Lqc;I)Lce;")
-    public Sprite method12294(RendererToolkit arg0, RendererToolkit arg1, int arg2, int arg3, int arg4, int arg5, boolean arg6, boolean arg7, int arg8, FontType arg9, PlayerModel arg10) {
+    public Sprite method12294(RendererToolkit arg0, RendererToolkit arg1, int arg2, int arg3, int arg4, int arg5, boolean arg6, boolean arg7, int arg8, Font arg9, PlayerModel arg10) {
         if (!arg7) {
             Sprite var12 = this.method12293(arg1, arg2, arg3, arg4, arg5, arg8, arg10);
             if (var12 != null) {

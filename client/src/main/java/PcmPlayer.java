@@ -71,7 +71,7 @@ public class PcmPlayer {
     }
 
     @ObfuscatedName("mg.j(Ljava/awt/Component;II)Lmg;")
-    public static final PcmPlayer method6494(Component arg0, int arg1, int arg2) {
+    public static final PcmPlayer method6494(java.awt.Component arg0, int arg1, int arg2) {
         if (Statics.field4015 == 0) {
             throw new IllegalStateException();
         } else if (arg1 >= 0 && arg1 < 2) {

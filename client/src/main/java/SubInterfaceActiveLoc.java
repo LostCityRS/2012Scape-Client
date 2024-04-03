@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ajq")
-public class SubInterfaceActiveLoc extends SubIfType {
+public class SubInterfaceActiveLoc extends SubInterface {
 
     @ObfuscatedName("ajq.m")
     public final LocReference field10477;

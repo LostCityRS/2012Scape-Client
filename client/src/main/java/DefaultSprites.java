@@ -37,11 +37,11 @@ public class DefaultSprites {
 
     @ObfuscatedName("eu.s(Lra;I)V")
     public static void method2931(RendererToolkit arg0) {
-        Statics.field2163 = (FontType) Statics.field6784.method4859(client.field8914, Statics.field551, true, true);
+        Statics.field2163 = (Font) Statics.field6784.method4859(client.field8914, Statics.field551, true, true);
         Statics.field559 = Statics.field6784.method4843(client.field8914, Statics.field551);
-        Statics.field560 = (FontType) Statics.field6784.method4859(client.field8914, Statics.field552, true, true);
+        Statics.field560 = (Font) Statics.field6784.method4859(client.field8914, Statics.field552, true, true);
         Statics.field9813 = Statics.field6784.method4843(client.field8914, Statics.field552);
-        Statics.field670 = (FontType) Statics.field6784.method4859(client.field8914, Statics.field557, true, true);
+        Statics.field670 = (Font) Statics.field6784.method4859(client.field8914, Statics.field557, true, true);
         Statics.field2399 = Statics.field6784.method4843(client.field8914, Statics.field557);
     }
 

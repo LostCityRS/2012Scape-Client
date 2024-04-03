@@ -48,7 +48,7 @@ public class Statics {
     public static final int field10505 = 1;
 
     @ObfuscatedName("akt.bd")
-    public static FontType field10523;
+    public static Font field10523;
 
     @ObfuscatedName("akf.c")
     public static Applet field10526;
@@ -243,7 +243,7 @@ public class Statics {
     public static MiniMenuDefaults field1736;
 
     @ObfuscatedName("ew.x")
-    public static IfType[] field1756;
+    public static Interface[] field1756;
 
     @ObfuscatedName("ew.i")
     public static boolean[] field1834;
@@ -276,7 +276,7 @@ public class Statics {
     public static int field2101;
 
     @ObfuscatedName("ep.x")
-    public static Font field2112;
+    public static java.awt.Font field2112;
 
     @ObfuscatedName("ep.kq")
     public static int field2113;
@@ -303,7 +303,7 @@ public class Statics {
     public static HardwarePlatformLoader field2137;
 
     @ObfuscatedName("fj.i")
-    public static FontType field2163;
+    public static Font field2163;
 
     @ObfuscatedName("fm.be")
     public static int[] field2187;
@@ -879,7 +879,7 @@ public class Statics {
     public static int field4666;
 
     @ObfuscatedName("pd.qq")
-    public static ComType[] field4667;
+    public static Component[] field4667;
 
     @ObfuscatedName("pp.o")
     public static int field4677;
@@ -966,7 +966,7 @@ public class Statics {
     public static ModeWhat field496;
 
     @ObfuscatedName("ql.aq")
-    public static ComType field4960;
+    public static Component field4960;
 
     @ObfuscatedName("ql.cj")
     public static ClientOptions field4961;
@@ -1101,7 +1101,7 @@ public class Statics {
     public static FontMetrics field559;
 
     @ObfuscatedName("t.v")
-    public static FontType field560;
+    public static Font field560;
 
     @ObfuscatedName("t.af")
     public static Sprite[] field561;
@@ -1281,7 +1281,7 @@ public class Statics {
     public static int field6693;
 
     @ObfuscatedName("af.k")
-    public static FontType field670;
+    public static Font field670;
 
     @ObfuscatedName("uw.no")
     public static long field6701;
@@ -1299,7 +1299,7 @@ public class Statics {
     public static RendererToolkit field672;
 
     @ObfuscatedName("ar.j")
-    public static FontType field673;
+    public static Font field673;
 
     @ObfuscatedName("ar.t")
     public static Js5 field674;
@@ -1731,7 +1731,7 @@ public class Statics {
     public static String[] field943;
 
     @ObfuscatedName("ada.mp")
-    public static ComType field9471;
+    public static Component field9471;
 
     @ObfuscatedName("adr.ai")
     public static int[] field9478;
@@ -1797,7 +1797,7 @@ public class Statics {
     public static WorldMapFont field9549;
 
     @ObfuscatedName("adk.pm")
-    public static ComType field9561;
+    public static Component field9561;
 
     @ObfuscatedName("aep.te")
     public static int field9680;
@@ -2407,14 +2407,14 @@ public class Statics {
     }
 
     @ObfuscatedName("cj.a(Ljava/lang/String;ZLra;Ll;Lvm;I)V")
-    public static void method2579(String arg0, boolean arg1, RendererToolkit arg2, FontType arg3, FontMetrics arg4) {
+    public static void method2579(String arg0, boolean arg1, RendererToolkit arg2, Font arg3, FontMetrics arg4) {
         boolean var5 = !field1201 || MessageBox.method14267();
         if (!var5) {
             return;
         }
         if (field1201 && var5) {
             FontMetrics var6 = field10224;
-            FontType var7 = arg2.method712(var6, field4566, true);
+            Font var7 = arg2.method712(var6, field4566, true);
             int var8 = var6.method12393(arg0, 250, null);
             int var9 = var6.method12395(arg0, 250, var6.field7175, null);
             int var10 = field5243.method2721();
@@ -2958,7 +2958,7 @@ public class Statics {
     }
 
     @ObfuscatedName("se.u(Ljava/awt/Component;B)Loq;")
-    public static Keyboard method11115(Component arg0) {
+    public static Keyboard method11115(java.awt.Component arg0) {
         return new JavaKeyboard(arg0);
     }
 
@@ -3364,7 +3364,7 @@ public class Statics {
         field1928 = arg0;
         field1191 = arg1;
         field1600 = arg2;
-        field1756 = new IfType[field1928.method5638()];
+        field1756 = new Interface[field1928.method5638()];
         field1834 = new boolean[field1928.method5638()];
     }
 
@@ -3658,12 +3658,12 @@ public class Statics {
 
     @ObfuscatedName("id.h(I)V")
     public static void method4591() {
-        field1756 = new IfType[field1928.method5638()];
+        field1756 = new Interface[field1928.method5638()];
         field1834 = new boolean[field1928.method5638()];
     }
 
     @ObfuscatedName("wq.w(Lew;Lta;IIIILce;I)V")
-    public static void method12552(ComType arg0, GraphicsRelated arg1, int arg2, int arg3, int arg4, int arg5, Sprite arg6) {
+    public static void method12552(Component arg0, GraphicsRelated arg1, int arg2, int arg3, int arg4, int arg5, Sprite arg6) {
         if (arg6 == null) {
             return;
         }
@@ -3779,7 +3779,7 @@ public class Statics {
     }
 
     @ObfuscatedName("age.au(IIIIIIILajs;Ll;Lvm;III)V")
-    public static void method15995(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, MiniMenuEntry arg7, FontType arg8, FontMetrics arg9, int arg10, int arg11) {
+    public static void method15995(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, MiniMenuEntry arg7, Font arg8, FontMetrics arg9, int arg10, int arg11) {
         if (arg0 > arg2 && arg0 < arg2 + arg4 && arg1 > arg6 - arg9.field7176 - 1 && arg1 < arg9.field7177 + arg6 && arg7.field10336) {
             arg10 = arg11;
         }
@@ -4000,7 +4000,7 @@ public class Statics {
         }
         if (var5 == 30 && client.field9108 == null) {
             method11509(var4, var3);
-            client.field9108 = ComType.method15145(var4, var3);
+            client.field9108 = Component.method15145(var4, var3);
             if (client.field9108 != null) {
                 client.method12939(client.field9108);
             }
@@ -4049,7 +4049,7 @@ public class Statics {
             client.field8975.method1913(var20);
         }
         if (var5 == 25) {
-            ComType var21 = ComType.method15145(var4, var3);
+            Component var21 = Component.method15145(var4, var3);
             if (var21 != null) {
                 client.method11223();
                 ServerKeyProperties var22 = client.method14331(var21);
@@ -4176,7 +4176,7 @@ public class Statics {
             }
         }
         if (var5 == 58) {
-            ComType var35 = ComType.method15145(var4, var3);
+            Component var35 = Component.method15145(var4, var3);
             if (var35 != null) {
                 client.method14206(var35);
             }
@@ -4279,7 +4279,7 @@ public class Statics {
         field5037.method7819();
         field6705.method7331();
         method7573();
-        ComType.method4114();
+        Component.method4114();
         field6784.method4842();
         HintArrow.method5713();
         SpotShadowFactory.method6026();
@@ -4497,22 +4497,22 @@ public class Statics {
         }
         while (true) {
             HookRequest var27;
-            ComType var28;
-            ComType var29;
+            Component var28;
+            Component var29;
             do {
                 var27 = (HookRequest) client.field9159.method11560();
                 if (var27 == null) {
                     while (true) {
                         HookRequest var30;
-                        ComType var31;
-                        ComType var32;
+                        Component var31;
+                        Component var32;
                         do {
                             var30 = (HookRequest) client.field9125.method11560();
                             if (var30 == null) {
                                 while (true) {
                                     HookRequest var33;
-                                    ComType var34;
-                                    ComType var35;
+                                    Component var34;
+                                    Component var35;
                                     do {
                                         var33 = (HookRequest) client.field9089.method11560();
                                         if (var33 == null) {
@@ -4625,7 +4625,7 @@ public class Statics {
                                         if (var34.field1765 < 0) {
                                             break;
                                         }
-                                        var35 = ComType.method11381(var34.field1886);
+                                        var35 = Component.method11381(var34.field1886);
                                     } while (var35 == null || var35.field1915 == null || var34.field1765 >= var35.field1915.length || var35.field1915[var34.field1765] != var34);
                                     ScriptRunner.method8605(var33);
                                 }
@@ -4634,7 +4634,7 @@ public class Statics {
                             if (var31.field1765 < 0) {
                                 break;
                             }
-                            var32 = ComType.method11381(var31.field1886);
+                            var32 = Component.method11381(var31.field1886);
                         } while (var32 == null || var32.field1915 == null || var31.field1765 >= var32.field1915.length || var32.field1915[var31.field1765] != var31);
                         ScriptRunner.method8605(var30);
                     }
@@ -4643,7 +4643,7 @@ public class Statics {
                 if (var28.field1765 < 0) {
                     break;
                 }
-                var29 = ComType.method11381(var28.field1886);
+                var29 = Component.method11381(var28.field1886);
             } while (var29 == null || var29.field1915 == null || var28.field1765 >= var29.field1915.length || var29.field1915[var28.field1765] != var28);
             ScriptRunner.method8605(var27);
         }
@@ -4901,8 +4901,8 @@ public class Statics {
     @ObfuscatedName("ajk.cl(ZLrn;I)V")
     public static final void method16642(boolean arg0, ClientScriptState arg1) {
         int var2 = arg1.field5215[--arg1.field5216];
-        ComType var3 = ComType.method11381(var2);
-        IfType var4 = field1756[var2 >> 16];
+        Component var3 = Component.method11381(var2);
+        Interface var4 = field1756[var2 >> 16];
         if (arg0) {
             ScriptRunner.method2840(var4, var3);
         } else {
@@ -4911,10 +4911,10 @@ public class Statics {
     }
 
     @ObfuscatedName("ge.cm(Lew;Lrn;B)V")
-    public static final void method3983(ComType arg0, ClientScriptState arg1) {
+    public static final void method3983(Component arg0, ClientScriptState arg1) {
         if (client.method14331(arg0).method14927() && client.field9108 == null) {
             method11509(arg0.field1764, arg0.field1765);
-            client.field9108 = ComType.method15145(arg0.field1764, arg0.field1765);
+            client.field9108 = Component.method15145(arg0.field1764, arg0.field1765);
             client.method12939(client.field9108);
         }
     }
@@ -4929,13 +4929,13 @@ public class Statics {
     @ObfuscatedName("ln.dp(Lrn;I)V")
     public static final void method5938(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        ComType var2 = ComType.method11381(var1);
-        IfType var3 = field1756[var1 >> 16];
+        Component var2 = Component.method11381(var1);
+        Interface var3 = field1756[var1 >> 16];
         ScriptRunner.method7912(var2, var3, arg0);
     }
 
     @ObfuscatedName("aey.di(Lew;Lej;Lrn;B)V")
-    public static final void method15567(ComType arg0, IfType arg1, ClientScriptState arg2) {
+    public static final void method15567(Component arg0, Interface arg1, ClientScriptState arg2) {
         arg0.field1741 = arg2.field5215[--arg2.field5216] == 1;
         client.method12939(arg0);
     }
@@ -4997,8 +4997,8 @@ public class Statics {
     @ObfuscatedName("gq.dh(Lrn;I)V")
     public static final void method3922(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-        ComType var2 = var1.field5240;
-        IfType var3 = var1.field5239;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
         ScriptRunner.method3060(var2, var3, arg0);
     }
 
@@ -5024,53 +5024,53 @@ public class Statics {
     @ObfuscatedName("dr.df(Lrn;B)V")
     public static final void method2823(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-        ComType var2 = var1.field5240;
-        IfType var3 = var1.field5239;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
         ScriptRunner.method6308(var2, var3, arg0);
     }
 
     @ObfuscatedName("pb.ee(Lrn;B)V")
     public static final void method7831(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-        ComType var2 = var1.field5240;
-        IfType var3 = var1.field5239;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
         ScriptRunner.method4103(var2, var3, arg0);
     }
 
     @ObfuscatedName("rj.ea(Lrn;B)V")
     public static final void method8597(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        ComType var2 = ComType.method11381(var1);
-        IfType var3 = field1756[var1 >> 16];
+        Component var2 = Component.method11381(var1);
+        Interface var3 = field1756[var1 >> 16];
         ScriptRunner.method3463(var2, var3, arg0);
     }
 
     @ObfuscatedName("qv.fp(Lrn;I)V")
     public static final void method8303(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        ComType var2 = ComType.method11381(var1);
-        IfType var3 = field1756[var1 >> 16];
+        Component var2 = Component.method11381(var1);
+        Interface var3 = field1756[var1 >> 16];
         ScriptRunner.method2787(var2, var3, arg0);
     }
 
     @ObfuscatedName("pd.fv(Lrn;I)V")
     public static final void method7676(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-        ComType var2 = var1.field5240;
-        IfType var3 = var1.field5239;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
         ScriptRunner.method2787(var2, var3, arg0);
     }
 
     @ObfuscatedName("ig.fy(Lrn;B)V")
     public static final void method4555(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        ComType var2 = ComType.method11381(var1);
-        IfType var3 = field1756[var1 >> 16];
+        Component var2 = Component.method11381(var1);
+        Interface var3 = field1756[var1 >> 16];
         ScriptRunner.method1626(var2, var3, arg0);
     }
 
     @ObfuscatedName("yu.fg(Lew;Lej;Lrn;B)V")
-    public static final void method12994(ComType arg0, IfType arg1, ClientScriptState arg2) {
+    public static final void method12994(Component arg0, Interface arg1, ClientScriptState arg2) {
         arg0.field1804 = arg2.field5215[--arg2.field5216] == 1;
         client.method12939(arg0);
     }
@@ -5078,21 +5078,21 @@ public class Statics {
     @ObfuscatedName("nh.fb(Lrn;B)V")
     public static final void method6876(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-        ComType var2 = var1.field5240;
-        IfType var3 = var1.field5239;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
         ScriptRunner.method2604(var2, var3, arg0);
     }
 
     @ObfuscatedName("zl.fe(Lrn;B)V")
     public static final void method13893(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-        ComType var2 = var1.field5240;
-        IfType var3 = var1.field5239;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
         ScriptRunner.method8485(var2, var3, arg0);
     }
 
     @ObfuscatedName("pk.gz(Lew;Lej;Lrn;S)V")
-    public static final void method7967(ComType arg0, IfType arg1, ClientScriptState arg2) {
+    public static final void method7967(Component arg0, Interface arg1, ClientScriptState arg2) {
         arg2.field5216 -= 2;
         int var3 = arg2.field5215[arg2.field5216];
         int var4 = arg2.field5215[arg2.field5216 + 1];
@@ -5107,13 +5107,13 @@ public class Statics {
     @ObfuscatedName("dv.gc(Lrn;B)V")
     public static final void method2843(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-        ComType var2 = var1.field5240;
-        IfType var3 = var1.field5239;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
         method7967(var2, var3, arg0);
     }
 
     @ObfuscatedName("on.gs(Lew;Lej;Lrn;I)V")
-    public static final void method7179(ComType arg0, IfType arg1, ClientScriptState arg2) {
+    public static final void method7179(Component arg0, Interface arg1, ClientScriptState arg2) {
         if (arg0.field1766 == 4) {
             ScriptRunner.method8481(arg0, arg1, arg2);
         }
@@ -5122,7 +5122,7 @@ public class Statics {
     @ObfuscatedName("fl.he(Lrn;B)V")
     public static final void method3571(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-        ComType var2 = var1.field5240;
+        Component var2 = var1.field5240;
         arg0.field5216 -= 2;
         int var3 = arg0.field5215[arg0.field5216];
         int var4 = arg0.field5215[arg0.field5216 + 1];
@@ -5185,7 +5185,7 @@ public class Statics {
     }
 
     @ObfuscatedName("qi.hb(Lew;Lej;Lrn;I)V")
-    public static final void method8049(ComType arg0, IfType arg1, ClientScriptState arg2) {
+    public static final void method8049(Component arg0, Interface arg1, ClientScriptState arg2) {
         arg0.field1806 = 3;
         arg0.field1838 = client.field9071;
         arg0.field1832 = 0;
@@ -5197,13 +5197,13 @@ public class Statics {
     @ObfuscatedName("dq.hp(Lrn;I)V")
     public static final void method2894(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-        ComType var2 = var1.field5240;
-        IfType var3 = var1.field5239;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
         ScriptRunner.method7651(var2, var3, true, 0, arg0);
     }
 
     @ObfuscatedName("nv.ii(Lew;Lej;Lrn;I)V")
-    public static final void method6788(ComType arg0, IfType arg1, ClientScriptState arg2) {
+    public static final void method6788(Component arg0, Interface arg1, ClientScriptState arg2) {
         arg0.field1806 = 5;
         arg0.field1838 = arg2.field5215[--arg2.field5216];
         if (arg0.field1765 == -1 && !arg1.field1734) {
@@ -5214,40 +5214,40 @@ public class Statics {
     @ObfuscatedName("am.iv(Lrn;I)V")
     public static final void method1905(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        ComType var2 = ComType.method11381(var1);
-        IfType var3 = field1756[var1 >> 16];
+        Component var2 = Component.method11381(var1);
+        Interface var3 = field1756[var1 >> 16];
         ScriptRunner.method14903(var2, var3, arg0);
     }
 
     @ObfuscatedName("fp.ji(Lrn;I)V")
     public static final void method3542(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        ComType var2 = ComType.method11381(var1);
-        IfType var3 = field1756[var1 >> 16];
+        Component var2 = Component.method11381(var1);
+        Interface var3 = field1756[var1 >> 16];
         ScriptRunner.method11906(var2, var3, arg0);
     }
 
     @ObfuscatedName("eb.jd(Lew;Lej;Lrn;I)V")
-    public static final void method3319(ComType arg0, IfType arg1, ClientScriptState arg2) {
+    public static final void method3319(Component arg0, Interface arg1, ClientScriptState arg2) {
         arg0.field1852 = null;
     }
 
     @ObfuscatedName("ks.jl(Lew;Lej;Lrn;I)V")
-    public static final void method5069(ComType arg0, IfType arg1, ClientScriptState arg2) {
+    public static final void method5069(Component arg0, Interface arg1, ClientScriptState arg2) {
         arg0.field1855 = arg2.field5215[--arg2.field5216];
     }
 
     @ObfuscatedName("fg.ki(Lrn;I)V")
     public static final void method3638(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        ComType var2 = ComType.method11381(var1);
+        Component var2 = Component.method11381(var1);
         ScriptRunner.method8614(var2, arg0);
     }
 
     @ObfuscatedName("xb.kp(Lrn;I)V")
     public static final void method12749(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-        ComType var2 = var1.field5240;
+        Component var2 = var1.field5240;
         ScriptRunner.method7054(var2, arg0);
     }
 
@@ -5257,7 +5257,7 @@ public class Statics {
         byte[] var1 = new byte[]{(byte) arg0.field5215[arg0.field5216]};
         byte[] var2 = new byte[]{(byte) arg0.field5215[arg0.field5216 + 1]};
         int var3 = arg0.field5215[arg0.field5216 + 2];
-        ComType var4 = ComType.method11381(var3);
+        Component var4 = Component.method11381(var3);
         ScriptRunner.method2813(var4, var1, var2, arg0);
     }
 
@@ -5297,15 +5297,15 @@ public class Statics {
     }
 
     @ObfuscatedName("pi.ka(Lew;Lej;Lrn;I)V")
-    public static final void method7900(ComType arg0, IfType arg1, ClientScriptState arg2) {
+    public static final void method7900(Component arg0, Interface arg1, ClientScriptState arg2) {
         arg0.field1786 = arg2.field5215[--arg2.field5216];
     }
 
     @ObfuscatedName("pk.kj(Lrn;S)V")
     public static final void method7968(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-        ComType var2 = var1.field5240;
-        IfType var3 = var1.field5239;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
         ScriptRunner.method6973(var2, var3, arg0);
     }
 
@@ -5315,7 +5315,7 @@ public class Statics {
     }
 
     @ObfuscatedName("iv.ll(Lew;Lej;Lrn;I)V")
-    public static final void method4583(ComType arg0, IfType arg1, ClientScriptState arg2) {
+    public static final void method4583(Component arg0, Interface arg1, ClientScriptState arg2) {
         String var3 = (String) arg2.field5222[--arg2.field5230];
         if (ScriptRunner.method3662(var3, arg2) != null) {
             var3 = var3.substring(0, var3.length() - 1);
@@ -5325,7 +5325,7 @@ public class Statics {
     }
 
     @ObfuscatedName("aes.le(Lew;Lej;Lrn;B)V")
-    public static final void method15654(ComType arg0, IfType arg1, ClientScriptState arg2) {
+    public static final void method15654(Component arg0, Interface arg1, ClientScriptState arg2) {
         String var3 = (String) arg2.field5222[--arg2.field5230];
         int[] var4 = ScriptRunner.method3662(var3, arg2);
         if (var4 != null) {
@@ -5337,7 +5337,7 @@ public class Statics {
     }
 
     @ObfuscatedName("eh.lp(Lew;Lej;Lrn;I)V")
-    public static final void method3070(ComType arg0, IfType arg1, ClientScriptState arg2) {
+    public static final void method3070(Component arg0, Interface arg1, ClientScriptState arg2) {
         String var3 = (String) arg2.field5222[--arg2.field5230];
         if (ScriptRunner.method3662(var3, arg2) != null) {
             var3 = var3.substring(0, var3.length() - 1);
@@ -5349,13 +5349,13 @@ public class Statics {
     @ObfuscatedName("vw.md(Lrn;B)V")
     public static final void method12347(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-        ComType var2 = var1.field5240;
-        IfType var3 = var1.field5239;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
         ScriptRunner.method3497(var2, var3, arg0);
     }
 
     @ObfuscatedName("eu.nk(Lew;Lej;Lrn;I)V")
-    public static final void method2929(ComType arg0, IfType arg1, ClientScriptState arg2) {
+    public static final void method2929(Component arg0, Interface arg1, ClientScriptState arg2) {
         String var3 = (String) arg2.field5222[--arg2.field5230];
         if (ScriptRunner.method3662(var3, arg2) != null) {
             var3 = var3.substring(0, var3.length() - 1);
@@ -5367,49 +5367,49 @@ public class Statics {
     @ObfuscatedName("jw.nz(Lrn;B)V")
     public static final void method4895(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        ComType var2 = ComType.method11381(var1);
-        IfType var3 = field1756[var1 >> 16];
+        Component var2 = Component.method11381(var1);
+        Interface var3 = field1756[var1 >> 16];
         ScriptRunner.method8454(var2, var3, arg0);
     }
 
     @ObfuscatedName("re.of(Lrn;B)V")
     public static final void method8660(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        ComType var2 = ComType.method11381(var1);
-        IfType var3 = field1756[var1 >> 16];
+        Component var2 = Component.method11381(var1);
+        Interface var3 = field1756[var1 >> 16];
         ScriptRunner.method12221(var2, var3, arg0);
     }
 
     @ObfuscatedName("pm.qu(Lrn;I)V")
     public static final void method7955(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-        ComType var2 = var1.field5240;
+        Component var2 = var1.field5240;
         arg0.field5215[++arg0.field5216 - 1] = var2.field1793;
     }
 
     @ObfuscatedName("gz.qd(Lrn;I)V")
     public static final void method3944(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-        ComType var2 = var1.field5240;
+        Component var2 = var1.field5240;
         arg0.field5215[++arg0.field5216 - 1] = var2.field1903;
     }
 
     @ObfuscatedName("vv.qi(Lrn;I)V")
     public static final void method12369(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-        ComType var2 = var1.field5240;
+        Component var2 = var1.field5240;
         arg0.field5215[++arg0.field5216 - 1] = var2.field1765;
     }
 
     @ObfuscatedName("if.qp(Lrn;I)V")
     public static final void method4706(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
-        ComType var2 = var1.field5240;
+        Component var2 = var1.field5240;
         ScriptRunner.method2816(var2, arg0);
     }
 
     @ObfuscatedName("lh.qe(Lew;Lrn;I)V")
-    public static final void method5714(ComType arg0, ClientScriptState arg1) {
+    public static final void method5714(Component arg0, ClientScriptState arg1) {
         int var2 = arg1.field5215[--arg1.field5216];
         int var3 = arg1.field5215[--arg1.field5216] - 1;
         if (arg0.field1806 != 2) {
@@ -5430,20 +5430,20 @@ public class Statics {
     @ObfuscatedName("aar.rp(Lrn;B)V")
     public static final void method13908(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        ComType var2 = ComType.method11381(var1);
+        Component var2 = Component.method11381(var1);
         arg0.field5215[++arg0.field5216 - 1] = var2.field1739;
     }
 
     @ObfuscatedName("xb.rq(Lrn;I)V")
     public static final void method12748(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        ComType var2 = ComType.method11381(var1);
+        Component var2 = Component.method11381(var1);
         arg0.field5215[++arg0.field5216 - 1] = var2.field1783;
     }
 
     @ObfuscatedName("tq.st(Lrn;I)V")
     public static final void method11638(ClientScriptState arg0) {
-        ComType var1 = ComType.method11381(arg0.field5215[--arg0.field5216]);
+        Component var1 = Component.method11381(arg0.field5215[--arg0.field5216]);
         arg0.field5215[++arg0.field5216 - 1] = var1.field1903;
     }
 
@@ -5855,7 +5855,7 @@ public class Statics {
     }
 
     @ObfuscatedName("ue.ks(Lew;III)V")
-    public static void method11974(ComType arg0, int arg1, int arg2) {
+    public static void method11974(Component arg0, int arg1, int arg2) {
         if (arg0 == null) {
             return;
         }
@@ -6046,7 +6046,7 @@ public class Statics {
     }
 
     @ObfuscatedName("kk.lh(Lew;I)V")
-    public static void method5567(ComType arg0) {
+    public static void method5567(Component arg0) {
         if (arg0.field1766 == 5 && arg0.field1903 != -1) {
             ObjIconFactory.method8730(field5187, arg0);
         }
@@ -6088,8 +6088,8 @@ public class Statics {
     }
 
     @ObfuscatedName("rf.le(Lew;I)V")
-    public static final void method8633(ComType arg0) {
-        if (ComType.field1740 != arg0.field1767) {
+    public static final void method8633(Component arg0) {
+        if (Component.field1740 != arg0.field1767) {
             return;
         }
         if (field2119.field10040 == null) {

@@ -10,7 +10,7 @@ public class HookRequest extends Node {
     public boolean field9608;
 
     @ObfuscatedName("ady.m")
-    public ComType field9609;
+    public Component field9609;
 
     @ObfuscatedName("ady.t")
     public int field9610;
@@ -22,7 +22,7 @@ public class HookRequest extends Node {
     public int field9612;
 
     @ObfuscatedName("ady.d")
-    public ComType field9607;
+    public Component field9607;
 
     @ObfuscatedName("ady.z")
     public int field9611;

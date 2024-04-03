@@ -2,7 +2,7 @@ import deob.ObfuscatedName;
 import jaggl.OpenGL;
 
 @ObfuscatedName("zc")
-public class GlFont extends FontType {
+public class GlFont extends Font {
 
     @ObfuscatedName("zc.q")
     public final GlToolkit field8440;

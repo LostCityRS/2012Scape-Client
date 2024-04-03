@@ -181,7 +181,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
     public Model[] field8651;
 
     @ObfuscatedName("aay.bb")
-    public IfType field8652;
+    public Interface field8652;
 
     @ObfuscatedName("aay.be")
     public int field8653;
@@ -888,7 +888,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
         if (this.field8653 == arg0) {
             return true;
         }
-        this.field8652 = ComType.method3971(arg0, null, null, true);
+        this.field8652 = Component.method3971(arg0, null, null, true);
         if (this.field8652 == null) {
             return false;
         } else {
@@ -901,7 +901,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
     @ObfuscatedName("aay.cz(S)V")
     public void method14002() {
         if (this.field8653 != -1) {
-            ComType.method7691(this.field8653);
+            Component.method7691(this.field8653);
             this.field8652 = null;
             this.field8653 = -1;
         }

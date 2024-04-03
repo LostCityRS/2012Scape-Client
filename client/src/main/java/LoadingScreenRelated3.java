@@ -13,7 +13,7 @@ public class LoadingScreenRelated3 implements LoadingScreenElement {
     public final Js5 field2336;
 
     @ObfuscatedName("gb.s")
-    public FontType field2334;
+    public Font field2334;
 
     public LoadingScreenRelated3(Js5 arg0, Js5 arg1, LoadingScreenRelated3_Sub1 arg2) {
         this.field2337 = arg2;
