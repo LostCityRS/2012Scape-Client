@@ -18,8 +18,8 @@ public class LoadingScreenRelated5_Sub1 extends LoadingScreenProgressDisplayConf
     @ObfuscatedName("dl.s(Laet;B)Liq;")
     public static LoadingScreenProgressDisplayConfig method2607(Packet arg0) {
         LoadingScreenProgressDisplayConfig var1 = LoadingScreenProgressDisplayConfig.method2603(arg0);
-        int var2 = arg0.g4();
-        int var3 = arg0.g4();
+        int var2 = arg0.g4s();
+        int var3 = arg0.g4s();
         int var4 = arg0.gSmart2or4null();
         return new LoadingScreenRelated5_Sub1(var1.field2605, var1.field2603, var1.field2604, var1.field2608, var1.field2602, var1.field2607, var1.field2610, var1.field2609, var1.field2606, var2, var3, var4);
     }

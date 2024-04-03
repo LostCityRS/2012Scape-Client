@@ -43,7 +43,7 @@ public final class CutsceneEntity {
             this.field1563 = true;
             if (this.field1560 >= 0) {
                 this.field1558 = new NpcEntity(client.field8980.method6098(), 25);
-                this.field1558.field8593 = this.field1559;
+                this.field1558.localPlayerIndex = this.field1559;
                 this.field1558.field8618 = client.field9213;
                 this.field1558.method16149(Statics.field3774.method12565(this.field1560));
                 this.field1558.method13979(this.field1558.field10075.field7213);
@@ -52,7 +52,7 @@ public final class CutsceneEntity {
             } else {
                 this.field1562 = new PlayerEntity(client.field8980.method6098(), 25);
                 this.field1562.method16116(Statics.field416);
-                this.field1562.field8593 = this.field1559;
+                this.field1562.localPlayerIndex = this.field1559;
                 this.field1562.field8618 = client.field9213;
                 this.field1562.field8600 = ++CutsceneManager.field1530 - 1;
             }
@@ -61,8 +61,8 @@ public final class CutsceneEntity {
             this.field1558.method16153(arg2, arg0, arg1, true, this.field1558.method13954());
             this.field1558.method13946(arg3, true);
         } else {
-            this.field1562.field9807 = this.field1562.field9809 = (byte) arg2;
-            this.field1562.method16123(arg0, arg1);
+            this.field1562.level = this.field1562.field9809 = (byte) arg2;
+            this.field1562.tele(arg0, arg1);
             this.field1562.method13946(arg3, true);
         }
     }
@@ -77,8 +77,8 @@ public final class CutsceneEntity {
     @ObfuscatedName("dn.a(IIII)V")
     public void method2853(int arg0, int arg1, int arg2) {
         if (this.field1558 == null) {
-            this.field1562.field9807 = this.field1562.field9809 = (byte) arg0;
-            this.field1562.method16123(arg1, arg2);
+            this.field1562.level = this.field1562.field9809 = (byte) arg0;
+            this.field1562.tele(arg1, arg2);
         } else {
             this.field1558.method16153(arg0, arg1, arg2, true, this.field1558.method13954());
         }

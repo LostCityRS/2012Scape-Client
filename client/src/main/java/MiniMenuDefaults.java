@@ -68,9 +68,9 @@ public class MiniMenuDefaults {
             } else if (var2 == 11) {
                 this.field5124 = true;
             } else if (var2 == 12) {
-                this.field5127 = arg0.g4();
+                this.field5127 = arg0.g4s();
             } else if (var2 == 13) {
-                this.field5128 = arg0.g4();
+                this.field5128 = arg0.g4s();
             }
         }
     }

@@ -31,7 +31,7 @@ public class CutsceneTemplate extends Node {
     public final int field9380;
 
     public CutsceneTemplate(Packet arg0) {
-        int var2 = arg0.g4();
+        int var2 = arg0.g4s();
         this.field9379 = var2 >>> 28;
         this.field9373 = var2 >>> 14 & 0x3FFF;
         this.field9374 = var2 & 0x3FFF;

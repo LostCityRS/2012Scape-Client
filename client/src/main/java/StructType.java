@@ -34,7 +34,7 @@ public class StructType extends SecondaryNode {
             if (var6) {
                 var8 = new ObjectNode(arg0.gjstr());
             } else {
-                var8 = new IntNode(arg0.g4());
+                var8 = new IntNode(arg0.g4s());
             }
             this.field10396.method11927(var8, (long) var7);
         }

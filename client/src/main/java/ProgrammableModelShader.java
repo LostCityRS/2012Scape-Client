@@ -95,9 +95,9 @@ public class ProgrammableModelShader extends ModelShader {
         this.field8682.method3355(this.field8688[4], this.field8671);
         this.field8682.method3354(this.field8688[5], this.field2248);
         this.field8682.method3350(this.field8688[7], this.field2266.field3426, this.field2266.field3427, this.field2266.field3428, this.field2266.field3429);
-        this.field8682.method3349(this.field8688[8], this.field2259.field3475, this.field2259.field3476, this.field2259.field3477);
+        this.field8682.method3349(this.field8688[8], this.field2259.x, this.field2259.field3476, this.field2259.z);
         this.field8682.method3350(this.field8688[9], this.field2260.field3426, this.field2260.field3427, this.field2260.field3428, this.field2260.field3429);
-        this.field8682.method3349(this.field8688[10], this.field2249.field3475, this.field2249.field3476, this.field2249.field3477);
+        this.field8682.method3349(this.field8688[10], this.field2249.x, this.field2249.field3476, this.field2249.z);
         this.field2270.method13596(PrimitiveType.field2582, this.field2267, this.field2261, this.field2269, this.field2252);
     }
 
@@ -114,7 +114,7 @@ public class ProgrammableModelShader extends ModelShader {
         this.field8682.method3335(this.field8686[18]);
         this.field8688 = this.field8687[this.field8682.method3401()];
         this.field8682.method3325();
-        this.field8682.method3349(this.field8688[6], this.field2258.field3475, this.field2258.field3476, this.field2258.field3477);
+        this.field8682.method3349(this.field8688[6], this.field2258.x, this.field2258.field3476, this.field2258.z);
         this.field8682.method3350(this.field8688[16], this.field2254, this.field2257, 0.0F, 0.0F);
         this.method14043(0);
     }
@@ -125,9 +125,9 @@ public class ProgrammableModelShader extends ModelShader {
         this.field8682.method3355(this.field8688[4], this.field8671);
         this.field8682.method3354(this.field8688[5], this.field2248);
         this.field8682.method3350(this.field8688[7], this.field2266.field3426, this.field2266.field3427, this.field2266.field3428, this.field2266.field3429);
-        this.field8682.method3349(this.field8688[8], this.field2259.field3475, this.field2259.field3476, this.field2259.field3477);
+        this.field8682.method3349(this.field8688[8], this.field2259.x, this.field2259.field3476, this.field2259.z);
         this.field8682.method3350(this.field8688[9], this.field2260.field3426, this.field2260.field3427, this.field2260.field3428, this.field2260.field3429);
-        this.field8682.method3349(this.field8688[10], this.field2249.field3475, this.field2249.field3476, this.field2249.field3477);
+        this.field8682.method3349(this.field8688[10], this.field2249.x, this.field2249.field3476, this.field2249.z);
         this.field8682.method3351(this.field8688[11], this.field2262);
         this.field8682.method3351(this.field8688[12], this.field2263);
         this.field8682.method3351(this.field8688[13], this.field2264);
@@ -152,7 +152,7 @@ public class ProgrammableModelShader extends ModelShader {
         this.field8682.method3335(this.field8686[arg0 + 7]);
         this.field8688 = this.field8687[this.field8682.method3401()];
         this.field8682.method3325();
-        this.field8682.method3349(this.field8688[6], this.field2258.field3475, this.field2258.field3476, this.field2258.field3477);
+        this.field8682.method3349(this.field8688[6], this.field2258.x, this.field2258.field3476, this.field2258.z);
         this.field8682.method3350(this.field8688[16], this.field2254, this.field2257, 0.0F, 0.0F);
         this.method14043(arg0);
     }
@@ -163,7 +163,7 @@ public class ProgrammableModelShader extends ModelShader {
         this.field8688 = this.field8687[this.field8682.method3401()];
         this.field8682.method3325();
         this.field8682.method3346(this.field8688[15], this.field2256);
-        this.field8682.method3349(this.field8688[6], this.field2258.field3475, this.field2258.field3476, this.field2258.field3477);
+        this.field8682.method3349(this.field8688[6], this.field2258.x, this.field2258.field3476, this.field2258.z);
         this.field8682.method3353(this.field8688[3], 1, this.field2253);
         this.method14043(arg0);
     }

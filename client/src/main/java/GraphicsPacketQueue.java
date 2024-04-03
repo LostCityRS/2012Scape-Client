@@ -37,7 +37,7 @@ public class GraphicsPacketQueue {
 
     @ObfuscatedName("jh.c(I)V")
     public static void method4786() {
-        if (client.field8923 != 1 || client.field8975 == null) {
+        if (client.state != 1 || client.gameConnection == null) {
             return;
         }
         while (true) {

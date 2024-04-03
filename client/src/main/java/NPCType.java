@@ -447,7 +447,7 @@ public class NPCType {
                 if (var33) {
                     var35 = new ObjectNode(arg0.gjstr());
                 } else {
-                    var35 = new IntNode(arg0.g4());
+                    var35 = new IntNode(arg0.g4s());
                 }
                 this.field7265.method11927(var35, (long) var34);
             }

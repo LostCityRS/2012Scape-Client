@@ -187,7 +187,7 @@ public class SeqType {
                     if (var22) {
                         var24 = new ObjectNode(arg0.gjstr());
                     } else {
-                        var24 = new IntNode(arg0.g4());
+                        var24 = new IntNode(arg0.g4s());
                     }
                     this.field6322.method11927(var24, (long) var23);
                 }

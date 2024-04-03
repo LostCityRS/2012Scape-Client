@@ -21,7 +21,7 @@ public class CutsceneAction_Sub4 extends CutsceneAction {
     public CutsceneAction_Sub4(Packet arg0) {
         super(arg0);
         this.field8503 = arg0.g2();
-        int var2 = arg0.g4();
+        int var2 = arg0.g4s();
         this.field8501 = var2 >>> 16;
         this.field8502 = var2 & 0xFFFF;
         this.field8500 = arg0.g1();

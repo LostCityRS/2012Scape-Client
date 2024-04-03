@@ -3368,9 +3368,9 @@ public class GpuModel extends Model {
                         int var16 = var15.method14881();
                         var13.method5334(var15.field9369);
                         var13.method5319(var11);
-                        var2.field2251[var14 * 4] = var13.field3475;
+                        var2.field2251[var14 * 4] = var13.x;
                         var2.field2251[var14 * 4 + 1] = var13.field3476;
-                        var2.field2251[var14 * 4 + 2] = var13.field3477;
+                        var2.field2251[var14 * 4 + 2] = var13.z;
                         var2.field2251[var14 * 4 + 3] = var15.method14880() * var15.method14880();
                         float var17 = var15.method14893() / 255.0F;
                         var2.field2250[var14 * 4] = (float) (var16 >> 16 & 0xFF) * var17;

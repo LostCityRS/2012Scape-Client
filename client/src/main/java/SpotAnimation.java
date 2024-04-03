@@ -87,10 +87,10 @@ public class SpotAnimation extends PrimaryLayerEntity {
     @ObfuscatedName("alf.c(Lra;III)Lqa;")
     public Model method17190(RendererToolkit arg0, int arg1, int arg2) {
         EffectAnimType var4 = Statics.field4213.method11082(arg2);
-        FloorModel var5 = this.field9808.field4527[this.field9807];
+        FloorModel var5 = this.field9808.field4527[this.level];
         FloorModel var6 = this.field9809 < 3 ? this.field9808.field4527[this.field9809 + 1] : null;
-        Vector3 var7 = this.method8565().field3464;
-        return this.field10642 == null || this.field10642.method11784() ? var4.method11103(arg0, arg1, true, var5, var6, (int) var7.field3475, (int) var7.field3476, (int) var7.field3477, null, (byte) 2) : var4.method11103(arg0, arg1, true, var5, var6, (int) var7.field3475, (int) var7.field3476, (int) var7.field3477, this.field10642, (byte) 2);
+        Vector3 var7 = this.getTransform().trans;
+        return this.field10642 == null || this.field10642.method11784() ? var4.method11103(arg0, arg1, true, var5, var6, (int) var7.x, (int) var7.field3476, (int) var7.z, null, (byte) 2) : var4.method11103(arg0, arg1, true, var5, var6, (int) var7.x, (int) var7.field3476, (int) var7.z, this.field10642, (byte) 2);
     }
 
     @ObfuscatedName("alf.bi(Lra;B)Loz;")
@@ -134,7 +134,7 @@ public class SpotAnimation extends PrimaryLayerEntity {
         }
         if (this.field10641 != null) {
             this.field10641.method8106(arg0, (long) client.field9213, var4, var5, false);
-            this.field10641.method8110(this.field9807, this.field10510, this.field10508, this.field10509, this.field10511);
+            this.field10641.method8110(this.level, this.field10510, this.field10508, this.field10509, this.field10511);
         }
     }
 

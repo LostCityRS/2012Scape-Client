@@ -52,7 +52,7 @@ public class LoadingScreenProgressDisplayConfig implements LoadingScreenElementC
         int var6 = arg0.g2();
         int var7 = arg0.g2s();
         int var8 = arg0.gSmart2or4null();
-        int var9 = arg0.g4();
+        int var9 = arg0.g4s();
         return new LoadingScreenProgressDisplayConfig(var1, var2, var3, var4, var5, var6, var7, var8, var9);
     }
 

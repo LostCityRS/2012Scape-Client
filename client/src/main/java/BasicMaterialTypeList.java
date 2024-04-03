@@ -118,7 +118,7 @@ public class BasicMaterialTypeList implements MaterialTypeList {
         }
         for (int var23 = 0; var23 < this.field1294; var23++) {
             if (this.field1291[var23] != null) {
-                this.field1291[var23].field1264 = var4.g4();
+                this.field1291[var23].field1264 = var4.g4s();
             }
         }
         for (int var24 = 0; var24 < this.field1294; var24++) {

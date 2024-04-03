@@ -269,7 +269,7 @@ public class GlFloorModel extends FloorModel {
                     var1[var2][var3] = (byte) ((this.field7700[var2][var3] >> 1) + (this.field7700[var2][var3 + 1] >> 3) + (this.field7700[var2][var3 - 1] >> 2) + (this.field7700[var2 - 1][var3] >> 2) + (this.field7700[var2 + 1][var3] >> 3));
                 }
             }
-            this.field7703 = new Node[this.field7697.method11926()];
+            this.field7703 = new Node[this.field7697.length()];
             this.field7697.method11933(this.field7703);
             for (int var4 = 0; var4 < this.field7703.length; var4++) {
                 ((GlFloorModelRelated1) this.field7703[var4]).method14874(this.field7712);

@@ -364,7 +364,7 @@ public final class Js5 {
                 for (int var36 = 0; var36 < var31; var36++) {
                     int var37 = 0;
                     for (int var38 = 0; var38 < var4; var38++) {
-                        var37 += var33.g4();
+                        var37 += var33.g4s();
                         int var39;
                         if (var5 == null) {
                             var39 = var38;
@@ -387,7 +387,7 @@ public final class Js5 {
                 for (int var43 = 0; var43 < var31; var43++) {
                     int var44 = 0;
                     for (int var45 = 0; var45 < var4; var45++) {
-                        var44 += var33.g4();
+                        var44 += var33.g4s();
                         int var46;
                         if (var5 == null) {
                             var46 = var45;
@@ -413,7 +413,7 @@ public final class Js5 {
                 for (int var19 = 0; var19 < var15; var19++) {
                     int var20 = 0;
                     for (int var21 = 0; var21 < var4; var21++) {
-                        var20 += var17.g4();
+                        var20 += var17.g4s();
                         var18[var21] += var20;
                     }
                 }
@@ -427,7 +427,7 @@ public final class Js5 {
                 for (int var25 = 0; var25 < var15; var25++) {
                     int var26 = 0;
                     for (int var27 = 0; var27 < var4; var27++) {
-                        var26 += var17.g4();
+                        var26 += var17.g4s();
                         System.arraycopy(var12, var24, var22[var27], var18[var27], var26);
                         var18[var27] += var26;
                         var24 += var26;

@@ -18,7 +18,7 @@ public class ServerConnection {
     public Packet field830 = new Packet(1600);
 
     @ObfuscatedName("ad.m")
-    public Isaac field834;
+    public Isaac randomOut;
 
     @ObfuscatedName("ad.t")
     public PacketBit field832 = new PacketBit(15000);
@@ -103,7 +103,7 @@ public class ServerConnection {
     }
 
     @ObfuscatedName("ad.a(Lada;B)V")
-    public final void method1913(ClientMessage arg0) {
+    public final void queue(ClientMessage arg0) {
         this.field829.method11558(arg0);
         arg0.field9465 = arg0.field9467.pos;
         arg0.field9467.pos = 0;
@@ -142,7 +142,7 @@ public class ServerConnection {
     }
 
     @ObfuscatedName("ad.l(I)Lov;")
-    public Stream method1927() {
+    public Stream getStream() {
         return this.field827;
     }
 }

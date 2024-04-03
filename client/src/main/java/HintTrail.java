@@ -72,7 +72,7 @@ public class HintTrail {
         Iterator var2 = this.field4219.iterator();
         while (var2.hasNext()) {
             HintTrailPoint var3 = (HintTrailPoint) var2.next();
-            arg0.method7430(var3.field9807, var3.field10510, var3.field10509, new HintTrailPointPrimaryLayerEntityPredicate(var3));
+            arg0.method7430(var3.level, var3.field10510, var3.field10509, new HintTrailPointPrimaryLayerEntityPredicate(var3));
         }
     }
 
@@ -81,30 +81,30 @@ public class HintTrail {
         this.field4219 = new LinkedList();
         SceneLevelTileFlags var2 = client.field8980.method6100();
         CoordGrid var3 = client.field8980.method6214();
-        CoordGrid var4 = new CoordGrid(Statics.field7324, this.field4216[0], this.field4220[0]);
+        CoordGrid var4 = new CoordGrid(Statics.currentPlayerLevel, this.field4216[0], this.field4220[0]);
         for (int var5 = 1; var5 < this.field4218; var5++) {
-            CoordGrid var6 = new CoordGrid(Statics.field7324, this.field4216[var5], this.field4220[var5]);
-            while (var4.field4836 != var6.field4836 || var4.field4838 != var6.field4838) {
-                if (var4.field4836 < var6.field4836) {
-                    var4.field4836++;
-                } else if (var4.field4836 > var6.field4836) {
-                    var4.field4836--;
+            CoordGrid var6 = new CoordGrid(Statics.currentPlayerLevel, this.field4216[var5], this.field4220[var5]);
+            while (var4.x != var6.x || var4.z != var6.z) {
+                if (var4.x < var6.x) {
+                    var4.x++;
+                } else if (var4.x > var6.x) {
+                    var4.x--;
                 }
-                if (var4.field4838 < var6.field4838) {
-                    var4.field4838++;
-                } else if (var4.field4838 > var6.field4838) {
-                    var4.field4838--;
+                if (var4.z < var6.z) {
+                    var4.z++;
+                } else if (var4.z > var6.z) {
+                    var4.z--;
                 }
-                int var7 = Statics.field7324;
-                int var8 = var4.field4836 - var3.field4836;
-                int var9 = var4.field4838 - var3.field4838;
+                int var7 = Statics.currentPlayerLevel;
+                int var8 = var4.x - var3.x;
+                int var9 = var4.z - var3.z;
                 if (var8 >= 0 && var8 < arg0.field4495 && var9 >= 0 && var9 < arg0.field4496) {
                     int var10 = (var8 << 9) + 256;
                     int var11 = (var9 << 9) + 256;
                     if (var2.method5794(var8, var9)) {
                         var7++;
                     }
-                    this.field4219.add(new HintTrailPoint(arg0, this, Statics.field7324, var7, var10, client.method8663(var10, var11, Statics.field7324), var11));
+                    this.field4219.add(new HintTrailPoint(arg0, this, Statics.currentPlayerLevel, var7, var10, client.method8663(var10, var11, Statics.currentPlayerLevel), var11));
                 }
             }
             var4 = var6;

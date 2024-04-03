@@ -17,7 +17,7 @@ public class CutsceneAction_Sub17 extends CutsceneAction {
         } else {
             this.field8483 = var3;
         }
-        this.field8482 = arg0.g4();
+        this.field8482 = arg0.g4s();
     }
 
     @ObfuscatedName("zm.j(I)V")

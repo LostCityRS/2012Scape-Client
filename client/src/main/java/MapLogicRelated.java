@@ -12,7 +12,7 @@ public class MapLogicRelated {
     @ObfuscatedName("rd.u(ZI)V")
     public static void method8512(boolean arg0) {
         AudioRenderer.method3461();
-        if (!client.method1608(client.field8923)) {
+        if (!client.method1608(client.state)) {
             return;
         }
         ServerConnection[] var1 = client.field9011;
@@ -23,9 +23,9 @@ public class MapLogicRelated {
                 return;
             }
             var3.field839 = 0;
-            if (!var3.field846 && var3.method1927() != null) {
-                ClientMessage var4 = ClientMessage.method14781(ClientProt.NO_TIMEOUT, var3.field834);
-                var3.method1913(var4);
+            if (!var3.field846 && var3.getStream() != null) {
+                ClientMessage var4 = ClientMessage.createMessage(ClientProt.NO_TIMEOUT, var3.randomOut);
+                var3.queue(var4);
                 try {
                     var3.method1912();
                 } catch (IOException var6) {

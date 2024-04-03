@@ -4,35 +4,35 @@ import deob.ObfuscatedName;
 public class CoordGrid {
 
     @ObfuscatedName("pz.u")
-    public int field4837;
+    public int level;
 
     @ObfuscatedName("pz.j")
-    public int field4836;
+    public int x;
 
     @ObfuscatedName("pz.a")
-    public int field4838;
+    public int z;
 
     public CoordGrid() {
-        this.field4837 = -1;
+        this.level = -1;
     }
 
-    public CoordGrid(int arg0, int arg1, int arg2) {
-        this.field4837 = arg0;
-        this.field4836 = arg1;
-        this.field4838 = arg2;
+    public CoordGrid(int level, int x, int z) {
+        this.level = level;
+        this.x = x;
+        this.z = z;
     }
 
-    public CoordGrid(int arg0) {
-        if (arg0 == -1) {
-            this.field4837 = -1;
+    public CoordGrid(int packed) {
+        if (packed == -1) {
+            this.level = -1;
         } else {
-            this.field4837 = arg0 >> 28 & 0x3;
-            this.field4836 = arg0 >> 14 & 0x3FFF;
-            this.field4838 = arg0 & 0x3FFF;
+            this.level = packed >> 28 & 0x3;
+            this.x = packed >> 14 & 0x3FFF;
+            this.z = packed & 0x3FFF;
         }
     }
 
     public String toString() {
-        return this.field4837 + "," + (this.field4836 >> 6) + "," + (this.field4838 >> 6) + "," + (this.field4836 & 0x3F) + "," + (this.field4838 & 0x3F);
+        return this.level + "," + (this.x >> 6) + "," + (this.z >> 6) + "," + (this.x & 0x3F) + "," + (this.z & 0x3F);
     }
 }

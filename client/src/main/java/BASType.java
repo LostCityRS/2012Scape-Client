@@ -378,7 +378,7 @@ public class BASType {
         method12356(this.field4709, var1);
         method12356(this.field4693, var1);
         method12356(this.field4711, var1);
-        int[] var5 = new int[var1.method11926()];
+        int[] var5 = new int[var1.length()];
         int var6 = 0;
         Iterator var7 = var1.iterator();
         while (var7.hasNext()) {

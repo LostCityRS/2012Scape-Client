@@ -24,7 +24,7 @@ public class Light extends Node {
 
     @ObfuscatedName("acg.u(B)I")
     public final int method14888() {
-        return (int) this.field9369.field3475;
+        return (int) this.field9369.x;
     }
 
     @ObfuscatedName("acg.j(I)I")
@@ -34,7 +34,7 @@ public class Light extends Node {
 
     @ObfuscatedName("acg.a(I)I")
     public final int method14879() {
-        return (int) this.field9369.field3477;
+        return (int) this.field9369.z;
     }
 
     @ObfuscatedName("acg.s(I)I")

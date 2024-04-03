@@ -167,8 +167,8 @@ public class MapElementType {
             if (this.field4784 == 65535) {
                 this.field4784 = -1;
             }
-            this.field4781 = arg0.g4();
-            this.field4803 = arg0.g4();
+            this.field4781 = arg0.g4s();
+            this.field4803 = arg0.g4s();
         } else if (arg1 >= 10 && arg1 <= 14) {
             this.field4778[arg1 - 10] = arg0.gjstr();
         } else if (arg1 == 15) {
@@ -177,11 +177,11 @@ public class MapElementType {
             for (int var5 = 0; var5 < var4 * 2; var5++) {
                 this.field4788[var5] = arg0.g2s();
             }
-            this.field4785 = arg0.g4();
+            this.field4785 = arg0.g4s();
             int var6 = arg0.g1();
             this.field4800 = new int[var6];
             for (int var7 = 0; var7 < this.field4800.length; var7++) {
-                this.field4800[var7] = arg0.g4();
+                this.field4800[var7] = arg0.g4s();
             }
             this.field4762 = new byte[var4];
             for (int var8 = 0; var8 < var4; var8++) {
@@ -204,12 +204,12 @@ public class MapElementType {
             if (this.field4765 == 65535) {
                 this.field4765 = -1;
             }
-            this.field4789 = arg0.g4();
-            this.field4786 = arg0.g4();
+            this.field4789 = arg0.g4s();
+            this.field4786 = arg0.g4s();
         } else if (arg1 == 21) {
-            this.field4782 = arg0.g4();
+            this.field4782 = arg0.g4s();
         } else if (arg1 == 22) {
-            this.field4801 = arg0.g4();
+            this.field4801 = arg0.g4s();
         } else if (arg1 == 23) {
             this.field4795 = arg0.g1();
             this.field4796 = arg0.g1();
@@ -230,7 +230,7 @@ public class MapElementType {
                 if (var12) {
                     var14 = new ObjectNode(arg0.gjstr());
                 } else {
-                    var14 = new IntNode(arg0.g4());
+                    var14 = new IntNode(arg0.g4s());
                 }
                 this.field4804.method11927(var14, (long) var13);
             }

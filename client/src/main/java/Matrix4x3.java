@@ -69,7 +69,7 @@ public class Matrix4x3 {
     @ObfuscatedName("kc.j(Lkx;)V")
     public void method5104(ScaleRotTrans arg0) {
         this.method5109(arg0.field3463);
-        this.method5127(arg0.field3464);
+        this.method5127(arg0.trans);
     }
 
     @ObfuscatedName("kc.a(Lkx;)V")
@@ -93,9 +93,9 @@ public class Matrix4x3 {
         this.field3457 = var4 + var8 + var8 + var4;
         this.field3461 = var10 - var3 - var3 + var10;
         this.field3459 = var2 + var11 - var9 - var6;
-        this.field3460 = arg0.field3464.field3475;
-        this.field3450 = arg0.field3464.field3476;
-        this.field3458 = arg0.field3464.field3477;
+        this.field3460 = arg0.trans.x;
+        this.field3450 = arg0.trans.field3476;
+        this.field3458 = arg0.trans.z;
     }
 
     @ObfuscatedName("kc.s()V")
@@ -358,7 +358,7 @@ public class Matrix4x3 {
 
     @ObfuscatedName("kc.b(Lko;)V")
     public void method5127(Vector3 arg0) {
-        this.method5116(arg0.field3475, arg0.field3476, arg0.field3477);
+        this.method5116(arg0.x, arg0.field3476, arg0.z);
     }
 
     @ObfuscatedName("kc.x(FFF)V")

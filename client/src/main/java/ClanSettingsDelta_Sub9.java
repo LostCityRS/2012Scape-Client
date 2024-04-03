@@ -18,8 +18,8 @@ public class ClanSettingsDelta_Sub9 extends ClanSettingsDeltaEntry {
 
     @ObfuscatedName("ait.u(Laet;I)V")
     public void method14956(Packet arg0) {
-        this.field10206 = arg0.g4();
-        this.field10205 = arg0.g4();
+        this.field10206 = arg0.g4s();
+        this.field10205 = arg0.g4s();
     }
 
     @ObfuscatedName("ait.j(Lga;B)V")

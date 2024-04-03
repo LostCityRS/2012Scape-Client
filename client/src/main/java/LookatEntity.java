@@ -43,28 +43,28 @@ public class LookatEntity extends Lookat {
 
     @ObfuscatedName("agg.j(I)Z")
     public boolean method11541() {
-        return !Float.isNaN(this.field9890.field3475);
+        return !Float.isNaN(this.field9890.x);
     }
 
     @ObfuscatedName("agg.s(Lfi;Lkc;III)V")
     public void method11543(Vector3i arg0, Matrix4x3 arg1, int arg2, int arg3) {
-        Vector3 var5 = Vector3.method5290(this.field6645.method3720());
-        var5.field3475 -= arg2;
-        var5.field3477 -= arg3;
+        Vector3 var5 = Vector3.create(this.field6645.method3720());
+        var5.x -= arg2;
+        var5.z -= arg3;
         var5.field3476 *= -1.0F;
         Vector3 var6 = this.method11550();
-        var6.field3475 -= arg2;
-        var6.field3477 -= arg3;
+        var6.x -= arg2;
+        var6.z -= arg3;
         var6.field3476 *= -1.0F;
-        arg1.method5103(var5.field3475, var5.field3476, var5.field3477, var6.field3475, var6.field3476, var6.field3477, 0.0F, 1.0F, 0.0F);
+        arg1.method5103(var5.x, var5.field3476, var5.z, var6.x, var6.field3476, var6.z, 0.0F, 1.0F, 0.0F);
         var5.method5291();
         var6.method5291();
     }
 
     @ObfuscatedName("agg.a(S)Lko;")
     public Vector3 method11550() {
-        Vector3 var1 = Vector3.method5290(this.field9890);
-        Vector3 var2 = Vector3.method5290(this.field9888);
+        Vector3 var1 = Vector3.create(this.field9890);
+        Vector3 var2 = Vector3.create(this.field9888);
         if (this.field9892) {
             var2.method5318(this.field9887.method3680());
         }

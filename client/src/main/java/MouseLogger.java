@@ -115,7 +115,7 @@ public abstract class MouseLogger {
                 var1.field9467.p1(var3 / var4);
                 var1.field9467.p1(var3 % var4);
                 var1.field9467.pos = var12;
-                client.field8975.method1913(var1);
+                client.gameConnection.queue(var1);
             }
         }
         this.method8357();

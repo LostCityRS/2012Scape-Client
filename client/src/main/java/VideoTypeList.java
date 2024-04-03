@@ -49,9 +49,9 @@ public class VideoTypeList {
     @ObfuscatedName("kg.s(IZI)V")
     public static void method5563(int arg0, boolean arg1) {
         if (arg1) {
-            ClientMessage var2 = ClientMessage.method14781(ClientProt.field2867, client.field8975.field834);
+            ClientMessage var2 = ClientMessage.createMessage(ClientProt.field2867, client.gameConnection.randomOut);
             var2.field9467.p2(arg0);
-            client.field8975.method1913(var2);
+            client.gameConnection.queue(var2);
         } else {
             ScriptRunner.method1372(ClientTriggerType.field7307, arg0, -1);
         }

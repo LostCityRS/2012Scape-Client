@@ -49,12 +49,12 @@ public class GraphNode {
     }
 
     @ObfuscatedName("ri.e()Lkx;")
-    public final ScaleRotTrans method8565() {
+    public final ScaleRotTrans getTransform() {
         if (this.field5112) {
             this.field5112 = false;
             this.field5115.method5191(this.field5111);
             if (this.field5114 != null) {
-                this.field5115.method5190(this.field5114.method8565());
+                this.field5115.method5190(this.field5114.getTransform());
             }
         }
         return this.field5115;
@@ -64,7 +64,7 @@ public class GraphNode {
     public final ScaleRotTrans method8547() {
         if (this.field5110) {
             this.field5110 = false;
-            this.field5113.method5191(this.method8565());
+            this.field5113.method5191(this.getTransform());
             this.field5113.method5192();
         }
         return this.field5115;
@@ -74,7 +74,7 @@ public class GraphNode {
     public final Matrix4x3 method8558() {
         if (this.field5116) {
             this.field5116 = false;
-            this.field5117.method5101(this.method8565());
+            this.field5117.method5101(this.getTransform());
         }
         return this.field5117;
     }
@@ -99,7 +99,7 @@ public class GraphNode {
 
     @ObfuscatedName("ri.ap(Lko;)V")
     public final void method8551(Vector3 arg0) {
-        this.field5111.field3464.method5334(arg0);
+        this.field5111.trans.method5334(arg0);
         this.method8554();
         if (this.field5118 != null) {
             this.field5118.method8555();
@@ -108,7 +108,7 @@ public class GraphNode {
 
     @ObfuscatedName("ri.ag(FFF)V")
     public final void method8552(float arg0, float arg1, float arg2) {
-        this.field5111.field3464.method5373(arg0, arg1, arg2);
+        this.field5111.trans.method5373(arg0, arg1, arg2);
         this.method8554();
         if (this.field5118 != null) {
             this.field5118.method8555();

@@ -79,7 +79,7 @@ public final class IterableMap implements Iterable {
     }
 
     @ObfuscatedName("uo.s(B)I")
-    public int method11926() {
+    public int length() {
         int var1 = 0;
         for (int var2 = 0; var2 < this.field6722; var2++) {
             Node var3 = this.field6725[var2];

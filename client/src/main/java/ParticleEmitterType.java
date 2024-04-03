@@ -251,16 +251,16 @@ public class ParticleEmitterType {
         } else if (arg1 == 2) {
             arg0.g1();
         } else if (arg1 == 3) {
-            this.field2681 = arg0.g4();
-            this.field2682 = arg0.g4();
+            this.field2681 = arg0.g4s();
+            this.field2682 = arg0.g4s();
         } else if (arg1 == 4) {
             this.field2683 = arg0.g1();
             this.field2684 = arg0.g1b();
         } else if (arg1 == 5) {
             this.field2716 = this.field2688 = arg0.g2() << 12 << 2;
         } else if (arg1 == 6) {
-            this.field2691 = arg0.g4();
-            this.field2730 = arg0.g4();
+            this.field2691 = arg0.g4s();
+            this.field2730 = arg0.g4s();
         } else if (arg1 == 7) {
             this.field2680 = arg0.g2();
             this.field2699 = arg0.g2();
@@ -295,7 +295,7 @@ public class ParticleEmitterType {
         } else if (arg1 == 17) {
             this.field2672 = arg0.g2();
         } else if (arg1 == 18) {
-            this.field2712 = arg0.g4();
+            this.field2712 = arg0.g4s();
         } else if (arg1 == 19) {
             this.field2722 = arg0.g1();
         } else if (arg1 == 20) {
@@ -303,7 +303,7 @@ public class ParticleEmitterType {
         } else if (arg1 == 21) {
             this.field2696 = arg0.g1();
         } else if (arg1 == 22) {
-            this.field2685 = arg0.g4();
+            this.field2685 = arg0.g4s();
         } else if (arg1 == 23) {
             this.field2717 = arg0.g1();
         } else if (arg1 == 24) {

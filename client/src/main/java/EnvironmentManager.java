@@ -67,14 +67,14 @@ public class EnvironmentManager {
 
     @ObfuscatedName("qp.u(Lml;B)V")
     public void method8144(World arg0) {
-        if (client.method11059(client.field8923) || client.method12902(client.field8923)) {
-            this.method8152(Statics.field6769 >> 12, Statics.field8424 >> 12, field4972);
+        if (client.method11059(client.state) || client.method12902(client.state)) {
+            this.method8152(Statics.cameraX >> 12, Statics.cameraZ >> 12, field4972);
         } else {
             int var2 = -1;
             int var3 = -1;
-            if (Statics.field2119 != null) {
-                var2 = Statics.field2119.field8642[0] >> 3;
-                var3 = Statics.field2119.field8643[0] >> 3;
+            if (Statics.localPlayerEntity != null) {
+                var2 = Statics.localPlayerEntity.routeWaypointX[0] >> 3;
+                var3 = Statics.localPlayerEntity.routeWaypointZ[0] >> 3;
             }
             if (var2 >= 0 && var2 < arg0.method6220() >> 3 && var3 >= 0 && var3 < arg0.method6193() >> 3) {
                 this.method8152(var2, var3, field4972);
@@ -213,8 +213,8 @@ public class EnvironmentManager {
 
     @ObfuscatedName("qp.o(I)V")
     public void method8194() {
-        this.field4973.IA(((float) Statics.field4961.field9642.method15672() * 0.1F + 0.7F + client.field8980.method6141()) * this.field4965.field4987);
-        this.field4973.m(this.field4965.field4991, this.field4965.field4988, this.field4965.field4996, (float) ((int) this.field4980.field3475 << 2), (float) ((int) this.field4980.field3476 << 2), (float) ((int) this.field4980.field3477 << 2));
+        this.field4973.IA(((float) Statics.clientOptions.field9642.method15672() * 0.1F + 0.7F + client.field8980.method6141()) * this.field4965.field4987);
+        this.field4973.m(this.field4965.field4991, this.field4965.field4988, this.field4965.field4996, (float) ((int) this.field4980.x << 2), (float) ((int) this.field4980.field3476 << 2), (float) ((int) this.field4980.z << 2));
         this.field4973.method549(this.field4965.field4993);
     }
 
@@ -222,7 +222,7 @@ public class EnvironmentManager {
     public void method8173() {
         byte var1 = 0;
         int var2 = (this.field4965.field4997 + 256 << 2) + var1;
-        this.field4973.c(this.field4965.field4989, Statics.field4961.field9646.method15696() == 1 ? var2 : -1, 0);
+        this.field4973.c(this.field4965.field4989, Statics.clientOptions.field9646.method15696() == 1 ? var2 : -1, 0);
     }
 
     @ObfuscatedName("qp.p(I)V")
@@ -232,7 +232,7 @@ public class EnvironmentManager {
 
     @ObfuscatedName("qp.w(I)V")
     public void method8158() {
-        this.field4973.IA(((float) Statics.field4961.field9642.method15672() * 0.1F + 0.7F + client.field8980.method6141()) * 1.1523438F);
+        this.field4973.IA(((float) Statics.clientOptions.field9642.method15672() * 0.1F + 0.7F + client.field8980.method6141()) * 1.1523438F);
         this.field4973.m(field4983, 0.69921875F, 1.2F, -200.0F, -240.0F, -200.0F);
         this.field4973.c(field4982, -1, 0);
         this.field4973.method549(Statics.field4971);

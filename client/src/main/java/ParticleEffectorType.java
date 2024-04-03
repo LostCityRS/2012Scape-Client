@@ -101,12 +101,12 @@ public class ParticleEffectorType {
         } else if (arg1 == 2) {
             arg0.g1();
         } else if (arg1 == 3) {
-            this.field2754 = arg0.g4();
-            this.field2763 = arg0.g4();
-            this.field2765 = arg0.g4();
+            this.field2754 = arg0.g4s();
+            this.field2763 = arg0.g4s();
+            this.field2765 = arg0.g4s();
         } else if (arg1 == 4) {
             this.field2759 = arg0.g1();
-            this.field2766 = arg0.g4();
+            this.field2766 = arg0.g4s();
         } else if (arg1 == 6) {
             this.field2760 = arg0.g1();
         } else if (arg1 == 8) {

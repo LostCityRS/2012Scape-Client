@@ -51,7 +51,7 @@ public class ClientWatch {
 
     @ObfuscatedName("is.s(Ladv;I)V")
     public static void method4631(BasicMouseEvent arg0) {
-        if (client.method1608(client.field8923)) {
+        if (client.method1608(client.state)) {
             field5040.method8370(arg0);
         } else {
             arg0.method15186();
@@ -112,7 +112,7 @@ public class ClientWatch {
         field5040.method8371();
         field5045.method8371();
         if (client.field8953 > 0) {
-            ClientMessage var0 = ClientMessage.method14781(ClientProt.field2878, client.field8975.field834);
+            ClientMessage var0 = ClientMessage.createMessage(ClientProt.field2878, client.gameConnection.randomOut);
             var0.field9467.p2(client.field8953 * 4);
             for (int var1 = 0; var1 < client.field8953; var1++) {
                 KeyboardEvent var2 = client.field9072[var1];
@@ -124,7 +124,7 @@ public class ClientWatch {
                 var0.field9467.p1(var2.method7286());
                 var0.field9467.p3((int) var3);
             }
-            client.field8975.method1913(var0);
+            client.gameConnection.queue(var0);
         }
         if (field5043 > 0) {
             field5043--;
@@ -132,27 +132,27 @@ public class ClientWatch {
         if (client.field9028 && field5043 <= 0) {
             field5043 = 20;
             client.field9028 = false;
-            ClientMessage var5 = ClientMessage.method14781(ClientProt.field2882, client.field8975.field834);
+            ClientMessage var5 = ClientMessage.createMessage(ClientProt.field2882, client.gameConnection.randomOut);
             var5.field9467.p2_alt3((int) client.field9171 >> 3);
             var5.field9467.p2_alt3((int) client.field9021 >> 3);
-            client.field8975.method1913(var5);
+            client.gameConnection.queue(var5);
         }
         if (Statics.field578 != field5042) {
             field5042 = Statics.field578;
-            ClientMessage var6 = ClientMessage.method14781(ClientProt.field2925, client.field8975.field834);
+            ClientMessage var6 = ClientMessage.createMessage(ClientProt.field2925, client.gameConnection.randomOut);
             var6.field9467.p1(Statics.field578 ? 1 : 0);
-            client.field8975.method1913(var6);
+            client.gameConnection.queue(var6);
         }
         if (client.field8932) {
             return;
         }
-        ClientMessage var7 = ClientMessage.method14781(ClientProt.field2888, client.field8975.field834);
+        ClientMessage var7 = ClientMessage.createMessage(ClientProt.field2888, client.gameConnection.randomOut);
         var7.field9467.p1(0);
         int var8 = var7.field9467.pos;
-        Packet var9 = Statics.field4961.method15447();
+        Packet var9 = Statics.clientOptions.method15447();
         var7.field9467.pdata(var9.data, 0, var9.pos);
         var7.field9467.psize1(var7.field9467.pos - var8);
-        client.field8975.method1913(var7);
+        client.gameConnection.queue(var7);
         client.field8932 = true;
     }
 }

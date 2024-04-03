@@ -120,7 +120,7 @@ public final class Quaternion {
 
     @ObfuscatedName("kn.f(Lko;F)V")
     public void method5215(Vector3 arg0, float arg1) {
-        this.method5216(arg0.field3475, arg0.field3476, arg0.field3477, arg1);
+        this.method5216(arg0.x, arg0.field3476, arg0.z, arg1);
     }
 
     @ObfuscatedName("kn.d(FFFF)V")

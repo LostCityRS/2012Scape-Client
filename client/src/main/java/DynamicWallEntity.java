@@ -23,7 +23,7 @@ public class DynamicWallEntity extends WallLayerEntity implements Location {
 
     public DynamicWallEntity(Scene arg0, RendererToolkit arg1, LocTypeList arg2, LocType arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11, int arg12) {
         super(arg0, arg6, arg7, arg8, arg4, arg5, method12063(arg10, arg11));
-        this.field7576 = new DynamicLoc(arg1, arg2, arg3, arg10, arg11, this.field9807, arg5, this, arg9, arg12);
+        this.field7576 = new DynamicLoc(arg1, arg2, arg3, arg10, arg11, this.level, arg5, this, arg9, arg12);
         this.field7577 = arg3.field6493 != 0 && !arg9;
         this.method15642(1);
     }
@@ -70,10 +70,10 @@ public class DynamicWallEntity extends WallLayerEntity implements Location {
             return null;
         }
         Matrix4x3 var3 = this.method8558();
-        ScaleRotTrans var4 = this.method8565();
+        ScaleRotTrans var4 = this.getTransform();
         PickableEntity var5 = PickableEntity.method12205(this.field7577);
-        int var6 = (int) var4.field3464.field3475 >> 9;
-        int var7 = (int) var4.field3464.field3477 >> 9;
+        int var6 = (int) var4.trans.x >> 9;
+        int var7 = (int) var4.trans.z >> 9;
         this.field7576.method2438(arg0, var2, var3, var6, var6, var7, var7, true);
         var2.method271(var3, this.field9811[0], 0);
         if (this.field7576.field1229 != null) {
@@ -82,9 +82,9 @@ public class DynamicWallEntity extends WallLayerEntity implements Location {
         }
         this.field7573 = var2.i() || this.field7576.field1229 != null;
         if (this.field7575 == null) {
-            this.field7575 = GraphEntity.method15140((int) var4.field3464.field3475, (int) var4.field3464.field3476, (int) var4.field3464.field3477, var2);
+            this.field7575 = GraphEntity.method15140((int) var4.trans.x, (int) var4.trans.field3476, (int) var4.trans.z, var2);
         } else {
-            GraphEntity.method11162(this.field7575, (int) var4.field3464.field3475, (int) var4.field3464.field3476, (int) var4.field3464.field3477, var2);
+            GraphEntity.method11162(this.field7575, (int) var4.trans.x, (int) var4.trans.field3476, (int) var4.trans.z, var2);
         }
         return var5;
     }
@@ -96,9 +96,9 @@ public class DynamicWallEntity extends WallLayerEntity implements Location {
             return;
         }
         Matrix4x3 var3 = this.method8558();
-        ScaleRotTrans var4 = this.method8565();
-        int var5 = (int) var4.field3464.field3475 >> 9;
-        int var6 = (int) var4.field3464.field3477 >> 9;
+        ScaleRotTrans var4 = this.getTransform();
+        int var5 = (int) var4.trans.x >> 9;
+        int var6 = (int) var4.trans.z >> 9;
         this.field7576.method2438(arg0, var2, var3, var5, var5, var6, var6, false);
     }
 

@@ -50,17 +50,17 @@ public class EnumType {
         } else if (arg1 == 3) {
             this.field6808 = arg0.gjstr();
         } else if (arg1 == 4) {
-            this.field6809 = arg0.g4();
+            this.field6809 = arg0.g4s();
         } else if (arg1 == 5 || arg1 == 6) {
             this.field6812 = arg0.g2();
             this.field6810 = new java.util.HashMap(this.field6812);
             for (int var6 = 0; var6 < this.field6812; var6++) {
-                int var7 = arg0.g4();
+                int var7 = arg0.g4s();
                 Object var8;
                 if (arg1 == 5) {
                     var8 = arg0.gjstr();
                 } else {
-                    var8 = Integer.valueOf(arg0.g4());
+                    var8 = Integer.valueOf(arg0.g4s());
                 }
                 this.field6810.put(Integer.valueOf(var7), var8);
             }
@@ -73,7 +73,7 @@ public class EnumType {
                 if (arg1 == 7) {
                     this.field6811[var5] = arg0.gjstr();
                 } else {
-                    this.field6811[var5] = Integer.valueOf(arg0.g4());
+                    this.field6811[var5] = Integer.valueOf(arg0.g4s());
                 }
             }
         }

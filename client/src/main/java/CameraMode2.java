@@ -13,15 +13,15 @@ public class CameraMode2 {
             return;
         }
         Vector3 var9 = Vector3.method5294(0.0F, 0.0F, 0.0F);
-        Vector3 var10 = Vector3.method5290(Vector3.method5377(arg3, arg1));
+        Vector3 var10 = Vector3.create(Vector3.method5377(arg3, arg1));
         var10.method5318(arg2);
         Vector3 var11 = Vector3.method5377(var10, var9);
         float var12 = var11.method5338();
         if (arg7 > 0.0F) {
-            arg5 = Vector3.method5290(arg5);
+            arg5 = Vector3.create(arg5);
             arg5.method5357(var12 / arg7 * arg8);
         }
-        if (arg5.field3475 == Float.POSITIVE_INFINITY || Float.isNaN(arg1.field3475) || var12 > 5120.0F) {
+        if (arg5.x == Float.POSITIVE_INFINITY || Float.isNaN(arg1.x) || var12 > 5120.0F) {
             arg1.method5334(arg3);
             arg4.method5370();
             return;
@@ -34,34 +34,34 @@ public class CameraMode2 {
         var14.method5318(arg2);
         var15.method5318(arg2);
         Vector3 var16 = Vector3.method5294(Vector3.method5306(var13, arg4), Vector3.method5306(var14, arg4), Vector3.method5306(var15, arg4));
-        Vector3 var17 = Vector3.method5290(var16);
+        Vector3 var17 = Vector3.create(var16);
         var17.method5310();
         Vector3 var18 = Vector3.method5315(Vector3.method5312(var17, var17), Vector3.method5317(arg5, 2.0F));
-        Vector3 var19 = Vector3.method5290(var11);
+        Vector3 var19 = Vector3.create(var11);
         var19.method5310();
-        Vector3 var20 = Vector3.method5290(var16);
-        if (var18.field3475 > var19.field3475) {
-            if (var11.field3475 < 0.0F) {
-                var20.field3475 += arg5.field3475 * arg0;
-                if (var20.field3475 > 0.0F) {
-                    var20.field3475 = 0.0F;
+        Vector3 var20 = Vector3.create(var16);
+        if (var18.x > var19.x) {
+            if (var11.x < 0.0F) {
+                var20.x += arg5.x * arg0;
+                if (var20.x > 0.0F) {
+                    var20.x = 0.0F;
                 }
             } else {
-                var20.field3475 -= arg5.field3475 * arg0;
-                if (var20.field3475 < 0.0F) {
-                    var20.field3475 = 0.0F;
+                var20.x -= arg5.x * arg0;
+                if (var20.x < 0.0F) {
+                    var20.x = 0.0F;
                 }
             }
-        } else if (var17.field3475 < arg6.field3475) {
-            if (var11.field3475 < 0.0F) {
-                var20.field3475 -= arg5.field3475 * arg0;
-                if (var20.field3475 < -arg6.field3475) {
-                    var20.field3475 = -arg6.field3475;
+        } else if (var17.x < arg6.x) {
+            if (var11.x < 0.0F) {
+                var20.x -= arg5.x * arg0;
+                if (var20.x < -arg6.x) {
+                    var20.x = -arg6.x;
                 }
             } else {
-                var20.field3475 += arg5.field3475 * arg0;
-                if (var20.field3475 > arg6.field3475) {
-                    var20.field3475 = arg6.field3475;
+                var20.x += arg5.x * arg0;
+                if (var20.x > arg6.x) {
+                    var20.x = arg6.x;
                 }
             }
         }
@@ -90,34 +90,34 @@ public class CameraMode2 {
                 }
             }
         }
-        if (var18.field3477 > var19.field3477) {
-            if (var11.field3477 < 0.0F) {
-                var20.field3477 += arg5.field3477 * arg0;
-                if (var20.field3477 > 0.0F) {
-                    var20.field3477 = 0.0F;
+        if (var18.z > var19.z) {
+            if (var11.z < 0.0F) {
+                var20.z += arg5.z * arg0;
+                if (var20.z > 0.0F) {
+                    var20.z = 0.0F;
                 }
             } else {
-                var20.field3477 -= arg5.field3477 * arg0;
-                if (var20.field3477 < 0.0F) {
-                    var20.field3477 = 0.0F;
+                var20.z -= arg5.z * arg0;
+                if (var20.z < 0.0F) {
+                    var20.z = 0.0F;
                 }
             }
-        } else if (var17.field3477 < arg6.field3477) {
-            if (var11.field3477 < 0.0F) {
-                var20.field3477 -= arg5.field3477 * arg0;
-                if (var20.field3477 < -arg6.field3477) {
-                    var20.field3477 = -arg6.field3477;
+        } else if (var17.z < arg6.z) {
+            if (var11.z < 0.0F) {
+                var20.z -= arg5.z * arg0;
+                if (var20.z < -arg6.z) {
+                    var20.z = -arg6.z;
                 }
             } else {
-                var20.field3477 += arg5.field3477 * arg0;
-                if (var20.field3477 > arg6.field3477) {
-                    var20.field3477 = arg6.field3477;
+                var20.z += arg5.z * arg0;
+                if (var20.z > arg6.z) {
+                    var20.z = arg6.z;
                 }
             }
         }
-        Vector3 var21 = Vector3.method5317(var13, var20.field3475);
+        Vector3 var21 = Vector3.method5317(var13, var20.x);
         var21.method5289(var14, var20.field3476);
-        var21.method5289(var15, var20.field3477);
+        var21.method5289(var15, var20.z);
         arg4.method5321(var21, 0.8F);
         if (var12 < 10.0F) {
             arg1.method5334(arg3);

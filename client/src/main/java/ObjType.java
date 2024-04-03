@@ -243,7 +243,7 @@ public class ObjType implements PlayerTypeRelated {
         } else if (arg1 == 11) {
             this.field7078 = 1;
         } else if (arg1 == 12) {
-            this.field7080 = arg0.g4();
+            this.field7080 = arg0.g4s();
         } else if (arg1 == 13) {
             this.field7085 = arg0.g1();
         } else if (arg1 == 14) {
@@ -289,7 +289,7 @@ public class ObjType implements PlayerTypeRelated {
                 this.field7067[var8] = arg0.g1b();
             }
         } else if (arg1 == 43) {
-            this.field7097 = arg0.g4();
+            this.field7097 = arg0.g4s();
             this.field7086 = true;
         } else if (arg1 == 44) {
             int var9 = arg0.g2();
@@ -414,7 +414,7 @@ public class ObjType implements PlayerTypeRelated {
                 if (var24) {
                     var26 = new ObjectNode(arg0.gjstr());
                 } else {
-                    var26 = new IntNode(arg0.g4());
+                    var26 = new IntNode(arg0.g4s());
                 }
                 this.field7055.method11927(var26, (long) var25);
             }

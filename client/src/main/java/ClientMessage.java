@@ -27,7 +27,7 @@ public class ClientMessage extends Node {
     }
 
     @ObfuscatedName("acx.j(Ljm;Lue;I)Lada;")
-    public static ClientMessage method14781(ClientProt arg0, Isaac arg1) {
+    public static ClientMessage createMessage(ClientProt arg0, Isaac arg1) {
         ClientMessage var2 = method11377();
         var2.field9469 = arg0;
         var2.field9466 = arg0.field2896;
@@ -42,8 +42,8 @@ public class ClientMessage extends Node {
         } else {
             var2.field9467 = new PacketBit(260);
         }
-        var2.field9467.method16876(arg1);
-        var2.field9467.method16864(var2.field9469.field2957);
+        var2.field9467.setIsaac(arg1);
+        var2.field9467.pIsaac1(var2.field9469.field2957);
         var2.field9465 = 0;
         return var2;
     }

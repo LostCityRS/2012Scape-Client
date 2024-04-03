@@ -687,17 +687,17 @@ public class Component {
             }
         }
         if (this.field1766 == 5) {
-            this.field1797 = arg0.g4();
+            this.field1797 = arg0.g4s();
             this.field1783 = arg0.g2();
             int var4 = arg0.g1();
             this.field1799 = (var4 & 0x1) != 0;
             this.field1804 = (var4 & 0x2) != 0;
             this.field1794 = arg0.g1();
             this.field1800 = arg0.g1();
-            this.field1801 = arg0.g4();
+            this.field1801 = arg0.g4s();
             this.field1770 = arg0.g1() == 1;
             this.field1803 = arg0.g1() == 1;
-            this.field1792 = arg0.g4();
+            this.field1792 = arg0.g4s();
             if (var2 >= 3) {
                 this.field1805 = arg0.g1() == 1;
             }
@@ -744,20 +744,20 @@ public class Component {
             this.field1836 = arg0.g1();
             this.field1837 = arg0.g1();
             this.field1901 = arg0.g1() == 1;
-            this.field1792 = arg0.g4();
+            this.field1792 = arg0.g4s();
             this.field1794 = arg0.g1();
             if (var2 >= 0) {
                 this.field1839 = arg0.g1();
             }
         }
         if (this.field1766 == 3) {
-            this.field1792 = arg0.g4();
+            this.field1792 = arg0.g4s();
             this.field1741 = arg0.g1() == 1;
             this.field1794 = arg0.g1();
         }
         if (this.field1766 == 9) {
             this.field1791 = arg0.g1();
-            this.field1792 = arg0.g4();
+            this.field1792 = arg0.g4s();
             this.field1796 = arg0.g1() == 1;
         }
         int var7 = arg0.g3();
@@ -841,7 +841,7 @@ public class Component {
             int var22 = arg0.g1();
             for (int var23 = 0; var23 < var22; var23++) {
                 int var24 = arg0.g3();
-                int var25 = arg0.g4();
+                int var25 = arg0.g4s();
                 this.field1902.method11927(new IntNode(var25), (long) var24);
             }
             int var26 = arg0.g1();
@@ -891,7 +891,7 @@ public class Component {
         for (int var4 = 0; var4 < var2; var4++) {
             int var5 = arg0.g1();
             if (var5 == 0) {
-                var3[var4] = Integer.valueOf(arg0.g4());
+                var3[var4] = Integer.valueOf(arg0.g4s());
             } else if (var5 == 1) {
                 var3[var4] = arg0.gjstr();
             }
@@ -908,7 +908,7 @@ public class Component {
         }
         int[] var3 = new int[var2];
         for (int var4 = 0; var4 < var2; var4++) {
-            var3[var4] = arg0.g4();
+            var3[var4] = arg0.g4s();
         }
         return var3;
     }

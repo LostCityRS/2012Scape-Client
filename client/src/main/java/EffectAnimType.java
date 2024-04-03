@@ -103,7 +103,7 @@ public class EffectAnimType {
             this.field5253 = arg0.g2();
         } else if (arg1 == 16) {
             this.field5262 = 3;
-            this.field5253 = arg0.g4();
+            this.field5253 = arg0.g4s();
         } else if (arg1 == 40) {
             int var3 = arg0.g1();
             this.field5261 = new short[var3];

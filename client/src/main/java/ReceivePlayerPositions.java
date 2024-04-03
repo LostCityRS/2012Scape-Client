@@ -39,20 +39,20 @@ public class ReceivePlayerPositions {
 
     @ObfuscatedName("ww.u(Lajl;B)V")
     public static final void method12667(PacketBit arg0) {
-        arg0.method16862();
+        arg0.bits();
         int var1 = client.field9071;
-        PlayerEntity var2 = Statics.field2119 = client.field9070[var1] = new PlayerEntity(client.field8980.method6098());
-        var2.field8593 = var1;
-        int var3 = arg0.method16863(30);
+        PlayerEntity var2 = Statics.localPlayerEntity = client.field9070[var1] = new PlayerEntity(client.field8980.method6098());
+        var2.localPlayerIndex = var1;
+        int var3 = arg0.gBit(30);
         byte var4 = (byte) (var3 >> 28);
         int var5 = var3 >> 14 & 0x3FFF;
         int var6 = var3 & 0x3FFF;
         CoordGrid var7 = client.field8980.method6214();
-        var2.field8642[0] = var5 - var7.field4836;
-        var2.field8643[0] = var6 - var7.field4838;
-        var2.method8552((float) ((var2.field8642[0] << 9) + (var2.method13954() << 8)), var2.method8545().field3464.field3476, (float) ((var2.field8643[0] << 9) + (var2.method13954() << 8)));
-        Statics.field7324 = var2.field9807 = var2.field9809 = var4;
-        if (client.field8980.method6100().method5794(var2.field8642[0], var2.field8643[0])) {
+        var2.routeWaypointX[0] = var5 - var7.x;
+        var2.routeWaypointZ[0] = var6 - var7.z;
+        var2.method8552((float) ((var2.routeWaypointX[0] << 9) + (var2.method13954() << 8)), var2.method8545().trans.field3476, (float) ((var2.routeWaypointZ[0] << 9) + (var2.method13954() << 8)));
+        Statics.currentPlayerLevel = var2.level = var2.field9809 = var4;
+        if (client.field8980.method6100().method5794(var2.routeWaypointX[0], var2.routeWaypointZ[0])) {
             var2.field9809++;
         }
         if (field731[var1] != null) {
@@ -64,7 +64,7 @@ public class ReceivePlayerPositions {
         field736 = 0;
         for (int var8 = 1; var8 < 2048; var8++) {
             if (var1 != var8) {
-                int var9 = arg0.method16863(18);
+                int var9 = arg0.gBit(18);
                 int var10 = var9 >> 16;
                 int var11 = var9 >> 8 & 0xFF;
                 int var12 = var9 & 0xFF;
@@ -78,7 +78,7 @@ public class ReceivePlayerPositions {
                 field729[var8] = 0;
             }
         }
-        arg0.method16881();
+        arg0.bytes();
     }
 
     @ObfuscatedName("ao.j(Lajl;II)V")
@@ -94,7 +94,7 @@ public class ReceivePlayerPositions {
     @ObfuscatedName("tz.a(Lajl;I)V")
     public static final void method11491(PacketBit arg0) {
         int var1 = 0;
-        arg0.method16862();
+        arg0.bits();
         for (int var2 = 0; var2 < field732; var2++) {
             int var3 = field727[var2];
             if ((field729[var3] & 0x1) == 0) {
@@ -102,7 +102,7 @@ public class ReceivePlayerPositions {
                     var1--;
                     field729[var3] = (byte) (field729[var3] | 0x2);
                 } else {
-                    int var4 = arg0.method16863(1);
+                    int var4 = arg0.gBit(1);
                     if (var4 == 0) {
                         var1 = method12094(arg0);
                         field729[var3] = (byte) (field729[var3] | 0x2);
@@ -112,11 +112,11 @@ public class ReceivePlayerPositions {
                 }
             }
         }
-        arg0.method16881();
+        arg0.bytes();
         if (var1 != 0) {
             throw new RuntimeException();
         }
-        arg0.method16862();
+        arg0.bits();
         for (int var5 = 0; var5 < field732; var5++) {
             int var6 = field727[var5];
             if ((field729[var6] & 0x1) != 0) {
@@ -124,7 +124,7 @@ public class ReceivePlayerPositions {
                     var1--;
                     field729[var6] = (byte) (field729[var6] | 0x2);
                 } else {
-                    int var7 = arg0.method16863(1);
+                    int var7 = arg0.gBit(1);
                     if (var7 == 0) {
                         var1 = method12094(arg0);
                         field729[var6] = (byte) (field729[var6] | 0x2);
@@ -134,11 +134,11 @@ public class ReceivePlayerPositions {
                 }
             }
         }
-        arg0.method16881();
+        arg0.bytes();
         if (var1 != 0) {
             throw new RuntimeException();
         }
-        arg0.method16862();
+        arg0.bits();
         for (int var8 = 0; var8 < field736; var8++) {
             int var9 = field735[var8];
             if ((field729[var9] & 0x1) != 0) {
@@ -146,7 +146,7 @@ public class ReceivePlayerPositions {
                     var1--;
                     field729[var9] = (byte) (field729[var9] | 0x2);
                 } else {
-                    int var10 = arg0.method16863(1);
+                    int var10 = arg0.gBit(1);
                     if (var10 == 0) {
                         var1 = method12094(arg0);
                         field729[var9] = (byte) (field729[var9] | 0x2);
@@ -156,11 +156,11 @@ public class ReceivePlayerPositions {
                 }
             }
         }
-        arg0.method16881();
+        arg0.bytes();
         if (var1 != 0) {
             throw new RuntimeException();
         }
-        arg0.method16862();
+        arg0.bits();
         for (int var11 = 0; var11 < field736; var11++) {
             int var12 = field735[var11];
             if ((field729[var12] & 0x1) == 0) {
@@ -168,7 +168,7 @@ public class ReceivePlayerPositions {
                     var1--;
                     field729[var12] = (byte) (field729[var12] | 0x2);
                 } else {
-                    int var13 = arg0.method16863(1);
+                    int var13 = arg0.gBit(1);
                     if (var13 == 0) {
                         var1 = method12094(arg0);
                         field729[var12] = (byte) (field729[var12] | 0x2);
@@ -178,7 +178,7 @@ public class ReceivePlayerPositions {
                 }
             }
         }
-        arg0.method16881();
+        arg0.bytes();
         if (var1 != 0) {
             throw new RuntimeException();
         }
@@ -197,16 +197,16 @@ public class ReceivePlayerPositions {
 
     @ObfuscatedName("un.s(Lajl;I)I")
     public static int method12094(PacketBit arg0) {
-        int var1 = arg0.method16863(2);
+        int var1 = arg0.gBit(2);
         int var2;
         if (var1 == 0) {
             var2 = 0;
         } else if (var1 == 1) {
-            var2 = arg0.method16863(5);
+            var2 = arg0.gBit(5);
         } else if (var1 == 2) {
-            var2 = arg0.method16863(8);
+            var2 = arg0.gBit(8);
         } else {
-            var2 = arg0.method16863(11);
+            var2 = arg0.gBit(11);
         }
         return var2;
     }
@@ -288,7 +288,7 @@ public class ReceivePlayerPositions {
             int var20 = arg0.data[++arg0.pos - 1] & 0xFF;
             for (int var21 = 0; var21 < var20; var21++) {
                 int var22 = arg0.g2_alt3();
-                int var23 = arg0.g4();
+                int var23 = arg0.g4s();
                 arg2.field10055.method2372(var22, var23);
             }
         }
@@ -312,7 +312,7 @@ public class ReceivePlayerPositions {
             int var28 = arg0.data[++arg0.pos - 1] & 0xFF;
             for (int var29 = 0; var29 < var28; var29++) {
                 int var30 = arg0.g2_alt1();
-                int var31 = arg0.g4();
+                int var31 = arg0.g4s();
                 arg2.field10055.method2372(var30, var31);
             }
         }
@@ -325,7 +325,7 @@ public class ReceivePlayerPositions {
         }
         if ((arg3 & 0x1) != 0) {
             int var32 = arg0.g2_alt3();
-            int var33 = arg0.g4s_alt2();
+            int var33 = arg0.g4s_alt3();
             if (var32 == 65535) {
                 var32 = -1;
             }
@@ -348,7 +348,7 @@ public class ReceivePlayerPositions {
         }
         if ((arg3 & 0x100) != 0) {
             int var41 = arg0.g2_alt2();
-            int var42 = arg0.g4s_alt3();
+            int var42 = arg0.g4s_alt2();
             if (var41 == 65535) {
                 var41 = -1;
             }
@@ -403,10 +403,10 @@ public class ReceivePlayerPositions {
                 arg2.field8605 = arg2.field8605 + arg2.field10064;
                 arg2.field8628 = 0;
             } else {
-                arg2.field8619 = arg2.field8619 + arg2.field8642[0];
-                arg2.field8621 = arg2.field8621 + arg2.field8643[0];
-                arg2.field8591 = arg2.field8591 + arg2.field8642[0];
-                arg2.field8605 = arg2.field8605 + arg2.field8643[0];
+                arg2.field8619 = arg2.field8619 + arg2.routeWaypointX[0];
+                arg2.field8621 = arg2.field8621 + arg2.routeWaypointZ[0];
+                arg2.field8591 = arg2.field8591 + arg2.routeWaypointX[0];
+                arg2.field8605 = arg2.field8605 + arg2.routeWaypointZ[0];
                 arg2.field8628 = 1;
             }
             arg2.field8646 = 0;
@@ -428,7 +428,7 @@ public class ReceivePlayerPositions {
         }
         if ((arg3 & 0x400) != 0) {
             String var60 = arg0.gjstr();
-            if (Statics.field2119 == arg2) {
+            if (Statics.localPlayerEntity == arg2) {
                 ChatHistory.method3943(2, 0, arg2.method16120(true), arg2.method16121(false), arg2.field10063, var60);
             }
             arg2.method16127(var60, 0, 0);
@@ -450,7 +450,7 @@ public class ReceivePlayerPositions {
         }
         if ((arg3 & 0x400000) != 0) {
             int var67 = arg0.g2_alt3();
-            int var68 = arg0.g4();
+            int var68 = arg0.g4s();
             if (var67 == 65535) {
                 var67 = -1;
             }
@@ -467,7 +467,7 @@ public class ReceivePlayerPositions {
             return;
         }
         if (var4 == 127) {
-            arg2.method16123(arg2.field10052, arg2.field10064);
+            arg2.tele(arg2.field10052, arg2.field10064);
             return;
         }
         byte var73;

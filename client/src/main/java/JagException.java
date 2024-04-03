@@ -31,7 +31,8 @@ public class JagException extends RuntimeException {
                 }
                 var2 = var2 + arg0;
             }
-            method12861(var2);
+            arg1.printStackTrace();
+            // method12861(var2);
             String var3 = WebTools.method4609(var2);
             if (Statics.field10526 == null) {
                 return;
@@ -48,12 +49,13 @@ public class JagException extends RuntimeException {
             var8.read();
             var8.close();
         } catch (Exception var11) {
-            var11.printStackTrace();
+            // var11.printStackTrace();
         }
     }
 
     @ObfuscatedName("aff.j(Ljava/lang/Throwable;Ljava/lang/String;)Lakf;")
     public static JagException method15876(Throwable arg0, String arg1) {
+        arg0.printStackTrace();
         JagException var2;
         if (arg0 instanceof JagException) {
             var2 = (JagException) arg0;

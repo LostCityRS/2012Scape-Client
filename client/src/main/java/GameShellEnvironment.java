@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class GameShellEnvironment {
 
     @ObfuscatedName("nt.u")
-    public static final GameShellEnvironment field4118 = new GameShellEnvironment();
+    public static final GameShellEnvironment APPLICATION = new GameShellEnvironment();
 
     @ObfuscatedName("nt.j")
     public static final GameShellEnvironment field4117 = new GameShellEnvironment();

@@ -27,10 +27,10 @@ public class StockMarketSlot {
     public StockMarketSlot(Packet arg0) {
         this.field3759 = arg0.g1b();
         this.field3758 = arg0.g2();
-        this.field3762 = arg0.g4();
-        this.field3761 = arg0.g4();
-        this.field3760 = arg0.g4();
-        this.field3763 = arg0.g4();
+        this.field3762 = arg0.g4s();
+        this.field3761 = arg0.g4s();
+        this.field3760 = arg0.g4s();
+        this.field3763 = arg0.g4s();
     }
 
     @ObfuscatedName("lp.u(I)I")

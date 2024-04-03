@@ -78,7 +78,7 @@ public class Js5Index {
             throw new RuntimeException();
         }
         if (var3 >= 6) {
-            this.field3547 = var2.g4();
+            this.field3547 = var2.g4s();
         } else {
             this.field3547 = 0;
         }
@@ -123,12 +123,12 @@ public class Js5Index {
                 this.field3551[var11] = -1;
             }
             for (int var12 = 0; var12 < this.field3549; var12++) {
-                this.field3551[this.field3554[var12]] = var2.g4();
+                this.field3551[this.field3554[var12]] = var2.g4s();
             }
             this.field3560 = new IntTreeMap(this.field3551);
         }
         for (int var13 = 0; var13 < this.field3549; var13++) {
-            this.field3548[this.field3554[var13]] = var2.g4();
+            this.field3548[this.field3554[var13]] = var2.g4s();
         }
         if (var6) {
             for (int var14 = 0; var14 < this.field3549; var14++) {
@@ -138,7 +138,7 @@ public class Js5Index {
             }
         }
         for (int var16 = 0; var16 < this.field3549; var16++) {
-            this.field3545[this.field3554[var16]] = var2.g4();
+            this.field3545[this.field3554[var16]] = var2.g4s();
         }
         if (var3 >= 7) {
             for (int var17 = 0; var17 < this.field3549; var17++) {
@@ -202,7 +202,7 @@ public class Js5Index {
                 } else {
                     var38 = this.field3556[var34][var37];
                 }
-                this.field3559[var34][var38] = var2.g4();
+                this.field3559[var34][var38] = var2.g4s();
             }
             this.field3558[var34] = new IntTreeMap(this.field3559[var34]);
         }

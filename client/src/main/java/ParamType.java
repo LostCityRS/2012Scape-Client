@@ -31,7 +31,7 @@ public class ParamType {
         if (arg1 == 1) {
             this.field7286 = Cp1252.method16898(arg0.g1b());
         } else if (arg1 == 2) {
-            this.field7287 = arg0.g4();
+            this.field7287 = arg0.g4s();
         } else if (arg1 == 4) {
             this.field7289 = false;
         } else if (arg1 == 5) {

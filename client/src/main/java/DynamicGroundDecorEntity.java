@@ -54,10 +54,10 @@ public class DynamicGroundDecorEntity extends GroundDecorLayerEntity implements 
             return null;
         }
         Matrix4x3 var3 = this.method8558();
-        ScaleRotTrans var4 = this.method8565();
+        ScaleRotTrans var4 = this.getTransform();
         PickableEntity var5 = PickableEntity.method12205(this.field7529);
-        int var6 = (int) var4.field3464.field3475 >> 9;
-        int var7 = (int) var4.field3464.field3477 >> 9;
+        int var6 = (int) var4.trans.x >> 9;
+        int var7 = (int) var4.trans.z >> 9;
         this.field7530.method2438(arg0, var2, var3, var6, var6, var7, var7, true);
         var2.method271(var3, this.field9811[0], 0);
         if (this.field7530.field1229 != null) {
@@ -66,9 +66,9 @@ public class DynamicGroundDecorEntity extends GroundDecorLayerEntity implements 
         }
         this.field7531 = var2.i() || this.field7530.field1229 != null;
         if (this.field7528 == null) {
-            this.field7528 = GraphEntity.method15140((int) var4.field3464.field3475, (int) var4.field3464.field3476, (int) var4.field3464.field3477, var2);
+            this.field7528 = GraphEntity.method15140((int) var4.trans.x, (int) var4.trans.field3476, (int) var4.trans.z, var2);
         } else {
-            GraphEntity.method11162(this.field7528, (int) var4.field3464.field3475, (int) var4.field3464.field3476, (int) var4.field3464.field3477, var2);
+            GraphEntity.method11162(this.field7528, (int) var4.trans.x, (int) var4.trans.field3476, (int) var4.trans.z, var2);
         }
         return var5;
     }
@@ -77,9 +77,9 @@ public class DynamicGroundDecorEntity extends GroundDecorLayerEntity implements 
     public void method12851(RendererToolkit arg0) {
         Model var2 = this.field7530.method2437(arg0, 262144, true, true);
         if (var2 != null) {
-            Vector3 var3 = this.method8565().field3464;
-            int var4 = (int) var3.field3475 >> 9;
-            int var5 = (int) var3.field3477 >> 9;
+            Vector3 var3 = this.getTransform().trans;
+            int var4 = (int) var3.x >> 9;
+            int var5 = (int) var3.z >> 9;
             this.field7530.method2438(arg0, var2, this.method8558(), var4, var4, var5, var5, false);
         }
     }

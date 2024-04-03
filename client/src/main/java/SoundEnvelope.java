@@ -46,8 +46,8 @@ public class SoundEnvelope {
     @ObfuscatedName("mt.u(Laet;)V")
     public final void method6470(Packet arg0) {
         this.field3998 = arg0.g1();
-        this.field4000 = arg0.g4();
-        this.field4001 = arg0.g4();
+        this.field4000 = arg0.g4s();
+        this.field4001 = arg0.g4s();
         this.method6471(arg0);
     }
 

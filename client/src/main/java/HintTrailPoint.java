@@ -54,9 +54,9 @@ public class HintTrailPoint extends PrimaryLayerEntity {
         if (this.field10647 != null) {
             Matrix4x3 var2 = arg0.method516();
             Matrix4x3 var3 = this.method8558();
-            ScaleRotTrans var4 = this.method8565();
+            ScaleRotTrans var4 = this.getTransform();
             var2.method5115(var3);
-            Tile var5 = this.field9808.field4497[this.field9807][(int) var4.field3464.field3475 >> 9][(int) var4.field3464.field3477 >> 9];
+            Tile var5 = this.field9808.field4497[this.level][(int) var4.trans.x >> 9][(int) var4.trans.z >> 9];
             if (var5 != null && var5.field4552 != null) {
                 var2.method5116(0.0F, (float) -var5.field4552.field10495, 0.0F);
             }

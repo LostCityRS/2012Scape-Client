@@ -35,7 +35,7 @@ public class BuildAreaSize {
     }
 
     @ObfuscatedName("cj.j(II)Lff;")
-    public static BuildAreaSize method2571(int arg0) {
+    public static BuildAreaSize forId(int arg0) {
         BuildAreaSize[] var1 = method3459();
         for (int var2 = 0; var2 < var1.length; var2++) {
             BuildAreaSize var3 = var1[var2];

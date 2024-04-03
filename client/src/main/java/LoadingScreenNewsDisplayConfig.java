@@ -59,9 +59,9 @@ public class LoadingScreenNewsDisplayConfig implements LoadingScreenElementConfi
         int var5 = arg0.g2s();
         int var6 = arg0.g2();
         int var7 = arg0.g2();
-        int var8 = arg0.g4();
-        int var9 = arg0.g4();
-        int var10 = arg0.g4();
+        int var8 = arg0.g4s();
+        int var9 = arg0.g4s();
+        int var10 = arg0.g4s();
         boolean var11 = arg0.g1() == 1;
         return new LoadingScreenNewsDisplayConfig(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11);
     }

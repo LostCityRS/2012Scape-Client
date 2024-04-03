@@ -306,7 +306,7 @@ public class GpuFloorModel extends FloorModel {
                 var1[var2][var3] = (byte) ((this.field7728[var2][var3] >> 1) + (this.field7728[var2][var3 + 1] >> 3) + (this.field7728[var2][var3 - 1] >> 2) + (this.field7728[var2 - 1][var3] >> 2) + (this.field7728[var2 + 1][var3] >> 3));
             }
         }
-        this.field7753 = new Node[this.field7749.method11926()];
+        this.field7753 = new Node[this.field7749.length()];
         this.field7749.method11933(this.field7753);
         for (int var4 = 0; var4 < this.field7753.length; var4++) {
             ((GpuFloorModelRelated1) this.field7753[var4]).method14996(this.field7746);

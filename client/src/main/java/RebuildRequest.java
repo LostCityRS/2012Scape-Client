@@ -4,13 +4,13 @@ import deob.ObfuscatedName;
 public class RebuildRequest {
 
     @ObfuscatedName("mo.u")
-    public RebuildType field3786;
+    public RebuildType rebuildType;
 
     @ObfuscatedName("mo.j")
-    public PacketBit field3787;
+    public PacketBit buf;
 
     public RebuildRequest(RebuildType arg0, PacketBit arg1) {
-        this.field3786 = arg0;
-        this.field3787 = arg1;
+        this.rebuildType = arg0;
+        this.buf = arg1;
     }
 }

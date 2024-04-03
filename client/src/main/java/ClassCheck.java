@@ -116,7 +116,7 @@ public class ClassCheck {
     public static void method2794(Packet arg0, int arg1) {
         ClassCheckNode var2 = new ClassCheckNode();
         var2.field9741 = arg0.g1();
-        var2.field9740 = arg0.g4();
+        var2.field9740 = arg0.g4s();
         var2.field9737 = new int[var2.field9741];
         var2.field9738 = new int[var2.field9741];
         var2.field9739 = new Field[var2.field9741];
@@ -131,7 +131,7 @@ public class ClassCheck {
                     String var6 = arg0.gjstr();
                     int var7 = 0;
                     if (var4 == 1) {
-                        var7 = arg0.g4();
+                        var7 = arg0.g4s();
                     }
                     var2.field9737[var3] = var4;
                     var2.field9735[var3] = var7;
@@ -151,7 +151,7 @@ public class ClassCheck {
                     byte[][] var14 = new byte[var10][];
                     if (var4 == 3) {
                         for (int var15 = 0; var15 < var10; var15++) {
-                            int var16 = arg0.g4();
+                            int var16 = arg0.g4s();
                             var14[var15] = new byte[var16];
                             arg0.gdata(var14[var15], 0, var16);
                         }

@@ -12,7 +12,7 @@ public class LoadingScreenClearConfig implements LoadingScreenElementConfig {
 
     @ObfuscatedName("tj.u(Laet;I)Lig;")
     public static LoadingScreenClearConfig method11849(Packet arg0) {
-        int var1 = arg0.g4();
+        int var1 = arg0.g4s();
         return new LoadingScreenClearConfig(var1);
     }
 

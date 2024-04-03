@@ -53,7 +53,7 @@ public class ObjStackEntity extends ObjLayerEntity {
         this.field10614 = (int) (Math.random() * 4.0D) + 32;
         this.field10615 = (int) (Math.random() * 2.0D) + 3;
         this.field10616 = (int) (Math.random() * 3.0D) + 16;
-        if (Statics.field4961.field9659.method15686() == 1) {
+        if (Statics.clientOptions.field9659.method15686() == 1) {
             this.field10617 = (int) (Math.random() * 10.0D);
         } else {
             this.field10617 = (int) (Math.random() * 20.0D);
@@ -82,9 +82,9 @@ public class ObjStackEntity extends ObjLayerEntity {
 
     @ObfuscatedName("ali.bi(Lra;B)Loz;")
     public PickableEntity method12812(RendererToolkit arg0) {
-        Vector3 var2 = Vector3.method5290(this.method8565().field3464);
-        PrimaryLayerEntityList var3 = this.field9808.method7438(this.field9807, (int) var2.field3475 >> 9, (int) var2.field3477 >> 9);
-        GroundDecorLayerEntity var4 = this.field9808.method7517(this.field9807, (int) var2.field3475 >> 9, (int) var2.field3477 >> 9);
+        Vector3 var2 = Vector3.create(this.getTransform().trans);
+        PrimaryLayerEntityList var3 = this.field9808.method7438(this.level, (int) var2.x >> 9, (int) var2.z >> 9);
+        GroundDecorLayerEntity var4 = this.field9808.method7517(this.level, (int) var2.x >> 9, (int) var2.z >> 9);
         int var5 = 0;
         if (var3 != null && var3.field4642.field10512) {
             var5 = var3.field4642.method12809();
@@ -107,16 +107,16 @@ public class ObjStackEntity extends ObjLayerEntity {
             int var11 = this.field10612 << 1;
             int var13 = -var11 / 2;
             int var14 = -var11 / 2;
-            int var15 = var10.method196((int) var2.field3475 + var13, (int) var2.field3477 + var14);
+            int var15 = var10.method196((int) var2.x + var13, (int) var2.z + var14);
             int var16 = var11 / 2;
             int var17 = -var11 / 2;
-            int var18 = var10.method196((int) var2.field3475 + var16, (int) var2.field3477 + var17);
+            int var18 = var10.method196((int) var2.x + var16, (int) var2.z + var17);
             int var19 = -var11 / 2;
             int var20 = var11 / 2;
-            int var21 = var10.method196((int) var2.field3475 + var19, (int) var2.field3477 + var20);
+            int var21 = var10.method196((int) var2.x + var19, (int) var2.z + var20);
             int var22 = var11 / 2;
             int var23 = var11 / 2;
-            int var24 = var10.method196((int) var2.field3475 + var22, (int) var2.field3477 + var23);
+            int var24 = var10.method196((int) var2.x + var22, (int) var2.z + var23);
             int var25 = var15 < var18 ? var15 : var18;
             int var26 = var21 < var24 ? var21 : var24;
             int var27 = var18 < var24 ? var18 : var24;
@@ -143,8 +143,8 @@ public class ObjStackEntity extends ObjLayerEntity {
             }
         }
         var2.method5291();
-        Vector3 var33 = this.method8565().field3464;
-        var6.method5116(var33.field3475, var33.field3476 - 10.0F, var33.field3477);
+        Vector3 var33 = this.getTransform().trans;
+        var6.method5116(var33.x, var33.field3476 - 10.0F, var33.z);
         PickableEntity var34 = PickableEntity.method12205(true);
         this.field10613 = false;
         this.field10612 = 0;
@@ -203,7 +203,7 @@ public class ObjStackEntity extends ObjLayerEntity {
     @ObfuscatedName("ali.bb(Lra;III)Z")
     public boolean method12814(RendererToolkit arg0, int arg1, int arg2) {
         Matrix4x3 var4 = arg0.method516();
-        var4.method5104(this.method8565());
+        var4.method5104(this.getTransform());
         var4.method5116(0.0F, -10.0F, 0.0F);
         Model var5 = Statics.field3492.method12316(this.field10611).method12241(arg0, 131072, this.field10605, null, null, 0, 0, 0, 0);
         if (var5 != null && var5.method272(arg1, arg2, var4, true, 0)) {

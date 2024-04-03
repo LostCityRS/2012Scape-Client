@@ -54,7 +54,7 @@ public class ClientOptionsBuildArea extends ClientOption {
     }
 
     @ObfuscatedName("afk.o(I)I")
-    public int method15792() {
+    public int getValue() {
         return this.field6461;
     }
 }

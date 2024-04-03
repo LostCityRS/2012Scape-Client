@@ -101,15 +101,15 @@ public class VorbisSound extends Node {
     @ObfuscatedName("adr.c([B)V")
     public void method15061(byte[] arg0) throws IOException {
         Packet var2 = new Packet(arg0);
-        this.field9495 = var2.g4();
-        this.field9480 = var2.g4();
-        this.field9487 = var2.g4();
-        this.field9482 = var2.g4();
+        this.field9495 = var2.g4s();
+        this.field9480 = var2.g4s();
+        this.field9487 = var2.g4s();
+        this.field9482 = var2.g4s();
         if (this.field9482 < 0) {
             this.field9482 = ~this.field9482;
             this.field9483 = true;
         }
-        int var3 = var2.g4();
+        int var3 = var2.g4s();
         if (var3 < 0) {
             throw new IOException();
         }

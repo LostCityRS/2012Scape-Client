@@ -23,11 +23,11 @@ public class NativeMouseLogger extends MouseLogger {
         if (var1 == null) {
             return;
         }
-        ClientMessage var2 = ClientMessage.method14781(ClientProt.field2956, client.field8975.field834);
+        ClientMessage var2 = ClientMessage.createMessage(ClientProt.field2956, client.gameConnection.randomOut);
         var2.field9467.p1_alt1(var1.method16844() << 1 | var1.method16842() & 0x1);
         var2.field9467.p2_alt2(this.method8354(var1, 65535));
         var2.field9467.p4_alt3(var1.method15182() | var1.method15183() << 16);
-        client.field8975.method1913(var2);
+        client.gameConnection.queue(var2);
         var1.method15186();
     }
 
@@ -38,7 +38,7 @@ public class NativeMouseLogger extends MouseLogger {
 
     @ObfuscatedName("aec.f(I)Lada;")
     public ClientMessage method8375() {
-        return ClientMessage.method14781(ClientProt.field2947, client.field8975.field834);
+        return ClientMessage.createMessage(ClientProt.field2947, client.gameConnection.randomOut);
     }
 
     @ObfuscatedName("aec.at(Laet;Lajn;I)V")

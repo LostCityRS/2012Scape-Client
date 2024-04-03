@@ -283,7 +283,7 @@ public class Packet extends Node {
     }
 
     @ObfuscatedName("aet.ao(I)I")
-    public int g4() {
+    public int g4s() {
         this.pos += 4;
         return (this.data[this.pos - 1] & 0xFF) + ((this.data[this.pos - 2] & 0xFF) << 8) + ((this.data[this.pos - 4] & 0xFF) << 24) + ((this.data[this.pos - 3] & 0xFF) << 16);
     }
@@ -297,14 +297,14 @@ public class Packet extends Node {
     @ObfuscatedName("aet.at(B)J")
     public long g5() {
         long var1 = (long) this.g1() & 0xFFFFFFFFL;
-        long var3 = (long) this.g4() & 0xFFFFFFFFL;
+        long var3 = (long) this.g4s() & 0xFFFFFFFFL;
         return (var1 << 32) + var3;
     }
 
     @ObfuscatedName("aet.ax(I)J")
     public long g8() {
-        long var1 = (long) this.g4() & 0xFFFFFFFFL;
-        long var3 = (long) this.g4() & 0xFFFFFFFFL;
+        long var1 = (long) this.g4s() & 0xFFFFFFFFL;
+        long var3 = (long) this.g4s() & 0xFFFFFFFFL;
         return (var1 << 32) + var3;
     }
 
@@ -332,7 +332,7 @@ public class Packet extends Node {
 
     @ObfuscatedName("aet.am(I)F")
     public float gFloat() {
-        return Float.intBitsToFloat(this.g4());
+        return Float.intBitsToFloat(this.g4s());
     }
 
     @ObfuscatedName("aet.ad(B)Ljava/lang/String;")
@@ -419,13 +419,13 @@ public class Packet extends Node {
 
     @ObfuscatedName("aet.aq(B)I")
     public int gSmart2or4() {
-        return this.data[this.pos] < 0 ? this.g4() & Integer.MAX_VALUE : this.g2();
+        return this.data[this.pos] < 0 ? this.g4s() & Integer.MAX_VALUE : this.g2();
     }
 
     @ObfuscatedName("aet.ab(B)I")
     public int gSmart2or4null() {
         if (this.data[this.pos] < 0) {
-            return this.g4() & Integer.MAX_VALUE;
+            return this.g4s() & Integer.MAX_VALUE;
         } else {
             int var1 = this.g2();
             return var1 == 32767 ? -1 : var1;
@@ -448,8 +448,8 @@ public class Packet extends Node {
         int var2 = this.pos / 8;
         this.pos = 0;
         for (int var3 = 0; var3 < var2; var3++) {
-            int var4 = this.g4();
-            int var5 = this.g4();
+            int var4 = this.g4s();
+            int var5 = this.g4s();
             int var6 = -957401312;
             int var7 = -1640531527;
             int var8 = 32;
@@ -470,8 +470,8 @@ public class Packet extends Node {
         this.pos = arg1;
         int var5 = (arg2 - arg1) / 8;
         for (int var6 = 0; var6 < var5; var6++) {
-            int var7 = this.g4();
-            int var8 = this.g4();
+            int var7 = this.g4s();
+            int var8 = this.g4s();
             int var9 = 0;
             int var10 = -1640531527;
             int var11 = 32;
@@ -493,8 +493,8 @@ public class Packet extends Node {
         this.pos = arg1;
         int var5 = (arg2 - arg1) / 8;
         for (int var6 = 0; var6 < var5; var6++) {
-            int var7 = this.g4();
-            int var8 = this.g4();
+            int var7 = this.g4s();
+            int var8 = this.g4s();
             int var9 = -957401312;
             int var10 = -1640531527;
             int var11 = 32;
@@ -535,7 +535,7 @@ public class Packet extends Node {
     public boolean checkcrc() {
         this.pos -= 4;
         int var1 = getcrc(this.data, 0, this.pos);
-        int var2 = this.g4();
+        int var2 = this.g4s();
         return var1 == var2;
     }
 
@@ -684,13 +684,13 @@ public class Packet extends Node {
     }
 
     @ObfuscatedName("aet.cm(I)I")
-    public int g4s_alt2() {
+    public int g4s_alt3() {
         this.pos += 4;
         return (this.data[this.pos - 3] & 0xFF) + ((this.data[this.pos - 4] & 0xFF) << 8) + ((this.data[this.pos - 2] & 0xFF) << 24) + ((this.data[this.pos - 1] & 0xFF) << 16);
     }
 
     @ObfuscatedName("aet.cw(I)I")
-    public int g4s_alt3() {
+    public int g4s_alt2() {
         this.pos += 4;
         return (this.data[this.pos - 2] & 0xFF) + ((this.data[this.pos - 1] & 0xFF) << 8) + ((this.data[this.pos - 4] & 0xFF) << 16) + ((this.data[this.pos - 3] & 0xFF) << 24);
     }

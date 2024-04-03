@@ -48,9 +48,9 @@ public class LookatOrientation extends Lookat {
 
     @ObfuscatedName("ago.s(Lfi;Lkc;III)V")
     public void method11543(Vector3i arg0, Matrix4x3 arg1, int arg2, int arg3) {
-        Vector3 var5 = Vector3.method5290(this.field6645.method3720());
-        var5.field3475 -= arg2;
-        var5.field3477 -= arg3;
+        Vector3 var5 = Vector3.create(this.field6645.method3720());
+        var5.x -= arg2;
+        var5.z -= arg3;
         var5.field3476 *= -1.0F;
         arg1.method5109(Quaternion.method5221(this.field9886));
         arg1.method5127(var5);

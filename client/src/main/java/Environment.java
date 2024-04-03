@@ -112,11 +112,11 @@ public class Environment {
     @ObfuscatedName("qf.s(Laet;Lqp;I)V")
     public void method8205(Packet arg0, EnvironmentManager arg1) {
         int var3 = arg0.g1();
-        if (Statics.field4961.field9650.method15667() == 1 && Statics.field5187.method768() > 0) {
+        if (Statics.clientOptions.field9650.method15667() == 1 && Statics.field5187.method768() > 0) {
             if ((var3 & 0x1) == 0) {
                 this.field4991 = EnvironmentManager.field4983;
             } else {
-                this.field4991 = arg0.g4();
+                this.field4991 = arg0.g4s();
             }
             if ((var3 & 0x2) == 0) {
                 this.field4987 = 1.1523438F;
@@ -135,7 +135,7 @@ public class Environment {
             }
         } else {
             if ((var3 & 0x1) != 0) {
-                arg0.g4();
+                arg0.g4s();
             }
             if ((var3 & 0x2) != 0) {
                 arg0.g2();
@@ -159,7 +159,7 @@ public class Environment {
         if ((var3 & 0x20) == 0) {
             this.field4989 = EnvironmentManager.field4982;
         } else {
-            this.field4989 = arg0.g4();
+            this.field4989 = arg0.g4s();
         }
         if ((var3 & 0x40) == 0) {
             this.field4997 = 0;

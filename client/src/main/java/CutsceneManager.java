@@ -190,8 +190,8 @@ public class CutsceneManager {
             ScriptRunner.method1372(ClientTriggerType.field7312, field1533, -1);
         }
         method2911();
-        ClientMessage var4 = ClientMessage.method14781(ClientProt.field2953, client.field8975.field834);
+        ClientMessage var4 = ClientMessage.createMessage(ClientProt.field2953, client.gameConnection.randomOut);
         var4.field9467.p1(arg0 ? 1 : 0);
-        client.field8975.method1913(var4);
+        client.gameConnection.queue(var4);
     }
 }

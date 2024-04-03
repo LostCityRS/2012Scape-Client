@@ -80,8 +80,8 @@ public class Js5Client {
             for (int var9 = 0; var9 < this.field3544.length; var9++) {
                 if (this.field3544[var9] != null) {
                     this.field3538.pos = var9 * 72 + 6;
-                    int var10 = this.field3538.g4();
-                    int var11 = this.field3538.g4();
+                    int var10 = this.field3538.g4s();
+                    int var11 = this.field3538.g4s();
                     byte[] var12 = new byte[64];
                     this.field3538.gdata(var12, 0, 64);
                     this.field3544[var9].method14234(var10, var12, var11);
@@ -104,8 +104,8 @@ public class Js5Client {
             throw new RuntimeException();
         } else if (this.field3544[arg0] == null) {
             this.field3538.pos = arg0 * 72 + 6;
-            int var5 = this.field3538.g4();
-            int var6 = this.field3538.g4();
+            int var5 = this.field3538.g4s();
+            int var6 = this.field3538.g4s();
             byte[] var7 = new byte[64];
             this.field3538.gdata(var7, 0, 64);
             Js5NetResourceProvider var8 = new Js5NetResourceProvider(arg0, arg1, arg2, this.field3540, this.field3539, var5, var7, var6, arg3);

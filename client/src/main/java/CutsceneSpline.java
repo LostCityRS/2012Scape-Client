@@ -57,6 +57,6 @@ public class CutsceneSpline {
             var2[var3 * 2 + 1][2] = this.field1550[var3];
             var2[var3 * 2 + 1][3] = this.field1547[var3];
         }
-        client.field9076[arg0] = var2;
+        client.cameraSpline[arg0] = var2;
     }
 }

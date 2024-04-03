@@ -28,7 +28,7 @@ public class ClientProt {
     public static final ClientProt field2856 = new ClientProt(7, 16);
 
     @ObfuscatedName("jm.f")
-    public static final ClientProt field2939 = new ClientProt(8, 4);
+    public static final ClientProt DETECT_MODIFIED_CLIENT = new ClientProt(8, 4);
 
     @ObfuscatedName("jm.d")
     public static final ClientProt field2858 = new ClientProt(9, -1);
@@ -196,7 +196,7 @@ public class ClientProt {
     public static final ClientProt field2852 = new ClientProt(63, 2);
 
     @ObfuscatedName("jm.bd")
-    public static final ClientProt field2913 = new ClientProt(64, 0);
+    public static final ClientProt MAP_BUILD_COMPLETE = new ClientProt(64, 0);
 
     @ObfuscatedName("jm.bc")
     public static final ClientProt field2914 = new ClientProt(65, 4);

@@ -93,7 +93,7 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
             Statics.field10343 = Statics.field4677 = arg0.method6868();
             field4147 = 0;
             field4127 = 0;
-            if (Statics.method5937() == GameShellEnvironment.field4116) {
+            if (Statics.getEnvironment() == GameShellEnvironment.field4116) {
                 Statics.field2204 += arg0.method6855() * 2;
                 Statics.field10343 += arg0.method6859() * 2;
                 this.method6725(arg0.method6860());
@@ -904,9 +904,9 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
     public void method6678(GameShellEnvironment arg0, boolean arg1) {
         if (arg0 == null) {
             throw new NullPointerException();
-        } else if (GameShellEnvironment.field4117 == arg0 || GameShellEnvironment.field4118 == arg0) {
+        } else if (GameShellEnvironment.field4117 == arg0 || GameShellEnvironment.APPLICATION == arg0) {
             field4148 = arg0;
-            if (field4148 != GameShellEnvironment.field4118 && arg1) {
+            if (field4148 != GameShellEnvironment.APPLICATION && arg1) {
                 field4148 = GameShellEnvironment.field4116;
             }
         } else {

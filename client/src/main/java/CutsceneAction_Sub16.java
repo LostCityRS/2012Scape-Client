@@ -19,7 +19,7 @@ public class CutsceneAction_Sub16 extends CutsceneAction {
         super(arg0);
         this.field8478 = arg0.g2();
         this.field8480 = arg0.gjstr();
-        this.field8479 = arg0.g4();
+        this.field8479 = arg0.g4s();
         this.field8477 = arg0.g2();
     }
 

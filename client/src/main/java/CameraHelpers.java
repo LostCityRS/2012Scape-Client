@@ -29,7 +29,7 @@ public class CameraHelpers {
     public static float method1721(Quaternion arg0) {
         Vector3 var1 = Vector3.method5294(0.0F, 0.0F, 1.0F);
         var1.method5318(arg0);
-        double var2 = Math.atan2((double) var1.field3475, (double) var1.field3477);
+        double var2 = Math.atan2((double) var1.x, (double) var1.z);
         var1.method5291();
         if (var2 < 0.0D) {
             var2 = var2 + 3.141592653589793D + 3.141592653589793D;

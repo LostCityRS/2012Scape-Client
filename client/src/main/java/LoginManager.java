@@ -123,7 +123,7 @@ public class LoginManager {
             method5547();
             field533 = arg0;
             field534 = arg1;
-            client.method11307(18);
+            client.setState(18);
         }
     }
 
@@ -136,7 +136,7 @@ public class LoginManager {
             field506 = -1L;
         }
         field499 = arg0;
-        client.method11307(18);
+        client.setState(18);
     }
 
     @ObfuscatedName("abm.d(Ljava/lang/String;Ljava/lang/String;I)V")
@@ -148,7 +148,7 @@ public class LoginManager {
         method5547();
         field533 = arg0;
         field534 = arg1;
-        client.method11307(3);
+        client.setState(3);
     }
 
     @ObfuscatedName("yh.o(I)V")
@@ -188,14 +188,14 @@ public class LoginManager {
     @ObfuscatedName("sq.w(Ljava/lang/String;Ljava/lang/String;I)Z")
     public static boolean method11239(String arg0, String arg1) {
         Statics.field500 = 223;
-        Statics.field501 = client.field8975;
+        Statics.field501 = client.gameConnection;
         return method6245(false, false, arg0, arg1, -1L);
     }
 
     @ObfuscatedName("uc.b(I)Z")
     public static boolean method11920() {
         Statics.field500 = 223;
-        Statics.field501 = client.field8975;
+        Statics.field501 = client.gameConnection;
         if (client.field8909 != null) {
             Packet var0 = new Packet(client.field8909);
             field506 = var0.g8();
@@ -212,7 +212,7 @@ public class LoginManager {
     @ObfuscatedName("v.x(B)Z")
     public static boolean method1201() {
         Statics.field500 = 223;
-        Statics.field501 = client.field8975;
+        Statics.field501 = client.gameConnection;
         return method6245(field506 == -1L, true, "", "", field506);
     }
 
@@ -301,7 +301,7 @@ public class LoginManager {
                     var1.field9467.p4(client.REVISION);
                     var1.field9467.p4(client.SUBREVISION);
                     if (Statics.field500 == 223) {
-                        var1.field9467.p1(client.field8923 == 9 ? 1 : 0);
+                        var1.field9467.p1(client.state == 9 ? 1 : 0);
                     }
                     Packet var3 = method8625();
                     var3.p1(field499);
@@ -320,15 +320,15 @@ public class LoginManager {
                 } else {
                     var1.field9467.p1(LoginProt.field2965.field2970);
                 }
-                Statics.field501.method1913(var1);
+                Statics.field501.queue(var1);
                 Statics.field501.method1912();
                 field531 = 35;
             }
             if (field531 == 35) {
-                if (!Statics.field501.method1927().method7212(1)) {
+                if (!Statics.field501.getStream().method7212(1)) {
                     return;
                 }
-                Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, 1);
+                Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, 1);
                 Statics.field501.field832.pos = 0;
                 int var5 = Statics.field501.field832.g1();
                 if (var5 != 0) {
@@ -347,43 +347,43 @@ public class LoginManager {
                 }
             }
             if (field531 == 40) {
-                if (!Statics.field501.method1927().method7212(2)) {
+                if (!Statics.field501.getStream().method7212(2)) {
                     return;
                 }
-                Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, 2);
+                Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, 2);
                 Statics.field501.field832.pos = 0;
                 Statics.field501.field832.pos = Statics.field501.field832.g2();
                 field531 = 55;
             }
             if (field531 == 55) {
-                if (!Statics.field501.method1927().method7212(Statics.field501.field832.pos)) {
+                if (!Statics.field501.getStream().method7212(Statics.field501.field832.pos)) {
                     return;
                 }
-                Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, Statics.field501.field832.pos);
+                Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, Statics.field501.field832.pos);
                 Statics.field501.field832.tinydec(Statics.field541);
                 Statics.field501.field832.pos = 0;
                 String var6 = Statics.field501.field832.gjstr2();
                 Statics.field501.field832.pos = 0;
                 String var7 = JavascriptFunction.field3152.method4757();
                 if (!client.field8903 || !Browser.method1814(var6, 1, var7)) {
-                    Browser.method5599(var6, true, Statics.field4961.field9661.method15781() == 5, var7, client.field8915, client.field9218);
+                    Browser.method5599(var6, true, Statics.clientOptions.field9661.method15781() == 5, var7, client.field8915, client.field9218);
                 }
                 field531 = 61;
             }
             if (field531 == 61) {
-                if (!Statics.field501.method1927().method7212(1)) {
+                if (!Statics.field501.getStream().method7212(1)) {
                     return;
                 }
-                Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, 1);
+                Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, 1);
                 if ((Statics.field501.field832.data[0] & 0xFF) == 1) {
                     field531 = 76;
                 }
             }
             if (field531 == 76) {
-                if (!Statics.field501.method1927().method7212(16)) {
+                if (!Statics.field501.getStream().method7212(16)) {
                     return;
                 }
-                Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, 16);
+                Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, 16);
                 Statics.field501.field832.pos = 16;
                 Statics.field501.field832.tinydec(Statics.field541);
                 Statics.field501.field832.pos = 0;
@@ -413,7 +413,7 @@ public class LoginManager {
                         if (client.CUSTOM_SEND_MAC_ADDRESS) {
                             var9.pjstr("userMacAddress");
                         }
-                        var9.p1(client.field8923 == 9 ? 1 : 0);
+                        var9.p1(client.state == 9 ? 1 : 0);
                         if (client.CUSTOM_SEND_MAC_ADDRESS) {
                             var9.pjstr("userMacAddress");
                         }
@@ -431,11 +431,11 @@ public class LoginManager {
                     var9.p1(client.method12476());
                     var9.p2(Statics.field4125);
                     var9.p2(Statics.field4677);
-                    var9.p1(Statics.field4961.field9665.method15829());
+                    var9.p1(Statics.clientOptions.field9665.method15829());
                     GameShell.method3615(var9);
                     var9.pjstr(client.field8947);
                     var9.p4(client.field9043);
-                    Packet var15 = Statics.field4961.method15447();
+                    Packet var15 = Statics.clientOptions.method15447();
                     var9.p1(var15.pos);
                     var9.pdata(var15.data, 0, var15.pos);
                     client.field8932 = true;
@@ -487,7 +487,7 @@ public class LoginManager {
                     var9.p1(Statics.field2308.method6339());
                     GameShell.method3615(var9);
                     var9.pjstr(client.field8947);
-                    Packet var21 = Statics.field4961.method15447();
+                    Packet var21 = Statics.clientOptions.method15447();
                     var9.p1(var21.pos);
                     var9.pdata(var21.data, 0, var21.pos);
                     Packet var22 = new Packet(Statics.field2305.method15476());
@@ -501,23 +501,23 @@ public class LoginManager {
                     var9.tinyenc(Statics.field541, var19, var9.pos);
                     var9.psize2(var9.pos - var18);
                 }
-                Statics.field501.method1913(var8);
+                Statics.field501.queue(var8);
                 Statics.field501.method1912();
-                Statics.field501.field834 = new Isaac(Statics.field541);
+                Statics.field501.randomOut = new Isaac(Statics.field541);
                 for (int var23 = 0; var23 < 4; var23++) {
                     Statics.field541[var23] += 50;
                 }
                 Statics.field501.field833 = new Isaac(Statics.field541);
                 new Isaac(Statics.field541);
-                Statics.field501.field832.method16876(Statics.field501.field833);
+                Statics.field501.field832.setIsaac(Statics.field501.field833);
                 Statics.field541 = null;
                 field531 = 96;
             }
             if (field531 == 96) {
-                if (!Statics.field501.method1927().method7212(1)) {
+                if (!Statics.field501.getStream().method7212(1)) {
                     return;
                 }
-                Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, 1);
+                Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, 1);
                 int var24 = Statics.field501.field832.g1();
                 Statics.field501.field832.pos = 0;
                 if (var24 == 21) {
@@ -552,7 +552,7 @@ public class LoginManager {
                     field531 = 208;
                     method7972(var24);
                     return;
-                } else if (Statics.field500 == 154 && var24 == 49 && client.field8923 != 4) {
+                } else if (Statics.field500 == 154 && var24 == 49 && client.state != 4) {
                     if (field537 != 52) {
                         method7972(var24);
                     }
@@ -578,18 +578,18 @@ public class LoginManager {
                 Statics.field501.method1935();
                 ClientMessage var25 = ClientMessage.method4876();
                 PacketBit var26 = var25.field9467;
-                var26.method16876(Statics.field501.field834);
-                var26.method16864(LoginProt.field2968.field2970);
-                Statics.field501.method1913(var25);
+                var26.setIsaac(Statics.field501.randomOut);
+                var26.pIsaac1(LoginProt.field2968.field2970);
+                Statics.field501.queue(var25);
                 Statics.field501.method1912();
                 field531 = 96;
                 return;
             }
             if (field531 == 120) {
-                if (!Statics.field501.method1927().method7212(1)) {
+                if (!Statics.field501.getStream().method7212(1)) {
                     return;
                 }
-                Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, 1);
+                Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, 1);
                 int var27 = Statics.field501.field832.data[0] & 0xFF;
                 field526 = var27 * 50;
                 field531 = 7;
@@ -599,20 +599,20 @@ public class LoginManager {
                 return;
             }
             if (field531 == 208) {
-                if (!Statics.field501.method1927().method7212(2)) {
+                if (!Statics.field501.getStream().method7212(2)) {
                     return;
                 }
-                Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, 2);
+                Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, 2);
                 field545 = ((Statics.field501.field832.data[0] & 0xFF) << 8) + (Statics.field501.field832.data[1] & 0xFF);
                 field531 = 96;
                 return;
             }
             if (field531 == 235) {
-                if (!Statics.field501.method1927().method7212(4)) {
+                if (!Statics.field501.getStream().method7212(4)) {
                     return;
                 }
-                Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, 4);
-                field507 = Statics.field501.field832.g4();
+                Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, 4);
+                field507 = Statics.field501.field832.g4s();
                 Statics.field501.field832.pos = 0;
                 field531 = 7;
                 method7972(53);
@@ -622,16 +622,16 @@ public class LoginManager {
             }
             if (field531 == 183) {
                 if (Statics.field1025 == 29) {
-                    if (!Statics.field501.method1927().method7212(1)) {
+                    if (!Statics.field501.getStream().method7212(1)) {
                         return;
                     }
-                    Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, 1);
+                    Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, 1);
                     field509 = Statics.field501.field832.data[0] & 0xFF;
                 } else if (Statics.field1025 == 45) {
-                    if (!Statics.field501.method1927().method7212(3)) {
+                    if (!Statics.field501.getStream().method7212(3)) {
                         return;
                     }
-                    Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, 3);
+                    Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, 3);
                     field509 = Statics.field501.field832.data[0] & 0xFF;
                     field543 = ((Statics.field501.field832.data[1] & 0xFF) << 8) + (Statics.field501.field832.data[2] & 0xFF);
                 } else {
@@ -644,10 +644,10 @@ public class LoginManager {
                 return;
             }
             if (field531 == 213) {
-                if (!Statics.field501.method1927().method7212(2)) {
+                if (!Statics.field501.getStream().method7212(2)) {
                     return;
                 }
-                Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, 2);
+                Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, 2);
                 Statics.field501.field832.pos = 0;
                 Statics.field10389 = Statics.field501.field832.g2();
                 Statics.field501.field832.pos = 0;
@@ -655,19 +655,19 @@ public class LoginManager {
                 return;
             }
             if (field531 == 225) {
-                if (!Statics.field501.method1927().method7212(Statics.field10389)) {
+                if (!Statics.field501.getStream().method7212(Statics.field10389)) {
                     return;
                 }
-                Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, Statics.field10389);
+                Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, Statics.field10389);
                 Statics.field501.field832.pos = 0;
                 byte[] var28 = new byte[Statics.field10389 + 1];
-                Statics.field501.field832.method16861(var28, 0, Statics.field10389);
+                Statics.field501.field832.gIsaacArrayBuffer(var28, 0, Statics.field10389);
                 Statics.field501.field832.pos = 0;
                 Packet var29 = new Packet(var28);
                 String var30 = var29.gjstr();
-                Browser.method3613(var30, true, Statics.field4961.field9661.method15781() == 5, client.field8915, client.field9218);
+                Browser.method3613(var30, true, Statics.clientOptions.field9661.method15781() == 5, client.field8915, client.field9218);
                 method7972(Statics.field1025);
-                if (Statics.field500 == 154 && client.field8923 != 4) {
+                if (Statics.field500 == 154 && client.state != 4) {
                     field531 = 96;
                 } else {
                     field531 = 7;
@@ -677,10 +677,10 @@ public class LoginManager {
                 return;
             }
             if (field531 == 136) {
-                if (!Statics.field501.method1927().method7212(1)) {
+                if (!Statics.field501.getStream().method7212(1)) {
                     return;
                 }
-                Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, 1);
+                Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, 1);
                 Statics.field8459 = Statics.field501.field832.data[0] & 0xFF;
                 field531 = 145;
                 return;
@@ -688,10 +688,10 @@ public class LoginManager {
             if (field531 == 145) {
                 PacketBit var31 = Statics.field501.field832;
                 if (Statics.field500 == 223) {
-                    if (!Statics.field501.method1927().method7212(Statics.field8459)) {
+                    if (!Statics.field501.getStream().method7212(Statics.field8459)) {
                         return;
                     }
-                    Statics.field501.method1927().method7196(var31.data, 0, Statics.field8459);
+                    Statics.field501.getStream().method7196(var31.data, 0, Statics.field8459);
                     var31.pos = 0;
                     client.field9074 = var31.g1();
                     client.field8916 = var31.g1();
@@ -708,14 +708,14 @@ public class LoginManager {
                     Statics.field8656.method6040().method6103().method11472(client.field9142);
                     Statics.field3492.method12304(client.field9142);
                     Statics.field3774.method12561(client.field9142);
-                } else if (Statics.field501.method1927().method7212(Statics.field8459)) {
-                    Statics.field501.method1927().method7196(var31.data, 0, Statics.field8459);
+                } else if (Statics.field501.getStream().method7212(Statics.field8459)) {
+                    Statics.field501.getStream().method7196(var31.data, 0, Statics.field8459);
                     var31.pos = 0;
                     client.field9074 = var31.g1();
                     client.field8916 = var31.g1();
                     client.field9054 = var31.g1() == 1;
                     Statics.field8469 = var31.g3s();
-                    Statics.field2119.field10043 = (byte) var31.g1();
+                    Statics.localPlayerEntity.field10043 = (byte) var31.g1();
                     client.field9077 = var31.g1() == 1;
                     client.field9078 = var31.g1() == 1;
                     Statics.field6701 = var31.g8();
@@ -723,22 +723,22 @@ public class LoginManager {
                     int var32 = var31.g1();
                     client.field8998 = (var32 & 0x1) != 0;
                     Statics.field628 = (var32 & 0x2) != 0;
-                    Statics.field3210 = var31.g4();
+                    Statics.field3210 = var31.g4s();
                     Statics.field3497 = var31.g1() == 1;
-                    Statics.field3584 = var31.g4();
+                    Statics.field3584 = var31.g4s();
                     Statics.field3585 = var31.g2();
                     Statics.field5056 = var31.g2();
                     Statics.field4225 = var31.g2();
-                    Statics.field8466 = var31.g4();
+                    Statics.field8466 = var31.g4s();
                     Statics.field771 = new HostNameProvider(Statics.field8466);
                     (new Thread(Statics.field771)).start();
                     Statics.field1685 = var31.g1();
                     Statics.field1599 = var31.g2();
                     Statics.field7157 = var31.g2();
                     Statics.field8432 = var31.g1() == 1;
-                    Statics.field2119.field10040 = Statics.field2119.field10063 = Statics.field10527 = var31.gjstr2();
+                    Statics.localPlayerEntity.field10040 = Statics.localPlayerEntity.field10063 = Statics.field10527 = var31.gjstr2();
                     Statics.field563 = var31.g1();
-                    Statics.field8537 = var31.g4();
+                    Statics.field8537 = var31.g4s();
                     client.field9079 = var31.g1() == 1;
                     Statics.field6779 = new ServerAddress();
                     Statics.field6779.field6768 = var31.g2();
@@ -780,37 +780,37 @@ public class LoginManager {
                     field531 = 7;
                     method7972(2);
                     method3222();
-                    client.method11307(15);
+                    client.setState(15);
                     Statics.field501.field840 = null;
                     return;
                 }
                 field531 = 166;
             }
             if (field531 == 166) {
-                if (!Statics.field501.method1927().method7212(3)) {
+                if (!Statics.field501.getStream().method7212(3)) {
                     return;
                 }
-                Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, 3);
+                Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, 3);
                 field531 = 173;
             }
             if (field531 == 173) {
                 PacketBit var36 = Statics.field501.field832;
                 var36.pos = 0;
-                if (var36.method16859()) {
-                    if (!Statics.field501.method1927().method7212(1)) {
+                if (var36.isIsaac1or2()) {
+                    if (!Statics.field501.getStream().method7212(1)) {
                         return;
                     }
-                    Statics.field501.method1927().method7196(var36.data, 3, 1);
+                    Statics.field501.getStream().method7196(var36.data, 3, 1);
                 }
-                Statics.field501.field840 = ServerProt.method14807()[var36.method16883()];
+                Statics.field501.field840 = ServerProt.method14807()[var36.gIsaac1or2()];
                 Statics.field501.field835 = var36.g2();
                 field531 = 153;
             }
             if (field531 == 153) {
-                if (!Statics.field501.method1927().method7212(Statics.field501.field835)) {
+                if (!Statics.field501.getStream().method7212(Statics.field501.field835)) {
                     return;
                 }
-                Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, Statics.field501.field835);
+                Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, Statics.field501.field835);
                 Statics.field501.field832.pos = 0;
                 int var37 = Statics.field501.field835;
                 field531 = 7;
@@ -821,10 +821,10 @@ public class LoginManager {
                 PacketBit var39 = new PacketBit(var38);
                 System.arraycopy(Statics.field501.field832.data, Statics.field501.field832.pos, var39.data, 0, var38);
                 Statics.field501.field832.pos += var38;
-                if (ServerProt.field3128 == Statics.field501.field840) {
-                    client.field8980.method6135(new RebuildRequest(RebuildType.field3835, var39));
+                if (ServerProt.REBUILD_REGION == Statics.field501.field840) {
+                    client.field8980.method6135(new RebuildRequest(RebuildType.REBUILD_REGION, var39));
                 } else {
-                    client.field8980.method6135(new RebuildRequest(RebuildType.field3836, var39));
+                    client.field8980.method6135(new RebuildRequest(RebuildType.REBUILD_NORMAL, var39));
                 }
                 if (Statics.field501.field832.pos != var37) {
                     throw new RuntimeException(Statics.field501.field832.pos + " " + var37);
@@ -834,17 +834,17 @@ public class LoginManager {
             }
             if (field531 == 197) {
                 if (Statics.field501.field835 == -2) {
-                    if (!Statics.field501.method1927().method7212(2)) {
+                    if (!Statics.field501.getStream().method7212(2)) {
                         return;
                     }
-                    Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, 2);
+                    Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, 2);
                     Statics.field501.field832.pos = 0;
                     Statics.field501.field835 = Statics.field501.field832.g2();
                 }
-                if (!Statics.field501.method1927().method7212(Statics.field501.field835)) {
+                if (!Statics.field501.getStream().method7212(Statics.field501.field835)) {
                     return;
                 }
-                Statics.field501.method1927().method7196(Statics.field501.field832.data, 0, Statics.field501.field835);
+                Statics.field501.getStream().method7196(Statics.field501.field832.data, 0, Statics.field501.field835);
                 Statics.field501.field832.pos = 0;
                 int var40 = Statics.field501.field835;
                 field531 = 7;
@@ -918,16 +918,16 @@ public class LoginManager {
 
     @ObfuscatedName("ta.e(I)V")
     public static void method184() {
-        if (client.method12490(client.field8923)) {
-            if (client.field8959.method1927() == null) {
-                client.method11307(3);
+        if (client.method12490(client.state)) {
+            if (client.field8959.getStream() == null) {
+                client.setState(3);
             } else {
-                client.method11307(15);
+                client.setState(15);
             }
-        } else if (client.field8923 == 3 || client.field8923 == 18) {
-            client.method11307(6);
-        } else if (client.field8923 == 4) {
-            client.method11307(6);
+        } else if (client.state == 3 || client.state == 18) {
+            client.setState(6);
+        } else if (client.state == 4) {
+            client.setState(6);
         }
     }
 
@@ -1005,7 +1005,7 @@ public class LoginManager {
 
     @ObfuscatedName("gc.an(B)V")
     public static void method3965() {
-        if (client.field8923 == 0) {
+        if (client.state == 0) {
             Statics.method1681();
         }
         method3988();
@@ -1027,10 +1027,10 @@ public class LoginManager {
         for (int var1 = 0; var1 < 2048; var1++) {
             client.field9070[var1] = null;
         }
-        Statics.field2119 = null;
-        client.field9104 = 0;
+        Statics.localPlayerEntity = null;
+        client.npcCount = 0;
         client.field8966 = 0;
-        client.field8964.method11925();
+        client.npcs.method11925();
         client.field9007.method11557();
         client.field9090.method11925();
         client.field9091.method11653();
@@ -1039,16 +1039,16 @@ public class LoginManager {
         ChangeLocationRequest.field9292 = new IterableQueue();
         Statics.field2669.method1647();
         Statics.method12620();
-        Statics.field1577 = 0;
-        Statics.field2123 = 0;
-        Statics.field4194 = 0;
-        Statics.field3385 = 0;
-        Statics.field2611 = 0;
-        Statics.field2799 = 0;
-        Statics.field4855 = 0;
-        Statics.field9680 = 0;
-        Statics.field9277 = 0;
-        Statics.field3785 = 0;
+        Statics.cameraMoveToX = 0;
+        Statics.cameraMoveToZ = 0;
+        Statics.cameraMoveToY = 0;
+        Statics.cameraMoveToStep = 0;
+        Statics.cameraMoveToRate = 0;
+        Statics.cameraLookX = 0;
+        Statics.cameraLookZ = 0;
+        Statics.cameraLookY = 0;
+        Statics.cameraLookStep = 0;
+        Statics.cameraLookRate = 0;
         for (int var2 = 0; var2 < Statics.field6666.length; var2++) {
             if (!Statics.field2210[var2]) {
                 Statics.field6666[var2] = -1;
@@ -1087,7 +1087,7 @@ public class LoginManager {
         client.field9028 = true;
         Statics.field2744 = LocType.field6530 = NPCType.field7209 = ObjType.field7118 = new short[256];
         Statics.field2400 = LocalisedText.field6994.method12206(Statics.field2308);
-        Statics.field4961.method15448(Statics.field4961.field9655, Statics.field4961.field9660.method15735());
+        Statics.clientOptions.method15448(Statics.clientOptions.field9655, Statics.clientOptions.field9660.method15735());
         client.field9023 = 0;
         MiniMenu.method11300();
         client.method15612();
@@ -1097,7 +1097,7 @@ public class LoginManager {
 
     @ObfuscatedName("vq.ag(I)Z")
     public static boolean method12287() {
-        if (client.field8923 == 6) {
+        if (client.state == 6) {
             return !Statics.method16489() && !Statics.method8399();
         } else {
             return false;

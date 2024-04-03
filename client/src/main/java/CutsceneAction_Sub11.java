@@ -35,11 +35,11 @@ public class CutsceneAction_Sub11 extends CutsceneAction {
     public void method2873() {
         Statics.field10534[this.field8485].method2821(0);
         Statics.field10534[this.field8488].method2821(1);
-        client.field9033 = 0;
-        client.field9035 = this.field8487 * 4;
-        client.field9219 = 0;
-        client.field9038 = this.field8489;
-        client.field9039 = this.field8486;
+        client.cameraSplinePos = 0;
+        client.cameraSplinePosOffset = this.field8487 * 4;
+        client.cameraSplineRate = 0;
+        client.cameraSplineStart = this.field8489;
+        client.cameraSplineEnd = this.field8486;
         client.field9034 = 1;
         client.field8995 = this.field8490 * 4;
         Statics.field2671 = 1;

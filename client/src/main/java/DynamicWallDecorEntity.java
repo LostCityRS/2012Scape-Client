@@ -17,7 +17,7 @@ public class DynamicWallDecorEntity extends WallDecorLayerEntity implements Loca
 
     public DynamicWallDecorEntity(Scene arg0, RendererToolkit arg1, LocTypeList arg2, LocType arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11, int arg12, int arg13, int arg14) {
         super(arg0, arg6, arg7, arg8, arg4, arg5, arg10, arg11);
-        this.field7570 = new DynamicLoc(arg1, arg2, arg3, arg12, arg13, this.field9807, arg5, this, arg9, arg14);
+        this.field7570 = new DynamicLoc(arg1, arg2, arg3, arg12, arg13, this.level, arg5, this, arg9, arg14);
         this.field7568 = arg3.field6493 != 0 && !arg9;
         this.method15642(1);
     }
@@ -61,10 +61,10 @@ public class DynamicWallDecorEntity extends WallDecorLayerEntity implements Loca
         Matrix4x3 var3 = arg0.method516();
         var3.method5115(this.method8558());
         var3.method5116((float) this.field10496, 0.0F, (float) this.field10497);
-        ScaleRotTrans var4 = this.method8565();
+        ScaleRotTrans var4 = this.getTransform();
         PickableEntity var5 = PickableEntity.method12205(this.field7568);
-        int var6 = (int) var4.field3464.field3475 >> 9;
-        int var7 = (int) var4.field3464.field3477 >> 9;
+        int var6 = (int) var4.trans.x >> 9;
+        int var7 = (int) var4.trans.z >> 9;
         this.field7570.method2438(arg0, var2, var3, var6, var6, var7, var7, true);
         var2.method271(var3, this.field9811[0], 0);
         if (this.field7570.field1229 != null) {
@@ -73,9 +73,9 @@ public class DynamicWallDecorEntity extends WallDecorLayerEntity implements Loca
         }
         this.field7571 = var2.i() || this.field7570.field1229 != null;
         if (this.field7569 == null) {
-            this.field7569 = GraphEntity.method15140((int) var4.field3464.field3475, (int) var4.field3464.field3476, (int) var4.field3464.field3477, var2);
+            this.field7569 = GraphEntity.method15140((int) var4.trans.x, (int) var4.trans.field3476, (int) var4.trans.z, var2);
         } else {
-            GraphEntity.method11162(this.field7569, (int) var4.field3464.field3475, (int) var4.field3464.field3476, (int) var4.field3464.field3477, var2);
+            GraphEntity.method11162(this.field7569, (int) var4.trans.x, (int) var4.trans.field3476, (int) var4.trans.z, var2);
         }
         return var5;
     }
@@ -87,9 +87,9 @@ public class DynamicWallDecorEntity extends WallDecorLayerEntity implements Loca
             return;
         }
         Matrix4x3 var3 = this.method8558();
-        ScaleRotTrans var4 = this.method8565();
-        int var5 = (int) var4.field3464.field3475 >> 9;
-        int var6 = (int) var4.field3464.field3477 >> 9;
+        ScaleRotTrans var4 = this.getTransform();
+        int var5 = (int) var4.trans.x >> 9;
+        int var6 = (int) var4.trans.z >> 9;
         this.field7570.method2438(arg0, var2, var3, var5, var5, var6, var6, false);
     }
 

@@ -74,7 +74,7 @@ public class AsyncRebuild implements Runnable {
 
     @ObfuscatedName("la.t(Lmo;I)V")
     public void method6044(RebuildRequest arg0) {
-        if (RebuildType.field3842 == arg0.field3786) {
+        if (RebuildType.field3842 == arg0.rebuildType) {
             this.field3773.method6102();
         } else {
             this.field3773.method6135(arg0);

@@ -468,7 +468,7 @@ public class LocType {
             }
         } else if (arg1 == 162) {
             this.field6494 = 3;
-            this.field6510 = arg0.g4();
+            this.field6510 = arg0.g4s();
         } else if (arg1 == 163) {
             this.field6524 = arg0.g1b();
             this.field6526 = arg0.g1b();
@@ -518,7 +518,7 @@ public class LocType {
                 if (var35) {
                     var37 = new ObjectNode(arg0.gjstr());
                 } else {
-                    var37 = new IntNode(arg0.g4());
+                    var37 = new IntNode(arg0.g4s());
                 }
                 this.field6543.method11927(var37, (long) var36);
             }

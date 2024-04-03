@@ -94,16 +94,16 @@ public class QuestType {
             this.field5060 = new int[var3][3];
             for (int var4 = 0; var4 < var3; var4++) {
                 this.field5060[var4][0] = arg0.g2();
-                this.field5060[var4][1] = arg0.g4();
-                this.field5060[var4][2] = arg0.g4();
+                this.field5060[var4][1] = arg0.g4s();
+                this.field5060[var4][2] = arg0.g4s();
             }
         } else if (arg1 == 4) {
             int var5 = arg0.g1();
             this.field5061 = new int[var5][3];
             for (int var6 = 0; var6 < var5; var6++) {
                 this.field5061[var6][0] = arg0.g2();
-                this.field5061[var6][1] = arg0.g4();
-                this.field5061[var6][2] = arg0.g4();
+                this.field5061[var6][1] = arg0.g4s();
+                this.field5061[var6][2] = arg0.g4s();
             }
         } else if (arg1 == 5) {
             arg0.g2();
@@ -119,10 +119,10 @@ public class QuestType {
             int var7 = arg0.g1();
             this.field5066 = new int[var7];
             for (int var8 = 0; var8 < var7; var8++) {
-                this.field5066[var8] = arg0.g4();
+                this.field5066[var8] = arg0.g4s();
             }
         } else if (arg1 == 12) {
-            arg0.g4();
+            arg0.g4s();
         } else if (arg1 == 13) {
             int var9 = arg0.g1();
             this.field5076 = new int[var9];
@@ -147,9 +147,9 @@ public class QuestType {
             this.field5072 = new int[var13];
             this.field5073 = new String[var13];
             for (int var14 = 0; var14 < var13; var14++) {
-                this.field5062[var14] = arg0.g4();
-                this.field5071[var14] = arg0.g4();
-                this.field5072[var14] = arg0.g4();
+                this.field5062[var14] = arg0.g4s();
+                this.field5071[var14] = arg0.g4s();
+                this.field5072[var14] = arg0.g4s();
                 this.field5073[var14] = arg0.gjstr();
             }
         } else if (arg1 == 19) {
@@ -159,9 +159,9 @@ public class QuestType {
             this.field5070 = new int[var15];
             this.field5077 = new String[var15];
             for (int var16 = 0; var16 < var15; var16++) {
-                this.field5074[var16] = arg0.g4();
-                this.field5075[var16] = arg0.g4();
-                this.field5070[var16] = arg0.g4();
+                this.field5074[var16] = arg0.g4s();
+                this.field5075[var16] = arg0.g4s();
+                this.field5070[var16] = arg0.g4s();
                 this.field5077[var16] = arg0.gjstr();
             }
         } else if (arg1 == 249) {
@@ -177,7 +177,7 @@ public class QuestType {
                 if (var20) {
                     var22 = new ObjectNode(arg0.gjstr());
                 } else {
-                    var22 = new IntNode(arg0.g4());
+                    var22 = new IntNode(arg0.g4s());
                 }
                 this.field5069.method11927(var22, (long) var21);
             }

@@ -68,7 +68,7 @@ public class ClientScript extends SecondaryNode {
         int var2 = arg0.g2();
         int var3 = arg0.data.length - 2 - var2 - 16;
         arg0.pos = var3;
-        int var4 = arg0.g4();
+        int var4 = arg0.g4s();
         this.field10379 = arg0.g2();
         this.field10387 = arg0.g2();
         this.field10384 = arg0.g2();
@@ -83,8 +83,8 @@ public class ClientScript extends SecondaryNode {
                 IterableMap var8 = new IterableMap(IntMath.method2839(var7));
                 this.field10383[var6] = var8;
                 while (var7-- > 0) {
-                    int var9 = arg0.g4();
-                    int var10 = arg0.g4();
+                    int var9 = arg0.g4s();
+                    int var10 = arg0.g4s();
                     var8.method11927(new IntNode(var10), (long) var9);
                 }
             }
@@ -113,7 +113,7 @@ public class ClientScript extends SecondaryNode {
                 this.field10385 = new int[var4];
             }
             if (arg2.field6315) {
-                this.field10385[arg1] = arg0.g4();
+                this.field10385[arg1] = arg0.g4s();
             } else {
                 this.field10385[arg1] = arg0.g1();
             }

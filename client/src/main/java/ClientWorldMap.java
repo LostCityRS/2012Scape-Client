@@ -75,9 +75,9 @@ public class ClientWorldMap extends WorldMap {
             int[] var2 = new int[3];
             int var3 = -1;
             int var4 = -1;
-            Vector3 var5 = Statics.field2119.method8565().field3464;
+            Vector3 var5 = Statics.localPlayerEntity.getTransform().trans;
             CoordGrid var6 = client.field8980.method6214();
-            if (Statics.field4292.method16705(Statics.field2119.field9807, ((int) var5.field3475 >> 9) + var6.field4836, ((int) var5.field3477 >> 9) + var6.field4838, var2)) {
+            if (Statics.field4292.method16705(Statics.localPlayerEntity.level, ((int) var5.x >> 9) + var6.x, ((int) var5.z >> 9) + var6.z, var2)) {
                 var3 = var2[1] - Statics.field4283;
                 var4 = var2[2] - Statics.field4284;
             }
@@ -803,10 +803,10 @@ public class ClientWorldMap extends WorldMap {
 
     @ObfuscatedName("ru.cb(IIIZB)V")
     public static void method8626(int arg0, int arg1, int arg2, boolean arg3) {
-        if (Statics.field4961.field9661.method15781() == 0) {
+        if (Statics.clientOptions.field9661.method15781() == 0) {
             method7184(false);
         } else {
-            field9764 = Statics.field4961.field9661.method15781();
+            field9764 = Statics.clientOptions.field9661.method15781();
             Statics.method5600(0, true);
         }
         field9759 = arg1;
@@ -822,7 +822,7 @@ public class ClientWorldMap extends WorldMap {
             return;
         }
         Statics.method5600(field9764, false);
-        if (Statics.field4961.field9661.method15781() != field9764) {
+        if (Statics.clientOptions.field9661.method15781() != field9764) {
             switch (field9764) {
                 case 1:
                     GraphicsPacketQueue.method12023(ToolkitType.field7359);

@@ -92,8 +92,8 @@ public class CameraManager {
             var16.field3476 *= -1.0F;
             var2.method5299(var16);
         }
-        CoordFine var17 = new CoordFine(0, (int) var2.field3475, (int) var2.field3476, (int) var2.field3477);
+        CoordFine var17 = new CoordFine(0, (int) var2.x, (int) var2.field3476, (int) var2.z);
         var0.method14091(var17);
-        Statics.field3780.method3727(0.02F, client.field8980.method6101(Statics.field7324), client.field8980.method6157().field3697);
+        Statics.field3780.method3727(0.02F, client.field8980.method6101(Statics.currentPlayerLevel), client.field8980.method6157().field3697);
     }
 }

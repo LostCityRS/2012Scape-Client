@@ -23,7 +23,7 @@ public class CutsceneAction_Sub5 extends CutsceneAction {
         this.field8495 = new int[MoveSpeed.method2553().length];
         this.field8492 = arg0.gSmart2or4null();
         Arrays.fill(this.field8495, 0, this.field8495.length, this.field8492);
-        this.field8494 = arg0.g4();
+        this.field8494 = arg0.g4s();
     }
 
     @ObfuscatedName("zh.j(I)V")

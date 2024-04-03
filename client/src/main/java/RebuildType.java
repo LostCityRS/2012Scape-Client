@@ -10,10 +10,10 @@ public class RebuildType {
     public static final RebuildType field3839 = new RebuildType(true, false);
 
     @ObfuscatedName("mp.a")
-    public static final RebuildType field3836 = new RebuildType(false, false);
+    public static final RebuildType REBUILD_NORMAL = new RebuildType(false, false);
 
     @ObfuscatedName("mp.s")
-    public static final RebuildType field3835 = new RebuildType(true, false);
+    public static final RebuildType REBUILD_REGION = new RebuildType(true, false);
 
     @ObfuscatedName("mp.c")
     public static final RebuildType field3837 = new RebuildType(true, false);
@@ -39,7 +39,7 @@ public class RebuildType {
     }
 
     @ObfuscatedName("mp.u(I)Z")
-    public boolean method6249() {
+    public boolean isRegionType() {
         return this.field3843;
     }
 

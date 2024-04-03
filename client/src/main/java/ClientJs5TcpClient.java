@@ -87,9 +87,9 @@ public class ClientJs5TcpClient extends Js5TcpClient {
                         if (this.field3592 == null) {
                             this.field3590.pos = 0;
                             int var12 = this.field3590.g1();
-                            int var13 = this.field3590.g4();
+                            int var13 = this.field3590.g4s();
                             int var14 = this.field3590.g1();
-                            int var15 = this.field3590.g4();
+                            int var15 = this.field3590.g4s();
                             int var16 = var14 & 0x7F;
                             boolean var17 = (var14 & 0x80) != 0;
                             long var18 = ((long) var12 << 32) + (long) var13;

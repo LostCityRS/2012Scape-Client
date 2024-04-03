@@ -495,8 +495,8 @@ public class ClanSettings {
             this.field2355 = null;
             this.field2367 = null;
         }
-        this.field2348 = arg0.g4();
-        this.field2371 = arg0.g4();
+        this.field2348 = arg0.g4s();
+        this.field2371 = arg0.g4s();
         if (var2 <= 3 && this.field2371 != 0) {
             this.field2371 += 16912800;
         }
@@ -504,7 +504,7 @@ public class ClanSettings {
         this.field2356 = arg0.g1();
         this.field2349 = arg0.gjstr();
         if (var2 >= 4) {
-            arg0.g4();
+            arg0.g4s();
         }
         this.field2366 = arg0.g1() == 1;
         this.field2352 = arg0.g1b();
@@ -536,7 +536,7 @@ public class ClanSettings {
                 }
                 this.field2358[var4] = arg0.g1b();
                 if (var2 >= 2) {
-                    this.field2372[var4] = arg0.g4();
+                    this.field2372[var4] = arg0.g4s();
                 }
                 if (var2 >= 5) {
                     this.field2361[var4] = arg0.g2();
@@ -571,11 +571,11 @@ public class ClanSettings {
         }
         this.field2368 = new IterableMap(var6 < 16 ? IntMath.method2839(var6) : 16);
         while (var6-- > 0) {
-            int var7 = arg0.g4();
+            int var7 = arg0.g4s();
             int var8 = var7 & 0x3FFFFFFF;
             int var9 = var7 >>> 30;
             if (var9 == 0) {
-                int var10 = arg0.g4();
+                int var10 = arg0.g4s();
                 this.field2368.method11927(new IntNode(var10), (long) var8);
             } else if (var9 == 1) {
                 long var11 = arg0.g8();

@@ -47,12 +47,12 @@ public class GWC {
             int var4 = arg0.gSmart1or2();
             GWCWorld var5 = Statics.field4873[var4] = new GWCWorld();
             var5.field4864 = arg0.g1();
-            var5.field4866 = arg0.g4();
+            var5.field4866 = arg0.g4s();
             var5.field9799 = Statics.field4871 + var4;
             var5.field9798 = arg0.gjstr2();
             var5.field9797 = arg0.gjstr2();
         }
-        Statics.field575 = arg0.g4();
+        Statics.field575 = arg0.g4s();
         field4872 = true;
     }
 

@@ -21,7 +21,7 @@ public class CutsceneAction_Sub24 extends CutsceneAction {
     public CutsceneAction_Sub24(Packet arg0) {
         super(arg0);
         this.field8462 = arg0.g2();
-        int var2 = arg0.g4();
+        int var2 = arg0.g4s();
         this.field8461 = var2 >>> 16;
         this.field8460 = var2 & 0xFFFF;
         this.field8463 = arg0.g1();

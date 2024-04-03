@@ -45,7 +45,7 @@ public class CutsceneAction_Sub12 extends CutsceneAction {
     public CutsceneAction_Sub12(Packet arg0, int arg1, int arg2) {
         super(arg0);
         if (arg1 == 0) {
-            int var4 = arg0.g4();
+            int var4 = arg0.g4s();
             this.field8543 = var4 >>> 16;
             this.field8551 = var4 & 0xFFFF;
             this.field8539 = -1;
@@ -55,7 +55,7 @@ public class CutsceneAction_Sub12 extends CutsceneAction {
             this.field8539 = arg0.g2();
         }
         if (arg2 == 0) {
-            int var5 = arg0.g4();
+            int var5 = arg0.g4s();
             this.field8546 = (var5 >>> 16) * 512;
             this.field8548 = (var5 & 0xFFFF) * 512;
             this.field8541 = -1;
@@ -88,10 +88,10 @@ public class CutsceneAction_Sub12 extends CutsceneAction {
             var3 = this.field8547;
         } else {
             PathingEntity var4 = Statics.field1537[this.field8539].method2854();
-            Vector3 var5 = var4.method8565().field3464;
-            var1 = (int) var5.field3475;
-            var2 = (int) var5.field3477;
-            var3 = var4.field9807;
+            Vector3 var5 = var4.getTransform().trans;
+            var1 = (int) var5.x;
+            var2 = (int) var5.z;
+            var3 = var4.level;
         }
         int var6;
         int var7;
@@ -100,11 +100,11 @@ public class CutsceneAction_Sub12 extends CutsceneAction {
             var7 = this.field8548 * 512 + 256;
         } else {
             PathingEntity var8 = Statics.field1537[this.field8541].method2854();
-            Vector3 var9 = var8.method8565().field3464;
-            var6 = (int) var9.field3475;
-            var7 = (int) var9.field3477;
+            Vector3 var9 = var8.getTransform().trans;
+            var6 = (int) var9.x;
+            var7 = (int) var9.z;
             if (var3 < 0) {
-                var3 = var8.field9807;
+                var3 = var8.level;
             }
         }
         int var10 = this.field8553 << 2;

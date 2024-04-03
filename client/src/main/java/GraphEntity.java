@@ -10,7 +10,7 @@ public abstract class GraphEntity extends GraphNode {
     public GraphEntity field9806;
 
     @ObfuscatedName("aes.o")
-    public byte field9807;
+    public byte level;
 
     @ObfuscatedName("aes.q")
     public byte field9809;
@@ -32,7 +32,7 @@ public abstract class GraphEntity extends GraphNode {
 
     @ObfuscatedName("aes.fi(II[Lacg;I)I")
     public int method15637(int arg0, int arg1, Light[] arg2) {
-        long var4 = this.field9808.field4526[this.field9807][arg0][arg1];
+        long var4 = this.field9808.field4526[this.level][arg0][arg1];
         long var6 = 0L;
         int var8 = 0;
         while (var6 <= 48L) {

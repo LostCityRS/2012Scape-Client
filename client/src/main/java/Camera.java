@@ -434,7 +434,7 @@ public abstract class Camera {
         float var3 = 0.0F;
         if (var1 != null && var2 != null) {
             Vector3 var4 = Vector3.method5377(var2, var1);
-            float var5 = (float) Math.sqrt((double) (var4.field3477 * var4.field3477 + var4.field3475 * var4.field3475));
+            float var5 = (float) Math.sqrt((double) (var4.z * var4.z + var4.x * var4.x));
             var3 = (float) Math.atan2((double) -var4.field3476, (double) var5);
             var1.method5291();
             var2.method5291();
@@ -450,7 +450,7 @@ public abstract class Camera {
         if (var1 != null && var2 != null) {
             Vector3 var4 = Vector3.method5377(var1, var2);
             var4.field3476 = 0.0F;
-            var3 = (float) Math.atan2((double) var4.field3475, (double) var4.field3477);
+            var3 = (float) Math.atan2((double) var4.x, (double) var4.z);
             var1.method5291();
             var2.method5291();
         }

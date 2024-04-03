@@ -37,10 +37,10 @@ public class LocReference {
 
     @ObfuscatedName("ro.a(I)Lca;")
     public Location method8723() {
-        int var1 = this.field5196.field4837;
+        int var1 = this.field5196.level;
         CoordGrid var2 = client.field8980.method6214();
-        int var3 = this.field5196.field4836 - var2.field4836;
-        int var4 = this.field5196.field4838 - var2.field4838;
+        int var3 = this.field5196.x - var2.x;
+        int var4 = this.field5196.z - var2.z;
         if (var3 < 0 || var4 < 0 || var3 >= client.field8980.method6220() || var4 >= client.field8980.method6193()) {
             return null;
         }

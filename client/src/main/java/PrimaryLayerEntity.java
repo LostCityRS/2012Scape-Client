@@ -23,7 +23,7 @@ public abstract class PrimaryLayerEntity extends GraphEntity {
 
     public PrimaryLayerEntity(Scene arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, boolean arg10, byte arg11) {
         super(arg0);
-        this.field9807 = (byte) arg1;
+        this.level = (byte) arg1;
         this.field9809 = (byte) arg2;
         this.method8551(new Vector3((float) arg3, (float) arg4, (float) arg5));
         this.field10510 = (short) arg6;
@@ -45,7 +45,7 @@ public abstract class PrimaryLayerEntity extends GraphEntity {
         for (int var3 = this.field10510; var3 <= this.field10508; var3++) {
             label113:
             for (int var4 = this.field10509; var4 <= this.field10511; var4++) {
-                long var5 = this.field9808.field4526[this.field9807][var3][var4];
+                long var5 = this.field9808.field4526[this.level][var3][var4];
                 long var7 = 0L;
                 while (true) {
                     label108:
@@ -108,7 +108,7 @@ public abstract class PrimaryLayerEntity extends GraphEntity {
             }
             label79:
             for (int var19 = 0; var19 < var2; var19++) {
-                long var20 = this.field9808.field4526[this.field9807][var15][var16];
+                long var20 = this.field9808.field4526[this.level][var15][var16];
                 while (var20 != 0L) {
                     StaticPointLight var22 = this.field9808.field4539[(int) ((var20 & 0xFFFFL) - 1L)];
                     var20 >>>= 0x10;
@@ -116,7 +116,7 @@ public abstract class PrimaryLayerEntity extends GraphEntity {
                         continue label79;
                     }
                 }
-                long var23 = this.field9808.field4526[this.field9807][var17][var18];
+                long var23 = this.field9808.field4526[this.level][var17][var18];
                 while (var23 != 0L) {
                     StaticPointLight var25 = this.field9808.field4539[(int) ((var23 & 0xFFFFL) - 1L)];
                     var23 >>>= 0x10;

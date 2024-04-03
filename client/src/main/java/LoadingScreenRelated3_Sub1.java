@@ -71,8 +71,8 @@ public class LoadingScreenRelated3_Sub1 implements LoadingScreenElementConfig {
         int var9 = arg0.g2();
         int var10 = arg0.g2();
         int var11 = arg0.gSmart2or4null();
-        int var12 = arg0.g4();
-        int var13 = arg0.g4();
+        int var12 = arg0.g4s();
+        int var13 = arg0.g4s();
         return new LoadingScreenRelated3_Sub1(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13);
     }
 

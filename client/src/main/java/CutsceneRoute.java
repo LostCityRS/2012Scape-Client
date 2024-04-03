@@ -31,8 +31,8 @@ public class CutsceneRoute {
         for (int var5 = this.field1569.length - 1; var5 >= 0; var5--) {
             int var6 = this.field1569[var5];
             int var7 = this.field1570[var5];
-            var4.field8642[var4.field8628] = var7 >> 16;
-            var4.field8643[var4.field8628] = var7 & 0xFFFF;
+            var4.routeWaypointX[var4.field8628] = var7 >> 16;
+            var4.routeWaypointZ[var4.field8628] = var7 & 0xFFFF;
             byte var8 = MoveSpeed.field3921.field3924;
             if (var6 == 0) {
                 var8 = MoveSpeed.field3920.field3924;

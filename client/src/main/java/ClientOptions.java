@@ -22,7 +22,7 @@ public class ClientOptions extends Node {
     public ClientOptionsBrightness field9642;
 
     @ObfuscatedName("aeg.q")
-    public ClientOptionsBuildArea field9643;
+    public ClientOptionsBuildArea buildArea;
 
     @ObfuscatedName("aeg.p")
     public ClientOptionsDrawDistance field9644;
@@ -157,7 +157,7 @@ public class ClientOptions extends Node {
                 this.field9665 = new ClientOptionsAntiAliasing(this.field9637.method15829(), this);
                 this.field9673 = new ClientOptionsBloom(arg0.g1(), this);
                 this.field9642 = new ClientOptionsBrightness(arg0.g1(), this);
-                this.field9643 = new ClientOptionsBuildArea(arg0.g1(), this);
+                this.buildArea = new ClientOptionsBuildArea(arg0.g1(), this);
                 if (var2 >= 27) {
                     this.field9644 = new ClientOptionsDrawDistance(arg0.g1(), this);
                 }
@@ -223,8 +223,8 @@ public class ClientOptions extends Node {
         if (arg0 || this.field9642 == null) {
             this.field9642 = new ClientOptionsBrightness(this);
         }
-        if (arg0 || this.field9643 == null) {
-            this.field9643 = new ClientOptionsBuildArea(this);
+        if (arg0 || this.buildArea == null) {
+            this.buildArea = new ClientOptionsBuildArea(this);
         }
         if (arg0 || this.field9644 == null) {
             this.field9644 = new ClientOptionsDrawDistance(this);
@@ -384,7 +384,7 @@ public class ClientOptions extends Node {
         if (arg1 >= 4) {
             this.field9648 = new ClientOptionsParticles(arg0.g1(), this);
         }
-        arg0.g4();
+        arg0.g4s();
         if (arg1 >= 6) {
             this.field9663 = new ClientOptionsMaxScreenSize(arg0.g1(), this);
         }
@@ -395,7 +395,7 @@ public class ClientOptions extends Node {
             arg0.g1();
         }
         if (arg1 >= 9) {
-            this.field9643 = new ClientOptionsBuildArea(arg0.g1(), this);
+            this.buildArea = new ClientOptionsBuildArea(arg0.g1(), this);
         }
         if (arg1 >= 10) {
             this.field9673 = new ClientOptionsBloom(arg0.g1(), this);
@@ -436,7 +436,7 @@ public class ClientOptions extends Node {
         var1.p1(this.field9637.method15829());
         var1.p1(this.field9673.method15816());
         var1.p1(this.field9642.method15672());
-        var1.p1(this.field9643.method15792());
+        var1.p1(this.buildArea.getValue());
         var1.p1(this.field9644.method15853());
         var1.p1(this.field9645.method15679());
         var1.p1(this.field9646.method15696());
@@ -489,7 +489,7 @@ public class ClientOptions extends Node {
         this.field9665.method15826();
         this.field9673.method15818();
         this.field9642.method15673();
-        this.field9643.method15789();
+        this.buildArea.method15789();
         this.field9644.method15851();
         this.field9645.method15677();
         this.field9646.method15695();

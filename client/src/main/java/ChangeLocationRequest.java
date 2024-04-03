@@ -203,10 +203,10 @@ public final class ChangeLocationRequest extends Node {
         }
         client.field8980.method6157().method14280(Statics.field5187, arg0, arg1, arg2, arg3, client.field8980.method6101(arg0));
         if (arg4 >= 0) {
-            int var9 = Statics.field4961.field9671.method15725();
-            Statics.field4961.method15448(Statics.field4961.field9671, 1);
+            int var9 = Statics.clientOptions.field9671.method15725();
+            Statics.clientOptions.method15448(Statics.clientOptions.field9671, 1);
             client.field8980.method6157().method14304(Statics.field5187, var8, arg0, arg2, arg3, arg4, arg5, arg6, client.field8980.method6101(arg0), arg7);
-            Statics.field4961.method15448(Statics.field4961.field9671, var9);
+            Statics.clientOptions.method15448(Statics.clientOptions.field9671, var9);
         }
     }
 

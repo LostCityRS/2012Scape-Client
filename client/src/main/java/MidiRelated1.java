@@ -47,8 +47,8 @@ public class MidiRelated1 {
         this.field1610 = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-            int var4 = this.field1614.g4();
-            int var5 = this.field1614.g4();
+            int var4 = this.field1614.g4s();
+            int var5 = this.field1614.g4s();
             if (var4 == 1297379947) {
                 this.field1610[var3] = this.field1614.pos;
                 var3++;

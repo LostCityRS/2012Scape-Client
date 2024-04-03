@@ -17,7 +17,7 @@ public class DynamicSceneryEntity extends PrimaryLayerEntity implements Location
 
     public DynamicSceneryEntity(Scene arg0, RendererToolkit arg1, LocTypeList arg2, LocType arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11, int arg12, int arg13, int arg14, int arg15, int arg16) {
         super(arg0, arg4, arg5, arg6, arg7, arg8, arg10, arg11, arg12, arg13, arg3.field6527 == 1, method3987(arg14, arg15));
-        this.field7524 = new DynamicLoc(arg1, arg2, arg3, arg14, arg15, this.field9807, arg5, this, arg9, arg16);
+        this.field7524 = new DynamicLoc(arg1, arg2, arg3, arg14, arg15, this.level, arg5, this, arg9, arg16);
         this.field7526 = arg3.field6493 != 0 && !arg9;
         this.method15642(1);
     }
@@ -71,11 +71,11 @@ public class DynamicSceneryEntity extends PrimaryLayerEntity implements Location
             arg0.method733(var5);
         }
         this.field7527 = var2.i() || this.field7524.field1229 != null;
-        ScaleRotTrans var6 = this.method8565();
+        ScaleRotTrans var6 = this.getTransform();
         if (this.field7525 == null) {
-            this.field7525 = GraphEntity.method15140((int) var6.field3464.field3475, (int) var6.field3464.field3476, (int) var6.field3464.field3477, var2);
+            this.field7525 = GraphEntity.method15140((int) var6.trans.x, (int) var6.trans.field3476, (int) var6.trans.z, var2);
         } else {
-            GraphEntity.method11162(this.field7525, (int) var6.field3464.field3475, (int) var6.field3464.field3476, (int) var6.field3464.field3477, var2);
+            GraphEntity.method11162(this.field7525, (int) var6.trans.x, (int) var6.trans.field3476, (int) var6.trans.z, var2);
         }
         return var4;
     }
