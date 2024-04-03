@@ -59,7 +59,7 @@ public class ClientScript extends SecondaryNode {
         if (var3 < 0 || var3 >= arg1.length) {
             throw new RuntimeException("");
         }
-        return arg1[var3];
+        return ClientScriptCommand.TRANSLATE_BY_ID[var3]; // arg1[var3];
     }
 
     @ObfuscatedName("ajg.j(Laet;S)I")

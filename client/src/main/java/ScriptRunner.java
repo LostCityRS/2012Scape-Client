@@ -405,3142 +405,3142 @@ public final class ScriptRunner {
     @ObfuscatedName("ml.i(Lsd;Lrn;I)V")
     public static final void method6241(ClientScriptCommand arg0, ClientScriptState arg1) throws CameraException {
         switch (arg0.field6283) {
-            case 0:
+            case 1022:
                 method4561(arg1);
                 return;
-            case 1:
+            case 537:
                 method1559(arg1);
                 return;
-            case 2:
+            case 964:
                 method6789(arg1);
                 return;
-            case 3:
+            case 884:
                 method6337(arg1);
                 return;
-            case 4:
+            case 581:
                 Statics.method1954(arg1);
                 return;
-            case 5:
+            case 408:
                 method2810(arg1);
                 return;
-            case 6:
+            case 965:
                 method1620(arg1);
                 return;
-            case 7:
+            case 551:
                 Statics.method2823(arg1);
                 return;
-            case 8:
+            case 660:
                 method2887(arg1);
                 return;
-            case 9:
+            case 944:
                 method4572(arg1);
                 return;
-            case 10:
+            case 702:
                 method3080(arg1);
                 return;
-            case 11:
+            case 438:
                 method6348(arg1);
                 return;
-            case 12:
+            case 75:
                 method4696(arg1);
                 return;
-            case 13:
+            case 295:
                 method15920(arg1);
                 return;
-            case 14:
+            case 464:
                 method1678(arg1);
                 return;
-            case 15:
+            case 676:
                 method6310(arg1);
                 return;
-            case 16:
+            case 1000:
                 method15676(arg1);
                 return;
-            case 17:
+            case 781:
                 method6819(arg1);
                 return;
-            case 18:
+            case 877:
                 method4751(arg1);
                 return;
-            case 19:
+            case 957:
                 method7729(arg1);
                 return;
-            case 20:
+            case 900:
                 method11158(arg1);
                 return;
-            case 21:
+            case 970:
                 method15216(arg1);
                 return;
-            case 22:
+            case 456:
                 method3952(arg1);
                 return;
-            case 23:
+            case 248:
                 method6977(arg1);
                 return;
-            case 24:
+            case 612:
                 method3968(arg1);
                 return;
-            case 25:
+            case 504:
                 Statics.method12748(arg1);
                 return;
-            case 26:
+            case 1030:
                 method12344(arg1);
                 return;
-            case 27:
+            case 471:
                 Statics.method7981(arg1);
                 return;
-            case 28:
+            case 582:
                 method11080(arg1);
                 return;
-            case 29:
+            case 49:
                 Statics.method12369(arg1);
                 return;
-            case 30:
+            case 166:
                 method12726(arg1);
                 return;
-            case 31:
+            case 580:
                 Statics.method7676(arg1);
                 return;
-            case 32:
+            case 623:
                 Statics.method4729(arg1);
                 return;
-            case 33:
+            case 666:
                 method3508(arg1);
                 return;
-            case 34:
+            case 912:
                 method1247(arg1);
                 return;
-            case 35:
+            case 716:
                 Statics.method7693(arg1);
                 return;
-            case 36:
+            case 669:
                 method1561(arg1);
                 return;
-            case 37:
+            case 843:
                 method6580(arg1);
                 return;
-            case 38:
+            case 424:
                 method1375(arg1);
                 return;
-            case 39:
+            case 242:
                 method5788(arg1);
                 return;
-            case 40:
+            case 173:
                 method11865(arg1);
                 return;
-            case 41:
+            case 876:
                 method6314(arg1);
                 return;
-            case 42:
+            case 902:
                 method12651(arg1);
                 return;
-            case 43:
+            case 637:
                 method7896(arg1);
                 return;
-            case 44:
+            case 972:
                 method2584(arg1);
                 return;
-            case 45:
+            case 397:
                 method7279(arg1);
                 return;
-            case 46:
+            case 290:
                 method12115(arg1);
                 return;
-            case 47:
+            case 602:
                 method8273(arg1);
                 return;
-            case 48:
+            case 714:
                 method7382(arg1);
                 return;
-            case 49:
+            case 52:
                 method4611(arg1);
                 return;
-            case 50:
+            case 243:
                 method12691(arg1);
                 return;
-            case 51:
+            case 806:
                 method2811(arg1);
                 return;
-            case 52:
+            case 994:
                 method6022(arg1);
                 return;
-            case 53:
+            case 128:
                 method2022(arg1);
                 return;
-            case 54:
+            case 931:
                 method2846(arg1);
                 return;
-            case 55:
+            case 51:
                 method4566(arg1);
                 return;
-            case 56:
+            case 611:
                 method5588(arg1);
                 return;
-            case 57:
+            case 1020:
                 method8632(arg1);
                 return;
-            case 58:
+            case 908:
                 method3086(arg1);
                 return;
-            case 59:
+            case 742:
                 method1396(arg1);
                 return;
-            case 60:
+            case 455:
                 method2863(arg1);
                 return;
-            case 61:
+            case 114:
                 method7990(arg1);
                 return;
-            case 62:
+            case 949:
                 method13910(arg1);
                 return;
-            case 63:
+            case 592:
                 Statics.method3585(arg1);
                 return;
-            case 64:
+            case 771:
                 method3214(arg1);
                 return;
-            case 65:
+            case 622:
                 method6477(arg1);
                 return;
-            case 66:
+            case 815:
                 method12503(arg1);
                 return;
-            case 67:
+            case 894:
                 method15675(arg1);
                 return;
-            case 68:
+            case 415:
                 method6079(arg1);
                 return;
-            case 69:
+            case 13:
                 method4559(arg1);
                 return;
-            case 70:
+            case 700:
                 method7812(arg1);
                 return;
-            case 71:
+            case 309:
                 method13879(arg1);
                 return;
-            case 72:
+            case 615:
                 method5559(arg1);
                 return;
-            case 73:
+            case 770:
                 method7278(arg1);
                 return;
-            case 74:
+            case 1024:
                 method3212(arg1);
                 return;
-            case 75:
+            case 684:
                 method8593(arg1);
                 return;
-            case 76:
+            case 12:
                 method1590(arg1);
                 return;
-            case 77:
+            case 1016:
                 method6077(arg1);
                 return;
-            case 78:
+            case 380:
                 method6883(arg1);
                 return;
-            case 79:
+            case 1017:
                 QuestCommands.method12290(arg1);
                 return;
-            case 80:
+            case 34:
                 method15856(arg1);
                 return;
-            case 81:
+            case 575:
                 method12345(arg1);
                 return;
-            case 82:
+            case 977:
                 method1772(arg1);
                 return;
-            case 83:
+            case 421:
                 method4726(arg1);
                 return;
-            case 84:
+            case 157:
                 method7077(arg1);
                 return;
-            case 85:
+            case 459:
                 method5791(arg1);
                 return;
-            case 86:
+            case 132:
                 method11328(arg1);
                 return;
-            case 87:
+            case 752:
                 method13888(arg1);
                 return;
-            case 88:
+            case 583:
                 QuestCommands.method4578(arg1);
                 return;
-            case 89:
+            case 870:
                 method3841(arg1);
                 return;
-            case 90:
+            case 672:
                 method2583(arg1);
                 return;
-            case 91:
+            case 249:
                 method7721(arg1);
                 return;
-            case 92:
+            case 254:
                 method3476(arg1);
                 return;
-            case 93:
+            case 636:
                 method1684(false, arg1);
                 return;
-            case 94:
+            case 671:
                 method1908(arg1);
                 return;
-            case 95:
+            case 336:
                 method15146(arg1);
                 return;
-            case 96:
+            case 893:
                 method11872(arg1);
                 return;
-            case 97:
+            case 80:
                 method11142(arg1);
                 return;
-            case 98:
+            case 625:
                 QuestCommands.method8606(arg1);
                 return;
-            case 99:
+            case 88:
                 method6851(arg1);
                 return;
-            case 100:
+            case 328:
                 method3632(arg1);
                 return;
-            case 101:
+            case 631:
                 method11688(arg1);
                 return;
-            case 102:
+            case 412:
                 method1806(arg1);
                 return;
-            case 103:
+            case 461:
                 method3570(arg1);
                 return;
-            case 104:
+            case 435:
                 method4598(arg1);
                 return;
-            case 105:
+            case 588:
                 method1699(arg1);
                 return;
-            case 106:
+            case 250:
                 method4556(arg1);
                 return;
-            case 107:
+            case 27:
                 method5616(arg1);
                 return;
-            case 108:
+            case 233:
                 Statics.method6035(arg1);
                 return;
-            case 109:
+            case 224:
                 method11155(arg1);
                 return;
-            case 110:
+            case 787:
                 method7372(arg1);
                 return;
-            case 111:
+            case 388:
                 method8081(arg1);
                 return;
-            case 112:
+            case 131:
                 method5922(arg1);
                 return;
-            case 113:
+            case 85:
                 method6850(arg1);
                 return;
-            case 114:
+            case 565:
                 method11907(arg1);
                 return;
-            case 115:
+            case 591:
                 method8030(arg1);
                 return;
-            case 116:
+            case 179:
                 method12505(arg1);
                 return;
-            case 117:
+            case 996:
                 method3215(arg1);
                 return;
-            case 118:
+            case 1039:
                 method4106(arg1);
                 return;
-            case 119:
+            case 850:
                 method3301(arg1);
                 return;
-            case 120:
+            case 722:
                 method3528(arg1);
                 return;
-            case 121:
+            case 155:
                 method11166(arg1);
                 return;
-            case 122:
+            case 703:
                 method7178(arg1);
                 return;
-            case 123:
+            case 566:
                 Statics.method7744(arg1);
                 return;
-            case 124:
+            case 647:
                 method8604(arg1);
                 return;
-            case 125:
+            case 987:
                 method4737(arg1);
                 return;
-            case 126:
+            case 639:
                 method3507(arg1);
                 return;
-            case 127:
+            case 845:
                 method12384(arg1);
                 return;
-            case 128:
+            case 774:
                 method5709(arg1);
                 return;
-            case 129:
+            case 757:
                 method1602(arg1);
                 return;
-            case 130:
+            case 511:
                 method14120(arg1);
                 return;
-            case 131:
+            case 809:
                 method7969(arg1);
                 return;
-            case 132:
+            case 578:
                 QuestCommands.method12348(arg1);
                 return;
-            case 133:
+            case 500:
                 method8648(arg1);
                 return;
-            case 134:
+            case 96:
                 method1328(arg1);
                 return;
-            case 135:
+            case 899:
                 method6852(arg1);
                 return;
-            case 136:
+            case 301:
                 method3525(arg1);
                 return;
-            case 137:
+            case 650:
                 QuestCommands.method5926(arg1);
                 return;
-            case 138:
+            case 476:
                 method2814(arg1);
                 return;
-            case 139:
+            case 343:
                 Statics.method12909(arg1);
                 return;
-            case 140:
+            case 614:
                 method12182(arg1);
                 return;
-            case 141:
+            case 909:
                 method1961(arg1);
                 return;
-            case 142:
+            case 892:
                 method1369(arg1);
                 return;
-            case 143:
+            case 165:
                 Statics.method2843(arg1);
                 return;
-            case 144:
+            case 807:
                 method12940(arg1);
                 return;
-            case 145:
+            case 896:
                 method6255(arg1);
                 return;
-            case 146:
+            case 826:
                 method7395(arg1);
                 return;
-            case 147:
+            case 367:
                 Statics.method4697(arg1);
                 return;
-            case 148:
+            case 86:
                 QuestCommands.method1982(arg1);
                 return;
-            case 149:
+            case 658:
                 method4005(arg1);
                 return;
-            case 150:
+            case 737:
                 method1809(arg1);
                 return;
-            case 151:
+            case 783:
                 method13863(arg1);
                 return;
-            case 152:
+            case 293:
                 method3221(arg1);
                 return;
-            case 153:
+            case 167:
                 method4032(arg1);
                 return;
-            case 154:
+            case 467:
                 method11948(arg1);
                 return;
-            case 155:
+            case 962:
                 Statics.method7879(arg1);
                 return;
-            case 156:
+            case 535:
                 method1959(arg1);
                 return;
-            case 157:
+            case 352:
                 method4563(arg1);
                 return;
-            case 158:
+            case 681:
                 method4874(arg1);
                 return;
-            case 159:
+            case 183:
                 method1220(arg1);
                 return;
-            case 160:
+            case 1021:
                 method2469(arg1);
                 return;
-            case 161:
+            case 287:
                 method4616(arg1);
                 return;
-            case 162:
+            case 347:
                 method7728(arg1);
                 return;
-            case 163:
+            case 777:
                 method13887(arg1);
                 return;
-            case 164:
+            case 146:
                 method7162(arg1);
                 return;
-            case 165:
+            case 99:
                 method14716(arg1);
                 return;
-            case 166:
+            case 866:
                 Statics.method4711(arg1);
                 return;
-            case 167:
+            case 555:
                 method5790(arg1);
                 return;
-            case 168:
+            case 934:
                 method8093(arg1);
                 return;
-            case 169:
+            case 175:
                 method12877(arg1);
                 return;
-            case 170:
+            case 743:
                 QuestCommands.method11880(arg1);
                 return;
-            case 171:
+            case 185:
                 method4605(arg1);
                 return;
-            case 172:
+            case 360:
                 method12158(arg1);
                 return;
-            case 173:
+            case 490:
                 method6080(arg1);
                 return;
-            case 174:
+            case 463:
                 method2866(arg1);
                 return;
-            case 175:
+            case 760:
                 method7215(arg1);
                 return;
-            case 176:
+            case 354:
                 method3067(arg1);
                 return;
-            case 177:
+            case 28:
                 method14048(arg1);
                 return;
-            case 178:
+            case 805:
                 method6030(arg1);
                 return;
-            case 179:
+            case 919:
                 method5923(arg1);
                 return;
-            case 180:
+            case 1009:
                 Statics.method4654(arg1);
                 return;
-            case 181:
+            case 379:
                 Statics.method3571(arg1);
                 return;
-            case 182:
+            case 999:
                 Statics.method2426(arg1);
                 return;
-            case 183:
+            case 349:
                 method11056(arg1);
                 return;
-            case 184:
+            case 562:
                 Statics.method3542(arg1);
                 return;
-            case 185:
+            case 279:
                 method6345(arg1);
                 return;
-            case 186:
+            case 665:
                 method8270(arg1);
                 return;
-            case 187:
+            case 168:
                 Statics.method3622(arg1);
                 return;
-            case 188:
+            case 140:
                 Statics.method4615(arg1);
                 return;
-            case 189:
+            case 797:
                 method6063(arg1);
                 return;
-            case 190:
+            case 502:
                 method1701(arg1);
                 return;
-            case 191:
+            case 292:
                 Statics.method12702(arg1);
                 return;
-            case 192:
+            case 11:
                 method5968(arg1);
                 return;
-            case 193:
+            case 521:
                 method7072(arg1);
                 return;
-            case 194:
+            case 929:
                 method3644(arg1);
                 return;
-            case 195:
+            case 685:
                 method4582(arg1);
                 return;
-            case 196:
+            case 916:
                 method2493(arg1);
                 return;
-            case 197:
+            case 321:
                 Statics.method2894(arg1);
                 return;
-            case 198:
+            case 955:
                 method1683(arg1);
                 return;
-            case 199:
+            case 35:
                 method6488(arg1);
                 return;
-            case 200:
+            case 331:
                 Statics.method5827(arg1);
                 return;
-            case 201:
+            case 692:
                 method6028(arg1);
                 return;
-            case 202:
+            case 988:
                 method2555(arg1);
                 return;
-            case 203:
+            case 402:
                 method1836(arg1);
                 return;
-            case 204:
+            case 911:
                 method4632(arg1);
                 return;
-            case 205:
+            case 522:
                 method6021(arg1);
                 return;
-            case 206:
+            case 178:
                 Statics.method8398(arg1);
                 return;
-            case 207:
+            case 122:
                 method15179(arg1);
                 return;
-            case 208:
+            case 533:
                 method5561(arg1);
                 return;
-            case 209:
+            case 596:
                 method883(arg1);
                 return;
-            case 210:
+            case 10:
                 method8348(arg1);
                 return;
-            case 211:
+            case 479:
                 method6827(arg1);
                 return;
-            case 212:
+            case 597:
                 method7347(arg1);
                 return;
-            case 213:
+            case 258:
                 method2838(arg1);
                 return;
-            case 214:
+            case 142:
                 method8031(arg1);
                 return;
-            case 215:
+            case 643:
                 method15810(arg1);
                 return;
-            case 216:
+            case 383:
                 method11114(arg1);
                 return;
-            case 217:
+            case 231:
                 method3940(arg1);
                 return;
-            case 218:
+            case 147:
                 method4035(arg1);
                 return;
-            case 219:
+            case 680:
                 Statics.method6876(arg1);
                 return;
-            case 220:
+            case 296:
                 Statics.method8728(arg1);
                 return;
-            case 221:
+            case 868:
                 method3906(arg1);
                 return;
-            case 222:
+            case 391:
                 method14924(arg1);
                 return;
-            case 223:
+            case 874:
                 method8300(arg1);
                 return;
-            case 224:
+            case 853:
                 QuestCommands.method3220(arg1);
                 return;
-            case 225:
+            case 406:
                 method1953(arg1);
                 return;
-            case 226:
+            case 980:
                 method4639(arg1);
                 return;
-            case 227:
+            case 148:
                 method15442(arg1);
                 return;
-            case 228:
+            case 1018:
                 Statics.method16476(arg1);
                 return;
-            case 229:
+            case 462:
                 method13880(arg1);
                 return;
-            case 230:
+            case 9:
                 method14132(arg1);
                 return;
-            case 231:
+            case 364:
                 method7980(arg1);
                 return;
-            case 232:
+            case 214:
                 method7321(arg1);
                 return;
-            case 233:
+            case 187:
                 method2538(arg1);
                 return;
-            case 234:
+            case 621:
                 method2490(arg1);
                 return;
-            case 235:
+            case 607:
                 method3663(arg1);
                 return;
-            case 236:
+            case 942:
                 method4770(arg1);
                 return;
-            case 237:
+            case 56:
                 method2889(arg1);
                 return;
-            case 238:
+            case 232:
                 method1418(arg1);
                 return;
-            case 239:
+            case 332:
                 Statics.method7975(arg1);
                 return;
-            case 240:
+            case 273:
                 method5566(arg1);
                 return;
-            case 241:
+            case 670:
                 method1344(arg1);
                 return;
-            case 242:
+            case 1025:
                 method16886(arg1);
                 return;
-            case 243:
+            case 811:
                 method3677(arg1);
                 return;
-            case 244:
+            case 546:
                 method6083(arg1);
                 return;
-            case 245:
+            case 414:
                 method7978(arg1);
                 return;
-            case 246:
+            case 959:
                 method5828(arg1);
                 return;
-            case 247:
+            case 690:
                 method3454(arg1);
                 return;
-            case 248:
+            case 841:
                 method6027(arg1);
                 return;
-            case 249:
+            case 879:
                 method13864(arg1);
                 return;
-            case 250:
+            case 997:
                 method7713(arg1);
                 return;
-            case 251:
+            case 208:
                 method8623(arg1);
                 return;
-            case 252:
+            case 439:
                 method4725(arg1);
                 return;
-            case 253:
+            case 326:
                 Statics.method7814(arg1);
                 return;
-            case 254:
+            case 858:
                 method1820(arg1);
                 return;
-            case 255:
+            case 506:
                 method12189(arg1);
                 return;
-            case 256:
+            case 840:
                 method4775(arg1);
                 return;
-            case 257:
+            case 976:
                 method4626(arg1);
                 return;
-            case 258:
+            case 335:
                 method2864(arg1);
                 return;
-            case 259:
+            case 986:
                 method4791(arg1);
                 return;
-            case 260:
+            case 369:
                 method4009(arg1);
                 return;
-            case 261:
+            case 53:
                 method12368(arg1);
                 return;
-            case 262:
+            case 539:
                 method3621(arg1);
                 return;
-            case 263:
+            case 247:
                 method11996(arg1);
                 return;
-            case 264:
+            case 839:
                 method2588(arg1);
                 return;
-            case 265:
+            case 978:
                 method1415(arg1);
                 return;
-            case 266:
+            case 384:
                 method8089(arg1);
                 return;
-            case 267:
+            case 164:
                 method7073(arg1);
                 return;
-            case 268:
+            case 117:
                 method14066(arg1);
                 return;
-            case 269:
+            case 935:
                 method4894(arg1);
                 return;
-            case 270:
+            case 492:
                 method2921(arg1);
                 return;
-            case 271:
+            case 856:
                 method12886(arg1);
                 return;
-            case 272:
+            case 1036:
                 method1975(arg1);
                 return;
-            case 273:
+            case 735:
                 method2574(arg1);
                 return;
-            case 274:
+            case 712:
                 method1324(arg1);
                 return;
-            case 275:
+            case 793:
                 QuestCommands.method8541(arg1);
                 return;
-            case 276:
+            case 928:
                 method6313(arg1);
                 return;
-            case 277:
+            case 396:
                 method8285(arg1);
                 return;
-            case 278:
+            case 118:
                 method1904(arg1);
                 return;
-            case 279:
+            case 878:
                 method1666(arg1);
                 return;
-            case 280:
+            case 454:
                 method1377(arg1);
                 return;
-            case 281:
+            case 610:
                 method11711(arg1);
                 return;
-            case 282:
+            case 963:
                 method7067(arg1);
                 return;
-            case 283:
+            case 89:
                 Statics.method8660(arg1);
                 return;
-            case 284:
+            case 534:
                 method827(arg1);
                 return;
-            case 285:
+            case 1004:
                 method1669(arg1);
                 return;
-            case 286:
+            case 646:
                 method5966(arg1);
                 return;
-            case 287:
+            case 921:
                 method14962(arg1);
                 return;
-            case 288:
+            case 60:
                 method4570(arg1);
                 return;
-            case 289:
+            case 365:
                 method7743(arg1);
                 return;
-            case 290:
+            case 633:
                 method11075(arg1);
                 return;
-            case 291:
+            case 253:
                 QuestCommands.method1348(arg1);
                 return;
-            case 292:
+            case 84:
                 method14810(arg1);
                 return;
-            case 293:
+            case 212:
                 method14812(arg1);
                 return;
-            case 294:
+            case 137:
                 method2708(arg1);
                 return;
-            case 295:
+            case 192:
                 method4640(arg1);
                 return;
-            case 296:
+            case 694:
                 method3584(arg1);
                 return;
-            case 297:
+            case 903:
                 method8616(arg1);
                 return;
-            case 298:
+            case 430:
                 method3653(arg1);
                 return;
-            case 299:
+            case 719:
                 QuestCommands.method14068(arg1);
                 return;
-            case 300:
+            case 554:
                 method1816(arg1);
                 return;
-            case 301:
+            case 39:
                 method12740(arg1);
                 return;
-            case 302:
+            case 227:
                 method3675(arg1);
                 return;
-            case 303:
+            case 491:
                 method8079(arg1);
                 return;
-            case 304:
+            case 630:
                 method6025(arg1);
                 return;
-            case 305:
+            case 651:
                 method4722(arg1);
                 return;
-            case 306:
+            case 348:
                 method8608(arg1);
                 return;
-            case 307:
+            case 552:
                 Statics.method2717(arg1);
                 return;
-            case 308:
+            case 202:
                 method3970(arg1);
                 return;
-            case 309:
+            case 163:
                 method1713(arg1);
                 return;
-            case 310:
+            case 220:
                 method6971(arg1);
                 return;
-            case 311:
+            case 197:
                 method3317(arg1);
                 return;
-            case 312:
+            case 724:
                 QuestCommands.method7657(arg1);
                 return;
-            case 313:
+            case 149:
                 Statics.method11055(arg1);
                 return;
-            case 314:
+            case 272:
                 method6487(arg1);
                 return;
-            case 315:
+            case 529:
                 Statics.method8622(arg1);
                 return;
-            case 316:
+            case 110:
                 method6877(arg1);
                 return;
-            case 317:
+            case 275:
                 method15609(arg1);
                 return;
-            case 318:
+            case 758:
                 Statics.method6879(arg1);
                 return;
-            case 319:
+            case 235:
                 method7346(arg1);
                 return;
-            case 320:
+            case 423:
                 method1971(arg1);
                 return;
-            case 321:
+            case 867:
                 method7979(arg1);
                 return;
-            case 322:
+            case 283:
                 method3474(arg1);
                 return;
-            case 323:
+            case 451:
                 method3966(arg1);
                 return;
-            case 324:
+            case 199:
                 method2985(arg1);
                 return;
-            case 325:
+            case 1044:
                 method7064(arg1);
                 return;
-            case 326:
+            case 54:
                 method826(arg1);
                 return;
-            case 327:
+            case 264:
                 method2558(arg1);
                 return;
-            case 328:
+            case 76:
                 method16249(arg1);
                 return;
-            case 329:
+            case 1002:
                 method4785(arg1);
                 return;
-            case 330:
+            case 981:
                 method3923(arg1);
                 return;
-            case 331:
+            case 803:
                 method7281(arg1);
                 return;
-            case 332:
+            case 772:
                 method3316(arg1);
                 return;
-            case 333:
+            case 956:
                 method4730(arg1);
                 return;
-            case 334:
+            case 778:
                 method3447(arg1);
                 return;
-            case 335:
+            case 276:
                 method12225(arg1);
                 return;
-            case 336:
+            case 644:
                 method12635(arg1);
                 return;
-            case 337:
+            case 790:
                 method6791(arg1);
                 return;
-            case 338:
+            case 827:
                 method4603(arg1);
                 return;
-            case 339:
+            case 325:
                 method4734(arg1);
                 return;
-            case 340:
+            case 833:
                 method1560(arg1);
                 return;
-            case 341:
+            case 801:
                 method3568(arg1);
                 return;
-            case 342:
+            case 314:
                 Statics.method7717(arg1);
                 return;
-            case 343:
+            case 375:
                 method3651(arg1);
                 return;
-            case 344:
+            case 593:
                 method3650(arg1);
                 return;
-            case 345:
+            case 620:
                 method5569(arg1);
                 return;
-            case 346:
+            case 717:
                 method15938(arg1);
                 return;
-            case 347:
+            case 817:
                 method15893(arg1);
                 return;
-            case 348:
+            case 64:
                 method11876(arg1);
                 return;
-            case 349:
+            case 193:
                 method2836(arg1);
                 return;
-            case 350:
+            case 629:
                 method1808(arg1);
                 return;
-            case 351:
+            case 58:
                 method5015(arg1);
                 return;
-            case 352:
+            case 568:
                 method2582(arg1);
                 return;
-            case 353:
+            case 846:
                 method7892(arg1);
                 return;
-            case 354:
+            case 603:
                 method2899(arg1);
                 return;
-            case 355:
+            case 65:
                 method1353(arg1);
                 return;
-            case 356:
+            case 260:
                 method4001(arg1);
                 return;
-            case 357:
+            case 240:
                 method4101(arg1);
                 return;
-            case 358:
+            case 94:
                 method7730(arg1);
                 return;
-            case 359:
+            case 92:
                 method1222(arg1);
                 return;
-            case 360:
+            case 642:
                 method6346(arg1);
                 return;
-            case 361:
+            case 544:
                 method8045(arg1);
                 return;
-            case 362:
+            case 203:
                 Statics.method3967(arg1);
                 return;
-            case 363:
+            case 448:
                 method12478(arg1);
                 return;
-            case 364:
+            case 170:
                 method8496(arg1);
                 return;
-            case 365:
+            case 821:
                 method8617(arg1);
                 return;
-            case 366:
+            case 553:
                 Statics.method7074(arg1);
                 return;
-            case 367:
+            case 297:
                 Statics.method8597(arg1);
                 return;
-            case 368:
+            case 441:
                 method1679(arg1);
                 return;
-            case 369:
+            case 256:
                 method15482(arg1);
                 return;
-            case 370:
+            case 111:
                 method7571(arg1);
                 return;
-            case 371:
+            case 8:
                 method8665(arg1);
                 return;
-            case 372:
+            case 755:
                 method1622(arg1);
                 return;
-            case 373:
+            case 730:
                 method8603(arg1);
                 return;
-            case 374:
+            case 392:
                 method4976(arg1);
                 return;
-            case 375:
+            case 1028:
                 method12162(arg1);
                 return;
-            case 376:
+            case 419:
                 method4002(arg1);
                 return;
-            case 377:
+            case 465:
                 Statics.method3638(arg1);
                 return;
-            case 378:
+            case 1006:
                 method2987(arg1);
                 return;
-            case 379:
+            case 947:
                 method11198(arg1);
                 return;
-            case 380:
+            case 559:
                 method3661(arg1);
                 return;
-            case 381:
+            case 512:
                 method2428(arg1);
                 return;
-            case 382:
+            case 378:
                 method3673(arg1);
                 return;
-            case 383:
+            case 707:
                 method5829(arg1);
                 return;
-            case 384:
+            case 749:
                 method4780(arg1);
                 return;
-            case 385:
+            case 313:
                 method11163(arg1);
                 return;
-            case 386:
+            case 244:
                 method6067(arg1);
                 return;
-            case 387:
+            case 251:
                 method14743(arg1);
                 return;
-            case 388:
+            case 426:
                 method12636(arg1);
                 return;
-            case 389:
+            case 386:
                 method11707(arg1);
                 return;
-            case 390:
+            case 721:
                 method11762(arg1);
                 return;
-            case 391:
+            case 1011:
                 method5024(arg1);
                 return;
-            case 392:
+            case 1038:
                 Statics.method1605(arg1);
                 return;
-            case 393:
+            case 547:
                 method4736(arg1);
                 return;
-            case 394:
+            case 824:
                 method11960(arg1);
                 return;
-            case 395:
+            case 25:
                 Statics.method16113(arg1);
                 return;
-            case 396:
+            case 705:
                 Statics.method8406(arg1);
                 return;
-            case 397:
+            case 91:
                 method6826(arg1);
                 return;
-            case 398:
+            case 45:
                 method3446(arg1);
                 return;
-            case 399:
+            case 882:
                 method7888(arg1);
                 return;
-            case 400:
+            case 945:
                 QuestCommands.method3566(arg1);
                 return;
-            case 401:
+            case 307:
                 method15787(arg1);
                 return;
-            case 402:
+            case 73:
                 method15613(arg1);
                 return;
-            case 403:
+            case 422:
                 method4622(arg1);
                 return;
-            case 404:
+            case 409:
                 method7554(arg1);
                 return;
-            case 405:
+            case 595:
                 method6258(arg1);
                 return;
-            case 406:
+            case 675:
                 method2354(arg1);
                 return;
-            case 407:
+            case 499:
                 method5071(arg1);
                 return;
-            case 408:
+            case 274:
                 method8589(arg1);
                 return;
-            case 409:
+            case 548:
                 method16682(arg1);
                 return;
-            case 410:
+            case 182:
                 Statics.method12185(arg1);
                 return;
-            case 411:
+            case 308:
                 method8080(arg1);
                 return;
-            case 412:
+            case 229:
                 method8387(arg1);
                 return;
-            case 413:
+            case 263:
                 method8197(arg1);
                 return;
-            case 414:
+            case 641:
                 method3323(arg1);
                 return;
-            case 415:
+            case 446:
                 method7686(arg1);
                 return;
-            case 416:
+            case 998:
                 Statics.method3907(arg1);
                 return;
-            case 417:
+            case 134:
                 method2871(arg1);
                 return;
-            case 418:
+            case 97:
                 method3544(arg1);
                 return;
-            case 419:
+            case 645:
                 Statics.method6647(arg1);
                 return;
-            case 420:
+            case 485:
                 method7374(arg1);
                 return;
-            case 421:
+            case 285:
                 method5619(arg1);
                 return;
-            case 422:
+            case 895:
                 method1413(arg1);
                 return;
-            case 423:
+            case 282:
                 method4695(arg1);
                 return;
-            case 424:
+            case 338:
                 method11537(arg1);
                 return;
-            case 425:
+            case 556:
                 method8408(arg1);
                 return;
-            case 426:
+            case 452:
                 method4690(arg1);
                 return;
-            case 427:
+            case 720:
                 method2869(arg1);
                 return;
-            case 428:
+            case 974:
                 method2589(arg1);
                 return;
-            case 429:
+            case 101:
                 method1203(arg1);
                 return;
-            case 430:
+            case 71:
                 method233(arg1);
                 return;
-            case 431:
+            case 885:
                 method11489(arg1);
                 return;
-            case 432:
+            case 42:
                 method7714(arg1);
                 return;
-            case 433:
+            case 857:
                 method1326(arg1);
                 return;
-            case 434:
+            case 886:
                 Statics.method6069(arg1);
                 return;
-            case 435:
+            case 239:
                 method14131(arg1);
                 return;
-            case 436:
+            case 517:
                 Statics.method2611(arg1);
                 return;
-            case 437:
+            case 259:
                 method5545(arg1);
                 return;
-            case 438:
+            case 576:
                 Statics.method13912(arg1);
                 return;
-            case 439:
+            case 638:
                 method16790(arg1);
                 return;
-            case 440:
+            case 334:
                 method1719(arg1);
                 return;
-            case 441:
+            case 599:
                 Statics.method16642(false, arg1);
                 return;
-            case 442:
+            case 954:
                 method6820(arg1);
                 return;
-            case 443:
+            case 635:
                 method3844(arg1);
                 return;
-            case 444:
+            case 655:
                 method2023(arg1);
                 return;
-            case 445:
+            case 545:
                 method8456(arg1);
                 return;
-            case 446:
+            case 115:
                 method1240(arg1);
                 return;
-            case 447:
+            case 848:
                 method1316(arg1);
                 return;
-            case 448:
+            case 47:
                 method3631(arg1);
                 return;
-            case 449:
+            case 697:
                 method3291(arg1);
                 return;
-            case 450:
+            case 98:
                 method1318(arg1);
                 return;
-            case 451:
+            case 887:
                 method2917(arg1);
                 return;
-            case 452:
+            case 55:
                 method8385(arg1);
                 return;
-            case 453:
+            case 933:
                 method7349(arg1);
                 return;
-            case 454:
+            case 37:
                 method3543(arg1);
                 return;
-            case 455:
+            case 810:
                 method14260(arg1);
                 return;
-            case 456:
+            case 960:
                 method7378(arg1);
                 return;
-            case 457:
+            case 791:
                 method3533(arg1);
                 return;
-            case 458:
+            case 17:
                 method5733(arg1);
                 return;
-            case 459:
+            case 1045:
                 method1684(true, arg1);
                 return;
-            case 460:
+            case 969:
                 method14811(arg1);
                 return;
-            case 461:
+            case 32:
                 method8284(arg1);
                 return;
-            case 462:
+            case 872:
                 method6887(arg1);
                 return;
-            case 463:
+            case 851:
                 method2815(arg1);
                 return;
-            case 464:
+            case 520:
                 method3660(arg1);
                 return;
-            case 465:
+            case 788:
                 method1815(arg1);
                 return;
-            case 466:
+            case 632:
                 method1964(arg1);
                 return;
-            case 467:
+            case 151:
                 method1817(arg1);
                 return;
-            case 468:
+            case 880:
                 method4003(arg1);
                 return;
-            case 469:
+            case 756:
                 method6985(arg1);
                 return;
-            case 470:
+            case 540:
                 method3453(arg1);
                 return;
-            case 471:
+            case 269:
                 method11309(arg1);
                 return;
-            case 472:
+            case 44:
                 method4034(arg1);
                 return;
-            case 473:
+            case 370:
                 method7858(arg1);
                 return;
-            case 474:
+            case 356:
                 method235(arg1);
                 return;
-            case 475:
+            case 820:
                 method7180(arg1);
                 return;
-            case 476:
+            case 330:
                 method2492(arg1);
                 return;
-            case 477:
+            case 901:
                 Statics.method14062(arg1);
                 return;
-            case 478:
+            case 371:
                 method6972(arg1);
                 return;
-            case 479:
+            case 984:
                 method5921(arg1);
                 return;
-            case 480:
+            case 704:
                 method5808(arg1);
                 return;
-            case 481:
+            case 1037:
                 method1963(arg1);
                 return;
-            case 482:
+            case 340:
                 method880(arg1);
                 return;
-            case 483:
+            case 162:
                 method5789(arg1);
                 return;
-            case 484:
+            case 252:
                 method6358(arg1);
                 return;
-            case 485:
+            case 407:
                 method15592(arg1);
                 return;
-            case 486:
+            case 663:
                 method8407(arg1);
                 return;
-            case 487:
+            case 156:
                 method1374(arg1);
                 return;
-            case 488:
+            case 628:
                 method11378(arg1);
                 return;
-            case 489:
+            case 608:
                 Statics.method13892(arg1);
                 return;
-            case 490:
+            case 281:
                 method3524(arg1);
                 return;
-            case 491:
+            case 1019:
                 method11242(arg1);
                 return;
-            case 492:
+            case 159:
                 Statics.method3531(arg1);
                 return;
-            case 493:
+            case 436:
                 method3846(arg1);
                 return;
-            case 494:
+            case 445:
                 method2489(arg1);
                 return;
-            case 495:
+            case 405:
                 method3659(arg1);
                 return;
-            case 496:
+            case 398:
                 method14747(arg1);
                 return;
-            case 497:
+            case 816:
                 method13894(arg1);
                 return;
-            case 498:
+            case 834:
                 method5927(arg1);
                 return;
-            case 499:
+            case 594:
                 method2983(arg1);
                 return;
-            case 500:
+            case 350:
                 method2827(arg1);
                 return;
-            case 501:
+            case 95:
                 method3061(arg1);
                 return;
-            case 502:
+            case 401:
                 method4808(arg1);
                 return;
-            case 503:
+            case 943:
                 method7277(arg1);
                 return;
-            case 504:
+            case 799:
                 method8199(arg1);
                 return;
-            case 505:
+            case 6:
                 method5028(arg1);
                 return;
-            case 506:
+            case 70:
                 method15785(arg1);
                 return;
-            case 507:
+            case 135:
                 Statics.method8303(arg1);
                 return;
-            case 508:
+            case 975:
                 method4691(arg1);
                 return;
-            case 509:
+            case 753:
                 Statics.method11255(arg1);
                 return;
-            case 510:
+            case 206:
                 method6064(arg1);
                 return;
-            case 511:
+            case 852:
                 method3062(arg1);
                 return;
-            case 512:
+            case 141:
                 method2541(arg1);
                 return;
-            case 513:
+            case 404:
                 method11665(arg1);
                 return;
-            case 514:
+            case 150:
                 method8386(arg1);
                 return;
-            case 515:
+            case 971:
                 QuestCommands.method2707(arg1);
                 return;
-            case 516:
+            case 109:
                 method4655(arg1);
                 return;
-            case 517:
+            case 300:
                 method7722(arg1);
                 return;
-            case 518:
+            case 429:
                 method1770(arg1);
                 return;
-            case 519:
+            case 145:
                 method3562(arg1);
                 return;
-            case 520:
+            case 477:
                 method15655(arg1);
                 return;
-            case 521:
+            case 304:
                 method13895(arg1);
                 return;
-            case 522:
+            case 600:
                 method2984(arg1);
                 return;
-            case 523:
+            case 268:
                 method4809(arg1);
                 return;
-            case 524:
+            case 57:
                 method13913(arg1);
                 return;
-            case 525:
+            case 948:
                 method11506(arg1);
                 return;
-            case 526:
+            case 802:
                 method6818(arg1);
                 return;
-            case 527:
+            case 211:
                 method12204(arg1);
                 return;
-            case 528:
+            case 961:
                 method2922(arg1);
                 return;
-            case 529:
+            case 842:
                 method8317(arg1);
                 return;
-            case 530:
+            case 473:
                 method3204(arg1);
                 return;
-            case 531:
+            case 278:
                 method16720(arg1);
                 return;
-            case 532:
+            case 989:
                 method2557(arg1);
                 return;
-            case 533:
+            case 127:
                 method5026(arg1);
                 return;
-            case 534:
+            case 339:
                 method4617(arg1);
                 return;
-            case 535:
+            case 927:
                 method14311(arg1);
                 return;
-            case 536:
+            case 77:
                 method15628(arg1);
                 return;
-            case 537:
+            case 728:
                 method15137(arg1);
                 return;
-            case 538:
+            case 930:
                 method3976(arg1);
                 return;
-            case 539:
+            case 792:
                 method1976(arg1);
                 return;
-            case 540:
+            case 950:
                 method7690(arg1);
                 return;
-            case 541:
+            case 372:
                 method8583(arg1);
                 return;
-            case 542:
+            case 795:
                 method11193(arg1);
                 return;
-            case 543:
+            case 294:
                 method3627(arg1);
                 return;
-            case 544:
+            case 657:
                 Statics.method7831(arg1);
                 return;
-            case 545:
+            case 322:
                 method5542(arg1);
                 return;
-            case 546:
+            case 531:
                 method6074(arg1);
                 return;
-            case 547:
+            case 710:
                 method12553(arg1);
                 return;
-            case 548:
+            case 871:
                 Statics.method3944(arg1);
                 return;
-            case 549:
+            case 324:
                 method13853(arg1);
                 return;
-            case 550:
+            case 738:
                 method4792(arg1);
                 return;
-            case 551:
+            case 946:
                 method8610(arg1);
                 return;
-            case 552:
+            case 662:
                 method12072(arg1);
                 return;
-            case 553:
+            case 346:
                 method15674(arg1);
                 return;
-            case 554:
+            case 695:
                 method1909(arg1);
                 return;
-            case 555:
+            case 678:
                 method7062(arg1);
                 return;
-            case 556:
+            case 418:
                 method7381(arg1);
                 return;
-            case 557:
+            case 873:
                 method3652(arg1);
                 return;
-            case 558:
+            case 731:
                 Statics.method2820(arg1);
                 return;
-            case 559:
+            case 480:
                 method12679(arg1);
                 return;
-            case 560:
+            case 800:
                 method11397(arg1);
                 return;
-            case 561:
+            case 271:
                 method2919(arg1);
                 return;
-            case 562:
+            case 180:
                 method4579(arg1);
                 return;
-            case 563:
+            case 497:
                 method7352(arg1);
                 return;
-            case 564:
+            case 995:
                 method2470(arg1);
                 return;
-            case 565:
+            case 449:
                 method2021(arg1);
                 return;
-            case 566:
+            case 112:
                 method15164(arg1);
                 return;
-            case 567:
+            case 428:
                 method7903(arg1);
                 return;
-            case 568:
+            case 488:
                 method6886(arg1);
                 return;
-            case 569:
+            case 72:
                 method1945(arg1);
                 return;
-            case 570:
+            case 525:
                 method15480(arg1);
                 return;
-            case 571:
+            case 812:
                 method11256(arg1);
                 return;
-            case 572:
+            case 968:
                 Statics.method15610(arg1);
                 return;
-            case 573:
+            case 443:
                 method7741(arg1);
                 return;
-            case 574:
+            case 230:
                 method1346(arg1);
                 return;
-            case 575:
+            case 210:
                 method7742(arg1);
                 return;
-            case 576:
+            case 359:
                 method1881(arg1);
                 return;
-            case 577:
+            case 189:
                 method2556(arg1);
                 return;
-            case 578:
+            case 41:
                 Statics.method11851(arg1);
                 return;
-            case 579:
+            case 503:
                 method8455(arg1);
                 return;
-            case 580:
+            case 357:
                 method6246(arg1);
                 return;
-            case 581:
+            case 20:
                 method2430(arg1);
                 return;
-            case 582:
+            case 626:
                 Statics.method3939(arg1);
                 return;
-            case 583:
+            case 574:
                 Statics.method16642(true, arg1);
                 return;
-            case 584:
+            case 701:
                 method4558(arg1);
                 return;
-            case 585:
+            case 59:
                 method4008(arg1);
                 return;
-            case 586:
+            case 768:
                 method15591(arg1);
                 return;
-            case 587:
+            case 130:
                 method3842(arg1);
                 return;
-            case 588:
+            case 389:
                 method4565(arg1);
                 return;
-            case 589:
+            case 31:
                 Statics.method1977(arg1);
                 return;
-            case 590:
+            case 736:
                 Statics.method2576(arg1);
                 return;
-            case 591:
+            case 831:
                 method3473(arg1);
                 return;
-            case 592:
+            case 81:
                 method7907(arg1);
                 return;
-            case 593:
+            case 433:
                 method1883(arg1);
                 return;
-            case 594:
+            case 990:
                 method7716(arg1);
                 return;
-            case 595:
+            case 188:
                 method15931(arg1);
                 return;
-            case 596:
+            case 266:
                 method6828(arg1);
                 return;
-            case 597:
+            case 280:
                 method12233(arg1);
                 return;
-            case 598:
+            case 829:
                 method4102(arg1);
                 return;
-            case 599:
+            case 453:
                 Statics.method12728(arg1);
                 return;
-            case 600:
+            case 1040:
                 method11296(arg1);
                 return;
-            case 601:
+            case 780:
                 method2837(arg1);
                 return;
-            case 602:
+            case 223:
                 method8482(arg1);
                 return;
-            case 603:
+            case 649:
                 method8200(arg1);
                 return;
-            case 604:
+            case 376:
                 method6242(arg1);
                 return;
-            case 605:
+            case 387:
                 method12724(arg1);
                 return;
-            case 606:
+            case 226:
                 method8228(arg1);
                 return;
-            case 607:
+            case 363:
                 method16115(arg1);
                 return;
-            case 608:
+            case 875:
                 method14266(arg1);
                 return;
-            case 609:
+            case 952:
                 method8584(arg1);
                 return;
-            case 610:
+            case 184:
                 method6075(arg1);
                 return;
-            case 611:
+            case 470:
                 method5708(arg1);
                 return;
-            case 612:
+            case 682:
                 method11758(arg1);
                 return;
-            case 613:
+            case 312:
                 method6969(arg1);
                 return;
-            case 614:
+            case 368:
                 LoadingScreenNewsDisplay.add(arg1, (byte) -95);
                 return;
-            case 615:
+            case 486:
                 method6817(arg1);
                 return;
-            case 616:
+            case 767:
                 method4004(arg1);
                 return;
-            case 617:
+            case 425:
                 method3639(arg1);
                 return;
-            case 618:
+            case 241:
                 method2992(arg1);
                 return;
-            case 619:
+            case 143:
                 method4653(arg1);
                 return;
-            case 620:
+            case 861:
                 method2605(arg1);
                 return;
-            case 621:
+            case 496:
                 method4784(arg1);
                 return;
-            case 622:
+            case 403:
                 method5826(arg1);
                 return;
-            case 623:
+            case 693:
                 method4580(arg1);
                 return;
-            case 624:
+            case 265:
                 method1837(arg1);
                 return;
-            case 625:
+            case 687:
                 method7555(arg1);
                 return;
-            case 626:
+            case 299:
                 method7911(arg1);
                 return;
-            case 627:
+            case 549:
                 method12346(arg1);
                 return;
-            case 628:
+            case 315:
                 method8090(arg1);
                 return;
-            case 629:
+            case 586:
                 method4755(arg1);
                 return;
-            case 630:
+            case 1031:
                 method6243(arg1);
                 return;
-            case 631:
+            case 813:
                 method3535(arg1);
                 return;
-            case 632:
+            case 706:
                 method7878(arg1);
                 return;
-            case 633:
+            case 590:
                 method11324(arg1);
                 return;
-            case 634:
+            case 107:
                 method2585(arg1);
                 return;
-            case 635:
+            case 932:
                 method7181(arg1);
                 return;
-            case 636:
+            case 413:
                 Statics.method7991(arg1);
                 return;
-            case 637:
+            case 542:
                 method8287(arg1);
                 return;
-            case 638:
+            case 609:
                 method4803(arg1);
                 return;
-            case 639:
+            case 46:
                 method7786(arg1);
                 return;
-            case 640:
+            case 982:
                 method1376(arg1);
                 return;
-            case 641:
+            case 698:
                 method7718(arg1);
                 return;
-            case 642:
+            case 561:
                 method7371(arg1);
                 return;
-            case 643:
+            case 317:
                 method1685(arg1);
                 return;
-            case 644:
+            case 200:
                 method15964(arg1);
                 return;
-            case 645:
+            case 104:
                 method2578(arg1);
                 return;
-            case 646:
+            case 303:
                 method6402(arg1);
                 return;
-            case 647:
+            case 437:
                 method3620(arg1);
                 return;
-            case 648:
+            case 746:
                 method3563(arg1);
                 return;
-            case 649:
+            case 323:
                 method11853(arg1);
                 return;
-            case 650:
+            case 587:
                 method828(arg1);
                 return;
-            case 651:
+            case 750:
                 Statics.method3642(arg1);
                 return;
-            case 652:
+            case 40:
                 method15467(arg1);
                 return;
-            case 653:
+            case 664:
                 method8607(arg1);
                 return;
-            case 654:
+            case 668:
                 method12646(arg1);
                 return;
-            case 655:
+            case 618:
                 QuestCommands.method1248(arg1);
                 return;
-            case 656:
+            case 898:
                 method3908(arg1);
                 return;
-            case 657:
+            case 487:
                 method1668(arg1);
                 return;
-            case 658:
+            case 291:
                 QuestCommands.method3307(arg1);
                 return;
-            case 659:
+            case 688:
                 method3628(arg1);
                 return;
-            case 660:
+            case 926:
                 method4715(arg1);
                 return;
-            case 661:
+            case 718:
                 method7229(arg1);
                 return;
-            case 662:
+            case 113:
                 method7736(arg1);
                 return;
-            case 663:
+            case 0:
                 method2580(arg1);
                 return;
-            case 664:
+            case 1032:
                 Statics.method5615(arg1);
                 return;
-            case 665:
+            case 939:
                 Statics.method6081(arg1);
                 return;
-            case 666:
+            case 225:
                 method8483(arg1);
                 return;
-            case 667:
+            case 527:
                 method16789(arg1);
                 return;
-            case 668:
+            case 345:
                 method12222(arg1);
                 return;
-            case 669:
+            case 571:
                 method3083(arg1);
                 return;
-            case 670:
+            case 320:
                 method11183(arg1);
                 return;
-            case 671:
+            case 341:
                 method7182(arg1);
                 return;
-            case 672:
+            case 915:
                 method3094(arg1);
                 return;
-            case 673:
+            case 217:
                 method6489(arg1);
                 return;
-            case 674:
+            case 627:
                 method2939(arg1);
                 return;
-            case 675:
+            case 154:
                 Statics.method7955(arg1);
                 return;
-            case 676:
+            case 855:
                 method3068(arg1);
                 return;
-            case 677:
+            case 205:
                 method3545(arg1);
                 return;
-            case 678:
+            case 510:
                 method4120(arg1);
                 return;
-            case 679:
+            case 5:
                 Statics.method2932(arg1);
                 return;
-            case 680:
+            case 654:
                 Statics.method5938(arg1);
                 return;
-            case 681:
+            case 66:
                 Statics.method2549(arg1);
                 return;
-            case 682:
+            case 906:
                 method2844(arg1);
                 return;
-            case 683:
+            case 605:
                 method4121(arg1);
                 return;
-            case 684:
+            case 673:
                 method12738(arg1);
                 return;
-            case 685:
+            case 78:
                 method2825(arg1);
                 return;
-            case 686:
+            case 572:
                 method7572(arg1);
                 return;
-            case 687:
+            case 634:
                 Statics.method12465(arg1);
                 return;
-            case 688:
+            case 344:
                 method5941(arg1);
                 return;
-            case 689:
+            case 411:
                 method5832(arg1);
                 return;
-            case 690:
+            case 288:
                 method14088(arg1);
                 return;
-            case 691:
+            case 699:
                 Statics.method2577(arg1);
                 return;
-            case 692:
+            case 316:
                 method5573(arg1);
                 return;
-            case 693:
+            case 353:
                 Statics.method4895(arg1);
                 return;
-            case 694:
+            case 216:
                 method4747(arg1);
                 return;
-            case 695:
+            case 640:
                 method7345(arg1);
                 return;
-            case 696:
+            case 245:
                 method3498(arg1);
                 return;
-            case 697:
+            case 524:
                 method12355(arg1);
                 return;
-            case 698:
+            case 121:
                 Statics.method1822(arg1);
                 return;
-            case 699:
+            case 102:
                 method4738(arg1);
                 return;
-            case 700:
+            case 733:
                 method4108(arg1);
                 return;
-            case 701:
+            case 172:
                 method3448(arg1);
                 return;
-            case 702:
+            case 1014:
                 method1204(arg1);
                 return;
-            case 703:
+            case 667:
                 method7183(arg1);
                 return;
-            case 704:
+            case 120:
                 method5710(arg1);
                 return;
-            case 705:
+            case 218:
                 method4670(arg1);
                 return;
-            case 706:
+            case 219:
                 method4709(arg1);
                 return;
-            case 707:
+            case 319:
                 method1607(arg1);
                 return;
-            case 708:
+            case 129:
                 method4804(arg1);
                 return;
-            case 709:
+            case 431:
                 method3466(arg1);
                 return;
-            case 710:
+            case 63:
                 Statics.method4893(arg1);
                 return;
-            case 711:
+            case 440:
                 method882(arg1);
                 return;
-            case 712:
+            case 940:
                 method12856(arg1);
                 return;
-            case 713:
+            case 1007:
                 Statics.method6829(arg1);
                 return;
-            case 714:
+            case 119:
                 QuestCommands.method4614(arg1);
                 return;
-            case 715:
+            case 744:
                 method2716(arg1);
                 return;
-            case 716:
+            case 82:
                 method1398(arg1);
                 return;
-            case 717:
+            case 683:
                 method5027(arg1);
                 return;
-            case 718:
+            case 361:
                 method6793(arg1);
                 return;
-            case 719:
+            case 967:
                 method12750(arg1);
                 return;
-            case 720:
+            case 381:
                 method3636(arg1);
                 return;
-            case 721:
+            case 564:
                 method4716(arg1);
                 return;
-            case 722:
+            case 395:
                 method1591(arg1);
                 return;
-            case 723:
+            case 123:
                 method3938(arg1);
                 return;
-            case 724:
+            case 1008:
                 method2928(arg1);
                 return;
-            case 725:
+            case 24:
                 method15165(arg1);
                 return;
-            case 726:
+            case 739:
                 Statics.method13893(arg1);
                 return;
-            case 727:
+            case 723:
                 method7375(arg1);
                 return;
-            case 728:
+            case 191:
                 method6984(arg1);
                 return;
-            case 729:
+            case 825:
                 method6642(arg1);
                 return;
-            case 730:
+            case 745:
                 method11299(arg1);
                 return;
-            case 731:
+            case 1034:
                 method15669(arg1);
                 return;
-            case 732:
+            case 653:
                 method2819(arg1);
                 return;
-            case 733:
+            case 1001:
                 method2824(arg1);
                 return;
-            case 734:
+            case 410:
                 method1239(arg1);
                 return;
-            case 735:
+            case 257:
                 method11184(arg1);
                 return;
-            case 736:
+            case 691:
                 method5787(arg1);
                 return;
-            case 737:
+            case 270:
                 method12164(arg1);
                 return;
-            case 738:
+            case 523:
                 method6794(arg1);
                 return;
-            case 739:
+            case 891:
                 method7556(arg1);
                 return;
-            case 740:
+            case 204:
                 method2927(arg1);
                 return;
-            case 741:
+            case 696:
                 method14723(arg1);
                 return;
-            case 742:
+            case 215:
                 method3081(arg1);
                 return;
-            case 743:
+            case 818:
                 Statics.method7988(arg1);
                 return;
-            case 744:
+            case 93:
                 method16254(arg1);
                 return;
-            case 745:
+            case 606:
                 method3464(arg1);
                 return;
-            case 746:
+            case 394:
                 method11845(arg1);
                 return;
-            case 747:
+            case 489:
                 method3539(arg1);
                 return;
-            case 748:
+            case 1035:
                 method2610(arg1);
                 return;
-            case 749:
+            case 689:
                 method6847(arg1);
                 return;
-            case 750:
+            case 859:
                 method8615(arg1);
                 return;
-            case 751:
+            case 382:
                 method3206(arg1);
                 return;
-            case 752:
+            case 652:
                 method4557(arg1);
                 return;
-            case 753:
+            case 1023:
                 method7813(arg1);
                 return;
-            case 754:
+            case 444:
                 QuestCommands.method5565(arg1);
                 return;
-            case 755:
+            case 427:
                 method4779(arg1);
                 return;
-            case 756:
+            case 19:
                 method1221(arg1);
                 return;
-            case 757:
+            case 68:
                 method7989(arg1);
                 return;
-            case 758:
+            case 169:
                 Statics.method6790(arg1);
                 return;
-            case 759:
+            case 481:
                 method2817(arg1);
                 return;
-            case 760:
+            case 194:
                 method8513(arg1);
                 return;
-            case 761:
+            case 213:
                 method7246(arg1);
                 return;
-            case 762:
+            case 865:
                 method16940(arg1);
                 return;
-            case 763:
+            case 530:
                 method12207(arg1);
                 return;
-            case 764:
+            case 475:
                 method3523(arg1);
                 return;
-            case 765:
+            case 14:
                 method7689(arg1);
                 return;
-            case 766:
+            case 765:
                 method5570(arg1);
                 return;
-            case 767:
+            case 478:
                 method4708(arg1);
                 return;
-            case 768:
+            case 604:
                 method11536(arg1);
                 return;
-            case 769:
+            case 385:
                 method12680(arg1);
                 return;
-            case 770:
+            case 759:
                 method5592(arg1);
                 return;
-            case 771:
+            case 469:
                 method15141(arg1);
                 return;
-            case 772:
+            case 87:
                 method8619(arg1);
                 return;
-            case 773:
+            case 333:
                 method3624(arg1);
                 return;
-            case 774:
+            case 79:
                 method6581(arg1);
                 return;
-            case 775:
+            case 889:
                 method5070(arg1);
                 return;
-            case 776:
+            case 951:
                 method2924(arg1);
                 return;
-            case 777:
+            case 1041:
                 method4753(arg1);
                 return;
-            case 778:
+            case 138:
                 method8141(arg1);
                 return;
-            case 779:
+            case 513:
                 method12900(arg1);
                 return;
-            case 780:
+            case 74:
                 Statics.method5810(arg1);
                 return;
-            case 781:
+            case 924:
                 method7715(arg1);
                 return;
-            case 782:
+            case 18:
                 method15949(arg1);
                 return;
-            case 783:
+            case 838:
                 method3290(arg1);
                 return;
-            case 784:
+            case 125:
                 method1978(arg1);
                 return;
-            case 785:
+            case 198:
                 method3308(arg1);
                 return;
-            case 786:
+            case 823:
                 method7078(arg1);
                 return;
-            case 787:
+            case 1010:
                 method3567(arg1);
                 return;
-            case 788:
+            case 519:
                 method8046(arg1);
                 return;
-            case 789:
+            case 1026:
                 method7393(arg1);
                 return;
-            case 790:
+            case 567:
                 Statics.method3207(arg1);
                 return;
-            case 791:
+            case 116:
                 method15732(arg1);
                 return;
-            case 792:
+            case 822:
                 QuestCommands.method14038(arg1);
                 return;
-            case 793:
+            case 90:
                 Statics.method7050(arg1);
                 return;
-            case 794:
+            case 327:
                 method2495(arg1);
                 return;
-            case 795:
+            case 393:
                 method7901(arg1);
                 return;
-            case 796:
+            case 937:
                 method8484(arg1);
                 return;
-            case 797:
+            case 923:
                 method3640(arg1);
                 return;
-            case 798:
+            case 67:
                 method12145(arg1);
                 return;
-            case 799:
+            case 174:
                 method4810(arg1);
                 return;
-            case 800:
+            case 536:
                 method1960(arg1);
                 return;
-            case 801:
+            case 941:
                 method7889(arg1);
                 return;
-            case 802:
+            case 528:
                 method15825(arg1);
                 return;
-            case 803:
+            case 740:
                 method16190(arg1);
                 return;
-            case 804:
+            case 43:
                 method8065(arg1);
                 return;
-            case 805:
+            case 860:
                 method8627(arg1);
                 return;
-            case 806:
+            case 420:
                 method1882(arg1);
                 return;
-            case 807:
+            case 318:
                 Statics.method1905(arg1);
                 return;
-            case 808:
+            case 450:
                 method1722(arg1);
                 return;
-            case 809:
+            case 374:
                 method1686(arg1);
                 return;
-            case 810:
+            case 26:
                 method3203(arg1);
                 return;
-            case 811:
+            case 277:
                 method12036(arg1);
                 return;
-            case 812:
+            case 355:
                 method14904(arg1);
                 return;
-            case 813:
+            case 589:
                 method7976(arg1);
                 return;
-            case 814:
+            case 237:
                 method1558(arg1);
                 return;
-            case 815:
+            case 953:
                 method1818(arg1);
                 return;
-            case 816:
+            case 1:
                 method6639(arg1);
                 return;
-            case 817:
+            case 557:
                 method4806(arg1);
                 return;
-            case 818:
+            case 985:
                 method4878(arg1);
                 return;
-            case 819:
+            case 447:
                 method4875(arg1);
                 return;
-            case 820:
+            case 33:
                 method6084(arg1);
                 return;
-            case 821:
+            case 798:
                 Statics.method5571(arg1);
                 return;
-            case 822:
+            case 136:
                 method4721(arg1);
                 return;
-            case 823:
+            case 677:
                 method6968(arg1);
                 return;
-            case 824:
+            case 1015:
                 method3227(arg1);
                 return;
-            case 825:
+            case 828:
                 method4594(arg1);
                 return;
-            case 826:
+            case 246:
                 method5014(arg1);
                 return;
-            case 827:
+            case 186:
                 method7832(arg1);
                 return;
-            case 828:
+            case 289:
                 method6845(arg1);
                 return;
-            case 829:
+            case 616:
                 method3084(arg1);
                 return;
-            case 830:
+            case 748:
                 method6491(arg1);
                 return;
-            case 831:
+            case 734:
                 method16721(arg1);
                 return;
-            case 832:
+            case 910:
                 method13885(arg1);
                 return;
-            case 833:
+            case 741:
                 method1414(arg1);
                 return;
-            case 834:
+            case 518:
                 method11196(arg1);
                 return;
-            case 835:
+            case 1029:
                 method6311(arg1);
                 return;
-            case 836:
+            case 729:
                 method1819(arg1);
                 return;
-            case 837:
+            case 617:
                 method2386(arg1);
                 return;
-            case 838:
+            case 221:
                 method7553(arg1);
                 return;
-            case 839:
+            case 761:
                 method14210(arg1);
                 return;
-            case 840:
+            case 144:
                 method2706(arg1);
                 return;
-            case 841:
+            case 417:
                 method3085(arg1);
                 return;
-            case 842:
+            case 306:
                 method1352(arg1);
                 return;
-            case 843:
+            case 819:
                 method3924(arg1);
                 return;
-            case 844:
+            case 674:
                 method7974(arg1);
                 return;
-            case 845:
+            case 50:
                 method1317(arg1);
                 return;
-            case 846:
+            case 366:
                 Statics.method6646(arg1);
                 return;
-            case 847:
+            case 764:
                 method1973(arg1);
                 return;
-            case 848:
+            case 573:
                 method1769(arg1);
                 return;
-            case 849:
+            case 727:
                 method3977(arg1);
                 return;
-            case 850:
+            case 979:
                 method1967(arg1);
                 return;
-            case 851:
+            case 228:
                 method1593(arg1);
                 return;
-            case 852:
+            case 495:
                 method2353(arg1);
                 return;
-            case 853:
+            case 854:
                 method2713(arg1);
                 return;
-            case 854:
+            case 938:
                 method12727(arg1);
                 return;
-            case 855:
+            case 124:
                 method3509(arg1);
                 return;
-            case 856:
+            case 342:
                 method7063(arg1);
                 return;
-            case 857:
+            case 804:
                 method15823(arg1);
                 return;
-            case 858:
+            case 715:
                 method3672(arg1);
                 return;
-            case 859:
+            case 904:
                 method2812(arg1);
                 return;
-            case 860:
+            case 601:
                 method6023(arg1);
                 return;
-            case 861:
+            case 708:
                 method7894(arg1);
                 return;
-            case 862:
+            case 918:
                 method1700(arg1);
                 return;
-            case 863:
+            case 416:
                 method3845(arg1);
                 return;
-            case 864:
+            case 920:
                 method14748(arg1);
                 return;
-            case 865:
+            case 483:
                 method6356(arg1);
                 return;
-            case 866:
+            case 849:
                 method2993(arg1);
                 return;
-            case 867:
+            case 579:
                 method2886(arg1);
                 return;
-            case 868:
+            case 3:
                 method4776(arg1);
                 return;
-            case 869:
+            case 195:
                 method6479(arg1);
                 return;
-            case 870:
+            case 863:
                 method2895(arg1);
                 return;
-            case 871:
+            case 472:
                 method8347(arg1);
                 return;
-            case 872:
+            case 713:
                 method4636(arg1);
                 return;
-            case 873:
+            case 432:
                 method6948(arg1);
                 return;
-            case 874:
+            case 936:
                 method11763(arg1);
                 return;
-            case 875:
+            case 106:
                 method1715(arg1);
                 return;
-            case 876:
+            case 773:
                 method1345(arg1);
                 return;
-            case 877:
+            case 2:
                 Statics.method8720(arg1);
                 return;
-            case 878:
+            case 358:
                 method3646(arg1);
                 return;
-            case 879:
+            case 377:
                 method2705(arg1);
                 return;
-            case 880:
+            case 769:
                 method2586(arg1);
                 return;
-            case 881:
+            case 474:
                 method12649(arg1);
                 return;
-            case 882:
+            case 782:
                 QuestCommands.method8480(arg1);
                 return;
-            case 883:
+            case 161:
                 method7214(arg1);
                 return;
-            case 884:
+            case 711:
                 method8661(arg1);
                 return;
-            case 885:
+            case 466:
                 method2491(arg1);
                 return;
-            case 886:
+            case 498:
                 method6073(arg1);
                 return;
-            case 887:
+            case 1005:
                 method14089(arg1);
                 return;
-            case 888:
+            case 22:
                 method8138(arg1);
                 return;
-            case 889:
+            case 830:
                 method7687(arg1);
                 return;
-            case 890:
+            case 779:
                 method4604(arg1);
                 return;
-            case 891:
+            case 310:
                 method7771(arg1);
                 return;
-            case 892:
+            case 108:
                 method3452(arg1);
                 return;
-            case 893:
+            case 796:
                 method2850(arg1);
                 return;
-            case 894:
+            case 732:
                 method4863(arg1);
                 return;
-            case 895:
+            case 29:
                 Statics.method12325(arg1);
                 return;
-            case 896:
+            case 659:
                 method14218(arg1);
                 return;
-            case 897:
+            case 434:
                 method5551(arg1);
                 return;
-            case 898:
+            case 1027:
                 method6649(arg1);
                 return;
-            case 899:
+            case 7:
                 Statics.method7968(arg1);
                 return;
-            case 900:
+            case 160:
                 method14217(arg1);
                 return;
-            case 901:
+            case 907:
                 method2986(arg1);
                 return;
-            case 902:
+            case 784:
                 Statics.method234(arg1);
                 return;
-            case 903:
+            case 267:
                 method7902(arg1);
                 return;
-            case 904:
+            case 847:
                 method8286(arg1);
                 return;
-            case 905:
+            case 1012:
                 Statics.method4706(arg1);
                 return;
-            case 906:
+            case 400:
                 QuestCommands.method4601(arg1);
                 return;
-            case 907:
+            case 526:
                 method5809(arg1);
                 return;
-            case 908:
+            case 181:
                 method12328(arg1);
                 return;
-            case 909:
+            case 917:
                 method11199(arg1);
                 return;
-            case 910:
+            case 298:
                 method1714(arg1);
                 return;
-            case 911:
+            case 1043:
                 method11976(arg1);
                 return;
-            case 912:
+            case 390:
                 method4007(arg1);
                 return;
-            case 913:
+            case 584:
                 method1907(arg1);
                 return;
-            case 914:
+            case 61:
                 method8657(arg1);
                 return;
-            case 915:
+            case 457:
                 method2897(arg1);
                 return;
-            case 916:
+            case 905:
                 method13905(arg1);
                 return;
-            case 917:
+            case 468:
                 Statics.method4599(arg1);
                 return;
-            case 918:
+            case 794:
                 method5543(arg1);
                 return;
-            case 919:
+            case 862:
                 method12729(arg1);
                 return;
-            case 920:
+            case 38:
                 method8602(arg1);
                 return;
-            case 921:
+            case 48:
                 method11490(arg1);
                 return;
-            case 922:
+            case 30:
                 method15803(arg1);
                 return;
-            case 923:
+            case 619:
                 method6403(arg1);
                 return;
-            case 924:
+            case 538:
                 method2606(arg1);
                 return;
-            case 925:
+            case 1003:
                 Statics.method11638(arg1);
                 return;
-            case 926:
+            case 585:
                 Statics.method13908(arg1);
                 return;
-            case 927:
+            case 550:
                 method4592(arg1);
                 return;
-            case 928:
+            case 726:
                 method8631(arg1);
                 return;
-            case 929:
+            case 1042:
                 Statics.method4771(arg1);
                 return;
-            case 930:
+            case 158:
                 method11165(arg1);
                 return;
-            case 931:
+            case 832:
                 Statics.method12700(arg1);
                 return;
-            case 932:
+            case 914:
                 method3984(arg1);
                 return;
-            case 933:
+            case 835:
                 method16503(arg1);
                 return;
-            case 934:
+            case 864:
                 method7677(arg1);
                 return;
-            case 935:
+            case 458:
                 Statics.method12749(arg1);
                 return;
-            case 936:
+            case 262:
                 method3569(arg1);
                 return;
-            case 937:
+            case 337:
                 method236(arg1);
                 return;
-            case 938:
+            case 329:
                 Statics.method8091(arg1);
                 return;
-            case 939:
+            case 766:
                 method2885(arg1);
                 return;
-            case 940:
+            case 570:
                 QuestCommands.method8349(arg1);
                 return;
-            case 941:
+            case 725:
                 method2890(arg1);
                 return;
-            case 942:
+            case 351:
                 method3843(arg1);
                 return;
-            case 943:
+            case 1033:
                 method8274(arg1);
                 return;
-            case 944:
+            case 837:
                 method7857(arg1);
                 return;
-            case 945:
+            case 509:
                 method2614(arg1);
                 return;
-            case 946:
+            case 686:
                 method3445(arg1);
                 return;
-            case 947:
+            case 139:
                 Statics.method4555(arg1);
                 return;
-            case 948:
+            case 21:
                 method12998(arg1);
                 return;
-            case 949:
+            case 176:
                 method7570(arg1);
                 return;
-            case 950:
+            case 507:
                 method1887(arg1);
                 return;
-            case 951:
+            case 754:
                 method14059(arg1);
                 return;
-            case 952:
+            case 993:
                 method5965(arg1);
                 return;
-            case 953:
+            case 484:
                 Statics.method14199(arg1);
                 return;
-            case 954:
+            case 598:
                 method14119(arg1);
                 return;
-            case 955:
+            case 362:
                 Statics.method14037(arg1);
                 return;
-            case 956:
+            case 966:
                 method2849(arg1);
                 return;
-            case 957:
+            case 460:
                 method6357(arg1);
                 return;
-            case 958:
+            case 505:
                 method8139(arg1);
                 return;
-            case 959:
+            case 679:
                 method5589(arg1);
                 return;
-            case 960:
+            case 284:
                 method5591(arg1);
                 return;
-            case 961:
+            case 133:
                 method6885(arg1);
                 return;
-            case 962:
+            case 493:
                 Statics.method3922(arg1);
                 return;
-            case 963:
+            case 153:
                 Statics.method4793(arg1);
                 return;
-            case 964:
+            case 236:
                 Statics.method7053(arg1);
                 return;
-            case 965:
+            case 709:
                 method2865(arg1);
                 return;
-            case 966:
+            case 883:
                 method1771(arg1);
                 return;
-            case 967:
+            case 171:
                 method12071(arg1);
                 return;
-            case 968:
+            case 751:
                 method8727(arg1);
                 return;
-            case 969:
+            case 311:
                 method11403(arg1);
                 return;
-            case 970:
+            case 613:
                 method7392(arg1);
                 return;
-            case 971:
+            case 69:
                 method14741(arg1);
                 return;
-            case 972:
+            case 514:
                 Statics.method3532(arg1);
                 return;
-            case 973:
+            case 515:
                 method6338(arg1);
                 return;
-            case 974:
+            case 36:
                 method4595(arg1);
                 return;
-            case 975:
+            case 814:
                 method1325(arg1);
                 return;
-            case 976:
+            case 222:
                 method3082(arg1);
                 return;
-            case 977:
+            case 543:
                 method12451(arg1);
                 return;
-            case 978:
+            case 958:
                 method13881(arg1);
                 return;
-            case 979:
+            case 624:
                 method7283(arg1);
                 return;
-            case 980:
+            case 501:
                 method8630(arg1);
                 return;
-            case 981:
+            case 302:
                 method3951(arg1);
                 return;
-            case 982:
+            case 4:
                 method4112(arg1);
                 return;
-            case 983:
+            case 563:
                 method6584(arg1);
                 return;
-            case 984:
+            case 888:
                 method6884(arg1);
                 return;
-            case 985:
+            case 532:
                 method3985(arg1);
                 return;
-            case 986:
+            case 152:
                 Statics.method12347(arg1);
                 return;
-            case 987:
+            case 541:
                 method3462(arg1);
                 return;
-            case 988:
+            case 373:
                 method12758(arg1);
                 return;
-            case 989:
+            case 881:
                 Statics.method3945(arg1);
                 return;
-            case 990:
+            case 656:
                 method4772(arg1);
                 return;
-            case 991:
+            case 973:
                 method11637(arg1);
                 return;
-            case 992:
+            case 286:
                 method6347(arg1);
                 return;
-            case 993:
+            case 100:
                 method5711(arg1);
                 return;
-            case 994:
+            case 261:
                 method4607(arg1);
                 return;
-            case 995:
+            case 201:
                 method4735(arg1);
                 return;
-            case 996:
+            case 983:
                 method5593(arg1);
                 return;
-            case 997:
+            case 1013:
                 method4564(arg1);
                 return;
-            case 998:
+            case 785:
                 method3205(arg1);
                 return;
-            case 999:
+            case 776:
                 method7982(arg1);
                 return;
-            case 1000:
+            case 207:
                 method12211(arg1);
                 return;
-            case 1001:
+            case 577:
                 method2496(arg1);
                 return;
-            case 1002:
+            case 925:
                 method6641(arg1);
                 return;
-            case 1003:
+            case 238:
                 method3654(arg1);
                 return;
-            case 1004:
+            case 558:
                 method4672(arg1);
                 return;
-            case 1005:
+            case 234:
                 method4723(arg1);
                 return;
-            case 1006:
+            case 16:
                 method14084(arg1);
                 return;
-            case 1007:
+            case 869:
                 method4787(arg1);
                 return;
-            case 1008:
+            case 775:
                 method5929(arg1);
                 return;
-            case 1009:
+            case 661:
                 method2424(arg1);
                 return;
-            case 1010:
+            case 105:
                 Statics.method4795(arg1);
                 return;
-            case 1011:
+            case 569:
                 method12223(arg1);
                 return;
-            case 1012:
+            case 190:
                 method3579(arg1);
                 return;
-            case 1013:
+            case 177:
                 method8543(arg1);
                 return;
-            case 1014:
+            case 913:
                 method7833(arg1);
                 return;
-            case 1015:
+            case 560:
                 method15784(arg1);
                 return;
-            case 1016:
+            case 648:
                 method6336(arg1);
                 return;
-            case 1017:
+            case 126:
                 method6072(arg1);
                 return;
-            case 1018:
+            case 789:
                 method4720(arg1);
                 return;
-            case 1019:
+            case 508:
                 method1359(arg1);
                 return;
-            case 1020:
+            case 836:
                 method4805(arg1);
                 return;
-            case 1021:
+            case 442:
                 method15149(arg1);
                 return;
-            case 1022:
+            case 255:
                 method12224(arg1);
                 return;
-            case 1023:
+            case 762:
                 method4105(arg1);
                 return;
-            case 1024:
+            case 897:
                 method1606(arg1);
                 return;
-            case 1025:
+            case 83:
                 method2539(arg1);
                 return;
-            case 1026:
+            case 844:
                 method1357(arg1);
                 return;
-            case 1027:
+            case 23:
                 method3671(arg1);
                 return;
-            case 1028:
+            case 482:
                 method3597(arg1);
                 return;
-            case 1029:
+            case 399:
                 method7373(arg1);
                 return;
-            case 1030:
+            case 305:
                 method12718(arg1);
                 return;
-            case 1031:
+            case 808:
                 method2918(arg1);
                 return;
-            case 1032:
+            case 922:
                 method8302(arg1);
                 return;
-            case 1033:
+            case 516:
                 Statics.method1821(arg1);
                 return;
-            case 1034:
+            case 209:
                 method3625(arg1);
                 return;
-            case 1035:
+            case 196:
                 method5924(arg1);
                 return;
-            case 1036:
+            case 992:
                 method1667(arg1);
                 return;
-            case 1037:
+            case 890:
                 method6344(arg1);
                 return;
-            case 1038:
+            case 494:
                 method8346(arg1);
                 return;
-            case 1039:
+            case 991:
                 method7909(arg1);
                 return;
-            case 1040:
+            case 15:
                 method5572(arg1);
                 return;
-            case 1041:
+            case 747:
                 method14994(arg1);
                 return;
-            case 1042:
+            case 786:
                 method8719(arg1);
                 return;
-            case 1043:
+            case 763:
                 method4717(arg1);
                 return;
-            case 1044:
+            case 62:
                 method6880(arg1);
                 return;
-            case 1045:
+            case 103:
                 method2870(arg1);
                 return;
             default:
