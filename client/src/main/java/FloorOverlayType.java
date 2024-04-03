@@ -54,7 +54,7 @@ public class FloorOverlayType {
     @ObfuscatedName("ry.u(Laet;I)V")
     public void method8494(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -65,40 +65,40 @@ public class FloorOverlayType {
     @ObfuscatedName("ry.j(Laet;II)V")
     public void method8488(Packet arg0, int arg1) {
         if (arg1 == 1) {
-            this.field5094 = method5934(arg0.method15241());
+            this.field5094 = method5934(arg0.g3());
         } else if (arg1 == 2) {
-            this.field5092 = arg0.method15220();
+            this.field5092 = arg0.g1();
         } else if (arg1 == 3) {
-            this.field5092 = arg0.method15239();
+            this.field5092 = arg0.g2();
             if (this.field5092 == 65535) {
                 this.field5092 = -1;
             }
         } else if (arg1 == 5) {
             this.field5103 = false;
         } else if (arg1 == 7) {
-            this.field5091 = method5934(arg0.method15241());
+            this.field5091 = method5934(arg0.g3());
         } else if (arg1 == 8) {
             this.field5088.field5108 = this.field5089;
         } else if (arg1 == 9) {
-            this.field5087 = arg0.method15239() << 2;
+            this.field5087 = arg0.g2() << 2;
         } else if (arg1 == 10) {
             this.field5095 = false;
         } else if (arg1 == 11) {
-            this.field5096 = arg0.method15220();
+            this.field5096 = arg0.g1();
         } else if (arg1 == 12) {
             this.field5097 = true;
         } else if (arg1 == 13) {
-            this.field5102 = arg0.method15241();
+            this.field5102 = arg0.g3();
         } else if (arg1 == 14) {
-            this.field5099 = (arg0.method15220() << 2) * 1678505033;
+            this.field5099 = (arg0.g1() << 2) * 1678505033;
         } else if (arg1 == 16) {
-            this.field5100 = arg0.method15220();
+            this.field5100 = arg0.g1();
         } else if (arg1 == 20) {
-            this.field5101 = arg0.method15239();
+            this.field5101 = arg0.g2();
         } else if (arg1 == 21) {
-            this.field5090 = arg0.method15220();
+            this.field5090 = arg0.g1();
         } else if (arg1 == 22) {
-            this.field5098 = arg0.method15239();
+            this.field5098 = arg0.g2();
         }
     }
 

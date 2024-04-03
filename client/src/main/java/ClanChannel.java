@@ -96,20 +96,20 @@ public class ClanChannel extends Node {
 
     @ObfuscatedName("adh.m(Laet;I)V")
     public void method14967(Packet arg0) {
-        int var2 = arg0.method15220();
+        int var2 = arg0.g1();
         if ((var2 & 0x1) != 0) {
             this.field9433 = true;
         }
         if ((var2 & 0x2) != 0) {
             this.field9428 = true;
         }
-        this.field4228 = arg0.method15246();
-        this.field9435 = arg0.method15246();
-        this.field9427 = arg0.method15337();
-        arg0.method15220();
-        this.field9432 = arg0.method15238();
-        this.field9434 = arg0.method15238();
-        this.field9430 = arg0.method15239();
+        this.field4228 = arg0.g8();
+        this.field9435 = arg0.g8();
+        this.field9427 = arg0.gjstr();
+        arg0.g1();
+        this.field9432 = arg0.g1b();
+        this.field9434 = arg0.g1b();
+        this.field9430 = arg0.g2();
         if (this.field9430 <= 0) {
             return;
         }
@@ -117,13 +117,13 @@ public class ClanChannel extends Node {
         for (int var3 = 0; var3 < this.field9430; var3++) {
             ClanChannelUser var4 = new ClanChannelUser();
             if (this.field9433) {
-                arg0.method15246();
+                arg0.g8();
             }
             if (this.field9428) {
-                var4.field2343 = arg0.method15337();
+                var4.field2343 = arg0.gjstr();
             }
-            var4.field2342 = arg0.method15238();
-            var4.field2341 = arg0.method15239();
+            var4.field2342 = arg0.g1b();
+            var4.field2341 = arg0.g2();
             this.field9429[var3] = var4;
         }
     }

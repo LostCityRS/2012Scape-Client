@@ -39,7 +39,7 @@ public class SkyDecorType {
     @ObfuscatedName("fy.u(Laet;B)V")
     public void method3595(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -50,23 +50,23 @@ public class SkyDecorType {
     @ObfuscatedName("fy.j(Laet;II)V")
     public void method3593(Packet arg0, int arg1) {
         if (arg1 == 1) {
-            this.field2151 = arg0.method15239();
+            this.field2151 = arg0.g2();
         } else if (arg1 == 2) {
             this.field2159 = true;
         } else if (arg1 == 3) {
-            this.field2152 = arg0.method15240();
-            this.field2153 = arg0.method15240();
-            this.field2154 = arg0.method15240();
+            this.field2152 = arg0.g2s();
+            this.field2153 = arg0.g2s();
+            this.field2154 = arg0.g2s();
         } else if (arg1 == 4) {
-            this.field2156 = arg0.method15220();
+            this.field2156 = arg0.g1();
         } else if (arg1 == 5) {
-            this.field2150 = arg0.method15411();
+            this.field2150 = arg0.gSmart2or4null();
         } else if (arg1 == 6) {
-            this.field2155 = arg0.method15241();
+            this.field2155 = arg0.g3();
         } else if (arg1 == 7) {
-            this.field2158 = arg0.method15240();
-            this.field2157 = arg0.method15240();
-            this.field2160 = arg0.method15240();
+            this.field2158 = arg0.g2s();
+            this.field2157 = arg0.g2s();
+            this.field2160 = arg0.g2s();
         }
     }
 }

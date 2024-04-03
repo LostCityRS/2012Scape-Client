@@ -84,7 +84,7 @@ public class PlayerModel {
 
     @ObfuscatedName("qc.m(I)V")
     public void method8229() {
-        long[] var1 = Packet.field9628;
+        long[] var1 = Packet.crc64table;
         this.field5007 = -1L;
         this.field5007 = this.field5007 >>> 8 ^ var1[(int) ((this.field5007 ^ (long) (this.field5002 >> 8)) & 0xFFL)];
         this.field5007 = this.field5007 >>> 8 ^ var1[(int) ((this.field5007 ^ (long) this.field5002) & 0xFFL)];

@@ -36,7 +36,7 @@ public class HeadbarType {
     @ObfuscatedName("oe.u(Laet;S)V")
     public void method7302(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -47,27 +47,27 @@ public class HeadbarType {
     @ObfuscatedName("oe.j(Laet;II)V")
     public void method7306(Packet arg0, int arg1) {
         if (arg1 == 1) {
-            arg0.method15239();
+            arg0.g2();
         } else if (arg1 == 2) {
-            this.field4446 = arg0.method15220();
+            this.field4446 = arg0.g1();
         } else if (arg1 == 3) {
-            this.field4442 = arg0.method15220();
+            this.field4442 = arg0.g1();
         } else if (arg1 == 4) {
             this.field4443 = 0;
         } else if (arg1 == 5) {
-            this.field4445 = arg0.method15239();
+            this.field4445 = arg0.g2();
         } else if (arg1 == 6) {
-            arg0.method15220();
+            arg0.g1();
         } else if (arg1 == 7) {
-            this.field4441 = arg0.method15411();
+            this.field4441 = arg0.gSmart2or4null();
         } else if (arg1 == 8) {
-            this.field4447 = arg0.method15411();
+            this.field4447 = arg0.gSmart2or4null();
         } else if (arg1 == 9) {
-            this.field4448 = arg0.method15411();
+            this.field4448 = arg0.gSmart2or4null();
         } else if (arg1 == 10) {
-            this.field4449 = arg0.method15411();
+            this.field4449 = arg0.gSmart2or4null();
         } else if (arg1 == 11) {
-            this.field4443 = arg0.method15239();
+            this.field4443 = arg0.g2();
         }
     }
 

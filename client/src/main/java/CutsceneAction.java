@@ -7,12 +7,12 @@ public abstract class CutsceneAction {
     public final int field1566;
 
     public CutsceneAction(Packet arg0) {
-        this.field1566 = arg0.method15239();
+        this.field1566 = arg0.g2();
     }
 
     @ObfuscatedName("gq.u(Laet;I)Ldm;")
     public static CutsceneAction method3928(Packet arg0) {
-        int var1 = arg0.method15220();
+        int var1 = arg0.g1();
         CutsceneCommand var2 = CutsceneCommand.method12118(var1);
         CutsceneAction var3 = null;
         switch (var2.field7412) {

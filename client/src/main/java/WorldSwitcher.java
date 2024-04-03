@@ -83,11 +83,11 @@ public class WorldSwitcher {
         if (Statics.field6778 == null) {
             Statics.field6778 = new Packet(20000);
         }
-        Statics.field6778.method15276(arg1, 0, arg1.length);
+        Statics.field6778.pdata(arg1, 0, arg1.length);
         if (!arg0) {
             return;
         }
-        GWC.method6034(Statics.field6778.field9629);
+        GWC.method6034(Statics.field6778.data);
         field6771 = new GWCWorld[Statics.field4876];
         int var2 = 0;
         for (int var3 = Statics.field4871; var3 <= Statics.field4875; var3++) {

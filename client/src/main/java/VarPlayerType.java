@@ -12,7 +12,7 @@ public class VarPlayerType implements PlayerTypeRelated {
     @ObfuscatedName("ju.u(Laet;I)V")
     public void method4870(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -23,9 +23,9 @@ public class VarPlayerType implements PlayerTypeRelated {
     @ObfuscatedName("ju.j(Laet;II)V")
     public void method4867(Packet arg0, int arg1) {
         if (arg1 == 1) {
-            this.field3309 = Cp1252.method16898(arg0.method15238());
+            this.field3309 = Cp1252.method16898(arg0.g1b());
         } else if (arg1 == 5) {
-            this.field3310 = arg0.method15239();
+            this.field3310 = arg0.g2();
         }
     }
 }

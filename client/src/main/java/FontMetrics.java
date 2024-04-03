@@ -37,28 +37,28 @@ public class FontMetrics {
 
     public FontMetrics(byte[] arg0) {
         Packet var2 = new Packet(arg0);
-        int var3 = var2.method15220();
+        int var3 = var2.g1();
         if (var3 != 0) {
             throw new RuntimeException("");
         }
-        boolean var4 = var2.method15220() == 1;
+        boolean var4 = var2.g1() == 1;
         this.field7178 = new byte[256];
-        var2.method15263(this.field7178, 0, 256);
+        var2.gdata(this.field7178, 0, 256);
         if (var4) {
             int[] var5 = new int[256];
             int[] var6 = new int[256];
             for (int var7 = 0; var7 < 256; var7++) {
-                var5[var7] = var2.method15220();
+                var5[var7] = var2.g1();
             }
             for (int var8 = 0; var8 < 256; var8++) {
-                var6[var8] = var2.method15220();
+                var6[var8] = var2.g1();
             }
             byte[][] var9 = new byte[256][];
             for (int var10 = 0; var10 < 256; var10++) {
                 var9[var10] = new byte[var5[var10]];
                 byte var11 = 0;
                 for (int var12 = 0; var12 < var9[var10].length; var12++) {
-                    var11 += var2.method15238();
+                    var11 += var2.g1b();
                     var9[var10][var12] = var11;
                 }
             }
@@ -67,7 +67,7 @@ public class FontMetrics {
                 var13[var14] = new byte[var5[var14]];
                 byte var15 = 0;
                 for (int var16 = 0; var16 < var13[var14].length; var16++) {
-                    var15 += var2.method15238();
+                    var15 += var2.g1b();
                     var13[var14][var16] = var15;
                 }
             }
@@ -83,12 +83,12 @@ public class FontMetrics {
             }
             this.field7175 = var5[32] + var6[32];
         } else {
-            this.field7175 = var2.method15220();
+            this.field7175 = var2.g1();
         }
-        var2.method15220();
-        var2.method15220();
-        this.field7176 = var2.method15220();
-        this.field7177 = var2.method15220();
+        var2.g1();
+        var2.g1();
+        this.field7176 = var2.g1();
+        this.field7177 = var2.g1();
     }
 
     @ObfuscatedName("fd.a([[B[[B[I[B[IIII)I")

@@ -476,11 +476,11 @@ public class ClanSettings {
 
     @ObfuscatedName("ga.k(Laet;I)V")
     public void method4048(Packet arg0) {
-        int var2 = arg0.method15220();
+        int var2 = arg0.g1();
         if (var2 < 1 || var2 > 5) {
             throw new RuntimeException("" + var2);
         }
-        int var3 = arg0.method15220();
+        int var3 = arg0.g1();
         if ((var3 & 0x1) != 0) {
             this.field2345 = true;
         }
@@ -495,22 +495,22 @@ public class ClanSettings {
             this.field2355 = null;
             this.field2367 = null;
         }
-        this.field2348 = arg0.method15379();
-        this.field2371 = arg0.method15379();
+        this.field2348 = arg0.g4();
+        this.field2371 = arg0.g4();
         if (var2 <= 3 && this.field2371 != 0) {
             this.field2371 += 16912800;
         }
-        this.field2346 = arg0.method15239();
-        this.field2356 = arg0.method15220();
-        this.field2349 = arg0.method15337();
+        this.field2346 = arg0.g2();
+        this.field2356 = arg0.g1();
+        this.field2349 = arg0.gjstr();
         if (var2 >= 4) {
-            arg0.method15379();
+            arg0.g4();
         }
-        this.field2366 = arg0.method15220() == 1;
-        this.field2352 = arg0.method15238();
-        this.field2353 = arg0.method15238();
-        this.field2354 = arg0.method15238();
-        this.field2350 = arg0.method15238();
+        this.field2366 = arg0.g1() == 1;
+        this.field2352 = arg0.g1b();
+        this.field2353 = arg0.g1b();
+        this.field2354 = arg0.g1b();
+        this.field2350 = arg0.g1b();
         if (this.field2346 > 0) {
             if (this.field2345 && (this.field2351 == null || this.field2351.length < this.field2346)) {
                 this.field2351 = new long[this.field2346];
@@ -529,17 +529,17 @@ public class ClanSettings {
             }
             for (int var4 = 0; var4 < this.field2346; var4++) {
                 if (this.field2345) {
-                    this.field2351[var4] = arg0.method15246();
+                    this.field2351[var4] = arg0.g8();
                 }
                 if (this.field2373) {
-                    this.field2355[var4] = arg0.method15219();
+                    this.field2355[var4] = arg0.fastgstr();
                 }
-                this.field2358[var4] = arg0.method15238();
+                this.field2358[var4] = arg0.g1b();
                 if (var2 >= 2) {
-                    this.field2372[var4] = arg0.method15379();
+                    this.field2372[var4] = arg0.g4();
                 }
                 if (var2 >= 5) {
-                    this.field2361[var4] = arg0.method15239();
+                    this.field2361[var4] = arg0.g2();
                 } else {
                     this.field2361[var4] = 0;
                 }
@@ -555,33 +555,33 @@ public class ClanSettings {
             }
             for (int var5 = 0; var5 < this.field2356; var5++) {
                 if (this.field2345) {
-                    this.field2365[var5] = arg0.method15246();
+                    this.field2365[var5] = arg0.g8();
                 }
                 if (this.field2373) {
-                    this.field2367[var5] = arg0.method15219();
+                    this.field2367[var5] = arg0.fastgstr();
                 }
             }
         }
         if (var2 < 3) {
             return;
         }
-        int var6 = arg0.method15239();
+        int var6 = arg0.g2();
         if (var6 <= 0) {
             return;
         }
         this.field2368 = new IterableMap(var6 < 16 ? IntMath.method2839(var6) : 16);
         while (var6-- > 0) {
-            int var7 = arg0.method15379();
+            int var7 = arg0.g4();
             int var8 = var7 & 0x3FFFFFFF;
             int var9 = var7 >>> 30;
             if (var9 == 0) {
-                int var10 = arg0.method15379();
+                int var10 = arg0.g4();
                 this.field2368.method11927(new IntNode(var10), (long) var8);
             } else if (var9 == 1) {
-                long var11 = arg0.method15246();
+                long var11 = arg0.g8();
                 this.field2368.method11927(new LongNode(var11), (long) var8);
             } else if (var9 == 2) {
-                String var13 = arg0.method15337();
+                String var13 = arg0.gjstr();
                 this.field2368.method11927(new ObjectNode(var13), (long) var8);
             }
         }

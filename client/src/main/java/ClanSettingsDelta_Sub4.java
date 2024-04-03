@@ -27,11 +27,11 @@ public class ClanSettingsDelta_Sub4 extends ClanSettingsDeltaEntry {
 
     @ObfuscatedName("aik.u(Laet;I)V")
     public void method14956(Packet arg0) {
-        this.field10201 = arg0.method15220() == 1;
-        this.field10198 = arg0.method15238();
-        this.field10199 = arg0.method15238();
-        this.field10197 = arg0.method15238();
-        this.field10200 = arg0.method15238();
+        this.field10201 = arg0.g1() == 1;
+        this.field10198 = arg0.g1b();
+        this.field10199 = arg0.g1b();
+        this.field10197 = arg0.g1b();
+        this.field10200 = arg0.g1b();
     }
 
     @ObfuscatedName("aik.j(Lga;B)V")

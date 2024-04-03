@@ -85,16 +85,16 @@ public class ServerConnection {
         if (this.field827 == null || this.field826 <= 0) {
             return;
         }
-        this.field830.field9626 = 0;
+        this.field830.pos = 0;
         while (true) {
             ClientMessage var1 = (ClientMessage) this.field829.method11563();
-            if (var1 == null || var1.field9465 > this.field830.field9629.length - this.field830.field9626) {
-                this.field827.method7193(this.field830.field9629, 0, this.field830.field9626);
-                this.field845 += this.field830.field9626;
+            if (var1 == null || var1.field9465 > this.field830.data.length - this.field830.pos) {
+                this.field827.method7193(this.field830.data, 0, this.field830.pos);
+                this.field845 += this.field830.pos;
                 this.field839 = 0;
                 break;
             }
-            this.field830.method15276(var1.field9467.field9629, 0, var1.field9465);
+            this.field830.pdata(var1.field9467.data, 0, var1.field9465);
             this.field826 -= var1.field9465;
             var1.method6979();
             var1.field9467.method15282();
@@ -105,8 +105,8 @@ public class ServerConnection {
     @ObfuscatedName("ad.a(Lada;B)V")
     public final void method1913(ClientMessage arg0) {
         this.field829.method11558(arg0);
-        arg0.field9465 = arg0.field9467.field9626;
-        arg0.field9467.field9626 = 0;
+        arg0.field9465 = arg0.field9467.pos;
+        arg0.field9467.pos = 0;
         this.field826 += arg0.field9465;
     }
 

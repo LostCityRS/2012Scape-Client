@@ -52,17 +52,17 @@ public class LoadingScreenNewsDisplayConfig implements LoadingScreenElementConfi
 
     @ObfuscatedName("cu.u(Laet;B)Liw;")
     public static LoadingScreenNewsDisplayConfig method2548(Packet arg0) {
-        int var1 = arg0.method15220();
-        LoadingScreenAlignmentX var2 = LoadingScreenAlignmentX.method15177()[arg0.method15220()];
-        LoadingScreenAlignmentY var3 = LoadingScreenAlignmentY.method3623()[arg0.method15220()];
-        int var4 = arg0.method15240();
-        int var5 = arg0.method15240();
-        int var6 = arg0.method15239();
-        int var7 = arg0.method15239();
-        int var8 = arg0.method15379();
-        int var9 = arg0.method15379();
-        int var10 = arg0.method15379();
-        boolean var11 = arg0.method15220() == 1;
+        int var1 = arg0.g1();
+        LoadingScreenAlignmentX var2 = LoadingScreenAlignmentX.method15177()[arg0.g1()];
+        LoadingScreenAlignmentY var3 = LoadingScreenAlignmentY.method3623()[arg0.g1()];
+        int var4 = arg0.g2s();
+        int var5 = arg0.g2s();
+        int var6 = arg0.g2();
+        int var7 = arg0.g2();
+        int var8 = arg0.g4();
+        int var9 = arg0.g4();
+        int var10 = arg0.g4();
+        boolean var11 = arg0.g1() == 1;
         return new LoadingScreenNewsDisplayConfig(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11);
     }
 

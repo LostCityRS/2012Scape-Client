@@ -50,7 +50,7 @@ public class VideoTypeList {
     public static void method5563(int arg0, boolean arg1) {
         if (arg1) {
             ClientMessage var2 = ClientMessage.method14781(ClientProt.field2867, client.field8975.field834);
-            var2.field9467.method15287(arg0);
+            var2.field9467.p2(arg0);
             client.field8975.method1913(var2);
         } else {
             ScriptRunner.method1372(ClientTriggerType.field7307, arg0, -1);

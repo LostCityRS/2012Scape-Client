@@ -12,7 +12,7 @@ public class LoadingScreenRelated2_Sub1 implements LoadingScreenElementConfig {
 
     @ObfuscatedName("fr.u(Laet;I)Lib;")
     public static LoadingScreenRelated2_Sub1 method3522(Packet arg0) {
-        int var1 = arg0.method15411();
+        int var1 = arg0.gSmart2or4null();
         return new LoadingScreenRelated2_Sub1(var1);
     }
 

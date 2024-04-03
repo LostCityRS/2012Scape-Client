@@ -42,12 +42,12 @@ public class MouseBinding implements Binding {
 
     @ObfuscatedName("ar.a(Laet;B)Lpc;")
     public static MouseBinding method1698(Packet arg0) {
-        int var1 = arg0.method15220();
-        int var2 = arg0.method15220();
-        int var3 = arg0.method15220();
+        int var1 = arg0.g1();
+        int var2 = arg0.g1();
+        int var3 = arg0.g1();
         int[] var4 = new int[var3];
         for (int var5 = 0; var5 < var3; var5++) {
-            var4[var5] = arg0.method15220();
+            var4[var5] = arg0.g1();
         }
         return new MouseBinding(var1, var2, var4);
     }

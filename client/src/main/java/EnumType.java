@@ -33,7 +33,7 @@ public class EnumType {
     @ObfuscatedName("ud.u(Laet;I)V")
     public void method12121(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -44,36 +44,36 @@ public class EnumType {
     @ObfuscatedName("ud.j(Laet;II)V")
     public void method12122(Packet arg0, int arg1) {
         if (arg1 == 1) {
-            this.field6807 = Cp1252.method16898(arg0.method15238());
+            this.field6807 = Cp1252.method16898(arg0.g1b());
         } else if (arg1 == 2) {
-            this.field6806 = Cp1252.method16898(arg0.method15238());
+            this.field6806 = Cp1252.method16898(arg0.g1b());
         } else if (arg1 == 3) {
-            this.field6808 = arg0.method15337();
+            this.field6808 = arg0.gjstr();
         } else if (arg1 == 4) {
-            this.field6809 = arg0.method15379();
+            this.field6809 = arg0.g4();
         } else if (arg1 == 5 || arg1 == 6) {
-            this.field6812 = arg0.method15239();
+            this.field6812 = arg0.g2();
             this.field6810 = new java.util.HashMap(this.field6812);
             for (int var6 = 0; var6 < this.field6812; var6++) {
-                int var7 = arg0.method15379();
+                int var7 = arg0.g4();
                 Object var8;
                 if (arg1 == 5) {
-                    var8 = arg0.method15337();
+                    var8 = arg0.gjstr();
                 } else {
-                    var8 = Integer.valueOf(arg0.method15379());
+                    var8 = Integer.valueOf(arg0.g4());
                 }
                 this.field6810.put(Integer.valueOf(var7), var8);
             }
         } else if (arg1 == 7 || arg1 == 8) {
-            int var3 = arg0.method15239();
-            this.field6812 = arg0.method15239();
+            int var3 = arg0.g2();
+            this.field6812 = arg0.g2();
             this.field6811 = new Object[var3];
             for (int var4 = 0; var4 < this.field6812; var4++) {
-                int var5 = arg0.method15239();
+                int var5 = arg0.g2();
                 if (arg1 == 7) {
-                    this.field6811[var5] = arg0.method15337();
+                    this.field6811[var5] = arg0.gjstr();
                 } else {
-                    this.field6811[var5] = Integer.valueOf(arg0.method15379());
+                    this.field6811[var5] = Integer.valueOf(arg0.g4());
                 }
             }
         }

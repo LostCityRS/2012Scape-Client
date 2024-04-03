@@ -11,13 +11,13 @@ public class CutsceneAction_Sub17 extends CutsceneAction {
 
     public CutsceneAction_Sub17(Packet arg0, boolean arg1) {
         super(arg0);
-        int var3 = arg0.method15239();
+        int var3 = arg0.g2();
         if (arg1) {
             this.field8483 = (long) var3 | 0x100000000L;
         } else {
             this.field8483 = var3;
         }
-        this.field8482 = arg0.method15379();
+        this.field8482 = arg0.g4();
     }
 
     @ObfuscatedName("zm.j(I)V")

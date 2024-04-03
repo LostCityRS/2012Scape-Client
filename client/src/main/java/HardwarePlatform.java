@@ -205,11 +205,11 @@ public class HardwarePlatform extends Node {
                     RawCpuInfo var24 = (RawCpuInfo) var16.get(0);
                     if (var24 != null) {
                         Packet var25 = new Packet(13);
-                        var25.method15274(var24.field6822);
-                        var25.method15274(var24.field6820);
-                        var25.method15274(var24.field6823);
-                        var25.field9626 = 0;
-                        this.field9725 = var25.method15337();
+                        var25.ip4(var24.field6822);
+                        var25.ip4(var24.field6820);
+                        var25.ip4(var24.field6823);
+                        var25.pos = 0;
+                        this.field9725 = var25.gjstr();
                     }
                     RawCpuInfo var26 = (RawCpuInfo) var16.get(1);
                     if (var26 != null) {
@@ -227,14 +227,14 @@ public class HardwarePlatform extends Node {
                     for (int var30 = -2147483646; var30 <= -2147483644; var30++) {
                         RawCpuInfo var31 = (RawCpuInfo) var16.get(var30);
                         if (var31 != null) {
-                            var29.method15274(var31.field6821);
-                            var29.method15274(var31.field6822);
-                            var29.method15274(var31.field6823);
-                            var29.method15274(var31.field6820);
+                            var29.ip4(var31.field6821);
+                            var29.ip4(var31.field6822);
+                            var29.ip4(var31.field6823);
+                            var29.ip4(var31.field6820);
                         }
                     }
-                    var29.field9626 = 0;
-                    this.field9726 = var29.method15337();
+                    var29.pos = 0;
+                    this.field9726 = var29.gjstr();
                 }
                 String[][] var32 = HardwareInfo.getDXDiagDisplayDevicesProps();
                 if (var32 != null && var32.length > 0 && var32[0] != null) {
@@ -312,43 +312,43 @@ public class HardwarePlatform extends Node {
 
     @ObfuscatedName("aeb.j(Laet;I)V")
     public void method15475(Packet arg0) {
-        arg0.method15308(6);
-        arg0.method15308(this.field9698);
-        arg0.method15308(this.field9687 ? 1 : 0);
-        arg0.method15308(this.field9715);
-        arg0.method15308(this.field9706);
-        arg0.method15308(this.field9707);
-        arg0.method15308(this.field9713);
-        arg0.method15308(this.field9701);
-        arg0.method15308(this.field9710 ? 1 : 0);
-        arg0.method15287(this.field9711);
-        arg0.method15308(this.field9705);
-        arg0.method15222(this.field9703);
-        arg0.method15287(this.field9716);
-        arg0.method15229(this.field9717);
-        arg0.method15229(this.field9718);
-        arg0.method15229(this.field9719);
-        arg0.method15229(this.field9720);
-        arg0.method15308(this.field9722);
-        arg0.method15287(this.field9721);
-        arg0.method15229(this.field9725);
-        arg0.method15229(this.field9726);
-        arg0.method15308(this.field9728);
-        arg0.method15308(this.field9724);
+        arg0.p1(6);
+        arg0.p1(this.field9698);
+        arg0.p1(this.field9687 ? 1 : 0);
+        arg0.p1(this.field9715);
+        arg0.p1(this.field9706);
+        arg0.p1(this.field9707);
+        arg0.p1(this.field9713);
+        arg0.p1(this.field9701);
+        arg0.p1(this.field9710 ? 1 : 0);
+        arg0.p2(this.field9711);
+        arg0.p1(this.field9705);
+        arg0.p3(this.field9703);
+        arg0.p2(this.field9716);
+        arg0.pjstr2(this.field9717);
+        arg0.pjstr2(this.field9718);
+        arg0.pjstr2(this.field9719);
+        arg0.pjstr2(this.field9720);
+        arg0.p1(this.field9722);
+        arg0.p2(this.field9721);
+        arg0.pjstr2(this.field9725);
+        arg0.pjstr2(this.field9726);
+        arg0.p1(this.field9728);
+        arg0.p1(this.field9724);
         for (int var2 = 0; var2 < this.field9727.length; var2++) {
-            arg0.method15223(this.field9727[var2]);
+            arg0.p4(this.field9727[var2]);
         }
-        arg0.method15223(this.field9685);
+        arg0.p4(this.field9685);
     }
 
     @ObfuscatedName("aeb.a(I)I")
     public int method15476() {
         byte var1 = 38;
-        int var2 = var1 + Packet.method13882(this.field9717);
-        int var3 = var2 + Packet.method13882(this.field9718);
-        int var4 = var3 + Packet.method13882(this.field9719);
-        int var5 = var4 + Packet.method13882(this.field9720);
-        int var6 = var5 + Packet.method13882(this.field9725);
-        return var6 + Packet.method13882(this.field9726);
+        int var2 = var1 + Packet.pjstr2len(this.field9717);
+        int var3 = var2 + Packet.pjstr2len(this.field9718);
+        int var4 = var3 + Packet.pjstr2len(this.field9719);
+        int var5 = var4 + Packet.pjstr2len(this.field9720);
+        int var6 = var5 + Packet.pjstr2len(this.field9725);
+        return var6 + Packet.pjstr2len(this.field9726);
     }
 }

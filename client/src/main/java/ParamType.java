@@ -18,7 +18,7 @@ public class ParamType {
     @ObfuscatedName("wv.u(Laet;B)V")
     public void method12580(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -29,13 +29,13 @@ public class ParamType {
     @ObfuscatedName("wv.j(Laet;II)V")
     public void method12581(Packet arg0, int arg1) {
         if (arg1 == 1) {
-            this.field7286 = Cp1252.method16898(arg0.method15238());
+            this.field7286 = Cp1252.method16898(arg0.g1b());
         } else if (arg1 == 2) {
-            this.field7287 = arg0.method15379();
+            this.field7287 = arg0.g4();
         } else if (arg1 == 4) {
             this.field7289 = false;
         } else if (arg1 == 5) {
-            this.field7288 = arg0.method15337();
+            this.field7288 = arg0.gjstr();
         }
     }
 

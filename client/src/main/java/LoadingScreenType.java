@@ -8,10 +8,10 @@ public class LoadingScreenType {
 
     @ObfuscatedName("wb.u(Laet;I)V")
     public void method12719(Packet arg0) {
-        this.field7395 = new LoadingScreenElementConfig[arg0.method15220()];
+        this.field7395 = new LoadingScreenElementConfig[arg0.g1()];
         LoadingScreenElementType[] var2 = LoadingScreenElementType.method8288();
         for (int var3 = 0; var3 < this.field7395.length; var3++) {
-            this.field7395[var3] = this.method12720(arg0, var2[arg0.method15220()]);
+            this.field7395[var3] = this.method12720(arg0, var2[arg0.g1()]);
         }
     }
 

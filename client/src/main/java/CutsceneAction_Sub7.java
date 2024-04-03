@@ -20,11 +20,11 @@ public class CutsceneAction_Sub7 extends CutsceneAction {
 
     public CutsceneAction_Sub7(Packet arg0) {
         super(arg0);
-        this.field8450 = arg0.method15239();
-        this.field8451 = arg0.method15239();
-        this.field8452 = arg0.method15239();
-        this.field8453 = arg0.method15239();
-        this.field8454 = arg0.method15239();
+        this.field8450 = arg0.g2();
+        this.field8451 = arg0.g2();
+        this.field8452 = arg0.g2();
+        this.field8453 = arg0.g2();
+        this.field8454 = arg0.g2();
     }
 
     @ObfuscatedName("ze.j(I)V")

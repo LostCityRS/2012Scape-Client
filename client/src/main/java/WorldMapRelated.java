@@ -31,9 +31,9 @@ public class WorldMapRelated {
         while (true) {
             while (var6 < var5.field4255) {
                 Packet var8 = new Packet(arg0.method5627(var3, var4[var7++]));
-                int var9 = var8.method15379();
-                int var10 = var8.method15239();
-                int var11 = var8.method15220();
+                int var9 = var8.g4();
+                int var10 = var8.g2();
+                int var11 = var8.g1();
                 if (!arg2 && var11 == 1) {
                     var5.field4255--;
                 } else {

@@ -17,17 +17,17 @@ public class LoadingRelated3 {
     public LoadingRelated3(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field7391 = arg2;
         Packet var4 = new Packet(this.field7391.method5627(0, 0));
-        int var5 = var4.field9629 == null || var4.field9629.length < 1 ? -1 : var4.method15220();
+        int var5 = var4.data == null || var4.data.length < 1 ? -1 : var4.g1();
         if (var5 < 4) {
             this.field7393 = new LoadingRelated2[0];
             this.field7394 = -1;
         } else {
-            int var6 = var4.method15220();
+            int var6 = var4.g1();
             LoadingScreenElementType[] var7 = LoadingScreenElementType.method8288();
             boolean var8 = true;
             if (var7.length == var6) {
                 for (int var9 = 0; var9 < var7.length; var9++) {
-                    int var10 = var4.method15220();
+                    int var10 = var4.g1();
                     if (var7[var9].field2629 != var10) {
                         var8 = false;
                         break;
@@ -37,14 +37,14 @@ public class LoadingRelated3 {
                 var8 = false;
             }
             if (var8) {
-                int var11 = var4.method15220();
-                int var12 = var4.method15220();
+                int var11 = var4.g1();
+                int var12 = var4.g1();
                 int var13;
                 int var14;
                 if (var5 > 2) {
-                    this.field7394 = var4.method15240();
-                    var13 = var4.method15241();
-                    var14 = var4.method15239();
+                    this.field7394 = var4.g2s();
+                    var13 = var4.g3();
+                    var14 = var4.g2();
                 } else {
                     this.field7394 = -1;
                     var13 = 0;
@@ -52,16 +52,16 @@ public class LoadingRelated3 {
                 }
                 this.field7393 = new LoadingRelated2[var12 + 1];
                 for (int var15 = 0; var15 < var11; var15++) {
-                    int var16 = var4.method15220();
-                    boolean var17 = var4.method15220() == 1;
-                    int var18 = var4.method15239();
+                    int var16 = var4.g1();
+                    boolean var17 = var4.g1() == 1;
+                    int var18 = var4.g2();
                     LoadingRelated1[] var19;
                     if (this.field7394 == -1) {
                         var19 = new LoadingRelated1[var18];
                         for (int var20 = 0; var20 < var18; var20++) {
-                            int var21 = var4.method15239();
-                            int var22 = var4.method15241();
-                            int var23 = var4.method15239();
+                            int var21 = var4.g2();
+                            int var22 = var4.g3();
+                            int var23 = var4.g2();
                             var19[var20] = new LoadingRelated1(var21, var22, var23);
                         }
                         this.field7393[var16] = new LoadingRelated2(var17, var19);
@@ -69,9 +69,9 @@ public class LoadingRelated3 {
                         var19 = new LoadingRelated1[var18 + 1];
                         var19[0] = new LoadingRelated1(this.field7394, var13, var14);
                         for (int var24 = 0; var24 < var18; var24++) {
-                            int var25 = var4.method15239();
-                            int var26 = var4.method15241();
-                            int var27 = var4.method15239();
+                            int var25 = var4.g2();
+                            int var26 = var4.g3();
+                            int var27 = var4.g2();
                             var19[var24 + 1] = new LoadingRelated1(var25, var26, var27);
                         }
                     }

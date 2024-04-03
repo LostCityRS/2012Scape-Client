@@ -176,7 +176,7 @@ public class GlParticleRenderer {
         float var15 = var6 - var3;
         float var16 = var7 - var4;
         float var17 = var8 - var5;
-        this.field1120.field9626 = 0;
+        this.field1120.pos = 0;
         if (arg0.field8149) {
             for (int var18 = arg1 - 1; var18 >= 0; var18--) {
                 int var19 = this.field1131[var18] > 64 ? 64 : this.field1131[var18];
@@ -197,37 +197,37 @@ public class GlParticleRenderer {
                         this.field1120.method16851((float) -var30 * var9 + var27);
                         this.field1120.method16851((float) -var30 * var10 + var28);
                         this.field1120.method16851((float) -var30 * var11 + var29);
-                        this.field1120.method15308(var23);
-                        this.field1120.method15308(var24);
-                        this.field1120.method15308(var25);
-                        this.field1120.method15308(var26);
+                        this.field1120.p1(var23);
+                        this.field1120.p1(var24);
+                        this.field1120.p1(var25);
+                        this.field1120.p1(var26);
                         this.field1120.method16851(0.0F);
                         this.field1120.method16851(1.0F);
                         this.field1120.method16851((float) var30 * var15 + var27);
                         this.field1120.method16851((float) var30 * var16 + var28);
                         this.field1120.method16851((float) var30 * var17 + var29);
-                        this.field1120.method15308(var23);
-                        this.field1120.method15308(var24);
-                        this.field1120.method15308(var25);
-                        this.field1120.method15308(var26);
+                        this.field1120.p1(var23);
+                        this.field1120.p1(var24);
+                        this.field1120.p1(var25);
+                        this.field1120.p1(var26);
                         this.field1120.method16851(1.0F);
                         this.field1120.method16851(1.0F);
                         this.field1120.method16851((float) var30 * var9 + var27);
                         this.field1120.method16851((float) var30 * var10 + var28);
                         this.field1120.method16851((float) var30 * var11 + var29);
-                        this.field1120.method15308(var23);
-                        this.field1120.method15308(var24);
-                        this.field1120.method15308(var25);
-                        this.field1120.method15308(var26);
+                        this.field1120.p1(var23);
+                        this.field1120.p1(var24);
+                        this.field1120.p1(var25);
+                        this.field1120.p1(var26);
                         this.field1120.method16851(1.0F);
                         this.field1120.method16851(0.0F);
                         this.field1120.method16851((float) var30 * var12 + var27);
                         this.field1120.method16851((float) var30 * var13 + var28);
                         this.field1120.method16851((float) var30 * var14 + var29);
-                        this.field1120.method15308(var23);
-                        this.field1120.method15308(var24);
-                        this.field1120.method15308(var25);
-                        this.field1120.method15308(var26);
+                        this.field1120.p1(var23);
+                        this.field1120.p1(var24);
+                        this.field1120.p1(var25);
+                        this.field1120.p1(var26);
                     }
                     if (this.field1131[var18] > 64) {
                         int var31 = this.field1131[var18] - 64 - 1;
@@ -247,37 +247,37 @@ public class GlParticleRenderer {
                             this.field1120.method16851((float) -var42 * var9 + var39);
                             this.field1120.method16851((float) -var42 * var10 + var40);
                             this.field1120.method16851((float) -var42 * var11 + var41);
-                            this.field1120.method15308(var35);
-                            this.field1120.method15308(var36);
-                            this.field1120.method15308(var37);
-                            this.field1120.method15308(var38);
+                            this.field1120.p1(var35);
+                            this.field1120.p1(var36);
+                            this.field1120.p1(var37);
+                            this.field1120.p1(var38);
                             this.field1120.method16851(0.0F);
                             this.field1120.method16851(1.0F);
                             this.field1120.method16851((float) var42 * var15 + var39);
                             this.field1120.method16851((float) var42 * var16 + var40);
                             this.field1120.method16851((float) var42 * var17 + var41);
-                            this.field1120.method15308(var35);
-                            this.field1120.method15308(var36);
-                            this.field1120.method15308(var37);
-                            this.field1120.method15308(var38);
+                            this.field1120.p1(var35);
+                            this.field1120.p1(var36);
+                            this.field1120.p1(var37);
+                            this.field1120.p1(var38);
                             this.field1120.method16851(1.0F);
                             this.field1120.method16851(1.0F);
                             this.field1120.method16851((float) var42 * var9 + var39);
                             this.field1120.method16851((float) var42 * var10 + var40);
                             this.field1120.method16851((float) var42 * var11 + var41);
-                            this.field1120.method15308(var35);
-                            this.field1120.method15308(var36);
-                            this.field1120.method15308(var37);
-                            this.field1120.method15308(var38);
+                            this.field1120.p1(var35);
+                            this.field1120.p1(var36);
+                            this.field1120.p1(var37);
+                            this.field1120.p1(var38);
                             this.field1120.method16851(1.0F);
                             this.field1120.method16851(0.0F);
                             this.field1120.method16851((float) var42 * var12 + var39);
                             this.field1120.method16851((float) var42 * var13 + var40);
                             this.field1120.method16851((float) var42 * var14 + var41);
-                            this.field1120.method15308(var35);
-                            this.field1120.method15308(var36);
-                            this.field1120.method15308(var37);
-                            this.field1120.method15308(var38);
+                            this.field1120.p1(var35);
+                            this.field1120.p1(var36);
+                            this.field1120.p1(var37);
+                            this.field1120.p1(var38);
                         }
                     }
                 }
@@ -302,37 +302,37 @@ public class GlParticleRenderer {
                         this.field1120.method16855((float) -var55 * var9 + var52);
                         this.field1120.method16855((float) -var55 * var10 + var53);
                         this.field1120.method16855((float) -var55 * var11 + var54);
-                        this.field1120.method15308(var48);
-                        this.field1120.method15308(var49);
-                        this.field1120.method15308(var50);
-                        this.field1120.method15308(var51);
+                        this.field1120.p1(var48);
+                        this.field1120.p1(var49);
+                        this.field1120.p1(var50);
+                        this.field1120.p1(var51);
                         this.field1120.method16855(0.0F);
                         this.field1120.method16855(1.0F);
                         this.field1120.method16855((float) var55 * var15 + var52);
                         this.field1120.method16855((float) var55 * var16 + var53);
                         this.field1120.method16855((float) var55 * var17 + var54);
-                        this.field1120.method15308(var48);
-                        this.field1120.method15308(var49);
-                        this.field1120.method15308(var50);
-                        this.field1120.method15308(var51);
+                        this.field1120.p1(var48);
+                        this.field1120.p1(var49);
+                        this.field1120.p1(var50);
+                        this.field1120.p1(var51);
                         this.field1120.method16855(1.0F);
                         this.field1120.method16855(1.0F);
                         this.field1120.method16855((float) var55 * var9 + var52);
                         this.field1120.method16855((float) var55 * var10 + var53);
                         this.field1120.method16855((float) var55 * var11 + var54);
-                        this.field1120.method15308(var48);
-                        this.field1120.method15308(var49);
-                        this.field1120.method15308(var50);
-                        this.field1120.method15308(var51);
+                        this.field1120.p1(var48);
+                        this.field1120.p1(var49);
+                        this.field1120.p1(var50);
+                        this.field1120.p1(var51);
                         this.field1120.method16855(1.0F);
                         this.field1120.method16855(0.0F);
                         this.field1120.method16855((float) var55 * var12 + var52);
                         this.field1120.method16855((float) var55 * var13 + var53);
                         this.field1120.method16855((float) var55 * var14 + var54);
-                        this.field1120.method15308(var48);
-                        this.field1120.method15308(var49);
-                        this.field1120.method15308(var50);
-                        this.field1120.method15308(var51);
+                        this.field1120.p1(var48);
+                        this.field1120.p1(var49);
+                        this.field1120.p1(var50);
+                        this.field1120.p1(var51);
                     }
                     if (this.field1131[var43] > 64) {
                         int var56 = this.field1131[var43] - 64 - 1;
@@ -352,46 +352,46 @@ public class GlParticleRenderer {
                             this.field1120.method16855((float) -var67 * var9 + var64);
                             this.field1120.method16855((float) -var67 * var10 + var65);
                             this.field1120.method16855((float) -var67 * var11 + var66);
-                            this.field1120.method15308(var60);
-                            this.field1120.method15308(var61);
-                            this.field1120.method15308(var62);
-                            this.field1120.method15308(var63);
+                            this.field1120.p1(var60);
+                            this.field1120.p1(var61);
+                            this.field1120.p1(var62);
+                            this.field1120.p1(var63);
                             this.field1120.method16855(0.0F);
                             this.field1120.method16855(1.0F);
                             this.field1120.method16855((float) var67 * var15 + var64);
                             this.field1120.method16855((float) var67 * var16 + var65);
                             this.field1120.method16855((float) var67 * var17 + var66);
-                            this.field1120.method15308(var60);
-                            this.field1120.method15308(var61);
-                            this.field1120.method15308(var62);
-                            this.field1120.method15308(var63);
+                            this.field1120.p1(var60);
+                            this.field1120.p1(var61);
+                            this.field1120.p1(var62);
+                            this.field1120.p1(var63);
                             this.field1120.method16855(1.0F);
                             this.field1120.method16855(1.0F);
                             this.field1120.method16855((float) var67 * var9 + var64);
                             this.field1120.method16855((float) var67 * var10 + var65);
                             this.field1120.method16855((float) var67 * var11 + var66);
-                            this.field1120.method15308(var60);
-                            this.field1120.method15308(var61);
-                            this.field1120.method15308(var62);
-                            this.field1120.method15308(var63);
+                            this.field1120.p1(var60);
+                            this.field1120.p1(var61);
+                            this.field1120.p1(var62);
+                            this.field1120.p1(var63);
                             this.field1120.method16855(1.0F);
                             this.field1120.method16855(0.0F);
                             this.field1120.method16855((float) var67 * var12 + var64);
                             this.field1120.method16855((float) var67 * var13 + var65);
                             this.field1120.method16855((float) var67 * var14 + var66);
-                            this.field1120.method15308(var60);
-                            this.field1120.method15308(var61);
-                            this.field1120.method15308(var62);
-                            this.field1120.method15308(var63);
+                            this.field1120.p1(var60);
+                            this.field1120.p1(var61);
+                            this.field1120.p1(var62);
+                            this.field1120.p1(var63);
                         }
                     }
                 }
             }
         }
-        if (this.field1120.field9626 != 0) {
-            this.field1121.method2234(24, this.field1120.field9629, this.field1120.field9626);
+        if (this.field1120.pos != 0) {
+            this.field1121.method2234(24, this.field1120.data, this.field1120.pos);
             arg0.method13305(this.field1135, null, this.field1123, this.field1124);
-            arg0.method13306(7, 0, this.field1120.field9626 / 24);
+            arg0.method13306(7, 0, this.field1120.pos / 24);
         }
     }
 

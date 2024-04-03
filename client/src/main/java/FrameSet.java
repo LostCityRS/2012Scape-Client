@@ -44,8 +44,8 @@ public class FrameSet extends SecondaryNode {
         for (int var6 = 0; var6 < this.field10348.length; var6++) {
             byte[] var7 = this.field10348[var6];
             Packet var8 = new Packet(var7);
-            var8.field9626 = 1;
-            int var9 = var8.method15239();
+            var8.pos = 1;
+            int var9 = var8.g2();
             Js5 var10 = Statics.field10347;
             synchronized (Statics.field10347) {
                 var5 &= Statics.field10347.method5630(var9);
@@ -65,8 +65,8 @@ public class FrameSet extends SecondaryNode {
         for (int var17 = 0; var17 < var15.length; var17++) {
             byte[] var18 = this.field10348[var17];
             Packet var19 = new Packet(var18);
-            var19.field9626 = 1;
-            int var20 = var19.method15239();
+            var19.pos = 1;
+            int var20 = var19.g2();
             AnimBase var21 = null;
             for (AnimBase var22 = (AnimBase) var12.method11563(); var22 != null; var22 = (AnimBase) var12.method11567()) {
                 if (var22.field9357 == var20) {

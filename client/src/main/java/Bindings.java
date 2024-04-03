@@ -9,7 +9,7 @@ public class Bindings {
 
     @ObfuscatedName("afu.u(Laet;I)Lpr;")
     public static Binding method15895(Packet arg0) {
-        BindingType var1 = BindingType.method6333(arg0.method15220());
+        BindingType var1 = BindingType.method6333(arg0.g1());
         if (BindingType.field4820 == var1) {
             return MouseBinding.method1698(arg0);
         } else if (BindingType.field4818 == var1) {

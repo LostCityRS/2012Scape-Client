@@ -12,7 +12,7 @@ public class VarClientType {
     @ObfuscatedName("vr.u(Laet;I)V")
     public void method12349(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -23,7 +23,7 @@ public class VarClientType {
     @ObfuscatedName("vr.j(Laet;IS)V")
     public void method12350(Packet arg0, int arg1) {
         if (arg1 == 1) {
-            this.field7153 = Cp1252.method16898(arg0.method15238());
+            this.field7153 = Cp1252.method16898(arg0.g1b());
         } else if (arg1 == 2) {
             this.field7156 = 0;
         }

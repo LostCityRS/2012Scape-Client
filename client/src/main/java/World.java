@@ -450,19 +450,19 @@ public class World {
 
     @ObfuscatedName("ml.ai(Lajl;I)V")
     public void method6119(PacketBit arg0) {
-        int var2 = arg0.method15271();
-        int var3 = arg0.method15239();
-        boolean var4 = arg0.method15271() == 1;
-        int var5 = arg0.method15281();
+        int var2 = arg0.g1_alt1();
+        int var3 = arg0.g2();
+        boolean var4 = arg0.g1_alt1() == 1;
+        int var5 = arg0.g2_alt2();
         if (!this.field3813) {
             this.method6196();
         }
         this.method6123(BuildAreaSize.method2571(var2));
-        int var6 = (arg0.field9629.length - arg0.field9626) / 16;
+        int var6 = (arg0.data.length - arg0.pos) / 16;
         this.field3831 = new int[var6][4];
         for (int var7 = 0; var7 < var6; var7++) {
             for (int var8 = 0; var8 < 4; var8++) {
-                this.field3831[var7][var8] = arg0.method15379();
+                this.field3831[var7][var8] = arg0.g4();
             }
         }
         this.field3820 = new int[var6];
@@ -492,12 +492,12 @@ public class World {
 
     @ObfuscatedName("ml.ao(Lajl;B)V")
     public void method6120(PacketBit arg0) {
-        int var2 = arg0.method15281();
-        int var3 = arg0.method15220();
+        int var2 = arg0.g2_alt2();
+        int var3 = arg0.g1();
         boolean var4 = (var3 & 0x1) != 0;
-        int var5 = arg0.method15239();
-        int var6 = arg0.method15220();
-        int var7 = arg0.method15272();
+        int var5 = arg0.g2();
+        int var6 = arg0.g1();
+        int var7 = arg0.g1_alt2();
         if (var7 == 1) {
             this.field3827 = RebuildType.field3835;
         } else if (var7 == 2) {
@@ -525,11 +525,11 @@ public class World {
             }
         }
         arg0.method16881();
-        int var12 = (arg0.field9629.length - arg0.field9626) / 16;
+        int var12 = (arg0.data.length - arg0.pos) / 16;
         this.field3831 = new int[var12][4];
         for (int var13 = 0; var13 < var12; var13++) {
             for (int var14 = 0; var14 < 4; var14++) {
-                this.field3831[var13][var14] = arg0.method15379();
+                this.field3831[var13][var14] = arg0.g4();
             }
         }
         this.field3820 = new int[var12];
@@ -1221,7 +1221,7 @@ public class World {
         ChangeLocationRequest.method11709();
         if (Statics.method5937() == GameShellEnvironment.field4118 && client.field8975.method1927() != null && client.field8923 == 16) {
             ClientMessage var27 = ClientMessage.method14781(ClientProt.field2939, client.field8975.field834);
-            var27.field9467.method15223(1057001181);
+            var27.field9467.p4(1057001181);
             client.field8975.method1913(var27);
         }
         if (!this.field3827.method6249()) {
@@ -1421,15 +1421,15 @@ public class World {
                 }
                 Packet var5 = new Packet(this.field3810[var2]);
                 int var6 = 0;
-                while (var5.field9626 < this.field3810[var2].length && var6 < 511 && client.field9104 < 1023) {
+                while (var5.pos < this.field3810[var2].length && var6 < 511 && client.field9104 < 1023) {
                     int var7 = var3 | var6++ << 6;
-                    int var8 = var5.method15239();
+                    int var8 = var5.g2();
                     int var9 = var8 >> 14;
                     int var10 = var8 >> 7 & 0x3F;
                     int var11 = var8 & 0x3F;
                     int var12 = (this.field3820[var2] >> 8) * 64 - this.field3795.field4836 + var10;
                     int var13 = (this.field3820[var2] & 0xFF) * 64 - this.field3795.field4838 + var11;
-                    NPCType var14 = Statics.field3774.method12565(var5.method15239());
+                    NPCType var14 = Statics.field3774.method12565(var5.g2());
                     ObjectNode var15 = (ObjectNode) client.field8964.method11923((long) var7);
                     if (var15 == null && (var14.field7220 & 0x1) > 0 && var12 >= 0 && var14.field7213 + var12 < this.field3799 && var13 >= 0 && var14.field7213 + var13 < this.field3826) {
                         NpcEntity var16 = new NpcEntity(this.field3791);

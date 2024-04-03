@@ -75,7 +75,7 @@ public class QuestType {
     @ObfuscatedName("qb.u(Laet;B)V")
     public void method8412(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -86,98 +86,98 @@ public class QuestType {
     @ObfuscatedName("qb.j(Laet;IB)V")
     public void method8413(Packet arg0, int arg1) {
         if (arg1 == 1) {
-            this.field5058 = arg0.method15366();
+            this.field5058 = arg0.gjstr2();
         } else if (arg1 == 2) {
-            this.field5059 = arg0.method15366();
+            this.field5059 = arg0.gjstr2();
         } else if (arg1 == 3) {
-            int var3 = arg0.method15220();
+            int var3 = arg0.g1();
             this.field5060 = new int[var3][3];
             for (int var4 = 0; var4 < var3; var4++) {
-                this.field5060[var4][0] = arg0.method15239();
-                this.field5060[var4][1] = arg0.method15379();
-                this.field5060[var4][2] = arg0.method15379();
+                this.field5060[var4][0] = arg0.g2();
+                this.field5060[var4][1] = arg0.g4();
+                this.field5060[var4][2] = arg0.g4();
             }
         } else if (arg1 == 4) {
-            int var5 = arg0.method15220();
+            int var5 = arg0.g1();
             this.field5061 = new int[var5][3];
             for (int var6 = 0; var6 < var5; var6++) {
-                this.field5061[var6][0] = arg0.method15239();
-                this.field5061[var6][1] = arg0.method15379();
-                this.field5061[var6][2] = arg0.method15379();
+                this.field5061[var6][0] = arg0.g2();
+                this.field5061[var6][1] = arg0.g4();
+                this.field5061[var6][2] = arg0.g4();
             }
         } else if (arg1 == 5) {
-            arg0.method15239();
+            arg0.g2();
         } else if (arg1 == 6) {
-            this.field5078 = arg0.method15220();
+            this.field5078 = arg0.g1();
         } else if (arg1 == 7) {
-            this.field5063 = arg0.method15220();
+            this.field5063 = arg0.g1();
         } else if (arg1 == 8) {
             this.field5057 = true;
         } else if (arg1 == 9) {
-            this.field5065 = arg0.method15220();
+            this.field5065 = arg0.g1();
         } else if (arg1 == 10) {
-            int var7 = arg0.method15220();
+            int var7 = arg0.g1();
             this.field5066 = new int[var7];
             for (int var8 = 0; var8 < var7; var8++) {
-                this.field5066[var8] = arg0.method15379();
+                this.field5066[var8] = arg0.g4();
             }
         } else if (arg1 == 12) {
-            arg0.method15379();
+            arg0.g4();
         } else if (arg1 == 13) {
-            int var9 = arg0.method15220();
+            int var9 = arg0.g1();
             this.field5076 = new int[var9];
             for (int var10 = 0; var10 < var9; var10++) {
-                this.field5076[var10] = arg0.method15239();
+                this.field5076[var10] = arg0.g2();
             }
         } else if (arg1 == 14) {
-            int var11 = arg0.method15220();
+            int var11 = arg0.g1();
             this.field5068 = new int[var11][2];
             for (int var12 = 0; var12 < var11; var12++) {
-                this.field5068[var12][0] = arg0.method15220();
-                this.field5068[var12][1] = arg0.method15220();
+                this.field5068[var12][0] = arg0.g1();
+                this.field5068[var12][1] = arg0.g1();
             }
         } else if (arg1 == 15) {
-            this.field5067 = arg0.method15239();
+            this.field5067 = arg0.g2();
         } else if (arg1 == 17) {
-            this.field5079 = arg0.method15411();
+            this.field5079 = arg0.gSmart2or4null();
         } else if (arg1 == 18) {
-            int var13 = arg0.method15220();
+            int var13 = arg0.g1();
             this.field5062 = new int[var13];
             this.field5071 = new int[var13];
             this.field5072 = new int[var13];
             this.field5073 = new String[var13];
             for (int var14 = 0; var14 < var13; var14++) {
-                this.field5062[var14] = arg0.method15379();
-                this.field5071[var14] = arg0.method15379();
-                this.field5072[var14] = arg0.method15379();
-                this.field5073[var14] = arg0.method15337();
+                this.field5062[var14] = arg0.g4();
+                this.field5071[var14] = arg0.g4();
+                this.field5072[var14] = arg0.g4();
+                this.field5073[var14] = arg0.gjstr();
             }
         } else if (arg1 == 19) {
-            int var15 = arg0.method15220();
+            int var15 = arg0.g1();
             this.field5074 = new int[var15];
             this.field5075 = new int[var15];
             this.field5070 = new int[var15];
             this.field5077 = new String[var15];
             for (int var16 = 0; var16 < var15; var16++) {
-                this.field5074[var16] = arg0.method15379();
-                this.field5075[var16] = arg0.method15379();
-                this.field5070[var16] = arg0.method15379();
-                this.field5077[var16] = arg0.method15337();
+                this.field5074[var16] = arg0.g4();
+                this.field5075[var16] = arg0.g4();
+                this.field5070[var16] = arg0.g4();
+                this.field5077[var16] = arg0.gjstr();
             }
         } else if (arg1 == 249) {
-            int var17 = arg0.method15220();
+            int var17 = arg0.g1();
             if (this.field5069 == null) {
                 int var18 = IntMath.method2839(var17);
                 this.field5069 = new IterableMap(var18);
             }
             for (int var19 = 0; var19 < var17; var19++) {
-                boolean var20 = arg0.method15220() == 1;
-                int var21 = arg0.method15241();
+                boolean var20 = arg0.g1() == 1;
+                int var21 = arg0.g3();
                 Node var22;
                 if (var20) {
-                    var22 = new ObjectNode(arg0.method15337());
+                    var22 = new ObjectNode(arg0.gjstr());
                 } else {
-                    var22 = new IntNode(arg0.method15379());
+                    var22 = new IntNode(arg0.g4());
                 }
                 this.field5069.method11927(var22, (long) var21);
             }

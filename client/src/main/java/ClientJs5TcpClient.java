@@ -43,17 +43,17 @@ public class ClientJs5TcpClient extends Js5TcpClient {
         }
         try {
             for (Js5NetRequest var5 = (Js5NetRequest) this.field3594.method11756(); var5 != null; var5 = (Js5NetRequest) this.field3594.method11744()) {
-                this.field3597.field9626 = 0;
-                this.field3597.method15308(1);
-                this.field3597.method15234(var5.field9554);
-                this.field8882.method7193(this.field3597.field9629, 0, this.field3597.field9629.length);
+                this.field3597.pos = 0;
+                this.field3597.p1(1);
+                this.field3597.p5(var5.field9554);
+                this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
                 this.field3595.method11728(var5);
             }
             for (Js5NetRequest var6 = (Js5NetRequest) this.field3605.method11756(); var6 != null; var6 = (Js5NetRequest) this.field3605.method11744()) {
-                this.field3597.field9626 = 0;
-                this.field3597.method15308(0);
-                this.field3597.method15234(var6.field9554);
-                this.field8882.method7193(this.field3597.field9629, 0, this.field3597.field9629.length);
+                this.field3597.pos = 0;
+                this.field3597.p1(0);
+                this.field3597.p5(var6.field9554);
+                this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
                 this.field3596.method11728(var6);
             }
             for (int var7 = 0; var7 < 100; var7++) {
@@ -72,24 +72,24 @@ public class ClientJs5TcpClient extends Js5TcpClient {
                     var9 = 1;
                 }
                 if (var9 > 0) {
-                    int var10 = var9 - this.field3590.field9626;
+                    int var10 = var9 - this.field3590.pos;
                     if (var10 > var8) {
                         var10 = var8;
                     }
-                    this.field8882.method7196(this.field3590.field9629, this.field3590.field9626, var10);
+                    this.field8882.method7196(this.field3590.data, this.field3590.pos, var10);
                     if (this.field3601 != 0) {
                         for (int var11 = 0; var11 < var10; var11++) {
-                            this.field3590.field9629[this.field3590.field9626 + var11] ^= this.field3601;
+                            this.field3590.data[this.field3590.pos + var11] ^= this.field3601;
                         }
                     }
-                    this.field3590.field9626 += var10;
-                    if (this.field3590.field9626 >= var9) {
+                    this.field3590.pos += var10;
+                    if (this.field3590.pos >= var9) {
                         if (this.field3592 == null) {
-                            this.field3590.field9626 = 0;
-                            int var12 = this.field3590.method15220();
-                            int var13 = this.field3590.method15379();
-                            int var14 = this.field3590.method15220();
-                            int var15 = this.field3590.method15379();
+                            this.field3590.pos = 0;
+                            int var12 = this.field3590.g1();
+                            int var13 = this.field3590.g4();
+                            int var14 = this.field3590.g1();
+                            int var15 = this.field3590.g4();
                             int var16 = var14 & 0x7F;
                             boolean var17 = (var14 & 0x80) != 0;
                             long var18 = ((long) var12 << 32) + (long) var13;
@@ -108,37 +108,37 @@ public class ClientJs5TcpClient extends Js5TcpClient {
                             int var22 = var16 == 0 ? 5 : 9;
                             this.field3592 = var21;
                             this.field3592.field10599 = new Packet(var15 + var22 + this.field3592.field10598);
-                            this.field3592.field10599.method15308(var16);
-                            this.field3592.field10599.method15223(var15);
+                            this.field3592.field10599.p1(var16);
+                            this.field3592.field10599.p4(var15);
                             this.field3592.field10600 = 10;
-                            this.field3590.field9626 = 0;
+                            this.field3590.pos = 0;
                         } else if (this.field3592.field10600 != 0) {
                             throw new IOException();
-                        } else if (this.field3590.field9629[0] == -1) {
+                        } else if (this.field3590.data[0] == -1) {
                             this.field3592.field10600 = 1;
-                            this.field3590.field9626 = 0;
+                            this.field3590.pos = 0;
                         } else {
                             this.field3592 = null;
                         }
                     }
                 } else {
-                    int var23 = this.field3592.field10599.field9629.length - this.field3592.field10598;
+                    int var23 = this.field3592.field10599.data.length - this.field3592.field10598;
                     int var24 = 512 - this.field3592.field10600;
-                    if (var24 > var23 - this.field3592.field10599.field9626) {
-                        var24 = var23 - this.field3592.field10599.field9626;
+                    if (var24 > var23 - this.field3592.field10599.pos) {
+                        var24 = var23 - this.field3592.field10599.pos;
                     }
                     if (var24 > var8) {
                         var24 = var8;
                     }
-                    this.field8882.method7196(this.field3592.field10599.field9629, this.field3592.field10599.field9626, var24);
+                    this.field8882.method7196(this.field3592.field10599.data, this.field3592.field10599.pos, var24);
                     if (this.field3601 != 0) {
                         for (int var25 = 0; var25 < var24; var25++) {
-                            this.field3592.field10599.field9629[this.field3592.field10599.field9626 + var25] ^= this.field3601;
+                            this.field3592.field10599.data[this.field3592.field10599.pos + var25] ^= this.field3601;
                         }
                     }
-                    this.field3592.field10599.field9626 += var24;
+                    this.field3592.field10599.pos += var24;
                     this.field3592.field10600 += var24;
-                    if (this.field3592.field10599.field9626 == var23) {
+                    if (this.field3592.field10599.pos == var23) {
                         this.field3592.method15142();
                         this.field3592.field10352 = false;
                         this.field3592 = null;
@@ -172,7 +172,7 @@ public class ClientJs5TcpClient extends Js5TcpClient {
         this.field8882 = (Stream) arg0;
         this.method14261();
         this.method5744(arg1);
-        this.field3590.field9626 = 0;
+        this.field3590.pos = 0;
         this.field3592 = null;
         while (true) {
             Js5NetRequest var4 = (Js5NetRequest) this.field3595.method11729();
@@ -182,11 +182,11 @@ public class ClientJs5TcpClient extends Js5TcpClient {
                     if (var5 == null) {
                         if (this.field3601 != 0) {
                             try {
-                                this.field3597.field9626 = 0;
-                                this.field3597.method15308(4);
-                                this.field3597.method15308(this.field3601);
-                                this.field3597.method15223(0);
-                                this.field8882.method7193(this.field3597.field9629, 0, this.field3597.field9629.length);
+                                this.field3597.pos = 0;
+                                this.field3597.p1(4);
+                                this.field3597.p1(this.field3601);
+                                this.field3597.p4(0);
+                                this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
                             } catch (IOException var9) {
                                 try {
                                     this.field8882.method7192();
@@ -214,11 +214,11 @@ public class ClientJs5TcpClient extends Js5TcpClient {
             return;
         }
         try {
-            this.field3597.field9626 = 0;
-            this.field3597.method15308(6);
-            this.field3597.method15222(3);
-            this.field3597.method15287(0);
-            this.field8882.method7193(this.field3597.field9629, 0, this.field3597.field9629.length);
+            this.field3597.pos = 0;
+            this.field3597.p1(6);
+            this.field3597.p3(3);
+            this.field3597.p2(0);
+            this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
         } catch (IOException var4) {
             try {
                 this.field8882.method7192();
@@ -236,10 +236,10 @@ public class ClientJs5TcpClient extends Js5TcpClient {
             return;
         }
         try {
-            this.field3597.field9626 = 0;
-            this.field3597.method15308(arg0 ? 2 : 3);
-            this.field3597.method15234(0L);
-            this.field8882.method7193(this.field3597.field9629, 0, this.field3597.field9629.length);
+            this.field3597.pos = 0;
+            this.field3597.p1(arg0 ? 2 : 3);
+            this.field3597.p5(0L);
+            this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
         } catch (IOException var5) {
             try {
                 this.field8882.method7192();
@@ -257,10 +257,10 @@ public class ClientJs5TcpClient extends Js5TcpClient {
             return;
         }
         try {
-            this.field3597.field9626 = 0;
-            this.field3597.method15308(7);
-            this.field3597.method15234(0L);
-            this.field8882.method7193(this.field3597.field9629, 0, this.field3597.field9629.length);
+            this.field3597.pos = 0;
+            this.field3597.p1(7);
+            this.field3597.p5(0L);
+            this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
         } catch (IOException var4) {
             try {
                 this.field8882.method7192();

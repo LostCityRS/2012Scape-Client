@@ -148,7 +148,7 @@ public class GlFloorModelRelated1 extends Node {
     public void method14862(int[] arg0, int arg1) {
         int var3 = 0;
         GpuPacket var4 = this.field9350.field8226;
-        var4.field9626 = 0;
+        var4.pos = 0;
         if (this.field9350.field8149) {
             for (int var5 = 0; var5 < arg1; var5++) {
                 int var6 = arg0[var5];
@@ -161,11 +161,11 @@ public class GlFloorModelRelated1 extends Node {
                         if ((var8 & 0x1 << var9++) == 0) {
                             var10 += 3;
                         } else {
-                            var4.method15287(var7[var10++] & 0xFFFF);
+                            var4.p2(var7[var10++] & 0xFFFF);
                             var3++;
-                            var4.method15287(var7[var10++] & 0xFFFF);
+                            var4.p2(var7[var10++] & 0xFFFF);
                             var3++;
-                            var4.method15287(var7[var10++] & 0xFFFF);
+                            var4.p2(var7[var10++] & 0xFFFF);
                             var3++;
                         }
                     }
@@ -183,11 +183,11 @@ public class GlFloorModelRelated1 extends Node {
                         if ((var14 & 0x1 << var15++) == 0) {
                             var16 += 3;
                         } else {
-                            var4.method15221(var13[var16++] & 0xFFFF);
+                            var4.ip2(var13[var16++] & 0xFFFF);
                             var3++;
-                            var4.method15221(var13[var16++] & 0xFFFF);
+                            var4.ip2(var13[var16++] & 0xFFFF);
                             var3++;
-                            var4.method15221(var13[var16++] & 0xFFFF);
+                            var4.ip2(var13[var16++] & 0xFFFF);
                             var3++;
                         }
                     }
@@ -197,7 +197,7 @@ public class GlFloorModelRelated1 extends Node {
         if (var3 <= 0) {
             return;
         }
-        this.field9347.method2338(5123, var4.field9629, var4.field9626);
+        this.field9347.method2338(5123, var4.data, var4.pos);
         this.field9350.method13305(this.field9342.field7708, this.field9342.field7710, this.field9349, this.field9342.field7701);
         this.field9350.method13473(this.field9343, (this.field9342.field7692 & 0x7) != 0, (this.field9342.field7692 & 0x8) != 0);
         if (this.field9350.field8174) {

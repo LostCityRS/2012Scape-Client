@@ -50,7 +50,7 @@ public class BillboardType {
     @ObfuscatedName("ik.a(Laet;II)V")
     public void method4641(Packet arg0, int arg1) {
         while (true) {
-            int var3 = arg0.method15220();
+            int var3 = arg0.g1();
             if (var3 == 0) {
                 return;
             }
@@ -61,19 +61,19 @@ public class BillboardType {
     @ObfuscatedName("ik.s(Laet;III)V")
     public void method4643(Packet arg0, int arg1, int arg2) {
         if (arg1 == 1) {
-            this.field2661 = arg0.method15239();
+            this.field2661 = arg0.g2();
             if (this.field2661 == 65535) {
                 this.field2661 = -1;
             }
         } else if (arg1 == 2) {
-            this.field2658 = arg0.method15239() + 1;
-            this.field2662 = arg0.method15239() + 1;
+            this.field2658 = arg0.g2() + 1;
+            this.field2662 = arg0.g2() + 1;
         } else if (arg1 == 3) {
-            arg0.method15238();
+            arg0.g1b();
         } else if (arg1 == 4) {
-            this.field2664 = arg0.method15220();
+            this.field2664 = arg0.g1();
         } else if (arg1 == 5) {
-            this.field2665 = arg0.method15220();
+            this.field2665 = arg0.g1();
         } else if (arg1 == 6) {
             this.field2666 = true;
         } else if (arg1 == 7) {

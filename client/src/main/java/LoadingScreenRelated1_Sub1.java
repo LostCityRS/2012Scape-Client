@@ -14,7 +14,7 @@ public class LoadingScreenRelated1_Sub1 extends LoadingScreenRelated4_Sub1 {
     @ObfuscatedName("afu.n(Laet;I)Liq;")
     public static LoadingScreenProgressDisplayConfig method15894(Packet arg0) {
         LoadingScreenRelated4_Sub1 var1 = (LoadingScreenRelated4_Sub1) LoadingScreenRelated4_Sub1.method4623(arg0);
-        int var2 = arg0.method15240();
+        int var2 = arg0.g2s();
         return new LoadingScreenRelated1_Sub1(var1.field2605, var1.field2603, var1.field2604, var1.field2608, var1.field2602, var1.field2607, var1.field2610, var1.field2609, var1.field2606, var1.field8822, var1.field8820, var1.field8821, var1.field8824, var1.field8823, var1.field8819, var2);
     }
 

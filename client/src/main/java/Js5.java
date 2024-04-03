@@ -329,13 +329,13 @@ public final class Js5 {
             } else {
                 var10 = Statics.method2896(this.field3564[arg0], true);
                 Packet var11 = new Packet(var10);
-                var11.method15336(arg2, 5, var11.field9629.length);
+                var11.tinydec(arg2, 5, var11.data.length);
             }
             byte[] var12;
             try {
                 var12 = Statics.method1598(var10);
             } catch (RuntimeException var48) {
-                throw JagException.method15876(var48, (arg2 != null) + " " + arg0 + " " + var10.length + " " + Packet.method7834(var10, var10.length) + " " + Packet.method7834(var10, var10.length - 2) + " " + this.field3572.field3548[arg0] + " " + this.field3572.field3546);
+                throw JagException.method15876(var48, (arg2 != null) + " " + arg0 + " " + var10.length + " " + Packet.getcrc(var10, var10.length) + " " + Packet.getcrc(var10, var10.length - 2) + " " + this.field3572.field3548[arg0] + " " + this.field3572.field3546);
             }
             if (this.field3574) {
                 this.field3564[arg0] = null;
@@ -360,11 +360,11 @@ public final class Js5 {
                 Packet var33 = new Packet(var12);
                 int var34 = 0;
                 int var35 = 0;
-                var33.field9626 = var32;
+                var33.pos = var32;
                 for (int var36 = 0; var36 < var31; var36++) {
                     int var37 = 0;
                     for (int var38 = 0; var38 < var4; var38++) {
-                        var37 += var33.method15379();
+                        var37 += var33.g4();
                         int var39;
                         if (var5 == null) {
                             var39 = var38;
@@ -382,12 +382,12 @@ public final class Js5 {
                 }
                 byte[] var40 = new byte[var34];
                 int var41 = 0;
-                var33.field9626 = var32;
+                var33.pos = var32;
                 int var42 = 0;
                 for (int var43 = 0; var43 < var31; var43++) {
                     int var44 = 0;
                     for (int var45 = 0; var45 < var4; var45++) {
-                        var44 += var33.method15379();
+                        var44 += var33.g4();
                         int var46;
                         if (var5 == null) {
                             var46 = var45;
@@ -409,11 +409,11 @@ public final class Js5 {
                 int var16 = var49 - var4 * var15 * 4;
                 Packet var17 = new Packet(var12);
                 int[] var18 = new int[var4];
-                var17.field9626 = var16;
+                var17.pos = var16;
                 for (int var19 = 0; var19 < var15; var19++) {
                     int var20 = 0;
                     for (int var21 = 0; var21 < var4; var21++) {
-                        var20 += var17.method15379();
+                        var20 += var17.g4();
                         var18[var21] += var20;
                     }
                 }
@@ -422,12 +422,12 @@ public final class Js5 {
                     var22[var23] = new byte[var18[var23]];
                     var18[var23] = 0;
                 }
-                var17.field9626 = var16;
+                var17.pos = var16;
                 int var24 = 0;
                 for (int var25 = 0; var25 < var15; var25++) {
                     int var26 = 0;
                     for (int var27 = 0; var27 < var4; var27++) {
-                        var26 += var17.method15379();
+                        var26 += var17.g4();
                         System.arraycopy(var12, var24, var22[var27], var18[var27], var26);
                         var18[var27] += var26;
                         var24 += var26;

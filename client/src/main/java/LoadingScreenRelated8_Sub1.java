@@ -14,7 +14,7 @@ public class LoadingScreenRelated8_Sub1 extends LoadingScreenSpriteConfig {
     @ObfuscatedName("wk.z(Laet;B)Liz;")
     public static LoadingScreenSpriteConfig method12717(Packet arg0) {
         LoadingScreenSpriteConfig var1 = LoadingScreenSpriteConfig.method7324(arg0);
-        int var2 = arg0.method15242();
+        int var2 = arg0.g3s();
         return new LoadingScreenRelated8_Sub1(var1.field2648, var1.field2651, var1.field2649, var1.field2650, var1.field2647, var2);
     }
 

@@ -15,7 +15,7 @@ public class VarBitType implements PlayerTypeRelated {
     @ObfuscatedName("pe.u(Laet;I)V")
     public void method7682(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -26,9 +26,9 @@ public class VarBitType implements PlayerTypeRelated {
     @ObfuscatedName("pe.j(Laet;II)V")
     public void method7680(Packet arg0, int arg1) {
         if (arg1 == 1) {
-            this.field4669 = arg0.method15239();
-            this.field4668 = arg0.method15220();
-            this.field4670 = arg0.method15220();
+            this.field4669 = arg0.g2();
+            this.field4668 = arg0.g1();
+            this.field4670 = arg0.g1();
         }
     }
 }

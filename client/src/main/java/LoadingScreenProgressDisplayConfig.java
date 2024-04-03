@@ -44,15 +44,15 @@ public class LoadingScreenProgressDisplayConfig implements LoadingScreenElementC
 
     @ObfuscatedName("dl.u(Laet;I)Liq;")
     public static LoadingScreenProgressDisplayConfig method2603(Packet arg0) {
-        LoadingScreenAlignmentX var1 = LoadingScreenAlignmentX.method15177()[arg0.method15220()];
-        LoadingScreenAlignmentY var2 = LoadingScreenAlignmentY.method3623()[arg0.method15220()];
-        int var3 = arg0.method15240();
-        int var4 = arg0.method15240();
-        int var5 = arg0.method15239();
-        int var6 = arg0.method15239();
-        int var7 = arg0.method15240();
-        int var8 = arg0.method15411();
-        int var9 = arg0.method15379();
+        LoadingScreenAlignmentX var1 = LoadingScreenAlignmentX.method15177()[arg0.g1()];
+        LoadingScreenAlignmentY var2 = LoadingScreenAlignmentY.method3623()[arg0.g1()];
+        int var3 = arg0.g2s();
+        int var4 = arg0.g2s();
+        int var5 = arg0.g2();
+        int var6 = arg0.g2();
+        int var7 = arg0.g2s();
+        int var8 = arg0.gSmart2or4null();
+        int var9 = arg0.g4();
         return new LoadingScreenProgressDisplayConfig(var1, var2, var3, var4, var5, var6, var7, var8, var9);
     }
 

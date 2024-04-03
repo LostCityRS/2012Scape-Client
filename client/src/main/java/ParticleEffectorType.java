@@ -86,7 +86,7 @@ public class ParticleEffectorType {
     @ObfuscatedName("ic.a(Laet;I)V")
     public void method4679(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -97,18 +97,18 @@ public class ParticleEffectorType {
     @ObfuscatedName("ic.s(Laet;II)V")
     public void method4685(Packet arg0, int arg1) {
         if (arg1 == 1) {
-            this.field2761 = arg0.method15239();
+            this.field2761 = arg0.g2();
         } else if (arg1 == 2) {
-            arg0.method15220();
+            arg0.g1();
         } else if (arg1 == 3) {
-            this.field2754 = arg0.method15379();
-            this.field2763 = arg0.method15379();
-            this.field2765 = arg0.method15379();
+            this.field2754 = arg0.g4();
+            this.field2763 = arg0.g4();
+            this.field2765 = arg0.g4();
         } else if (arg1 == 4) {
-            this.field2759 = arg0.method15220();
-            this.field2766 = arg0.method15379();
+            this.field2759 = arg0.g1();
+            this.field2766 = arg0.g4();
         } else if (arg1 == 6) {
-            this.field2760 = arg0.method15220();
+            this.field2760 = arg0.g1();
         } else if (arg1 == 8) {
             this.field2767 = 1;
         } else if (arg1 == 9) {

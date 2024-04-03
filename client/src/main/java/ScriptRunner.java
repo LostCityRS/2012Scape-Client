@@ -379,10 +379,10 @@ public final class ScriptRunner {
             return;
         }
         ClientMessage var6 = ClientMessage.method14781(ClientProt.field2860, var5.field834);
-        var6.field9467.method15287(Statics.method1724(arg0) + Statics.method1724(arg1) + Statics.method1724(arg2) + 1);
-        var6.field9467.method15228(arg0);
-        var6.field9467.method15228(arg1);
-        var6.field9467.method15228(arg2);
+        var6.field9467.p2(Packet.pjstrlen(arg0) + Packet.pjstrlen(arg1) + Packet.pjstrlen(arg2) + 1);
+        var6.field9467.pjstr(arg0);
+        var6.field9467.pjstr(arg1);
+        var6.field9467.pjstr(arg2);
         int var7 = 0;
         if (arg3) {
             var7 |= 0x1;
@@ -390,7 +390,7 @@ public final class ScriptRunner {
         if (arg4) {
             var7 |= 0x2;
         }
-        var6.field9467.method15308(var7);
+        var6.field9467.p1(var7);
         var5.method1913(var6);
     }
 
@@ -7356,7 +7356,7 @@ public final class ScriptRunner {
             var2 = StringTools.method5598(var1);
         }
         ClientMessage var3 = ClientMessage.method14781(ClientProt.field2914, client.field8975.field834);
-        var3.field9467.method15223(var2);
+        var3.field9467.p4(var2);
         client.field8975.method1913(var3);
     }
 
@@ -7364,8 +7364,8 @@ public final class ScriptRunner {
     public static final void method12718(ClientScriptState arg0) {
         String var1 = (String) arg0.field5222[--arg0.field5230];
         ClientMessage var2 = ClientMessage.method14781(ClientProt.field2849, client.field8975.field834);
-        var2.field9467.method15308(var1.length() + 1);
-        var2.field9467.method15228(var1);
+        var2.field9467.p1(var1.length() + 1);
+        var2.field9467.pjstr(var1);
         client.field8975.method1913(var2);
     }
 
@@ -7373,8 +7373,8 @@ public final class ScriptRunner {
     public static final void method12738(ClientScriptState arg0) {
         String var1 = (String) arg0.field5222[--arg0.field5230];
         ClientMessage var2 = ClientMessage.method14781(ClientProt.field2870, client.field8975.field834);
-        var2.field9467.method15308(var1.length() + 1);
-        var2.field9467.method15228(var1);
+        var2.field9467.p1(var1.length() + 1);
+        var2.field9467.pjstr(var1);
         client.field8975.method1913(var2);
     }
 
@@ -7399,7 +7399,7 @@ public final class ScriptRunner {
     public static final void method3584(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
         ClientMessage var2 = ClientMessage.method14781(ClientProt.field2954, client.field8975.field834);
-        var2.field9467.method15287(var1);
+        var2.field9467.p2(var1);
         client.field8975.method1913(var2);
     }
 
@@ -7453,7 +7453,7 @@ public final class ScriptRunner {
     public static final void method11536(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
         ClientMessage var2 = ClientMessage.method14781(ClientProt.field2854, client.field8975.field834);
-        var2.field9467.method15287(var1);
+        var2.field9467.p2(var1);
         client.field8975.method1913(var2);
     }
 
@@ -7938,8 +7938,8 @@ public final class ScriptRunner {
     public static final void method1770(ClientScriptState arg0) {
         String var1 = (String) arg0.field5222[--arg0.field5230];
         ClientMessage var2 = ClientMessage.method14781(ClientProt.field2950, client.field8959.field834);
-        var2.field9467.method15308(Statics.method1724(var1));
-        var2.field9467.method15228(var1);
+        var2.field9467.p1(Packet.pjstrlen(var1));
+        var2.field9467.pjstr(var1);
         client.field8959.method1913(var2);
     }
 
@@ -7948,9 +7948,9 @@ public final class ScriptRunner {
         String var1 = (String) arg0.field5222[--arg0.field5230];
         String var2 = (String) arg0.field5222[--arg0.field5230];
         ClientMessage var3 = ClientMessage.method14781(ClientProt.field2958, client.field8959.field834);
-        var3.field9467.method15287(Statics.method1724(var1) + Statics.method1724(var2));
-        var3.field9467.method15228(var1);
-        var3.field9467.method15228(var2);
+        var3.field9467.p2(Packet.pjstrlen(var1) + Packet.pjstrlen(var2));
+        var3.field9467.pjstr(var1);
+        var3.field9467.pjstr(var2);
         client.field8959.method1913(var3);
     }
 
@@ -7963,8 +7963,8 @@ public final class ScriptRunner {
         boolean var3 = arg0.field5215[arg0.field5216 + 1] == 1;
         boolean var4 = arg0.field5215[arg0.field5216 + 2] == 1;
         ClientMessage var5 = ClientMessage.method14781(ClientProt.field2944, client.field8959.field834);
-        var5.field9467.method15287(Statics.method1724(var1) + 1);
-        var5.field9467.method15228(var1);
+        var5.field9467.p2(Packet.pjstrlen(var1) + 1);
+        var5.field9467.pjstr(var1);
         int var6 = 0;
         if (var2) {
             var6 |= 0x1;
@@ -7975,7 +7975,7 @@ public final class ScriptRunner {
         if (var4) {
             var6 |= 0x4;
         }
-        var5.field9467.method15308(var6);
+        var5.field9467.p1(var6);
         client.field8959.method1913(var5);
     }
 
@@ -9102,10 +9102,10 @@ public final class ScriptRunner {
         } else {
             client.field9030 = -1;
             ClientMessage var2 = ClientMessage.method14781(ClientProt.field2861, client.field8959.field834);
-            var2.field9467.method15308(0);
-            int var3 = var2.field9467.field9626;
-            var2.field9467.method15228(var1);
-            var2.field9467.method15251(var2.field9467.field9626 - var3);
+            var2.field9467.p1(0);
+            int var3 = var2.field9467.pos;
+            var2.field9467.pjstr(var1);
+            var2.field9467.psize1(var2.field9467.pos - var3);
             client.field8959.method1913(var2);
         }
     }
@@ -9134,9 +9134,9 @@ public final class ScriptRunner {
         client.field9178 = arg0.field5215[arg0.field5216 + 2];
         ServerConnection var1 = client.method4104();
         ClientMessage var2 = ClientMessage.method14781(ClientProt.field2922, var1.field834);
-        var2.field9467.method15308(client.field9177);
-        var2.field9467.method15308(Statics.field769.field6699);
-        var2.field9467.method15308(client.field9178);
+        var2.field9467.p1(client.field9177);
+        var2.field9467.p1(Statics.field769.field6699);
+        var2.field9467.p1(client.field9178);
         var1.method1913(var2);
     }
 
@@ -9156,11 +9156,11 @@ public final class ScriptRunner {
         }
         ServerConnection var5 = client.method4104();
         ClientMessage var6 = ClientMessage.method14781(ClientProt.field2926, var5.field834);
-        var6.field9467.method15308(Statics.method1724(var1) + 2 + Statics.method1724(var2));
-        var6.field9467.method15228(var1);
-        var6.field9467.method15308(var3 - 1);
-        var6.field9467.method15308(var4);
-        var6.field9467.method15228(var2);
+        var6.field9467.p1(Packet.pjstrlen(var1) + 2 + Packet.pjstrlen(var2));
+        var6.field9467.pjstr(var1);
+        var6.field9467.p1(var3 - 1);
+        var6.field9467.p1(var4);
+        var6.field9467.pjstr(var2);
         var5.method1913(var6);
     }
 
@@ -9191,7 +9191,7 @@ public final class ScriptRunner {
         int var1 = arg0.field5215[--arg0.field5216];
         ServerConnection var2 = client.method4104();
         ClientMessage var3 = ClientMessage.method14781(ClientProt.field2862, var2.field834);
-        var3.field9467.method15308(var1);
+        var3.field9467.p1(var1);
         var2.method1913(var3);
     }
 
@@ -9205,11 +9205,11 @@ public final class ScriptRunner {
         }
         ServerConnection var3 = client.method4104();
         ClientMessage var4 = ClientMessage.method14781(ClientProt.field2919, var3.field834);
-        var4.field9467.method15287(0);
-        int var5 = var4.field9467.field9626;
-        var4.field9467.method15228(var1);
+        var4.field9467.p2(0);
+        int var5 = var4.field9467.pos;
+        var4.field9467.pjstr(var1);
         WordPack.method14081(var4.field9467, var2);
-        var4.field9467.method15233(var4.field9467.field9626 - var5);
+        var4.field9467.psize2(var4.field9467.pos - var5);
         var3.method1913(var4);
     }
 
@@ -9397,12 +9397,12 @@ public final class ScriptRunner {
     public static final void method1359(ClientScriptState arg0) {
         ServerConnection var1 = client.method4104();
         ClientMessage var2 = ClientMessage.method14781(ClientProt.field2936, var1.field834);
-        var2.field9467.method15308(0);
-        int var3 = var2.field9467.field9626;
-        var2.field9467.method15308(0);
-        var2.field9467.method15287(arg0.field5213.field2655);
+        var2.field9467.p1(0);
+        int var3 = var2.field9467.pos;
+        var2.field9467.p1(0);
+        var2.field9467.p2(arg0.field5213.field2655);
         arg0.field5213.field2656.method16748(var2.field9467, arg0.field5213.field2657);
-        var2.field9467.method15251(var2.field9467.field9626 - var3);
+        var2.field9467.psize1(var2.field9467.pos - var3);
         var1.method1913(var2);
     }
 
@@ -9411,12 +9411,12 @@ public final class ScriptRunner {
         String var1 = (String) arg0.field5222[--arg0.field5230];
         ServerConnection var2 = client.method4104();
         ClientMessage var3 = ClientMessage.method14781(ClientProt.field2901, var2.field834);
-        var3.field9467.method15308(0);
-        int var4 = var3.field9467.field9626;
-        var3.field9467.method15228(var1);
-        var3.field9467.method15287(arg0.field5213.field2655);
+        var3.field9467.p1(0);
+        int var4 = var3.field9467.pos;
+        var3.field9467.pjstr(var1);
+        var3.field9467.p2(arg0.field5213.field2655);
         arg0.field5213.field2656.method16748(var3.field9467, arg0.field5213.field2657);
-        var3.field9467.method15251(var3.field9467.field9626 - var4);
+        var3.field9467.psize1(var3.field9467.pos - var4);
         var2.method1913(var3);
     }
 
@@ -9424,12 +9424,12 @@ public final class ScriptRunner {
     public static final void method4106(ClientScriptState arg0) {
         ServerConnection var1 = client.method4104();
         ClientMessage var2 = ClientMessage.method14781(ClientProt.field2936, var1.field834);
-        var2.field9467.method15308(0);
-        int var3 = var2.field9467.field9626;
-        var2.field9467.method15308(1);
-        var2.field9467.method15287(arg0.field5213.field2655);
+        var2.field9467.p1(0);
+        int var3 = var2.field9467.pos;
+        var2.field9467.p1(1);
+        var2.field9467.p2(arg0.field5213.field2655);
         arg0.field5213.field2656.method16748(var2.field9467, arg0.field5213.field2657);
-        var2.field9467.method15251(var2.field9467.field9626 - var3);
+        var2.field9467.psize1(var2.field9467.pos - var3);
         var1.method1913(var2);
     }
 
@@ -9534,12 +9534,12 @@ public final class ScriptRunner {
     public static final void method6985(ClientScriptState arg0) {
         ServerConnection var1 = client.method4104();
         ClientMessage var2 = ClientMessage.method14781(ClientProt.field2936, var1.field834);
-        var2.field9467.method15308(0);
-        int var3 = var2.field9467.field9626;
-        var2.field9467.method15308(3);
-        var2.field9467.method15287(arg0.field5213.field2655);
+        var2.field9467.p1(0);
+        int var3 = var2.field9467.pos;
+        var2.field9467.p1(3);
+        var2.field9467.p2(arg0.field5213.field2655);
         arg0.field5213.field2656.method16748(var2.field9467, arg0.field5213.field2657);
-        var2.field9467.method15251(var2.field9467.field9626 - var3);
+        var2.field9467.psize1(var2.field9467.pos - var3);
         var1.method1913(var2);
     }
 
@@ -11461,7 +11461,7 @@ public final class ScriptRunner {
         } else {
             WorldSwitcher.field6777 = true;
             ClientMessage var1 = ClientMessage.method14781(ClientProt.field2927, client.field8959.field834);
-            var1.field9467.method15223(Statics.field575);
+            var1.field9467.p4(Statics.field575);
             client.field8959.method1913(var1);
             arg0.field5215[++arg0.field5216 - 1] = 0;
         }
@@ -12436,10 +12436,10 @@ public final class ScriptRunner {
             return;
         }
         ClientMessage var3 = ClientMessage.method14781(ClientProt.field2946, client.field8975.field834);
-        var3.field9467.method15287(Packet.method13882(arg1) + 1 + Packet.method13882(arg2));
-        var3.field9467.method15229(arg2);
-        var3.field9467.method15229(arg1);
-        var3.field9467.method15268(arg0);
+        var3.field9467.p2(Packet.pjstr2len(arg1) + 1 + Packet.pjstr2len(arg2));
+        var3.field9467.pjstr2(arg2);
+        var3.field9467.pjstr2(arg1);
+        var3.field9467.p1_alt1(arg0);
         client.field8975.method1913(var3);
     }
 

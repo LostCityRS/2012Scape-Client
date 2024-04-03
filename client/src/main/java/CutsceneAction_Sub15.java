@@ -11,8 +11,8 @@ public class CutsceneAction_Sub15 extends CutsceneAction {
 
     public CutsceneAction_Sub15(Packet arg0) {
         super(arg0);
-        this.field8471 = arg0.method15337();
-        this.field8470 = arg0.method15239();
+        this.field8471 = arg0.gjstr();
+        this.field8470 = arg0.g2();
     }
 
     @ObfuscatedName("zy.j(I)V")

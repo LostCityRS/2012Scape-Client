@@ -51,7 +51,7 @@ public class HitmarkType {
     @ObfuscatedName("po.u(Laet;I)V")
     public void method7791(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -62,34 +62,34 @@ public class HitmarkType {
     @ObfuscatedName("po.j(Laet;II)V")
     public void method7792(Packet arg0, int arg1) {
         if (arg1 == 1) {
-            this.field4744 = arg0.method15411();
+            this.field4744 = arg0.gSmart2or4null();
         } else if (arg1 == 2) {
-            this.field4736 = arg0.method15241();
+            this.field4736 = arg0.g3();
             this.field4742 = true;
         } else if (arg1 == 3) {
-            this.field4746 = arg0.method15411();
+            this.field4746 = arg0.gSmart2or4null();
         } else if (arg1 == 4) {
-            this.field4748 = arg0.method15411();
+            this.field4748 = arg0.gSmart2or4null();
         } else if (arg1 == 5) {
-            this.field4747 = arg0.method15411();
+            this.field4747 = arg0.gSmart2or4null();
         } else if (arg1 == 6) {
-            this.field4749 = arg0.method15411();
+            this.field4749 = arg0.gSmart2or4null();
         } else if (arg1 == 7) {
-            this.field4738 = arg0.method15240();
+            this.field4738 = arg0.g2s();
         } else if (arg1 == 8) {
-            this.field4753 = arg0.method15366();
+            this.field4753 = arg0.gjstr2();
         } else if (arg1 == 9) {
-            this.field4750 = arg0.method15239();
+            this.field4750 = arg0.g2();
         } else if (arg1 == 10) {
-            this.field4751 = arg0.method15240();
+            this.field4751 = arg0.g2s();
         } else if (arg1 == 11) {
             this.field4752 = 0;
         } else if (arg1 == 12) {
-            this.field4743 = arg0.method15220();
+            this.field4743 = arg0.g1();
         } else if (arg1 == 13) {
-            this.field4755 = arg0.method15240();
+            this.field4755 = arg0.g2s();
         } else if (arg1 == 14) {
-            this.field4752 = arg0.method15239();
+            this.field4752 = arg0.g2();
         }
     }
 

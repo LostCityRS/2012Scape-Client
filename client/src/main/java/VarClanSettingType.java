@@ -18,7 +18,7 @@ public class VarClanSettingType {
     @ObfuscatedName("qh.u(Laet;B)V")
     public void method8279(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -29,11 +29,11 @@ public class VarClanSettingType {
     @ObfuscatedName("qh.j(Laet;II)V")
     public void method8275(Packet arg0, int arg1) {
         if (arg1 == 1) {
-            this.field5036 = Cp1252.method16898(arg0.method15238());
+            this.field5036 = Cp1252.method16898(arg0.g1b());
         } else if (arg1 == 2) {
-            this.field5033 = arg0.method15239();
-            this.field5035 = arg0.method15220();
-            this.field5034 = arg0.method15220();
+            this.field5033 = arg0.g2();
+            this.field5035 = arg0.g1();
+            this.field5034 = arg0.g1();
         }
     }
 }

@@ -48,31 +48,31 @@ public class CutsceneManager {
             }
             Packet var2 = new Packet(var1);
             method7325(var2);
-            int var3 = var2.method15220();
+            int var3 = var2.g1();
             for (int var4 = 0; var4 < var3; var4++) {
                 field1534.method11558(new CutsceneTemplate(var2));
             }
-            int var5 = var2.method15277();
+            int var5 = var2.gSmart1or2();
             Statics.field10534 = new CutsceneSpline[var5];
             for (int var6 = 0; var6 < var5; var6++) {
                 Statics.field10534[var6] = new CutsceneSpline(var2);
             }
-            int var7 = var2.method15277();
+            int var7 = var2.gSmart1or2();
             Statics.field1537 = new CutsceneEntity[var7];
             for (int var8 = 0; var8 < var7; var8++) {
                 Statics.field1537[var8] = new CutsceneEntity(var2, var8);
             }
-            int var9 = var2.method15277();
+            int var9 = var2.gSmart1or2();
             Statics.field1528 = new CutsceneLocation[var9];
             for (int var10 = 0; var10 < var9; var10++) {
                 Statics.field1528[var10] = new CutsceneLocation(var2);
             }
-            int var11 = var2.method15277();
+            int var11 = var2.gSmart1or2();
             Statics.field5181 = new CutsceneRoute[var11];
             for (int var12 = 0; var12 < var11; var12++) {
                 Statics.field5181[var12] = new CutsceneRoute(var2);
             }
-            int var13 = var2.method15277();
+            int var13 = var2.gSmart1or2();
             Statics.field6396 = new CutsceneAction[var13];
             for (int var14 = 0; var14 < var13; var14++) {
                 Statics.field6396[var14] = CutsceneAction.method3928(var2);
@@ -113,11 +113,11 @@ public class CutsceneManager {
     @ObfuscatedName("oe.j(Laet;B)V")
     public static void method7325(Packet arg0) {
         while (true) {
-            int var1 = arg0.method15220();
+            int var1 = arg0.g1();
             switch (var1) {
                 case 0:
-                    field1527 = arg0.method15239();
-                    field1531 = arg0.method15239();
+                    field1527 = arg0.g2();
+                    field1531 = arg0.g2();
                     break;
                 case 255:
                     return;
@@ -191,7 +191,7 @@ public class CutsceneManager {
         }
         method2911();
         ClientMessage var4 = ClientMessage.method14781(ClientProt.field2953, client.field8975.field834);
-        var4.field9467.method15308(arg0 ? 1 : 0);
+        var4.field9467.p1(arg0 ? 1 : 0);
         client.field8975.method1913(var4);
     }
 }

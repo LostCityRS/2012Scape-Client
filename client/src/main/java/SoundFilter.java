@@ -80,7 +80,7 @@ public class SoundFilter {
 
     @ObfuscatedName("ng.c(Laet;Lmt;)V")
     public final void method6623(Packet arg0, SoundEnvelope arg1) {
-        int var3 = arg0.method15220();
+        int var3 = arg0.g1();
         this.field4097[0] = var3 >> 4;
         this.field4097[1] = var3 & 0xF;
         if (var3 == 0) {
@@ -89,13 +89,13 @@ public class SoundFilter {
             var9[0] = 0;
             return;
         }
-        this.field4095[0] = arg0.method15239();
-        this.field4095[1] = arg0.method15239();
-        int var4 = arg0.method15220();
+        this.field4095[0] = arg0.g2();
+        this.field4095[1] = arg0.g2();
+        int var4 = arg0.g1();
         for (int var5 = 0; var5 < 2; var5++) {
             for (int var6 = 0; var6 < this.field4097[var5]; var6++) {
-                this.field4103[var5][0][var6] = arg0.method15239();
-                this.field4096[var5][0][var6] = arg0.method15239();
+                this.field4103[var5][0][var6] = arg0.g2();
+                this.field4096[var5][0][var6] = arg0.g2();
             }
         }
         for (int var7 = 0; var7 < 2; var7++) {
@@ -104,8 +104,8 @@ public class SoundFilter {
                     this.field4103[var7][1][var8] = this.field4103[var7][0][var8];
                     this.field4096[var7][1][var8] = this.field4096[var7][0][var8];
                 } else {
-                    this.field4103[var7][1][var8] = arg0.method15239();
-                    this.field4096[var7][1][var8] = arg0.method15239();
+                    this.field4103[var7][1][var8] = arg0.g2();
+                    this.field4096[var7][1][var8] = arg0.g2();
                 }
             }
         }

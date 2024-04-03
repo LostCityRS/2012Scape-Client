@@ -439,18 +439,18 @@ public class Loading {
     public static void method7678(byte[] arg0) {
         Packet var1 = new Packet(arg0);
         while (true) {
-            int var2 = var1.method15220();
+            int var2 = var1.g1();
             if (var2 == 0) {
                 return;
             }
             if (var2 == 1) {
                 int[] var3 = Statics.field9860 = new int[6];
-                var3[0] = var1.method15239();
-                var3[1] = var1.method15239();
-                var3[2] = var1.method15239();
-                var3[3] = var1.method15239();
-                var3[4] = var1.method15239();
-                var3[5] = var1.method15239();
+                var3[0] = var1.g2();
+                var3[1] = var1.g2();
+                var3[2] = var1.g2();
+                var3[3] = var1.g2();
+                var3[4] = var1.g2();
+                var3[5] = var1.g2();
             }
         }
     }
@@ -459,12 +459,12 @@ public class Loading {
     public static void method3560(byte[] arg0) {
         Packet var1 = new Packet(arg0);
         while (true) {
-            int var2 = var1.method15220();
+            int var2 = var1.g1();
             if (var2 == 0) {
                 return;
             }
             if (var2 == 1) {
-                int var3 = var1.method15239();
+                int var3 = var1.g2();
                 if (AudioRenderer.field4205 == -1) {
                     AudioRenderer.field4205 = var3;
                 }
@@ -498,20 +498,20 @@ public class Loading {
 
     @ObfuscatedName("fi.n(Laet;I)V")
     public static void method3665(Packet arg0) {
-        if (arg0.field9629.length - arg0.field9626 < 1) {
+        if (arg0.data.length - arg0.pos < 1) {
             return;
         }
-        int var1 = arg0.method15220();
-        if (var1 < 0 || var1 > 1 || arg0.field9629.length - arg0.field9626 < 2) {
+        int var1 = arg0.g1();
+        if (var1 < 0 || var1 > 1 || arg0.data.length - arg0.pos < 2) {
             return;
         }
-        int var2 = arg0.method15239();
-        if (arg0.field9629.length - arg0.field9626 < var2 * 6) {
+        int var2 = arg0.g2();
+        if (arg0.data.length - arg0.pos < var2 * 6) {
             return;
         }
         for (int var3 = 0; var3 < var2; var3++) {
-            int var4 = arg0.method15239();
-            int var5 = arg0.method15379();
+            int var4 = arg0.g2();
+            int var5 = arg0.g4();
             if (var4 < Statics.field6666.length && Statics.field2210[var4] && (Statics.field8455.method12359(var4).field7153 != '1' || var5 >= -1 && var5 <= 1)) {
                 Statics.field6666[var4] = var5;
             }

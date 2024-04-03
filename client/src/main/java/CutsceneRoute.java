@@ -10,14 +10,14 @@ public class CutsceneRoute {
     public final int[] field1570;
 
     public CutsceneRoute(Packet arg0) {
-        int var2 = arg0.method15277();
+        int var2 = arg0.gSmart1or2();
         this.field1569 = new int[var2];
         this.field1570 = new int[var2];
         for (int var3 = 0; var3 < var2; var3++) {
-            int var4 = arg0.method15220();
+            int var4 = arg0.g1();
             this.field1569[var3] = var4;
-            int var5 = arg0.method15239();
-            int var6 = arg0.method15239();
+            int var5 = arg0.g2();
+            int var6 = arg0.g2();
             this.field1570[var3] = (var5 << 16) + var6;
         }
     }

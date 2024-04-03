@@ -46,7 +46,7 @@ public class ClientScript extends SecondaryNode {
         int var2 = this.method16736(arg0);
         int var3 = 0;
         ClientScriptCommand[] var4 = ClientScriptCommand.method7977();
-        while (arg0.field9626 < var2) {
+        while (arg0.pos < var2) {
             ClientScriptCommand var5 = this.method16735(arg0, var4);
             this.method16734(arg0, var3, var5);
             var3++;
@@ -55,7 +55,7 @@ public class ClientScript extends SecondaryNode {
 
     @ObfuscatedName("ajg.u(Laet;[Lsd;I)Lsd;")
     public ClientScriptCommand method16735(Packet arg0, ClientScriptCommand[] arg1) {
-        int var3 = arg0.method15239();
+        int var3 = arg0.g2();
         if (var3 < 0 || var3 >= arg1.length) {
             throw new RuntimeException("");
         }
@@ -64,33 +64,33 @@ public class ClientScript extends SecondaryNode {
 
     @ObfuscatedName("ajg.j(Laet;S)I")
     public int method16736(Packet arg0) {
-        arg0.field9626 = arg0.field9629.length - 2;
-        int var2 = arg0.method15239();
-        int var3 = arg0.field9629.length - 2 - var2 - 16;
-        arg0.field9626 = var3;
-        int var4 = arg0.method15379();
-        this.field10379 = arg0.method15239();
-        this.field10387 = arg0.method15239();
-        this.field10384 = arg0.method15239();
-        this.field10382 = arg0.method15239();
-        this.field10386 = arg0.method15239();
-        this.field10376 = arg0.method15239();
-        int var5 = arg0.method15220();
+        arg0.pos = arg0.data.length - 2;
+        int var2 = arg0.g2();
+        int var3 = arg0.data.length - 2 - var2 - 16;
+        arg0.pos = var3;
+        int var4 = arg0.g4();
+        this.field10379 = arg0.g2();
+        this.field10387 = arg0.g2();
+        this.field10384 = arg0.g2();
+        this.field10382 = arg0.g2();
+        this.field10386 = arg0.g2();
+        this.field10376 = arg0.g2();
+        int var5 = arg0.g1();
         if (var5 > 0) {
             this.field10383 = new IterableMap[var5];
             for (int var6 = 0; var6 < var5; var6++) {
-                int var7 = arg0.method15239();
+                int var7 = arg0.g2();
                 IterableMap var8 = new IterableMap(IntMath.method2839(var7));
                 this.field10383[var6] = var8;
                 while (var7-- > 0) {
-                    int var9 = arg0.method15379();
-                    int var10 = arg0.method15379();
+                    int var9 = arg0.g4();
+                    int var10 = arg0.g4();
                     var8.method11927(new IntNode(var10), (long) var9);
                 }
             }
         }
-        arg0.field9626 = 0;
-        this.field10377 = arg0.method15219();
+        arg0.pos = 0;
+        this.field10377 = arg0.fastgstr();
         this.field10378 = new ClientScriptCommand[var4];
         return var3;
     }
@@ -102,20 +102,20 @@ public class ClientScript extends SecondaryNode {
             if (this.field10380 == null) {
                 this.field10380 = new String[var4];
             }
-            this.field10380[arg1] = arg0.method15337().intern();
+            this.field10380[arg1] = arg0.gjstr().intern();
         } else if (ClientScriptCommand.field5337 == arg2) {
             if (this.field10381 == null) {
                 this.field10381 = new long[var4];
             }
-            this.field10381[arg1] = arg0.method15246();
+            this.field10381[arg1] = arg0.g8();
         } else {
             if (this.field10385 == null) {
                 this.field10385 = new int[var4];
             }
             if (arg2.field6315) {
-                this.field10385[arg1] = arg0.method15379();
+                this.field10385[arg1] = arg0.g4();
             } else {
-                this.field10385[arg1] = arg0.method15220();
+                this.field10385[arg1] = arg0.g1();
             }
         }
         this.field10378[arg1] = arg2;

@@ -18,9 +18,9 @@ public class ClanChannelDelta {
 
     @ObfuscatedName("gd.u(Laet;I)V")
     public void method4116(Packet arg0) {
-        this.field2393 = arg0.method15246();
-        this.field2392 = arg0.method15246();
-        for (int var2 = arg0.method15220(); var2 != 0; var2 = arg0.method15220()) {
+        this.field2393 = arg0.g8();
+        this.field2392 = arg0.g8();
+        for (int var2 = arg0.g1(); var2 != 0; var2 = arg0.g1()) {
             ClanChannelDeltaEntry var3;
             if (var2 == 1) {
                 var3 = new ClanChannelDelta_Sub1(this);

@@ -595,10 +595,10 @@ public class DeveloperConsole {
                 if (client.field8923 == 1 || client.field8923 == 15) {
                     ServerConnection var26 = client.method4104();
                     ClientMessage var27 = ClientMessage.method14781(ClientProt.field2951, var26.field834);
-                    var27.field9467.method15308(arg0.length() + 3);
-                    var27.field9467.method15308(arg1 ? 1 : 0);
-                    var27.field9467.method15308(arg2 ? 1 : 0);
-                    var27.field9467.method15228(arg0);
+                    var27.field9467.p1(arg0.length() + 3);
+                    var27.field9467.p1(arg1 ? 1 : 0);
+                    var27.field9467.p1(arg2 ? 1 : 0);
+                    var27.field9467.pjstr(arg0);
                     var26.method1913(var27);
                 }
             } catch (Exception var32) {

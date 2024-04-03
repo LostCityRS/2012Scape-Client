@@ -14,10 +14,10 @@ public class CutsceneAction_Sub14 extends CutsceneAction_Sub25 {
 
     public CutsceneAction_Sub14(Packet arg0) {
         super(arg0);
-        int var2 = arg0.method15379();
+        int var2 = arg0.g4();
         this.field10035 = var2 >>> 16;
         this.field10034 = var2 & 0xFFFF;
-        this.field10033 = arg0.method15220();
+        this.field10033 = arg0.g1();
     }
 
     @ObfuscatedName("ahj.j(I)V")

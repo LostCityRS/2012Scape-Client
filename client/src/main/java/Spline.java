@@ -116,18 +116,18 @@ public class Spline {
     }
 
     public Spline(Packet arg0) {
-        int var2 = arg0.method15277();
+        int var2 = arg0.gSmart1or2();
         this.field3484[0] = new SplineRelated();
         this.field3484[0].method5492(0, new Vector3(arg0));
         this.field3484[0].method5492(1, new Vector3(arg0));
-        this.field3485[0] = arg0.method15324();
+        this.field3485[0] = arg0.gFloat();
         this.field3484[0].method5492(3, new Vector3(arg0));
         this.field3484[0].method5492(2, new Vector3(arg0));
-        this.field3485[1] = arg0.method15324();
+        this.field3485[1] = arg0.gFloat();
         for (int var3 = 2; var3 < var2; var3++) {
             Vector3 var4 = new Vector3(arg0);
             Vector3 var5 = new Vector3(arg0);
-            this.method5526(var4, var5, arg0.method15324());
+            this.method5526(var4, var5, arg0.gFloat());
         }
     }
 }

@@ -45,36 +45,36 @@ public class CutsceneAction_Sub12 extends CutsceneAction {
     public CutsceneAction_Sub12(Packet arg0, int arg1, int arg2) {
         super(arg0);
         if (arg1 == 0) {
-            int var4 = arg0.method15379();
+            int var4 = arg0.g4();
             this.field8543 = var4 >>> 16;
             this.field8551 = var4 & 0xFFFF;
             this.field8539 = -1;
         } else {
             this.field8543 = -1;
             this.field8551 = -1;
-            this.field8539 = arg0.method15239();
+            this.field8539 = arg0.g2();
         }
         if (arg2 == 0) {
-            int var5 = arg0.method15379();
+            int var5 = arg0.g4();
             this.field8546 = (var5 >>> 16) * 512;
             this.field8548 = (var5 & 0xFFFF) * 262144;
             this.field8541 = -1;
         } else {
             this.field8546 = -512;
             this.field8548 = -262144;
-            this.field8541 = arg0.method15239();
+            this.field8541 = arg0.g2();
         }
         if (arg1 == 0 && arg2 == 0) {
-            this.field8547 = arg0.method15220();
+            this.field8547 = arg0.g1();
         } else {
             this.field8547 = -1;
         }
-        this.field8550 = arg0.method15239();
-        this.field8544 = arg0.method15220();
-        this.field8549 = arg0.method15220();
-        this.field8542 = arg0.method15241();
-        this.field8552 = arg0.method15239();
-        this.field8553 = arg0.method15220();
+        this.field8550 = arg0.g2();
+        this.field8544 = arg0.g1();
+        this.field8549 = arg0.g1();
+        this.field8542 = arg0.g3();
+        this.field8552 = arg0.g2();
+        this.field8553 = arg0.g1();
     }
 
     @ObfuscatedName("aah.j(I)V")

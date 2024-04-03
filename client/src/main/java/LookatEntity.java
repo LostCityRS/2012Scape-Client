@@ -75,11 +75,11 @@ public class LookatEntity extends Lookat {
 
     @ObfuscatedName("agg.c(Laet;I)V")
     public void method11542(Packet arg0) {
-        CameraTrackableType var2 = CameraTrackableType.method4728(arg0.method15220());
-        int var3 = arg0.method15239();
+        CameraTrackableType var2 = CameraTrackableType.method4728(arg0.g1());
+        int var3 = arg0.g2();
         this.field9887 = this.field6645.method3717().method1355(var2, var3);
         this.field9888.method5292(arg0);
-        if (arg0.method15220() == 1) {
+        if (arg0.g1() == 1) {
             this.field9892 = true;
         } else {
             this.field9892 = false;

@@ -178,8 +178,8 @@ public class GlFloorModelRelated extends Node {
                 }
                 var21++;
             }
-            this.field9322 = this.field9330.method13345(5123, this.field9338.field9629, this.field9338.field9626, false);
-            this.field9332 = this.field9330.method13301(16, this.field9339.field9629, this.field9339.field9626, false);
+            this.field9322 = this.field9330.method13345(5123, this.field9338.data, this.field9338.pos, false);
+            this.field9332 = this.field9330.method13301(16, this.field9339.data, this.field9339.pos, false);
             this.field9323 = new GlRelated1(this.field9332, 5126, 3, 0);
             this.field9334 = new GlRelated1(this.field9332, 5121, 4, 12);
         } else {
@@ -199,9 +199,9 @@ public class GlFloorModelRelated extends Node {
     @ObfuscatedName("acq.u(S)V")
     public void method14850(short arg0) {
         if (this.field9330.field8149) {
-            this.field9338.method15287(arg0);
+            this.field9338.p2(arg0);
         } else {
-            this.field9338.method15221(arg0);
+            this.field9338.ip2(arg0);
         }
     }
 
@@ -304,10 +304,10 @@ public class GlFloorModelRelated extends Node {
             this.field9339.method16855((float) var11);
             this.field9339.method16855((float) var10);
         }
-        this.field9339.method15308(var44);
-        this.field9339.method15308(var45);
-        this.field9339.method15308(var46);
-        this.field9339.method15308(255);
+        this.field9339.p1(var44);
+        this.field9339.p1(var45);
+        this.field9339.p1(var46);
+        this.field9339.p1(255);
         this.method14850(var13);
     }
 

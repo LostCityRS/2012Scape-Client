@@ -103,8 +103,8 @@ public class PlayerEntity extends PathingEntity {
 
     @ObfuscatedName("ahg.gl(Laet;I)V")
     public final void method16116(Packet arg0) {
-        arg0.field9626 = 0;
-        int var2 = arg0.method15220();
+        arg0.pos = 0;
+        int var2 = arg0.g1();
         this.field10043 = (byte) (var2 & 0x1);
         boolean var3 = this.field10051;
         this.field10051 = (var2 & 0x2) != 0;
@@ -119,18 +119,18 @@ public class PlayerEntity extends PathingEntity {
         this.method8551(var8);
         var8.method5291();
         if (var6) {
-            this.field10041 = arg0.method15366();
+            this.field10041 = arg0.gjstr2();
         } else {
             this.field10041 = null;
         }
         if (var7) {
-            this.field10042 = arg0.method15366();
+            this.field10042 = arg0.gjstr2();
         } else {
             this.field10042 = null;
         }
-        this.field10045 = arg0.method15238();
-        this.field10053 = arg0.method15238();
-        this.field10066 = arg0.method15238() == 1;
+        this.field10045 = arg0.g1b();
+        this.field10053 = arg0.g1b();
+        this.field10066 = arg0.g1b() == 1;
         if (Statics.field6683 == ModeWhere.field6368 && client.field9074 >= 2) {
             this.field10066 = false;
         }
@@ -141,15 +141,15 @@ public class PlayerEntity extends PathingEntity {
         ObjType[] var12 = new ObjType[Statics.field3226.field5171.length];
         for (int var13 = 0; var13 < Statics.field3226.field5171.length; var13++) {
             if (Statics.field3226.field5171[var13] != 1) {
-                int var14 = arg0.method15220();
+                int var14 = arg0.g1();
                 if (var14 == 0) {
                     var10[var13] = 0;
                 } else {
-                    int var15 = arg0.method15220();
+                    int var15 = arg0.g1();
                     int var16 = (var14 << 8) + var15;
                     if (var13 == 0 && var16 == 65535) {
-                        var9 = arg0.method15411();
-                        this.field10061 = arg0.method15220();
+                        var9 = arg0.gSmart2or4null();
+                        this.field10061 = arg0.g1();
                         break;
                     }
                     if (var16 >= 16384) {
@@ -167,7 +167,7 @@ public class PlayerEntity extends PathingEntity {
             }
         }
         if (var9 == -1) {
-            int var19 = arg0.method15239();
+            int var19 = arg0.g2();
             int var20 = 0;
             for (int var21 = 0; var21 < Statics.field3226.field5171.length; var21++) {
                 if (Statics.field3226.field5171[var21] == 0) {
@@ -180,21 +180,21 @@ public class PlayerEntity extends PathingEntity {
         }
         int[] var22 = new int[10];
         for (int var23 = 0; var23 < 10; var23++) {
-            int var24 = arg0.method15220();
+            int var24 = arg0.g1();
             if (Statics.field5010.length < 1 || var24 < 0 || var24 >= Statics.field5010[var23][0].length) {
                 var24 = 0;
             }
             var22[var23] = var24;
         }
-        this.field10068 = arg0.method15239();
-        this.field10063 = arg0.method15337();
+        this.field10068 = arg0.g2();
+        this.field10063 = arg0.gjstr();
         this.field10040 = this.field10063;
         if (Statics.field2119 == this) {
             Statics.field10527 = this.field10063;
         }
-        this.field10047 = arg0.method15220();
+        this.field10047 = arg0.g1();
         if (var4) {
-            this.field10046 = arg0.method15239();
+            this.field10046 = arg0.g2();
             if (this.field10046 == 65535) {
                 this.field10046 = -1;
             }
@@ -202,14 +202,14 @@ public class PlayerEntity extends PathingEntity {
             this.field10049 = -1;
         } else {
             this.field10046 = 0;
-            this.field10048 = arg0.method15220();
-            this.field10049 = arg0.method15220();
+            this.field10048 = arg0.g1();
+            this.field10049 = arg0.g1();
             if (this.field10049 == 255) {
                 this.field10049 = -1;
             }
         }
         int var25 = this.field10039;
-        this.field10039 = arg0.method15220();
+        this.field10039 = arg0.g1();
         if (this.field10039 == 0) {
             PositionedSound.method7377(this);
         } else {
@@ -218,11 +218,11 @@ public class PlayerEntity extends PathingEntity {
             int var28 = this.field10056;
             int var29 = this.field10057;
             int var30 = this.field10060;
-            this.field10054 = arg0.method15239();
-            this.field10059 = arg0.method15239();
-            this.field10056 = arg0.method15239();
-            this.field10057 = arg0.method15239();
-            this.field10060 = arg0.method15220();
+            this.field10054 = arg0.g2();
+            this.field10059 = arg0.g2();
+            this.field10056 = arg0.g2();
+            this.field10057 = arg0.g2();
+            this.field10060 = arg0.g1();
             if (this.field10051 != var3 || this.field10039 != var25 || this.field10054 != var26 || this.field10059 != var27 || this.field10056 != var28 || this.field10057 != var29 || this.field10060 != var30) {
                 PositionedSound.method1807(this);
             }

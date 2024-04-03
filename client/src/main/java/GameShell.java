@@ -231,31 +231,31 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
             try {
                 FileOnDisk var8 = new FileOnDisk(Statics.field3918, "rw", 10000L);
                 Packet var9 = new Packet((int) var8.method12077());
-                while (var9.field9626 < var9.field9629.length) {
-                    int var10 = var8.method12078(var9.field9629, var9.field9626, var9.field9629.length - var9.field9626);
+                while (var9.pos < var9.data.length) {
+                    int var10 = var8.method12078(var9.data, var9.pos, var9.data.length - var9.pos);
                     if (var10 == -1) {
                         throw new IOException();
                     }
-                    var9.field9626 += var10;
+                    var9.pos += var10;
                 }
-                var9.field9626 = 0;
-                int var11 = var9.method15220();
+                var9.pos = 0;
+                int var11 = var9.g1();
                 if (var11 < 1 || var11 > 3) {
                     throw new IOException("" + var11);
                 }
                 int var12 = 0;
                 if (var11 > 1) {
-                    var12 = var9.method15220();
+                    var12 = var9.g1();
                 }
                 if (var11 <= 2) {
-                    var5 = var9.method15366();
+                    var5 = var9.gjstr2();
                     if (var12 == 1) {
-                        var6 = var9.method15366();
+                        var6 = var9.gjstr2();
                     }
                 } else {
-                    var5 = var9.method15232();
+                    var5 = var9.gUTF8();
                     if (var12 == 1) {
-                        var6 = var9.method15232();
+                        var6 = var9.gUTF8();
                     }
                 }
                 var8.method12076();
@@ -340,13 +340,13 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
         try {
             FileOnDisk var3 = new FileOnDisk(Statics.field3918, "rw", 10000L);
             Packet var4 = new Packet(500);
-            var4.method15308(3);
-            var4.method15308(arg1 == null ? 0 : 1);
-            var4.method15230(arg0.getPath());
+            var4.p1(3);
+            var4.p1(arg1 == null ? 0 : 1);
+            var4.pUTF8(arg0.getPath());
             if (arg1 != null) {
-                var4.method15230(arg1.getPath());
+                var4.pUTF8(arg1.getPath());
             }
-            var3.method12075(var4.field9629, 0, var4.field9626);
+            var3.method12075(var4.data, 0, var4.pos);
             var3.method12076();
         } catch (IOException var6) {
             var6.printStackTrace();
@@ -453,7 +453,7 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
                 var1[var4] = -1;
             }
         }
-        arg0.method15276(var1, 0, 24);
+        arg0.pdata(var1, 0, 24);
     }
 
     @ObfuscatedName("nv.o(Ljava/lang/String;I)V")

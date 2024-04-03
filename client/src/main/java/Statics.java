@@ -2004,10 +2004,10 @@ public class Statics {
 
     @ObfuscatedName("fp.a(Laet;I)Lpf;")
     public static KeyHeldBinding method3541(Packet arg0) {
-        int var1 = arg0.method15220();
+        int var1 = arg0.g1();
         int[] var2 = new int[var1];
         for (int var3 = 0; var3 < var1; var3++) {
-            var2[var3] = arg0.method15220();
+            var2[var3] = arg0.g1();
         }
         return new KeyHeldBinding(var2);
     }
@@ -2339,15 +2339,15 @@ public class Statics {
             return;
         }
         ClientMessage var4 = ClientMessage.method14781(ClientProt.field2924, client.field8959.field834);
-        var4.field9467.method15287(0);
-        int var5 = var4.field9467.field9626;
-        var4.field9467.method15228(arg0);
-        var4.field9467.method15228(arg1);
-        var4.field9467.method15308(arg2);
-        var4.field9467.method15308(arg3 ? 1 : 0);
-        var4.field9467.field9626 += 7;
-        var4.field9467.method15280(field630, var5, var4.field9467.field9626);
-        var4.field9467.method15233(var4.field9467.field9626 - var5);
+        var4.field9467.p2(0);
+        int var5 = var4.field9467.pos;
+        var4.field9467.pjstr(arg0);
+        var4.field9467.pjstr(arg1);
+        var4.field9467.p1(arg2);
+        var4.field9467.p1(arg3 ? 1 : 0);
+        var4.field9467.pos += 7;
+        var4.field9467.tinyenc(field630, var5, var4.field9467.pos);
+        var4.field9467.psize2(var4.field9467.pos - var5);
         client.field8959.method1913(var4);
         if (arg2 < 13) {
             client.field8946 = true;
@@ -2380,7 +2380,7 @@ public class Statics {
         try {
             var0 = GameShell.method4031("", client.field9163.field6404, true);
             Packet var1 = field4961.method15447();
-            var0.method12075(var1.field9629, 0, var1.field9626);
+            var0.method12075(var1.data, 0, var1.pos);
         } catch (Exception var5) {
         }
         try {
@@ -2960,11 +2960,6 @@ public class Statics {
     @ObfuscatedName("se.u(Ljava/awt/Component;B)Loq;")
     public static Keyboard method11115(java.awt.Component arg0) {
         return new JavaKeyboard(arg0);
-    }
-
-    @ObfuscatedName("ap.o(Ljava/lang/String;B)I")
-    public static int method1724(String arg0) {
-        return arg0.length() + 1;
     }
 
     @ObfuscatedName("aiq.m(I)Z")
@@ -3584,16 +3579,16 @@ public class Statics {
     @ObfuscatedName("x.ag([BB)[B")
     public static final byte[] method1598(byte[] arg0) {
         Packet var1 = new Packet(arg0);
-        int var2 = var1.method15220();
-        int var3 = var1.method15379();
+        int var2 = var1.g1();
+        int var3 = var1.g4();
         if (var3 < 0 || Js5.field3573 != 0 && var3 > Js5.field3573) {
             throw new RuntimeException();
         } else if (var2 == 0) {
             byte[] var4 = new byte[var3];
-            var1.method15263(var4, 0, var3);
+            var1.gdata(var4, 0, var3);
             return var4;
         } else {
-            int var5 = var1.method15379();
+            int var5 = var1.g4();
             if (var5 < 0 || Js5.field3573 != 0 && var5 > Js5.field3573) {
                 throw new RuntimeException();
             }
@@ -3617,7 +3612,7 @@ public class Statics {
         }
         try {
             GameShell.field4155.method12109(0L);
-            GameShell.field4155.method12102(arg0.field9629, arg1, 24);
+            GameShell.field4155.method12102(arg0.data, arg1, 24);
         } catch (Exception var3) {
         }
     }
@@ -3703,7 +3698,7 @@ public class Statics {
     @ObfuscatedName("u.ap(I)V")
     public static void method1237() {
         field501.method1935();
-        field501.field832.field9626 = 0;
+        field501.field832.pos = 0;
         field501.field840 = null;
         field501.field843 = null;
         field501.field844 = null;
@@ -3905,11 +3900,11 @@ public class Statics {
                 client.field9052 = 2;
                 client.field9051 = 0;
                 ClientMessage var11 = ClientMessage.method14781(ClientProt.field2955, client.field8975.field834);
-                var11.field9467.method15278(client.field9102);
-                var11.field9467.method15308(MiniMenu.method3496() ? 1 : 0);
-                var11.field9467.method15223(field4166);
-                var11.field9467.method15287(client.field9101);
-                var11.field9467.method15293(var6);
+                var11.field9467.p2_alt2(client.field9102);
+                var11.field9467.p1(MiniMenu.method3496() ? 1 : 0);
+                var11.field9467.p4(field4166);
+                var11.field9467.p2(client.field9101);
+                var11.field9467.p2_alt1(var6);
                 client.field8975.method1913(var11);
                 client.method2677(var10.field8642[0], var10.field8643[0], true, PathFinderEntityRelated.method11404(var10.field8642[0], var10.field8643[0], var10.method13954(), var10.method13954(), 0));
             }
@@ -3920,11 +3915,11 @@ public class Statics {
             client.field9052 = 1;
             client.field9051 = 0;
             ClientMessage var12 = ClientMessage.method14781(ClientProt.field2948, client.field8975.field834);
-            var12.field9467.method15279(client.field9102);
-            var12.field9467.method15279(var9.field4838 + var4);
-            var12.field9467.method15287(client.field9101);
-            var12.field9467.method15287(var9.field4836 + var3);
-            var12.field9467.method15223(field4166);
+            var12.field9467.p2_alt3(client.field9102);
+            var12.field9467.p2_alt3(var9.field4838 + var4);
+            var12.field9467.p2(client.field9101);
+            var12.field9467.p2(var9.field4836 + var3);
+            var12.field9467.p4(field4166);
             client.field8975.method1913(var12);
             client.method2677(var3, var4, true, PathFinderEntityRelated.method3645(var3, var4));
         }
@@ -3948,10 +3943,10 @@ public class Statics {
             client.field9052 = 2;
             client.field9051 = 0;
             ClientMessage var14 = ClientMessage.method14781(var13, client.field8975.field834);
-            var14.field9467.method15308(MiniMenu.method3496() ? 1 : 0);
-            var14.field9467.method15293(var9.field4838 + var4);
-            var14.field9467.method15287(var9.field4836 + var3);
-            var14.field9467.method15287(var6);
+            var14.field9467.p1(MiniMenu.method3496() ? 1 : 0);
+            var14.field9467.p2_alt1(var9.field4838 + var4);
+            var14.field9467.p2(var9.field4836 + var3);
+            var14.field9467.p2(var6);
             client.field8975.method1913(var14);
             client.method12668(var3, var4);
         }
@@ -3961,13 +3956,13 @@ public class Statics {
             client.field9052 = 2;
             client.field9051 = 0;
             ClientMessage var15 = ClientMessage.method14781(ClientProt.field2905, client.field8975.field834);
-            var15.field9467.method15278(var9.field4838 + var4);
-            var15.field9467.method15279(var9.field4836 + var3);
-            var15.field9467.method15287(client.field9102);
-            var15.field9467.method15269(MiniMenu.method3496() ? 1 : 0);
-            var15.field9467.method15223((int) (var7 >>> 32) & Integer.MAX_VALUE);
-            var15.field9467.method15345(field4166);
-            var15.field9467.method15279(client.field9101);
+            var15.field9467.p2_alt2(var9.field4838 + var4);
+            var15.field9467.p2_alt3(var9.field4836 + var3);
+            var15.field9467.p2(client.field9102);
+            var15.field9467.p1_alt2(MiniMenu.method3496() ? 1 : 0);
+            var15.field9467.p4((int) (var7 >>> 32) & Integer.MAX_VALUE);
+            var15.field9467.p4_alt1(field4166);
+            var15.field9467.p2_alt3(client.field9101);
             client.field8975.method1913(var15);
             client.method5830(var3, var4, var7);
         }
@@ -3991,10 +3986,10 @@ public class Statics {
             client.field9052 = 2;
             client.field9051 = 0;
             ClientMessage var17 = ClientMessage.method14781(var16, client.field8975.field834);
-            var17.field9467.method15269(MiniMenu.method3496() ? 1 : 0);
-            var17.field9467.method15279(var9.field4838 + var4);
-            var17.field9467.method15345((int) (var7 >>> 32) & Integer.MAX_VALUE);
-            var17.field9467.method15279(var9.field4836 + var3);
+            var17.field9467.p1_alt2(MiniMenu.method3496() ? 1 : 0);
+            var17.field9467.p2_alt3(var9.field4838 + var4);
+            var17.field9467.p4_alt1((int) (var7 >>> 32) & Integer.MAX_VALUE);
+            var17.field9467.p2_alt3(var9.field4836 + var3);
             client.field8975.method1913(var17);
             client.method5830(var3, var4, var7);
         }
@@ -4014,17 +4009,17 @@ public class Statics {
             } else {
                 ClientMessage var18 = MiniMenu.method1910(var3, var4, var6);
                 if (var6 == 1) {
-                    var18.field9467.method15308(-1);
-                    var18.field9467.method15308(-1);
-                    var18.field9467.method15287((int) client.field9021);
-                    var18.field9467.method15308(57);
-                    var18.field9467.method15308(client.field9087);
-                    var18.field9467.method15308(client.field8976);
-                    var18.field9467.method15308(89);
+                    var18.field9467.p1(-1);
+                    var18.field9467.p1(-1);
+                    var18.field9467.p2((int) client.field9021);
+                    var18.field9467.p1(57);
+                    var18.field9467.p1(client.field9087);
+                    var18.field9467.p1(client.field8976);
+                    var18.field9467.p1(89);
                     Vector3 var19 = field2119.method8565().field3464;
-                    var18.field9467.method15287((int) var19.field3475);
-                    var18.field9467.method15287((int) var19.field3477);
-                    var18.field9467.method15308(63);
+                    var18.field9467.p2((int) var19.field3475);
+                    var18.field9467.p2((int) var19.field3477);
+                    var18.field9467.p1(63);
                 } else {
                     client.field9049 = arg1;
                     client.field9032 = arg2;
@@ -4041,11 +4036,11 @@ public class Statics {
             client.field9052 = 2;
             client.field9051 = 0;
             ClientMessage var20 = ClientMessage.method14781(ClientProt.field2955, client.field8975.field834);
-            var20.field9467.method15278(client.field9102);
-            var20.field9467.method15308(MiniMenu.method3496() ? 1 : 0);
-            var20.field9467.method15223(field4166);
-            var20.field9467.method15287(client.field9101);
-            var20.field9467.method15293(field2119.field8593);
+            var20.field9467.p2_alt2(client.field9102);
+            var20.field9467.p1(MiniMenu.method3496() ? 1 : 0);
+            var20.field9467.p4(field4166);
+            var20.field9467.p2(client.field9101);
+            var20.field9467.p2_alt1(field2119.field8593);
             client.field8975.method1913(var20);
         }
         if (var5 == 25) {
@@ -4068,13 +4063,13 @@ public class Statics {
             client.field9052 = 2;
             client.field9051 = 0;
             ClientMessage var23 = ClientMessage.method14781(ClientProt.field2874, client.field8975.field834);
-            var23.field9467.method15279(var9.field4838 + var4);
-            var23.field9467.method15223(field4166);
-            var23.field9467.method15278(client.field9101);
-            var23.field9467.method15279(var6);
-            var23.field9467.method15278(client.field9102);
-            var23.field9467.method15287(var9.field4836 + var3);
-            var23.field9467.method15318(MiniMenu.method3496() ? 1 : 0);
+            var23.field9467.p2_alt3(var9.field4838 + var4);
+            var23.field9467.p4(field4166);
+            var23.field9467.p2_alt2(client.field9101);
+            var23.field9467.p2_alt3(var6);
+            var23.field9467.p2_alt2(client.field9102);
+            var23.field9467.p2(var9.field4836 + var3);
+            var23.field9467.p1_alt3(MiniMenu.method3496() ? 1 : 0);
             client.field8975.method1913(var23);
             client.method12668(var3, var4);
         }
@@ -4087,8 +4082,8 @@ public class Statics {
                 client.field9052 = 1;
                 client.field9051 = 0;
                 ClientMessage var24 = ClientMessage.method14781(ClientProt.field2897, client.field8975.field834);
-                var24.field9467.method15279(var9.field4836 + var3);
-                var24.field9467.method15279(var9.field4838 + var4);
+                var24.field9467.p2_alt3(var9.field4836 + var3);
+                var24.field9467.p2_alt3(var9.field4838 + var4);
                 client.field8975.method1913(var24);
             }
         }
@@ -4122,8 +4117,8 @@ public class Statics {
                 client.field9052 = 2;
                 client.field9051 = 0;
                 ClientMessage var27 = ClientMessage.method14781(var25, client.field8975.field834);
-                var27.field9467.method15279(var6);
-                var27.field9467.method15308(MiniMenu.method3496() ? 1 : 0);
+                var27.field9467.p2_alt3(var6);
+                var27.field9467.p1(MiniMenu.method3496() ? 1 : 0);
                 client.field8975.method1913(var27);
                 client.method2677(var26.field8642[0], var26.field8643[0], true, PathFinderEntityRelated.method11404(var26.field8642[0], var26.field8643[0], var26.method13954(), var26.method13954(), 0));
             }
@@ -4137,11 +4132,11 @@ public class Statics {
                 client.field9052 = 2;
                 client.field9051 = 0;
                 ClientMessage var30 = ClientMessage.method14781(ClientProt.field2855, client.field8975.field834);
-                var30.field9467.method15279(var6);
-                var30.field9467.method15397(field4166);
-                var30.field9467.method15278(client.field9102);
-                var30.field9467.method15287(client.field9101);
-                var30.field9467.method15318(MiniMenu.method3496() ? 1 : 0);
+                var30.field9467.p2_alt3(var6);
+                var30.field9467.p4_alt2(field4166);
+                var30.field9467.p2_alt2(client.field9102);
+                var30.field9467.p2(client.field9101);
+                var30.field9467.p1_alt3(MiniMenu.method3496() ? 1 : 0);
                 client.field8975.method1913(var30);
                 client.method2677(var29.field8642[0], var29.field8643[0], true, PathFinderEntityRelated.method11404(var29.field8642[0], var29.field8643[0], var29.method13954(), var29.method13954(), 0));
             }
@@ -4169,8 +4164,8 @@ public class Statics {
                 client.field9052 = 2;
                 client.field9051 = 0;
                 ClientMessage var34 = ClientMessage.method14781(var31, client.field8975.field834);
-                var34.field9467.method15293(var6);
-                var34.field9467.method15308(MiniMenu.method3496() ? 1 : 0);
+                var34.field9467.p2_alt1(var6);
+                var34.field9467.p1(MiniMenu.method3496() ? 1 : 0);
                 client.field8975.method1913(var34);
                 client.method2677(var33.field8642[0], var33.field8643[0], true, PathFinderEntityRelated.method11404(var33.field8642[0], var33.field8643[0], var33.method13954(), var33.method13954(), 0));
             }
@@ -4309,10 +4304,10 @@ public class Statics {
         }
         while (ClassCheck.method3320()) {
             ClientMessage var1 = ClientMessage.method14781(ClientProt.field2943, client.field8975.field834);
-            var1.field9467.method15308(0);
-            int var2 = var1.field9467.field9626;
+            var1.field9467.p1(0);
+            int var2 = var1.field9467.pos;
             ClassCheck.method5552(var1.field9467);
-            var1.field9467.method15251(var1.field9467.field9626 - var2);
+            var1.field9467.psize1(var1.field9467.pos - var2);
             client.field8975.method1913(var1);
         }
         if (field3357 == null) {
@@ -4349,9 +4344,9 @@ public class Statics {
                 client.field9106 = var10;
                 client.field9124 = var7;
             }
-            var3.field9467.method15308(client.field4121);
-            var3.field9467.method15308(var9);
-            var3.field9467.method15278(field3357.field5178);
+            var3.field9467.p1(client.field4121);
+            var3.field9467.p1(var9);
+            var3.field9467.p2_alt2(field3357.field5178);
             client.field8975.method1913(var3);
             field3357 = null;
             field3307 = var7 + 30000L;
@@ -4491,7 +4486,7 @@ public class Statics {
         client.field9132++;
         if (client.field9041) {
             ClientMessage var26 = ClientMessage.method14781(ClientProt.field2942, client.field8975.field834);
-            var26.field9467.method15345(field669 << 28 | field9405 << 14 | field6665);
+            var26.field9467.p4_alt1(field669 << 28 | field9405 << 14 | field6665);
             client.field8975.method1913(var26);
             client.field9041 = false;
         }
@@ -5460,8 +5455,8 @@ public class Statics {
     public static final void method7975(ClientScriptState arg0) {
         String var1 = (String) arg0.field5222[--arg0.field5230];
         ClientMessage var2 = ClientMessage.method14781(ClientProt.field2929, client.field8975.field834);
-        var2.field9467.method15308(var1.length() + 1);
-        var2.field9467.method15228(var1);
+        var2.field9467.p1(var1.length() + 1);
+        var2.field9467.pjstr(var1);
         client.field8975.method1913(var2);
     }
 
@@ -5797,12 +5792,12 @@ public class Statics {
         }
         ServerConnection var6 = client.method4104();
         ClientMessage var7 = ClientMessage.method14781(ClientProt.field2935, var6.field834);
-        var7.field9467.method15308(0);
-        int var8 = var7.field9467.field9626;
-        var7.field9467.method15308(var3);
-        var7.field9467.method15308(var5);
+        var7.field9467.p1(0);
+        int var8 = var7.field9467.pos;
+        var7.field9467.p1(var3);
+        var7.field9467.p1(var5);
         WordPack.method14081(var7.field9467, var1);
-        var7.field9467.method15251(var7.field9467.field9626 - var8);
+        var7.field9467.psize1(var7.field9467.pos - var8);
         var6.method1913(var7);
     }
 
@@ -5841,8 +5836,8 @@ public class Statics {
                 }
                 if (var7 != null) {
                     ClientMessage var8 = ClientMessage.method14781(var7, client.field8975.field834);
-                    var8.field9467.method15279(var3[var5]);
-                    var8.field9467.method15308(0);
+                    var8.field9467.p2_alt3(var3[var5]);
+                    var8.field9467.p1(0);
                     client.field8975.method1913(var8);
                 }
                 var4 = true;
@@ -5888,8 +5883,8 @@ public class Statics {
     @ObfuscatedName("tm.ku(IIB)V")
     public static void method11509(int arg0, int arg1) {
         ClientMessage var2 = ClientMessage.method14781(ClientProt.field2932, client.field8975.field834);
-        var2.field9467.method15293(arg1);
-        var2.field9467.method15397(arg0);
+        var2.field9467.p2_alt1(arg1);
+        var2.field9467.p4_alt2(arg0);
         client.field8975.method1913(var2);
     }
 
@@ -5897,12 +5892,12 @@ public class Statics {
     public static final void method7050(ClientScriptState arg0) {
         ServerConnection var1 = client.method4104();
         ClientMessage var2 = ClientMessage.method14781(ClientProt.field2936, var1.field834);
-        var2.field9467.method15308(0);
-        int var3 = var2.field9467.field9626;
-        var2.field9467.method15308(2);
-        var2.field9467.method15287(arg0.field5213.field2655);
+        var2.field9467.p1(0);
+        int var3 = var2.field9467.pos;
+        var2.field9467.p1(2);
+        var2.field9467.p2(arg0.field5213.field2655);
         arg0.field5213.field2656.method16748(var2.field9467, arg0.field5213.field2657);
-        var2.field9467.method15251(var2.field9467.field9626 - var3);
+        var2.field9467.psize1(var2.field9467.pos - var3);
         var1.method1913(var2);
     }
 
@@ -6140,8 +6135,8 @@ public class Statics {
                 client.field9148 = client.field9132;
                 ServerConnection var7 = client.method4104();
                 ClientMessage var8 = ClientMessage.method14781(ClientProt.field2930, var7.field834);
-                var8.field9467.method15308(method1724(arg0));
-                var8.field9467.method15228(arg0);
+                var8.field9467.p1(Packet.pjstrlen(arg0));
+                var8.field9467.pjstr(arg0);
                 var7.method1913(var8);
                 break;
             }
@@ -6169,8 +6164,8 @@ public class Statics {
                 client.field9148 = client.field9132;
                 ServerConnection var7 = client.method4104();
                 ClientMessage var8 = ClientMessage.method14781(ClientProt.field2931, var7.field834);
-                var8.field9467.method15308(method1724(arg0));
-                var8.field9467.method15228(arg0);
+                var8.field9467.p1(Packet.pjstrlen(arg0));
+                var8.field9467.pjstr(arg0);
                 var7.method1913(var8);
                 break;
             }

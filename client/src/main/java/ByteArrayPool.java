@@ -26,7 +26,7 @@ public class ByteArrayPool {
     }
 
     @ObfuscatedName("of.j([BI)V")
-    public static synchronized void method7068(byte[] arg0) {
+    public static synchronized void release(byte[] arg0) {
         if (arg0.length == 100 && field6417 < 1000) {
             field6418[++field6417 - 1] = arg0;
         } else if (arg0.length == 5000 && field6415 < 250) {

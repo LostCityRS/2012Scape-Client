@@ -283,43 +283,43 @@ public class Instrument {
         this.field4074.method6470(arg0);
         this.field4070 = new SoundEnvelope();
         this.field4070.method6470(arg0);
-        int var2 = arg0.method15220();
+        int var2 = arg0.g1();
         if (var2 != 0) {
-            arg0.field9626--;
+            arg0.pos--;
             this.field4069 = new SoundEnvelope();
             this.field4069.method6470(arg0);
             this.field4086 = new SoundEnvelope();
             this.field4086.method6470(arg0);
         }
-        int var3 = arg0.method15220();
+        int var3 = arg0.g1();
         if (var3 != 0) {
-            arg0.field9626--;
+            arg0.pos--;
             this.field4072 = new SoundEnvelope();
             this.field4072.method6470(arg0);
             this.field4091 = new SoundEnvelope();
             this.field4091.method6470(arg0);
         }
-        int var4 = arg0.method15220();
+        int var4 = arg0.g1();
         if (var4 != 0) {
-            arg0.field9626--;
+            arg0.pos--;
             this.field4071 = new SoundEnvelope();
             this.field4071.method6470(arg0);
             this.field4088 = new SoundEnvelope();
             this.field4088.method6470(arg0);
         }
         for (int var5 = 0; var5 < 10; var5++) {
-            int var6 = arg0.method15277();
+            int var6 = arg0.gSmart1or2();
             if (var6 == 0) {
                 break;
             }
             this.field4082[var5] = var6;
-            this.field4076[var5] = arg0.method15254();
-            this.field4077[var5] = arg0.method15277();
+            this.field4076[var5] = arg0.gSmart1or2s();
+            this.field4077[var5] = arg0.gSmart1or2();
         }
-        this.field4078 = arg0.method15277();
-        this.field4079 = arg0.method15277();
-        this.field4075 = arg0.method15239();
-        this.field4083 = arg0.method15239();
+        this.field4078 = arg0.gSmart1or2();
+        this.field4079 = arg0.gSmart1or2();
+        this.field4075 = arg0.g2();
+        this.field4083 = arg0.g2();
         this.field4080 = new SoundFilter();
         this.field4081 = new SoundEnvelope();
         this.field4080.method6623(arg0, this.field4081);

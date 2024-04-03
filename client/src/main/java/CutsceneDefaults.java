@@ -14,7 +14,7 @@ public class CutsceneDefaults {
     @ObfuscatedName("rj.u(Laet;I)V")
     public void method8594(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }

@@ -1668,9 +1668,9 @@ public class MiniMenu {
             var3 = ClientMessage.method14781(ClientProt.field2890, client.field8975.field834);
         }
         CoordGrid var4 = client.field8980.method6214();
-        var3.field9467.method15287(var4.field4838 + arg1);
-        var3.field9467.method15279(var4.field4836 + arg0);
-        var3.field9467.method15308(method3496() ? 1 : 0);
+        var3.field9467.p2(var4.field4838 + arg1);
+        var3.field9467.p2_alt3(var4.field4836 + arg0);
+        var3.field9467.p1(method3496() ? 1 : 0);
         MiniMap.field763 = arg0;
         MiniMap.field764 = arg1;
         MiniMap.field766 = false;

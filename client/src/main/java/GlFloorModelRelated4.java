@@ -61,7 +61,7 @@ public class GlFloorModelRelated4 {
                         short[] var21 = arg2.field7687[var19++];
                         if (var21 != null) {
                             for (int var22 = 0; var22 < var21.length; var22++) {
-                                var17.method15287(var21[var22] & 0xFFFF);
+                                var17.p2(var21[var22] & 0xFFFF);
                             }
                         }
                     }
@@ -73,13 +73,13 @@ public class GlFloorModelRelated4 {
                         short[] var26 = arg2.field7687[var24++];
                         if (var26 != null) {
                             for (int var27 = 0; var27 < var26.length; var27++) {
-                                var17.method15221(var26[var27] & 0xFFFF);
+                                var17.ip2(var26[var27] & 0xFFFF);
                             }
                         }
                     }
                 }
             }
-            this.field1038 = this.field1031.method13345(5123, var17.field9629, var17.field9626, false);
+            this.field1038 = this.field1031.method13345(5123, var17.data, var17.pos, false);
             this.field1036 = new GlFloorModelRelated4_Sub1(this.field1031, 5123, null, 1);
         } else {
             this.field1029 = null;

@@ -11,8 +11,8 @@ public class CutsceneAction_Sub10 extends CutsceneAction {
 
     public CutsceneAction_Sub10(Packet arg0) {
         super(arg0);
-        this.field8525 = arg0.method15239();
-        this.field8526 = arg0.method15379();
+        this.field8525 = arg0.g2();
+        this.field8526 = arg0.g4();
     }
 
     @ObfuscatedName("aar.j(I)V")

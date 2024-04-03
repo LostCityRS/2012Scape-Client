@@ -615,7 +615,7 @@ public class GlFloorModel extends FloorModel {
         if (this.field7688.field8229.length < var8) {
             this.field7688.field8229 = new int[var8];
         }
-        if (this.field7688.field8226.field9629.length < this.field7694 * 2) {
+        if (this.field7688.field8226.data.length < this.field7694 * 2) {
             this.field7688.field8226 = new GpuPacket(this.field7694 * 2);
         }
         int var9 = arg0 - arg2;
@@ -739,10 +739,10 @@ public class GlFloorModel extends FloorModel {
             this.field7688.method13294();
         }
         this.field7688.method13305(this.field7708, this.field7710, this.field7715, this.field7701);
-        if (this.field7688.field8226.field9629.length < this.field7694 * 2) {
+        if (this.field7688.field8226.data.length < this.field7694 * 2) {
             this.field7688.field8226 = new GpuPacket(this.field7694 * 2);
         } else {
-            this.field7688.field8226.field9626 = 0;
+            this.field7688.field8226.pos = 0;
         }
         int var10 = 0;
         GpuPacket var11 = this.field7688.field8226;
@@ -754,7 +754,7 @@ public class GlFloorModel extends FloorModel {
                         short[] var15 = this.field7687[var13];
                         if (var15 != null) {
                             for (int var16 = 0; var16 < var15.length; var16++) {
-                                var11.method15287(var15[var16] & 0xFFFF);
+                                var11.p2(var15[var16] & 0xFFFF);
                                 var10++;
                             }
                         }
@@ -770,7 +770,7 @@ public class GlFloorModel extends FloorModel {
                         short[] var20 = this.field7687[var18];
                         if (var20 != null) {
                             for (int var21 = 0; var21 < var20.length; var21++) {
-                                var11.method15221(var20[var21] & 0xFFFF);
+                                var11.ip2(var20[var21] & 0xFFFF);
                                 var10++;
                             }
                         }
@@ -780,7 +780,7 @@ public class GlFloorModel extends FloorModel {
             }
         }
         if (var10 > 0) {
-            GlFloorModelRelated4_Sub1 var22 = new GlFloorModelRelated4_Sub1(this.field7688, 5123, var11.field9629, var11.field9626);
+            GlFloorModelRelated4_Sub1 var22 = new GlFloorModelRelated4_Sub1(this.field7688, 5123, var11.data, var11.pos);
             this.field7688.method13307(var22, 4, 0, var10);
         }
     }

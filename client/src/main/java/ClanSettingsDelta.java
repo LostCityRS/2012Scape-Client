@@ -18,9 +18,9 @@ public class ClanSettingsDelta {
 
     @ObfuscatedName("gs.u(Laet;B)V")
     public void method4110(Packet arg0) {
-        this.field2379 = arg0.method15246();
-        this.field2375 = arg0.method15379();
-        for (int var2 = arg0.method15220(); var2 != 0; var2 = arg0.method15220()) {
+        this.field2379 = arg0.g8();
+        this.field2375 = arg0.g4();
+        for (int var2 = arg0.g1(); var2 != 0; var2 = arg0.g1()) {
             ClanSettingsDeltaEntry var3;
             if (var2 == 3) {
                 var3 = new ClanSettingsDelta_Sub1(this);

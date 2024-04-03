@@ -20,12 +20,12 @@ public class CutsceneAction_Sub24 extends CutsceneAction {
 
     public CutsceneAction_Sub24(Packet arg0) {
         super(arg0);
-        this.field8462 = arg0.method15239();
-        int var2 = arg0.method15379();
+        this.field8462 = arg0.g2();
+        int var2 = arg0.g4();
         this.field8461 = var2 >>> 16;
         this.field8460 = var2 & 0xFFFF;
-        this.field8463 = arg0.method15220();
-        this.field8464 = arg0.method15254();
+        this.field8463 = arg0.g1();
+        this.field8464 = arg0.gSmart1or2s();
     }
 
     @ObfuscatedName("zi.j(I)V")

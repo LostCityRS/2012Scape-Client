@@ -8,7 +8,7 @@ public class CutsceneAction_Sub3 extends CutsceneAction {
 
     public CutsceneAction_Sub3(Packet arg0) {
         super(arg0);
-        this.field8513 = arg0.method15239();
+        this.field8513 = arg0.g2();
     }
 
     @ObfuscatedName("zj.j(I)V")

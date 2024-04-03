@@ -126,7 +126,7 @@ public class MapElementType {
     @ObfuscatedName("pw.u(Laet;I)V")
     public void method7836(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -137,19 +137,19 @@ public class MapElementType {
     @ObfuscatedName("pw.j(Laet;II)V")
     public void method7837(Packet arg0, int arg1) {
         if (arg1 == 1) {
-            this.field4764 = arg0.method15411();
+            this.field4764 = arg0.gSmart2or4null();
         } else if (arg1 == 2) {
-            this.field4769 = arg0.method15411();
+            this.field4769 = arg0.gSmart2or4null();
         } else if (arg1 == 3) {
-            this.field4766 = arg0.method15337();
+            this.field4766 = arg0.gjstr();
         } else if (arg1 == 4) {
-            this.field4767 = arg0.method15241();
+            this.field4767 = arg0.g3();
         } else if (arg1 == 5) {
-            this.field4768 = arg0.method15241();
+            this.field4768 = arg0.g3();
         } else if (arg1 == 6) {
-            this.field4777 = arg0.method15220();
+            this.field4777 = arg0.g1();
         } else if (arg1 == 7) {
-            int var3 = arg0.method15220();
+            int var3 = arg0.g1();
             if ((var3 & 0x1) == 0) {
                 this.field4797 = false;
             }
@@ -157,80 +157,80 @@ public class MapElementType {
                 this.field4776 = true;
             }
         } else if (arg1 == 8) {
-            this.field4774 = arg0.method15220() == 1;
+            this.field4774 = arg0.g1() == 1;
         } else if (arg1 == 9) {
-            this.field4783 = arg0.method15239();
+            this.field4783 = arg0.g2();
             if (this.field4783 == 65535) {
                 this.field4783 = -1;
             }
-            this.field4784 = arg0.method15239();
+            this.field4784 = arg0.g2();
             if (this.field4784 == 65535) {
                 this.field4784 = -1;
             }
-            this.field4781 = arg0.method15379();
-            this.field4803 = arg0.method15379();
+            this.field4781 = arg0.g4();
+            this.field4803 = arg0.g4();
         } else if (arg1 >= 10 && arg1 <= 14) {
-            this.field4778[arg1 - 10] = arg0.method15337();
+            this.field4778[arg1 - 10] = arg0.gjstr();
         } else if (arg1 == 15) {
-            int var4 = arg0.method15220();
+            int var4 = arg0.g1();
             this.field4788 = new int[var4 * 2];
             for (int var5 = 0; var5 < var4 * 2; var5++) {
-                this.field4788[var5] = arg0.method15240();
+                this.field4788[var5] = arg0.g2s();
             }
-            this.field4785 = arg0.method15379();
-            int var6 = arg0.method15220();
+            this.field4785 = arg0.g4();
+            int var6 = arg0.g1();
             this.field4800 = new int[var6];
             for (int var7 = 0; var7 < this.field4800.length; var7++) {
-                this.field4800[var7] = arg0.method15379();
+                this.field4800[var7] = arg0.g4();
             }
             this.field4762 = new byte[var4];
             for (int var8 = 0; var8 < var4; var8++) {
-                this.field4762[var8] = arg0.method15238();
+                this.field4762[var8] = arg0.g1b();
             }
         } else if (arg1 == 16) {
             this.field4802 = false;
         } else if (arg1 == 17) {
-            this.field4779 = arg0.method15337();
+            this.field4779 = arg0.gjstr();
         } else if (arg1 == 18) {
-            this.field4780 = arg0.method15411();
+            this.field4780 = arg0.gSmart2or4null();
         } else if (arg1 == 19) {
-            this.field4775 = arg0.method15239();
+            this.field4775 = arg0.g2();
         } else if (arg1 == 20) {
-            this.field4787 = arg0.method15239();
+            this.field4787 = arg0.g2();
             if (this.field4787 == 65535) {
                 this.field4787 = -1;
             }
-            this.field4765 = arg0.method15239();
+            this.field4765 = arg0.g2();
             if (this.field4765 == 65535) {
                 this.field4765 = -1;
             }
-            this.field4789 = arg0.method15379();
-            this.field4786 = arg0.method15379();
+            this.field4789 = arg0.g4();
+            this.field4786 = arg0.g4();
         } else if (arg1 == 21) {
-            this.field4782 = arg0.method15379();
+            this.field4782 = arg0.g4();
         } else if (arg1 == 22) {
-            this.field4801 = arg0.method15379();
+            this.field4801 = arg0.g4();
         } else if (arg1 == 23) {
-            this.field4795 = arg0.method15220();
-            this.field4796 = arg0.method15220();
-            this.field4794 = arg0.method15220();
+            this.field4795 = arg0.g1();
+            this.field4796 = arg0.g1();
+            this.field4794 = arg0.g1();
         } else if (arg1 == 24) {
-            this.field4793 = arg0.method15240();
-            this.field4799 = arg0.method15240();
+            this.field4793 = arg0.g2s();
+            this.field4799 = arg0.g2s();
         } else if (arg1 == 249) {
-            int var9 = arg0.method15220();
+            int var9 = arg0.g1();
             if (this.field4804 == null) {
                 int var10 = IntMath.method2839(var9);
                 this.field4804 = new IterableMap(var10);
             }
             for (int var11 = 0; var11 < var9; var11++) {
-                boolean var12 = arg0.method15220() == 1;
-                int var13 = arg0.method15241();
+                boolean var12 = arg0.g1() == 1;
+                int var13 = arg0.g3();
                 Node var14;
                 if (var12) {
-                    var14 = new ObjectNode(arg0.method15337());
+                    var14 = new ObjectNode(arg0.gjstr());
                 } else {
-                    var14 = new IntNode(arg0.method15379());
+                    var14 = new IntNode(arg0.g4());
                 }
                 this.field4804.method11927(var14, (long) var13);
             }

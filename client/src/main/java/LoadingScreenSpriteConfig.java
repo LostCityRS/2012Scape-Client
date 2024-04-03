@@ -28,11 +28,11 @@ public class LoadingScreenSpriteConfig implements LoadingScreenElementConfig {
 
     @ObfuscatedName("oe.u(Laet;I)Liz;")
     public static LoadingScreenSpriteConfig method7324(Packet arg0) {
-        int var1 = arg0.method15411();
-        LoadingScreenAlignmentX var2 = LoadingScreenAlignmentX.method15177()[arg0.method15220()];
-        LoadingScreenAlignmentY var3 = LoadingScreenAlignmentY.method3623()[arg0.method15220()];
-        int var4 = arg0.method15240();
-        int var5 = arg0.method15240();
+        int var1 = arg0.gSmart2or4null();
+        LoadingScreenAlignmentX var2 = LoadingScreenAlignmentX.method15177()[arg0.g1()];
+        LoadingScreenAlignmentY var3 = LoadingScreenAlignmentY.method3623()[arg0.g1()];
+        int var4 = arg0.g2s();
+        int var5 = arg0.g2s();
         return new LoadingScreenSpriteConfig(var1, var2, var3, var4, var5);
     }
 

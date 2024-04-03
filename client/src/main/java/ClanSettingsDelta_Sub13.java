@@ -15,8 +15,8 @@ public class ClanSettingsDelta_Sub13 extends ClanSettingsDeltaEntry {
 
     @ObfuscatedName("aii.u(Laet;I)V")
     public void method14956(Packet arg0) {
-        this.field10196 = arg0.method15337();
-        arg0.method15379();
+        this.field10196 = arg0.gjstr();
+        arg0.g4();
     }
 
     @ObfuscatedName("aii.j(Lga;B)V")

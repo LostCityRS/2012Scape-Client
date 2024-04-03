@@ -14,14 +14,14 @@ public class Js5NetRequest extends Js5Request {
 
     @ObfuscatedName("alp.u(I)[B")
     public byte[] method16685() {
-        if (this.field10352 || this.field10599.field9626 < this.field10599.field9629.length - this.field10598) {
+        if (this.field10352 || this.field10599.pos < this.field10599.data.length - this.field10598) {
             throw new RuntimeException();
         }
-        return this.field10599.field9629;
+        return this.field10599.data;
     }
 
     @ObfuscatedName("alp.j(I)I")
     public int method16687() {
-        return this.field10599 == null ? 0 : this.field10599.field9626 * 100 / (this.field10599.field9629.length - this.field10598);
+        return this.field10599 == null ? 0 : this.field10599.pos * 100 / (this.field10599.data.length - this.field10598);
     }
 }

@@ -94,7 +94,7 @@ public class GlFloorModelRelated2 {
                     int var20 = var18 << this.field1143;
                     int var21 = var18 + 1 << this.field1143;
                     GpuPacket var22 = this.field1141.field8226;
-                    var22.field9626 = 0;
+                    var22.pos = 0;
                     for (int var23 = var16; var23 < var17; var23++) {
                         if (var23 - arg1 >= -arg2 && var23 - arg1 <= arg2) {
                             int var24 = this.field1138.field387 * var23 + var20;
@@ -104,12 +104,12 @@ public class GlFloorModelRelated2 {
                                     if (var26 != null) {
                                         if (this.field1141.field8149) {
                                             for (int var27 = 0; var27 < var26.length; var27++) {
-                                                var22.method15287(var26[var27] & 0xFFFF);
+                                                var22.p2(var26[var27] & 0xFFFF);
                                                 var19++;
                                             }
                                         } else {
                                             for (int var28 = 0; var28 < var26.length; var28++) {
-                                                var22.method15221(var26[var28] & 0xFFFF);
+                                                var22.ip2(var26[var28] & 0xFFFF);
                                                 var19++;
                                             }
                                         }
@@ -125,7 +125,7 @@ public class GlFloorModelRelated2 {
                         OpenGL.glScalef(var6, var6, 1.0F);
                         OpenGL.glTranslatef((float) -var18 / var6, (float) -var15 / var6, 1.0F);
                         OpenGL.glMatrixMode(5888);
-                        this.field1145[var18][var15].method2041(var22.field9629, var19);
+                        this.field1145[var18][var15].method2041(var22.data, var19);
                     }
                 }
             }

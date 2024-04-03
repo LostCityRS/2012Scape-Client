@@ -33,7 +33,7 @@ public class FloorUnderlayType {
     @ObfuscatedName("uc.u(Laet;B)V")
     public void method11909(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -44,15 +44,15 @@ public class FloorUnderlayType {
     @ObfuscatedName("uc.j(Laet;II)V")
     public void method11918(Packet arg0, int arg1) {
         if (arg1 == 1) {
-            this.field6716 = arg0.method15241();
+            this.field6716 = arg0.g3();
             this.method11916(this.field6716);
         } else if (arg1 == 2) {
-            this.field6713 = arg0.method15239();
+            this.field6713 = arg0.g2();
             if (this.field6713 == 65535) {
                 this.field6713 = -1;
             }
         } else if (arg1 == 3) {
-            this.field6715 = arg0.method15239() << 2;
+            this.field6715 = arg0.g2() << 2;
         } else if (arg1 == 4) {
             this.field6719 = false;
         } else if (arg1 == 5) {

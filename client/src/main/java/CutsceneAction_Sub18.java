@@ -20,25 +20,25 @@ public class CutsceneAction_Sub18 extends CutsceneAction {
 
     public CutsceneAction_Sub18(Packet arg0) {
         super(arg0);
-        this.field8474 = arg0.method15239();
-        int var2 = arg0.method15220();
+        this.field8474 = arg0.g2();
+        int var2 = arg0.g1();
         if ((var2 & 0x1) == 0) {
             this.field8473 = -1;
             this.field8472 = -1;
         } else {
-            this.field8473 = arg0.method15239();
-            this.field8472 = arg0.method15239();
+            this.field8473 = arg0.g2();
+            this.field8472 = arg0.g2();
         }
         if ((var2 & 0x2) == 0) {
             this.field8475 = -1;
             this.field8476 = -1;
         } else {
-            this.field8475 = arg0.method15239();
-            this.field8476 = arg0.method15239();
+            this.field8475 = arg0.g2();
+            this.field8476 = arg0.g2();
         }
         if ((var2 & 0x4) != 0) {
-            int var3 = arg0.method15239();
-            int var4 = arg0.method15239();
+            int var3 = arg0.g2();
+            int var4 = arg0.g2();
             int var5 = var3 * 255 / var4;
             if (var3 > 0 && var5 < 1) {
                 boolean var6 = true;

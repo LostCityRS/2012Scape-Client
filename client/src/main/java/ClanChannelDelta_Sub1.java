@@ -22,14 +22,14 @@ public class ClanChannelDelta_Sub1 extends ClanChannelDeltaEntry {
 
     @ObfuscatedName("air.u(Laet;B)V")
     public void method14985(Packet arg0) {
-        if (arg0.method15220() != 255) {
-            arg0.field9626--;
-            arg0.method15246();
+        if (arg0.g1() != 255) {
+            arg0.pos--;
+            arg0.g8();
         }
-        this.field10223 = arg0.method15219();
-        this.field10221 = arg0.method15239();
-        this.field10222 = arg0.method15238();
-        arg0.method15246();
+        this.field10223 = arg0.fastgstr();
+        this.field10221 = arg0.g2();
+        this.field10222 = arg0.g1b();
+        arg0.g8();
     }
 
     @ObfuscatedName("air.j(Ladh;B)V")

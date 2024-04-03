@@ -441,16 +441,16 @@ public class MapLoader {
         }
         if (arg2 < 0 || arg2 >= this.field3627 || arg3 < 0 || arg3 >= this.field3643) {
             while (true) {
-                int var13 = arg0.method15220();
+                int var13 = arg0.g1();
                 if (var13 == 0) {
                     break;
                 }
                 if (var13 == 1) {
-                    arg0.method15220();
+                    arg0.g1();
                     break;
                 }
                 if (var13 <= 49) {
-                    arg0.method15220();
+                    arg0.g1();
                 }
             }
             return;
@@ -459,7 +459,7 @@ public class MapLoader {
             this.field3618.field3606[arg1][arg2][arg3] = 0;
         }
         while (true) {
-            int var11 = arg0.method15220();
+            int var11 = arg0.g1();
             if (var11 == 0) {
                 if (this.field3644) {
                     this.field3697[0][arg2 + arg4][arg3 + arg5] = 0;
@@ -471,7 +471,7 @@ public class MapLoader {
                 break;
             }
             if (var11 == 1) {
-                int var12 = arg0.method15220();
+                int var12 = arg0.g1();
                 if (this.field3644) {
                     this.field3697[0][arg2 + arg4][arg3 + arg5] = var12 * 8 << 2;
                 } else {
@@ -488,9 +488,9 @@ public class MapLoader {
             }
             if (var11 <= 49) {
                 if (arg9) {
-                    arg0.method15220();
+                    arg0.g1();
                 } else {
-                    this.field3636[arg1][arg2][arg3] = arg0.method15238();
+                    this.field3636[arg1][arg2][arg3] = arg0.g1b();
                     this.field3703[arg1][arg2][arg3] = (byte) ((var11 - 2) / 4);
                     this.field3621[arg1][arg2][arg3] = (byte) (var11 - 2 + arg8 & 0x3);
                 }

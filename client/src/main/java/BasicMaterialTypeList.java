@@ -24,106 +24,106 @@ public class BasicMaterialTypeList implements MaterialTypeList {
         this.field1292 = arg1;
         this.field1293 = arg2;
         Packet var4 = new Packet(arg0.method5627(0, 0));
-        this.field1294 = var4.method15239();
+        this.field1294 = var4.g2();
         this.field1291 = new Material[this.field1294];
         for (int var5 = 0; var5 < this.field1294; var5++) {
-            if (var4.method15220() == 1) {
+            if (var4.g1() == 1) {
                 this.field1291[var5] = new Material();
             }
         }
         for (int var6 = 0; var6 < this.field1294; var6++) {
             if (this.field1291[var6] != null) {
-                this.field1291[var6].field1250 = var4.method15220() == 0;
+                this.field1291[var6].field1250 = var4.g1() == 0;
             }
         }
         for (int var7 = 0; var7 < this.field1294; var7++) {
             if (this.field1291[var7] != null) {
-                this.field1291[var7].field1252 = Material.method1839(var4.method15220());
+                this.field1291[var7].field1252 = Material.method1839(var4.g1());
             }
         }
         for (int var8 = 0; var8 < this.field1294; var8++) {
             if (this.field1291[var8] != null) {
-                this.field1291[var8].field1265 = var4.method15220() == 1;
+                this.field1291[var8].field1265 = var4.g1() == 1;
             }
         }
         for (int var9 = 0; var9 < this.field1294; var9++) {
             if (this.field1291[var9] != null) {
-                this.field1291[var9].field1267 = var4.method15238();
+                this.field1291[var9].field1267 = var4.g1b();
             }
         }
         for (int var10 = 0; var10 < this.field1294; var10++) {
             if (this.field1291[var10] != null) {
-                this.field1291[var10].field1266 = var4.method15238();
+                this.field1291[var10].field1266 = var4.g1b();
             }
         }
         for (int var11 = 0; var11 < this.field1294; var11++) {
             if (this.field1291[var11] != null) {
-                this.field1291[var11].field1270 = var4.method15238();
+                this.field1291[var11].field1270 = var4.g1b();
             }
         }
         for (int var12 = 0; var12 < this.field1294; var12++) {
             if (this.field1291[var12] != null) {
-                this.field1291[var12].field1248 = var4.method15238();
+                this.field1291[var12].field1248 = var4.g1b();
             }
         }
         for (int var13 = 0; var13 < this.field1294; var13++) {
             if (this.field1291[var13] != null) {
-                this.field1291[var13].field1260 = (short) var4.method15239();
+                this.field1291[var13].field1260 = (short) var4.g2();
             }
         }
         for (int var14 = 0; var14 < this.field1294; var14++) {
             if (this.field1291[var14] != null) {
-                this.field1291[var14].field1268 = var4.method15238();
+                this.field1291[var14].field1268 = var4.g1b();
             }
         }
         for (int var15 = 0; var15 < this.field1294; var15++) {
             if (this.field1291[var15] != null) {
-                this.field1291[var15].field1261 = var4.method15238();
+                this.field1291[var15].field1261 = var4.g1b();
             }
         }
         for (int var16 = 0; var16 < this.field1294; var16++) {
             if (this.field1291[var16] != null) {
-                this.field1291[var16].field1276 = var4.method15220() == 1;
+                this.field1291[var16].field1276 = var4.g1() == 1;
             }
         }
         for (int var17 = 0; var17 < this.field1294; var17++) {
             if (this.field1291[var17] != null) {
-                this.field1291[var17].field1277 = var4.method15220() == 1;
+                this.field1291[var17].field1277 = var4.g1() == 1;
             }
         }
         for (int var18 = 0; var18 < this.field1294; var18++) {
             if (this.field1291[var18] != null) {
-                this.field1291[var18].field1275 = var4.method15238();
+                this.field1291[var18].field1275 = var4.g1b();
             }
         }
         for (int var19 = 0; var19 < this.field1294; var19++) {
             if (this.field1291[var19] != null) {
-                this.field1291[var19].field1273 = var4.method15220() == 1;
+                this.field1291[var19].field1273 = var4.g1() == 1;
             }
         }
         for (int var20 = 0; var20 < this.field1294; var20++) {
             if (this.field1291[var20] != null) {
-                this.field1291[var20].field1274 = var4.method15220() == 1;
+                this.field1291[var20].field1274 = var4.g1() == 1;
             }
         }
         for (int var21 = 0; var21 < this.field1294; var21++) {
             if (this.field1291[var21] != null) {
-                this.field1291[var21].field1245 = var4.method15220() == 1;
+                this.field1291[var21].field1245 = var4.g1() == 1;
             }
         }
         for (int var22 = 0; var22 < this.field1294; var22++) {
             if (this.field1291[var22] != null) {
-                this.field1291[var22].field1278 = var4.method15220();
+                this.field1291[var22].field1278 = var4.g1();
             }
         }
         for (int var23 = 0; var23 < this.field1294; var23++) {
             if (this.field1291[var23] != null) {
-                this.field1291[var23].field1264 = var4.method15379();
+                this.field1291[var23].field1264 = var4.g4();
             }
         }
         for (int var24 = 0; var24 < this.field1294; var24++) {
             if (this.field1291[var24] != null) {
-                this.field1291[var24].field1262 = (MaterialAlphaMode) SerializableEnums.method8032(MaterialAlphaMode.method7322(), var4.method15220());
+                this.field1291[var24].field1262 = (MaterialAlphaMode) SerializableEnums.method8032(MaterialAlphaMode.method7322(), var4.g1());
             }
         }
     }

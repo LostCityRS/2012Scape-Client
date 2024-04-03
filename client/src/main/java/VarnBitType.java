@@ -15,7 +15,7 @@ public class VarnBitType {
     @ObfuscatedName("sj.u(Laet;I)V")
     public void method11304(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -26,9 +26,9 @@ public class VarnBitType {
     @ObfuscatedName("sj.j(Laet;II)V")
     public void method11302(Packet arg0, int arg1) {
         if (arg1 == 1) {
-            this.field6409 = arg0.method15239();
-            this.field6410 = arg0.method15220();
-            this.field6411 = arg0.method15220();
+            this.field6409 = arg0.g2();
+            this.field6410 = arg0.g1();
+            this.field6411 = arg0.g1();
         }
     }
 }

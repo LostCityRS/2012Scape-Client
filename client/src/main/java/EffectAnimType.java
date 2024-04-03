@@ -60,7 +60,7 @@ public class EffectAnimType {
     @ObfuscatedName("se.u(Laet;I)V")
     public void method11100(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -71,19 +71,19 @@ public class EffectAnimType {
     @ObfuscatedName("se.j(Laet;II)V")
     public void method11101(Packet arg0, int arg1) {
         if (arg1 == 1) {
-            this.field5251 = arg0.method15411();
+            this.field5251 = arg0.gSmart2or4null();
         } else if (arg1 == 2) {
-            this.field5252 = arg0.method15411();
+            this.field5252 = arg0.gSmart2or4null();
         } else if (arg1 == 4) {
-            this.field5259 = arg0.method15239();
+            this.field5259 = arg0.g2();
         } else if (arg1 == 5) {
-            this.field5260 = arg0.method15239();
+            this.field5260 = arg0.g2();
         } else if (arg1 == 6) {
-            this.field5265 = arg0.method15239();
+            this.field5265 = arg0.g2();
         } else if (arg1 == 7) {
-            this.field5257 = arg0.method15220();
+            this.field5257 = arg0.g1();
         } else if (arg1 == 8) {
-            this.field5263 = arg0.method15220();
+            this.field5263 = arg0.g1();
         } else if (arg1 == 9) {
             this.field5262 = 3;
             this.field5253 = 8224;
@@ -97,31 +97,31 @@ public class EffectAnimType {
             this.field5262 = 5;
         } else if (arg1 == 14) {
             this.field5262 = 2;
-            this.field5253 = arg0.method15220() * 256;
+            this.field5253 = arg0.g1() * 256;
         } else if (arg1 == 15) {
             this.field5262 = 3;
-            this.field5253 = arg0.method15239();
+            this.field5253 = arg0.g2();
         } else if (arg1 == 16) {
             this.field5262 = 3;
-            this.field5253 = arg0.method15379();
+            this.field5253 = arg0.g4();
         } else if (arg1 == 40) {
-            int var3 = arg0.method15220();
+            int var3 = arg0.g1();
             this.field5261 = new short[var3];
             this.field5254 = new short[var3];
             for (int var4 = 0; var4 < var3; var4++) {
-                this.field5261[var4] = (short) arg0.method15239();
-                this.field5254[var4] = (short) arg0.method15239();
+                this.field5261[var4] = (short) arg0.g2();
+                this.field5254[var4] = (short) arg0.g2();
             }
         } else if (arg1 == 41) {
-            int var5 = arg0.method15220();
+            int var5 = arg0.g1();
             this.field5255 = new short[var5];
             this.field5266 = new short[var5];
             for (int var6 = 0; var6 < var5; var6++) {
-                this.field5255[var6] = (short) arg0.method15239();
-                this.field5266[var6] = (short) arg0.method15239();
+                this.field5255[var6] = (short) arg0.g2();
+                this.field5266[var6] = (short) arg0.g2();
             }
         } else if (arg1 == 44) {
-            int var7 = arg0.method15239();
+            int var7 = arg0.g2();
             int var8 = 0;
             for (int var9 = var7; var9 > 0; var9 >>= 0x1) {
                 var8++;
@@ -136,7 +136,7 @@ public class EffectAnimType {
                 }
             }
         } else if (arg1 == 45) {
-            int var12 = arg0.method15239();
+            int var12 = arg0.g2();
             int var13 = 0;
             for (int var14 = var12; var14 > 0; var14 >>= 0x1) {
                 var13++;

@@ -59,19 +59,19 @@ public class AnimFrame {
         try {
             Packet var3 = new Packet(arg0);
             Packet var4 = new Packet(arg0);
-            var3.method15220();
-            var3.field9626 += 2;
-            int var5 = var3.method15239();
+            var3.g1();
+            var3.pos += 2;
+            int var5 = var3.g2();
             int var6 = 0;
             int var7 = -1;
             int var8 = -1;
-            var4.field9626 = var3.field9626 + var5;
+            var4.pos = var3.pos + var5;
             for (int var9 = 0; var9 < var5; var9++) {
                 int var10 = this.field1496.field9365[var9];
                 if (var10 == 0) {
                     var7 = var9;
                 }
-                int var11 = var3.method15220();
+                int var11 = var3.g1();
                 if (var11 > 0) {
                     if (var10 == 0) {
                         var8 = var9;
@@ -84,17 +84,17 @@ public class AnimFrame {
                     if ((var11 & 0x1) == 0) {
                         field1479[var6] = var12;
                     } else {
-                        field1479[var6] = (short) var4.method15254();
+                        field1479[var6] = (short) var4.gSmart1or2s();
                     }
                     if ((var11 & 0x2) == 0) {
                         field1480[var6] = var12;
                     } else {
-                        field1480[var6] = (short) var4.method15254();
+                        field1480[var6] = (short) var4.gSmart1or2s();
                     }
                     if ((var11 & 0x4) == 0) {
                         field1484[var6] = var12;
                     } else {
-                        field1484[var6] = (short) var4.method15254();
+                        field1484[var6] = (short) var4.gSmart1or2s();
                     }
                     field1483[var6] = (byte) (var11 >>> 3 & 0x3);
                     if (var10 == 2 || var10 == 9) {
@@ -118,7 +118,7 @@ public class AnimFrame {
                     var6++;
                 }
             }
-            if (var4.field9626 != arg0.length) {
+            if (var4.pos != arg0.length) {
                 throw new RuntimeException();
             }
             this.field1485 = var6;

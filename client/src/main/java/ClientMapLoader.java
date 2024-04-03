@@ -44,8 +44,8 @@ public class ClientMapLoader extends MapLoader {
         boolean var5 = false;
         Environment var6 = null;
         while (true) {
-            while (arg1.field9626 < arg1.field9629.length) {
-                int var7 = arg1.method15220();
+            while (arg1.pos < arg1.data.length) {
+                int var7 = arg1.g1();
                 if (var7 == 0) {
                     if (var6 == null) {
                         var6 = new Environment(arg1, this.field8883);
@@ -53,12 +53,12 @@ public class ClientMapLoader extends MapLoader {
                         var6.method8205(arg1, this.field8883);
                     }
                 } else if (var7 == 1) {
-                    int var8 = arg1.method15220();
+                    int var8 = arg1.g1();
                     if (var8 > 0) {
                         for (int var9 = 0; var9 < var8; var9++) {
                             StaticPointLight var10 = new StaticPointLight(arg0, this.field3619.field4510, arg1, 2);
                             if (var10.field4594 == 31) {
-                                LightType var11 = Statics.field785.method12453(arg1.method15239());
+                                LightType var11 = Statics.field785.method12453(arg1.g2());
                                 var10.method7577(var11.field7188, var11.field7191, var11.field7189, var11.field7190);
                             }
                             if (arg0.method768() > 0) {
@@ -89,7 +89,7 @@ public class ClientMapLoader extends MapLoader {
                         this.field3631 = new byte[4][][];
                     }
                     for (int var17 = 0; var17 < 4; var17++) {
-                        byte var18 = arg1.method15238();
+                        byte var18 = arg1.g1b();
                         if (var18 == 0 && this.field3631[var17] != null) {
                             int var19 = arg2;
                             int var20 = arg2 + 64;
@@ -128,7 +128,7 @@ public class ClientMapLoader extends MapLoader {
                             }
                             for (int var23 = 0; var23 < 64; var23 += 4) {
                                 for (int var24 = 0; var24 < 64; var24 += 4) {
-                                    byte var25 = arg1.method15238();
+                                    byte var25 = arg1.g1b();
                                     for (int var26 = arg2 + var23; var26 < arg2 + var23 + 4; var26++) {
                                         for (int var27 = arg3 + var24; var27 < arg3 + var24 + 4; var27++) {
                                             if (var26 >= 0 && var26 < this.field3627 && var27 >= 0 && var27 < this.field3643) {
@@ -222,8 +222,8 @@ public class ClientMapLoader extends MapLoader {
         int var12 = (arg6 & 0x7) * 8;
         int var13 = (arg7 & 0x7) * 8;
         while (true) {
-            while (arg1.field9626 < arg1.field9629.length) {
-                int var14 = arg1.method15220();
+            while (arg1.pos < arg1.data.length) {
+                int var14 = arg1.g1();
                 if (var14 == 0) {
                     if (var11 == null) {
                         var11 = new Environment(arg1, this.field8883);
@@ -231,12 +231,12 @@ public class ClientMapLoader extends MapLoader {
                         var11.method8205(arg1, this.field8883);
                     }
                 } else if (var14 == 1) {
-                    int var15 = arg1.method15220();
+                    int var15 = arg1.g1();
                     if (var15 > 0) {
                         for (int var16 = 0; var16 < var15; var16++) {
                             StaticPointLight var17 = new StaticPointLight(arg0, this.field3619.field4510, arg1, 2);
                             if (var17.field4594 == 31) {
-                                LightType var18 = Statics.field785.method12453(arg1.method15239());
+                                LightType var18 = Statics.field785.method12453(arg1.g2());
                                 var17.method7577(var18.field7188, var18.field7191, var18.field7189, var18.field7190);
                             }
                             if (arg0.method768() > 0) {
@@ -271,7 +271,7 @@ public class ClientMapLoader extends MapLoader {
                         this.field3631 = new byte[4][][];
                     }
                     for (int var26 = 0; var26 < 4; var26++) {
-                        byte var27 = arg1.method15238();
+                        byte var27 = arg1.g1b();
                         if (var27 == 0 && this.field3631[arg2] != null) {
                             if (var26 <= arg5) {
                                 int var28 = arg3;
@@ -312,7 +312,7 @@ public class ClientMapLoader extends MapLoader {
                             }
                             for (int var32 = 0; var32 < 64; var32 += 4) {
                                 for (int var33 = 0; var33 < 64; var33 += 4) {
-                                    byte var34 = arg1.method15238();
+                                    byte var34 = arg1.g1b();
                                     if (var26 <= arg5) {
                                         for (int var35 = var32; var35 < var32 + 4; var35++) {
                                             for (int var36 = var33; var36 < var33 + 4; var36++) {
@@ -359,7 +359,7 @@ public class ClientMapLoader extends MapLoader {
         int var8 = -1;
         label57:
         while (true) {
-            int var9 = var7.method15258();
+            int var9 = var7.gExtended1or2();
             if (var9 == 0) {
                 return var6;
             }
@@ -368,14 +368,14 @@ public class ClientMapLoader extends MapLoader {
             boolean var11 = false;
             while (true) {
                 while (!var11) {
-                    int var13 = var7.method15277();
+                    int var13 = var7.gSmart1or2();
                     if (var13 == 0) {
                         continue label57;
                     }
                     var10 += var13 - 1;
                     int var14 = var10 & 0x3F;
                     int var15 = var10 >> 6 & 0x3F;
-                    int var16 = var7.method15220() >> 2;
+                    int var16 = var7.g1() >> 2;
                     int var17 = arg2 + var15;
                     int var18 = arg3 + var14;
                     if (var17 > 0 && var18 > 0 && var17 < arg4 - 1 && var18 < arg5 - 1) {
@@ -388,11 +388,11 @@ public class ClientMapLoader extends MapLoader {
                         }
                     }
                 }
-                int var12 = var7.method15277();
+                int var12 = var7.gSmart1or2();
                 if (var12 == 0) {
                     break;
                 }
-                var7.method15220();
+                var7.g1();
             }
         }
     }
@@ -414,14 +414,14 @@ public class ClientMapLoader extends MapLoader {
         Packet var6 = new Packet(arg1);
         int var7 = -1;
         while (true) {
-            int var8 = var6.method15258();
+            int var8 = var6.gExtended1or2();
             if (var8 == 0) {
                 return;
             }
             var7 += var8;
             int var9 = 0;
             while (true) {
-                int var10 = var6.method15277();
+                int var10 = var6.gSmart1or2();
                 if (var10 == 0) {
                     break;
                 }
@@ -429,7 +429,7 @@ public class ClientMapLoader extends MapLoader {
                 int var11 = var9 & 0x3F;
                 int var12 = var9 >> 6 & 0x3F;
                 int var13 = var9 >> 12;
-                int var14 = var6.method15220();
+                int var14 = var6.g1();
                 int var15 = var14 >> 2;
                 int var16 = var14 & 0x3;
                 int var17 = arg2 + var12;
@@ -456,14 +456,14 @@ public class ClientMapLoader extends MapLoader {
         Packet var11 = new Packet(arg1);
         int var12 = -1;
         while (true) {
-            int var13 = var11.method15258();
+            int var13 = var11.gExtended1or2();
             if (var13 == 0) {
                 return;
             }
             var12 += var13;
             int var14 = 0;
             while (true) {
-                int var15 = var11.method15277();
+                int var15 = var11.gSmart1or2();
                 if (var15 == 0) {
                     break;
                 }
@@ -471,7 +471,7 @@ public class ClientMapLoader extends MapLoader {
                 int var16 = var14 & 0x3F;
                 int var17 = var14 >> 6 & 0x3F;
                 int var18 = var14 >> 12;
-                int var19 = var11.method15220();
+                int var19 = var11.g1();
                 int var20 = var19 >> 2;
                 int var21 = var19 & 0x3;
                 if (arg5 == var18 && var17 >= arg6 && var17 < arg6 + 8 && var16 >= arg7 && var16 < arg7 + 8) {

@@ -1426,7 +1426,7 @@ public class GlToolkit extends RendererToolkit {
             var2.method16855(1.0F);
             var2.method16855(0.0F);
         }
-        this.field8223 = this.method13301(20, var2.field9629, var2.field9626, false);
+        this.field8223 = this.method13301(20, var2.data, var2.pos, false);
         this.field8221 = new GlRelated1(this.field8223, 5126, 3, 0);
         this.field8211 = new GlRelated1(this.field8223, 5126, 2, 12);
         this.field8085.method2263(this);

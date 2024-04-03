@@ -41,7 +41,7 @@ public class MiniMenuDefaults {
     @ObfuscatedName("rx.u(Laet;I)V")
     public void method8582(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -68,9 +68,9 @@ public class MiniMenuDefaults {
             } else if (var2 == 11) {
                 this.field5124 = true;
             } else if (var2 == 12) {
-                this.field5127 = arg0.method15379();
+                this.field5127 = arg0.g4();
             } else if (var2 == 13) {
-                this.field5128 = arg0.method15379();
+                this.field5128 = arg0.g4();
             }
         }
     }

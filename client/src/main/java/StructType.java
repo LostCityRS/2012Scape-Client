@@ -9,7 +9,7 @@ public class StructType extends SecondaryNode {
     @ObfuscatedName("aju.u(Laet;I)V")
     public void method16778(Packet arg0) {
         while (true) {
-            int var2 = arg0.method15220();
+            int var2 = arg0.g1();
             if (var2 == 0) {
                 return;
             }
@@ -22,19 +22,19 @@ public class StructType extends SecondaryNode {
         if (arg1 != 249) {
             return;
         }
-        int var3 = arg0.method15220();
+        int var3 = arg0.g1();
         if (this.field10396 == null) {
             int var4 = IntMath.method2839(var3);
             this.field10396 = new IterableMap(var4);
         }
         for (int var5 = 0; var5 < var3; var5++) {
-            boolean var6 = arg0.method15220() == 1;
-            int var7 = arg0.method15241();
+            boolean var6 = arg0.g1() == 1;
+            int var7 = arg0.g3();
             Node var8;
             if (var6) {
-                var8 = new ObjectNode(arg0.method15337());
+                var8 = new ObjectNode(arg0.gjstr());
             } else {
-                var8 = new IntNode(arg0.method15379());
+                var8 = new IntNode(arg0.g4());
             }
             this.field10396.method11927(var8, (long) var7);
         }

@@ -27,8 +27,8 @@ public class KeyBinding implements Binding {
 
     @ObfuscatedName("ul.a(Laet;I)Lpi;")
     public static KeyBinding method11866(Packet arg0) {
-        int var1 = arg0.method15220();
-        int var2 = arg0.method15220();
+        int var1 = arg0.g1();
+        int var2 = arg0.g1();
         return new KeyBinding(var1, var2);
     }
 }
