@@ -319,7 +319,7 @@ public abstract class Model {
                         var28 = arg6;
                     }
                 }
-                this.method397(var28);
+                this.t(var28);
             }
         }
         if (arg4 != 0) {
@@ -335,7 +335,7 @@ public abstract class Model {
                         var30 = arg7;
                     }
                 }
-                this.method284(var30);
+                this.EA(var30);
             }
         }
         int var32 = var14 + var23;
@@ -344,7 +344,7 @@ public abstract class Model {
         }
         int var33 = (var32 >> 1) - arg2;
         if (var33 != 0) {
-            this.method353(0, var33, 0);
+            this.ia(0, var33, 0);
         }
     }
 
@@ -354,7 +354,7 @@ public abstract class Model {
             return;
         }
         this.method257();
-        if (!this.method421()) {
+        if (!this.ea()) {
             this.method407();
             return;
         }
@@ -368,7 +368,7 @@ public abstract class Model {
             }
         }
         this.method263(var10, var9, var11, arg4, arg5, arg6, null, false, arg7, 65535, null);
-        this.method269();
+        this.ka();
         this.method407();
     }
 
@@ -378,7 +378,7 @@ public abstract class Model {
             return;
         }
         this.method257();
-        if (!this.method421()) {
+        if (!this.ea()) {
             this.method407();
             return;
         }
@@ -392,7 +392,7 @@ public abstract class Model {
             }
         }
         this.method263(var12, var11, var13, arg4, arg5, arg6, null, false, arg8, arg7, arg9);
-        this.method269();
+        this.ka();
         this.method407();
     }
 
@@ -406,7 +406,7 @@ public abstract class Model {
             return;
         }
         this.method257();
-        if (!this.method421()) {
+        if (!this.ea()) {
             this.method407();
             return;
         }
@@ -430,7 +430,7 @@ public abstract class Model {
         }
         this.method266(0, new int[0], 0, 0, 0, 0, arg13);
         this.method263(var18.field1496, var18, var19, arg10, arg11, 0, arg12, true, arg13, 65535, null);
-        this.method269();
+        this.ka();
         this.method407();
     }
 
@@ -440,7 +440,7 @@ public abstract class Model {
             return;
         }
         this.method257();
-        if (!this.method421()) {
+        if (!this.ea()) {
             this.method407();
             return;
         }
@@ -450,12 +450,12 @@ public abstract class Model {
             short var6 = var3.field1486[var5];
             if (var4.field9361[var6]) {
                 if (var3.field1490[var5] != -1) {
-                    this.method343(0, 0, 0, 0);
+                    this.w(0, 0, 0, 0);
                 }
-                this.method343(var4.field9365[var6], var3.field1494[var5], var3.field1481[var5], var3.field1489[var5]);
+                this.w(var4.field9365[var6], var3.field1494[var5], var3.field1481[var5], var3.field1489[var5]);
             }
         }
-        this.method269();
+        this.ka();
         this.method407();
     }
 
@@ -634,7 +634,7 @@ public abstract class Model {
         if (arg7 == 65535) {
             this.method266(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         } else {
-            this.method267(arg0, arg1, arg2, arg3, arg4, arg6, arg7, arg8);
+            this.e(arg0, arg1, arg2, arg3, arg4, arg6, arg7, arg8);
         }
     }
 
@@ -642,25 +642,25 @@ public abstract class Model {
     public abstract void method239(Matrix4x3 arg0, int arg1, boolean arg2);
 
     @ObfuscatedName("qa.oa(III)V")
-    public abstract void method245(int arg0, int arg1, int arg2);
+    public abstract void oa(int arg0, int arg1, int arg2);
 
     @ObfuscatedName("qa.f(I)V")
-    public abstract void method246(int arg0);
+    public abstract void f(int arg0);
 
     @ObfuscatedName("qa.b()V")
     public abstract void method247();
 
     @ObfuscatedName("qa.S(I)V")
-    public abstract void method249(int arg0);
+    public abstract void S(int arg0);
 
     @ObfuscatedName("qa.KA(I)V")
-    public abstract void method252(int arg0);
+    public abstract void KA(int arg0);
 
     @ObfuscatedName("qa.wa()V")
-    public abstract void method253();
+    public abstract void wa();
 
     @ObfuscatedName("qa.pa(IILxa;Lxa;III)V")
-    public abstract void method255(int arg0, int arg1, FloorModel arg2, FloorModel arg3, int arg4, int arg5, int arg6);
+    public abstract void pa(int arg0, int arg1, FloorModel arg2, FloorModel arg3, int arg4, int arg5, int arg6);
 
     @ObfuscatedName("qa.k()V")
     public abstract void method257();
@@ -669,10 +669,10 @@ public abstract class Model {
     public abstract void method266(int arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, boolean arg6);
 
     @ObfuscatedName("qa.e(I[IIIIZI[I)V")
-    public abstract void method267(int arg0, int[] arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6, int[] arg7);
+    public abstract void e(int arg0, int[] arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6, int[] arg7);
 
     @ObfuscatedName("qa.ka()V")
-    public abstract void method269();
+    public abstract void ka();
 
     @ObfuscatedName("qa.as(Lkc;Ldy;I)V")
     public abstract void method271(Matrix4x3 arg0, ScreenBoundingBox arg1, int arg2);
@@ -681,64 +681,64 @@ public abstract class Model {
     public abstract boolean method272(int arg0, int arg1, Matrix4x3 arg2, boolean arg3, int arg4);
 
     @ObfuscatedName("qa.ga(Lna;)Lna;")
-    public abstract HardShadow method273(HardShadow arg0);
+    public abstract HardShadow ga(HardShadow arg0);
 
     @ObfuscatedName("qa.N()I")
-    public abstract int method274();
+    public abstract int N();
 
     @ObfuscatedName("qa.n()I")
-    public abstract int method275();
+    public abstract int n();
 
     @ObfuscatedName("qa.aw()[Ldx;")
     public abstract ModelParticleEmitter[] method276();
 
     @ObfuscatedName("qa.ya()I")
-    public abstract int method277();
+    public abstract int ya();
 
     @ObfuscatedName("qa.YA()I")
-    public abstract int method278();
+    public abstract int YA();
 
     @ObfuscatedName("qa.o()I")
-    public abstract int method279();
+    public abstract int o();
 
     @ObfuscatedName("qa.AA()I")
-    public abstract int method280();
+    public abstract int AA();
 
     @ObfuscatedName("qa.ha()I")
-    public abstract int method281();
+    public abstract int ha();
 
     @ObfuscatedName("qa.p(I)V")
-    public abstract void method282(int arg0);
+    public abstract void p(int arg0);
 
     @ObfuscatedName("qa.Q(I)V")
-    public abstract void method283(int arg0);
+    public abstract void Q(int arg0);
 
     @ObfuscatedName("qa.EA(I)V")
-    public abstract void method284(int arg0);
+    public abstract void EA(int arg0);
 
     @ObfuscatedName("qa.Z()I")
-    public abstract int method285();
+    public abstract int Z();
 
     @ObfuscatedName("qa.X(SS)V")
-    public abstract void method287(short arg0, short arg1);
+    public abstract void X(short arg0, short arg1);
 
     @ObfuscatedName("qa.al(B[B)V")
     public abstract void method288(byte arg0, byte[] arg1);
 
     @ObfuscatedName("qa.W(SS)V")
-    public abstract void method289(short arg0, short arg1);
+    public abstract void W(short arg0, short arg1);
 
     @ObfuscatedName("qa.PA(IIII)V")
-    public abstract void method290(int arg0, int arg1, int arg2, int arg3);
+    public abstract void PA(int arg0, int arg1, int arg2, int arg3);
 
     @ObfuscatedName("qa.at()Z")
     public abstract boolean method291();
 
     @ObfuscatedName("qa.i()Z")
-    public abstract boolean method292();
+    public abstract boolean i();
 
     @ObfuscatedName("qa.u()Z")
-    public abstract boolean method293();
+    public abstract boolean u();
 
     @ObfuscatedName("qa.ax(Lkc;)V")
     public abstract void method294(Matrix4x3 arg0);
@@ -750,25 +750,25 @@ public abstract class Model {
     public abstract void method297(Model arg0, int arg1, int arg2, int arg3, boolean arg4);
 
     @ObfuscatedName("qa.m()I")
-    public abstract int method329();
+    public abstract int m();
 
     @ObfuscatedName("qa.ao()[B")
-    public abstract byte[] method334();
+    public abstract byte[] ao();
 
     @ObfuscatedName("qa.w(IIII)V")
-    public abstract void method343(int arg0, int arg1, int arg2, int arg3);
+    public abstract void w(int arg0, int arg1, int arg2, int arg3);
 
     @ObfuscatedName("qa.ia(III)V")
-    public abstract void method353(int arg0, int arg1, int arg2);
+    public abstract void ia(int arg0, int arg1, int arg2);
 
     @ObfuscatedName("qa.RA()I")
-    public abstract int method358();
+    public abstract int RA();
 
     @ObfuscatedName("qa.t(I)V")
-    public abstract void method397(int arg0);
+    public abstract void t(int arg0);
 
     @ObfuscatedName("qa.c()I")
-    public abstract int method398();
+    public abstract int c();
 
     @ObfuscatedName("qa.h()V")
     public abstract void method407();
@@ -777,5 +777,5 @@ public abstract class Model {
     public abstract ModelParticleEffector[] method413();
 
     @ObfuscatedName("qa.ea()Z")
-    public abstract boolean method421();
+    public abstract boolean ea();
 }

@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("m")
-public class m extends Font implements SoftwareRendererRelated {
+public class m extends Font implements ua {
 
     public long nativeid;
 
@@ -19,29 +19,29 @@ public class m extends Font implements SoftwareRendererRelated {
             var9[var11] = arg3[var11].field8413;
             var10[var11] = arg3[var11].field8412;
         }
-        this.method1162(arg0, arg1, var6, var7, var8, var9, var10);
+        this.n(arg0, arg1, var6, var7, var8, var9, var10);
     }
 
     public void finalize() {
         if (this.nativeid != 0L) {
-            SoftwareRendererRelated2.method2358(this);
+            cp.method2358(this);
         }
     }
 
     @ObfuscatedName("m.b(CIIIZLta;II)V")
     public void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, GraphicsRelated arg5, int arg6, int arg7) {
-        this.method1164(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+        this.MA(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     @ObfuscatedName("m.n(Lja;Lba;[[B[I[I[I[I)V")
-    public native void method1162(ja arg0, ba arg1, byte[][] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6);
+    public native void n(ja arg0, ba arg1, byte[][] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6);
 
     @ObfuscatedName("m.ma(Z)V")
-    public native void method92(boolean arg0);
+    public native void ma(boolean arg0);
 
     @ObfuscatedName("m.UA(CIIIZ)V")
-    public native void method848(char arg0, int arg1, int arg2, int arg3, boolean arg4);
+    public native void UA(char arg0, int arg1, int arg2, int arg3, boolean arg4);
 
     @ObfuscatedName("m.MA(CIIIZLta;II)V")
-    public native void method1164(char arg0, int arg1, int arg2, int arg3, boolean arg4, GraphicsRelated arg5, int arg6, int arg7);
+    public native void MA(char arg0, int arg1, int arg2, int arg3, boolean arg4, GraphicsRelated arg5, int arg6, int arg7);
 }

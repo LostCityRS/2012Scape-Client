@@ -26,9 +26,9 @@ public class SpotShadowFactory {
         synchronized (field654) {
             var17 = (Model) field654.method7916(var14);
         }
-        if (var17 == null || arg0.method519(var17.method329(), var12) != 0) {
+        if (var17 == null || arg0.method519(var17.m(), var12) != 0) {
             if (var17 != null) {
-                var12 = arg0.method520(var12, var17.method329());
+                var12 = arg0.method520(var12, var17.m());
             }
             byte var19;
             if (arg5 == 1) {
@@ -77,29 +77,29 @@ public class SpotShadowFactory {
                 field654.method7937(var17, var14);
             }
         }
-        int var40 = arg6.method358();
-        int var41 = arg6.method277();
-        int var42 = arg6.method280();
-        int var43 = arg6.method281();
+        int var40 = arg6.RA();
+        int var41 = arg6.ya();
+        int var42 = arg6.AA();
+        int var43 = arg6.ha();
         Model var44;
         if (arg11 == null) {
             var44 = var17.method295((byte) 3, var12, true);
-            var44.method245(var41 - var40 >> 1, 128, var43 - var42 >> 1);
-            var44.method353(var40 + var41 >> 1, 0, var42 + var43 >> 1);
+            var44.oa(var41 - var40 >> 1, 128, var43 - var42 >> 1);
+            var44.ia(var40 + var41 >> 1, 0, var42 + var43 >> 1);
         } else {
             var44 = var17.method295((byte) 3, var12, true);
-            var44.method245(var41 - var40 >> 1, 128, var43 - var42 >> 1);
-            var44.method353(var40 + var41 >> 1, 0, var42 + var43 >> 1);
+            var44.oa(var41 - var40 >> 1, 128, var43 - var42 >> 1);
+            var44.ia(var40 + var41 >> 1, 0, var42 + var43 >> 1);
             arg11.method11782(var44);
         }
         if (arg2 != 0) {
-            var44.method397(arg2);
+            var44.t(arg2);
         }
         if (arg3 != 0) {
-            var44.method284(arg3);
+            var44.EA(arg3);
         }
         if (arg4 != 0) {
-            var44.method353(0, arg4, 0);
+            var44.ia(0, arg4, 0);
         }
         return var44;
     }

@@ -94,7 +94,7 @@ public class GlSprite extends Sprite {
             this.field7625.method12767(arg0, arg1, arg2, arg3, arg4, arg5);
             return;
         }
-        int[] var7 = this.field7626.method691(arg4, arg5, arg2, arg3);
+        int[] var7 = this.field7626.ae(arg4, arg5, arg2, arg3);
         if (var7 != null) {
             for (int var8 = 0; var8 < var7.length; var8++) {
                 var7[var8] |= 0xFF000000;

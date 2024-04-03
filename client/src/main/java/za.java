@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import java.awt.*;
 
 @ObfuscatedName("za")
-public class za extends Surface implements SoftwareRendererRelated {
+public class za extends Surface implements ua {
 
     public long nativeid;
 
@@ -27,12 +27,12 @@ public class za extends Surface implements SoftwareRendererRelated {
         this.field430 = arg1;
         this.field431 = arg2;
         this.field432 = arg3;
-        this.method924(arg0, this.field430, arg2, arg3);
+        this.n(arg0, this.field430, arg2, arg3);
     }
 
     public void finalize() {
         if (this.nativeid != 0L) {
-            SoftwareRendererRelated2.method2358(this);
+            cp.method2358(this);
         }
     }
 
@@ -79,7 +79,7 @@ public class za extends Surface implements SoftwareRendererRelated {
                     }
                     var4 = var9;
                 }
-                this.method953(arg0, arg1, var5, var6, this.field431, this.field432, var8, var7);
+                this.H(arg0, arg1, var5, var6, this.field431, this.field432, var8, var7);
                 field434 = false;
                 return 0;
             }
@@ -93,7 +93,7 @@ public class za extends Surface implements SoftwareRendererRelated {
     public void method923(int arg0, int arg1) {
         this.field431 = arg0;
         this.field432 = arg1;
-        this.method917(this.field430, arg0, arg1);
+        this.wa(this.field430, arg0, arg1);
         if (this.field433.method457() == this) {
             this.method954();
         }
@@ -114,14 +114,14 @@ public class za extends Surface implements SoftwareRendererRelated {
         if (this.field433.method457() == this) {
             this.method925();
         }
-        this.method92(true);
+        this.ma(true);
         this.nativeid = 0L;
         this.field430 = null;
     }
 
     @ObfuscatedName("za.s()Z")
     public boolean method954() {
-        this.field433.method978(this);
+        this.field433.PA(this);
         return true;
     }
 
@@ -131,14 +131,14 @@ public class za extends Surface implements SoftwareRendererRelated {
     }
 
     @ObfuscatedName("za.ma(Z)V")
-    public native void method92(boolean arg0);
+    public native void ma(boolean arg0);
 
     @ObfuscatedName("za.wa(Ljava/awt/Canvas;II)V")
-    public native void method917(Canvas arg0, int arg1, int arg2);
+    public native void wa(Canvas arg0, int arg1, int arg2);
 
     @ObfuscatedName("za.n(Lja;Ljava/awt/Canvas;II)V")
-    public native void method924(ja arg0, Canvas arg1, int arg2, int arg3);
+    public native void n(ja arg0, Canvas arg1, int arg2, int arg3);
 
     @ObfuscatedName("za.H(IIIIIIII)V")
-    public native void method953(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7);
+    public native void H(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7);
 }

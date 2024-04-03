@@ -186,7 +186,7 @@ public class GpuPostProcessManager {
             this.field2426.method1207(this.field2427);
             this.field2431.method464(this.field2426);
         }
-        this.field2431.method505(3, -16777216);
+        this.field2431.ba(3, -16777216);
         this.field2431.method13637(15);
         this.field2431.method13575(0);
         if (!this.field2435.method1208()) {
@@ -216,7 +216,7 @@ public class GpuPostProcessManager {
         this.field2431.method13597();
         this.field2431.method13592(0);
         this.field2431.method13791(1);
-        this.field2431.method753();
+        this.field2431.L();
         this.field2435.method1207(null);
         this.field2431.method13659(0, 0);
         int var1 = this.field2441.size();

@@ -106,7 +106,7 @@ public class PureJavaFloorModel extends FloorModel {
     }
 
     @ObfuscatedName("ym.LA(III)V")
-    public void method192(int arg0, int arg1, int arg2) {
+    public void LA(int arg0, int arg1, int arg2) {
         if (this.field7659[arg0][arg1] < arg2) {
             this.field7659[arg0][arg1] = (byte) arg2;
         }
@@ -729,7 +729,7 @@ public class PureJavaFloorModel extends FloorModel {
     }
 
     @ObfuscatedName("ym.SA()V")
-    public void method195() {
+    public void SA() {
         this.field7682 = null;
         this.field7659 = null;
     }
@@ -1544,7 +1544,7 @@ public class PureJavaFloorModel extends FloorModel {
         int var13 = (arg6 - arg4) * arg2 / 256;
         int var14 = arg2 >> 8;
         boolean var15 = arg8.field874;
-        this.field7658.method526(false);
+        this.field7658.RA(false);
         arg9.field1006 = false;
         arg9.field986 = false;
         int var16 = arg0;
@@ -1601,7 +1601,7 @@ public class PureJavaFloorModel extends FloorModel {
             var16 += var14;
         }
         arg9.field1006 = true;
-        this.field7658.method526(var15);
+        this.field7658.RA(var15);
     }
 
     @ObfuscatedName("ym.aj(IIIIIII[[ZLak;Lbv;[F[F)V")
@@ -1609,7 +1609,7 @@ public class PureJavaFloorModel extends FloorModel {
         int var13 = (arg6 - arg4) * arg2 / 256;
         int var14 = arg2 >> 8;
         boolean var15 = arg8.field874;
-        this.field7658.method526(false);
+        this.field7658.RA(false);
         arg9.field1006 = false;
         arg9.field986 = false;
         int var16 = arg0;
@@ -1690,16 +1690,16 @@ public class PureJavaFloorModel extends FloorModel {
             var16 += var14;
         }
         arg9.field1006 = true;
-        this.field7658.method526(var15);
+        this.field7658.RA(var15);
     }
 
     @ObfuscatedName("ym.w(IILna;)Lna;")
-    public HardShadow method200(int arg0, int arg1, HardShadow arg2) {
+    public HardShadow w(int arg0, int arg1, HardShadow arg2) {
         return null;
     }
 
     @ObfuscatedName("ym.UA(Lna;IIIIZ)V")
-    public void method209(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+    public void UA(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
     }
 
     @ObfuscatedName("ym.l(Lna;IIIIZ)Z")
@@ -1708,7 +1708,7 @@ public class PureJavaFloorModel extends FloorModel {
     }
 
     @ObfuscatedName("ym.NA(Lna;IIIIZ)V")
-    public void method194(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+    public void NA(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
     }
 
     @ObfuscatedName("ym.f(Lacg;[I)V")

@@ -560,9 +560,9 @@ public class ObjType implements PlayerTypeRelated {
         synchronized (this.field7061.field7146) {
             var14 = (Model) this.field7061.field7146.method7916((long) (this.field7062 | arg0.field397 << 29));
         }
-        if (var14 == null || arg0.method519(var14.method329(), var12) != 0) {
+        if (var14 == null || arg0.method519(var14.m(), var12) != 0) {
             if (var14 != null) {
-                var12 = arg0.method520(var12, var14.method329());
+                var12 = arg0.method520(var12, var14.m());
             }
             int var16 = var12;
             if (this.field7102 != null) {
@@ -589,32 +589,32 @@ public class ObjType implements PlayerTypeRelated {
             }
             var14 = arg0.method625(var17, var16, this.field7061.field7150, this.field7114 + 64, this.field7115 * 5 + 850);
             if (this.field7084 != 128 || this.field7112 != 128 || this.field7113 != 128) {
-                var14.method245(this.field7084, this.field7112, this.field7113);
+                var14.oa(this.field7084, this.field7112, this.field7113);
             }
             if (this.field7103 != null) {
                 for (int var18 = 0; var18 < this.field7103.length; var18++) {
                     if (this.field7067 == null || var18 >= this.field7067.length) {
-                        var14.method287(this.field7103[var18], this.field7066[var18]);
+                        var14.X(this.field7103[var18], this.field7066[var18]);
                     } else {
-                        var14.method287(this.field7103[var18], field7118[this.field7067[var18] & 0xFF]);
+                        var14.X(this.field7103[var18], field7118[this.field7067[var18] & 0xFF]);
                     }
                 }
             }
             if (this.field7102 != null) {
                 for (int var19 = 0; var19 < this.field7102.length; var19++) {
-                    var14.method289(this.field7102[var19], this.field7100[var19]);
+                    var14.W(this.field7102[var19], this.field7100[var19]);
                 }
             }
             if (arg3 != null) {
                 for (int var20 = 0; var20 < 10; var20++) {
                     for (int var21 = 0; var21 < Statics.field5009[var20].length; var21++) {
                         if (arg3.field5000[var20] < Statics.field5010[var20][var21].length) {
-                            var14.method287(Statics.field5009[var20][var21], Statics.field5010[var20][var21][arg3.field5000[var20]]);
+                            var14.X(Statics.field5009[var20][var21], Statics.field5010[var20][var21][arg3.field5000[var20]]);
                         }
                     }
                 }
             }
-            var14.method252(var12);
+            var14.KA(var12);
             WeightedCache var22 = this.field7061.field7146;
             synchronized (this.field7061.field7146) {
                 this.field7061.field7146.method7937(var14, (long) (this.field7062 | arg0.field397 << 29));
@@ -626,10 +626,10 @@ public class ObjType implements PlayerTypeRelated {
                 arg4.method11780(var14, 0);
             }
             if (arg8 != 0) {
-                var14.method290(arg5, arg6, arg7, arg8);
+                var14.PA(arg5, arg6, arg7, arg8);
             }
         }
-        var14.method252(arg1);
+        var14.KA(arg1);
         return var14;
     }
 
@@ -692,7 +692,7 @@ public class ObjType implements PlayerTypeRelated {
             return null;
         }
         if (var16) {
-            var17.method245(this.field7084, this.field7112, this.field7113);
+            var17.oa(this.field7084, this.field7112, this.field7113);
         }
         Sprite var18 = null;
         if (this.field7108 != -1) {
@@ -726,20 +726,20 @@ public class ObjType implements PlayerTypeRelated {
         arg0.method474(0, 0, arg0.method457().method921(), arg0.method457().method922());
         Matrix4x3 var22 = new Matrix4x3();
         arg0.method524(var22);
-        arg0.method529((float) (Math.random() / 10.0D) + 0.95F);
-        arg0.method530(16777215, (float) (Math.random() / 10.0D) + 0.95F, (float) (Math.random() / 10.0D) + 0.95F, -50.0F, -10.0F, -50.0F);
+        arg0.IA((float) (Math.random() / 10.0D) + 0.95F);
+        arg0.m(16777215, (float) (Math.random() / 10.0D) + 0.95F, (float) (Math.random() / 10.0D) + 0.95F, -50.0F, -10.0F, -50.0F);
         Matrix4x3 var23 = arg0.method516();
         var23.method5106(0.0F, 0.0F, 1.0F, Trig1.method5096(-this.field7088 << 3));
         var23.method5178(0.0F, 1.0F, 0.0F, Trig1.method5096(this.field7077 << 3));
-        var23.method5116((float) (this.field7076 << 2), (float) ((Trig1.field3439[this.field7073 << 3] * var19 >> 14) - var17.method278() / 2 + (this.field7075 << 2)), (float) ((this.field7075 << 2) + (Trig1.field3447[this.field7073 << 3] * var19 >> 14)));
+        var23.method5116((float) (this.field7076 << 2), (float) ((Trig1.field3439[this.field7073 << 3] * var19 >> 14) - var17.YA() / 2 + (this.field7075 << 2)), (float) ((this.field7075 << 2) + (Trig1.field3447[this.field7073 << 3] * var19 >> 14)));
         var23.method5178(1.0F, 0.0F, 0.0F, Trig1.method5096(this.field7073 << 3));
-        arg0.method659(0, 0, 36, 32);
-        arg0.method505(2, 0);
-        arg0.method489(0, 0, 36, 32, 0, 0);
-        arg0.method532(0, -1, 0);
+        arg0.r(0, 0, 36, 32);
+        arg0.ba(2, 0);
+        arg0.B(0, 0, 36, 32, 0, 0);
+        arg0.c(0, -1, 0);
         var17.method271(var23, null, 1);
         arg0.method784(var20);
-        int[] var24 = arg0.method691(0, 0, 36, 32);
+        int[] var24 = arg0.ae(0, 0, 36, 32);
         if (arg3 >= 1) {
             var24 = this.method12244(var24, -16777214);
             if (arg3 >= 2) {
@@ -761,7 +761,7 @@ public class ObjType implements PlayerTypeRelated {
         if (arg6 == 1 || arg6 == 2 && (this.field7078 == 1 || arg2 != 1) && arg2 != -1) {
             arg7.method833(method11975(arg2, this.field7061.field7140), 0, 9, -256, -16777215);
         }
-        int[] var25 = arg0.method691(0, 0, 36, 32);
+        int[] var25 = arg0.ae(0, 0, 36, 32);
         for (int var26 = 0; var26 < var25.length; var26++) {
             if ((var25[var26] & 0xFFFFFF) == 0) {
                 var25[var26] = 0;

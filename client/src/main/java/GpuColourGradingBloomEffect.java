@@ -177,7 +177,7 @@ public class GpuColourGradingBloomEffect extends GpuPostProcessEffect {
         this.field8793.method3342(this.field8788, field8795, field8789, field8792, 0.0F);
         this.field8793.method3342(this.field8801, 0.0F, 0.0F, 256.0F / var7, 256.0F / var8);
         this.field2424.method474(0, 0, var13, var14);
-        this.field2424.method659(0, 0, var13, var14);
+        this.field2424.r(0, 0, var13, var14);
     }
 
     @ObfuscatedName("abr.t(I)V")

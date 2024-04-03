@@ -1305,12 +1305,12 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.m()I")
-    public int method329() {
+    public int m() {
         return this.field7777;
     }
 
     @ObfuscatedName("yx.KA(I)V")
-    public void method252(int arg0) {
+    public void KA(int arg0) {
         if (this.field7839.field8030 <= 1) {
             if ((this.field7777 & 0x10000) == 65536 && (arg0 & 0x10000) == 0) {
                 this.method13003(true);
@@ -1331,7 +1331,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.f(I)V")
-    public void method246(int arg0) {
+    public void f(int arg0) {
         if ((this.field7777 & 0x5) != 5) {
             throw new IllegalStateException();
         } else if (arg0 == 4096) {
@@ -1355,11 +1355,11 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.S(I)V")
-    public void method249(int arg0) {
+    public void S(int arg0) {
         if ((this.field7777 & 0xD) != 13) {
             throw new IllegalStateException();
         } else if (this.field7813 == null) {
-            this.method246(arg0);
+            this.f(arg0);
         } else if (arg0 == 4096) {
             this.method13014();
         } else if (arg0 == 8192) {
@@ -1528,7 +1528,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.t(I)V")
-    public void method397(int arg0) {
+    public void t(int arg0) {
         if ((this.field7777 & 0x6) != 6) {
             throw new IllegalStateException();
         }
@@ -1545,7 +1545,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.EA(I)V")
-    public void method284(int arg0) {
+    public void EA(int arg0) {
         if ((this.field7777 & 0x3) != 3) {
             throw new IllegalStateException();
         }
@@ -1562,7 +1562,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.ia(III)V")
-    public void method353(int arg0, int arg1, int arg2) {
+    public void ia(int arg0, int arg1, int arg2) {
         if (arg0 != 0 && (this.field7777 & 0x1) != 1) {
             throw new IllegalStateException();
         } else if (arg1 != 0 && (this.field7777 & 0x2) != 2) {
@@ -1581,7 +1581,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.wa()V")
-    public void method253() {
+    public void wa() {
         if ((this.field7777 & 0x10) != 16) {
             throw new IllegalStateException();
         }
@@ -1633,7 +1633,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.oa(III)V")
-    public void method245(int arg0, int arg1, int arg2) {
+    public void oa(int arg0, int arg1, int arg2) {
         if (arg0 != 128 && (this.field7777 & 0x1) != 1) {
             throw new IllegalStateException();
         } else if (arg1 != 128 && (this.field7777 & 0x2) != 2) {
@@ -1653,7 +1653,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.pa(IILxa;Lxa;III)V")
-    public void method255(int arg0, int arg1, FloorModel arg2, FloorModel arg3, int arg4, int arg5, int arg6) {
+    public void pa(int arg0, int arg1, FloorModel arg2, FloorModel arg3, int arg4, int arg5, int arg6) {
         if (arg0 == 3) {
             if ((this.field7777 & 0x7) != 7) {
                 throw new IllegalStateException();
@@ -1877,7 +1877,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.ea()Z")
-    public boolean method421() {
+    public boolean ea() {
         if (this.field7809 == null) {
             return false;
         } else {
@@ -1889,7 +1889,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.ka()V")
-    public void method269() {
+    public void ka() {
         if (this.field7812) {
             for (int var1 = 0; var1 < this.field7780; var1++) {
                 this.field7807[var1] = this.field7807[var1] + 7 >> 4;
@@ -2166,7 +2166,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.e(I[IIIIZI[I)V")
-    public void method267(int arg0, int[] arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6, int[] arg7) {
+    public void e(int arg0, int[] arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6, int[] arg7) {
         int var9 = arg1.length;
         if (arg0 == 0) {
             int var10 = arg2 << 4;
@@ -2600,7 +2600,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.w(IIII)V")
-    public void method343(int arg0, int arg1, int arg2, int arg3) {
+    public void w(int arg0, int arg1, int arg2, int arg3) {
         if (arg0 == 0) {
             int var5 = 0;
             this.field7764 = 0;
@@ -3386,7 +3386,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.ga(Lna;)Lna;")
-    public HardShadow method273(HardShadow arg0) {
+    public HardShadow ga(HardShadow arg0) {
         return null;
     }
 
@@ -3446,7 +3446,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.N()I")
-    public int method274() {
+    public int N() {
         if (!this.field7826) {
             this.method13001();
         }
@@ -3454,7 +3454,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.n()I")
-    public int method275() {
+    public int n() {
         if (!this.field7826) {
             this.method13001();
         }
@@ -3462,7 +3462,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.RA()I")
-    public int method358() {
+    public int RA() {
         if (!this.field7826) {
             this.method13001();
         }
@@ -3470,7 +3470,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.ya()I")
-    public int method277() {
+    public int ya() {
         if (!this.field7826) {
             this.method13001();
         }
@@ -3478,7 +3478,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.YA()I")
-    public int method278() {
+    public int YA() {
         if (!this.field7826) {
             this.method13001();
         }
@@ -3486,7 +3486,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.o()I")
-    public int method279() {
+    public int o() {
         if (!this.field7826) {
             this.method13001();
         }
@@ -3494,7 +3494,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.AA()I")
-    public int method280() {
+    public int AA() {
         if (!this.field7826) {
             this.method13001();
         }
@@ -3502,7 +3502,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.ha()I")
-    public int method281() {
+    public int ha() {
         if (!this.field7826) {
             this.method13001();
         }
@@ -3510,7 +3510,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.p(I)V")
-    public void method282(int arg0) {
+    public void p(int arg0) {
         if ((this.field7777 & 0x1000) != 4096) {
             throw new IllegalStateException();
         }
@@ -3519,7 +3519,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.Q(I)V")
-    public void method283(int arg0) {
+    public void Q(int arg0) {
         if ((this.field7777 & 0x2000) != 8192) {
             throw new IllegalStateException();
         }
@@ -3528,22 +3528,22 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.c()I")
-    public int method398() {
+    public int c() {
         return this.field7778;
     }
 
     @ObfuscatedName("yx.Z()I")
-    public int method285() {
+    public int Z() {
         return this.field7779;
     }
 
     @ObfuscatedName("yx.ao()[B")
-    public byte[] method334() {
+    public byte[] ao() {
         return this.field7805;
     }
 
     @ObfuscatedName("yx.X(SS)V")
-    public void method287(short arg0, short arg1) {
+    public void X(short arg0, short arg1) {
         for (int var3 = 0; var3 < this.field7788; var3++) {
             if (this.field7806[var3] == arg0) {
                 this.field7806[var3] = arg1;
@@ -3585,7 +3585,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.W(SS)V")
-    public void method289(short arg0, short arg1) {
+    public void W(short arg0, short arg1) {
         if (this.field7819 == null) {
             return;
         }
@@ -3603,7 +3603,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.PA(IIII)V")
-    public void method290(int arg0, int arg1, int arg2, int arg3) {
+    public void PA(int arg0, int arg1, int arg2, int arg3) {
         if ((this.field7777 & 0x80000) != 524288) {
             throw new IllegalStateException();
         }
@@ -3659,12 +3659,12 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.i()Z")
-    public boolean method292() {
+    public boolean i() {
         return this.field7808;
     }
 
     @ObfuscatedName("yx.u()Z")
-    public boolean method293() {
+    public boolean u() {
         return this.field7833;
     }
 }

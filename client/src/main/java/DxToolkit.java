@@ -439,7 +439,7 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.ae(IIII)[I")
-    public int[] method691(int arg0, int arg1, int arg2, int arg3) {
+    public int[] ae(int arg0, int arg1, int arg2, int arg3) {
         int[] var5 = null;
         long var6 = IDirect3DDevice.GetRenderTarget(this.field9975, 0);
         long var8 = IDirect3DDevice.CreateRenderTarget(this.field9975, arg2, arg3, 21, 0, 0, true);
@@ -464,7 +464,7 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.ba(II)V")
-    public void method505(int arg0, int arg1) {
+    public void ba(int arg0, int arg1) {
         IDirect3DDevice.Clear(this.field9975, arg0, arg1, 1.0F, 0);
     }
 

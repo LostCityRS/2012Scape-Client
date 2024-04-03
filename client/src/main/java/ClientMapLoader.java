@@ -584,7 +584,7 @@ public class ClientMapLoader extends MapLoader {
                     }
                     for (int var32 = 0; var32 <= var12; var32++) {
                         for (int var33 = 0; var33 <= var13; var33++) {
-                            var18.method192(arg3 + var32, arg4 + var33, var30);
+                            var18.LA(arg3 + var32, arg4 + var33, var30);
                         }
                     }
                 }
@@ -635,32 +635,32 @@ public class ClientMapLoader extends MapLoader {
             this.field3619.method7402(arg6, arg11, arg12, var21, null);
             if (arg2 == 0) {
                 if (this.field3632 && arg4.field6513) {
-                    arg14.method192(arg11, arg12, 50);
-                    arg14.method192(arg11, arg12 + 1, 50);
+                    arg14.LA(arg11, arg12, 50);
+                    arg14.LA(arg11, arg12 + 1, 50);
                 }
                 if (var19 == 1 && !this.field3644) {
                     this.field3619.field4493.method7615(1, arg6, arg11, arg12, arg4.field6535, arg4.field6499);
                 }
             } else if (arg2 == 1) {
                 if (this.field3632 && arg4.field6513) {
-                    arg14.method192(arg11, arg12 + 1, 50);
-                    arg14.method192(arg11 + 1, arg12 + 1, 50);
+                    arg14.LA(arg11, arg12 + 1, 50);
+                    arg14.LA(arg11 + 1, arg12 + 1, 50);
                 }
                 if (var19 == 1 && !this.field3644) {
                     this.field3619.field4493.method7615(2, arg6, arg11, arg12 + 1, arg4.field6535, -arg4.field6499);
                 }
             } else if (arg2 == 2) {
                 if (this.field3632 && arg4.field6513) {
-                    arg14.method192(arg11 + 1, arg12, 50);
-                    arg14.method192(arg11 + 1, arg12 + 1, 50);
+                    arg14.LA(arg11 + 1, arg12, 50);
+                    arg14.LA(arg11 + 1, arg12 + 1, 50);
                 }
                 if (var19 == 1 && !this.field3644) {
                     this.field3619.field4493.method7615(1, arg6, arg11 + 1, arg12, arg4.field6535, -arg4.field6499);
                 }
             } else if (arg2 == 3) {
                 if (this.field3632 && arg4.field6513) {
-                    arg14.method192(arg11, arg12, 50);
-                    arg14.method192(arg11 + 1, arg12, 50);
+                    arg14.LA(arg11, arg12, 50);
+                    arg14.LA(arg11 + 1, arg12, 50);
                 }
                 if (var19 == 1 && !this.field3644) {
                     this.field3619.field4493.method7615(2, arg6, arg11, arg12, arg4.field6535, arg4.field6499);
@@ -687,13 +687,13 @@ public class ClientMapLoader extends MapLoader {
             this.field3619.method7402(arg6, arg11, arg12, var23, null);
             if (arg4.field6513 && this.field3632) {
                 if (arg2 == 0) {
-                    arg14.method192(arg11, arg12 + 1, 50);
+                    arg14.LA(arg11, arg12 + 1, 50);
                 } else if (arg2 == 1) {
-                    arg14.method192(arg11 + 1, arg12 + 1, 50);
+                    arg14.LA(arg11 + 1, arg12 + 1, 50);
                 } else if (arg2 == 2) {
-                    arg14.method192(arg11 + 1, arg12, 50);
+                    arg14.LA(arg11 + 1, arg12, 50);
                 } else if (arg2 == 3) {
-                    arg14.method192(arg11, arg12, 50);
+                    arg14.LA(arg11, arg12, 50);
                 }
             }
             if (arg4.field6491 != 0 && arg15 != null) {
@@ -756,13 +756,13 @@ public class ClientMapLoader extends MapLoader {
             this.field3619.method7402(arg6, arg11, arg12, var30, null);
             if (arg4.field6513 && this.field3632) {
                 if (arg2 == 0) {
-                    arg14.method192(arg11, arg12 + 1, 50);
+                    arg14.LA(arg11, arg12 + 1, 50);
                 } else if (arg2 == 1) {
-                    arg14.method192(arg11 + 1, arg12 + 1, 50);
+                    arg14.LA(arg11 + 1, arg12 + 1, 50);
                 } else if (arg2 == 2) {
-                    arg14.method192(arg11 + 1, arg12, 50);
+                    arg14.LA(arg11 + 1, arg12, 50);
                 } else if (arg2 == 3) {
-                    arg14.method192(arg11, arg12, 50);
+                    arg14.LA(arg11, arg12, 50);
                 }
             }
             if (arg4.field6491 != 0 && arg15 != null) {

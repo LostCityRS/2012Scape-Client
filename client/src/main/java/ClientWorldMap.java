@@ -280,14 +280,14 @@ public class ClientWorldMap extends WorldMap {
         if (field9753 < 100) {
             method7164(arg0, arg1);
         }
-        arg0.method659(arg2, arg3, arg2 + arg4, arg3 + arg5);
+        arg0.r(arg2, arg3, arg2 + arg4, arg3 + arg5);
         if (field9753 < 100) {
             byte var6 = 20;
             int var7 = arg4 / 2 + arg2;
             int var8 = arg5 / 2 + arg3 - 18 - var6;
-            arg0.method489(arg2, arg3, arg4, arg5, -16777216, 0);
+            arg0.B(arg2, arg3, arg4, arg5, -16777216, 0);
             arg0.method488(var7 - 152, var8, 304, 34, client.field8956[client.field8907].getRGB(), 0);
-            arg0.method489(var7 - 150, var8 + 2, field9753 * 3, 30, client.field8974[client.field8907].getRGB(), 0);
+            arg0.B(var7 - 150, var8 + 2, field9753 * 3, 30, client.field8974[client.field8907].getRGB(), 0);
             Statics.field670.method834(LocalisedText.field7014.method12206(Statics.field2308), var7, var6 + var8, client.field8902[client.field8907].getRGB(), -1);
             return;
         }
@@ -647,7 +647,7 @@ public class ClientWorldMap extends WorldMap {
 
     @ObfuscatedName("if.cl(Lra;IIIII)V")
     public static final void method4707(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4) {
-        arg0.method659(arg1, arg2, arg1 + arg3, arg2 + arg4);
+        arg0.r(arg1, arg2, arg1 + arg3, arg2 + arg4);
         arg0.method496(arg1, arg2, arg3, arg4, -16777216);
         if (field9753 < 100) {
             return;
@@ -676,7 +676,7 @@ public class ClientWorldMap extends WorldMap {
         if (client.field9163 == ModeGame.field6402) {
             var14 = -1996488705;
         }
-        arg0.method489(var12, var13, var10, var11, var14, 1);
+        arg0.B(var12, var13, var10, var11, var14, 1);
         arg0.method488(var12, var13, var10, var11, var14, 0);
         if (Statics.field4469 <= 0) {
             return;

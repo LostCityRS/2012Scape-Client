@@ -2186,7 +2186,7 @@ public class Statics {
 
     @ObfuscatedName("cp.c(ZB)V")
     public static synchronized void method2362(boolean arg0) {
-        SoftwareRendererRelated2.field1193 = arg0;
+        cp.field1193 = arg0;
     }
 
     @ObfuscatedName("aeq.ar(II)V")
@@ -2454,7 +2454,7 @@ public class Statics {
             byte var18 = 4;
             int var19 = var18 + 6;
             int var20 = var18 + 6;
-            arg2.method489(var19 - var18, var20 - var18, var16 + var18 + var18, var17 + var18 + var18, -16777216, 0);
+            arg2.B(var19 - var18, var20 - var18, var16 + var18 + var18, var17 + var18 + var18, -16777216, 0);
             arg2.method488(var19 - var18, var20 - var18, var16 + var18 + var18, var17 + var18 + var18, -1, 0);
             arg3.method836(arg0, var19, var20, var16, var17, -1, -1, 1, 1, 0, null, null, null, 0, 0);
             client.method7910(var19 - var18, var20 - var18, var16 + var18 + var18, var17 + var18 + var18);
@@ -2520,7 +2520,7 @@ public class Statics {
             var6 = var2;
             var18 = 48;
             var19 = 48;
-            arg0.method505(1, 0);
+            arg0.ba(1, 0);
         } else {
             field6357 = arg0.method506(var15, 0, var14, var14, var14);
         }
@@ -2552,11 +2552,11 @@ public class Statics {
                     var28 = var19 + 4;
                 }
                 if (MiniMap.field768) {
-                    arg0.method753();
+                    arg0.L();
                 } else {
-                    arg0.method659(0, 0, var6 * 4 + var27, var6 * 4 + var28);
+                    arg0.r(0, 0, var6 * 4 + var27, var6 * 4 + var28);
                 }
-                arg0.method505(3, -16777216);
+                arg0.ba(3, -16777216);
                 int var33 = var6;
                 if (var6 > var2 - 1) {
                     var33 = var2 - 1;
@@ -2607,7 +2607,7 @@ public class Statics {
                         }
                     }
                 }
-                arg0.method489(var27, var28, var6 * 4, var6 * 4, var23, 2);
+                arg0.B(var27, var28, var6 * 4, var6 * 4, var23, 2);
                 arg0.method509();
                 if (!MiniMap.field756) {
                     field6357.method1086((var25 - var7) * 4 + 48, var3 * 4 + 48 - (var26 - var8) * 4 - var6 * 4, var6 * 4, var6 * 4, var27, var28);
@@ -2633,8 +2633,8 @@ public class Statics {
                 }
             }
         }
-        arg0.method753();
-        arg0.method505(1, 1);
+        arg0.L();
+        arg0.ba(1, 1);
         client.method1703();
         LocTypeList var50 = client.field8980.method6103();
         MiniMap.field767 = 0;
@@ -4959,7 +4959,7 @@ public class Statics {
                 int var9 = arg3 * var6 * 512 / (var8 * 334);
                 int var10 = (arg2 - var9) / 2;
                 if (arg4) {
-                    field5187.method753();
+                    field5187.L();
                     field5187.method496(arg0, arg1, var10, arg3, -16777216);
                     field5187.method496(arg0 + arg2 - var10, arg1, var10, arg3, -16777216);
                 }
@@ -4974,7 +4974,7 @@ public class Statics {
                 int var12 = arg2 * var11 * 334 / (var6 * 512);
                 int var13 = (arg3 - var12) / 2;
                 if (arg4) {
-                    field5187.method753();
+                    field5187.L();
                     field5187.method496(arg0, arg1, arg2, var13, -16777216);
                     field5187.method496(arg0, arg1 + arg3 - var13, arg2, var13, -16777216);
                 }

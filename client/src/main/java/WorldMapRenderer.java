@@ -16,7 +16,7 @@ public class WorldMapRenderer {
             ColourUtils.method8092(false, true);
             int var8 = Statics.field5084[var7];
             ColourUtils.method2790(false, true);
-            arg0.method489(arg1, (arg3.field1929 * (63 - var6) >> 6) + arg2, arg3.field1863, (arg3.field1929 >> 6) + 1, var8 | 0xFF000000, 0);
+            arg0.B(arg1, (arg3.field1929 * (63 - var6) >> 6) + arg2, arg3.field1863, (arg3.field1929 >> 6) + 1, var8 | 0xFF000000, 0);
         }
     }
 
@@ -28,7 +28,7 @@ public class WorldMapRenderer {
                 ColourUtils.method8092(false, true);
                 int var8 = Statics.field5084[var7];
                 ColourUtils.method2790(false, true);
-                arg0.method489((arg3.field1863 * var6 >> 7) + arg1, (arg3.field1929 * (7 - var5) >> 3) + arg2, (arg3.field1863 >> 7) + 1, (arg3.field1929 >> 3) + 1, var8 | 0xFF000000, 0);
+                arg0.B((arg3.field1863 * var6 >> 7) + arg1, (arg3.field1929 * (7 - var5) >> 3) + arg2, (arg3.field1863 >> 7) + 1, (arg3.field1929 >> 3) + 1, var8 | 0xFF000000, 0);
             }
         }
     }

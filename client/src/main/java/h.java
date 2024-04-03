@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("h")
-public class h extends Model implements SoftwareRendererRelated {
+public class h extends Model implements ua {
 
     public long nativeid;
 
@@ -52,18 +52,18 @@ public class h extends Model implements SoftwareRendererRelated {
             ModelBillboard var21 = arg2.field1349[var20];
             var15[var16++] = var21.field1511;
         }
-        this.method1128(this.field474, this.field472, arg2.field1328, arg2.field1315, arg2.field1316, arg2.field1320, arg2.field1318, arg2.field1313, arg2.field1321, arg2.field1342, arg2.field1322, arg2.field1323, arg2.field1324, arg2.field1345, arg2.field1326, arg2.field1332, arg2.field1348, arg2.field1329, arg2.field1330, arg2.field1331, arg2.field1319, arg2.field1333, arg2.field1334, arg2.field1335, arg2.field1336, arg2.field1337, arg2.field1338, arg2.field1339, arg2.field1340, arg2.field1341, arg2.field1327, arg2.field1325, arg2.field1317, arg2.field1343, arg2.field1344, var11, var8, var9, arg3, arg4, arg5, arg6, var15);
+        this.U(this.field474, this.field472, arg2.field1328, arg2.field1315, arg2.field1316, arg2.field1320, arg2.field1318, arg2.field1313, arg2.field1321, arg2.field1342, arg2.field1322, arg2.field1323, arg2.field1324, arg2.field1345, arg2.field1326, arg2.field1332, arg2.field1348, arg2.field1329, arg2.field1330, arg2.field1331, arg2.field1319, arg2.field1333, arg2.field1334, arg2.field1335, arg2.field1336, arg2.field1337, arg2.field1338, arg2.field1339, arg2.field1340, arg2.field1341, arg2.field1327, arg2.field1325, arg2.field1317, arg2.field1343, arg2.field1344, var11, var8, var9, arg3, arg4, arg5, arg6, var15);
     }
 
     public h(ja arg0) {
         this.field474 = arg0;
         this.field472 = null;
-        this.method1129(arg0);
+        this.ba(arg0);
     }
 
     public void finalize() {
         if (this.nativeid != 0L) {
-            SoftwareRendererRelated2.method2358(this);
+            cp.method2358(this);
         }
     }
 
@@ -146,14 +146,14 @@ public class h extends Model implements SoftwareRendererRelated {
 
     @ObfuscatedName("h.ap(I[IIIIIZ)V")
     public final void method266(int arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, boolean arg6) {
-        this.method1142(this.nativeid, arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+        this.J(this.nativeid, arg0, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     @ObfuscatedName("h.ag(Lkc;IZ)V")
     public void method239(Matrix4x3 arg0, int arg1, boolean arg2) {
         Matrix4x4 var4 = this.field474.method987().field376;
         var4.method5385(arg0);
-        this.method1130(var4.field3480, arg1, arg2);
+        this.aa(var4.field3480, arg1, arg2);
     }
 
     @ObfuscatedName("h.as(Lkc;Ldy;I)V")
@@ -179,7 +179,7 @@ public class h extends Model implements SoftwareRendererRelated {
 
     @ObfuscatedName("h.al(B[B)V")
     public void method288(byte arg0, byte[] arg1) {
-        this.method1136(arg0, arg1);
+        this.IA(arg0, arg1);
     }
 
     @ObfuscatedName("h.at()Z")
@@ -203,122 +203,122 @@ public class h extends Model implements SoftwareRendererRelated {
     }
 
     @ObfuscatedName("h.U(Lja;Lba;II[I[I[I[I[SI[S[S[S[B[B[B[B[S[S[IB[SI[B[S[S[S[I[I[I[B[B[I[I[I[IIIIIII[I)V")
-    public native void method1128(ja arg0, ba arg1, int arg2, int arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, short[] arg8, int arg9, short[] arg10, short[] arg11, short[] arg12, byte[] arg13, byte[] arg14, byte[] arg15, byte[] arg16, short[] arg17, short[] arg18, int[] arg19, byte arg20, short[] arg21, int arg22, byte[] arg23, short[] arg24, short[] arg25, short[] arg26, int[] arg27, int[] arg28, int[] arg29, byte[] arg30, byte[] arg31, int[] arg32, int[] arg33, int[] arg34, int[] arg35, int arg36, int arg37, int arg38, int arg39, int arg40, int arg41, int[] arg42);
+    public native void U(ja arg0, ba arg1, int arg2, int arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, short[] arg8, int arg9, short[] arg10, short[] arg11, short[] arg12, byte[] arg13, byte[] arg14, byte[] arg15, byte[] arg16, short[] arg17, short[] arg18, int[] arg19, byte arg20, short[] arg21, int arg22, byte[] arg23, short[] arg24, short[] arg25, short[] arg26, int[] arg27, int[] arg28, int[] arg29, byte[] arg30, byte[] arg31, int[] arg32, int[] arg33, int[] arg34, int[] arg35, int arg36, int arg37, int arg38, int arg39, int arg40, int arg41, int[] arg42);
 
     @ObfuscatedName("h.ba(Lja;)V")
-    public native void method1129(ja arg0);
+    public native void ba(ja arg0);
 
     @ObfuscatedName("h.ma(Z)V")
-    public native void method92(boolean arg0);
+    public native void ma(boolean arg0);
 
     @ObfuscatedName("h.KA(I)V")
-    public native void method252(int arg0);
+    public native void KA(int arg0);
 
     @ObfuscatedName("h.m()I")
-    public native int method329();
+    public native int m();
 
     @ObfuscatedName("h.S(I)V")
-    public native void method249(int arg0);
+    public native void S(int arg0);
 
     @ObfuscatedName("h.f(I)V")
-    public native void method246(int arg0);
+    public native void f(int arg0);
 
     @ObfuscatedName("h.EA(I)V")
-    public native void method284(int arg0);
+    public native void EA(int arg0);
 
     @ObfuscatedName("h.wa()V")
-    public native void method253();
+    public native void wa();
 
     @ObfuscatedName("h.oa(III)V")
-    public native void method245(int arg0, int arg1, int arg2);
+    public native void oa(int arg0, int arg1, int arg2);
 
     @ObfuscatedName("h.ha()I")
-    public native int method281();
+    public native int ha();
 
     @ObfuscatedName("h.e(I[IIIIZI[I)V")
-    public native void method267(int arg0, int[] arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6, int[] arg7);
+    public native void e(int arg0, int[] arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6, int[] arg7);
 
     @ObfuscatedName("h.w(IIII)V")
-    public native void method343(int arg0, int arg1, int arg2, int arg3);
+    public native void w(int arg0, int arg1, int arg2, int arg3);
 
     @ObfuscatedName("h.aa([FIZ)V")
-    public native void method1130(float[] arg0, int arg1, boolean arg2);
+    public native void aa(float[] arg0, int arg1, boolean arg2);
 
     @ObfuscatedName("h.N()I")
-    public native int method274();
+    public native int N();
 
     @ObfuscatedName("h.Z()I")
-    public native int method285();
+    public native int Z();
 
     @ObfuscatedName("h.ya()I")
-    public native int method277();
+    public native int ya();
 
     @ObfuscatedName("h.YA()I")
-    public native int method278();
+    public native int YA();
 
     @ObfuscatedName("h.ia(III)V")
-    public native void method353(int arg0, int arg1, int arg2);
+    public native void ia(int arg0, int arg1, int arg2);
 
     @ObfuscatedName("h.Q(I)V")
-    public native void method283(int arg0);
+    public native void Q(int arg0);
 
     @ObfuscatedName("h.c()I")
-    public native int method398();
+    public native int c();
 
     @ObfuscatedName("h.o()I")
-    public native int method279();
+    public native int o();
 
     @ObfuscatedName("h.ao()[B")
-    public native byte[] method334();
+    public native byte[] ao();
 
     @ObfuscatedName("h.PA(IIII)V")
-    public native void method290(int arg0, int arg1, int arg2, int arg3);
+    public native void PA(int arg0, int arg1, int arg2, int arg3);
 
     @ObfuscatedName("h.i()Z")
-    public native boolean method292();
+    public native boolean i();
 
     @ObfuscatedName("h.u()Z")
-    public native boolean method293();
+    public native boolean u();
 
     @ObfuscatedName("h.BA(Lh;Lh;IZZ)V")
-    public native void method1132(h arg0, h arg1, int arg2, boolean arg3, boolean arg4);
+    public native void BA(h arg0, h arg1, int arg2, boolean arg3, boolean arg4);
 
     @ObfuscatedName("h.RA()I")
-    public native int method358();
+    public native int RA();
 
     @ObfuscatedName("h.AA()I")
-    public native int method280();
+    public native int AA();
 
     @ObfuscatedName("h.ka()V")
-    public native void method269();
+    public native void ka();
 
     @ObfuscatedName("h.n()I")
-    public native int method275();
+    public native int n();
 
     @ObfuscatedName("h.X(SS)V")
-    public native void method287(short arg0, short arg1);
+    public native void X(short arg0, short arg1);
 
     @ObfuscatedName("h.IA(B[B)V")
-    public native void method1136(byte arg0, byte[] arg1);
+    public native void IA(byte arg0, byte[] arg1);
 
     @ObfuscatedName("h.t(I)V")
-    public native void method397(int arg0);
+    public native void t(int arg0);
 
     @ObfuscatedName("h.ga(Lna;)Lna;")
-    public native HardShadow method273(HardShadow arg0);
+    public native HardShadow ga(HardShadow arg0);
 
     @ObfuscatedName("h.ea()Z")
-    public native boolean method421();
+    public native boolean ea();
 
     @ObfuscatedName("h.W(SS)V")
-    public native void method289(short arg0, short arg1);
+    public native void W(short arg0, short arg1);
 
     @ObfuscatedName("h.J(JI[IIIIIZ)V")
-    public native void method1142(long arg0, int arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, boolean arg7);
+    public native void J(long arg0, int arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, boolean arg7);
 
     @ObfuscatedName("h.pa(IILxa;Lxa;III)V")
-    public native void method255(int arg0, int arg1, FloorModel arg2, FloorModel arg3, int arg4, int arg5, int arg6);
+    public native void pa(int arg0, int arg1, FloorModel arg2, FloorModel arg3, int arg4, int arg5, int arg6);
 
     @ObfuscatedName("h.p(I)V")
-    public native void method282(int arg0);
+    public native void p(int arg0);
 }

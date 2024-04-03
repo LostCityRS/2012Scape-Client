@@ -130,7 +130,7 @@ public class GlFont extends Font {
     }
 
     @ObfuscatedName("zc.UA(CIIIZ)V")
-    public void method848(char arg0, int arg1, int arg2, int arg3, boolean arg4) {
+    public void UA(char arg0, int arg1, int arg2, int arg3, boolean arg4) {
         this.field8440.method13341();
         this.field8440.method13315(this.field8441);
         if (this.field8443 || arg4) {

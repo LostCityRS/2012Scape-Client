@@ -518,9 +518,9 @@ public class NPCType {
         } else if (this.field7217 != -1) {
             var23 = arg2.method7784(this.field7217);
         }
-        if (var21 == null || (var21.method329() & var14) != var14) {
+        if (var21 == null || (var21.m() & var14) != var14) {
             if (var21 != null) {
-                var14 |= var21.method329();
+                var14 |= var21.m();
             }
             int var24 = var14;
             if (this.field7218 != null) {
@@ -604,9 +604,9 @@ public class NPCType {
                 }
                 for (int var43 = 0; var43 < this.field7218.length; var43++) {
                     if (this.field7272 == null || var43 >= this.field7272.length) {
-                        var21.method287(this.field7218[var43], var42[var43]);
+                        var21.X(this.field7218[var43], var42[var43]);
                     } else {
-                        var21.method287(this.field7218[var43], field7209[this.field7272[var43] & 0xFF]);
+                        var21.X(this.field7218[var43], field7209[this.field7272[var43] & 0xFF]);
                     }
                 }
             }
@@ -618,13 +618,13 @@ public class NPCType {
                     var44 = arg9.field7206;
                 }
                 for (int var45 = 0; var45 < this.field7234.length; var45++) {
-                    var21.method289(this.field7234[var45], var44[var45]);
+                    var21.W(this.field7234[var45], var44[var45]);
                 }
             }
             if (this.field7228 != 0) {
-                var21.method290(this.field7225, this.field7226, this.field7255, this.field7228 & 0xFF);
+                var21.PA(this.field7225, this.field7226, this.field7255, this.field7228 & 0xFF);
             }
-            var21.method252(var14);
+            var21.KA(var14);
             WeightedCache var46 = this.field7210.field7285;
             synchronized (this.field7210.field7285) {
                 this.field7210.field7285.method7937(var21, var18);
@@ -688,9 +688,9 @@ public class NPCType {
             arg5.method11780(var48, 0);
         }
         if (this.field7235 != 128 || this.field7208 != 128) {
-            var48.method245(this.field7235, this.field7208, this.field7235);
+            var48.oa(this.field7235, this.field7208, this.field7235);
         }
-        var48.method252(arg1);
+        var48.KA(arg1);
         return var48;
     }
 
@@ -715,9 +715,9 @@ public class NPCType {
             synchronized (this.field7210.field7283) {
                 var11 = (Model) this.field7210.field7283.method7916(var8);
             }
-            if (var11 == null || (var11.method329() & var7) != var7) {
+            if (var11 == null || (var11.m() & var7) != var7) {
                 if (var11 != null) {
-                    var7 |= var11.method329();
+                    var7 |= var11.m();
                 }
                 int var13 = var7;
                 if (this.field7218 != null) {
@@ -775,9 +775,9 @@ public class NPCType {
                     }
                     for (int var26 = 0; var26 < this.field7218.length; var26++) {
                         if (this.field7272 == null || var26 >= this.field7272.length) {
-                            var11.method287(this.field7218[var26], var25[var26]);
+                            var11.X(this.field7218[var26], var25[var26]);
                         } else {
-                            var11.method287(this.field7218[var26], field7209[this.field7272[var26] & 0xFF]);
+                            var11.X(this.field7218[var26], field7209[this.field7272[var26] & 0xFF]);
                         }
                     }
                 }
@@ -789,13 +789,13 @@ public class NPCType {
                         var27 = arg4.field7206;
                     }
                     for (int var28 = 0; var28 < this.field7234.length; var28++) {
-                        var11.method289(this.field7234[var28], var27[var28]);
+                        var11.W(this.field7234[var28], var27[var28]);
                     }
                 }
                 if (this.field7228 != 0) {
-                    var11.method290(this.field7225, this.field7226, this.field7255, this.field7228 & 0xFF);
+                    var11.PA(this.field7225, this.field7226, this.field7255, this.field7228 & 0xFF);
                 }
-                var11.method252(var7);
+                var11.KA(var7);
                 WeightedCache var29 = this.field7210.field7283;
                 synchronized (this.field7210.field7283) {
                     this.field7210.field7283.method7937(var11, var8);
@@ -805,7 +805,7 @@ public class NPCType {
                 var11 = var11.method295((byte) 1, var7, true);
                 arg3.method11780(var11, 0);
             }
-            var11.method252(arg1);
+            var11.KA(arg1);
             return var11;
         }
     }

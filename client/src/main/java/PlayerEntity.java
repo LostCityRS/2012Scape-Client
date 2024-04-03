@@ -298,9 +298,9 @@ public class PlayerEntity extends PathingEntity {
                     }
                     var8 = PickableEntity.method12205(true);
                     this.field8650 = true;
-                    arg0.method526(false);
+                    arg0.RA(false);
                     var12.method271(var2, this.field9811[this.field8651.length], 0);
-                    arg0.method526(true);
+                    arg0.RA(true);
                 }
             }
         }
@@ -358,7 +358,7 @@ public class PlayerEntity extends PathingEntity {
         }
         for (int var35 = 0; var35 < this.field8651.length; var35++) {
             if (this.field8651[var35] != null) {
-                this.field8650 |= this.field8651[var35].method292();
+                this.field8650 |= this.field8651[var35].i();
             }
             this.field8651[var35] = null;
         }
@@ -389,9 +389,9 @@ public class PlayerEntity extends PathingEntity {
         int var13 = (int) (Math.atan2((double) arg3, (double) arg4) * 2607.5945876176133D - (double) this.field8638.method1387()) & 0x3FFF;
         Model var14 = HintArrow.method8588(arg0, var13, this.field8601, this.field8644, this.field8603, arg5);
         if (var14 != null) {
-            arg0.method526(false);
+            arg0.RA(false);
             var14.method271(arg1, null, 0);
-            arg0.method526(true);
+            arg0.RA(true);
         }
     }
 
@@ -433,25 +433,25 @@ public class PlayerEntity extends PathingEntity {
         if (var11 == null) {
             return false;
         }
-        this.field8622 = var11.method278();
-        var11.method275();
+        this.field8622 = var11.YA();
+        var11.n();
         this.method13972(var11);
         if (var7 == 0 && var8 == 0) {
             this.method13958(var9, this.method13954() << 9, this.method13954() << 9, 0, 0);
         } else {
             this.method13958(var9, var7, var8, var4.field4700, var4.field4715);
             if (this.field8601 != 0) {
-                var11.method397(this.field8601);
+                var11.t(this.field8601);
             }
             if (this.field8644 != 0) {
-                var11.method284(this.field8644);
+                var11.EA(this.field8644);
             }
             if (this.field8603 != 0) {
-                var11.method353(0, this.field8603, 0);
+                var11.ia(0, this.field8603, 0);
             }
         }
         if (var10) {
-            var11.method290(this.field8596, this.field8602, this.field8617, this.field8631 & 0xFF);
+            var11.PA(this.field8596, this.field8602, this.field8617, this.field8631 & 0xFF);
         }
         if (!this.field10050) {
             this.method13957(arg0, var4, var3, var7, var8, var9);

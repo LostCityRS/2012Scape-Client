@@ -147,7 +147,7 @@ public class WorldMapFont {
     @ObfuscatedName("as.c(Lra;Ljava/lang/String;IIIZ)V")
     public void method1749(RendererToolkit arg0, String arg1, int arg2, int arg3, int arg4, boolean arg5) {
         int var7 = this.method1747(arg1) / 2;
-        arg0.method453(this.field747);
+        arg0.qa(this.field747);
         if (arg2 - var7 <= this.field747[2] && (arg2 + var7 >= this.field747[0] && (arg3 - this.field745 <= this.field747[3] && this.field746 + arg3 >= this.field747[1]))) {
             this.method1748(arg0, arg1, this.field747, arg2 - var7, arg3, arg4, arg5);
         }

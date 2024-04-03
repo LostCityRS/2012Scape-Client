@@ -179,9 +179,9 @@ public class EffectAnimType {
         synchronized (this.field5256.field5245) {
             var14 = (Model) this.field5256.field5245.method7916((long) (this.field5250 |= arg0.field397 << 29));
         }
-        if (var14 == null || arg0.method519(var14.method329(), var11) != 0) {
+        if (var14 == null || arg0.method519(var14.m(), var11) != 0) {
             if (var14 != null) {
-                var11 = arg0.method520(var11, var14.method329());
+                var11 = arg0.method520(var11, var14.m());
             }
             int var16 = var11;
             if (this.field5261 != null) {
@@ -200,15 +200,15 @@ public class EffectAnimType {
             var14 = arg0.method625(var17, var16, this.field5256.field5248, this.field5257 + 64, this.field5263 + 850);
             if (this.field5261 != null) {
                 for (int var18 = 0; var18 < this.field5261.length; var18++) {
-                    var14.method287(this.field5261[var18], this.field5254[var18]);
+                    var14.X(this.field5261[var18], this.field5254[var18]);
                 }
             }
             if (this.field5255 != null) {
                 for (int var19 = 0; var19 < this.field5255.length; var19++) {
-                    var14.method289(this.field5255[var19], this.field5266[var19]);
+                    var14.W(this.field5255[var19], this.field5266[var19]);
                 }
             }
-            var14.method252(var11);
+            var14.KA(var11);
             WeightedCache var20 = this.field5256.field5245;
             synchronized (this.field5256.field5245) {
                 this.field5256.field5245.method7937(var14, (long) (this.field5250 |= arg0.field397 << 29));
@@ -219,23 +219,23 @@ public class EffectAnimType {
             arg8.method11780(var22, 0);
         }
         if (this.field5259 != 128 || this.field5260 != 128) {
-            var22.method245(this.field5259, this.field5260, this.field5259);
+            var22.oa(this.field5259, this.field5260, this.field5259);
         }
         if (this.field5265 != 0) {
             if (this.field5265 == 90) {
-                var22.method246(4096);
+                var22.f(4096);
             }
             if (this.field5265 == 180) {
-                var22.method246(8192);
+                var22.f(8192);
             }
             if (this.field5265 == 270) {
-                var22.method246(12288);
+                var22.f(12288);
             }
         }
         if (var12) {
-            var22.method255(this.field5262, this.field5253, arg3, arg4, arg5, arg6, arg7);
+            var22.pa(this.field5262, this.field5253, arg3, arg4, arg5, arg6, arg7);
         }
-        var22.method252(arg1);
+        var22.KA(arg1);
         return var22;
     }
 

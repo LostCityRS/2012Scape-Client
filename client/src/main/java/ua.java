@@ -1,8 +1,8 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ua")
-public interface SoftwareRendererRelated {
+public interface ua {
 
     @ObfuscatedName("ua.ma(Z)V")
-    void method92(boolean arg0);
+    void ma(boolean arg0);
 }

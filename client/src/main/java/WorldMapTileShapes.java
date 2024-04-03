@@ -24,7 +24,7 @@ public class WorldMapTileShapes {
             arg9 = 8;
             arg10 = arg10 + 3 & 0x3;
         }
-        arg0.method748(arg3, arg4, arg7, arg8, arg5, arg6, arg1[arg9 - 1][arg10], arg2, arg11);
+        arg0.N(arg3, arg4, arg7, arg8, arg5, arg6, arg1[arg9 - 1][arg10], arg2, arg11);
     }
 
     @ObfuscatedName("nz.j(II)[[[B")

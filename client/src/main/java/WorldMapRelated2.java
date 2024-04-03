@@ -20,7 +20,7 @@ public class WorldMapRelated2 {
     @ObfuscatedName("db.a(Lra;[IIII[I[I)V")
     public static void method2680(RendererToolkit arg0, int[] arg1, int arg2, int arg3, int arg4, int[] arg5, int[] arg6) {
         int[] var7 = new int[4];
-        arg0.method453(var7);
+        arg0.qa(var7);
         if (arg5 != null && var7[3] - var7[1] != arg5.length) {
             throw new IllegalStateException();
         }
@@ -49,7 +49,7 @@ public class WorldMapRelated2 {
                     var9 = arg5[var11] + arg6[var11] + var7[0];
                 }
             } while (var9 - var8 <= 0);
-            arg0.method493(var8, var10, var9 - var8, arg4, 1);
+            arg0.XA(var8, var10, var9 - var8, arg4, 1);
         }
     }
 

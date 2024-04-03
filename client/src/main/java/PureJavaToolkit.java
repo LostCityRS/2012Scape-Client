@@ -213,7 +213,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.za()I")
-    public int method552() {
+    public int za() {
         return 0;
     }
 
@@ -342,12 +342,12 @@ public class PureJavaToolkit extends RendererToolkit {
         for (int var5 = 0; var5 < this.field8030; var5++) {
             this.field8031[var5].method1948();
         }
-        this.method753();
+        this.L();
         this.method490();
     }
 
     @ObfuscatedName("yt.ae(IIII)[I")
-    public int[] method691(int arg0, int arg1, int arg2, int arg3) {
+    public int[] ae(int arg0, int arg1, int arg2, int arg3) {
         if (this.field8001 == null) {
             throw new IllegalStateException("");
         }
@@ -439,7 +439,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.RA(Z)V")
-    public void method526(boolean arg0) {
+    public void RA(boolean arg0) {
         PureJavaToolkitContext var2 = this.method13206(Thread.currentThread());
         var2.field874 = arg0;
     }
@@ -463,7 +463,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.GA(FF)V")
-    public void method475(float arg0, float arg1) {
+    public void GA(float arg0, float arg1) {
         this.field8028 = arg1 - arg0;
         this.field8006 = arg0 + arg1 - 1.0F;
         for (int var3 = 0; var3 < this.field8030; var3++) {
@@ -502,7 +502,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.L()V")
-    public void method753() {
+    public void L() {
         this.field8005 = 0;
         this.field8027 = 0;
         this.field8024 = this.field8002;
@@ -511,7 +511,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.r(IIII)V")
-    public void method659(int arg0, int arg1, int arg2, int arg3) {
+    public void r(int arg0, int arg1, int arg2, int arg3) {
         if (arg0 < 0) {
             arg0 = 0;
         }
@@ -532,7 +532,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.o(IIII)V")
-    public void method478(int arg0, int arg1, int arg2, int arg3) {
+    public void o(int arg0, int arg1, int arg2, int arg3) {
         if (this.field8005 < arg0) {
             this.field8005 = arg0;
         }
@@ -549,7 +549,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.qa([I)V")
-    public void method453(int[] arg0) {
+    public void qa(int[] arg0) {
         arg0[0] = this.field8005;
         arg0[1] = this.field8027;
         arg0[2] = this.field8024;
@@ -557,9 +557,9 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.ba(II)V")
-    public void method505(int arg0, int arg1) {
+    public void ba(int arg0, int arg1) {
         if ((arg0 & 0x1) != 0) {
-            this.method489(0, 0, this.field8002, this.field8003, arg1, 0);
+            this.B(0, 0, this.field8002, this.field8003, arg1, 0);
         }
         if ((arg0 & 0x2) != 0) {
             this.method13198();
@@ -568,14 +568,14 @@ public class PureJavaToolkit extends RendererToolkit {
 
     @ObfuscatedName("yt.bl(IIIIII)V")
     public void method488(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
-        this.method493(arg0, arg1, arg2, arg4, arg5);
-        this.method493(arg0, arg1 + arg3 - 1, arg2, arg4, arg5);
-        this.method494(arg0, arg1 + 1, arg3 - 2, arg4, arg5);
-        this.method494(arg0 + arg2 - 1, arg1 + 1, arg3 - 2, arg4, arg5);
+        this.XA(arg0, arg1, arg2, arg4, arg5);
+        this.XA(arg0, arg1 + arg3 - 1, arg2, arg4, arg5);
+        this.G(arg0, arg1 + 1, arg3 - 2, arg4, arg5);
+        this.G(arg0 + arg2 - 1, arg1 + 1, arg3 - 2, arg4, arg5);
     }
 
     @ObfuscatedName("yt.B(IIIIII)V")
-    public void method489(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+    public void B(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
         if (this.field8001 == null) {
             return;
         }
@@ -664,7 +664,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.N(IIIIII[BII)V")
-    public void method748(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, byte[] arg6, int arg7, int arg8) {
+    public void N(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, byte[] arg6, int arg7, int arg8) {
         if (this.field8001 == null || (arg2 <= 0 || arg3 <= 0)) {
             return;
         }
@@ -762,7 +762,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.CA(IIIII)V")
-    public void method601(int arg0, int arg1, int arg2, int arg3, int arg4) {
+    public void CA(int arg0, int arg1, int arg2, int arg3, int arg4) {
         if (this.field8001 == null) {
             return;
         }
@@ -952,7 +952,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.XA(IIIII)V")
-    public void method493(int arg0, int arg1, int arg2, int arg3, int arg4) {
+    public void XA(int arg0, int arg1, int arg2, int arg3, int arg4) {
         if (this.field8001 == null || (arg1 < this.field8027 || arg1 >= this.field8008)) {
             return;
         }
@@ -1043,7 +1043,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.G(IIIII)V")
-    public void method494(int arg0, int arg1, int arg2, int arg3, int arg4) {
+    public void G(int arg0, int arg1, int arg2, int arg3, int arg4) {
         if (this.field8001 == null || (arg0 < this.field8005 || arg0 >= this.field8024)) {
             return;
         }
@@ -1146,9 +1146,9 @@ public class PureJavaToolkit extends RendererToolkit {
         int var8 = arg3 - arg1;
         if (var8 == 0) {
             if (var7 >= 0) {
-                this.method493(arg0, arg1, var7 + 1, arg4, arg5);
+                this.XA(arg0, arg1, var7 + 1, arg4, arg5);
             } else {
-                this.method493(arg0 + var7, arg1, -var7 + 1, arg4, arg5);
+                this.XA(arg0 + var7, arg1, -var7 + 1, arg4, arg5);
             }
         } else if (var7 != 0) {
             if (var7 + var8 < 0) {
@@ -1267,9 +1267,9 @@ public class PureJavaToolkit extends RendererToolkit {
                 }
             }
         } else if (var8 >= 0) {
-            this.method494(arg0, arg1, var8 + 1, arg4, arg5);
+            this.G(arg0, arg1, var8 + 1, arg4, arg5);
         } else {
-            this.method494(arg0, arg1 + var8, -var8 + 1, arg4, arg5);
+            this.G(arg0, arg1 + var8, -var8 + 1, arg4, arg5);
         }
     }
 
@@ -1786,12 +1786,12 @@ public class PureJavaToolkit extends RendererToolkit {
         } else {
             throw new IllegalArgumentException();
         }
-        this.method526(false);
+        this.RA(false);
         var9.field988 = var25 < 0 || var25 > var9.field1010 * 859149921 || var26 < 0 || var26 > var9.field1010 * 859149921 || var27 < 0 || var27 > var9.field1010 * 859149921;
         var9.method1991(true, false, false, (float) var29, (float) var30, (float) var31, (float) var25, (float) var26, (float) var27, 100.0F, 100.0F, 100.0F, arg4);
         var9.field988 = var25 < 0 || var25 > var9.field1010 * 859149921 || var27 < 0 || var27 > var9.field1010 * 859149921 || var28 < 0 || var28 > var9.field1010 * 859149921;
         var9.method1991(true, false, false, (float) var29, (float) var31, (float) var32, (float) var25, (float) var27, (float) var28, 100.0F, 100.0F, 100.0F, arg4);
-        this.method526(true);
+        this.RA(true);
     }
 
     @ObfuscatedName("yt.bp(IIIIII)I")
@@ -1914,7 +1914,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.DA(ILta;II)V")
-    public void method684(int arg0, GraphicsRelated arg1, int arg2, int arg3) {
+    public void DA(int arg0, GraphicsRelated arg1, int arg2, int arg3) {
         if (this.field8001 == null) {
             return;
         }
@@ -2382,12 +2382,12 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.IA(F)V")
-    public void method529(float arg0) {
+    public void IA(float arg0) {
         this.field8012 = (int) (arg0 * 65535.0F);
     }
 
     @ObfuscatedName("yt.m(IFFFFF)V")
-    public void method530(int arg0, float arg1, float arg2, float arg3, float arg4, float arg5) {
+    public void m(int arg0, float arg1, float arg2, float arg3, float arg4, float arg5) {
         this.field7998 = (int) (arg1 * 65535.0F) * 768;
         this.field8013 = (int) (arg2 * 65535.0F) * 589824;
         float var7 = (float) Math.sqrt((double) (arg5 * arg5 + arg3 * arg3 + arg4 * arg4));
@@ -2397,11 +2397,11 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.J(I)V")
-    public void method531(int arg0) {
+    public void J(int arg0) {
     }
 
     @ObfuscatedName("yt.c(III)V")
-    public void method532(int arg0, int arg1, int arg2) {
+    public void c(int arg0, int arg1, int arg2) {
         for (int var4 = 0; var4 < this.field8031.length; var4++) {
             PureJavaToolkitContext var5 = this.field8031[var4];
             var5.field869 = arg0 & 0xFFFFFF;
@@ -2508,7 +2508,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.O()V")
-    public void method548() {
+    public void O() {
         for (int var1 = 0; var1 < this.field8031.length; var1++) {
             this.field8031[var1].field869 = this.field8031[var1].field870;
             this.field8031[var1].field871 = false;

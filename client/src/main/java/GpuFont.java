@@ -157,7 +157,7 @@ public class GpuFont extends Font {
     }
 
     @ObfuscatedName("zf.UA(CIIIZ)V")
-    public void method848(char arg0, int arg1, int arg2, int arg3, boolean arg4) {
+    public void UA(char arg0, int arg1, int arg2, int arg3, boolean arg4) {
         if (this.field8447.method13508() != GpuImageRelated.field2416) {
             int var6 = this.field8448[arg0 * 2] + arg1;
             int var7 = this.field8448[arg0 * 2 + 1] + arg2;

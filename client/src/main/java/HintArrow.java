@@ -54,16 +54,16 @@ public class HintArrow {
         }
         Model var11 = var8.method295((byte) 6, var9, true);
         if (arg1 != 0) {
-            var11.method246(arg1);
+            var11.f(arg1);
         }
         if (arg2 != 0) {
-            var11.method397(arg2);
+            var11.t(arg2);
         }
         if (arg3 != 0) {
-            var11.method284(arg3);
+            var11.EA(arg3);
         }
         if (arg4 != 0) {
-            var11.method353(0, arg4, 0);
+            var11.ia(0, arg4, 0);
         }
         return var11;
     }

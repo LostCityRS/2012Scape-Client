@@ -215,7 +215,7 @@ public class GlPostProcessing {
         this.field1164 = true;
         this.field1148.method13379(-this.field1154, this.field1155 + this.field1153 - this.field1148.method457().method922());
         this.field1148.method464(this.field1151);
-        this.field1148.method505(3, 0);
+        this.field1148.ba(3, 0);
         this.field1151.method16000(0);
         return true;
     }
@@ -234,7 +234,7 @@ public class GlPostProcessing {
         this.field1148.method13309();
         this.field1148.method13327(0);
         this.field1148.method13316(1);
-        this.field1148.method753();
+        this.field1148.L();
         int var1 = 0;
         int var2 = 1;
         GlPostProcessEffect var4;

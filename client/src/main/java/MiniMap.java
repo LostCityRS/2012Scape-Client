@@ -234,11 +234,11 @@ public class MiniMap {
             return;
         }
         GraphicsRelated var5 = var4.field1730;
-        arg0.method659(arg2, arg3, arg1.field1863 + arg2, arg1.field1929 + arg3);
+        arg0.r(arg2, arg3, arg1.field1863 + arg2, arg1.field1929 + arg3);
         if (arg1.field1863 != var4.field1728 || arg1.field1929 != var4.field1727) {
             throw new IllegalStateException("");
         } else if (field762 == 2 || field762 == 5 || Statics.field6357 == null) {
-            arg0.method684(-16777216, var5, arg2, arg3);
+            arg0.DA(-16777216, var5, arg2, arg3);
         } else {
             CoordGrid var6 = client.field8980.method6214();
             int var7;

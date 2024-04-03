@@ -612,11 +612,11 @@ public abstract class GpuToolkit extends RendererToolkit {
         this.field8393 = this.method13797(true);
         this.method13497();
         this.method467();
-        this.method753();
+        this.L();
         this.method587();
         this.field8278 = new GpuSprite(this, this.field8312);
         this.field8315 = new GpuSprite(this, this.field8359);
-        this.method505(3, 0);
+        this.ba(3, 0);
     }
 
     @ObfuscatedName("yk.oq()V")
@@ -942,7 +942,7 @@ public abstract class GpuToolkit extends RendererToolkit {
         this.method13671();
         this.method13802();
         this.method490();
-        this.method753();
+        this.L();
     }
 
     @ObfuscatedName("yk.cg()Z")
@@ -1014,7 +1014,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.za()I")
-    public final int method552() {
+    public final int za() {
         return this.field8325 + this.field8252 + this.field8334;
     }
 
@@ -1150,14 +1150,14 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.GA(FF)V")
-    public void method475(float arg0, float arg1) {
+    public void GA(float arg0, float arg1) {
         this.field8233 = arg0;
         this.field8288 = arg1;
         this.method13776();
     }
 
     @ObfuscatedName("yk.qa([I)V")
-    public final void method453(int[] arg0) {
+    public final void qa(int[] arg0) {
         arg0[0] = this.field8293;
         arg0[1] = this.field8291;
         arg0[2] = this.field8294;
@@ -1165,7 +1165,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.L()V")
-    public final void method753() {
+    public final void L() {
         if (this.field412 == null) {
             this.field8292 = 0;
             this.field8294 = 0;
@@ -1184,7 +1184,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.r(IIII)V")
-    public final void method659(int arg0, int arg1, int arg2, int arg3) {
+    public final void r(int arg0, int arg1, int arg2, int arg3) {
         int var5;
         int var6;
         if (this.field412 == null) {
@@ -1195,7 +1195,7 @@ public abstract class GpuToolkit extends RendererToolkit {
             var6 = this.field412.method922();
         }
         if (arg0 <= 0 && arg2 >= var5 - 1 && arg1 <= 0 && arg3 >= var6 - 1) {
-            this.method753();
+            this.L();
             return;
         }
         this.field8293 = arg0 >= 0 ? arg0 : 0;
@@ -1210,7 +1210,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.o(IIII)V")
-    public final void method478(int arg0, int arg1, int arg2, int arg3) {
+    public final void o(int arg0, int arg1, int arg2, int arg3) {
         int var5;
         int var6;
         if (this.field412 == null) {
@@ -1473,7 +1473,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.RA(Z)V")
-    public final void method526(boolean arg0) {
+    public final void RA(boolean arg0) {
         this.field8305 = arg0;
         this.method13537();
     }
@@ -1594,7 +1594,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.IA(F)V")
-    public final void method529(float arg0) {
+    public final void IA(float arg0) {
         if (this.field8319 != arg0) {
             this.field8319 = arg0;
             this.method13540();
@@ -1603,7 +1603,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.m(IFFFFF)V")
-    public final void method530(int arg0, float arg1, float arg2, float arg3, float arg4, float arg5) {
+    public final void m(int arg0, float arg1, float arg2, float arg3, float arg4, float arg5) {
         boolean var7 = this.field8378 * 16777215 != arg0;
         if (var7 || this.field8320 != arg1 || this.field8373 != arg2) {
             this.field8378 = arg0 * 33488896;
@@ -1639,7 +1639,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.J(I)V")
-    public final void method531(int arg0) {
+    public final void J(int arg0) {
         this.field8326 = 0;
         while (arg0 > 1) {
             this.field8326++;
@@ -1811,7 +1811,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.O()V")
-    public final void method548() {
+    public final void O() {
         this.field8274 = false;
     }
 
@@ -1874,7 +1874,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.c(III)V")
-    public final void method532(int arg0, int arg1, int arg2) {
+    public final void c(int arg0, int arg1, int arg2) {
         if (this.field8363 == arg0 && this.field8364 == arg1 && this.field8390 == arg2) {
             return;
         }
@@ -1894,18 +1894,18 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.DA(ILta;II)V")
-    public final void method684(int arg0, GraphicsRelated arg1, int arg2, int arg3) {
-        this.method526(false);
+    public final void DA(int arg0, GraphicsRelated arg1, int arg2, int arg3) {
+        this.RA(false);
         this.field8315.method1044(0.0F, 0.0F, (float) this.method457().method921(), 0.0F, 0.0F, (float) this.method457().method922(), 0, arg1, arg2, arg3);
-        this.method526(true);
+        this.RA(true);
     }
 
     @ObfuscatedName("yk.B(IIIIII)V")
-    public final void method489(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+    public final void B(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
         if (this.field8305) {
-            this.method526(false);
+            this.RA(false);
             this.field8278.method2502(arg0, arg1, arg2, arg3, 0, arg4, arg5);
-            this.method526(true);
+            this.RA(true);
         } else {
             this.field8278.method2502(arg0, arg1, arg2, arg3, 0, arg4, arg5);
         }
@@ -1926,7 +1926,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.N(IIIIII[BII)V")
-    public final void method748(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, byte[] arg6, int arg7, int arg8) {
+    public final void N(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, byte[] arg6, int arg7, int arg8) {
     }
 
     @ObfuscatedName("yk.bk(IIFIIFIIFIIII)V")
@@ -1934,16 +1934,16 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.CA(IIIII)V")
-    public final void method601(int arg0, int arg1, int arg2, int arg3, int arg4) {
+    public final void CA(int arg0, int arg1, int arg2, int arg3, int arg4) {
     }
 
     @ObfuscatedName("yk.XA(IIIII)V")
-    public final void method493(int arg0, int arg1, int arg2, int arg3, int arg4) {
+    public final void XA(int arg0, int arg1, int arg2, int arg3, int arg4) {
         this.method825(arg0, arg1, arg0 + arg2, arg1, arg3, arg4);
     }
 
     @ObfuscatedName("yk.G(IIIII)V")
-    public final void method494(int arg0, int arg1, int arg2, int arg3, int arg4) {
+    public final void G(int arg0, int arg1, int arg2, int arg3, int arg4) {
         this.method825(arg0, arg1, arg0, arg1 + arg2, arg3, arg4);
     }
 

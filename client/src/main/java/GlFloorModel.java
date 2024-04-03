@@ -138,7 +138,7 @@ public class GlFloorModel extends FloorModel {
     }
 
     @ObfuscatedName("yj.LA(III)V")
-    public void method192(int arg0, int arg1, int arg2) {
+    public void LA(int arg0, int arg1, int arg2) {
         if ((this.field7700[arg0][arg1] & 0xFF) < arg2) {
             this.field7700[arg0][arg1] = (byte) arg2;
         }
@@ -261,7 +261,7 @@ public class GlFloorModel extends FloorModel {
     }
 
     @ObfuscatedName("yj.SA()V")
-    public void method195() {
+    public void SA() {
         if (this.field7712 > 0) {
             byte[][] var1 = new byte[this.field387 + 1][this.field386 + 1];
             for (int var2 = 1; var2 < this.field387; var2++) {
@@ -654,7 +654,7 @@ public class GlFloorModel extends FloorModel {
         if (!this.field7705.method11585()) {
             int var21 = this.field7688.field8167;
             int var22 = this.field7688.field8168;
-            this.field7688.method532(0, var22, this.field7688.field8169);
+            this.field7688.c(0, var22, this.field7688.field8169);
             this.field7688.method13322(false);
             this.field7688.method13325(false);
             this.field7688.method13327(128);
@@ -670,7 +670,7 @@ public class GlFloorModel extends FloorModel {
             this.field7688.method13318(0, 5890, 768);
             this.field7688.method13267(0, 5890, 770);
             this.field7688.method13315(null);
-            this.field7688.method532(var21, var22, this.field7688.field8169);
+            this.field7688.c(var21, var22, this.field7688.field8169);
         }
         if (this.field7704 == null) {
             return;
@@ -786,7 +786,7 @@ public class GlFloorModel extends FloorModel {
     }
 
     @ObfuscatedName("yj.w(IILna;)Lna;")
-    public HardShadow method200(int arg0, int arg1, HardShadow arg2) {
+    public HardShadow w(int arg0, int arg1, HardShadow arg2) {
         if ((this.field7711[arg0][arg1] & 0x1) == 0) {
             return null;
         }
@@ -845,7 +845,7 @@ public class GlFloorModel extends FloorModel {
     }
 
     @ObfuscatedName("yj.UA(Lna;IIIIZ)V")
-    public void method209(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+    public void UA(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
         if (this.field7704 != null && arg0 != null) {
             int var7 = arg1 - (this.field7688.field8164 * arg2 >> 8) >> this.field7688.field8092;
             int var8 = arg3 - (this.field7688.field8165 * arg2 >> 8) >> this.field7688.field8092;
@@ -854,7 +854,7 @@ public class GlFloorModel extends FloorModel {
     }
 
     @ObfuscatedName("yj.NA(Lna;IIIIZ)V")
-    public void method194(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+    public void NA(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
         if (this.field7704 != null && arg0 != null) {
             int var7 = arg1 - (this.field7688.field8164 * arg2 >> 8) >> this.field7688.field8092;
             int var8 = arg3 - (this.field7688.field8165 * arg2 >> 8) >> this.field7688.field8092;

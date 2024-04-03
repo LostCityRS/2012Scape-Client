@@ -10,8 +10,8 @@ public class LoadingScreenRelated6 extends LoadingScreenProgressDisplay {
     @ObfuscatedName("aal.d(ZIII)V")
     public void method3955(boolean arg0, int arg1, int arg2) {
         int var4 = this.method3956() * this.field2311.field2602 / 10000;
-        Statics.field5187.method489(arg1, arg2 + 2, var4, this.field2311.field2607 - 2, ((LoadingScreenRelated6_Sub1) this.field2311).field8828, 0);
-        Statics.field5187.method489(arg1 + var4, arg2 + 2, this.field2311.field2602 - var4, this.field2311.field2607 - 2, 0, 0);
+        Statics.field5187.B(arg1, arg2 + 2, var4, this.field2311.field2607 - 2, ((LoadingScreenRelated6_Sub1) this.field2311).field8828, 0);
+        Statics.field5187.B(arg1 + var4, arg2 + 2, this.field2311.field2602 - var4, this.field2311.field2607 - 2, 0, 0);
     }
 
     @ObfuscatedName("aal.f(ZIIS)V")

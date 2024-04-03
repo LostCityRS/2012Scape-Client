@@ -100,7 +100,7 @@ public class SpotAnimation extends PrimaryLayerEntity {
             return null;
         }
         if (this.field10646 != 0) {
-            var2.method246(this.field10646 * 2048);
+            var2.f(this.field10646 * 2048);
         }
         Matrix4x3 var3 = this.method8558();
         this.method17185(arg0, var2, var3);
@@ -110,9 +110,9 @@ public class SpotAnimation extends PrimaryLayerEntity {
             ParticleList var5 = this.field10641.method8112();
             arg0.method733(var5);
         }
-        this.field10644 = var2.method292();
-        this.field10643 = var2.method278();
-        var2.method275();
+        this.field10644 = var2.i();
+        this.field10643 = var2.YA();
+        var2.n();
         return var4;
     }
 

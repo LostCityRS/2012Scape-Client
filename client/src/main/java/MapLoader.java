@@ -653,7 +653,7 @@ public class MapLoader {
             }
         }
         for (int var23 = 0; var23 < this.field3628; var23++) {
-            this.field3619.field4498[var23].method195();
+            this.field3619.field4498[var23].SA();
         }
     }
 

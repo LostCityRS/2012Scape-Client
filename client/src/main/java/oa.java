@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("oa")
-public class oa implements EffectInterface, SoftwareRendererRelated {
+public class oa implements EffectInterface, ua {
 
     public long nativeid = 0L;
 
@@ -14,7 +14,7 @@ public class oa implements EffectInterface, SoftwareRendererRelated {
     public oa(int arg0, int arg1) {
         this.field381 = arg0;
         this.field382 = arg1;
-        this.method163(arg0, arg1);
+        this.g(arg0, arg1);
     }
 
     @ObfuscatedName("oa.u()I")
@@ -29,23 +29,23 @@ public class oa implements EffectInterface, SoftwareRendererRelated {
 
     public void finalize() {
         if (this.nativeid != 0L) {
-            SoftwareRendererRelated2.method2358(this);
+            cp.method2358(this);
         }
     }
 
     @ObfuscatedName("oa.ma(Z)V")
-    public void method92(boolean arg0) {
-        this.method167(this.nativeid, arg0);
+    public void ma(boolean arg0) {
+        this.za(this.nativeid, arg0);
     }
 
     @ObfuscatedName("oa.s()V")
     public void method168() {
-        this.method92(false);
+        this.ma(false);
     }
 
     @ObfuscatedName("oa.g(II)V")
-    public native void method163(int arg0, int arg1);
+    public native void g(int arg0, int arg1);
 
     @ObfuscatedName("oa.za(JZ)V")
-    public native void method167(long arg0, boolean arg1);
+    public native void za(long arg0, boolean arg1);
 }

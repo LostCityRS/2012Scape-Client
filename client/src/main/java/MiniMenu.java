@@ -535,7 +535,7 @@ public class MiniMenu {
         Matrix4x4 var4 = arg0.method781();
         arg0.method784(field610);
         arg0.method524(field612);
-        arg0.method659(field606, field607, field614 + field606, field607 + field587);
+        arg0.r(field606, field607, field614 + field606, field607 + field587);
         arg0.method474(field606, field607, field614, field587);
         var4.method5385(field612);
         var4.method5384(field610);
@@ -1285,7 +1285,7 @@ public class MiniMenu {
                 var10.method2757();
                 Statics.field1557 = arg0.method517(var10, true);
             } else {
-                arg0.method489(arg1, arg2, arg3, arg5, var9 << 24 | Statics.field9426, 1);
+                arg0.B(arg1, arg2, arg3, arg5, var9 << 24 | Statics.field9426, 1);
             }
         }
         if (Statics.field2652 != null && Statics.field8491 != null) {
@@ -1297,7 +1297,7 @@ public class MiniMenu {
             Statics.field1557.method2500(arg1 + arg3 - Statics.field1557.method1061(), arg2);
         }
         arg6.method833(arg8, arg1 + 3, (20 - arg7.field7176) / 2 + arg7.field7176 + arg2, Statics.field8718 | 0xFF000000, -1);
-        arg0.method489(arg1, arg2 + arg5, arg3, arg4 - arg5, var9 << 24 | Statics.field9426, 1);
+        arg0.B(arg1, arg2 + arg5, arg3, arg4 - arg5, var9 << 24 | Statics.field9426, 1);
     }
 
     @ObfuscatedName("ag.ab(Lra;IIIIII)V")
@@ -1371,7 +1371,7 @@ public class MiniMenu {
             for (MiniMenuSubMenu var16 = (MiniMenuSubMenu) field592.method11756(); var16 != null; var16 = (MiniMenuSubMenu) field592.method11744()) {
                 int var17 = field582 * var15 + var8.field7176 + var2 + var5 + 1;
                 if (var10 > Statics.field4756 && var10 < Statics.field4756 + Statics.field1571 && var11 > var17 - var8.field7176 - 1 && var11 < var8.field7177 + var17 && (var16.field10346 > 1 || ((MiniMenuEntry) var16.field10345.field6662.field9552).field10336)) {
-                    arg0.method489(Statics.field4756, var17 - var8.field7176, Statics.field1571, field582, var9 << 24 | Statics.field1477, 1);
+                    arg0.B(Statics.field4756, var17 - var8.field7176, Statics.field1571, field582, var9 << 24 | Statics.field1477, 1);
                 }
                 var15++;
             }
@@ -1381,7 +1381,7 @@ public class MiniMenu {
                 for (MiniMenuEntry var19 = (MiniMenuEntry) field583.field10345.method11756(); var19 != null; var19 = (MiniMenuEntry) field583.field10345.method11744()) {
                     int var20 = field582 * var18 + var8.field7176 + Statics.field9294 + var5 + 1;
                     if (var10 > Statics.field384 && var10 < Statics.field603 + Statics.field384 && var11 > var20 - var8.field7176 - 1 && var11 < var8.field7177 + var20 && var19.field10336) {
-                        arg0.method489(Statics.field384, var20 - var8.field7176, Statics.field603, field582, var9 << 24 | Statics.field1477, 1);
+                        arg0.B(Statics.field384, var20 - var8.field7176, Statics.field603, field582, var9 << 24 | Statics.field1477, 1);
                     }
                     var18++;
                 }
@@ -1392,7 +1392,7 @@ public class MiniMenu {
             for (MiniMenuEntry var13 = (MiniMenuEntry) field595.method11563(); var13 != null; var13 = (MiniMenuEntry) field595.method11567()) {
                 int var14 = field582 * (field588 - 1 - var12) + var8.field7176 + var2 + var5 + 1;
                 if (var10 > Statics.field4756 && var10 < Statics.field4756 + Statics.field1571 && var11 > var14 - var8.field7176 - 1 && var11 < var8.field7177 + var14 && var13.field10336) {
-                    arg0.method489(Statics.field4756, var14 - var8.field7176, Statics.field1571, field582, var9 << 24 | Statics.field1477, 1);
+                    arg0.B(Statics.field4756, var14 - var8.field7176, Statics.field1571, field582, var9 << 24 | Statics.field1477, 1);
                 }
                 var12++;
             }

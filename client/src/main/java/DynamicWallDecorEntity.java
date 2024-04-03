@@ -71,7 +71,7 @@ public class DynamicWallDecorEntity extends WallDecorLayerEntity implements Loca
             ParticleList var8 = this.field7570.field1229.method8112();
             arg0.method733(var8);
         }
-        this.field7571 = var2.method292() || this.field7570.field1229 != null;
+        this.field7571 = var2.i() || this.field7570.field1229 != null;
         if (this.field7569 == null) {
             this.field7569 = GraphEntity.method15140((int) var4.field3464.field3475, (int) var4.field3464.field3476, (int) var4.field3464.field3477, var2);
         } else {

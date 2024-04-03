@@ -113,7 +113,7 @@ public class GpuSprite extends Sprite {
 
     @ObfuscatedName("yo.h(IIIIII)V")
     public void method1086(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
-        int[] var7 = this.field7637.method691(arg4, arg5, arg2, arg3);
+        int[] var7 = this.field7637.ae(arg4, arg5, arg2, arg3);
         if (var7 != null) {
             for (int var8 = 0; var8 < var7.length; var8++) {
                 var7[var8] |= 0xFF000000;
@@ -124,7 +124,7 @@ public class GpuSprite extends Sprite {
 
     @ObfuscatedName("yo.r(III)V")
     public void method1052(int arg0, int arg1, int arg2) {
-        int[] var4 = this.field7637.method691(arg0, arg1, this.field7646, this.field7638);
+        int[] var4 = this.field7637.ae(arg0, arg1, this.field7646, this.field7638);
         int[] var5 = new int[this.field7646 * this.field7638];
         this.field7639.method4415(0, 0, this.field7646, this.field7638, var5, 0);
         if (arg2 == 0) {

@@ -350,7 +350,7 @@ public final class GlxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahv.ae(IIII)[I")
-    public int[] method691(int arg0, int arg1, int arg2, int arg3) {
+    public int[] ae(int arg0, int arg1, int arg2, int arg3) {
         int[] var5 = new int[arg2 * arg3];
         int var6 = this.field412.method922();
         for (int var7 = 0; var7 < arg3; var7++) {
@@ -378,7 +378,7 @@ public final class GlxToolkit extends GpuToolkit {
         int var8 = this.field8294;
         int var9 = this.field8291;
         int var10 = this.field8292;
-        this.method753();
+        this.L();
         OpenGL.glReadBuffer(1028);
         OpenGL.glDrawBuffer(1029);
         this.method13802();
@@ -399,7 +399,7 @@ public final class GlxToolkit extends GpuToolkit {
         OpenGL.glFlush();
         OpenGL.glReadBuffer(1029);
         OpenGL.glDrawBuffer(1029);
-        this.method659(var7, var9, var8, var10);
+        this.r(var7, var9, var8, var10);
         this.method474(var3, var4, var5, var6);
     }
 
@@ -409,7 +409,7 @@ public final class GlxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahv.ba(II)V")
-    public void method505(int arg0, int arg1) {
+    public void ba(int arg0, int arg1) {
         int var3 = 0;
         if ((arg0 & 0x1) != 0) {
             OpenGL.glClearColor((float) (arg1 & 0xFF0000) / 1.671168E7F, (float) (arg1 & 0xFF00) / 65280.0F, (float) (arg1 & 0xFF) / 255.0F, (float) (arg1 >>> 24) / 255.0F);
@@ -1097,7 +1097,7 @@ public final class GlxToolkit extends GpuToolkit {
             IntNode var12 = (IntNode) this.field10031.method11560();
             OpenGL.glDeleteLists((int) var12.field4228, var12.field9556);
         }
-        if (this.method552() > 100663296 && MonotonicTime.method5554() > this.field10011 + 60000L) {
+        if (this.za() > 100663296 && MonotonicTime.method5554() > this.field10011 + 60000L) {
             System.gc();
             this.field10011 = MonotonicTime.method5554();
         }

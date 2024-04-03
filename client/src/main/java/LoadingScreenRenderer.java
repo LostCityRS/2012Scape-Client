@@ -122,7 +122,7 @@ public class LoadingScreenRenderer implements Runnable {
                             if (this.field3348) {
                                 client.method3536();
                                 if (Statics.field5187 != null) {
-                                    Statics.field5187.method505(1, 0);
+                                    Statics.field5187.ba(1, 0);
                                 }
                             }
                             this.field3349.method4982(this.field3348 || Statics.field5187 != null && Statics.field5187.method447());
@@ -132,7 +132,7 @@ public class LoadingScreenRenderer implements Runnable {
                             int var8 = var6 << 24 | 0xFFFFFF;
                             int var9 = var7 << 24 | 0xFFFFFF;
                             client.method3536();
-                            Statics.field5187.method505(1, 0);
+                            Statics.field5187.ba(1, 0);
                             Sprite var10 = Statics.field5187.method777(Statics.field4125, Statics.field4677, true);
                             Framebuffer var11 = Statics.field5187.method467();
                             var11.method1206(0, var10.method1049());
@@ -141,7 +141,7 @@ public class LoadingScreenRenderer implements Runnable {
                             Statics.field5187.method696(var11);
                             var10.method1054(0, 0, 0, var9, 1);
                             Statics.field5187.method464(var11);
-                            Statics.field5187.method505(1, 0);
+                            Statics.field5187.ba(1, 0);
                             this.field3349.method4982(true);
                             Statics.field5187.method696(var11);
                             var10.method1054(0, 0, 0, var8, 1);

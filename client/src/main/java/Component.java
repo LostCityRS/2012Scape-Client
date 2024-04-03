@@ -999,9 +999,9 @@ public class Component {
             }
             long var29 = (long) arg0.field397 << 59 | (long) this.field1806 << 54 | (long) this.field1838 << 38 | var12 & 0x3FFFFFFFFFL;
             Model var31 = (Model) field1760.method7916(var29);
-            if (var31 == null || arg0.method519(var31.method329(), arg1) != 0) {
+            if (var31 == null || arg0.method519(var31.m(), arg1) != 0) {
                 if (var31 != null) {
-                    arg1 = arg0.method520(arg1, var31.method329());
+                    arg1 = arg0.method520(arg1, var31.m());
                 }
                 ModelUnlit var32 = ModelUnlit.method2664(Statics.field1191, this.field1838, 0);
                 if (var32 == null) {
@@ -1014,12 +1014,12 @@ public class Component {
                 var31 = arg0.method625(var32, arg1, Statics.field1290, 64, 768);
                 if (this.field1754 != null) {
                     for (int var33 = 0; var33 < this.field1754.length; var33++) {
-                        var31.method287(this.field1754[var33], this.field1802[var33]);
+                        var31.X(this.field1754[var33], this.field1802[var33]);
                     }
                 }
                 if (this.field1826 != null) {
                     for (int var34 = 0; var34 < this.field1826.length; var34++) {
-                        var31.method289(this.field1826[var34], this.field1780[var34]);
+                        var31.W(this.field1826[var34], this.field1780[var34]);
                     }
                 }
                 field1760.method7937(var31, var29);
@@ -1028,7 +1028,7 @@ public class Component {
                 var31 = var31.method295((byte) 1, arg1, true);
                 arg8.method11780(var31, 0);
             }
-            var31.method252(var11);
+            var31.KA(var11);
             return var31;
         } else if (this.field1806 == 2) {
             Model var35 = arg4.method12565(this.field1838).method12512(arg0, arg1, arg7, arg8, this.field1930);

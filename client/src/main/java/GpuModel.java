@@ -855,12 +855,12 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.m()I")
-    public int method329() {
+    public int m() {
         return this.field7923;
     }
 
     @ObfuscatedName("yg.KA(I)V")
-    public void method252(int arg0) {
+    public void KA(int arg0) {
         if (this.field7958 != null) {
             this.field7958.field2535 = GpuModelFlags.method4171(arg0, this.field7952);
         }
@@ -1365,7 +1365,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.f(I)V")
-    public void method246(int arg0) {
+    public void f(int arg0) {
         int var2 = Trig1.field3439[arg0];
         int var3 = Trig1.field3447[arg0];
         for (int var4 = 0; var4 < this.field7959; var4++) {
@@ -1378,7 +1378,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.S(I)V")
-    public void method249(int arg0) {
+    public void S(int arg0) {
         int var2 = Trig1.field3439[arg0];
         int var3 = Trig1.field3447[arg0];
         for (int var4 = 0; var4 < this.field7959; var4++) {
@@ -1397,7 +1397,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.t(I)V")
-    public void method397(int arg0) {
+    public void t(int arg0) {
         int var2 = Trig1.field3439[arg0];
         int var3 = Trig1.field3447[arg0];
         for (int var4 = 0; var4 < this.field7959; var4++) {
@@ -1410,7 +1410,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.EA(I)V")
-    public void method284(int arg0) {
+    public void EA(int arg0) {
         int var2 = Trig1.field3439[arg0];
         int var3 = Trig1.field3447[arg0];
         for (int var4 = 0; var4 < this.field7959; var4++) {
@@ -1423,7 +1423,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.ia(III)V")
-    public void method353(int arg0, int arg1, int arg2) {
+    public void ia(int arg0, int arg1, int arg2) {
         for (int var4 = 0; var4 < this.field7959; var4++) {
             if (arg0 != 0) {
                 this.field7932[var4] += arg0;
@@ -1440,7 +1440,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.wa()V")
-    public void method253() {
+    public void wa() {
         for (int var1 = 0; var1 < this.field7959; var1++) {
             this.field7934[var1] = -this.field7934[var1];
         }
@@ -1459,7 +1459,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.oa(III)V")
-    public void method245(int arg0, int arg1, int arg2) {
+    public void oa(int arg0, int arg1, int arg2) {
         for (int var4 = 0; var4 < this.field7959; var4++) {
             if (arg0 != 128) {
                 this.field7932[var4] = this.field7932[var4] * arg0 >> 7;
@@ -1476,7 +1476,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.pa(IILxa;Lxa;III)V")
-    public void method255(int arg0, int arg1, FloorModel arg2, FloorModel arg3, int arg4, int arg5, int arg6) {
+    public void pa(int arg0, int arg1, FloorModel arg2, FloorModel arg3, int arg4, int arg5, int arg6) {
         if (!this.field7968) {
             this.method13128();
         }
@@ -1600,7 +1600,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.N()I")
-    public int method274() {
+    public int N() {
         if (!this.field7968) {
             this.method13128();
         }
@@ -1608,7 +1608,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.n()I")
-    public int method275() {
+    public int n() {
         if (!this.field7968) {
             this.method13128();
         }
@@ -1616,7 +1616,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.RA()I")
-    public int method358() {
+    public int RA() {
         if (!this.field7968) {
             this.method13128();
         }
@@ -1624,7 +1624,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.ya()I")
-    public int method277() {
+    public int ya() {
         if (!this.field7968) {
             this.method13128();
         }
@@ -1632,7 +1632,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.YA()I")
-    public int method278() {
+    public int YA() {
         if (!this.field7968) {
             this.method13128();
         }
@@ -1640,7 +1640,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.o()I")
-    public int method279() {
+    public int o() {
         if (!this.field7968) {
             this.method13128();
         }
@@ -1648,7 +1648,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.AA()I")
-    public int method280() {
+    public int AA() {
         if (!this.field7968) {
             this.method13128();
         }
@@ -1656,7 +1656,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.ha()I")
-    public int method281() {
+    public int ha() {
         if (!this.field7968) {
             this.method13128();
         }
@@ -1810,35 +1810,35 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.p(I)V")
-    public void method282(int arg0) {
+    public void p(int arg0) {
         this.field7928 = (short) arg0;
         this.method13174();
     }
 
     @ObfuscatedName("yg.Q(I)V")
-    public void method283(int arg0) {
+    public void Q(int arg0) {
         this.field7929 = (short) arg0;
         this.method13167();
         this.method13125();
     }
 
     @ObfuscatedName("yg.c()I")
-    public int method398() {
+    public int c() {
         return this.field7928;
     }
 
     @ObfuscatedName("yg.Z()I")
-    public int method285() {
+    public int Z() {
         return this.field7929;
     }
 
     @ObfuscatedName("yg.ao()[B")
-    public byte[] method334() {
+    public byte[] ao() {
         return this.field7950;
     }
 
     @ObfuscatedName("yg.X(SS)V")
-    public void method287(short arg0, short arg1) {
+    public void X(short arg0, short arg1) {
         for (int var3 = 0; var3 < this.field7947 * -1431655765; var3++) {
             if (this.field7949[var3] == arg0) {
                 this.field7949[var3] = arg1;
@@ -1870,7 +1870,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.W(SS)V")
-    public void method289(short arg0, short arg1) {
+    public void W(short arg0, short arg1) {
         MaterialTypeList var3 = this.field7925.field400;
         for (int var4 = 0; var4 < this.field7947 * -1431655765; var4++) {
             if (this.field7936[var4] == arg0) {
@@ -1908,7 +1908,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.PA(IIII)V")
-    public void method290(int arg0, int arg1, int arg2, int arg3) {
+    public void PA(int arg0, int arg1, int arg2, int arg3) {
         for (int var5 = 0; var5 < this.field7947 * -1431655765; var5++) {
             int var6 = this.field7949[var5] & 0xFFFF;
             int var7 = var6 >> 10 & 0x3F;
@@ -1949,12 +1949,12 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.i()Z")
-    public boolean method292() {
+    public boolean i() {
         return this.field7964;
     }
 
     @ObfuscatedName("yg.u()Z")
-    public boolean method293() {
+    public boolean u() {
         return this.field7940;
     }
 
@@ -1967,7 +1967,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.ea()Z")
-    public boolean method421() {
+    public boolean ea() {
         if (this.field7935 == null) {
             return false;
         }
@@ -1983,7 +1983,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.e(I[IIIIZI[I)V")
-    public void method267(int arg0, int[] arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6, int[] arg7) {
+    public void e(int arg0, int[] arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6, int[] arg7) {
         int var9 = arg1.length;
         if (arg0 == 0) {
             int var10 = arg2 << 4;
@@ -2437,7 +2437,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.w(IIII)V")
-    public void method343(int arg0, int arg1, int arg2, int arg3) {
+    public void w(int arg0, int arg1, int arg2, int arg3) {
         if (arg0 == 0) {
             int var5 = 0;
             this.field7965 = 0;
@@ -2868,7 +2868,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.ka()V")
-    public void method269() {
+    public void ka() {
         for (int var1 = 0; var1 < this.field7930; var1++) {
             this.field7932[var1] = this.field7932[var1] + 7 >> 4;
             this.field7931[var1] = this.field7931[var1] + 7 >> 4;
@@ -3095,7 +3095,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.ga(Lna;)Lna;")
-    public HardShadow method273(HardShadow arg0) {
+    public HardShadow ga(HardShadow arg0) {
         if (this.field7937 == 0) {
             return null;
         }
@@ -3451,7 +3451,7 @@ public class GpuModel extends Model {
         if (this.field7983 == null) {
             return;
         }
-        this.field7925.method526(!this.field7964);
+        this.field7925.RA(!this.field7964);
         Matrix4x3 var2 = this.field7925.field8351;
         ParticleShader var3 = this.field7925.field8314;
         for (int var4 = 0; var4 < this.field7938; var4++) {
@@ -3475,7 +3475,7 @@ public class GpuModel extends Model {
                 var3.method3872();
             }
         }
-        this.field7925.method526(true);
+        this.field7925.RA(true);
     }
 
     @ObfuscatedName("yg.go()Z")

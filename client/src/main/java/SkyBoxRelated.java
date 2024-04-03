@@ -181,10 +181,10 @@ public class SkyBoxRelated {
         if (var3 == null) {
             return;
         }
-        arg0.method453(field3980);
-        arg0.method659(0, 0, this.field3972, this.field3972);
-        arg0.method505(2, 0);
-        arg0.method489(0, 0, this.field3972, this.field3972, 0, 0);
+        arg0.qa(field3980);
+        arg0.r(0, 0, this.field3972, this.field3972);
+        arg0.ba(2, 0);
+        arg0.B(0, 0, this.field3972, this.field3972, 0, 0);
         int var4 = 0;
         int var5 = 0;
         int var6 = 256;
@@ -215,12 +215,12 @@ public class SkyBoxRelated {
             var6 = var6 * var13 - var4 * var12 >> 14;
             var4 = var14;
         }
-        arg0.method529(1.0F);
-        arg0.method530(this.field3952, 1.0F, 1.0F, (float) var4, (float) var5, (float) var6);
+        arg0.IA(1.0F);
+        arg0.m(this.field3952, 1.0F, 1.0F, (float) var4, (float) var5, (float) var6);
         var3.method2633(this.field3968 & 0x3FFF, this.field3975 & 0x3FFF, this.field3970 & 0x3FFF);
         Model var15 = arg0.method625(var3, 2048, 0, 64, 768);
-        int var16 = var15.method277() - var15.method358();
-        int var17 = var15.method279() - var15.method278();
+        int var16 = var15.ya() - var15.RA();
+        int var17 = var15.o() - var15.YA();
         int var18 = var16 > var17 ? var16 : var17;
         int var19 = this.field3972 * 1024 / var18;
         Matrix4x4 var20 = arg0.method528();
@@ -230,22 +230,22 @@ public class SkyBoxRelated {
         Matrix4x3 var22 = new Matrix4x3();
         arg0.method524(var22);
         Matrix4x3 var23 = arg0.method516();
-        var23.method5114(0.0F, 0.0F, (float) (50 - var15.method280()));
+        var23.method5114(0.0F, 0.0F, (float) (50 - var15.AA()));
         var15.method271(var23, null, 1);
         this.field3967 = arg0.method508(0, 0, this.field3972, this.field3972, true);
         this.field3967.method1052(0, 0, 3);
         arg0.method784(var20);
-        arg0.method659(field3980[0], field3980[1], field3980[2], field3980[3]);
+        arg0.r(field3980[0], field3980[1], field3980[2], field3980[3]);
     }
 
     @ObfuscatedName("mh.t(Lra;Lmh;)V")
     public void method6408(RendererToolkit arg0, SkyBoxRelated arg1) {
         method6413(arg0);
         method6412(arg0);
-        arg0.method453(field3980);
-        arg0.method659(0, 0, this.field3972, this.field3972);
-        arg0.method505(2, 0);
-        arg0.method489(0, 0, this.field3972, this.field3972, this.field3952 | 0xFF000000, 0);
+        arg0.qa(field3980);
+        arg0.r(0, 0, this.field3972, this.field3972);
+        arg0.ba(2, 0);
+        arg0.B(0, 0, this.field3972, this.field3972, this.field3952 | 0xFF000000, 0);
         int var3 = 0;
         int var4 = 0;
         int var5 = 256;
@@ -275,10 +275,10 @@ public class SkyBoxRelated {
             var3 = var11;
         }
         Model var12 = Statics.field3977.method295((byte) 0, 51200, true);
-        var12.method289((short) 0, (short) this.field3960);
-        arg0.method529(1.0F);
-        arg0.method530(16777215, 1.0F, 1.0F, (float) var3, (float) var4, (float) var5);
-        int var13 = this.field3972 * 1024 / (var12.method277() - var12.method358());
+        var12.W((short) 0, (short) this.field3960);
+        arg0.IA(1.0F);
+        arg0.m(16777215, 1.0F, 1.0F, (float) var3, (float) var4, (float) var5);
+        int var13 = this.field3972 * 1024 / (var12.ya() - var12.RA());
         if (this.field3952 != 0) {
             var13 = var13 * 13 / 16;
         }
@@ -288,18 +288,18 @@ public class SkyBoxRelated {
         arg0.method784(var15);
         arg0.method524(new Matrix4x3());
         Matrix4x3 var16 = new Matrix4x3();
-        var16.method5114(0.0F, 0.0F, (float) (50 - var12.method280()));
+        var16.method5114(0.0F, 0.0F, (float) (50 - var12.AA()));
         var12.method271(var16, null, 1);
         int var17 = this.field3972 * 13 / 16;
         int var18 = (this.field3972 - var17) / 2;
         Statics.field3978.method2502(var18, var18, var17, var17, 0, this.field3952 | 0xFF000000, 1);
         this.field3967 = arg0.method508(0, 0, this.field3972, this.field3972, true);
-        arg0.method505(2, 0);
-        arg0.method489(0, 0, this.field3972, this.field3972, 0, 0);
+        arg0.ba(2, 0);
+        arg0.B(0, 0, this.field3972, this.field3972, 0, 0);
         Statics.field3979.method2502(0, 0, this.field3972, this.field3972, 1, 0, 0);
         this.field3967.method1052(0, 0, 3);
         arg0.method784(var14);
-        arg0.method659(field3980[0], field3980[1], field3980[2], field3980[3]);
+        arg0.r(field3980[0], field3980[1], field3980[2], field3980[3]);
     }
 
     @ObfuscatedName("mh.l(Lra;)V")

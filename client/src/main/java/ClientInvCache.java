@@ -199,9 +199,9 @@ public class ClientInvCache extends Node {
         if (field9274 != null) {
             var7 = (Model) field9274.method7916(var13);
         }
-        if (var7 == null || arg0.method519(var7.method329(), var8) != 0) {
+        if (var7 == null || arg0.method519(var7.m(), var8) != 0) {
             if (var7 != null) {
-                var8 = arg0.method520(var8, var7.method329());
+                var8 = arg0.method520(var8, var7.m());
             }
             int var15 = var8;
             boolean var16 = false;
@@ -246,13 +246,13 @@ public class ClientInvCache extends Node {
                 for (int var28 = 0; var28 < 10; var28++) {
                     for (int var29 = 0; var29 < Statics.field5009[var28].length; var29++) {
                         if (arg5.field5000[var28] < Statics.field5010[var28][var29].length) {
-                            var7.method287(Statics.field5009[var28][var29], Statics.field5010[var28][var29][arg5.field5000[var28]]);
+                            var7.X(Statics.field5009[var28][var29], Statics.field5010[var28][var29][arg5.field5000[var28]]);
                         }
                     }
                 }
             }
             if (field9274 != null) {
-                var7.method252(var8);
+                var7.KA(var8);
                 field9274.method7937(var7, var13);
             }
         }

@@ -287,8 +287,8 @@ public class DeveloperConsole {
 
     @ObfuscatedName("va.o(Lra;B)V")
     public static void method12188(RendererToolkit arg0) {
-        arg0.method659(0, 0, Statics.field4125, 350);
-        arg0.method489(0, 0, Statics.field4125, 350, field793 * 36 << 24 | 0x332277, 1);
+        arg0.r(0, 0, Statics.field4125, 350);
+        arg0.B(0, 0, Statics.field4125, 350, field793 * 36 << 24 | 0x332277, 1);
         int var1 = 350 / Statics.field794;
         if (field796 > 0) {
             int var2 = 346 - Statics.field794 - 4;
@@ -297,19 +297,19 @@ public class DeveloperConsole {
             if (field796 > 1) {
                 var4 += (field796 - 1 - field797) * (var2 - var3) / (field796 - 1);
             }
-            arg0.method489(Statics.field4125 - 16, var4, 12, var3, field793 * 36 << 24 | 0x332277, 2);
+            arg0.B(Statics.field4125 - 16, var4, 12, var3, field793 * 36 << 24 | 0x332277, 2);
             for (int var5 = field797; var5 < field797 + var1 && var5 < field796; var5++) {
                 String[] var6 = StringTools.method11508(Statics.field792[var5], '\b');
                 int var7 = (Statics.field4125 - 8 - 16) / var6.length;
                 for (int var8 = 0; var8 < var6.length; var8++) {
                     int var9 = var7 * var8 + 8;
-                    arg0.method659(var9, 0, var7 + var9 - 8, 350);
+                    arg0.r(var9, 0, var7 + var9 - 8, 350);
                     Statics.field560.method833(method3505(var6[var8]), var9, 350 - Statics.field803 - 2 - Statics.field9813.field7177 - Statics.field794 * (var5 - field797), -1, -16777216);
                 }
             }
         }
         Statics.field2163.method862("742 1", Statics.field4125 - 25, 330, -1, -16777216);
-        arg0.method659(0, 0, Statics.field4125, 350);
+        arg0.r(0, 0, Statics.field4125, 350);
         arg0.method485(0, 350 - Statics.field803, Statics.field4125, -1);
         Statics.field670.method833("--> " + method3505(field798), 10, 350 - Statics.field2399.field7177 - 1, -1, -16777216);
         if (Statics.field578) {
@@ -319,7 +319,7 @@ public class DeveloperConsole {
             }
             arg0.method486(Statics.field2399.method12418("--> " + method3505(field798).substring(0, field806)) + 10, 350 - Statics.field2399.field7177 - 11, 12, var10);
         }
-        arg0.method753();
+        arg0.L();
         Statics.method4693();
     }
 
@@ -394,7 +394,7 @@ public class DeveloperConsole {
             method1958(LocalisedText.field6867.method12206(Statics.field2308));
             return;
         }
-        if (Statics.field6683 != ModeWhere.field6368 || client.field9074 >= 2) {
+        if (true || Statics.field6683 != ModeWhere.field6368 || client.field9074 >= 2) {
             try {
                 if (arg0.equalsIgnoreCase("wm1")) {
                     client.method7282(1, -1, -1, false);

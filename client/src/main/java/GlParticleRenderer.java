@@ -147,9 +147,9 @@ public class GlParticleRenderer {
                     arg0.method13312(-1);
                 }
                 if (var19 && Statics.field1134 != arg0.field8158) {
-                    arg0.method529(Statics.field1134);
+                    arg0.IA(Statics.field1134);
                 } else if (arg0.field8158 != 1.0F) {
-                    arg0.method529(1.0F);
+                    arg0.IA(1.0F);
                 }
                 this.method2265(arg0, var14);
             }
@@ -411,7 +411,7 @@ public class GlParticleRenderer {
         OpenGL.glEnable(16384);
         OpenGL.glEnable(16385);
         if (Statics.field1134 != arg0.field8158) {
-            arg0.method529(Statics.field1134);
+            arg0.IA(Statics.field1134);
         }
     }
 }

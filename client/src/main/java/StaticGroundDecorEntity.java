@@ -57,7 +57,7 @@ public class StaticGroundDecorEntity extends GroundDecorLayerEntity implements L
                 this.field7580 = this.field7580.method295((byte) 0, var13, false);
                 if (arg3.field6472) {
                     LocTint var15 = client.field8980.method6094();
-                    this.field7580.method290(var15.field3783, var15.field3782, var15.field3781, var15.field3784);
+                    this.field7580.PA(var15.field3783, var15.field3782, var15.field3781, var15.field3784);
                 }
             }
         }
@@ -69,23 +69,23 @@ public class StaticGroundDecorEntity extends GroundDecorLayerEntity implements L
         if (this.field7580 == null) {
             return true;
         } else {
-            return !this.field7580.method293();
+            return !this.field7580.u();
         }
     }
 
     @ObfuscatedName("yw.ba(I)Z")
     public boolean method12808() {
-        return this.field7580 == null ? false : this.field7580.method292();
+        return this.field7580 == null ? false : this.field7580.i();
     }
 
     @ObfuscatedName("yw.bc(I)I")
     public int method12809() {
-        return this.field7580 == null ? 0 : this.field7580.method278();
+        return this.field7580 == null ? 0 : this.field7580.YA();
     }
 
     @ObfuscatedName("yw.bd(Lra;II)Lqa;")
     public Model method12905(RendererToolkit arg0, int arg1) {
-        if (this.field7580 != null && arg0.method519(this.field7580.method329(), arg1) == 0) {
+        if (this.field7580 != null && arg0.method519(this.field7580.m(), arg1) == 0) {
             return this.field7580;
         } else {
             Pair var3 = this.method12906(arg0, arg1, false);
@@ -168,7 +168,7 @@ public class StaticGroundDecorEntity extends GroundDecorLayerEntity implements L
     public void method12817() {
         this.field7587 = false;
         if (this.field7580 != null) {
-            this.field7580.method252(this.field7580.method329() & 0xFFFEFFFF);
+            this.field7580.KA(this.field7580.m() & 0xFFFEFFFF);
         }
     }
 

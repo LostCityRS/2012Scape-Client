@@ -770,12 +770,12 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.m()I")
-    public int method329() {
+    public int m() {
         return this.field7905;
     }
 
     @ObfuscatedName("yz.KA(I)V")
-    public void method252(int arg0) {
+    public void KA(int arg0) {
         this.field7905 = arg0;
         if (this.field7875 != null && (this.field7905 & 0x10000) == 0) {
             this.field7856 = this.field7875.field1185;
@@ -1226,7 +1226,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.f(I)V")
-    public void method246(int arg0) {
+    public void f(int arg0) {
         int var2 = Trig1.field3439[arg0];
         int var3 = Trig1.field3447[arg0];
         for (int var4 = 0; var4 < this.field7864; var4++) {
@@ -1241,7 +1241,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.S(I)V")
-    public void method249(int arg0) {
+    public void S(int arg0) {
         int var2 = Trig1.field3439[arg0];
         int var3 = Trig1.field3447[arg0];
         for (int var4 = 0; var4 < this.field7864; var4++) {
@@ -1267,7 +1267,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.t(I)V")
-    public void method397(int arg0) {
+    public void t(int arg0) {
         int var2 = Trig1.field3439[arg0];
         int var3 = Trig1.field3447[arg0];
         for (int var4 = 0; var4 < this.field7864; var4++) {
@@ -1282,7 +1282,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.EA(I)V")
-    public void method284(int arg0) {
+    public void EA(int arg0) {
         int var2 = Trig1.field3439[arg0];
         int var3 = Trig1.field3447[arg0];
         for (int var4 = 0; var4 < this.field7864; var4++) {
@@ -1297,7 +1297,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.ia(III)V")
-    public void method353(int arg0, int arg1, int arg2) {
+    public void ia(int arg0, int arg1, int arg2) {
         for (int var4 = 0; var4 < this.field7864; var4++) {
             if (arg0 != 0) {
                 this.field7865[var4] += arg0;
@@ -1316,7 +1316,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.wa()V")
-    public void method253() {
+    public void wa() {
         for (int var1 = 0; var1 < this.field7864; var1++) {
             this.field7904[var1] = -this.field7904[var1];
         }
@@ -1344,7 +1344,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.oa(III)V")
-    public void method245(int arg0, int arg1, int arg2) {
+    public void oa(int arg0, int arg1, int arg2) {
         for (int var4 = 0; var4 < this.field7864; var4++) {
             if (arg0 != 128) {
                 this.field7865[var4] = this.field7865[var4] * arg0 >> 7;
@@ -1363,7 +1363,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.pa(IILxa;Lxa;III)V")
-    public void method255(int arg0, int arg1, FloorModel arg2, FloorModel arg3, int arg4, int arg5, int arg6) {
+    public void pa(int arg0, int arg1, FloorModel arg2, FloorModel arg3, int arg4, int arg5, int arg6) {
         if (!this.field7898) {
             this.method13082();
         }
@@ -1489,7 +1489,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.N()I")
-    public int method274() {
+    public int N() {
         if (!this.field7898) {
             this.method13082();
         }
@@ -1497,7 +1497,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.n()I")
-    public int method275() {
+    public int n() {
         if (!this.field7898) {
             this.method13082();
         }
@@ -1505,7 +1505,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.RA()I")
-    public int method358() {
+    public int RA() {
         if (!this.field7898) {
             this.method13082();
         }
@@ -1513,7 +1513,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.ya()I")
-    public int method277() {
+    public int ya() {
         if (!this.field7898) {
             this.method13082();
         }
@@ -1521,7 +1521,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.YA()I")
-    public int method278() {
+    public int YA() {
         if (!this.field7898) {
             this.method13082();
         }
@@ -1529,7 +1529,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.o()I")
-    public int method279() {
+    public int o() {
         if (!this.field7898) {
             this.method13082();
         }
@@ -1537,7 +1537,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.AA()I")
-    public int method280() {
+    public int AA() {
         if (!this.field7898) {
             this.method13082();
         }
@@ -1545,7 +1545,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.ha()I")
-    public int method281() {
+    public int ha() {
         if (!this.field7898) {
             this.method13082();
         }
@@ -1709,7 +1709,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.p(I)V")
-    public void method282(int arg0) {
+    public void p(int arg0) {
         this.field7859 = (short) arg0;
         if (this.field7889 != null) {
             this.field7889.field1097 = null;
@@ -1717,7 +1717,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.Q(I)V")
-    public void method283(int arg0) {
+    public void Q(int arg0) {
         this.field7860 = (short) arg0;
         if (this.field7889 != null) {
             this.field7889.field1097 = null;
@@ -1728,22 +1728,22 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.c()I")
-    public int method398() {
+    public int c() {
         return this.field7859;
     }
 
     @ObfuscatedName("yz.Z()I")
-    public int method285() {
+    public int Z() {
         return this.field7860;
     }
 
     @ObfuscatedName("yz.ao()[B")
-    public byte[] method334() {
+    public byte[] ao() {
         return this.field7881;
     }
 
     @ObfuscatedName("yz.X(SS)V")
-    public void method287(short arg0, short arg1) {
+    public void X(short arg0, short arg1) {
         for (int var3 = 0; var3 < this.field7883 * -1431655765; var3++) {
             if (this.field7912[var3] == arg0) {
                 this.field7912[var3] = arg1;
@@ -1779,7 +1779,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.W(SS)V")
-    public void method289(short arg0, short arg1) {
+    public void W(short arg0, short arg1) {
         MaterialTypeList var3 = this.field7891.field400;
         for (int var4 = 0; var4 < this.field7883 * -1431655765; var4++) {
             if (this.field7897[var4] == arg0) {
@@ -1819,7 +1819,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.PA(IIII)V")
-    public void method290(int arg0, int arg1, int arg2, int arg3) {
+    public void PA(int arg0, int arg1, int arg2, int arg3) {
         for (int var5 = 0; var5 < this.field7883 * -1431655765; var5++) {
             int var6 = this.field7912[var5] & 0xFFFF;
             int var7 = var6 >> 10 & 0x3F;
@@ -1862,12 +1862,12 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.i()Z")
-    public boolean method292() {
+    public boolean i() {
         return this.field7913;
     }
 
     @ObfuscatedName("yz.u()Z")
-    public boolean method293() {
+    public boolean u() {
         return this.field7867;
     }
 
@@ -1880,7 +1880,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.ea()Z")
-    public boolean method421() {
+    public boolean ea() {
         if (this.field7868 == null) {
             return false;
         }
@@ -1896,7 +1896,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.e(I[IIIIZI[I)V")
-    public void method267(int arg0, int[] arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6, int[] arg7) {
+    public void e(int arg0, int[] arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6, int[] arg7) {
         int var9 = arg1.length;
         if (arg0 == 0) {
             int var10 = arg2 << 4;
@@ -2351,7 +2351,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.w(IIII)V")
-    public void method343(int arg0, int arg1, int arg2, int arg3) {
+    public void w(int arg0, int arg1, int arg2, int arg3) {
         if (arg0 == 0) {
             int var5 = 0;
             Statics.field7855 = 0;
@@ -2787,7 +2787,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.ka()V")
-    public void method269() {
+    public void ka() {
         for (int var1 = 0; var1 < this.field7863; var1++) {
             this.field7865[var1] = this.field7865[var1] + 7 >> 4;
             this.field7866[var1] = this.field7866[var1] + 7 >> 4;
@@ -3011,7 +3011,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.ga(Lna;)Lna;")
-    public HardShadow method273(HardShadow arg0) {
+    public HardShadow ga(HardShadow arg0) {
         if (this.field7870 == 0) {
             return null;
         }
@@ -3234,7 +3234,7 @@ public class GlModel extends Model {
         }
         Matrix4x4 var2 = this.field7891.field8087;
         this.field7891.method13281();
-        this.field7891.method526(!this.field7913);
+        this.field7891.RA(!this.field7913);
         this.field7891.method13322(false);
         this.field7891.method13305(this.field7891.field8221, null, null, this.field7891.field8211);
         for (int var3 = 0; var3 < this.field7910; var3++) {
@@ -3257,7 +3257,7 @@ public class GlModel extends Model {
                 this.field7891.method13306(7, 0, 4);
             }
         }
-        this.field7891.method526(true);
+        this.field7891.RA(true);
         this.field7891.method13357();
     }
 

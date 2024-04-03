@@ -1043,7 +1043,7 @@ public class Scene {
             this.method7404(true);
             this.field4489.method503(-1, new WaterFogData(1583160, 40, 127, 63, 0, 0, 0));
             this.method7503(true, arg4, arg10, arg11, arg16);
-            this.field4489.method548();
+            this.field4489.O();
             this.method7404(false);
         }
         this.method7503(false, arg4, arg10, arg11, arg16);
@@ -1324,7 +1324,7 @@ public class Scene {
                             continue;
                         }
                     }
-                    var9.method209(arg0, arg2, var10, arg3, 0, false);
+                    var9.UA(arg0, arg2, var10, arg3, 0, false);
                     var6 = true;
                 }
             }
@@ -1342,7 +1342,7 @@ public class Scene {
             if (arg4 == null || arg4[var7]) {
                 FloorModel var8 = this.field4527[var7];
                 if (var8 != null) {
-                    var8.method194(arg0, arg2, var6 - var8.method196(arg2, arg3), arg3, 0, false);
+                    var8.NA(arg0, arg2, var6 - var8.method196(arg2, arg3), arg3, 0, false);
                 }
             }
         }
@@ -1356,7 +1356,7 @@ public class Scene {
             if (var5 != null) {
                 for (int var6 = 0; var6 < this.field4496; var6++) {
                     for (int var7 = 0; var7 < this.field4495; var7++) {
-                        var3 = var5.method200(var7, var6, var3);
+                        var3 = var5.w(var7, var6, var3);
                         if (var3 != null) {
                             int var8 = var7 << this.field4510;
                             int var9 = var6 << this.field4510;
@@ -1367,7 +1367,7 @@ public class Scene {
                                     int var13 = var5.method199(var7 + 1, var6) - var11.method199(var7 + 1, var6);
                                     int var14 = var5.method199(var7 + 1, var6 + 1) - var11.method199(var7 + 1, var6 + 1);
                                     int var15 = var5.method199(var7, var6 + 1) - var11.method199(var7, var6 + 1);
-                                    var11.method209(var3, var8, (var12 + var13 + var14 + var15) / 4, var9, 0, false);
+                                    var11.UA(var3, var8, (var12 + var13 + var14 + var15) / 4, var9, 0, false);
                                 }
                             }
                         }

@@ -252,9 +252,9 @@ public class ProjectileAnimation extends PrimaryLayerEntity {
             ParticleList var5 = this.field10632.method8112();
             arg0.method733(var5);
         }
-        this.field10637 = var2.method292();
-        var2.method275();
-        this.field10636 = var2.method278();
+        this.field10637 = var2.i();
+        var2.n();
+        this.field10636 = var2.YA();
         return var4;
     }
 
@@ -263,8 +263,8 @@ public class ProjectileAnimation extends PrimaryLayerEntity {
         Model var2 = this.method17156(arg0, 0);
         if (var2 != null) {
             Matrix4x3 var3 = this.method8558();
-            this.field10636 = var2.method278();
-            var2.method275();
+            this.field10636 = var2.YA();
+            var2.n();
             this.method17158(arg0, var2, var3);
         }
     }

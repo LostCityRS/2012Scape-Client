@@ -125,9 +125,9 @@ public class NpcEntity extends PathingEntity {
                 }
                 var10 = PickableEntity.method12205(this.method16155());
                 this.field8650 = true;
-                arg0.method526(false);
+                arg0.RA(false);
                 var13.method271(var4, this.field9811[this.field8651.length], 0);
-                arg0.method526(true);
+                arg0.RA(true);
             }
         }
         if (this.field9811 == null || this.field9811.length < this.field8651.length) {
@@ -140,7 +140,7 @@ public class NpcEntity extends PathingEntity {
         for (int var14 = 0; var14 < this.field8651.length; var14++) {
             if (this.field8651[var14] != null) {
                 if (this.field10075.field7275) {
-                    this.field8651[var14].method290(this.field10081, this.field10082, this.field10083, this.field10084);
+                    this.field8651[var14].PA(this.field10081, this.field10082, this.field10083, this.field10084);
                 }
                 this.field8651[var14].method271(var4, this.field9811[var14], 0);
             }
@@ -151,7 +151,7 @@ public class NpcEntity extends PathingEntity {
         }
         for (int var16 = 0; var16 < this.field8651.length; var16++) {
             if (this.field8651[var16] != null) {
-                this.field8650 |= this.field8651[var16].method292();
+                this.field8650 |= this.field8651[var16].i();
             }
             this.field8651[var16] = null;
         }
@@ -179,25 +179,25 @@ public class NpcEntity extends PathingEntity {
         if (var11 == null) {
             return false;
         }
-        this.field8622 = var11.method278();
-        var11.method275();
+        this.field8622 = var11.YA();
+        var11.n();
         this.method13972(var11);
         if (var7 == 0 && var8 == 0) {
             this.method13958(var10, this.method13954() << 9, this.method13954() << 9, 0, 0);
         } else {
             this.method13958(var10, var7, var8, var4.field4700, var4.field4715);
             if (this.field8601 != 0) {
-                this.field8651[0].method397(this.field8601);
+                this.field8651[0].t(this.field8601);
             }
             if (this.field8644 != 0) {
-                this.field8651[0].method284(this.field8644);
+                this.field8651[0].EA(this.field8644);
             }
             if (this.field8603 != 0) {
-                this.field8651[0].method353(0, this.field8603, 0);
+                this.field8651[0].ia(0, this.field8603, 0);
             }
         }
         if (var9) {
-            var11.method290(this.field8596, this.field8602, this.field8617, this.field8631 & 0xFF);
+            var11.PA(this.field8596, this.field8602, this.field8617, this.field8631 & 0xFF);
         }
         this.method13957(arg0, var4, var3, var7, var8, var10);
         return true;

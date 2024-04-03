@@ -34,7 +34,7 @@ public class o extends Framebuffer {
 
     @ObfuscatedName("o.s()Z")
     public boolean method954() {
-        this.field478.method976(this.field479 == null ? 0L : this.field479.nativeid, this.field481 == null ? 0L : this.field481.nativeid);
+        this.field478.d(this.field479 == null ? 0L : this.field479.nativeid, this.field481 == null ? 0L : this.field481.nativeid);
         return true;
     }
 
@@ -101,7 +101,7 @@ public class o extends Framebuffer {
         } else {
             var11 = this.field481.nativeid;
         }
-        this.method1209(this.field478.nativeid, var9, var11, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+        this.BA(this.field478.nativeid, var9, var11, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     @ObfuscatedName("o.a()V")
@@ -109,5 +109,5 @@ public class o extends Framebuffer {
     }
 
     @ObfuscatedName("o.BA(JJJIIIIIIZZ)V")
-    public native void method1209(long arg0, long arg1, long arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, boolean arg10);
+    public native void BA(long arg0, long arg1, long arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, boolean arg10);
 }

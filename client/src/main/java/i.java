@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("i")
-public class i extends FloorModel implements SoftwareRendererRelated {
+public class i extends FloorModel implements ua {
 
     public long nativeid;
 
@@ -14,18 +14,18 @@ public class i extends FloorModel implements SoftwareRendererRelated {
     public i(ja arg0, ba arg1, int arg2, int arg3, int[][] arg4, int[][] arg5, int arg6, int arg7, int arg8) {
         super(arg2, arg3, arg6, arg4);
         this.field475 = arg0;
-        this.method1177(this.field475, arg1, arg2, arg3, this.field389, arg5, arg6, arg7, arg8);
+        this.G(this.field475, arg1, arg2, arg3, this.field389, arg5, arg6, arg7, arg8);
     }
 
     public void finalize() {
         if (this.nativeid != 0L) {
-            SoftwareRendererRelated2.method2358(this);
+            cp.method2358(this);
         }
     }
 
     @ObfuscatedName("i.u(II[I[I[I[I[I[I[I[ILdk;Z)V")
     public final void method193(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, WaterFogData arg10, boolean arg11) {
-        this.method1178(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10.field1475, arg10.field1471, arg10.field1474, arg11);
+        this.ya(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10.field1475, arg10.field1471, arg10.field1474, arg11);
     }
 
     @ObfuscatedName("i.j(II[I[I[I[I[I[I[I[I[I[I[ILdk;Z)V")
@@ -102,7 +102,7 @@ public class i extends FloorModel implements SoftwareRendererRelated {
             var29++;
         }
         if (var16 || var26 != null) {
-            this.method1178(arg0, arg1, var21, var27, var22, var28, var23, var26, var24, var25, arg13.field1475, arg13.field1471, arg13.field1474, arg14);
+            this.ya(arg0, arg1, var21, var27, var22, var28, var23, var26, var24, var25, arg13.field1475, arg13.field1471, arg13.field1474, arg14);
         }
     }
 
@@ -113,7 +113,7 @@ public class i extends FloorModel implements SoftwareRendererRelated {
         for (Light var9 = (Light) this.field476.method11563(); var9 != null; var9 = (Light) this.field476.method11567()) {
             var8[var7++] = var9.method14893();
         }
-        this.method1180(var8);
+        this.t(var8);
         for (int var10 = 0; var10 < arg2 + arg2; var10++) {
             for (int var11 = 0; var11 < arg2 + arg2; var11++) {
                 if (arg3[var10][var11]) {
@@ -140,36 +140,36 @@ public class i extends FloorModel implements SoftwareRendererRelated {
     @ObfuscatedName("i.f(Lacg;[I)V")
     public void method204(Light arg0, int[] arg1) {
         this.field476.method11558(arg0);
-        this.method1179(arg0.hashCode(), arg0.method14888(), arg0.method14882(), arg0.method14879(), arg0.method14880(), arg0.method14881(), arg1);
+        this.A(arg0.hashCode(), arg0.method14888(), arg0.method14882(), arg0.method14879(), arg0.method14880(), arg0.method14881(), arg1);
     }
 
     @ObfuscatedName("i.G(Lja;Lba;II[[I[[IIII)V")
-    public native void method1177(ja arg0, ba arg1, int arg2, int arg3, int[][] arg4, int[][] arg5, int arg6, int arg7, int arg8);
+    public native void G(ja arg0, ba arg1, int arg2, int arg3, int[][] arg4, int[][] arg5, int arg6, int arg7, int arg8);
 
     @ObfuscatedName("i.ma(Z)V")
-    public native void method92(boolean arg0);
+    public native void ma(boolean arg0);
 
     @ObfuscatedName("i.ya(II[I[I[I[I[I[I[I[IIIIZ)V")
-    public native void method1178(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, int arg10, int arg11, int arg12, boolean arg13);
+    public native void ya(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, int arg10, int arg11, int arg12, boolean arg13);
 
     @ObfuscatedName("i.SA()V")
-    public native void method195();
+    public native void SA();
 
     @ObfuscatedName("i.w(IILna;)Lna;")
-    public native HardShadow method200(int arg0, int arg1, HardShadow arg2);
+    public native HardShadow w(int arg0, int arg1, HardShadow arg2);
 
     @ObfuscatedName("i.NA(Lna;IIIIZ)V")
-    public native void method194(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
+    public native void NA(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
 
     @ObfuscatedName("i.A(IIIIII[I)V")
-    public native void method1179(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int[] arg6);
+    public native void A(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int[] arg6);
 
     @ObfuscatedName("i.LA(III)V")
-    public native void method192(int arg0, int arg1, int arg2);
+    public native void LA(int arg0, int arg1, int arg2);
 
     @ObfuscatedName("i.t([F)V")
-    public native void method1180(float[] arg0);
+    public native void t(float[] arg0);
 
     @ObfuscatedName("i.UA(Lna;IIIIZ)V")
-    public native void method209(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
+    public native void UA(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5);
 }

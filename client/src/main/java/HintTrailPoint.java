@@ -29,13 +29,13 @@ public class HintTrailPoint extends PrimaryLayerEntity {
         if (this.field10647 == null) {
             return true;
         } else {
-            return !this.field10647.method293();
+            return !this.field10647.u();
         }
     }
 
     @ObfuscatedName("alb.ba(I)Z")
     public boolean method12808() {
-        return this.field10647 == null ? false : this.field10647.method292();
+        return this.field10647 == null ? false : this.field10647.i();
     }
 
     @ObfuscatedName("alb.bw(Lra;Laes;IIIZI)V")
@@ -76,6 +76,6 @@ public class HintTrailPoint extends PrimaryLayerEntity {
 
     @ObfuscatedName("alb.bc(I)I")
     public int method12809() {
-        return this.field10647 == null ? 0 : this.field10647.method278();
+        return this.field10647 == null ? 0 : this.field10647.YA();
     }
 }

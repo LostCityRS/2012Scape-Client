@@ -32,8 +32,8 @@ public class GlEnvironmentSampler_Sub1 extends GlEnvironmentSampler {
     public boolean method16015(GlCubeTexture arg0, GlCubeTexture arg1, float arg2) {
         boolean var4 = true;
         GlFramebuffer var5 = this.field9950.field8152;
-        this.field9950.method453(field9949);
-        this.field9950.method753();
+        this.field9950.qa(field9949);
+        this.field9950.L();
         this.field9950.method13324();
         OpenGL.glMatrixMode(5889);
         OpenGL.glLoadIdentity();
@@ -159,7 +159,7 @@ public class GlEnvironmentSampler_Sub1 extends GlEnvironmentSampler {
         this.field9950.method13314(0);
         this.field9950.method13315(null);
         OpenGL.glPopAttrib();
-        this.field9950.method659(field9949[0], field9949[1], field9949[2], field9949[3]);
+        this.field9950.r(field9949[0], field9949[1], field9949[2], field9949[3]);
         if (var4 && !this.field9950.field8191) {
             this.field9951.method2046();
         }

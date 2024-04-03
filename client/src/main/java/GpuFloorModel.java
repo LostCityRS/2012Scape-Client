@@ -177,7 +177,7 @@ public class GpuFloorModel extends FloorModel {
     }
 
     @ObfuscatedName("yn.LA(III)V")
-    public void method192(int arg0, int arg1, int arg2) {
+    public void LA(int arg0, int arg1, int arg2) {
         if ((this.field7728[arg0][arg1] & 0xFF) < arg2) {
             this.field7728[arg0][arg1] = (byte) arg2;
         }
@@ -294,7 +294,7 @@ public class GpuFloorModel extends FloorModel {
     }
 
     @ObfuscatedName("yn.SA()V")
-    public void method195() {
+    public void SA() {
         if (this.field7746 <= 0) {
             this.field7740 = null;
             this.method12991();
@@ -925,16 +925,16 @@ public class GpuFloorModel extends FloorModel {
         var20.field2269 = 0;
         var20.field2252 = var10 / 3;
         if (this.field7722.field8305) {
-            this.field7722.method526(false);
+            this.field7722.RA(false);
             var20.method3849(false);
-            this.field7722.method526(true);
+            this.field7722.RA(true);
         } else {
             var20.method3849(false);
         }
     }
 
     @ObfuscatedName("yn.w(IILna;)Lna;")
-    public HardShadow method200(int arg0, int arg1, HardShadow arg2) {
+    public HardShadow w(int arg0, int arg1, HardShadow arg2) {
         if ((this.field7748[arg0][arg1] & 0x1) == 0) {
             return null;
         }
@@ -991,7 +991,7 @@ public class GpuFloorModel extends FloorModel {
     }
 
     @ObfuscatedName("yn.UA(Lna;IIIIZ)V")
-    public void method209(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+    public void UA(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
         if (this.field7740 != null && arg0 != null) {
             int var7 = arg1 - (this.field7722.field8327 * arg2 >> 8) >> this.field7722.field8326;
             int var8 = arg3 - (this.field7722.field8371 * arg2 >> 8) >> this.field7722.field8326;
@@ -1000,7 +1000,7 @@ public class GpuFloorModel extends FloorModel {
     }
 
     @ObfuscatedName("yn.NA(Lna;IIIIZ)V")
-    public void method194(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
+    public void NA(HardShadow arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
         if (this.field7740 != null && arg0 != null) {
             int var7 = arg1 - (this.field7722.field8327 * arg2 >> 8) >> this.field7722.field8326;
             int var8 = arg3 - (this.field7722.field8371 * arg2 >> 8) >> this.field7722.field8326;

@@ -99,7 +99,7 @@ public class GpuParticleRenderer {
 
     @ObfuscatedName("hw.a(Lyk;Ldp;)V")
     public void method4478(GpuToolkit arg0, ParticleList arg1) {
-        arg0.method526(false);
+        arg0.RA(false);
         Statics.field2514 = arg0.field8319;
         float var3 = arg0.field8258.field3480[2];
         float var4 = arg0.field8258.field3480[6];
@@ -136,9 +136,9 @@ public class GpuParticleRenderer {
         var16.field2272 = -1;
         this.method4480(arg0, var10, var14, var8, var15, var16);
         if (Statics.field2514 != arg0.field8319) {
-            arg0.method529(Statics.field2514);
+            arg0.IA(Statics.field2514);
         }
-        arg0.method526(true);
+        arg0.RA(true);
     }
 
     @ObfuscatedName("hw.s(Lyk;Lacl;IIILft;)V")
@@ -172,9 +172,9 @@ public class GpuParticleRenderer {
             }
             arg5.field2271 = var9 >= 0 ? arg0.field8336.method4359(var9) : null;
             if (var10 && Statics.field2514 != arg0.field8319) {
-                arg0.method529(Statics.field2514);
+                arg0.IA(Statics.field2514);
             } else if (arg0.field8319 != 1.0F) {
-                arg0.method529(1.0F);
+                arg0.IA(1.0F);
             }
             this.method4469(arg0, arg2);
         }

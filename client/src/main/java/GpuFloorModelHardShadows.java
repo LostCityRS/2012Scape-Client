@@ -58,7 +58,7 @@ public class GpuFloorModelHardShadows {
 
     @ObfuscatedName("hx.j(Lfq;III[[ZZ)V")
     public void method4375(ModelShader arg0, int arg1, int arg2, int arg3, boolean[][] arg4, boolean arg5) {
-        this.field2469.method526(false);
+        this.field2469.RA(false);
         float var7 = 1.0F / (float) (this.field2469.field8263 * 128);
         if (arg5) {
             for (int var8 = 0; var8 < this.field2470; var8++) {
@@ -141,7 +141,7 @@ public class GpuFloorModelHardShadows {
                 }
             }
         }
-        this.field2469.method526(true);
+        this.field2469.RA(true);
     }
 
     @ObfuscatedName("hx.a(Lna;II)V")

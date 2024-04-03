@@ -152,26 +152,26 @@ public class ObjStackEntity extends ObjLayerEntity {
             Model var35 = Statics.field3492.method12316(this.field10609).method12241(arg0, 526336, this.field10610, null, null, this.field10614, this.field10615, this.field10616, this.field10617);
             if (var35 != null) {
                 var35.method271(var6, this.field9811[2], 0);
-                this.field10613 |= var35.method292();
-                this.field10612 = var35.method275();
+                this.field10613 |= var35.i();
+                this.field10612 = var35.n();
             }
         }
         if (this.field10607 != -1) {
             Model var36 = Statics.field3492.method12316(this.field10607).method12241(arg0, 526336, this.field10608, null, null, this.field10614, this.field10615, this.field10616, this.field10617);
             if (var36 != null) {
                 var36.method271(var6, this.field9811[1], 0);
-                this.field10613 |= var36.method292();
-                if (var36.method275() > this.field10612) {
-                    this.field10612 = var36.method275();
+                this.field10613 |= var36.i();
+                if (var36.n() > this.field10612) {
+                    this.field10612 = var36.n();
                 }
             }
         }
         Model var37 = Statics.field3492.method12316(this.field10611).method12241(arg0, 526336, this.field10605, null, null, this.field10614, this.field10615, this.field10616, this.field10617);
         if (var37 != null) {
             var37.method271(var6, this.field9811[0], 0);
-            this.field10613 |= var37.method292();
-            if (var37.method275() > this.field10612) {
-                this.field10612 = var37.method275();
+            this.field10613 |= var37.i();
+            if (var37.n() > this.field10612) {
+                this.field10612 = var37.n();
             }
         }
         return var34;

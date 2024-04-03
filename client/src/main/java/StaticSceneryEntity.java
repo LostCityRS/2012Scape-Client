@@ -62,7 +62,7 @@ public class StaticSceneryEntity extends PrimaryLayerEntity implements Location 
                 this.field7537 = this.field7537.method295((byte) 0, var18, false);
                 if (arg3.field6472) {
                     LocTint var20 = client.field8980.method6094();
-                    this.field7537.method290(var20.field3783, var20.field3782, var20.field3781, var20.field3784);
+                    this.field7537.PA(var20.field3783, var20.field3782, var20.field3781, var20.field3784);
                 }
             }
         }
@@ -74,13 +74,13 @@ public class StaticSceneryEntity extends PrimaryLayerEntity implements Location 
         if (this.field7537 == null) {
             return true;
         } else {
-            return !this.field7537.method293();
+            return !this.field7537.u();
         }
     }
 
     @ObfuscatedName("yp.ba(I)Z")
     public boolean method12808() {
-        return this.field7537 == null ? false : this.field7537.method292();
+        return this.field7537 == null ? false : this.field7537.i();
     }
 
     @ObfuscatedName("p.bd(III)B")
@@ -94,12 +94,12 @@ public class StaticSceneryEntity extends PrimaryLayerEntity implements Location 
 
     @ObfuscatedName("yp.bc(I)I")
     public int method12809() {
-        return this.field7537 == null ? 0 : this.field7537.method278();
+        return this.field7537 == null ? 0 : this.field7537.YA();
     }
 
     @ObfuscatedName("yp.bm(Lra;IB)Lqa;")
     public Model method12863(RendererToolkit arg0, int arg1) {
-        if (this.field7537 != null && arg0.method519(this.field7537.method329(), arg1) == 0) {
+        if (this.field7537 != null && arg0.method519(this.field7537.m(), arg1) == 0) {
             return this.field7537;
         } else {
             Pair var3 = this.method12864(arg0, arg1, false);
@@ -187,7 +187,7 @@ public class StaticSceneryEntity extends PrimaryLayerEntity implements Location 
     public void method12817() {
         this.field7533 = false;
         if (this.field7537 != null) {
-            this.field7537.method252(this.field7537.method329() & 0xFFFEFFFF);
+            this.field7537.KA(this.field7537.m() & 0xFFFEFFFF);
         }
     }
 
@@ -254,6 +254,6 @@ public class StaticSceneryEntity extends PrimaryLayerEntity implements Location 
 
     @ObfuscatedName("yp.cn(B)I")
     public int method12865() {
-        return this.field7537 == null ? 15 : this.field7537.method274() / 4;
+        return this.field7537 == null ? 15 : this.field7537.N() / 4;
     }
 }

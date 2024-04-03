@@ -558,7 +558,7 @@ public class WorldMap {
                                 if (var21 == 0) {
                                     var21 = -16777216;
                                 }
-                                arg0.method489(var8, var13, var10, var15, var21, 0);
+                                arg0.B(var8, var13, var10, var15, var21, 0);
                             } else if (var20 == null) {
                                 method7079(arg0, var8, var13, var10, var15, var18, var19, Statics.field4291[var17], null, null, true);
                             } else if (var20 instanceof WorldMapRelated14) {
@@ -590,7 +590,7 @@ public class WorldMap {
                         if (var28 == 0) {
                             var28 = -16777216;
                         }
-                        arg0.method489(var8, var25, var10, var27, var28, 0);
+                        arg0.B(var8, var25, var10, var27, var28, 0);
                     }
                 }
             }
@@ -693,13 +693,13 @@ public class WorldMap {
     public static void method7079(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int[] arg8, byte[] arg9, boolean arg10) {
         if (arg10 || arg5 != 0 || arg6 > 0) {
             if (arg6 == 0) {
-                arg0.method489(arg1, arg2, arg3, arg4, arg5, 0);
+                arg0.B(arg1, arg2, arg3, arg4, arg5, 0);
             } else {
                 int var11 = arg7 & 0x3F;
                 if (var11 == 0 || arg3 <= 1 || arg4 <= 1) {
                     int var13 = Statics.field4267[arg6];
                     if (arg10 || var13 != 0) {
-                        arg0.method489(arg1, arg2, arg3, arg4, var13, 0);
+                        arg0.B(arg1, arg2, arg3, arg4, var13, 0);
                     }
                 } else {
                     int var12 = arg10 ? 0 : 1;
@@ -734,46 +734,46 @@ public class WorldMap {
                     int var20 = arg9[var16] >> 6 & 0x3;
                     if (LocShape.field6591.field6590 == var17) {
                         if (var20 == 0) {
-                            arg0.method494(arg1, arg2, arg4, var19, 0);
+                            arg0.G(arg1, arg2, arg4, var19, 0);
                         } else if (var20 == 1) {
-                            arg0.method493(arg1, arg2, arg3, var19, 0);
+                            arg0.XA(arg1, arg2, arg3, var19, 0);
                         } else if (var20 == 2) {
-                            arg0.method494(var14, arg2, arg4, var19, 0);
+                            arg0.G(var14, arg2, arg4, var19, 0);
                         } else {
-                            arg0.method493(arg1, var15, arg3, var19, 0);
+                            arg0.XA(arg1, var15, arg3, var19, 0);
                         }
                     } else if (LocShape.field6569.field6590 == var17) {
                         if (var20 == 0) {
-                            arg0.method494(arg1, arg2, arg4, -1, 0);
-                            arg0.method493(arg1, arg2, arg3, var19, 0);
+                            arg0.G(arg1, arg2, arg4, -1, 0);
+                            arg0.XA(arg1, arg2, arg3, var19, 0);
                         } else if (var20 == 1) {
-                            arg0.method494(var14, arg2, arg4, -1, 0);
-                            arg0.method493(arg1, arg2, arg3, var19, 0);
+                            arg0.G(var14, arg2, arg4, -1, 0);
+                            arg0.XA(arg1, arg2, arg3, var19, 0);
                         } else if (var20 == 2) {
-                            arg0.method494(var14, arg2, arg4, -1, 0);
-                            arg0.method493(arg1, var15, arg3, var19, 0);
+                            arg0.G(var14, arg2, arg4, -1, 0);
+                            arg0.XA(arg1, var15, arg3, var19, 0);
                         } else {
-                            arg0.method494(arg1, arg2, arg4, -1, 0);
-                            arg0.method493(arg1, var15, arg3, var19, 0);
+                            arg0.G(arg1, arg2, arg4, -1, 0);
+                            arg0.XA(arg1, var15, arg3, var19, 0);
                         }
                     } else if (LocShape.field6570.field6590 == var17) {
                         if (var20 == 0) {
-                            arg0.method493(arg1, arg2, 1, var19, 0);
+                            arg0.XA(arg1, arg2, 1, var19, 0);
                         } else if (var20 == 1) {
-                            arg0.method493(var14, arg2, 1, var19, 0);
+                            arg0.XA(var14, arg2, 1, var19, 0);
                         } else if (var20 == 2) {
-                            arg0.method493(var14, var15, 1, var19, 0);
+                            arg0.XA(var14, var15, 1, var19, 0);
                         } else {
-                            arg0.method493(arg1, var15, 1, var19, 0);
+                            arg0.XA(arg1, var15, 1, var19, 0);
                         }
                     } else if (LocShape.field6567.field6590 == var17) {
                         if (var20 == 0 || var20 == 2) {
                             for (int var22 = 0; var22 < arg4; var22++) {
-                                arg0.method493(arg1 + var22, var15 - var22, 1, var19, 0);
+                                arg0.XA(arg1 + var22, var15 - var22, 1, var19, 0);
                             }
                         } else {
                             for (int var21 = 0; var21 < arg4; var21++) {
-                                arg0.method493(arg1 + var21, arg2 + var21, 1, var19, 0);
+                                arg0.XA(arg1 + var21, arg2 + var21, 1, var19, 0);
                             }
                         }
                     }

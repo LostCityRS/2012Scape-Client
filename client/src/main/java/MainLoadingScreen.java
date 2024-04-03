@@ -48,7 +48,7 @@ public class MainLoadingScreen implements LoadingScreen {
             this.field3418 = Statics.field5187;
             this.field3419 = true;
         }
-        this.field3418.method505(3, 0);
+        this.field3418.ba(3, 0);
         LoadingScreenElement[] var1 = this.field3417;
         for (int var2 = 0; var2 < var1.length; var2++) {
             LoadingScreenElement var3 = var1[var2];

@@ -42,7 +42,7 @@ public class FontRelated1 extends Font {
     }
 
     @ObfuscatedName("zw.UA(CIIIZ)V")
-    public void method848(char arg0, int arg1, int arg2, int arg3, boolean arg4) {
+    public void UA(char arg0, int arg1, int arg2, int arg3, boolean arg4) {
         if (this.field8430.field8001 == null) {
             return;
         }
@@ -180,7 +180,7 @@ public class FontRelated1 extends Font {
             return;
         }
         if (arg5 == null) {
-            this.method848(arg0, arg1, arg2, arg3, arg4);
+            this.UA(arg0, arg1, arg2, arg3, arg4);
             return;
         }
         int var9 = this.field8431[arg0] + arg1;

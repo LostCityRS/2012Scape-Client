@@ -224,9 +224,9 @@ public class PlayerModel {
         if (this.field5002 != -1) {
             var36 = arg2.method7784(this.field5002);
         }
-        if (var34 == null || arg0.method519(var34.method329(), var16) != 0) {
+        if (var34 == null || arg0.method519(var34.m(), var16) != 0) {
             if (var34 != null) {
-                var16 = arg0.method520(var16, var34.method329());
+                var16 = arg0.method520(var16, var34.m());
             }
             boolean var38 = false;
             int var39 = 0;
@@ -239,7 +239,7 @@ public class PlayerModel {
                                 var34 = (Model) field5012.method7916(this.field5008);
                             }
                         }
-                        if (var34 != null && arg0.method519(var34.method329(), var16) == 0) {
+                        if (var34 != null && arg0.method519(var34.m(), var16) == 0) {
                             break;
                         }
                         return null;
@@ -296,12 +296,12 @@ public class PlayerModel {
                     for (int var63 = 0; var63 < 10; var63++) {
                         for (int var64 = 0; var64 < Statics.field5009[var63].length; var64++) {
                             if (this.field5000[var63] < Statics.field5010[var63][var64].length) {
-                                var34.method287(Statics.field5009[var63][var64], Statics.field5010[var63][var64][this.field5000[var63]]);
+                                var34.X(Statics.field5009[var63][var64], Statics.field5010[var63][var64][this.field5000[var63]]);
                             }
                         }
                     }
                     if (arg13) {
-                        var34.method252(var16);
+                        var34.KA(var16);
                         WeightedCache var65 = field5012;
                         synchronized (field5012) {
                             field5012.method7937(var34, var17);
@@ -413,9 +413,9 @@ public class PlayerModel {
         synchronized (field4998) {
             var11 = (Model) field4998.method7916(this.field5007);
         }
-        if (var11 == null || arg0.method519(var11.method329(), var9) != 0) {
+        if (var11 == null || arg0.method519(var11.m(), var9) != 0) {
             if (var11 != null) {
-                var9 = arg0.method520(var9, var11.method329());
+                var9 = arg0.method520(var9, var11.m());
             }
             boolean var14 = false;
             for (int var15 = 0; var15 < this.field5001.length; var15++) {
@@ -461,11 +461,11 @@ public class PlayerModel {
             for (int var27 = 0; var27 < 10; var27++) {
                 for (int var28 = 0; var28 < Statics.field5009[var27].length; var28++) {
                     if (this.field5000[var27] < Statics.field5010[var27][var28].length) {
-                        var11.method287(Statics.field5009[var27][var28], Statics.field5010[var27][var28][this.field5000[var27]]);
+                        var11.X(Statics.field5009[var27][var28], Statics.field5010[var27][var28][this.field5000[var27]]);
                     }
                 }
             }
-            var11.method252(var9);
+            var11.KA(var9);
             WeightedCache var29 = field4998;
             synchronized (field4998) {
                 field4998.method7937(var11, this.field5007);
@@ -489,9 +489,9 @@ public class PlayerModel {
         synchronized (field4998) {
             var13 = (Model) field4998.method7916(var10);
         }
-        if (var13 == null || arg0.method519(var13.method329(), var9) != 0) {
+        if (var13 == null || arg0.method519(var13.m(), var9) != 0) {
             if (var13 != null) {
-                var9 = arg0.method520(var9, var13.method329());
+                var9 = arg0.method520(var9, var13.m());
             }
             ModelUnlit[] var16 = new ModelUnlit[3];
             int var17 = 0;
@@ -516,11 +516,11 @@ public class PlayerModel {
             for (int var23 = 0; var23 < 10; var23++) {
                 for (int var24 = 0; var24 < Statics.field5009[var23].length; var24++) {
                     if (this.field5000[var23] < Statics.field5010[var23][var24].length) {
-                        var13.method287(Statics.field5009[var23][var24], Statics.field5010[var23][var24][this.field5000[var23]]);
+                        var13.X(Statics.field5009[var23][var24], Statics.field5010[var23][var24][this.field5000[var23]]);
                     }
                 }
             }
-            var13.method252(var9);
+            var13.KA(var9);
             WeightedCache var25 = field4998;
             synchronized (field4998) {
                 field4998.method7937(var13, var10);

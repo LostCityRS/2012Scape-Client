@@ -67,7 +67,7 @@ public class StaticWallEntity extends WallLayerEntity implements Location {
                 this.field7557 = this.field7557.method295((byte) 0, var14, false);
                 if (arg3.field6472) {
                     LocTint var16 = client.field8980.method6094();
-                    this.field7557.method290(var16.field3783, var16.field3782, var16.field3781, var16.field3784);
+                    this.field7557.PA(var16.field3783, var16.field3782, var16.field3781, var16.field3784);
                 }
             }
         }
@@ -79,18 +79,18 @@ public class StaticWallEntity extends WallLayerEntity implements Location {
         if (this.field7557 == null) {
             return true;
         } else {
-            return !this.field7557.method293();
+            return !this.field7557.u();
         }
     }
 
     @ObfuscatedName("ye.ba(I)Z")
     public boolean method12808() {
-        return this.field7557 == null ? false : this.field7557.method292();
+        return this.field7557 == null ? false : this.field7557.i();
     }
 
     @ObfuscatedName("ye.bc(I)I")
     public int method12809() {
-        return this.field7557 == null ? 0 : this.field7557.method278();
+        return this.field7557 == null ? 0 : this.field7557.YA();
     }
 
     @ObfuscatedName("ew.bd(III)I")
@@ -100,7 +100,7 @@ public class StaticWallEntity extends WallLayerEntity implements Location {
 
     @ObfuscatedName("ye.bm(Lra;II)Lqa;")
     public Model method12890(RendererToolkit arg0, int arg1) {
-        if (this.field7557 != null && arg0.method519(this.field7557.method329(), arg1) == 0) {
+        if (this.field7557 != null && arg0.method519(this.field7557.m(), arg1) == 0) {
             return this.field7557;
         } else {
             Pair var3 = this.method12887(arg0, arg1, false);
@@ -188,7 +188,7 @@ public class StaticWallEntity extends WallLayerEntity implements Location {
     public void method12817() {
         this.field7563 = false;
         if (this.field7557 != null) {
-            this.field7557.method252(this.field7557.method329() & 0xFFFEFFFF);
+            this.field7557.KA(this.field7557.m() & 0xFFFEFFFF);
         }
     }
 

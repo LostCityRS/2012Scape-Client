@@ -234,22 +234,22 @@ public abstract class RendererToolkit {
 
     @ObfuscatedName("ra.bv(IIIIII)V")
     public final void method496(int arg0, int arg1, int arg2, int arg3, int arg4) {
-        this.method489(arg0, arg1, arg2, arg3, arg4, 1);
+        this.B(arg0, arg1, arg2, arg3, arg4, 1);
     }
 
     @ObfuscatedName("ra.bj(IIIIB)V")
     public final void method484(int arg0, int arg1, int arg2, int arg3) {
-        this.method601(arg0, arg1, arg2, arg3, 1);
+        this.CA(arg0, arg1, arg2, arg3, 1);
     }
 
     @ObfuscatedName("ra.bf(IIIII)V")
     public final void method485(int arg0, int arg1, int arg2, int arg3) {
-        this.method493(arg0, arg1, arg2, arg3, 1);
+        this.XA(arg0, arg1, arg2, arg3, 1);
     }
 
     @ObfuscatedName("ra.bt(IIIII)V")
     public final void method486(int arg0, int arg1, int arg2, int arg3) {
-        this.method494(arg0, arg1, arg2, arg3, 1);
+        this.G(arg0, arg1, arg2, arg3, 1);
     }
 
     @ObfuscatedName("ra.bg(IIIIII)V")
@@ -325,7 +325,7 @@ public abstract class RendererToolkit {
     public abstract boolean method452();
 
     @ObfuscatedName("ra.qa([I)V")
-    public abstract void method453(int[] arg0);
+    public abstract void qa(int[] arg0);
 
     @ObfuscatedName("ra.ap()Z")
     public abstract boolean method454();
@@ -349,16 +349,16 @@ public abstract class RendererToolkit {
     public abstract void method474(int arg0, int arg1, int arg2, int arg3);
 
     @ObfuscatedName("ra.GA(FF)V")
-    public abstract void method475(float arg0, float arg1);
+    public abstract void GA(float arg0, float arg1);
 
     @ObfuscatedName("ra.o(IIII)V")
-    public abstract void method478(int arg0, int arg1, int arg2, int arg3);
+    public abstract void o(int arg0, int arg1, int arg2, int arg3);
 
     @ObfuscatedName("ra.bl(IIIIII)V")
     public abstract void method488(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
 
     @ObfuscatedName("ra.B(IIIIII)V")
-    public abstract void method489(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
+    public abstract void B(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
 
     @ObfuscatedName("ra.aq()V")
     public abstract void method490();
@@ -367,10 +367,10 @@ public abstract class RendererToolkit {
     public abstract void method491(int arg0, int arg1, float arg2, int arg3, int arg4, float arg5, int arg6, int arg7, float arg8, int arg9, int arg10, int arg11, int arg12);
 
     @ObfuscatedName("ra.XA(IIIII)V")
-    public abstract void method493(int arg0, int arg1, int arg2, int arg3, int arg4);
+    public abstract void XA(int arg0, int arg1, int arg2, int arg3, int arg4);
 
     @ObfuscatedName("ra.G(IIIII)V")
-    public abstract void method494(int arg0, int arg1, int arg2, int arg3, int arg4);
+    public abstract void G(int arg0, int arg1, int arg2, int arg3, int arg4);
 
     @ObfuscatedName("ra.bd(IIIIIIIII)V")
     public abstract void method497(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8);
@@ -391,7 +391,7 @@ public abstract class RendererToolkit {
     public abstract void method503(int arg0, WaterFogData arg1);
 
     @ObfuscatedName("ra.ba(II)V")
-    public abstract void method505(int arg0, int arg1);
+    public abstract void ba(int arg0, int arg1);
 
     @ObfuscatedName("ra.bh(IIIIZ)Lce;")
     public abstract Sprite method508(int arg0, int arg1, int arg2, int arg3, boolean arg4);
@@ -424,22 +424,22 @@ public abstract class RendererToolkit {
     public abstract Matrix4x3 method525();
 
     @ObfuscatedName("ra.RA(Z)V")
-    public abstract void method526(boolean arg0);
+    public abstract void RA(boolean arg0);
 
     @ObfuscatedName("ra.cv()Lka;")
     public abstract Matrix4x4 method528();
 
     @ObfuscatedName("ra.IA(F)V")
-    public abstract void method529(float arg0);
+    public abstract void IA(float arg0);
 
     @ObfuscatedName("ra.m(IFFFFF)V")
-    public abstract void method530(int arg0, float arg1, float arg2, float arg3, float arg4, float arg5);
+    public abstract void m(int arg0, float arg1, float arg2, float arg3, float arg4, float arg5);
 
     @ObfuscatedName("ra.J(I)V")
-    public abstract void method531(int arg0);
+    public abstract void J(int arg0);
 
     @ObfuscatedName("ra.c(III)V")
-    public abstract void method532(int arg0, int arg1, int arg2);
+    public abstract void c(int arg0, int arg1, int arg2);
 
     @ObfuscatedName("ra.ce(I[Lacg;)V")
     public abstract void method535(int arg0, Light[] arg1);
@@ -463,7 +463,7 @@ public abstract class RendererToolkit {
     public abstract void method547(int arg0, WaterFogData arg1);
 
     @ObfuscatedName("ra.O()V")
-    public abstract void method548();
+    public abstract void O();
 
     @ObfuscatedName("ra.cc(Ldj;)V")
     public abstract void method549(EnvironmentSampler arg0);
@@ -472,7 +472,7 @@ public abstract class RendererToolkit {
     public abstract void method550(float arg0, float arg1, float arg2, float[] arg3);
 
     @ObfuscatedName("ra.za()I")
-    public abstract int method552();
+    public abstract int za();
 
     @ObfuscatedName("ra.cj()V")
     public abstract void method558();
@@ -493,7 +493,7 @@ public abstract class RendererToolkit {
     public abstract boolean method600();
 
     @ObfuscatedName("ra.CA(IIIII)V")
-    public abstract void method601(int arg0, int arg1, int arg2, int arg3, int arg4);
+    public abstract void CA(int arg0, int arg1, int arg2, int arg3, int arg4);
 
     @ObfuscatedName("ra.cx(Ldw;IIII)Lqa;")
     public abstract Model method625(ModelUnlit arg0, int arg1, int arg2, int arg3, int arg4);
@@ -511,16 +511,16 @@ public abstract class RendererToolkit {
     public abstract Sprite method658(int arg0, int arg1, boolean arg2, boolean arg3);
 
     @ObfuscatedName("ra.r(IIII)V")
-    public abstract void method659(int arg0, int arg1, int arg2, int arg3);
+    public abstract void r(int arg0, int arg1, int arg2, int arg3);
 
     @ObfuscatedName("ra.cw(I)V")
     public abstract void method673(int arg0);
 
     @ObfuscatedName("ra.DA(ILta;II)V")
-    public abstract void method684(int arg0, GraphicsRelated arg1, int arg2, int arg3);
+    public abstract void DA(int arg0, GraphicsRelated arg1, int arg2, int arg3);
 
     @ObfuscatedName("ra.ae(IIII)[I")
-    public abstract int[] method691(int arg0, int arg1, int arg2, int arg3);
+    public abstract int[] ae(int arg0, int arg1, int arg2, int arg3);
 
     @ObfuscatedName("ra.co(Lvm;[Lzv;Z)Ll;")
     public abstract Font method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2);
@@ -532,10 +532,10 @@ public abstract class RendererToolkit {
     public abstract Surface method735(Canvas arg0, int arg1, int arg2);
 
     @ObfuscatedName("ra.N(IIIIII[BII)V")
-    public abstract void method748(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, byte[] arg6, int arg7, int arg8);
+    public abstract void N(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, byte[] arg6, int arg7, int arg8);
 
     @ObfuscatedName("ra.L()V")
-    public abstract void method753();
+    public abstract void L();
 
     @ObfuscatedName("ra.an()Z")
     public abstract boolean method765();

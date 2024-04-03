@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("cp")
-public class SoftwareRendererRelated2 {
+public class cp {
 
     @ObfuscatedName("cp.u")
     public static int field1192 = 0;
@@ -12,12 +12,12 @@ public class SoftwareRendererRelated2 {
     @ObfuscatedName("cp.a")
     public static final IterableQueue field1194 = new IterableQueue();
 
-    public SoftwareRendererRelated2() throws Throwable {
+    public cp() throws Throwable {
         throw new Error();
     }
 
     @ObfuscatedName("cp.u(Lua;I)V")
-    public static synchronized void method2358(SoftwareRendererRelated arg0) {
+    public static synchronized void method2358(ua arg0) {
         if (field1193) {
             return;
         }
@@ -25,7 +25,7 @@ public class SoftwareRendererRelated2 {
             ObjectNode var1 = new ObjectNode(arg0);
             field1194.method11558(var1);
         } else {
-            arg0.method92(false);
+            arg0.ma(false);
         }
     }
 
@@ -36,7 +36,7 @@ public class SoftwareRendererRelated2 {
             if (var0 == null) {
                 return;
             }
-            ((SoftwareRendererRelated) var0.field9550).method92(true);
+            ((ua) var0.field9550).ma(true);
             var0.method6979();
         }
     }

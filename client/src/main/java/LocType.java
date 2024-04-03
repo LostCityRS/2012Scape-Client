@@ -621,14 +621,14 @@ public class LocType {
         }
         Model var22 = (Model) (var20 == null ? null : var20.field6757);
         HardShadow var23 = null;
-        if (var22 != null && arg0.method519(var22.method329(), var16) == 0) {
+        if (var22 != null && arg0.method519(var22.m(), var16) == 0) {
             var23 = (HardShadow) var20.field6756;
             if (arg9 && var23 == null && !var17 && !var18) {
-                var23 = (HardShadow) (var20.field6756 = var22.method273(null));
+                var23 = (HardShadow) (var20.field6756 = var22.ga(null));
             }
         } else {
             if (var22 != null) {
-                var16 = arg0.method520(var16, var22.method329());
+                var16 = arg0.method520(var16, var22.m());
             }
             int var24 = var16;
             if (LocShape.field6572.field6590 == arg2 && arg3 > 3) {
@@ -639,12 +639,12 @@ public class LocType {
                 return null;
             }
             if (LocShape.field6572.field6590 == arg2 && arg3 > 3) {
-                var22.method246(2048);
+                var22.f(2048);
             }
             if (arg9 && !var17 && !var18) {
-                var23 = var22.method273(null);
+                var23 = var22.ga(null);
             }
-            var22.method252(var16);
+            var22.KA(var16);
             Pair var25 = new Pair(var22, var23);
             WeightedCache var26 = this.field6473.field6559;
             synchronized (this.field6473.field6559) {
@@ -655,15 +655,15 @@ public class LocType {
         if (var17 || var18) {
             var28 = var22.method295((byte) 0, var16, true);
             if (var17) {
-                var28.method255(this.field6494, this.field6510, arg4, arg5, arg6, arg7, arg8);
+                var28.pa(this.field6494, this.field6510, arg4, arg5, arg6, arg7, arg8);
             }
             if (var18) {
-                var28.method353(this.field6550, this.field6521, this.field6498);
+                var28.ia(this.field6550, this.field6521, this.field6498);
             }
             if (arg9) {
-                var23 = var28.method273(null);
+                var23 = var28.ga(null);
             }
-            var28.method252(arg1);
+            var28.KA(arg1);
         } else {
             var28 = var22.method295((byte) 0, arg1, true);
         }
@@ -707,9 +707,9 @@ public class LocType {
         synchronized (this.field6473.field6560) {
             var18 = (Model) this.field6473.field6560.method7916(var15);
         }
-        if (var18 == null || arg0.method519(var18.method329(), arg1) != 0) {
+        if (var18 == null || arg0.method519(var18.m(), arg1) != 0) {
             if (var18 != null) {
-                arg1 = arg0.method520(arg1, var18.method329());
+                arg1 = arg0.method520(arg1, var18.m());
             }
             var18 = this.method11415(arg0, arg1, arg2, arg3, arg10);
             if (var18 == null) {
@@ -731,24 +731,24 @@ public class LocType {
                 var18 = var18.method295((byte) 3, arg1, true);
                 var22 = true;
             }
-            var18.method246(2048);
+            var18.f(2048);
         }
         if (this.field6494 != 0) {
             if (!var22) {
                 var18 = var18.method295((byte) 3, arg1, true);
                 var22 = true;
             }
-            var18.method255(this.field6494, this.field6510, arg4, arg5, arg6, arg7, arg8);
+            var18.pa(this.field6494, this.field6510, arg4, arg5, arg6, arg7, arg8);
         }
         if (this.field6550 != 0 || this.field6521 != 0 || this.field6498 != 0) {
             if (!var22) {
                 var18 = var18.method295((byte) 3, arg1, true);
                 var22 = true;
             }
-            var18.method353(this.field6550, this.field6521, this.field6498);
+            var18.ia(this.field6550, this.field6521, this.field6498);
         }
         if (var22) {
-            var18.method252(var14);
+            var18.KA(var14);
         }
         return var18;
     }
@@ -808,17 +808,17 @@ public class LocType {
                     var10 = (Model) this.field6473.field6558.method7916(var15);
                 }
                 if (var10 != null) {
-                    if (var6 != var10.method398()) {
+                    if (var6 != var10.c()) {
                         arg1 |= 0x1000;
                     }
-                    if (var7 != var10.method285()) {
+                    if (var7 != var10.Z()) {
                         arg1 |= 0x2000;
                     }
                 }
-                if (var10 == null || arg0.method519(var10.method329(), arg1) != 0) {
+                if (var10 == null || arg0.method519(var10.m(), arg1) != 0) {
                     int var20 = arg1 | 0x1F01F;
                     if (var10 != null) {
-                        var20 = arg0.method520(var20, var10.method329());
+                        var20 = arg0.method520(var20, var10.m());
                     }
                     ModelUnlit var21 = null;
                     ModelUnlit[] var22 = this.field6473.field6562;
@@ -859,26 +859,26 @@ public class LocType {
             return null;
         }
         Model var29 = var10.method295((byte) 0, arg1, true);
-        if (var6 != var10.method398()) {
-            var29.method282(var6);
+        if (var6 != var10.c()) {
+            var29.p(var6);
         }
-        if (var7 != var10.method285()) {
-            var29.method283(var7);
+        if (var7 != var10.Z()) {
+            var29.Q(var7);
         }
         if (var9) {
-            var29.method253();
+            var29.wa();
         }
         if (LocShape.field6577.field6590 == arg2 && arg3 > 3) {
-            var29.method249(2048);
-            var29.method353(180, 0, -180);
+            var29.S(2048);
+            var29.ia(180, 0, -180);
         }
         int var30 = arg3 & 0x3;
         if (var30 == 1) {
-            var29.method249(4096);
+            var29.S(4096);
         } else if (var30 == 2) {
-            var29.method249(8192);
+            var29.S(8192);
         } else if (var30 == 3) {
-            var29.method249(12288);
+            var29.S(12288);
         }
         if (this.field6478 != null) {
             short[] var31;
@@ -889,9 +889,9 @@ public class LocType {
             }
             for (int var32 = 0; var32 < this.field6478.length; var32++) {
                 if (this.field6512 == null || var32 >= this.field6512.length) {
-                    var29.method287(this.field6478[var32], var31[var32]);
+                    var29.X(this.field6478[var32], var31[var32]);
                 } else {
-                    var29.method287(this.field6478[var32], field6530[this.field6512[var32] & 0xFF]);
+                    var29.X(this.field6478[var32], field6530[this.field6512[var32] & 0xFF]);
                 }
             }
         }
@@ -903,19 +903,19 @@ public class LocType {
                 var33 = arg4.field6470;
             }
             for (int var34 = 0; var34 < this.field6538.length; var34++) {
-                var29.method289(this.field6538[var34], var33[var34]);
+                var29.W(this.field6538[var34], var33[var34]);
             }
         }
         if (this.field6488 != 0) {
-            var29.method290(this.field6524, this.field6526, this.field6487, this.field6488 & 0xFF);
+            var29.PA(this.field6524, this.field6526, this.field6487, this.field6488 & 0xFF);
         }
         if (this.field6514 != 128 || this.field6515 != 128 || this.field6516 != 128) {
-            var29.method245(this.field6514, this.field6515, this.field6516);
+            var29.oa(this.field6514, this.field6515, this.field6516);
         }
         if (this.field6517 != 0 || this.field6518 != 0 || this.field6519 != 0) {
-            var29.method353(this.field6517, this.field6518, this.field6519);
+            var29.ia(this.field6517, this.field6518, this.field6519);
         }
-        var29.method252(var8);
+        var29.KA(var8);
         return var29;
     }
 

@@ -54,7 +54,7 @@ public class StaticWallDecorLayerEntity extends WallDecorLayerEntity implements 
                 this.field7544 = this.field7544.method295((byte) 0, var15, false);
                 if (arg3.field6472) {
                     LocTint var17 = client.field8980.method6094();
-                    this.field7544.method290(var17.field3783, var17.field3782, var17.field3781, var17.field3784);
+                    this.field7544.PA(var17.field3783, var17.field3782, var17.field3781, var17.field3784);
                 }
             }
         }
@@ -66,23 +66,23 @@ public class StaticWallDecorLayerEntity extends WallDecorLayerEntity implements 
         if (this.field7544 == null) {
             return true;
         } else {
-            return !this.field7544.method293();
+            return !this.field7544.u();
         }
     }
 
     @ObfuscatedName("yc.ba(I)Z")
     public boolean method12808() {
-        return this.field7544 == null ? false : this.field7544.method292();
+        return this.field7544 == null ? false : this.field7544.i();
     }
 
     @ObfuscatedName("yc.bc(I)I")
     public int method12809() {
-        return this.field7544 == null ? 0 : this.field7544.method278();
+        return this.field7544 == null ? 0 : this.field7544.YA();
     }
 
     @ObfuscatedName("yc.bd(Lra;IS)Lqa;")
     public Model method12878(RendererToolkit arg0, int arg1) {
-        if (this.field7544 != null && arg0.method519(this.field7544.method329(), arg1) == 0) {
+        if (this.field7544 != null && arg0.method519(this.field7544.m(), arg1) == 0) {
             return this.field7544;
         } else {
             Pair var3 = this.method12879(arg0, arg1, false);

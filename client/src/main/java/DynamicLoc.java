@@ -152,19 +152,19 @@ public class DynamicLoc {
                     if (this.field1228 == null) {
                         this.field1228 = new boolean[4];
                     }
-                    this.field1224 = var10.method273(this.field1224);
+                    this.field1224 = var10.ga(this.field1224);
                     var7.method7445(this.field1224, this.field1213, (int) var6.field3475, (int) var6.field3477, this.field1228);
                     this.field1227 = true;
                 }
-                this.field1223 = var10.method278();
-                var10.method275();
+                this.field1223 = var10.YA();
+                var10.n();
             }
             this.field1222 = null;
-        } else if (this.field1222 != null && (this.field1222.method329() & arg1) == arg1 && this.field1214 == var5.field6474) {
+        } else if (this.field1222 != null && (this.field1222.m() & arg1) == arg1 && this.field1214 == var5.field6474) {
             var10 = this.field1222;
         } else {
             if (this.field1222 != null) {
-                arg1 |= this.field1222.method329();
+                arg1 |= this.field1222.m();
             }
             Pair var11 = var5.method11447(arg0, arg1, this.field1226 == 11 ? 10 : this.field1226, this.field1226 == 11 ? this.field1216 + 4 : this.field1216, var8, var9, (int) var6.field3475, var8.method196((int) var6.field3475, (int) var6.field3477), (int) var6.field3477, arg3, this.field1230);
             if (var11 == null) {
@@ -180,8 +180,8 @@ public class DynamicLoc {
                     var7.method7445(this.field1224, this.field1213, (int) var6.field3475, (int) var6.field3477, null);
                     this.field1227 = true;
                 }
-                this.field1223 = var10.method278();
-                var10.method275();
+                this.field1223 = var10.YA();
+                var10.n();
             }
         }
         this.field1214 = var5.field6474;

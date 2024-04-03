@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aa")
-public class aa extends HardShadow implements SoftwareRendererRelated {
+public class aa extends HardShadow implements ua {
 
     public long nativeid;
 
@@ -10,10 +10,10 @@ public class aa extends HardShadow implements SoftwareRendererRelated {
 
     public void finalize() {
         if (this.nativeid != 0L) {
-            SoftwareRendererRelated2.method2358(this);
+            cp.method2358(this);
         }
     }
 
     @ObfuscatedName("aa.ma(Z)V")
-    public native void method92(boolean arg0);
+    public native void ma(boolean arg0);
 }

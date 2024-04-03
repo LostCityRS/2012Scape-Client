@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import java.awt.*;
 
 @ObfuscatedName("ja")
-public class ja extends RendererToolkit implements SoftwareRendererRelated {
+public class ja extends RendererToolkit implements ua {
 
     public long nativeid = 0L;
 
@@ -100,8 +100,8 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
             if (!NativeLibraries.method11710().method6800("sw3d")) {
                 throw new RuntimeException("");
             }
-            SoftwareRendererRelated2.method2360();
-            this.method966(this.field400, this.field400.method894(), 0);
+            cp.method2360();
+            this.q(this.field400, this.field400.method894(), 0);
             ColourUtils.method8092(false, true);
             this.field449 = true;
             this.field441 = new Matrix4x4();
@@ -123,10 +123,11 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
             for (short var6 = 0; var6 < var5; var6++) {
                 Material var7 = this.field400.method889(var6);
                 if (var7 != null) {
-                    this.method974(var6, var7.field1260, var7.field1262.method6339(), var7.field1270, var7.field1248, var7.field1264, var7.field1252 == 64, var7.field1266, var7.field1267, var7.field1268, var7.field1261, var7.field1250, var7.field1265, var7.field1276, var7.field1273, var7.field1274, var7.field1275, var7.field1245, var7.field1277, var7.field1278);
+                    this.V(var6, var7.field1260, var7.field1262.method6339(), var7.field1270, var7.field1248, var7.field1264, var7.field1252 == 64, var7.field1266, var7.field1267, var7.field1268, var7.field1261, var7.field1250, var7.field1265, var7.field1276, var7.field1273, var7.field1274, var7.field1275, var7.field1245, var7.field1277, var7.field1278);
                 }
             }
         } catch (Throwable var9) {
+            var9.printStackTrace();
             this.method442();
             throw new RuntimeException();
         }
@@ -136,13 +137,13 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
     public void method992() {
         System.gc();
         System.runFinalization();
-        SoftwareRendererRelated2.method2359();
+        cp.method2359();
     }
 
     public synchronized void finalize() {
         this.method442();
         if (this.nativeid != 0L) {
-            SoftwareRendererRelated2.method2358(this);
+            cp.method2358(this);
         }
     }
 
@@ -196,25 +197,25 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
         this.field437 = null;
         this.field441 = null;
         for (ba var1 = (ba) this.field438.method11563(); var1 != null; var1 = (ba) this.field438.method11567()) {
-            var1.method1153();
+            var1.ha();
         }
         this.field438.method11557();
-        this.method969();
+        this.da();
         if (this.field449) {
             ColourUtils.method2790(false, true);
             this.field449 = false;
         }
         this.method992();
-        SoftwareRendererRelated2.method2361();
+        cp.method2361();
         this.field459 = true;
     }
 
     @ObfuscatedName("ja.b(I)V")
     public void method444(int arg0) {
-        SoftwareRendererRelated2.method2359();
-        this.method970(arg0);
+        cp.method2359();
+        this.Y(arg0);
         for (ba var2 = (ba) this.field438.method11563(); var2 != null; var2 = (ba) this.field438.method11567()) {
-            var2.method1152();
+            var2.u();
         }
     }
 
@@ -292,7 +293,7 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
         this.field450 = (float) this.method457().method922() / 2.0F;
         this.field448 = this.field447;
         this.field451 = this.field450;
-        this.method979();
+        this.k();
     }
 
     @ObfuscatedName("ja.ab(IIII)V")
@@ -301,15 +302,15 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
         this.field450 = (float) arg3 / 2.0F;
         this.field448 = (float) arg0 + this.field447;
         this.field451 = (float) arg1 + this.field450;
-        this.method980(arg0, arg1, arg2, arg3);
+        this.A(arg0, arg1, arg2, arg3);
     }
 
     @ObfuscatedName("ja.bl(IIIIII)V")
     public void method488(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
-        this.method493(arg0, arg1, arg2, arg4, arg5);
-        this.method493(arg0, arg1 + arg3 - 1, arg2, arg4, arg5);
-        this.method494(arg0, arg1 + 1, arg3 - 1, arg4, arg5);
-        this.method494(arg0 + arg2 - 1, arg1 + 1, arg3 - 1, arg4, arg5);
+        this.XA(arg0, arg1, arg2, arg4, arg5);
+        this.XA(arg0, arg1 + arg3 - 1, arg2, arg4, arg5);
+        this.G(arg0, arg1 + 1, arg3 - 1, arg4, arg5);
+        this.G(arg0 + arg2 - 1, arg1 + 1, arg3 - 1, arg4, arg5);
     }
 
     @ObfuscatedName("ja.bk(IIFIIFIIFIIII)V")
@@ -319,12 +320,12 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
 
     @ObfuscatedName("ja.bs(IIIIII)V")
     public void method825(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
-        this.method967(arg0, arg1, arg2, arg3, arg4, arg5);
+        this.YA(arg0, arg1, arg2, arg3, arg4, arg5);
     }
 
     @ObfuscatedName("ja.bn(IIIIIILta;II)V")
     public void method440(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, GraphicsRelated arg6, int arg7, int arg8) {
-        this.method968(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+        this.R(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
     @ObfuscatedName("ja.br(IIIIIII)V")
@@ -422,7 +423,7 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
     @ObfuscatedName("ja.bx(Lv;)V")
     public void method502(Heap arg0) {
         this.field437 = (ba) arg0;
-        this.method971(arg0);
+        this.n(arg0);
     }
 
     @ObfuscatedName("ja.bb(IIZZ)Lce;")
@@ -555,7 +556,7 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
     public void method524(Matrix4x3 arg0) {
         this.field443 = arg0;
         this.field464.method5385(arg0);
-        this.method1001(this.field464.field3480);
+        this.AA(this.field464.field3480);
         this.field436.method5383(this.field464, this.field445);
     }
 
@@ -567,7 +568,7 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
     @ObfuscatedName("ja.ch(Lka;)V")
     public void method784(Matrix4x4 arg0) {
         this.field445 = arg0;
-        this.method977(this.field445.field3480);
+        this.wa(this.field445.field3480);
         this.field436.method5383(this.field464, this.field445);
     }
 
@@ -587,7 +588,7 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
             field462[var4] = arg1[var4].method14893();
             field461[var3++] = arg1[var4].method14881();
         }
-        this.method972(arg0, field461, field462);
+        this.Q(arg0, field461, field462);
     }
 
     @ObfuscatedName("ja.ct(IIIIII)Ldj;")
@@ -632,12 +633,12 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
 
     @ObfuscatedName("ja.di(ILdk;)V")
     public final void method547(int arg0, WaterFogData arg1) {
-        this.method989(arg0, arg1.field1475, arg1.field1471, arg1.field1474);
+        this.JA(arg0, arg1.field1475, arg1.field1471, arg1.field1474);
     }
 
     @ObfuscatedName("ja.dw(ILdk;)V")
     public final void method503(int arg0, WaterFogData arg1) {
-        this.method990(arg0, arg1.field1475, arg1.field1471, arg1.field1474);
+        this.M(arg0, arg1.field1475, arg1.field1471, arg1.field1474);
     }
 
     @ObfuscatedName("ja.av()Lyu;")
@@ -665,117 +666,172 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
         return new oa(arg0, arg1);
     }
 
+    // Native -> Java (do not change)
+    @ObfuscatedName("ja.WA()Ljava/lang/Object;")
+    public Object WA() {
+        return new aa(this);
+    }
+
+    // Native -> Java (do not change)
+    @ObfuscatedName("ja.h()V")
+    public void h() {
+        System.gc();
+        System.runFinalization();
+        cp.method2359();
+    }
+
+    // Native -> Java (do not change)
+    @ObfuscatedName("ja.SA(S)Z")
+    public boolean SA(short arg0) {
+        MaterialTypeList var2 = this.field400;
+        synchronized(this.field400) {
+            Material var3 = this.field400.method889(arg0);
+            if (var3 == null) {
+                return false;
+            } else {
+                int var4 = var3.field1252;
+                if (!this.field400.method898(arg0, MaterialAlphaMode.field4853 != var3.field1262 ? TextureRelated2.field4849 : TextureRelated2.field4848, 0.7F, var4, var4, true)) {
+                    return false;
+                } else {
+                    int[] var5;
+                    if (MaterialAlphaMode.field4853 != var3.field1262) {
+                        var5 = this.field400.method886(arg0, 0.7F, var4, var4, true);
+                    } else {
+                        var5 = this.field400.method887(arg0, 0.7F, var4, var4, true);
+                    }
+
+                    int[] var6;
+                    if (var4 == 64) {
+                        var6 = new int[16384];
+
+                        for(int var7 = 0; var7 < var4; ++var7) {
+                            for(int var8 = 0; var8 < var4; ++var8) {
+                                int var9 = (var8 * 128 + var7) * 2;
+                                var6[var9] = var6[var9 + 1] = var6[var9 + 128] = var6[var9 + 128 + 1] = var5[var4 * var8 + var7];
+                            }
+                        }
+                    } else {
+                        var6 = var5;
+                    }
+
+                    this.F(arg0, var6, var3.field1260, var3.field1262.method6339(), var3.field1270, var3.field1248, var3.field1264, var3.field1252 == 64, var3.field1266, var3.field1267, var3.field1268, var3.field1261, var3.field1250, var3.field1265, var3.field1276, var3.field1273, var3.field1274, var3.field1275, var3.field1245, var3.field1277, var3.field1278);
+                    return true;
+                }
+            }
+        }
+    }
+
     @ObfuscatedName("ja.q(Lma;II)V")
-    public native void method966(MaterialTypeList arg0, int arg1, int arg2);
+    public native void q(MaterialTypeList arg0, int arg1, int arg2);
 
     @ObfuscatedName("ja.YA(IIIIII)V")
-    public native void method967(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
+    public native void YA(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
 
     @ObfuscatedName("ja.R(IIIIIILta;II)V")
-    public native void method968(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, GraphicsRelated arg6, int arg7, int arg8);
+    public native void R(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, GraphicsRelated arg6, int arg7, int arg8);
 
     @ObfuscatedName("ja.da()V")
-    public native void method969();
+    public native void da();
 
     @ObfuscatedName("ja.Y(I)V")
-    public native void method970(int arg0);
+    public native void Y(int arg0);
 
     @ObfuscatedName("ja.n(Lv;)V")
-    public native void method971(Heap arg0);
+    public native void n(Heap arg0);
 
     @ObfuscatedName("ja.Q(I[I[F)V")
-    public native void method972(int arg0, int[] arg1, float[] arg2);
+    public native void Q(int arg0, int[] arg1, float[] arg2);
 
     @ObfuscatedName("ja.V(SSIBBIZBBBBZZZZZBZZI)V")
-    public native void method974(short arg0, short arg1, int arg2, byte arg3, byte arg4, int arg5, boolean arg6, byte arg7, byte arg8, byte arg9, byte arg10, boolean arg11, boolean arg12, boolean arg13, boolean arg14, boolean arg15, byte arg16, boolean arg17, boolean arg18, int arg19);
+    public native void V(short arg0, short arg1, int arg2, byte arg3, byte arg4, int arg5, boolean arg6, byte arg7, byte arg8, byte arg9, byte arg10, boolean arg11, boolean arg12, boolean arg13, boolean arg14, boolean arg15, byte arg16, boolean arg17, boolean arg18, int arg19);
 
     @ObfuscatedName("ja.F(S[ISIBBIZBBBBZZZZZBZZI)V")
-    public native void method975(short arg0, int[] arg1, short arg2, int arg3, byte arg4, byte arg5, int arg6, boolean arg7, byte arg8, byte arg9, byte arg10, byte arg11, boolean arg12, boolean arg13, boolean arg14, boolean arg15, boolean arg16, byte arg17, boolean arg18, boolean arg19, int arg20);
+    public native void F(short arg0, int[] arg1, short arg2, int arg3, byte arg4, byte arg5, int arg6, boolean arg7, byte arg8, byte arg9, byte arg10, byte arg11, boolean arg12, boolean arg13, boolean arg14, boolean arg15, boolean arg16, byte arg17, boolean arg18, boolean arg19, int arg20);
 
     @ObfuscatedName("ja.ma(Z)V")
-    public native void method92(boolean arg0);
+    public native void ma(boolean arg0);
 
     @ObfuscatedName("ja.d(JJ)V")
-    public native void method976(long arg0, long arg1);
+    public native void d(long arg0, long arg1);
 
     @ObfuscatedName("ja.za()I")
-    public native int method552();
+    public native int za();
 
     @ObfuscatedName("ja.ba(II)V")
-    public native void method505(int arg0, int arg1);
+    public native void ba(int arg0, int arg1);
 
     @ObfuscatedName("ja.ae(IIII)[I")
-    public native int[] method691(int arg0, int arg1, int arg2, int arg3);
+    public native int[] ae(int arg0, int arg1, int arg2, int arg3);
 
     @ObfuscatedName("ja.wa([F)V")
-    public native void method977(float[] arg0);
+    public native void wa(float[] arg0);
 
     @ObfuscatedName("ja.PA(Lza;)V")
-    public native void method978(za arg0);
+    public native void PA(za arg0);
 
     @ObfuscatedName("ja.k()V")
-    public native void method979();
+    public native void k();
 
     @ObfuscatedName("ja.A(IIII)V")
-    public native void method980(int arg0, int arg1, int arg2, int arg3);
+    public native void A(int arg0, int arg1, int arg2, int arg3);
 
     @ObfuscatedName("ja.GA(FF)V")
-    public native void method475(float arg0, float arg1);
+    public native void GA(float arg0, float arg1);
 
     @ObfuscatedName("ja.r(IIII)V")
-    public native void method659(int arg0, int arg1, int arg2, int arg3);
+    public native void r(int arg0, int arg1, int arg2, int arg3);
 
     @ObfuscatedName("ja.B(IIIIII)V")
-    public native void method489(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
+    public native void B(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
 
     @ObfuscatedName("ja.N(IIIIII[BII)V")
-    public native void method748(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, byte[] arg6, int arg7, int arg8);
+    public native void N(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, byte[] arg6, int arg7, int arg8);
 
     @ObfuscatedName("ja.DA(ILta;II)V")
-    public native void method684(int arg0, GraphicsRelated arg1, int arg2, int arg3);
+    public native void DA(int arg0, GraphicsRelated arg1, int arg2, int arg3);
 
     @ObfuscatedName("ja.IA(F)V")
-    public native void method529(float arg0);
+    public native void IA(float arg0);
 
     @ObfuscatedName("ja.m(IFFFFF)V")
-    public native void method530(int arg0, float arg1, float arg2, float arg3, float arg4, float arg5);
+    public native void m(int arg0, float arg1, float arg2, float arg3, float arg4, float arg5);
 
     @ObfuscatedName("ja.J(I)V")
-    public native void method531(int arg0);
+    public native void J(int arg0);
 
     @ObfuscatedName("ja.c(III)V")
-    public native void method532(int arg0, int arg1, int arg2);
+    public native void c(int arg0, int arg1, int arg2);
 
     @ObfuscatedName("ja.JA(IIII)V")
-    public native void method989(int arg0, int arg1, int arg2, int arg3);
+    public native void JA(int arg0, int arg1, int arg2, int arg3);
 
     @ObfuscatedName("ja.M(IIII)V")
-    public native void method990(int arg0, int arg1, int arg2, int arg3);
+    public native void M(int arg0, int arg1, int arg2, int arg3);
 
     @ObfuscatedName("ja.O()V")
-    public native void method548();
+    public native void O();
 
     @ObfuscatedName("ja.RA(Z)V")
-    public native void method526(boolean arg0);
+    public native void RA(boolean arg0);
 
     @ObfuscatedName("ja.qa([I)V")
-    public native void method453(int[] arg0);
+    public native void qa(int[] arg0);
 
     @ObfuscatedName("ja.XA(IIIII)V")
-    public native void method493(int arg0, int arg1, int arg2, int arg3, int arg4);
+    public native void XA(int arg0, int arg1, int arg2, int arg3, int arg4);
 
     @ObfuscatedName("ja.AA([F)V")
-    public native void method1001(float[] arg0);
+    public native void AA(float[] arg0);
 
     @ObfuscatedName("ja.G(IIIII)V")
-    public native void method494(int arg0, int arg1, int arg2, int arg3, int arg4);
+    public native void G(int arg0, int arg1, int arg2, int arg3, int arg4);
 
     @ObfuscatedName("ja.L()V")
-    public native void method753();
+    public native void L();
 
     @ObfuscatedName("ja.o(IIII)V")
-    public native void method478(int arg0, int arg1, int arg2, int arg3);
+    public native void o(int arg0, int arg1, int arg2, int arg3);
 
     @ObfuscatedName("ja.CA(IIIII)V")
-    public native void method601(int arg0, int arg1, int arg2, int arg3, int arg4);
+    public native void CA(int arg0, int arg1, int arg2, int arg3, int arg4);
 }

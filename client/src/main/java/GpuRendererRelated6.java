@@ -144,7 +144,7 @@ public class GpuRendererRelated6 {
         if ((arg9 & 0xFF000000) == 0) {
             return;
         }
-        this.field2569.method453(this.field2566);
+        this.field2569.qa(this.field2566);
         int var11 = this.field2566[0];
         int var12 = this.field2566[1];
         int var13 = this.field2566[2];
@@ -206,7 +206,7 @@ public class GpuRendererRelated6 {
         if ((arg17 & 0xFF000000) == 0) {
             return;
         }
-        this.field2569.method453(this.field2566);
+        this.field2569.qa(this.field2566);
         int var19 = this.field2566[0];
         int var20 = this.field2566[1];
         int var21 = this.field2566[2];
@@ -235,7 +235,7 @@ public class GpuRendererRelated6 {
         if (var31 != 0) {
             this.method4503();
             this.field2569.method515(true);
-            this.field2569.method659(var19, var20, var21, var22);
+            this.field2569.r(var19, var20, var21, var22);
         }
         this.method4499();
         float var32 = this.method4500(arg0);
@@ -270,8 +270,8 @@ public class GpuRendererRelated6 {
         }
         if (var31 != 0) {
             this.field2569.method515(false);
-            this.field2569.method753();
-            this.field2569.method659(var19, var20, var21, var22);
+            this.field2569.L();
+            this.field2569.r(var19, var20, var21, var22);
         }
     }
 

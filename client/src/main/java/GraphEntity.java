@@ -51,13 +51,13 @@ public abstract class GraphEntity extends GraphNode {
 
     @ObfuscatedName("adj.fb(IIILqa;I)Lok;")
     public static EntityBounds method15140(int arg0, int arg1, int arg2, Model arg3) {
-        return arg3 == null ? null : new EntityBounds(arg0, arg1, arg2, arg3.method274(), arg3.method358(), arg3.method277(), arg3.method278(), arg3.method279(), arg3.method280(), arg3.method281());
+        return arg3 == null ? null : new EntityBounds(arg0, arg1, arg2, arg3.N(), arg3.RA(), arg3.ya(), arg3.YA(), arg3.o(), arg3.AA(), arg3.ha());
     }
 
     @ObfuscatedName("sz.fw(Lok;IIILqa;I)V")
     public static void method11162(EntityBounds arg0, int arg1, int arg2, int arg3, Model arg4) {
         if (arg4 != null) {
-            arg0.method7641(arg1, arg2, arg3, arg4.method274(), arg4.method358(), arg4.method277(), arg4.method278(), arg4.method279(), arg4.method280(), arg4.method281());
+            arg0.method7641(arg1, arg2, arg3, arg4.N(), arg4.RA(), arg4.ya(), arg4.YA(), arg4.o(), arg4.AA(), arg4.ha());
         }
     }
 

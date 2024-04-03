@@ -386,9 +386,9 @@ public abstract class Font {
                         }
                     } else if (arg5 == null) {
                         if ((field426 & 0xFF000000) != 0) {
-                            this.method848(var14, arg1 + 1, var9 + 1, field426, true);
+                            this.UA(var14, arg1 + 1, var9 + 1, field426, true);
                         }
-                        this.method848(var14, arg1, var9, field424, false);
+                        this.UA(var14, arg1, var9, field424, false);
                     } else {
                         if ((field426 & 0xFF000000) != 0) {
                             this.method867(var14, arg1 + 1, var9 + 1, field426, true, arg5, arg6, arg7);
@@ -490,9 +490,9 @@ public abstract class Font {
                     var11++;
                     if (var14 != ' ') {
                         if ((field426 & 0xFF000000) != 0) {
-                            this.method848(var14, arg1 + 1 + var22, var8 + 1 + var23, field426, true);
+                            this.UA(var14, arg1 + 1 + var22, var8 + 1 + var23, field426, true);
                         }
-                        this.method848(var14, arg1 + var22, var8 + var23, field424, false);
+                        this.UA(var14, arg1 + var22, var8 + var23, field424, false);
                     } else if (field427 > 0) {
                         field428 += field427;
                         arg1 += field428 >> 8;
@@ -513,7 +513,7 @@ public abstract class Font {
     }
 
     @ObfuscatedName("l.UA(CIIIZ)V")
-    public abstract void method848(char arg0, int arg1, int arg2, int arg3, boolean arg4);
+    public abstract void UA(char arg0, int arg1, int arg2, int arg3, boolean arg4);
 
     @ObfuscatedName("l.b(CIIIZLta;II)V")
     public abstract void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, GraphicsRelated arg5, int arg6, int arg7);

@@ -193,10 +193,10 @@ public class SkyBox {
         try {
             boolean var2 = Statics.field549.method5631(this.field3942);
             if (var2) {
-                arg0.method530(16777215, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F);
+                arg0.m(16777215, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F);
                 ModelUnlit var3 = ModelUnlit.method2664(Statics.field549, this.field3942, 0);
                 this.field3943 = arg0.method625(var3, 1099776, 0, 255, 1);
-                byte[] var4 = this.field3943.method334();
+                byte[] var4 = this.field3943.ao();
                 if (var4 == null) {
                     this.field3944 = null;
                 } else {
@@ -239,10 +239,10 @@ public class SkyBox {
         int var14 = 255 - arg12;
         arg0.method510();
         if (this.field3943 == null) {
-            arg0.method505(2, 0);
+            arg0.ba(2, 0);
             arg7 = arg1 + arg7 & 0x3FFF;
             if (this.field3927 == -1 || this.field3928 == 0) {
-                arg0.method489(arg2, arg3, arg4, arg5, var14 << 24 | arg9, 1);
+                arg0.B(arg2, arg3, arg4, arg5, var14 << 24 | arg9, 1);
             } else {
                 Material var15 = Statics.field6785.method889(this.field3927);
                 if (this.field3937 == null && Statics.field6785.method898(this.field3927, MaterialAlphaMode.field4853 == var15.field1262 ? TextureRelated2.field4848 : TextureRelated2.field4849, 0.7F, this.field3928, this.field3928, false)) {
@@ -253,7 +253,7 @@ public class SkyBox {
                 }
                 int var17 = var14 == 255 ? (MaterialAlphaMode.field4853 == var15.field1262 ? 1 : 0) : 1;
                 if (var17 == 1 && arg10) {
-                    arg0.method489(arg2, arg3, arg4, arg5, arg9, 0);
+                    arg0.B(arg2, arg3, arg4, arg5, arg9, 0);
                 }
                 if (this.field3937 != null) {
                     int var18 = arg5 * arg6 / -4096;
@@ -300,14 +300,14 @@ public class SkyBox {
             arg0.method784(var24);
         } else {
             if (arg10) {
-                arg0.method505(3, arg9);
+                arg0.ba(3, arg9);
             }
             this.method6375(arg0, arg6, arg7, arg8, arg12);
         }
         for (int var25 = this.field3932 - 1; var25 >= 0; var25--) {
             this.field3931[var25].method6409(arg0, arg2, arg3, arg4, arg5, arg6, arg7, this.field3934, this.field3926, this.field3936, var14);
         }
-        arg0.method505(2, 0);
+        arg0.ba(2, 0);
         arg0.method511();
     }
 

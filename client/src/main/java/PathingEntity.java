@@ -689,11 +689,11 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
         if (var2 == 0 && var3 == 0) {
             return;
         }
-        int var4 = arg0.method278() / 2;
-        arg0.method353(0, -var4, 0);
-        arg0.method284(var2 & 0x3FFF);
-        arg0.method397(var3 & 0x3FFF);
-        arg0.method353(0, var4, 0);
+        int var4 = arg0.YA() / 2;
+        arg0.ia(0, -var4, 0);
+        arg0.EA(var2 & 0x3FFF);
+        arg0.t(var3 & 0x3FFF);
+        arg0.ia(0, var4, 0);
     }
 
     @ObfuscatedName("aay.r(Lra;Lps;IIIII)V")
@@ -752,7 +752,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
                             }
                             int var18 = var9.field1207 * 2048 + var17 - arg5 & 0x3FFF;
                             if (var18 != 0) {
-                                var13.method246(var18);
+                                var13.f(var18);
                             }
                             int var19 = Trig1.field3439[var18];
                             int var20 = Trig1.field3447[var18];
@@ -760,22 +760,22 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
                             var16 = var16 * var20 - var14 * var19 >> 14;
                             var14 = var21;
                         }
-                        var13.method353(var14, var15, var16);
+                        var13.ia(var14, var15, var16);
                     } else if (var9.field1207 != 0) {
-                        var13.method246(var9.field1207 * 2048);
+                        var13.f(var9.field1207 * 2048);
                     }
                     if (var9.field1205 != 0) {
-                        var13.method353(0, -var9.field1205 << 2, 0);
+                        var13.ia(0, -var9.field1205 << 2, 0);
                     }
                     if (var11) {
                         if (this.field8601 != 0) {
-                            var13.method397(this.field8601);
+                            var13.t(this.field8601);
                         }
                         if (this.field8644 != 0) {
-                            var13.method284(this.field8644);
+                            var13.EA(this.field8644);
                         }
                         if (this.field8603 != 0) {
-                            var13.method353(0, this.field8603, 0);
+                            var13.ia(0, this.field8603, 0);
                         }
                     }
                 }

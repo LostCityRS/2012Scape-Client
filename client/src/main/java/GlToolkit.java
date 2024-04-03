@@ -690,7 +690,7 @@ public class GlToolkit extends RendererToolkit {
         this.method13322(true);
         this.method13364(true);
         this.method13325(true);
-        this.method475(0.0F, 1.0F);
+        this.GA(0.0F, 1.0F);
         this.method13324();
         this.field8079.setSwapInterval(0);
         OpenGL.glShadeModel(7425);
@@ -721,7 +721,7 @@ public class GlToolkit extends RendererToolkit {
         this.field8167 = -1;
         this.field8154 = -1;
         this.method490();
-        this.method753();
+        this.L();
     }
 
     @ObfuscatedName("yq.t()Lcg;")
@@ -839,11 +839,11 @@ public class GlToolkit extends RendererToolkit {
         this.field8119.method5393(0.0F, (float) var1, 0.0F, (float) var2, -1.0F, 1.0F);
         this.method490();
         this.method13324();
-        this.method753();
+        this.L();
     }
 
     @ObfuscatedName("yq.ae(IIII)[I")
-    public int[] method691(int arg0, int arg1, int arg2, int arg3) {
+    public int[] ae(int arg0, int arg1, int arg2, int arg3) {
         if (this.field412 == null) {
             return null;
         }
@@ -864,7 +864,7 @@ public class GlToolkit extends RendererToolkit {
         int var2 = this.field8140;
         int var3 = this.field8137;
         int var4 = this.field8138;
-        this.method753();
+        this.L();
         int var5 = this.field8220;
         int var6 = this.field8144;
         int var7 = this.field8139;
@@ -891,12 +891,12 @@ public class GlToolkit extends RendererToolkit {
         OpenGL.glFlush();
         OpenGL.glReadBuffer(1029);
         OpenGL.glDrawBuffer(1029);
-        this.method659(var1, var3, var2, var4);
+        this.r(var1, var3, var2, var4);
         this.method474(var5, var6, var7, var8);
     }
 
     @ObfuscatedName("yq.ba(II)V")
-    public void method505(int arg0, int arg1) {
+    public void ba(int arg0, int arg1) {
         int var3 = 0;
         if ((arg0 & 0x1) != 0) {
             OpenGL.glClearColor((float) (arg1 & 0xFF0000) / 1.671168E7F, (float) (arg1 & 0xFF00) / 65280.0F, (float) (arg1 & 0xFF) / 255.0F, (float) (arg1 >>> 24) / 255.0F);
@@ -936,7 +936,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.B(IIIIII)V")
-    public void method489(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+    public void B(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
         float var7 = (float) arg0 + 0.35F;
         float var8 = (float) arg1 + 0.35F;
         float var9 = (float) arg2 + var7;
@@ -959,7 +959,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.N(IIIIII[BII)V")
-    public void method748(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, byte[] arg6, int arg7, int arg8) {
+    public void N(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, byte[] arg6, int arg7, int arg8) {
         float var10;
         float var11;
         if (this.field8204 == null || this.field8204.field7440 < arg2 || this.field8204.field7441 < arg3) {
@@ -1017,7 +1017,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.CA(IIIII)V")
-    public void method601(int arg0, int arg1, int arg2, int arg3, int arg4) {
+    public void CA(int arg0, int arg1, int arg2, int arg3, int arg4) {
         if (arg2 < 0) {
             arg2 = -arg2;
         }
@@ -1064,7 +1064,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.XA(IIIII)V")
-    public void method493(int arg0, int arg1, int arg2, int arg3, int arg4) {
+    public void XA(int arg0, int arg1, int arg2, int arg3, int arg4) {
         this.method13308();
         this.method13327(arg4);
         float var6 = (float) arg0 + 0.35F;
@@ -1077,7 +1077,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.G(IIIII)V")
-    public void method494(int arg0, int arg1, int arg2, int arg3, int arg4) {
+    public void G(int arg0, int arg1, int arg2, int arg3, int arg4) {
         this.method13308();
         this.method13327(arg4);
         float var6 = (float) arg0 + 0.35F;
@@ -1463,7 +1463,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.DA(ILta;II)V")
-    public void method684(int arg0, GraphicsRelated arg1, int arg2, int arg3) {
+    public void DA(int arg0, GraphicsRelated arg1, int arg2, int arg3) {
         GlGraphicRelated2 var5 = (GlGraphicRelated2) arg1;
         GlGraphicRelated var6 = var5.field7651;
         this.method13309();
@@ -1552,7 +1552,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.O()V")
-    public void method548() {
+    public void O() {
         this.field8174 = false;
     }
 
@@ -1575,14 +1575,14 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.GA(FF)V")
-    public void method475(float arg0, float arg1) {
+    public void GA(float arg0, float arg1) {
         this.field8127 = arg0;
         this.field8128 = arg1;
         this.method13460();
     }
 
     @ObfuscatedName("yq.qa([I)V")
-    public final void method453(int[] arg0) {
+    public final void qa(int[] arg0) {
         arg0[0] = this.field8141;
         arg0[1] = this.field8137;
         arg0[2] = this.field8140;
@@ -1590,7 +1590,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.L()V")
-    public final void method753() {
+    public final void L() {
         if (this.field412 == null) {
             return;
         }
@@ -1602,7 +1602,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.r(IIII)V")
-    public final void method659(int arg0, int arg1, int arg2, int arg3) {
+    public final void r(int arg0, int arg1, int arg2, int arg3) {
         if (this.field412 == null) {
             return;
         }
@@ -1627,7 +1627,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.o(IIII)V")
-    public final void method478(int arg0, int arg1, int arg2, int arg3) {
+    public final void o(int arg0, int arg1, int arg2, int arg3) {
         if (this.field8141 < arg0) {
             this.field8141 = arg0;
         }
@@ -1840,7 +1840,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.RA(Z)V")
-    public void method526(boolean arg0) {
+    public void RA(boolean arg0) {
         this.field8201 = arg0;
         this.method13326();
     }
@@ -1889,7 +1889,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.IA(F)V")
-    public final void method529(float arg0) {
+    public final void IA(float arg0) {
         if (this.field8158 != arg0) {
             this.field8158 = arg0;
             this.method13293();
@@ -1897,7 +1897,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.m(IFFFFF)V")
-    public final void method530(int arg0, float arg1, float arg2, float arg3, float arg4, float arg5) {
+    public final void m(int arg0, float arg1, float arg2, float arg3, float arg4, float arg5) {
         boolean var7 = this.field8154 != arg0;
         if (var7 || this.field8159 != arg1 || this.field8121 != arg2) {
             this.field8154 = arg0;
@@ -1933,7 +1933,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.J(I)V")
-    public final void method531(int arg0) {
+    public final void J(int arg0) {
         this.field8092 = 0;
         while (arg0 > 1) {
             this.field8092++;
@@ -1943,7 +1943,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.c(III)V")
-    public final void method532(int arg0, int arg1, int arg2) {
+    public final void c(int arg0, int arg1, int arg2) {
         if (this.field8167 == arg0 && this.field8168 == arg1 && this.field8169 == arg2) {
             return;
         }
@@ -2556,7 +2556,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.za()I")
-    public final int method552() {
+    public final int za() {
         return this.field8157 + this.field8096 + this.field8098;
     }
 
@@ -2632,7 +2632,7 @@ public class GlToolkit extends RendererToolkit {
             OpenGL.glDeleteLists((int) var12.field4228, var12.field9556);
         }
         this.field8083.method2326();
-        if (this.method552() > 100663296 && MonotonicTime.method5554() > this.field8078 + 60000L) {
+        if (this.za() > 100663296 && MonotonicTime.method5554() > this.field8078 + 60000L) {
             System.gc();
             this.field8078 = MonotonicTime.method5554();
         }
