@@ -1,27 +1,26 @@
-
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aca")
 public class TextCoord extends Link {
 
-	@ObfuscatedName("aca.a")
-	public int field9257;
+    @ObfuscatedName("aca.a")
+    public int field9257;
 
-	@ObfuscatedName("aca.s")
-	public int field9256;
+    @ObfuscatedName("aca.s")
+    public int field9256;
 
-	@ObfuscatedName("aca.c")
-	public int field9255;
+    @ObfuscatedName("aca.c")
+    public int field9255;
 
-	@ObfuscatedName("aca.m")
-	public int field9260;
+    @ObfuscatedName("aca.m")
+    public int field9260;
 
-	@ObfuscatedName("aca.t")
-	public int field9259;
+    @ObfuscatedName("aca.t")
+    public int field9259;
 
-	@ObfuscatedName("aca.l")
-	public int field9258;
+    @ObfuscatedName("aca.l")
+    public int field9258;
 
-	@ObfuscatedName("aca.f")
-	public String field9261;
+    @ObfuscatedName("aca.f")
+    public String field9261;
 }

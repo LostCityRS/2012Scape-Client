@@ -1,18 +1,17 @@
-
 import deob.ObfuscatedName;
 
-@ObfuscatedName("hv")
+@ObfuscatedName("be")
 public class GlVertexNormal {
 
-	@ObfuscatedName("hv.u")
-	public int field2558;
+    @ObfuscatedName("be.u")
+    public int field1104;
 
-	@ObfuscatedName("hv.j")
-	public int field2557;
+    @ObfuscatedName("be.j")
+    public int field1101;
 
-	@ObfuscatedName("hv.a")
-	public int field2556;
+    @ObfuscatedName("be.a")
+    public int field1103;
 
-	@ObfuscatedName("hv.s")
-	public int field2559;
+    @ObfuscatedName("be.s")
+    public int field1102;
 }

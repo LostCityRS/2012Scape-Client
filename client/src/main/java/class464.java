@@ -1,4 +1,3 @@
-
 import deob.ObfuscatedName;
 
 @ObfuscatedName("qt")

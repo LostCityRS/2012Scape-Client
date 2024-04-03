@@ -2,29 +2,29 @@ package jagdx;
 
 public class D3DCAPS {
 
-	public int DevCaps;
+    public int DevCaps;
 
-	public int SrcBlendCaps;
+    public int SrcBlendCaps;
 
-	public int DestBlendCaps;
+    public int DestBlendCaps;
 
-	public int TextureCaps;
+    public int TextureCaps;
 
-	public int TextureOpCaps;
+    public int TextureOpCaps;
 
-	public int MaxSimultaneousTextures;
+    public int MaxSimultaneousTextures;
 
-	public int MaxActiveLights;
+    public int MaxActiveLights;
 
-	public int MaxStreams;
+    public int MaxStreams;
 
-	public int VertexShaderVersion;
+    public int VertexShaderVersion;
 
-	public int PixelShaderVersion;
+    public int PixelShaderVersion;
 
-	public D3DVSHADERCAPS2_0 VS20Caps = new D3DVSHADERCAPS2_0();
+    public D3DVSHADERCAPS2_0 VS20Caps = new D3DVSHADERCAPS2_0();
 
-	public D3DPSHADERCAPS2_0 PS20Caps = new D3DPSHADERCAPS2_0();
+    public D3DPSHADERCAPS2_0 PS20Caps = new D3DPSHADERCAPS2_0();
 
-	public int NumSimultaneousRTs;
+    public int NumSimultaneousRTs;
 }

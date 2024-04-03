@@ -4,11 +4,11 @@ import jagtheora.misc.SimplePeer;
 
 public class GranulePos extends SimplePeer {
 
-	static {
-		init();
-	}
+    static {
+        init();
+    }
 
-	public static native void init();
+    public static native void init();
 
-	public native void clear();
+    public native void clear();
 }

@@ -1,20 +1,19 @@
-
 import deob.ObfuscatedName;
 
 @ObfuscatedName("eu")
 public final class MonotonicTime {
 
-	public MonotonicTime() throws Throwable {
-		throw new Error();
-	}
+    public MonotonicTime() throws Throwable {
+        throw new Error();
+    }
 
-	@ObfuscatedName("kw.u(I)J")
-	public static final synchronized long method5554() {
-		long var0 = System.currentTimeMillis();
-		if (var0 < Statics.field1575) {
-			Statics.field1576 += Statics.field1575 - var0;
-		}
-		Statics.field1575 = var0;
-		return Statics.field1576 + var0;
-	}
+    @ObfuscatedName("kw.u(I)J")
+    public static final synchronized long method5554() {
+        long var0 = System.currentTimeMillis();
+        if (var0 < Statics.field1575) {
+            Statics.field1576 += Statics.field1575 - var0;
+        }
+        Statics.field1575 = var0;
+        return Statics.field1576 + var0;
+    }
 }
