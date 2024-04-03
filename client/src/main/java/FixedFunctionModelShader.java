@@ -15,11 +15,11 @@ public class FixedFunctionModelShader extends ModelShader {
     @ObfuscatedName("aad.a(Z)V")
     public void method3849(boolean arg0) {
         this.field2270.method13629(0);
-        this.field2270.method13560(0, class249.field2546);
-        this.field2270.method13562(0, class249.field2546);
-        this.field2270.method13560(1, class249.field2545);
-        this.field2270.method13562(1, class249.field2545);
-        this.field2270.method13632(class253.field2574, class253.field2574);
+        this.field2270.method13560(0, TextureCombiner.field2546);
+        this.field2270.method13562(0, TextureCombiner.field2546);
+        this.field2270.method13560(1, TextureCombiner.field2545);
+        this.field2270.method13562(1, TextureCombiner.field2545);
+        this.field2270.method13632(TextureCombineMode.field2574, TextureCombineMode.field2574);
         this.method14039();
     }
 
@@ -28,39 +28,39 @@ public class FixedFunctionModelShader extends ModelShader {
         this.field2270.method13557(this.field2268);
         this.field2270.method13566().method5412(this.field2248);
         this.field2270.method13567(TextureTramsformType.field2549);
-        this.field2270.method13596(class255.field2582, this.field2267, this.field2261, this.field2269, this.field2252);
+        this.field2270.method13596(PrimitiveType.field2582, this.field2267, this.field2261, this.field2269, this.field2252);
     }
 
     @ObfuscatedName("aad.s(I)V")
     public void method3850(int arg0) {
         this.field2270.method13629(0);
-        this.field2270.method13632(class253.field2574, class253.field2574);
-        this.field2270.method13560(0, class249.field2546);
-        this.field2270.method13562(0, class249.field2546);
-        this.field2270.method13560(1, class249.field2545);
-        this.field2270.method13562(1, class249.field2545);
+        this.field2270.method13632(TextureCombineMode.field2574, TextureCombineMode.field2574);
+        this.field2270.method13560(0, TextureCombiner.field2546);
+        this.field2270.method13562(0, TextureCombiner.field2546);
+        this.field2270.method13560(1, TextureCombiner.field2545);
+        this.field2270.method13562(1, TextureCombiner.field2545);
         this.method14039();
     }
 
     @ObfuscatedName("aad.c(I)V")
     public void method3851(int arg0) {
         this.field2270.method13629(0);
-        this.field2270.method13632(class253.field2574, class253.field2573);
-        this.field2270.method13560(0, class249.field2546);
-        this.field2270.method13562(0, class249.field2545);
-        this.field2270.method13560(1, class249.field2545);
-        this.field2270.method13562(1, class249.field2545);
+        this.field2270.method13632(TextureCombineMode.field2574, TextureCombineMode.field2573);
+        this.field2270.method13560(0, TextureCombiner.field2546);
+        this.field2270.method13562(0, TextureCombiner.field2545);
+        this.field2270.method13560(1, TextureCombiner.field2545);
+        this.field2270.method13562(1, TextureCombiner.field2545);
         this.method14039();
     }
 
     @ObfuscatedName("aad.m(I)V")
     public void method3852(int arg0) {
         this.field2270.method13629(0);
-        this.field2270.method13632(class253.field2574, class253.field2573);
-        this.field2270.method13560(0, class249.field2546);
-        this.field2270.method13562(0, class249.field2545);
-        this.field2270.method13560(1, class249.field2545);
-        this.field2270.method13562(1, class249.field2545);
+        this.field2270.method13632(TextureCombineMode.field2574, TextureCombineMode.field2573);
+        this.field2270.method13560(0, TextureCombiner.field2546);
+        this.field2270.method13562(0, TextureCombiner.field2545);
+        this.field2270.method13560(1, TextureCombiner.field2545);
+        this.field2270.method13562(1, TextureCombiner.field2545);
         this.method14039();
     }
 

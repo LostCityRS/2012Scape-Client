@@ -56,7 +56,7 @@ public class a implements SoftwareRendererRelated {
 
     public void finalize() {
         if (this.nativeid != 0L) {
-            class111.method2358(this);
+            SoftwareRendererRelated2.method2358(this);
         }
     }
 

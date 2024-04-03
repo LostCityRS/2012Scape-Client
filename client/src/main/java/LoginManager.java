@@ -1006,7 +1006,7 @@ public class LoginManager {
             client.field8936[var0] = null;
         }
         client.field9117 = false;
-        SoundPlayer.method2387();
+        AudioRenderer.method2387();
         client.field9050 = (int) (Math.random() * 100.0D) - 50;
         client.field9006 = (int) (Math.random() * 110.0D) - 55;
         client.field9008 = (int) (Math.random() * 80.0D) - 40;

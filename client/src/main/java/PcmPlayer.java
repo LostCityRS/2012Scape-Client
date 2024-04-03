@@ -91,7 +91,7 @@ public class PcmPlayer {
                     }
                     var4.method6538(var4.field4014);
                     if (Statics.field4017 > 0 && Statics.field4027 == null) {
-                        Statics.field4027 = new class638();
+                        Statics.field4027 = new AudioRelatedPcm12_Sub1();
                         Thread var5 = new Thread(Statics.field4027);
                         var5.setDaemon(true);
                         var5.start();

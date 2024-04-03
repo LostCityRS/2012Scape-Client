@@ -2105,17 +2105,17 @@ public class GlToolkit extends RendererToolkit {
 
     @ObfuscatedName("yq.ah(II)Ldo;")
     public EffectInterface method637(int arg0, int arg1) {
-        return new class656(this, TextureFormat.field1300, DataType.field1503, arg0, arg1);
+        return new PostProcessingRelated(this, TextureFormat.field1300, DataType.field1503, arg0, arg1);
     }
 
     @ObfuscatedName("yq.au(III)Ldo;")
     public EffectInterface method541(int arg0, int arg1, int arg2) {
-        return new class656(this, TextureFormat.field1300, DataType.field1503, arg0, arg1, arg2);
+        return new PostProcessingRelated(this, TextureFormat.field1300, DataType.field1503, arg0, arg1, arg2);
     }
 
     @ObfuscatedName("yq.aj(IILcy;Ldz;I)Lde;")
     public GraphicsDeletable method468(int arg0, int arg1, TextureFormat arg2, DataType arg3, int arg4) {
-        return new class656(this, arg2, arg3, arg0, arg1, arg4);
+        return new PostProcessingRelated(this, arg2, arg3, arg0, arg1, arg4);
     }
 
     @ObfuscatedName("yq.pv(I[BIZ)Lcf;")
@@ -2125,12 +2125,12 @@ public class GlToolkit extends RendererToolkit {
 
     @ObfuscatedName("yq.pd(I[BIZ)Lbi;")
     public final GlInterfaceRelated method13301(int arg0, byte[] arg1, int arg2, boolean arg3) {
-        return (GlInterfaceRelated) (this.field8181 && (!arg3 || this.field8049) ? new class653(this, arg0, arg1, arg2, arg3) : new class652(this, arg0, arg1, arg2));
+        return (GlInterfaceRelated) (this.field8181 && (!arg3 || this.field8049) ? new GpuBufferRelated12(this, arg0, arg1, arg2, arg3) : new GlFloorModelRelated12(this, arg0, arg1, arg2));
     }
 
     @ObfuscatedName("yq.pe(ILjaclib/memory/Buffer;IZ)Lbi;")
     public final GlInterfaceRelated method13302(int arg0, Buffer arg1, int arg2, boolean arg3) {
-        return (GlInterfaceRelated) (this.field8181 && (!arg3 || this.field8049) ? new class653(this, arg0, arg1, arg2, arg3) : new class652(this, arg0, arg1));
+        return (GlInterfaceRelated) (this.field8181 && (!arg3 || this.field8049) ? new GpuBufferRelated12(this, arg0, arg1, arg2, arg3) : new GlFloorModelRelated12(this, arg0, arg1));
     }
 
     @ObfuscatedName("yq.pp(Lbi;)V")

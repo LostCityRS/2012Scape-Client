@@ -23,7 +23,7 @@ public class fa extends Sprite implements SoftwareRendererRelated, GraphicsDelet
 
     public void finalize() {
         if (this.nativeid != 0L) {
-            class111.method2358(this);
+            SoftwareRendererRelated2.method2358(this);
         }
     }
 

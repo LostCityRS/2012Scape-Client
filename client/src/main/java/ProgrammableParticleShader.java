@@ -46,7 +46,7 @@ public class ProgrammableParticleShader extends ParticleShader {
     @ObfuscatedName("aaf.j(I)V")
     public void method3871(int arg0) {
         this.method14051();
-        this.field2274.method13596(class255.field2582, 0, arg0 * 4, 0, arg0 * 2);
+        this.field2274.method13596(PrimitiveType.field2582, 0, arg0 * 4, 0, arg0 * 2);
     }
 
     @ObfuscatedName("aaf.a()V")

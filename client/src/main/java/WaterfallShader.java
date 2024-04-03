@@ -128,6 +128,6 @@ public class WaterfallShader extends WaterShader {
         this.field8778.method3406(this.field10096, new Vector4(this.field10097[0], this.field10097[1], this.field10097[2], this.field10097[3]));
         this.field8778.method3406(this.field10098, new Vector4(this.field10099[0], this.field10099[1], this.field10099[2], this.field10099[3]));
         this.field8778.method3406(this.field10102, new Vector4(this.field10100, 0.0F, 0.0F, 0.0F));
-        this.field2414.method13596(class255.field2582, this.field10095, this.field10090, this.field10103, this.field10088);
+        this.field2414.method13596(PrimitiveType.field2582, this.field10095, this.field10090, this.field10103, this.field10088);
     }
 }

@@ -56,7 +56,7 @@ public class ClientMapLoader extends MapLoader {
                     int var8 = arg1.method15220();
                     if (var8 > 0) {
                         for (int var9 = 0; var9 < var8; var9++) {
-                            class427 var10 = new class427(arg0, this.field3619.field4510, arg1, 2);
+                            StaticPointLight var10 = new StaticPointLight(arg0, this.field3619.field4510, arg1, 2);
                             if (var10.field4594 == 31) {
                                 LightType var11 = Statics.field785.method12453(arg1.method15239());
                                 var10.method7577(var11.field7188, var11.field7191, var11.field7189, var11.field7190);
@@ -234,7 +234,7 @@ public class ClientMapLoader extends MapLoader {
                     int var15 = arg1.method15220();
                     if (var15 > 0) {
                         for (int var16 = 0; var16 < var15; var16++) {
-                            class427 var17 = new class427(arg0, this.field3619.field4510, arg1, 2);
+                            StaticPointLight var17 = new StaticPointLight(arg0, this.field3619.field4510, arg1, 2);
                             if (var17.field4594 == 31) {
                                 LightType var18 = Statics.field785.method12453(arg1.method15239());
                                 var17.method7577(var18.field7188, var18.field7191, var18.field7189, var18.field7190);

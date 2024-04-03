@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("gp")
-public class IDKType implements class464 {
+public class IDKType implements PlayerTypeRelated {
 
     @ObfuscatedName("gp.u")
     public IDKTypeList field2296;

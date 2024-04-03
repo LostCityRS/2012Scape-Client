@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("pd")
-public class VarBitTypeList implements class463 {
+public class VarBitTypeList implements PlayerTypeListRelated {
 
     @ObfuscatedName("pd.j")
     public final Js5 field4664;

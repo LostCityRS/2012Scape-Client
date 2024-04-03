@@ -1271,8 +1271,8 @@ public final class client extends GameShell {
         if (Statics.field3562 != null) {
             Statics.field3562.method5576();
         }
-        SoundPlayer.method7228();
-        class521.method16665();
+        AudioRenderer.method7228();
+        VideoTypeList.method16665();
         Statics.field2131.method7231();
         Statics.field7136.method7249();
         if (Statics.field5187 != null) {
@@ -1394,8 +1394,8 @@ public final class client extends GameShell {
         }
         long var1 = GameShell.method13883() / 1000000L - field8927;
         field8927 = GameShell.method13883() / 1000000L;
-        boolean var3 = class155.method7075();
-        if (var3 && SoundPlayer.field4203 && Statics.field5198 != null) {
+        boolean var3 = SoundRelated12.method7075();
+        if (var3 && AudioRenderer.field4203 && Statics.field5198 != null) {
             Statics.field5198.method6497();
         }
         if (method6478(field8923)) {
@@ -1491,7 +1491,7 @@ public final class client extends GameShell {
                 }
             }
         }
-        class521.method12632();
+        VideoTypeList.method12632();
         int var14 = Statics.field4961.field9652.method15874();
         if (var14 == 0) {
             PreciseSleep.method7052(15L);
@@ -1704,16 +1704,16 @@ public final class client extends GameShell {
         boolean var2 = field8923 == 10 || method11059(field8923) || method12902(field8923);
         if (var1 != var2) {
             if (var1) {
-                SoundPlayer.field4202 = SoundPlayer.field4205;
+                AudioRenderer.field4202 = AudioRenderer.field4205;
                 if (Statics.field4961.field9675.method15899() == 0) {
-                    class155.method3311(2);
+                    SoundRelated12.method3311(2);
                 } else {
-                    class155.method11764(2, Statics.field9367, SoundPlayer.field4205, 0, Statics.field4961.field9675.method15899(), false);
-                    SoundPlayer.method2572();
+                    SoundRelated12.method11764(2, Statics.field9367, AudioRenderer.field4205, 0, Statics.field4961.field9675.method15899(), false);
+                    AudioRenderer.method2572();
                 }
                 Statics.field848.method5744(false);
             } else {
-                class155.method3311(2);
+                SoundRelated12.method3311(2);
                 Statics.field848.method5744(true);
             }
         }
@@ -2495,10 +2495,10 @@ public final class client extends GameShell {
         field8980.method6110();
         ClientWorldMap.method7184(false);
         CameraManager.method8391();
-        class155.method3311(2);
-        SoundPlayer.field4202 = -1;
-        SoundPlayer.field4203 = false;
-        SoundPlayer.method2572();
+        SoundRelated12.method3311(2);
+        AudioRenderer.field4202 = -1;
+        AudioRenderer.field4203 = false;
+        AudioRenderer.method2572();
         PositionedSound.method6259(true);
         ClientWorldMap.method3465();
         ClientWorldMap.method3318();
@@ -2682,7 +2682,7 @@ public final class client extends GameShell {
                             } else if (var9 > field8980.method6193() - var5 - 1) {
                                 var9 = field8980.method6193() - var5 - 1;
                             }
-                            int var10 = PathFinder.method15625(var3.field8642[0], var3.field8643[0], var5, class434.method6645(var8, var9, var5, var5, 0), field8980.method6101(var3.field9807), true, field9001, field9065);
+                            int var10 = PathFinder.method15625(var3.field8642[0], var3.field8643[0], var5, PathFinderEntityRelated.method6645(var8, var9, var5, var5, 0), field8980.method6101(var3.field9807), true, field9001, field9065);
                             if (var10 > 0) {
                                 if (var10 > 9) {
                                     var10 = 9;
@@ -4185,7 +4185,7 @@ public final class client extends GameShell {
             field8980.method6098().method7419(field9213, Statics.field6769, Statics.field8423, Statics.field8424, field8980.method6129(), field9058, field9222, field9097, field9061, field8945, Statics.field2119.field9807 + 1, var26, (int) var5.field3475 >> 9, (int) var5.field3477 >> 9, Statics.field4961.field9645.method15679() == 0, true, 0, true);
         }
         field9017++;
-        SoundPlayer.method3461();
+        AudioRenderer.method3461();
         if (field8923 == 1) {
             method11759(var7, var8, var9, var10, 256, 256);
             method12631(var7, var8, var9, var10, 256, 256);
@@ -5897,11 +5897,11 @@ public final class client extends GameShell {
             }
             if (var5 != 0) {
             }
-            var8 = class434.method1767(arg0, arg1, var10, var11, LocShape.field6591, 0);
+            var8 = PathFinderEntityRelated.method1767(arg0, arg1, var10, var11, LocShape.field6591, 0);
         } else if (LocShape.method2616(var7.field6590)) {
-            var8 = class434.method1767(arg0, arg1, 0, 0, var7, var5);
+            var8 = PathFinderEntityRelated.method1767(arg0, arg1, 0, 0, var7, var5);
         } else {
-            var8 = class434.method7893(arg0, arg1, 0, 0, var7, var5);
+            var8 = PathFinderEntityRelated.method7893(arg0, arg1, 0, 0, var7, var5);
         }
         method2677(arg0, arg1, true, var8);
     }
@@ -5909,14 +5909,14 @@ public final class client extends GameShell {
     @ObfuscatedName("ww.je(IIB)V")
     public static final void method12668(int arg0, int arg1) {
         if (field9163 == ModeGame.field6402) {
-            if (method2677(arg0, arg1, false, class434.method11404(arg0, arg1, 1, 1, 0))) {
+            if (method2677(arg0, arg1, false, PathFinderEntityRelated.method11404(arg0, arg1, 1, 1, 0))) {
                 return;
             }
             method2677(arg0, arg1, false, Statics.method7914(arg0, arg1, 1, 1));
         } else if (method2677(arg0, arg1, false, Statics.method7914(arg0, arg1, 1, 1))) {
             return;
         } else {
-            method2677(arg0, arg1, false, class434.method11404(arg0, arg1, 1, 1, 0));
+            method2677(arg0, arg1, false, PathFinderEntityRelated.method11404(arg0, arg1, 1, 1, 0));
         }
     }
 
@@ -5948,7 +5948,7 @@ public final class client extends GameShell {
         if (var4 < 0 || var4 >= field8980.method6220() || var5 < 0 || var5 >= field8980.method6193() || (arg1 < 0 || arg1 >= field8980.method6220() || arg2 < 0 || arg2 >= field8980.method6193())) {
             return;
         }
-        int var6 = PathFinder.method15625(var4, var5, arg0.method13954(), class434.method3645(arg1, arg2), field8980.method6101(arg0.field9807), true, field9001, field9065);
+        int var6 = PathFinder.method15625(var4, var5, arg0.method13954(), PathFinderEntityRelated.method3645(arg1, arg2), field8980.method6101(arg0.field9807), true, field9001, field9065);
         if (var6 >= 1 && var6 <= 3) {
             for (int var7 = 0; var7 < var6 - 1; var7++) {
                 arg0.method16124(field9001[var7], field9065[var7], arg3);
@@ -6078,7 +6078,7 @@ public final class client extends GameShell {
             }
             int var18 = var2.method15273();
             int var19 = var2.method15286();
-            SoundPlayer.method5596(var17, var19, var18);
+            AudioRenderer.method5596(var17, var19, var18);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3004 == arg0.field840) {
@@ -6123,7 +6123,7 @@ public final class client extends GameShell {
             int var28 = var2.method15273();
             byte var29 = var2.method15275();
             method2793();
-            SoundPlayer.method1349(var29, var28);
+            AudioRenderer.method1349(var29, var28);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3005 == arg0.field840) {
@@ -6425,7 +6425,7 @@ public final class client extends GameShell {
             int var107 = var2.method15239();
             int var108 = var2.method15220();
             method2793();
-            class521.method7358(var107, var108, true);
+            VideoTypeList.method7358(var107, var108, true);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3080 == arg0.field840) {
@@ -6437,7 +6437,7 @@ public final class client extends GameShell {
             int var111 = var2.method15239();
             int var112 = var2.method15220();
             int var113 = var2.method15239();
-            SoundPlayer.method1717(var109, var110, var111, var112, false, var113);
+            AudioRenderer.method1717(var109, var110, var111, var112, false, var113);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field2992 == arg0.field840) {
@@ -6873,7 +6873,7 @@ public final class client extends GameShell {
         } else if (ServerProt.field3075 == arg0.field840) {
             int var229 = var2.method15281();
             method2793();
-            class521.method2930(var229);
+            VideoTypeList.method2930(var229);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3087 == arg0.field840) {
@@ -7065,7 +7065,7 @@ public final class client extends GameShell {
         } else if (ServerProt.field3079 == arg0.field840) {
             int var283 = var2.method15281();
             method2793();
-            class521.method11689(var283);
+            VideoTypeList.method11689(var283);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3083 == arg0.field840) {
@@ -7097,7 +7097,7 @@ public final class client extends GameShell {
             int var290 = var2.method15239();
             int var291 = var2.method15220();
             int var292 = var2.method15239();
-            SoundPlayer.method14082(var288, var289, var290, var291, var292);
+            AudioRenderer.method14082(var288, var289, var290, var291, var292);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3067 == arg0.field840) {
@@ -7105,7 +7105,7 @@ public final class client extends GameShell {
             if (var293 == 65535) {
                 var293 = -1;
             }
-            SoundPlayer.method5712(var293);
+            AudioRenderer.method5712(var293);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3076 == arg0.field840) {
@@ -7330,7 +7330,7 @@ public final class client extends GameShell {
                 }
             } else {
                 String var327 = var2.method15337();
-                class61 var328 = new class61();
+                FriendChatUser var328 = new FriendChatUser();
                 var328.field791 = var319;
                 var328.field786 = var321;
                 var328.field787 = NamespaceUtil.method4744(var328.field786);
@@ -7363,7 +7363,7 @@ public final class client extends GameShell {
                     Statics.field5180[var331 + 1] = Statics.field5180[var331];
                 }
                 if (Statics.field7045 == 0) {
-                    Statics.field5180 = new class61[100];
+                    Statics.field5180 = new FriendChatUser[100];
                 }
                 Statics.field5180[var329 + 1] = var328;
                 Statics.field7045++;
@@ -7375,7 +7375,7 @@ public final class client extends GameShell {
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3113 == arg0.field840) {
-            SoundPlayer.method6849();
+            AudioRenderer.method6849();
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3077 == arg0.field840) {
@@ -7386,7 +7386,7 @@ public final class client extends GameShell {
             int var333 = var2.method15220();
             int var334 = var2.method15239();
             int var335 = var2.method15220();
-            SoundPlayer.method1717(var332, var333, var334, var335, true, 256);
+            AudioRenderer.method1717(var332, var333, var334, var335, true, 256);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3002 == arg0.field840) {
@@ -7610,7 +7610,7 @@ public final class client extends GameShell {
             int var419 = var414 >> 28;
             int var420 = var414 >> 14 & 0x3FFF;
             int var421 = var414 & 0x3FFF;
-            SoundPlayer.method15962(var419, var420, var421, var416, var417, var415, var418);
+            AudioRenderer.method15962(var419, var420, var421, var416, var417, var415, var418);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3102 == arg0.field840) {
@@ -7825,7 +7825,7 @@ public final class client extends GameShell {
                 ObjectNode var480 = (ObjectNode) field8964.method11923((long) var479);
                 if (var480 != null) {
                     NpcEntity var481 = (NpcEntity) var480.field9550;
-                    class115 var482 = var481.field8641[var463];
+                    EntitySpotAnim var482 = var481.field8641[var463];
                     if (var462 == 65535) {
                         var462 = -1;
                     }
@@ -7880,7 +7880,7 @@ public final class client extends GameShell {
                     var495 = field9070[var494];
                 }
                 if (var495 != null) {
-                    class115 var496 = var495.field8641[var463];
+                    EntitySpotAnim var496 = var495.field8641[var463];
                     if (var462 == 65535) {
                         var462 = -1;
                     }
@@ -8106,7 +8106,7 @@ public final class client extends GameShell {
                 var551 = -1;
             }
             int var552 = var2.method15273();
-            SoundPlayer.method11057(var551, var550, var552);
+            AudioRenderer.method11057(var551, var550, var552);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3078 == arg0.field840) {
@@ -8250,9 +8250,9 @@ public final class client extends GameShell {
                 return true;
             }
             Statics.field7045 = var591;
-            class61[] var592 = new class61[100];
+            FriendChatUser[] var592 = new FriendChatUser[100];
             for (int var593 = 0; var593 < Statics.field7045; var593++) {
-                var592[var593] = new class61();
+                var592[var593] = new FriendChatUser();
                 var592[var593].field791 = var2.method15337();
                 boolean var594 = var2.method15220() == 1;
                 if (var594) {
@@ -8275,7 +8275,7 @@ public final class client extends GameShell {
                 var596--;
                 for (int var598 = 0; var598 < var596; var598++) {
                     if (var592[var598].field787.compareTo(var592[var598 + 1].field787) > 0) {
-                        class61 var599 = var592[var598];
+                        FriendChatUser var599 = var592[var598];
                         var592[var598] = var592[var598 + 1];
                         var592[var598 + 1] = var599;
                         var597 = false;
@@ -8568,7 +8568,7 @@ public final class client extends GameShell {
             if (field8980.method6132() != RebuildType.field3839 && (var132 >= 0 && var133 >= 0 && var132 < field8980.method6220() && var133 < field8980.method6193())) {
                 int var142 = var136 + 1;
                 if (Statics.field2119.field8642[0] >= var132 - var142 && Statics.field2119.field8642[0] <= var132 + var142 && Statics.field2119.field8643[0] >= var133 - var142 && Statics.field2119.field8643[0] <= var133 + var142) {
-                    SoundPlayer.method12739(var134, var137, var138, var139, (var133 << 8) + (Statics.field3161 << 24) + (var132 << 16) + var136, var141, var140);
+                    AudioRenderer.method12739(var134, var137, var138, var139, (var133 << 8) + (Statics.field3161 << 24) + (var132 << 16) + var136, var141, var140);
                 }
             }
         } else if (ZoneProt.field2801 == arg0) {
@@ -8599,7 +8599,7 @@ public final class client extends GameShell {
             if (field8980.method6132() != RebuildType.field3839 && (var151 >= 0 && var152 >= 0 && var151 < field8980.method6220() && var152 < field8980.method6193())) {
                 int var160 = var155 + 1;
                 if (Statics.field2119.field8642[0] >= var151 - var160 && Statics.field2119.field8642[0] <= var151 + var160 && Statics.field2119.field8643[0] >= var152 - var160 && Statics.field2119.field8643[0] <= var152 + var160) {
-                    SoundPlayer.method1356(var153, var156, var157, var158, (var152 << 8) + (Statics.field3161 << 24) + (var151 << 16) + var155, var159);
+                    AudioRenderer.method1356(var153, var156, var157, var158, (var152 << 8) + (Statics.field3161 << 24) + (var151 << 16) + var155, var159);
                 }
             }
         } else if (ZoneProt.field2804 == arg0) {
@@ -9378,7 +9378,7 @@ public final class client extends GameShell {
                 var6.field9467.method15293(var3[var4]);
                 field8975.method1913(var6);
                 int var7 = var5.method13954();
-                method2677(var5.field8642[0], var5.field8643[0], true, class434.method11404(var5.field8642[0], var5.field8643[0], var7, var7, 0));
+                method2677(var5.field8642[0], var5.field8643[0], true, PathFinderEntityRelated.method11404(var5.field8642[0], var5.field8643[0], var7, var7, 0));
                 var1 = true;
                 break;
             }
@@ -9644,7 +9644,7 @@ public final class client extends GameShell {
                             }
                             if (ComType.field1743 == var11.field1767 && field8988 == 2) {
                                 if (var11.method3124(Statics.field5187) != null) {
-                                    SoundPlayer.method3461();
+                                    AudioRenderer.method3461();
                                     MiniMap.method3655(Statics.field5187, var11, var13, var14);
                                     Statics.field5187.method659(arg2, arg3, arg4, arg5);
                                 }
@@ -9752,7 +9752,7 @@ public final class client extends GameShell {
                                             }
                                         }
                                         if (var11.field1737 != -1) {
-                                            var35 = class521.method1723(var11.field1737);
+                                            var35 = VideoTypeList.method1723(var11.field1737);
                                             if (var35 == null) {
                                                 var35 = "";
                                             }
@@ -9788,7 +9788,7 @@ public final class client extends GameShell {
                                     } else if (var11.field1737 == -1) {
                                         var39 = var11.method3151(Statics.field5187);
                                     } else {
-                                        var39 = class521.method4742(Statics.field5187, var11.field1737);
+                                        var39 = VideoTypeList.method4742(Statics.field5187, var11.field1737);
                                     }
                                     if (var39 != null) {
                                         int var40 = var39.method1042();
@@ -10294,7 +10294,7 @@ public final class client extends GameShell {
         field8980.method6111();
         MiniMap.method7992();
         method5025(true);
-        class521.method4743();
+        VideoTypeList.method4743();
         System.gc();
         Statics.field5187.method505(2, 0);
     }

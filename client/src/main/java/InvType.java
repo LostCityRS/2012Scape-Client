@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aez")
-public class InvType extends SecondaryNode implements class464 {
+public class InvType extends SecondaryNode implements PlayerTypeRelated {
 
     @ObfuscatedName("aez.t")
     public int field9804 = 0;

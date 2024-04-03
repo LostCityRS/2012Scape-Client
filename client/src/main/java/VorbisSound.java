@@ -469,7 +469,7 @@ public class VorbisSound extends Node {
 
     @ObfuscatedName("adr.z()Laly;")
     public VariableRateSoundPacket method15099() {
-        class373.method4778(this);
+        VorbisRelated1.method4778(this);
         return this.method15071() && (this.field9510 <= this.field9495 || this.field9512 <= this.field9495 / GameShell.method2809()) ? null : new VariableRateSoundPacket(this.field9495, this, this.field9509, this.field9487, this.field9482, this.field9483);
     }
 

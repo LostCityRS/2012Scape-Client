@@ -120,7 +120,7 @@ public class PcmPlayer_Sub1 extends PcmPlayer {
     public boolean method14312() {
         boolean var1 = false;
         if (this.field8897 != null) {
-            Thread var2 = new Thread(new class369(this));
+            Thread var2 = new Thread(new PcmPlayerStop(this));
             var2.start();
             boolean var8 = false;
             label84:

@@ -31,7 +31,7 @@ public class GlEffectRelated5 {
             return false;
         }
         GlFramebuffer var4 = this.field1170.field8152;
-        class656 var5 = new class656(this.field1170, TextureFormat.field1296, DataType.field1501, arg0.field7438, arg0.field7437);
+        PostProcessingRelated var5 = new PostProcessingRelated(this.field1170, TextureFormat.field1296, DataType.field1501, arg0.field7438, arg0.field7437);
         boolean var6 = false;
         this.field1170.method464(var4);
         var4.method1206(0, var5);

@@ -98,7 +98,7 @@ public class ProgrammableModelShader extends ModelShader {
         this.field8682.method3349(this.field8688[8], this.field2259.field3475, this.field2259.field3476, this.field2259.field3477);
         this.field8682.method3350(this.field8688[9], this.field2260.field3426, this.field2260.field3427, this.field2260.field3428, this.field2260.field3429);
         this.field8682.method3349(this.field8688[10], this.field2249.field3475, this.field2249.field3476, this.field2249.field3477);
-        this.field2270.method13596(class255.field2582, this.field2267, this.field2261, this.field2269, this.field2252);
+        this.field2270.method13596(PrimitiveType.field2582, this.field2267, this.field2261, this.field2269, this.field2252);
     }
 
     @ObfuscatedName("aam.t()V")
@@ -136,7 +136,7 @@ public class ProgrammableModelShader extends ModelShader {
             this.field8682.method3352(this.field8688[1], this.field2251, arg0 * 4);
             this.field8682.method3352(this.field8688[0], this.field2250, arg0 * 4);
         }
-        this.field2270.method13596(class255.field2582, this.field2267, this.field2261, this.field2269, this.field2252);
+        this.field2270.method13596(PrimitiveType.field2582, this.field2267, this.field2261, this.field2269, this.field2252);
     }
 
     @ObfuscatedName("aam.s(I)V")

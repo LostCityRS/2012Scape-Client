@@ -79,7 +79,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
     public AnimationNode field8597;
 
     @ObfuscatedName("aay.ax")
-    public class115[] field8641;
+    public EntitySpotAnim[] field8641;
 
     @ObfuscatedName("aay.aw")
     public int field8619;
@@ -230,9 +230,9 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
         this.field8643 = new int[arg1];
         this.field8645 = new byte[arg1];
         this.field8651 = new Model[5];
-        this.field8641 = new class115[4];
+        this.field8641 = new EntitySpotAnim[4];
         for (int var3 = 0; var3 < 4; var3++) {
-            this.field8641[var3] = new class115(this);
+            this.field8641[var3] = new EntitySpotAnim(this);
         }
         this.field8633 = new UnknownEntityAnimationNode[Statics.field3226.field5171.length];
     }
@@ -477,7 +477,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
 
     @ObfuscatedName("aay.p(IIIIZII)V")
     public final void method13950(int arg0, int arg1, int arg2, int arg3, boolean arg4, int arg5) {
-        class115 var7 = this.field8641[arg5];
+        EntitySpotAnim var7 = this.field8641[arg5];
         int var8 = var7.field1204;
         if (arg0 != -1 && var8 != -1) {
             if (arg0 == var8) {
@@ -709,7 +709,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
             } else if (var7 == 3) {
                 var8 = 7;
             }
-            class115 var9 = this.field8641[var7];
+            EntitySpotAnim var9 = this.field8641[var7];
             if (var9.field1204 == -1 || var9.field1203.method11776()) {
                 this.field8651[var7 + 1] = null;
             } else {

@@ -183,11 +183,11 @@ public class GlRelated2 extends GlTexture {
 
     @ObfuscatedName("xp.al(I)Ldo;")
     public EffectInterface method12764(int arg0) {
-        return new class107(this, arg0);
+        return new GlRelated6(this, arg0);
     }
 
     @ObfuscatedName("xp.at(I)Lde;")
     public GraphicsDeletable method12762(int arg0) {
-        return new class107(this, arg0);
+        return new GlRelated6(this, arg0);
     }
 }

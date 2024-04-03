@@ -100,7 +100,7 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
             if (!NativeLibraries.method11710().method6800("sw3d")) {
                 throw new RuntimeException("");
             }
-            class111.method2360();
+            SoftwareRendererRelated2.method2360();
             this.method966(this.field400, this.field400.method894(), 0);
             ColourUtils.method8092(false, true);
             this.field449 = true;
@@ -136,13 +136,13 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
     public void method992() {
         System.gc();
         System.runFinalization();
-        class111.method2359();
+        SoftwareRendererRelated2.method2359();
     }
 
     public synchronized void finalize() {
         this.method442();
         if (this.nativeid != 0L) {
-            class111.method2358(this);
+            SoftwareRendererRelated2.method2358(this);
         }
     }
 
@@ -205,13 +205,13 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
             this.field449 = false;
         }
         this.method992();
-        class111.method2361();
+        SoftwareRendererRelated2.method2361();
         this.field459 = true;
     }
 
     @ObfuscatedName("ja.b(I)V")
     public void method444(int arg0) {
-        class111.method2359();
+        SoftwareRendererRelated2.method2359();
         this.method970(arg0);
         for (ba var2 = (ba) this.field438.method11563(); var2 != null; var2 = (ba) this.field438.method11567()) {
             var2.method1152();
@@ -642,7 +642,7 @@ public class ja extends RendererToolkit implements SoftwareRendererRelated {
 
     @ObfuscatedName("ja.av()Lyu;")
     public Framebuffer method467() {
-        return new class29(this);
+        return new o(this);
     }
 
     @ObfuscatedName("ja.ob(II)Lde;")

@@ -1,64 +1,95 @@
 import deob.ObfuscatedName;
 
-@ObfuscatedName("np")
+@ObfuscatedName("mr")
 public class SynthSound {
 
-    @ObfuscatedName("np.s")
-    public byte field4186;
+    @ObfuscatedName("mr.j")
+    public Instrument[] field3994 = new Instrument[10];
 
-    @ObfuscatedName("np.c")
-    public int field4173;
+    @ObfuscatedName("mr.a")
+    public int field3996;
 
-    @ObfuscatedName("np.m")
-    public int field4178;
+    @ObfuscatedName("mr.s")
+    public int field3993;
 
-    @ObfuscatedName("np.t")
-    public int field4179;
-
-    @ObfuscatedName("np.l")
-    public int field4177;
-
-    @ObfuscatedName("np.f")
-    public int field4181;
-
-    @ObfuscatedName("np.d")
-    public int field4182;
-
-    @ObfuscatedName("np.z")
-    public class370 field4176;
-
-    @ObfuscatedName("np.n")
-    public VorbisSound field4184;
-
-    @ObfuscatedName("np.o")
-    public VariableRateSoundPacket field4185;
-
-    @ObfuscatedName("np.q")
-    public SoundStream field4188;
-
-    @ObfuscatedName("np.p")
-    public int field4180 = -1;
-
-    @ObfuscatedName("np.w")
-    public int field4187 = -1;
-
-    public SynthSound(byte arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, GraphEntity arg7) {
-        this.field4186 = arg0;
-        this.field4173 = arg1;
-        this.field4178 = arg2;
-        this.field4179 = arg3;
-        this.field4181 = arg4;
-        this.field4177 = arg5;
-        this.field4182 = arg6;
-        if (arg7 != null && arg7 instanceof PrimaryLayerEntity) {
-            PrimaryLayerEntity var9 = (PrimaryLayerEntity) arg7;
-            this.field4180 = var9.field10510;
-            this.field4187 = var9.field10509;
-        }
+    @ObfuscatedName("mr.u(Lls;II)Lmr;")
+    public static SynthSound method6466(Js5 arg0, int arg1, int arg2) {
+        byte[] var3 = arg0.method5627(arg1, arg2);
+        return var3 == null ? null : new SynthSound(new Packet(var3));
     }
 
-    @ObfuscatedName("np.u(I)Z")
-    public boolean method6878() {
-        return this.field4186 == 2 || this.field4186 == 3;
+    public SynthSound(Packet arg0) {
+        for (int var2 = 0; var2 < 10; var2++) {
+            int var3 = arg0.method15220();
+            if (var3 != 0) {
+                arg0.field9626--;
+                this.field3994[var2] = new Instrument();
+                this.field3994[var2].method6600(arg0);
+            }
+        }
+        this.field3996 = arg0.method15239();
+        this.field3993 = arg0.method15239();
+    }
+
+    @ObfuscatedName("mr.j()Lalu;")
+    public SynthVariableRateSoundPacket method6463() {
+        byte[] var1 = this.method6465();
+        return new SynthVariableRateSoundPacket(22050, var1, this.field3996 * 22050 / 1000, this.field3993 * 22050 / 1000);
+    }
+
+    @ObfuscatedName("mr.a()I")
+    public final int method6462() {
+        int var1 = 9999999;
+        for (int var2 = 0; var2 < 10; var2++) {
+            if (this.field3994[var2] != null && this.field3994[var2].field4083 / 20 < var1) {
+                var1 = this.field3994[var2].field4083 / 20;
+            }
+        }
+        if (this.field3996 < this.field3993 && this.field3996 / 20 < var1) {
+            var1 = this.field3996 / 20;
+        }
+        if (var1 == 9999999 || var1 == 0) {
+            return 0;
+        }
+        for (int var3 = 0; var3 < 10; var3++) {
+            if (this.field3994[var3] != null) {
+                this.field3994[var3].field4083 -= var1 * 20;
+            }
+        }
+        if (this.field3996 < this.field3993) {
+            this.field3996 -= var1 * 20;
+            this.field3993 -= var1 * 20;
+        }
+        return var1;
+    }
+
+    @ObfuscatedName("mr.s()[B")
+    public final byte[] method6465() {
+        int var1 = 0;
+        for (int var2 = 0; var2 < 10; var2++) {
+            if (this.field3994[var2] != null && this.field3994[var2].field4083 + this.field3994[var2].field4075 > var1) {
+                var1 = this.field3994[var2].field4083 + this.field3994[var2].field4075;
+            }
+        }
+        if (var1 == 0) {
+            return new byte[0];
+        }
+        int var3 = var1 * 22050 / 1000;
+        byte[] var4 = new byte[var3];
+        for (int var5 = 0; var5 < 10; var5++) {
+            if (this.field3994[var5] != null) {
+                int var6 = this.field3994[var5].field4075 * 22050 / 1000;
+                int var7 = this.field3994[var5].field4083 * 22050 / 1000;
+                int[] var8 = this.field3994[var5].method6598(var6, this.field3994[var5].field4075);
+                for (int var9 = 0; var9 < var6; var9++) {
+                    int var10 = (var8[var9] >> 8) + var4[var7 + var9];
+                    if ((var10 + 128 & 0xFFFFFF00) != 0) {
+                        var10 = var10 >> 31 ^ 0x7F;
+                    }
+                    var4[var7 + var9] = (byte) var10;
+                }
+            }
+        }
+        return var4;
     }
 }

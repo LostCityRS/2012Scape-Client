@@ -16,7 +16,7 @@ public class CutsceneAction_Sub9 extends CutsceneAction {
     public final int field8535;
 
     @ObfuscatedName("aab.m")
-    public SynthSound field8533;
+    public Sound field8533;
 
     public CutsceneAction_Sub9(Packet arg0) {
         super(arg0);
@@ -28,7 +28,7 @@ public class CutsceneAction_Sub9 extends CutsceneAction {
 
     @ObfuscatedName("aab.j(I)V")
     public void method2873() {
-        this.field8533 = SoundPlayer.method14082(this.field8534, this.field8535, 0, this.field8532, this.field8536);
+        this.field8533 = AudioRenderer.method14082(this.field8534, this.field8535, 0, this.field8532, this.field8536);
     }
 
     @ObfuscatedName("aab.a(B)V")

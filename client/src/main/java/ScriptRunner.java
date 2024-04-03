@@ -7460,54 +7460,54 @@ public final class ScriptRunner {
     @ObfuscatedName("ob.tb(Lrn;I)V")
     public static final void method7277(ClientScriptState arg0) {
         arg0.field5216 -= 3;
-        SoundPlayer.method14082(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2], 255, 256);
+        AudioRenderer.method14082(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2], 255, 256);
     }
 
     @ObfuscatedName("qp.tr(Lrn;I)V")
     public static final void method8200(ClientScriptState arg0) {
-        SoundPlayer.method11057(arg0.field5215[--arg0.field5216], 255, 50);
+        AudioRenderer.method11057(arg0.field5215[--arg0.field5216], 255, 50);
     }
 
     @ObfuscatedName("lu.to(Lrn;B)V")
     public static final void method5826(ClientScriptState arg0) {
         arg0.field5216 -= 2;
-        SoundPlayer.method5596(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], 255);
+        AudioRenderer.method5596(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], 255);
     }
 
     @ObfuscatedName("ob.tg(Lrn;B)V")
     public static final void method7278(ClientScriptState arg0) {
         arg0.field5216 -= 4;
-        SoundPlayer.method14082(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2], arg0.field5215[arg0.field5216 + 3], 256);
+        AudioRenderer.method14082(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2], arg0.field5215[arg0.field5216 + 3], 256);
     }
 
     @ObfuscatedName("fc.ta(Lrn;I)V")
     public static final void method3535(ClientScriptState arg0) {
         arg0.field5216 -= 3;
-        SoundPlayer.method11057(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2]);
+        AudioRenderer.method11057(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2]);
     }
 
     @ObfuscatedName("cy.tz(Lrn;B)V")
     public static final void method2586(ClientScriptState arg0) {
         arg0.field5216 -= 3;
-        SoundPlayer.method5596(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2]);
+        AudioRenderer.method5596(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2]);
     }
 
     @ObfuscatedName("lo.tm(Lrn;B)V")
     public static final void method5787(ClientScriptState arg0) {
         arg0.field5216 -= 4;
-        SoundPlayer.method1717(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2], arg0.field5215[arg0.field5216 + 3], true, 256);
+        AudioRenderer.method1717(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2], arg0.field5215[arg0.field5216 + 3], true, 256);
     }
 
     @ObfuscatedName("pi.tx(Lrn;I)V")
     public static final void method7901(ClientScriptState arg0) {
         arg0.field5216 -= 5;
-        SoundPlayer.method14082(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2], arg0.field5215[arg0.field5216 + 3], arg0.field5215[arg0.field5216 + 4]);
+        AudioRenderer.method14082(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2], arg0.field5215[arg0.field5216 + 3], arg0.field5215[arg0.field5216 + 4]);
     }
 
     @ObfuscatedName("jc.te(Lrn;S)V")
     public static final void method4735(ClientScriptState arg0) {
         arg0.field5216 -= 5;
-        SoundPlayer.method1717(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2], arg0.field5215[arg0.field5216 + 3], false, arg0.field5215[arg0.field5216 + 4]);
+        AudioRenderer.method1717(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2], arg0.field5215[arg0.field5216 + 3], false, arg0.field5215[arg0.field5216 + 4]);
     }
 
     @ObfuscatedName("gb.td(Lrn;I)V")
@@ -10982,7 +10982,7 @@ public final class ScriptRunner {
     @ObfuscatedName("ef.aka(Lrn;I)V")
     public static final void method3301(ClientScriptState arg0) {
         Statics.field4961.method15448(Statics.field4961.field9676, arg0.field5215[--arg0.field5216] == 1 ? 1 : 0);
-        SoundPlayer.method12701();
+        AudioRenderer.method12701();
         Statics.method1245();
         client.field8932 = false;
     }
@@ -11002,15 +11002,15 @@ public final class ScriptRunner {
             return;
         }
         if (client.method1608(client.field8923)) {
-            if (var2 == 0 && SoundPlayer.field4202 != -1) {
-                class155.method3986(Statics.field9367, SoundPlayer.field4202, 0, var1, false);
-                SoundPlayer.method2572();
-                SoundPlayer.field4203 = false;
+            if (var2 == 0 && AudioRenderer.field4202 != -1) {
+                SoundRelated12.method3986(Statics.field9367, AudioRenderer.field4202, 0, var1, false);
+                AudioRenderer.method2572();
+                AudioRenderer.field4203 = false;
             } else if (var1 == 0) {
-                class155.method8662();
-                SoundPlayer.field4203 = false;
+                SoundRelated12.method8662();
+                AudioRenderer.field4203 = false;
             } else {
-                class155.method1315(var1);
+                SoundRelated12.method1315(var1);
             }
         }
         Statics.field4961.method15448(Statics.field4961.field9674, var1);
@@ -11108,19 +11108,19 @@ public final class ScriptRunner {
     public static final void method3675(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
         int var2 = Statics.field4961.field9675.method15899();
-        if (var1 == var2 || SoundPlayer.field4205 != SoundPlayer.field4202) {
+        if (var1 == var2 || AudioRenderer.field4205 != AudioRenderer.field4202) {
             return;
         }
         if (!client.method1608(client.field8923)) {
             if (var2 == 0) {
-                class155.method3986(Statics.field9367, SoundPlayer.field4202, 0, var1, false);
-                SoundPlayer.method2572();
-                SoundPlayer.field4203 = false;
+                SoundRelated12.method3986(Statics.field9367, AudioRenderer.field4202, 0, var1, false);
+                AudioRenderer.method2572();
+                AudioRenderer.field4203 = false;
             } else if (var1 == 0) {
-                class155.method8662();
-                SoundPlayer.field4203 = false;
+                SoundRelated12.method8662();
+                AudioRenderer.field4203 = false;
             } else {
-                class155.method1315(var1);
+                SoundRelated12.method1315(var1);
             }
         }
         Statics.field4961.method15448(Statics.field4961.field9675, var1);
@@ -11964,14 +11964,14 @@ public final class ScriptRunner {
         } else if (var2 < 0) {
             var2 = 0;
         }
-        class521.method7358(var1, var2, false);
+        VideoTypeList.method7358(var1, var2, false);
     }
 
     @ObfuscatedName("t.apj(Lrn;I)V")
     public static final void method1346(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
         if (var1 != -1) {
-            class521.method2930(var1);
+            VideoTypeList.method2930(var1);
         }
     }
 
@@ -11979,7 +11979,7 @@ public final class ScriptRunner {
     public static final void method6886(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
         if (var1 != -1) {
-            class521.method11689(var1);
+            VideoTypeList.method11689(var1);
         }
     }
 

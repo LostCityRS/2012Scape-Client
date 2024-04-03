@@ -200,7 +200,7 @@ public class WorldMap {
                         if (var29 != null) {
                             Iterator var30 = var29.iterator();
                             while (var30.hasNext()) {
-                                class405 var31 = (class405) var30.next();
+                                WorldMapRelated1 var31 = (WorldMapRelated1) var30.next();
                                 var26[(var28 * 64 + var31.field4247) * Statics.field4285 + var27 * 64 + var31.field4248] = (byte) var31.field4250;
                             }
                         }
@@ -213,7 +213,7 @@ public class WorldMap {
                         if (var34 != null) {
                             Iterator var35 = var34.iterator();
                             while (var35.hasNext()) {
-                                class405 var36 = (class405) var35.next();
+                                WorldMapRelated1 var36 = (WorldMapRelated1) var35.next();
                                 int var37 = (var33 * 64 + var36.field4247) * Statics.field4285 + var32 * 64 + var36.field4248;
                                 var36.field4250 = (Statics.field4289[var37] & 0xFF) << 16 | Statics.field4280[var37] & 0xFFFF;
                                 if (var36.field4250 != 0) {
@@ -287,7 +287,7 @@ public class WorldMap {
                         var20[var22] = arg1.method15411();
                         var21[var22] = arg1.method15238();
                     }
-                    Statics.field4293[Statics.field4285 * arg5 + arg4] = new class805(var20, var21);
+                    Statics.field4293[Statics.field4285 * arg5 + arg4] = new WorldMapRelated14(var20, var21);
                 }
             } else {
                 int[] var23 = null;
@@ -303,7 +303,7 @@ public class WorldMap {
                 if (Statics.field4295[var15 - 1][arg2 - (Statics.field4283 >> 6)][arg3 - (Statics.field4284 >> 6)] == null) {
                     Statics.field4295[var15 - 1][arg2 - (Statics.field4283 >> 6)][arg3 - (Statics.field4284 >> 6)] = new ArrayList();
                 }
-                class405 var26 = new class405(arg4 & 0x3F, arg5 & 0x3F, var16, var17, var18, var23, var24);
+                WorldMapRelated1 var26 = new WorldMapRelated1(arg4 & 0x3F, arg5 & 0x3F, var16, var17, var18, var23, var24);
                 Statics.field4295[var15 - 1][arg2 - (Statics.field4283 >> 6)][arg3 - (Statics.field4284 >> 6)].add(var26);
             }
         }
@@ -315,8 +315,8 @@ public class WorldMap {
             for (int var1 = 0; var1 < Statics.field4282; var1++) {
                 Object var2 = Statics.field4293[Statics.field4285 * var1 + var0];
                 if (var2 != null) {
-                    if (var2 instanceof class805) {
-                        class805 var3 = (class805) var2;
+                    if (var2 instanceof WorldMapRelated14) {
+                        WorldMapRelated14 var3 = (WorldMapRelated14) var2;
                         if (var3 != null) {
                             for (int var4 = 0; var4 < var3.field9562.length; var4++) {
                                 LocType var5 = Statics.field4266.method11471(var3.field9562[var4]);
@@ -363,12 +363,12 @@ public class WorldMap {
                     if (var17 != null) {
                         Iterator var18 = var17.iterator();
                         while (true) {
-                            class405 var19;
+                            WorldMapRelated1 var19;
                             do {
                                 if (!var18.hasNext()) {
                                     continue label89;
                                 }
-                                var19 = (class405) var18.next();
+                                var19 = (WorldMapRelated1) var18.next();
                             } while (var19.field4251 == null);
                             for (int var20 = 0; var20 < var19.field4251.length; var20++) {
                                 LocType var21 = Statics.field4266.method11471(var19.field4251[var20]);
@@ -561,8 +561,8 @@ public class WorldMap {
                                 arg0.method489(var8, var13, var10, var15, var21, 0);
                             } else if (var20 == null) {
                                 method7079(arg0, var8, var13, var10, var15, var18, var19, Statics.field4291[var17], null, null, true);
-                            } else if (var20 instanceof class805) {
-                                class805 var22 = (class805) var20;
+                            } else if (var20 instanceof WorldMapRelated14) {
+                                WorldMapRelated14 var22 = (WorldMapRelated14) var20;
                                 if (var22 != null) {
                                     method7079(arg0, var8, var13, var10, var15, var18, var19, Statics.field4291[var17], var22.field9562, var22.field9563, true);
                                 }
@@ -612,8 +612,8 @@ public class WorldMap {
                                 Object var39 = Statics.field4293[Statics.field4285 * var38 + var33];
                                 if (var39 == null) {
                                     method7098(arg0, var30, var35, var32, var37, null, null);
-                                } else if (var39 instanceof class805) {
-                                    class805 var40 = (class805) var39;
+                                } else if (var39 instanceof WorldMapRelated14) {
+                                    WorldMapRelated14 var40 = (WorldMapRelated14) var39;
                                     if (var40 != null) {
                                         method7098(arg0, var30, var35, var32, var37, var40.field9562, var40.field9563);
                                     }
@@ -654,7 +654,7 @@ public class WorldMap {
                         int var51 = ((Statics.field4284 >> 6) + var48) * 64;
                         Iterator var52 = var49.iterator();
                         while (var52.hasNext()) {
-                            class405 var53 = (class405) var52.next();
+                            WorldMapRelated1 var53 = (WorldMapRelated1) var52.next();
                             int var54 = var53.field4248 + var50 - Statics.field4283 - Statics.field4296;
                             int var55 = var53.field4247 + var51 - Statics.field4284 - Statics.field4302;
                             int var56 = (arg1 * var54 + arg3 >> 16) + Statics.field4300;
@@ -674,7 +674,7 @@ public class WorldMap {
                         int var64 = ((Statics.field4284 >> 6) + var61) * 64;
                         Iterator var65 = var62.iterator();
                         while (var65.hasNext()) {
-                            class405 var66 = (class405) var65.next();
+                            WorldMapRelated1 var66 = (WorldMapRelated1) var65.next();
                             int var67 = var66.field4248 + var63 - Statics.field4283 - Statics.field4296;
                             int var68 = var66.field4247 + var64 - Statics.field4284 - Statics.field4302;
                             int var69 = (arg1 * var67 + arg3 >> 16) + Statics.field4300;
@@ -703,7 +703,7 @@ public class WorldMap {
                     }
                 } else {
                     int var12 = arg10 ? 0 : 1;
-                    class404.method4630(arg0, Statics.field4275, Statics.field4276, arg1, arg2, arg5, Statics.field4267[arg6], arg3, arg4, var11, arg7 >> 6 & 0x3, var12);
+                    WorldMapTileShapes.method4630(arg0, Statics.field4275, Statics.field4276, arg1, arg2, arg5, Statics.field4267[arg6], arg3, arg4, var11, arg7 >> 6 & 0x3, var12);
                 }
             }
         }

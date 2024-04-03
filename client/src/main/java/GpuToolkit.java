@@ -105,7 +105,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     public boolean field8268 = false;
 
     @ObfuscatedName("yk.bn")
-    public class238 field8269 = class238.field2500;
+    public GpuRelated12 field8269 = GpuRelated12.field2500;
 
     @ObfuscatedName("yk.ba")
     public boolean field8270 = false;
@@ -297,16 +297,16 @@ public abstract class GpuToolkit extends RendererToolkit {
     public TextureTramsformType[] field8306;
 
     @ObfuscatedName("yk.dv")
-    public class253[] field8333;
+    public TextureCombineMode[] field8333;
 
     @ObfuscatedName("yk.dn")
-    public class253[] field8356;
+    public TextureCombineMode[] field8356;
 
     @ObfuscatedName("yk.dm")
     public int field8335;
 
     @ObfuscatedName("yk.dq")
-    public final class233 field8336;
+    public final GpuRelated13 field8336;
 
     @ObfuscatedName("yk.et")
     public GpuTexture field8312;
@@ -399,7 +399,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     public int field8370 = 1;
 
     @ObfuscatedName("yk.fn")
-    public class248 field8369 = class248.field2543;
+    public BlendMode field8369 = BlendMode.field2543;
 
     @ObfuscatedName("yk.fl")
     public boolean field8241 = true;
@@ -554,7 +554,7 @@ public abstract class GpuToolkit extends RendererToolkit {
             if (this.field400 == null) {
                 this.field8336 = null;
             } else {
-                this.field8336 = new class233(this, this.field400);
+                this.field8336 = new GpuRelated13(this, this.field400);
             }
             if (this.field8348 == 0) {
                 this.field8243 = Statics.field5084;
@@ -586,11 +586,11 @@ public abstract class GpuToolkit extends RendererToolkit {
         this.field8330 = new BaseTexture[this.field8337];
         this.field8331 = new Matrix4x4[this.field8337];
         this.field8306 = new TextureTramsformType[this.field8337];
-        this.field8333 = new class253[this.field8337];
-        this.field8356 = new class253[this.field8337];
+        this.field8333 = new TextureCombineMode[this.field8337];
+        this.field8356 = new TextureCombineMode[this.field8337];
         for (int var1 = 0; var1 < this.field8337; var1++) {
-            this.field8356[var1] = class253.field2574;
-            this.field8333[var1] = class253.field2574;
+            this.field8356[var1] = TextureCombineMode.field2574;
+            this.field8333[var1] = TextureCombineMode.field2574;
             this.field8306[var1] = TextureTramsformType.field2550;
             this.field8331[var1] = new Matrix4x4();
         }
@@ -1055,7 +1055,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 
     @ObfuscatedName("yk.cq(II[I[I)Lta;")
     public final GraphicsRelated method571(int arg0, int arg1, int[] arg2, int[] arg3) {
-        return class670.method12944(this, arg0, arg1, arg2, arg3);
+        return GpuTextureRelated12.method12944(this, arg0, arg1, arg2, arg3);
     }
 
     @ObfuscatedName("yk.cw(I)V")
@@ -1127,7 +1127,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 
     @ObfuscatedName("yk.oh()V")
     public final void method13776() {
-        if (class238.field2498 == this.field8269) {
+        if (GpuRelated12.field2498 == this.field8269) {
             this.field8299 = this.field8295;
             this.field8300 = this.field8296;
             this.field8301 = this.field8311;
@@ -1266,12 +1266,12 @@ public abstract class GpuToolkit extends RendererToolkit {
 
     @ObfuscatedName("yk.pq()Lka;")
     public final Matrix4x4 method13690() {
-        return class238.field2498 == this.field8269 ? this.field8258 : field8358;
+        return GpuRelated12.field2498 == this.field8269 ? this.field8258 : field8358;
     }
 
     @ObfuscatedName("yk.px()Lka;")
     public final Matrix4x4 method13522() {
-        return class238.field2498 == this.field8269 ? this.field8322 : field8358;
+        return GpuRelated12.field2498 == this.field8269 ? this.field8322 : field8358;
     }
 
     @ObfuscatedName("yk.ci(Lkc;)V")
@@ -1282,7 +1282,7 @@ public abstract class GpuToolkit extends RendererToolkit {
         this.field8257.method5102();
         this.field8322.method5385(this.field8257);
         this.method13524();
-        if (class238.field2498 == this.field8269) {
+        if (GpuRelated12.field2498 == this.field8269) {
             this.method13525();
         }
     }
@@ -1296,7 +1296,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     public final void method784(Matrix4x4 arg0) {
         this.field8368.method5412(arg0);
         this.method13524();
-        if (class238.field2498 == this.field8269) {
+        if (GpuRelated12.field2498 == this.field8269) {
             this.method13533();
         }
     }
@@ -1332,7 +1332,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 
     @ObfuscatedName("yk.pn()Lkc;")
     public Matrix4x3 method13624() {
-        if (class238.field2498 != this.field8269) {
+        if (GpuRelated12.field2498 != this.field8269) {
             return this.field8302;
         }
         if (!this.field8268) {
@@ -1346,7 +1346,7 @@ public abstract class GpuToolkit extends RendererToolkit {
 
     @ObfuscatedName("yk.po()Lka;")
     public Matrix4x4 method13504() {
-        if (class238.field2498 == this.field8269) {
+        if (GpuRelated12.field2498 == this.field8269) {
             if (!this.field8268) {
                 this.method13624();
             }
@@ -1368,12 +1368,12 @@ public abstract class GpuToolkit extends RendererToolkit {
 
     @ObfuscatedName("yk.pr()V")
     public final void method13802() {
-        if (class238.field2500 == this.field8269) {
+        if (GpuRelated12.field2500 == this.field8269) {
             return;
         }
-        class238 var1 = this.field8269;
-        this.field8269 = class238.field2500;
-        if (class238.field2498 == var1) {
+        GpuRelated12 var1 = this.field8269;
+        this.field8269 = GpuRelated12.field2500;
+        if (GpuRelated12.field2498 == var1) {
             this.method13525();
         }
         this.field8276 = this.field8275;
@@ -1384,12 +1384,12 @@ public abstract class GpuToolkit extends RendererToolkit {
 
     @ObfuscatedName("yk.pc()V")
     public final void method13610() {
-        if (class238.field2499 == this.field8269) {
+        if (GpuRelated12.field2499 == this.field8269) {
             return;
         }
-        class238 var1 = this.field8269;
-        this.field8269 = class238.field2499;
-        if (class238.field2498 == var1) {
+        GpuRelated12 var1 = this.field8269;
+        this.field8269 = GpuRelated12.field2499;
+        if (GpuRelated12.field2498 == var1) {
             this.method13525();
         }
         this.method13531();
@@ -1402,7 +1402,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     @ObfuscatedName("yk.pj()V")
     public final void method13530() {
         this.field8270 = false;
-        if (class238.field2499 == this.field8269) {
+        if (GpuRelated12.field2499 == this.field8269) {
             this.method13531();
             this.method13533();
         }
@@ -1410,10 +1410,10 @@ public abstract class GpuToolkit extends RendererToolkit {
 
     @ObfuscatedName("yk.pi()V")
     public final void method13515() {
-        if (class238.field2498 == this.field8269) {
+        if (GpuRelated12.field2498 == this.field8269) {
             return;
         }
-        this.field8269 = class238.field2498;
+        this.field8269 = GpuRelated12.field2498;
         this.method13525();
         this.method13532();
         this.field8276 = this.field8368;
@@ -1426,7 +1426,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     public final void method13671() {
         this.field8273 = false;
         this.method13532();
-        if (class238.field2498 == this.field8269) {
+        if (GpuRelated12.field2498 == this.field8269) {
             this.method13533();
         }
     }
@@ -1588,7 +1588,7 @@ public abstract class GpuToolkit extends RendererToolkit {
             this.field8365[var3] = arg1[var3];
         }
         this.field8324 = arg0;
-        if (class238.field2498 == this.field8269) {
+        if (GpuRelated12.field2498 == this.field8269) {
             this.method13544();
         }
     }
@@ -1703,24 +1703,24 @@ public abstract class GpuToolkit extends RendererToolkit {
     public final void method13791(int arg0) {
         switch (arg0) {
             case 0:
-                this.method13632(class253.field2574, class253.field2574);
+                this.method13632(TextureCombineMode.field2574, TextureCombineMode.field2574);
                 break;
             case 1:
-                this.method13632(class253.field2573, class253.field2573);
+                this.method13632(TextureCombineMode.field2573, TextureCombineMode.field2573);
                 break;
             case 2:
-                this.method13632(class253.field2577, class253.field2573);
+                this.method13632(TextureCombineMode.field2577, TextureCombineMode.field2573);
                 break;
             case 3:
-                this.method13632(class253.field2575, class253.field2574);
+                this.method13632(TextureCombineMode.field2575, TextureCombineMode.field2574);
                 break;
             case 4:
-                this.method13632(class253.field2576, class253.field2576);
+                this.method13632(TextureCombineMode.field2576, TextureCombineMode.field2576);
         }
     }
 
     @ObfuscatedName("yk.ry(Lhi;Lhi;)V")
-    public final void method13632(class253 arg0, class253 arg1) {
+    public final void method13632(TextureCombineMode arg0, TextureCombineMode arg1) {
         boolean var3 = false;
         if (this.field8333[this.field8253] != arg0) {
             this.field8333[this.field8253] = arg0;
@@ -1738,12 +1738,12 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.rd(ILhp;)V")
-    public final void method13560(int arg0, class249 arg1) {
+    public final void method13560(int arg0, TextureCombiner arg1) {
         this.method13561(arg0, arg1, false, false);
     }
 
     @ObfuscatedName("yk.ri(ILhp;)V")
-    public final void method13562(int arg0, class249 arg1) {
+    public final void method13562(int arg0, TextureCombiner arg1) {
         this.method13563(arg0, arg1, false);
     }
 
@@ -1820,23 +1820,23 @@ public abstract class GpuToolkit extends RendererToolkit {
         if (this.field8370 == arg0) {
             return;
         }
-        class248 var2;
+        BlendMode var2;
         boolean var3;
         boolean var4;
         if (arg0 == 1) {
-            var2 = class248.field2543;
+            var2 = BlendMode.field2543;
             var3 = true;
             var4 = true;
         } else if (arg0 == 2) {
-            var2 = class248.field2540;
+            var2 = BlendMode.field2540;
             var3 = false;
             var4 = true;
         } else if (arg0 == 128) {
-            var2 = class248.field2541;
+            var2 = BlendMode.field2541;
             var3 = true;
             var4 = true;
         } else {
-            var2 = class248.field2542;
+            var2 = BlendMode.field2542;
             var3 = false;
             var4 = false;
         }
@@ -2069,16 +2069,16 @@ public abstract class GpuToolkit extends RendererToolkit {
     public final void method13777() {
         this.method13587(0, this.field8385);
         this.method13688(this.field8388);
-        this.method13619(class255.field2581, 0, 1);
+        this.method13619(PrimitiveType.field2581, 0, 1);
     }
 
     @ObfuscatedName("yk.sy()V")
     public final void method13593() {
-        this.method13594(class255.field2580, 2);
+        this.method13594(PrimitiveType.field2580, 2);
     }
 
     @ObfuscatedName("yk.sm(Lir;I)V")
-    public final void method13594(class255 arg0, int arg1) {
+    public final void method13594(PrimitiveType arg0, int arg1) {
         this.method13587(0, this.field8328);
         this.method13688(this.field8389);
         this.method13619(arg0, 0, arg1);
@@ -2174,10 +2174,10 @@ public abstract class GpuToolkit extends RendererToolkit {
     public abstract void method13558();
 
     @ObfuscatedName("yk.rs(ILhp;ZZ)V")
-    public abstract void method13561(int arg0, class249 arg1, boolean arg2, boolean arg3);
+    public abstract void method13561(int arg0, TextureCombiner arg1, boolean arg2, boolean arg3);
 
     @ObfuscatedName("yk.rx(ILhp;Z)V")
-    public abstract void method13563(int arg0, class249 arg1, boolean arg2);
+    public abstract void method13563(int arg0, TextureCombiner arg1, boolean arg2);
 
     @ObfuscatedName("yk.rp()V")
     public abstract void method13569();
@@ -2213,10 +2213,10 @@ public abstract class GpuToolkit extends RendererToolkit {
     public abstract void method13588(IndexBuffer arg0);
 
     @ObfuscatedName("yk.su(Lin;Lir;IIII)V")
-    public abstract void method13595(IndexBuffer arg0, class255 arg1, int arg2, int arg3, int arg4, int arg5);
+    public abstract void method13595(IndexBuffer arg0, PrimitiveType arg1, int arg2, int arg3, int arg4, int arg5);
 
     @ObfuscatedName("yk.sh(Lir;IIII)V")
-    public abstract void method13596(class255 arg0, int arg1, int arg2, int arg3, int arg4);
+    public abstract void method13596(PrimitiveType arg0, int arg1, int arg2, int arg3, int arg4);
 
     @ObfuscatedName("yk.qj(Lcy;IIZ[BII)Lhc;")
     public abstract GpuTexture method13599(TextureFormat arg0, int arg1, int arg2, boolean arg3, byte[] arg4, int arg5, int arg6);
@@ -2225,7 +2225,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     public abstract void method13618();
 
     @ObfuscatedName("yk.sn(Lir;II)V")
-    public abstract void method13619(class255 arg0, int arg1, int arg2);
+    public abstract void method13619(PrimitiveType arg0, int arg1, int arg2);
 
     @ObfuscatedName("yk.qn()V")
     public abstract void method13628();

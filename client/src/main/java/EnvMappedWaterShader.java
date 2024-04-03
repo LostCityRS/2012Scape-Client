@@ -173,7 +173,7 @@ public class EnvMappedWaterShader extends WaterShader {
         this.field8778.method3420(this.field10124, this.field10125);
         this.field8778.method3406(this.field10126, this.field10131);
         this.field8778.method3420(this.field10128, this.field10129);
-        this.field2414.method13596(class255.field2582, this.field10132, this.field10117, this.field10130, this.field10133);
+        this.field2414.method13596(PrimitiveType.field2582, this.field10132, this.field10117, this.field10130, this.field10133);
     }
 
     @ObfuscatedName("ahw.bn(B)V")

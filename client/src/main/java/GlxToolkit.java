@@ -336,17 +336,17 @@ public final class GlxToolkit extends GpuToolkit {
 
     @ObfuscatedName("ahv.aj(IILcy;Ldz;I)Lde;")
     public GraphicsDeletable method468(int arg0, int arg1, TextureFormat arg2, DataType arg3, int arg4) {
-        return new class351(this, arg2, arg3, arg0, arg1, arg4);
+        return new GlxRelated14(this, arg2, arg3, arg0, arg1, arg4);
     }
 
     @ObfuscatedName("ahv.ah(II)Ldo;")
     public EffectInterface method637(int arg0, int arg1) {
-        return new class351(this, TextureFormat.field1300, DataType.field1503, arg0, arg1);
+        return new GlxRelated14(this, TextureFormat.field1300, DataType.field1503, arg0, arg1);
     }
 
     @ObfuscatedName("ahv.au(III)Ldo;")
     public EffectInterface method541(int arg0, int arg1, int arg2) {
-        return new class351(this, TextureFormat.field1300, DataType.field1503, arg0, arg1, arg2);
+        return new GlxRelated14(this, TextureFormat.field1300, DataType.field1503, arg0, arg1, arg2);
     }
 
     @ObfuscatedName("ahv.ae(IIII)[I")
@@ -688,7 +688,7 @@ public final class GlxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahv.rs(ILhp;ZZ)V")
-    public final void method13561(int arg0, class249 arg1, boolean arg2, boolean arg3) {
+    public final void method13561(int arg0, TextureCombiner arg1, boolean arg2, boolean arg3) {
         OpenGL.glTexEnvi(8960, arg0 + 34176, method16085(arg1));
         if (arg2) {
             OpenGL.glTexEnvi(8960, arg0 + 34192, arg3 ? 771 : 770);
@@ -698,7 +698,7 @@ public final class GlxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahv.rx(ILhp;Z)V")
-    public final void method13563(int arg0, class249 arg1, boolean arg2) {
+    public final void method13563(int arg0, TextureCombiner arg1, boolean arg2) {
         OpenGL.glTexEnvi(8960, arg0 + 34184, method16085(arg1));
         OpenGL.glTexEnvi(8960, arg0 + 34200, arg2 ? 771 : 770);
     }
@@ -713,16 +713,16 @@ public final class GlxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahv.abz(Lhi;)I")
-    public static final int method16084(class253 arg0) {
-        if (class253.field2573 == arg0) {
+    public static final int method16084(TextureCombineMode arg0) {
+        if (TextureCombineMode.field2573 == arg0) {
             return 7681;
-        } else if (class253.field2574 == arg0) {
+        } else if (TextureCombineMode.field2574 == arg0) {
             return 8448;
-        } else if (class253.field2577 == arg0) {
+        } else if (TextureCombineMode.field2577 == arg0) {
             return 34165;
-        } else if (class253.field2575 == arg0) {
+        } else if (TextureCombineMode.field2575 == arg0) {
             return 260;
-        } else if (class253.field2576 == arg0) {
+        } else if (TextureCombineMode.field2576 == arg0) {
             return 34023;
         } else {
             throw new IllegalArgumentException();
@@ -730,14 +730,14 @@ public final class GlxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahv.acc(Lhp;)I")
-    public static final int method16085(class249 arg0) {
-        if (class249.field2546 == arg0) {
+    public static final int method16085(TextureCombiner arg0) {
+        if (TextureCombiner.field2546 == arg0) {
             return 5890;
-        } else if (class249.field2545 == arg0) {
+        } else if (TextureCombiner.field2545 == arg0) {
             return 34167;
-        } else if (class249.field2544 == arg0) {
+        } else if (TextureCombiner.field2544 == arg0) {
             return 34168;
-        } else if (class249.field2547 == arg0) {
+        } else if (TextureCombiner.field2547 == arg0) {
             return 34166;
         } else {
             throw new IllegalArgumentException();
@@ -772,11 +772,11 @@ public final class GlxToolkit extends GpuToolkit {
             var1 = 1;
             var2 = 1;
         }
-        if (class248.field2543 == this.field8369) {
+        if (BlendMode.field2543 == this.field8369) {
             OpenGL.glBlendFuncSeparate(770, 771, var1, var2);
-        } else if (class248.field2540 == this.field8369) {
+        } else if (BlendMode.field2540 == this.field8369) {
             OpenGL.glBlendFuncSeparate(1, 1, var1, var2);
-        } else if (class248.field2541 == this.field8369) {
+        } else if (BlendMode.field2541 == this.field8369) {
             OpenGL.glBlendFuncSeparate(774, 1, var1, var2);
         }
     }
@@ -945,22 +945,22 @@ public final class GlxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahv.sn(Lir;II)V")
-    public final void method13619(class255 arg0, int arg1, int arg2) {
+    public final void method13619(PrimitiveType arg0, int arg1, int arg2) {
         byte var4;
         int var5;
-        if (class255.field2581 == arg0) {
+        if (PrimitiveType.field2581 == arg0) {
             var4 = 1;
             var5 = arg2 * 2;
-        } else if (class255.field2585 == arg0) {
+        } else if (PrimitiveType.field2585 == arg0) {
             var4 = 3;
             var5 = arg2 + 1;
-        } else if (class255.field2582 == arg0) {
+        } else if (PrimitiveType.field2582 == arg0) {
             var4 = 4;
             var5 = arg2 * 3;
-        } else if (class255.field2580 == arg0) {
+        } else if (PrimitiveType.field2580 == arg0) {
             var4 = 6;
             var5 = arg2 + 2;
-        } else if (class255.field2584 == arg0) {
+        } else if (PrimitiveType.field2584 == arg0) {
             var4 = 5;
             var5 = arg2 + 2;
         } else {
@@ -971,22 +971,22 @@ public final class GlxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahv.su(Lin;Lir;IIII)V")
-    public final void method13595(IndexBuffer arg0, class255 arg1, int arg2, int arg3, int arg4, int arg5) {
+    public final void method13595(IndexBuffer arg0, PrimitiveType arg1, int arg2, int arg3, int arg4, int arg5) {
         byte var7;
         int var8;
-        if (class255.field2581 == arg1) {
+        if (PrimitiveType.field2581 == arg1) {
             var7 = 1;
             var8 = arg5 * 2;
-        } else if (class255.field2585 == arg1) {
+        } else if (PrimitiveType.field2585 == arg1) {
             var7 = 3;
             var8 = arg5 + 1;
-        } else if (class255.field2582 == arg1) {
+        } else if (PrimitiveType.field2582 == arg1) {
             var7 = 4;
             var8 = arg5 * 3;
-        } else if (class255.field2580 == arg1) {
+        } else if (PrimitiveType.field2580 == arg1) {
             var7 = 6;
             var8 = arg5 + 2;
-        } else if (class255.field2584 == arg1) {
+        } else if (PrimitiveType.field2584 == arg1) {
             var7 = 5;
             var8 = arg5 + 2;
         } else {
@@ -1000,22 +1000,22 @@ public final class GlxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahv.sh(Lir;IIII)V")
-    public final void method13596(class255 arg0, int arg1, int arg2, int arg3, int arg4) {
+    public final void method13596(PrimitiveType arg0, int arg1, int arg2, int arg3, int arg4) {
         byte var6;
         int var7;
-        if (class255.field2581 == arg0) {
+        if (PrimitiveType.field2581 == arg0) {
             var6 = 1;
             var7 = arg4 * 2;
-        } else if (class255.field2585 == arg0) {
+        } else if (PrimitiveType.field2585 == arg0) {
             var6 = 3;
             var7 = arg4 + 1;
-        } else if (class255.field2582 == arg0) {
+        } else if (PrimitiveType.field2582 == arg0) {
             var6 = 4;
             var7 = arg4 * 3;
-        } else if (class255.field2580 == arg0) {
+        } else if (PrimitiveType.field2580 == arg0) {
             var6 = 6;
             var7 = arg4 + 2;
-        } else if (class255.field2584 == arg0) {
+        } else if (PrimitiveType.field2584 == arg0) {
             var6 = 5;
             var7 = arg4 + 2;
         } else {

@@ -624,7 +624,7 @@ public class DeveloperConsole {
                 } else if (arg0 == 9) {
                     method1958("" + GameShell.field4121);
                 } else if (arg0 == 19) {
-                    class428 var1 = client.field8980.method6098().field4493;
+                    OcclusionManager var1 = client.field8980.method6098().field4493;
                     var1.field4624 = !var1.field4624;
                 } else if (arg0 == 29) {
                     client.field8926 = true;

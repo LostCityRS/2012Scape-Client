@@ -17,6 +17,6 @@ public class CutsceneAction_Sub19 extends CutsceneAction {
 
     @ObfuscatedName("zd.j(I)V")
     public void method2873() {
-        SoundPlayer.method5596(this.field8516, 0, this.field8517);
+        AudioRenderer.method5596(this.field8516, 0, this.field8517);
     }
 }

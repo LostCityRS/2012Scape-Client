@@ -306,7 +306,7 @@ public class MidiSong extends Node {
         int[] var2 = new int[16];
         var2[9] = 128;
         var1[9] = 128;
-        class158 var4 = new class158(this.field9381);
+        MidiRelated1 var4 = new MidiRelated1(this.field9381);
         int var5 = var4.method3018();
         for (int var6 = 0; var6 < var5; var6++) {
             var4.method3030(var6);

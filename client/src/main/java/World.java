@@ -880,7 +880,7 @@ public class World {
             MiniMap.field763 -= var2;
             MiniMap.field764 -= var3;
         }
-        SoundPlayer.method2387();
+        AudioRenderer.method2387();
         PositionedSound.method6259(false);
         if (arg0 == 16) {
             client.field9154 -= var2 * 512;
@@ -1027,7 +1027,7 @@ public class World {
         }
         this.field3834 = RebuildStage.field3778;
         if (!this.field3813) {
-            SoundPlayer.method3461();
+            AudioRenderer.method3461();
         }
         if (!this.field3813) {
             for (int var11 = 0; var11 < 2048; var11++) {
@@ -1047,7 +1047,7 @@ public class World {
             client.method5025(true);
         }
         if (!this.field3813) {
-            class521.method4743();
+            VideoTypeList.method4743();
         }
         boolean var15 = false;
         if (Statics.field4961.field9666.method15755() == 2) {
@@ -1201,7 +1201,7 @@ public class World {
             this.method6126(16);
             this.method6196();
         } else {
-            SoundPlayer.method3461();
+            AudioRenderer.method3461();
             this.field3802.method8173();
             GameShell.method2427();
         }
@@ -1289,7 +1289,7 @@ public class World {
                 int var9 = var7 * 64 - this.field3795.field4836;
                 int var10 = var8 * 64 - this.field3795.field4838;
                 if (!this.field3813) {
-                    SoundPlayer.method3461();
+                    AudioRenderer.method3461();
                 }
                 arg0.method5838(var6, var9, var10, this.field3795.field4836, this.field3795.field4838, this.field3811);
                 arg0.method14269(Statics.field5187, var6, var9, var10);
@@ -1301,7 +1301,7 @@ public class World {
             byte[] var14 = arg1[var11];
             if (var14 == null && this.field3798 < 800) {
                 if (!this.field3813) {
-                    SoundPlayer.method3461();
+                    AudioRenderer.method3461();
                 }
                 arg0.method5836(var12, var13, 64, 64);
             }
@@ -1312,7 +1312,7 @@ public class World {
     public void method6131(ClientMapLoader arg0, byte[][] arg1) {
         for (int var3 = 0; var3 < arg0.field3628; var3++) {
             if (!this.field3813) {
-                SoundPlayer.method3461();
+                AudioRenderer.method3461();
             }
             for (int var4 = 0; var4 < this.field3799 >> 3; var4++) {
                 for (int var5 = 0; var5 < this.field3826 >> 3; var5++) {
@@ -1339,7 +1339,7 @@ public class World {
         }
         for (int var14 = 0; var14 < arg0.field3628; var14++) {
             if (!this.field3813) {
-                SoundPlayer.method3461();
+                AudioRenderer.method3461();
             }
             for (int var15 = 0; var15 < this.field3799 >> 3; var15++) {
                 for (int var16 = 0; var16 < this.field3826 >> 3; var16++) {
@@ -1361,7 +1361,7 @@ public class World {
                 int var6 = (this.field3820[var4] >> 8) * 64 - this.field3795.field4836;
                 int var7 = (this.field3820[var4] & 0xFF) * 64 - this.field3795.field4838;
                 if (!this.field3813) {
-                    SoundPlayer.method3461();
+                    AudioRenderer.method3461();
                 }
                 arg0.method14271(Statics.field5187, var5, var6, var7, this.field3811);
                 if (this.field3813) {
@@ -1375,7 +1375,7 @@ public class World {
     public void method6209(ClientMapLoader arg0, byte[][] arg1) {
         for (int var3 = 0; var3 < arg0.field3628; var3++) {
             if (!this.field3813) {
-                SoundPlayer.method3461();
+                AudioRenderer.method3461();
             }
             for (int var4 = 0; var4 < this.field3799 >> 3; var4++) {
                 for (int var5 = 0; var5 < this.field3826 >> 3; var5++) {

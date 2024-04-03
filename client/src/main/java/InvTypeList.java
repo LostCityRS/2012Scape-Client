@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("wo")
-public class InvTypeList implements class463 {
+public class InvTypeList implements PlayerTypeListRelated {
 
     @ObfuscatedName("wo.u")
     public final Js5 field7325;

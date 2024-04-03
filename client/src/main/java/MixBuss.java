@@ -70,7 +70,7 @@ public class MixBuss extends AudioBuss {
     public SoundRelated1[][] field10252 = new SoundRelated1[16][128];
 
     @ObfuscatedName("aih.as")
-    public class158 field10253 = new class158();
+    public MidiRelated1 field10253 = new MidiRelated1();
 
     @ObfuscatedName("aih.ai")
     public boolean field10254;
@@ -88,7 +88,7 @@ public class MixBuss extends AudioBuss {
     public long field10258;
 
     @ObfuscatedName("aih.aw")
-    public class936 field10251 = new class936(this);
+    public AudioBuss_Sub2 field10251 = new AudioBuss_Sub2(this);
 
     @ObfuscatedName("aih.aa")
     public MidiSong field10260;
@@ -138,7 +138,7 @@ public class MixBuss extends AudioBuss {
     }
 
     @ObfuscatedName("aih.ai(Lacw;Lls;Lmd;II)Z")
-    public synchronized boolean method16375(MidiSong arg0, Js5 arg1, class377 arg2, int arg3) {
+    public synchronized boolean method16375(MidiSong arg0, Js5 arg1, SynthSoundRelated12 arg2, int arg3) {
         arg0.method14906();
         boolean var5 = true;
         int[] var6 = null;

@@ -33,7 +33,7 @@ public class Scene {
     public boolean field4492;
 
     @ObfuscatedName("oo.d")
-    public final class428 field4493;
+    public final OcclusionManager field4493;
 
     @ObfuscatedName("oo.z")
     public int field4494;
@@ -171,7 +171,7 @@ public class Scene {
     public long[][][] field4526;
 
     @ObfuscatedName("oo.bj")
-    public class427[] field4539;
+    public StaticPointLight[] field4539;
 
     @ObfuscatedName("oo.bf")
     public boolean[] field4540;
@@ -202,7 +202,7 @@ public class Scene {
         this.field4496 = arg4;
         this.field4531 = arg5;
         this.field4490 = new SceneDebugging();
-        this.field4493 = new class428(this);
+        this.field4493 = new OcclusionManager(this);
         this.field4500 = new Tile[arg2][this.field4495][this.field4496];
         this.field4527 = new FloorModel[arg2];
         if (arg6) {
@@ -217,7 +217,7 @@ public class Scene {
         }
         if (arg7) {
             this.field4526 = new long[arg2][arg3][arg4];
-            this.field4539 = new class427[65459];
+            this.field4539 = new StaticPointLight[65459];
             this.field4540 = new boolean[65459];
             this.field4537 = 0;
         }
@@ -1383,7 +1383,7 @@ public class Scene {
     }
 
     @ObfuscatedName("oo.bq(Lor;I)V")
-    public void method7454(class427 arg0) {
+    public void method7454(StaticPointLight arg0) {
         if (this.field4537 >= 65459) {
             return;
         }
@@ -1440,7 +1440,7 @@ public class Scene {
     public void method7455() {
         for (int var1 = 0; var1 < this.field4537; var1++) {
             if (!this.field4540[var1]) {
-                class427 var2 = this.field4539[var1];
+                StaticPointLight var2 = this.field4539[var1];
                 Light var3 = var2.field4588;
                 int var4 = var2.field4592;
                 int var5 = var3.method14880() - this.field4487;

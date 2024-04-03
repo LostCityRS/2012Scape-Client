@@ -152,7 +152,7 @@ public class GlxTexture extends GlxBaseTexture implements GpuTextureRelated1 {
 
     @ObfuscatedName("abb.bf(I)Lde;")
     public GraphicsDeletable method4534(int arg0) {
-        return new class346(this, arg0);
+        return new GlxRelated13(this, arg0);
     }
 
     @ObfuscatedName("abb.p()Z")

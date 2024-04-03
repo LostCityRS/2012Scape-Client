@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("pe")
-public class VarBitType implements class464 {
+public class VarBitType implements PlayerTypeRelated {
 
     @ObfuscatedName("pe.u")
     public int field4669;

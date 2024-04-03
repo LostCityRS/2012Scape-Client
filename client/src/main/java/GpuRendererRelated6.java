@@ -125,7 +125,7 @@ public class GpuRendererRelated6 {
                 } else {
                     var1.field2275 = var24;
                     var1.method3878();
-                    this.field2569.method13595(this.field2571, class255.field2582, var26 * 4, var25 * 4, var26 * 6, var25 * 2);
+                    this.field2569.method13595(this.field2571, PrimitiveType.field2582, var26 * 4, var25 * 4, var26 * 6, var25 * 2);
                     var24 = this.field2567[var27];
                     var25 = 1;
                     var26 = var27 - var5;
@@ -133,7 +133,7 @@ public class GpuRendererRelated6 {
             }
             var1.field2275 = var24;
             var1.method3878();
-            this.field2569.method13595(this.field2571, class255.field2582, var26 * 4, var25 * 4, var26 * 6, var25 * 2);
+            this.field2569.method13595(this.field2571, PrimitiveType.field2582, var26 * 4, var25 * 4, var26 * 6, var25 * 2);
             var5 += this.field2568;
         }
         this.field2564 = 0;

@@ -252,7 +252,7 @@ public class GpuSprite extends Sprite {
         var6.field2283 = this.field7637.field8328;
         var6.field2277 = 0;
         var6.field2285 = this.field7637.field8389;
-        GpuTexture var11 = ((class670) arg2).field7652;
+        GpuTexture var11 = ((GpuTextureRelated12) arg2).field7652;
         var6.field2279 = var11;
         var6.field2282.method5435(var11.method4437((float) this.field7646), var11.method4439((float) this.field7638), 1.0F, 1.0F);
         var6.field2282.field3480[12] = var11.method4437((float) (var7 - arg3));
@@ -535,7 +535,7 @@ public class GpuSprite extends Sprite {
         var11.field2283 = this.field7637.field8328;
         var11.field2277 = 0;
         var11.field2285 = this.field7637.field8389;
-        GpuTexture var17 = ((class670) arg7).field7652;
+        GpuTexture var17 = ((GpuTextureRelated12) arg7).field7652;
         var11.field2279 = var17;
         var11.field2282.method5453();
         var11.field2282.field3480[0] = (arg2 - arg0) * var17.method4437(1.0F);

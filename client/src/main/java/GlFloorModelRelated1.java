@@ -136,7 +136,7 @@ public class GlFloorModelRelated1 extends Node {
     public void method14861(int arg0) {
         this.field9344.method41();
         GlInterfaceRelated var2 = this.field9350.method13302(4, this.field9346, arg0 * 4, false);
-        if (var2 instanceof class653) {
+        if (var2 instanceof GpuBufferRelated12) {
             this.field9346.method62();
         }
         this.field9349 = new GlRelated1(var2, 5121, 4, 0);

@@ -336,7 +336,7 @@ public class Loading {
             BillboardType.method8409(Statics.field8734);
             Statics.field3262 = new QuickChatCatTypeList(Statics.field2308, Statics.field6343, Statics.field6712);
             Statics.field3779 = new QuickChatPhraseTypeList(Statics.field2308, Statics.field6343, Statics.field6712, new ClientDynamicProvider());
-            Statics.field2669 = new class49();
+            Statics.field2669 = new VarRelated1();
             client.method13901();
             AnimationNode.method6490(Statics.field566);
             ParticleSystemRenderer.method12208(Statics.field8655);
@@ -465,8 +465,8 @@ public class Loading {
             }
             if (var2 == 1) {
                 int var3 = var1.method15239();
-                if (SoundPlayer.field4205 == -1) {
-                    SoundPlayer.field4205 = var3;
+                if (AudioRenderer.field4205 == -1) {
+                    AudioRenderer.field4205 = var3;
                 }
             }
         }

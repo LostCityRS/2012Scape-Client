@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("vj")
-public class ObjTypeList implements class463 {
+public class ObjTypeList implements PlayerTypeListRelated {
 
     @ObfuscatedName("vj.u")
     public final ModeGame field7139;
@@ -28,10 +28,10 @@ public class ObjTypeList implements class463 {
     public final WeightedCache field7146 = new WeightedCache(50);
 
     @ObfuscatedName("vj.f")
-    public final class458 field7147 = new class458(250);
+    public final ObjTypeListRelated field7147 = new ObjTypeListRelated(250);
 
     @ObfuscatedName("vj.d")
-    public final class591 field7148 = new class591();
+    public final IconCacheKey field7148 = new IconCacheKey();
 
     @ObfuscatedName("vj.z")
     public final ParamTypeList field7141;
@@ -170,7 +170,7 @@ public class ObjTypeList implements class463 {
             var17 = arg1.method506(var16, 0, 36, 36, 32);
         }
         if (!arg7) {
-            class591 var18 = new class591();
+            IconCacheKey var18 = new IconCacheKey();
             var18.field7047 = arg1.field397;
             var18.field7052 = arg2;
             var18.field7049 = arg3;
@@ -210,7 +210,7 @@ public class ObjTypeList implements class463 {
         synchronized (this.field7146) {
             this.field7146.method7922();
         }
-        class458 var5 = this.field7147;
+        ObjTypeListRelated var5 = this.field7147;
         synchronized (this.field7147) {
             this.field7147.method8026();
         }
@@ -218,7 +218,7 @@ public class ObjTypeList implements class463 {
 
     @ObfuscatedName("vj.t(B)V")
     public void method12297() {
-        class458 var1 = this.field7147;
+        ObjTypeListRelated var1 = this.field7147;
         synchronized (this.field7147) {
             this.field7147.method8026();
         }
@@ -242,7 +242,7 @@ public class ObjTypeList implements class463 {
         synchronized (this.field7146) {
             this.field7146.method7921(arg0);
         }
-        class458 var6 = this.field7147;
+        ObjTypeListRelated var6 = this.field7147;
         synchronized (this.field7147) {
             this.field7147.method8022(arg0);
         }
@@ -258,7 +258,7 @@ public class ObjTypeList implements class463 {
         synchronized (this.field7146) {
             this.field7146.method7925();
         }
-        class458 var5 = this.field7147;
+        ObjTypeListRelated var5 = this.field7147;
         synchronized (this.field7147) {
             this.field7147.method8010();
         }

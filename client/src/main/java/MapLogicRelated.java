@@ -11,7 +11,7 @@ public class MapLogicRelated {
 
     @ObfuscatedName("rd.u(ZI)V")
     public static void method8512(boolean arg0) {
-        SoundPlayer.method3461();
+        AudioRenderer.method3461();
         if (!client.method1608(client.field8923)) {
             return;
         }
@@ -33,6 +33,6 @@ public class MapLogicRelated {
                 }
             }
         }
-        SoundPlayer.method3461();
+        AudioRenderer.method3461();
     }
 }

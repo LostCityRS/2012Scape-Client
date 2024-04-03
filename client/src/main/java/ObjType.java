@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import java.util.Arrays;
 
 @ObfuscatedName("vn")
-public class ObjType implements class464 {
+public class ObjType implements PlayerTypeRelated {
 
     @ObfuscatedName("vn.m")
     public static short[] field7118 = new short[256];

@@ -728,7 +728,7 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.rs(ILhp;ZZ)V")
-    public final void method13561(int arg0, class249 arg1, boolean arg2, boolean arg3) {
+    public final void method13561(int arg0, TextureCombiner arg1, boolean arg2, boolean arg3) {
         if (!this.field8242) {
             return;
         }
@@ -754,7 +754,7 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.rx(ILhp;Z)V")
-    public final void method13563(int arg0, class249 arg1, boolean arg2) {
+    public final void method13563(int arg0, TextureCombiner arg1, boolean arg2) {
         if (!this.field8242) {
             return;
         }
@@ -784,7 +784,7 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.ach(Lhi;)I")
-    public static final int method16033(class253 arg0) {
+    public static final int method16033(TextureCombineMode arg0) {
         switch (arg0.field2578) {
             case 0:
                 return 26;
@@ -802,7 +802,7 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.acz(Lhp;)I")
-    public static final int method16048(class249 arg0) {
+    public static final int method16048(TextureCombiner arg0) {
         switch (arg0.field2548) {
             case 0:
                 return 2;
@@ -943,7 +943,7 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.sn(Lir;II)V")
-    public final void method13619(class255 arg0, int arg1, int arg2) {
+    public final void method13619(PrimitiveType arg0, int arg1, int arg2) {
         if (this.field9990 != null) {
             this.field9990.method13918();
         }
@@ -951,7 +951,7 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.su(Lin;Lir;IIII)V")
-    public final void method13595(IndexBuffer arg0, class255 arg1, int arg2, int arg3, int arg4, int arg5) {
+    public final void method13595(IndexBuffer arg0, PrimitiveType arg1, int arg2, int arg3, int arg4, int arg5) {
         if (this.field9990 != null) {
             this.field9990.method13918();
         }
@@ -959,7 +959,7 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.sh(Lir;IIII)V")
-    public final void method13596(class255 arg0, int arg1, int arg2, int arg3, int arg4) {
+    public final void method13596(PrimitiveType arg0, int arg1, int arg2, int arg3, int arg4) {
         if (this.field9990 != null) {
             this.field9990.method13918();
         }
@@ -1041,7 +1041,7 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.acd(Lir;)I")
-    public static final int method16027(class255 arg0) {
+    public static final int method16027(PrimitiveType arg0) {
         switch (arg0.field2579) {
             case 0:
                 return 6;

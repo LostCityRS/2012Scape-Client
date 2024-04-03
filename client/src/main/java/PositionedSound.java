@@ -549,7 +549,7 @@ public class PositionedSound extends Node {
             arg0.field9540.method16402(var8);
             arg0.field9540.method16387(var10);
         } else if (arg0.field9536 >= 0) {
-            int var15 = arg0.field9532 == 256 && arg0.field9524 == 256 ? 256 : SoundPlayer.method4688(arg0.field9524, arg0.field9532);
+            int var15 = arg0.field9532 == 256 && arg0.field9524 == 256 ? 256 : AudioRenderer.method4688(arg0.field9524, arg0.field9532);
             if (arg0.field9537) {
                 if (arg0.field9538 == null) {
                     arg0.field9538 = VorbisSound.method15066(Statics.field3156, arg0.field9536);
@@ -566,10 +566,10 @@ public class PositionedSound extends Node {
                     }
                 }
             } else {
-                class370 var17 = class370.method6466(Statics.field5197, arg0.field9536, 0);
+                SynthSound var17 = SynthSound.method6466(Statics.field5197, arg0.field9536, 0);
                 if (var17 != null) {
-                    class997 var18 = var17.method6463().method17108(Statics.field3160);
-                    class994 var19 = (class994) var18.method16502(var15, var8 << 6, var10);
+                    SynthVariableRateSoundPacket var18 = var17.method6463().method17108(Statics.field3160);
+                    SoundStreamRelated1 var19 = (SoundStreamRelated1) var18.method16502(var15, var8 << 6, var10);
                     var19.method16384(-1);
                     Statics.field4201.method16452(var19);
                     arg0.field9540 = var19;
@@ -605,10 +605,10 @@ public class PositionedSound extends Node {
                 }
             } else {
                 int var23 = (int) (Math.random() * (double) arg0.field9543.length);
-                class370 var24 = class370.method6466(Statics.field5197, arg0.field9543[var23], 0);
+                SynthSound var24 = SynthSound.method6466(Statics.field5197, arg0.field9543[var23], 0);
                 if (var24 != null) {
-                    class997 var25 = var24.method6463().method17108(Statics.field3160);
-                    class994 var26 = (class994) var25.method16502(var20, var8 << 6, var10);
+                    SynthVariableRateSoundPacket var25 = var24.method6463().method17108(Statics.field3160);
+                    SoundStreamRelated1 var26 = (SoundStreamRelated1) var25.method16502(var20, var8 << 6, var10);
                     var26.method16384(0);
                     Statics.field4201.method16452(var26);
                     arg0.field9548 = var26;

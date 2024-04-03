@@ -363,7 +363,7 @@ public class SoundRelated2 extends Node {
     }
 
     @ObfuscatedName("acu.j(Lmd;[B[II)Z")
-    public boolean method14918(class377 arg0, byte[] arg1, int[] arg2) {
+    public boolean method14918(SynthSoundRelated12 arg0, byte[] arg1, int[] arg2) {
         boolean var4 = true;
         int var5 = 0;
         BasicVariableRateSoundPacket var6 = null;

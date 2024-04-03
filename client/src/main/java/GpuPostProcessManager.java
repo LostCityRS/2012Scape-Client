@@ -96,7 +96,7 @@ public class GpuPostProcessManager {
     public void method4314() {
         this.field2431.method13587(0, this.field2440);
         this.field2431.method13688(this.field2443);
-        this.field2431.method13619(class255.field2582, 0, 1);
+        this.field2431.method13619(PrimitiveType.field2582, 0, 1);
     }
 
     @ObfuscatedName("hh.a()V")

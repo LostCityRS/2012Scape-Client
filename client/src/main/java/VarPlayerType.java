@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ju")
-public class VarPlayerType implements class464 {
+public class VarPlayerType implements PlayerTypeRelated {
 
     @ObfuscatedName("ju.u")
     public int field3310 = 0;

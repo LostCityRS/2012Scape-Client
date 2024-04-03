@@ -89,7 +89,7 @@ public final class ProgrammableSpriteShader extends SpriteShader {
         this.field8709.method3350(this.field8713[6], this.field8704.field3426, this.field8704.field3427, this.field8704.field3428, this.field8704.field3429);
         this.field2278.method13587(0, this.field2283);
         this.field2278.method13688(this.field2285);
-        this.field2278.method13619(class255.field2580, this.field2277, 2);
+        this.field2278.method13619(PrimitiveType.field2580, this.field2277, 2);
     }
 
     @ObfuscatedName("aat.j()V")

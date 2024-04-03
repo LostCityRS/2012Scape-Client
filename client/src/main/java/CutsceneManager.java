@@ -157,7 +157,7 @@ public class CutsceneManager {
         Statics.field1535 = client.field9197;
         Statics.field784 = client.field9188;
         field1526 = true;
-        field1536 = SoundPlayer.field4202;
+        field1536 = AudioRenderer.field4202;
         if (field1531 != 0 && field1527 != 0) {
             client.field9197 = 334;
             client.field9188 = 334;
@@ -177,9 +177,9 @@ public class CutsceneManager {
                 var3.method2874();
             }
             if (field1536 != -1) {
-                class155.method8662();
-                SoundPlayer.field4202 = -1;
-                SoundPlayer.method11057(field1536, 255, 50);
+                SoundRelated12.method8662();
+                AudioRenderer.field4202 = -1;
+                AudioRenderer.method11057(field1536, 255, 50);
             }
         }
         client.field8988 = 1;

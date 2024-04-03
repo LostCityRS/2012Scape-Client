@@ -114,7 +114,7 @@ public class Statics {
     public static EnumTypeList field1244;
 
     @ObfuscatedName("cc.r")
-    public static class377 field1279;
+    public static SynthSoundRelated12 field1279;
 
     @ObfuscatedName("cg.ay")
     public static int field1290;
@@ -417,7 +417,7 @@ public class Statics {
     public static Thread field2668;
 
     @ObfuscatedName("ik.dy")
-    public static class49 field2669;
+    public static VarRelated1 field2669;
 
     @ObfuscatedName("ik.gn")
     public static Js5 field2670;
@@ -444,7 +444,7 @@ public class Statics {
     public static Js5 field3156;
 
     @ObfuscatedName("jr.b")
-    public static class375 field3160;
+    public static SampleRateConverter field3160;
 
     @ObfuscatedName("jr.ic")
     public static int field3161;
@@ -648,10 +648,10 @@ public class Statics {
     public static int field4017;
 
     @ObfuscatedName("mg.c")
-    public static class372 field4027;
+    public static AudioRelatedPcm12 field4027;
 
     @ObfuscatedName("md.v")
-    public static class156 field4058;
+    public static SoundRelated13 field4058;
 
     @ObfuscatedName("md.gq")
     public static Js5 field4059;
@@ -696,10 +696,10 @@ public class Statics {
     public static int field4194;
 
     @ObfuscatedName("ne.q")
-    public static class939 field4201;
+    public static AudioBuss_Sub1 field4201;
 
     @ObfuscatedName("ne.o")
-    public static class157 field4206;
+    public static SoundRelated14 field4206;
 
     @ObfuscatedName("ne.hm")
     public static EffectAnimTypeList field4213;
@@ -1038,7 +1038,7 @@ public class Statics {
     public static int field5179;
 
     @ObfuscatedName("ru.si")
-    public static class61[] field5180;
+    public static FriendChatUser[] field5180;
 
     @ObfuscatedName("rf.c")
     public static CutsceneRoute[] field5181;
@@ -2014,11 +2014,11 @@ public class Statics {
 
     @ObfuscatedName("pf.j(IIIIB)Lpq;")
     public static PathFinderEntitySize method7914(int arg0, int arg1, int arg2, int arg3) {
-        class434.field4672.field4682 = arg0;
-        class434.field4672.field4680 = arg1;
-        class434.field4672.field4681 = arg2;
-        class434.field4672.field4679 = arg3;
-        return class434.field4672;
+        PathFinderEntityRelated.field4672.field4682 = arg0;
+        PathFinderEntityRelated.field4672.field4680 = arg1;
+        PathFinderEntityRelated.field4672.field4681 = arg2;
+        PathFinderEntityRelated.field4672.field4679 = arg3;
+        return PathFinderEntityRelated.field4672;
     }
 
     @ObfuscatedName("aaf.s(Lacp;B)V")
@@ -2186,7 +2186,7 @@ public class Statics {
 
     @ObfuscatedName("cp.c(ZB)V")
     public static synchronized void method2362(boolean arg0) {
-        class111.field1193 = arg0;
+        SoftwareRendererRelated2.field1193 = arg0;
     }
 
     @ObfuscatedName("aeq.ar(II)V")
@@ -2310,12 +2310,12 @@ public class Statics {
     public static void method4790() {
         PcmPlayer.method6512(22050, field4961.field9676.method15891() == 1, 2);
         field5198 = PcmPlayer.method6494(field1231, 0, 22050);
-        SoundPlayer.method3658(true, SoundPlayer.method6082(null));
+        AudioRenderer.method3658(true, AudioRenderer.method6082(null));
         field3536 = PcmPlayer.method6494(field1231, 1, 2048);
-        field4201 = new class939();
+        field4201 = new AudioBuss_Sub1();
         field3536.method6521(field4201);
-        field3160 = new class375(22050, field4015);
-        SoundPlayer.method2572();
+        field3160 = new SampleRateConverter(22050, field4015);
+        AudioRenderer.method2572();
     }
 
     @ObfuscatedName("agj.a(I)I")
@@ -3231,7 +3231,7 @@ public class Statics {
 
     @ObfuscatedName("vw.d(Lso;ILaes;I)V")
     public static void method12343(SeqType arg0, int arg1, GraphEntity arg2) {
-        if (SoundPlayer.field4209 >= 50 || (arg0 == null || arg0.field6338 == null || arg1 >= arg0.field6338.length || arg0.field6338[arg1] == null || field2119.field9807 != arg2.field9807)) {
+        if (AudioRenderer.field4209 >= 50 || (arg0 == null || arg0.field6338 == null || arg1 >= arg0.field6338.length || arg0.field6338[arg1] == null || field2119.field9807 != arg2.field9807)) {
             return;
         }
         int var3 = arg0.field6338[arg1][0];
@@ -3279,12 +3279,12 @@ public class Statics {
             int var12 = (int) var11.field3475 - 256 >> 9;
             int var13 = (int) var11.field3477 - 256 >> 9;
             int var14 = field2119 == arg2 ? 0 : (var13 << 8) + (arg2.field9807 << 24) + (var12 << 16) + var6;
-            SoundPlayer.field4195[++SoundPlayer.field4209 - 1] = new SynthSound((byte) (arg0.field6334 ? 2 : 1), var4, var5, 0, var9, var14, var8, arg2);
+            AudioRenderer.field4195[++AudioRenderer.field4209 - 1] = new Sound((byte) (arg0.field6334 ? 2 : 1), var4, var5, 0, var9, var14, var8, arg2);
         } else if (field2119 == arg2) {
             if (arg0.field6334) {
-                SoundPlayer.method1717(var4, var5, 0, var9, false, var8);
+                AudioRenderer.method1717(var4, var5, 0, var9, false, var8);
             } else {
-                SoundPlayer.method14082(var4, var5, 0, var9, var8);
+                AudioRenderer.method14082(var4, var5, 0, var9, var8);
             }
         }
     }
@@ -3370,7 +3370,7 @@ public class Statics {
 
     @ObfuscatedName("jv.z(Lso;IB)V")
     public static void method4719(SeqType arg0, int arg1) {
-        if (SoundPlayer.field4209 >= 50 || (arg0 == null || arg0.field6338 == null || arg1 >= arg0.field6338.length || arg0.field6338[arg1] == null)) {
+        if (AudioRenderer.field4209 >= 50 || (arg0 == null || arg0.field6338 == null || arg1 >= arg0.field6338.length || arg0.field6338[arg1] == null)) {
             return;
         }
         int var2 = arg0.field6338[arg1][0];
@@ -3384,13 +3384,13 @@ public class Statics {
         }
         int var6 = 256;
         if (arg0.field6316 != null && arg0.field6337 != null) {
-            var6 = SoundPlayer.method4688(arg0.field6316[arg1], arg0.field6337[arg1]);
+            var6 = AudioRenderer.method4688(arg0.field6316[arg1], arg0.field6337[arg1]);
         }
         int var7 = arg0.field6335 == null ? 255 : arg0.field6335[arg1];
         if (arg0.field6334) {
-            SoundPlayer.method1717(var3, var4, 0, var7, false, var6);
+            AudioRenderer.method1717(var3, var4, 0, var7, false, var6);
         } else {
-            SoundPlayer.method14082(var3, var4, 0, var7, var6);
+            AudioRenderer.method14082(var3, var4, 0, var7, var6);
         }
     }
 
@@ -3573,7 +3573,7 @@ public class Statics {
     }
 
     @ObfuscatedName("afd.g(Lnp;I)V")
-    public static void method15704(SynthSound arg0) {
+    public static void method15704(Sound arg0) {
         if (arg0.field4188 == null) {
             arg0.field4179 = Integer.MIN_VALUE;
         } else {
@@ -3911,7 +3911,7 @@ public class Statics {
                 var11.field9467.method15287(client.field9101);
                 var11.field9467.method15293(var6);
                 client.field8975.method1913(var11);
-                client.method2677(var10.field8642[0], var10.field8643[0], true, class434.method11404(var10.field8642[0], var10.field8643[0], var10.method13954(), var10.method13954(), 0));
+                client.method2677(var10.field8642[0], var10.field8643[0], true, PathFinderEntityRelated.method11404(var10.field8642[0], var10.field8643[0], var10.method13954(), var10.method13954(), 0));
             }
         }
         if (var5 == 59) {
@@ -3926,7 +3926,7 @@ public class Statics {
             var12.field9467.method15287(var9.field4836 + var3);
             var12.field9467.method15223(field4166);
             client.field8975.method1913(var12);
-            client.method2677(var3, var4, true, class434.method3645(var3, var4));
+            client.method2677(var3, var4, true, PathFinderEntityRelated.method3645(var3, var4));
         }
         ClientProt var13 = null;
         if (var5 == 18) {
@@ -4032,7 +4032,7 @@ public class Statics {
                     client.field9051 = 0;
                 }
                 client.field8975.method1913(var18);
-                client.method2677(var3, var4, true, class434.method3645(var3, var4));
+                client.method2677(var3, var4, true, PathFinderEntityRelated.method3645(var3, var4));
             }
         }
         if (var5 == 16) {
@@ -4125,7 +4125,7 @@ public class Statics {
                 var27.field9467.method15279(var6);
                 var27.field9467.method15308(MiniMenu.method3496() ? 1 : 0);
                 client.field8975.method1913(var27);
-                client.method2677(var26.field8642[0], var26.field8643[0], true, class434.method11404(var26.field8642[0], var26.field8643[0], var26.method13954(), var26.method13954(), 0));
+                client.method2677(var26.field8642[0], var26.field8643[0], true, PathFinderEntityRelated.method11404(var26.field8642[0], var26.field8643[0], var26.method13954(), var26.method13954(), 0));
             }
         }
         if (var5 == 8) {
@@ -4143,7 +4143,7 @@ public class Statics {
                 var30.field9467.method15287(client.field9101);
                 var30.field9467.method15318(MiniMenu.method3496() ? 1 : 0);
                 client.field8975.method1913(var30);
-                client.method2677(var29.field8642[0], var29.field8643[0], true, class434.method11404(var29.field8642[0], var29.field8643[0], var29.method13954(), var29.method13954(), 0));
+                client.method2677(var29.field8642[0], var29.field8643[0], true, PathFinderEntityRelated.method11404(var29.field8642[0], var29.field8643[0], var29.method13954(), var29.method13954(), 0));
             }
         }
         ClientProt var31 = null;
@@ -4172,7 +4172,7 @@ public class Statics {
                 var34.field9467.method15293(var6);
                 var34.field9467.method15308(MiniMenu.method3496() ? 1 : 0);
                 client.field8975.method1913(var34);
-                client.method2677(var33.field8642[0], var33.field8643[0], true, class434.method11404(var33.field8642[0], var33.field8643[0], var33.method13954(), var33.method13954(), 0));
+                client.method2677(var33.field8642[0], var33.field8643[0], true, PathFinderEntityRelated.method11404(var33.field8642[0], var33.field8643[0], var33.method13954(), var33.method13954(), 0));
             }
         }
         if (var5 == 58) {
@@ -4415,7 +4415,7 @@ public class Statics {
         }
         client.field8980.method6139().method8144(client.field8980);
         ChangeLocationRequest.method3590();
-        SoundPlayer.method1677();
+        AudioRenderer.method1677();
         if (client.field9017 > 10) {
             client.field8975.field837++;
         }
@@ -5468,7 +5468,7 @@ public class Statics {
     @ObfuscatedName("qk.tn(Lrn;B)V")
     public static final void method8398(ClientScriptState arg0) {
         arg0.field5216 -= 4;
-        SoundPlayer.method1717(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2], arg0.field5215[arg0.field5216 + 3], false, 256);
+        AudioRenderer.method1717(arg0.field5215[arg0.field5216], arg0.field5215[arg0.field5216 + 1], arg0.field5215[arg0.field5216 + 2], arg0.field5215[arg0.field5216 + 3], false, 256);
     }
 
     @ObfuscatedName("nv.tt(Lrn;I)V")

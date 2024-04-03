@@ -211,14 +211,14 @@ public class GpuFloorModelRelated extends Node {
             Node var12 = this.field9463.method11923(var7);
             if (var12 != null) {
                 Unsafe var13 = this.field9460.field8247;
-                var13.putShort(this.field9460.field8245 + 2097152L + (long) (this.field9461 * 2), ((class799) var12).field9551);
+                var13.putShort(this.field9460.field8245 + 2097152L + (long) (this.field9461 * 2), ((FloorModelNode) var12).field9551);
                 this.field9461++;
                 return;
             }
         }
         short var14 = (short) this.field9455;
         if (var7 != -1L) {
-            this.field9463.method11927(new class799(var14), var7);
+            this.field9463.method11927(new FloorModelNode(var14), var7);
         }
         float var15;
         float var16;

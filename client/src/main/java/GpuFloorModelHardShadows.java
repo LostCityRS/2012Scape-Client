@@ -30,7 +30,7 @@ public class GpuFloorModelHardShadows {
     public final int field2471;
 
     @ObfuscatedName("hx.f")
-    public class234[][] field2464;
+    public GpuRelated14[][] field2464;
 
     public GpuFloorModelHardShadows(GpuToolkit arg0, GpuFloorModel arg1) {
         this.field2469 = arg0;
@@ -45,10 +45,10 @@ public class GpuFloorModelHardShadows {
 
     @ObfuscatedName("hx.u()V")
     public void method4374() {
-        this.field2464 = new class234[this.field2472][this.field2470];
+        this.field2464 = new GpuRelated14[this.field2472][this.field2470];
         for (int var1 = 0; var1 < this.field2470; var1++) {
             for (int var2 = 0; var2 < this.field2472; var2++) {
-                this.field2464[var2][var1] = new class234(this.field2469, this, this.field2465, var2, var1, this.field2471, var2 * 128 + 1, var1 * 128 + 1);
+                this.field2464[var2][var1] = new GpuRelated14(this.field2469, this, this.field2465, var2, var1, this.field2471, var2 * 128 + 1, var1 * 128 + 1);
                 if (this.field2464[var2][var1].field2449 == 0) {
                     this.field2464[var2][var1] = null;
                 }
@@ -94,7 +94,7 @@ public class GpuFloorModelHardShadows {
                 int var20 = var19 << this.field2471;
                 int var21 = var19 + 1 << this.field2471;
                 for (int var22 = 0; var22 < this.field2472; var22++) {
-                    class234 var23 = this.field2464[var22][var19];
+                    GpuRelated14 var23 = this.field2464[var22][var19];
                     int var24 = 0;
                     if (var23 != null) {
                         int var25 = var22 << this.field2471;
@@ -280,7 +280,7 @@ public class GpuFloorModelHardShadows {
         int var7 = arg1 - 1 >> 7;
         int var8 = arg1 - 1 + arg3 - 1 >> 7;
         for (int var9 = var5; var9 <= var6; var9++) {
-            class234[] var10 = this.field2464[var9];
+            GpuRelated14[] var10 = this.field2464[var9];
             for (int var11 = var7; var11 <= var8; var11++) {
                 if (var10[var11] != null) {
                     var10[var11].field2455 = true;

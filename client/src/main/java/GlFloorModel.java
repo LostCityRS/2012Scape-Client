@@ -484,9 +484,9 @@ public class GlFloorModel extends FloorModel {
                                 if (var47 != -1) {
                                     var8[var84] = var14[var42];
                                 }
-                                var10.method11927(new class799(var41[var42]), var50);
+                                var10.method11927(new FloorModelNode(var41[var42]), var50);
                             } else {
-                                var41[var42] = ((class799) var73).field9551;
+                                var41[var42] = ((FloorModelNode) var73).field9551;
                                 var84 = var41[var42] & 0xFFFF;
                                 if (var47 != -1 && var14[var42].field4228 < var8[var84].field4228) {
                                     var8[var84] = var14[var42];
@@ -555,7 +555,7 @@ public class GlFloorModel extends FloorModel {
             }
             var7.method41();
             this.field7707 = this.field7688.method13302(var5, var6, var7.method36(), false);
-            if (this.field7707 instanceof class653) {
+            if (this.field7707 instanceof GpuBufferRelated12) {
                 var6.method62();
             }
             this.field7708 = new GlRelated1(this.field7707, 5126, 3, 0);

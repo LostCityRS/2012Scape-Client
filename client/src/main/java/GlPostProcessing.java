@@ -50,13 +50,13 @@ public class GlPostProcessing {
     public GlRelated2[] field1162 = new GlRelated2[2];
 
     @ObfuscatedName("co.w")
-    public class656 field1163;
+    public PostProcessingRelated field1163;
 
     @ObfuscatedName("co.b")
     public GlRelated2 field1166;
 
     @ObfuscatedName("co.x")
-    public class656 field1152;
+    public PostProcessingRelated field1152;
 
     @ObfuscatedName("co.i")
     public boolean field1168 = false;
@@ -128,12 +128,12 @@ public class GlPostProcessing {
         }
         if (this.field1159) {
             if (this.field1165 != null) {
-                this.field1152 = new class656(this.field1148, TextureFormat.field1300, DataType.field1503, this.field1150, this.field1155, this.field1148.field8080);
+                this.field1152 = new PostProcessingRelated(this.field1148, TextureFormat.field1300, DataType.field1503, this.field1150, this.field1155, this.field1148.field8080);
             }
             if (this.field1168) {
                 this.field1166 = new GlRelated2(this.field1148, 34037, TextureFormat.field1300, DataType.field1503, this.field1150, this.field1155);
             } else if (this.field1152 == null) {
-                this.field1152 = new class656(this.field1148, TextureFormat.field1300, DataType.field1503, this.field1150, this.field1155);
+                this.field1152 = new PostProcessingRelated(this.field1148, TextureFormat.field1300, DataType.field1503, this.field1150, this.field1155);
             }
             this.field1159 = false;
             this.field1160 = true;
@@ -141,7 +141,7 @@ public class GlPostProcessing {
         }
         if (this.field1158) {
             if (this.field1165 != null) {
-                this.field1163 = new class656(this.field1148, TextureFormat.field1296, this.field1161, this.field1150, this.field1155, this.field1148.field8080);
+                this.field1163 = new PostProcessingRelated(this.field1148, TextureFormat.field1296, this.field1161, this.field1150, this.field1155, this.field1148.field8080);
             }
             this.field1162[0] = new GlRelated2(this.field1148, 34037, TextureFormat.field1296, this.field1161, this.field1150, this.field1155);
             this.field1162[1] = this.field1167 > 1 ? new GlRelated2(this.field1148, 34037, TextureFormat.field1296, this.field1161, this.field1150, this.field1155) : null;

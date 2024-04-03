@@ -180,7 +180,7 @@ public class ClanSettings {
             return null;
         } else {
             Node var2 = this.field2368.method11923((long) arg0);
-            return var2 != null && var2 instanceof class801 ? Long.valueOf(((class801) var2).field9555) : null;
+            return var2 != null && var2 instanceof LongNode ? Long.valueOf(((LongNode) var2).field9555) : null;
         }
     }
 
@@ -428,8 +428,8 @@ public class ClanSettings {
         } else {
             Node var4 = this.field2368.method11923((long) arg0);
             if (var4 != null) {
-                if (var4 instanceof class801) {
-                    class801 var5 = (class801) var4;
+                if (var4 instanceof LongNode) {
+                    LongNode var5 = (LongNode) var4;
                     if (var5.field9555 == arg1) {
                         return false;
                     }
@@ -439,7 +439,7 @@ public class ClanSettings {
                 var4.method6979();
             }
         }
-        this.field2368.method11927(new class801(arg1), (long) arg0);
+        this.field2368.method11927(new LongNode(arg1), (long) arg0);
         return true;
     }
 
@@ -579,7 +579,7 @@ public class ClanSettings {
                 this.field2368.method11927(new IntNode(var10), (long) var8);
             } else if (var9 == 1) {
                 long var11 = arg0.method15246();
-                this.field2368.method11927(new class801(var11), (long) var8);
+                this.field2368.method11927(new LongNode(var11), (long) var8);
             } else if (var9 == 2) {
                 String var13 = arg0.method15337();
                 this.field2368.method11927(new ObjectNode(var13), (long) var8);
