@@ -1,6 +1,6 @@
 package jagdx;
 
-import java.awt.*;
+import java.awt.Component;
 
 public class D3DPRESENT_PARAMETERS {
 
@@ -25,6 +25,10 @@ public class D3DPRESENT_PARAMETERS {
     public boolean EnableAutoDepthStencil;
 
     public int AutoDepthStencilFormat = 0;
+
+    public int Flags;
+
+    public int FullScreen_RefreshRateInHz;
 
     public int PresentationInterval = Integer.MIN_VALUE;
 
