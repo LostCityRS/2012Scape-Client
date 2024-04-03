@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class class940 extends AudioBuss {
 
     @ObfuscatedName("aiq.f")
-    public static class344 field10291 = new class344(64, class342.field3710);
+    public static PrioritizedCache field10291 = new PrioritizedCache(64, PrioritizedCacheMode.field3710);
 
     @ObfuscatedName("aiq.d")
     public final int field10282;

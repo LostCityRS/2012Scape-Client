@@ -10,7 +10,7 @@ public class FrameSet extends SecondaryNode {
     public byte[][] field10348;
 
     @ObfuscatedName("aje.z")
-    public class138[] field10350;
+    public AnimFrame[] field10350;
 
     @ObfuscatedName("aha.u(Lls;Lls;II)V")
     public static void method16191(Js5 arg0, Js5 arg1, int arg2) {
@@ -59,7 +59,7 @@ public class FrameSet extends SecondaryNode {
         int[] var15;
         synchronized (Statics.field674) {
             int var14 = Statics.field674.method5637(this.field10349);
-            this.field10350 = new class138[var14];
+            this.field10350 = new AnimFrame[var14];
             var15 = Statics.field674.method5683(this.field10349);
         }
         for (int var17 = 0; var17 < var15.length; var17++) {
@@ -81,7 +81,7 @@ public class FrameSet extends SecondaryNode {
                 }
                 var12.method11558(var21);
             }
-            this.field10350[var15[var17]] = new class138(var18, var21);
+            this.field10350[var15[var17]] = new AnimFrame(var18, var21);
         }
         this.field10348 = null;
         return true;

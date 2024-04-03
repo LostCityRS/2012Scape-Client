@@ -28,7 +28,7 @@ public class EnumType {
     public int field6812 = 0;
 
     @ObfuscatedName("ud.l")
-    public HashMap field6813;
+    public java.util.HashMap field6813;
 
     @ObfuscatedName("ud.u(Laet;I)V")
     public void method12121(Packet arg0) {
@@ -53,7 +53,7 @@ public class EnumType {
             this.field6809 = arg0.method15379();
         } else if (arg1 == 5 || arg1 == 6) {
             this.field6812 = arg0.method15239();
-            this.field6810 = new HashMap(this.field6812);
+            this.field6810 = new java.util.HashMap(this.field6812);
             for (int var6 = 0; var6 < this.field6812; var6++) {
                 int var7 = arg0.method15379();
                 Object var8;
@@ -133,7 +133,7 @@ public class EnumType {
 
     @ObfuscatedName("ud.f(B)V")
     public void method12129() {
-        HashMap var1 = new HashMap();
+        java.util.HashMap var1 = new java.util.HashMap();
         if (this.field6811 == null) {
             if (this.field6810 == null) {
                 throw new IllegalStateException();
@@ -162,7 +162,7 @@ public class EnumType {
                 }
             }
         }
-        this.field6813 = new HashMap();
+        this.field6813 = new java.util.HashMap();
         Iterator var9 = var1.entrySet().iterator();
         while (var9.hasNext()) {
             Entry var10 = (Entry) var9.next();

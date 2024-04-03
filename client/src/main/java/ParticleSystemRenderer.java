@@ -42,12 +42,12 @@ public class ParticleSystemRenderer {
         field4922 = 0;
         field4921 = 0;
         Statics.field4686 = new LinkedList();
-        Statics.field4919 = new class991[1024];
-        Statics.field4927 = new ParticleSystem[class130.field1351[field4929] + 1];
+        Statics.field4919 = new MovingParticle[1024];
+        Statics.field4927 = new ParticleSystem[ParticleLimits.field1351[field4929] + 1];
         field4923 = 0;
         field4928 = 0;
-        class273.method7704(arg0);
-        class274.method3618(arg0);
+        ParticleEmitterType.method7704(arg0);
+        ParticleEffectorType.method3618(arg0);
     }
 
     @ObfuscatedName("dv.j(Lra;J)V")
@@ -62,7 +62,7 @@ public class ParticleSystemRenderer {
             if (!var5) {
                 var3.remove();
                 Statics.field4927[field4928] = var4;
-                field4928 = field4928 + 1 & class130.field1351[field4929];
+                field4928 = field4928 + 1 & ParticleLimits.field1351[field4929];
             }
         }
     }
@@ -84,7 +84,7 @@ public class ParticleSystemRenderer {
             arg0 = 0;
         }
         field4929 = arg0;
-        Statics.field4927 = new ParticleSystem[class130.field1351[field4929] + 1];
+        Statics.field4927 = new ParticleSystem[ParticleLimits.field1351[field4929] + 1];
         field4923 = 0;
         field4928 = 0;
     }

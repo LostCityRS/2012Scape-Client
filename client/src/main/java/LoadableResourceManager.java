@@ -23,7 +23,7 @@ public class LoadableResourceManager {
             }
             if (!((Js5DllResourceLoader) LoadableResource.field6838.method12192()).method5557()) {
                 Statics.field1543.method6676();
-                class477.method13902();
+                ClientWatch.method13902();
                 try {
                     Ping.init();
                 } catch (Throwable var19) {

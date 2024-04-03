@@ -643,7 +643,7 @@ public final class ScriptRunner {
                 method6883(arg1);
                 return;
             case 79:
-                class500.method12290(arg1);
+                QuestCommands.method12290(arg1);
                 return;
             case 80:
                 method15856(arg1);
@@ -670,7 +670,7 @@ public final class ScriptRunner {
                 method13888(arg1);
                 return;
             case 88:
-                class500.method4578(arg1);
+                QuestCommands.method4578(arg1);
                 return;
             case 89:
                 method3841(arg1);
@@ -700,7 +700,7 @@ public final class ScriptRunner {
                 method11142(arg1);
                 return;
             case 98:
-                class500.method8606(arg1);
+                QuestCommands.method8606(arg1);
                 return;
             case 99:
                 method6851(arg1);
@@ -802,7 +802,7 @@ public final class ScriptRunner {
                 method7969(arg1);
                 return;
             case 132:
-                class500.method12348(arg1);
+                QuestCommands.method12348(arg1);
                 return;
             case 133:
                 method8648(arg1);
@@ -817,7 +817,7 @@ public final class ScriptRunner {
                 method3525(arg1);
                 return;
             case 137:
-                class500.method5926(arg1);
+                QuestCommands.method5926(arg1);
                 return;
             case 138:
                 method2814(arg1);
@@ -850,7 +850,7 @@ public final class ScriptRunner {
                 Statics.method4697(arg1);
                 return;
             case 148:
-                class500.method1982(arg1);
+                QuestCommands.method1982(arg1);
                 return;
             case 149:
                 method4005(arg1);
@@ -916,7 +916,7 @@ public final class ScriptRunner {
                 method12877(arg1);
                 return;
             case 170:
-                class500.method11880(arg1);
+                QuestCommands.method11880(arg1);
                 return;
             case 171:
                 method4605(arg1);
@@ -1078,7 +1078,7 @@ public final class ScriptRunner {
                 method8300(arg1);
                 return;
             case 224:
-                class500.method3220(arg1);
+                QuestCommands.method3220(arg1);
                 return;
             case 225:
                 method1953(arg1);
@@ -1231,7 +1231,7 @@ public final class ScriptRunner {
                 method1324(arg1);
                 return;
             case 275:
-                class500.method8541(arg1);
+                QuestCommands.method8541(arg1);
                 return;
             case 276:
                 method6313(arg1);
@@ -1279,7 +1279,7 @@ public final class ScriptRunner {
                 method11075(arg1);
                 return;
             case 291:
-                class500.method1348(arg1);
+                QuestCommands.method1348(arg1);
                 return;
             case 292:
                 method14810(arg1);
@@ -1303,7 +1303,7 @@ public final class ScriptRunner {
                 method3653(arg1);
                 return;
             case 299:
-                class500.method14068(arg1);
+                QuestCommands.method14068(arg1);
                 return;
             case 300:
                 method1816(arg1);
@@ -1342,7 +1342,7 @@ public final class ScriptRunner {
                 method3317(arg1);
                 return;
             case 312:
-                class500.method7657(arg1);
+                QuestCommands.method7657(arg1);
                 return;
             case 313:
                 Statics.method11055(arg1);
@@ -1606,7 +1606,7 @@ public final class ScriptRunner {
                 method7888(arg1);
                 return;
             case 400:
-                class500.method3566(arg1);
+                QuestCommands.method3566(arg1);
                 return;
             case 401:
                 method15787(arg1);
@@ -1951,7 +1951,7 @@ public final class ScriptRunner {
                 method8386(arg1);
                 return;
             case 515:
-                class500.method2707(arg1);
+                QuestCommands.method2707(arg1);
                 return;
             case 516:
                 method4655(arg1);
@@ -2371,7 +2371,7 @@ public final class ScriptRunner {
                 method12646(arg1);
                 return;
             case 655:
-                class500.method1248(arg1);
+                QuestCommands.method1248(arg1);
                 return;
             case 656:
                 method3908(arg1);
@@ -2380,7 +2380,7 @@ public final class ScriptRunner {
                 method1668(arg1);
                 return;
             case 658:
-                class500.method3307(arg1);
+                QuestCommands.method3307(arg1);
                 return;
             case 659:
                 method3628(arg1);
@@ -2548,7 +2548,7 @@ public final class ScriptRunner {
                 Statics.method6829(arg1);
                 return;
             case 714:
-                class500.method4614(arg1);
+                QuestCommands.method4614(arg1);
                 return;
             case 715:
                 method2716(arg1);
@@ -2668,7 +2668,7 @@ public final class ScriptRunner {
                 method7813(arg1);
                 return;
             case 754:
-                class500.method5565(arg1);
+                QuestCommands.method5565(arg1);
                 return;
             case 755:
                 method4779(arg1);
@@ -2782,7 +2782,7 @@ public final class ScriptRunner {
                 method15732(arg1);
                 return;
             case 792:
-                class500.method14038(arg1);
+                QuestCommands.method14038(arg1);
                 return;
             case 793:
                 Statics.method7050(arg1);
@@ -3052,7 +3052,7 @@ public final class ScriptRunner {
                 method12649(arg1);
                 return;
             case 882:
-                class500.method8480(arg1);
+                QuestCommands.method8480(arg1);
                 return;
             case 883:
                 method7214(arg1);
@@ -3124,7 +3124,7 @@ public final class ScriptRunner {
                 Statics.method4706(arg1);
                 return;
             case 906:
-                class500.method4601(arg1);
+                QuestCommands.method4601(arg1);
                 return;
             case 907:
                 method5809(arg1);
@@ -3226,7 +3226,7 @@ public final class ScriptRunner {
                 method2885(arg1);
                 return;
             case 940:
-                class500.method8349(arg1);
+                QuestCommands.method8349(arg1);
                 return;
             case 941:
                 method2890(arg1);
@@ -3697,7 +3697,7 @@ public final class ScriptRunner {
         arg0.field5216 -= var2.field10382;
         arg0.field5230 -= var2.field10386;
         arg0.field5220 -= var2.field10376;
-        class499 var9 = new class499();
+        ScriptFrame var9 = new ScriptFrame();
         var9.field5191 = arg0.field5218;
         var9.field5189 = arg0.field5236;
         var9.field5188 = arg0.field5235;
@@ -8752,7 +8752,7 @@ public final class ScriptRunner {
     @ObfuscatedName("iu.aan(Lrn;B)V")
     public static final void method4670(ClientScriptState arg0) {
         String var1 = (String) arg0.field5222[--arg0.field5230];
-        arg0.field5222[++arg0.field5230 - 1] = class121.method4597(var1);
+        arg0.field5222[++arg0.field5230 - 1] = StringHelper.method4597(var1);
     }
 
     @ObfuscatedName("oy.aaz(Lrn;I)V")
@@ -9208,7 +9208,7 @@ public final class ScriptRunner {
         var4.field9467.method15287(0);
         int var5 = var4.field9467.field9626;
         var4.field9467.method15228(var1);
-        class178.method14081(var4.field9467, var2);
+        WordPack.method14081(var4.field9467, var2);
         var4.field9467.method15233(var4.field9467.field9626 - var5);
         var3.method1913(var4);
     }
@@ -9387,7 +9387,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("ed.adn(Lrn;I)V")
     public static final void method3085(ClientScriptState arg0) {
-        arg0.field5213 = new class270();
+        arg0.field5213 = new QuickChatPhrase();
         arg0.field5213.field2655 = arg0.field5215[--arg0.field5216];
         arg0.field5213.field2656 = Statics.field3779.method12176(arg0.field5213.field2655);
         arg0.field5213.field2657 = new int[arg0.field5213.field2656.method16751()];
@@ -9588,7 +9588,7 @@ public final class ScriptRunner {
     @ObfuscatedName("gd.aeg(Lrn;I)V")
     public static final void method4121(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        WorldMapAreaMetadata var2 = class408.method7084(var1 >> 14 & 0x3FFF, var1 & 0x3FFF);
+        WorldMapAreaMetadata var2 = WorldMap.method7084(var1 >> 14 & 0x3FFF, var1 & 0x3FFF);
         if (var2 == null) {
             arg0.field5215[++arg0.field5216 - 1] = -1;
         } else {
@@ -9598,7 +9598,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("eb.aep(Lrn;I)V")
     public static final void method3316(ClientScriptState arg0) {
-        WorldMapAreaMetadata var1 = class408.method7117(arg0.field5215[--arg0.field5216]);
+        WorldMapAreaMetadata var1 = WorldMap.method7117(arg0.field5215[--arg0.field5216]);
         if (var1 == null || var1.field10372 == null) {
             arg0.field5222[++arg0.field5230 - 1] = "";
         } else {
@@ -9621,7 +9621,7 @@ public final class ScriptRunner {
     @ObfuscatedName("ib.aek(Lrn;I)V")
     public static final void method4607(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        WorldMapAreaMetadata var2 = class408.method7117(var1);
+        WorldMapAreaMetadata var2 = WorldMap.method7117(var1);
         if (var2 == null) {
             arg0.field5215[++arg0.field5216 - 1] = 0;
             arg0.field5215[++arg0.field5216 - 1] = 0;
@@ -9634,7 +9634,7 @@ public final class ScriptRunner {
     @ObfuscatedName("up.aee(Lrn;I)V")
     public static final void method11876(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        WorldMapAreaMetadata var2 = class408.method7117(var1);
+        WorldMapAreaMetadata var2 = WorldMap.method7117(var1);
         if (var2 == null) {
             arg0.field5215[++arg0.field5216 - 1] = 0;
             arg0.field5215[++arg0.field5216 - 1] = 0;
@@ -9646,7 +9646,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("iq.aeh(Lrn;I)V")
     public static final void method4570(ClientScriptState arg0) {
-        class806 var1 = ClientWorldMap.method12725();
+        WorldMapElement var1 = ClientWorldMap.method12725();
         if (var1 == null) {
             arg0.field5215[++arg0.field5216 - 1] = -1;
             arg0.field5215[++arg0.field5216 - 1] = -1;
@@ -9659,7 +9659,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("nx.aeq(Lrn;I)V")
     public static final void method6826(ClientScriptState arg0) {
-        class806 var1 = ClientWorldMap.method11468();
+        WorldMapElement var1 = ClientWorldMap.method11468();
         if (var1 == null) {
             arg0.field5215[++arg0.field5216 - 1] = -1;
             arg0.field5215[++arg0.field5216 - 1] = -1;
@@ -9687,7 +9687,7 @@ public final class ScriptRunner {
         arg0.field5216 -= 2;
         int var1 = arg0.field5215[arg0.field5216];
         int var2 = arg0.field5215[arg0.field5216 + 1];
-        DualIterableQueue var3 = class408.method7086(var1 >> 14 & 0x3FFF, var1 & 0x3FFF);
+        DualIterableQueue var3 = WorldMap.method7086(var1 >> 14 & 0x3FFF, var1 & 0x3FFF);
         boolean var4 = false;
         for (WorldMapAreaMetadata var5 = (WorldMapAreaMetadata) var3.method11756(); var5 != null; var5 = (WorldMapAreaMetadata) var3.method11744()) {
             if (var5.field10370 == var2) {
@@ -9705,7 +9705,7 @@ public final class ScriptRunner {
     @ObfuscatedName("wb.aeo(Lrn;I)V")
     public static final void method12724(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        WorldMapAreaMetadata var2 = class408.method7117(var1);
+        WorldMapAreaMetadata var2 = WorldMap.method7117(var1);
         if (var2 == null) {
             arg0.field5215[++arg0.field5216 - 1] = -1;
         } else {
@@ -9997,7 +9997,7 @@ public final class ScriptRunner {
         String var1 = (String) arg0.field5222[--arg0.field5230];
         boolean var2 = arg0.field5215[--arg0.field5216] == 1;
         String var3 = client.method11406() + var1;
-        class383.method3613(var3, var2, Statics.field4961.field9661.method15781() == 5, client.field8915, client.field9218);
+        Browser.method3613(var3, var2, Statics.field4961.field9661.method15781() == 5, client.field8915, client.field9218);
     }
 
     @ObfuscatedName("el.afi(Lrn;I)V")
@@ -10132,7 +10132,7 @@ public final class ScriptRunner {
     @ObfuscatedName("pk.agm(Lrn;I)V")
     public static final void method7969(ClientScriptState arg0) {
         String var1 = (String) arg0.field5222[--arg0.field5230];
-        arg0.field5233 = new class53(var1, true);
+        arg0.field5233 = new FileChooser(var1, true);
     }
 
     @ObfuscatedName("u.agb(Lrn;I)V")

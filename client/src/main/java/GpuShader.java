@@ -10,10 +10,10 @@ public abstract class GpuShader {
     public GpuProgram[] field2073;
 
     @ObfuscatedName("ec.a")
-    public class182 field2075;
+    public HashMap field2075;
 
     @ObfuscatedName("ec.s")
-    public class182 field2077;
+    public HashMap field2077;
 
     @ObfuscatedName("ec.c")
     public int field2074;
@@ -25,17 +25,17 @@ public abstract class GpuShader {
     public int field2079 = -1;
 
     @ObfuscatedName("ec.l")
-    public static final class181 field2076 = new class166();
+    public static final HashMapKey field2076 = new ShaderRelated();
 
     public GpuShader(GpuToolkit arg0, ShaderData arg1) {
         this.field2080 = arg1.field2086;
         this.field2074 = arg1.field2088.length;
-        this.field2075 = new class182(this.field2074, field2076);
+        this.field2075 = new HashMap(this.field2074, field2076);
         for (int var3 = 0; var3 < this.field2074; var3++) {
             this.field2075.method3552(var3, arg1.field2088[var3].field2093, this.method3338(arg1.field2088[var3]));
         }
         this.field2078 = arg1.field2082.length;
-        this.field2077 = new class182(this.field2078, field2076);
+        this.field2077 = new HashMap(this.field2078, field2076);
         for (int var4 = 0; var4 < this.field2078; var4++) {
             this.field2077.method3552(var4, arg1.field2082[var4].field2093, this.method3338(arg1.field2082[var4]));
         }
@@ -255,10 +255,10 @@ public abstract class GpuShader {
     public abstract boolean method3335(GpuProgram arg0);
 
     @ObfuscatedName("ec.q(Ley;)Laig;")
-    public abstract GpuProgramUniform method3338(class174 arg0);
+    public abstract GpuProgramUniform method3338(ProgramUniformData arg0);
 
     @ObfuscatedName("ec.c(Lyk;Lei;)Leo;")
-    public abstract GpuProgram method3404(GpuToolkit arg0, class167 arg1);
+    public abstract GpuProgram method3404(GpuToolkit arg0, ProgramData arg1);
 
     @ObfuscatedName("ec.j()V")
     public abstract void method3416();

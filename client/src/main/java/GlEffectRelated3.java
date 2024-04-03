@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import java.util.Random;
 
 @ObfuscatedName("aee")
-public class GlEffectRelated3 extends class400 {
+public class GlEffectRelated3 extends AbstractEffect1 {
 
     @ObfuscatedName("aee.u")
     public int[] field9744 = new int[512];

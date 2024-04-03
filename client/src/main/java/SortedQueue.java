@@ -27,7 +27,7 @@ public class SortedQueue extends AbstractQueue {
     public SortedQueue(int arg0, Comparator arg1) {
         this.field10517 = 0;
         this.field10519 = new SortedQueueEntry[arg0];
-        this.field10518 = new HashMap();
+        this.field10518 = new java.util.HashMap();
         this.field10521 = arg1;
     }
 
@@ -179,6 +179,6 @@ public class SortedQueue extends AbstractQueue {
     }
 
     public Iterator iterator() {
-        return new class276(this);
+        return new SortedQueueIterator(this);
     }
 }

@@ -12,7 +12,7 @@ public final class DxProgramUniform extends GpuProgramUniform {
     @ObfuscatedName("akg.o")
     public int[] field10569 = null;
 
-    public DxProgramUniform(DxProgramManager arg0, class174 arg1) {
+    public DxProgramUniform(DxProgramManager arg0, ProgramUniformData arg1) {
         super(arg1);
         this.field10568 = arg0;
         this.field10567 = arg1.field2090;

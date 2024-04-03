@@ -38,10 +38,10 @@ public class CutsceneManager {
     public static boolean method2467(int arg0) {
         if (field1533 != arg0 || Statics.field10188 == null) {
             method2911();
-            Statics.field10188 = class145.field1541;
+            Statics.field10188 = CutsceneLoadingStage.field1541;
             field1533 = arg0;
         }
-        if (Statics.field10188 == class145.field1541) {
+        if (Statics.field10188 == CutsceneLoadingStage.field1541) {
             byte[] var1 = Statics.field4824.method5635(arg0);
             if (var1 == null) {
                 return false;
@@ -53,9 +53,9 @@ public class CutsceneManager {
                 field1534.method11558(new CutsceneTemplate(var2));
             }
             int var5 = var2.method15277();
-            Statics.field10534 = new class146[var5];
+            Statics.field10534 = new CutsceneSpline[var5];
             for (int var6 = 0; var6 < var5; var6++) {
-                Statics.field10534[var6] = new class146(var2);
+                Statics.field10534[var6] = new CutsceneSpline(var2);
             }
             int var7 = var2.method15277();
             Statics.field1537 = new CutsceneEntity[var7];
@@ -63,23 +63,23 @@ public class CutsceneManager {
                 Statics.field1537[var8] = new CutsceneEntity(var2, var8);
             }
             int var9 = var2.method15277();
-            Statics.field1528 = new class147[var9];
+            Statics.field1528 = new CutsceneLocation[var9];
             for (int var10 = 0; var10 < var9; var10++) {
-                Statics.field1528[var10] = new class147(var2);
+                Statics.field1528[var10] = new CutsceneLocation(var2);
             }
             int var11 = var2.method15277();
-            Statics.field5181 = new class151[var11];
+            Statics.field5181 = new CutsceneRoute[var11];
             for (int var12 = 0; var12 < var11; var12++) {
-                Statics.field5181[var12] = new class151(var2);
+                Statics.field5181[var12] = new CutsceneRoute(var2);
             }
             int var13 = var2.method15277();
             Statics.field6396 = new CutsceneAction[var13];
             for (int var14 = 0; var14 < var13; var14++) {
                 Statics.field6396[var14] = CutsceneAction.method3928(var2);
             }
-            Statics.field10188 = class145.field1540;
+            Statics.field10188 = CutsceneLoadingStage.field1540;
         }
-        if (Statics.field10188 == class145.field1540) {
+        if (Statics.field10188 == CutsceneLoadingStage.field1540) {
             boolean var15 = true;
             CutsceneEntity[] var16 = Statics.field1537;
             for (int var17 = 0; var17 < var16.length; var17++) {
@@ -95,9 +95,9 @@ public class CutsceneManager {
                     var15 = false;
                 }
             }
-            class147[] var22 = Statics.field1528;
+            CutsceneLocation[] var22 = Statics.field1528;
             for (int var23 = 0; var23 < var22.length; var23++) {
-                class147 var24 = var22[var23];
+                CutsceneLocation var24 = var22[var23];
                 if (!var24.method2831()) {
                     var15 = false;
                 }
@@ -105,7 +105,7 @@ public class CutsceneManager {
             if (!var15) {
                 return false;
             }
-            Statics.field10188 = class145.field1542;
+            Statics.field10188 = CutsceneLoadingStage.field1542;
         }
         return true;
     }

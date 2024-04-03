@@ -371,7 +371,7 @@ public class DeveloperConsole {
                 return;
             }
             if (arg0.equals("renderer")) {
-                ToolkitInfo var3 = Statics.field5187.method456();
+                RendererInfo var3 = Statics.field5187.method456();
                 method1958("Toolkit ID: " + Statics.field4961.field9661.method15781());
                 method1958("Vendor: " + var3.field1285);
                 method1958("Name: " + var3.field1288);

@@ -361,8 +361,8 @@ public class LoginManager {
                 String var6 = Statics.field501.field832.method15366();
                 Statics.field501.field832.field9626 = 0;
                 String var7 = JavascriptFunction.field3152.method4757();
-                if (!client.field8903 || !class383.method1814(var6, 1, var7)) {
-                    class383.method5599(var6, true, Statics.field4961.field9661.method15781() == 5, var7, client.field8915, client.field9218);
+                if (!client.field8903 || !Browser.method1814(var6, 1, var7)) {
+                    Browser.method5599(var6, true, Statics.field4961.field9661.method15781() == 5, var7, client.field8915, client.field9218);
                 }
                 field531 = 61;
             }
@@ -655,7 +655,7 @@ public class LoginManager {
                 Statics.field501.field832.field9626 = 0;
                 Packet var29 = new Packet(var28);
                 String var30 = var29.method15337();
-                class383.method3613(var30, true, Statics.field4961.field9661.method15781() == 5, client.field8915, client.field9218);
+                Browser.method3613(var30, true, Statics.field4961.field9661.method15781() == 5, client.field8915, client.field9218);
                 method7972(Statics.field1025);
                 if (Statics.field500 == 154 && client.field8923 != 4) {
                     field531 = 96;
@@ -980,7 +980,7 @@ public class LoginManager {
         Statics.field5180 = null;
         Statics.field913 = null;
         Statics.field2972 = null;
-        class477.method5946();
+        ClientWatch.method5946();
         for (int var0 = 0; var0 < 25; var0++) {
             client.field9092[var0] = 0;
             client.field9093[var0] = 0;
@@ -1001,7 +1001,7 @@ public class LoginManager {
         method3988();
         client.field8959.method1916();
         Statics.field578 = true;
-        class590.method11905();
+        ClassCheck.method11905();
         for (int var0 = 0; var0 < client.field8936.length; var0++) {
             client.field8936[var0] = null;
         }
@@ -1025,8 +1025,8 @@ public class LoginManager {
         client.field9090.method11925();
         client.field9091.method11653();
         client.field9088.method11925();
-        class770.field9278 = new IterableQueue();
-        class770.field9292 = new IterableQueue();
+        ChangeLocationRequest.field9278 = new IterableQueue();
+        ChangeLocationRequest.field9292 = new IterableQueue();
         Statics.field2669.method1647();
         Statics.method12620();
         Statics.field1577 = 0;

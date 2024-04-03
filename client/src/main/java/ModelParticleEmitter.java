@@ -57,8 +57,8 @@ public class ModelParticleEmitter {
     }
 
     @ObfuscatedName("dx.u(B)Liu;")
-    public class273 method2702() {
-        return class273.method2841(this.field1383);
+    public ParticleEmitterType method2702() {
+        return ParticleEmitterType.method2841(this.field1383);
     }
 
     @ObfuscatedName("dx.j(IIIB)Ldx;")

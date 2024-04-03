@@ -89,7 +89,7 @@ public abstract class RendererToolkit {
     }
 
     @ObfuscatedName("ra.l(I)V")
-    public final void method466() throws class881 {
+    public final void method466() throws RendererException {
         this.method653(0, 0);
     }
 
@@ -334,7 +334,7 @@ public abstract class RendererToolkit {
     public abstract boolean method455();
 
     @ObfuscatedName("ra.t()Lcg;")
-    public abstract ToolkitInfo method456();
+    public abstract RendererInfo method456();
 
     @ObfuscatedName("ra.av()Lyu;")
     public abstract Framebuffer method467();
@@ -445,7 +445,7 @@ public abstract class RendererToolkit {
     public abstract void method535(int arg0, Light[] arg1);
 
     @ObfuscatedName("ra.cu(Ldj;Ldj;FLdj;)Ldj;")
-    public abstract class127 method537(class127 arg0, class127 arg1, float arg2, class127 arg3);
+    public abstract EnvironmentSampler method537(EnvironmentSampler arg0, EnvironmentSampler arg1, float arg2, EnvironmentSampler arg3);
 
     @ObfuscatedName("ra.cg()Z")
     public abstract boolean method539();
@@ -466,7 +466,7 @@ public abstract class RendererToolkit {
     public abstract void method548();
 
     @ObfuscatedName("ra.cc(Ldj;)V")
-    public abstract void method549(class127 arg0);
+    public abstract void method549(EnvironmentSampler arg0);
 
     @ObfuscatedName("ra.do(FFF[F)V")
     public abstract void method550(float arg0, float arg1, float arg2, float[] arg3);
@@ -505,7 +505,7 @@ public abstract class RendererToolkit {
     public abstract EffectInterface method637(int arg0, int arg1);
 
     @ObfuscatedName("ra.f(II)V")
-    public abstract void method653(int arg0, int arg1) throws class881;
+    public abstract void method653(int arg0, int arg1) throws RendererException;
 
     @ObfuscatedName("ra.bb(IIZZ)Lce;")
     public abstract Sprite method658(int arg0, int arg1, boolean arg2, boolean arg3);
@@ -550,7 +550,7 @@ public abstract class RendererToolkit {
     public abstract void method784(Matrix4x4 arg0);
 
     @ObfuscatedName("ra.ct(IIIIII)Ldj;")
-    public abstract class127 method788(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
+    public abstract EnvironmentSampler method788(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
 
     @ObfuscatedName("ra.bs(IIIIII)V")
     public abstract void method825(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);

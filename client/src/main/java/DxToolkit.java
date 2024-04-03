@@ -307,14 +307,14 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.t()Lcg;")
-    public ToolkitInfo method456() {
+    public RendererInfo method456() {
         D3DADAPTER_IDENTIFIER var1 = new D3DADAPTER_IDENTIFIER();
         IDirect3D.GetAdapterIdentifier(this.field9974, this.field9989, 0, var1);
-        return new ToolkitInfo(var1.VendorID, "Direct3D", 9, var1.Description, var1.DriverVersion);
+        return new RendererInfo(var1.VendorID, "Direct3D", 9, var1.Description, var1.DriverVersion);
     }
 
     @ObfuscatedName("ahh.f(II)V")
-    public void method653(int arg0, int arg1) throws class881 {
+    public void method653(int arg0, int arg1) throws RendererException {
         IDirect3DDevice.EndScene(this.field9975);
         int var3 = this.field415.method918();
         if (!HRESULT.method18(var3)) {
@@ -324,7 +324,7 @@ public class DxToolkit extends GpuToolkit {
             this.method16023();
             ((DxSurface) this.field415).method4914();
         } else if (++this.field9978 > 50) {
-            throw new class881(var3);
+            throw new RendererException(var3);
         }
         IDirect3DDevice.BeginScene(this.field9975);
         if (this.field400 != null) {
@@ -459,7 +459,7 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.cu(Ldj;Ldj;FLdj;)Ldj;")
-    public class127 method537(class127 arg0, class127 arg1, float arg2, class127 arg3) {
+    public EnvironmentSampler method537(EnvironmentSampler arg0, EnvironmentSampler arg1, float arg2, EnvironmentSampler arg3) {
         return arg2 < 0.5F ? arg0 : arg1;
     }
 
@@ -690,12 +690,12 @@ public class DxToolkit extends GpuToolkit {
 
     @ObfuscatedName("ahh.ru()V")
     public void method13570() {
-        if (this.field9991 != 0L || this.field8306[this.field8253] == class250.field2550) {
+        if (this.field9991 != 0L || this.field8306[this.field8253] == TextureTramsformType.field2550) {
             IDirect3DDevice.SetTextureStageState(this.field9975, this.field8253, 24, 0);
             this.field9988[this.field8253] = 0;
             return;
         }
-        if (this.field8306[this.field8253] == class250.field2549) {
+        if (this.field8306[this.field8253] == TextureTramsformType.field2549) {
             IDirect3DDevice.SetTransform(this.field9975, this.field8253 + 16, this.field8331[this.field8253].method5414(this.field9997));
         } else {
             IDirect3DDevice.SetTransform(this.field9975, this.field8253 + 16, this.field8331[this.field8253].method5408(this.field9997));
@@ -818,7 +818,7 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.acb(Lhr;)I")
-    public static final int method16035(class250 arg0) {
+    public static final int method16035(TextureTramsformType arg0) {
         switch (arg0.field2555) {
             case 0:
                 return 2;

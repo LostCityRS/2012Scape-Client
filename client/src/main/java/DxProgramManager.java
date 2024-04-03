@@ -19,7 +19,7 @@ public final class DxProgramManager extends GpuShader {
     }
 
     @ObfuscatedName("aaz.c(Lyk;Lei;)Leo;")
-    public GpuProgram method3404(GpuToolkit arg0, class167 arg1) {
+    public GpuProgram method3404(GpuToolkit arg0, ProgramData arg1) {
         return new DxProgram((DxToolkit) arg0, this, arg1);
     }
 
@@ -45,7 +45,7 @@ public final class DxProgramManager extends GpuShader {
     }
 
     @ObfuscatedName("aaz.q(Ley;)Laig;")
-    public GpuProgramUniform method3338(class174 arg0) {
+    public GpuProgramUniform method3338(ProgramUniformData arg0) {
         return new DxProgramUniform(this, arg0);
     }
 

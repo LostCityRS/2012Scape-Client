@@ -1098,12 +1098,12 @@ public class ComType {
     }
 
     @ObfuscatedName("ew.b(Lot;Lfj;I)Lmq;")
-    public class366 method3181(SkyBoxTypeList arg0, SkyDecorTypeList arg1) {
+    public SkyBox method3181(SkyBoxTypeList arg0, SkyDecorTypeList arg1) {
         if (this.field1906 == -1) {
             return null;
         }
         long var3 = ((long) this.field1909 & 0xFFFFL) << 48 | ((long) this.field1785 & 0xFFFFL) << 32 | ((long) this.field1911 & 0xFFFFL) << 16 | (long) this.field1906 & 0xFFFFL;
-        class366 var5 = (class366) field1745.method7916(var3);
+        SkyBox var5 = (SkyBox) field1745.method7916(var3);
         if (var5 == null) {
             var5 = arg0.method7361(this.field1906, this.field1909, this.field1785, this.field1911, arg1);
             field1745.method7937(var5, var3);

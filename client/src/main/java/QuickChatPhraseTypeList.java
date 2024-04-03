@@ -58,7 +58,7 @@ public class QuickChatPhraseTypeList {
     }
 
     @ObfuscatedName("vx.j(Lqz;[IJ)Ljava/lang/String;")
-    public String method12175(class473 arg0, int[] arg1, long arg2) {
+    public String method12175(QuickChatDynamicCommand arg0, int[] arg1, long arg2) {
         if (this.field6830 != null) {
             String var5 = this.field6830.method4638(arg0, arg1, arg2);
             if (var5 != null) {

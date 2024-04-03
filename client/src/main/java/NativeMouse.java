@@ -12,7 +12,7 @@ public class NativeMouse extends IcmpService {
     public final List field9812 = new ArrayList();
 
     @ObfuscatedName("mp.s(Lrp;I)V")
-    public static void method6260(class494 arg0) {
+    public static void method6260(NativeMouseListener arg0) {
         if (Statics.field9906 == null) {
             throw new IllegalStateException("");
         }
@@ -53,7 +53,7 @@ public class NativeMouse extends IcmpService {
     public void notify(int arg0) {
         Iterator var2 = this.field9812.iterator();
         while (var2.hasNext()) {
-            class494 var3 = (class494) var2.next();
+            NativeMouseListener var3 = (NativeMouseListener) var2.next();
             var3.method8306(arg0 == 0);
         }
     }
@@ -61,7 +61,7 @@ public class NativeMouse extends IcmpService {
     public void notify(int arg0, int arg1, int arg2) {
         Iterator var4 = this.field9812.iterator();
         while (var4.hasNext()) {
-            class494 var5 = (class494) var4.next();
+            NativeMouseListener var5 = (NativeMouseListener) var4.next();
             var5.method8307(arg0, arg1, arg2);
         }
     }

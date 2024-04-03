@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import java.awt.*;
 
 @ObfuscatedName("za")
-public class za extends Surface implements class10 {
+public class za extends Surface implements SoftwareRendererRelated {
 
     public long nativeid;
 

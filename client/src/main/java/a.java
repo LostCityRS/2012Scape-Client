@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("a")
-public class a implements class10 {
+public class a implements SoftwareRendererRelated {
 
     public long nativeid;
 

@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class class370 {
 
     @ObfuscatedName("mr.j")
-    public class380[] field3994 = new class380[10];
+    public Instrument[] field3994 = new Instrument[10];
 
     @ObfuscatedName("mr.a")
     public int field3996;
@@ -23,7 +23,7 @@ public class class370 {
             int var3 = arg0.method15220();
             if (var3 != 0) {
                 arg0.field9626--;
-                this.field3994[var2] = new class380();
+                this.field3994[var2] = new Instrument();
                 this.field3994[var2].method6600(arg0);
             }
         }

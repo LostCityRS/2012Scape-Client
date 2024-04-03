@@ -171,28 +171,28 @@ public class VorbisSound extends Node {
             }
         }
         int var15 = method15060(8) + 1;
-        Statics.field9489 = new class378[var15];
+        Statics.field9489 = new VorbisCodebook[var15];
         for (int var16 = 0; var16 < var15; var16++) {
-            Statics.field9489[var16] = new class378();
+            Statics.field9489[var16] = new VorbisCodebook();
         }
         int var17 = method15060(6) + 1;
         for (int var18 = 0; var18 < var17; var18++) {
             method15060(16);
         }
         int var19 = method15060(6) + 1;
-        Statics.field9490 = new class368[var19];
+        Statics.field9490 = new VorbisFloor[var19];
         for (int var20 = 0; var20 < var19; var20++) {
-            Statics.field9490[var20] = new class368();
+            Statics.field9490[var20] = new VorbisFloor();
         }
         int var21 = method15060(6) + 1;
-        Statics.field9491 = new class382[var21];
+        Statics.field9491 = new VorbisResidue[var21];
         for (int var22 = 0; var22 < var21; var22++) {
-            Statics.field9491[var22] = new class382();
+            Statics.field9491[var22] = new VorbisResidue();
         }
         int var23 = method15060(6) + 1;
-        Statics.field9501 = new class376[var23];
+        Statics.field9501 = new VorbisMapping[var23];
         for (int var24 = 0; var24 < var23; var24++) {
-            Statics.field9501[var24] = new class376();
+            Statics.field9501[var24] = new VorbisMapping();
         }
         int var25 = method15060(6) + 1;
         Statics.field9493 = new boolean[var25];
@@ -244,13 +244,13 @@ public class VorbisSound extends Node {
             var12 = var4;
             var13 = var4 >> 1;
         }
-        class376 var14 = Statics.field9501[Statics.field9494[var2]];
+        VorbisMapping var14 = Statics.field9501[Statics.field9494[var2]];
         int var15 = var14.field4051;
         int var16 = var14.field4049[var15];
         boolean var17 = !Statics.field9490[var16].method6444();
         boolean var18 = var17;
         for (int var19 = 0; var19 < var14.field4050; var19++) {
-            class382 var20 = Statics.field9491[var14.field4052[var19]];
+            VorbisResidue var20 = Statics.field9491[var14.field4052[var19]];
             float[] var21 = Statics.field9484;
             var20.method6627(var21, var4 >> 1, var18);
         }

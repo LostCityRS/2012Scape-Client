@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("fa")
-public class fa extends Sprite implements class10, GraphicsDeletable {
+public class fa extends Sprite implements SoftwareRendererRelated, GraphicsDeletable {
 
     public long nativeid;
 

@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("i")
-public class i extends FloorModel implements class10 {
+public class i extends FloorModel implements SoftwareRendererRelated {
 
     public long nativeid;
 

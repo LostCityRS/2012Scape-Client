@@ -11,7 +11,7 @@ public abstract class Position {
     }
 
     @ObfuscatedName("go.u(FLmv;[[[IB)V")
-    public abstract void method4014(float arg0, class361 arg1, int[][][] arg2);
+    public abstract void method4014(float arg0, CollisionMap arg1, int[][][] arg2);
 
     @ObfuscatedName("go.a(I)Lko;")
     public abstract Vector3 method4016();

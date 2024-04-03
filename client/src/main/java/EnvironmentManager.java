@@ -110,11 +110,11 @@ public class EnvironmentManager {
     }
 
     @ObfuscatedName("qp.c(IIIIIII)Ldj;")
-    public class127 method8185(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+    public EnvironmentSampler method8185(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
         long var7 = (long) arg0 * 67481L ^ (long) arg1 * 97549L ^ (long) arg2 * 475427L ^ (long) arg3 * 986053L ^ (long) arg4 * 32147369L ^ (long) arg5 * 76724863L;
-        class127 var9 = (class127) this.field4984.method7916(var7);
+        EnvironmentSampler var9 = (EnvironmentSampler) this.field4984.method7916(var7);
         if (var9 == null) {
-            class127 var10 = this.field4973.method788(arg0, arg1, arg2, arg3, arg4, arg5);
+            EnvironmentSampler var10 = this.field4973.method788(arg0, arg1, arg2, arg3, arg4, arg5);
             this.field4984.method7937(var10, var7);
             return var10;
         } else {
@@ -123,9 +123,9 @@ public class EnvironmentManager {
     }
 
     @ObfuscatedName("qp.m(IIIII)Lmq;")
-    public class366 method8193(int arg0, int arg1, int arg2, int arg3) {
+    public SkyBox method8193(int arg0, int arg1, int arg2, int arg3) {
         long var5 = ((long) arg1 & 0xFFFFL) << 48 | ((long) arg2 & 0xFFFFL) << 32 | ((long) arg3 & 0xFFFFL) << 16 | (long) arg0 & 0xFFFFL;
-        class366 var7 = (class366) this.field4985.method7916(var5);
+        SkyBox var7 = (SkyBox) this.field4985.method7916(var5);
         if (var7 == null) {
             var7 = Statics.field4678.method7361(arg0, arg1, arg2, arg3, Statics.field6360);
             this.field4985.method7937(var7, var5);

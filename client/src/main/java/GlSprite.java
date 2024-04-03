@@ -203,7 +203,7 @@ public class GlSprite extends Sprite {
 
     @ObfuscatedName("yl.af(IILta;II)V")
     public void method1056(int arg0, int arg1, GraphicsRelated arg2, int arg3, int arg4) {
-        class669 var6 = (class669) arg2;
+        GlGraphicRelated2 var6 = (GlGraphicRelated2) arg2;
         GlGraphicRelated var7 = var6.field7651;
         this.field7625.method2055(false);
         this.field7626.method13309();
@@ -463,7 +463,7 @@ public class GlSprite extends Sprite {
 
     @ObfuscatedName("yl.az(FFFFFFILta;II)V")
     public void method1044(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, int arg6, GraphicsRelated arg7, int arg8, int arg9) {
-        GlGraphicRelated var11 = ((class669) arg7).field7651;
+        GlGraphicRelated var11 = ((GlGraphicRelated2) arg7).field7651;
         if (this.field7633) {
             float var12 = (float) this.method1042();
             float var13 = (float) this.method1047();

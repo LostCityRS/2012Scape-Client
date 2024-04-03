@@ -25,7 +25,7 @@ public class Environment {
     public int field4997;
 
     @ObfuscatedName("qf.l")
-    public class127 field4993;
+    public EnvironmentSampler field4993;
 
     @ObfuscatedName("qf.f")
     public float field4992;
@@ -37,7 +37,7 @@ public class Environment {
     public float field4994;
 
     @ObfuscatedName("qf.n")
-    public class366 field4986;
+    public SkyBox field4986;
 
     public Environment() {
         this.method8202();
@@ -208,7 +208,7 @@ public class Environment {
     }
 
     @ObfuscatedName("qf.f(I)Lmq;")
-    public class366 method8210() {
+    public SkyBox method8210() {
         return this.field4986;
     }
 }

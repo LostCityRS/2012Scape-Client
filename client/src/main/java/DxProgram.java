@@ -35,13 +35,13 @@ public final class DxProgram extends GpuProgram {
     @ObfuscatedName("aae.p")
     public final boolean[] field8554;
 
-    public DxProgram(DxToolkit arg0, DxProgramManager arg1, class167 arg2) {
+    public DxProgram(DxToolkit arg0, DxProgramManager arg1, ProgramData arg2) {
         this(arg0, arg2);
         this.field8559 = arg0;
         this.field8555 = arg1;
     }
 
-    public DxProgram(DxToolkit arg0, class167 arg1) {
+    public DxProgram(DxToolkit arg0, ProgramData arg1) {
         this.field8558 = false;
         this.field8565 = new float[2][];
         this.field8554 = new boolean[2];
@@ -89,9 +89,9 @@ public final class DxProgram extends GpuProgram {
         int var11 = this.field8555.method3345(this);
         for (int var12 = 0; var12 < var3 + var4; var12++) {
             DxProgramUniform var13 = (DxProgramUniform) (var12 < var3 ? this.field8555.method3362(var12) : this.field8555.method3359(var12 - var3));
-            class170 var14 = var13.method16234();
+            UniformType var14 = var13.method16234();
             int var15 = 1;
-            if (class170.field1977 == var14) {
+            if (UniformType.field1977 == var14) {
                 var14 = var13.method16235();
                 var15 = var13.method16236();
             }
@@ -144,7 +144,7 @@ public final class DxProgram extends GpuProgram {
     public void method3231(GpuProgramUniform arg0, float arg1) {
         int var3 = ((DxProgramUniform) arg0).method16988();
         int var4 = ((DxProgramUniform) arg0).method16989();
-        if (arg0.method16234() != class170.field2067 && arg0.method16234() != class170.field2014) {
+        if (arg0.method16234() != UniformType.field2067 && arg0.method16234() != UniformType.field2014) {
             throw new OpenGLError(arg0, "");
         }
         if (var3 >= 0) {
@@ -163,7 +163,7 @@ public final class DxProgram extends GpuProgram {
     public void method3267(GpuProgramUniform arg0, float arg1, float arg2) {
         int var4 = ((DxProgramUniform) arg0).method16988();
         int var5 = ((DxProgramUniform) arg0).method16989();
-        if (arg0.method16234() != class170.field1948) {
+        if (arg0.method16234() != UniformType.field1948) {
             throw new OpenGLError(arg0, "");
         }
         if (var4 >= 0) {
@@ -184,7 +184,7 @@ public final class DxProgram extends GpuProgram {
     public void method3233(GpuProgramUniform arg0, float arg1, float arg2, float arg3) {
         int var5 = ((DxProgramUniform) arg0).method16988();
         int var6 = ((DxProgramUniform) arg0).method16989();
-        if (arg0.method16234() != class170.field2003) {
+        if (arg0.method16234() != UniformType.field2003) {
             throw new OpenGLError(arg0, "");
         }
         if (var5 >= 0) {
@@ -208,7 +208,7 @@ public final class DxProgram extends GpuProgram {
     public void method3234(GpuProgramUniform arg0, float arg1, float arg2, float arg3, float arg4) {
         int var6 = ((DxProgramUniform) arg0).method16988();
         int var7 = ((DxProgramUniform) arg0).method16989();
-        if (arg0.method16234() != class170.field1971) {
+        if (arg0.method16234() != UniformType.field1971) {
             throw new OpenGLError(arg0, "");
         }
         if (var6 >= 0) {
@@ -234,7 +234,7 @@ public final class DxProgram extends GpuProgram {
     public void method3232(GpuProgramUniform arg0, Matrix4x4 arg1) {
         int var3 = ((DxProgramUniform) arg0).method16988();
         int var4 = ((DxProgramUniform) arg0).method16989();
-        if (arg0.method16234() != class170.field1985) {
+        if (arg0.method16234() != UniformType.field1985) {
             throw new OpenGLError(arg0, "");
         }
         if (var3 >= 0) {
@@ -249,7 +249,7 @@ public final class DxProgram extends GpuProgram {
     public void method3237(GpuProgramUniform arg0, Matrix4x4 arg1) {
         int var3 = ((DxProgramUniform) arg0).method16988();
         int var4 = ((DxProgramUniform) arg0).method16989();
-        if (arg0.method16234() != class170.field1987) {
+        if (arg0.method16234() != UniformType.field1987) {
             throw new OpenGLError(arg0, "");
         }
         if (var3 >= 0) {
@@ -264,7 +264,7 @@ public final class DxProgram extends GpuProgram {
     public void method3235(GpuProgramUniform arg0, float[] arg1, int arg2) {
         int var4 = ((DxProgramUniform) arg0).method16988();
         int var5 = ((DxProgramUniform) arg0).method16989();
-        if (arg0.method16234() != class170.field1977) {
+        if (arg0.method16234() != UniformType.field1977) {
             throw new OpenGLError(arg0, "");
         }
         if (var4 >= 0) {

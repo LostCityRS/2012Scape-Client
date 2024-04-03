@@ -30,8 +30,8 @@ public class ModelParticleEffector {
     }
 
     @ObfuscatedName("ct.u(B)Lic;")
-    public class274 method2534() {
-        return class274.method2938(this.field1243);
+    public ParticleEffectorType method2534() {
+        return ParticleEffectorType.method2938(this.field1243);
     }
 
     @ObfuscatedName("ct.j(II)Lct;")

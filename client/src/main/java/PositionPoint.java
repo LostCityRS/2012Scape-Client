@@ -32,7 +32,7 @@ public class PositionPoint extends Position {
     }
 
     @ObfuscatedName("aaq.u(FLmv;[[[IB)V")
-    public void method4014(float arg0, class361 arg1, int[][][] arg2) {
+    public void method4014(float arg0, CollisionMap arg1, int[][][] arg2) {
         this.field2340.method3811(true, arg0, this.field8730, this.field2340.method3726(), this.field8732, this.field8733);
     }
 

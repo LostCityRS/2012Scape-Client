@@ -37,6 +37,6 @@ public final class FixedFunctionParticleShader extends ParticleShader {
         this.field2274.method13562(0, class249.field2546);
         this.field2274.method13632(class253.field2574, class253.field2574);
         this.field2274.method13566().method5412(this.field2273);
-        this.field2274.method13567(class250.field2549);
+        this.field2274.method13567(TextureTramsformType.field2549);
     }
 }

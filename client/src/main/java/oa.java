@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("oa")
-public class oa implements EffectInterface, class10 {
+public class oa implements EffectInterface, SoftwareRendererRelated {
 
     public long nativeid = 0L;
 

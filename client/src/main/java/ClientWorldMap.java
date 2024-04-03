@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aeq")
-public class ClientWorldMap extends class408 {
+public class ClientWorldMap extends WorldMap {
 
     @ObfuscatedName("aeq.am")
     public static int field9764 = -1;
@@ -145,10 +145,10 @@ public class ClientWorldMap extends class408 {
             Statics.field4645.method7658(256);
             field9753 = 20;
         } else if (field9753 == 20) {
-            class356.method8512(true);
+            MapLogicRelated.method8512(true);
             method7120(arg0, field4273, field4274);
             field9753 = 60;
-            class356.method8512(true);
+            MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else if (field9753 == 60) {
             if (Statics.field4264.method5680(Statics.field4292.field10362 + "_staticelements")) {
@@ -161,47 +161,47 @@ public class ClientWorldMap extends class408 {
             }
             method7093();
             field9753 = 70;
-            class356.method8512(true);
+            MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else if (field9753 == 70) {
             Statics.field4684 = new WorldMapFont(arg0, 11, true, Statics.field1231);
             field9753 = 73;
-            class356.method8512(true);
+            MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else if (field9753 == 73) {
             Statics.field6790 = new WorldMapFont(arg0, 12, true, Statics.field1231);
             field9753 = 76;
-            class356.method8512(true);
+            MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else if (field9753 == 76) {
             Statics.field1578 = new WorldMapFont(arg0, 14, true, Statics.field1231);
             field9753 = 79;
-            class356.method8512(true);
+            MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else if (field9753 == 79) {
             Statics.field9549 = new WorldMapFont(arg0, 17, true, Statics.field1231);
             field9753 = 82;
-            class356.method8512(true);
+            MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else if (field9753 == 82) {
             Statics.field3263 = new WorldMapFont(arg0, 19, true, Statics.field1231);
             field9753 = 85;
-            class356.method8512(true);
+            MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else if (field9753 == 85) {
             Statics.field1388 = new WorldMapFont(arg0, 22, true, Statics.field1231);
             field9753 = 88;
-            class356.method8512(true);
+            MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else if (field9753 == 88) {
             Statics.field7158 = new WorldMapFont(arg0, 26, true, Statics.field1231);
             field9753 = 91;
-            class356.method8512(true);
+            MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else {
             Statics.field4325 = new WorldMapFont(arg0, 30, true, Statics.field1231);
             field9753 = 100;
-            class356.method8512(true);
+            MapLogicRelated.method8512(true);
             GameShell.method2427();
             System.gc();
         }
@@ -333,7 +333,7 @@ public class ClientWorldMap extends class408 {
         if (field9758) {
             return;
         }
-        for (class806 var4 = (class806) arg1.method11563(); var4 != null; var4 = (class806) arg1.method11567()) {
+        for (WorldMapElement var4 = (WorldMapElement) arg1.method11563(); var4 != null; var4 = (WorldMapElement) arg1.method11567()) {
             MapElementType var5 = Statics.field4290.method7862(var4.field9564);
             if (method1371(var5)) {
                 boolean var6 = method1358(arg0, var4, var5, arg2, arg3);
@@ -360,7 +360,7 @@ public class ClientWorldMap extends class408 {
     }
 
     @ObfuscatedName("d.bo(Lra;Ladw;Lpw;III)Z")
-    public static boolean method1358(RendererToolkit arg0, class806 arg1, MapElementType arg2, int arg3, int arg4) {
+    public static boolean method1358(RendererToolkit arg0, WorldMapElement arg1, MapElementType arg2, int arg3, int arg4) {
         int var5 = Integer.MAX_VALUE;
         int var6 = Integer.MIN_VALUE;
         int var7 = Integer.MAX_VALUE;
@@ -474,7 +474,7 @@ public class ClientWorldMap extends class408 {
             method6644(arg0, arg1, arg2, var15, var16, var17, var18, var14);
         }
         if (arg2.field4764 != -1 || arg2.field4766 != null) {
-            class771 var29 = new class771(arg1);
+            MapElementContainer var29 = new MapElementContainer(arg1);
             var29.field9295 = var10;
             var29.field9296 = var11;
             var29.field9301 = var12;
@@ -489,7 +489,7 @@ public class ClientWorldMap extends class408 {
     }
 
     @ObfuscatedName("acr.bh(Lra;Ladw;Lpw;I)V")
-    public static void method14746(RendererToolkit arg0, class806 arg1, MapElementType arg2) {
+    public static void method14746(RendererToolkit arg0, WorldMapElement arg1, MapElementType arg2) {
         Sprite var3 = arg2.method7841(arg0);
         if (var3 == null) {
             return;
@@ -563,7 +563,7 @@ public class ClientWorldMap extends class408 {
         if (arg2.field4764 == -1 && arg2.field4766 == null) {
             return;
         }
-        class771 var23 = new class771(arg1);
+        MapElementContainer var23 = new MapElementContainer(arg1);
         int var24 = var4 >> 1;
         var23.field9295 = var6 - var24;
         var23.field9296 = var6 + var24;
@@ -622,7 +622,7 @@ public class ClientWorldMap extends class408 {
     }
 
     @ObfuscatedName("nf.bu(Lra;Ladw;Lpw;IIIILas;B)V")
-    public static void method6644(RendererToolkit arg0, class806 arg1, MapElementType arg2, int arg3, int arg4, int arg5, int arg6, WorldMapFont arg7) {
+    public static void method6644(RendererToolkit arg0, WorldMapElement arg1, MapElementType arg2, int arg3, int arg4, int arg5, int arg6, WorldMapFont arg7) {
         int var8 = arg4 - arg6 / 2 - 5;
         int var9 = arg5 + 2;
         if (arg2.field4801 != 0) {
@@ -687,7 +687,7 @@ public class ClientWorldMap extends class408 {
         } else {
             var15 = Statics.field10208 * 5;
         }
-        for (class806 var16 = (class806) field4301.method11563(); var16 != null; var16 = (class806) field4301.method11567()) {
+        for (WorldMapElement var16 = (WorldMapElement) field4301.method11563(); var16 != null; var16 = (WorldMapElement) field4301.method11567()) {
             MapElementType var17 = Statics.field4290.method7862(var16.field9564);
             if (method1371(var17)) {
                 if (field9755 == var16.field9564) {
@@ -752,7 +752,7 @@ public class ClientWorldMap extends class408 {
         if (!field9754 || Statics.field5267 == null) {
             return;
         }
-        for (class771 var4 = (class771) Statics.field5267.method11563(); var4 != null; var4 = (class771) Statics.field5267.method11567()) {
+        for (MapElementContainer var4 = (MapElementContainer) Statics.field5267.method11563(); var4 != null; var4 = (MapElementContainer) Statics.field5267.method11567()) {
             MapElementType var5 = Statics.field4290.method7862(var4.field9303.field9564);
             if (var4.method14803(arg0, arg1)) {
                 if (var5.field4778 != null) {
@@ -942,7 +942,7 @@ public class ClientWorldMap extends class408 {
         int var4 = Integer.MAX_VALUE;
         int var5 = arg1 - Statics.field4283;
         int var6 = arg2 - Statics.field4284;
-        for (class806 var7 = (class806) field4301.method11563(); var7 != null; var7 = (class806) field4301.method11567()) {
+        for (WorldMapElement var7 = (WorldMapElement) field4301.method11563(); var7 != null; var7 = (WorldMapElement) field4301.method11567()) {
             if (var7.field9564 == arg0) {
                 int var8 = var7.field9566;
                 int var9 = var7.field9567;
@@ -958,12 +958,12 @@ public class ClientWorldMap extends class408 {
     }
 
     @ObfuscatedName("wb.cv(I)Ladw;")
-    public static class806 method12725() {
+    public static WorldMapElement method12725() {
         if (field4301 == null || field9767 == null) {
             return null;
         }
         field9767.method11691(field4301);
-        class806 var0 = (class806) field9767.method11701();
+        WorldMapElement var0 = (WorldMapElement) field9767.method11701();
         if (var0 == null) {
             return null;
         } else {
@@ -973,11 +973,11 @@ public class ClientWorldMap extends class408 {
     }
 
     @ObfuscatedName("tg.ck(S)Ladw;")
-    public static class806 method11468() {
+    public static WorldMapElement method11468() {
         if (field4301 == null || field9767 == null) {
             return null;
         }
-        for (class806 var0 = (class806) field9767.next(); var0 != null; var0 = (class806) field9767.next()) {
+        for (WorldMapElement var0 = (WorldMapElement) field9767.next(); var0 != null; var0 = (WorldMapElement) field9767.next()) {
             MapElementType var1 = Statics.field4290.method7862(var0.field9564);
             if (var1 != null && var1.field4802 && var1.method7835(Statics.field4299)) {
                 return var0;

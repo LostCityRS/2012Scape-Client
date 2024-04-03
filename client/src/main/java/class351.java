@@ -2,7 +2,7 @@ import deob.ObfuscatedName;
 import jaggl.OpenGL;
 
 @ObfuscatedName("lx")
-public class class351 implements GraphicsDeletable, EffectInterface, class349 {
+public class class351 implements GraphicsDeletable, EffectInterface, GlxRelated5 {
 
     @ObfuscatedName("lx.u")
     public final DataType field3752;

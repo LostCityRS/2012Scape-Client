@@ -415,14 +415,14 @@ public class GpuFloorModel extends FloorModel {
         this.field7722.field8247.freeMemory(this.field7747);
         if ((this.field7752 & 0x7) == 0) {
             if (this.field7738 == null) {
-                this.field7729 = this.field7722.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new class237[]{class237.field2495, class237.field2483}), new VertexDeclarationElement(class237.field2488)});
+                this.field7729 = this.field7722.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new VertexDeclarationElementComponent[]{VertexDeclarationElementComponent.field2495, VertexDeclarationElementComponent.field2483}), new VertexDeclarationElement(VertexDeclarationElementComponent.field2488)});
             } else {
-                this.field7729 = this.field7722.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new class237[]{class237.field2495, class237.field2483, class237.field2482}), new VertexDeclarationElement(class237.field2488)});
+                this.field7729 = this.field7722.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new VertexDeclarationElementComponent[]{VertexDeclarationElementComponent.field2495, VertexDeclarationElementComponent.field2483, VertexDeclarationElementComponent.field2482}), new VertexDeclarationElement(VertexDeclarationElementComponent.field2488)});
             }
         } else if (this.field7738 == null) {
-            this.field7729 = this.field7722.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new class237[]{class237.field2495, class237.field2483, class237.field2480}), new VertexDeclarationElement(class237.field2488)});
+            this.field7729 = this.field7722.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new VertexDeclarationElementComponent[]{VertexDeclarationElementComponent.field2495, VertexDeclarationElementComponent.field2483, VertexDeclarationElementComponent.field2480}), new VertexDeclarationElement(VertexDeclarationElementComponent.field2488)});
         } else {
-            this.field7729 = this.field7722.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new class237[]{class237.field2495, class237.field2483, class237.field2482, class237.field2480}), new VertexDeclarationElement(class237.field2488)});
+            this.field7729 = this.field7722.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new VertexDeclarationElementComponent[]{VertexDeclarationElementComponent.field2495, VertexDeclarationElementComponent.field2483, VertexDeclarationElementComponent.field2482, VertexDeclarationElementComponent.field2480}), new VertexDeclarationElement(VertexDeclarationElementComponent.field2488)});
         }
         for (int var1 = 0; var1 < this.field7754; var1++) {
             GpuFloorModelRelated1 var2 = (GpuFloorModelRelated1) this.field7753[var1];
@@ -1010,6 +1010,6 @@ public class GpuFloorModel extends FloorModel {
 
     @ObfuscatedName("yn.f(Lacg;[I)V")
     public void method204(Light arg0, int[] arg1) {
-        this.field7741.method11558(new class791(this.field7722, this, arg0, arg1));
+        this.field7741.method11558(new GpuFloorModelRelated(this.field7722, this, arg0, arg1));
     }
 }

@@ -664,7 +664,7 @@ public class GlFloorModel extends FloorModel {
             this.field7688.method13318(0, 34166, 770);
             this.field7688.method13267(0, 34167, 770);
             for (Node var23 = this.field7705.method11563(); var23 != null; var23 = this.field7705.method11567()) {
-                class777 var24 = (class777) var23;
+                GlFloorModelRelated var24 = (GlFloorModelRelated) var23;
                 var24.method14849(arg0, arg1, arg2, arg3);
             }
             this.field7688.method13318(0, 5890, 768);
@@ -864,6 +864,6 @@ public class GlFloorModel extends FloorModel {
 
     @ObfuscatedName("yj.f(Lacg;[I)V")
     public void method204(Light arg0, int[] arg1) {
-        this.field7705.method11558(new class777(this.field7688, this, arg0, arg1));
+        this.field7705.method11558(new GlFloorModelRelated(this.field7688, this, arg0, arg1));
     }
 }

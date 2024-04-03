@@ -17,7 +17,7 @@ public class CutsceneAction_Sub2 extends CutsceneAction {
 
     @ObfuscatedName("zt.j(I)V")
     public void method2873() {
-        class147 var1 = Statics.field1528[this.field8467];
+        CutsceneLocation var1 = Statics.field1528[this.field8467];
         client.method3302(var1.field1553, var1.field1554, var1.field1555, var1.field1551.field6582, var1.field1551.field6590, var1.field1556, this.field8468);
     }
 

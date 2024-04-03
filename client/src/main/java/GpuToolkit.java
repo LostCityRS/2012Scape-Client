@@ -294,7 +294,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     public Matrix4x4[] field8331;
 
     @ObfuscatedName("yk.df")
-    public class250[] field8306;
+    public TextureTramsformType[] field8306;
 
     @ObfuscatedName("yk.dv")
     public class253[] field8333;
@@ -324,7 +324,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     public boolean field8341 = false;
 
     @ObfuscatedName("yk.eq")
-    public class252 field8342;
+    public GpuRendererRelated6 field8342;
 
     @ObfuscatedName("yk.en")
     public GpuRendererRelated2 field8240;
@@ -354,13 +354,13 @@ public abstract class GpuToolkit extends RendererToolkit {
     public WaterfallShader field8277;
 
     @ObfuscatedName("yk.ei")
-    public class232 field8352;
+    public GpuPostProcessManager field8352;
 
     @ObfuscatedName("yk.ex")
     public final GpuPostProcessEffect[] field8355 = new GpuPostProcessEffect[2];
 
     @ObfuscatedName("yk.eb")
-    public class680 field8386;
+    public GpuEnvironmentSampler field8386;
 
     @ObfuscatedName("yk.ec")
     public boolean field8274;
@@ -420,7 +420,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     public boolean field8375 = false;
 
     @ObfuscatedName("yk.fm")
-    public class242 field8267;
+    public GpuParticleRenderer field8267;
 
     @ObfuscatedName("yk.fk")
     public int field8348;
@@ -585,13 +585,13 @@ public abstract class GpuToolkit extends RendererToolkit {
     public final void method13495() {
         this.field8330 = new BaseTexture[this.field8337];
         this.field8331 = new Matrix4x4[this.field8337];
-        this.field8306 = new class250[this.field8337];
+        this.field8306 = new TextureTramsformType[this.field8337];
         this.field8333 = new class253[this.field8337];
         this.field8356 = new class253[this.field8337];
         for (int var1 = 0; var1 < this.field8337; var1++) {
             this.field8356[var1] = class253.field2574;
             this.field8333[var1] = class253.field2574;
-            this.field8306[var1] = class250.field2550;
+            this.field8306[var1] = TextureTramsformType.field2550;
             this.field8331[var1] = new Matrix4x4();
         }
         this.field8365 = new Light[this.field8379 - 2];
@@ -600,10 +600,10 @@ public abstract class GpuToolkit extends RendererToolkit {
         var2[0] = -16777216;
         this.field8359 = this.method13552(1, 1, false, var2, 0, 0);
         this.method502(new GpuHeap(262144));
-        this.field8392 = this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new class237[]{class237.field2495, class237.field2483})});
-        this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new class237[]{class237.field2495, class237.field2488})});
-        this.field8343 = this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(class237.field2495), new VertexDeclarationElement(class237.field2488), new VertexDeclarationElement(class237.field2483), new VertexDeclarationElement(class237.field2480)});
-        this.field8298 = this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(class237.field2495), new VertexDeclarationElement(class237.field2488), new VertexDeclarationElement(class237.field2483)});
+        this.field8392 = this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new VertexDeclarationElementComponent[]{VertexDeclarationElementComponent.field2495, VertexDeclarationElementComponent.field2483})});
+        this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new VertexDeclarationElementComponent[]{VertexDeclarationElementComponent.field2495, VertexDeclarationElementComponent.field2488})});
+        this.field8343 = this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(VertexDeclarationElementComponent.field2495), new VertexDeclarationElement(VertexDeclarationElementComponent.field2488), new VertexDeclarationElement(VertexDeclarationElementComponent.field2483), new VertexDeclarationElement(VertexDeclarationElementComponent.field2480)});
+        this.field8298 = this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(VertexDeclarationElementComponent.field2495), new VertexDeclarationElement(VertexDeclarationElementComponent.field2488), new VertexDeclarationElement(VertexDeclarationElementComponent.field2483)});
         for (int var3 = 0; var3 < 7; var3++) {
             this.field8394[var3] = new GpuModel(this, 0, 0, false, false);
             this.field8395[var3] = new GpuModel(this, 0, 0, true, true);
@@ -651,7 +651,7 @@ public abstract class GpuToolkit extends RendererToolkit {
             var2 = this.field412.method921();
             var3 = this.field412.method922();
         }
-        this.field8352 = new class232(this, var2, var3);
+        this.field8352 = new GpuPostProcessManager(this, var2, var3);
         if (!this.field8242) {
             this.field8355[1] = new GpuColourGradingBloomEffect(this);
             this.field8352.method4338(this.field8355[1]);
@@ -723,12 +723,12 @@ public abstract class GpuToolkit extends RendererToolkit {
                 this.field8355[var1].method4281();
             }
         }
-        this.field8267 = new class242(this);
+        this.field8267 = new GpuParticleRenderer(this);
         this.method13500();
         this.method13501();
         this.method13502();
         this.field8267.method4468(this);
-        this.field8342 = new class252(this, 1024);
+        this.field8342 = new GpuRendererRelated6(this, 1024);
     }
 
     @ObfuscatedName("yk.ot()V")
@@ -778,14 +778,14 @@ public abstract class GpuToolkit extends RendererToolkit {
         this.field8244.putFloat(0.0F);
         this.field8244.putFloat(0.0F);
         this.field8328.method4452(0, this.field8244.position(), this.field8245);
-        this.field8389 = this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new class237[]{class237.field2495, class237.field2488, class237.field2483, class237.field2483})});
+        this.field8389 = this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new VertexDeclarationElementComponent[]{VertexDeclarationElementComponent.field2495, VertexDeclarationElementComponent.field2488, VertexDeclarationElementComponent.field2483, VertexDeclarationElementComponent.field2483})});
     }
 
     @ObfuscatedName("yk.oc()V")
     public final void method13501() {
         this.field8385 = this.method13584(true);
         this.field8385.method4269(24, 12);
-        this.field8388 = this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(class237.field2495)});
+        this.field8388 = this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(VertexDeclarationElementComponent.field2495)});
     }
 
     @ObfuscatedName("yk.oy()V")
@@ -906,8 +906,8 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.ou()Lgy;")
-    public class224 method13508() {
-        return this.field8342 == null ? class224.field2416 : this.field8342.method4507();
+    public GpuImageRelated method13508() {
+        return this.field8342 == null ? GpuImageRelated.field2416 : this.field8342.method4507();
     }
 
     @ObfuscatedName("yk.by()V")
@@ -1093,13 +1093,13 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.ct(IIIIII)Ldj;")
-    public final class127 method788(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
-        return new class897(this, arg0, arg1, arg2, arg3, arg4, arg5);
+    public final EnvironmentSampler method788(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+        return new GpuEnvironmentSampler_Sub1(this, arg0, arg1, arg2, arg3, arg4, arg5);
     }
 
     @ObfuscatedName("yk.cc(Ldj;)V")
-    public final void method549(class127 arg0) {
-        this.field8386 = (class680) arg0;
+    public final void method549(EnvironmentSampler arg0) {
+        this.field8386 = (GpuEnvironmentSampler) arg0;
     }
 
     @ObfuscatedName("yk.ok()Lih;")
@@ -1202,7 +1202,7 @@ public abstract class GpuToolkit extends RendererToolkit {
         this.field8294 = arg2 <= var5 ? arg2 : var5;
         this.field8291 = arg1 >= 0 ? arg1 : 0;
         this.field8292 = arg3 <= var6 ? arg3 : var6;
-        if (!this.field8398 && (this.field8341 || this.method13508() == class224.field2416)) {
+        if (!this.field8398 && (this.field8341 || this.method13508() == GpuImageRelated.field2416)) {
             this.field8398 = true;
             this.method13520();
         }
@@ -1244,7 +1244,7 @@ public abstract class GpuToolkit extends RendererToolkit {
         if (!var11) {
             return;
         }
-        if (!this.field8398 && (this.field8341 || this.method13508() == class224.field2416)) {
+        if (!this.field8398 && (this.field8341 || this.method13508() == GpuImageRelated.field2416)) {
             this.field8398 = true;
             this.method13520();
         }
@@ -1766,15 +1766,15 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.rc(Lhr;)V")
-    public final void method13567(class250 arg0) {
+    public final void method13567(TextureTramsformType arg0) {
         this.field8306[this.field8253] = arg0;
         this.method13568();
     }
 
     @ObfuscatedName("yk.rh()V")
     public final void method13741() {
-        if (this.field8306[this.field8253] != class250.field2550) {
-            this.field8306[this.field8253] = class250.field2550;
+        if (this.field8306[this.field8253] != TextureTramsformType.field2550) {
+            this.field8306[this.field8253] = TextureTramsformType.field2550;
             this.field8331[this.field8253].method5453();
             this.method13568();
         }

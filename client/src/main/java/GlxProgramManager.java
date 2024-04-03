@@ -19,7 +19,7 @@ public class GlxProgramManager extends GpuShader {
     }
 
     @ObfuscatedName("aap.c(Lyk;Lei;)Leo;")
-    public GpuProgram method3404(GpuToolkit arg0, class167 arg1) {
+    public GpuProgram method3404(GpuToolkit arg0, ProgramData arg1) {
         return new GlxProgram((GlxToolkit) arg0, this, arg1);
     }
 
@@ -46,7 +46,7 @@ public class GlxProgramManager extends GpuShader {
     }
 
     @ObfuscatedName("aap.q(Ley;)Laig;")
-    public GpuProgramUniform method3338(class174 arg0) {
+    public GpuProgramUniform method3338(ProgramUniformData arg0) {
         return new GlxProgramUniform(this, arg0);
     }
 

@@ -1,10 +1,10 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aig")
-public abstract class GpuProgramUniform extends class786 {
+public abstract class GpuProgramUniform extends HashMapValue {
 
     @ObfuscatedName("aig.m")
-    public class170 field10176;
+    public UniformType field10176;
 
     @ObfuscatedName("aig.t")
     public String field10178;
@@ -16,9 +16,9 @@ public abstract class GpuProgramUniform extends class786 {
     public int field10175;
 
     @ObfuscatedName("aig.d")
-    public class170 field10179;
+    public UniformType field10179;
 
-    public GpuProgramUniform(class174 arg0) {
+    public GpuProgramUniform(ProgramUniformData arg0) {
         this.field10176 = arg0.field2095;
         this.field10178 = arg0.field2093;
         this.field10177 = arg0.field2094;
@@ -40,18 +40,18 @@ public abstract class GpuProgramUniform extends class786 {
     }
 
     @ObfuscatedName("aig.a(I)Lex;")
-    public class170 method16234() {
+    public UniformType method16234() {
         return this.field10176;
     }
 
     @ObfuscatedName("aig.s(B)Lex;")
-    public class170 method16235() {
+    public UniformType method16235() {
         return this.field10179;
     }
 
     @ObfuscatedName("aig.c(B)I")
     public int method16236() {
-        if (class170.field1977 != this.field10176) {
+        if (UniformType.field1977 != this.field10176) {
             throw new OpenGLError(this, this.field10176.toString().toLowerCase());
         }
         return this.field10175;

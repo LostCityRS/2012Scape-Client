@@ -233,7 +233,7 @@ public final class GlxToolkit extends GpuToolkit {
                     throw new RuntimeException("");
                 }
             }
-            this.method460(arg1, new class990(this, arg1, arg2));
+            this.method460(arg1, new GlxSurface(this, arg1, arg2));
             this.method462(arg1);
             this.method13512(32768, false);
             this.method13512(32768, false);
@@ -284,7 +284,7 @@ public final class GlxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahv.t()Lcg;")
-    public ToolkitInfo method456() {
+    public RendererInfo method456() {
         int var1 = -1;
         if (this.field10021.indexOf("nvidia") != -1) {
             var1 = 4318;
@@ -293,11 +293,11 @@ public final class GlxToolkit extends GpuToolkit {
         } else if (this.field10021.indexOf("ati") != -1) {
             var1 = 4098;
         }
-        return new ToolkitInfo(var1, "OpenGL", this.field10023, this.field10022, 0L);
+        return new RendererInfo(var1, "OpenGL", this.field10023, this.field10022, 0L);
     }
 
     @ObfuscatedName("ahv.f(II)V")
-    public void method653(int arg0, int arg1) throws class881 {
+    public void method653(int arg0, int arg1) throws RendererException {
         this.field415.method918();
         if (this.field400 != null) {
             this.field400.method890();
@@ -326,12 +326,12 @@ public final class GlxToolkit extends GpuToolkit {
 
     @ObfuscatedName("ahv.ak(Ljava/awt/Canvas;II)Lya;")
     public Surface method735(Canvas arg0, int arg1, int arg2) {
-        return new class990(this, arg0);
+        return new GlxSurface(this, arg0);
     }
 
     @ObfuscatedName("ahv.av()Lyu;")
     public Framebuffer method467() {
-        return new class988(this);
+        return new GlxFramebuffer(this);
     }
 
     @ObfuscatedName("ahv.aj(IILcy;Ldz;I)Lde;")
@@ -404,7 +404,7 @@ public final class GlxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahv.cu(Ldj;Ldj;FLdj;)Ldj;")
-    public class127 method537(class127 arg0, class127 arg1, float arg2, class127 arg3) {
+    public EnvironmentSampler method537(EnvironmentSampler arg0, EnvironmentSampler arg1, float arg2, EnvironmentSampler arg3) {
         return arg2 < 0.5F ? arg0 : arg1;
     }
 
@@ -664,7 +664,7 @@ public final class GlxToolkit extends GpuToolkit {
     @ObfuscatedName("ahv.ru()V")
     public void method13570() {
         OpenGL.glMatrixMode(5890);
-        if (this.field8306[this.field8253] == class250.field2550) {
+        if (this.field8306[this.field8253] == TextureTramsformType.field2550) {
             OpenGL.glLoadIdentity();
         } else {
             OpenGL.glLoadMatrixf(this.field8331[this.field8253].method5408(this.field10032), 0);
@@ -867,7 +867,7 @@ public final class GlxToolkit extends GpuToolkit {
             long var12 = var9.method5995();
             var9.method5996();
             for (int var14 = 0; var14 < var8.method4484(); var14++) {
-                class237 var15 = var8.method4482(var14);
+                VertexDeclarationElementComponent var15 = var8.method4482(var14);
                 switch (var15.field2491) {
                     case 0:
                         OpenGL.glColorPointer(4, 5121, var11, (long) var10 + var12);

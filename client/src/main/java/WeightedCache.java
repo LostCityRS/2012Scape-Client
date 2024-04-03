@@ -43,7 +43,7 @@ public final class WeightedCache {
             return null;
         }
         if (var3.method16724()) {
-            class1005 var5 = new class1005(var4, var3.field10373);
+            HardWeightedNode var5 = new HardWeightedNode(var4, var3.field10373);
             this.field4828.method11927(var5, var3.field4228);
             this.field4829.method11728(var5);
             var5.field9554 = 0L;
@@ -87,7 +87,7 @@ public final class WeightedCache {
             WeightedNode var5 = (WeightedNode) this.field4829.method11729();
             this.method7950(var5);
         }
-        class1005 var6 = new class1005(arg0, arg2);
+        HardWeightedNode var6 = new HardWeightedNode(arg0, arg2);
         this.field4828.method11927(var6, arg1);
         this.field4829.method11728(var6);
         var6.field9554 = 0L;
@@ -103,7 +103,7 @@ public final class WeightedCache {
                     this.field4827 += var2.field10373;
                 }
             } else if (++var2.field9554 > (long) arg0) {
-                class1004 var3 = new class1004(var2.method16722(), var2.field10373);
+                SoftWeightedNode var3 = new SoftWeightedNode(var2.method16722(), var2.field10373);
                 this.field4828.method11927(var3, var2.field4228);
                 DualIterableQueue.method2355(var3, var2);
                 var2.method6979();

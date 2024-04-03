@@ -24,7 +24,7 @@ public abstract class PositionSpline extends Position {
     }
 
     @ObfuscatedName("aaj.u(FLmv;[[[IB)V")
-    public void method4014(float arg0, class361 arg1, int[][][] arg2) {
+    public void method4014(float arg0, CollisionMap arg1, int[][][] arg2) {
         float var4 = this.field8746.method5514();
         if (this.field8747 >= var4) {
             return;

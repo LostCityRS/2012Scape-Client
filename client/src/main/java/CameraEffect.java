@@ -7,10 +7,10 @@ public abstract class CameraEffect extends SecondaryNode {
     public final int field10351;
 
     @ObfuscatedName("aet.u(ILfc;Laet;I)Laja;")
-    public static CameraEffect method15441(int arg0, class179 arg1, Packet arg2) {
-        if (class179.field2122 == arg1) {
+    public static CameraEffect method15441(int arg0, CameraEffectType arg1, Packet arg2) {
+        if (CameraEffectType.field2122 == arg1) {
             return new Shake(arg0, arg2);
-        } else if (class179.field2120 == arg1) {
+        } else if (CameraEffectType.field2120 == arg1) {
             return new ZTilt(arg0, arg2);
         } else {
             return null;

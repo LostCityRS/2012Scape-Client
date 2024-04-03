@@ -56,7 +56,7 @@ public class WorldMapAreaMetadata extends SecondaryNode {
 
     @ObfuscatedName("ajo.u(III)Z")
     public boolean method16717(int arg0, int arg1) {
-        for (class807 var3 = (class807) this.field10363.method11563(); var3 != null; var3 = (class807) this.field10363.method11567()) {
+        for (WorldMapSubarea var3 = (WorldMapSubarea) this.field10363.method11563(); var3 != null; var3 = (WorldMapSubarea) this.field10363.method11567()) {
             if (var3.method15167(arg0, arg1)) {
                 return true;
             }
@@ -66,7 +66,7 @@ public class WorldMapAreaMetadata extends SecondaryNode {
 
     @ObfuscatedName("ajo.j(II[II)Z")
     public boolean method16707(int arg0, int arg1, int[] arg2) {
-        for (class807 var4 = (class807) this.field10363.method11563(); var4 != null; var4 = (class807) this.field10363.method11567()) {
+        for (WorldMapSubarea var4 = (WorldMapSubarea) this.field10363.method11563(); var4 != null; var4 = (WorldMapSubarea) this.field10363.method11567()) {
             if (var4.method15168(arg0, arg1)) {
                 var4.method15169(arg0, arg1, arg2);
                 return true;
@@ -77,7 +77,7 @@ public class WorldMapAreaMetadata extends SecondaryNode {
 
     @ObfuscatedName("ajo.a(II[II)Z")
     public boolean method16708(int arg0, int arg1, int[] arg2) {
-        for (class807 var4 = (class807) this.field10363.method11563(); var4 != null; var4 = (class807) this.field10363.method11567()) {
+        for (WorldMapSubarea var4 = (WorldMapSubarea) this.field10363.method11563(); var4 != null; var4 = (WorldMapSubarea) this.field10363.method11567()) {
             if (var4.method15167(arg0, arg1)) {
                 var4.method15170(arg0, arg1, arg2);
                 return true;
@@ -88,7 +88,7 @@ public class WorldMapAreaMetadata extends SecondaryNode {
 
     @ObfuscatedName("ajo.s(III[IB)Z")
     public boolean method16705(int arg0, int arg1, int arg2, int[] arg3) {
-        for (class807 var5 = (class807) this.field10363.method11563(); var5 != null; var5 = (class807) this.field10363.method11567()) {
+        for (WorldMapSubarea var5 = (WorldMapSubarea) this.field10363.method11563(); var5 != null; var5 = (WorldMapSubarea) this.field10363.method11567()) {
             if (var5.method15166(arg0, arg1, arg2)) {
                 var5.method15170(arg1, arg2, arg3);
                 return true;
@@ -103,7 +103,7 @@ public class WorldMapAreaMetadata extends SecondaryNode {
         this.field10369 = 0;
         this.field10364 = 12800;
         this.field10371 = 0;
-        for (class807 var1 = (class807) this.field10363.method11563(); var1 != null; var1 = (class807) this.field10363.method11567()) {
+        for (WorldMapSubarea var1 = (WorldMapSubarea) this.field10363.method11563(); var1 != null; var1 = (WorldMapSubarea) this.field10363.method11567()) {
             if (var1.field9576 < this.field10368) {
                 this.field10368 = var1.field9576;
             }
@@ -125,7 +125,7 @@ public class WorldMapAreaMetadata extends SecondaryNode {
         WorldMapAreaMetadata var4 = new WorldMapAreaMetadata(arg2, var3.method15337(), var3.method15337(), var3.method15379(), var3.method15379(), var3.method15220() == 1, var3.method15220(), var3.method15220());
         int var5 = var3.method15220();
         for (int var6 = 0; var6 < var5; var6++) {
-            var4.field10363.method11558(new class807(var3.method15220(), var3.method15239(), var3.method15239(), var3.method15239(), var3.method15239(), var3.method15239(), var3.method15239(), var3.method15239(), var3.method15239()));
+            var4.field10363.method11558(new WorldMapSubarea(var3.method15220(), var3.method15239(), var3.method15239(), var3.method15239(), var3.method15239(), var3.method15239(), var3.method15239(), var3.method15239(), var3.method15239()));
         }
         var4.method16710();
         return var4;

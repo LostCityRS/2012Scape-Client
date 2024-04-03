@@ -11,7 +11,7 @@ public class GlUnderwaterEffect extends GlEffect {
     public GlRenderList field7472;
 
     @ObfuscatedName("xq.m")
-    public class642 field7474;
+    public GlUnderwaterRelated field7474;
 
     @ObfuscatedName("xq.t")
     public static final float[] field7469 = new float[]{0.0F, 0.0F, 0.0F, 0.0F};
@@ -20,7 +20,7 @@ public class GlUnderwaterEffect extends GlEffect {
         super(arg0);
         this.field7471 = arg1;
         this.method12791();
-        this.field7474 = new class642(this.field1062, TextureFormat.field1297, DataType.field1501, 2, new byte[]{0, -1}, TextureFormat.field1297);
+        this.field7474 = new GlUnderwaterRelated(this.field1062, TextureFormat.field1297, DataType.field1501, 2, new byte[]{0, -1}, TextureFormat.field1297);
         this.field7474.method12783(false);
     }
 

@@ -130,7 +130,7 @@ public abstract class Camera {
     }
 
     @ObfuscatedName("fe.j(FLmv;[[[II)V")
-    public void method3727(float arg0, class361 arg1, int[][][] arg2) {
+    public void method3727(float arg0, CollisionMap arg1, int[][][] arg2) {
         if (this.field2222 != null) {
             this.field2222.method11540(arg0);
         }
@@ -147,11 +147,11 @@ public abstract class Camera {
     @ObfuscatedName("fe.a(ZFLko;Lkn;Lko;Lko;I)V")
     public void method3811(boolean arg0, float arg1, Vector3 arg2, Quaternion arg3, Vector3 arg4, Vector3 arg5) {
         if (CameraLinearMovementMode.field2196 == this.field2226) {
-            class437.method7675(arg1, arg2, arg4, arg5, arg0 ? this.field2233 : this.field2232, arg0 ? this.field2230 : this.field2229, (float) this.field2244, this.field2236);
+            CameraMode1.method7675(arg1, arg2, arg4, arg5, arg0 ? this.field2233 : this.field2232, arg0 ? this.field2230 : this.field2229, (float) this.field2244, this.field2236);
         } else if (CameraLinearMovementMode.field2197 == this.field2226) {
-            class438.method1697(arg1, arg2, arg3, arg4, arg5, arg0 ? this.field2233 : this.field2232, arg0 ? this.field2230 : this.field2229, (float) this.field2244, this.field2236);
+            CameraMode2.method1697(arg1, arg2, arg3, arg4, arg5, arg0 ? this.field2233 : this.field2232, arg0 ? this.field2230 : this.field2229, (float) this.field2244, this.field2236);
         } else if (CameraLinearMovementMode.field2199 == this.field2226) {
-            class436.method3664(arg1, arg2, arg3, arg4, arg5, arg0 ? this.field2235 : this.field2246, arg0 ? this.field2237 : this.field2245);
+            CameraMode3.method3664(arg1, arg2, arg3, arg4, arg5, arg0 ? this.field2235 : this.field2246, arg0 ? this.field2237 : this.field2245);
         }
     }
 

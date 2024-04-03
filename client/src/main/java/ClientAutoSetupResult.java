@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("agp")
-public class ClientAutoSetupResult extends class629 implements SendablePacket {
+public class ClientAutoSetupResult extends AutoSetupResult implements SendablePacket {
 
     @ObfuscatedName("agp.u(I)V")
     public void method11847() {

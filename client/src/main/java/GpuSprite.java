@@ -208,7 +208,7 @@ public class GpuSprite extends Sprite {
 
     @ObfuscatedName("yo.ay(IIIII)V")
     public void method1054(int arg0, int arg1, int arg2, int arg3, int arg4) {
-        if (this.field7637.method13508() != class224.field2416) {
+        if (this.field7637.method13508() != GpuImageRelated.field2416) {
             int var6 = this.field7641 + arg0;
             int var7 = this.field7640 + arg1;
             this.field7637.field8342.method4497((float) var6, (float) var7, (float) (this.field7646 + var6), (float) (this.field7638 + var7), 0.0F, 0.0F, this.field7639.method4433(), this.field7639.method4443(), this.field7639, arg3);
@@ -262,7 +262,7 @@ public class GpuSprite extends Sprite {
 
     @ObfuscatedName("yo.ap(IIIIIIII)V")
     public void method1041(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
-        if (this.field7637.method13508() != class224.field2416) {
+        if (this.field7637.method13508() != GpuImageRelated.field2416) {
             if (this.field7643) {
                 arg2 = this.field7646 * arg2 / this.method1042();
                 arg3 = this.field7638 * arg3 / this.method1047();
@@ -298,7 +298,7 @@ public class GpuSprite extends Sprite {
 
     @ObfuscatedName("yo.as(IIIIIII)V")
     public void method1070(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
-        if (this.field7637.method13508() != class224.field2416) {
+        if (this.field7637.method13508() != GpuImageRelated.field2416) {
             int var8 = arg1 + arg3;
             int var9 = arg0 + arg2;
             int var10 = this.method1042();
@@ -449,7 +449,7 @@ public class GpuSprite extends Sprite {
 
     @ObfuscatedName("yo.am(FFFFFFIIII)V")
     public void method1060(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, int arg6, int arg7, int arg8, int arg9) {
-        if (this.field7637.method13508() != class224.field2416) {
+        if (this.field7637.method13508() != GpuImageRelated.field2416) {
             this.field7637.field8342.method4498(arg0, arg1, arg2, arg3, arg4, arg5, arg2 + arg4 - arg0, arg3 + arg5 - arg1, 0.0F, 0.0F, this.field7639.method4433(), 0.0F, 0.0F, this.field7639.method4443(), this.field7639.method4433(), this.field7639.method4443(), this.field7639, arg7);
             return;
         }

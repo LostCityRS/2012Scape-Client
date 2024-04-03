@@ -10,7 +10,7 @@ public class GlxProgramUniform extends GpuProgramUniform {
     @ObfuscatedName("akj.n")
     public int[] field10571 = null;
 
-    public GlxProgramUniform(GlxProgramManager arg0, class174 arg1) {
+    public GlxProgramUniform(GlxProgramManager arg0, ProgramUniformData arg1) {
         super(arg1);
         this.field10570 = arg0;
     }

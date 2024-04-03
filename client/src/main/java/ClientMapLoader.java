@@ -244,8 +244,8 @@ public class ClientMapLoader extends MapLoader {
                                 int var20 = var19.method14888() >> 9;
                                 int var21 = var19.method14879() >> 9;
                                 if (var17.field4592 == arg5 && var20 >= var12 && var20 < var12 + 8 && var21 >= var13 && var21 < var13 + 8) {
-                                    int var22 = (arg3 << 9) + class339.method2537(var19.method14888() & 0xFFF, var19.method14879() & 0xFFF, arg8);
-                                    int var23 = (arg4 << 9) + class339.method3578(var19.method14888() & 0xFFF, var19.method14879() & 0xFFF, arg8);
+                                    int var22 = (arg3 << 9) + MapCoordUtil.method2537(var19.method14888() & 0xFFF, var19.method14879() & 0xFFF, arg8);
+                                    int var23 = (arg4 << 9) + MapCoordUtil.method3578(var19.method14888() & 0xFFF, var19.method14879() & 0xFFF, arg8);
                                     int var24 = var22 >> 9;
                                     int var25 = var23 >> 9;
                                     if (var24 >= 0 && var25 >= 0 && var24 < this.field3627 && var25 < this.field3643) {
@@ -317,8 +317,8 @@ public class ClientMapLoader extends MapLoader {
                                         for (int var35 = var32; var35 < var32 + 4; var35++) {
                                             for (int var36 = var33; var36 < var33 + 4; var36++) {
                                                 if (var35 >= var12 && var35 < var12 + 8 && var36 >= var13 && var36 < var13 + 8) {
-                                                    int var37 = arg3 + class339.method1725(var35 & 0x7, var36 & 0x7, arg8);
-                                                    int var38 = arg4 + class339.method4739(var35 & 0x7, var36 & 0x7, arg8);
+                                                    int var37 = arg3 + MapCoordUtil.method1725(var35 & 0x7, var36 & 0x7, arg8);
+                                                    int var38 = arg4 + MapCoordUtil.method4739(var35 & 0x7, var36 & 0x7, arg8);
                                                     if (var37 >= 0 && var37 < this.field3627 && var38 >= 0 && var38 < this.field3643) {
                                                         this.field3631[arg2][var37][var38] = var34;
                                                         var10 = true;
@@ -410,7 +410,7 @@ public class ClientMapLoader extends MapLoader {
     }
 
     @ObfuscatedName("abo.cc(Lra;[BII[Lmv;B)V")
-    public final void method14271(RendererToolkit arg0, byte[] arg1, int arg2, int arg3, class361[] arg4) {
+    public final void method14271(RendererToolkit arg0, byte[] arg1, int arg2, int arg3, CollisionMap[] arg4) {
         Packet var6 = new Packet(arg1);
         int var7 = -1;
         while (true) {
@@ -435,7 +435,7 @@ public class ClientMapLoader extends MapLoader {
                 int var17 = arg2 + var12;
                 int var18 = arg3 + var11;
                 if (var17 > 0 && var18 > 0 && var17 < this.field3627 - 1 && var18 < this.field3643 - 1) {
-                    class361 var19 = null;
+                    CollisionMap var19 = null;
                     if (!this.field3644) {
                         int var20 = var13;
                         if ((this.field3618.field3606[1][var17][var18] & 0x2) == 2) {
@@ -452,7 +452,7 @@ public class ClientMapLoader extends MapLoader {
     }
 
     @ObfuscatedName("abo.cg(Lra;[BIIIIIII[Lmv;I)V")
-    public final void method14272(RendererToolkit arg0, byte[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, class361[] arg9) {
+    public final void method14272(RendererToolkit arg0, byte[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, CollisionMap[] arg9) {
         Packet var11 = new Packet(arg1);
         int var12 = -1;
         while (true) {
@@ -476,10 +476,10 @@ public class ClientMapLoader extends MapLoader {
                 int var21 = var19 & 0x3;
                 if (arg5 == var18 && var17 >= arg6 && var17 < arg6 + 8 && var16 >= arg7 && var16 < arg7 + 8) {
                     LocType var22 = this.field8894.method11471(var12);
-                    int var23 = arg3 + class339.method14717(var17 & 0x7, var16 & 0x7, arg8, var22.field6489, var22.field6503, var21);
-                    int var24 = arg4 + class339.method7051(var17 & 0x7, var16 & 0x7, arg8, var22.field6489, var22.field6503, var21);
+                    int var23 = arg3 + MapCoordUtil.method14717(var17 & 0x7, var16 & 0x7, arg8, var22.field6489, var22.field6503, var21);
+                    int var24 = arg4 + MapCoordUtil.method7051(var17 & 0x7, var16 & 0x7, arg8, var22.field6489, var22.field6503, var21);
                     if (var23 > 0 && var24 > 0 && var23 < this.field3627 - 1 && var24 < this.field3643 - 1) {
-                        class361 var25 = null;
+                        CollisionMap var25 = null;
                         if (!this.field3644) {
                             int var26 = arg2;
                             if ((this.field3618.field3606[1][var23][var24] & 0x2) == 2) {
@@ -497,7 +497,7 @@ public class ClientMapLoader extends MapLoader {
     }
 
     @ObfuscatedName("abo.cj(Lra;IIIIIIILmv;IB)V")
-    public final void method14304(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, class361 arg8, int arg9) {
+    public final void method14304(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, CollisionMap arg8, int arg9) {
         if (arg2 < this.field8893) {
             this.field8893 = arg2;
         }
@@ -616,7 +616,7 @@ public class ClientMapLoader extends MapLoader {
     }
 
     @ObfuscatedName("abo.cy(Lra;IIZLtg;IIIIIIIIZLxa;Lmv;III)Z")
-    public boolean method14285(RendererToolkit arg0, int arg1, int arg2, boolean arg3, LocType arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, boolean arg13, FloorModel arg14, class361 arg15, int arg16, int arg17) {
+    public boolean method14285(RendererToolkit arg0, int arg1, int arg2, boolean arg3, LocType arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, boolean arg13, FloorModel arg14, CollisionMap arg15, int arg16, int arg17) {
         if (LocShape.field6591.field6590 == arg1) {
             int var19 = arg4.field6497;
             if (field8884 && arg4.field6497 == -1) {
@@ -901,7 +901,7 @@ public class ClientMapLoader extends MapLoader {
     }
 
     @ObfuscatedName("abo.dl(Lra;IIIILmv;B)V")
-    public void method14280(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, class361 arg5) {
+    public void method14280(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, CollisionMap arg5) {
         Location var7 = this.method14289(arg1, arg2, arg3, arg4);
         if (var7 == null) {
             return;

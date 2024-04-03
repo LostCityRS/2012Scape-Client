@@ -91,7 +91,7 @@ public class PlayerEntity extends PathingEntity {
     public boolean field10067 = false;
 
     @ObfuscatedName("ahg.cz")
-    public final class112 field10055 = new class112(16);
+    public final PlayerVarProvider field10055 = new PlayerVarProvider(16);
 
     public PlayerEntity(Scene arg0) {
         super(arg0);

@@ -2,7 +2,7 @@ import deob.ObfuscatedName;
 import jaggl.OpenGL;
 
 @ObfuscatedName("ld")
-public class class345 implements class349 {
+public class class345 implements GlxRelated5 {
 
     @ObfuscatedName("ld.u")
     public final int field3725;

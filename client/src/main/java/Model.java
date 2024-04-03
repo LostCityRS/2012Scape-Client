@@ -358,9 +358,9 @@ public abstract class Model {
             this.method407();
             return;
         }
-        class138 var9 = arg0.field10350[arg1];
+        AnimFrame var9 = arg0.field10350[arg1];
         AnimBase var10 = var9.field1496;
-        class138 var11 = null;
+        AnimFrame var11 = null;
         if (arg2 != null) {
             var11 = arg2.field10350[arg3];
             if (var11.field1496 != var10) {
@@ -382,9 +382,9 @@ public abstract class Model {
             this.method407();
             return;
         }
-        class138 var11 = arg0.field10350[arg1];
+        AnimFrame var11 = arg0.field10350[arg1];
         AnimBase var12 = var11.field1496;
-        class138 var13 = null;
+        AnimFrame var13 = null;
         if (arg2 != null) {
             var13 = arg2.field10350[arg3];
             if (var13.field1496 != var12) {
@@ -410,9 +410,9 @@ public abstract class Model {
             this.method407();
             return;
         }
-        class138 var15 = arg0.field10350[arg1];
+        AnimFrame var15 = arg0.field10350[arg1];
         AnimBase var16 = var15.field1496;
-        class138 var17 = null;
+        AnimFrame var17 = null;
         if (arg2 != null) {
             var17 = arg2.field10350[arg3];
             if (var17.field1496 != var16) {
@@ -420,8 +420,8 @@ public abstract class Model {
             }
         }
         this.method263(var16, var15, var17, arg4, arg5, 0, arg12, false, arg13, 65535, null);
-        class138 var18 = arg6.field10350[arg7];
-        class138 var19 = null;
+        AnimFrame var18 = arg6.field10350[arg7];
+        AnimFrame var19 = null;
         if (arg8 != null) {
             var19 = arg8.field10350[arg9];
             if (var19.field1496 != var16) {
@@ -444,7 +444,7 @@ public abstract class Model {
             this.method407();
             return;
         }
-        class138 var3 = arg0.field10350[arg1];
+        AnimFrame var3 = arg0.field10350[arg1];
         AnimBase var4 = var3.field1496;
         for (int var5 = 0; var5 < var3.field1485; var5++) {
             short var6 = var3.field1486[var5];
@@ -460,7 +460,7 @@ public abstract class Model {
     }
 
     @ObfuscatedName("qa.ar(Laco;Ldu;Ldu;III[ZZZI[I)V")
-    public void method263(AnimBase arg0, class138 arg1, class138 arg2, int arg3, int arg4, int arg5, boolean[] arg6, boolean arg7, boolean arg8, int arg9, int[] arg10) {
+    public void method263(AnimBase arg0, AnimFrame arg1, AnimFrame arg2, int arg3, int arg4, int arg5, boolean[] arg6, boolean arg7, boolean arg8, int arg9, int[] arg10) {
         if (arg2 == null || arg3 == 0) {
             for (int var37 = 0; var37 < arg1.field1485; var37++) {
                 short var38 = arg1.field1486[var37];

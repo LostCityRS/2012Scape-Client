@@ -166,12 +166,12 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.t()Lcg;")
-    public ToolkitInfo method456() {
-        return new ToolkitInfo(0, "Pure Java", 1, "CPU", 0L);
+    public RendererInfo method456() {
+        return new RendererInfo(0, "Pure Java", 1, "CPU", 0L);
     }
 
     @ObfuscatedName("yt.f(II)V")
-    public void method653(int arg0, int arg1) throws class881 {
+    public void method653(int arg0, int arg1) throws RendererException {
         this.field415.method919(arg0, arg1);
         if (this.field400 != null) {
             this.field400.method890();
@@ -194,7 +194,7 @@ public class PureJavaToolkit extends RendererToolkit {
     @ObfuscatedName("yt.b(I)V")
     public void method444(int arg0) {
         int var2 = arg0 - this.field7999;
-        for (class775 var3 = (class775) this.field8032.method7931(); var3 != null; var3 = (class775) this.field8032.method7949()) {
+        for (PureJavaTexture var3 = (PureJavaTexture) this.field8032.method7931(); var3 != null; var3 = (PureJavaTexture) this.field8032.method7949()) {
             if (var3.field9317) {
                 var3.field9316 += var2;
                 int var4 = var3.field9316 / 50;
@@ -225,9 +225,9 @@ public class PureJavaToolkit extends RendererToolkit {
     @ObfuscatedName("yt.n(I)[I")
     public int[] method13241(int arg0) {
         WeightedCache var2 = this.field8032;
-        class775 var3;
+        PureJavaTexture var3;
         synchronized (this.field8032) {
-            var3 = (class775) this.field8032.method7916((long) arg0 | Long.MIN_VALUE);
+            var3 = (PureJavaTexture) this.field8032.method7916((long) arg0 | Long.MIN_VALUE);
             if (var3 == null) {
                 Material var4 = this.field400.method889(arg0);
                 int var5 = var4.field1252;
@@ -240,7 +240,7 @@ public class PureJavaToolkit extends RendererToolkit {
                 } else {
                     var6 = this.field400.method886(arg0, 0.7F, var5, var5, true);
                 }
-                var3 = new class775(arg0, var5, var6, MaterialAlphaMode.field4852 != var4.field1262);
+                var3 = new PureJavaTexture(arg0, var5, var6, MaterialAlphaMode.field4852 != var4.field1262);
                 this.field8032.method7918(var3, (long) arg0 | Long.MIN_VALUE, var5 * var5);
             }
         }
@@ -1873,7 +1873,7 @@ public class PureJavaToolkit extends RendererToolkit {
             for (int var11 = 0; var11 < var5.field8410.length; var11++) {
                 var6[var11] = var5.field8410[var11];
             }
-            var12 = new class888(this, var7, var6, var3, var4);
+            var12 = new PureJavaSpritePaletted(this, var7, var6, var3, var4);
         } else {
             int[] var13 = arg0.method2735(false);
             if (arg0.method2720()) {
@@ -2071,7 +2071,7 @@ public class PureJavaToolkit extends RendererToolkit {
     @ObfuscatedName("yt.oe(ZZZLdp;)V")
     public void method13207(boolean arg0, boolean arg1, boolean arg2, ParticleList arg3) {
         PureJavaToolkitContext var5 = this.method13206(Thread.currentThread());
-        for (class914 var6 = (class914) arg3.field1311.method11670(); var6 != null; var6 = (class914) arg3.field1311.method11671()) {
+        for (Particle var6 = (Particle) arg3.field1311.method11670(); var6 != null; var6 = (Particle) arg3.field1311.method11671()) {
             int var7 = var6.field10145 >> 12;
             int var8 = var6.field10146 >> 12;
             int var9 = var6.field10147 >> 12;
@@ -2097,7 +2097,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.ow(ZZZLahl;IIFI)V")
-    public void method13208(boolean arg0, boolean arg1, boolean arg2, class914 arg3, int arg4, int arg5, float arg6, int arg7) {
+    public void method13208(boolean arg0, boolean arg1, boolean arg2, Particle arg3, int arg4, int arg5, float arg6, int arg7) {
         int var9 = arg3.field10149;
         int var11 = arg7 << 1;
         if (var9 == -1) {
@@ -2449,17 +2449,17 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.ct(IIIIII)Ldj;")
-    public class127 method788(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+    public EnvironmentSampler method788(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
         return null;
     }
 
     @ObfuscatedName("yt.cu(Ldj;Ldj;FLdj;)Ldj;")
-    public class127 method537(class127 arg0, class127 arg1, float arg2, class127 arg3) {
+    public EnvironmentSampler method537(EnvironmentSampler arg0, EnvironmentSampler arg1, float arg2, EnvironmentSampler arg3) {
         return null;
     }
 
     @ObfuscatedName("yt.cc(Ldj;)V")
-    public void method549(class127 arg0) {
+    public void method549(EnvironmentSampler arg0) {
     }
 
     @ObfuscatedName("yt.cg()Z")

@@ -27,7 +27,7 @@ public final class FixedFunctionSpriteShader extends SpriteShader {
         this.field2278.method13560(1, class249.field2547);
         this.field2278.method13562(1, class249.field2547);
         this.field2278.method13566().method5412(this.field2281);
-        this.field2278.method13567(class250.field2549);
+        this.field2278.method13567(TextureTramsformType.field2549);
     }
 
     @ObfuscatedName("aaa.u(II)V")
@@ -46,7 +46,7 @@ public final class FixedFunctionSpriteShader extends SpriteShader {
         this.field2278.method13629(1);
         this.field2278.method13557(this.field2279);
         this.field2278.method13566().method5412(this.field2282);
-        this.field2278.method13567(class250.field2549);
+        this.field2278.method13567(TextureTramsformType.field2549);
         this.field2278.method13632(class253.field2573, class253.field2574);
         this.field2278.method13560(0, class249.field2544);
         this.method14071();

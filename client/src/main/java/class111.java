@@ -17,7 +17,7 @@ public class class111 {
     }
 
     @ObfuscatedName("cp.u(Lua;I)V")
-    public static synchronized void method2358(class10 arg0) {
+    public static synchronized void method2358(SoftwareRendererRelated arg0) {
         if (field1193) {
             return;
         }
@@ -36,7 +36,7 @@ public class class111 {
             if (var0 == null) {
                 return;
             }
-            ((class10) var0.field9550).method92(true);
+            ((SoftwareRendererRelated) var0.field9550).method92(true);
             var0.method6979();
         }
     }

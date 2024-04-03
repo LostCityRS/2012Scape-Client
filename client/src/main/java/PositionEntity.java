@@ -38,7 +38,7 @@ public class PositionEntity extends Position {
     }
 
     @ObfuscatedName("aav.i(Lfs;Lko;Lkn;ZILmv;[[[IB)V")
-    public void method14097(CameraTrackable arg0, Vector3 arg1, Quaternion arg2, boolean arg3, int arg4, class361 arg5, int[][][] arg6) {
+    public void method14097(CameraTrackable arg0, Vector3 arg1, Quaternion arg2, boolean arg3, int arg4, CollisionMap arg5, int[][][] arg6) {
         this.field8741 = arg0;
         this.field8736.method5334(arg1);
         this.field8737.method5214(arg2);
@@ -49,7 +49,7 @@ public class PositionEntity extends Position {
     }
 
     @ObfuscatedName("aav.u(FLmv;[[[IB)V")
-    public void method4014(float arg0, class361 arg1, int[][][] arg2) {
+    public void method4014(float arg0, CollisionMap arg1, int[][][] arg2) {
         if (this.field8741 == null) {
             return;
         }
@@ -82,7 +82,7 @@ public class PositionEntity extends Position {
     }
 
     @ObfuscatedName("aav.k(Lmv;[[[IB)V")
-    public void method14099(class361 arg0, int[][][] arg1) {
+    public void method14099(CollisionMap arg0, int[][][] arg1) {
         if (this.method4030() && (this.field2340.method3734() || this.field2340.method3765())) {
             Quaternion var3 = this.method14098();
             if (this.field2340.method3765() && arg1 != null) {

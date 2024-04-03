@@ -136,7 +136,7 @@ public class HardwarePlatformLoader implements NativeLibraryLoader {
 
     @ObfuscatedName("nb.m(Ljava/lang/String;B)Z")
     public boolean method6800(String arg0) {
-        return this.method6801(arg0, class391.class);
+        return this.method6801(arg0, HardwarePlatformLoaderException.class);
     }
 
     @ObfuscatedName("nb.t(Ljava/lang/String;Ljava/lang/Class;B)Z")
@@ -163,7 +163,7 @@ public class HardwarePlatformLoader implements NativeLibraryLoader {
                 return true;
             } catch (NoSuchMethodException var11) {
                 System.load(var4.getPath());
-                this.field4160.put(arg0, class391.class);
+                this.field4160.put(arg0, HardwarePlatformLoaderException.class);
                 return true;
             } catch (Throwable var12) {
             }

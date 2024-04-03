@@ -441,7 +441,7 @@ public class MiniMap {
             }
             Graphic var14 = arg2.method3124(arg0);
             if (var14 != null) {
-                class133.method2679(arg0, var9, var8.field4785, var14.field1729, var14.field1726);
+                WorldMapRelated2.method2679(arg0, var9, var8.field4785, var14.field1729, var14.field1726);
             }
             if (var8.field4795 > 0) {
                 for (int var15 = 0; var15 < var9.length / 2 - 1; var15++) {

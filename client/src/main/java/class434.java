@@ -4,29 +4,29 @@ import deob.ObfuscatedName;
 public final class class434 {
 
     @ObfuscatedName("pp.u")
-    public static final class830 field4676 = new class830();
+    public static final PathFinderEntitySize_Sub5 field4676 = new PathFinderEntitySize_Sub5();
 
     @ObfuscatedName("pp.j")
-    public static final class829 field4672 = new class829();
+    public static final PathFinderEntitySize_Sub4 field4672 = new PathFinderEntitySize_Sub4();
 
     @ObfuscatedName("pp.a")
-    public static final class827 field4673 = new class827();
+    public static final PathFinderEntitySize_Sub2 field4673 = new PathFinderEntitySize_Sub2();
 
     @ObfuscatedName("pp.s")
-    public static final class831 field4674 = new class831();
+    public static final PathFinderEntitySize_Sub6 field4674 = new PathFinderEntitySize_Sub6();
 
     @ObfuscatedName("pp.c")
-    public static final class828 field4675 = new class828();
+    public static final PathFinderEntitySize_Sub3 field4675 = new PathFinderEntitySize_Sub3();
 
     @ObfuscatedName("pp.m")
-    public static final class826 field4671 = new class826();
+    public static final PathFinderEntitySize_Sub1 field4671 = new PathFinderEntitySize_Sub1();
 
     public class434() throws Throwable {
         throw new Error();
     }
 
     @ObfuscatedName("fu.u(III)Lpq;")
-    public static class435 method3645(int arg0, int arg1) {
+    public static PathFinderEntitySize method3645(int arg0, int arg1) {
         field4676.field4682 = arg0;
         field4676.field4680 = arg1;
         field4676.field4681 = 1;
@@ -35,7 +35,7 @@ public final class class434 {
     }
 
     @ObfuscatedName("tr.a(IIIIIS)Lpq;")
-    public static class435 method11404(int arg0, int arg1, int arg2, int arg3, int arg4) {
+    public static PathFinderEntitySize method11404(int arg0, int arg1, int arg2, int arg3, int arg4) {
         field4673.field4682 = arg0;
         field4673.field4680 = arg1;
         field4673.field4681 = arg2;
@@ -45,7 +45,7 @@ public final class class434 {
     }
 
     @ObfuscatedName("nt.s(IIIIII)Lpq;")
-    public static class435 method6645(int arg0, int arg1, int arg2, int arg3, int arg4) {
+    public static PathFinderEntitySize method6645(int arg0, int arg1, int arg2, int arg3, int arg4) {
         field4674.field4682 = arg0;
         field4674.field4680 = arg1;
         field4674.field4681 = arg2;
@@ -55,7 +55,7 @@ public final class class434 {
     }
 
     @ObfuscatedName("ai.c(IIIILtn;II)Lpq;")
-    public static class435 method1767(int arg0, int arg1, int arg2, int arg3, LocShape arg4, int arg5) {
+    public static PathFinderEntitySize method1767(int arg0, int arg1, int arg2, int arg3, LocShape arg4, int arg5) {
         field4675.field4682 = arg0;
         field4675.field4680 = arg1;
         field4675.field4681 = arg2;
@@ -66,7 +66,7 @@ public final class class434 {
     }
 
     @ObfuscatedName("pj.m(IIIILtn;IB)Lpq;")
-    public static class435 method7893(int arg0, int arg1, int arg2, int arg3, LocShape arg4, int arg5) {
+    public static PathFinderEntitySize method7893(int arg0, int arg1, int arg2, int arg3, LocShape arg4, int arg5) {
         field4671.field4682 = arg0;
         field4671.field4680 = arg1;
         field4671.field4681 = arg2;

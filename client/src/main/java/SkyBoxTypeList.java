@@ -41,17 +41,17 @@ public class SkyBoxTypeList {
     }
 
     @ObfuscatedName("ot.j(IIIILfj;I)Lmq;")
-    public class366 method7361(int arg0, int arg1, int arg2, int arg3, SkyDecorTypeList arg4) {
-        class367[] var6 = null;
+    public SkyBox method7361(int arg0, int arg1, int arg2, int arg3, SkyDecorTypeList arg4) {
+        SkyBoxRelated[] var6 = null;
         SkyBoxType var7 = this.method7360(arg0);
         if (var7.field4457 != null) {
-            var6 = new class367[var7.field4457.length];
+            var6 = new SkyBoxRelated[var7.field4457.length];
             for (int var8 = 0; var8 < var6.length; var8++) {
                 SkyDecorType var9 = arg4.method3601(var7.field4457[var8]);
-                var6[var8] = new class367(var9.field2156, var9.field2150, var9.field2152, var9.field2153, var9.field2154, var9.field2151, var9.field2155, var9.field2159, var9.field2158, var9.field2157, var9.field2160);
+                var6[var8] = new SkyBoxRelated(var9.field2156, var9.field2150, var9.field2152, var9.field2153, var9.field2154, var9.field2151, var9.field2155, var9.field2159, var9.field2158, var9.field2157, var9.field2160);
             }
         }
-        return new class366(var7.field4459, var6, var7.field4458, arg1, arg2, arg3, var7.field4460, var7.field4461);
+        return new SkyBox(var7.field4459, var6, var7.field4458, arg1, arg2, arg3, var7.field4460, var7.field4461);
     }
 
     @ObfuscatedName("ot.a(B)V")

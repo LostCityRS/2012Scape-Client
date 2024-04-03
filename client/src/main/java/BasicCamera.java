@@ -44,39 +44,39 @@ public class BasicCamera extends Camera {
         }
         if ((var4 >> 7 & 0x1) == 1) {
             int var9 = arg0.method15239();
-            if ((var9 >> class189.field2180.field2186 & 0x1) == 1) {
+            if ((var9 >> CameraSettingType.field2180.field2186 & 0x1) == 1) {
                 this.field2229.method5292(arg0);
             }
-            if ((var9 >> class189.field2181.field2186 & 0x1) == 1) {
+            if ((var9 >> CameraSettingType.field2181.field2186 & 0x1) == 1) {
                 this.field2230.method5292(arg0);
             }
-            if ((var9 >> class189.field2173.field2186 & 0x1) == 1) {
+            if ((var9 >> CameraSettingType.field2173.field2186 & 0x1) == 1) {
                 this.field2232.method5292(arg0);
             }
-            if ((var9 >> class189.field2174.field2186 & 0x1) == 1) {
+            if ((var9 >> CameraSettingType.field2174.field2186 & 0x1) == 1) {
                 this.field2233.method5292(arg0);
             }
-            if ((var9 >> class189.field2177.field2186 & 0x1) == 1) {
+            if ((var9 >> CameraSettingType.field2177.field2186 & 0x1) == 1) {
                 this.field2223 = arg0.method15324();
                 this.field2239 = arg0.method15324();
             }
-            if ((var9 >> class189.field2176.field2186 & 0x1) == 1) {
+            if ((var9 >> CameraSettingType.field2176.field2186 & 0x1) == 1) {
                 this.field2218 = arg0.method15324();
                 this.field2241 = arg0.method15324();
             }
-            if ((var9 >> class189.field2171.field2186 & 0x1) == 1) {
+            if ((var9 >> CameraSettingType.field2171.field2186 & 0x1) == 1) {
                 this.field2220 = CameraProjectionMode.method8664(arg0.method15220());
             }
-            if ((var9 >> class189.field2178.field2186 & 0x1) == 1) {
+            if ((var9 >> CameraSettingType.field2178.field2186 & 0x1) == 1) {
                 this.field2238 = arg0.method15241();
                 arg0.method15220();
             }
-            if ((var9 >> class189.field2179.field2186 & 0x1) == 1) {
+            if ((var9 >> CameraSettingType.field2179.field2186 & 0x1) == 1) {
                 int var10 = arg0.method15220();
                 this.field2242 = (var10 & 0x1) == 1;
                 this.field2243 = (var10 & 0x2) == 2;
             }
-            if ((var9 >> class189.field2175.field2186 & 0x1) == 1) {
+            if ((var9 >> CameraSettingType.field2175.field2186 & 0x1) == 1) {
                 int var11 = arg0.method15220();
                 for (int var12 = 0; var12 < var11; var12++) {
                     int var13 = arg0.method15220();
@@ -84,7 +84,7 @@ public class BasicCamera extends Camera {
                     if (var13 == 0) {
                         this.method3710(var14);
                     } else {
-                        class179 var15 = Statics.method7654(arg0.method15220());
+                        CameraEffectType var15 = Statics.method7654(arg0.method15220());
                         boolean var16 = true;
                         Iterator var17 = this.field2225.iterator();
                         while (var17.hasNext()) {
@@ -101,23 +101,23 @@ public class BasicCamera extends Camera {
                     }
                 }
             }
-            if ((var9 >> class189.field2172.field2186 & 0x1) == 1) {
+            if ((var9 >> CameraSettingType.field2172.field2186 & 0x1) == 1) {
                 this.field2244 = arg0.method15239();
                 this.field2236 = arg0.method15324();
             }
-            if ((var9 >> class189.field2182.field2186 & 0x1) == 1) {
+            if ((var9 >> CameraSettingType.field2182.field2186 & 0x1) == 1) {
                 this.field2226 = CameraLinearMovementMode.method1955(arg0.method15220());
             }
-            if ((var9 >> class189.field2183.field2186 & 0x1) == 1) {
+            if ((var9 >> CameraSettingType.field2183.field2186 & 0x1) == 1) {
                 this.field2246.method5292(arg0);
                 this.field2235.method5292(arg0);
                 this.field2245 = arg0.method15324();
                 this.field2237 = arg0.method15324();
             }
-            if ((var9 >> class189.field2184.field2186 & 0x1) == 1) {
+            if ((var9 >> CameraSettingType.field2184.field2186 & 0x1) == 1) {
                 arg0.method15324();
             }
-            if ((var9 >> class189.field2185.field2186 & 0x1) == 1) {
+            if ((var9 >> CameraSettingType.field2185.field2186 & 0x1) == 1) {
                 this.field2228 = arg0.method15324();
             }
         }

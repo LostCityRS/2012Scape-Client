@@ -43,7 +43,7 @@ public class ClientScriptState {
     public int field5221 = 0;
 
     @ObfuscatedName("rn.q")
-    public class499[] field5225 = new class499[50];
+    public ScriptFrame[] field5225 = new ScriptFrame[50];
 
     @ObfuscatedName("rn.p")
     public ActiveComponent field5223 = new ActiveComponent();
@@ -52,7 +52,7 @@ public class ClientScriptState {
     public ActiveComponent field5210 = new ActiveComponent();
 
     @ObfuscatedName("rn.b")
-    public class270 field5213;
+    public QuickChatPhrase field5213;
 
     @ObfuscatedName("rn.x")
     public ClanSettings field5226;
@@ -76,7 +76,7 @@ public class ClientScriptState {
     public int field5232;
 
     @ObfuscatedName("rn.y")
-    public class53 field5233;
+    public FileChooser field5233;
 
     @ObfuscatedName("rn.e")
     public int[] field5227;

@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import java.awt.*;
 
 @ObfuscatedName("ja")
-public class ja extends RendererToolkit implements class10 {
+public class ja extends RendererToolkit implements SoftwareRendererRelated {
 
     public long nativeid = 0L;
 
@@ -153,7 +153,7 @@ public class ja extends RendererToolkit implements class10 {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        for (class914 var8 = (class914) arg0.field1311.method11670(); var8 != null; var8 = (class914) arg0.field1311.method11671()) {
+        for (Particle var8 = (Particle) arg0.field1311.method11670(); var8 != null; var8 = (Particle) arg0.field1311.method11671()) {
             field439[var3++] = var8.field10145;
             field439[var3++] = var8.field10146;
             field439[var3++] = var8.field10147;
@@ -167,12 +167,12 @@ public class ja extends RendererToolkit implements class10 {
     }
 
     @ObfuscatedName("ja.t()Lcg;")
-    public ToolkitInfo method456() {
-        return new ToolkitInfo(0, "SSE", 1, "CPU", 0L);
+    public RendererInfo method456() {
+        return new RendererInfo(0, "SSE", 1, "CPU", 0L);
     }
 
     @ObfuscatedName("ja.f(II)V")
-    public void method653(int arg0, int arg1) throws class881 {
+    public void method653(int arg0, int arg1) throws RendererException {
         za var3 = (za) this.method458();
         if (var3 == null) {
             throw new IllegalStateException();
@@ -591,17 +591,17 @@ public class ja extends RendererToolkit implements class10 {
     }
 
     @ObfuscatedName("ja.ct(IIIIII)Ldj;")
-    public class127 method788(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+    public EnvironmentSampler method788(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
         return null;
     }
 
     @ObfuscatedName("ja.cu(Ldj;Ldj;FLdj;)Ldj;")
-    public class127 method537(class127 arg0, class127 arg1, float arg2, class127 arg3) {
+    public EnvironmentSampler method537(EnvironmentSampler arg0, EnvironmentSampler arg1, float arg2, EnvironmentSampler arg3) {
         return null;
     }
 
     @ObfuscatedName("ja.cc(Ldj;)V")
-    public void method549(class127 arg0) {
+    public void method549(EnvironmentSampler arg0) {
     }
 
     @ObfuscatedName("ja.dj(IIII)V")

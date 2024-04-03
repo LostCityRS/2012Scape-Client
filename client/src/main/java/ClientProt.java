@@ -94,7 +94,7 @@ public class ClientProt {
     public static final ClientProt field2944 = new ClientProt(29, -2);
 
     @ObfuscatedName("jm.ap")
-    public static final ClientProt field2873 = new ClientProt(30, 0);
+    public static final ClientProt NO_TIMEOUT = new ClientProt(30, 0);
 
     @ObfuscatedName("jm.ag")
     public static final ClientProt field2880 = new ClientProt(31, 6);

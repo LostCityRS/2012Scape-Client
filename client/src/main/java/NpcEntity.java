@@ -31,7 +31,7 @@ public class NpcEntity extends PathingEntity {
     public String field10077;
 
     @ObfuscatedName("ahs.cw")
-    public final class114 field10078 = new class114(32);
+    public final NpcVarProvider field10078 = new NpcVarProvider(32);
 
     @ObfuscatedName("ahs.cx")
     public int[] field10079 = new int[6];

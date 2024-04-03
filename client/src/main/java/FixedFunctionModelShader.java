@@ -27,7 +27,7 @@ public class FixedFunctionModelShader extends ModelShader {
     public void method14039() {
         this.field2270.method13557(this.field2268);
         this.field2270.method13566().method5412(this.field2248);
-        this.field2270.method13567(class250.field2549);
+        this.field2270.method13567(TextureTramsformType.field2549);
         this.field2270.method13596(class255.field2582, this.field2267, this.field2261, this.field2269, this.field2252);
     }
 

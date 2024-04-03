@@ -23,20 +23,20 @@ public class DxVertexDeclaration extends VertexDeclaration {
             short var6 = 0;
             VertexDeclarationElement var7 = this.field2422[var5];
             for (int var8 = 0; var8 < var7.method4484(); var8++) {
-                class237 var9 = var7.method4482(var8);
-                if (class237.field2495 == var9) {
+                VertexDeclarationElementComponent var9 = var7.method4482(var8);
+                if (VertexDeclarationElementComponent.field2495 == var9) {
                     this.method14172(var4, var5, var6, (byte) 2, (byte) 0, (byte) 0, (byte) 0);
-                } else if (class237.field2480 == var9) {
+                } else if (VertexDeclarationElementComponent.field2480 == var9) {
                     this.method14172(var4, var5, var6, (byte) 2, (byte) 0, (byte) 3, (byte) 0);
-                } else if (class237.field2488 == var9) {
+                } else if (VertexDeclarationElementComponent.field2488 == var9) {
                     this.method14172(var4, var5, var6, (byte) 4, (byte) 0, (byte) 10, (byte) 0);
-                } else if (class237.field2482 == var9) {
+                } else if (VertexDeclarationElementComponent.field2482 == var9) {
                     this.method14172(var4, var5, var6, (byte) 0, (byte) 0, (byte) 5, var3++);
-                } else if (class237.field2483 == var9) {
+                } else if (VertexDeclarationElementComponent.field2483 == var9) {
                     this.method14172(var4, var5, var6, (byte) 1, (byte) 0, (byte) 5, var3++);
-                } else if (class237.field2484 == var9) {
+                } else if (VertexDeclarationElementComponent.field2484 == var9) {
                     this.method14172(var4, var5, var6, (byte) 2, (byte) 0, (byte) 5, var3++);
-                } else if (class237.field2485 == var9) {
+                } else if (VertexDeclarationElementComponent.field2485 == var9) {
                     this.method14172(var4, var5, var6, (byte) 3, (byte) 0, (byte) 5, var3++);
                 }
                 var6 = (short) (var9.field2486 + var6);

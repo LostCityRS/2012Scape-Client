@@ -48,7 +48,7 @@ public class QuickChatPhraseType extends SecondaryNode {
             this.field10391 = new int[var5][];
             for (int var6 = 0; var6 < var5; var6++) {
                 int var7 = arg0.method15239();
-                class473 var8 = Statics.method15663(var7);
+                QuickChatDynamicCommand var8 = Statics.method15663(var7);
                 if (var8 != null) {
                     this.field10390[var6] = var7;
                     this.field10391[var6] = new int[var8.field5032];
@@ -110,7 +110,7 @@ public class QuickChatPhraseType extends SecondaryNode {
     }
 
     @ObfuscatedName("ajt.t(II)Lqz;")
-    public class473 method16752(int arg0) {
+    public QuickChatDynamicCommand method16752(int arg0) {
         return this.field10390 == null || arg0 < 0 || arg0 > this.field10390.length ? null : Statics.method15663(this.field10390[arg0]);
     }
 

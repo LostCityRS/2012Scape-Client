@@ -72,7 +72,7 @@ public class World {
     public LocTypeList field3815;
 
     @ObfuscatedName("ml.r")
-    public class361[] field3811 = new class361[4];
+    public CollisionMap[] field3811 = new CollisionMap[4];
 
     @ObfuscatedName("ml.g")
     public int[][] field3812;
@@ -223,7 +223,7 @@ public class World {
     }
 
     @ObfuscatedName("ml.w(II)Lmv;")
-    public class361 method6101(int arg0) {
+    public CollisionMap method6101(int arg0) {
         return this.field3811[arg0];
     }
 
@@ -705,7 +705,7 @@ public class World {
         this.field3812 = new int[this.field3799][this.field3826];
         this.field3823 = new int[this.field3799][this.field3826];
         for (int var2 = 0; var2 < 4; var2++) {
-            this.field3811[var2] = class361.method4718(this.field3799, this.field3826);
+            this.field3811[var2] = CollisionMap.method4718(this.field3799, this.field3826);
         }
         this.field3814 = new byte[4][this.field3799][this.field3826];
         this.field3803 = new SceneLevelTileFlags(4, this.field3799, this.field3826);
@@ -750,7 +750,7 @@ public class World {
             this.field3824 = this.field3795;
         }
         this.field3795 = new CoordGrid(0, (this.field3790 - (this.field3799 >> 4)) * 8, (this.field3798 - (this.field3826 >> 4)) * 8);
-        this.field3829 = class408.method7084(this.field3795.field4836, this.field3795.field4838);
+        this.field3829 = WorldMap.method7084(this.field3795.field4836, this.field3795.field4838);
         this.field3806 = null;
         if (!this.field3813) {
             this.method6126(arg2);
@@ -846,14 +846,14 @@ public class World {
                 var27.field777 = var27.field777 * 262144 - var3 * 512;
             }
         }
-        for (class770 var28 = (class770) class770.field9278.method11563(); var28 != null; var28 = (class770) class770.field9278.method11567()) {
+        for (ChangeLocationRequest var28 = (ChangeLocationRequest) ChangeLocationRequest.field9278.method11563(); var28 != null; var28 = (ChangeLocationRequest) ChangeLocationRequest.field9278.method11567()) {
             var28.field9291 -= var2;
             var28.field9280 -= var3;
             if (RebuildType.field3841 != this.field3827 && (var28.field9291 < 0 || var28.field9280 < 0 || var28.field9291 >= this.field3799 || var28.field9280 >= this.field3826)) {
                 var28.method6979();
             }
         }
-        for (class770 var29 = (class770) class770.field9292.method11563(); var29 != null; var29 = (class770) class770.field9292.method11567()) {
+        for (ChangeLocationRequest var29 = (ChangeLocationRequest) ChangeLocationRequest.field9292.method11563(); var29 != null; var29 = (ChangeLocationRequest) ChangeLocationRequest.field9292.method11567()) {
             var29.field9291 -= var2;
             var29.field9280 -= var3;
             if (RebuildType.field3841 != this.field3827 && (var29.field9291 < 0 || var29.field9280 < 0 || var29.field9291 >= this.field3799 || var29.field9280 >= this.field3826)) {
@@ -935,7 +935,7 @@ public class World {
     @ObfuscatedName("ml.az(I)Z")
     public boolean method6128() {
         if (!this.field3813) {
-            class356.method8512(false);
+            MapLogicRelated.method8512(false);
         }
         this.field3816 = 0;
         for (int var1 = 0; var1 < this.field3800.length; var1++) {
@@ -1058,7 +1058,7 @@ public class World {
                 }
             }
         }
-        int var17 = class185.method5012(Statics.field4961.field9644.method15853()).field2149 * 64;
+        int var17 = DrawDistance.method5012(Statics.field4961.field9644.method15853()).field2149 * 64;
         if (Statics.field5187.method454()) {
             var17++;
         }
@@ -1103,12 +1103,12 @@ public class World {
             if (this.field3827.method6249()) {
                 this.method6131(this.field3793, this.field3830);
                 if (!this.field3813) {
-                    class356.method8512(true);
+                    MapLogicRelated.method8512(true);
                 }
             } else {
                 this.method6184(this.field3793, this.field3830);
                 if (!this.field3813) {
-                    class356.method8512(true);
+                    MapLogicRelated.method8512(true);
                 }
             }
             this.field3793.method5841(0, this.field3794.field3697[0]);
@@ -1121,12 +1121,12 @@ public class World {
         this.field3794.method5842(Statics.field5187, var15 ? this.field3793.field3697 : (int[][][]) null, this.field3811);
         if (this.field3827.method6249()) {
             if (!this.field3813) {
-                class356.method8512(true);
+                MapLogicRelated.method8512(true);
             }
             this.method6209(this.field3794, this.field3828);
         } else {
             if (!this.field3813) {
-                class356.method8512(true);
+                MapLogicRelated.method8512(true);
             }
             this.method6203(this.field3794, this.field3828);
             if (this.field3810 != null) {
@@ -1134,7 +1134,7 @@ public class World {
             }
         }
         if (!this.field3813) {
-            class356.method8512(true);
+            MapLogicRelated.method8512(true);
         }
         this.field3794.method5833(Statics.field5187, var15 ? this.field3791.field4502[0] : null, null);
         if (this.field3813) {
@@ -1145,12 +1145,12 @@ public class World {
             this.method6174(75);
         }
         if (!this.field3813) {
-            class356.method8512(true);
+            MapLogicRelated.method8512(true);
         }
         if (var15) {
             this.field3791.method7404(true);
             if (!this.field3813) {
-                class356.method8512(true);
+                MapLogicRelated.method8512(true);
             }
             if (this.field3827.method6249()) {
                 this.method6209(this.field3793, this.field3832);
@@ -1158,12 +1158,12 @@ public class World {
                 this.method6203(this.field3793, this.field3832);
             }
             if (!this.field3813) {
-                class356.method8512(true);
+                MapLogicRelated.method8512(true);
             }
             this.field3793.method5833(Statics.field5187, null, this.field3791.field4527[0]);
             this.field3793.method14291(Statics.field5187, true);
             if (!this.field3813) {
-                class356.method8512(true);
+                MapLogicRelated.method8512(true);
             }
             this.field3791.method7404(false);
             if (this.field3813) {
@@ -1218,7 +1218,7 @@ public class World {
             }
         }
         Statics.method7076();
-        class770.method11709();
+        ChangeLocationRequest.method11709();
         if (Statics.method5937() == GameShellEnvironment.field4118 && client.field8975.method1927() != null && client.field8923 == 16) {
             ClientMessage var27 = ClientMessage.method14781(ClientProt.field2939, client.field8975.field834);
             var27.field9467.method15223(1057001181);

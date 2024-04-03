@@ -16,19 +16,19 @@ public class GlToolkit extends RendererToolkit {
     public int field8080;
 
     @ObfuscatedName("yq.bx")
-    public final class104 field8083;
+    public final GlRelated8 field8083;
 
     @ObfuscatedName("yq.bm")
     public GlEffectList field8082;
 
     @ObfuscatedName("yq.bb")
-    public class102 field8093;
+    public GlPostProcessing field8093;
 
     @ObfuscatedName("yq.be")
     public GlColourGradingBloomEffect field8047;
 
     @ObfuscatedName("yq.bw")
-    public class99 field8085 = new class99();
+    public GlParticleRenderer field8085 = new GlParticleRenderer();
 
     @ObfuscatedName("yq.bo")
     public Matrix4x4 field8086 = new Matrix4x4();
@@ -334,7 +334,7 @@ public class GlToolkit extends RendererToolkit {
     public GlRelated2 field8186;
 
     @ObfuscatedName("yq.fi")
-    public class679 field8187;
+    public GlEnvironmentSampler field8187;
 
     @ObfuscatedName("yq.fb")
     public GlGraphicRelated field8204;
@@ -541,10 +541,10 @@ public class GlToolkit extends RendererToolkit {
                 }
                 ColourUtils.method8092(false, true);
                 this.field8178 = true;
-                this.field8083 = new class104(this, this.field400);
+                this.field8083 = new GlRelated8(this, this.field400);
                 this.method13475();
                 this.field8090 = new GlEffectRelated5(this);
-                this.field8093 = new class102(this);
+                this.field8093 = new GlPostProcessing(this);
                 if (this.field8093.method2298()) {
                     this.field8047 = new GlColourGradingBloomEffect(this);
                     if (!this.field8047.method16224()) {
@@ -723,7 +723,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.t()Lcg;")
-    public ToolkitInfo method456() {
+    public RendererInfo method456() {
         int var1 = -1;
         if (this.field8036.indexOf("nvidia") != -1) {
             var1 = 4318;
@@ -732,11 +732,11 @@ public class GlToolkit extends RendererToolkit {
         } else if (this.field8036.indexOf("ati") != -1) {
             var1 = 4098;
         }
-        return new ToolkitInfo(var1, "OpenGL", this.field8192, this.field8084, 0L);
+        return new RendererInfo(var1, "OpenGL", this.field8192, this.field8084, 0L);
     }
 
     @ObfuscatedName("yq.f(II)V")
-    public void method653(int arg0, int arg1) throws class881 {
+    public void method653(int arg0, int arg1) throws RendererException {
         try {
             this.field415.method918();
         } catch (Exception var4) {
@@ -1054,7 +1054,7 @@ public class GlToolkit extends RendererToolkit {
             int var10 = IntMath.method1962(var9);
             OpenGL.glVertex2f((float) arg2 + var6, var7);
             for (int var11 = 16384 - var10; var11 > 0; var11 -= var10) {
-                OpenGL.glVertex2f(class101.field1146[var11] * (float) arg2 + var6, class101.field1147[var11] * (float) arg2 + var7);
+                OpenGL.glVertex2f(GlTrig.field1146[var11] * (float) arg2 + var6, GlTrig.field1147[var11] * (float) arg2 + var7);
             }
             OpenGL.glVertex2f((float) arg2 + var6, var7);
             OpenGL.glEnd();
@@ -1183,7 +1183,7 @@ public class GlToolkit extends RendererToolkit {
 
     @ObfuscatedName("yq.bn(IIIIIILta;II)V")
     public void method440(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, GraphicsRelated arg6, int arg7, int arg8) {
-        class669 var10 = (class669) arg6;
+        GlGraphicRelated2 var10 = (GlGraphicRelated2) arg6;
         GlGraphicRelated var11 = var10.field7651;
         this.method13309();
         this.method13315(var10.field7651);
@@ -1212,7 +1212,7 @@ public class GlToolkit extends RendererToolkit {
         if (arg0 == arg2 && arg1 == arg3) {
             return;
         }
-        class669 var13 = (class669) arg6;
+        GlGraphicRelated2 var13 = (GlGraphicRelated2) arg6;
         GlGraphicRelated var14 = var13.field7651;
         this.method13309();
         this.method13315(var13.field7651);
@@ -1457,12 +1457,12 @@ public class GlToolkit extends RendererToolkit {
 
     @ObfuscatedName("yq.cq(II[I[I)Lta;")
     public GraphicsRelated method571(int arg0, int arg1, int[] arg2, int[] arg3) {
-        return class669.method12942(this, arg0, arg1, arg2, arg3);
+        return GlGraphicRelated2.method12942(this, arg0, arg1, arg2, arg3);
     }
 
     @ObfuscatedName("yq.DA(ILta;II)V")
     public void method684(int arg0, GraphicsRelated arg1, int arg2, int arg3) {
-        class669 var5 = (class669) arg1;
+        GlGraphicRelated2 var5 = (GlGraphicRelated2) arg1;
         GlGraphicRelated var6 = var5.field7651;
         this.method13309();
         this.method13315(var5.field7651);
@@ -2013,28 +2013,28 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.ct(IIIIII)Ldj;")
-    public class127 method788(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
-        return this.field8206 ? new class896(this, arg0, arg1, arg2, arg3, arg4, arg5) : null;
+    public EnvironmentSampler method788(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+        return this.field8206 ? new GlEnvironmentSampler_Sub2(this, arg0, arg1, arg2, arg3, arg4, arg5) : null;
     }
 
     @ObfuscatedName("yq.cu(Ldj;Ldj;FLdj;)Ldj;")
-    public class127 method537(class127 arg0, class127 arg1, float arg2, class127 arg3) {
+    public EnvironmentSampler method537(EnvironmentSampler arg0, EnvironmentSampler arg1, float arg2, EnvironmentSampler arg3) {
         if (arg0 != null && arg1 != null && this.field8206 && this.field8176) {
-            class895 var5 = null;
-            class679 var6 = (class679) arg0;
-            class679 var7 = (class679) arg1;
+            GlEnvironmentSampler_Sub1 var5 = null;
+            GlEnvironmentSampler var6 = (GlEnvironmentSampler) arg0;
+            GlEnvironmentSampler var7 = (GlEnvironmentSampler) arg1;
             GlCubeTexture var8 = var6.method13186();
             GlCubeTexture var9 = var7.method13186();
             if (var8 != null && var9 != null) {
                 int var10 = var8.field7448 > var9.field7448 ? var8.field7448 : var9.field7448;
-                if (arg0 != arg3 && arg1 != arg3 && arg3 instanceof class895) {
-                    class895 var11 = (class895) arg3;
+                if (arg0 != arg3 && arg1 != arg3 && arg3 instanceof GlEnvironmentSampler_Sub1) {
+                    GlEnvironmentSampler_Sub1 var11 = (GlEnvironmentSampler_Sub1) arg3;
                     if (var11.method16016() == var10) {
                         var5 = var11;
                     }
                 }
                 if (var5 == null) {
-                    var5 = new class895(this, var10);
+                    var5 = new GlEnvironmentSampler_Sub1(this, var10);
                 }
                 if (var5.method16015(var8, var9, arg2)) {
                     return var5;
@@ -2045,8 +2045,8 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.cc(Ldj;)V")
-    public final void method549(class127 arg0) {
-        this.field8187 = (class679) arg0;
+    public final void method549(EnvironmentSampler arg0) {
+        this.field8187 = (GlEnvironmentSampler) arg0;
     }
 
     @ObfuscatedName("yq.oh()Lxl;")

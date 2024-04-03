@@ -175,10 +175,10 @@ public class Packet extends Node {
 
     @ObfuscatedName("aet.h(Ljava/lang/CharSequence;B)V")
     public void method15230(CharSequence arg0) {
-        int var2 = class479.method7859(arg0);
+        int var2 = Utf8.method7859(arg0);
         this.field9629[++this.field9626 - 1] = 0;
         this.method15315(var2);
-        this.field9626 += class479.method4006(this.field9629, this.field9626, arg0);
+        this.field9626 += Utf8.method4006(this.field9629, this.field9626, arg0);
     }
 
     @ObfuscatedName("aet.r([BIIB)V")

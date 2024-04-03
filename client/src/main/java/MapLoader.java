@@ -305,10 +305,10 @@ public class MapLoader {
     }
 
     @ObfuscatedName("lq.c(Laet;IIII[Lmv;I)V")
-    public final void method5838(Packet arg0, int arg1, int arg2, int arg3, int arg4, class361[] arg5) {
+    public final void method5838(Packet arg0, int arg1, int arg2, int arg3, int arg4, CollisionMap[] arg5) {
         if (!this.field3644) {
             for (int var7 = 0; var7 < 4; var7++) {
-                class361 var8 = arg5[var7];
+                CollisionMap var8 = arg5[var7];
                 for (int var9 = 0; var9 < 64; var9++) {
                     for (int var10 = 0; var10 < 64; var10++) {
                         int var11 = arg1 + var9;
@@ -332,15 +332,15 @@ public class MapLoader {
     }
 
     @ObfuscatedName("lq.m(Laet;IIIIIII[Lmv;B)V")
-    public final void method5839(Packet arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, class361[] arg8) {
+    public final void method5839(Packet arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, CollisionMap[] arg8) {
         int var10 = (arg5 & 0x7) * 8;
         int var11 = (arg6 & 0x7) * 8;
         if (!this.field3644) {
-            class361 var12 = arg8[arg1];
+            CollisionMap var12 = arg8[arg1];
             for (int var13 = 0; var13 < 8; var13++) {
                 for (int var14 = 0; var14 < 8; var14++) {
-                    int var15 = arg2 + class339.method1725(var13 & 0x7, var14 & 0x7, arg7);
-                    int var16 = arg3 + class339.method4739(var13 & 0x7, var14 & 0x7, arg7);
+                    int var15 = arg2 + MapCoordUtil.method1725(var13 & 0x7, var14 & 0x7, arg7);
+                    int var16 = arg3 + MapCoordUtil.method4739(var13 & 0x7, var14 & 0x7, arg7);
                     if (var15 > 0 && var15 < this.field3627 - 1 && var16 > 0 && var16 < this.field3643 - 1) {
                         var12.method6271(var15, var16);
                     }
@@ -381,8 +381,8 @@ public class MapLoader {
                             }
                             this.method5843(arg0, arg1, var24, var25, 0, 0, var17 + var22, var18 + var23, 0, true);
                         } else {
-                            var24 = arg2 + class339.method1725(var22 & 0x7, var23 & 0x7, arg7);
-                            var25 = arg3 + class339.method4739(var22 & 0x7, var23 & 0x7, arg7);
+                            var24 = arg2 + MapCoordUtil.method1725(var22 & 0x7, var23 & 0x7, arg7);
+                            var25 = arg3 + MapCoordUtil.method4739(var22 & 0x7, var23 & 0x7, arg7);
                             this.method5843(arg0, arg1, var24, var25, var19, var20, var17 + var22, var18 + var23, arg7, false);
                         }
                         if (var22 == 63 || var23 == 63) {
@@ -515,7 +515,7 @@ public class MapLoader {
     }
 
     @ObfuscatedName("lq.f(Lra;[[[I[Lmv;S)V")
-    public void method5842(RendererToolkit arg0, int[][][] arg1, class361[] arg2) {
+    public void method5842(RendererToolkit arg0, int[][][] arg1, CollisionMap[] arg2) {
         if (!this.field3644) {
             for (int var4 = 0; var4 < 4; var4++) {
                 for (int var5 = 0; var5 < this.field3627; var5++) {

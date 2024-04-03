@@ -8,7 +8,7 @@ public abstract class Stream {
 
     @ObfuscatedName("va.u(Ljava/net/Socket;IB)Lov;")
     public static Stream method12184(Socket arg0, int arg1) throws IOException {
-        return new class823(arg0, arg1);
+        return new SocketStream(arg0, arg1);
     }
 
     @ObfuscatedName("ov.a(I)I")
