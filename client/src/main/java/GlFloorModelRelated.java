@@ -210,10 +210,10 @@ public class GlFloorModelRelated extends Node {
         long var7 = -1L;
         int var9 = (arg2 << this.field9333.field388) + arg4;
         int var10 = (arg3 << this.field9333.field388) + arg5;
-        int var11 = this.field9333.method196(var9, var10);
+        int var11 = this.field9333.getFineHeight(var9, var10);
         if ((arg4 & 0x7F) == 0 || (arg5 & 0x7F) == 0) {
             var7 = ((long) var10 & 0xFFFFL) << 16 | (long) var9 & 0xFFFFL;
-            FloorModelNode var12 = (FloorModelNode) this.field9340.method11923(var7);
+            FloorModelNode var12 = (FloorModelNode) this.field9340.getNode(var7);
             if (var12 != null) {
                 this.method14850(var12.field9551);
                 return;

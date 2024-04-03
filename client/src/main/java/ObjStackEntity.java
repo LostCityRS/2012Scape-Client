@@ -93,7 +93,7 @@ public class ObjStackEntity extends ObjLayerEntity {
             var5 = -var4.field10495;
         }
         if (this.field10606 != var5) {
-            var2.field3476 += var5 - this.field10606;
+            var2.y += var5 - this.field10606;
             this.method8551(var2);
             this.field10606 = var5;
         }
@@ -107,16 +107,16 @@ public class ObjStackEntity extends ObjLayerEntity {
             int var11 = this.field10612 << 1;
             int var13 = -var11 / 2;
             int var14 = -var11 / 2;
-            int var15 = var10.method196((int) var2.x + var13, (int) var2.z + var14);
+            int var15 = var10.getFineHeight((int) var2.x + var13, (int) var2.z + var14);
             int var16 = var11 / 2;
             int var17 = -var11 / 2;
-            int var18 = var10.method196((int) var2.x + var16, (int) var2.z + var17);
+            int var18 = var10.getFineHeight((int) var2.x + var16, (int) var2.z + var17);
             int var19 = -var11 / 2;
             int var20 = var11 / 2;
-            int var21 = var10.method196((int) var2.x + var19, (int) var2.z + var20);
+            int var21 = var10.getFineHeight((int) var2.x + var19, (int) var2.z + var20);
             int var22 = var11 / 2;
             int var23 = var11 / 2;
-            int var24 = var10.method196((int) var2.x + var22, (int) var2.z + var23);
+            int var24 = var10.getFineHeight((int) var2.x + var22, (int) var2.z + var23);
             int var25 = var15 < var18 ? var15 : var18;
             int var26 = var21 < var24 ? var21 : var24;
             int var27 = var18 < var24 ? var18 : var24;
@@ -137,14 +137,14 @@ public class ObjStackEntity extends ObjLayerEntity {
             if (var18 + var21 < var31) {
                 var31 = var18 + var21;
             }
-            int var32 = (var31 >> 1) - (int) var2.field3476;
+            int var32 = (var31 >> 1) - (int) var2.y;
             if (var32 != 0) {
                 var6.method5116(0.0F, (float) var32, 0.0F);
             }
         }
-        var2.method5291();
+        var2.release();
         Vector3 var33 = this.getTransform().trans;
-        var6.method5116(var33.x, var33.field3476 - 10.0F, var33.z);
+        var6.method5116(var33.x, var33.y - 10.0F, var33.z);
         PickableEntity var34 = PickableEntity.method12205(true);
         this.field10613 = false;
         this.field10612 = 0;

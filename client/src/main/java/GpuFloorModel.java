@@ -212,7 +212,7 @@ public class GpuFloorModel extends FloorModel {
             }
             long var18 = (long) arg10.field1474 << 48 | (long) arg10.field1471 << 42 | (long) arg10.field1475 << 28 | (long) (var17 << 14) | (long) var16;
             Node var20;
-            for (var20 = this.field7749.method11923(var18); var20 != null; var20 = this.field7749.method11924()) {
+            for (var20 = this.field7749.getNode(var18); var20 != null; var20 = this.field7749.method11924()) {
                 GpuFloorModelRelated1 var21 = (GpuFloorModelRelated1) var20;
                 if (var21.field9438 == var16 && (float) var17 == var21.field9441 && var21.field9440.method2711(arg10)) {
                     break;
@@ -565,7 +565,7 @@ public class GpuFloorModel extends FloorModel {
             }
             Node var66 = null;
             if ((var36 & this.field7745 - 1) == 0 && (var37 & this.field7745 - 1) == 0) {
-                var66 = arg4.method11923(var43);
+                var66 = arg4.getNode(var43);
             }
             int var81;
             if (var66 == null) {
@@ -610,7 +610,7 @@ public class GpuFloorModel extends FloorModel {
                 Unsafe var77 = this.field7722.field8247;
                 var77.putFloat(this.field7756, (float) var36);
                 this.field7756 += 4L;
-                var77.putFloat(this.field7756, (float) (this.method196(var36, var37) + var42));
+                var77.putFloat(this.field7756, (float) (this.getFineHeight(var36, var37) + var42));
                 this.field7756 += 4L;
                 var77.putFloat(this.field7756, (float) var37);
                 this.field7756 += 4L;

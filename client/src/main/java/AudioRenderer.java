@@ -115,7 +115,7 @@ public class AudioRenderer {
                             int var4 = var1.field4177 >> 24 & 0x3;
                             if (Statics.localPlayerEntity.level == var4) {
                                 int var5 = (var1.field4177 & 0xFF) << 9;
-                                int var6 = Statics.localPlayerEntity.method13954() << 8;
+                                int var6 = Statics.localPlayerEntity.size() << 8;
                                 Vector3 var7 = Statics.localPlayerEntity.getTransform().trans;
                                 int var8 = var1.field4177 >> 16 & 0xFF;
                                 int var9 = (var8 << 9) + 256 - (int) var7.x + var6;
@@ -253,12 +253,12 @@ public class AudioRenderer {
             return;
         }
         Vector3 var0 = Vector3.create(Statics.localPlayerEntity.getTransform().trans);
-        CoordGrid var1 = client.field8980.method6214();
+        CoordGrid var1 = client.world.method6214();
         var0.x += var1.x << 9;
         var0.z += var1.z << 9;
-        var0.method5346((float) field4196.field4190, var0.field3476, (float) field4196.field4189);
+        var0.method5346((float) field4196.field4190, var0.y, (float) field4196.field4189);
         float var2 = var0.method5338();
-        var0.method5291();
+        var0.release();
         float var3 = 0.0F;
         float var4;
         if (var2 < (float) field4196.field4191) {

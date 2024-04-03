@@ -155,7 +155,7 @@ public class ClanSettings {
         if (this.field2368 == null) {
             return null;
         } else {
-            Node var2 = this.field2368.method11923((long) arg0);
+            Node var2 = this.field2368.getNode((long) arg0);
             return var2 != null && var2 instanceof IntNode ? Integer.valueOf(((IntNode) var2).field9556) : null;
         }
     }
@@ -165,7 +165,7 @@ public class ClanSettings {
         if (this.field2368 == null) {
             return null;
         }
-        Node var4 = this.field2368.method11923((long) arg0);
+        Node var4 = this.field2368.getNode((long) arg0);
         if (var4 != null && var4 instanceof IntNode) {
             int var5 = arg2 == 31 ? -1 : (0x1 << arg2 + 1) - 1;
             return Integer.valueOf((((IntNode) var4).field9556 & var5) >>> arg1);
@@ -179,7 +179,7 @@ public class ClanSettings {
         if (this.field2368 == null) {
             return null;
         } else {
-            Node var2 = this.field2368.method11923((long) arg0);
+            Node var2 = this.field2368.getNode((long) arg0);
             return var2 != null && var2 instanceof LongNode ? Long.valueOf(((LongNode) var2).field9555) : null;
         }
     }
@@ -189,7 +189,7 @@ public class ClanSettings {
         if (this.field2368 == null) {
             return null;
         } else {
-            Node var2 = this.field2368.method11923((long) arg0);
+            Node var2 = this.field2368.getNode((long) arg0);
             return var2 != null && var2 instanceof ObjectNode ? (String) ((ObjectNode) var2).field9550 : null;
         }
     }
@@ -376,7 +376,7 @@ public class ClanSettings {
         if (this.field2368 == null) {
             this.field2368 = new IterableMap(4);
         } else {
-            Node var3 = this.field2368.method11923((long) arg0);
+            Node var3 = this.field2368.getNode((long) arg0);
             if (var3 != null) {
                 if (var3 instanceof IntNode) {
                     IntNode var4 = (IntNode) var3;
@@ -403,7 +403,7 @@ public class ClanSettings {
         if (this.field2368 == null) {
             this.field2368 = new IterableMap(4);
         } else {
-            Node var10 = this.field2368.method11923((long) arg0);
+            Node var10 = this.field2368.getNode((long) arg0);
             if (var10 != null) {
                 if (var10 instanceof IntNode) {
                     IntNode var11 = (IntNode) var10;
@@ -426,7 +426,7 @@ public class ClanSettings {
         if (this.field2368 == null) {
             this.field2368 = new IterableMap(4);
         } else {
-            Node var4 = this.field2368.method11923((long) arg0);
+            Node var4 = this.field2368.getNode((long) arg0);
             if (var4 != null) {
                 if (var4 instanceof LongNode) {
                     LongNode var5 = (LongNode) var4;
@@ -453,7 +453,7 @@ public class ClanSettings {
         if (this.field2368 == null) {
             this.field2368 = new IterableMap(4);
         } else {
-            Node var3 = this.field2368.method11923((long) arg0);
+            Node var3 = this.field2368.getNode((long) arg0);
             if (var3 != null) {
                 if (var3 instanceof ObjectNode) {
                     ObjectNode var4 = (ObjectNode) var3;

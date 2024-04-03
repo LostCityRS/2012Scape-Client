@@ -45,7 +45,7 @@ public class StructType extends SecondaryNode {
         if (this.field10396 == null) {
             return arg1;
         } else {
-            IntNode var3 = (IntNode) this.field10396.method11923((long) arg0);
+            IntNode var3 = (IntNode) this.field10396.getNode((long) arg0);
             return var3 == null ? arg1 : var3.field9556;
         }
     }
@@ -55,7 +55,7 @@ public class StructType extends SecondaryNode {
         if (this.field10396 == null) {
             return arg1;
         } else {
-            ObjectNode var3 = (ObjectNode) this.field10396.method11923((long) arg0);
+            ObjectNode var3 = (ObjectNode) this.field10396.getNode((long) arg0);
             return var3 == null ? arg1 : (String) var3.field9550;
         }
     }

@@ -20,7 +20,7 @@ public class CameraMode1 {
         }
         if (arg4.x == Float.POSITIVE_INFINITY || Float.isNaN(arg1.x) || var9 > 5120.0F) {
             arg1.method5334(arg2);
-            arg3.method5370();
+            arg3.reset();
             return;
         }
         Vector3 var10 = Vector3.create(arg3);
@@ -55,28 +55,28 @@ public class CameraMode1 {
                 }
             }
         }
-        if (var12.field3476 > var14.field3476) {
-            if (var8.field3476 < 0.0F) {
-                var13.field3476 += arg4.field3476 * arg0;
-                if (var13.field3476 > 0.0F) {
-                    var13.field3476 = 0.0F;
+        if (var12.y > var14.y) {
+            if (var8.y < 0.0F) {
+                var13.y += arg4.y * arg0;
+                if (var13.y > 0.0F) {
+                    var13.y = 0.0F;
                 }
             } else {
-                var13.field3476 -= arg4.field3476 * arg0;
-                if (var13.field3476 < 0.0F) {
-                    var13.field3476 = 0.0F;
+                var13.y -= arg4.y * arg0;
+                if (var13.y < 0.0F) {
+                    var13.y = 0.0F;
                 }
             }
-        } else if (var10.field3476 < arg5.field3476) {
-            if (var8.field3476 < 0.0F) {
-                var13.field3476 -= arg4.field3476 * arg0;
-                if (var13.field3476 < -arg5.field3476) {
-                    var13.field3476 = -arg5.field3476;
+        } else if (var10.y < arg5.y) {
+            if (var8.y < 0.0F) {
+                var13.y -= arg4.y * arg0;
+                if (var13.y < -arg5.y) {
+                    var13.y = -arg5.y;
                 }
             } else {
-                var13.field3476 += arg4.field3476 * arg0;
-                if (var13.field3476 > arg5.field3476) {
-                    var13.field3476 = arg5.field3476;
+                var13.y += arg4.y * arg0;
+                if (var13.y > arg5.y) {
+                    var13.y = arg5.y;
                 }
             }
         }
@@ -108,12 +108,12 @@ public class CameraMode1 {
         arg3.method5321(var13, 0.8F);
         if (var9 < 10.0F && arg3.method5338() < 10.0F) {
             arg1.method5334(arg2);
-            arg3.method5370();
+            arg3.reset();
         } else {
             arg1.method5299(Vector3.method5317(arg3, arg0));
         }
-        var10.method5291();
-        var13.method5291();
-        var14.method5291();
+        var10.release();
+        var13.release();
+        var14.release();
     }
 }

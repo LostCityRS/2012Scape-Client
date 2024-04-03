@@ -349,7 +349,7 @@ public class MidiSong extends Node {
                         int var18 = var9 >> 16 & 0x7F;
                         if (var18 > 0) {
                             int var19 = var2[var16];
-                            ObjectNode var20 = (ObjectNode) this.field9382.method11923((long) var19);
+                            ObjectNode var20 = (ObjectNode) this.field9382.getNode((long) var19);
                             if (var20 == null) {
                                 var20 = new ObjectNode(new byte[128]);
                                 this.field9382.method11927(var20, (long) var19);

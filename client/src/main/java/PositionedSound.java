@@ -199,7 +199,7 @@ public class PositionedSound extends Node {
         } else if (this.field9513 != null) {
             this.field9536 = method11761(this.field9513);
             this.field9537 = this.field9513.field10051;
-            this.field9523 = this.field9513.field10039 << 9;
+            this.field9523 = this.field9513.bgsound_range << 9;
             this.field9522 = 0;
             this.field9546 = this.field9513.bgsound_volume;
             this.field9532 = 256;
@@ -269,11 +269,11 @@ public class PositionedSound extends Node {
             field9528.method11558(var7);
         } else if (arg6 != null) {
             var7.field9513 = arg6;
-            var7.field9547 = arg1 + arg6.method13954() << 9;
-            var7.field9521 = arg2 + arg6.method13954() << 9;
+            var7.field9547 = arg1 + arg6.size() << 9;
+            var7.field9521 = arg2 + arg6.size() << 9;
             var7.field9536 = method11761(arg6);
             var7.field9537 = arg6.field10051;
-            var7.field9523 = arg6.field10039 << 9;
+            var7.field9523 = arg6.bgsound_range << 9;
             var7.field9546 = arg6.bgsound_volume;
             var7.field9532 = 256;
             var7.field9524 = 256;
@@ -316,7 +316,7 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("ot.t(Lahg;S)V")
     public static void method7377(PlayerEntity arg0) {
-        PositionedSound var1 = (PositionedSound) field9516.method11923((long) arg0.localPlayerIndex);
+        PositionedSound var1 = (PositionedSound) field9516.getNode((long) arg0.localPlayerIndex);
         if (var1 == null) {
             return;
         }
@@ -329,7 +329,7 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("ao.l(Lahg;I)V")
     public static void method1807(PlayerEntity arg0) {
-        PositionedSound var1 = (PositionedSound) field9516.method11923((long) arg0.localPlayerIndex);
+        PositionedSound var1 = (PositionedSound) field9516.getNode((long) arg0.localPlayerIndex);
         if (var1 == null) {
             method14954(arg0.level, arg0.routeWaypointX[0], arg0.routeWaypointZ[0], 0, null, null, arg0);
         } else {
@@ -347,8 +347,8 @@ public class PositionedSound extends Node {
             }
         }
         int var2 = var1.field7223;
-        BASType var3 = arg0.method13959();
-        int var4 = arg0.field8616.method11812();
+        BASType var3 = arg0.getBASType();
+        int var4 = arg0.field8616.getSeqTypeId();
         if (var4 == -1 || arg0.field8616.field9899) {
             var2 = var1.field7257;
         } else if (var3.field4710 == var4 || var3.field4699 == var4 || var3.field4701 == var4 || var3.field4726 == var4) {
@@ -361,15 +361,15 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("tv.d(Lahg;I)I")
     public static int method11761(PlayerEntity arg0) {
-        int var1 = arg0.field10056;
-        BASType var2 = arg0.method13959();
-        int var3 = arg0.field8616.method11812();
+        int var1 = arg0.bgsound_walk_player;
+        BASType var2 = arg0.getBASType();
+        int var3 = arg0.field8616.getSeqTypeId();
         if (var3 == -1 || arg0.field8616.field9899) {
-            var1 = arg0.field10054;
+            var1 = arg0.bgsound_player;
         } else if (var2.field4710 == var3 || var2.field4699 == var3 || var2.field4701 == var3 || var2.field4726 == var3) {
-            var1 = arg0.field10057;
+            var1 = arg0.bgsound_run_player;
         } else if (var2.field4702 == var3 || var2.field4692 == var3 || var2.field4705 == var3 || var2.field4697 == var3) {
-            var1 = arg0.field10059;
+            var1 = arg0.bgsound_crawl_player;
         }
         return var1;
     }
@@ -381,8 +381,8 @@ public class PositionedSound extends Node {
         }
         for (PositionedSound var5 = (PositionedSound) field9528.method11563(); var5 != null; var5 = (PositionedSound) field9528.method11567()) {
             byte var6 = 1;
-            BASType var7 = var5.field9527.method13959();
-            int var8 = var5.field9527.field8616.method11812();
+            BASType var7 = var5.field9527.getBASType();
+            int var8 = var5.field9527.field8616.getSeqTypeId();
             if (var8 == -1 || var5.field9527.field8616.field9899) {
                 var6 = 0;
             } else if (var7.field4710 == var8 || var7.field4699 == var8 || var7.field4701 == var8 || var7.field4726 == var8) {
@@ -427,16 +427,16 @@ public class PositionedSound extends Node {
             }
             Vector3 var12 = var5.field9527.getTransform().trans;
             var5.field9518 = (int) var12.x;
-            var5.field9547 = (int) var12.x + (var5.field9527.method13954() << 8);
+            var5.field9547 = (int) var12.x + (var5.field9527.size() << 8);
             var5.field9519 = (int) var12.z;
-            var5.field9521 = (int) var12.z + (var5.field9527.method13954() << 8);
+            var5.field9521 = (int) var12.z + (var5.field9527.size() << 8);
             var5.field9517 = var5.field9527.level;
             method4977(var5, arg0, arg1, arg2, arg3);
         }
         for (PositionedSound var13 = (PositionedSound) field9516.method11928(); var13 != null; var13 = (PositionedSound) field9516.method11929()) {
             byte var14 = 1;
-            BASType var15 = var13.field9513.method13959();
-            int var16 = var13.field9513.field8616.method11812();
+            BASType var15 = var13.field9513.getBASType();
+            int var16 = var13.field9513.field8616.getSeqTypeId();
             if (var16 == -1 || var13.field9513.field8616.field9899) {
                 var14 = 0;
             } else if (var15.field4710 == var16 || var15.field4699 == var16 || var15.field4701 == var16 || var15.field4726 == var16) {
@@ -473,9 +473,9 @@ public class PositionedSound extends Node {
             }
             Vector3 var19 = var13.field9513.getTransform().trans;
             var13.field9518 = (int) var19.x;
-            var13.field9547 = (int) var19.x + (var13.field9513.method13954() << 8);
+            var13.field9547 = (int) var19.x + (var13.field9513.size() << 8);
             var13.field9519 = (int) var19.z;
-            var13.field9521 = (int) var19.z + (var13.field9513.method13954() << 8);
+            var13.field9521 = (int) var19.z + (var13.field9513.size() << 8);
             var13.field9517 = var13.field9513.level;
             method4977(var13, arg0, arg1, arg2, arg3);
         }
@@ -526,7 +526,7 @@ public class PositionedSound extends Node {
         if (var9 > 0 && var7 > 0) {
             var8 = (var7 - var9) * var6 / var7;
         }
-        Statics.localPlayerEntity.method13954();
+        Statics.localPlayerEntity.size();
         int var10 = 8192;
         int var11 = (arg0.field9547 + arg0.field9518) / 2 - arg2;
         int var12 = (arg0.field9521 + arg0.field9519) / 2 - arg3;

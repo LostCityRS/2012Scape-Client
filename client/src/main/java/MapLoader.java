@@ -456,7 +456,7 @@ public class MapLoader {
             return;
         }
         if (!this.field3644 && !arg9) {
-            this.field3618.field3606[arg1][arg2][arg3] = 0;
+            this.field3618.levelTileFlags[arg1][arg2][arg3] = 0;
         }
         while (true) {
             int var11 = arg0.g1();
@@ -496,7 +496,7 @@ public class MapLoader {
                 }
             } else if (var11 <= 81) {
                 if (!this.field3644 && !arg9) {
-                    this.field3618.field3606[arg1][arg2][arg3] = (byte) (var11 - 49);
+                    this.field3618.levelTileFlags[arg1][arg2][arg3] = (byte) (var11 - 49);
                 }
             } else if (!arg9) {
                 this.field3635[arg1][arg2][arg3] = (byte) (var11 - 81);
@@ -520,9 +520,9 @@ public class MapLoader {
             for (int var4 = 0; var4 < 4; var4++) {
                 for (int var5 = 0; var5 < this.field3627; var5++) {
                     for (int var6 = 0; var6 < this.field3643; var6++) {
-                        if ((this.field3618.field3606[var4][var5][var6] & 0x1) != 0) {
+                        if ((this.field3618.levelTileFlags[var4][var5][var6] & 0x1) != 0) {
                             int var7 = var4;
-                            if ((this.field3618.field3606[1][var5][var6] & 0x2) != 0) {
+                            if ((this.field3618.levelTileFlags[1][var5][var6] & 0x2) != 0) {
                                 var7 = var4 - 1;
                             }
                             if (var7 >= 0) {
@@ -749,17 +749,17 @@ public class MapLoader {
                         if (var31 != null && field3665[var9][var33]) {
                             int var38 = (var7 << 9) + var29[var33];
                             int var39 = (var8 << 9) + var30[var33];
-                            var31[var33] = arg5.method196(var38, var39) - arg1.method196(var38, var39);
+                            var31[var33] = arg5.getFineHeight(var38, var39) - arg1.getFineHeight(var38, var39);
                         }
                         if (var32 != null) {
                             if (arg5 != null && !field3665[var9][var33]) {
                                 int var40 = (var7 << 9) + var29[var33];
                                 int var41 = (var8 << 9) + var30[var33];
-                                var32[var33] = arg1.method196(var40, var41) - arg5.method196(var40, var41);
+                                var32[var33] = arg1.getFineHeight(var40, var41) - arg5.getFineHeight(var40, var41);
                             } else if (arg4 != null && !field3666[var9][var33]) {
                                 int var42 = (var7 << 9) + var29[var33];
                                 int var43 = (var8 << 9) + var30[var33];
-                                var32[var33] = arg4.method196(var42, var43) - arg1.method196(var42, var43);
+                                var32[var33] = arg4.getFineHeight(var42, var43) - arg1.getFineHeight(var42, var43);
                             }
                         }
                     }
@@ -767,7 +767,7 @@ public class MapLoader {
                     int var45 = arg1.method199(var7 + 1, var8);
                     int var46 = arg1.method199(var7 + 1, var8 + 1);
                     int var47 = arg1.method199(var7, var8 + 1);
-                    boolean var48 = this.field3618.method5794(var7, var8);
+                    boolean var48 = this.field3618.isLinkBelow(var7, var8);
                     if (var48 && arg2 > 1 || !var48 && arg2 > 0) {
                         boolean var49 = true;
                         if (var14 != null && !var14.field6717) {
@@ -1105,17 +1105,17 @@ public class MapLoader {
                     if (arg12 != null && field3665[this.field3669][var23]) {
                         int var29 = (arg2 << 9) + var27;
                         int var30 = (arg3 << 9) + var28;
-                        arg12[this.field3690] = arg15.method196(var29, var30) - arg14.method196(var29, var30);
+                        arg12[this.field3690] = arg15.getFineHeight(var29, var30) - arg14.getFineHeight(var29, var30);
                     }
                     if (arg13 != null) {
                         if (arg15 != null && !field3665[this.field3669][var23]) {
                             int var31 = (arg2 << 9) + var27;
                             int var32 = (arg3 << 9) + var28;
-                            arg13[this.field3690] = arg14.method196(var31, var32) - arg15.method196(var31, var32);
+                            arg13[this.field3690] = arg14.getFineHeight(var31, var32) - arg15.getFineHeight(var31, var32);
                         } else if (arg16 != null && !field3666[this.field3669][var23]) {
                             int var33 = (arg2 << 9) + var27;
                             int var34 = (arg3 << 9) + var28;
-                            arg13[this.field3690] = arg16.method196(var33, var34) - arg14.method196(var33, var34);
+                            arg13[this.field3690] = arg16.getFineHeight(var33, var34) - arg14.getFineHeight(var33, var34);
                         }
                     }
                     if (var23 < 8 && this.field3648[var24] > arg4.field5096) {
@@ -1236,17 +1236,17 @@ public class MapLoader {
                 if (arg18 != null && field3665[this.field3669][var33]) {
                     int var39 = (arg2 << 9) + var37;
                     int var40 = (arg3 << 9) + var38;
-                    arg18[this.field3690] = arg22.method196(var39, var40) - arg21.method196(var39, var40);
+                    arg18[this.field3690] = arg22.getFineHeight(var39, var40) - arg21.getFineHeight(var39, var40);
                 }
                 if (arg19 != null) {
                     if (arg22 != null && !field3665[this.field3669][var33]) {
                         int var41 = (arg2 << 9) + var37;
                         int var42 = (arg3 << 9) + var38;
-                        arg19[this.field3690] = arg21.method196(var41, var42) - arg22.method196(var41, var42);
+                        arg19[this.field3690] = arg21.getFineHeight(var41, var42) - arg22.getFineHeight(var41, var42);
                     } else if (arg23 != null && !field3666[this.field3669][var33]) {
                         int var43 = (arg2 << 9) + var37;
                         int var44 = (arg3 << 9) + var38;
-                        arg19[this.field3690] = arg23.method196(var43, var44) - arg21.method196(var43, var44);
+                        arg19[this.field3690] = arg23.getFineHeight(var43, var44) - arg21.getFineHeight(var43, var44);
                     }
                 }
                 if (var33 < 8 && this.field3648[var34] >= 0) {
@@ -1316,7 +1316,7 @@ public class MapLoader {
         int var12 = arg0.method199(arg6, arg5);
         int var13 = arg0.method199(arg6, arg7);
         int var14 = arg0.method199(arg4, arg7);
-        boolean var15 = this.field3618.method5794(arg4, arg5);
+        boolean var15 = this.field3618.isLinkBelow(arg4, arg5);
         if ((!var15 || arg3 <= 1) && (var15 || arg3 <= 0)) {
             return;
         }
@@ -1644,7 +1644,7 @@ public class MapLoader {
 
     @ObfuscatedName("lp.g(IIIII)I")
     public static final int method6029(int arg0, int arg1, int arg2, int arg3) {
-        int var4 = 65536 - Trig1.field3447[arg2 * 8192 / arg3] >> 1;
+        int var4 = 65536 - Trig1.cos[arg2 * 8192 / arg3] >> 1;
         return ((65536 - var4) * arg0 >> 16) + (arg1 * var4 >> 16);
     }
 

@@ -699,12 +699,12 @@ public class LoginManager {
                     client.field9077 = var31.g1() == 1;
                     client.field9078 = var31.g1() == 1;
                     client.field9081 = var31.g1() == 1;
-                    client.field9071 = var31.g2();
+                    client.currentPlayerUid = var31.g2();
                     client.field8998 = var31.g1() == 1;
                     Statics.field8469 = var31.g3s();
                     client.field9142 = var31.g1() == 1;
                     Statics.field4685 = var31.gjstr();
-                    client.field8980.method6103().method11472(client.field9142);
+                    client.world.method6103().method11472(client.field9142);
                     Statics.field8656.method6040().method6103().method11472(client.field9142);
                     Statics.field3492.method12304(client.field9142);
                     Statics.field3774.method12561(client.field9142);
@@ -715,7 +715,7 @@ public class LoginManager {
                     client.field8916 = var31.g1();
                     client.field9054 = var31.g1() == 1;
                     Statics.field8469 = var31.g3s();
-                    Statics.localPlayerEntity.field10043 = (byte) var31.g1();
+                    Statics.localPlayerEntity.gender = (byte) var31.g1();
                     client.field9077 = var31.g1() == 1;
                     client.field9078 = var31.g1() == 1;
                     Statics.field6701 = var31.g8();
@@ -736,7 +736,7 @@ public class LoginManager {
                     Statics.field1599 = var31.g2();
                     Statics.field7157 = var31.g2();
                     Statics.field8432 = var31.g1() == 1;
-                    Statics.localPlayerEntity.field10040 = Statics.localPlayerEntity.field10063 = Statics.field10527 = var31.gjstr2();
+                    Statics.localPlayerEntity.nameUnfiltered = Statics.localPlayerEntity.name = Statics.user = var31.gjstr2();
                     Statics.field563 = var31.g1();
                     Statics.field8537 = var31.g4s();
                     client.field9079 = var31.g1() == 1;
@@ -822,9 +822,9 @@ public class LoginManager {
                 System.arraycopy(Statics.field501.field832.data, Statics.field501.field832.pos, var39.data, 0, var38);
                 Statics.field501.field832.pos += var38;
                 if (ServerProt.REBUILD_REGION == Statics.field501.field840) {
-                    client.field8980.method6135(new RebuildRequest(RebuildType.REBUILD_REGION, var39));
+                    client.world.method6135(new RebuildRequest(RebuildType.REBUILD_REGION, var39));
                 } else {
-                    client.field8980.method6135(new RebuildRequest(RebuildType.REBUILD_NORMAL, var39));
+                    client.world.method6135(new RebuildRequest(RebuildType.REBUILD_NORMAL, var39));
                 }
                 if (Statics.field501.field832.pos != var37) {
                     throw new RuntimeException(Statics.field501.field832.pos + " " + var37);
@@ -1025,7 +1025,7 @@ public class LoginManager {
         client.field9021 = (int) (Math.random() * 160.0D) - 80 & 0x3FFF;
         MiniMap.method7163();
         for (int var1 = 0; var1 < 2048; var1++) {
-            client.field9070[var1] = null;
+            client.players[var1] = null;
         }
         Statics.localPlayerEntity = null;
         client.npcCount = 0;
@@ -1047,8 +1047,8 @@ public class LoginManager {
         Statics.cameraLookX = 0;
         Statics.cameraLookZ = 0;
         Statics.cameraLookY = 0;
-        Statics.cameraLookStep = 0;
-        Statics.cameraLookRate = 0;
+        Statics.cameraRotateAcceleration = 0;
+        Statics.cameraRotateSpeed = 0;
         for (int var2 = 0; var2 < Statics.field6666.length; var2++) {
             if (!Statics.field2210[var2]) {
                 Statics.field6666[var2] = -1;
@@ -1083,7 +1083,7 @@ public class LoginManager {
         for (int var6 = 0; var6 < 6; var6++) {
             client.field9184[var6] = new StockMarketSlot();
         }
-        client.field8980.method6139().method8154();
+        client.world.method6139().method8154();
         client.field9028 = true;
         Statics.field2744 = LocType.field6530 = NPCType.field7209 = ObjType.field7118 = new short[256];
         Statics.field2400 = LocalisedText.field6994.method12206(Statics.field2308);

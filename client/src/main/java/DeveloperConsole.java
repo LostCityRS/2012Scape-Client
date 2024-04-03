@@ -314,7 +314,7 @@ public class DeveloperConsole {
         Statics.field670.method833("--> " + method3505(field798), 10, 350 - Statics.field2399.field7177 - 1, -1, -16777216);
         if (Statics.field578) {
             int var10 = -1;
-            if (client.field9213 % 30 > 15) {
+            if (client.loopCycle % 30 > 15) {
                 var10 = 16777215;
             }
             arg0.method486(Statics.field2399.method12418("--> " + method3505(field798).substring(0, field806)) + 10, 350 - Statics.field2399.field7177 - 11, 12, var10);
@@ -385,9 +385,9 @@ public class DeveloperConsole {
                 return;
             }
             if (arg0.equalsIgnoreCase("getcamerapos")) {
-                CoordGrid var4 = client.field8980.method6214();
-                method1958("Pos: " + Statics.localPlayerEntity.level + "," + ((Statics.cameraX >> 9) + var4.x >> 6) + "," + ((Statics.cameraZ >> 9) + var4.z >> 6) + "," + ((Statics.cameraX >> 9) + var4.x & 0x3F) + "," + ((Statics.cameraZ >> 9) + var4.z & 0x3F) + " Height: " + (client.method8663(Statics.cameraX, Statics.cameraZ, Statics.localPlayerEntity.level) - Statics.cameraY));
-                method1958("Look: " + Statics.localPlayerEntity.level + "," + (Statics.cameraLookX + var4.x >> 6) + "," + (Statics.cameraLookZ + var4.z >> 6) + "," + (Statics.cameraLookX + var4.x & 0x3F) + "," + (Statics.cameraLookZ + var4.z & 0x3F) + " Height: " + (client.method8663(Statics.cameraLookX, Statics.cameraLookZ, Statics.localPlayerEntity.level) - Statics.cameraLookY));
+                CoordGrid var4 = client.world.method6214();
+                method1958("Pos: " + Statics.localPlayerEntity.level + "," + ((Statics.cameraX >> 9) + var4.x >> 6) + "," + ((Statics.cameraZ >> 9) + var4.z >> 6) + "," + ((Statics.cameraX >> 9) + var4.x & 0x3F) + "," + ((Statics.cameraZ >> 9) + var4.z & 0x3F) + " Height: " + (client.getHeightmapY(Statics.cameraX, Statics.cameraZ, Statics.localPlayerEntity.level) - Statics.cameraY));
+                method1958("Look: " + Statics.localPlayerEntity.level + "," + (Statics.cameraLookX + var4.x >> 6) + "," + (Statics.cameraLookZ + var4.z >> 6) + "," + (Statics.cameraLookX + var4.x & 0x3F) + "," + (Statics.cameraLookZ + var4.z & 0x3F) + " Height: " + (client.getHeightmapY(Statics.cameraLookX, Statics.cameraLookZ, Statics.localPlayerEntity.level) - Statics.cameraLookY));
                 return;
             }
         } catch (Exception var33) {
@@ -624,7 +624,7 @@ public class DeveloperConsole {
                 } else if (arg0 == 9) {
                     method1958("" + GameShell.field4121);
                 } else if (arg0 == 19) {
-                    OcclusionManager var1 = client.field8980.method6098().field4493;
+                    OcclusionManager var1 = client.world.getScene().field4493;
                     var1.field4624 = !var1.field4624;
                 } else if (arg0 == 29) {
                     client.field8926 = true;
@@ -670,15 +670,15 @@ public class DeveloperConsole {
                 } else if (arg0 == 8) {
                     method1623();
                 } else if (arg0 == 28) {
-                    client.field8980.field3789 = MonotonicTime.method5554();
-                    client.field8980.field3833 = true;
+                    client.world.field3789 = MonotonicTime.method5554();
+                    client.world.field3833 = true;
                     method1623();
                 } else if (arg0 == 22) {
                     Vector3 var10 = Statics.localPlayerEntity.getTransform().trans;
                     method1958(((int) var10.x >> 9) + " " + ((int) var10.z >> 9));
                 } else if (arg0 == 26) {
                     Vector3 var11 = Statics.localPlayerEntity.getTransform().trans;
-                    method1958("" + client.field8980.method6098().field4498[Statics.localPlayerEntity.level].method199((int) var11.x >> 9, (int) var11.z >> 9));
+                    method1958("" + client.world.getScene().field4498[Statics.localPlayerEntity.level].method199((int) var11.x >> 9, (int) var11.z >> 9));
                 } else if (arg0 == 1) {
                     method1958(Component.field1757.method7924() + " " + Component.field1757.method7923());
                     method1958(Component.field1760.method7924() + " " + Component.field1760.method7923());
@@ -692,13 +692,13 @@ public class DeveloperConsole {
                     return;
                 } else if (arg0 == 23) {
                     client.field8943 = 0;
-                    client.field8980.method6102();
+                    client.world.method6102();
                 } else if (arg0 == 20) {
                     client.field8943 = 1;
-                    client.field8980.method6102();
+                    client.world.method6102();
                 } else if (arg0 == 5) {
                     client.field8943 = 2;
-                    client.field8980.method6102();
+                    client.world.method6102();
                 }
             } catch (Exception var13) {
                 method1958(LocalisedText.field6867.method12206(Statics.field2308));
@@ -711,7 +711,7 @@ public class DeveloperConsole {
         if (Statics.clientOptions.field9667.method15884() == 1) {
             Statics.field8656.method6053(new RebuildRequest(RebuildType.field3842, null));
         } else {
-            client.field8980.method6102();
+            client.world.method6102();
             MiniMap.method7992();
         }
     }

@@ -765,7 +765,7 @@ public class ObjType implements PlayerTypeRelated {
         Matrix4x3 var23 = arg0.method516();
         var23.method5106(0.0F, 0.0F, 1.0F, Trig1.method5096(-this.field7088 << 3));
         var23.method5178(0.0F, 1.0F, 0.0F, Trig1.method5096(this.field7077 << 3));
-        var23.method5116((float) (this.field7076 << 2), (float) ((Trig1.field3439[this.field7073 << 3] * var19 >> 14) - var17.YA() / 2 + (this.field7075 << 2)), (float) ((this.field7075 << 2) + (Trig1.field3447[this.field7073 << 3] * var19 >> 14)));
+        var23.method5116((float) (this.field7076 << 2), (float) ((Trig1.sin[this.field7073 << 3] * var19 >> 14) - var17.YA() / 2 + (this.field7075 << 2)), (float) ((this.field7075 << 2) + (Trig1.cos[this.field7073 << 3] * var19 >> 14)));
         var23.method5178(1.0F, 0.0F, 0.0F, Trig1.method5096(this.field7073 << 3));
         arg0.r(0, 0, 36, 32);
         arg0.ba(2, 0);
@@ -1071,7 +1071,7 @@ public class ObjType implements PlayerTypeRelated {
         if (this.field7055 == null) {
             return arg1;
         } else {
-            IntNode var3 = (IntNode) this.field7055.method11923((long) arg0);
+            IntNode var3 = (IntNode) this.field7055.getNode((long) arg0);
             return var3 == null ? arg1 : var3.field9556;
         }
     }
@@ -1081,7 +1081,7 @@ public class ObjType implements PlayerTypeRelated {
         if (this.field7055 == null) {
             return arg1;
         } else {
-            ObjectNode var3 = (ObjectNode) this.field7055.method11923((long) arg0);
+            ObjectNode var3 = (ObjectNode) this.field7055.getNode((long) arg0);
             return var3 == null ? arg1 : (String) var3.field9550;
         }
     }

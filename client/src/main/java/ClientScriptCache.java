@@ -29,7 +29,7 @@ public final class ClientScriptCache {
 
     @ObfuscatedName("pk.u(J)Ladi;")
     public SecondaryNode method7965(long arg0) {
-        SecondaryNode var3 = (SecondaryNode) this.field4833.method11923(arg0);
+        SecondaryNode var3 = (SecondaryNode) this.field4833.getNode(arg0);
         if (var3 != null) {
             this.field4830.method11728(var3);
         }

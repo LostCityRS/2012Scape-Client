@@ -29,7 +29,7 @@ public class Light extends Node {
 
     @ObfuscatedName("acg.j(I)I")
     public final int method14882() {
-        return (int) this.field9369.field3476;
+        return (int) this.field9369.y;
     }
 
     @ObfuscatedName("acg.a(I)I")

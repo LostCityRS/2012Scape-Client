@@ -11,8 +11,8 @@ public class CameraHelpers {
     public static float method7588(Quaternion arg0) {
         Vector3 var1 = Vector3.method5294(0.0F, 0.0F, 1.0F);
         var1.method5318(arg0);
-        double var2 = 1.5707963267948966D - Math.acos((double) var1.field3476);
-        var1.method5291();
+        double var2 = 1.5707963267948966D - Math.acos((double) var1.y);
+        var1.release();
         return (float) var2;
     }
 
@@ -30,7 +30,7 @@ public class CameraHelpers {
         Vector3 var1 = Vector3.method5294(0.0F, 0.0F, 1.0F);
         var1.method5318(arg0);
         double var2 = Math.atan2((double) var1.x, (double) var1.z);
-        var1.method5291();
+        var1.release();
         if (var2 < 0.0D) {
             var2 = var2 + 3.141592653589793D + 3.141592653589793D;
         }

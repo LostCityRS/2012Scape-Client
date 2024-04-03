@@ -70,7 +70,7 @@ public class ProjectileAnimation extends PrimaryLayerEntity {
     public int field10639 = 0;
 
     public ProjectileAnimation(Scene arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, int arg13, boolean arg14, int arg15, int arg16) {
-        super(arg0, arg2, arg3, arg4, client.method8663(arg4, arg5, arg2) - arg6, arg5, arg4 >> 9, arg4 >> 9, arg5 >> 9, arg5 >> 9, false, (byte) 0);
+        super(arg0, arg2, arg3, arg4, client.getHeightmapY(arg4, arg5, arg2) - arg6, arg5, arg4 >> 9, arg4 >> 9, arg5 >> 9, arg5 >> 9, false, (byte) 0);
         this.field10630 = arg1;
         this.field10625 = arg7;
         this.field10622 = arg8;
@@ -127,7 +127,7 @@ public class ProjectileAnimation extends PrimaryLayerEntity {
                 var5.z += (float) this.field10635 * var7 / var8;
             }
             if (this.field10619) {
-                var5.field3476 = client.method8663((int) var5.x, (int) var5.z, this.level) - this.field10628;
+                var5.y = client.getHeightmapY((int) var5.x, (int) var5.z, this.level) - this.field10628;
             }
             this.method8551(var5);
         }
@@ -136,14 +136,14 @@ public class ProjectileAnimation extends PrimaryLayerEntity {
         this.field10631 = (double) ((float) arg1 - var5.z) / var9;
         this.field10621 = Math.sqrt(this.field10631 * this.field10631 + this.field10618 * this.field10618);
         if (this.field10623 == -1) {
-            this.field10633 = (double) ((float) arg2 - var5.field3476) / var9;
+            this.field10633 = (double) ((float) arg2 - var5.y) / var9;
         } else {
             if (!this.field10629) {
                 this.field10633 = -this.field10621 * Math.tan((double) this.field10623 * 0.02454369D);
             }
-            this.field10634 = ((double) ((float) arg2 - var5.field3476) - this.field10633 * var9) * 2.0D / (var9 * var9);
+            this.field10634 = ((double) ((float) arg2 - var5.y) - this.field10633 * var9) * 2.0D / (var9 * var9);
         }
-        var5.method5291();
+        var5.release();
     }
 
     @ObfuscatedName("alv.a(I)V")
@@ -156,14 +156,14 @@ public class ProjectileAnimation extends PrimaryLayerEntity {
             var1 = Statics.field1537[this.field10624 - 1].method2854();
         } else if (this.field10624 < 0) {
             int var2 = -this.field10624 - 1;
-            if (client.field9071 == var2) {
+            if (client.currentPlayerUid == var2) {
                 var1 = Statics.localPlayerEntity;
             } else {
-                var1 = client.field9070[var2];
+                var1 = client.players[var2];
             }
         } else {
             int var3 = this.field10624 - 1;
-            ObjectNode var4 = (ObjectNode) client.npcs.method11923((long) var3);
+            ObjectNode var4 = (ObjectNode) client.npcs.getNode((long) var3);
             if (var4 != null) {
                 var1 = (PathingEntity) var4.field9550;
             }
@@ -172,11 +172,11 @@ public class ProjectileAnimation extends PrimaryLayerEntity {
             return;
         }
         Vector3 var5 = var1.getTransform().trans;
-        this.method8552(var5.x, (float) (client.method8663((int) var5.x, (int) var5.z, this.level) - this.field10628), var5.z);
+        this.method8552(var5.x, (float) (client.getHeightmapY((int) var5.x, (int) var5.z, this.level) - this.field10628), var5.z);
         if (this.field10627 < 0) {
             return;
         }
-        BASType var6 = var1.method13959();
+        BASType var6 = var1.getBASType();
         int var7 = 0;
         int var8 = 0;
         if (var6.field4716 != null && var6.field4716[this.field10627] != null) {
@@ -196,15 +196,15 @@ public class ProjectileAnimation extends PrimaryLayerEntity {
             var10 = var1.field8654[this.field10627];
         }
         int var11 = var10 - var9 & 0x3FFF;
-        int var12 = Trig1.field3439[var11];
-        int var13 = Trig1.field3447[var11];
+        int var12 = Trig1.sin[var11];
+        int var13 = Trig1.cos[var11];
         int var14 = var7 * var13 + var8 * var12 >> 14;
         int var15 = var8 * var13 - var7 * var12 >> 14;
         Vector3 var17 = Vector3.create(this.getTransform().trans);
         var17.x += var14;
         var17.z += var15;
         this.method8551(var17);
-        var17.method5291();
+        var17.release();
     }
 
     @ObfuscatedName("alv.s(II)V")
@@ -214,11 +214,11 @@ public class ProjectileAnimation extends PrimaryLayerEntity {
         var2.trans.x = (float) ((double) var2.trans.x + (double) arg0 * this.field10618);
         var2.trans.z = (float) ((double) var2.trans.z + (double) arg0 * this.field10631);
         if (this.field10619) {
-            var2.trans.field3476 = client.method8663((int) var2.trans.x, (int) var2.trans.z, this.level) - this.field10628;
+            var2.trans.y = client.getHeightmapY((int) var2.trans.x, (int) var2.trans.z, this.level) - this.field10628;
         } else if (this.field10623 == -1) {
-            var2.trans.field3476 = (float) ((double) var2.trans.field3476 + (double) arg0 * this.field10633);
+            var2.trans.y = (float) ((double) var2.trans.y + (double) arg0 * this.field10633);
         } else {
-            var2.trans.field3476 = (float) ((double) var2.trans.field3476 + this.field10634 * 0.5D * (double) arg0 * (double) arg0 + (double) arg0 * this.field10633);
+            var2.trans.y = (float) ((double) var2.trans.y + this.field10634 * 0.5D * (double) arg0 * (double) arg0 + (double) arg0 * this.field10633);
             this.field10633 += (double) arg0 * this.field10634;
         }
         var2.field3463.method5216(1.0F, 0.0F, 0.0F, (float) Math.atan2(this.field10633, this.field10621));
@@ -282,10 +282,10 @@ public class ProjectileAnimation extends PrimaryLayerEntity {
         ModelParticleEmitter[] var4 = arg1.method276();
         ModelParticleEffector[] var5 = arg1.method413();
         if ((this.field10632 == null || this.field10632.field4945) && (var4 != null || var5 != null)) {
-            this.field10632 = ParticleSystem.method8123(client.field9213, true);
+            this.field10632 = ParticleSystem.method8123(client.loopCycle, true);
         }
         if (this.field10632 != null) {
-            this.field10632.method8106(arg0, (long) client.field9213, var4, var5, false);
+            this.field10632.method8106(arg0, (long) client.loopCycle, var4, var5, false);
             this.field10632.method8110(this.level, this.field10510, this.field10508, this.field10509, this.field10511);
         }
     }

@@ -73,9 +73,9 @@ public class DynamicSceneryEntity extends PrimaryLayerEntity implements Location
         this.field7527 = var2.i() || this.field7524.field1229 != null;
         ScaleRotTrans var6 = this.getTransform();
         if (this.field7525 == null) {
-            this.field7525 = GraphEntity.method15140((int) var6.trans.x, (int) var6.trans.field3476, (int) var6.trans.z, var2);
+            this.field7525 = GraphEntity.method15140((int) var6.trans.x, (int) var6.trans.y, (int) var6.trans.z, var2);
         } else {
-            GraphEntity.method11162(this.field7525, (int) var6.trans.x, (int) var6.trans.field3476, (int) var6.trans.z, var2);
+            GraphEntity.method11162(this.field7525, (int) var6.trans.x, (int) var6.trans.y, (int) var6.trans.z, var2);
         }
         return var4;
     }

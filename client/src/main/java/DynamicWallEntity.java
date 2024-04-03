@@ -82,9 +82,9 @@ public class DynamicWallEntity extends WallLayerEntity implements Location {
         }
         this.field7573 = var2.i() || this.field7576.field1229 != null;
         if (this.field7575 == null) {
-            this.field7575 = GraphEntity.method15140((int) var4.trans.x, (int) var4.trans.field3476, (int) var4.trans.z, var2);
+            this.field7575 = GraphEntity.method15140((int) var4.trans.x, (int) var4.trans.y, (int) var4.trans.z, var2);
         } else {
-            GraphEntity.method11162(this.field7575, (int) var4.trans.x, (int) var4.trans.field3476, (int) var4.trans.z, var2);
+            GraphEntity.method11162(this.field7575, (int) var4.trans.x, (int) var4.trans.y, (int) var4.trans.z, var2);
         }
         return var5;
     }

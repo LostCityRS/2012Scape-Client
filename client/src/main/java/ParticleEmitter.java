@@ -198,12 +198,12 @@ public class ParticleEmitter {
                     } else {
                         int var27 = this.field4913 + (int) ((double) this.field4914 * Math.random());
                         int var28 = var27 & 0x3FFF;
-                        int var29 = Trig1.field3439[var28];
-                        int var30 = Trig1.field3447[var28];
+                        int var29 = Trig1.sin[var28];
+                        int var30 = Trig1.cos[var28];
                         int var31 = this.field4915 + (int) ((double) this.field4910 * Math.random());
                         int var32 = var31 & 0x1FFF;
-                        int var33 = Trig1.field3439[var32];
-                        int var34 = Trig1.field3447[var32];
+                        int var33 = Trig1.sin[var32];
+                        int var34 = Trig1.cos[var32];
                         byte var35 = 13;
                         var24 = var30 * var33 >> var35;
                         var25 = (var34 << 1) * -1;

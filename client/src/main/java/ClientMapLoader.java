@@ -438,7 +438,7 @@ public class ClientMapLoader extends MapLoader {
                     CollisionMap var19 = null;
                     if (!this.field3644) {
                         int var20 = var13;
-                        if ((this.field3618.field3606[1][var17][var18] & 0x2) == 2) {
+                        if ((this.field3618.levelTileFlags[1][var17][var18] & 0x2) == 2) {
                             var20 = var13 - 1;
                         }
                         if (var20 >= 0) {
@@ -482,7 +482,7 @@ public class ClientMapLoader extends MapLoader {
                         CollisionMap var25 = null;
                         if (!this.field3644) {
                             int var26 = arg2;
-                            if ((this.field3618.field3606[1][var23][var24] & 0x2) == 2) {
+                            if ((this.field3618.levelTileFlags[1][var23][var24] & 0x2) == 2) {
                                 var26 = arg2 - 1;
                             }
                             if (var26 >= 0) {
@@ -980,7 +980,7 @@ public class ClientMapLoader extends MapLoader {
             if (this.field3628 > 1) {
                 for (int var3 = 0; var3 < this.field3627; var3++) {
                     for (int var4 = 0; var4 < this.field3643; var4++) {
-                        if ((this.field3618.field3606[1][var3][var4] & 0x2) == 2) {
+                        if ((this.field3618.levelTileFlags[1][var3][var4] & 0x2) == 2) {
                             this.field3619.method7466(var3, var4);
                         }
                     }

@@ -73,9 +73,9 @@ public class DynamicWallDecorEntity extends WallDecorLayerEntity implements Loca
         }
         this.field7571 = var2.i() || this.field7570.field1229 != null;
         if (this.field7569 == null) {
-            this.field7569 = GraphEntity.method15140((int) var4.trans.x, (int) var4.trans.field3476, (int) var4.trans.z, var2);
+            this.field7569 = GraphEntity.method15140((int) var4.trans.x, (int) var4.trans.y, (int) var4.trans.z, var2);
         } else {
-            GraphEntity.method11162(this.field7569, (int) var4.trans.x, (int) var4.trans.field3476, (int) var4.trans.z, var2);
+            GraphEntity.method11162(this.field7569, (int) var4.trans.x, (int) var4.trans.y, (int) var4.trans.z, var2);
         }
         return var5;
     }

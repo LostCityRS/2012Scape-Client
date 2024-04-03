@@ -71,9 +71,9 @@ public class PositionEntity extends Position {
                 Quaternion var3 = this.field8741.method3680();
                 var2.method5318(var3);
             }
-            var2.field3476 = 0.0F;
+            var2.y = 0.0F;
             float var4 = (float) Math.atan2((double) var2.x, (double) var2.z);
-            var2.method5291();
+            var2.release();
             Quaternion var5 = new Quaternion();
             var5.method5216(0.0F, 1.0F, 0.0F, var4);
             var1.method5266(var5);
@@ -101,15 +101,15 @@ public class PositionEntity extends Position {
         Vector3 var1 = Vector3.create(this.field8736);
         var1.method5318(this.field8744);
         Vector3 var2 = Vector3.method5301(this.field8739, var1);
-        var1.method5291();
+        var1.release();
         return var2;
     }
 
     @ObfuscatedName("aav.s(B)Ladu;")
     public CoordFine method4017() {
         Vector3 var1 = this.method4016();
-        CoordFine var2 = new CoordFine(this.field8740, (int) var1.x, (int) var1.field3476, (int) var1.z);
-        var1.method5291();
+        CoordFine var2 = new CoordFine(this.field8740, (int) var1.x, (int) var1.y, (int) var1.z);
+        var1.release();
         return var2;
     }
 
@@ -137,9 +137,9 @@ public class PositionEntity extends Position {
     public void method4029(Vector3i arg0, int arg1, int arg2) {
         Vector3 var4 = this.method4016();
         arg0.field2212 = (int) var4.x - arg1;
-        arg0.field2211 = (int) -var4.field3476;
+        arg0.field2211 = (int) -var4.y;
         arg0.field2213 = (int) var4.z - arg2;
-        var4.method5291();
+        var4.release();
     }
 
     @ObfuscatedName("aav.m(Laet;B)V")

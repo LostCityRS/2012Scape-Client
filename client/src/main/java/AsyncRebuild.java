@@ -82,6 +82,6 @@ public class AsyncRebuild implements Runnable {
         for (boolean var2 = this.field3773.method6128(); !var2; var2 = this.field3773.method6128()) {
         }
         this.field3773.method6112();
-        client.field8980.method6112();
+        client.world.method6112();
     }
 }

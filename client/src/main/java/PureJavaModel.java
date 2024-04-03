@@ -1341,8 +1341,8 @@ public class PureJavaModel extends Model {
         } else if (arg0 == 12288) {
             this.method13013();
         } else {
-            int var2 = Trig1.field3439[arg0];
-            int var3 = Trig1.field3447[arg0];
+            int var2 = Trig1.sin[arg0];
+            int var3 = Trig1.cos[arg0];
             synchronized (this) {
                 for (int var5 = 0; var5 < this.field7780; var5++) {
                     int var6 = this.field7820[var5] * var2 + this.field7807[var5] * var3 >> 14;
@@ -1367,8 +1367,8 @@ public class PureJavaModel extends Model {
         } else if (arg0 == 12288) {
             this.method13075();
         } else {
-            int var2 = Trig1.field3439[arg0];
-            int var3 = Trig1.field3447[arg0];
+            int var2 = Trig1.sin[arg0];
+            int var3 = Trig1.cos[arg0];
             synchronized (this) {
                 for (int var5 = 0; var5 < this.field7781; var5++) {
                     int var6 = this.field7820[var5] * var2 + this.field7807[var5] * var3 >> 14;
@@ -1532,8 +1532,8 @@ public class PureJavaModel extends Model {
         if ((this.field7777 & 0x6) != 6) {
             throw new IllegalStateException();
         }
-        int var2 = Trig1.field3439[arg0];
-        int var3 = Trig1.field3447[arg0];
+        int var2 = Trig1.sin[arg0];
+        int var3 = Trig1.cos[arg0];
         synchronized (this) {
             for (int var5 = 0; var5 < this.field7780; var5++) {
                 int var6 = this.field7783[var5] * var3 - this.field7820[var5] * var2 >> 14;
@@ -1549,8 +1549,8 @@ public class PureJavaModel extends Model {
         if ((this.field7777 & 0x3) != 3) {
             throw new IllegalStateException();
         }
-        int var2 = Trig1.field3439[arg0];
-        int var3 = Trig1.field3447[arg0];
+        int var2 = Trig1.sin[arg0];
+        int var3 = Trig1.cos[arg0];
         synchronized (this) {
             for (int var5 = 0; var5 < this.field7780; var5++) {
                 int var6 = this.field7807[var5] * var3 + this.field7783[var5] * var2 >> 14;
@@ -1982,22 +1982,22 @@ public class PureJavaModel extends Model {
                             this.field7783[var32] -= this.field7816;
                             this.field7820[var32] -= this.field7815;
                             if (arg4 != 0) {
-                                int var33 = Trig1.field3439[arg4];
-                                int var34 = Trig1.field3447[arg4];
+                                int var33 = Trig1.sin[arg4];
+                                int var34 = Trig1.cos[arg4];
                                 int var35 = this.field7807[var32] * var34 + this.field7783[var32] * var33 + 16383 >> 14;
                                 this.field7783[var32] = this.field7783[var32] * var34 - this.field7807[var32] * var33 + 16383 >> 14;
                                 this.field7807[var32] = var35;
                             }
                             if (arg2 != 0) {
-                                int var36 = Trig1.field3439[arg2];
-                                int var37 = Trig1.field3447[arg2];
+                                int var36 = Trig1.sin[arg2];
+                                int var37 = Trig1.cos[arg2];
                                 int var38 = this.field7783[var32] * var37 - this.field7820[var32] * var36 + 16383 >> 14;
                                 this.field7820[var32] = this.field7820[var32] * var37 + this.field7783[var32] * var36 + 16383 >> 14;
                                 this.field7783[var32] = var38;
                             }
                             if (arg3 != 0) {
-                                int var39 = Trig1.field3439[arg3];
-                                int var40 = Trig1.field3447[arg3];
+                                int var39 = Trig1.sin[arg3];
+                                int var40 = Trig1.cos[arg3];
                                 int var41 = this.field7820[var32] * var39 + this.field7807[var32] * var40 + 16383 >> 14;
                                 this.field7820[var32] = this.field7820[var32] * var40 - this.field7807[var32] * var39 + 16383 >> 14;
                                 this.field7807[var32] = var41;
@@ -2013,22 +2013,22 @@ public class PureJavaModel extends Model {
                             this.field7783[var43] -= this.field7816;
                             this.field7820[var43] -= this.field7815;
                             if (arg2 != 0) {
-                                int var44 = Trig1.field3439[arg2];
-                                int var45 = Trig1.field3447[arg2];
+                                int var44 = Trig1.sin[arg2];
+                                int var45 = Trig1.cos[arg2];
                                 int var46 = this.field7783[var43] * var45 - this.field7820[var43] * var44 + 16383 >> 14;
                                 this.field7820[var43] = this.field7820[var43] * var45 + this.field7783[var43] * var44 + 16383 >> 14;
                                 this.field7783[var43] = var46;
                             }
                             if (arg4 != 0) {
-                                int var47 = Trig1.field3439[arg4];
-                                int var48 = Trig1.field3447[arg4];
+                                int var47 = Trig1.sin[arg4];
+                                int var48 = Trig1.cos[arg4];
                                 int var49 = this.field7807[var43] * var48 + this.field7783[var43] * var47 + 16383 >> 14;
                                 this.field7783[var43] = this.field7783[var43] * var48 - this.field7807[var43] * var47 + 16383 >> 14;
                                 this.field7807[var43] = var49;
                             }
                             if (arg3 != 0) {
-                                int var50 = Trig1.field3439[arg3];
-                                int var51 = Trig1.field3447[arg3];
+                                int var50 = Trig1.sin[arg3];
+                                int var51 = Trig1.cos[arg3];
                                 int var52 = this.field7820[var43] * var50 + this.field7807[var43] * var51 + 16383 >> 14;
                                 this.field7820[var43] = this.field7820[var43] * var51 - this.field7807[var43] * var50 + 16383 >> 14;
                                 this.field7807[var43] = var52;
@@ -2256,22 +2256,22 @@ public class PureJavaModel extends Model {
                                 this.field7783[var97] -= this.field7816;
                                 this.field7820[var97] -= this.field7815;
                                 if (arg4 != 0) {
-                                    int var98 = Trig1.field3439[arg4];
-                                    int var99 = Trig1.field3447[arg4];
+                                    int var98 = Trig1.sin[arg4];
+                                    int var99 = Trig1.cos[arg4];
                                     int var100 = this.field7807[var97] * var99 + this.field7783[var97] * var98 + 16383 >> 14;
                                     this.field7783[var97] = this.field7783[var97] * var99 - this.field7807[var97] * var98 + 16383 >> 14;
                                     this.field7807[var97] = var100;
                                 }
                                 if (arg2 != 0) {
-                                    int var101 = Trig1.field3439[arg2];
-                                    int var102 = Trig1.field3447[arg2];
+                                    int var101 = Trig1.sin[arg2];
+                                    int var102 = Trig1.cos[arg2];
                                     int var103 = this.field7783[var97] * var102 - this.field7820[var97] * var101 + 16383 >> 14;
                                     this.field7820[var97] = this.field7820[var97] * var102 + this.field7783[var97] * var101 + 16383 >> 14;
                                     this.field7783[var97] = var103;
                                 }
                                 if (arg3 != 0) {
-                                    int var104 = Trig1.field3439[arg3];
-                                    int var105 = Trig1.field3447[arg3];
+                                    int var104 = Trig1.sin[arg3];
+                                    int var105 = Trig1.cos[arg3];
                                     int var106 = this.field7820[var97] * var104 + this.field7807[var97] * var105 + 16383 >> 14;
                                     this.field7820[var97] = this.field7820[var97] * var105 - this.field7807[var97] * var104 + 16383 >> 14;
                                     this.field7807[var97] = var106;
@@ -2311,12 +2311,12 @@ public class PureJavaModel extends Model {
                     this.field7799 = false;
                 }
                 int[] var45 = new int[9];
-                int var46 = Trig1.field3447[arg2];
-                int var47 = Trig1.field3439[arg2];
-                int var48 = Trig1.field3447[arg3];
-                int var49 = Trig1.field3439[arg3];
-                int var50 = Trig1.field3447[arg4];
-                int var51 = Trig1.field3439[arg4];
+                int var46 = Trig1.cos[arg2];
+                int var47 = Trig1.sin[arg2];
+                int var48 = Trig1.cos[arg3];
+                int var49 = Trig1.sin[arg3];
+                int var50 = Trig1.cos[arg4];
+                int var51 = Trig1.sin[arg4];
                 int var52 = var47 * var50 + 8192 >> 14;
                 int var53 = var47 * var51 + 8192 >> 14;
                 var45[0] = var48 * var50 + var49 * var53 + 8192 >> 14;
@@ -2633,22 +2633,22 @@ public class PureJavaModel extends Model {
                 this.field7783[var8] -= this.field7816;
                 this.field7820[var8] -= this.field7815;
                 if (arg3 != 0) {
-                    int var9 = Trig1.field3439[arg3];
-                    int var10 = Trig1.field3447[arg3];
+                    int var9 = Trig1.sin[arg3];
+                    int var10 = Trig1.cos[arg3];
                     int var11 = this.field7807[var8] * var10 + this.field7783[var8] * var9 + 16383 >> 14;
                     this.field7783[var8] = this.field7783[var8] * var10 - this.field7807[var8] * var9 + 16383 >> 14;
                     this.field7807[var8] = var11;
                 }
                 if (arg1 != 0) {
-                    int var12 = Trig1.field3439[arg1];
-                    int var13 = Trig1.field3447[arg1];
+                    int var12 = Trig1.sin[arg1];
+                    int var13 = Trig1.cos[arg1];
                     int var14 = this.field7783[var8] * var13 - this.field7820[var8] * var12 + 16383 >> 14;
                     this.field7820[var8] = this.field7820[var8] * var13 + this.field7783[var8] * var12 + 16383 >> 14;
                     this.field7783[var8] = var14;
                 }
                 if (arg2 != 0) {
-                    int var15 = Trig1.field3439[arg2];
-                    int var16 = Trig1.field3447[arg2];
+                    int var15 = Trig1.sin[arg2];
+                    int var16 = Trig1.cos[arg2];
                     int var17 = this.field7820[var8] * var15 + this.field7807[var8] * var16 + 16383 >> 14;
                     this.field7820[var8] = this.field7820[var8] * var16 - this.field7807[var8] * var15 + 16383 >> 14;
                     this.field7807[var8] = var17;

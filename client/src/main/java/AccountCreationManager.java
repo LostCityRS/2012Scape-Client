@@ -129,7 +129,7 @@ public class AccountCreationManager {
                     return;
                 }
                 client.field8959.getStream().method7196(client.field8959.field832.data, 0, 1);
-                Statics.field629 = (ConnectReply) SerializableEnums.method8032(ConnectReply.method8658(), client.field8959.field832.data[0] & 0xFF);
+                Statics.field629 = (ConnectReply) SerializableEnums.decode(ConnectReply.method8658(), client.field8959.field832.data[0] & 0xFF);
                 if (Statics.field629 == ConnectReply.field6424) {
                     client.field8959.randomOut = new Isaac(Statics.field630);
                     int[] var5 = new int[4];

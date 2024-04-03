@@ -26,7 +26,7 @@ public class DelayedStateChange extends SecondaryNode {
 
     @ObfuscatedName("qv.u(IJ)Laif;")
     public static DelayedStateChange method8304(int arg0, long arg1) {
-        DelayedStateChange var3 = (DelayedStateChange) field10326.method11923((long) arg0 << 56 | arg1);
+        DelayedStateChange var3 = (DelayedStateChange) field10326.getNode((long) arg0 << 56 | arg1);
         if (var3 == null) {
             var3 = new DelayedStateChange(arg0, arg1);
             field10326.method11927(var3, var3.field4228);

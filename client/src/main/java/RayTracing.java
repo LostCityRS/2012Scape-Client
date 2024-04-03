@@ -18,14 +18,14 @@ public class RayTracing {
             arg4[0] = null;
         } else if (var8 >= 9.765625E-4F) {
             float var10 = (float) Math.sqrt((double) var8);
-            arg4[0] = Vector3.method5288();
+            arg4[0] = Vector3.create();
             arg4[0].method5334(arg0);
             arg4[0].method5299(Vector3.method5317(Vector3.create(arg1), -var7 - var10));
-            arg4[1] = Vector3.method5288();
+            arg4[1] = Vector3.create();
             arg4[1].method5334(arg0);
             arg4[1].method5299(Vector3.method5317(Vector3.create(arg1), -var7 + var10));
         } else {
-            arg4[0] = Vector3.method5288();
+            arg4[0] = Vector3.create();
             arg4[0].method5334(arg0);
             arg4[0].method5299(Vector3.method5317(Vector3.create(arg1), -var7));
             arg4[1] = null;

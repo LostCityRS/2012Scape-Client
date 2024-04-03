@@ -111,7 +111,7 @@ public class NpcEntity extends PathingEntity {
         }
         var4.method5115(var2);
         var4.method5116(0.0F, (float) (-20 - this.field8604), 0.0F);
-        BASType var8 = this.method13959();
+        BASType var8 = this.getBASType();
         NPCType var9 = this.field10075.field7244 == null ? this.field10075 : this.field10075.method12516(Statics.field2669);
         this.field8650 = false;
         PickableEntity var10 = null;
@@ -162,7 +162,7 @@ public class NpcEntity extends PathingEntity {
     @ObfuscatedName("ahs.go(Lra;II)Z")
     public boolean method16151(RendererToolkit arg0, int arg1) {
         int var3 = arg1;
-        BASType var4 = this.method13959();
+        BASType var4 = this.getBASType();
         AnimationNode var5 = this.field8597.method11767() && !this.field8597.method11776() ? this.field8597 : null;
         EntityWalkAnimationNode var6 = this.field8616.method11767() && (!this.field8616.field9899 || var5 == null) ? this.field8616 : null;
         int var7 = var4.field4712;
@@ -170,7 +170,7 @@ public class NpcEntity extends PathingEntity {
         if (var7 != 0 || var8 != 0 || var4.field4725 != 0 || var4.field4728 != 0) {
             arg1 |= 0x7;
         }
-        boolean var9 = this.field8631 != 0 && client.field9213 >= this.field8626 && client.field9213 < this.field8632;
+        boolean var9 = this.field8631 != 0 && client.loopCycle >= this.field8626 && client.loopCycle < this.field8632;
         if (var9) {
             arg1 |= 0x80000;
         }
@@ -183,7 +183,7 @@ public class NpcEntity extends PathingEntity {
         var11.n();
         this.method13972(var11);
         if (var7 == 0 && var8 == 0) {
-            this.method13958(var10, this.method13954() << 9, this.method13954() << 9, 0, 0);
+            this.method13958(var10, this.size() << 9, this.size() << 9, 0, 0);
         } else {
             this.method13958(var10, var7, var8, var4.field4700, var4.field4715);
             if (this.field8601 != 0) {
@@ -254,19 +254,19 @@ public class NpcEntity extends PathingEntity {
             this.field8615 = null;
             this.field8597.method11769(-1);
         }
-        for (int var5 = 0; var5 < this.field8641.length; var5++) {
-            if (this.field8641[var5].field1204 != -1) {
-                EffectAnimType var6 = Statics.field4213.method11082(this.field8641[var5].field1204);
+        for (int var5 = 0; var5 < this.spotAnims.length; var5++) {
+            if (this.spotAnims[var5].field1204 != -1) {
+                EffectAnimType var6 = Statics.field4213.method11082(this.spotAnims[var5].field1204);
                 if (var6.field5264 && var6.field5252 != -1 && Statics.field566.method11144(var6.field5252).field6330 == 1) {
-                    this.field8641[var5].field1203.method11769(-1);
-                    this.field8641[var5].field1204 = -1;
+                    this.spotAnims[var5].field1203.method11769(-1);
+                    this.spotAnims[var5].field1204 = -1;
                 }
             }
         }
-        if (this.field8628 < this.routeWaypointX.length - 1) {
-            this.field8628++;
+        if (this.routeLength < this.routeWaypointX.length - 1) {
+            this.routeLength++;
         }
-        for (int var7 = this.field8628; var7 > 0; var7--) {
+        for (int var7 = this.routeLength; var7 > 0; var7--) {
             this.routeWaypointX[var7] = this.routeWaypointX[var7 - 1];
             this.routeWaypointZ[var7] = this.routeWaypointZ[var7 - 1];
             this.field8645[var7] = this.field8645[var7 - 1];
@@ -279,19 +279,19 @@ public class NpcEntity extends PathingEntity {
     @ObfuscatedName("ahs.ga(IIIZII)V")
     public void method16153(int arg0, int arg1, int arg2, boolean arg3, int arg4) {
         this.level = this.field9809 = (byte) arg0;
-        if (client.field8980.method6100().method5794(arg1, arg2)) {
+        if (client.world.getSceneLevelTileFlags().isLinkBelow(arg1, arg2)) {
             this.field9809++;
         }
         if (this.field8597.method11767() && this.field8597.method11804().field6330 == 1) {
             this.field8615 = null;
             this.field8597.method11769(-1);
         }
-        for (int var6 = 0; var6 < this.field8641.length; var6++) {
-            if (this.field8641[var6].field1204 != -1) {
-                EffectAnimType var7 = Statics.field4213.method11082(this.field8641[var6].field1204);
+        for (int var6 = 0; var6 < this.spotAnims.length; var6++) {
+            if (this.spotAnims[var6].field1204 != -1) {
+                EffectAnimType var7 = Statics.field4213.method11082(this.spotAnims[var6].field1204);
                 if (var7.field5264 && var7.field5252 != -1 && Statics.field566.method11144(var7.field5252).field6330 == 1) {
-                    this.field8641[var6].field1203.method11769(-1);
-                    this.field8641[var6].field1204 = -1;
+                    this.spotAnims[var6].field1203.method11769(-1);
+                    this.spotAnims[var6].field1204 = -1;
                 }
             }
         }
@@ -299,21 +299,21 @@ public class NpcEntity extends PathingEntity {
             int var8 = arg1 - this.routeWaypointX[0];
             int var9 = arg2 - this.routeWaypointZ[0];
             if (var8 >= -8 && var8 <= 8 && var9 >= -8 && var9 <= 8) {
-                if (this.field8628 < this.routeWaypointX.length - 1) {
-                    this.field8628++;
+                if (this.routeLength < this.routeWaypointX.length - 1) {
+                    this.routeLength++;
                 }
-                for (int var10 = this.field8628; var10 > 0; var10--) {
+                for (int var10 = this.routeLength; var10 > 0; var10--) {
                     this.routeWaypointX[var10] = this.routeWaypointX[var10 - 1];
                     this.routeWaypointZ[var10] = this.routeWaypointZ[var10 - 1];
                     this.field8645[var10] = this.field8645[var10 - 1];
                 }
                 this.routeWaypointX[0] = arg1;
                 this.routeWaypointZ[0] = arg2;
-                this.field8645[0] = MoveSpeed.field3921.field3924;
+                this.field8645[0] = MoveSpeed.field3921.id;
                 return;
             }
         }
-        this.field8628 = 0;
+        this.routeLength = 0;
         this.field8646 = 0;
         this.field8648 = 0;
         this.routeWaypointX[0] = arg1;
@@ -322,7 +322,7 @@ public class NpcEntity extends PathingEntity {
         var11.x = (this.routeWaypointX[0] << 9) + (arg4 << 8);
         var11.z = (this.routeWaypointZ[0] << 9) + (arg4 << 8);
         this.method8551(var11);
-        var11.method5291();
+        var11.release();
         if (this.field8640 != null) {
             this.field8640.method8100();
         }
@@ -475,8 +475,8 @@ public class NpcEntity extends PathingEntity {
 
     @ObfuscatedName("ahs.u(I)Ladu;")
     public CoordFine method3684() {
-        CoordGrid var1 = client.field8980.method6214();
-        return CoordFine.method8611(this.level, (int) this.getTransform().trans.x + var1.x * 512, -((int) this.getTransform().trans.field3476), (int) this.getTransform().trans.z + var1.z * 512);
+        CoordGrid var1 = client.world.method6214();
+        return CoordFine.method8611(this.level, (int) this.getTransform().trans.x + var1.x * 512, -((int) this.getTransform().trans.y), (int) this.getTransform().trans.z + var1.z * 512);
     }
 
     @ObfuscatedName("ahs.j(I)Lkn;")
@@ -488,6 +488,6 @@ public class NpcEntity extends PathingEntity {
 
     @ObfuscatedName("ahs.a(I)Lko;")
     public Vector3 method3683() {
-        return Vector3.method5288();
+        return Vector3.create();
     }
 }

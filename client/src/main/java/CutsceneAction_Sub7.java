@@ -29,7 +29,7 @@ public class CutsceneAction_Sub7 extends CutsceneAction {
 
     @ObfuscatedName("ze.j(I)V")
     public void method2873() {
-        client.method8600(this.field8450, this.field8452, this.field8451, 100, 100, false);
+        client.cameraMoveTo(this.field8450, this.field8452, this.field8451, 100, 100, false);
         client.method8486(this.field8453, this.field8454, 0);
         client.field8989 = true;
     }

@@ -336,7 +336,7 @@ public abstract class Camera {
 
     @ObfuscatedName("fe.r(II)V")
     public void method3710(int arg0) {
-        CameraEffect var2 = (CameraEffect) this.field2225.method11923((long) arg0);
+        CameraEffect var2 = (CameraEffect) this.field2225.getNode((long) arg0);
         if (var2 != null) {
             var2.method6979();
         }
@@ -344,7 +344,7 @@ public abstract class Camera {
 
     @ObfuscatedName("fe.g(IB)Laja;")
     public CameraEffect method3711(int arg0) {
-        return (CameraEffect) this.field2225.method11923((long) arg0);
+        return (CameraEffect) this.field2225.getNode((long) arg0);
     }
 
     @ObfuscatedName("fe.y(I)V")
@@ -435,9 +435,9 @@ public abstract class Camera {
         if (var1 != null && var2 != null) {
             Vector3 var4 = Vector3.method5377(var2, var1);
             float var5 = (float) Math.sqrt((double) (var4.z * var4.z + var4.x * var4.x));
-            var3 = (float) Math.atan2((double) -var4.field3476, (double) var5);
-            var1.method5291();
-            var2.method5291();
+            var3 = (float) Math.atan2((double) -var4.y, (double) var5);
+            var1.release();
+            var2.release();
         }
         return var3;
     }
@@ -449,10 +449,10 @@ public abstract class Camera {
         float var3 = 0.0F;
         if (var1 != null && var2 != null) {
             Vector3 var4 = Vector3.method5377(var1, var2);
-            var4.field3476 = 0.0F;
+            var4.y = 0.0F;
             var3 = (float) Math.atan2((double) var4.x, (double) var4.z);
-            var1.method5291();
-            var2.method5291();
+            var1.release();
+            var2.release();
         }
         return (float) (3.141592653589793D - (double) var3);
     }

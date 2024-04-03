@@ -42,7 +42,7 @@ public class CutsceneAction_Sub11 extends CutsceneAction {
         client.cameraSplineEnd = this.field8486;
         client.field9034 = 1;
         client.field8995 = this.field8490 * 4;
-        Statics.field2671 = 1;
+        Statics.cameraState = 1;
         client.method6648();
         client.field8989 = true;
     }

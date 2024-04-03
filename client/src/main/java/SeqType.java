@@ -235,7 +235,7 @@ public class SeqType {
         if (this.field6322 == null) {
             return arg1;
         } else {
-            IntNode var3 = (IntNode) this.field6322.method11923((long) arg0);
+            IntNode var3 = (IntNode) this.field6322.getNode((long) arg0);
             return var3 == null ? arg1 : var3.field9556;
         }
     }
@@ -245,7 +245,7 @@ public class SeqType {
         if (this.field6322 == null) {
             return arg1;
         } else {
-            ObjectNode var3 = (ObjectNode) this.field6322.method11923((long) arg0);
+            ObjectNode var3 = (ObjectNode) this.field6322.getNode((long) arg0);
             return var3 == null ? arg1 : (String) var3.field9550;
         }
     }

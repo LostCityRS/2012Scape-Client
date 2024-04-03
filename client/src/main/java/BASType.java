@@ -390,7 +390,7 @@ public class BASType {
 
     @ObfuscatedName("vr.t(ILuo;I)V")
     public static final void method12356(int arg0, IterableMap arg1) {
-        if (arg0 != -1 && arg1.method11923((long) arg0) == null) {
+        if (arg0 != -1 && arg1.getNode((long) arg0) == null) {
             arg1.method11927(new Node(), (long) arg0);
         }
     }

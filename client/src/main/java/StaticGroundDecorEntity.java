@@ -56,7 +56,7 @@ public class StaticGroundDecorEntity extends GroundDecorLayerEntity implements L
             if (this.field7587 || arg3.field6472) {
                 this.field7580 = this.field7580.method295((byte) 0, var13, false);
                 if (arg3.field6472) {
-                    LocTint var15 = client.field8980.method6094();
+                    LocTint var15 = client.world.method6094();
                     this.field7580.PA(var15.field3783, var15.field3782, var15.field3781, var15.field3784);
                 }
             }
@@ -110,14 +110,14 @@ public class StaticGroundDecorEntity extends GroundDecorLayerEntity implements L
             }
         }
         Vector3 var7 = this.getTransform().trans;
-        return var4.method11447(arg0, arg1, LocShape.field6589.field6590, this.field7584, var5, var6, (int) var7.x, (int) var7.field3476, (int) var7.z, arg2, null);
+        return var4.method11447(arg0, arg1, LocShape.field6589.field6590, this.field7584, var5, var6, (int) var7.x, (int) var7.y, (int) var7.z, arg2, null);
     }
 
     @ObfuscatedName("yw.br(Lra;I)Lok;")
     public EntityBounds method12810(RendererToolkit arg0) {
         Vector3 var2 = this.getTransform().trans;
         if (this.field7582 == null) {
-            this.field7582 = GraphEntity.method15140((int) var2.x, (int) var2.field3476, (int) var2.z, this.method12905(arg0, 0));
+            this.field7582 = GraphEntity.method15140((int) var2.x, (int) var2.y, (int) var2.z, this.method12905(arg0, 0));
         }
         return this.field7582;
     }

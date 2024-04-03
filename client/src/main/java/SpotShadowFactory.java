@@ -52,8 +52,8 @@ public class SpotShadowFactory {
                 int var27 = var21[var25];
                 for (int var28 = 0; var28 < var19; var28++) {
                     int var29 = (var28 << 14) / var19;
-                    int var30 = Trig1.field3439[var29] * var26 >> 14;
-                    int var31 = Trig1.field3447[var29] * var27 >> 14;
+                    int var30 = Trig1.sin[var29] * var26 >> 14;
+                    int var31 = Trig1.cos[var29] * var27 >> 14;
                     var24[var25][var28] = var22.method2625(var30, 0, var31);
                 }
             }

@@ -76,7 +76,7 @@ public class ClientWorldMap extends WorldMap {
             int var3 = -1;
             int var4 = -1;
             Vector3 var5 = Statics.localPlayerEntity.getTransform().trans;
-            CoordGrid var6 = client.field8980.method6214();
+            CoordGrid var6 = client.world.method6214();
             if (Statics.field4292.method16705(Statics.localPlayerEntity.level, ((int) var5.x >> 9) + var6.x, ((int) var5.z >> 9) + var6.z, var2)) {
                 var3 = var2[1] - Statics.field4283;
                 var4 = var2[2] - Statics.field4284;
@@ -352,8 +352,8 @@ public class ClientWorldMap extends WorldMap {
             return false;
         } else if (!arg0.method7835(Statics.field4299)) {
             return false;
-        } else if (field9765.method11923((long) arg0.field4763) == null) {
-            return field9766.method11923((long) arg0.field4775) == null;
+        } else if (field9765.getNode((long) arg0.field4763) == null) {
+            return field9766.getNode((long) arg0.field4775) == null;
         } else {
             return false;
         }

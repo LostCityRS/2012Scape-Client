@@ -34,7 +34,7 @@ public final class IterableMap implements Iterable {
     }
 
     @ObfuscatedName("uo.u(J)Lnz;")
-    public Node method11923(long arg0) {
+    public Node getNode(long arg0) {
         this.field6724 = arg0;
         Node var3 = this.field6725[(int) (arg0 & (long) (this.field6722 - 1))];
         for (this.field6727 = var3.field4226; this.field6727 != var3; this.field6727 = this.field6727.field4226) {

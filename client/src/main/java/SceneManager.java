@@ -15,9 +15,9 @@ public class SceneManager {
         if (field770) {
             return;
         }
-        method2468(client.field8980.method6098().field4500);
-        if (client.field8980.method6098().field4508 != null) {
-            method2468(client.field8980.method6098().field4508);
+        method2468(client.world.getScene().field4500);
+        if (client.world.getScene().field4508 != null) {
+            method2468(client.world.getScene().field4508);
         }
         field770 = true;
     }

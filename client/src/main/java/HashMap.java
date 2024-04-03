@@ -29,7 +29,7 @@ public class HashMap {
     @ObfuscatedName("fn.j(Ljava/lang/String;I)Lacn;")
     public HashMapValue method3550(String arg0) {
         long var2 = this.field2132.method3209(arg0);
-        for (HashMapValue var4 = (HashMapValue) this.field2134.method11923(var2); var4 != null; var4 = (HashMapValue) this.field2134.method11924()) {
+        for (HashMapValue var4 = (HashMapValue) this.field2134.getNode(var2); var4 != null; var4 = (HashMapValue) this.field2134.method11924()) {
             if (var4.field9424.equals(arg0)) {
                 return var4;
             }

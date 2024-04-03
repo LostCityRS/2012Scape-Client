@@ -112,7 +112,7 @@ public class ServerConnection {
 
     @ObfuscatedName("ad.s(I)V")
     public void method1933() {
-        if (client.field9213 % 50 == 0) {
+        if (client.loopCycle % 50 == 0) {
             this.field841 = this.field845;
             this.field845 = 0;
             this.field838 = this.field842;

@@ -51,14 +51,14 @@ public class LookatEntity extends Lookat {
         Vector3 var5 = Vector3.create(this.field6645.method3720());
         var5.x -= arg2;
         var5.z -= arg3;
-        var5.field3476 *= -1.0F;
+        var5.y *= -1.0F;
         Vector3 var6 = this.method11550();
         var6.x -= arg2;
         var6.z -= arg3;
-        var6.field3476 *= -1.0F;
-        arg1.method5103(var5.x, var5.field3476, var5.z, var6.x, var6.field3476, var6.z, 0.0F, 1.0F, 0.0F);
-        var5.method5291();
-        var6.method5291();
+        var6.y *= -1.0F;
+        arg1.method5103(var5.x, var5.y, var5.z, var6.x, var6.y, var6.z, 0.0F, 1.0F, 0.0F);
+        var5.release();
+        var6.release();
     }
 
     @ObfuscatedName("agg.a(S)Lko;")
@@ -69,7 +69,7 @@ public class LookatEntity extends Lookat {
             var2.method5318(this.field9887.method3680());
         }
         var1.method5299(var2);
-        var2.method5291();
+        var2.release();
         return var1;
     }
 

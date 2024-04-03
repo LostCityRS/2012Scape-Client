@@ -173,12 +173,12 @@ public class World {
     }
 
     @ObfuscatedName("ml.m(B)I")
-    public int method6220() {
+    public int getSizeX() {
         return this.mapSizeX;
     }
 
     @ObfuscatedName("ml.t(S)I")
-    public int method6193() {
+    public int getSizeZ() {
         return this.mapSizeZ;
     }
 
@@ -208,7 +208,7 @@ public class World {
     }
 
     @ObfuscatedName("ml.o(B)Loo;")
-    public Scene method6098() {
+    public Scene getScene() {
         return this.field3791;
     }
 
@@ -218,7 +218,7 @@ public class World {
     }
 
     @ObfuscatedName("ml.p(B)Llg;")
-    public SceneLevelTileFlags method6100() {
+    public SceneLevelTileFlags getSceneLevelTileFlags() {
         return this.sceneLevelTileFlags;
     }
 
@@ -325,7 +325,7 @@ public class World {
         if (this.asyncRebuilding) {
             this.method6112();
             ClientWorldMap.method7184(true);
-            World var1 = client.field8980;
+            World var1 = client.world;
             this.field3820 = var1.field3820;
             this.field3821 = var1.field3821;
             this.field3822 = var1.field3822;
@@ -774,7 +774,7 @@ public class World {
                     var8.x -= var2 * 512;
                     var8.z -= var3 * 512;
                     var6.method8551(var8);
-                    var8.method5291();
+                    var8.release();
                 }
             }
         } else {
@@ -811,7 +811,7 @@ public class World {
                         var13.method6979();
                         var9 = true;
                     }
-                    var15.method5291();
+                    var15.release();
                 }
             }
             if (var9) {
@@ -825,7 +825,7 @@ public class World {
             }
         }
         for (int var21 = 0; var21 < 2048; var21++) {
-            PlayerEntity var22 = client.field9070[var21];
+            PlayerEntity var22 = client.players[var21];
             if (var22 != null) {
                 for (int var23 = 0; var23 < var22.routeWaypointX.length; var23++) {
                     var22.routeWaypointX[var23] -= var2;
@@ -835,7 +835,7 @@ public class World {
                 var24.x -= var2 * 512;
                 var24.z -= var3 * 512;
                 var22.method8551(var24);
-                var24.method5291();
+                var24.release();
             }
         }
         HintArrow[] var25 = client.field8936;
@@ -885,10 +885,10 @@ public class World {
         if (arg0 == 16) {
             client.field9154 -= var2 * 512;
             client.field9019 -= var3 * 512;
-            Statics.field2297 -= var2 * 512;
-            Statics.field6818 -= var3 * 512;
-            if (Statics.field2671 != 5) {
-                Statics.field2671 = 4;
+            Statics.cameraOrbitX -= var2 * 512;
+            Statics.cameraOrbitZ -= var3 * 512;
+            if (Statics.cameraState != 5) {
+                Statics.cameraState = 4;
                 Statics.field3308 = -1;
                 Statics.field1941 = -1;
             }
@@ -1031,7 +1031,7 @@ public class World {
         }
         if (!this.asyncRebuilding) {
             for (int var11 = 0; var11 < 2048; var11++) {
-                PlayerEntity var12 = client.field9070[var11];
+                PlayerEntity var12 = client.players[var11];
                 if (var12 != null) {
                     var12.field9808 = null;
                 }
@@ -1183,7 +1183,7 @@ public class World {
         }
         boolean var18 = false;
         if (this.asyncRebuilding) {
-            World var19 = client.field8980;
+            World var19 = client.world;
             this.method6090(var19);
             Statics.field8656.method6041(var19);
             var18 = true;
@@ -1196,7 +1196,7 @@ public class World {
                 } catch (InterruptedException var38) {
                 }
             }
-            client.field8980 = this;
+            client.world = this;
             var19.method6127();
             this.method6126(16);
             this.method6196();
@@ -1430,7 +1430,7 @@ public class World {
                     int var12 = (this.field3820[var2] >> 8) * 64 - this.field3795.x + var10;
                     int var13 = (this.field3820[var2] & 0xFF) * 64 - this.field3795.z + var11;
                     NPCType var14 = Statics.field3774.method12565(var5.g2());
-                    ObjectNode var15 = (ObjectNode) client.npcs.method11923((long) var7);
+                    ObjectNode var15 = (ObjectNode) client.npcs.getNode((long) var7);
                     if (var15 == null && (var14.field7220 & 0x1) > 0 && var12 >= 0 && var14.field7213 + var12 < this.mapSizeX && var13 >= 0 && var14.field7213 + var13 < this.mapSizeZ) {
                         NpcEntity var16 = new NpcEntity(this.field3791);
                         var16.localPlayerIndex = var7;
@@ -1438,12 +1438,12 @@ public class World {
                         client.npcs.method11927(var17, (long) var7);
                         client.field8965[++client.field8966 - 1] = var17;
                         client.field9056[++client.npcCount - 1] = var7;
-                        var16.field8618 = client.field9213;
+                        var16.field8618 = client.loopCycle;
                         var16.method16149(var14);
-                        var16.method13979(var16.field10075.field7213);
+                        var16.setSize(var16.field10075.field7213);
                         var16.field8636 = var16.field10075.field7241 << 3;
                         var16.method13946(var16.field10075.field7243.method6342().method6339() << 11 & 0x3FFF, true);
-                        var16.method16153(var9, var12, var13, true, var16.method13954());
+                        var16.method16153(var9, var12, var13, true, var16.size());
                     }
                 }
             }

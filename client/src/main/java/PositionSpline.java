@@ -49,7 +49,7 @@ public abstract class PositionSpline extends Position {
     @ObfuscatedName("aaj.s(B)Ladu;")
     public CoordFine method4017() {
         Vector3 var1 = this.field8746.method5528(this.field8747);
-        return new CoordFine(0, (int) var1.x, (int) var1.field3476, (int) var1.z);
+        return new CoordFine(0, (int) var1.x, (int) var1.y, (int) var1.z);
     }
 
     @ObfuscatedName("aaj.k(B)F")
@@ -61,7 +61,7 @@ public abstract class PositionSpline extends Position {
     public void method4029(Vector3i arg0, int arg1, int arg2) {
         Vector3 var4 = this.field8746.method5528(this.field8747);
         arg0.field2212 = (int) var4.x - arg1;
-        arg0.field2211 = (int) -var4.field3476;
+        arg0.field2211 = (int) -var4.y;
         arg0.field2213 = (int) var4.z - arg2;
     }
 

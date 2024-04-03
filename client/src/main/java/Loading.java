@@ -291,7 +291,7 @@ public class Loading {
                 client.field9067 = Statics.field4825.field5166;
                 client.field9068 = Statics.field4825.field5167;
             }
-            Statics.field3226 = new WearposDefaults(Statics.field849);
+            Statics.wearposDefaults = new WearposDefaults(Statics.field849);
             Statics.field1736 = new MiniMenuDefaults(Statics.field849);
             Statics.field2190 = new CutsceneDefaults(Statics.field849);
         }
@@ -301,7 +301,7 @@ public class Loading {
             }
             Statics.field8465 = new BasicMaterialTypeList(Statics.field7572, Statics.field808, Statics.field6435);
             Statics.field4464 = new ParamTypeList(client.field9163, Statics.field2308, Statics.field7435);
-            Statics.field3769 = new BASTypeList(client.field9163, Statics.field2308, Statics.field7435, Statics.field3226);
+            Statics.field3769 = new BASTypeList(client.field9163, Statics.field2308, Statics.field7435, Statics.wearposDefaults);
             Statics.field3770 = new CursorTypeList(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
             Statics.field1244 = new EnumTypeList(client.field9163, Statics.field2308, Statics.field6451);
             Statics.field3615 = new FloorOverlayTypeList(client.field9163, Statics.field2308, Statics.field7435);
@@ -312,7 +312,7 @@ public class Loading {
             Statics.field495 = new InvTypeList(client.field9163, Statics.field2308, Statics.field7435);
             Statics.field785 = new LightTypeList(client.field9163, Statics.field2308, Statics.field7435);
             Statics.field10355 = new LocTypeList(client.field9163, Statics.field2308, true, Statics.field1565, Statics.field4560);
-            client.field8980.method6159(Statics.field10355);
+            client.world.method6159(Statics.field10355);
             Statics.field8656.method6038(new LocTypeList(client.field9163, Statics.field2308, true, Statics.field1565, Statics.field4560));
             Statics.field8499 = new MapElementTypeList(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
             Statics.field850 = new MSITypeList(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
@@ -354,7 +354,7 @@ public class Loading {
             }
         }
         if (Statics.field1208 == LoadingStage.field3408) {
-            WorldMap.method7080(Statics.field4059, Statics.field3615, Statics.field4450, client.field8980.method6103(), Statics.field8499, Statics.field850, Statics.field2669);
+            WorldMap.method7080(Statics.field4059, Statics.field3615, Statics.field4450, client.world.method6103(), Statics.field8499, Statics.field850, Statics.field2669);
         }
         if (Statics.field1208 == LoadingStage.field3399) {
             Statics.field6666 = new int[Statics.field8455.field7160];

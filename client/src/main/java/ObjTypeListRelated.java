@@ -27,7 +27,7 @@ public class ObjTypeListRelated {
     @ObfuscatedName("qd.u(Lqu;)Ljava/lang/Object;")
     public final Object method8006(CacheKey arg0) {
         long var2 = arg0.method7998();
-        for (CacheEntry var4 = (CacheEntry) this.field4856.method11923(var2); var4 != null; var4 = (CacheEntry) this.field4856.method11924()) {
+        for (CacheEntry var4 = (CacheEntry) this.field4856.getNode(var2); var4 != null; var4 = (CacheEntry) this.field4856.method11924()) {
             if (var4.field10375.method7994(arg0)) {
                 Object var5 = var4.method16728();
                 if (var5 != null) {
@@ -55,7 +55,7 @@ public class ObjTypeListRelated {
     @ObfuscatedName("qd.j(Lqu;)V")
     public final void method8002(CacheKey arg0) {
         long var2 = arg0.method7998();
-        for (CacheEntry var4 = (CacheEntry) this.field4856.method11923(var2); var4 != null; var4 = (CacheEntry) this.field4856.method11924()) {
+        for (CacheEntry var4 = (CacheEntry) this.field4856.getNode(var2); var4 != null; var4 = (CacheEntry) this.field4856.method11924()) {
             if (var4.field10375.method7994(arg0)) {
                 this.method8003(var4);
                 break;

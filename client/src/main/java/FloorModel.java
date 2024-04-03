@@ -32,7 +32,7 @@ public abstract class FloorModel {
     }
 
     @ObfuscatedName("xa.c(III)I")
-    public final int method196(int arg0, int arg1) {
+    public final int getFineHeight(int arg0, int arg1) {
         int var3 = arg0 >> this.field388;
         int var4 = arg1 >> this.field388;
         if (var3 < 0 || var4 < 0 || var3 > this.field387 - 1 || var4 > this.field386 - 1) {

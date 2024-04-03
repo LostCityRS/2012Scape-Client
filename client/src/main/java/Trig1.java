@@ -4,16 +4,16 @@ import deob.ObfuscatedName;
 public class Trig1 {
 
     @ObfuscatedName("kp.b")
-    public static final int[] field3439 = new int[16384];
+    public static final int[] sin = new int[16384];
 
     @ObfuscatedName("kp.x")
-    public static final int[] field3447 = new int[16384];
+    public static final int[] cos = new int[16384];
 
     static {
         double var0 = 3.834951969714103E-4D;
         for (int var2 = 0; var2 < 16384; var2++) {
-            field3439[var2] = (int) (Math.sin((double) var2 * var0) * 16384.0D);
-            field3447[var2] = (int) (Math.cos((double) var2 * var0) * 16384.0D);
+            sin[var2] = (int) (Math.sin((double) var2 * var0) * 16384.0D);
+            cos[var2] = (int) (Math.cos((double) var2 * var0) * 16384.0D);
         }
     }
 

@@ -17,8 +17,8 @@ public class CutsceneAction_Sub10 extends CutsceneAction {
 
     @ObfuscatedName("aar.j(I)V")
     public void method2873() {
-        client.field8992 = client.field9213;
-        client.field8993 = client.field9213 + this.field8525;
+        client.field8992 = client.loopCycle;
+        client.field8993 = client.loopCycle + this.field8525;
         Statics.field4666 = client.field8994;
         Statics.field6400 = client.field9147;
         Statics.field6565 = client.field8996;

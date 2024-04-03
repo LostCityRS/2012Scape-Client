@@ -161,7 +161,7 @@ public class PureJavaFloorModel extends FloorModel {
                 int var29 = (arg1 << this.field388) + var25;
                 var20.field921[var23] = (short) var24;
                 var20.field923[var23] = (short) var25;
-                var20.field920[var23] = (short) (this.method196(var28, var29) + (arg3 == null ? 0 : arg3[var23]));
+                var20.field920[var23] = (short) (this.getFineHeight(var28, var29) + (arg3 == null ? 0 : arg3[var23]));
                 if (var20.field924[var23] < 2) {
                     var20.field924[var23] = 2;
                 }
@@ -327,7 +327,7 @@ public class PureJavaFloorModel extends FloorModel {
                 int var25 = (arg1 << this.field388) + var19;
                 var16.field975[var17] = (short) var18;
                 var16.field977[var17] = (short) var19;
-                var16.field973[var17] = (short) (this.method196(var24, var25) + (arg3 == null ? 0 : arg3[var17]));
+                var16.field973[var17] = (short) (this.getFineHeight(var24, var25) + (arg3 == null ? 0 : arg3[var17]));
                 if (var21 < 0) {
                     var21 = 0;
                 }
@@ -467,7 +467,7 @@ public class PureJavaFloorModel extends FloorModel {
                 int var59 = (arg1 << this.field388) + var53;
                 var50.field958[var51] = (short) var52;
                 var50.field960[var51] = (short) var53;
-                var50.field959[var51] = (short) (this.method196(var58, var59) + (arg3 == null ? 0 : arg3[var51]));
+                var50.field959[var51] = (short) (this.getFineHeight(var58, var59) + (arg3 == null ? 0 : arg3[var51]));
                 if (var55 < 0) {
                     var55 = 0;
                 }

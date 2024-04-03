@@ -22,11 +22,11 @@ public class PositionPoint extends Position {
     @ObfuscatedName("aaq.i(Ladu;I)V")
     public void method14091(CoordFine arg0) {
         this.field8732.x = arg0.field9594;
-        this.field8732.field3476 = arg0.field9597;
+        this.field8732.y = arg0.field9597;
         this.field8732.z = arg0.field9598;
         if (Float.isNaN(this.field8730.x)) {
             this.field8730.method5334(this.field8732);
-            this.field8733.method5370();
+            this.field8733.reset();
         }
         this.field8731 = arg0.field9595;
     }
@@ -48,13 +48,13 @@ public class PositionPoint extends Position {
 
     @ObfuscatedName("aaq.s(B)Ladu;")
     public CoordFine method4017() {
-        return new CoordFine(this.field8731, (int) this.field8730.x, (int) this.field8730.field3476, (int) this.field8730.z);
+        return new CoordFine(this.field8731, (int) this.field8730.x, (int) this.field8730.y, (int) this.field8730.z);
     }
 
     @ObfuscatedName("aaq.c(Lfi;III)V")
     public void method4029(Vector3i arg0, int arg1, int arg2) {
         arg0.field2212 = (int) this.field8730.x - arg1;
-        arg0.field2211 = (int) -this.field8730.field3476;
+        arg0.field2211 = (int) -this.field8730.y;
         arg0.field2213 = (int) this.field8730.z - arg2;
     }
 

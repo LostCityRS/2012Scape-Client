@@ -19,11 +19,11 @@ public class LookatPoint extends Lookat {
     @ObfuscatedName("aga.b(Ladu;I)V")
     public void method15915(CoordFine arg0) {
         this.field9882.x = arg0.field9594;
-        this.field9882.field3476 = arg0.field9597;
+        this.field9882.y = arg0.field9597;
         this.field9882.z = arg0.field9598;
         if (Float.isNaN(this.field9883.x)) {
             this.field9883.method5334(this.field9882);
-            this.field9884.method5370();
+            this.field9884.reset();
         }
     }
 
@@ -42,14 +42,14 @@ public class LookatPoint extends Lookat {
         Vector3 var5 = Vector3.create(this.field6645.method3720());
         var5.x -= arg2;
         var5.z -= arg3;
-        var5.field3476 *= -1.0F;
+        var5.y *= -1.0F;
         Vector3 var6 = Vector3.create(this.field9883);
         var6.x -= arg2;
         var6.z -= arg3;
-        var6.field3476 *= -1.0F;
-        arg1.method5103(var5.x, var5.field3476, var5.z, var6.x, var6.field3476, var6.z, 0.0F, 1.0F, 0.0F);
-        var5.method5291();
-        var6.method5291();
+        var6.y *= -1.0F;
+        arg1.method5103(var5.x, var5.y, var5.z, var6.x, var6.y, var6.z, 0.0F, 1.0F, 0.0F);
+        var5.release();
+        var6.release();
     }
 
     @ObfuscatedName("aga.a(S)Lko;")

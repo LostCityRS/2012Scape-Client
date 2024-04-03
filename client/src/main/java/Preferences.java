@@ -139,7 +139,7 @@ public class Preferences {
         Statics.clientOptions.method15448(Statics.clientOptions.field9677, 0);
         Statics.clientOptions.method15448(Statics.clientOptions.field9633, 4);
         client.method13901();
-        client.field8980.method6139().method8154();
+        client.world.method6139().method8154();
         client.field9165 = true;
     }
 
@@ -170,7 +170,7 @@ public class Preferences {
         Statics.clientOptions.method15448(Statics.clientOptions.field9677, 1);
         Statics.clientOptions.method15448(Statics.clientOptions.field9633, 3);
         client.method13901();
-        client.field8980.method6139().method8154();
+        client.world.method6139().method8154();
         client.field9165 = true;
     }
 
@@ -201,7 +201,7 @@ public class Preferences {
         Statics.clientOptions.method15448(Statics.clientOptions.field9677, 2);
         Statics.clientOptions.method15448(Statics.clientOptions.field9633, 2);
         client.method13901();
-        client.field8980.method6139().method8154();
+        client.world.method6139().method8154();
         client.field9165 = true;
     }
 
@@ -232,7 +232,7 @@ public class Preferences {
         Statics.clientOptions.method15448(Statics.clientOptions.field9677, 2);
         Statics.clientOptions.method15448(Statics.clientOptions.field9633, 1);
         client.method13901();
-        client.field8980.method6139().method8154();
+        client.world.method6139().method8154();
         client.field9165 = true;
     }
 

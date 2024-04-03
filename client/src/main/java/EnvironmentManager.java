@@ -76,10 +76,10 @@ public class EnvironmentManager {
                 var2 = Statics.localPlayerEntity.routeWaypointX[0] >> 3;
                 var3 = Statics.localPlayerEntity.routeWaypointZ[0] >> 3;
             }
-            if (var2 >= 0 && var2 < arg0.method6220() >> 3 && var3 >= 0 && var3 < arg0.method6193() >> 3) {
+            if (var2 >= 0 && var2 < arg0.getSizeX() >> 3 && var3 >= 0 && var3 < arg0.getSizeZ() >> 3) {
                 this.method8152(var2, var3, field4972);
             } else {
-                this.method8152(arg0.method6220() >> 4, arg0.method6193() >> 4, 0);
+                this.method8152(arg0.getSizeX() >> 4, arg0.getSizeZ() >> 4, 0);
             }
         }
         this.method8160();
@@ -213,8 +213,8 @@ public class EnvironmentManager {
 
     @ObfuscatedName("qp.o(I)V")
     public void method8194() {
-        this.field4973.IA(((float) Statics.clientOptions.field9642.method15672() * 0.1F + 0.7F + client.field8980.method6141()) * this.field4965.field4987);
-        this.field4973.m(this.field4965.field4991, this.field4965.field4988, this.field4965.field4996, (float) ((int) this.field4980.x << 2), (float) ((int) this.field4980.field3476 << 2), (float) ((int) this.field4980.z << 2));
+        this.field4973.IA(((float) Statics.clientOptions.field9642.method15672() * 0.1F + 0.7F + client.world.method6141()) * this.field4965.field4987);
+        this.field4973.m(this.field4965.field4991, this.field4965.field4988, this.field4965.field4996, (float) ((int) this.field4980.x << 2), (float) ((int) this.field4980.y << 2), (float) ((int) this.field4980.z << 2));
         this.field4973.method549(this.field4965.field4993);
     }
 
@@ -232,7 +232,7 @@ public class EnvironmentManager {
 
     @ObfuscatedName("qp.w(I)V")
     public void method8158() {
-        this.field4973.IA(((float) Statics.clientOptions.field9642.method15672() * 0.1F + 0.7F + client.field8980.method6141()) * 1.1523438F);
+        this.field4973.IA(((float) Statics.clientOptions.field9642.method15672() * 0.1F + 0.7F + client.world.method6141()) * 1.1523438F);
         this.field4973.m(field4983, 0.69921875F, 1.2F, -200.0F, -240.0F, -200.0F);
         this.field4973.c(field4982, -1, 0);
         this.field4973.method549(Statics.field4971);

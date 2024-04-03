@@ -197,7 +197,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
 
     @ObfuscatedName("abt.p(III)Lajf;")
     public Js5Request method14237(int arg0, int arg1) {
-        Js5Request var3 = (Js5Request) this.field8868.method11923((long) arg0);
+        Js5Request var3 = (Js5Request) this.field8868.getNode((long) arg0);
         if (var3 != null && arg1 == 0 && !var3.field10354 && var3.field10352) {
             var3.method6979();
             var3 = null;
@@ -509,7 +509,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
 
     @ObfuscatedName("abt.s(IB)I")
     public int method5607(int arg0) {
-        Js5Request var2 = (Js5Request) this.field8868.method11923((long) arg0);
+        Js5Request var2 = (Js5Request) this.field8868.getNode((long) arg0);
         return var2 == null ? 0 : var2.method16687();
     }
 }

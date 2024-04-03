@@ -23,7 +23,7 @@ public class CutsceneLocation {
 
     public CutsceneLocation(Packet arg0) {
         this.field1552 = arg0.gSmart2or4null();
-        this.field1551 = (LocShape) SerializableEnums.method8032(LocShape.method6247(), arg0.g1());
+        this.field1551 = (LocShape) SerializableEnums.decode(LocShape.method6247(), arg0.g1());
     }
 
     @ObfuscatedName("df.u(IIIIB)V")

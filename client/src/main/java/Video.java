@@ -81,7 +81,7 @@ public abstract class Video {
             }
             int var2 = this.field4236.getSerialNumber();
             if (!this.field4236.isBOS()) {
-                OggStream var9 = (OggStream) this.field4234.method11923((long) var2);
+                OggStream var9 = (OggStream) this.field4234.getNode((long) var2);
                 if (!var9.field9557.pageIn(this.field4236)) {
                     throw new IllegalStateException();
                 }
@@ -127,7 +127,7 @@ public abstract class Video {
         while (!this.field4238) {
             OggStream var1;
             if (this.field4237) {
-                var1 = (OggStream) this.field4234.method11923((long) this.field4236.getSerialNumber());
+                var1 = (OggStream) this.field4234.getNode((long) this.field4236.getSerialNumber());
             } else {
                 var1 = this.method7005();
                 if (var1 == null) {

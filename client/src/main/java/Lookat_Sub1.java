@@ -45,12 +45,12 @@ public class Lookat_Sub1 extends Lookat {
         Vector3 var12 = Vector3.method5308(var9, var11);
         Vector3 var13 = Vector3.method5308(var12, var9);
         var13.method5318(var10);
-        var5.field3476 *= -1.0F;
-        var7.field3476 *= -1.0F;
-        arg1.method5103(var5.x, var5.field3476, var5.z, var7.x, var7.field3476, var7.z, var13.x, var13.field3476, var13.z);
-        var5.method5291();
-        var7.method5291();
-        var13.method5291();
+        var5.y *= -1.0F;
+        var7.y *= -1.0F;
+        arg1.method5103(var5.x, var5.y, var5.z, var7.x, var7.y, var7.z, var13.x, var13.y, var13.z);
+        var5.release();
+        var7.release();
+        var13.release();
     }
 
     @ObfuscatedName("agf.c(Laet;I)V")

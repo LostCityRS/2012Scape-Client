@@ -13,7 +13,7 @@ public class SubInterfaceActivePlayer extends SubInterface {
 
     @ObfuscatedName("ajd.u(B)Z")
     public boolean method15469() {
-        PlayerEntity var1 = client.field9070[this.field10478];
+        PlayerEntity var1 = client.players[this.field10478];
         if (var1 == null) {
             return false;
         } else {

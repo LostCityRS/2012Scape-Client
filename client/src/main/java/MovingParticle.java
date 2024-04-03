@@ -225,7 +225,7 @@ public class MovingParticle extends Particle {
         }
         if (var8.field2674 != null) {
             for (int var57 = 0; var57 < var8.field2674.length; var57++) {
-                ParticleEffector var58 = (ParticleEffector) ParticleSystemRenderer.field4924.method11923((long) var8.field2674[var57]);
+                ParticleEffector var58 = (ParticleEffector) ParticleSystemRenderer.field4924.getNode((long) var8.field2674[var57]);
                 while (var58 != null) {
                     ParticleEffectorType var59 = var58.field9602;
                     double var60 = (double) (var4 - var58.field9601);
@@ -284,7 +284,7 @@ public class MovingParticle extends Particle {
                 var8.field2705 = new int[var8.field2698.length];
                 for (int var80 = 0; var80 < var8.field2698.length; var80++) {
                     ParticleEffectorType.method2938(var8.field2698[var80]);
-                    var8.field2705[var80] = ((IntNode) ParticleEffectorType.field2745.method11923((long) var8.field2698[var80])).field9556;
+                    var8.field2705[var80] = ((IntNode) ParticleEffectorType.field2745.getNode((long) var8.field2698[var80])).field9556;
                 }
             }
             for (int var81 = 0; var81 < var8.field2705.length; var81++) {

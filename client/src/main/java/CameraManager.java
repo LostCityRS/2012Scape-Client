@@ -71,29 +71,29 @@ public class CameraManager {
         if (Statics.field2131.method7243(98)) {
             Vector3 var13 = Vector3.method5294(0.0F, 0.0F, 25.0F);
             var13.method5318(var3);
-            var13.field3476 *= -1.0F;
+            var13.y *= -1.0F;
             var2.method5299(var13);
         }
         if (Statics.field2131.method7243(99)) {
             Vector3 var14 = Vector3.method5294(0.0F, 0.0F, -25.0F);
             var14.method5318(var3);
-            var14.field3476 *= -1.0F;
+            var14.y *= -1.0F;
             var2.method5299(var14);
         }
         if (Statics.field2131.method7243(96)) {
             Vector3 var15 = Vector3.method5294(-25.0F, 0.0F, 0.0F);
             var15.method5318(var3);
-            var15.field3476 *= -1.0F;
+            var15.y *= -1.0F;
             var2.method5299(var15);
         }
         if (Statics.field2131.method7243(97)) {
             Vector3 var16 = Vector3.method5294(25.0F, 0.0F, 0.0F);
             var16.method5318(var3);
-            var16.field3476 *= -1.0F;
+            var16.y *= -1.0F;
             var2.method5299(var16);
         }
-        CoordFine var17 = new CoordFine(0, (int) var2.x, (int) var2.field3476, (int) var2.z);
+        CoordFine var17 = new CoordFine(0, (int) var2.x, (int) var2.y, (int) var2.z);
         var0.method14091(var17);
-        Statics.field3780.method3727(0.02F, client.field8980.method6101(Statics.currentPlayerLevel), client.field8980.method6157().field3697);
+        Statics.field3780.method3727(0.02F, client.world.method6101(Statics.currentPlayerLevel), client.world.method6157().field3697);
     }
 }

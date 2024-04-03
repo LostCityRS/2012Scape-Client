@@ -63,12 +63,12 @@ public abstract class LookatSpline extends Lookat {
         Vector3 var11 = Vector3.method5308(var8, var10);
         Vector3 var12 = Vector3.method5308(var11, var8);
         var12.method5318(var9);
-        var5.field3476 *= -1.0F;
-        var6.field3476 *= -1.0F;
-        arg1.method5103(var5.x, var5.field3476, var5.z, var6.x, var6.field3476, var6.z, var12.x, var12.field3476, var12.z);
-        var5.method5291();
-        var6.method5291();
-        var12.method5291();
+        var5.y *= -1.0F;
+        var6.y *= -1.0F;
+        arg1.method5103(var5.x, var5.y, var5.z, var6.x, var6.y, var6.z, var12.x, var12.y, var12.z);
+        var5.release();
+        var6.release();
+        var12.release();
     }
 
     @ObfuscatedName("agw.c(Laet;I)V")

@@ -1267,7 +1267,7 @@ public class Component {
         if (this.field1902 == null) {
             return arg1;
         } else {
-            IntNode var3 = (IntNode) this.field1902.method11923((long) arg0);
+            IntNode var3 = (IntNode) this.field1902.getNode((long) arg0);
             return var3 == null ? arg1 : var3.field9556;
         }
     }
@@ -1277,7 +1277,7 @@ public class Component {
         if (this.field1902 == null) {
             return arg1;
         } else {
-            ObjectNode var3 = (ObjectNode) this.field1902.method11923((long) arg0);
+            ObjectNode var3 = (ObjectNode) this.field1902.getNode((long) arg0);
             return var3 == null ? arg1 : (String) var3.field9550;
         }
     }
@@ -1289,7 +1289,7 @@ public class Component {
             this.field1902.method11927(new IntNode(arg1), (long) arg0);
             return;
         }
-        IntNode var3 = (IntNode) this.field1902.method11923((long) arg0);
+        IntNode var3 = (IntNode) this.field1902.getNode((long) arg0);
         if (var3 == null) {
             this.field1902.method11927(new IntNode(arg1), (long) arg0);
         } else {
@@ -1304,7 +1304,7 @@ public class Component {
             this.field1902.method11927(new ObjectNode(arg1), (long) arg0);
             return;
         }
-        ObjectNode var3 = (ObjectNode) this.field1902.method11923((long) arg0);
+        ObjectNode var3 = (ObjectNode) this.field1902.getNode((long) arg0);
         if (var3 != null) {
             var3.method6979();
         }
@@ -1314,7 +1314,7 @@ public class Component {
     @ObfuscatedName("ew.ap(IB)V")
     public void method3129(int arg0) {
         if (this.field1902 != null) {
-            Node var2 = this.field1902.method11923((long) arg0);
+            Node var2 = this.field1902.getNode((long) arg0);
             if (var2 != null) {
                 var2.method6979();
             }

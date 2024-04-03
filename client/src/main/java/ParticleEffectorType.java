@@ -75,7 +75,7 @@ public class ParticleEffectorType {
             var3.method4679(new Packet(var2));
         }
         var3.method4675();
-        if (var3.field2760 == 2 && field2745.method11923((long) arg0) == null) {
+        if (var3.field2760 == 2 && field2745.getNode((long) arg0) == null) {
             field2745.method11927(new IntNode(field2764), (long) arg0);
             field2756[++field2764 - 1] = var3;
         }
@@ -120,7 +120,7 @@ public class ParticleEffectorType {
 
     @ObfuscatedName("ic.c(B)V")
     public void method4675() {
-        this.field2772 = Trig1.field3447[this.field2761 << 3];
+        this.field2772 = Trig1.cos[this.field2761 << 3];
         long var1 = (long) this.field2754;
         long var3 = (long) this.field2763;
         long var5 = (long) this.field2765;

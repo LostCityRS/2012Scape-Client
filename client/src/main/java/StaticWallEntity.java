@@ -66,7 +66,7 @@ public class StaticWallEntity extends WallLayerEntity implements Location {
             if (this.field7563 || arg3.field6472) {
                 this.field7557 = this.field7557.method295((byte) 0, var14, false);
                 if (arg3.field6472) {
-                    LocTint var16 = client.field8980.method6094();
+                    LocTint var16 = client.world.method6094();
                     this.field7557.PA(var16.field3783, var16.field3782, var16.field3781, var16.field3784);
                 }
             }
@@ -125,14 +125,14 @@ public class StaticWallEntity extends WallLayerEntity implements Location {
             }
         }
         Vector3 var7 = this.getTransform().trans;
-        return var4.method11447(arg0, arg1, this.field7559, this.field7561, var5, var6, (int) var7.x, (int) var7.field3476, (int) var7.z, arg2, null);
+        return var4.method11447(arg0, arg1, this.field7559, this.field7561, var5, var6, (int) var7.x, (int) var7.y, (int) var7.z, arg2, null);
     }
 
     @ObfuscatedName("ye.br(Lra;I)Lok;")
     public EntityBounds method12810(RendererToolkit arg0) {
         Vector3 var2 = this.getTransform().trans;
         if (this.field7554 == null) {
-            this.field7554 = GraphEntity.method15140((int) var2.x, (int) var2.field3476, (int) var2.z, this.method12890(arg0, 0));
+            this.field7554 = GraphEntity.method15140((int) var2.x, (int) var2.y, (int) var2.z, this.method12890(arg0, 0));
         }
         return this.field7554;
     }

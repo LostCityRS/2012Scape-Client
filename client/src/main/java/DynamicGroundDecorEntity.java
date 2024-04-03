@@ -66,9 +66,9 @@ public class DynamicGroundDecorEntity extends GroundDecorLayerEntity implements 
         }
         this.field7531 = var2.i() || this.field7530.field1229 != null;
         if (this.field7528 == null) {
-            this.field7528 = GraphEntity.method15140((int) var4.trans.x, (int) var4.trans.field3476, (int) var4.trans.z, var2);
+            this.field7528 = GraphEntity.method15140((int) var4.trans.x, (int) var4.trans.y, (int) var4.trans.z, var2);
         } else {
-            GraphEntity.method11162(this.field7528, (int) var4.trans.x, (int) var4.trans.field3476, (int) var4.trans.z, var2);
+            GraphEntity.method11162(this.field7528, (int) var4.trans.x, (int) var4.trans.y, (int) var4.trans.z, var2);
         }
         return var5;
     }

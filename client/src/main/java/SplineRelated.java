@@ -45,10 +45,10 @@ public class SplineRelated {
         float var6 = (this.field3483[2].x - this.field3483[1].x) * 3.0F - var5;
         float var7 = this.field3483[3].x - this.field3483[0].x - var5 - var6;
         var2.x = arg0 * var5 + var3 * var6 + var4 * var7 + this.field3483[0].x;
-        float var8 = (this.field3483[1].field3476 - this.field3483[0].field3476) * 3.0F;
-        float var9 = (this.field3483[2].field3476 - this.field3483[1].field3476) * 3.0F - var8;
-        float var10 = this.field3483[3].field3476 - this.field3483[0].field3476 - var8 - var9;
-        var2.field3476 = arg0 * var8 + var3 * var9 + var4 * var10 + this.field3483[0].field3476;
+        float var8 = (this.field3483[1].y - this.field3483[0].y) * 3.0F;
+        float var9 = (this.field3483[2].y - this.field3483[1].y) * 3.0F - var8;
+        float var10 = this.field3483[3].y - this.field3483[0].y - var8 - var9;
+        var2.y = arg0 * var8 + var3 * var9 + var4 * var10 + this.field3483[0].y;
         float var11 = (this.field3483[1].z - this.field3483[0].z) * 3.0F;
         float var12 = (this.field3483[2].z - this.field3483[1].z) * 3.0F - var11;
         float var13 = this.field3483[3].z - this.field3483[0].z - var11 - var12;

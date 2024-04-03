@@ -196,7 +196,7 @@ public class QuestType {
         if (this.field5069 == null) {
             return arg1;
         } else {
-            IntNode var3 = (IntNode) this.field5069.method11923((long) arg0);
+            IntNode var3 = (IntNode) this.field5069.getNode((long) arg0);
             return var3 == null ? arg1 : var3.field9556;
         }
     }
@@ -206,7 +206,7 @@ public class QuestType {
         if (this.field5069 == null) {
             return arg1;
         } else {
-            ObjectNode var3 = (ObjectNode) this.field5069.method11923((long) arg0);
+            ObjectNode var3 = (ObjectNode) this.field5069.getNode((long) arg0);
             return var3 == null ? arg1 : (String) var3.field9550;
         }
     }

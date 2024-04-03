@@ -52,7 +52,7 @@ public class VarRelated1 implements VarIntDomain {
     @ObfuscatedName("e.a(III)V")
     public void method1642(int arg0, int arg1) {
         this.field661[arg0] = arg1;
-        LongNode var3 = (LongNode) this.field662.method11923((long) arg0);
+        LongNode var3 = (LongNode) this.field662.getNode((long) arg0);
         if (var3 == null) {
             LongNode var4 = new LongNode(MonotonicTime.method5554() + 500L);
             this.field662.method11927(var4, (long) arg0);
@@ -64,7 +64,7 @@ public class VarRelated1 implements VarIntDomain {
     @ObfuscatedName("e.s(III)V")
     public void method1643(int arg0, int arg1) {
         this.field657[arg0] = arg1;
-        LongNode var3 = (LongNode) this.field662.method11923((long) arg0);
+        LongNode var3 = (LongNode) this.field662.getNode((long) arg0);
         if (var3 == null) {
             LongNode var4 = new LongNode(4611686018427387905L);
             this.field662.method11927(var4, (long) arg0);

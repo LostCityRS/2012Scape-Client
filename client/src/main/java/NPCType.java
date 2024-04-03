@@ -353,11 +353,11 @@ public class NPCType {
         } else if (arg1 == 123) {
             this.field7266 = arg0.g2();
         } else if (arg1 == 125) {
-            this.field7243 = (CompassPoint) SerializableEnums.method8032(Statics.method3921(), arg0.g1b());
+            this.field7243 = (CompassPoint) SerializableEnums.decode(Statics.method3921(), arg0.g1b());
         } else if (arg1 == 127) {
             this.field7217 = arg0.g2();
         } else if (arg1 == 128) {
-            SerializableEnums.method8032(MoveSpeed.method2553(), arg0.g1());
+            SerializableEnums.decode(MoveSpeed.values(), arg0.g1());
         } else if (arg1 == 134) {
             this.field7257 = arg0.g2();
             if (this.field7257 == 65535) {
@@ -831,7 +831,7 @@ public class NPCType {
         if (this.field7265 == null) {
             return arg1;
         } else {
-            IntNode var3 = (IntNode) this.field7265.method11923((long) arg0);
+            IntNode var3 = (IntNode) this.field7265.getNode((long) arg0);
             return var3 == null ? arg1 : var3.field9556;
         }
     }
@@ -841,7 +841,7 @@ public class NPCType {
         if (this.field7265 == null) {
             return arg1;
         } else {
-            ObjectNode var3 = (ObjectNode) this.field7265.method11923((long) arg0);
+            ObjectNode var3 = (ObjectNode) this.field7265.getNode((long) arg0);
             return var3 == null ? arg1 : (String) var3.field9550;
         }
     }

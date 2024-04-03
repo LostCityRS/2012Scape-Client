@@ -19,7 +19,7 @@ public class CameraMode3 {
         float var10 = var9.method5338();
         if (arg5.x == Float.POSITIVE_INFINITY || Float.isNaN(arg1.x) || var10 > 5120.0F) {
             arg1.method5334(arg3);
-            arg4.method5370();
+            arg4.reset();
             return;
         }
         arg2.method5220();
@@ -31,16 +31,16 @@ public class CameraMode3 {
         var13.method5318(arg2);
         Vector3 var14 = Vector3.method5294(Vector3.method5306(var11, arg4), Vector3.method5306(var12, arg4), Vector3.method5306(var13, arg4));
         Vector3 var15 = Vector3.create(var14);
-        Vector3 var16 = Vector3.method5294(arg5.x * var9.x, arg5.field3476 * var9.field3476, arg5.z * var9.z);
+        Vector3 var16 = Vector3.method5294(arg5.x * var9.x, arg5.y * var9.y, arg5.z * var9.z);
         var15.method5289(var16, arg0);
         var15.method5309(arg6);
         Vector3 var17 = Vector3.method5317(var11, var15.x);
-        var17.method5289(var12, var15.field3476);
+        var17.method5289(var12, var15.y);
         var17.method5289(var13, var15.z);
         arg4.method5334(var17);
         if (var10 < 1.0F) {
             arg1.method5334(arg3);
-            arg4.method5370();
+            arg4.reset();
         } else {
             arg1.method5299(Vector3.method5317(arg4, arg0));
         }

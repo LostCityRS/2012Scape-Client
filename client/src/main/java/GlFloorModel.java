@@ -173,7 +173,7 @@ public class GlFloorModel extends FloorModel {
             }
             long var18 = (long) arg10.field1474 << 48 | (long) arg10.field1471 << 42 | (long) arg10.field1475 << 28 | (long) (var17 << 14) | (long) var16;
             Node var20;
-            for (var20 = this.field7697.method11923(var18); var20 != null; var20 = this.field7697.method11924()) {
+            for (var20 = this.field7697.getNode(var18); var20 != null; var20 = this.field7697.method11924()) {
                 GlFloorModelRelated1 var21 = (GlFloorModelRelated1) var20;
                 if (var21.field9343 == var16 && (float) var17 == var21.field9341 && var21.field9345.method2711(arg10)) {
                     break;
@@ -400,7 +400,7 @@ public class GlFloorModel extends FloorModel {
                             }
                             Node var73 = null;
                             if ((var43 & this.field7695 - 1) == 0 && (var44 & this.field7695 - 1) == 0) {
-                                var73 = var10.method11923(var50);
+                                var73 = var10.getNode(var50);
                             }
                             int var84;
                             if (var73 == null) {
@@ -444,7 +444,7 @@ public class GlFloorModel extends FloorModel {
                                 }
                                 if (this.field7688.field8149) {
                                     var7.method39((float) var43);
-                                    var7.method39((float) (this.method196(var43, var44) + var49));
+                                    var7.method39((float) (this.getFineHeight(var43, var44) + var49));
                                     var7.method39((float) var44);
                                     var7.method38((byte) (var75 >> 16));
                                     var7.method38((byte) (var75 >> 8));
@@ -462,7 +462,7 @@ public class GlFloorModel extends FloorModel {
                                     }
                                 } else {
                                     var7.method40((float) var43);
-                                    var7.method40((float) (this.method196(var43, var44) + var49));
+                                    var7.method40((float) (this.getFineHeight(var43, var44) + var49));
                                     var7.method40((float) var44);
                                     var7.method38((byte) (var75 >> 16));
                                     var7.method38((byte) (var75 >> 8));

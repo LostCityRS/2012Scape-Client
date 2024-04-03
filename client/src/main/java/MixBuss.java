@@ -147,7 +147,7 @@ public class MixBuss extends AudioBuss {
         }
         for (ObjectNode var7 = (ObjectNode) arg0.field9382.method11928(); var7 != null; var7 = (ObjectNode) arg0.field9382.method11929()) {
             int var8 = (int) var7.field4228;
-            SoundRelated2 var9 = (SoundRelated2) this.field10239.method11923((long) var8);
+            SoundRelated2 var9 = (SoundRelated2) this.field10239.getNode((long) var8);
             if (var9 == null) {
                 var9 = SoundRelated2.method14060(arg1, var8);
                 if (var9 == null) {
@@ -264,7 +264,7 @@ public class MixBuss extends AudioBuss {
                 }
             }
         }
-        SoundRelated2 var6 = (SoundRelated2) this.field10239.method11923((long) this.field10262[arg0]);
+        SoundRelated2 var6 = (SoundRelated2) this.field10239.getNode((long) this.field10262[arg0]);
         if (var6 == null) {
             return;
         }

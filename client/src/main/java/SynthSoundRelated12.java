@@ -28,7 +28,7 @@ public class SynthSoundRelated12 {
         int var4 = arg1 ^ (arg0 << 4 & 0xFFFF | arg0 >>> 12);
         int var5 = var4 | arg0 << 16;
         long var6 = (long) var5;
-        SynthVariableRateSoundPacket var8 = (SynthVariableRateSoundPacket) this.field4054.method11923(var6);
+        SynthVariableRateSoundPacket var8 = (SynthVariableRateSoundPacket) this.field4054.getNode(var6);
         if (var8 != null) {
             return var8;
         } else if (arg2 == null || arg2[0] > 0) {
@@ -52,11 +52,11 @@ public class SynthSoundRelated12 {
         int var4 = arg1 ^ (arg0 << 4 & 0xFFFF | arg0 >>> 12);
         int var5 = var4 | arg0 << 16;
         long var6 = (long) var5 ^ 0x100000000L;
-        VariableRateSoundPacket var8 = (VariableRateSoundPacket) this.field4057.method11923(var6);
+        VariableRateSoundPacket var8 = (VariableRateSoundPacket) this.field4057.getNode(var6);
         if (var8 != null) {
             return var8;
         } else if (arg2 == null || arg2[0] > 0) {
-            VorbisSound var9 = (VorbisSound) this.field4055.method11923(var6);
+            VorbisSound var9 = (VorbisSound) this.field4055.getNode(var6);
             if (var9 == null) {
                 var9 = VorbisSound.method15065(this.field4053, arg0, arg1);
                 if (var9 == null) {

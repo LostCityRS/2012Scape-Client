@@ -165,7 +165,7 @@ public class EnvMappedWaterShader extends WaterShader {
         this.field8778.method3371(this.field10109, this.field10107);
         this.field8778.method3356(this.field10110, this.field10112);
         int var1 = 0x1 << (this.field10115 & 0x3);
-        this.field8778.method3342(this.field10113, this.field10114.x, this.field10114.field3476, this.field10114.z, (float) (this.field2414.field8391 * var1 % 40000) / 40000.0F);
+        this.field8778.method3342(this.field10113, this.field10114.x, this.field10114.y, this.field10114.z, (float) (this.field2414.field8391 * var1 % 40000) / 40000.0F);
         this.field8778.method3406(this.field10111, this.field10135);
         this.field8778.method3406(this.field10118, this.field10119);
         this.field8778.method3406(this.field10120, this.field10121);

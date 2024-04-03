@@ -44,7 +44,7 @@ public class JagException extends RuntimeException {
                 var5 = System.getProperty("java.version");
             } catch (Exception var10) {
             }
-            URL var7 = new URL(Statics.field10526.getCodeBase(), "clienterror.ws?c=" + Statics.field10528 + "&cs=" + Statics.field10530 + "&u=" + (Statics.field10527 == null ? "" + Statics.field10532 : WebTools.method4609(Statics.field10527)) + "&v1=" + WebTools.method4609(var4) + "&v2=" + WebTools.method4609(var5) + "&e=" + var3);
+            URL var7 = new URL(Statics.field10526.getCodeBase(), "clienterror.ws?c=" + Statics.field10528 + "&cs=" + Statics.field10530 + "&u=" + (Statics.user == null ? "" + Statics.field10532 : WebTools.method4609(Statics.user)) + "&v1=" + WebTools.method4609(var4) + "&v2=" + WebTools.method4609(var5) + "&e=" + var3);
             DataInputStream var8 = new DataInputStream(var7.openStream());
             var8.read();
             var8.close();

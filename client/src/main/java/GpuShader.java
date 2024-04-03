@@ -130,7 +130,7 @@ public abstract class GpuShader {
 
     @ObfuscatedName("ec.i(Laig;Lko;I)V")
     public final void method3420(GpuProgramUniform arg0, Vector3 arg1) {
-        this.field2073[this.field2079].method3233(arg0, arg1.x, arg1.field3476, arg1.z);
+        this.field2073[this.field2079].method3233(arg0, arg1.x, arg1.y, arg1.z);
     }
 
     @ObfuscatedName("ec.v(Laig;Lku;I)V")
@@ -179,7 +179,7 @@ public abstract class GpuShader {
 
     @ObfuscatedName("ec.af(ILko;B)V")
     public final void method3351(int arg0, Vector3 arg1) {
-        this.field2073[this.field2079].method3239(arg0, arg1.x, arg1.field3476, arg1.z);
+        this.field2073[this.field2079].method3239(arg0, arg1.x, arg1.y, arg1.z);
     }
 
     @ObfuscatedName("ec.ar(I[FII)V")

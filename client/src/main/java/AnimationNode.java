@@ -78,7 +78,7 @@ public class AnimationNode {
     }
 
     @ObfuscatedName("tt.c(B)I")
-    public final int method11812() {
+    public final int getSeqTypeId() {
         return this.field6671 == null ? -1 : this.field6671.field6318;
     }
 
@@ -109,7 +109,7 @@ public class AnimationNode {
 
     @ObfuscatedName("tt.z(IIIZZI)V")
     public final void method11775(int arg0, int arg1, int arg2, boolean arg3, boolean arg4) {
-        if (arg0 == this.method11812()) {
+        if (arg0 == this.getSeqTypeId()) {
             return;
         }
         if (arg0 == -1) {

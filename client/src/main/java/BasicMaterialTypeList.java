@@ -123,7 +123,7 @@ public class BasicMaterialTypeList implements MaterialTypeList {
         }
         for (int var24 = 0; var24 < this.field1294; var24++) {
             if (this.field1291[var24] != null) {
-                this.field1291[var24].field1262 = (MaterialAlphaMode) SerializableEnums.method8032(MaterialAlphaMode.method7322(), var4.g1());
+                this.field1291[var24].field1262 = (MaterialAlphaMode) SerializableEnums.decode(MaterialAlphaMode.method7322(), var4.g1());
             }
         }
     }

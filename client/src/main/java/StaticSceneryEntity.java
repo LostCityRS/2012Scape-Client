@@ -61,7 +61,7 @@ public class StaticSceneryEntity extends PrimaryLayerEntity implements Location 
             if (this.field7533 || arg3.field6472) {
                 this.field7537 = this.field7537.method295((byte) 0, var18, false);
                 if (arg3.field6472) {
-                    LocTint var20 = client.field8980.method6094();
+                    LocTint var20 = client.world.method6094();
                     this.field7537.PA(var20.field3783, var20.field3782, var20.field3781, var20.field3784);
                 }
             }
@@ -124,14 +124,14 @@ public class StaticSceneryEntity extends PrimaryLayerEntity implements Location 
             }
         }
         Vector3 var7 = this.getTransform().trans;
-        return var4.method11447(arg0, arg1, LocShape.field6588.field6590 == this.field7541 ? LocShape.field6572.field6590 : this.field7541, LocShape.field6588.field6590 == this.field7541 ? this.field7538 + 4 : this.field7538, var5, var6, (int) var7.x, (int) var7.field3476, (int) var7.z, arg2, null);
+        return var4.method11447(arg0, arg1, LocShape.field6588.field6590 == this.field7541 ? LocShape.field6572.field6590 : this.field7541, LocShape.field6588.field6590 == this.field7541 ? this.field7538 + 4 : this.field7538, var5, var6, (int) var7.x, (int) var7.y, (int) var7.z, arg2, null);
     }
 
     @ObfuscatedName("yp.br(Lra;I)Lok;")
     public EntityBounds method12810(RendererToolkit arg0) {
         Vector3 var2 = this.getTransform().trans;
         if (this.field7535 == null) {
-            this.field7535 = GraphEntity.method15140((int) var2.x, (int) var2.field3476, (int) var2.z, this.method12863(arg0, 0));
+            this.field7535 = GraphEntity.method15140((int) var2.x, (int) var2.y, (int) var2.z, this.method12863(arg0, 0));
         }
         return this.field7535;
     }

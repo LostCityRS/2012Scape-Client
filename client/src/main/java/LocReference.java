@@ -38,21 +38,21 @@ public class LocReference {
     @ObfuscatedName("ro.a(I)Lca;")
     public Location method8723() {
         int var1 = this.field5196.level;
-        CoordGrid var2 = client.field8980.method6214();
+        CoordGrid var2 = client.world.method6214();
         int var3 = this.field5196.x - var2.x;
         int var4 = this.field5196.z - var2.z;
-        if (var3 < 0 || var4 < 0 || var3 >= client.field8980.method6220() || var4 >= client.field8980.method6193()) {
+        if (var3 < 0 || var4 < 0 || var3 >= client.world.getSizeX() || var4 >= client.world.getSizeZ()) {
             return null;
         }
         switch (this.method8722()) {
             case 0:
-                return (Location) client.field8980.method6098().method7433(var1, var3, var4);
+                return (Location) client.world.getScene().method7433(var1, var3, var4);
             case 1:
-                return (Location) client.field8980.method6098().method7435(var1, var3, var4);
+                return (Location) client.world.getScene().method7435(var1, var3, var4);
             case 2:
-                return (Location) client.field8980.method6098().method7437(var1, var3, var4, client.field9216);
+                return (Location) client.world.getScene().method7437(var1, var3, var4, client.field9216);
             case 3:
-                return (Location) client.field8980.method6098().method7517(var1, var3, var4);
+                return (Location) client.world.getScene().method7517(var1, var3, var4);
             default:
                 return null;
         }

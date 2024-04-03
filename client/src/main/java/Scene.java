@@ -561,9 +561,9 @@ public class Scene {
         }
         if (arg1) {
             Vector3 var16 = Vector3.create(arg0.getTransform().trans);
-            var16.field3476 -= var7;
+            var16.y -= var7;
             arg0.method8551(var16);
-            var16.method5291();
+            var16.release();
         }
         return true;
     }
@@ -1177,7 +1177,7 @@ public class Scene {
     @ObfuscatedName("oo.ak(Laes;I)V")
     public void method7491(GraphEntity arg0) {
         Vector3 var2 = arg0.getTransform().trans;
-        this.field4489.method550((float) var2.x, (float) ((int) var2.field3476 + (arg0.method12809() >> 1)), (float) var2.z, this.field4522);
+        this.field4489.method550((float) var2.x, (float) ((int) var2.y + (arg0.method12809() >> 1)), (float) var2.z, this.field4522);
         arg0.field9810 = (int) this.field4522[2];
     }
 
@@ -1295,7 +1295,7 @@ public class Scene {
             var9.field1470 = this.method7413(var7, var8);
             var9.field1476 = this.method7505(var7, var8);
             var9.field1472 = this.method7501(var7, var8);
-            this.field4489.method547(this.field4527[0].method196((int) var6.x, (int) var6.z), var9);
+            this.field4489.method547(this.field4527[0].getFineHeight((int) var6.x, (int) var6.z), var9);
         }
         PickableEntity var10 = arg0.method12812(this.field4489);
         if (var10 == null) {
@@ -1313,11 +1313,11 @@ public class Scene {
     public boolean method7445(HardShadow arg0, int arg1, int arg2, int arg3, boolean[] arg4) {
         boolean var6 = false;
         if (this.field4502 != this.field4498) {
-            int var7 = this.field4527[arg1].method196(arg2, arg3);
+            int var7 = this.field4527[arg1].getFineHeight(arg2, arg3);
             for (int var8 = 0; var8 <= arg1; var8++) {
                 FloorModel var9 = this.field4527[var8];
                 if (var9 != null) {
-                    int var10 = var7 - var9.method196(arg2, arg3);
+                    int var10 = var7 - var9.getFineHeight(arg2, arg3);
                     if (arg4 != null) {
                         arg4[var8] = var9.method203(arg0, arg2, var10, arg3, 0, false);
                         if (!arg4[var8]) {
@@ -1337,12 +1337,12 @@ public class Scene {
         if (this.field4502 == this.field4498) {
             return;
         }
-        int var6 = this.field4527[arg1].method196(arg2, arg3);
+        int var6 = this.field4527[arg1].getFineHeight(arg2, arg3);
         for (int var7 = 0; var7 <= arg1; var7++) {
             if (arg4 == null || arg4[var7]) {
                 FloorModel var8 = this.field4527[var7];
                 if (var8 != null) {
-                    var8.NA(arg0, arg2, var6 - var8.method196(arg2, arg3), arg3, 0, false);
+                    var8.NA(arg0, arg2, var6 - var8.getFineHeight(arg2, arg3), arg3, 0, false);
                 }
             }
         }

@@ -4,25 +4,25 @@ import deob.ObfuscatedName;
 public class ReceivePlayerPositions {
 
     @ObfuscatedName("ag.a")
-    public static byte[] field729 = new byte[2048];
+    public static byte[] nsn = new byte[2048];
 
     @ObfuscatedName("ag.s")
     public static byte[] field730 = new byte[2048];
 
     @ObfuscatedName("ag.c")
-    public static Packet[] field731 = new Packet[2048];
+    public static Packet[] appearances = new Packet[2048];
 
     @ObfuscatedName("ag.m")
-    public static int field732 = 0;
+    public static int highResolutionsCount = 0;
 
     @ObfuscatedName("ag.t")
-    public static int[] field727 = new int[2048];
+    public static int[] highResolutionsIndices = new int[2048];
 
     @ObfuscatedName("ag.l")
-    public static int field736 = 0;
+    public static int lowResolutionsCount = 0;
 
     @ObfuscatedName("ag.f")
-    public static int[] field735 = new int[2048];
+    public static int[] lowResolutionsIndices = new int[2048];
 
     @ObfuscatedName("ag.d")
     public static LowResPlayerInfo[] field733 = new LowResPlayerInfo[2048];
@@ -40,28 +40,28 @@ public class ReceivePlayerPositions {
     @ObfuscatedName("ww.u(Lajl;B)V")
     public static final void method12667(PacketBit arg0) {
         arg0.bits();
-        int var1 = client.field9071;
-        PlayerEntity var2 = Statics.localPlayerEntity = client.field9070[var1] = new PlayerEntity(client.field8980.method6098());
+        int var1 = client.currentPlayerUid;
+        PlayerEntity var2 = Statics.localPlayerEntity = client.players[var1] = new PlayerEntity(client.world.getScene());
         var2.localPlayerIndex = var1;
         int var3 = arg0.gBit(30);
         byte var4 = (byte) (var3 >> 28);
         int var5 = var3 >> 14 & 0x3FFF;
         int var6 = var3 & 0x3FFF;
-        CoordGrid var7 = client.field8980.method6214();
+        CoordGrid var7 = client.world.method6214();
         var2.routeWaypointX[0] = var5 - var7.x;
         var2.routeWaypointZ[0] = var6 - var7.z;
-        var2.method8552((float) ((var2.routeWaypointX[0] << 9) + (var2.method13954() << 8)), var2.method8545().trans.field3476, (float) ((var2.routeWaypointZ[0] << 9) + (var2.method13954() << 8)));
+        var2.method8552((float) ((var2.routeWaypointX[0] << 9) + (var2.size() << 8)), var2.method8545().trans.y, (float) ((var2.routeWaypointZ[0] << 9) + (var2.size() << 8)));
         Statics.currentPlayerLevel = var2.level = var2.field9809 = var4;
-        if (client.field8980.method6100().method5794(var2.routeWaypointX[0], var2.routeWaypointZ[0])) {
+        if (client.world.getSceneLevelTileFlags().isLinkBelow(var2.routeWaypointX[0], var2.routeWaypointZ[0])) {
             var2.field9809++;
         }
-        if (field731[var1] != null) {
-            var2.method16116(field731[var1]);
+        if (appearances[var1] != null) {
+            var2.getAppearance(appearances[var1]);
         }
-        field732 = 0;
-        field727[++field732 - 1] = var1;
-        field729[var1] = 0;
-        field736 = 0;
+        highResolutionsCount = 0;
+        highResolutionsIndices[++highResolutionsCount - 1] = var1;
+        nsn[var1] = 0;
+        lowResolutionsCount = 0;
         for (int var8 = 1; var8 < 2048; var8++) {
             if (var1 != var8) {
                 int var9 = arg0.gBit(18);
@@ -69,13 +69,13 @@ public class ReceivePlayerPositions {
                 int var11 = var9 >> 8 & 0xFF;
                 int var12 = var9 & 0xFF;
                 LowResPlayerInfo var13 = field733[var8] = new LowResPlayerInfo();
-                var13.field570 = (var10 << 28) + (var11 << 14) + var12;
+                var13.coord = (var10 << 28) + (var11 << 14) + var12;
                 var13.field572 = 0;
                 var13.field569 = -1;
                 var13.field571 = false;
                 var13.field568 = false;
-                field735[++field736 - 1] = var8;
-                field729[var8] = 0;
+                lowResolutionsIndices[++lowResolutionsCount - 1] = var8;
+                nsn[var8] = 0;
             }
         }
         arg0.bytes();
@@ -95,17 +95,17 @@ public class ReceivePlayerPositions {
     public static final void method11491(PacketBit arg0) {
         int var1 = 0;
         arg0.bits();
-        for (int var2 = 0; var2 < field732; var2++) {
-            int var3 = field727[var2];
-            if ((field729[var3] & 0x1) == 0) {
+        for (int var2 = 0; var2 < highResolutionsCount; var2++) {
+            int var3 = highResolutionsIndices[var2];
+            if ((nsn[var3] & 0x1) == 0) {
                 if (var1 > 0) {
                     var1--;
-                    field729[var3] = (byte) (field729[var3] | 0x2);
+                    nsn[var3] = (byte) (nsn[var3] | 0x2);
                 } else {
                     int var4 = arg0.gBit(1);
                     if (var4 == 0) {
                         var1 = method12094(arg0);
-                        field729[var3] = (byte) (field729[var3] | 0x2);
+                        nsn[var3] = (byte) (nsn[var3] | 0x2);
                     } else {
                         Statics.method7394(arg0, var3);
                     }
@@ -117,17 +117,17 @@ public class ReceivePlayerPositions {
             throw new RuntimeException();
         }
         arg0.bits();
-        for (int var5 = 0; var5 < field732; var5++) {
-            int var6 = field727[var5];
-            if ((field729[var6] & 0x1) != 0) {
+        for (int var5 = 0; var5 < highResolutionsCount; var5++) {
+            int var6 = highResolutionsIndices[var5];
+            if ((nsn[var6] & 0x1) != 0) {
                 if (var1 > 0) {
                     var1--;
-                    field729[var6] = (byte) (field729[var6] | 0x2);
+                    nsn[var6] = (byte) (nsn[var6] | 0x2);
                 } else {
                     int var7 = arg0.gBit(1);
                     if (var7 == 0) {
                         var1 = method12094(arg0);
-                        field729[var6] = (byte) (field729[var6] | 0x2);
+                        nsn[var6] = (byte) (nsn[var6] | 0x2);
                     } else {
                         Statics.method7394(arg0, var6);
                     }
@@ -139,19 +139,19 @@ public class ReceivePlayerPositions {
             throw new RuntimeException();
         }
         arg0.bits();
-        for (int var8 = 0; var8 < field736; var8++) {
-            int var9 = field735[var8];
-            if ((field729[var9] & 0x1) != 0) {
+        for (int var8 = 0; var8 < lowResolutionsCount; var8++) {
+            int var9 = lowResolutionsIndices[var8];
+            if ((nsn[var9] & 0x1) != 0) {
                 if (var1 > 0) {
                     var1--;
-                    field729[var9] = (byte) (field729[var9] | 0x2);
+                    nsn[var9] = (byte) (nsn[var9] | 0x2);
                 } else {
                     int var10 = arg0.gBit(1);
                     if (var10 == 0) {
                         var1 = method12094(arg0);
-                        field729[var9] = (byte) (field729[var9] | 0x2);
+                        nsn[var9] = (byte) (nsn[var9] | 0x2);
                     } else if (Statics.method3110(arg0, var9)) {
-                        field729[var9] = (byte) (field729[var9] | 0x2);
+                        nsn[var9] = (byte) (nsn[var9] | 0x2);
                     }
                 }
             }
@@ -161,19 +161,19 @@ public class ReceivePlayerPositions {
             throw new RuntimeException();
         }
         arg0.bits();
-        for (int var11 = 0; var11 < field736; var11++) {
-            int var12 = field735[var11];
-            if ((field729[var12] & 0x1) == 0) {
+        for (int var11 = 0; var11 < lowResolutionsCount; var11++) {
+            int var12 = lowResolutionsIndices[var11];
+            if ((nsn[var12] & 0x1) == 0) {
                 if (var1 > 0) {
                     var1--;
-                    field729[var12] = (byte) (field729[var12] | 0x2);
+                    nsn[var12] = (byte) (nsn[var12] | 0x2);
                 } else {
                     int var13 = arg0.gBit(1);
                     if (var13 == 0) {
                         var1 = method12094(arg0);
-                        field729[var12] = (byte) (field729[var12] | 0x2);
+                        nsn[var12] = (byte) (nsn[var12] | 0x2);
                     } else if (Statics.method3110(arg0, var12)) {
-                        field729[var12] = (byte) (field729[var12] | 0x2);
+                        nsn[var12] = (byte) (nsn[var12] | 0x2);
                     }
                 }
             }
@@ -182,15 +182,15 @@ public class ReceivePlayerPositions {
         if (var1 != 0) {
             throw new RuntimeException();
         }
-        field732 = 0;
-        field736 = 0;
+        highResolutionsCount = 0;
+        lowResolutionsCount = 0;
         for (int var14 = 1; var14 < 2048; var14++) {
-            field729[var14] = (byte) (field729[var14] >> 1);
-            PlayerEntity var15 = client.field9070[var14];
+            nsn[var14] = (byte) (nsn[var14] >> 1);
+            PlayerEntity var15 = client.players[var14];
             if (var15 == null) {
-                field735[++field736 - 1] = var14;
+                lowResolutionsIndices[++lowResolutionsCount - 1] = var14;
             } else {
-                field727[++field732 - 1] = var14;
+                highResolutionsIndices[++highResolutionsCount - 1] = var14;
             }
         }
     }
@@ -215,7 +215,7 @@ public class ReceivePlayerPositions {
     public static final void method15865(PacketBit arg0) {
         for (int var1 = 0; var1 < field728; var1++) {
             int var2 = field738[var1];
-            PlayerEntity var3 = client.field9070[var2];
+            PlayerEntity var3 = client.players[var2];
             int var4 = arg0.g1();
             if ((var4 & 0x8) != 0) {
                 var4 += arg0.g1() << 8;
@@ -229,7 +229,7 @@ public class ReceivePlayerPositions {
 
     @ObfuscatedName("sz.l(Lajl;ILahg;II)V")
     public static final void method11159(PacketBit arg0, int arg1, PlayerEntity arg2, int arg3) {
-        byte var4 = MoveSpeed.field3923.field3924;
+        byte var4 = MoveSpeed.STATIONARY.id;
         if ((arg3 & 0x1000) != 0) {
             arg2.field10065 = arg0.g1() == 1;
         }
@@ -257,7 +257,7 @@ public class ReceivePlayerPositions {
                         var11 = arg0.gSmart1or2();
                     }
                     int var12 = arg0.gSmart1or2();
-                    arg2.method13953(var10, var11, var7, var9, client.field9213, var12);
+                    arg2.method13953(var10, var11, var7, var9, client.loopCycle, var12);
                 }
             }
             int var13 = arg0.g1_alt2();
@@ -271,7 +271,7 @@ public class ReceivePlayerPositions {
                         int var17 = arg0.gSmart1or2();
                         int var18 = arg0.g1_alt2();
                         int var19 = var16 > 0 ? arg0.g1_alt1() : var18;
-                        arg2.method13944(var15, client.field9213, var16, var17, var18, var19);
+                        arg2.method13944(var15, client.loopCycle, var16, var17, var18, var19);
                     }
                 }
             }
@@ -281,8 +281,8 @@ public class ReceivePlayerPositions {
             arg2.field8602 = arg0.g1b_alt3();
             arg2.field8617 = arg0.g1b_alt3();
             arg2.field8631 = (byte) arg0.g1_alt2();
-            arg2.field8626 = client.field9213 + arg0.g2_alt2();
-            arg2.field8632 = client.field9213 + arg0.g2();
+            arg2.field8626 = client.loopCycle + arg0.g2_alt2();
+            arg2.field8632 = client.loopCycle + arg0.g2();
         }
         if ((arg3 & 0x100000) != 0) {
             int var20 = arg0.data[++arg0.pos - 1] & 0xFF;
@@ -300,8 +300,8 @@ public class ReceivePlayerPositions {
             arg2.field8624 = var24;
         }
         if ((arg3 & 0x40) != 0) {
-            int[] var25 = new int[MoveSpeed.method2553().length];
-            for (int var26 = 0; var26 < MoveSpeed.method2553().length; var26++) {
+            int[] var25 = new int[MoveSpeed.values().length];
+            for (int var26 = 0; var26 < MoveSpeed.values().length; var26++) {
                 var25[var26] = arg0.gSmart2or4null();
             }
             int var27 = arg0.g1_alt2();
@@ -318,7 +318,7 @@ public class ReceivePlayerPositions {
         }
         if ((arg3 & 0x2) != 0) {
             arg2.field10058 = arg0.g2_alt3();
-            if (arg2.field8628 == 0) {
+            if (arg2.routeLength == 0) {
                 arg2.method14013(arg2.field10058);
                 arg2.field10058 = -1;
             }
@@ -343,8 +343,8 @@ public class ReceivePlayerPositions {
             byte[] var39 = new byte[var38];
             Packet var40 = new Packet(var39);
             arg0.gdata_alt2(var39, 0, var38);
-            field731[arg1] = var40;
-            arg2.method16116(var40);
+            appearances[arg1] = var40;
+            arg2.getAppearance(var40);
         }
         if ((arg3 & 0x100) != 0) {
             int var41 = arg0.g2_alt2();
@@ -381,7 +381,7 @@ public class ReceivePlayerPositions {
             String var53 = arg0.gjstr();
             int var54 = arg0.g1_alt3();
             if ((var54 & 0x1) != 0) {
-                ChatHistory.method3943(2, var54, arg2.method16120(true), arg2.method16121(false), arg2.field10063, var53);
+                ChatHistory.method3943(2, var54, arg2.method16120(true), arg2.method16121(false), arg2.name, var53);
             }
             arg2.method16127(var53, 0, 0);
         }
@@ -393,21 +393,21 @@ public class ReceivePlayerPositions {
             arg2.field8621 = arg0.g1b();
             arg2.field8591 = arg0.g1b_alt1();
             arg2.field8605 = arg0.g1b();
-            arg2.field8649 = arg0.g2_alt3() + client.field9213;
-            arg2.field8620 = arg0.g2_alt3() + client.field9213;
+            arg2.forceMoveEndCycle = arg0.g2_alt3() + client.loopCycle;
+            arg2.forceMoveStartCycle = arg0.g2_alt3() + client.loopCycle;
             arg2.field8625 = arg0.g2();
             if (arg2.field10062) {
                 arg2.field8619 = arg2.field8619 + arg2.field10052;
                 arg2.field8621 = arg2.field8621 + arg2.field10064;
                 arg2.field8591 = arg2.field8591 + arg2.field10052;
                 arg2.field8605 = arg2.field8605 + arg2.field10064;
-                arg2.field8628 = 0;
+                arg2.routeLength = 0;
             } else {
                 arg2.field8619 = arg2.field8619 + arg2.routeWaypointX[0];
                 arg2.field8621 = arg2.field8621 + arg2.routeWaypointZ[0];
                 arg2.field8591 = arg2.field8591 + arg2.routeWaypointX[0];
                 arg2.field8605 = arg2.field8605 + arg2.routeWaypointZ[0];
-                arg2.field8628 = 1;
+                arg2.routeLength = 1;
             }
             arg2.field8646 = 0;
         }
@@ -429,7 +429,7 @@ public class ReceivePlayerPositions {
         if ((arg3 & 0x400) != 0) {
             String var60 = arg0.gjstr();
             if (Statics.localPlayerEntity == arg2) {
-                ChatHistory.method3943(2, 0, arg2.method16120(true), arg2.method16121(false), arg2.field10063, var60);
+                ChatHistory.method3943(2, 0, arg2.method16120(true), arg2.method16121(false), arg2.name, var60);
             }
             arg2.method16127(var60, 0, 0);
         }
@@ -471,7 +471,7 @@ public class ReceivePlayerPositions {
             return;
         }
         byte var73;
-        if (MoveSpeed.field3923.field3924 == var4) {
+        if (MoveSpeed.STATIONARY.id == var4) {
             var73 = field730[arg1];
         } else {
             var73 = var4;
@@ -482,10 +482,10 @@ public class ReceivePlayerPositions {
 
     @ObfuscatedName("afs.f(B)V")
     public static void method15786() {
-        field732 = 0;
+        highResolutionsCount = 0;
         for (int var0 = 0; var0 < 2048; var0++) {
-            field731[var0] = null;
-            field730[var0] = MoveSpeed.field3921.field3924;
+            appearances[var0] = null;
+            field730[var0] = MoveSpeed.field3921.id;
             field733[var0] = null;
         }
     }

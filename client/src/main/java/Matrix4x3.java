@@ -94,7 +94,7 @@ public class Matrix4x3 {
         this.field3461 = var10 - var3 - var3 + var10;
         this.field3459 = var2 + var11 - var9 - var6;
         this.field3460 = arg0.trans.x;
-        this.field3450 = arg0.trans.field3476;
+        this.field3450 = arg0.trans.y;
         this.field3458 = arg0.trans.z;
     }
 
@@ -358,7 +358,7 @@ public class Matrix4x3 {
 
     @ObfuscatedName("kc.b(Lko;)V")
     public void method5127(Vector3 arg0) {
-        this.method5116(arg0.x, arg0.field3476, arg0.z);
+        this.method5116(arg0.x, arg0.y, arg0.z);
     }
 
     @ObfuscatedName("kc.x(FFF)V")

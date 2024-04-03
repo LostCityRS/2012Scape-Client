@@ -75,7 +75,7 @@ public class WorldMap {
 
     @ObfuscatedName("om.s(I)V")
     public static void method7122(int arg0) {
-        Statics.field4292 = (WorldMapAreaMetadata) field4272.method11923((long) arg0);
+        Statics.field4292 = (WorldMapAreaMetadata) field4272.getNode((long) arg0);
     }
 
     @ObfuscatedName("om.c(II)Lajo;")
@@ -90,7 +90,7 @@ public class WorldMap {
 
     @ObfuscatedName("om.m(I)Lajo;")
     public static WorldMapAreaMetadata method7117(int arg0) {
-        return (WorldMapAreaMetadata) field4272.method11923((long) arg0);
+        return (WorldMapAreaMetadata) field4272.getNode((long) arg0);
     }
 
     @ObfuscatedName("om.t(II)Ltv;")

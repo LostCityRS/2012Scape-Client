@@ -23,7 +23,7 @@ public class CameraMode2 {
         }
         if (arg5.x == Float.POSITIVE_INFINITY || Float.isNaN(arg1.x) || var12 > 5120.0F) {
             arg1.method5334(arg3);
-            arg4.method5370();
+            arg4.reset();
             return;
         }
         arg2.method5220();
@@ -65,28 +65,28 @@ public class CameraMode2 {
                 }
             }
         }
-        if (var18.field3476 > var19.field3476) {
-            if (var11.field3476 < 0.0F) {
-                var20.field3476 += arg5.field3476 * arg0;
-                if (var20.field3476 > 0.0F) {
-                    var20.field3476 = 0.0F;
+        if (var18.y > var19.y) {
+            if (var11.y < 0.0F) {
+                var20.y += arg5.y * arg0;
+                if (var20.y > 0.0F) {
+                    var20.y = 0.0F;
                 }
             } else {
-                var20.field3476 -= arg5.field3476 * arg0;
-                if (var20.field3476 < 0.0F) {
-                    var20.field3476 = 0.0F;
+                var20.y -= arg5.y * arg0;
+                if (var20.y < 0.0F) {
+                    var20.y = 0.0F;
                 }
             }
-        } else if (var17.field3476 < arg6.field3476) {
-            if (var11.field3476 < 0.0F) {
-                var20.field3476 -= arg5.field3476 * arg0;
-                if (var20.field3476 < -arg6.field3476) {
-                    var20.field3476 = -arg6.field3476;
+        } else if (var17.y < arg6.y) {
+            if (var11.y < 0.0F) {
+                var20.y -= arg5.y * arg0;
+                if (var20.y < -arg6.y) {
+                    var20.y = -arg6.y;
                 }
             } else {
-                var20.field3476 += arg5.field3476 * arg0;
-                if (var20.field3476 > arg6.field3476) {
-                    var20.field3476 = arg6.field3476;
+                var20.y += arg5.y * arg0;
+                if (var20.y > arg6.y) {
+                    var20.y = arg6.y;
                 }
             }
         }
@@ -116,17 +116,17 @@ public class CameraMode2 {
             }
         }
         Vector3 var21 = Vector3.method5317(var13, var20.x);
-        var21.method5289(var14, var20.field3476);
+        var21.method5289(var14, var20.y);
         var21.method5289(var15, var20.z);
         arg4.method5321(var21, 0.8F);
         if (var12 < 10.0F) {
             arg1.method5334(arg3);
-            arg4.method5370();
+            arg4.reset();
         } else {
             arg1.method5299(Vector3.method5317(arg4, arg0));
         }
-        var17.method5291();
-        var20.method5291();
-        var19.method5291();
+        var17.release();
+        var20.release();
+        var19.release();
     }
 }

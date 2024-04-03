@@ -69,7 +69,7 @@ public class MiniMap {
 
     @ObfuscatedName("ff.s(Lra;I)V")
     public static void method3580(RendererToolkit arg0) {
-        if (field765 != Statics.localPlayerEntity.level && client.field8980.method6098() != null) {
+        if (field765 != Statics.localPlayerEntity.level && client.world.getScene() != null) {
             MonotonicTime.method5554();
             if (Statics.method2581(arg0, Statics.localPlayerEntity.level)) {
                 field765 = Statics.localPlayerEntity.level;
@@ -79,7 +79,7 @@ public class MiniMap {
 
     @ObfuscatedName("pn.m(IIII)Z")
     public static boolean method7787(int arg0, int arg1, int arg2) {
-        Scene var3 = client.field8980.method6098();
+        Scene var3 = client.world.getScene();
         boolean var4 = true;
         Location var5 = (Location) var3.method7433(arg0, arg1, arg2);
         if (var5 != null) {
@@ -98,7 +98,7 @@ public class MiniMap {
 
     @ObfuscatedName("aiq.t(Lca;B)Z")
     public static boolean method16491(Location arg0) {
-        LocType var1 = client.field8980.method6103().method11471(arg0.method2401());
+        LocType var1 = client.world.method6103().method11471(arg0.method2401());
         if (var1.field6508 == -1) {
             return true;
         } else {
@@ -109,10 +109,10 @@ public class MiniMap {
 
     @ObfuscatedName("qr.l(Lra;IIIIIIII)V")
     public static void method8094(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
-        Scene var8 = client.field8980.method6098();
+        Scene var8 = client.world.getScene();
         Location var9 = (Location) var8.method7433(arg1, arg2, arg3);
         if (var9 != null) {
-            LocType var10 = client.field8980.method6103().method11471(var9.method2401());
+            LocType var10 = client.world.method6103().method11471(var9.method2401());
             int var11 = var9.method2391() & 0x3;
             int var12 = var9.method2390();
             if (var10.field6508 == -1) {
@@ -159,7 +159,7 @@ public class MiniMap {
         }
         Location var14 = (Location) var8.method7437(arg1, arg2, arg3, client.field9216);
         if (var14 != null) {
-            LocType var15 = client.field8980.method6103().method11471(var14.method2401());
+            LocType var15 = client.world.method6103().method11471(var14.method2401());
             int var16 = var14.method2391() & 0x3;
             int var17 = var14.method2390();
             if (var15.field6508 != -1) {
@@ -180,7 +180,7 @@ public class MiniMap {
         if (var19 == null) {
             return;
         }
-        LocType var20 = client.field8980.method6103().method11471(var19.method2401());
+        LocType var20 = client.world.method6103().method11471(var19.method2401());
         int var21 = var19.method2391() & 0x3;
         if (var20.field6508 != -1) {
             method3634(arg0, var20, var21, arg4, arg5);
@@ -240,12 +240,12 @@ public class MiniMap {
         } else if (field762 == 2 || field762 == 5 || Statics.field6357 == null) {
             arg0.DA(-16777216, var5, arg2, arg3);
         } else {
-            CoordGrid var6 = client.field8980.method6214();
+            CoordGrid var6 = client.world.method6214();
             int var7;
             int var8;
             int var9;
             int var10;
-            if (Statics.field2671 == 5) {
+            if (Statics.cameraState == 5) {
                 var7 = client.field9154;
                 var8 = client.field9019;
                 var9 = (int) -client.field9021 & 0x3FFF;
@@ -258,9 +258,9 @@ public class MiniMap {
                 var10 = 4096 - client.field8976 * 16;
             }
             int var12 = var7 / 128 + 48;
-            int var13 = client.field8980.method6193() * 4 + 48 - var8 / 128;
+            int var13 = client.world.getSizeZ() * 4 + 48 - var8 / 128;
             Statics.field6357.method2512((float) arg1.field1863 / 2.0F + (float) arg2, (float) arg1.field1929 / 2.0F + (float) arg3, (float) var12, (float) var13, var10, var9 << 2, var5, arg2, arg3);
-            WorldMapRelated var14 = client.field8980.method6093();
+            WorldMapRelated var14 = client.world.method6093();
             for (IntNode var15 = (IntNode) field758.method11563(); var15 != null; var15 = (IntNode) field758.method11567()) {
                 int var16 = var15.field9556;
                 int var17 = (var14.field4254[var16] >> 14 & 0x3FFF) - var6.x;
@@ -272,7 +272,7 @@ public class MiniMap {
             for (int var21 = 0; var21 < field767; var21++) {
                 int var22 = field759[var21] * 4 + 2 - var7 / 128;
                 int var23 = field757[var21] * 4 + 2 - var8 / 128;
-                LocType var24 = client.field8980.method6103().method11471(field761[var21]);
+                LocType var24 = client.world.method6103().method11471(field761[var21]);
                 if (var24.field6534 != null) {
                     var24 = var24.method11431(Statics.field2669);
                     if (var24 == null || var24.field6495 == -1) {
@@ -294,10 +294,10 @@ public class MiniMap {
             method2388(arg0, var7, var8, arg1, var5, arg2, arg3);
             method1592(var7, var8, arg1, var5, arg2, arg3);
             method2472(var7, var8, arg1, var4, arg2, arg3);
-            if (Statics.field2671 != 5) {
+            if (Statics.cameraState != 5) {
                 if (field763 != 0) {
-                    int var31 = field763 * 4 + 2 - var7 / 128 + (Statics.localPlayerEntity.method13954() - 1) * 2;
-                    int var32 = field764 * 4 + 2 - var8 / 128 + (Statics.localPlayerEntity.method13954() - 1) * 2;
+                    int var31 = field763 * 4 + 2 - var7 / 128 + (Statics.localPlayerEntity.size() - 1) * 2;
+                    int var32 = field764 * 4 + 2 - var8 / 128 + (Statics.localPlayerEntity.size() - 1) * 2;
                     Statics.method12552(arg1, var5, arg2, arg3, var31, var32, Statics.field9826[field766 ? 1 : 0]);
                 }
                 if (!Statics.localPlayerEntity.field10066) {
@@ -310,7 +310,7 @@ public class MiniMap {
     @ObfuscatedName("ci.z(Lra;IILew;Lta;III)V")
     public static void method2388(RendererToolkit arg0, int arg1, int arg2, Component arg3, GraphicsRelated arg4, int arg5, int arg6) {
         for (int var7 = 0; var7 < client.npcCount; var7++) {
-            ObjectNode var8 = (ObjectNode) client.npcs.method11923((long) client.field9056[var7]);
+            ObjectNode var8 = (ObjectNode) client.npcs.getNode((long) client.field9056[var7]);
             if (var8 != null) {
                 NpcEntity var9 = (NpcEntity) var8.field9550;
                 if (var9.method16154() && Statics.localPlayerEntity.level == var9.level) {
@@ -335,10 +335,10 @@ public class MiniMap {
 
     @ObfuscatedName("b.n(IILew;Lta;III)V")
     public static void method1592(int arg0, int arg1, Component arg2, GraphicsRelated arg3, int arg4, int arg5) {
-        int var6 = ReceivePlayerPositions.field732;
-        int[] var7 = ReceivePlayerPositions.field727;
+        int var6 = ReceivePlayerPositions.highResolutionsCount;
+        int[] var7 = ReceivePlayerPositions.highResolutionsIndices;
         for (int var8 = 0; var8 < var6; var8++) {
-            PlayerEntity var9 = client.field9070[var7[var8]];
+            PlayerEntity var9 = client.players[var7[var8]];
             if (var9 != null && var9.method16125() && !var9.field10066 && Statics.localPlayerEntity != var9 && Statics.localPlayerEntity.level == var9.level) {
                 Vector3 var10 = var9.getTransform().trans;
                 int var11 = (int) var10.x / 128 - arg0 / 128;
@@ -346,14 +346,14 @@ public class MiniMap {
                 boolean var13 = false;
                 for (int var14 = 0; var14 < client.field9206; var14++) {
                     Friend var15 = client.field9209[var14];
-                    if (var9.field10040.equals(var15.field649) && var15.field647 != 0) {
+                    if (var9.nameUnfiltered.equals(var15.field649) && var15.field647 != 0) {
                         var13 = true;
                         break;
                     }
                 }
                 boolean var16 = false;
                 for (int var17 = 0; var17 < Statics.field7045; var17++) {
-                    if (var9.field10040.equals(Statics.field5180[var17].field786)) {
+                    if (var9.nameUnfiltered.equals(Statics.field5180[var17].field786)) {
                         var16 = true;
                         break;
                     }
@@ -384,9 +384,9 @@ public class MiniMap {
         HintArrow[] var6 = client.field8936;
         for (int var7 = 0; var7 < var6.length; var7++) {
             HintArrow var8 = var6[var7];
-            if (var8 != null && var8.field776 != 0 && client.field9213 % 20 < 10) {
+            if (var8 != null && var8.field776 != 0 && client.loopCycle % 20 < 10) {
                 if (var8.field776 == 1) {
-                    ObjectNode var9 = (ObjectNode) client.npcs.method11923((long) var8.field772);
+                    ObjectNode var9 = (ObjectNode) client.npcs.getNode((long) var8.field772);
                     if (var9 != null) {
                         NpcEntity var10 = (NpcEntity) var9.field9550;
                         Vector3 var11 = var10.getTransform().trans;
@@ -402,8 +402,8 @@ public class MiniMap {
                     long var18 = var16 * var16;
                     method4656(arg2, arg3, arg4, arg5, var14, var15, var8.field773, var18);
                 }
-                if (var8.field776 == 10 && var8.field772 >= 0 && var8.field772 < client.field9070.length) {
-                    PlayerEntity var20 = client.field9070[var8.field772];
+                if (var8.field776 == 10 && var8.field772 >= 0 && var8.field772 < client.players.length) {
+                    PlayerEntity var20 = client.players[var8.field772];
                     if (var20 != null) {
                         Vector3 var21 = var20.getTransform().trans;
                         int var22 = (int) var21.x / 128 - arg0 / 128;
@@ -425,14 +425,14 @@ public class MiniMap {
             int[] var9 = new int[var8.field4788.length];
             for (int var10 = 0; var10 < var9.length / 2; var10++) {
                 int var11;
-                if (Statics.field2671 == 5) {
+                if (Statics.cameraState == 5) {
                     var11 = (int) client.field9021 & 0x3FFF;
                 } else {
                     var11 = client.field9087 + (int) client.field9021 & 0x3FFF;
                 }
-                int var12 = Trig1.field3439[var11];
-                int var13 = Trig1.field3447[var11];
-                if (Statics.field2671 != 5) {
+                int var12 = Trig1.sin[var11];
+                int var13 = Trig1.cos[var11];
+                if (Statics.cameraState != 5) {
                     var12 = var12 * 256 / (client.field8976 + 256);
                     var13 = var13 * 256 / (client.field8976 + 256);
                 }
@@ -521,14 +521,14 @@ public class MiniMap {
             return;
         }
         int var10;
-        if (Statics.field2671 == 5) {
+        if (Statics.cameraState == 5) {
             var10 = (int) client.field9021 & 0x3FFF;
         } else {
             var10 = client.field9087 + (int) client.field9021 & 0x3FFF;
         }
-        int var11 = Trig1.field3439[var10];
-        int var12 = Trig1.field3447[var10];
-        if (Statics.field2671 != 5) {
+        int var11 = Trig1.sin[var10];
+        int var12 = Trig1.cos[var10];
+        if (Statics.cameraState != 5) {
             var11 = var11 * 256 / (client.field8976 + 256);
             var12 = var12 * 256 / (client.field8976 + 256);
         }
@@ -556,7 +556,7 @@ public class MiniMap {
     @ObfuscatedName("aam.b(Lew;Lta;IIIIILjava/lang/String;Ll;Lvm;II)V")
     public static void method14046(Component arg0, GraphicsRelated arg1, int arg2, int arg3, int arg4, int arg5, int arg6, String arg7, Font arg8, FontMetrics arg9, int arg10) {
         int var11;
-        if (Statics.field2671 == 5) {
+        if (Statics.cameraState == 5) {
             var11 = (int) client.field9021 & 0x3FFF;
         } else {
             var11 = client.field9087 + (int) client.field9021 & 0x3FFF;
@@ -566,9 +566,9 @@ public class MiniMap {
         if (var13 > var12 * var12) {
             return;
         }
-        int var14 = Trig1.field3439[var11];
-        int var15 = Trig1.field3447[var11];
-        if (Statics.field2671 != 5) {
+        int var14 = Trig1.sin[var11];
+        int var15 = Trig1.cos[var11];
+        if (Statics.cameraState != 5) {
             var14 = var14 * 256 / (client.field8976 + 256);
             var15 = var15 * 256 / (client.field8976 + 256);
         }

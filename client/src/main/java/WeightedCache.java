@@ -31,7 +31,7 @@ public final class WeightedCache {
 
     @ObfuscatedName("pm.u(J)Ljava/lang/Object;")
     public Object method7916(long arg0) {
-        WeightedNode var3 = (WeightedNode) this.field4828.method11923(arg0);
+        WeightedNode var3 = (WeightedNode) this.field4828.getNode(arg0);
         if (var3 == null) {
             return null;
         }
@@ -58,7 +58,7 @@ public final class WeightedCache {
 
     @ObfuscatedName("pm.j(J)V")
     public void method7917(long arg0) {
-        WeightedNode var3 = (WeightedNode) this.field4828.method11923(arg0);
+        WeightedNode var3 = (WeightedNode) this.field4828.getNode(arg0);
         this.method7950(var3);
     }
 

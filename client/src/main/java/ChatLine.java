@@ -7,7 +7,7 @@ public class ChatLine {
     public int field2105 = ChatHistory.method4608();
 
     @ObfuscatedName("ep.j")
-    public int field2103 = client.field9213;
+    public int field2103 = client.loopCycle;
 
     @ObfuscatedName("ep.a")
     public int field2104;
@@ -47,7 +47,7 @@ public class ChatLine {
     @ObfuscatedName("ep.u(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;B)V")
     public void method3493(int arg0, int arg1, String arg2, String arg3, String arg4, String arg5, int arg6, String arg7) {
         this.field2105 = ChatHistory.method4608();
-        this.field2103 = client.field9213;
+        this.field2103 = client.loopCycle;
         this.field2104 = arg0;
         this.field2111 = arg1;
         this.field2106 = arg2;

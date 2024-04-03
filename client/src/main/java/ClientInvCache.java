@@ -99,13 +99,13 @@ public class ClientInvCache extends Node {
     @ObfuscatedName("th.m(IZB)Lacx;")
     public static ClientInvCache method11708(int arg0, boolean arg1) {
         long var2 = (long) (arg0 | (arg1 ? Integer.MIN_VALUE : 0));
-        return (ClientInvCache) field9273.method11923(var2);
+        return (ClientInvCache) field9273.getNode(var2);
     }
 
     @ObfuscatedName("acp.t(IIIIZI)V")
     public static void method14728(int arg0, int arg1, int arg2, int arg3, boolean arg4) {
         long var5 = (long) (arg0 | (arg4 ? Integer.MIN_VALUE : 0));
-        ClientInvCache var7 = (ClientInvCache) field9273.method11923(var5);
+        ClientInvCache var7 = (ClientInvCache) field9273.getNode(var5);
         if (var7 == null) {
             var7 = new ClientInvCache();
             field9273.method11927(var7, var5);

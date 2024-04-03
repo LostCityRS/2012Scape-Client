@@ -125,7 +125,7 @@ public class DynamicLoc {
             return null;
         }
         Vector3 var6 = this.field1217.getTransform().trans;
-        Scene var7 = client.field8980.method6098();
+        Scene var7 = client.world.getScene();
         if (arg3) {
             var7.method7451(this.field1224, this.field1213, (int) var6.x, (int) var6.z, this.field1228);
             this.field1227 = false;
@@ -142,7 +142,7 @@ public class DynamicLoc {
             if (arg3) {
                 arg1 |= 0x40000;
             }
-            var10 = var5.method11414(arg0, arg1, this.field1226 == 11 ? 10 : this.field1226, this.field1226 == 11 ? this.field1216 + 4 : this.field1216, var8, var9, (int) var6.x, var8.method196((int) var6.x, (int) var6.z), (int) var6.z, this.field1220, this.field1230);
+            var10 = var5.method11414(arg0, arg1, this.field1226 == 11 ? 10 : this.field1226, this.field1226 == 11 ? this.field1216 + 4 : this.field1216, var8, var9, (int) var6.x, var8.getFineHeight((int) var6.x, (int) var6.z), (int) var6.z, this.field1220, this.field1230);
             if (var10 == null) {
                 this.field1228 = null;
                 this.field1224 = null;
@@ -166,7 +166,7 @@ public class DynamicLoc {
             if (this.field1222 != null) {
                 arg1 |= this.field1222.m();
             }
-            Pair var11 = var5.method11447(arg0, arg1, this.field1226 == 11 ? 10 : this.field1226, this.field1226 == 11 ? this.field1216 + 4 : this.field1216, var8, var9, (int) var6.x, var8.method196((int) var6.x, (int) var6.z), (int) var6.z, arg3, this.field1230);
+            Pair var11 = var5.method11447(arg0, arg1, this.field1226 == 11 ? 10 : this.field1226, this.field1226 == 11 ? this.field1216 + 4 : this.field1216, var8, var9, (int) var6.x, var8.getFineHeight((int) var6.x, (int) var6.z), (int) var6.z, arg3, this.field1230);
             if (var11 == null) {
                 this.field1228 = null;
                 this.field1224 = null;
@@ -198,7 +198,7 @@ public class DynamicLoc {
                 var11 = var11.method11431(client.field8988 == 0 ? CutsceneManager.field1538 : Statics.field2669);
             }
             if (var11 != null) {
-                this.field1229 = ParticleSystem.method8123(client.field9213, true);
+                this.field1229 = ParticleSystem.method8123(client.loopCycle, true);
             }
         }
         if (this.field1229 == null) {
@@ -206,9 +206,9 @@ public class DynamicLoc {
         }
         arg1.method294(arg2);
         if (arg7) {
-            this.field1229.method8106(arg0, (long) client.field9213, var9, var10, false);
+            this.field1229.method8106(arg0, (long) client.loopCycle, var9, var10, false);
         } else {
-            this.field1229.method8105((long) client.field9213);
+            this.field1229.method8105((long) client.loopCycle);
         }
         this.field1229.method8110(this.field1212, arg3, arg4, arg5, arg6);
     }
@@ -227,7 +227,7 @@ public class DynamicLoc {
     public void method2441(RendererToolkit arg0) {
         if (this.field1224 != null) {
             Vector3 var2 = this.field1217.getTransform().trans;
-            client.field8980.method6098().method7451(this.field1224, this.field1213, (int) var2.x, (int) var2.z, this.field1228);
+            client.world.getScene().method7451(this.field1224, this.field1213, (int) var2.x, (int) var2.z, this.field1228);
             this.field1228 = null;
             this.field1224 = null;
         }
@@ -237,7 +237,7 @@ public class DynamicLoc {
     public void method2432(GraphEntity arg0) {
         if (!this.field1220.method11767()) {
             this.method2439(false, -1, 0);
-        } else if (this.field1220.method11787(client.field9213 - this.field1221)) {
+        } else if (this.field1220.method11787(client.loopCycle - this.field1221)) {
             if (Statics.clientOptions.field9651.method15747() == 2) {
                 this.field1227 = false;
             }
@@ -247,7 +247,7 @@ public class DynamicLoc {
                 this.method2439(false, -1, 0);
             }
         }
-        this.field1221 = client.field9213;
+        this.field1221 = client.loopCycle;
     }
 
     @ObfuscatedName("ck.z(ZIIB)V")
@@ -267,7 +267,7 @@ public class DynamicLoc {
                 var7 = null;
             }
             if (var6.method11409()) {
-                if (arg0 && this.field1220.method11767() && var6.method11423(this.field1220.method11812())) {
+                if (arg0 && this.field1220.method11767() && var6.method11423(this.field1220.getSeqTypeId())) {
                     return;
                 }
                 if (this.field1214 != var6.field6474) {
@@ -280,7 +280,7 @@ public class DynamicLoc {
                     arg2 = 1;
                 }
             } else if (var7 != null && var7.method11409()) {
-                if (arg0 && this.field1220.method11767() && var7.method11423(this.field1220.method11812())) {
+                if (arg0 && this.field1220.method11767() && var7.method11423(this.field1220.getSeqTypeId())) {
                     return;
                 }
                 if (this.field1214 != var6.field6474) {
@@ -298,7 +298,7 @@ public class DynamicLoc {
             this.field1220.method11772(-1, false);
         } else {
             this.field1220.method11803(var4, 0, arg2, var5);
-            this.field1221 = client.field9213;
+            this.field1221 = client.loopCycle;
             this.field1227 = false;
             this.field1222 = null;
         }

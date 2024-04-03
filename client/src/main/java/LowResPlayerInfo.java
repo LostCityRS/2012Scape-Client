@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class LowResPlayerInfo {
 
     @ObfuscatedName("n.u")
-    public int field570;
+    public int coord;
 
     @ObfuscatedName("n.j")
     public int field572;

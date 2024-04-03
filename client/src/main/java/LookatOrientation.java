@@ -26,7 +26,7 @@ public class LookatOrientation extends Lookat {
     public Vector3 method11550() {
         Vector3 var1 = new Vector3(0.0F, 0.0F, 1000.0F);
         var1.method5318(Quaternion.method5221(this.field9886));
-        var1.field3476 *= -1.0F;
+        var1.y *= -1.0F;
         var1.method5299(this.field6645.method3720());
         return var1;
     }
@@ -51,11 +51,11 @@ public class LookatOrientation extends Lookat {
         Vector3 var5 = Vector3.create(this.field6645.method3720());
         var5.x -= arg2;
         var5.z -= arg3;
-        var5.field3476 *= -1.0F;
+        var5.y *= -1.0F;
         arg1.method5109(Quaternion.method5221(this.field9886));
         arg1.method5127(var5);
         arg1.method5102();
-        var5.method5291();
+        var5.release();
     }
 
     @ObfuscatedName("ago.c(Laet;I)V")

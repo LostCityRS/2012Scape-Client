@@ -79,8 +79,8 @@ public class HintTrail {
     @ObfuscatedName("nj.s(Loo;I)V")
     public void method6953(Scene arg0) {
         this.field4219 = new LinkedList();
-        SceneLevelTileFlags var2 = client.field8980.method6100();
-        CoordGrid var3 = client.field8980.method6214();
+        SceneLevelTileFlags var2 = client.world.getSceneLevelTileFlags();
+        CoordGrid var3 = client.world.method6214();
         CoordGrid var4 = new CoordGrid(Statics.currentPlayerLevel, this.field4216[0], this.field4220[0]);
         for (int var5 = 1; var5 < this.field4218; var5++) {
             CoordGrid var6 = new CoordGrid(Statics.currentPlayerLevel, this.field4216[var5], this.field4220[var5]);
@@ -101,10 +101,10 @@ public class HintTrail {
                 if (var8 >= 0 && var8 < arg0.field4495 && var9 >= 0 && var9 < arg0.field4496) {
                     int var10 = (var8 << 9) + 256;
                     int var11 = (var9 << 9) + 256;
-                    if (var2.method5794(var8, var9)) {
+                    if (var2.isLinkBelow(var8, var9)) {
                         var7++;
                     }
-                    this.field4219.add(new HintTrailPoint(arg0, this, Statics.currentPlayerLevel, var7, var10, client.method8663(var10, var11, Statics.currentPlayerLevel), var11));
+                    this.field4219.add(new HintTrailPoint(arg0, this, Statics.currentPlayerLevel, var7, var10, client.getHeightmapY(var10, var11, Statics.currentPlayerLevel), var11));
                 }
             }
             var4 = var6;
