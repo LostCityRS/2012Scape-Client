@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 java {
@@ -10,7 +11,24 @@ java {
     sourceCompatibility = JavaVersion.VERSION_1_6
 }
 
+application {
+    mainClass = "AppletViewer"
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'AppletViewer'
+        )
+    }
+}
+
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
     // options.compilerArgs << '-Xlint:unchecked' << '-Xlint:deprecation'
+}
+
+tasks.withType(JavaExec) {
+    workingDir = project.rootDir
+    jvmArgs = ['-Xms2G', '-Xmx2G', '-Xss2m', '-Dsun.java2d.noddraw=true', '-XX:CompileThreshold=1500']
 }
