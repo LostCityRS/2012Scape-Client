@@ -9,6 +9,17 @@ import java.util.*;
 
 public final class client extends GameShell {
 
+    public static final int REVISION = 742;
+    public static final int SUBREVISION = 2; // this client gamepack is actually 742-1, but servers expect 742-2
+
+    public static final boolean ENABLE_HOST_CHECK = false;
+    public static final boolean ENABLE_JS5_RSA = false;
+    public static final boolean ENABLE_LOBBY = false;
+    public static final boolean ENABLE_RSA = false;
+    public static final boolean ENABLE_ISAAC = false;
+
+    public static final boolean CUSTOM_SEND_MAC_ADDRESS = false; // servers out there expect additional data on login
+
     @ObfuscatedName("client.bx")
     public static ModeGame field9163 = null;
 
@@ -1784,8 +1795,8 @@ public final class client extends GameShell {
                 Packet var2 = new Packet(var1 + 2);
                 var2.p1(LoginProt.field2960.field2970);
                 var2.p1(var1);
-                var2.p4(742);
-                var2.p4(1);
+                var2.p4(client.REVISION);
+                var2.p4(client.SUBREVISION);
                 var2.pjstr(field8921);
                 Statics.field3614.method7193(var2.data, 0, var1 + 2);
                 field8958++;

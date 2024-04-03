@@ -517,7 +517,7 @@ public class Packet extends Node {
         byte[] var4 = new byte[var3];
         this.gdata(var4, 0, var3);
         BigInteger var5 = new BigInteger(var4);
-        BigInteger var6 = var5.modPow(arg0, arg1);
+        BigInteger var6 = client.ENABLE_RSA ? var5.modPow(arg0, arg1) : var5;
         byte[] var7 = var6.toByteArray();
         this.pos = 0;
         this.p2(var7.length);

@@ -159,6 +159,10 @@ public class LoginManager {
 
     @ObfuscatedName("jc.q(Ljava/lang/String;Ljava/lang/String;S)Z")
     public static boolean method4741(String arg0, String arg1) {
+        if (!client.ENABLE_LOBBY) {
+            return method11239(arg0, arg1);
+        }
+
         Statics.field500 = 154;
         Statics.field501 = client.field8959;
         return method6245(false, false, arg0, arg1, -1L);
@@ -294,8 +298,8 @@ public class LoginManager {
                     var1.field9467.p1(LoginProt.field2969.field2970);
                     var1.field9467.p2(0);
                     int var2 = var1.field9467.pos;
-                    var1.field9467.p4(742);
-                    var1.field9467.p4(1);
+                    var1.field9467.p4(client.REVISION);
+                    var1.field9467.p4(client.SUBREVISION);
                     if (Statics.field500 == 223) {
                         var1.field9467.p1(client.field8923 == 9 ? 1 : 0);
                     }
@@ -404,9 +408,15 @@ public class LoginManager {
                     int var11 = var9.pos;
                     int var12 = var9.pos;
                     if (!field504) {
-                        var9.p4(742);
-                        var9.p4(1);
+                        var9.p4(client.REVISION);
+                        var9.p4(client.SUBREVISION);
+                        if (client.CUSTOM_SEND_MAC_ADDRESS) {
+                            var9.pjstr("userMacAddress");
+                        }
                         var9.p1(client.field8923 == 9 ? 1 : 0);
+                        if (client.CUSTOM_SEND_MAC_ADDRESS) {
+                            var9.pjstr("userMacAddress");
+                        }
                         int var13 = var9.pos;
                         Packet var14 = method5564();
                         var9.pdata(var14.data, 0, var14.pos);
@@ -461,8 +471,8 @@ public class LoginManager {
                     int var18 = var9.pos;
                     int var19 = var9.pos;
                     if (!field504) {
-                        var9.p4(742);
-                        var9.p4(1);
+                        var9.p4(client.REVISION);
+                        var9.p4(client.SUBREVISION);
                         Packet var20 = method5564();
                         var9.pdata(var20.data, 0, var20.pos);
                         var19 = var9.pos;

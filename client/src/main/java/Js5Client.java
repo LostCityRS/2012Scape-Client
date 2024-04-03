@@ -57,7 +57,7 @@ public class Js5Client {
         byte[] var3 = new byte[var1.data.length - var1.pos];
         var1.gdata(var3, 0, var3.length);
         byte[] var6;
-        if (this.field3543 == null || this.field3541 == null) {
+        if (this.field3543 == null || this.field3541 == null || !client.ENABLE_JS5_RSA) {
             var6 = var3;
         } else {
             BigInteger var4 = new BigInteger(var3);

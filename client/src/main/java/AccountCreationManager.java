@@ -96,8 +96,8 @@ public class AccountCreationManager {
                 var1.field9467.p1(LoginProt.field2959.field2970);
                 var1.field9467.p2(0);
                 int var2 = var1.field9467.pos;
-                var1.field9467.p2(742);
-                var1.field9467.p2(1);
+                var1.field9467.p2(client.REVISION);
+                var1.field9467.p2(client.SUBREVISION);
                 Statics.field630 = method11380(var1);
                 int var3 = var1.field9467.pos;
                 var1.field9467.pjstr(client.field8921);
