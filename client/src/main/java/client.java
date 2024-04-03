@@ -8299,6 +8299,10 @@ public final class client extends GameShell {
             Statics.field5180 = var592;
             arg0.field840 = null;
             return true;
+        } else if (ServerProt.CUSTOM_OLDITEMSLOOK == arg0.field840) {
+            var2.g1();
+            arg0.field840 = null;
+            return true;
         } else {
             JagException.method16252((arg0.field840 == null ? -1 : arg0.field840.field3138) + TextUtil.field488 + (arg0.field844 == null ? -1 : arg0.field844.field3138) + TextUtil.field488 + (arg0.field831 == null ? -1 : arg0.field831.field3138) + " " + arg0.field835, new RuntimeException());
             method13897(false);
