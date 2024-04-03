@@ -206,9 +206,9 @@ public class PureJavaRasteriser {
                                 arg4 = 0.0F;
                             }
                             if (arg3 != arg4 && var26 < var25 || arg3 == arg4 && var26 > var24) {
-                                float var35 = (float) (arg3 + 0.5F);
-                                float var36 = (float) (arg4 + 0.5F);
-                                float var37 = (float) (arg5 + 0.5F) - var36;
+                                float var35 = (int) (arg3 + 0.5F);
+                                float var36 = (int) (arg4 + 0.5F);
+                                float var37 = (int) (arg5 + 0.5F) - var36;
                                 float var38 = var36 - var35;
                                 float var39 = (float) this.field1017[(int) var35];
                                 while (--var38 >= 0.0F) {
@@ -228,9 +228,9 @@ public class PureJavaRasteriser {
                                     var39 += this.field1001;
                                 }
                             } else {
-                                float var40 = (float) (arg3 + 0.5F);
-                                float var41 = (float) (arg4 + 0.5F);
-                                float var42 = (float) (arg5 + 0.5F) - var41;
+                                float var40 = (int) (arg3 + 0.5F);
+                                float var41 = (int) (arg4 + 0.5F);
+                                float var42 = (int) (arg5 + 0.5F) - var41;
                                 float var43 = var41 - var40;
                                 float var44 = (float) this.field1017[(int) var40];
                                 while (--var43 >= 0.0F) {
@@ -264,9 +264,9 @@ public class PureJavaRasteriser {
                                 arg5 = 0.0F;
                             }
                             if (arg3 != arg5 && var26 < var25 || arg3 == arg5 && var24 > var25) {
-                                float var46 = (float) (arg3 + 0.5F);
-                                float var47 = (float) (arg5 + 0.5F);
-                                float var48 = (float) (arg4 + 0.5F) - var47;
+                                float var46 = (int) (arg3 + 0.5F);
+                                float var47 = (int) (arg5 + 0.5F);
+                                float var48 = (int) (arg4 + 0.5F) - var47;
                                 float var49 = var47 - var46;
                                 float var50 = (float) this.field1017[(int) var46];
                                 while (--var49 >= 0.0F) {
@@ -286,9 +286,9 @@ public class PureJavaRasteriser {
                                     var50 += this.field1001;
                                 }
                             } else {
-                                float var51 = (float) (arg3 + 0.5F);
-                                float var52 = (float) (arg5 + 0.5F);
-                                float var53 = (float) (arg4 + 0.5F) - var52;
+                                float var51 = (int) (arg3 + 0.5F);
+                                float var52 = (int) (arg5 + 0.5F);
+                                float var53 = (int) (arg4 + 0.5F) - var52;
                                 float var54 = var52 - var51;
                                 float var55 = (float) this.field1017[(int) var51];
                                 while (--var54 >= 0.0F) {
@@ -334,9 +334,9 @@ public class PureJavaRasteriser {
                                 arg5 = 0.0F;
                             }
                             if (arg4 != arg5 && var25 < var24 || arg4 == arg5 && var25 > var26) {
-                                float var59 = (float) (arg4 + 0.5F);
-                                float var60 = (float) (arg5 + 0.5F);
-                                float var61 = (float) (arg3 + 0.5F) - var60;
+                                float var59 = (int) (arg4 + 0.5F);
+                                float var60 = (int) (arg5 + 0.5F);
+                                float var61 = (int) (arg3 + 0.5F) - var60;
                                 float var62 = var60 - var59;
                                 float var63 = (float) this.field1017[(int) var59];
                                 while (--var62 >= 0.0F) {
@@ -356,9 +356,9 @@ public class PureJavaRasteriser {
                                     var63 += this.field1001;
                                 }
                             } else {
-                                float var64 = (float) (arg4 + 0.5F);
-                                float var65 = (float) (arg5 + 0.5F);
-                                float var66 = (float) (arg3 + 0.5F) - var65;
+                                float var64 = (int) (arg4 + 0.5F);
+                                float var65 = (int) (arg5 + 0.5F);
+                                float var66 = (int) (arg3 + 0.5F) - var65;
                                 float var67 = var65 - var64;
                                 float var68 = (float) this.field1017[(int) var64];
                                 while (--var67 >= 0.0F) {
@@ -392,9 +392,9 @@ public class PureJavaRasteriser {
                                 arg3 = 0.0F;
                             }
                             if (var25 < var24) {
-                                float var70 = (float) (arg4 + 0.5F);
-                                float var71 = (float) (arg3 + 0.5F);
-                                float var72 = (float) (arg5 + 0.5F) - var71;
+                                float var70 = (int) (arg4 + 0.5F);
+                                float var71 = (int) (arg3 + 0.5F);
+                                float var72 = (int) (arg5 + 0.5F) - var71;
                                 float var73 = var71 - var70;
                                 float var74 = (float) this.field1017[(int) var70];
                                 while (--var73 >= 0.0F) {
@@ -414,9 +414,9 @@ public class PureJavaRasteriser {
                                     var74 += this.field1001;
                                 }
                             } else {
-                                float var75 = (float) (arg4 + 0.5F);
-                                float var76 = (float) (arg3 + 0.5F);
-                                float var77 = (float) (arg5 + 0.5F) - var76;
+                                float var75 = (int) (arg4 + 0.5F);
+                                float var76 = (int) (arg3 + 0.5F);
+                                float var77 = (int) (arg5 + 0.5F) - var76;
                                 float var78 = var76 - var75;
                                 float var79 = (float) this.field1017[(int) var75];
                                 while (--var78 >= 0.0F) {
@@ -461,9 +461,9 @@ public class PureJavaRasteriser {
                             arg3 = 0.0F;
                         }
                         if (var24 < var26) {
-                            float var83 = (float) (arg5 + 0.5F);
-                            float var84 = (float) (arg3 + 0.5F);
-                            float var85 = (float) (arg4 + 0.5F) - var84;
+                            float var83 = (int) (arg5 + 0.5F);
+                            float var84 = (int) (arg3 + 0.5F);
+                            float var85 = (int) (arg4 + 0.5F) - var84;
                             float var86 = var84 - var83;
                             float var87 = (float) this.field1017[(int) var83];
                             while (--var86 >= 0.0F) {
@@ -483,9 +483,9 @@ public class PureJavaRasteriser {
                                 var87 += this.field1001;
                             }
                         } else {
-                            float var88 = (float) (arg5 + 0.5F);
-                            float var89 = (float) (arg3 + 0.5F);
-                            float var90 = (float) (arg4 + 0.5F) - var89;
+                            float var88 = (int) (arg5 + 0.5F);
+                            float var89 = (int) (arg3 + 0.5F);
+                            float var90 = (int) (arg4 + 0.5F) - var89;
                             float var91 = var89 - var88;
                             float var92 = (float) this.field1017[(int) var88];
                             while (--var91 >= 0.0F) {
@@ -519,9 +519,9 @@ public class PureJavaRasteriser {
                             arg4 = 0.0F;
                         }
                         if (var24 < var26) {
-                            float var94 = (float) (arg5 + 0.5F);
-                            float var95 = (float) (arg4 + 0.5F);
-                            float var96 = (float) (arg3 + 0.5F) - var95;
+                            float var94 = (int) (arg5 + 0.5F);
+                            float var95 = (int) (arg4 + 0.5F);
+                            float var96 = (int) (arg3 + 0.5F) - var95;
                             float var97 = var95 - var94;
                             float var98 = (float) this.field1017[(int) var94];
                             while (--var97 >= 0.0F) {
@@ -541,9 +541,9 @@ public class PureJavaRasteriser {
                                 var98 += this.field1001;
                             }
                         } else {
-                            float var99 = (float) (arg5 + 0.5F);
-                            float var100 = (float) (arg4 + 0.5F);
-                            float var101 = (float) (arg3 + 0.5F) - var100;
+                            float var99 = (int) (arg5 + 0.5F);
+                            float var100 = (int) (arg4 + 0.5F);
+                            float var101 = (int) (arg3 + 0.5F) - var100;
                             float var102 = var100 - var99;
                             float var103 = (float) this.field1017[(int) var99];
                             while (--var102 >= 0.0F) {
@@ -993,9 +993,9 @@ public class PureJavaRasteriser {
                                 arg4 = 0.0F;
                             }
                             if (arg3 != arg4 && var30 < var29 || arg3 == arg4 && var30 > var28) {
-                                float var45 = (float) (arg3 + 0.5F);
-                                float var46 = (float) (arg4 + 0.5F);
-                                float var47 = (float) (arg5 + 0.5F) - var46;
+                                float var45 = (int) (arg3 + 0.5F);
+                                float var46 = (int) (arg4 + 0.5F);
+                                float var47 = (int) (arg5 + 0.5F) - var46;
                                 float var48 = var46 - var45;
                                 float var49 = (float) this.field1017[(int) var45];
                                 while (--var48 >= 0.0F) {
@@ -1019,9 +1019,9 @@ public class PureJavaRasteriser {
                                     var49 += this.field1001;
                                 }
                             } else {
-                                float var50 = (float) (arg3 + 0.5F);
-                                float var51 = (float) (arg4 + 0.5F);
-                                float var52 = (float) (arg5 + 0.5F) - var51;
+                                float var50 = (int) (arg3 + 0.5F);
+                                float var51 = (int) (arg4 + 0.5F);
+                                float var52 = (int) (arg5 + 0.5F) - var51;
                                 float var53 = var51 - var50;
                                 float var54 = (float) this.field1017[(int) var50];
                                 while (--var53 >= 0.0F) {
@@ -1061,9 +1061,9 @@ public class PureJavaRasteriser {
                                 arg5 = 0.0F;
                             }
                             if (arg3 != arg5 && var30 < var29 || arg3 == arg5 && var28 > var29) {
-                                float var56 = (float) (arg3 + 0.5F);
-                                float var57 = (float) (arg5 + 0.5F);
-                                float var58 = (float) (arg4 + 0.5F) - var57;
+                                float var56 = (int) (arg3 + 0.5F);
+                                float var57 = (int) (arg5 + 0.5F);
+                                float var58 = (int) (arg4 + 0.5F) - var57;
                                 float var59 = var57 - var56;
                                 float var60 = (float) this.field1017[(int) var56];
                                 while (--var59 >= 0.0F) {
@@ -1087,9 +1087,9 @@ public class PureJavaRasteriser {
                                     var60 += this.field1001;
                                 }
                             } else {
-                                float var61 = (float) (arg3 + 0.5F);
-                                float var62 = (float) (arg5 + 0.5F);
-                                float var63 = (float) (arg4 + 0.5F) - var62;
+                                float var61 = (int) (arg3 + 0.5F);
+                                float var62 = (int) (arg5 + 0.5F);
+                                float var63 = (int) (arg4 + 0.5F) - var62;
                                 float var64 = var62 - var61;
                                 float var65 = (float) this.field1017[(int) var61];
                                 while (--var64 >= 0.0F) {
@@ -1143,9 +1143,9 @@ public class PureJavaRasteriser {
                                 arg5 = 0.0F;
                             }
                             if (arg4 != arg5 && var29 < var28 || arg4 == arg5 && var29 > var30) {
-                                float var71 = (float) (arg4 + 0.5F);
-                                float var72 = (float) (arg5 + 0.5F);
-                                float var73 = (float) (arg3 + 0.5F) - var72;
+                                float var71 = (int) (arg4 + 0.5F);
+                                float var72 = (int) (arg5 + 0.5F);
+                                float var73 = (int) (arg3 + 0.5F) - var72;
                                 float var74 = var72 - var71;
                                 float var75 = (float) this.field1017[(int) var71];
                                 while (--var74 >= 0.0F) {
@@ -1169,9 +1169,9 @@ public class PureJavaRasteriser {
                                     var75 += this.field1001;
                                 }
                             } else {
-                                float var76 = (float) (arg4 + 0.5F);
-                                float var77 = (float) (arg5 + 0.5F);
-                                float var78 = (float) (arg3 + 0.5F) - var77;
+                                float var76 = (int) (arg4 + 0.5F);
+                                float var77 = (int) (arg5 + 0.5F);
+                                float var78 = (int) (arg3 + 0.5F) - var77;
                                 float var79 = var77 - var76;
                                 float var80 = (float) this.field1017[(int) var76];
                                 while (--var79 >= 0.0F) {
@@ -1211,9 +1211,9 @@ public class PureJavaRasteriser {
                                 arg3 = 0.0F;
                             }
                             if (var29 < var28) {
-                                float var82 = (float) (arg4 + 0.5F);
-                                float var83 = (float) (arg3 + 0.5F);
-                                float var84 = (float) (arg5 + 0.5F) - var83;
+                                float var82 = (int) (arg4 + 0.5F);
+                                float var83 = (int) (arg3 + 0.5F);
+                                float var84 = (int) (arg5 + 0.5F) - var83;
                                 float var85 = var83 - var82;
                                 float var86 = (float) this.field1017[(int) var82];
                                 while (--var85 >= 0.0F) {
@@ -1237,9 +1237,9 @@ public class PureJavaRasteriser {
                                     var86 += this.field1001;
                                 }
                             } else {
-                                float var87 = (float) (arg4 + 0.5F);
-                                float var88 = (float) (arg3 + 0.5F);
-                                float var89 = (float) (arg5 + 0.5F) - var88;
+                                float var87 = (int) (arg4 + 0.5F);
+                                float var88 = (int) (arg3 + 0.5F);
+                                float var89 = (int) (arg5 + 0.5F) - var88;
                                 float var90 = var88 - var87;
                                 float var91 = (float) this.field1017[(int) var87];
                                 while (--var90 >= 0.0F) {
@@ -1292,9 +1292,9 @@ public class PureJavaRasteriser {
                             arg3 = 0.0F;
                         }
                         if (var28 < var30) {
-                            float var97 = (float) (arg5 + 0.5F);
-                            float var98 = (float) (arg3 + 0.5F);
-                            float var99 = (float) (arg4 + 0.5F) - var98;
+                            float var97 = (int) (arg5 + 0.5F);
+                            float var98 = (int) (arg3 + 0.5F);
+                            float var99 = (int) (arg4 + 0.5F) - var98;
                             float var100 = var98 - var97;
                             float var101 = (float) this.field1017[(int) var97];
                             while (--var100 >= 0.0F) {
@@ -1318,9 +1318,9 @@ public class PureJavaRasteriser {
                                 var101 += this.field1001;
                             }
                         } else {
-                            float var102 = (float) (arg5 + 0.5F);
-                            float var103 = (float) (arg3 + 0.5F);
-                            float var104 = (float) (arg4 + 0.5F) - var103;
+                            float var102 = (int) (arg5 + 0.5F);
+                            float var103 = (int) (arg3 + 0.5F);
+                            float var104 = (int) (arg4 + 0.5F) - var103;
                             float var105 = var103 - var102;
                             float var106 = (float) this.field1017[(int) var102];
                             while (--var105 >= 0.0F) {
@@ -1360,9 +1360,9 @@ public class PureJavaRasteriser {
                             arg4 = 0.0F;
                         }
                         if (var28 < var30) {
-                            float var108 = (float) (arg5 + 0.5F);
-                            float var109 = (float) (arg4 + 0.5F);
-                            float var110 = (float) (arg3 + 0.5F) - var109;
+                            float var108 = (int) (arg5 + 0.5F);
+                            float var109 = (int) (arg4 + 0.5F);
+                            float var110 = (int) (arg3 + 0.5F) - var109;
                             float var111 = var109 - var108;
                             float var112 = (float) this.field1017[(int) var108];
                             while (--var111 >= 0.0F) {
@@ -1386,9 +1386,9 @@ public class PureJavaRasteriser {
                                 var112 += this.field1001;
                             }
                         } else {
-                            float var113 = (float) (arg5 + 0.5F);
-                            float var114 = (float) (arg4 + 0.5F);
-                            float var115 = (float) (arg3 + 0.5F) - var114;
+                            float var113 = (int) (arg5 + 0.5F);
+                            float var114 = (int) (arg4 + 0.5F);
+                            float var115 = (int) (arg3 + 0.5F) - var114;
                             float var116 = var114 - var113;
                             float var117 = (float) this.field1017[(int) var113];
                             while (--var116 >= 0.0F) {
@@ -2187,9 +2187,9 @@ public class PureJavaRasteriser {
                         arg4 = 0.0F;
                     }
                     if (arg3 != arg4 && var22 < var20 || arg3 == arg4 && var22 > var21) {
-                        float var28 = (float) (arg3 + 0.5F);
-                        float var29 = (float) (arg4 + 0.5F);
-                        float var30 = (float) (arg5 + 0.5F) - var29;
+                        float var28 = (int) (arg3 + 0.5F);
+                        float var29 = (int) (arg4 + 0.5F);
+                        float var30 = (int) (arg5 + 0.5F) - var29;
                         float var31 = var29 - var28;
                         float var32 = (float) this.field1017[(int) var28];
                         while (--var31 >= 0.0F) {
@@ -2207,9 +2207,9 @@ public class PureJavaRasteriser {
                             var32 += this.field1001;
                         }
                     } else {
-                        float var33 = (float) (arg3 + 0.5F);
-                        float var34 = (float) (arg4 + 0.5F);
-                        float var35 = (float) (arg5 + 0.5F) - var34;
+                        float var33 = (int) (arg3 + 0.5F);
+                        float var34 = (int) (arg4 + 0.5F);
+                        float var35 = (int) (arg5 + 0.5F) - var34;
                         float var36 = var34 - var33;
                         float var37 = (float) this.field1017[(int) var33];
                         while (--var36 >= 0.0F) {
@@ -2240,9 +2240,9 @@ public class PureJavaRasteriser {
                         arg5 = 0.0F;
                     }
                     if ((arg3 == arg5 || !(var22 < var20)) && (arg3 != arg5 || !(var21 > var20))) {
-                        float var44 = (float) (arg3 + 0.5F);
-                        float var45 = (float) (arg5 + 0.5F);
-                        float var46 = (float) (arg4 + 0.5F) - var45;
+                        float var44 = (int) (arg3 + 0.5F);
+                        float var45 = (int) (arg5 + 0.5F);
+                        float var46 = (int) (arg4 + 0.5F) - var45;
                         float var47 = var45 - var44;
                         float var48 = (float) this.field1017[(int) var44];
                         while (--var47 >= 0.0F) {
@@ -2260,9 +2260,9 @@ public class PureJavaRasteriser {
                             var48 += this.field1001;
                         }
                     } else {
-                        float var39 = (float) (arg3 + 0.5F);
-                        float var40 = (float) (arg5 + 0.5F);
-                        float var41 = (float) (arg4 + 0.5F) - var40;
+                        float var39 = (int) (arg3 + 0.5F);
+                        float var40 = (int) (arg5 + 0.5F);
+                        float var41 = (int) (arg4 + 0.5F) - var40;
                         float var42 = var40 - var39;
                         float var43 = (float) this.field1017[(int) var39];
                         while (--var42 >= 0.0F) {
@@ -2304,9 +2304,9 @@ public class PureJavaRasteriser {
                         arg5 = 0.0F;
                     }
                     if (arg4 != arg5 && var20 < var21 || arg4 == arg5 && var20 > var22) {
-                        float var51 = (float) (arg4 + 0.5F);
-                        float var52 = (float) (arg5 + 0.5F);
-                        float var53 = (float) (arg3 + 0.5F) - var52;
+                        float var51 = (int) (arg4 + 0.5F);
+                        float var52 = (int) (arg5 + 0.5F);
+                        float var53 = (int) (arg3 + 0.5F) - var52;
                         float var54 = var52 - var51;
                         float var55 = (float) this.field1017[(int) var51];
                         while (--var54 >= 0.0F) {
@@ -2324,9 +2324,9 @@ public class PureJavaRasteriser {
                             var55 += this.field1001;
                         }
                     } else {
-                        float var56 = (float) (arg4 + 0.5F);
-                        float var57 = (float) (arg5 + 0.5F);
-                        float var58 = (float) (arg3 + 0.5F) - var57;
+                        float var56 = (int) (arg4 + 0.5F);
+                        float var57 = (int) (arg5 + 0.5F);
+                        float var58 = (int) (arg3 + 0.5F) - var57;
                         float var59 = var57 - var56;
                         float var60 = (float) this.field1017[(int) var56];
                         while (--var59 >= 0.0F) {
@@ -2357,9 +2357,9 @@ public class PureJavaRasteriser {
                         arg3 = 0.0F;
                     }
                     if (var20 < var21) {
-                        float var62 = (float) (arg4 + 0.5F);
-                        float var63 = (float) (arg3 + 0.5F);
-                        float var64 = (float) (arg5 + 0.5F) - var63;
+                        float var62 = (int) (arg4 + 0.5F);
+                        float var63 = (int) (arg3 + 0.5F);
+                        float var64 = (int) (arg5 + 0.5F) - var63;
                         float var65 = var63 - var62;
                         float var66 = (float) this.field1017[(int) var62];
                         while (--var65 >= 0.0F) {
@@ -2377,9 +2377,9 @@ public class PureJavaRasteriser {
                             var66 += this.field1001;
                         }
                     } else {
-                        float var67 = (float) (arg4 + 0.5F);
-                        float var68 = (float) (arg3 + 0.5F);
-                        float var69 = (float) (arg5 + 0.5F) - var68;
+                        float var67 = (int) (arg4 + 0.5F);
+                        float var68 = (int) (arg3 + 0.5F);
+                        float var69 = (int) (arg5 + 0.5F) - var68;
                         float var70 = var68 - var67;
                         float var71 = (float) this.field1017[(int) var67];
                         while (--var70 >= 0.0F) {
@@ -2420,9 +2420,9 @@ public class PureJavaRasteriser {
                     arg3 = 0.0F;
                 }
                 if (var21 < var22) {
-                    float var74 = (float) (arg5 + 0.5F);
-                    float var75 = (float) (arg3 + 0.5F);
-                    float var76 = (float) (arg4 + 0.5F) - var75;
+                    float var74 = (int) (arg5 + 0.5F);
+                    float var75 = (int) (arg3 + 0.5F);
+                    float var76 = (int) (arg4 + 0.5F) - var75;
                     float var77 = var75 - var74;
                     float var78 = (float) this.field1017[(int) var74];
                     while (--var77 >= 0.0F) {
@@ -2440,9 +2440,9 @@ public class PureJavaRasteriser {
                         var78 += this.field1001;
                     }
                 } else {
-                    float var79 = (float) (arg5 + 0.5F);
-                    float var80 = (float) (arg3 + 0.5F);
-                    float var81 = (float) (arg4 + 0.5F) - var80;
+                    float var79 = (int) (arg5 + 0.5F);
+                    float var80 = (int) (arg3 + 0.5F);
+                    float var81 = (int) (arg4 + 0.5F) - var80;
                     float var82 = var80 - var79;
                     float var83 = (float) this.field1017[(int) var79];
                     while (--var82 >= 0.0F) {
@@ -2473,9 +2473,9 @@ public class PureJavaRasteriser {
                     arg4 = 0.0F;
                 }
                 if (var21 < var22) {
-                    float var85 = (float) (arg5 + 0.5F);
-                    float var86 = (float) (arg4 + 0.5F);
-                    float var87 = (float) (arg3 + 0.5F) - var86;
+                    float var85 = (int) (arg5 + 0.5F);
+                    float var86 = (int) (arg4 + 0.5F);
+                    float var87 = (int) (arg3 + 0.5F) - var86;
                     float var88 = var86 - var85;
                     float var89 = (float) this.field1017[(int) var85];
                     while (--var88 >= 0.0F) {
@@ -2493,9 +2493,9 @@ public class PureJavaRasteriser {
                         var89 += this.field1001;
                     }
                 } else {
-                    float var90 = (float) (arg5 + 0.5F);
-                    float var91 = (float) (arg4 + 0.5F);
-                    float var92 = (float) (arg3 + 0.5F) - var91;
+                    float var90 = (int) (arg5 + 0.5F);
+                    float var91 = (int) (arg4 + 0.5F);
+                    float var92 = (int) (arg3 + 0.5F) - var91;
                     float var93 = var91 - var90;
                     float var94 = (float) this.field1017[(int) var90];
                     while (--var93 >= 0.0F) {
@@ -3098,9 +3098,9 @@ public class PureJavaRasteriser {
                 arg5 = 0.0F;
             }
             if (arg3 != arg5 && var94 < var72 || arg3 == arg5 && var83 > var72) {
-                float var135 = (float) (arg3 + 0.5F);
-                float var136 = (float) (arg5 + 0.5F);
-                float var137 = (float) (arg4 + 0.5F) - var136;
+                float var135 = (int) (arg3 + 0.5F);
+                float var136 = (int) (arg5 + 0.5F);
+                float var137 = (int) (arg4 + 0.5F) - var136;
                 float var138 = var136 - var135;
                 float var139 = (float) this.field1017[(int) var135];
                 while (--var138 >= 0.0F) {
@@ -3152,9 +3152,9 @@ public class PureJavaRasteriser {
                     var139 += this.field1001;
                 }
             } else {
-                float var140 = (float) (arg3 + 0.5F);
-                float var141 = (float) (arg5 + 0.5F);
-                float var142 = (float) (arg4 + 0.5F) - var141;
+                float var140 = (int) (arg3 + 0.5F);
+                float var141 = (int) (arg5 + 0.5F);
+                float var142 = (int) (arg4 + 0.5F) - var141;
                 float var143 = var141 - var140;
                 float var144 = (float) this.field1017[(int) var140];
                 while (--var143 >= 0.0F) {
@@ -3255,9 +3255,9 @@ public class PureJavaRasteriser {
             arg4 = 0.0F;
         }
         if (arg3 != arg4 && var94 < var72 || !(arg3 != arg4 || !(var94 > var83))) {
-            float var115 = (float) (arg3 + 0.5F);
-            float var116 = (float) (arg4 + 0.5F);
-            float var117 = (float) (arg5 + 0.5F) - var116;
+            float var115 = (int) (arg3 + 0.5F);
+            float var116 = (int) (arg4 + 0.5F);
+            float var117 = (int) (arg5 + 0.5F) - var116;
             float var118 = var116 - var115;
             float var119 = (float) this.field1017[(int) var115];
             while (--var118 >= 0.0F) {
@@ -3310,9 +3310,9 @@ public class PureJavaRasteriser {
             }
             return;
         }
-        float var120 = (float) (arg3 + 0.5F);
-        float var121 = (float) (arg4 + 0.5F);
-        float var122 = (float) (arg5 + 0.5F) - var121;
+        float var120 = (int) (arg3 + 0.5F);
+        float var121 = (int) (arg4 + 0.5F);
+        float var122 = (int) (arg5 + 0.5F) - var121;
         float var123 = var121 - var120;
         float var124 = (float) this.field1017[(int) var120];
         while (--var123 >= 0.0F) {
@@ -3768,9 +3768,9 @@ public class PureJavaRasteriser {
                 arg5 = 0.0F;
             }
             if (arg3 != arg5 && var117 < var91 || arg3 == arg5 && var104 > var91) {
-                float var164 = (float) (arg3 + 0.5F);
-                float var165 = (float) (arg5 + 0.5F);
-                float var166 = (float) (arg4 + 0.5F) - var165;
+                float var164 = (int) (arg3 + 0.5F);
+                float var165 = (int) (arg5 + 0.5F);
+                float var166 = (int) (arg4 + 0.5F) - var165;
                 float var167 = var165 - var164;
                 float var168 = (float) this.field1017[(int) var164];
                 while (--var167 >= 0.0F) {
@@ -3830,9 +3830,9 @@ public class PureJavaRasteriser {
                     var168 += this.field1001;
                 }
             } else {
-                float var169 = (float) (arg3 + 0.5F);
-                float var170 = (float) (arg5 + 0.5F);
-                float var171 = (float) (arg4 + 0.5F) - var170;
+                float var169 = (int) (arg3 + 0.5F);
+                float var170 = (int) (arg5 + 0.5F);
+                float var171 = (int) (arg4 + 0.5F) - var170;
                 float var172 = var170 - var169;
                 float var173 = (float) this.field1017[(int) var169];
                 while (--var172 >= 0.0F) {
@@ -3949,9 +3949,9 @@ public class PureJavaRasteriser {
             arg4 = 0.0F;
         }
         if ((arg3 == arg4 || var117 >= var91) && (arg3 != arg4 || var117 <= var104)) {
-            float var147 = (float) (arg3 + 0.5F);
-            float var148 = (float) (arg4 + 0.5F);
-            float var149 = (float) (arg5 + 0.5F) - var148;
+            float var147 = (int) (arg3 + 0.5F);
+            float var148 = (int) (arg4 + 0.5F);
+            float var149 = (int) (arg5 + 0.5F) - var148;
             float var150 = var148 - var147;
             float var151 = (float) this.field1017[(int) var147];
             while (--var150 >= 0.0F) {
@@ -4012,9 +4012,9 @@ public class PureJavaRasteriser {
             }
             return;
         }
-        float var142 = (float) (arg3 + 0.5F);
-        float var143 = (float) (arg4 + 0.5F);
-        float var144 = (float) (arg5 + 0.5F) - var143;
+        float var142 = (int) (arg3 + 0.5F);
+        float var143 = (int) (arg4 + 0.5F);
+        float var144 = (int) (arg5 + 0.5F) - var143;
         float var145 = var143 - var142;
         float var146 = (float) this.field1017[(int) var142];
         while (--var145 >= 0.0F) {
