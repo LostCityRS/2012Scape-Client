@@ -9,6 +9,8 @@ import java.awt.*;
 @ObfuscatedName("yq")
 public class GlToolkit extends RendererToolkit {
 
+    public static final boolean ALLOW_MICROSOFT = true; // microsoft support is better now!
+
     @ObfuscatedName("yq.bp")
     public OpenGL field8079;
 
@@ -586,7 +588,7 @@ public class GlToolkit extends RendererToolkit {
         int var1 = 0;
         this.field8036 = OpenGL.glGetString(7936).toLowerCase();
         this.field8084 = OpenGL.glGetString(7937).toLowerCase();
-        if (this.field8036.indexOf("microsoft") != -1) {
+        if (!GlToolkit.ALLOW_MICROSOFT && this.field8036.indexOf("microsoft") != -1) {
             var1 |= 0x1;
         }
         if (this.field8036.indexOf("brian paul") != -1 || this.field8036.indexOf("mesa") != -1) {
