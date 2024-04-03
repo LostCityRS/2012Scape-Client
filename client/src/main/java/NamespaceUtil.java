@@ -14,7 +14,7 @@ public class NamespaceUtil {
     }
 
     @ObfuscatedName("ns.u(Lwx;I)I")
-    public static final int method6974(class624 arg0) {
+    public static final int method6974(Namespace arg0) {
         if (arg0 == null) {
             return 12;
         } else {
@@ -58,7 +58,7 @@ public class NamespaceUtil {
     }
 
     @ObfuscatedName("wf.c(Ljava/lang/CharSequence;Lwx;I)Ljava/lang/String;")
-    public static String method12504(CharSequence arg0, class624 arg1) {
+    public static String method12504(CharSequence arg0, Namespace arg1) {
         if (arg0 == null) {
             return null;
         }

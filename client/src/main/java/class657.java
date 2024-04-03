@@ -34,7 +34,7 @@ public class class657 extends PrimaryLayerEntity implements Location {
 
     @ObfuscatedName("gr.bd(III)B")
     public static byte method3987(int arg0, int arg1) {
-        if (class542.field6567.field6590 == arg0) {
+        if (LocShape.field6567.field6590 == arg0) {
             return (byte) ((arg1 & 0x1) == 0 ? 1 : 2);
         } else {
             return 0;

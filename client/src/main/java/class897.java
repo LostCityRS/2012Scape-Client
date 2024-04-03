@@ -64,7 +64,7 @@ public class class897 extends class680 {
                 if (var6 > var3) {
                     var3 = var6;
                 }
-                if (!var1.method898(field9970[var4], class455.field4849, 1.0F, var3, var3, false)) {
+                if (!var1.method898(field9970[var4], TextureRelated2.field4849, 1.0F, var3, var3, false)) {
                     return null;
                 }
                 if (var5.field1275 > 0) {

@@ -7,7 +7,7 @@ public class class147 {
     public final int field1552;
 
     @ObfuscatedName("df.j")
-    public final class542 field1551;
+    public final LocShape field1551;
 
     @ObfuscatedName("df.a")
     public int field1553;
@@ -23,7 +23,7 @@ public class class147 {
 
     public class147(Packet arg0) {
         this.field1552 = arg0.method15411();
-        this.field1551 = (class542) SerializableEnums.method8032(class542.method6247(), arg0.method15220());
+        this.field1551 = (LocShape) SerializableEnums.method8032(LocShape.method6247(), arg0.method15220());
     }
 
     @ObfuscatedName("df.u(IIIIB)V")

@@ -4,9 +4,9 @@ import deob.ObfuscatedName;
 public class class555 implements class557 {
 
     @ObfuscatedName("tj.u")
-    public final class628 field6691;
+    public final ToolkitType field6691;
 
-    public class555(class628 arg0) {
+    public class555(ToolkitType arg0) {
         this.field6691 = arg0;
     }
 

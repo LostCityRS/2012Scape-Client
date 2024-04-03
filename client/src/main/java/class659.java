@@ -85,7 +85,7 @@ public class class659 extends PrimaryLayerEntity implements Location {
 
     @ObfuscatedName("p.bd(III)B")
     public static byte method1416(int arg0, int arg1) {
-        if (class542.field6567.field6590 == arg0) {
+        if (LocShape.field6567.field6590 == arg0) {
             return (byte) ((arg1 & 0x1) == 0 ? 1 : 2);
         } else {
             return 0;
@@ -124,7 +124,7 @@ public class class659 extends PrimaryLayerEntity implements Location {
             }
         }
         Vector3 var7 = this.method8565().field3464;
-        return var4.method11447(arg0, arg1, class542.field6588.field6590 == this.field7541 ? class542.field6572.field6590 : this.field7541, class542.field6588.field6590 == this.field7541 ? this.field7538 + 4 : this.field7538, var5, var6, (int) var7.field3475, (int) var7.field3476, (int) var7.field3477, arg2, null);
+        return var4.method11447(arg0, arg1, LocShape.field6588.field6590 == this.field7541 ? LocShape.field6572.field6590 : this.field7541, LocShape.field6588.field6590 == this.field7541 ? this.field7538 + 4 : this.field7538, var5, var6, (int) var7.field3475, (int) var7.field3476, (int) var7.field3477, arg2, null);
     }
 
     @ObfuscatedName("yp.br(Lra;I)Lok;")

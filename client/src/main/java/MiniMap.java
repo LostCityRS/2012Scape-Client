@@ -120,7 +120,7 @@ public class MiniMap {
                 if (var10.field6493 > 0) {
                     var13 = arg7;
                 }
-                if (class542.field6591.field6590 == var12 || class542.field6569.field6590 == var12) {
+                if (LocShape.field6591.field6590 == var12 || LocShape.field6569.field6590 == var12) {
                     if (var11 == 0) {
                         arg0.method486(arg4, arg5, 4, var13);
                     } else if (var11 == 1) {
@@ -131,7 +131,7 @@ public class MiniMap {
                         arg0.method485(arg4, arg5 + 3, 4, var13);
                     }
                 }
-                if (class542.field6570.field6590 == var12) {
+                if (LocShape.field6570.field6590 == var12) {
                     if (var11 == 0) {
                         arg0.method496(arg4, arg5, 1, 1, var13);
                     } else if (var11 == 1) {
@@ -142,7 +142,7 @@ public class MiniMap {
                         arg0.method496(arg4, arg5 + 3, 1, 1, var13);
                     }
                 }
-                if (class542.field6569.field6590 == var12) {
+                if (LocShape.field6569.field6590 == var12) {
                     if (var11 == 0) {
                         arg0.method485(arg4, arg5, 4, var13);
                     } else if (var11 == 1) {
@@ -164,7 +164,7 @@ public class MiniMap {
             int var17 = var14.method2390();
             if (var15.field6508 != -1) {
                 method3634(arg0, var15, var16, arg4, arg5);
-            } else if (class542.field6567.field6590 == var17) {
+            } else if (LocShape.field6567.field6590 == var17) {
                 int var18 = -1118482;
                 if (var15.field6493 > 0) {
                     var18 = -1179648;

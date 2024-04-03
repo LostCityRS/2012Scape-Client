@@ -17,7 +17,7 @@ public class class658 extends GroundDecorLayerEntity implements Location {
 
     public class658(Scene arg0, RendererToolkit arg1, LocTypeList arg2, LocType arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11) {
         super(arg0, arg6, arg7, arg8, arg4, arg5, arg3.field6477);
-        this.field7530 = new class116(arg1, arg2, arg3, class542.field6589.field6590, arg10, arg4, arg5, this, arg9, arg11);
+        this.field7530 = new class116(arg1, arg2, arg3, LocShape.field6589.field6590, arg10, arg4, arg5, this, arg9, arg11);
         this.field7529 = arg3.field6493 != 0 && !arg9;
         this.method15642(1);
     }

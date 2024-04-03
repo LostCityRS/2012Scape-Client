@@ -95,7 +95,7 @@ public class class661 extends WallLayerEntity implements Location {
 
     @ObfuscatedName("ew.bd(III)I")
     public static int method3208(int arg0, int arg1) {
-        return class542.field6575.field6590 == arg0 || class542.field6570.field6590 == arg0 ? field7565[arg1 & 0x3] : field7558[arg1 & 0x3];
+        return LocShape.field6575.field6590 == arg0 || LocShape.field6570.field6590 == arg0 ? field7565[arg1 & 0x3] : field7558[arg1 & 0x3];
     }
 
     @ObfuscatedName("ye.bm(Lra;II)Lqa;")

@@ -22,5 +22,5 @@ public interface MaterialTypeList {
     int method894();
 
     @ObfuscatedName("ma.j(ILpy;FIIZI)Z")
-    boolean method898(int arg0, class455 arg1, float arg2, int arg3, int arg4, boolean arg5);
+    boolean method898(int arg0, TextureRelated2 arg1, float arg2, int arg3, int arg4, boolean arg5);
 }

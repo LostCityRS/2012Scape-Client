@@ -23,7 +23,7 @@ public class GraphicsPacketQueue {
     }
 
     @ObfuscatedName("uh.a(Lwt;I)V")
-    public static void method12023(class628 arg0) {
+    public static void method12023(ToolkitType arg0) {
         method5935(new class555(arg0));
     }
 

@@ -1235,7 +1235,7 @@ public final class client extends GameShell {
         } catch (Throwable var4) {
             JagException.method16252(var4.getMessage() + " " + this.method6701(), var4);
             field8928 = true;
-            GraphicsPacketQueue.method12023(class628.field7362);
+            GraphicsPacketQueue.method12023(ToolkitType.field7362);
             Statics.method5600(0, false);
         }
     }
@@ -1382,7 +1382,7 @@ public final class client extends GameShell {
         } catch (Throwable var4) {
             JagException.method16252(var4.getMessage() + " " + this.method6701(), var4);
             field8928 = true;
-            GraphicsPacketQueue.method12023(class628.field7362);
+            GraphicsPacketQueue.method12023(ToolkitType.field7362);
             Statics.method5600(0, false);
         }
     }
@@ -2006,13 +2006,13 @@ public final class client extends GameShell {
                     } catch (Throwable var27) {
                         switch (arg0) {
                             case 1:
-                                GraphicsPacketQueue.method12023(class628.field7357);
+                                GraphicsPacketQueue.method12023(ToolkitType.field7357);
                                 break;
                             case 2:
-                                GraphicsPacketQueue.method12023(class628.field7365);
+                                GraphicsPacketQueue.method12023(ToolkitType.field7365);
                                 break;
                             case 3:
-                                GraphicsPacketQueue.method12023(class628.field7358);
+                                GraphicsPacketQueue.method12023(ToolkitType.field7358);
                         }
                     }
                     int var15 = Statics.field4961.field9661.method15781();
@@ -5882,9 +5882,9 @@ public final class client extends GameShell {
         int var4 = (int) arg2 >> 14 & 0x1F;
         int var5 = (int) arg2 >> 20 & 0x3;
         int var6 = (int) (arg2 >>> 32) & Integer.MAX_VALUE;
-        class542 var7 = (class542) SerializableEnums.method8032(class542.method6247(), var4);
+        LocShape var7 = (LocShape) SerializableEnums.method8032(LocShape.method6247(), var4);
         class435 var8;
-        if (class542.field6572 == var7 || class542.field6588 == var7 || class542.field6589 == var7) {
+        if (LocShape.field6572 == var7 || LocShape.field6588 == var7 || LocShape.field6589 == var7) {
             LocType var9 = field8980.method6103().method11471(var6);
             int var10;
             int var11;
@@ -5897,8 +5897,8 @@ public final class client extends GameShell {
             }
             if (var5 != 0) {
             }
-            var8 = class434.method1767(arg0, arg1, var10, var11, class542.field6591, 0);
-        } else if (class542.method2616(var7.field6590)) {
+            var8 = class434.method1767(arg0, arg1, var10, var11, LocShape.field6591, 0);
+        } else if (LocShape.method2616(var7.field6590)) {
             var8 = class434.method1767(arg0, arg1, 0, 0, var7, var5);
         } else {
             var8 = class434.method7893(arg0, arg1, 0, 0, var7, var5);
@@ -8357,8 +8357,8 @@ public final class client extends GameShell {
             int var28 = var1.method15273();
             int var29 = (var28 >> 4 & 0x7) + Statics.field6803;
             int var30 = (var28 & 0x7) + Statics.field3907;
-            if (class542.field6588.field6590 == var23) {
-                var23 = class542.field6572.field6590;
+            if (LocShape.field6588.field6590 == var23) {
+                var23 = LocShape.field6572.field6590;
             }
             int var31 = 0;
             if (var27.field6475 != null) {

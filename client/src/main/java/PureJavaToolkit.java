@@ -231,7 +231,7 @@ public class PureJavaToolkit extends RendererToolkit {
             if (var3 == null) {
                 Material var4 = this.field400.method889(arg0);
                 int var5 = var4.field1252;
-                if (!this.field400.method898(arg0, class455.field4848, 0.7F, var5, var5, true)) {
+                if (!this.field400.method898(arg0, TextureRelated2.field4848, 0.7F, var5, var5, true)) {
                     return null;
                 }
                 int[] var6;
@@ -251,7 +251,7 @@ public class PureJavaToolkit extends RendererToolkit {
     @ObfuscatedName("yt.q(I)Z")
     public boolean method13192(int arg0) {
         Material var2 = this.field400.method889(arg0);
-        return this.field400.method898(arg0, class455.field4848, 0.7F, var2.field1252, var2.field1252, true);
+        return this.field400.method898(arg0, TextureRelated2.field4848, 0.7F, var2.field1252, var2.field1252, true);
     }
 
     @ObfuscatedName("yt.x(I)I")

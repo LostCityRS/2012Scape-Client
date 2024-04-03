@@ -134,7 +134,7 @@ public class BasicMaterialTypeList implements MaterialTypeList {
     }
 
     @ObfuscatedName("cj.j(ILpy;FIIZI)Z")
-    public boolean method898(int arg0, class455 arg1, float arg2, int arg3, int arg4, boolean arg5) {
+    public boolean method898(int arg0, TextureRelated2 arg1, float arg2, int arg3, int arg4, boolean arg5) {
         boolean var7 = true;
         if (this.field1291[arg0].field1245) {
             var7 = this.field1293.method5630(arg0);

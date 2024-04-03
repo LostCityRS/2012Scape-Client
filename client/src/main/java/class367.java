@@ -162,7 +162,7 @@ public class class367 {
     public boolean method6410(RendererToolkit arg0, class367 arg1) {
         if (this.field3967 == null) {
             if (this.field3954 == 0) {
-                if (Statics.field6785.method898(this.field3960, class455.field4848, 0.7F, this.field3972, this.field3972, false)) {
+                if (Statics.field6785.method898(this.field3960, TextureRelated2.field4848, 0.7F, this.field3972, this.field3972, false)) {
                     int[] var3 = Statics.field6785.method887(this.field3960, 0.7F, this.field3972, this.field3972, false);
                     this.field3967 = arg0.method506(var3, 0, this.field3972, this.field3972, this.field3972);
                 }

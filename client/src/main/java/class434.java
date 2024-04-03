@@ -55,7 +55,7 @@ public final class class434 {
     }
 
     @ObfuscatedName("ai.c(IIIILtn;II)Lpq;")
-    public static class435 method1767(int arg0, int arg1, int arg2, int arg3, class542 arg4, int arg5) {
+    public static class435 method1767(int arg0, int arg1, int arg2, int arg3, LocShape arg4, int arg5) {
         field4675.field4682 = arg0;
         field4675.field4680 = arg1;
         field4675.field4681 = arg2;
@@ -66,7 +66,7 @@ public final class class434 {
     }
 
     @ObfuscatedName("pj.m(IIIILtn;IB)Lpq;")
-    public static class435 method7893(int arg0, int arg1, int arg2, int arg3, class542 arg4, int arg5) {
+    public static class435 method7893(int arg0, int arg1, int arg2, int arg3, LocShape arg4, int arg5) {
         field4671.field4682 = arg0;
         field4671.field4680 = arg1;
         field4671.field4681 = arg2;

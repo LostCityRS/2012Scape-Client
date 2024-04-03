@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class class828 extends class435 {
 
     @ObfuscatedName("aev.c")
-    public class542 field9794;
+    public LocShape field9794;
 
     @ObfuscatedName("aev.m")
     public int field9795;

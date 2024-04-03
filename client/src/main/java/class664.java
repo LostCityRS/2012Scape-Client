@@ -110,7 +110,7 @@ public class class664 extends GroundDecorLayerEntity implements Location {
             }
         }
         Vector3 var7 = this.method8565().field3464;
-        return var4.method11447(arg0, arg1, class542.field6589.field6590, this.field7584, var5, var6, (int) var7.field3475, (int) var7.field3476, (int) var7.field3477, arg2, null);
+        return var4.method11447(arg0, arg1, LocShape.field6589.field6590, this.field7584, var5, var6, (int) var7.field3475, (int) var7.field3476, (int) var7.field3477, arg2, null);
     }
 
     @ObfuscatedName("yw.br(Lra;I)Lok;")
@@ -179,7 +179,7 @@ public class class664 extends GroundDecorLayerEntity implements Location {
 
     @ObfuscatedName("yw.j(B)I")
     public int method2390() {
-        return class542.field6589.field6590;
+        return LocShape.field6589.field6590;
     }
 
     @ObfuscatedName("yw.a(I)I")

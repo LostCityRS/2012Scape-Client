@@ -529,7 +529,7 @@ public class LocType {
     public void method11410() {
         if (this.field6493 == -1) {
             this.field6493 = 0;
-            if (this.field6475 != null && this.field6475.length == 1 && class542.field6572.field6590 == this.field6475[0]) {
+            if (this.field6475 != null && this.field6475.length == 1 && LocShape.field6572.field6590 == this.field6475[0]) {
                 this.field6493 = 1;
             }
             for (int var1 = 0; var1 < 5; var1++) {
@@ -587,8 +587,8 @@ public class LocType {
 
     @ObfuscatedName("tg.m(Lra;IIILxa;Lxa;IIIZLto;I)Luz;")
     public final synchronized Pair method11447(RendererToolkit arg0, int arg1, int arg2, int arg3, FloorModel arg4, FloorModel arg5, int arg6, int arg7, int arg8, boolean arg9, class539 arg10) {
-        if (class542.method3309(arg2)) {
-            arg2 = class542.field6577.field6590;
+        if (LocShape.method3309(arg2)) {
+            arg2 = LocShape.field6577.field6590;
         }
         long var12 = (long) ((this.field6474 << 10) + (arg2 << 3) + arg3);
         long var14 = var12 | (long) (arg0.field397 << 29);
@@ -631,14 +631,14 @@ public class LocType {
                 var16 = arg0.method520(var16, var22.method329());
             }
             int var24 = var16;
-            if (class542.field6572.field6590 == arg2 && arg3 > 3) {
+            if (LocShape.field6572.field6590 == arg2 && arg3 > 3) {
                 var24 = var16 | 0x5;
             }
             var22 = this.method11415(arg0, var24, arg2, arg3, arg10);
             if (var22 == null) {
                 return null;
             }
-            if (class542.field6572.field6590 == arg2 && arg3 > 3) {
+            if (LocShape.field6572.field6590 == arg2 && arg3 > 3) {
                 var22.method246(2048);
             }
             if (arg9 && !var17 && !var18) {
@@ -674,8 +674,8 @@ public class LocType {
 
     @ObfuscatedName("tg.t(Lra;IIILxa;Lxa;IIILtt;Lto;I)Lqa;")
     public final synchronized Model method11414(RendererToolkit arg0, int arg1, int arg2, int arg3, FloorModel arg4, FloorModel arg5, int arg6, int arg7, int arg8, AnimationNode arg9, class539 arg10) {
-        if (class542.method3309(arg2)) {
-            arg2 = class542.field6577.field6590;
+        if (LocShape.method3309(arg2)) {
+            arg2 = LocShape.field6577.field6590;
         }
         long var12 = (long) ((this.field6474 << 10) + (arg2 << 3) + arg3);
         int var14 = arg1;
@@ -699,7 +699,7 @@ public class LocType {
                 arg1 |= 0x4;
             }
         }
-        if (class542.field6572.field6590 == arg2 && arg3 > 3) {
+        if (LocShape.field6572.field6590 == arg2 && arg3 > 3) {
             arg1 |= 0x5;
         }
         WeightedCache var17 = this.field6473.field6560;
@@ -726,7 +726,7 @@ public class LocType {
             var22 = true;
             arg9.method11780(var18, arg3 & 0x3);
         }
-        if (class542.field6572.field6590 == arg2 && arg3 > 3) {
+        if (LocShape.field6572.field6590 == arg2 && arg3 > 3) {
             if (!var22) {
                 var18 = var18.method295((byte) 3, arg1, true);
                 var22 = true;
@@ -758,7 +758,7 @@ public class LocType {
         int var6 = this.field6549 + 64;
         int var7 = this.field6504 * 5 + 850;
         int var8 = arg1;
-        boolean var9 = this.field6486 || class542.field6569.field6590 == arg2 && arg3 > 3;
+        boolean var9 = this.field6486 || LocShape.field6569.field6590 == arg2 && arg3 > 3;
         if (var9) {
             arg1 |= 0x10;
         }
@@ -868,7 +868,7 @@ public class LocType {
         if (var9) {
             var29.method253();
         }
-        if (class542.field6577.field6590 == arg2 && arg3 > 3) {
+        if (LocShape.field6577.field6590 == arg2 && arg3 > 3) {
             var29.method249(2048);
             var29.method353(180, 0, -180);
         }

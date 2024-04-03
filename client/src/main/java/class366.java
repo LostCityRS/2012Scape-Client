@@ -245,7 +245,7 @@ public class class366 {
                 arg0.method489(arg2, arg3, arg4, arg5, var14 << 24 | arg9, 1);
             } else {
                 Material var15 = Statics.field6785.method889(this.field3927);
-                if (this.field3937 == null && Statics.field6785.method898(this.field3927, MaterialAlphaMode.field4853 == var15.field1262 ? class455.field4848 : class455.field4849, 0.7F, this.field3928, this.field3928, false)) {
+                if (this.field3937 == null && Statics.field6785.method898(this.field3927, MaterialAlphaMode.field4853 == var15.field1262 ? TextureRelated2.field4848 : TextureRelated2.field4849, 0.7F, this.field3928, this.field3928, false)) {
                     int[] var16 = MaterialAlphaMode.field4853 == var15.field1262 ? Statics.field6785.method887(this.field3927, 0.7F, this.field3928, this.field3928, false) : Statics.field6785.method886(this.field3927, 0.7F, this.field3928, this.field3928, false);
                     this.field3941 = var16[0];
                     this.field3940 = var16[var16.length - 1];

@@ -724,7 +724,7 @@ public class class408 {
         }
         for (int var16 = 0; var16 < arg8.length; var16++) {
             int var17 = arg9[var16] & 0x3F;
-            if (class542.field6591.field6590 == var17 || class542.field6569.field6590 == var17 || class542.field6570.field6590 == var17 || class542.field6567.field6590 == var17) {
+            if (LocShape.field6591.field6590 == var17 || LocShape.field6569.field6590 == var17 || LocShape.field6570.field6590 == var17 || LocShape.field6567.field6590 == var17) {
                 LocType var18 = Statics.field4266.method11471(arg8[var16]);
                 if (var18.field6508 == -1) {
                     int var19 = -3355444;
@@ -732,7 +732,7 @@ public class class408 {
                         var19 = -3407872;
                     }
                     int var20 = arg9[var16] >> 6 & 0x3;
-                    if (class542.field6591.field6590 == var17) {
+                    if (LocShape.field6591.field6590 == var17) {
                         if (var20 == 0) {
                             arg0.method494(arg1, arg2, arg4, var19, 0);
                         } else if (var20 == 1) {
@@ -742,7 +742,7 @@ public class class408 {
                         } else {
                             arg0.method493(arg1, var15, arg3, var19, 0);
                         }
-                    } else if (class542.field6569.field6590 == var17) {
+                    } else if (LocShape.field6569.field6590 == var17) {
                         if (var20 == 0) {
                             arg0.method494(arg1, arg2, arg4, -1, 0);
                             arg0.method493(arg1, arg2, arg3, var19, 0);
@@ -756,7 +756,7 @@ public class class408 {
                             arg0.method494(arg1, arg2, arg4, -1, 0);
                             arg0.method493(arg1, var15, arg3, var19, 0);
                         }
-                    } else if (class542.field6570.field6590 == var17) {
+                    } else if (LocShape.field6570.field6590 == var17) {
                         if (var20 == 0) {
                             arg0.method493(arg1, arg2, 1, var19, 0);
                         } else if (var20 == 1) {
@@ -766,7 +766,7 @@ public class class408 {
                         } else {
                             arg0.method493(arg1, var15, 1, var19, 0);
                         }
-                    } else if (class542.field6567.field6590 == var17) {
+                    } else if (LocShape.field6567.field6590 == var17) {
                         if (var20 == 0 || var20 == 2) {
                             for (int var22 = 0; var22 < arg4; var22++) {
                                 arg0.method493(arg1 + var22, var15 - var22, 1, var19, 0);

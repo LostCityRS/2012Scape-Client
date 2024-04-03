@@ -60,11 +60,11 @@ public class class104 {
             arg1 = var3.field1252;
         }
         if (var3.field1245 && this.field1174.method600()) {
-            return this.field1173.method898(arg0, class455.field4850, 0.7F, arg1, arg1, false);
+            return this.field1173.method898(arg0, TextureRelated2.field4850, 0.7F, arg1, arg1, false);
         } else if (MaterialAlphaMode.field4853 != var3.field1262 && Material.method12638(var3.field1270)) {
-            return this.field1173.method898(arg0, class455.field4849, 0.7F, arg1, arg1, true);
+            return this.field1173.method898(arg0, TextureRelated2.field4849, 0.7F, arg1, arg1, true);
         } else {
-            return this.field1173.method898(arg0, class455.field4848, 0.7F, arg1, arg1, false);
+            return this.field1173.method898(arg0, TextureRelated2.field4848, 0.7F, arg1, arg1, false);
         }
     }
 

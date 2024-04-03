@@ -825,13 +825,13 @@ public class ClientWorldMap extends class408 {
         if (Statics.field4961.field9661.method15781() != field9764) {
             switch (field9764) {
                 case 1:
-                    GraphicsPacketQueue.method12023(class628.field7359);
+                    GraphicsPacketQueue.method12023(ToolkitType.field7359);
                     break;
                 case 2:
-                    GraphicsPacketQueue.method12023(class628.field7360);
+                    GraphicsPacketQueue.method12023(ToolkitType.field7360);
                     break;
                 case 3:
-                    GraphicsPacketQueue.method12023(class628.field7361);
+                    GraphicsPacketQueue.method12023(ToolkitType.field7361);
             }
         }
         field9764 = -1;

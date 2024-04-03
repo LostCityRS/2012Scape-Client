@@ -146,7 +146,7 @@ public class Loading {
                 if (client.field8951[var0].method7298() == 's' || client.field8951[var0].method7298() == 'S') {
                     Statics.field4961.method15448(Statics.field4961.field9669, 1);
                     client.field8912 = true;
-                    GraphicsPacketQueue.method12023(class628.field7363);
+                    GraphicsPacketQueue.method12023(ToolkitType.field7363);
                     break;
                 }
             }
@@ -418,12 +418,12 @@ public class Loading {
             if (client.field8911) {
                 Statics.method5600(0, false);
                 if (!client.field8912) {
-                    GraphicsPacketQueue.method12023(class628.field7356);
+                    GraphicsPacketQueue.method12023(ToolkitType.field7356);
                 }
             } else {
                 Statics.method5600(Statics.field4961.field9670.method15781(), false);
                 if (Statics.field4961.field9670.method15781() == 0) {
-                    GraphicsPacketQueue.method12023(class628.field7364);
+                    GraphicsPacketQueue.method12023(ToolkitType.field7364);
                 }
             }
             client.method7282(Statics.field4961.field9663.method15766(), -1, -1, false);
