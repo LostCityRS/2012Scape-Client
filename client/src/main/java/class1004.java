@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import java.lang.ref.SoftReference;
 
 @ObfuscatedName("alq")
-public class class1004 extends class952 {
+public class class1004 extends WeightedNode {
 
     @ObfuscatedName("alq.l")
     public SoftReference field10601;

@@ -1252,7 +1252,7 @@ public class ComType {
             var8[var10 + var5.method2724()] = var11 + var5.method2722();
             var9[var10 + var5.method2724()] = var12 - var11;
         }
-        class11 var15 = arg0.method571(var6, var7, var8, var9);
+        GraphicsRelated var15 = arg0.method571(var6, var7, var8, var9);
         if (var15 == null) {
             return null;
         } else {

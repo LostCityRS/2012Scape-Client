@@ -93,7 +93,7 @@ public class fa extends Sprite implements class10, GraphicsDeletable {
     }
 
     @ObfuscatedName("fa.af(IILta;II)V")
-    public void method1056(int arg0, int arg1, class11 arg2, int arg3, int arg4) {
+    public void method1056(int arg0, int arg1, GraphicsRelated arg2, int arg3, int arg4) {
         this.method1057(this.nativeid, arg0, arg1, ((wa) arg2).nativeid, arg3, arg4);
     }
 
@@ -113,7 +113,7 @@ public class fa extends Sprite implements class10, GraphicsDeletable {
     }
 
     @ObfuscatedName("fa.az(FFFFFFILta;II)V")
-    public void method1044(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, int arg6, class11 arg7, int arg8, int arg9) {
+    public void method1044(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, int arg6, GraphicsRelated arg7, int arg8, int arg9) {
         this.method1096(this.nativeid, arg0, arg1, arg2, arg3, arg4, arg5, arg6, ((wa) arg7).nativeid, arg8, arg9, this.field470);
     }
 

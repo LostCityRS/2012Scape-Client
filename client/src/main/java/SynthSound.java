@@ -28,13 +28,13 @@ public class SynthSound {
     public class370 field4176;
 
     @ObfuscatedName("np.n")
-    public class796 field4184;
+    public VorbisSound field4184;
 
     @ObfuscatedName("np.o")
-    public class996 field4185;
+    public VariableRateSoundPacket field4185;
 
     @ObfuscatedName("np.q")
-    public class938 field4188;
+    public SoundStream field4188;
 
     @ObfuscatedName("np.p")
     public int field4180 = -1;

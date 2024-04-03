@@ -18,7 +18,7 @@ public class class373 {
         int var0 = field4012.size();
         Iterator var1 = field4012.iterator();
         while (var1.hasNext()) {
-            class796 var2 = (class796) var1.next();
+            VorbisSound var2 = (VorbisSound) var1.next();
             var2.method15069(var2.method15074() + var2.method15072() / (var0 * 2));
             if (!var2.method15071()) {
                 var1.remove();
@@ -27,7 +27,7 @@ public class class373 {
     }
 
     @ObfuscatedName("jr.j(Ladr;I)V")
-    public static void method4778(class796 arg0) {
+    public static void method4778(VorbisSound arg0) {
         if (!field4012.contains(arg0)) {
             field4012.add(arg0);
         }

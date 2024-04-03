@@ -89,7 +89,7 @@ public class class232 {
         var1.putFloat(1.0F);
         var1.putFloat(2.0F);
         this.field2440.method4452(0, var1.position(), this.field2431.field8245);
-        this.field2443 = this.field2431.method13585(new class243[]{new class243(class237.field2482)});
+        this.field2443 = this.field2431.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(class237.field2482)});
     }
 
     @ObfuscatedName("hh.j()V")

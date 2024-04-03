@@ -19,7 +19,7 @@ public class SeqTypeList {
             Js5ConfigGroup.SEQTYPE.method3071();
             this.field6342.method5637(var6);
         }
-        class947.method16191(arg3, arg4, 2);
+        FrameSet.method16191(arg3, arg4, 2);
     }
 
     @ObfuscatedName("st.u(II)Lso;")
@@ -52,12 +52,12 @@ public class SeqTypeList {
     }
 
     @ObfuscatedName("st.j(II)Laje;")
-    public class947 method11146(int arg0) {
+    public FrameSet method11146(int arg0) {
         WeightedCache var2 = this.field6340;
         synchronized (this.field6340) {
-            class947 var3 = (class947) this.field6340.method7916((long) arg0);
+            FrameSet var3 = (FrameSet) this.field6340.method7916((long) arg0);
             if (var3 == null) {
-                var3 = new class947(arg0);
+                var3 = new FrameSet(arg0);
                 this.field6340.method7937(var3, (long) arg0);
             }
             return var3.method16652() ? var3 : null;

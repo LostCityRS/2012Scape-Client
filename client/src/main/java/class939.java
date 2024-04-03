@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aiu")
-public class class939 extends class793 {
+public class class939 extends AudioBuss {
 
     @ObfuscatedName("aiu.l")
     public IterableQueue field10280 = new IterableQueue();
@@ -16,12 +16,12 @@ public class class939 extends class793 {
     public int field10281 = -1;
 
     @ObfuscatedName("aiu.an(Ladc;)V")
-    public final synchronized void method16452(class793 arg0) {
+    public final synchronized void method16452(AudioBuss arg0) {
         this.field10280.method11559(arg0);
     }
 
     @ObfuscatedName("aiu.ap(Ladc;)V")
-    public final synchronized void method16445(class793 arg0) {
+    public final synchronized void method16445(AudioBuss arg0) {
         arg0.method6979();
     }
 
@@ -59,13 +59,13 @@ public class class939 extends class793 {
     }
 
     @ObfuscatedName("aiu.j()Ladc;")
-    public class793 method15031() {
-        return (class793) this.field10280.method11563();
+    public AudioBuss method15031() {
+        return (AudioBuss) this.field10280.method11563();
     }
 
     @ObfuscatedName("aiu.a()Ladc;")
-    public class793 method15032() {
-        return (class793) this.field10280.method11567();
+    public AudioBuss method15032() {
+        return (AudioBuss) this.field10280.method11567();
     }
 
     @ObfuscatedName("aiu.s()I")
@@ -107,7 +107,7 @@ public class class939 extends class793 {
 
     @ObfuscatedName("aiu.ao([III)V")
     public void method16444(int[] arg0, int arg1, int arg2) {
-        for (class793 var4 = (class793) this.field10280.method11563(); var4 != null; var4 = (class793) this.field10280.method11567()) {
+        for (AudioBuss var4 = (AudioBuss) this.field10280.method11563(); var4 != null; var4 = (AudioBuss) this.field10280.method11567()) {
             var4.method15033(arg0, arg1, arg2);
         }
     }
@@ -145,7 +145,7 @@ public class class939 extends class793 {
 
     @ObfuscatedName("aiu.al(I)V")
     public void method16449(int arg0) {
-        for (class793 var2 = (class793) this.field10280.method11563(); var2 != null; var2 = (class793) this.field10280.method11567()) {
+        for (AudioBuss var2 = (AudioBuss) this.field10280.method11563(); var2 != null; var2 = (AudioBuss) this.field10280.method11567()) {
             var2.method15046(arg0);
         }
     }

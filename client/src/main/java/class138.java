@@ -22,7 +22,7 @@ public class class138 {
     public static byte[] field1483 = new byte[500];
 
     @ObfuscatedName("du.t")
-    public class779 field1496 = null;
+    public AnimBase field1496 = null;
 
     @ObfuscatedName("du.l")
     public int field1485 = 0;
@@ -54,7 +54,7 @@ public class class138 {
     @ObfuscatedName("du.b")
     public boolean field1491 = false;
 
-    public class138(byte[] arg0, class779 arg1) {
+    public class138(byte[] arg0, AnimBase arg1) {
         this.field1496 = arg1;
         try {
             Packet var3 = new Packet(arg0);

@@ -24,7 +24,7 @@ public class GlRelated2 extends GlTexture {
         this.field7440 = arg4;
         this.field7441 = arg5;
         this.field1054.method13315(this);
-        class126 var7 = this.field1054.method457();
+        RenderTarget var7 = this.field1054.method457();
         if (var7 != null) {
             int var8 = var7.method922() - (arg3 + arg5);
             int var9 = GlToolkit.method13335(this.field1050, this.field1051);
@@ -172,7 +172,7 @@ public class GlRelated2 extends GlTexture {
 
     @ObfuscatedName("xp.ao(IIIIII)V")
     public void method12767(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
-        class126 var7 = this.field1054.method457();
+        RenderTarget var7 = this.field1054.method457();
         if (var7 != null) {
             int var8 = var7.method922() - (arg3 + arg5);
             this.field1054.method13315(this);

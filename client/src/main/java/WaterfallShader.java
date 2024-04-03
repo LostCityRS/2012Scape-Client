@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ahn")
-public class WaterfallShader extends class736 {
+public class WaterfallShader extends WaterShader {
 
     @ObfuscatedName("ahn.ag")
     public final GpuWaterRelated field10091;

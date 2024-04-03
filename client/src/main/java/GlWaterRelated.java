@@ -64,12 +64,12 @@ public class GlWaterRelated {
         } else {
             this.field1082 = new GlRelated2[16];
             for (int var2 = 0; var2 < 16; var2++) {
-                byte[] var3 = class533.method5943(Statics.field1087, var2 * 32768, 32768);
+                byte[] var3 = ByteArrayCopier.method5943(Statics.field1087, var2 * 32768, 32768);
                 this.field1082[var2] = new GlRelated2(arg0, 3553, TextureFormat.field1299, DataType.field1501, 128, 128, true, var3, TextureFormat.field1299, false);
             }
             this.field1083 = new GlRelated2[16];
             for (int var4 = 0; var4 < 16; var4++) {
-                byte[] var5 = class533.method5943(Statics.field1085, var4 * 32768, 32768);
+                byte[] var5 = ByteArrayCopier.method5943(Statics.field1085, var4 * 32768, 32768);
                 this.field1083[var4] = new GlRelated2(arg0, 3553, TextureFormat.field1299, DataType.field1501, 128, 128, true, var5, TextureFormat.field1299, false);
             }
         }

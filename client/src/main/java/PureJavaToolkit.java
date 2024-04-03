@@ -329,8 +329,8 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.ak(Ljava/awt/Canvas;II)Lya;")
-    public class675 method735(Canvas arg0, int arg1, int arg2) {
-        return class892.method1885(this, arg0, arg1, arg2);
+    public Surface method735(Canvas arg0, int arg1, int arg2) {
+        return PureJavaSurface.method1885(this, arg0, arg1, arg2);
     }
 
     @ObfuscatedName("yt.da(II[I[F)V")
@@ -1436,11 +1436,11 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.bn(IIIIIILta;II)V")
-    public void method440(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class11 arg6, int arg7, int arg8) {
+    public void method440(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, GraphicsRelated arg6, int arg7, int arg8) {
         if (this.field8001 == null) {
             return;
         }
-        class668 var10 = (class668) arg6;
+        PureJavaGraphicsRelated var10 = (PureJavaGraphicsRelated) arg6;
         int[] var11 = var10.field7648;
         int[] var12 = var10.field7649;
         int var13 = this.field8027 > arg8 ? this.field8027 : arg8;
@@ -1583,11 +1583,11 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.bc(IIIIIILta;IIIII)V")
-    public void method498(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class11 arg6, int arg7, int arg8, int arg9, int arg10, int arg11) {
+    public void method498(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, GraphicsRelated arg6, int arg7, int arg8, int arg9, int arg10, int arg11) {
         if (this.field8001 == null) {
             return;
         }
-        class668 var13 = (class668) arg6;
+        PureJavaGraphicsRelated var13 = (PureJavaGraphicsRelated) arg6;
         int[] var14 = var13.field7648;
         int[] var15 = var13.field7649;
         int var16 = this.field8027 > arg8 ? this.field8027 : arg8;
@@ -1836,7 +1836,7 @@ public class PureJavaToolkit extends RendererToolkit {
 
     @ObfuscatedName("yt.bb(IIZZ)Lce;")
     public Sprite method658(int arg0, int arg1, boolean arg2, boolean arg3) {
-        return arg2 ? new class887(this, arg0, arg1) : new PureJavaSpriteNormal(this, arg0, arg1);
+        return arg2 ? new PureJavaSpriteAlpha(this, arg0, arg1) : new PureJavaSpriteNormal(this, arg0, arg1);
     }
 
     @ObfuscatedName("yt.be([IIIIIZ)Lce;")
@@ -1848,11 +1848,11 @@ public class PureJavaToolkit extends RendererToolkit {
                 int var11 = arg0[var8++] >>> 24;
                 if (var11 != 0 && var11 != 255) {
                     var7 = true;
-                    return var7 ? new class887(this, arg0, arg1, arg2, arg3, arg4, arg5) : new PureJavaSpriteNormal(this, arg0, arg1, arg2, arg3, arg4, arg5);
+                    return var7 ? new PureJavaSpriteAlpha(this, arg0, arg1, arg2, arg3, arg4, arg5) : new PureJavaSpriteNormal(this, arg0, arg1, arg2, arg3, arg4, arg5);
                 }
             }
         }
-        return var7 ? new class887(this, arg0, arg1, arg2, arg3, arg4, arg5) : new PureJavaSpriteNormal(this, arg0, arg1, arg2, arg3, arg4, arg5);
+        return var7 ? new PureJavaSpriteAlpha(this, arg0, arg1, arg2, arg3, arg4, arg5) : new PureJavaSpriteNormal(this, arg0, arg1, arg2, arg3, arg4, arg5);
     }
 
     @ObfuscatedName("yt.bo(Lds;Z)Lce;")
@@ -1877,7 +1877,7 @@ public class PureJavaToolkit extends RendererToolkit {
         } else {
             int[] var13 = arg0.method2735(false);
             if (arg0.method2720()) {
-                var12 = new class887(this, var13, var3, var4);
+                var12 = new PureJavaSpriteAlpha(this, var13, var3, var4);
             } else {
                 var12 = new PureJavaSpriteNormal(this, var13, var3, var4);
             }
@@ -1902,23 +1902,23 @@ public class PureJavaToolkit extends RendererToolkit {
             var7 += var8;
         }
         if (arg4) {
-            return new class887(this, var6, arg2, arg3);
+            return new PureJavaSpriteAlpha(this, var6, arg2, arg3);
         } else {
             return new PureJavaSpriteNormal(this, var6, arg2, arg3);
         }
     }
 
     @ObfuscatedName("yt.cq(II[I[I)Lta;")
-    public class11 method571(int arg0, int arg1, int[] arg2, int[] arg3) {
-        return new class668(arg0, arg1, arg2, arg3);
+    public GraphicsRelated method571(int arg0, int arg1, int[] arg2, int[] arg3) {
+        return new PureJavaGraphicsRelated(arg0, arg1, arg2, arg3);
     }
 
     @ObfuscatedName("yt.DA(ILta;II)V")
-    public void method684(int arg0, class11 arg1, int arg2, int arg3) {
+    public void method684(int arg0, GraphicsRelated arg1, int arg2, int arg3) {
         if (this.field8001 == null) {
             return;
         }
-        class668 var5 = (class668) arg1;
+        PureJavaGraphicsRelated var5 = (PureJavaGraphicsRelated) arg1;
         int[] var6 = var5.field7648;
         int[] var7 = var5.field7649;
         int var8;

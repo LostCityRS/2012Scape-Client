@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("wy")
-public class ClientTriggerType implements class620 {
+public class ClientTriggerType implements TriggerType {
 
     @ObfuscatedName("wy.u")
     public static final ClientTriggerType field7317 = new ClientTriggerType("", 10);

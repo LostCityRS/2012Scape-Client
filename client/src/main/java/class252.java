@@ -49,7 +49,7 @@ public class class252 {
         this.field2569 = arg0;
         this.field2565 = this.field2569.method13584(true);
         this.field2565.method4269(arg1 * 96, 24);
-        this.field2570 = this.field2569.method13585(new class243[]{new class243(new class237[]{class237.field2495, class237.field2483, class237.field2488})});
+        this.field2570 = this.field2569.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new class237[]{class237.field2495, class237.field2483, class237.field2488})});
         this.field2571 = this.field2569.method13797(false);
         int var3 = arg1 * 6;
         this.field2571.method4535(var3);
@@ -88,7 +88,7 @@ public class class252 {
         this.field2569.method13588(this.field2571);
         this.field2569.method13587(0, this.field2565);
         this.field2569.method13688(this.field2570);
-        class202 var1 = this.field2569.field8347;
+        BatchedSpriteShader var1 = this.field2569.field8347;
         Unsafe var2 = this.field2569.field8247;
         ByteBuffer var3 = this.field2569.field8244;
         var3.clear();

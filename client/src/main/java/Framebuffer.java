@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("yu")
-public abstract class Framebuffer extends class126 {
+public abstract class Framebuffer extends RenderTarget {
 
     @ObfuscatedName("yu.r()Z")
     public abstract boolean method1208();

@@ -91,7 +91,7 @@ public class HardwarePlatformLoader implements NativeLibraryLoader {
             return -1;
         }
         boolean var8 = true;
-        byte[] var9 = class575.method15684(var6);
+        byte[] var9 = FileUtil.method15684(var6);
         if (var9 != null && var4.length == var9.length) {
             for (int var10 = 0; var10 < var9.length; var10++) {
                 if (var4[var10] != var9[var10]) {

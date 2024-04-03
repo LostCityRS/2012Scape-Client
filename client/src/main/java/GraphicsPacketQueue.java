@@ -19,16 +19,16 @@ public class GraphicsPacketQueue {
 
     @ObfuscatedName("ax.j(IB)V")
     public static void method1838(int arg0) {
-        method5935(new class556(arg0));
+        method5935(new ClientDirectXFailure(arg0));
     }
 
     @ObfuscatedName("uh.a(Lwt;I)V")
     public static void method12023(ToolkitType arg0) {
-        method5935(new class555(arg0));
+        method5935(new SimpleToolkitChange(arg0));
     }
 
     @ObfuscatedName("lt.s(Lts;B)V")
-    public static void method5935(class557 arg0) {
+    public static void method5935(SendablePacket arg0) {
         while (field6695.size() > 10) {
             field6695.remove();
         }
@@ -41,7 +41,7 @@ public class GraphicsPacketQueue {
             return;
         }
         while (true) {
-            class557 var0 = (class557) field6695.poll();
+            SendablePacket var0 = (SendablePacket) field6695.poll();
             if (var0 == null) {
                 return;
             }

@@ -68,12 +68,12 @@ public abstract class FontType {
     }
 
     @ObfuscatedName("l.s(Ljava/lang/String;IIIIIIIII[Lce;[ILta;IIB)I")
-    public int method836(String arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, Sprite[] arg10, int[] arg11, class11 arg12, int arg13, int arg14) {
+    public int method836(String arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, Sprite[] arg10, int[] arg11, GraphicsRelated arg12, int arg13, int arg14) {
         return this.method832(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, 0, arg10, arg11, arg12, arg13, arg14);
     }
 
     @ObfuscatedName("l.c(Ljava/lang/String;IIIIIIIIII[Lce;[ILta;IIB)I")
-    public int method832(String arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, Sprite[] arg11, int[] arg12, class11 arg13, int arg14, int arg15) {
+    public int method832(String arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, Sprite[] arg11, int[] arg12, GraphicsRelated arg13, int arg14, int arg15) {
         if (arg0 == null) {
             return 0;
         }
@@ -323,7 +323,7 @@ public abstract class FontType {
     }
 
     @ObfuscatedName("l.p(Ljava/lang/String;II[Lce;[ILta;III)V")
-    public void method857(String arg0, int arg1, int arg2, Sprite[] arg3, int[] arg4, class11 arg5, int arg6, int arg7) {
+    public void method857(String arg0, int arg1, int arg2, Sprite[] arg3, int[] arg4, GraphicsRelated arg5, int arg6, int arg7) {
         int var9 = arg2 - this.field418.field7175;
         int var10 = -1;
         int var11 = -1;
@@ -516,5 +516,5 @@ public abstract class FontType {
     public abstract void method848(char arg0, int arg1, int arg2, int arg3, boolean arg4);
 
     @ObfuscatedName("l.b(CIIIZLta;II)V")
-    public abstract void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, class11 arg5, int arg6, int arg7);
+    public abstract void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, GraphicsRelated arg5, int arg6, int arg7);
 }

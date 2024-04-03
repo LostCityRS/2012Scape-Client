@@ -38,7 +38,7 @@ public class ea extends FontType implements class10 {
     }
 
     @ObfuscatedName("ea.b(CIIIZLta;II)V")
-    public void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, class11 arg5, int arg6, int arg7) {
+    public void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, GraphicsRelated arg5, int arg6, int arg7) {
         this.method1172(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
@@ -49,7 +49,7 @@ public class ea extends FontType implements class10 {
     public native void method848(char arg0, int arg1, int arg2, int arg3, boolean arg4);
 
     @ObfuscatedName("ea.P(CIIIZLta;II)V")
-    public native void method1172(char arg0, int arg1, int arg2, int arg3, boolean arg4, class11 arg5, int arg6, int arg7);
+    public native void method1172(char arg0, int arg1, int arg2, int arg3, boolean arg4, GraphicsRelated arg5, int arg6, int arg7);
 
     @ObfuscatedName("ea.ma(Z)V")
     public native void method92(boolean arg0);

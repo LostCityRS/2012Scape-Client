@@ -34,7 +34,7 @@ public final class class770 extends Node {
     public int field9287;
 
     @ObfuscatedName("ach.q")
-    public class539 field9288;
+    public LocTypeCustomisation field9288;
 
     @ObfuscatedName("ach.p")
     public boolean field9289 = true;
@@ -79,7 +79,7 @@ public final class class770 extends Node {
     }
 
     @ObfuscatedName("abz.j(IIIIIILto;I)V")
-    public static void method14721(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class539 arg6) {
+    public static void method14721(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, LocTypeCustomisation arg6) {
         class770 var7 = null;
         for (class770 var8 = (class770) field9292.method11563(); var8 != null; var8 = (class770) field9292.method11567()) {
             if (var8.field9281 == arg0 && var8.field9291 == arg1 && var8.field9280 == arg2 && var8.field9293 == arg3) {
@@ -211,7 +211,7 @@ public final class class770 extends Node {
     }
 
     @ObfuscatedName("ut.l(IIIILto;I)V")
-    public static final void method12070(int arg0, int arg1, int arg2, int arg3, class539 arg4) {
+    public static final void method12070(int arg0, int arg1, int arg2, int arg3, LocTypeCustomisation arg4) {
         if (arg2 < 1 || arg3 < 1 || arg2 > client.field8980.method6220() - 2 || arg3 > client.field8980.method6193() - 2) {
             return;
         }
@@ -222,14 +222,14 @@ public final class class770 extends Node {
         if (var5 == null) {
             return;
         }
-        if (var5 instanceof class657) {
-            ((class657) var5).method12813(arg4);
-        } else if (var5 instanceof class658) {
-            ((class658) var5).method12858(arg4);
-        } else if (var5 instanceof class663) {
-            ((class663) var5).method12898(arg4);
-        } else if (var5 instanceof class662) {
-            ((class662) var5).method12893(arg4);
+        if (var5 instanceof DynamicSceneryEntity) {
+            ((DynamicSceneryEntity) var5).method12813(arg4);
+        } else if (var5 instanceof DynamicGroundDecorEntity) {
+            ((DynamicGroundDecorEntity) var5).method12858(arg4);
+        } else if (var5 instanceof DynamicWallEntity) {
+            ((DynamicWallEntity) var5).method12898(arg4);
+        } else if (var5 instanceof DynamicWallDecorEntity) {
+            ((DynamicWallDecorEntity) var5).method12893(arg4);
         }
     }
 }

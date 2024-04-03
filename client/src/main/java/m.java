@@ -29,7 +29,7 @@ public class m extends FontType implements class10 {
     }
 
     @ObfuscatedName("m.b(CIIIZLta;II)V")
-    public void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, class11 arg5, int arg6, int arg7) {
+    public void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, GraphicsRelated arg5, int arg6, int arg7) {
         this.method1164(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
@@ -43,5 +43,5 @@ public class m extends FontType implements class10 {
     public native void method848(char arg0, int arg1, int arg2, int arg3, boolean arg4);
 
     @ObfuscatedName("m.MA(CIIIZLta;II)V")
-    public native void method1164(char arg0, int arg1, int arg2, int arg3, boolean arg4, class11 arg5, int arg6, int arg7);
+    public native void method1164(char arg0, int arg1, int arg2, int arg3, boolean arg4, GraphicsRelated arg5, int arg6, int arg7);
 }

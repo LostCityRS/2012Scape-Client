@@ -4,22 +4,22 @@ import deob.ObfuscatedName;
 public class class382 {
 
     @ObfuscatedName("ni.u")
-    public int field4107 = class796.method15060(16);
+    public int field4107 = VorbisSound.method15060(16);
 
     @ObfuscatedName("ni.j")
-    public int field4110 = class796.method15060(24);
+    public int field4110 = VorbisSound.method15060(24);
 
     @ObfuscatedName("ni.a")
-    public int field4108 = class796.method15060(24);
+    public int field4108 = VorbisSound.method15060(24);
 
     @ObfuscatedName("ni.s")
-    public int field4106 = class796.method15060(24) + 1;
+    public int field4106 = VorbisSound.method15060(24) + 1;
 
     @ObfuscatedName("ni.c")
-    public int field4109 = class796.method15060(6) + 1;
+    public int field4109 = VorbisSound.method15060(6) + 1;
 
     @ObfuscatedName("ni.m")
-    public int field4105 = class796.method15060(8);
+    public int field4105 = VorbisSound.method15060(8);
 
     @ObfuscatedName("ni.t")
     public int[] field4111;
@@ -28,16 +28,16 @@ public class class382 {
         int[] var1 = new int[this.field4109];
         for (int var2 = 0; var2 < this.field4109; var2++) {
             int var3 = 0;
-            int var4 = class796.method15060(3);
-            boolean var5 = class796.method15084() != 0;
+            int var4 = VorbisSound.method15060(3);
+            boolean var5 = VorbisSound.method15084() != 0;
             if (var5) {
-                var3 = class796.method15060(5);
+                var3 = VorbisSound.method15060(5);
             }
             var1[var2] = var3 << 3 | var4;
         }
         this.field4111 = new int[this.field4109 * 8];
         for (int var6 = 0; var6 < this.field4109 * 8; var6++) {
-            this.field4111[var6] = (var1[var6 >> 3] & 0x1 << (var6 & 0x7)) == 0 ? -1 : class796.method15060(8);
+            this.field4111[var6] = (var1[var6 >> 3] & 0x1 << (var6 & 0x7)) == 0 ? -1 : VorbisSound.method15060(8);
         }
     }
 

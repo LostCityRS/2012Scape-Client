@@ -15,7 +15,7 @@ public final class Fullscreen {
     @ObfuscatedName("lr.j(Lub;IIIII)Ljava/awt/Frame;")
     public static Frame method6036(FullscreenImpl arg0, int arg1, int arg2, int arg3, int arg4) {
         if (arg3 == 0) {
-            class562[] var5 = Statics.method11507(arg0);
+            FullscreenMode[] var5 = Statics.method11507(arg0);
             if (var5 == null) {
                 return null;
             }

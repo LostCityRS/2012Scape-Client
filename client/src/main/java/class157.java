@@ -10,10 +10,10 @@ public class class157 {
     public final int field1591;
 
     @ObfuscatedName("eq.m")
-    public class782 field1593;
+    public MidiSong field1593;
 
     @ObfuscatedName("eq.t")
-    public class937 field1588;
+    public MixBuss field1588;
 
     @ObfuscatedName("eq.l")
     public class377 field1595 = null;
@@ -24,17 +24,17 @@ public class class157 {
     public class157(Js5 arg0, int arg1) {
         this.field1594 = arg0;
         this.field1591 = arg1;
-        this.field1588 = new class937();
+        this.field1588 = new MixBuss();
         this.field1588.method16283(9, 128);
     }
 
     @ObfuscatedName("eq.u(B)Laih;")
-    public class937 method3002() {
+    public MixBuss method3002() {
         return this.field1588;
     }
 
     @ObfuscatedName("eq.j(I)Lacw;")
-    public class782 method3009() {
+    public MidiSong method3009() {
         return this.field1593;
     }
 
@@ -42,7 +42,7 @@ public class class157 {
     public boolean method2999() {
         class155.method7561();
         if (this.field1596 == 0) {
-            this.field1593 = class782.method14909(this.field1594, this.field1591, 0);
+            this.field1593 = MidiSong.method14909(this.field1594, this.field1591, 0);
             if (this.field1593 == null) {
                 return false;
             }

@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("akw")
-public class class994 extends class938 {
+public class class994 extends SoundStream {
 
     public class994(class997 arg0, int arg1, int arg2, int arg3) {
         this.field9474 = arg0;

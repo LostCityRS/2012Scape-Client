@@ -394,7 +394,7 @@ public class PureJavaSpriteNormal extends PureJavaSprite {
     }
 
     @ObfuscatedName("agk.af(IILta;II)V")
-    public void method1056(int arg0, int arg1, class11 arg2, int arg3, int arg4) {
+    public void method1056(int arg0, int arg1, GraphicsRelated arg2, int arg3, int arg4) {
         if (this.field7602.method13191()) {
             throw new IllegalStateException();
         }
@@ -439,7 +439,7 @@ public class PureJavaSpriteNormal extends PureJavaSprite {
         if (var11 <= 0 || var12 <= 0) {
             return;
         }
-        class668 var19 = (class668) arg2;
+        PureJavaGraphicsRelated var19 = (PureJavaGraphicsRelated) arg2;
         int[] var20 = var19.field7648;
         int[] var21 = var19.field7649;
         int var22 = var8;

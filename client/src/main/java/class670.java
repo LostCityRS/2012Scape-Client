@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("yv")
-public class class670 extends class11 {
+public class class670 extends GraphicsRelated {
 
     @ObfuscatedName("yv.u")
     public final GpuTexture field7652;

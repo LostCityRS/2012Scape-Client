@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ahl")
-public class class914 extends class766 {
+public class class914 extends DualLink {
 
     @ObfuscatedName("ahl.t")
     public int field10144;

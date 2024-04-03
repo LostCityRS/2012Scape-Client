@@ -34,10 +34,10 @@ public class AnimationNode {
     public boolean field6680 = false;
 
     @ObfuscatedName("tt.p")
-    public final class554 field6681;
+    public final FrameSetLoader field6681;
 
     @ObfuscatedName("tt.w")
-    public final class554 field6682;
+    public final FrameSetLoader field6682;
 
     @ObfuscatedName("ms.u(Lst;I)V")
     public static void method6490(SeqTypeList arg0) {
@@ -46,9 +46,9 @@ public class AnimationNode {
 
     public AnimationNode(boolean arg0) {
         this.field6677 = arg0;
-        this.field6681 = new class554();
+        this.field6681 = new FrameSetLoader();
         if (this.field6677) {
-            this.field6682 = new class554();
+            this.field6682 = new FrameSetLoader();
         } else {
             this.field6682 = null;
         }

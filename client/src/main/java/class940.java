@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aiq")
-public class class940 extends class793 {
+public class class940 extends AudioBuss {
 
     @ObfuscatedName("aiq.f")
     public static class344 field10291 = new class344(64, class342.field3710);
@@ -174,12 +174,12 @@ public class class940 extends class793 {
     }
 
     @ObfuscatedName("aiq.a()Ladc;")
-    public class793 method15032() {
+    public AudioBuss method15032() {
         return null;
     }
 
     @ObfuscatedName("aiq.j()Ladc;")
-    public class793 method15031() {
+    public AudioBuss method15031() {
         return null;
     }
 }

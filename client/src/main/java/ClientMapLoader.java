@@ -548,13 +548,13 @@ public class ClientMapLoader extends MapLoader {
             if (Statics.field4961.field9671.method15725() != 0 || var11.field6493 != 0 || var11.field6491 == 1 || var11.field6523) {
                 GroundDecorLayerEntity var25;
                 if (var23) {
-                    class664 var24 = new class664(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg6, var22);
+                    StaticGroundDecorEntity var24 = new StaticGroundDecorEntity(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg6, var22);
                     if (var24.method2393()) {
                         var24.method2406(arg0);
                     }
                     var25 = var24;
                 } else {
-                    var25 = new class658(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg6, arg9);
+                    var25 = new DynamicGroundDecorEntity(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg6, arg9);
                 }
                 this.field3619.method7512(arg2, arg3, arg4, var25);
                 if (var11.field6491 == 1 && arg8 != null) {
@@ -562,16 +562,16 @@ public class ClientMapLoader extends MapLoader {
                 }
             }
         } else if (LocShape.field6572.field6590 == arg7 || LocShape.field6588.field6590 == arg7) {
-            class659 var28 = null;
+            StaticSceneryEntity var28 = null;
             int var30;
             PrimaryLayerEntity var31;
             if (var23) {
-                class659 var29 = new class659(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg3, arg3 + var12 - 1, arg4, arg4 + var13 - 1, arg7, arg6, var22);
+                StaticSceneryEntity var29 = new StaticSceneryEntity(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg3, arg3 + var12 - 1, arg4, arg4 + var13 - 1, arg7, arg6, var22);
                 var30 = var29.method12865();
                 var31 = var29;
                 var28 = var29;
             } else {
-                var31 = new class657(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg3, arg3 + var12 - 1, arg4, arg4 + var13 - 1, arg7, arg6, arg9);
+                var31 = new DynamicSceneryEntity(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg3, arg3 + var12 - 1, arg4, arg4 + var13 - 1, arg7, arg6, arg9);
                 var30 = 15;
             }
             if (this.field3619.method7412(var31, false)) {
@@ -595,13 +595,13 @@ public class ClientMapLoader extends MapLoader {
         } else if (LocShape.method11327(arg7) || LocShape.method11666(arg7)) {
             PrimaryLayerEntity var27;
             if (var23) {
-                class659 var26 = new class659(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg3, arg3 + var12 - 1, arg4, arg4 + var13 - 1, arg7, arg6, var22);
+                StaticSceneryEntity var26 = new StaticSceneryEntity(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg3, arg3 + var12 - 1, arg4, arg4 + var13 - 1, arg7, arg6, var22);
                 if (var26.method2393()) {
                     var26.method2406(arg0);
                 }
                 var27 = var26;
             } else {
-                var27 = new class657(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg3, arg3 + var12 - 1, arg4, arg4 + var13 - 1, arg7, arg6, arg9);
+                var27 = new DynamicSceneryEntity(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg3, arg3 + var12 - 1, arg4, arg4 + var13 - 1, arg7, arg6, arg9);
             }
             this.field3619.method7412(var27, false);
             if (this.field3632 && !this.field3644 && LocShape.method11327(arg7) && LocShape.field6568.field6590 != arg7 && arg2 > 0 && var11.field6497 != 0) {
@@ -624,13 +624,13 @@ public class ClientMapLoader extends MapLoader {
             }
             WallLayerEntity var21;
             if (arg3) {
-                class661 var20 = new class661(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2, arg13);
+                StaticWallEntity var20 = new StaticWallEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2, arg13);
                 if (var20.method2393()) {
                     var20.method2406(arg0);
                 }
                 var21 = var20;
             } else {
-                var21 = new class663(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2, arg5);
+                var21 = new DynamicWallEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2, arg5);
             }
             this.field3619.method7402(arg6, arg11, arg12, var21, null);
             if (arg2 == 0) {
@@ -676,13 +676,13 @@ public class ClientMapLoader extends MapLoader {
         } else if (LocShape.field6575.field6590 == arg1) {
             WallLayerEntity var23;
             if (arg3) {
-                class661 var22 = new class661(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2, arg13);
+                StaticWallEntity var22 = new StaticWallEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2, arg13);
                 if (var22.method2393()) {
                     var22.method2406(arg0);
                 }
                 var23 = var22;
             } else {
-                var23 = new class663(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2, arg5);
+                var23 = new DynamicWallEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2, arg5);
             }
             this.field3619.method7402(arg6, arg11, arg12, var23, null);
             if (arg4.field6513 && this.field3632) {
@@ -705,8 +705,8 @@ public class ClientMapLoader extends MapLoader {
             WallLayerEntity var27;
             WallLayerEntity var28;
             if (arg3) {
-                class661 var25 = new class661(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2 + 4, arg13);
-                class661 var26 = new class661(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, var24, arg13);
+                StaticWallEntity var25 = new StaticWallEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2 + 4, arg13);
+                StaticWallEntity var26 = new StaticWallEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, var24, arg13);
                 if (var25.method2393()) {
                     var25.method2406(arg0);
                 }
@@ -716,8 +716,8 @@ public class ClientMapLoader extends MapLoader {
                 var27 = var25;
                 var28 = var26;
             } else {
-                var27 = new class663(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2 + 4, arg5);
-                var28 = new class663(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, var24, arg5);
+                var27 = new DynamicWallEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2 + 4, arg5);
+                var28 = new DynamicWallEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, var24, arg5);
             }
             this.field3619.method7402(arg6, arg11, arg12, var27, var28);
             if ((arg4.field6497 == 1 || field8884 && arg4.field6497 == -1) && !this.field3644) {
@@ -745,13 +745,13 @@ public class ClientMapLoader extends MapLoader {
         } else if (LocShape.field6570.field6590 == arg1) {
             WallLayerEntity var30;
             if (arg3) {
-                class661 var29 = new class661(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2, arg13);
+                StaticWallEntity var29 = new StaticWallEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2, arg13);
                 if (var29.method2393()) {
                     var29.method2406(arg0);
                 }
                 var30 = var29;
             } else {
-                var30 = new class663(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2, arg5);
+                var30 = new DynamicWallEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg1, arg2, arg5);
             }
             this.field3619.method7402(arg6, arg11, arg12, var30, null);
             if (arg4.field6513 && this.field3632) {
@@ -772,13 +772,13 @@ public class ClientMapLoader extends MapLoader {
         } else if (LocShape.field6567.field6590 == arg1) {
             PrimaryLayerEntity var32;
             if (arg3) {
-                class659 var31 = new class659(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg11, arg11, arg12, arg12, arg1, arg2, arg13);
+                StaticSceneryEntity var31 = new StaticSceneryEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg11, arg11, arg12, arg12, arg1, arg2, arg13);
                 if (var31.method2393()) {
                     var31.method2406(arg0);
                 }
                 var32 = var31;
             } else {
-                var32 = new class657(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg11, arg11 + arg16 - 1, arg12, arg12 + arg17 - 1, arg1, arg2, arg5);
+                var32 = new DynamicSceneryEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, arg11, arg11 + arg16 - 1, arg12, arg12 + arg17 - 1, arg1, arg2, arg5);
             }
             this.field3619.method7412(var32, false);
             if (arg4.field6497 == 1 && !this.field3644) {
@@ -807,13 +807,13 @@ public class ClientMapLoader extends MapLoader {
         if (LocShape.field6577.field6590 == arg1) {
             WallDecorLayerEntity var15;
             if (arg3) {
-                class660 var14 = new class660(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, 0, 0, arg1, arg2);
+                StaticWallDecorLayerEntity var14 = new StaticWallDecorLayerEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, 0, 0, arg1, arg2);
                 if (var14.method2393()) {
                     var14.method2406(arg0);
                 }
                 var15 = var14;
             } else {
-                var15 = new class662(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, 0, 0, arg1, arg2, arg5);
+                var15 = new DynamicWallDecorEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, 0, 0, arg1, arg2, arg5);
             }
             this.field3619.method7420(arg6, arg11, arg12, var15, null);
             return true;
@@ -825,13 +825,13 @@ public class ClientMapLoader extends MapLoader {
             }
             WallDecorLayerEntity var19;
             if (arg3) {
-                class660 var18 = new class660(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, field8890[arg2] * var16, field8886[arg2] * var16, arg1, arg2);
+                StaticWallDecorLayerEntity var18 = new StaticWallDecorLayerEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, field8890[arg2] * var16, field8886[arg2] * var16, arg1, arg2);
                 if (var18.method2393()) {
                     var18.method2406(arg0);
                 }
                 var19 = var18;
             } else {
-                var19 = new class662(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, field8890[arg2] * var16, field8886[arg2] * var16, arg1, arg2, arg5);
+                var19 = new DynamicWallDecorEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, field8890[arg2] * var16, field8886[arg2] * var16, arg1, arg2, arg5);
             }
             this.field3619.method7420(arg6, arg11, arg12, var19, null);
             return true;
@@ -843,13 +843,13 @@ public class ClientMapLoader extends MapLoader {
             }
             WallDecorLayerEntity var23;
             if (arg3) {
-                class660 var22 = new class660(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, field8890[arg2] * var20, field8886[arg2] * var20, arg1, arg2 + 4);
+                StaticWallDecorLayerEntity var22 = new StaticWallDecorLayerEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, field8890[arg2] * var20, field8886[arg2] * var20, arg1, arg2 + 4);
                 if (var22.method2393()) {
                     var22.method2406(arg0);
                 }
                 var23 = var22;
             } else {
-                var23 = new class662(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, field8891[arg2] * var20, field8892[arg2] * var20, arg1, arg2 + 4, arg5);
+                var23 = new DynamicWallDecorEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, field8891[arg2] * var20, field8892[arg2] * var20, arg1, arg2 + 4, arg5);
             }
             this.field3619.method7420(arg6, arg11, arg12, var23, null);
             return true;
@@ -857,13 +857,13 @@ public class ClientMapLoader extends MapLoader {
             int var24 = arg2 + 2 & 0x3;
             WallDecorLayerEntity var26;
             if (arg3) {
-                class660 var25 = new class660(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, 0, 0, arg1, var24 + 4);
+                StaticWallDecorLayerEntity var25 = new StaticWallDecorLayerEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, 0, 0, arg1, var24 + 4);
                 if (var25.method2393()) {
                     var25.method2406(arg0);
                 }
                 var26 = var25;
             } else {
-                var26 = new class662(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, 0, 0, arg1, var24 + 4, arg5);
+                var26 = new DynamicWallDecorEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, 0, 0, arg1, var24 + 4, arg5);
             }
             this.field3619.method7420(arg6, arg11, arg12, var26, null);
             return true;
@@ -877,8 +877,8 @@ public class ClientMapLoader extends MapLoader {
             WallDecorLayerEntity var32;
             WallDecorLayerEntity var33;
             if (arg3) {
-                class660 var30 = new class660(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, field8891[arg2] * var28, field8892[arg2] * var28, arg1, arg2 + 4);
-                class660 var31 = new class660(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, 0, 0, arg1, var27 + 4);
+                StaticWallDecorLayerEntity var30 = new StaticWallDecorLayerEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, field8891[arg2] * var28, field8892[arg2] * var28, arg1, arg2 + 4);
+                StaticWallDecorLayerEntity var31 = new StaticWallDecorLayerEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, 0, 0, arg1, var27 + 4);
                 if (var30.method2393()) {
                     var30.method2406(arg0);
                 }
@@ -888,8 +888,8 @@ public class ClientMapLoader extends MapLoader {
                 var32 = var30;
                 var33 = var31;
             } else {
-                class662 var34 = new class662(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, field8891[arg2] * var28, field8892[arg2] * var28, arg1, arg2 + 4, arg5);
-                class662 var35 = new class662(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, 0, 0, arg1, var27 + 4, arg5);
+                DynamicWallDecorEntity var34 = new DynamicWallDecorEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, field8891[arg2] * var28, field8892[arg2] * var28, arg1, arg2 + 4, arg5);
+                DynamicWallDecorEntity var35 = new DynamicWallDecorEntity(this.field3619, arg0, this.field8894, arg4, arg6, arg7, arg8, arg9, arg10, this.field3644, 0, 0, arg1, var27 + 4, arg5);
                 var32 = var34;
                 var33 = var35;
             }

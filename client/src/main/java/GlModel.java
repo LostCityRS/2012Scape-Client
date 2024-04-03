@@ -1641,14 +1641,14 @@ public class GlModel extends Model {
                                             var15 = this.field7875.field1185 = Statics.method879(this.field7856);
                                             var16 = this.field7875.field1186 = Statics.method879(this.field7872);
                                             var17 = this.field7875.field1187 = Statics.method879(this.field7873);
-                                            var18 = this.field7875.field1188 = class530.method16683(this.field7874);
+                                            var18 = this.field7875.field1188 = GpuByteArrayUtil.method16683(this.field7874);
                                         }
                                         if (var19 == null) {
                                             GlModelRelated1 var44 = var6.field7875 = new GlModelRelated1();
                                             var19 = var44.field1185 = Statics.method879(var11);
                                             var20 = var44.field1186 = Statics.method879(var12);
                                             var21 = var44.field1187 = Statics.method879(var13);
-                                            var22 = var44.field1188 = class530.method16683(var14);
+                                            var22 = var44.field1188 = GpuByteArrayUtil.method16683(var14);
                                         }
                                         short var45 = this.field7856[var35];
                                         short var46 = this.field7872[var35];

@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ce")
-public abstract class Sprite implements class602 {
+public abstract class Sprite implements FontGlyph {
 
     @ObfuscatedName("ce.g(II)V")
     public final void method2500(int arg0, int arg1) {
@@ -51,12 +51,12 @@ public abstract class Sprite implements class602 {
     }
 
     @ObfuscatedName("ce.at(FFIILta;II)V")
-    public final void method2506(float arg0, float arg1, int arg2, int arg3, class11 arg4, int arg5, int arg6) {
+    public final void method2506(float arg0, float arg1, int arg2, int arg3, GraphicsRelated arg4, int arg5, int arg6) {
         this.method2512(arg0, arg1, (float) this.method1042() / 2.0F, (float) this.method1047() / 2.0F, arg2, arg3, arg4, arg5, arg6);
     }
 
     @ObfuscatedName("ce.ax(FFFFIILta;II)V")
-    public final void method2512(float arg0, float arg1, float arg2, float arg3, int arg4, int arg5, class11 arg6, int arg7, int arg8) {
+    public final void method2512(float arg0, float arg1, float arg2, float arg3, int arg4, int arg5, GraphicsRelated arg6, int arg7, int arg8) {
         if (arg4 == 0) {
             return;
         }
@@ -78,7 +78,7 @@ public abstract class Sprite implements class602 {
     }
 
     @ObfuscatedName("ce.ad(FFFFFFLta;II)V")
-    public final void method2509(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, class11 arg6, int arg7, int arg8) {
+    public final void method2509(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, GraphicsRelated arg6, int arg7, int arg8) {
         this.method1044(arg0, arg1, arg2, arg3, arg4, arg5, 1, arg6, arg7, arg8);
     }
 
@@ -101,7 +101,7 @@ public abstract class Sprite implements class602 {
     public abstract void method1052(int arg0, int arg1, int arg2);
 
     @ObfuscatedName("ce.af(IILta;II)V")
-    public abstract void method1056(int arg0, int arg1, class11 arg2, int arg3, int arg4);
+    public abstract void method1056(int arg0, int arg1, GraphicsRelated arg2, int arg3, int arg4);
 
     @ObfuscatedName("ce.ap(IIIIIIII)V")
     public abstract void method1041(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7);
@@ -113,7 +113,7 @@ public abstract class Sprite implements class602 {
     public abstract void method1060(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, int arg6, int arg7, int arg8, int arg9);
 
     @ObfuscatedName("ce.az(FFFFFFILta;II)V")
-    public abstract void method1044(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, int arg6, class11 arg7, int arg8, int arg9);
+    public abstract void method1044(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, int arg6, GraphicsRelated arg7, int arg8, int arg9);
 
     @ObfuscatedName("ce.w()I")
     public abstract int method1061();

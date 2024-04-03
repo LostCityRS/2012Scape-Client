@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ys")
-public class class669 extends class11 {
+public class class669 extends GraphicsRelated {
 
     @ObfuscatedName("ys.u")
     public final GlGraphicRelated field7651;

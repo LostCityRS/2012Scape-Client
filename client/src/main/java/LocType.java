@@ -586,7 +586,7 @@ public class LocType {
     }
 
     @ObfuscatedName("tg.m(Lra;IIILxa;Lxa;IIIZLto;I)Luz;")
-    public final synchronized Pair method11447(RendererToolkit arg0, int arg1, int arg2, int arg3, FloorModel arg4, FloorModel arg5, int arg6, int arg7, int arg8, boolean arg9, class539 arg10) {
+    public final synchronized Pair method11447(RendererToolkit arg0, int arg1, int arg2, int arg3, FloorModel arg4, FloorModel arg5, int arg6, int arg7, int arg8, boolean arg9, LocTypeCustomisation arg10) {
         if (LocShape.method3309(arg2)) {
             arg2 = LocShape.field6577.field6590;
         }
@@ -673,7 +673,7 @@ public class LocType {
     }
 
     @ObfuscatedName("tg.t(Lra;IIILxa;Lxa;IIILtt;Lto;I)Lqa;")
-    public final synchronized Model method11414(RendererToolkit arg0, int arg1, int arg2, int arg3, FloorModel arg4, FloorModel arg5, int arg6, int arg7, int arg8, AnimationNode arg9, class539 arg10) {
+    public final synchronized Model method11414(RendererToolkit arg0, int arg1, int arg2, int arg3, FloorModel arg4, FloorModel arg5, int arg6, int arg7, int arg8, AnimationNode arg9, LocTypeCustomisation arg10) {
         if (LocShape.method3309(arg2)) {
             arg2 = LocShape.field6577.field6590;
         }
@@ -754,7 +754,7 @@ public class LocType {
     }
 
     @ObfuscatedName("tg.l(Lra;IIILto;I)Lqa;")
-    public Model method11415(RendererToolkit arg0, int arg1, int arg2, int arg3, class539 arg4) {
+    public Model method11415(RendererToolkit arg0, int arg1, int arg2, int arg3, LocTypeCustomisation arg4) {
         int var6 = this.field6549 + 64;
         int var7 = this.field6504 * 5 + 850;
         int var8 = arg1;

@@ -282,7 +282,7 @@ public class ja extends RendererToolkit implements class10 {
     }
 
     @ObfuscatedName("ja.ak(Ljava/awt/Canvas;II)Lya;")
-    public class675 method735(Canvas arg0, int arg1, int arg2) {
+    public Surface method735(Canvas arg0, int arg1, int arg2) {
         return new za(this, arg0, arg1, arg2);
     }
 
@@ -323,7 +323,7 @@ public class ja extends RendererToolkit implements class10 {
     }
 
     @ObfuscatedName("ja.bn(IIIIIILta;II)V")
-    public void method440(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class11 arg6, int arg7, int arg8) {
+    public void method440(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, GraphicsRelated arg6, int arg7, int arg8) {
         this.method968(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
@@ -333,7 +333,7 @@ public class ja extends RendererToolkit implements class10 {
     }
 
     @ObfuscatedName("ja.bc(IIIIIILta;IIIII)V")
-    public void method498(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class11 arg6, int arg7, int arg8, int arg9, int arg10, int arg11) {
+    public void method498(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, GraphicsRelated arg6, int arg7, int arg8, int arg9, int arg10, int arg11) {
     }
 
     @ObfuscatedName("ja.bd(IIIIIIIII)V")
@@ -448,7 +448,7 @@ public class ja extends RendererToolkit implements class10 {
     }
 
     @ObfuscatedName("ja.cq(II[I[I)Lta;")
-    public class11 method571(int arg0, int arg1, int[] arg2, int[] arg3) {
+    public GraphicsRelated method571(int arg0, int arg1, int[] arg2, int[] arg3) {
         return new wa(this, this.field437, arg0, arg1, arg2, arg3);
     }
 
@@ -672,7 +672,7 @@ public class ja extends RendererToolkit implements class10 {
     public native void method967(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
 
     @ObfuscatedName("ja.R(IIIIIILta;II)V")
-    public native void method968(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class11 arg6, int arg7, int arg8);
+    public native void method968(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, GraphicsRelated arg6, int arg7, int arg8);
 
     @ObfuscatedName("ja.da()V")
     public native void method969();
@@ -732,7 +732,7 @@ public class ja extends RendererToolkit implements class10 {
     public native void method748(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, byte[] arg6, int arg7, int arg8);
 
     @ObfuscatedName("ja.DA(ILta;II)V")
-    public native void method684(int arg0, class11 arg1, int arg2, int arg3);
+    public native void method684(int arg0, GraphicsRelated arg1, int arg2, int arg3);
 
     @ObfuscatedName("ja.IA(F)V")
     public native void method529(float arg0);

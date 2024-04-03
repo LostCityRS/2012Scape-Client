@@ -48,23 +48,23 @@ public class class377 {
     }
 
     @ObfuscatedName("md.j(II[II)Laly;")
-    public class996 method6566(int arg0, int arg1, int[] arg2) {
+    public VariableRateSoundPacket method6566(int arg0, int arg1, int[] arg2) {
         int var4 = arg1 ^ (arg0 << 4 & 0xFFFF | arg0 >>> 12);
         int var5 = var4 | arg0 << 16;
         long var6 = (long) var5 ^ 0x100000000L;
-        class996 var8 = (class996) this.field4057.method11923(var6);
+        VariableRateSoundPacket var8 = (VariableRateSoundPacket) this.field4057.method11923(var6);
         if (var8 != null) {
             return var8;
         } else if (arg2 == null || arg2[0] > 0) {
-            class796 var9 = (class796) this.field4055.method11923(var6);
+            VorbisSound var9 = (VorbisSound) this.field4055.method11923(var6);
             if (var9 == null) {
-                var9 = class796.method15065(this.field4053, arg0, arg1);
+                var9 = VorbisSound.method15065(this.field4053, arg0, arg1);
                 if (var9 == null) {
                     return null;
                 }
                 this.field4055.method11927(var9, var6);
             }
-            class996 var10 = var9.method15099();
+            VariableRateSoundPacket var10 = var9.method15099();
             if (var10 == null) {
                 return null;
             } else {
@@ -89,7 +89,7 @@ public class class377 {
     }
 
     @ObfuscatedName("md.s(I[II)Laly;")
-    public class996 method6568(int arg0, int[] arg1) {
+    public VariableRateSoundPacket method6568(int arg0, int[] arg1) {
         if (this.field4053.method5638() == 1) {
             return this.method6566(0, arg0, arg1);
         } else if (this.field4053.method5637(arg0) == 1) {

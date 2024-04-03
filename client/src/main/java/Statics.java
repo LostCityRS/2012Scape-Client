@@ -237,7 +237,7 @@ public class Statics {
     public static int field1685;
 
     @ObfuscatedName("ej.s")
-    public static class937 field1735;
+    public static MixBuss field1735;
 
     @ObfuscatedName("ej.bw")
     public static MiniMenuDefaults field1736;
@@ -333,7 +333,7 @@ public class Statics {
     public static int field2304;
 
     @ObfuscatedName("gz.cy")
-    public static class817 field2305;
+    public static HardwarePlatform field2305;
 
     @ObfuscatedName("gk.bm")
     public static Language field2308;
@@ -345,7 +345,7 @@ public class Statics {
     public static int field2325;
 
     @ObfuscatedName("gr.d")
-    public static class937 field2327;
+    public static MixBuss field2327;
 
     @ObfuscatedName("gr.kd")
     public static int field2328;
@@ -540,7 +540,7 @@ public class Statics {
     public static Stream field3529;
 
     @ObfuscatedName("lk.w")
-    public static class374 field3536;
+    public static PcmPlayer field3536;
 
     @ObfuscatedName("lk.b")
     public static int field3537;
@@ -684,7 +684,7 @@ public class Statics {
     public static File field4162;
 
     @ObfuscatedName("nx.c")
-    public static class374 field4165;
+    public static PcmPlayer field4165;
 
     @ObfuscatedName("nx.od")
     public static int field4166;
@@ -720,7 +720,7 @@ public class Statics {
     public static BufferedFile[] field4245;
 
     @ObfuscatedName("ol.k")
-    public static class937 field4262;
+    public static MixBuss field4262;
 
     @ObfuscatedName("ol.eb")
     public static long field4263;
@@ -924,7 +924,7 @@ public class Statics {
     public static GraphicsDefaults field4825;
 
     @ObfuscatedName("pk.h")
-    public static class782 field4835;
+    public static MidiSong field4835;
 
     @ObfuscatedName("pu.tx")
     public static int field4855;
@@ -963,7 +963,7 @@ public class Statics {
     public static QuestTypeList field4959;
 
     @ObfuscatedName("j.bp")
-    public static class545 field496;
+    public static ModeWhat field496;
 
     @ObfuscatedName("ql.aq")
     public static ComType field4960;
@@ -1056,7 +1056,7 @@ public class Statics {
     public static Js5 field5197;
 
     @ObfuscatedName("ro.p")
-    public static class374 field5198;
+    public static PcmPlayer field5198;
 
     @ObfuscatedName("rq.n")
     public static SpriteData field5243;
@@ -1545,7 +1545,7 @@ public class Statics {
     public static IDKTypeList field7650;
 
     @ObfuscatedName("ao.ss")
-    public static class559 field769;
+    public static PrivateChatFilter field769;
 
     @ObfuscatedName("al.du")
     public static HostNameProvider field771;
@@ -1650,7 +1650,7 @@ public class Statics {
     public static long field8515;
 
     @ObfuscatedName("zd.mj")
-    public static class562[] field8518;
+    public static FullscreenMode[] field8518;
 
     @ObfuscatedName("zd.bl")
     public static Sprite field8519;
@@ -1877,11 +1877,11 @@ public class Statics {
     }
 
     @ObfuscatedName("tm.u(Lub;I)[Lus;")
-    public static class562[] method11507(FullscreenImpl arg0) {
+    public static FullscreenMode[] method11507(FullscreenImpl arg0) {
         int[] var1 = arg0.method11883();
-        class562[] var2 = new class562[var1.length >> 2];
+        FullscreenMode[] var2 = new FullscreenMode[var1.length >> 2];
         for (int var3 = 0; var3 < var2.length; var3++) {
-            class562 var4 = new class562();
+            FullscreenMode var4 = new FullscreenMode();
             var2[var3] = var4;
             var4.field6709 = var1[var3 << 2];
             var4.field6707 = var1[(var3 << 2) + 1];
@@ -1948,17 +1948,17 @@ public class Statics {
 
     @ObfuscatedName("sg.u(IS)[B")
     public static synchronized byte[] method11364(int arg0) {
-        if (arg0 == 100 && class532.field6417 > 0) {
-            byte[] var1 = class532.field6418[--class532.field6417];
-            class532.field6418[class532.field6417] = null;
+        if (arg0 == 100 && ByteArrayPool.field6417 > 0) {
+            byte[] var1 = ByteArrayPool.field6418[--ByteArrayPool.field6417];
+            ByteArrayPool.field6418[ByteArrayPool.field6417] = null;
             return var1;
-        } else if (arg0 == 5000 && class532.field6415 > 0) {
-            byte[] var2 = class532.field6416[--class532.field6415];
-            class532.field6416[class532.field6415] = null;
+        } else if (arg0 == 5000 && ByteArrayPool.field6415 > 0) {
+            byte[] var2 = ByteArrayPool.field6416[--ByteArrayPool.field6415];
+            ByteArrayPool.field6416[ByteArrayPool.field6415] = null;
             return var2;
-        } else if (arg0 == 30000 && class532.field6419 > 0) {
-            byte[] var3 = class532.field6420[--class532.field6419];
-            class532.field6420[class532.field6419] = null;
+        } else if (arg0 == 30000 && ByteArrayPool.field6419 > 0) {
+            byte[] var3 = ByteArrayPool.field6420[--ByteArrayPool.field6419];
+            ByteArrayPool.field6420[ByteArrayPool.field6419] = null;
             return var3;
         } else {
             if (field6422 != null) {
@@ -2093,7 +2093,7 @@ public class Statics {
     }
 
     @ObfuscatedName("fj.u(Lls;Lls;Lls;Laih;Lmg;I)Z")
-    public static boolean method3612(Js5 arg0, Js5 arg1, Js5 arg2, class937 arg3, class374 arg4) {
+    public static boolean method3612(Js5 arg0, Js5 arg1, Js5 arg2, MixBuss arg3, PcmPlayer arg4) {
         field1586 = arg0;
         field1580 = arg1;
         field1581 = arg2;
@@ -2176,7 +2176,7 @@ public class Statics {
 
     @ObfuscatedName("ux.u(CI)I")
     public static int method11908(char arg0) {
-        return arg0 >= 0 && arg0 < class525.field6399.length ? class525.field6399[arg0] : -1;
+        return arg0 >= 0 && arg0 < Base64.field6399.length ? Base64.field6399[arg0] : -1;
     }
 
     @ObfuscatedName("pn.a(CB)Z")
@@ -2308,10 +2308,10 @@ public class Statics {
 
     @ObfuscatedName("ji.u(I)V")
     public static void method4790() {
-        class374.method6512(22050, field4961.field9676.method15891() == 1, 2);
-        field5198 = class374.method6494(field1231, 0, 22050);
+        PcmPlayer.method6512(22050, field4961.field9676.method15891() == 1, 2);
+        field5198 = PcmPlayer.method6494(field1231, 0, 22050);
         SoundPlayer.method3658(true, SoundPlayer.method6082(null));
-        field3536 = class374.method6494(field1231, 1, 2048);
+        field3536 = PcmPlayer.method6494(field1231, 1, 2048);
         field4201 = new class939();
         field3536.method6521(field4201);
         field3160 = new class375(22050, field4015);
@@ -3525,7 +3525,7 @@ public class Statics {
         int var3 = var2.method12418(LocalisedText.field6992.method12206(field2308));
         int var6;
         if (MiniMenu.field586) {
-            for (class946 var7 = (class946) MiniMenu.field592.method11756(); var7 != null; var7 = (class946) MiniMenu.field592.method11744()) {
+            for (MiniMenuSubMenu var7 = (MiniMenuSubMenu) MiniMenu.field592.method11756(); var7 != null; var7 = (MiniMenuSubMenu) MiniMenu.field592.method11744()) {
                 int var8;
                 if (var7.field10346 == 1) {
                     var8 = MiniMenu.method5560((MiniMenuEntry) var7.field10345.field6662.field9552, var2);
@@ -3599,7 +3599,7 @@ public class Statics {
             }
             byte[] var6 = new byte[var5];
             if (var2 == 1) {
-                class544.method11511(var6, var5, arg0, var3, 9);
+                BZip2.method11511(var6, var5, arg0, var3, 9);
             } else {
                 GZip var7 = Js5.field3566;
                 synchronized (Js5.field3566) {
@@ -3663,7 +3663,7 @@ public class Statics {
     }
 
     @ObfuscatedName("wq.w(Lew;Lta;IIIILce;I)V")
-    public static void method12552(ComType arg0, class11 arg1, int arg2, int arg3, int arg4, int arg5, Sprite arg6) {
+    public static void method12552(ComType arg0, GraphicsRelated arg1, int arg2, int arg3, int arg4, int arg5, Sprite arg6) {
         if (arg6 == null) {
             return;
         }
@@ -3795,7 +3795,7 @@ public class Statics {
     }
 
     @ObfuscatedName("eb.bv(Lajz;I)Ljava/lang/String;")
-    public static String method3322(class946 arg0) {
+    public static String method3322(MiniMenuSubMenu arg0) {
         return arg0.field10344 + TextUtil.method3978(16777215) + " >";
     }
 
@@ -5136,7 +5136,7 @@ public class Statics {
 
     @ObfuscatedName("vx.iy(B)V")
     public static final void method12183() {
-        for (class945 var0 = (class945) client.field9007.method11563(); var0 != null; var0 = (class945) client.field9007.method11567()) {
+        for (ProjectileEntityNode var0 = (ProjectileEntityNode) client.field9007.method11563(); var0 != null; var0 = (ProjectileEntityNode) client.field9007.method11567()) {
             ProjectileAnimation var1 = var0.field10342;
             if (client.field9213 > var1.field10622) {
                 var0.method6979();
@@ -6227,7 +6227,7 @@ public class Statics {
         }
         ProjectileAnimation var21 = new ProjectileAnimation(client.field8980.method6098(), arg0, field3161, field3161, arg6, arg7, arg4, client.field9213 + arg10, client.field9213 + arg11, arg12, arg13, arg1, arg2, arg5, arg14, arg3, arg15);
         var21.method17162(arg8, arg9, client.method8663(arg8, arg9, field3161) - arg5, client.field9213 + arg10);
-        client.field9007.method11558(new class945(var21));
+        client.field9007.method11558(new ProjectileEntityNode(var21));
     }
 
     @ObfuscatedName("lg.apb(Lrn;I)V")

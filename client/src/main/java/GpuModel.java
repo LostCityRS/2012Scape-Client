@@ -1752,14 +1752,14 @@ public class GpuModel extends Model {
                                             var15 = this.field7955.field2588 = Statics.method879(this.field7924);
                                             var16 = this.field7955.field2586 = Statics.method879(this.field7960);
                                             var17 = this.field7955.field2587 = Statics.method879(this.field7942);
-                                            var18 = this.field7955.field2589 = class530.method16683(this.field7973);
+                                            var18 = this.field7955.field2589 = GpuByteArrayUtil.method16683(this.field7973);
                                         }
                                         if (var19 == null) {
                                             GpuModelRelated3 var44 = var6.field7955 = new GpuModelRelated3();
                                             var19 = var44.field2588 = Statics.method879(var11);
                                             var20 = var44.field2586 = Statics.method879(var12);
                                             var21 = var44.field2587 = Statics.method879(var13);
-                                            var22 = var44.field2589 = class530.method16683(var14);
+                                            var22 = var44.field2589 = GpuByteArrayUtil.method16683(var14);
                                         }
                                         short var45 = this.field7924[var35];
                                         short var46 = this.field7960[var35];

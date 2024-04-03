@@ -175,7 +175,7 @@ public class FontRelated1 extends FontType {
     }
 
     @ObfuscatedName("zw.b(CIIIZLta;II)V")
-    public void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, class11 arg5, int arg6, int arg7) {
+    public void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, GraphicsRelated arg5, int arg6, int arg7) {
         if (this.field8430.field8001 == null) {
             return;
         }
@@ -228,8 +228,8 @@ public class FontRelated1 extends FontType {
     }
 
     @ObfuscatedName("zw.y([B[I[IIIIIIIIIIILta;II)V")
-    public void method13856(byte[] arg0, int[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, class11 arg13, int arg14, int arg15) {
-        class668 var17 = (class668) arg13;
+    public void method13856(byte[] arg0, int[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, GraphicsRelated arg13, int arg14, int arg15) {
+        PureJavaGraphicsRelated var17 = (PureJavaGraphicsRelated) arg13;
         int[] var18 = var17.field7648;
         int[] var19 = var17.field7649;
         int var20 = arg10 - this.field8430.field8005;
@@ -284,8 +284,8 @@ public class FontRelated1 extends FontType {
     }
 
     @ObfuscatedName("zw.ac([B[IIIIIIIIIIILta;II)V")
-    public void method13857(byte[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, class11 arg12, int arg13, int arg14) {
-        class668 var16 = (class668) arg12;
+    public void method13857(byte[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, GraphicsRelated arg12, int arg13, int arg14) {
+        PureJavaGraphicsRelated var16 = (PureJavaGraphicsRelated) arg12;
         int[] var17 = var16.field7648;
         int[] var18 = var16.field7649;
         int var19 = arg9 - this.field8430.field8005;

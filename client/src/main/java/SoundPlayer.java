@@ -29,8 +29,8 @@ public class SoundPlayer {
     }
 
     @ObfuscatedName("mf.j(Laih;I)Laih;")
-    public static class937 method6082(class937 arg0) {
-        class937 var1 = arg0 == null ? new class937() : new class937(arg0);
+    public static MixBuss method6082(MixBuss arg0) {
+        MixBuss var1 = arg0 == null ? new MixBuss() : new MixBuss(arg0);
         var1.method16283(9, 128);
         return var1;
     }
@@ -38,15 +38,15 @@ public class SoundPlayer {
     @ObfuscatedName("wu.a(I)V")
     public static void method12701() {
         Statics.method12330();
-        class374.method6512(22050, Statics.field4961.field9676.method15891() == 1, 2);
-        Statics.field5198 = class374.method6494(Statics.field1231, 0, 22050);
+        PcmPlayer.method6512(22050, Statics.field4961.field9676.method15891() == 1, 2);
+        Statics.field5198 = PcmPlayer.method6494(Statics.field1231, 0, 22050);
         method3658(true, method6082(null));
-        Statics.field3536 = class374.method6494(Statics.field1231, 1, 2048);
+        Statics.field3536 = PcmPlayer.method6494(Statics.field1231, 1, 2048);
         Statics.field3536.method6521(Statics.field4201);
     }
 
     @ObfuscatedName("fz.s(ZLaih;I)V")
-    public static void method3658(boolean arg0, class937 arg1) {
+    public static void method3658(boolean arg0, MixBuss arg1) {
         Statics.field5198.method6521(arg1);
         if (arg0) {
             Statics.method3612(Statics.field5104, Statics.field3156, Statics.field5197, arg1, Statics.field5198);
@@ -94,7 +94,7 @@ public class SoundPlayer {
                         var1.field4179 += var1.field4176.method6462();
                     } else if (var1.method6878() && (var1.field4184 == null || var1.field4185 == null)) {
                         if (var1.field4184 == null) {
-                            var1.field4184 = class796.method15066(Statics.field3156, var1.field4173);
+                            var1.field4184 = VorbisSound.method15066(Statics.field3156, var1.field4173);
                         }
                         if (var1.field4184 == null) {
                             continue;
@@ -326,7 +326,7 @@ public class SoundPlayer {
         if (!field4203 && field4202 != -1 && class155.method13899() && !class155.method15138()) {
             Statics.field2327 = class155.method7705();
             method3225();
-            class937 var4 = method6082(Statics.field2327);
+            MixBuss var4 = method6082(Statics.field2327);
             method3658(true, var4);
         }
         class155.method3986(Statics.field1509, arg0, 0, var3, false);

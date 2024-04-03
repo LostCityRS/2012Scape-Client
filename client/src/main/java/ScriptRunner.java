@@ -9127,9 +9127,9 @@ public final class ScriptRunner {
     public static final void method7714(ClientScriptState arg0) {
         arg0.field5216 -= 3;
         client.field9177 = arg0.field5215[arg0.field5216];
-        Statics.field769 = class559.method11235(arg0.field5215[arg0.field5216 + 1]);
+        Statics.field769 = PrivateChatFilter.method11235(arg0.field5215[arg0.field5216 + 1]);
         if (Statics.field769 == null) {
-            Statics.field769 = class559.field6697;
+            Statics.field769 = PrivateChatFilter.field6697;
         }
         client.field9178 = arg0.field5215[arg0.field5216 + 2];
         ServerConnection var1 = client.method4104();
@@ -9877,7 +9877,7 @@ public final class ScriptRunner {
     @ObfuscatedName("acb.afh(Lrn;B)V")
     public static final void method14811(ClientScriptState arg0) {
         if (Fullscreen.field6700) {
-            class562[] var1 = client.method1671();
+            FullscreenMode[] var1 = client.method1671();
             arg0.field5215[++arg0.field5216 - 1] = var1.length;
         } else {
             arg0.field5215[++arg0.field5216 - 1] = 0;
@@ -9888,7 +9888,7 @@ public final class ScriptRunner {
     public static final void method1683(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
         if (Fullscreen.field6700) {
-            class562[] var2 = client.method1671();
+            FullscreenMode[] var2 = client.method1671();
             arg0.field5215[++arg0.field5216 - 1] = var2[var1].field6709;
             arg0.field5215[++arg0.field5216 - 1] = var2[var1].field6707;
         } else {
@@ -9903,9 +9903,9 @@ public final class ScriptRunner {
         int var2 = Statics.field3315;
         int var3 = -1;
         if (Fullscreen.field6700) {
-            class562[] var4 = client.method1671();
+            FullscreenMode[] var4 = client.method1671();
             for (int var5 = 0; var5 < var4.length; var5++) {
-                class562 var6 = var4[var5];
+                FullscreenMode var6 = var4[var5];
                 if (var6.field6709 == var1 && var6.field6707 == var2) {
                     var3 = var5;
                     break;

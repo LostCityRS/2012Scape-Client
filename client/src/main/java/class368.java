@@ -125,15 +125,15 @@ public class class368 {
     }
 
     public class368() {
-        int var1 = class796.method15060(16);
+        int var1 = VorbisSound.method15060(16);
         if (var1 != 1) {
             throw new RuntimeException();
         }
-        int var2 = class796.method15060(5);
+        int var2 = VorbisSound.method15060(5);
         int var3 = 0;
         this.field3985 = new int[var2];
         for (int var4 = 0; var4 < var2; var4++) {
-            int var5 = class796.method15060(4);
+            int var5 = VorbisSound.method15060(4);
             this.field3985[var4] = var5;
             if (var5 >= var3) {
                 var3 = var5 + 1;
@@ -144,20 +144,20 @@ public class class368 {
         this.field3988 = new int[var3];
         this.field3984 = new int[var3][];
         for (int var6 = 0; var6 < var3; var6++) {
-            this.field3986[var6] = class796.method15060(3) + 1;
-            int var7 = this.field3991[var6] = class796.method15060(2);
+            this.field3986[var6] = VorbisSound.method15060(3) + 1;
+            int var7 = this.field3991[var6] = VorbisSound.method15060(2);
             if (var7 != 0) {
-                this.field3988[var6] = class796.method15060(8);
+                this.field3988[var6] = VorbisSound.method15060(8);
             }
             int var8 = 0x1 << var7;
             int[] var9 = new int[var8];
             this.field3984[var6] = var9;
             for (int var10 = 0; var10 < var8; var10++) {
-                var9[var10] = class796.method15060(8) - 1;
+                var9[var10] = VorbisSound.method15060(8) - 1;
             }
         }
-        this.field3992 = class796.method15060(2) + 1;
-        int var11 = class796.method15060(4);
+        this.field3992 = VorbisSound.method15060(2) + 1;
+        int var11 = VorbisSound.method15060(4);
         int var12 = 2;
         for (int var13 = 0; var13 < var2; var13++) {
             var12 += this.field3986[this.field3985[var13]];
@@ -169,7 +169,7 @@ public class class368 {
         for (int var15 = 0; var15 < var2; var15++) {
             int var16 = this.field3985[var15];
             for (int var17 = 0; var17 < this.field3986[var16]; var17++) {
-                this.field3983[var14++] = class796.method15060(var11);
+                this.field3983[var14++] = VorbisSound.method15060(var11);
             }
         }
         if (Statics.field3982 == null || Statics.field3982.length < var14) {
@@ -181,7 +181,7 @@ public class class368 {
 
     @ObfuscatedName("mw.m()Z")
     public boolean method6444() {
-        boolean var1 = class796.method15084() != 0;
+        boolean var1 = VorbisSound.method15084() != 0;
         if (!var1) {
             return false;
         }
@@ -191,8 +191,8 @@ public class class368 {
         }
         int var4 = field3987[this.field3992 - 1];
         int var5 = IntMath.method2540(var4 - 1);
-        Statics.field3990[0] = class796.method15060(var5);
-        Statics.field3990[1] = class796.method15060(var5);
+        Statics.field3990[0] = VorbisSound.method15060(var5);
+        Statics.field3990[1] = VorbisSound.method15060(var5);
         int var6 = 2;
         for (int var7 = 0; var7 < this.field3985.length; var7++) {
             int var8 = this.field3985[var7];

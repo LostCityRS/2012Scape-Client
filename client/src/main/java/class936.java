@@ -1,10 +1,10 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aij")
-public class class936 extends class793 {
+public class class936 extends AudioBuss {
 
     @ObfuscatedName("aij.l")
-    public class937 field10226;
+    public MixBuss field10226;
 
     @ObfuscatedName("aij.f")
     public IterableQueue field10227 = new IterableQueue();
@@ -12,13 +12,13 @@ public class class936 extends class793 {
     @ObfuscatedName("aij.d")
     public class939 field10225 = new class939();
 
-    public class936(class937 arg0) {
+    public class936(MixBuss arg0) {
         this.field10226 = arg0;
     }
 
     @ObfuscatedName("aij.j()Ladc;")
-    public class793 method15031() {
-        class783 var1 = (class783) this.field10227.method11563();
+    public AudioBuss method15031() {
+        SoundRelated1 var1 = (SoundRelated1) this.field10227.method11563();
         if (var1 == null) {
             return null;
         } else if (var1.field9401 == null) {
@@ -29,10 +29,10 @@ public class class936 extends class793 {
     }
 
     @ObfuscatedName("aij.a()Ladc;")
-    public class793 method15032() {
-        class783 var1;
+    public AudioBuss method15032() {
+        SoundRelated1 var1;
         do {
-            var1 = (class783) this.field10227.method11567();
+            var1 = (SoundRelated1) this.field10227.method11567();
             if (var1 == null) {
                 return null;
             }
@@ -48,7 +48,7 @@ public class class936 extends class793 {
     @ObfuscatedName("aij.m([III)V")
     public void method15034(int[] arg0, int arg1, int arg2) {
         this.field10225.method15034(arg0, arg1, arg2);
-        for (class783 var4 = (class783) this.field10227.method11563(); var4 != null; var4 = (class783) this.field10227.method11567()) {
+        for (SoundRelated1 var4 = (SoundRelated1) this.field10227.method11563(); var4 != null; var4 = (SoundRelated1) this.field10227.method11567()) {
             if (!this.field10226.method16296(var4)) {
                 int var5 = arg1;
                 int var6 = arg2;
@@ -69,7 +69,7 @@ public class class936 extends class793 {
     @ObfuscatedName("aij.t(I)V")
     public void method15046(int arg0) {
         this.field10225.method15046(arg0);
-        for (class783 var2 = (class783) this.field10227.method11563(); var2 != null; var2 = (class783) this.field10227.method11567()) {
+        for (SoundRelated1 var2 = (SoundRelated1) this.field10227.method11563(); var2 != null; var2 = (SoundRelated1) this.field10227.method11567()) {
             if (!this.field10226.method16296(var2)) {
                 int var3 = arg0;
                 do {
@@ -86,7 +86,7 @@ public class class936 extends class793 {
     }
 
     @ObfuscatedName("aij.an(Laci;[IIIII)V")
-    public void method16255(class783 arg0, int[] arg1, int arg2, int arg3, int arg4) {
+    public void method16255(SoundRelated1 arg0, int[] arg1, int arg2, int arg3, int arg4) {
         if ((this.field10226.field10245[arg0.field9400] & 0x4) != 0 && arg0.field9402 < 0) {
             int var6 = this.field10226.field10250[arg0.field9400] / Statics.field4015;
             while (true) {
@@ -104,7 +104,7 @@ public class class936 extends class793 {
                 if (var9 < var8) {
                     var8 = var9;
                 }
-                class938 var10 = arg0.field9401;
+                SoundStream var10 = arg0.field9401;
                 if (this.field10226.field10248[arg0.field9400] == 0) {
                     arg0.field9401 = arg0.field9385.method16502(var10.method16397(), var10.method16442(), var10.method16426());
                 } else {
@@ -126,13 +126,13 @@ public class class936 extends class793 {
     }
 
     @ObfuscatedName("aij.ap(Laci;II)V")
-    public void method16256(class783 arg0, int arg1) {
+    public void method16256(SoundRelated1 arg0, int arg1) {
         if ((this.field10226.field10245[arg0.field9400] & 0x4) != 0 && arg0.field9402 < 0) {
             int var3 = this.field10226.field10250[arg0.field9400] / Statics.field4015;
             int var4 = (var3 + 1048575 - arg0.field9398) / var3;
             arg0.field9398 = arg0.field9398 + arg1 * var3 & 0xFFFFF;
             if (var4 <= arg1) {
-                class938 var5 = arg0.field9401;
+                SoundStream var5 = arg0.field9401;
                 if (this.field10226.field10248[arg0.field9400] == 0) {
                     arg0.field9401 = arg0.field9385.method16502(var5.method16397(), var5.method16442(), var5.method16426());
                 } else {

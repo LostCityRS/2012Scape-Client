@@ -233,7 +233,7 @@ public class MiniMap {
         if (var4 == null) {
             return;
         }
-        class11 var5 = var4.field1730;
+        GraphicsRelated var5 = var4.field1730;
         arg0.method659(arg2, arg3, arg1.field1863 + arg2, arg1.field1929 + arg3);
         if (arg1.field1863 != var4.field1728 || arg1.field1929 != var4.field1727) {
             throw new IllegalStateException("");
@@ -308,7 +308,7 @@ public class MiniMap {
     }
 
     @ObfuscatedName("ci.z(Lra;IILew;Lta;III)V")
-    public static void method2388(RendererToolkit arg0, int arg1, int arg2, ComType arg3, class11 arg4, int arg5, int arg6) {
+    public static void method2388(RendererToolkit arg0, int arg1, int arg2, ComType arg3, GraphicsRelated arg4, int arg5, int arg6) {
         for (int var7 = 0; var7 < client.field9104; var7++) {
             ObjectNode var8 = (ObjectNode) client.field8964.method11923((long) client.field9056[var7]);
             if (var8 != null) {
@@ -334,7 +334,7 @@ public class MiniMap {
     }
 
     @ObfuscatedName("b.n(IILew;Lta;III)V")
-    public static void method1592(int arg0, int arg1, ComType arg2, class11 arg3, int arg4, int arg5) {
+    public static void method1592(int arg0, int arg1, ComType arg2, GraphicsRelated arg3, int arg4, int arg5) {
         int var6 = ReceivePlayerPositions.field732;
         int[] var7 = ReceivePlayerPositions.field727;
         for (int var8 = 0; var8 < var6; var8++) {
@@ -416,7 +416,7 @@ public class MiniMap {
     }
 
     @ObfuscatedName("an.q(Lra;Lta;Lew;IIIIII)V")
-    public static void method1712(RendererToolkit arg0, class11 arg1, ComType arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
+    public static void method1712(RendererToolkit arg0, GraphicsRelated arg1, ComType arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
         MapElementType var8 = Statics.field8499.method7862(arg7);
         if (var8 == null || !var8.field4776 || !var8.method7835(Statics.field2669)) {
             return;
@@ -554,7 +554,7 @@ public class MiniMap {
     }
 
     @ObfuscatedName("aam.b(Lew;Lta;IIIIILjava/lang/String;Ll;Lvm;II)V")
-    public static void method14046(ComType arg0, class11 arg1, int arg2, int arg3, int arg4, int arg5, int arg6, String arg7, FontType arg8, FontMetrics arg9, int arg10) {
+    public static void method14046(ComType arg0, GraphicsRelated arg1, int arg2, int arg3, int arg4, int arg5, int arg6, String arg7, FontType arg8, FontMetrics arg9, int arg10) {
         int var11;
         if (Statics.field2671 == 5) {
             var11 = (int) client.field9021 & 0x3FFF;

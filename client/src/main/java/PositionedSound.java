@@ -67,13 +67,13 @@ public class PositionedSound extends Node {
     public boolean field9537;
 
     @ObfuscatedName("adg.ap")
-    public class796 field9538;
+    public VorbisSound field9538;
 
     @ObfuscatedName("adg.ag")
-    public class996 field9539;
+    public VariableRateSoundPacket field9539;
 
     @ObfuscatedName("adg.as")
-    public class938 field9540;
+    public SoundStream field9540;
 
     @ObfuscatedName("adg.ai")
     public int field9535;
@@ -85,16 +85,16 @@ public class PositionedSound extends Node {
     public boolean field9544;
 
     @ObfuscatedName("adg.at")
-    public class796 field9545;
+    public VorbisSound field9545;
 
     @ObfuscatedName("adg.ax")
-    public class996 field9542;
+    public VariableRateSoundPacket field9542;
 
     @ObfuscatedName("adg.aw")
     public int field9526;
 
     @ObfuscatedName("adg.aa")
-    public class938 field9548;
+    public SoundStream field9548;
 
     @ObfuscatedName("mp.u(ZI)V")
     public static void method6259(boolean arg0) {
@@ -552,14 +552,14 @@ public class PositionedSound extends Node {
             int var15 = arg0.field9532 == 256 && arg0.field9524 == 256 ? 256 : SoundPlayer.method4688(arg0.field9524, arg0.field9532);
             if (arg0.field9537) {
                 if (arg0.field9538 == null) {
-                    arg0.field9538 = class796.method15066(Statics.field3156, arg0.field9536);
+                    arg0.field9538 = VorbisSound.method15066(Statics.field3156, arg0.field9536);
                 }
                 if (arg0.field9538 != null) {
                     if (arg0.field9539 == null) {
                         arg0.field9539 = arg0.field9538.method15099();
                     }
                     if (arg0.field9539 != null) {
-                        class995 var16 = (class995) arg0.field9539.method16502(var15, var8 << 6, var10);
+                        VariableRateSoundStream var16 = (VariableRateSoundStream) arg0.field9539.method16502(var15, var8 << 6, var10);
                         var16.method16384(-1);
                         Statics.field4201.method16452(var16);
                         arg0.field9540 = var16;
@@ -589,14 +589,14 @@ public class PositionedSound extends Node {
             if (arg0.field9544) {
                 if (arg0.field9545 == null) {
                     int var21 = (int) (Math.random() * (double) arg0.field9543.length);
-                    arg0.field9545 = class796.method15066(Statics.field3156, arg0.field9543[var21]);
+                    arg0.field9545 = VorbisSound.method15066(Statics.field3156, arg0.field9543[var21]);
                 }
                 if (arg0.field9545 != null) {
                     if (arg0.field9542 == null) {
                         arg0.field9542 = arg0.field9545.method15099();
                     }
                     if (arg0.field9542 != null) {
-                        class995 var22 = (class995) arg0.field9542.method16502(var20, var8 << 6, var10);
+                        VariableRateSoundStream var22 = (VariableRateSoundStream) arg0.field9542.method16502(var20, var8 << 6, var10);
                         var22.method16384(0);
                         Statics.field4201.method16452(var22);
                         arg0.field9548 = var22;

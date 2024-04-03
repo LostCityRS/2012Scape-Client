@@ -29,7 +29,7 @@ public class ia extends FontType implements class10 {
     }
 
     @ObfuscatedName("ia.b(CIIIZLta;II)V")
-    public void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, class11 arg5, int arg6, int arg7) {
+    public void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, GraphicsRelated arg5, int arg6, int arg7) {
         this.method960(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
@@ -40,7 +40,7 @@ public class ia extends FontType implements class10 {
     public native void method848(char arg0, int arg1, int arg2, int arg3, boolean arg4);
 
     @ObfuscatedName("ia.GA(CIIIZLta;II)V")
-    public native void method960(char arg0, int arg1, int arg2, int arg3, boolean arg4, class11 arg5, int arg6, int arg7);
+    public native void method960(char arg0, int arg1, int arg2, int arg3, boolean arg4, GraphicsRelated arg5, int arg6, int arg7);
 
     @ObfuscatedName("ia.EA(Lja;Lba;[[B[I[I[I[I[I)V")
     public native void method961(ja arg0, ba arg1, byte[][] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7);

@@ -552,7 +552,7 @@ public class GlToolkit extends RendererToolkit {
                         this.field8047 = null;
                     }
                 }
-                this.method460(arg0, new class893(this, arg0, var4));
+                this.method460(arg0, new GlSurface(this, arg0, var4));
                 this.method462(arg0);
                 this.field8082 = new GlEffectList(this);
                 this.method13265();
@@ -821,8 +821,8 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.ak(Ljava/awt/Canvas;II)Lya;")
-    public class675 method735(Canvas arg0, int arg1, int arg2) {
-        return new class893(this, arg0);
+    public Surface method735(Canvas arg0, int arg1, int arg2) {
+        return new GlSurface(this, arg0);
     }
 
     @ObfuscatedName("yq.h()V")
@@ -1182,7 +1182,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.bn(IIIIIILta;II)V")
-    public void method440(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class11 arg6, int arg7, int arg8) {
+    public void method440(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, GraphicsRelated arg6, int arg7, int arg8) {
         class669 var10 = (class669) arg6;
         GlGraphicRelated var11 = var10.field7651;
         this.method13309();
@@ -1208,7 +1208,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.bc(IIIIIILta;IIIII)V")
-    public void method498(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class11 arg6, int arg7, int arg8, int arg9, int arg10, int arg11) {
+    public void method498(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, GraphicsRelated arg6, int arg7, int arg8, int arg9, int arg10, int arg11) {
         if (arg0 == arg2 && arg1 == arg3) {
             return;
         }
@@ -1456,12 +1456,12 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.cq(II[I[I)Lta;")
-    public class11 method571(int arg0, int arg1, int[] arg2, int[] arg3) {
+    public GraphicsRelated method571(int arg0, int arg1, int[] arg2, int[] arg3) {
         return class669.method12942(this, arg0, arg1, arg2, arg3);
     }
 
     @ObfuscatedName("yq.DA(ILta;II)V")
-    public void method684(int arg0, class11 arg1, int arg2, int arg3) {
+    public void method684(int arg0, GraphicsRelated arg1, int arg2, int arg3) {
         class669 var5 = (class669) arg1;
         GlGraphicRelated var6 = var5.field7651;
         this.method13309();

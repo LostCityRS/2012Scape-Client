@@ -183,6 +183,6 @@ public class GpuFont extends FontType {
     }
 
     @ObfuscatedName("zf.b(CIIIZLta;II)V")
-    public void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, class11 arg5, int arg6, int arg7) {
+    public void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, GraphicsRelated arg5, int arg6, int arg7) {
     }
 }

@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("alz")
-public class class1005 extends class952 {
+public class class1005 extends WeightedNode {
 
     @ObfuscatedName("alz.l")
     public Object field10602;

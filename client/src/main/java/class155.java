@@ -16,7 +16,7 @@ public class class155 {
     }
 
     @ObfuscatedName("mk.a(Lls;IIIZLaih;B)V")
-    public static void method6359(Js5 arg0, int arg1, int arg2, int arg3, boolean arg4, class937 arg5) {
+    public static void method6359(Js5 arg0, int arg1, int arg2, int arg3, boolean arg4, MixBuss arg5) {
         method3986(arg0, arg1, arg2, arg3, arg4);
         Statics.field4262 = arg5;
     }
@@ -183,7 +183,7 @@ public class class155 {
         try {
             if (field1583 == 2) {
                 if (Statics.field4835 == null) {
-                    Statics.field4835 = class782.method14909(Statics.field6702, Statics.field7042, Statics.field641);
+                    Statics.field4835 = MidiSong.method14909(Statics.field6702, Statics.field7042, Statics.field641);
                     if (Statics.field4835 == null) {
                         return false;
                     }
@@ -191,7 +191,7 @@ public class class155 {
                 if (Statics.field1279 == null) {
                     Statics.field1279 = new class377(Statics.field1581, Statics.field1580);
                 }
-                class937 var0 = Statics.field1735;
+                MixBuss var0 = Statics.field1735;
                 if (Statics.field4262 != null) {
                     var0 = Statics.field4262;
                 }
@@ -246,7 +246,7 @@ public class class155 {
     @ObfuscatedName("pl.b(Leq;IB)V")
     public static void method7908(class157 arg0, int arg1) {
         Statics.field1735.method16273();
-        class937 var2 = arg0.method3002();
+        MixBuss var2 = arg0.method3002();
         if (var2 == null) {
             return;
         }
@@ -270,7 +270,7 @@ public class class155 {
     }
 
     @ObfuscatedName("pp.i(I)Laih;")
-    public static class937 method7705() {
+    public static MixBuss method7705() {
         return Statics.field1735;
     }
 }

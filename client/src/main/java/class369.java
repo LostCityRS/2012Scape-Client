@@ -4,9 +4,9 @@ import deob.ObfuscatedName;
 public class class369 implements Runnable {
 
     // $FF: synthetic field
-    public final class760 this$0;
+    public final PcmPlayer_Sub1 this$0;
 
-    public class369(class760 arg0) {
+    public class369(PcmPlayer_Sub1 arg0) {
         this.this$0 = arg0;
     }
 

@@ -24,7 +24,7 @@ public class Scene {
     public final RendererToolkit field4489;
 
     @ObfuscatedName("oo.t")
-    public class583 field4490;
+    public SceneDebugging field4490;
 
     @ObfuscatedName("oo.l")
     public final boolean field4491;
@@ -201,7 +201,7 @@ public class Scene {
         this.field4495 = arg3;
         this.field4496 = arg4;
         this.field4531 = arg5;
-        this.field4490 = new class583();
+        this.field4490 = new SceneDebugging();
         this.field4493 = new class428(this);
         this.field4500 = new Tile[arg2][this.field4495][this.field4496];
         this.field4527 = new FloorModel[arg2];

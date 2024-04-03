@@ -70,7 +70,7 @@ public class Packet extends Node {
     @ObfuscatedName("aet.a(I)V")
     public void method15282() {
         if (this.field9629 != null) {
-            class532.method7068(this.field9629);
+            ByteArrayPool.method7068(this.field9629);
         }
         this.field9629 = null;
     }

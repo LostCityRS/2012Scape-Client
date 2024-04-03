@@ -51,7 +51,7 @@ public class class242 {
     public int field2518 = 0;
 
     public class242(GpuToolkit arg0) {
-        this.field2505 = arg0.method13585(new class243[]{new class243(new class237[]{class237.field2495, class237.field2488, class237.field2483}), new class243(class237.field2480)});
+        this.field2505 = arg0.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new class237[]{class237.field2495, class237.field2488, class237.field2483}), new VertexDeclarationElement(class237.field2480)});
         this.field2506 = arg0.method13584(true);
         this.field2517 = arg0.method13584(false);
         this.field2517.method4269(393168, 12);
@@ -108,8 +108,8 @@ public class class242 {
         int var7 = 0;
         int var8 = Integer.MAX_VALUE;
         int var9 = 0;
-        class766 var10 = arg1.field1311.field6653;
-        for (class766 var11 = var10.field9265; var11 != var10; var11 = var11.field9265) {
+        DualLink var10 = arg1.field1311.field6653;
+        for (DualLink var11 = var10.field9265; var11 != var10; var11 = var11.field9265) {
             class914 var12 = (class914) var11;
             int var13 = (int) ((float) (var12.field10147 >> 12) * var5 + (float) (var12.field10146 >> 12) * var4 + (float) (var12.field10145 >> 12) * var3 + var6);
             if (var13 > var9) {
@@ -142,8 +142,8 @@ public class class242 {
     }
 
     @ObfuscatedName("hw.s(Lyk;Lacl;IIILft;)V")
-    public void method4480(GpuToolkit arg0, class766 arg1, int arg2, int arg3, int arg4, ParticleShader arg5) {
-        class766 var7 = arg1.field9265;
+    public void method4480(GpuToolkit arg0, DualLink arg1, int arg2, int arg3, int arg4, ParticleShader arg5) {
+        DualLink var7 = arg1.field9265;
         int var8 = 0;
         int var9 = -2;
         boolean var10 = true;

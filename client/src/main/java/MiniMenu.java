@@ -16,7 +16,7 @@ public class MiniMenu {
     public static boolean field586 = false;
 
     @ObfuscatedName("w.f")
-    public static class946 field583 = null;
+    public static MiniMenuSubMenu field583 = null;
 
     @ObfuscatedName("w.o")
     public static int field602 = 0;
@@ -238,8 +238,8 @@ public class MiniMenu {
                     }
                     if (var28 != -1) {
                         int var33 = 0;
-                        class551 var34 = new class551(field592);
-                        for (class946 var35 = (class946) var34.method11715(); var35 != null; var35 = (class946) var34.next()) {
+                        DualIterableQueueIterator var34 = new DualIterableQueueIterator(field592);
+                        for (MiniMenuSubMenu var35 = (MiniMenuSubMenu) var34.method11715(); var35 != null; var35 = (MiniMenuSubMenu) var34.next()) {
                             if (var28 == var33) {
                                 if (var35.field10346 > 1) {
                                     method1672(var35, var29);
@@ -268,7 +268,7 @@ public class MiniMenu {
             }
             if (var6 != -1) {
                 int var10 = 0;
-                class551 var11 = new class551(field583.field10345);
+                DualIterableQueueIterator var11 = new DualIterableQueueIterator(field583.field10345);
                 for (MiniMenuEntry var12 = (MiniMenuEntry) var11.method11715(); var12 != null; var12 = (MiniMenuEntry) var11.next()) {
                     if (var6 == var10) {
                         Statics.method15936(var12, var4, var5);
@@ -298,8 +298,8 @@ public class MiniMenu {
                 }
                 if (var20 != -1) {
                     int var24 = 0;
-                    class551 var25 = new class551(field592);
-                    for (class946 var26 = (class946) var25.method11715(); var26 != null; var26 = (class946) var25.next()) {
+                    DualIterableQueueIterator var25 = new DualIterableQueueIterator(field592);
+                    for (MiniMenuSubMenu var26 = (MiniMenuSubMenu) var25.method11715(); var26 != null; var26 = (MiniMenuSubMenu) var25.next()) {
                         if (var20 == var24) {
                             Statics.method15936((MiniMenuEntry) var26.field10345.field6662.field9552, var4, var5);
                             method3561();
@@ -325,7 +325,7 @@ public class MiniMenu {
                 }
                 if (var13 != -1) {
                     int var17 = 0;
-                    class550 var18 = new class550(field595);
+                    IterableQueueIterator var18 = new IterableQueueIterator(field595);
                     for (MiniMenuEntry var19 = (MiniMenuEntry) var18.method11701(); var19 != null; var19 = (MiniMenuEntry) var18.next()) {
                         if (var13 == var17) {
                             Statics.method15936(var19, var4, var5);
@@ -363,7 +363,7 @@ public class MiniMenu {
     }
 
     @ObfuscatedName("e.z(Lajz;II)V")
-    public static void method1672(class946 arg0, int arg1) {
+    public static void method1672(MiniMenuSubMenu arg0, int arg1) {
         if (!field585) {
             return;
         }
@@ -438,21 +438,21 @@ public class MiniMenu {
         field595.method11558(arg0);
         field588++;
         Object var1 = null;
-        class946 var4;
+        MiniMenuSubMenu var4;
         if (arg0.field10338 || "".equals(arg0.field10334)) {
-            var4 = new class946(arg0.field10334);
+            var4 = new MiniMenuSubMenu(arg0.field10334);
             field594++;
         } else {
             long var2 = arg0.field10330;
-            for (var4 = (class946) field609.method11923(var2); var4 != null && !var4.field10344.equals(arg0.field10334); var4 = (class946) field609.method11924()) {
+            for (var4 = (MiniMenuSubMenu) field609.method11923(var2); var4 != null && !var4.field10344.equals(arg0.field10334); var4 = (MiniMenuSubMenu) field609.method11924()) {
             }
             if (var4 == null) {
-                var4 = (class946) field600.method7916(var2);
+                var4 = (MiniMenuSubMenu) field600.method7916(var2);
                 if (var4 != null && !var4.field10344.equals(arg0.field10334)) {
                     var4 = null;
                 }
                 if (var4 == null) {
-                    var4 = new class946(arg0.field10334);
+                    var4 = new MiniMenuSubMenu(arg0.field10334);
                 }
                 field609.method11927(var4, var2);
                 field594++;
@@ -464,10 +464,10 @@ public class MiniMenu {
     }
 
     @ObfuscatedName("px.b(Lajz;I)V")
-    public static void method7720(class946 arg0) {
+    public static void method7720(MiniMenuSubMenu arg0) {
         boolean var1 = false;
         arg0.method15142();
-        for (class946 var2 = (class946) field592.method11756(); var2 != null; var2 = (class946) field592.method11744()) {
+        for (MiniMenuSubMenu var2 = (MiniMenuSubMenu) field592.method11756(); var2 != null; var2 = (MiniMenuSubMenu) field592.method11744()) {
             if (method5825(arg0.method16648(), var2.method16648())) {
                 DualIterableQueue.method2355(arg0, var2);
                 var1 = true;
@@ -844,15 +844,15 @@ public class MiniMenu {
         field588--;
         if (!arg0.field10338) {
             long var1 = arg0.field10330;
-            class946 var3;
-            for (var3 = (class946) field609.method11923(var1); var3 != null && !var3.field10344.equals(arg0.field10334); var3 = (class946) field609.method11924()) {
+            MiniMenuSubMenu var3;
+            for (var3 = (MiniMenuSubMenu) field609.method11923(var1); var3 != null && !var3.field10344.equals(arg0.field10334); var3 = (MiniMenuSubMenu) field609.method11924()) {
             }
             if (var3 != null && var3.method16650(arg0)) {
                 method7720(var3);
             }
             return;
         }
-        for (class946 var4 = (class946) field592.method11756(); var4 != null; var4 = (class946) field592.method11744()) {
+        for (MiniMenuSubMenu var4 = (MiniMenuSubMenu) field592.method11756(); var4 != null; var4 = (MiniMenuSubMenu) field592.method11744()) {
             if (var4.field10344.equals(arg0.field10334)) {
                 boolean var5 = false;
                 for (MiniMenuEntry var6 = (MiniMenuEntry) var4.field10345.method11756(); var6 != null; var6 = (MiniMenuEntry) var4.field10345.method11744()) {
@@ -906,7 +906,7 @@ public class MiniMenu {
 
     @ObfuscatedName("q.ay(I)V")
     public static void method1401() {
-        for (class946 var0 = (class946) field592.method11756(); var0 != null; var0 = (class946) field592.method11744()) {
+        for (MiniMenuSubMenu var0 = (MiniMenuSubMenu) field592.method11756(); var0 != null; var0 = (MiniMenuSubMenu) field592.method11744()) {
             if (var0.field10346 > 1) {
                 var0.field10346 = 0;
                 field600.method7937(var0, ((MiniMenuEntry) var0.field10345.field6662.field9552).field10330);
@@ -923,7 +923,7 @@ public class MiniMenu {
 
     @ObfuscatedName("sv.af(I)V")
     public static void method11300() {
-        for (class946 var0 = (class946) field592.method11756(); var0 != null; var0 = (class946) field592.method11744()) {
+        for (MiniMenuSubMenu var0 = (MiniMenuSubMenu) field592.method11756(); var0 != null; var0 = (MiniMenuSubMenu) field592.method11744()) {
             if (var0.field10346 > 1) {
                 var0.field10346 = 0;
                 field600.method7937(var0, ((MiniMenuEntry) var0.field10345.field6662.field9552).field10330);
@@ -1004,8 +1004,8 @@ public class MiniMenu {
                         }
                         if (var10 != -1) {
                             int var14 = 0;
-                            class551 var15 = new class551(field592);
-                            for (class946 var16 = (class946) var15.method11715(); var16 != null; var16 = (class946) var15.next()) {
+                            DualIterableQueueIterator var15 = new DualIterableQueueIterator(field592);
+                            for (MiniMenuSubMenu var16 = (MiniMenuSubMenu) var15.method11715(); var16 != null; var16 = (MiniMenuSubMenu) var15.next()) {
                                 if (var14++ == var10) {
                                     return ((MiniMenuEntry) var16.field10345.field6662.field9552).field10331;
                                 }
@@ -1028,7 +1028,7 @@ public class MiniMenu {
                         }
                         if (var17 != -1) {
                             int var21 = 0;
-                            class551 var22 = new class551(field583.field10345);
+                            DualIterableQueueIterator var22 = new DualIterableQueueIterator(field583.field10345);
                             for (MiniMenuEntry var23 = (MiniMenuEntry) var22.method11715(); var23 != null; var23 = (MiniMenuEntry) var22.next()) {
                                 if (var21++ == var17) {
                                     return var23.field10331;
@@ -1053,7 +1053,7 @@ public class MiniMenu {
                     }
                     if (var3 != -1) {
                         int var7 = 0;
-                        class550 var8 = new class550(field595);
+                        IterableQueueIterator var8 = new IterableQueueIterator(field595);
                         for (MiniMenuEntry var9 = (MiniMenuEntry) var8.method11701(); var9 != null; var9 = (MiniMenuEntry) var8.next()) {
                             if (var7++ == var3) {
                                 return var9.field10331;
@@ -1224,7 +1224,7 @@ public class MiniMenu {
     }
 
     @ObfuscatedName("x.ae(IIIIIIILajz;Ll;Lvm;III)V")
-    public static void method1599(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, class946 arg7, FontType arg8, FontMetrics arg9, int arg10, int arg11) {
+    public static void method1599(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, MiniMenuSubMenu arg7, FontType arg8, FontMetrics arg9, int arg10, int arg11) {
         if (arg0 > arg2 && arg0 < arg2 + arg4 && arg1 > arg6 - arg9.field7176 - 1 && arg1 < arg9.field7177 + arg6) {
             arg10 = arg11;
         }
@@ -1249,7 +1249,7 @@ public class MiniMenu {
             return;
         }
         int var7 = 0;
-        for (class946 var8 = (class946) field592.method11756(); var8 != null; var8 = (class946) field592.method11744()) {
+        for (MiniMenuSubMenu var8 = (MiniMenuSubMenu) field592.method11756(); var8 != null; var8 = (MiniMenuSubMenu) field592.method11744()) {
             int var9 = field582 * var7 + Statics.field2325 + 31;
             if (var8.field10346 == 1) {
                 Statics.method15995(var2, var3, Statics.field4756, Statics.field2325, Statics.field1571, Statics.field611, var9, (MiniMenuEntry) var8.field10345.field6662.field9552, Statics.field670, Statics.field2399, -1, -256);
@@ -1368,7 +1368,7 @@ public class MiniMenu {
         int var11 = Statics.field7136.method7255();
         if (field586) {
             int var15 = 0;
-            for (class946 var16 = (class946) field592.method11756(); var16 != null; var16 = (class946) field592.method11744()) {
+            for (MiniMenuSubMenu var16 = (MiniMenuSubMenu) field592.method11756(); var16 != null; var16 = (MiniMenuSubMenu) field592.method11744()) {
                 int var17 = field582 * var15 + var8.field7176 + var2 + var5 + 1;
                 if (var10 > Statics.field4756 && var10 < Statics.field4756 + Statics.field1571 && var11 > var17 - var8.field7176 - 1 && var11 < var8.field7177 + var17 && (var16.field10346 > 1 || ((MiniMenuEntry) var16.field10345.field6662.field9552).field10336)) {
                     arg0.method489(Statics.field4756, var17 - var8.field7176, Statics.field1571, field582, var9 << 24 | Statics.field1477, 1);
@@ -1408,7 +1408,7 @@ public class MiniMenu {
             return;
         }
         int var24 = 0;
-        for (class946 var25 = (class946) field592.method11756(); var25 != null; var25 = (class946) field592.method11744()) {
+        for (MiniMenuSubMenu var25 = (MiniMenuSubMenu) field592.method11756(); var25 != null; var25 = (MiniMenuSubMenu) field592.method11744()) {
             int var26 = field582 * var24 + var8.field7176 + Statics.field2325 + var5 + 1;
             if (var25.field10346 == 1) {
                 Statics.method15995(var10, var11, Statics.field4756, Statics.field2325, Statics.field1571, Statics.field611, var26, (MiniMenuEntry) var25.field10345.field6662.field9552, var7, var8, Statics.field8718 | 0xFF000000, Statics.field5086 | 0xFF000000);
@@ -1440,7 +1440,7 @@ public class MiniMenu {
     }
 
     @ObfuscatedName("q.bj(Lajz;Lvm;B)I")
-    public static int method1399(class946 arg0, FontMetrics arg1) {
+    public static int method1399(MiniMenuSubMenu arg0, FontMetrics arg1) {
         String var2 = Statics.method3322(arg0);
         return arg1.method12390(var2, Statics.field383);
     }

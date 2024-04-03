@@ -111,6 +111,6 @@ public class DualIterableQueue implements Iterable {
     }
 
     public Iterator iterator() {
-        return new class551(this);
+        return new DualIterableQueueIterator(this);
     }
 }

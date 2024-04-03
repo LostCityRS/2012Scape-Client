@@ -584,7 +584,7 @@ public class DeveloperConsole {
                         method1958("No such file");
                         return;
                     }
-                    byte[] var24 = class575.method15684(var23);
+                    byte[] var24 = FileUtil.method15684(var23);
                     if (var24 == null) {
                         method1958("Failed to read file");
                         return;

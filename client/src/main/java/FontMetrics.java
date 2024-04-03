@@ -138,7 +138,7 @@ public class FontMetrics {
     }
 
     @ObfuscatedName("vm.t(Ljava/lang/String;[Lvd;B)I")
-    public int method12390(String arg0, class602[] arg1) {
+    public int method12390(String arg0, FontGlyph[] arg1) {
         if (arg0 == null) {
             return 0;
         }
@@ -196,7 +196,7 @@ public class FontMetrics {
     }
 
     @ObfuscatedName("vm.l(Ljava/lang/String;I[Lvd;I)Ljava/lang/String;")
-    public String method12391(String arg0, int arg1, class602[] arg2) {
+    public String method12391(String arg0, int arg1, FontGlyph[] arg2) {
         if (this.method12390(arg0, arg2) <= arg1) {
             return arg0;
         }
@@ -268,12 +268,12 @@ public class FontMetrics {
     }
 
     @ObfuscatedName("vm.f(Ljava/lang/String;[I[Ljava/lang/String;[Lvd;I)I")
-    public int method12398(String arg0, int[] arg1, String[] arg2, class602[] arg3) {
+    public int method12398(String arg0, int[] arg1, String[] arg2, FontGlyph[] arg3) {
         return this.method12392(arg0, arg1, arg2, arg3, true);
     }
 
     @ObfuscatedName("vm.d(Ljava/lang/String;[I[Ljava/lang/String;[Lvd;ZB)I")
-    public int method12392(String arg0, int[] arg1, String[] arg2, class602[] arg3, boolean arg4) {
+    public int method12392(String arg0, int[] arg1, String[] arg2, FontGlyph[] arg3, boolean arg4) {
         if (arg0 == null) {
             return 0;
         }
@@ -425,7 +425,7 @@ public class FontMetrics {
     }
 
     @ObfuscatedName("vm.z(Ljava/lang/String;I[Lvd;B)I")
-    public int method12393(String arg0, int arg1, class602[] arg2) {
+    public int method12393(String arg0, int arg1, FontGlyph[] arg2) {
         int var4 = this.method12398(arg0, new int[]{arg1}, field7174, arg2);
         int var5 = 0;
         for (int var6 = 0; var6 < var4; var6++) {
@@ -438,12 +438,12 @@ public class FontMetrics {
     }
 
     @ObfuscatedName("vm.n(Ljava/lang/String;I[Lvd;B)I")
-    public int method12394(String arg0, int arg1, class602[] arg2) {
+    public int method12394(String arg0, int arg1, FontGlyph[] arg2) {
         return this.method12398(arg0, new int[]{arg1}, field7174, arg2);
     }
 
     @ObfuscatedName("vm.o(Ljava/lang/String;II[Lvd;I)I")
-    public int method12395(String arg0, int arg1, int arg2, class602[] arg3) {
+    public int method12395(String arg0, int arg1, int arg2, FontGlyph[] arg3) {
         if (arg2 == 0) {
             arg2 = this.field7175;
         }
@@ -453,7 +453,7 @@ public class FontMetrics {
     }
 
     @ObfuscatedName("vm.q(Ljava/lang/String;III[Lvd;I)Ljava/awt/Point;")
-    public Point method12396(String arg0, int arg1, int arg2, int arg3, class602[] arg4) {
+    public Point method12396(String arg0, int arg1, int arg2, int arg3, FontGlyph[] arg4) {
         if (arg3 <= 0) {
             return new Point(0, this.field7176 + arg2);
         }
@@ -484,7 +484,7 @@ public class FontMetrics {
     }
 
     @ObfuscatedName("vm.p(Ljava/lang/String;IIII[Lvd;B)I")
-    public int method12410(String arg0, int arg1, int arg2, int arg3, int arg4, class602[] arg5) {
+    public int method12410(String arg0, int arg1, int arg2, int arg3, int arg4, FontGlyph[] arg5) {
         if (arg2 == 0) {
             arg2 = this.field7175;
         }

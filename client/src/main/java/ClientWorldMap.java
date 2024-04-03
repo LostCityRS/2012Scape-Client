@@ -46,7 +46,7 @@ public class ClientWorldMap extends class408 {
     public static IterableMap field9766 = new IterableMap(8);
 
     @ObfuscatedName("aeq.bo")
-    public static class550 field9767 = new class550(new IterableQueue());
+    public static IterableQueueIterator field9767 = new IterableQueueIterator(new IterableQueue());
 
     public ClientWorldMap() throws Throwable {
         throw new Error();

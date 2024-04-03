@@ -149,7 +149,7 @@ public class GlFont extends FontType {
     }
 
     @ObfuscatedName("zc.b(CIIIZLta;II)V")
-    public void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, class11 arg5, int arg6, int arg7) {
+    public void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, GraphicsRelated arg5, int arg6, int arg7) {
         class669 var9 = (class669) arg5;
         GlGraphicRelated var10 = var9.field7651;
         this.field8440.method13341();

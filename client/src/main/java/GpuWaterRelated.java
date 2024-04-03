@@ -54,12 +54,12 @@ public class GpuWaterRelated {
             } else {
                 this.field2406 = new GpuTexture[16];
                 for (int var2 = 0; var2 < 16; var2++) {
-                    byte[] var3 = class533.method5943(Statics.field2411, var2 * 32768, 32768);
+                    byte[] var3 = ByteArrayCopier.method5943(Statics.field2411, var2 * 32768, 32768);
                     this.field2406[var2] = this.field2404.method13549(TextureFormat.field1299, 128, 128, true, var3);
                 }
                 this.field2408 = new GpuTexture[16];
                 for (int var4 = 0; var4 < 16; var4++) {
-                    byte[] var5 = class533.method5943(Statics.field2407, var4 * 32768, 32768);
+                    byte[] var5 = ByteArrayCopier.method5943(Statics.field2407, var4 * 32768, 32768);
                     this.field2408[var4] = this.field2404.method13549(TextureFormat.field1299, 128, 128, true, var5);
                 }
             }

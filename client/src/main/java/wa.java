@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("wa")
-public class wa extends class11 implements class10 {
+public class wa extends GraphicsRelated implements class10 {
 
     public long nativeid;
 

@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("alu")
-public class class997 extends class941 {
+public class class997 extends BasicVariableRateSoundPacket {
 
     @ObfuscatedName("alu.f")
     public byte[] field10574;
@@ -35,7 +35,7 @@ public class class997 extends class941 {
     }
 
     @ObfuscatedName("alu.j(III)Laib;")
-    public class938 method16502(int arg0, int arg1, int arg2) {
+    public SoundStream method16502(int arg0, int arg1, int arg2) {
         return this.field10574 == null || this.field10574.length == 0 ? null : new class994(this, arg0, arg1, arg2);
     }
 }

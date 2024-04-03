@@ -349,7 +349,7 @@ public abstract class Model {
     }
 
     @ObfuscatedName("qa.r(Laje;ILaje;IIIIZ)V")
-    public final void method375(class947 arg0, int arg1, class947 arg2, int arg3, int arg4, int arg5, int arg6, boolean arg7) {
+    public final void method375(FrameSet arg0, int arg1, FrameSet arg2, int arg3, int arg4, int arg5, int arg6, boolean arg7) {
         if (arg1 == -1) {
             return;
         }
@@ -359,7 +359,7 @@ public abstract class Model {
             return;
         }
         class138 var9 = arg0.field10350[arg1];
-        class779 var10 = var9.field1496;
+        AnimBase var10 = var9.field1496;
         class138 var11 = null;
         if (arg2 != null) {
             var11 = arg2.field10350[arg3];
@@ -373,7 +373,7 @@ public abstract class Model {
     }
 
     @ObfuscatedName("qa.g(Laje;ILaje;IIIIIZ[I)V")
-    public final void method260(class947 arg0, int arg1, class947 arg2, int arg3, int arg4, int arg5, int arg6, int arg7, boolean arg8, int[] arg9) {
+    public final void method260(FrameSet arg0, int arg1, FrameSet arg2, int arg3, int arg4, int arg5, int arg6, int arg7, boolean arg8, int[] arg9) {
         if (arg1 == -1) {
             return;
         }
@@ -383,7 +383,7 @@ public abstract class Model {
             return;
         }
         class138 var11 = arg0.field10350[arg1];
-        class779 var12 = var11.field1496;
+        AnimBase var12 = var11.field1496;
         class138 var13 = null;
         if (arg2 != null) {
             var13 = arg2.field10350[arg3];
@@ -397,7 +397,7 @@ public abstract class Model {
     }
 
     @ObfuscatedName("qa.ay(Laje;ILaje;IIILaje;ILaje;III[ZZ)V")
-    public final void method301(class947 arg0, int arg1, class947 arg2, int arg3, int arg4, int arg5, class947 arg6, int arg7, class947 arg8, int arg9, int arg10, int arg11, boolean[] arg12, boolean arg13) {
+    public final void method301(FrameSet arg0, int arg1, FrameSet arg2, int arg3, int arg4, int arg5, FrameSet arg6, int arg7, FrameSet arg8, int arg9, int arg10, int arg11, boolean[] arg12, boolean arg13) {
         if (arg1 == -1) {
             return;
         }
@@ -411,7 +411,7 @@ public abstract class Model {
             return;
         }
         class138 var15 = arg0.field10350[arg1];
-        class779 var16 = var15.field1496;
+        AnimBase var16 = var15.field1496;
         class138 var17 = null;
         if (arg2 != null) {
             var17 = arg2.field10350[arg3];
@@ -435,7 +435,7 @@ public abstract class Model {
     }
 
     @ObfuscatedName("qa.af(Laje;I)V")
-    public final void method262(class947 arg0, int arg1) {
+    public final void method262(FrameSet arg0, int arg1) {
         if (arg1 == -1) {
             return;
         }
@@ -445,7 +445,7 @@ public abstract class Model {
             return;
         }
         class138 var3 = arg0.field10350[arg1];
-        class779 var4 = var3.field1496;
+        AnimBase var4 = var3.field1496;
         for (int var5 = 0; var5 < var3.field1485; var5++) {
             short var6 = var3.field1486[var5];
             if (var4.field9361[var6]) {
@@ -460,7 +460,7 @@ public abstract class Model {
     }
 
     @ObfuscatedName("qa.ar(Laco;Ldu;Ldu;III[ZZZI[I)V")
-    public void method263(class779 arg0, class138 arg1, class138 arg2, int arg3, int arg4, int arg5, boolean[] arg6, boolean arg7, boolean arg8, int arg9, int[] arg10) {
+    public void method263(AnimBase arg0, class138 arg1, class138 arg2, int arg3, int arg4, int arg5, boolean[] arg6, boolean arg7, boolean arg8, int arg9, int[] arg10) {
         if (arg2 == null || arg3 == 0) {
             for (int var37 = 0; var37 < arg1.field1485; var37++) {
                 short var38 = arg1.field1486[var37];

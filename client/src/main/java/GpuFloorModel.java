@@ -415,14 +415,14 @@ public class GpuFloorModel extends FloorModel {
         this.field7722.field8247.freeMemory(this.field7747);
         if ((this.field7752 & 0x7) == 0) {
             if (this.field7738 == null) {
-                this.field7729 = this.field7722.method13585(new class243[]{new class243(new class237[]{class237.field2495, class237.field2483}), new class243(class237.field2488)});
+                this.field7729 = this.field7722.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new class237[]{class237.field2495, class237.field2483}), new VertexDeclarationElement(class237.field2488)});
             } else {
-                this.field7729 = this.field7722.method13585(new class243[]{new class243(new class237[]{class237.field2495, class237.field2483, class237.field2482}), new class243(class237.field2488)});
+                this.field7729 = this.field7722.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new class237[]{class237.field2495, class237.field2483, class237.field2482}), new VertexDeclarationElement(class237.field2488)});
             }
         } else if (this.field7738 == null) {
-            this.field7729 = this.field7722.method13585(new class243[]{new class243(new class237[]{class237.field2495, class237.field2483, class237.field2480}), new class243(class237.field2488)});
+            this.field7729 = this.field7722.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new class237[]{class237.field2495, class237.field2483, class237.field2480}), new VertexDeclarationElement(class237.field2488)});
         } else {
-            this.field7729 = this.field7722.method13585(new class243[]{new class243(new class237[]{class237.field2495, class237.field2483, class237.field2482, class237.field2480}), new class243(class237.field2488)});
+            this.field7729 = this.field7722.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new class237[]{class237.field2495, class237.field2483, class237.field2482, class237.field2480}), new VertexDeclarationElement(class237.field2488)});
         }
         for (int var1 = 0; var1 < this.field7754; var1++) {
             GpuFloorModelRelated1 var2 = (GpuFloorModelRelated1) this.field7753[var1];
@@ -804,7 +804,7 @@ public class GpuFloorModel extends FloorModel {
                                 if (this.field7722.field8242 || (this.field7752 & 0x8) == 0 || !this.field7722.field8350.method16196()) {
                                     var22.method3850(0);
                                 } else {
-                                    class908 var35 = this.field7722.field8350;
+                                    EnvMappedWaterShader var35 = this.field7722.field8350;
                                     if (var33 == 2) {
                                         var35 = this.field7722.field8349;
                                     }

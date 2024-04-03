@@ -344,7 +344,7 @@ public class Loading {
             class177 var16 = new class177(Statics.field3523.method5645("huffman", ""));
             class178.method15896(var16);
             Statics.field8481 = Statics.method4777();
-            Statics.field2305 = new class817(true);
+            Statics.field2305 = new HardwarePlatform(true);
         }
         if (Statics.field1208 == LoadingStage.field3387) {
             int var17 = DefaultSprites.method12092(Statics.field7387) + Statics.field6784.method4840(true);

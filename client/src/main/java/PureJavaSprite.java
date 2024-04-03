@@ -251,11 +251,11 @@ public abstract class PureJavaSprite extends Sprite {
     }
 
     @ObfuscatedName("yd.az(FFFFFFILta;II)V")
-    public void method1044(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, int arg6, class11 arg7, int arg8, int arg9) {
+    public void method1044(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, int arg6, GraphicsRelated arg7, int arg8, int arg9) {
         if (this.field7602.method13191()) {
             throw new IllegalStateException();
         } else if (this.method12912(arg0, arg1, arg2, arg3, arg4, arg5)) {
-            class668 var11 = (class668) arg7;
+            PureJavaGraphicsRelated var11 = (PureJavaGraphicsRelated) arg7;
             this.method12914(var11.field7648, var11.field7649, Statics.field7600 - arg8, -arg9 - (Statics.field7603 - Statics.field7601));
         }
     }
@@ -276,5 +276,5 @@ public abstract class PureJavaSprite extends Sprite {
     public abstract void method12923(boolean arg0, boolean arg1, boolean arg2, int arg3, int arg4, float arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, boolean arg12);
 
     @ObfuscatedName("yd.af(IILta;II)V")
-    public abstract void method1056(int arg0, int arg1, class11 arg2, int arg3, int arg4);
+    public abstract void method1056(int arg0, int arg1, GraphicsRelated arg2, int arg3, int arg4);
 }

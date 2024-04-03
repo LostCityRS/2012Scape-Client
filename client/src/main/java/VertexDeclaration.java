@@ -4,9 +4,9 @@ import deob.ObfuscatedName;
 public abstract class VertexDeclaration implements DeletableResource {
 
     @ObfuscatedName("hy.u")
-    public final class243[] field2422;
+    public final VertexDeclarationElement[] field2422;
 
-    public VertexDeclaration(class243[] arg0) {
+    public VertexDeclaration(VertexDeclarationElement[] arg0) {
         this.field2422 = arg0;
     }
 }

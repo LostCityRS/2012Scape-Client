@@ -165,7 +165,7 @@ public class DxToolkit extends GpuToolkit {
                 var4 = new DxToolkit(var5, var6, var7, var14, var10, var9, arg1, arg2, arg3);
                 if (!var4.field401.containsKey(arg0)) {
                     RendererToolkit.method16838(arg0);
-                    var4.method460(arg0, new class756(var4, arg0, arg0.getWidth(), arg0.getHeight(), true));
+                    var4.method460(arg0, new DxSurface(var4, arg0, arg0.getWidth(), arg0.getHeight(), true));
                 }
                 var4.method462(arg0);
                 var4.method13495();
@@ -223,7 +223,7 @@ public class DxToolkit extends GpuToolkit {
     @ObfuscatedName("ahh.oi()V")
     public void method13499() {
         for (ObjectNode var1 = (ObjectNode) this.field9977.method11563(); var1 != null; var1 = (ObjectNode) this.field9977.method11567()) {
-            class298 var2 = (class298) var1.field9550;
+            DxInterface1 var2 = (DxInterface1) var1.field9550;
             var2.method4914();
             if (this.field412 == var2) {
                 var2.method954();
@@ -235,7 +235,7 @@ public class DxToolkit extends GpuToolkit {
     @ObfuscatedName("ahh.ow()V")
     public void method13583() {
         for (ObjectNode var1 = (ObjectNode) this.field9977.method11563(); var1 != null; var1 = (ObjectNode) this.field9977.method11567()) {
-            class298 var2 = (class298) var1.field9550;
+            DxInterface1 var2 = (DxInterface1) var1.field9550;
             var2.method944();
         }
         super.method13583();
@@ -322,7 +322,7 @@ public class DxToolkit extends GpuToolkit {
         } else if (var3 == -2005530520) {
             this.field415.method944();
             this.method16023();
-            ((class756) this.field415).method4914();
+            ((DxSurface) this.field415).method4914();
         } else if (++this.field9978 > 50) {
             throw new class881(var3);
         }
@@ -387,8 +387,8 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.ak(Ljava/awt/Canvas;II)Lya;")
-    public class675 method735(Canvas arg0, int arg1, int arg2) {
-        return new class756(this, arg0, arg1, arg2, false);
+    public Surface method735(Canvas arg0, int arg1, int arg2) {
+        return new DxSurface(this, arg0, arg1, arg2, false);
     }
 
     @ObfuscatedName("ahh.aj(IILcy;Ldz;I)Lde;")
@@ -407,7 +407,7 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.acc(Ljz;)Ladt;")
-    public ObjectNode method16024(class298 arg0) {
+    public ObjectNode method16024(DxInterface1 arg0) {
         for (ObjectNode var2 = (ObjectNode) this.field9977.method11563(); var2 != null; var2 = (ObjectNode) this.field9977.method11567()) {
             if (var2.field9550 == arg0) {
                 return var2;
@@ -417,13 +417,13 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.acp(Ljz;)V")
-    public void method16025(class298 arg0) {
+    public void method16025(DxInterface1 arg0) {
         if (this.method16024(arg0) == null) {
             this.field9977.method11558(new ObjectNode(arg0));
         }
     }
 
-    public void add(class298 arg0) {
+    public void add(DxInterface1 arg0) {
         ObjectNode var2 = this.method16024(arg0);
         if (var2 != null) {
             var2.method6979();
@@ -431,7 +431,7 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.aca(Ljz;)V")
-    public void method16026(class298 arg0) {
+    public void method16026(DxInterface1 arg0) {
         ObjectNode var2 = this.method16024(arg0);
         if (var2 != null) {
             var2.method6979();
@@ -921,13 +921,13 @@ public class DxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahh.sb([Lhu;)Lhy;")
-    public VertexDeclaration method13585(class243[] arg0) {
-        return new class740(this, arg0);
+    public VertexDeclaration method13585(VertexDeclarationElement[] arg0) {
+        return new DxVertexDeclaration(this, arg0);
     }
 
     @ObfuscatedName("ahh.sa(Lhy;)V")
     public void method13688(VertexDeclaration arg0) {
-        class740 var2 = (class740) arg0;
+        DxVertexDeclaration var2 = (DxVertexDeclaration) arg0;
         IDirect3DDevice.SetVertexDeclaration(this.field9975, var2.field8786);
     }
 

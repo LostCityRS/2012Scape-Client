@@ -1082,7 +1082,7 @@ public final class client extends GameShell {
                         break;
                     case 24:
                         if (var5 != null) {
-                            field8909 = class525.method2608(WebTools.method8264(var5));
+                            field8909 = Base64.method2608(WebTools.method8264(var5));
                             if (field8909.length < 16) {
                                 field8909 = null;
                             }
@@ -1125,9 +1125,9 @@ public final class client extends GameShell {
                         Statics.field6817 = var5;
                         break;
                     case 33:
-                        Statics.field496 = class545.method7734(Integer.parseInt(var5));
-                        if (Statics.field496 != class545.field6638 && Statics.field496 != class545.field6640 && Statics.field496 != class545.field6639 && Statics.field496 != class545.field6641) {
-                            Statics.field496 = class545.field6641;
+                        Statics.field496 = ModeWhat.method7734(Integer.parseInt(var5));
+                        if (Statics.field496 != ModeWhat.field6638 && Statics.field496 != ModeWhat.field6640 && Statics.field496 != ModeWhat.field6639 && Statics.field496 != ModeWhat.field6641) {
+                            Statics.field496 = ModeWhat.field6641;
                         }
                         break;
                     case 34:
@@ -3007,18 +3007,18 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("e.gy(I)[Lus;")
-    public static class562[] method1671() {
+    public static FullscreenMode[] method1671() {
         if (Statics.field8518 == null) {
-            class562[] var0 = Statics.method11507(Statics.field4013);
-            class562[] var1 = new class562[var0.length];
+            FullscreenMode[] var0 = Statics.method11507(Statics.field4013);
+            FullscreenMode[] var1 = new FullscreenMode[var0.length];
             int var2 = 0;
             int var3 = Statics.field4961.field9677.method15794();
             label71:
             for (int var4 = 0; var4 < var0.length; var4++) {
-                class562 var5 = var0[var4];
+                FullscreenMode var5 = var0[var4];
                 if ((var5.field6708 <= 0 || var5.field6708 >= 24) && var5.field6709 >= 800 && var5.field6707 >= 600 && (var3 != 2 || var5.field6709 <= 800 && var5.field6707 <= 600) && (var3 != 1 || var5.field6709 <= 1024 && var5.field6707 <= 768)) {
                     for (int var6 = 0; var6 < var2; var6++) {
-                        class562 var7 = var1[var6];
+                        FullscreenMode var7 = var1[var6];
                         if (var5.field6709 == var7.field6709 && var5.field6707 == var7.field6707) {
                             if (var5.field6708 > var7.field6708) {
                                 var1[var6] = var5;
@@ -3030,11 +3030,11 @@ public final class client extends GameShell {
                     var2++;
                 }
             }
-            Statics.field8518 = new class562[var2];
+            Statics.field8518 = new FullscreenMode[var2];
             System.arraycopy(var1, 0, Statics.field8518, 0, var2);
             int[] var8 = new int[Statics.field8518.length];
             for (int var9 = 0; var9 < Statics.field8518.length; var9++) {
-                class562 var10 = Statics.field8518[var9];
+                FullscreenMode var10 = Statics.field8518[var9];
                 var8[var9] = var10.field6709 * var10.field6707;
             }
             Algorithms.method15733(var8, Statics.field8518);
@@ -6526,7 +6526,7 @@ public final class client extends GameShell {
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3133 == arg0.field840) {
-            Statics.field769 = class559.method11235(var2.method15220());
+            Statics.field769 = PrivateChatFilter.method11235(var2.method15220());
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3032 == arg0.field840) {
@@ -8403,7 +8403,7 @@ public final class client extends GameShell {
                         var40[var41] = (short) var1.method15239();
                     }
                 }
-                class770.method14721(Statics.field3161, var29, var30, var24, var26, var23, new class539(class770.field9279, var36, var38, var40));
+                class770.method14721(Statics.field3161, var29, var30, var24, var26, var23, new LocTypeCustomisation(class770.field9279, var36, var38, var40));
                 class770.field9279++;
             }
         } else if (ZoneProt.field2813 == arg0) {
@@ -8509,7 +8509,7 @@ public final class client extends GameShell {
                 int var102 = var94 << 2;
                 ProjectileAnimation var103 = new ProjectileAnimation(field8980.method6098(), var88, Statics.field3161, Statics.field3161, var96, var97, var100, field9213 + var91, field9213 + var92, var93, var102, 0, var87, var101, var82, -1, var95);
                 var103.method17162(var98, var99, method8663(var98, var99, Statics.field3161) - var101, field9213 + var91);
-                field9007.method11558(new class945(var103));
+                field9007.method11558(new ProjectileEntityNode(var103));
             }
         } else if (ZoneProt.field2807 == arg0) {
             int var104 = var1.method15220();
@@ -9293,15 +9293,15 @@ public final class client extends GameShell {
             Location var7 = (Location) field8980.method6098().method7433(arg0, arg1, arg2);
             Location var8 = (Location) field8980.method6098().method7442(arg0, arg1, arg2);
             if (var7 != null && arg4 != 2) {
-                if (var7 instanceof class663) {
-                    ((class663) var7).field7576.method2451(arg6);
+                if (var7 instanceof DynamicWallEntity) {
+                    ((DynamicWallEntity) var7).field7576.method2451(arg6);
                 } else {
                     class770.method11120(arg0, arg3, arg1, arg2, var7.method2401(), arg5, arg4, arg6);
                 }
             }
             if (var8 != null) {
-                if (var8 instanceof class663) {
-                    ((class663) var8).field7576.method2451(arg6);
+                if (var8 instanceof DynamicWallEntity) {
+                    ((DynamicWallEntity) var8).field7576.method2451(arg6);
                 } else {
                     class770.method11120(arg0, arg3, arg1, arg2, var8.method2401(), arg5, arg4, arg6);
                 }
@@ -9309,8 +9309,8 @@ public final class client extends GameShell {
         } else if (arg3 == 1) {
             Location var9 = (Location) field8980.method6098().method7435(arg0, arg1, arg2);
             if (var9 != null) {
-                if (var9 instanceof class662) {
-                    ((class662) var9).field7570.method2451(arg6);
+                if (var9 instanceof DynamicWallDecorEntity) {
+                    ((DynamicWallDecorEntity) var9).field7570.method2451(arg6);
                 } else {
                     int var10 = var9.method2401();
                     if (arg4 == 4 || arg4 == 5) {
@@ -9331,8 +9331,8 @@ public final class client extends GameShell {
                 if (arg4 == 11) {
                     arg4 = 10;
                 }
-                if (var11 instanceof class657) {
-                    ((class657) var11).field7524.method2451(arg6);
+                if (var11 instanceof DynamicSceneryEntity) {
+                    ((DynamicSceneryEntity) var11).field7524.method2451(arg6);
                 } else {
                     class770.method11120(arg0, arg3, arg1, arg2, var11.method2401(), arg5, arg4, arg6);
                 }
@@ -9340,8 +9340,8 @@ public final class client extends GameShell {
         } else if (arg3 == 3) {
             Location var12 = (Location) field8980.method6098().method7517(arg0, arg1, arg2);
             if (var12 != null) {
-                if (var12 instanceof class658) {
-                    ((class658) var12).field7530.method2451(arg6);
+                if (var12 instanceof DynamicGroundDecorEntity) {
+                    ((DynamicGroundDecorEntity) var12).field7530.method2451(arg6);
                 } else {
                     class770.method11120(arg0, arg3, arg1, arg2, var12.method2401(), arg5, arg4, arg6);
                 }

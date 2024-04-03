@@ -327,10 +327,10 @@ public abstract class GpuToolkit extends RendererToolkit {
     public class252 field8342;
 
     @ObfuscatedName("yk.en")
-    public class222 field8240;
+    public GpuRendererRelated2 field8240;
 
     @ObfuscatedName("yk.ez")
-    public final class222[] field8344 = new class222[16];
+    public final GpuRendererRelated2[] field8344 = new GpuRendererRelated2[16];
 
     @ObfuscatedName("yk.eh")
     public ModelShader field8345;
@@ -339,16 +339,16 @@ public abstract class GpuToolkit extends RendererToolkit {
     public SpriteShader field8346;
 
     @ObfuscatedName("yk.ee")
-    public class202 field8347;
+    public BatchedSpriteShader field8347;
 
     @ObfuscatedName("yk.es")
     public ParticleShader field8314;
 
     @ObfuscatedName("yk.ej")
-    public class908 field8349;
+    public EnvMappedWaterShader field8349;
 
     @ObfuscatedName("yk.ew")
-    public class908 field8350;
+    public EnvMappedWaterShader field8350;
 
     @ObfuscatedName("yk.el")
     public WaterfallShader field8277;
@@ -600,10 +600,10 @@ public abstract class GpuToolkit extends RendererToolkit {
         var2[0] = -16777216;
         this.field8359 = this.method13552(1, 1, false, var2, 0, 0);
         this.method502(new GpuHeap(262144));
-        this.field8392 = this.method13585(new class243[]{new class243(new class237[]{class237.field2495, class237.field2483})});
-        this.method13585(new class243[]{new class243(new class237[]{class237.field2495, class237.field2488})});
-        this.field8343 = this.method13585(new class243[]{new class243(class237.field2495), new class243(class237.field2488), new class243(class237.field2483), new class243(class237.field2480)});
-        this.field8298 = this.method13585(new class243[]{new class243(class237.field2495), new class243(class237.field2488), new class243(class237.field2483)});
+        this.field8392 = this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new class237[]{class237.field2495, class237.field2483})});
+        this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new class237[]{class237.field2495, class237.field2488})});
+        this.field8343 = this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(class237.field2495), new VertexDeclarationElement(class237.field2488), new VertexDeclarationElement(class237.field2483), new VertexDeclarationElement(class237.field2480)});
+        this.field8298 = this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(class237.field2495), new VertexDeclarationElement(class237.field2488), new VertexDeclarationElement(class237.field2483)});
         for (int var3 = 0; var3 < 7; var3++) {
             this.field8394[var3] = new GpuModel(this, 0, 0, false, false);
             this.field8395[var3] = new GpuModel(this, 0, 0, true, true);
@@ -624,19 +624,19 @@ public abstract class GpuToolkit extends RendererToolkit {
         this.field8248 = new GpuWaterRelated(this);
         this.field8242 = false;
         try {
-            this.field8345 = new class722(this);
-            this.field8346 = new class728(this);
-            this.field8347 = new class726(this);
-            this.field8314 = new class724(this);
-            this.field8349 = new class908(this, this.field8248, false);
-            this.field8350 = new class908(this, this.field8248, true);
+            this.field8345 = new ProgrammableModelShader(this);
+            this.field8346 = new ProgrammableSpriteShader(this);
+            this.field8347 = new ProgrammableBatchedSpriteShader(this);
+            this.field8314 = new ProgrammableParticleShader(this);
+            this.field8349 = new EnvMappedWaterShader(this, this.field8248, false);
+            this.field8350 = new EnvMappedWaterShader(this, this.field8248, true);
             this.field8277 = new WaterfallShader(this, this.field8248);
         } catch (Exception var4) {
             var4.printStackTrace();
-            this.field8345 = new class721(this);
-            this.field8346 = new class727(this);
-            this.field8347 = new class725(this);
-            this.field8314 = new class723(this);
+            this.field8345 = new FixedFunctionModelShader(this);
+            this.field8346 = new FixedFunctionSpriteShader(this);
+            this.field8347 = new FixedFunctionBatchedSpriteShader(this);
+            this.field8314 = new FixedFunctionParticleShader(this);
             this.field8349 = null;
             this.field8350 = null;
             this.field8277 = null;
@@ -664,7 +664,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.ob(I)Lgu;")
-    public class222 method13739(int arg0) {
+    public GpuRendererRelated2 method13739(int arg0) {
         return this.field8344[arg0];
     }
 
@@ -778,14 +778,14 @@ public abstract class GpuToolkit extends RendererToolkit {
         this.field8244.putFloat(0.0F);
         this.field8244.putFloat(0.0F);
         this.field8328.method4452(0, this.field8244.position(), this.field8245);
-        this.field8389 = this.method13585(new class243[]{new class243(new class237[]{class237.field2495, class237.field2488, class237.field2483, class237.field2483})});
+        this.field8389 = this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(new class237[]{class237.field2495, class237.field2488, class237.field2483, class237.field2483})});
     }
 
     @ObfuscatedName("yk.oc()V")
     public final void method13501() {
         this.field8385 = this.method13584(true);
         this.field8385.method4269(24, 12);
-        this.field8388 = this.method13585(new class243[]{new class243(class237.field2495)});
+        this.field8388 = this.method13585(new VertexDeclarationElement[]{new VertexDeclarationElement(class237.field2495)});
     }
 
     @ObfuscatedName("yk.oy()V")
@@ -1054,7 +1054,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.cq(II[I[I)Lta;")
-    public final class11 method571(int arg0, int arg1, int[] arg2, int[] arg3) {
+    public final GraphicsRelated method571(int arg0, int arg1, int[] arg2, int[] arg3) {
         return class670.method12944(this, arg0, arg1, arg2, arg3);
     }
 
@@ -1894,7 +1894,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.DA(ILta;II)V")
-    public final void method684(int arg0, class11 arg1, int arg2, int arg3) {
+    public final void method684(int arg0, GraphicsRelated arg1, int arg2, int arg3) {
         this.method526(false);
         this.field8315.method1044(0.0F, 0.0F, (float) this.method457().method921(), 0.0F, 0.0F, (float) this.method457().method922(), 0, arg1, arg2, arg3);
         this.method526(true);
@@ -1965,7 +1965,7 @@ public abstract class GpuToolkit extends RendererToolkit {
             var11 *= var13;
         }
         this.method13610();
-        class222 var14 = this.field8344[13];
+        GpuRendererRelated2 var14 = this.field8344[13];
         var14.method4130();
         var14.method4132(arg4);
         this.method13592(arg5);
@@ -2034,11 +2034,11 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.bc(IIIIIILta;IIIII)V")
-    public void method498(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class11 arg6, int arg7, int arg8, int arg9, int arg10, int arg11) {
+    public void method498(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, GraphicsRelated arg6, int arg7, int arg8, int arg9, int arg10, int arg11) {
     }
 
     @ObfuscatedName("yk.bn(IIIIIILta;II)V")
-    public final void method440(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class11 arg6, int arg7, int arg8) {
+    public final void method440(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, GraphicsRelated arg6, int arg7, int arg8) {
     }
 
     @ObfuscatedName("yk.br(IIIIIII)V")
@@ -2204,7 +2204,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     public abstract VertexBuffer method13584(boolean arg0);
 
     @ObfuscatedName("yk.sb([Lhu;)Lhy;")
-    public abstract VertexDeclaration method13585(class243[] arg0);
+    public abstract VertexDeclaration method13585(VertexDeclarationElement[] arg0);
 
     @ObfuscatedName("yk.sl(ILhe;)V")
     public abstract void method13587(int arg0, VertexBuffer arg1);

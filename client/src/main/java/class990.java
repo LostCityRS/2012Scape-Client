@@ -4,7 +4,7 @@ import jaggl.OpenGL;
 import java.awt.*;
 
 @ObfuscatedName("ake")
-public class class990 extends class894 {
+public class class990 extends GpuSurface {
 
     @ObfuscatedName("ake.j")
     public final Canvas field10556;

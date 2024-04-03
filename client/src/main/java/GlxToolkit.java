@@ -325,7 +325,7 @@ public final class GlxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahv.ak(Ljava/awt/Canvas;II)Lya;")
-    public class675 method735(Canvas arg0, int arg1, int arg2) {
+    public Surface method735(Canvas arg0, int arg1, int arg2) {
         return new class990(this, arg0);
     }
 
@@ -837,8 +837,8 @@ public final class GlxToolkit extends GpuToolkit {
     }
 
     @ObfuscatedName("ahv.sb([Lhu;)Lhy;")
-    public VertexDeclaration method13585(class243[] arg0) {
-        return new class741(arg0);
+    public VertexDeclaration method13585(VertexDeclarationElement[] arg0) {
+        return new VertexDeclaration_Sub1(arg0);
     }
 
     @ObfuscatedName("ahv.sl(ILhe;)V")
@@ -854,13 +854,13 @@ public final class GlxToolkit extends GpuToolkit {
 
     @ObfuscatedName("ahv.sa(Lhy;)V")
     public void method13688(VertexDeclaration arg0) {
-        class243[] var2 = arg0.field2422;
+        VertexDeclarationElement[] var2 = arg0.field2422;
         int var3 = 0;
         boolean var4 = false;
         boolean var5 = false;
         boolean var6 = false;
         for (int var7 = 0; var7 < var2.length; var7++) {
-            class243 var8 = var2[var7];
+            VertexDeclarationElement var8 = var2[var7];
             GlxVertexBuffer var9 = this.field10017[var7];
             int var10 = 0;
             int var11 = var9.method14169();

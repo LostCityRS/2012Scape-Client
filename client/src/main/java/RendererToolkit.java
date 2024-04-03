@@ -22,10 +22,10 @@ public abstract class RendererToolkit {
     public int field411 = -1;
 
     @ObfuscatedName("ra.k")
-    public class126 field412;
+    public RenderTarget field412;
 
     @ObfuscatedName("ra.h")
-    public class675 field415;
+    public Surface field415;
 
     @ObfuscatedName("ra.r")
     public Hashtable field401 = new Hashtable();
@@ -99,7 +99,7 @@ public abstract class RendererToolkit {
         Enumeration var1 = this.field401.keys();
         while (var1.hasMoreElements()) {
             Canvas var2 = (Canvas) var1.nextElement();
-            class675 var3 = (class675) this.field401.get(var2);
+            Surface var3 = (Surface) this.field401.get(var2);
             var3.method944();
         }
         this.method443();
@@ -131,12 +131,12 @@ public abstract class RendererToolkit {
     }
 
     @ObfuscatedName("ra.ao(I)Ldl;")
-    public final class126 method457() {
+    public final RenderTarget method457() {
         return this.field412;
     }
 
     @ObfuscatedName("ra.al(I)Lya;")
-    public final class675 method458() {
+    public final Surface method458() {
         return this.field415;
     }
 
@@ -149,7 +149,7 @@ public abstract class RendererToolkit {
     }
 
     @ObfuscatedName("ra.ax(Ljava/awt/Canvas;Lya;B)V")
-    public final void method460(Canvas arg0, class675 arg1) {
+    public final void method460(Canvas arg0, Surface arg1) {
         if (arg1 == null) {
             throw new RuntimeException();
         }
@@ -159,7 +159,7 @@ public abstract class RendererToolkit {
     @ObfuscatedName("ra.aw(Ljava/awt/Canvas;I)V")
     public final void method461(Canvas arg0) {
         if (this.field401.containsKey(arg0)) {
-            class675 var2 = (class675) this.field401.get(arg0);
+            Surface var2 = (Surface) this.field401.get(arg0);
             var2.method944();
             this.field401.remove(arg0);
         }
@@ -167,7 +167,7 @@ public abstract class RendererToolkit {
 
     @ObfuscatedName("ra.aa(Ljava/awt/Canvas;I)V")
     public final void method462(Canvas arg0) {
-        class675 var2 = (class675) this.field401.get(arg0);
+        Surface var2 = (Surface) this.field401.get(arg0);
         if (var2 == null) {
             throw new RuntimeException();
         } else if (this.field411 <= 0 && this.field415 == this.field412) {
@@ -186,7 +186,7 @@ public abstract class RendererToolkit {
 
     @ObfuscatedName("ra.am(Ljava/awt/Canvas;III)V")
     public final void method463(Canvas arg0, int arg1, int arg2) {
-        class675 var4 = (class675) this.field401.get(arg0);
+        Surface var4 = (Surface) this.field401.get(arg0);
         if (var4 == null) {
             throw new RuntimeException();
         }
@@ -295,7 +295,7 @@ public abstract class RendererToolkit {
     }
 
     @ObfuscatedName("ra.bn(IIIIIILta;II)V")
-    public abstract void method440(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class11 arg6, int arg7, int arg8);
+    public abstract void method440(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, GraphicsRelated arg6, int arg7, int arg8);
 
     @ObfuscatedName("ra.z()V")
     public abstract void method441();
@@ -376,7 +376,7 @@ public abstract class RendererToolkit {
     public abstract void method497(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8);
 
     @ObfuscatedName("ra.bc(IIIIIILta;IIIII)V")
-    public abstract void method498(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, class11 arg6, int arg7, int arg8, int arg9, int arg10, int arg11);
+    public abstract void method498(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, GraphicsRelated arg6, int arg7, int arg8, int arg9, int arg10, int arg11);
 
     @ObfuscatedName("ra.br(IIIIIII)V")
     public abstract void method499(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6);
@@ -481,7 +481,7 @@ public abstract class RendererToolkit {
     public abstract void method567(float arg0, float arg1, float arg2, float[] arg3);
 
     @ObfuscatedName("ra.cq(II[I[I)Lta;")
-    public abstract class11 method571(int arg0, int arg1, int[] arg2, int[] arg3);
+    public abstract GraphicsRelated method571(int arg0, int arg1, int[] arg2, int[] arg3);
 
     @ObfuscatedName("ra.ac()V")
     public abstract void method587();
@@ -517,7 +517,7 @@ public abstract class RendererToolkit {
     public abstract void method673(int arg0);
 
     @ObfuscatedName("ra.DA(ILta;II)V")
-    public abstract void method684(int arg0, class11 arg1, int arg2, int arg3);
+    public abstract void method684(int arg0, GraphicsRelated arg1, int arg2, int arg3);
 
     @ObfuscatedName("ra.ae(IIII)[I")
     public abstract int[] method691(int arg0, int arg1, int arg2, int arg3);
@@ -529,7 +529,7 @@ public abstract class RendererToolkit {
     public abstract void method733(ParticleList arg0);
 
     @ObfuscatedName("ra.ak(Ljava/awt/Canvas;II)Lya;")
-    public abstract class675 method735(Canvas arg0, int arg1, int arg2);
+    public abstract Surface method735(Canvas arg0, int arg1, int arg2);
 
     @ObfuscatedName("ra.N(IIIIII[BII)V")
     public abstract void method748(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, byte[] arg6, int arg7, int arg8);

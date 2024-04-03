@@ -586,7 +586,7 @@ public class World {
                 }
             }
         }
-        for (class781 var4 = (class781) CutsceneManager.field1534.method11563(); var4 != null; var4 = (class781) CutsceneManager.field1534.method11567()) {
+        for (CutsceneTemplate var4 = (CutsceneTemplate) CutsceneManager.field1534.method11563(); var4 != null; var4 = (CutsceneTemplate) CutsceneManager.field1534.method11567()) {
             int var5 = var4.field9380;
             boolean var6 = (var5 & 0x1) == 1;
             int var7 = var4.field9373 >> 3;
@@ -644,7 +644,7 @@ public class World {
         this.field3830 = new byte[var22][];
         this.field3832 = new byte[var22][];
         int var23 = 0;
-        for (class781 var24 = (class781) CutsceneManager.field1534.method11563(); var24 != null; var24 = (class781) CutsceneManager.field1534.method11567()) {
+        for (CutsceneTemplate var24 = (CutsceneTemplate) CutsceneManager.field1534.method11563(); var24 != null; var24 = (CutsceneTemplate) CutsceneManager.field1534.method11567()) {
             int var25 = var24.field9373 >>> 3;
             int var26 = var24.field9374 >>> 3;
             int var27 = var24.field9378 + var25;

@@ -8,7 +8,7 @@ public class class638 extends class372 implements Runnable {
         try {
             while (!this.field4008) {
                 for (int var1 = 0; var1 < 2; var1++) {
-                    class374 var2 = this.field4010[var1];
+                    PcmPlayer var2 = this.field4010[var1];
                     if (var2 != null) {
                         var2.method6496();
                     }
