@@ -40,10 +40,10 @@ public class FloorOverlayType {
     public int field5099 = 512;
 
     @ObfuscatedName("ry.q")
-    public int field5100 = 255;
+    public int field5100 = 256;
 
     @ObfuscatedName("ry.p")
-    public int field5101 = 63;
+    public int field5101 = 64;
 
     @ObfuscatedName("ry.w")
     public int field5090 = 0;

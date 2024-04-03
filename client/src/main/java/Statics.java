@@ -4550,26 +4550,26 @@ public class Statics {
                                                 client.field9174 = 0;
                                                 int var40 = (int) (Math.random() * 8.0D);
                                                 if ((var40 & 0x1) == 1) {
-                                                    client.field9050 += client.field9005 * -2;
+                                                    client.field9050 += client.field9005;
                                                 }
                                                 if ((var40 & 0x2) == 2) {
-                                                    client.field9006 += client.field9100 * 2;
+                                                    client.field9006 += client.field9100;
                                                 }
                                                 if ((var40 & 0x4) == 4) {
                                                     client.field9008 += client.field9009;
                                                 }
                                             }
                                             if (client.field9050 < -54) {
-                                                client.field9005 = -105766596;
+                                                client.field9005 = 4;
                                             }
                                             if (client.field9050 > 54) {
-                                                client.field9005 = 105766596;
+                                                client.field9005 = -4;
                                             }
                                             if (client.field9006 < -59) {
-                                                client.field9100 = 574862020;
+                                                client.field9100 = 2;
                                             }
                                             if (client.field9006 > 57) {
-                                                client.field9100 = -574862020;
+                                                client.field9100 = -2;
                                             }
                                             if (client.field9008 < -44) {
                                                 client.field9009 = 1;
@@ -4582,17 +4582,17 @@ public class Statics {
                                                 client.field9122 = 0;
                                                 int var41 = (int) (Math.random() * 8.0D);
                                                 if ((var41 & 0x1) == 1) {
-                                                    client.field9087 += client.field9012 * 2;
+                                                    client.field9087 += client.field9012;
                                                 }
                                                 if ((var41 & 0x2) == 2) {
                                                     client.field8976 += client.field9014;
                                                 }
                                             }
                                             if (client.field9087 < -61) {
-                                                client.field9012 = -1235639024;
+                                                client.field9012 = -2;
                                             }
                                             if (client.field9087 > 62) {
-                                                client.field9012 = 1235639024;
+                                                client.field9012 = 2;
                                             }
                                             if (client.field8976 < -20) {
                                                 client.field9014 = 1;

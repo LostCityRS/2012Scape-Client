@@ -321,13 +321,13 @@ public final class client extends GameShell {
     public static int field9050 = 0;
 
     @ObfuscatedName("client.jb")
-    public static int field9005 = -105766596;
+    public static int field9005 = 2;
 
     @ObfuscatedName("client.jl")
     public static int field9006 = 0;
 
     @ObfuscatedName("client.kr")
-    public static int field9100 = 574862020;
+    public static int field9100 = 2;
 
     @ObfuscatedName("client.kh")
     public static int field9008 = 0;
@@ -342,7 +342,7 @@ public final class client extends GameShell {
     public static int field9087 = 0;
 
     @ObfuscatedName("client.ks")
-    public static int field9012 = -1235639024;
+    public static int field9012 = 1;
 
     @ObfuscatedName("client.kv")
     public static int field8976 = 0;
@@ -7447,7 +7447,7 @@ public final class client extends GameShell {
             method8486(var349, var350, 0);
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field3065 == arg0.field840) {
+        } else if (ServerProt.PLAYER_INFO == arg0.field840) {
             ReceivePlayerPositions.method1805(var2, arg0.field835);
             arg0.field840 = null;
             return true;
@@ -7505,8 +7505,8 @@ public final class client extends GameShell {
             method13897(false);
             arg0.field840 = null;
             return false;
-        } else if (ServerProt.field3047 == arg0.field840) {
-            method3676(false);
+        } else if (ServerProt.NPC_INFO == arg0.field840) {
+            // method3676(false); // todo
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3013 == arg0.field840) {

@@ -139,8 +139,8 @@ public class PureJavaToolkit extends RendererToolkit {
         this.field8024 = 0;
         this.field8027 = 0;
         this.field8008 = 0;
-        this.field7998 = 35192064;
-        this.field8013 = -859701248;
+        this.field7998 = 45823;
+        this.field8013 = 78642;
         this.field8012 = 75518;
         this.field8019 = new float[6][4];
         this.field8028 = 1.0F;
