@@ -189,7 +189,7 @@ public class LocType {
     public int field6532 = 0;
 
     @ObfuscatedName("tg.bn")
-    public int field6533 = 255;
+    public int bgsound_volume = 255;
 
     @ObfuscatedName("tg.ba")
     public boolean field6520 = false;
@@ -438,7 +438,7 @@ public class LocType {
         } else if (arg1 == 103) {
             this.field6497 = 0;
         } else if (arg1 == 104) {
-            this.field6533 = arg0.g1();
+            this.bgsound_volume = arg0.g1();
         } else if (arg1 == 105) {
             this.field6511 = true;
         } else if (arg1 == 106) {

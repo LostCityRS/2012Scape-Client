@@ -67,7 +67,7 @@ public class PlayerEntity extends PathingEntity {
     public int field10039 = 0;
 
     @ObfuscatedName("ahg.cd")
-    public int field10060 = 255;
+    public int bgsound_volume = 255;
 
     @ObfuscatedName("ahg.ce")
     public int field10068;
@@ -217,13 +217,13 @@ public class PlayerEntity extends PathingEntity {
             int var27 = this.field10059;
             int var28 = this.field10056;
             int var29 = this.field10057;
-            int var30 = this.field10060;
+            int var30 = this.bgsound_volume;
             this.field10054 = arg0.g2();
             this.field10059 = arg0.g2();
             this.field10056 = arg0.g2();
             this.field10057 = arg0.g2();
-            this.field10060 = arg0.g1();
-            if (this.field10051 != var3 || this.field10039 != var25 || this.field10054 != var26 || this.field10059 != var27 || this.field10056 != var28 || this.field10057 != var29 || this.field10060 != var30) {
+            this.bgsound_volume = arg0.g1();
+            if (this.field10051 != var3 || this.field10039 != var25 || this.field10054 != var26 || this.field10059 != var27 || this.field10056 != var28 || this.field10057 != var29 || this.bgsound_volume != var30) {
                 PositionedSound.method1807(this);
             }
         }

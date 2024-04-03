@@ -162,7 +162,7 @@ public class NPCType {
     public int field7262 = 0;
 
     @ObfuscatedName("wq.bj")
-    public int field7263 = 255;
+    public int bgsound_volume = 255;
 
     @ObfuscatedName("wq.bf")
     public boolean field7264;
@@ -384,7 +384,7 @@ public class NPCType {
         } else if (arg1 == 138) {
             this.field7242 = arg0.gSmart2or4null();
         } else if (arg1 == 140) {
-            this.field7263 = arg0.g1();
+            this.bgsound_volume = arg0.g1();
         } else if (arg1 == 141) {
             this.field7238 = true;
         } else if (arg1 == 142) {
