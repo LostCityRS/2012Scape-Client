@@ -52,31 +52,31 @@ public class Js5ConfigGroup {
     public static final Js5ConfigGroup VARP = new Js5ConfigGroup(16);
 
     @ObfuscatedName("ed.b")
-    public static final Js5ConfigGroup field1628 = new Js5ConfigGroup(17);
+    public static final Js5ConfigGroup CATEGORY = new Js5ConfigGroup(17);
 
     @ObfuscatedName("ed.x")
     public static final Js5ConfigGroup AREATYPE = new Js5ConfigGroup(18);
 
     @ObfuscatedName("ed.i")
-    public static final Js5ConfigGroup VARCLIENT = new Js5ConfigGroup(19);
+    public static final Js5ConfigGroup VARCINT = new Js5ConfigGroup(19);
 
     @ObfuscatedName("ed.v")
-    public static final Js5ConfigGroup field1645 = new Js5ConfigGroup(20);
+    public static final Js5ConfigGroup VAROBJ = new Js5ConfigGroup(20);
 
     @ObfuscatedName("ed.k")
-    public static final Js5ConfigGroup field1678 = new Js5ConfigGroup(21);
+    public static final Js5ConfigGroup VARPSTR = new Js5ConfigGroup(21);
 
     @ObfuscatedName("ed.h")
-    public static final Js5ConfigGroup field1635 = new Js5ConfigGroup(22);
+    public static final Js5ConfigGroup VARS = new Js5ConfigGroup(22);
 
     @ObfuscatedName("ed.r")
-    public static final Js5ConfigGroup field1671 = new Js5ConfigGroup(23);
+    public static final Js5ConfigGroup VARSSTR = new Js5ConfigGroup(23);
 
     @ObfuscatedName("ed.g")
-    public static final Js5ConfigGroup field1649 = new Js5ConfigGroup(24);
+    public static final Js5ConfigGroup VARN = new Js5ConfigGroup(24);
 
     @ObfuscatedName("ed.y")
-    public static final Js5ConfigGroup field1650 = new Js5ConfigGroup(25);
+    public static final Js5ConfigGroup VARNBIT = new Js5ConfigGroup(25);
 
     @ObfuscatedName("ed.e")
     public static final Js5ConfigGroup STRUCTTYPE = new Js5ConfigGroup(26);
@@ -151,7 +151,7 @@ public class Js5ConfigGroup {
     public static final Js5ConfigGroup CATEGORYTYPE = new Js5ConfigGroup(49);
 
     @ObfuscatedName("ed.ac")
-    public static final Js5ConfigGroup field1683 = new Js5ConfigGroup(50);
+    public static final Js5ConfigGroup VARREGION = new Js5ConfigGroup(50);
 
     @ObfuscatedName("ed.aq")
     public static final Js5ConfigGroup field1639 = new Js5ConfigGroup(51);

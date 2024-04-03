@@ -159,7 +159,7 @@ public class Statics {
     public static Js5 field1509;
 
     @ObfuscatedName("dz.hn")
-    public static class571 field1510;
+    public static VarnTypeList field1510;
 
     @ObfuscatedName("dc.tk")
     public static ClanChannel field1515;
@@ -1410,7 +1410,7 @@ public class Statics {
     public static MiniMenuEntry field7187;
 
     @ObfuscatedName("vc.hd")
-    public static class529 field7196;
+    public static VarnBitTypeList field7196;
 
     @ObfuscatedName("wf.p")
     public static int field7207;

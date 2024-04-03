@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ui")
-public class class571 {
+public class VarnTypeList {
 
     @ObfuscatedName("ui.u")
     public final Js5 field6759;
@@ -9,25 +9,25 @@ public class class571 {
     @ObfuscatedName("ui.j")
     public final WeightedCache field6758 = new WeightedCache(64);
 
-    public class571(ModeGame arg0, Language arg1, Js5 arg2) {
+    public VarnTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field6759 = arg2;
         if (this.field6759 != null) {
-            this.field6759.method5637(Js5ConfigGroup.field1649.field1668);
+            this.field6759.method5637(Js5ConfigGroup.VARN.field1668);
         }
     }
 
     @ObfuscatedName("ui.u(IB)Luh;")
-    public class572 method12004(int arg0) {
+    public VarnType method12004(int arg0) {
         WeightedCache var2 = this.field6758;
-        class572 var3;
+        VarnType var3;
         synchronized (this.field6758) {
-            var3 = (class572) this.field6758.method7916((long) arg0);
+            var3 = (VarnType) this.field6758.method7916((long) arg0);
         }
         if (var3 != null) {
             return var3;
         }
-        byte[] var5 = this.field6759.method5627(Js5ConfigGroup.field1649.field1668, arg0);
-        class572 var6 = new class572();
+        byte[] var5 = this.field6759.method5627(Js5ConfigGroup.VARN.field1668, arg0);
+        VarnType var6 = new VarnType();
         if (var5 != null) {
             var6.method12016(new Packet(var5));
         }

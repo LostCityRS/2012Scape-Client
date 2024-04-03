@@ -328,8 +328,8 @@ public class Loading {
             Statics.field8455 = new VarClientTypeList(client.field9163, Statics.field2308, Statics.field7435);
             Statics.field4645 = new VarBitTypeList(client.field9163, Statics.field2308, Statics.field4229);
             Statics.field6667 = new VarPlayerTypeList(client.field9163, Statics.field2308, Statics.field7435);
-            Statics.field1510 = new class571(client.field9163, Statics.field2308, Statics.field7435);
-            Statics.field7196 = new class529(client.field9163, Statics.field2308, Statics.field7435);
+            Statics.field1510 = new VarnTypeList(client.field9163, Statics.field2308, Statics.field7435);
+            Statics.field7196 = new VarnBitTypeList(client.field9163, Statics.field2308, Statics.field7435);
             Statics.field7390 = new VarClanTypeList(client.field9163, Statics.field2308, Statics.field7435);
             Statics.field1202 = new VarClanSettingTypeList(client.field9163, Statics.field2308, Statics.field7435);
             Statics.method3529(Statics.field2653, Statics.field4560, Statics.field7387, Statics.field8745);

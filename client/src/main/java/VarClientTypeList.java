@@ -14,7 +14,7 @@ public class VarClientTypeList {
 
     public VarClientTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field7161 = arg2;
-        this.field7160 = this.field7161.method5637(Js5ConfigGroup.VARCLIENT.field1668);
+        this.field7160 = this.field7161.method5637(Js5ConfigGroup.VARCINT.field1668);
     }
 
     @ObfuscatedName("vb.u(IS)Lvr;")
@@ -30,7 +30,7 @@ public class VarClientTypeList {
         Js5 var5 = this.field7161;
         byte[] var6;
         synchronized (this.field7161) {
-            var6 = this.field7161.method5627(Js5ConfigGroup.VARCLIENT.field1668, arg0);
+            var6 = this.field7161.method5627(Js5ConfigGroup.VARCINT.field1668, arg0);
         }
         VarClientType var8 = new VarClientType();
         if (var6 != null) {

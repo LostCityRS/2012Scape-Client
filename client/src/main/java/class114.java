@@ -38,7 +38,7 @@ public final class class114 {
     public int method2416(int arg0) {
         IntNode var2 = (IntNode) this.field1199.method11923((long) arg0);
         if (var2 == null) {
-            class572 var3 = Statics.field1510.method12004(arg0);
+            VarnType var3 = Statics.field1510.method12004(arg0);
             return var3.field6760 == 'i' ? 0 : -1;
         } else {
             return var2.field9556;
@@ -47,7 +47,7 @@ public final class class114 {
 
     @ObfuscatedName("ch.s(II)I")
     public int method2417(int arg0) {
-        class528 var2 = Statics.field7196.method11311(arg0);
+        VarnBitType var2 = Statics.field7196.method11311(arg0);
         int var3 = var2.field6409;
         int var4 = var2.field6411 == 31 ? -1 : (0x1 << var2.field6411 + 1) - 1;
         return (this.method2416(var3) & var4) >>> var2.field6410;

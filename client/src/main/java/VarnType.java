@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("uh")
-public class class572 {
+public class VarnType {
 
     @ObfuscatedName("uh.u")
     public char field6760;

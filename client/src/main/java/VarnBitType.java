@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("sj")
-public class class528 {
+public class VarnBitType {
 
     @ObfuscatedName("sj.u")
     public int field6409;
