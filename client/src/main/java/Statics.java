@@ -4462,8 +4462,8 @@ public class Statics {
         client.method8601();
         client.field8931++;
         if (client.field9052 != 0) {
-            client.field9051 = client.field9051 * 400 + 400;
-            if (client.field9051 * 20 >= 400) {
+            client.field9051 += 20;
+            if (client.field9051 >= 400) {
                 client.field9052 = 0;
             }
         }

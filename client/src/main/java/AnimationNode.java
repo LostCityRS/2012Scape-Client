@@ -131,9 +131,9 @@ public class AnimationNode {
                 this.field6670 = 0;
                 this.field6672 = 0;
             }
-            this.field6675 = this.field6670 * 1201130439 + 1201130439;
-            if (this.field6675 * 2062845431 < 0 || this.field6675 * 2062845431 >= this.field6671.field6329.length) {
-                this.field6675 = -1201130439;
+            this.field6675 = this.field6670;
+            if (this.field6675 < 0 || this.field6675 >= this.field6671.field6329.length) {
+                this.field6675 = 0;
             }
             if (this.field6673 == 0) {
                 this.method11789(this.field6671, this.field6670);
@@ -221,7 +221,7 @@ public class AnimationNode {
     @ObfuscatedName("tt.r(II)V")
     public final void method11786(int arg0) {
         this.field6670 = 0;
-        this.field6675 = (this.field6671.field6329.length > 1 ? 1 : -1) * 1201130439;
+        this.field6675 = this.field6671.field6329.length > 1 ? 1 : -1;
         this.field6672 = 0;
         this.field6668 = false;
         this.field6673 = arg0;
@@ -264,15 +264,15 @@ public class AnimationNode {
                 }
                 var2 %= var5;
             }
-            this.field6675 = this.field6670 * 1201130439 + 1201130439;
-            if (this.field6675 * 2062845431 >= this.field6671.field6329.length) {
+            this.field6675 = this.field6670;
+            if (this.field6675 >= this.field6671.field6329.length) {
                 if (this.field6671.field6336 == -1 && this.field6680) {
                     this.field6675 = 0;
                 } else {
-                    this.field6675 -= this.field6671.field6336 * 1201130439;
+                    this.field6675 -= this.field6671.field6336;
                 }
-                if (this.field6675 * 2062845431 < 0 || this.field6675 * 2062845431 >= this.field6671.field6329.length) {
-                    this.field6675 = -1201130439;
+                if (this.field6675 < 0 || this.field6675 >= this.field6671.field6329.length) {
+                    this.field6675 = 0;
                 }
             }
             var3 = true;
@@ -293,15 +293,15 @@ public class AnimationNode {
                 }
             }
             this.method11789(this.field6671, this.field6670);
-            this.field6675 = this.field6670 * 1201130439 + 1201130439;
-            if (this.field6675 * 2062845431 >= this.field6671.field6329.length) {
+            this.field6675 = this.field6670;
+            if (this.field6675 >= this.field6671.field6329.length) {
                 if (this.field6671.field6336 == -1 && this.field6680) {
                     this.field6675 = 0;
                 } else {
-                    this.field6675 -= this.field6671.field6336 * 1201130439;
+                    this.field6675 -= this.field6671.field6336;
                 }
-                if (this.field6675 * 2062845431 < 0 || this.field6675 * 2062845431 >= this.field6671.field6329.length) {
-                    this.field6675 = -1201130439;
+                if (this.field6675 < 0 || this.field6675 >= this.field6671.field6329.length) {
+                    this.field6675 = 0;
                 }
             }
         }
@@ -327,9 +327,9 @@ public class AnimationNode {
         if (this.field6671 == null) {
             return false;
         }
-        boolean var1 = this.field6681.method11837(Statics.field8530, this.field6671, this.field6670, this.field6675 * 2062845431, this.field6671.field6329);
+        boolean var1 = this.field6681.method11837(Statics.field8530, this.field6671, this.field6670, this.field6675, this.field6671.field6329);
         if (var1 && this.field6677 && this.field6671.field6320 != null) {
-            this.field6682.method11837(Statics.field8530, this.field6671, this.field6670, this.field6675 * 2062845431, this.field6671.field6320);
+            this.field6682.method11837(Statics.field8530, this.field6671, this.field6670, this.field6675, this.field6671.field6320);
         }
         return var1;
     }

@@ -1604,15 +1604,15 @@ public abstract class GpuToolkit extends RendererToolkit {
 
     @ObfuscatedName("yk.m(IFFFFF)V")
     public final void m(int arg0, float arg1, float arg2, float arg3, float arg4, float arg5) {
-        boolean var7 = this.field8378 * 16777215 != arg0;
+        boolean var7 = this.field8378 != arg0;
         if (var7 || this.field8320 != arg1 || this.field8373 != arg2) {
-            this.field8378 = arg0 * 33488896;
+            this.field8378 = arg0;
             this.field8320 = arg1;
             this.field8373 = arg2;
             if (var7) {
-                this.field8316 = (float) (this.field8378 * 16777215 & 0xFF0000) / 1.671168E7F;
-                this.field8317 = (float) (this.field8378 * 16777215 & 0xFF00) / 65280.0F;
-                this.field8237 = (float) (this.field8378 * 16777215 & 0xFF) / 255.0F;
+                this.field8316 = (float) (this.field8378 & 0xFF0000) / 1.671168E7F;
+                this.field8317 = (float) (this.field8378 & 0xFF00) / 65280.0F;
+                this.field8237 = (float) (this.field8378 & 0xFF) / 255.0F;
                 this.method13540();
             }
             this.method13541();

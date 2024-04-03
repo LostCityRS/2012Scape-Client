@@ -390,7 +390,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
                         }
                         if (this.field8866[this.field8871] == 0) {
                             Node var4 = new Node();
-                            var4.field4228 = (long) (this.field8871 * -2001188995) * 1012378069L;
+                            var4.field4228 = this.field8871;
                             this.field8872.method11558(var4);
                             var1 = false;
                         }
@@ -427,7 +427,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
                         }
                         if (this.field8866[this.field8871] != 1) {
                             Node var8 = new Node();
-                            var8.field4228 = (long) (this.field8871 * -2001188995) * 1012378069L;
+                            var8.field4228 = this.field8871;
                             this.field8872.method11558(var8);
                             var5 = false;
                         }

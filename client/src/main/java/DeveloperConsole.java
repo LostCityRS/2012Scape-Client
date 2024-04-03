@@ -308,7 +308,7 @@ public class DeveloperConsole {
                 }
             }
         }
-        Statics.field2163.method862("742 1", Statics.field4125 - 25, 330, -1, -16777216);
+        Statics.field2163.method862(client.REVISION + " " + client.SUBREVISION, Statics.field4125 - 25, 330, -1, -16777216);
         arg0.r(0, 0, Statics.field4125, 350);
         arg0.method485(0, 350 - Statics.field803, Statics.field4125, -1);
         Statics.field670.method833("--> " + method3505(field798), 10, 350 - Statics.field2399.field7177 - 1, -1, -16777216);

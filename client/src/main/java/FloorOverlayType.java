@@ -37,7 +37,7 @@ public class FloorOverlayType {
     public int field5102 = 1190717;
 
     @ObfuscatedName("ry.o")
-    public int field5099 = 50139712;
+    public int field5099 = 512;
 
     @ObfuscatedName("ry.q")
     public int field5100 = 255;
@@ -90,7 +90,7 @@ public class FloorOverlayType {
         } else if (arg1 == 13) {
             this.field5102 = arg0.g3();
         } else if (arg1 == 14) {
-            this.field5099 = (arg0.g1() << 2) * 1678505033;
+            this.field5099 = arg0.g1() << 2;
         } else if (arg1 == 16) {
             this.field5100 = arg0.g1();
         } else if (arg1 == 20) {

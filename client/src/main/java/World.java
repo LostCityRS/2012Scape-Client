@@ -842,8 +842,8 @@ public class World {
         for (int var26 = 0; var26 < var25.length; var26++) {
             HintArrow var27 = var25[var26];
             if (var27 != null) {
-                var27.field778 = var27.field778 * 262144 - var2 * 262144;
-                var27.field777 = var27.field777 * 262144 - var3 * 512;
+                var27.field778 -= var2 * 512;
+                var27.field777 -= var3 * 512;
             }
         }
         for (ChangeLocationRequest var28 = (ChangeLocationRequest) ChangeLocationRequest.field9278.method11563(); var28 != null; var28 = (ChangeLocationRequest) ChangeLocationRequest.field9278.method11567()) {
@@ -893,8 +893,8 @@ public class World {
                 Statics.field1941 = -1;
             }
         } else {
-            Statics.field1577 = Statics.field1577 * 262144 - var2 * 512;
-            Statics.field2123 = Statics.field2123 * 262144 - var3 * 262144;
+            Statics.field1577 -= var2 * 512;
+            Statics.field2123 -= var3 * 512;
             Statics.field2799 -= var2;
             Statics.field4855 -= var3;
             Statics.field6769 -= var2 * 512;

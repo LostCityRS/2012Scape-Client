@@ -57,7 +57,7 @@ public class VariableRateSoundStream extends SoundStream {
                                 return;
                             }
                             this.field10266 = var4 + var4 - 1 - this.field10266;
-                            this.field10264 = -(this.field10264 * -268721813) * -866024637;
+                            this.field10264 = -(this.field10264);
                             if (--this.field10265 == 0) {
                                 break label131;
                             }
@@ -68,7 +68,7 @@ public class VariableRateSoundStream extends SoundStream {
                                 return;
                             }
                             this.field10266 = var5 + var5 - 1 - this.field10266;
-                            this.field10264 = -(this.field10264 * -268721813) * -866024637;
+                            this.field10264 = -(this.field10264);
                             if (--this.field10265 == 0) {
                                 break;
                             }
@@ -77,7 +77,7 @@ public class VariableRateSoundStream extends SoundStream {
                                 return;
                             }
                             this.field10266 = var4 + var4 - 1 - this.field10266;
-                            this.field10264 = -(this.field10264 * -268721813) * -866024637;
+                            this.field10264 = -(this.field10264);
                         } while (--this.field10265 != 0);
                     }
                 } else if (this.field10264 < 0) {
@@ -134,7 +134,7 @@ public class VariableRateSoundStream extends SoundStream {
                     return;
                 }
                 this.field10266 = var4 + var4 - 1 - this.field10266;
-                this.field10264 = -(this.field10264 * -268721813) * -866024637;
+                this.field10264 = -(this.field10264);
             }
             while (true) {
                 int var10 = this.method17051(arg0, var8, var5, var9, ((VariableRateSoundPacket) this.field9474).method17104()[this.field10275 - 1]);
@@ -142,13 +142,13 @@ public class VariableRateSoundStream extends SoundStream {
                     return;
                 }
                 this.field10266 = var5 + var5 - 1 - this.field10266;
-                this.field10264 = -(this.field10264 * -268721813) * -866024637;
+                this.field10264 = -(this.field10264);
                 var8 = this.method17052(arg0, var10, var4, var9, ((VariableRateSoundPacket) this.field9474).method17104()[this.field10272]);
                 if (this.field10266 >= var4) {
                     return;
                 }
                 this.field10266 = var4 + var4 - 1 - this.field10266;
-                this.field10264 = -(this.field10264 * -268721813) * -866024637;
+                this.field10264 = -(this.field10264);
             }
         } else if (this.field10264 < 0) {
             while (true) {

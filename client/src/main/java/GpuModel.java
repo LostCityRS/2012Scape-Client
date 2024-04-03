@@ -1666,7 +1666,7 @@ public class GpuModel extends Model {
     @ObfuscatedName("yg.ad(Lqa;IIIZ)V")
     public void method297(Model arg0, int arg1, int arg2, int arg3, boolean arg4) {
         GpuModel var6 = (GpuModel) arg0;
-        if (this.field7947 == 0 || var6.field7947 * -1431655765 == 0) {
+        if (this.field7947 == 0 || var6.field7947 == 0) {
             return;
         }
         int var7 = var6.field7959;

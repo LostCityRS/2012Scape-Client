@@ -396,8 +396,8 @@ public class MiniMap {
                     }
                 }
                 if (var8.field776 == 2) {
-                    int var14 = var8.field778 * 512 / 128 - arg0 / 128;
-                    int var15 = var8.field777 * 262144 / 128 - arg1 / 128;
+                    int var14 = var8.field778 / 128 - arg0 / 128;
+                    int var15 = var8.field777 / 128 - arg1 / 128;
                     long var16 = (long) (var8.field780 << 7);
                     long var18 = var16 * var16;
                     method4656(arg2, arg3, arg4, arg5, var14, var15, var8.field773, var18);

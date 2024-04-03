@@ -254,7 +254,7 @@ public class BufferedFile {
             this.field6796 = this.field6797;
         }
         this.field6792.method12075(this.field6800, 0, this.field6791);
-        this.field6796 += (long) (this.field6791 * 1172955613) * -769294731L;
+        this.field6796 += this.field6791;
         if (this.field6796 > this.field6798) {
             this.field6798 = this.field6796;
         }

@@ -489,7 +489,7 @@ public class PureJavaToolkit extends RendererToolkit {
             var7.field990 = var4;
             var7.field991 = this.field8007 - (float) this.field8005;
             var7.field1015 = this.field8010 - (float) this.field8027;
-            var7.field1010 = var1 * -1743155807;
+            var7.field1010 = var1;
             var7.field994 = var2;
         }
         int var8 = this.field8027 * this.field8002 + this.field8005;
@@ -1787,9 +1787,9 @@ public class PureJavaToolkit extends RendererToolkit {
             throw new IllegalArgumentException();
         }
         this.RA(false);
-        var9.field988 = var25 < 0 || var25 > var9.field1010 * 859149921 || var26 < 0 || var26 > var9.field1010 * 859149921 || var27 < 0 || var27 > var9.field1010 * 859149921;
+        var9.field988 = var25 < 0 || var25 > var9.field1010 || var26 < 0 || var26 > var9.field1010 || var27 < 0 || var27 > var9.field1010;
         var9.method1991(true, false, false, (float) var29, (float) var30, (float) var31, (float) var25, (float) var26, (float) var27, 100.0F, 100.0F, 100.0F, arg4);
-        var9.field988 = var25 < 0 || var25 > var9.field1010 * 859149921 || var27 < 0 || var27 > var9.field1010 * 859149921 || var28 < 0 || var28 > var9.field1010 * 859149921;
+        var9.field988 = var25 < 0 || var25 > var9.field1010 || var27 < 0 || var27 > var9.field1010 || var28 < 0 || var28 > var9.field1010;
         var9.method1991(true, false, false, (float) var29, (float) var31, (float) var32, (float) var25, (float) var27, (float) var28, 100.0F, 100.0F, 100.0F, arg4);
         this.RA(true);
     }
@@ -2531,7 +2531,7 @@ public class PureJavaToolkit extends RendererToolkit {
         int var21 = arg1 - this.field8027;
         int var22 = arg4 - this.field8027;
         int var23 = arg7 - this.field8027;
-        var17.field988 = var18 < 0 || var18 > var17.field1010 * 859149921 || var19 < 0 || var19 > var17.field1010 * 859149921 || var20 < 0 || var20 > var17.field1010 * 859149921;
+        var17.field988 = var18 < 0 || var18 > var17.field1010 || var19 < 0 || var19 > var17.field1010 || var20 < 0 || var20 > var17.field1010;
         int var24 = arg9 >>> 24;
         if (arg12 == 0 || arg12 == 1 && var24 == 255) {
             var17.field987 = 0;

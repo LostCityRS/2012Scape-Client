@@ -193,7 +193,7 @@ public class EnvironmentManager {
             return;
         }
         long var1 = MonotonicTime.method5554();
-        this.field4978 = (int) ((long) (this.field4978 * -1653075315) - (var1 - this.field4977) * -1653075315L) * 1911488581;
+        this.field4978 = (int) ((long) (this.field4978) - (var1 - this.field4977));
         if (this.field4978 > 0) {
             this.field4965.method8218(this.field4973, this.field4981, this.field4962, (float) (this.field4975 - this.field4978) / (float) this.field4975);
         } else {

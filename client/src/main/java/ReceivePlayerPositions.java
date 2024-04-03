@@ -389,24 +389,24 @@ public class ReceivePlayerPositions {
             field730[arg1] = arg0.g1b_alt1();
         }
         if ((arg3 & 0x200) != 0) {
-            arg2.field8619 = arg0.g1b() * 262144;
-            arg2.field8621 = arg0.g1b() * 262144;
-            arg2.field8591 = arg0.g1b_alt1() * 262144;
-            arg2.field8605 = arg0.g1b() * 262144;
+            arg2.field8619 = arg0.g1b();
+            arg2.field8621 = arg0.g1b();
+            arg2.field8591 = arg0.g1b_alt1();
+            arg2.field8605 = arg0.g1b();
             arg2.field8649 = arg0.g2_alt3() + client.field9213;
             arg2.field8620 = arg0.g2_alt3() + client.field9213;
             arg2.field8625 = arg0.g2();
             if (arg2.field10062) {
-                arg2.field8619 = arg2.field8619 * 262144 + arg2.field10052 * 262144;
-                arg2.field8621 = arg2.field8621 * 262144 + arg2.field10064 * 262144;
-                arg2.field8591 = arg2.field8591 * 262144 + arg2.field10052 * 262144;
-                arg2.field8605 = arg2.field8605 * 262144 + arg2.field10064 * 262144;
+                arg2.field8619 = arg2.field8619 + arg2.field10052;
+                arg2.field8621 = arg2.field8621 + arg2.field10064;
+                arg2.field8591 = arg2.field8591 + arg2.field10052;
+                arg2.field8605 = arg2.field8605 + arg2.field10064;
                 arg2.field8628 = 0;
             } else {
-                arg2.field8619 = arg2.field8619 * 262144 + arg2.field8642[0] * 262144;
-                arg2.field8621 = arg2.field8621 * 262144 + arg2.field8643[0] * 262144;
-                arg2.field8591 = arg2.field8591 * 262144 + arg2.field8642[0] * 262144;
-                arg2.field8605 = arg2.field8605 * 262144 + arg2.field8643[0] * 262144;
+                arg2.field8619 = arg2.field8619 + arg2.field8642[0];
+                arg2.field8621 = arg2.field8621 + arg2.field8643[0];
+                arg2.field8591 = arg2.field8591 + arg2.field8642[0];
+                arg2.field8605 = arg2.field8605 + arg2.field8643[0];
                 arg2.field8628 = 1;
             }
             arg2.field8646 = 0;

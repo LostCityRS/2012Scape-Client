@@ -145,7 +145,7 @@ public class Whirlpool {
             if (var12 < 0 || var12 >= 256) {
                 throw new RuntimeException();
             }
-            this.field6748[this.field6752 * -1746973379 * 587723285] = (byte) (this.field6748[this.field6752 * -1746973379 * 587723285] | var12 >>> var6);
+            this.field6748[this.field6752] = (byte) (this.field6748[this.field6752] | var12 >>> var6);
             this.field6752++;
             this.field6749 += 8 - var6;
             if (this.field6749 == 512) {
@@ -161,12 +161,12 @@ public class Whirlpool {
         int var13;
         if (arg1 > 0L) {
             var13 = arg0[var4] << var5 & 0xFF;
-            this.field6748[this.field6752 * -1746973379 * 587723285] = (byte) (this.field6748[this.field6752 * -1746973379 * 587723285] | var13 >>> var6);
+            this.field6748[this.field6752] = (byte) (this.field6748[this.field6752] | var13 >>> var6);
         } else {
             var13 = 0;
         }
         if ((long) var6 + arg1 < 8L) {
-            this.field6749 = (int) ((long) (this.field6749 * 2050141527) + arg1 * 2050141527L) * 310021735;
+            this.field6749 = (int) ((long) (this.field6749) + arg1);
             return;
         }
         this.field6752++;
@@ -183,7 +183,7 @@ public class Whirlpool {
 
     @ObfuscatedName("uj.s([BIB)V")
     public void method11981(byte[] arg0, int arg1) {
-        this.field6748[this.field6752 * -1746973379 * 587723285] = (byte) (this.field6748[this.field6752 * -1746973379 * 587723285] | 0x80 >>> (this.field6749 & 0x7));
+        this.field6748[this.field6752] = (byte) (this.field6748[this.field6752] | 0x80 >>> (this.field6749 & 0x7));
         this.field6752++;
         if (this.field6752 > 32) {
             while (true) {

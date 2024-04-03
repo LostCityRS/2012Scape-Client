@@ -687,7 +687,7 @@ public class MixBuss extends AudioBuss {
     @ObfuscatedName("aih.m([III)V")
     public synchronized void method15034(int[] arg0, int arg1, int arg2) {
         if (this.field10253.method3017()) {
-            int var4 = this.field10231 * -727379968 * this.field10253.field1606 / Statics.field4015;
+            int var4 = this.field10231 * this.field10253.field1606 / Statics.field4015;
             do {
                 long var5 = (long) arg2 * (long) var4 + this.field10257;
                 if (this.field10258 - var5 >= 0L) {
@@ -708,7 +708,7 @@ public class MixBuss extends AudioBuss {
     @ObfuscatedName("aih.t(I)V")
     public synchronized void method15046(int arg0) {
         if (this.field10253.method3017()) {
-            int var2 = this.field10231 * -727379968 * this.field10253.field1606 / Statics.field4015;
+            int var2 = this.field10231 * this.field10253.field1606 / Statics.field4015;
             do {
                 long var3 = (long) arg0 * (long) var2 + this.field10257;
                 if (this.field10258 - var3 >= 0L) {

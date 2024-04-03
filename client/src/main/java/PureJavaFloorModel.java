@@ -827,7 +827,7 @@ public class PureJavaFloorModel extends FloorModel {
                         if ((var89 - var90) * (var94 - var93) - (var91 - var90) * (var92 - var93) > 0.0F) {
                             int var95 = var64.field931[var85];
                             if (var95 != -1) {
-                                arg2.field988 = var89 < 0.0F || var90 < 0.0F || var91 < 0.0F || var89 > (float) (arg2.field1010 * 859149921) || var90 > (float) (arg2.field1010 * 859149921) || var91 > (float) (arg2.field1010 * 859149921);
+                                arg2.field988 = var89 < 0.0F || var90 < 0.0F || var91 < 0.0F || var89 > arg2.field1010 || var90 > arg2.field1010 || var91 > arg2.field1010;
                                 arg2.method1987(true, true, false, var92, var93, var94, var89, var90, var91, arg5[var86], arg5[var87], arg5[var88], (float) ColourUtils.method2020(var95, var64.field924[var86]), (float) ColourUtils.method2020(var95, var64.field924[var87]), (float) ColourUtils.method2020(var95, var64.field924[var88]));
                             }
                         }
@@ -844,7 +844,7 @@ public class PureJavaFloorModel extends FloorModel {
                         float var81 = arg4[var75];
                         float var82 = arg4[var76];
                         if ((var77 - var78) * (var82 - var81) - (var79 - var78) * (var80 - var81) > 0.0F) {
-                            arg2.field988 = var77 < 0.0F || var78 < 0.0F || var79 < 0.0F || var77 > (float) (arg2.field1010 * 859149921) || var78 > (float) (arg2.field1010 * 859149921) || var79 > (float) (arg2.field1010 * 859149921);
+                            arg2.field988 = var77 < 0.0F || var78 < 0.0F || var79 < 0.0F || var77 > arg2.field1010 || var78 > arg2.field1010 || var79 > arg2.field1010;
                             short var83 = var64.field919[var73];
                             if (var83 == -1) {
                                 int var84 = var64.field931[var73];
@@ -981,7 +981,7 @@ public class PureJavaFloorModel extends FloorModel {
                 var47 = arg2.field996 * var24 / var25 + arg2.field995;
             }
             if ((var36 - var46) * (var39 - var44) - (var34 - var44) * (var41 - var46) > 0.0F) {
-                arg2.field988 = var39 < 0.0F || var44 < 0.0F || var34 < 0.0F || var39 > (float) (arg2.field1010 * 859149921) || var44 > (float) (arg2.field1010 * 859149921) || var34 > (float) (arg2.field1010 * 859149921);
+                arg2.field988 = var39 < 0.0F || var44 < 0.0F || var34 < 0.0F || var39 > arg2.field1010 || var44 > arg2.field1010 || var34 > arg2.field1010;
                 if (var10.field972 >= 0) {
                     arg2.method2015(true, true, false, var41, var46, var36, var39, var44, var34, var42, var47, var37, var23, var25, var21, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, Statics.field5083[var10.field969 & 0xFFFF] & 0xFFFFFF | 0xFF000000, Statics.field5083[var10.field970 & 0xFFFF] & 0xFFFFFF | 0xFF000000, Statics.field5083[var10.field968 & 0xFFFF] & 0xFFFFFF | 0xFF000000, 0, 0.0F, 0.0F, 0.0F, var10.field972);
                 } else {
@@ -989,7 +989,7 @@ public class PureJavaFloorModel extends FloorModel {
                 }
             }
             if ((var29 - var34) * (var46 - var36) - (var31 - var36) * (var44 - var34) > 0.0F) {
-                arg2.field988 = var29 < 0.0F || var34 < 0.0F || var44 < 0.0F || var29 > (float) (arg2.field1010 * 859149921) || var34 > (float) (arg2.field1010 * 859149921) || var44 > (float) (arg2.field1010 * 859149921);
+                arg2.field988 = var29 < 0.0F || var34 < 0.0F || var44 < 0.0F || var29 > arg2.field1010 || var34 > arg2.field1010 || var44 > arg2.field1010;
                 if (var10.field972 >= 0) {
                     arg2.method2015(true, true, false, var31, var36, var46, var29, var34, var44, var32, var37, var47, var19, var21, var25, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, Statics.field5083[var10.field966 & 0xFFFF] & 0xFFFFFF | 0xFF000000, Statics.field5083[var10.field968 & 0xFFFF] & 0xFFFFFF | 0xFF000000, Statics.field5083[var10.field970 & 0xFFFF] & 0xFFFFFF | 0xFF000000, 0, 0.0F, 0.0F, 0.0F, var10.field972);
                 } else {
@@ -1067,7 +1067,7 @@ public class PureJavaFloorModel extends FloorModel {
                         float var134 = arg6[var128];
                         float var135 = arg9[var126] + arg9[var127] + arg9[var128];
                         if ((var129 - var130) * (var134 - var133) - (var131 - var130) * (var132 - var133) > 0.0F) {
-                            arg4.field988 = var129 < 0.0F || var130 < 0.0F || var131 < 0.0F || var129 > (float) (arg4.field1010 * 859149921) || var130 > (float) (arg4.field1010 * 859149921) || var131 > (float) (arg4.field1010 * 859149921);
+                            arg4.field988 = var129 < 0.0F || var130 < 0.0F || var131 < 0.0F || var129 > arg4.field1010 || var130 > arg4.field1010 || var131 > arg4.field1010;
                             if (var135 >= 3.0F) {
                                 arg4.method1991(true, true, false, var132, var133, var134, var129, var130, var131, arg7[var126], arg7[var127], arg7[var128], arg3.field869);
                             } else if (var135 > 0.0F) {
@@ -1092,7 +1092,7 @@ public class PureJavaFloorModel extends FloorModel {
                         float var120 = arg6[var114];
                         float var121 = arg9[var112] + arg9[var113] + arg9[var114];
                         if ((var115 - var116) * (var120 - var119) - (var117 - var116) * (var118 - var119) > 0.0F) {
-                            arg4.field988 = var115 < 0.0F || var116 < 0.0F || var117 < 0.0F || var115 > (float) (arg4.field1010 * 859149921) || var116 > (float) (arg4.field1010 * 859149921) || var117 > (float) (arg4.field1010 * 859149921);
+                            arg4.field988 = var115 < 0.0F || var116 < 0.0F || var117 < 0.0F || var115 > arg4.field1010 || var116 > arg4.field1010 || var117 > arg4.field1010;
                             short var122 = var97.field963[var111];
                             if (var121 >= 3.0F) {
                                 arg4.method1991(true, true, false, var118, var119, var120, var115, var116, var117, arg7[var112], arg7[var113], arg7[var114], arg3.field869);
@@ -1365,7 +1365,7 @@ public class PureJavaFloorModel extends FloorModel {
             boolean var90 = var12.field954 != -1 && this.method12952(this.field7658.field400.method889(var12.field954).field1270);
             float var91 = var18 + var19 + var20;
             if ((var49 - var57) * (var51 - var55) - (var47 - var55) * (var53 - var57) > 0.0F) {
-                arg4.field988 = var51 < 0.0F || var55 < 0.0F || var47 < 0.0F || var51 > (float) (arg4.field1010 * 859149921) || var55 > (float) (arg4.field1010 * 859149921) || var47 > (float) (arg4.field1010 * 859149921);
+                arg4.field988 = var51 < 0.0F || var55 < 0.0F || var47 < 0.0F || var51 > arg4.field1010 || var55 > arg4.field1010 || var47 > arg4.field1010;
                 if (var91 >= 3.0F) {
                     arg4.method1991(true, true, false, var53, var57, var49, var51, var55, var47, var34, var35, var33, arg3.field869);
                 } else if (var91 > 0.0F) {
@@ -1398,7 +1398,7 @@ public class PureJavaFloorModel extends FloorModel {
             }
             float var94 = var17 + var18 + var20;
             if ((var43 - var47) * (var57 - var49) - (var45 - var49) * (var55 - var47) > 0.0F) {
-                arg4.field988 = var43 < 0.0F || var47 < 0.0F || var55 < 0.0F || var43 > (float) (arg4.field1010 * 859149921) || var47 > (float) (arg4.field1010 * 859149921) || var55 > (float) (arg4.field1010 * 859149921);
+                arg4.field988 = var43 < 0.0F || var47 < 0.0F || var55 < 0.0F || var43 > arg4.field1010 || var47 > arg4.field1010 || var55 > arg4.field1010;
                 if (var94 < 3.0F) {
                     if (var90) {
                         arg4.field987 = -1694498816;
@@ -1494,7 +1494,7 @@ public class PureJavaFloorModel extends FloorModel {
             float var34 = arg6[var28];
             float var35 = arg6[var29];
             if ((var30 - var31) * (var35 - var34) - (var32 - var31) * (var33 - var34) > 0.0F) {
-                arg4.field988 = var30 < 0.0F || var31 < 0.0F || var32 < 0.0F || var30 > (float) (arg4.field1010 * 859149921) || var31 > (float) (arg4.field1010 * 859149921) || var32 > (float) (arg4.field1010 * 859149921);
+                arg4.field988 = var30 < 0.0F || var31 < 0.0F || var32 < 0.0F || var30 > arg4.field1010 || var31 > arg4.field1010 || var32 > arg4.field1010;
                 if (arg9[var27] + arg9[var28] + arg9[var29] < 3.0F) {
                     int var36 = arg0 << this.field388;
                     int var37 = arg1 << this.field388;

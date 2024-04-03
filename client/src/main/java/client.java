@@ -3112,11 +3112,11 @@ public final class client extends GameShell {
 
     @ObfuscatedName("su.gx(B)V")
     public static final void method11197() {
-        int var0 = Statics.field1577 * 262144 + 256;
+        int var0 = Statics.field1577 * 512 + 256;
         int var1 = Statics.field2123 * 512 + 256;
         int var2 = method8663(var0, var1, Statics.field7324) - Statics.field4194;
         if (Statics.field2611 >= 100) {
-            Statics.field6769 = Statics.field1577 * 262144 + 256;
+            Statics.field6769 = Statics.field1577 * 512 + 256;
             Statics.field8424 = Statics.field2123 * 512 + 256;
             Statics.field8423 = method8663(Statics.field6769, Statics.field8424, Statics.field7324) - Statics.field4194;
         } else {
@@ -3400,13 +3400,13 @@ public final class client extends GameShell {
 
     @ObfuscatedName("rj.hc(IIIIIZI)V")
     public static final void method8600(int arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5) {
-        Statics.field1577 = arg0 * 512;
-        Statics.field2123 = arg1 * 262144;
+        Statics.field1577 = arg0;
+        Statics.field2123 = arg1;
         Statics.field4194 = arg2;
         Statics.field3385 = arg3;
         Statics.field2611 = arg4;
         if (arg5 && Statics.field2611 >= 100) {
-            Statics.field6769 = Statics.field1577 * 262144 + 256;
+            Statics.field6769 = Statics.field1577 * 512 + 256;
             Statics.field8424 = Statics.field2123 * 512 + 256;
             Statics.field8423 = method8663(Statics.field6769, Statics.field8424, Statics.field7324) - Statics.field4194;
         }
@@ -5057,7 +5057,7 @@ public final class client extends GameShell {
         for (int var7 = 0; var7 < var6.length; var7++) {
             HintArrow var8 = var6[var7];
             if (var8 != null && var8.field776 == 2) {
-                Statics.method7732(var8.field775, var8.field778 * 512, var8.field777 * 262144, var8.field781 * 2);
+                Statics.method7732(var8.field775, var8.field778, var8.field777, var8.field781 * 2);
                 if (field9048[0] > -1.0F && field9213 % 20 < 10) {
                     Sprite var9 = Statics.field6361[var8.field773];
                     int var10 = (int) (field9048[0] + (float) arg0 - 12.0F);
@@ -5721,11 +5721,11 @@ public final class client extends GameShell {
         int var4 = field9049;
         int var5 = field9032;
         if (field9052 == 1) {
-            Sprite var6 = Statics.field2618[field9051 * 20 / 100];
+            Sprite var6 = Statics.field2618[field9051 / 100];
             var6.method2500(var4 - 8, var5 - 8);
         }
         if (field9052 == 2) {
-            Sprite var7 = Statics.field2618[field9051 * 20 / 100 + 4];
+            Sprite var7 = Statics.field2618[field9051 / 100 + 4];
             var7.method2500(var4 - 8, var5 - 8);
         }
     }
@@ -7224,7 +7224,7 @@ public final class client extends GameShell {
                     var2.pos += 4;
                 } else if (var311.field776 >= 2 && var311.field776 <= 6) {
                     if (var311.field776 == 2) {
-                        var311.field778 = 131072;
+                        var311.field778 = 256;
                         var311.field777 = 256;
                     }
                     if (var311.field776 == 3) {
@@ -7232,23 +7232,23 @@ public final class client extends GameShell {
                         var311.field777 = 256;
                     }
                     if (var311.field776 == 4) {
-                        var311.field778 = 262144;
+                        var311.field778 = 512;
                         var311.field777 = 256;
                     }
                     if (var311.field776 == 5) {
-                        var311.field778 = 131072;
+                        var311.field778 = 256;
                         var311.field777 = 0;
                     }
                     if (var311.field776 == 6) {
-                        var311.field778 = 131072;
+                        var311.field778 = 256;
                         var311.field777 = 512;
                     }
                     var311.field776 = 2;
                     var311.field775 = var2.g1();
                     CoordGrid var312 = field8980.method6214();
-                    var311.field778 = var311.field778 * 262144 + (var2.g2() - var312.field4836 << 9) * 512;
-                    var311.field777 = var311.field777 * 262144 + (var2.g2() - var312.field4838 << 9);
-                    var311.field781 = (var2.g1() << 2) * 4;
+                    var311.field778 += var2.g2() - var312.field4836 << 9;
+                    var311.field777 += var2.g2() - var312.field4838 << 9;
+                    var311.field781 = var2.g1() << 2;
                     var311.field780 = var2.g2();
                 }
                 var311.field779 = var2.g4();
@@ -8951,17 +8951,17 @@ public final class client extends GameShell {
                 }
             }
             if ((var4 & 0x8000) != 0) {
-                var3.field8619 = var0.g1b() * 262144;
-                var3.field8621 = var0.g1b() * 262144;
-                var3.field8591 = var0.g1b_alt3() * 262144;
-                var3.field8605 = var0.g1b_alt1() * 262144;
+                var3.field8619 = var0.g1b();
+                var3.field8621 = var0.g1b();
+                var3.field8591 = var0.g1b_alt3();
+                var3.field8605 = var0.g1b_alt1();
                 var3.field8649 = var0.g2_alt3() + field9213;
                 var3.field8620 = var0.g2() + field9213;
                 var3.field8625 = var0.g2();
-                var3.field8619 = var3.field8619 * 262144 + var3.field8642[0] * 262144;
-                var3.field8621 = var3.field8621 * 262144 + var3.field8643[0] * 262144;
-                var3.field8591 = var3.field8591 * 262144 + var3.field8642[0] * 262144;
-                var3.field8605 = var3.field8605 * 262144 + var3.field8643[0] * 262144;
+                var3.field8619 = var3.field8619 + var3.field8642[0];
+                var3.field8621 = var3.field8621 + var3.field8643[0];
+                var3.field8591 = var3.field8591 + var3.field8642[0];
+                var3.field8605 = var3.field8605 + var3.field8643[0];
                 var3.field8628 = 1;
                 var3.field8646 = 0;
             }

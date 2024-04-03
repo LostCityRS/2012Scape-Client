@@ -1555,7 +1555,7 @@ public class GlModel extends Model {
     @ObfuscatedName("yz.ad(Lqa;IIIZ)V")
     public void method297(Model arg0, int arg1, int arg2, int arg3, boolean arg4) {
         GlModel var6 = (GlModel) arg0;
-        if (this.field7883 == 0 || var6.field7883 * -1431655765 == 0) {
+        if (this.field7883 == 0 || var6.field7883 == 0) {
             return;
         }
         int var7 = var6.field7864;

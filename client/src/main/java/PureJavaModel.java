@@ -709,7 +709,7 @@ public class PureJavaModel extends Model {
             int var6 = 0;
             int var7 = 0;
             if (this.field7779 != 0) {
-                var6 = this.field7839.field7998 * 589824 / this.field7779;
+                var6 = this.field7839.field7998 * 768 / this.field7779;
                 var7 = this.field7839.field8013 * 768 / this.field7779;
             }
             if (this.field7840 == null) {
@@ -2836,7 +2836,7 @@ public class PureJavaModel extends Model {
         this.field7785.field893 = this.field7768.field991;
         this.field7785.field895 = this.field7768.field1015;
         this.field7785.field906 = this.field7768.field995;
-        this.field7785.field889 = this.field7768.field1010 * 859149921;
+        this.field7785.field889 = this.field7768.field1010;
         for (int var31 = 0; var31 < this.field7780; var31++) {
             int var32 = this.field7807[var31];
             int var33 = this.field7783[var31];
