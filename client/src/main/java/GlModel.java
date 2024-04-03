@@ -233,19 +233,19 @@ public class GlModel extends Model {
                         continue;
                     }
                 }
-                int var10003 = this.field7883 * -1431655765;
-                int var10001 = this.field7883 * -1431655765;
-                this.field7883 = (var10003 + 1) * 3;
+                int var10003 = this.field7883;
+                int var10001 = this.field7883;
+                this.field7883 = var10003 + 1;
                 var8[var10001] = var9;
                 this.field7906[arg1.field1322[var9]]++;
                 this.field7906[arg1.field1323[var9]]++;
                 this.field7906[arg1.field1324[var9]]++;
             }
         }
-        this.field7877 = this.field7883 * -1431655765;
-        long[] var11 = new long[this.field7883 * -1431655765];
+        this.field7877 = this.field7883;
+        long[] var11 = new long[this.field7883];
         boolean var12 = (this.field7905 & 0x100) != 0;
-        for (int var13 = 0; var13 < this.field7883 * -1431655765; var13++) {
+        for (int var13 = 0; var13 < this.field7883; var13++) {
             int var14 = var8[var13];
             Material var15 = null;
             int var16 = 0;
@@ -325,7 +325,7 @@ public class GlModel extends Model {
                 ModelBillboard var33 = arg1.field1349[var32];
                 BillboardType var34 = BillboardType.method3666(var33.field1512);
                 int var35 = -1;
-                for (int var36 = 0; var36 < this.field7883 * -1431655765; var36++) {
+                for (int var36 = 0; var36 < this.field7883; var36++) {
                     if (var33.field1513 == var8[var36]) {
                         var35 = var36;
                         break;
@@ -340,21 +340,21 @@ public class GlModel extends Model {
                 this.field7915[var32] = new GlModelRelated7(var38);
             }
         }
-        int var39 = this.field7883;
+        int var39 = this.field7883 * 3;
         this.field7856 = new short[var39];
         this.field7872 = new short[var39];
         this.field7873 = new short[var39];
         this.field7874 = new byte[var39];
         this.field7876 = new float[var39];
         this.field7901 = new float[var39];
-        this.field7912 = new short[this.field7883 * -1431655765];
-        this.field7881 = new byte[this.field7883 * -1431655765];
-        this.field7882 = new short[this.field7883 * -1431655765];
-        this.field7902 = new short[this.field7883 * -1431655765];
-        this.field7896 = new short[this.field7883 * -1431655765];
-        this.field7897 = new short[this.field7883 * -1431655765];
+        this.field7912 = new short[this.field7883];
+        this.field7881 = new byte[this.field7883];
+        this.field7882 = new short[this.field7883];
+        this.field7902 = new short[this.field7883];
+        this.field7896 = new short[this.field7883];
+        this.field7897 = new short[this.field7883];
         if (arg1.field1333 != null) {
-            this.field7887 = new short[this.field7883 * -1431655765];
+            this.field7887 = new short[this.field7883];
         }
         this.field7859 = (short) arg3;
         this.field7860 = (short) arg4;
@@ -368,7 +368,7 @@ public class GlModel extends Model {
             var31[var41] = new GlVertexNormal();
         }
         this.field7906[arg1.field1315] = var40;
-        ModelRelated1 var43 = this.method349(arg1, var8, this.field7883 * -1431655765);
+        ModelRelated1 var43 = this.method349(arg1, var8, this.field7883);
         TriangleNormal[] var44 = new TriangleNormal[arg1.field1342];
         for (int var45 = 0; var45 < arg1.field1342; var45++) {
             short var46 = arg1.field1322[var45];
@@ -418,7 +418,7 @@ public class GlModel extends Model {
                 var66.field1076 = var61;
             }
         }
-        for (int var67 = 0; var67 < this.field7883 * -1431655765; var67++) {
+        for (int var67 = 0; var67 < this.field7883; var67++) {
             int var68 = var8[var67];
             int var69 = arg1.field1329[var68] & 0xFFFF;
             int var70;
@@ -699,7 +699,7 @@ public class GlModel extends Model {
         if (arg1.field1331 != null && GlModelFlags.method2141(arg2, this.field7857)) {
             int var167 = 0;
             int[] var168 = new int[256];
-            for (int var169 = 0; var169 < this.field7883 * -1431655765; var169++) {
+            for (int var169 = 0; var169 < this.field7883; var169++) {
                 int var170 = arg1.field1331[var8[var169]];
                 if (var170 >= 0) {
                     int var10002 = var168[var170]++;
@@ -713,7 +713,7 @@ public class GlModel extends Model {
                 this.field7886[var171] = new int[var168[var171]];
                 var168[var171] = 0;
             }
-            for (int var172 = 0; var172 < this.field7883 * -1431655765; var172++) {
+            for (int var172 = 0; var172 < this.field7883; var172++) {
                 int var173 = arg1.field1331[var8[var172]];
                 if (var173 >= 0) {
                     this.field7886[var173][var168[var173]++] = var172;
@@ -889,24 +889,24 @@ public class GlModel extends Model {
             arg0.field7888 = null;
         }
         if (GlModelFlags.method2090(arg2, this.field7857)) {
-            if (arg1.field7912 == null || arg1.field7912.length < this.field7883 * -1431655765) {
-                arg0.field7912 = arg1.field7912 = new short[this.field7883 * -1431655765];
+            if (arg1.field7912 == null || arg1.field7912.length < this.field7883) {
+                arg0.field7912 = arg1.field7912 = new short[this.field7883];
             } else {
                 arg0.field7912 = arg1.field7912;
             }
-            for (int var11 = 0; var11 < this.field7883 * -1431655765; var11++) {
+            for (int var11 = 0; var11 < this.field7883; var11++) {
                 arg0.field7912[var11] = this.field7912[var11];
             }
         } else {
             arg0.field7912 = this.field7912;
         }
         if (GlModelFlags.method2091(arg2, this.field7857)) {
-            if (arg1.field7881 == null || arg1.field7881.length < this.field7883 * -1431655765) {
-                arg0.field7881 = arg1.field7881 = new byte[this.field7883 * -1431655765];
+            if (arg1.field7881 == null || arg1.field7881.length < this.field7883) {
+                arg0.field7881 = arg1.field7881 = new byte[this.field7883];
             } else {
                 arg0.field7881 = arg1.field7881;
             }
-            for (int var12 = 0; var12 < this.field7883 * -1431655765; var12++) {
+            for (int var12 = 0; var12 < this.field7883; var12++) {
                 arg0.field7881[var12] = this.field7881[var12];
             }
         } else {
@@ -984,7 +984,7 @@ public class GlModel extends Model {
             arg0.field7890 = null;
         }
         if (GlModelFlags.method2114(arg2, this.field7857)) {
-            if (arg1.field7876 == null || arg1.field7876.length < this.field7883 * -1431655765) {
+            if (arg1.field7876 == null || arg1.field7876.length < this.field7883) {
                 int var18 = this.field7870;
                 arg0.field7876 = arg1.field7876 = new float[var18];
                 arg0.field7901 = arg1.field7901 = new float[var18];
@@ -1013,8 +1013,8 @@ public class GlModel extends Model {
             arg0.field7885 = null;
         }
         if (GlModelFlags.method2093(arg2, this.field7857)) {
-            if (arg1.field7882 == null || arg1.field7882.length < this.field7883 * -1431655765) {
-                int var20 = this.field7883 * -1431655765;
+            if (arg1.field7882 == null || arg1.field7882.length < this.field7883) {
+                int var20 = this.field7883;
                 arg0.field7882 = arg1.field7882 = new short[var20];
                 arg0.field7902 = arg1.field7902 = new short[var20];
                 arg0.field7896 = arg1.field7896 = new short[var20];
@@ -1023,7 +1023,7 @@ public class GlModel extends Model {
                 arg0.field7902 = arg1.field7902;
                 arg0.field7896 = arg1.field7896;
             }
-            for (int var21 = 0; var21 < this.field7883 * -1431655765; var21++) {
+            for (int var21 = 0; var21 < this.field7883; var21++) {
                 arg0.field7882[var21] = this.field7882[var21];
                 arg0.field7902[var21] = this.field7902[var21];
                 arg0.field7896[var21] = this.field7896[var21];
@@ -1045,13 +1045,13 @@ public class GlModel extends Model {
             arg0.field7892 = null;
         }
         if (GlModelFlags.method2094(arg2, this.field7857)) {
-            if (arg1.field7897 == null || arg1.field7897.length < this.field7883 * -1431655765) {
-                int var22 = this.field7883 * -1431655765;
+            if (arg1.field7897 == null || arg1.field7897.length < this.field7883) {
+                int var22 = this.field7883;
                 arg0.field7897 = arg1.field7897 = new short[var22];
             } else {
                 arg0.field7897 = arg1.field7897;
             }
-            for (int var23 = 0; var23 < this.field7883 * -1431655765; var23++) {
+            for (int var23 = 0; var23 < this.field7883; var23++) {
                 arg0.field7897[var23] = this.field7897[var23];
             }
         } else {
@@ -1323,7 +1323,7 @@ public class GlModel extends Model {
         for (int var2 = 0; var2 < this.field7870; var2++) {
             this.field7873[var2] = (short) -this.field7873[var2];
         }
-        for (int var3 = 0; var3 < this.field7883 * -1431655765; var3++) {
+        for (int var3 = 0; var3 < this.field7883; var3++) {
             short var4 = this.field7882[var3];
             this.field7882[var3] = this.field7896[var3];
             this.field7896[var3] = var4;
@@ -1555,7 +1555,7 @@ public class GlModel extends Model {
     @ObfuscatedName("yz.ad(Lqa;IIIZ)V")
     public void method297(Model arg0, int arg1, int arg2, int arg3, boolean arg4) {
         GlModel var6 = (GlModel) arg0;
-        if (this.field7883 * -1431655765 == 0 || var6.field7883 * -1431655765 == 0) {
+        if (this.field7883 == 0 || var6.field7883 * -1431655765 == 0) {
             return;
         }
         int var7 = var6.field7864;
@@ -1744,7 +1744,7 @@ public class GlModel extends Model {
 
     @ObfuscatedName("yz.X(SS)V")
     public void X(short arg0, short arg1) {
-        for (int var3 = 0; var3 < this.field7883 * -1431655765; var3++) {
+        for (int var3 = 0; var3 < this.field7883; var3++) {
             if (this.field7912[var3] == arg0) {
                 this.field7912[var3] = arg1;
             }
@@ -1764,11 +1764,11 @@ public class GlModel extends Model {
     @ObfuscatedName("yz.al(B[B)V")
     public void method288(byte arg0, byte[] arg1) {
         if (arg1 == null) {
-            for (int var3 = 0; var3 < this.field7883 * -1431655765; var3++) {
+            for (int var3 = 0; var3 < this.field7883; var3++) {
                 this.field7881[var3] = arg0;
             }
         } else {
-            for (int var4 = 0; var4 < this.field7883 * -1431655765; var4++) {
+            for (int var4 = 0; var4 < this.field7883; var4++) {
                 int var5 = 255 - (255 - (arg1[var4] & 0xFF)) * (255 - (arg0 & 0xFF)) / 255;
                 this.field7881[var4] = (byte) var5;
             }
@@ -1781,7 +1781,7 @@ public class GlModel extends Model {
     @ObfuscatedName("yz.W(SS)V")
     public void W(short arg0, short arg1) {
         MaterialTypeList var3 = this.field7891.field400;
-        for (int var4 = 0; var4 < this.field7883 * -1431655765; var4++) {
+        for (int var4 = 0; var4 < this.field7883; var4++) {
             if (this.field7897[var4] == arg0) {
                 this.field7897[var4] = arg1;
             }
@@ -1820,7 +1820,7 @@ public class GlModel extends Model {
 
     @ObfuscatedName("yz.PA(IIII)V")
     public void PA(int arg0, int arg1, int arg2, int arg3) {
-        for (int var5 = 0; var5 < this.field7883 * -1431655765; var5++) {
+        for (int var5 = 0; var5 < this.field7883; var5++) {
             int var6 = this.field7912[var5] & 0xFFFF;
             int var7 = var6 >> 10 & 0x3F;
             int var8 = var6 >> 7 & 0x7;
@@ -2421,7 +2421,7 @@ public class GlModel extends Model {
                 this.field7904[var18] += Statics.field7921;
             }
         } else if (arg0 == 5) {
-            for (int var19 = 0; var19 < this.field7883 * -1431655765; var19++) {
+            for (int var19 = 0; var19 < this.field7883; var19++) {
                 int var20 = (this.field7881[var19] & 0xFF) + arg1 * 8;
                 if (var20 < 0) {
                     var20 = 0;
@@ -2441,7 +2441,7 @@ public class GlModel extends Model {
                 }
             }
         } else if (arg0 == 7) {
-            for (int var24 = 0; var24 < this.field7883 * -1431655765; var24++) {
+            for (int var24 = 0; var24 < this.field7883; var24++) {
                 int var25 = this.field7912[var24] & 0xFFFF;
                 int var26 = var25 >> 10 & 0x3F;
                 int var27 = var25 >> 7 & 0x7;
@@ -2988,7 +2988,7 @@ public class GlModel extends Model {
                     }
                 }
             }
-            for (int var52 = 0; var52 < this.field7883 * -1431655765; var52++) {
+            for (int var52 = 0; var52 < this.field7883; var52++) {
                 if (var34[this.field7882[var52]] != -999999 && var34[this.field7902[var52]] != -999999 && var34[this.field7896[var52]] != -999999 && this.method13086(arg0, arg1, var35[this.field7882[var52]], var35[this.field7902[var52]], var35[this.field7896[var52]], var34[this.field7882[var52]], var34[this.field7902[var52]], var34[this.field7896[var52]])) {
                     return true;
                 }
@@ -3404,7 +3404,7 @@ public class GlModel extends Model {
                 float var35 = this.field7891.field8158;
                 float var36 = this.field7891.field8159 * 768.0F / (float) this.field7860;
                 float var37 = this.field7891.field8121 * 768.0F / (float) this.field7860;
-                for (int var38 = 0; var38 < this.field7883 * -1431655765; var38++) {
+                for (int var38 = 0; var38 < this.field7883; var38++) {
                     int var39 = this.method13088(this.field7912[var38], this.field7897[var38], this.field7859, this.field7881[var38]);
                     float var40 = (float) (var39 >>> 24) * this.field7891.field8136;
                     float var41 = (float) (var39 >> 16 & 0xFF) * this.field7891.field8156;
@@ -3507,7 +3507,7 @@ public class GlModel extends Model {
                     var11.p1(255 - (this.field7881[var38] & 0xFF));
                 }
             } else {
-                for (int var64 = 0; var64 < this.field7883 * -1431655765; var64++) {
+                for (int var64 = 0; var64 < this.field7883; var64++) {
                     int var65 = this.method13088(this.field7912[var64], this.field7897[var64], this.field7859, this.field7881[var64]);
                     var11.pos = (this.field7882[var64] & 0xFFFF) * var6 + var8;
                     var11.p4(var65);
