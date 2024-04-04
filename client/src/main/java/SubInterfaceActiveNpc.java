@@ -17,7 +17,7 @@ public class SubInterfaceActiveNpc extends SubInterface {
         if (var1 == null) {
             return false;
         } else {
-            ScriptRunner.method2842(ClientTriggerType.field7313, this.field9679, -1, (PathingEntity) var1.field9550, this.field10476);
+            ScriptRunner.method2842(ClientTriggerType.field7313, this.field9679, -1, (PathingEntity) var1.value, this.field10476);
             return true;
         }
     }

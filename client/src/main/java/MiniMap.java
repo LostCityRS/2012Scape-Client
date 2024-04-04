@@ -312,7 +312,7 @@ public class MiniMap {
         for (int var7 = 0; var7 < client.npcCount; var7++) {
             ObjectNode var8 = (ObjectNode) client.npcs.getNode((long) client.field9056[var7]);
             if (var8 != null) {
-                NpcEntity var9 = (NpcEntity) var8.field9550;
+                NpcEntity var9 = (NpcEntity) var8.value;
                 if (var9.method16154() && Statics.localPlayerEntity.level == var9.level) {
                     NPCType var10 = var9.field10075;
                     if (var10 != null && var10.field7244 != null) {
@@ -388,7 +388,7 @@ public class MiniMap {
                 if (var8.field776 == 1) {
                     ObjectNode var9 = (ObjectNode) client.npcs.getNode((long) var8.field772);
                     if (var9 != null) {
-                        NpcEntity var10 = (NpcEntity) var9.field9550;
+                        NpcEntity var10 = (NpcEntity) var9.value;
                         Vector3 var11 = var10.getTransform().trans;
                         int var12 = (int) var11.x / 128 - arg0 / 128;
                         int var13 = (int) var11.z / 128 - arg1 / 128;

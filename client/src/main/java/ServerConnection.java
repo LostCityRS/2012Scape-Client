@@ -6,143 +6,143 @@ import java.io.IOException;
 public class ServerConnection {
 
     @ObfuscatedName("ad.j")
-    public Stream field827;
+    public Stream stream;
 
     @ObfuscatedName("ad.a")
-    public IterableQueue field829 = new IterableQueue();
+    public IterableQueue writeQueue = new IterableQueue();
 
     @ObfuscatedName("ad.s")
-    public int field826 = 0;
+    public int writePos = 0;
 
     @ObfuscatedName("ad.c")
-    public Packet field830 = new Packet(1600);
+    public Packet out = new Packet(1600);
 
     @ObfuscatedName("ad.m")
     public Isaac randomOut;
 
     @ObfuscatedName("ad.t")
-    public PacketBit field832 = new PacketBit(15000);
+    public PacketBit in = new PacketBit(15000);
 
     @ObfuscatedName("ad.l")
-    public Isaac field833;
+    public Isaac randomIn;
 
     @ObfuscatedName("ad.f")
-    public ServerProt field840 = null;
+    public ServerProt packetType = null;
 
     @ObfuscatedName("ad.d")
-    public int field835 = 0;
+    public int packetSize = 0;
 
     @ObfuscatedName("ad.z")
     public boolean field836 = true;
 
     @ObfuscatedName("ad.n")
-    public int field837 = 0;
+    public int idleNetCycles = 0;
 
     @ObfuscatedName("ad.o")
     public int numConnections = 0;
 
     @ObfuscatedName("ad.q")
-    public int field845;
+    public int totalBytesSent;
 
     @ObfuscatedName("ad.p")
-    public int field842;
+    public int readPos;
 
     @ObfuscatedName("ad.w")
-    public int field841;
+    public int outBytesPerSecond;
 
     @ObfuscatedName("ad.b")
-    public int field838;
+    public int inBytesPerSecond;
 
     @ObfuscatedName("ad.x")
-    public ServerProt field843;
+    public ServerProt lastPacketType0;
 
     @ObfuscatedName("ad.i")
-    public ServerProt field844;
+    public ServerProt lastPacketType1;
 
     @ObfuscatedName("ad.v")
-    public ServerProt field831;
+    public ServerProt lastPacketType2;
 
     @ObfuscatedName("ad.k")
     public boolean disconnected = false;
 
     @ObfuscatedName("ad.h")
-    public PingProvider field847 = new PingProvider();
+    public PingProvider pingProvider = new PingProvider();
 
     public ServerConnection() {
-        Thread var1 = new Thread(this.field847);
+        Thread var1 = new Thread(this.pingProvider);
         var1.setPriority(1);
         var1.start();
     }
 
     @ObfuscatedName("ad.u(I)V")
     public final void method1935() {
-        this.field829.method11557();
-        this.field826 = 0;
+        this.writeQueue.method11557();
+        this.writePos = 0;
     }
 
     @ObfuscatedName("ad.j(I)V")
     public final void method1912() throws IOException {
-        if (this.field827 == null || this.field826 <= 0) {
+        if (this.stream == null || this.writePos <= 0) {
             return;
         }
-        this.field830.pos = 0;
+        this.out.pos = 0;
         while (true) {
-            ClientMessage var1 = (ClientMessage) this.field829.method11563();
-            if (var1 == null || var1.field9465 > this.field830.data.length - this.field830.pos) {
-                this.field827.method7193(this.field830.data, 0, this.field830.pos);
-                this.field845 += this.field830.pos;
+            ClientMessage var1 = (ClientMessage) this.writeQueue.method11563();
+            if (var1 == null || var1.field9465 > this.out.data.length - this.out.pos) {
+                this.stream.method7193(this.out.data, 0, this.out.pos);
+                this.totalBytesSent += this.out.pos;
                 this.numConnections = 0;
                 break;
             }
-            this.field830.pdata(var1.buf.data, 0, var1.field9465);
-            this.field826 -= var1.field9465;
+            this.out.pdata(var1.buf.data, 0, var1.field9465);
+            this.writePos -= var1.field9465;
             var1.method6979();
-            var1.buf.method15282();
+            var1.buf.release();
             var1.method15023();
         }
     }
 
     @ObfuscatedName("ad.a(Lada;B)V")
     public final void queue(ClientMessage arg0) {
-        this.field829.method11558(arg0);
+        this.writeQueue.method11558(arg0);
         arg0.field9465 = arg0.buf.pos;
         arg0.buf.pos = 0;
-        this.field826 += arg0.field9465;
+        this.writePos += arg0.field9465;
     }
 
     @ObfuscatedName("ad.s(I)V")
     public void method1933() {
         if (client.loopCycle % 50 == 0) {
-            this.field841 = this.field845;
-            this.field845 = 0;
-            this.field838 = this.field842;
-            this.field842 = 0;
+            this.outBytesPerSecond = this.totalBytesSent;
+            this.totalBytesSent = 0;
+            this.inBytesPerSecond = this.readPos;
+            this.readPos = 0;
         }
     }
 
     @ObfuscatedName("ad.c(Lov;Ljava/lang/String;I)V")
     public void method1911(Stream arg0, String arg1) {
-        this.field827 = arg0;
-        this.field847.method1233(arg1);
+        this.stream = arg0;
+        this.pingProvider.method1233(arg1);
     }
 
     @ObfuscatedName("ad.m(I)V")
     public void method1916() {
-        if (this.field827 != null) {
-            this.field827.method7192();
-            this.field827 = null;
+        if (this.stream != null) {
+            this.stream.method7192();
+            this.stream = null;
         }
-        this.field847.method1233(null);
+        this.pingProvider.method1233(null);
     }
 
     @ObfuscatedName("ad.t(I)V")
     public void closeForcefully() {
-        this.field827 = null;
-        this.field847.method1233(null);
+        this.stream = null;
+        this.pingProvider.method1233(null);
     }
 
     @ObfuscatedName("ad.l(I)Lov;")
     public Stream getStream() {
-        return this.field827;
+        return this.stream;
     }
 }

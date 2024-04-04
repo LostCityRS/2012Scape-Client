@@ -228,108 +228,108 @@ public class ReceivePlayerPositions {
     }
 
     @ObfuscatedName("sz.l(Lajl;ILahg;II)V")
-    public static final void method11159(PacketBit arg0, int arg1, PlayerEntity arg2, int arg3) {
+    public static final void method11159(PacketBit buf, int arg1, PlayerEntity arg2, int extendedInfo) {
         byte var4 = MoveSpeed.STATIONARY.id;
-        if ((arg3 & 0x1000) != 0) {
-            arg2.field10065 = arg0.g1() == 1;
+        if ((extendedInfo & 0x1000) != 0) {
+            arg2.field10065 = buf.g1() == 1;
         }
-        if ((arg3 & 0x8000) != 0) {
-            var4 = arg0.g1b_alt2();
+        if ((extendedInfo & 0x8000) != 0) {
+            var4 = buf.g1b_alt2();
         }
-        if ((arg3 & 0x4) != 0) {
-            int var5 = arg0.g1_alt1();
+        if ((extendedInfo & 0x4) != 0) {
+            int var5 = buf.g1_alt1();
             if (var5 > 0) {
                 for (int var6 = 0; var6 < var5; var6++) {
                     int var7 = -1;
                     boolean var8 = true;
                     int var9 = -1;
-                    int var10 = arg0.gSmart1or2();
+                    int var10 = buf.gSmart1or2();
                     int var11;
                     if (var10 == 32767) {
-                        var10 = arg0.gSmart1or2();
-                        var11 = arg0.gSmart1or2();
-                        var7 = arg0.gSmart1or2();
-                        var9 = arg0.gSmart1or2();
+                        var10 = buf.gSmart1or2();
+                        var11 = buf.gSmart1or2();
+                        var7 = buf.gSmart1or2();
+                        var9 = buf.gSmart1or2();
                     } else if (var10 == 32766) {
                         var10 = -1;
-                        var11 = arg0.g1_alt3();
+                        var11 = buf.g1_alt3();
                     } else {
-                        var11 = arg0.gSmart1or2();
+                        var11 = buf.gSmart1or2();
                     }
-                    int var12 = arg0.gSmart1or2();
+                    int var12 = buf.gSmart1or2();
                     arg2.method13953(var10, var11, var7, var9, client.loopCycle, var12);
                 }
             }
-            int var13 = arg0.g1_alt2();
+            int var13 = buf.g1_alt2();
             if (var13 > 0) {
                 for (int var14 = 0; var14 < var13; var14++) {
-                    int var15 = arg0.gSmart1or2();
-                    int var16 = arg0.gSmart1or2();
+                    int var15 = buf.gSmart1or2();
+                    int var16 = buf.gSmart1or2();
                     if (var16 == 32767) {
                         arg2.method13990(var15);
                     } else {
-                        int var17 = arg0.gSmart1or2();
-                        int var18 = arg0.g1_alt2();
-                        int var19 = var16 > 0 ? arg0.g1_alt1() : var18;
+                        int var17 = buf.gSmart1or2();
+                        int var18 = buf.g1_alt2();
+                        int var19 = var16 > 0 ? buf.g1_alt1() : var18;
                         arg2.method13944(var15, client.loopCycle, var16, var17, var18, var19);
                     }
                 }
             }
         }
-        if ((arg3 & 0x40000) != 0) {
-            arg2.field8596 = arg0.g1b_alt2();
-            arg2.field8602 = arg0.g1b_alt3();
-            arg2.field8617 = arg0.g1b_alt3();
-            arg2.field8631 = (byte) arg0.g1_alt2();
-            arg2.field8626 = client.loopCycle + arg0.g2_alt2();
-            arg2.field8632 = client.loopCycle + arg0.g2();
+        if ((extendedInfo & 0x40000) != 0) {
+            arg2.field8596 = buf.g1b_alt2();
+            arg2.field8602 = buf.g1b_alt3();
+            arg2.field8617 = buf.g1b_alt3();
+            arg2.field8631 = (byte) buf.g1_alt2();
+            arg2.field8626 = client.loopCycle + buf.g2_alt2();
+            arg2.field8632 = client.loopCycle + buf.g2();
         }
-        if ((arg3 & 0x100000) != 0) {
-            int var20 = arg0.data[++arg0.pos - 1] & 0xFF;
+        if ((extendedInfo & 0x100000) != 0) {
+            int var20 = buf.data[++buf.pos - 1] & 0xFF;
             for (int var21 = 0; var21 < var20; var21++) {
-                int var22 = arg0.g2_alt3();
-                int var23 = arg0.g4s();
+                int var22 = buf.g2_alt3();
+                int var23 = buf.g4s();
                 arg2.field10055.method2372(var22, var23);
             }
         }
-        if ((arg3 & 0x10) != 0) {
-            int var24 = arg0.g2_alt1();
+        if ((extendedInfo & 0x10) != 0) {
+            int var24 = buf.g2_alt1();
             if (var24 == 65535) {
                 var24 = -1;
             }
             arg2.field8624 = var24;
         }
-        if ((arg3 & 0x40) != 0) {
+        if ((extendedInfo & 0x40) != 0) {
             int[] var25 = new int[MoveSpeed.values().length];
             for (int var26 = 0; var26 < MoveSpeed.values().length; var26++) {
-                var25[var26] = arg0.gSmart2or4null();
+                var25[var26] = buf.gSmart2or4null();
             }
-            int var27 = arg0.g1_alt2();
+            int var27 = buf.g1_alt2();
             client.method8263(arg2, var25, var27, false);
         }
-        if ((arg3 & 0x80000) != 0) {
+        if ((extendedInfo & 0x80000) != 0) {
             arg2.field10055.method2377();
-            int var28 = arg0.data[++arg0.pos - 1] & 0xFF;
+            int var28 = buf.data[++buf.pos - 1] & 0xFF;
             for (int var29 = 0; var29 < var28; var29++) {
-                int var30 = arg0.g2_alt1();
-                int var31 = arg0.g4s();
+                int var30 = buf.g2_alt1();
+                int var31 = buf.g4s();
                 arg2.field10055.method2372(var30, var31);
             }
         }
-        if ((arg3 & 0x2) != 0) {
-            arg2.field10058 = arg0.g2_alt3();
+        if ((extendedInfo & 0x2) != 0) {
+            arg2.field10058 = buf.g2_alt3();
             if (arg2.routeLength == 0) {
                 arg2.method14013(arg2.field10058);
                 arg2.field10058 = -1;
             }
         }
-        if ((arg3 & 0x1) != 0) {
-            int var32 = arg0.g2_alt3();
-            int var33 = arg0.g4s_alt3();
+        if ((extendedInfo & 0x1) != 0) {
+            int var32 = buf.g2_alt3();
+            int var33 = buf.g4s_alt2();
             if (var32 == 65535) {
                 var32 = -1;
             }
-            int var34 = arg0.g1_alt2();
+            int var34 = buf.g1_alt2();
             int var35 = var34 & 0x7;
             int var36 = var34 >> 3 & 0xF;
             if (var36 == 15) {
@@ -338,21 +338,21 @@ public class ReceivePlayerPositions {
             boolean var37 = (var34 >> 7 & 0x1) == 1;
             arg2.method13950(var32, var33, var35, var36, var37, 0);
         }
-        if ((arg3 & 0x20) != 0) {
-            int var38 = arg0.g1();
+        if ((extendedInfo & 0x20) != 0) {
+            int var38 = buf.g1();
             byte[] var39 = new byte[var38];
             Packet var40 = new Packet(var39);
-            arg0.gdata_alt2(var39, 0, var38);
+            buf.gdata_alt3(var39, 0, var38);
             appearances[arg1] = var40;
             arg2.getAppearance(var40);
         }
-        if ((arg3 & 0x100) != 0) {
-            int var41 = arg0.g2_alt2();
-            int var42 = arg0.g4s_alt2();
+        if ((extendedInfo & 0x100) != 0) {
+            int var41 = buf.g2_alt2();
+            int var42 = buf.g4s_alt3();
             if (var41 == 65535) {
                 var41 = -1;
             }
-            int var43 = arg0.g1_alt1();
+            int var43 = buf.g1_alt1();
             int var44 = var43 & 0x7;
             int var45 = var43 >> 3 & 0xF;
             if (var45 == 15) {
@@ -361,41 +361,41 @@ public class ReceivePlayerPositions {
             boolean var46 = (var43 >> 7 & 0x1) == 1;
             arg2.method13950(var41, var42, var44, var45, var46, 1);
         }
-        if ((arg3 & 0x20000) != 0) {
-            int var47 = arg0.g1();
+        if ((extendedInfo & 0x20000) != 0) {
+            int var47 = buf.g1();
             int[] var48 = new int[var47];
             int[] var49 = new int[var47];
             for (int var50 = 0; var50 < var47; var50++) {
-                int var51 = arg0.g2_alt2();
+                int var51 = buf.g2_alt2();
                 if ((var51 & 0xC000) == 49152) {
-                    int var52 = arg0.g2();
+                    int var52 = buf.g2();
                     var48[var50] = var51 << 16 | var52;
                 } else {
                     var48[var50] = var51;
                 }
-                var49[var50] = arg0.g2_alt3();
+                var49[var50] = buf.g2_alt3();
             }
             arg2.method13948(var48, var49);
         }
-        if ((arg3 & 0x10000) != 0) {
-            String var53 = arg0.gjstr();
-            int var54 = arg0.g1_alt3();
+        if ((extendedInfo & 0x10000) != 0) {
+            String var53 = buf.gjstr();
+            int var54 = buf.g1_alt3();
             if ((var54 & 0x1) != 0) {
                 ChatHistory.addMessage(2, var54, arg2.method16120(true), arg2.method16121(false), arg2.name, var53);
             }
             arg2.method16127(var53, 0, 0);
         }
-        if ((arg3 & 0x80) != 0) {
-            field730[arg1] = arg0.g1b_alt1();
+        if ((extendedInfo & 0x80) != 0) {
+            field730[arg1] = buf.g1b_alt1();
         }
-        if ((arg3 & 0x200) != 0) {
-            arg2.field8619 = arg0.g1b();
-            arg2.field8621 = arg0.g1b();
-            arg2.field8591 = arg0.g1b_alt1();
-            arg2.field8605 = arg0.g1b();
-            arg2.forceMoveEndCycle = arg0.g2_alt3() + client.loopCycle;
-            arg2.forceMoveStartCycle = arg0.g2_alt3() + client.loopCycle;
-            arg2.field8625 = arg0.g2();
+        if ((extendedInfo & 0x200) != 0) {
+            arg2.field8619 = buf.g1b();
+            arg2.field8621 = buf.g1b();
+            arg2.field8591 = buf.g1b_alt1();
+            arg2.field8605 = buf.g1b();
+            arg2.forceMoveEndCycle = buf.g2_alt3() + client.loopCycle;
+            arg2.forceMoveStartCycle = buf.g2_alt3() + client.loopCycle;
+            arg2.field8625 = buf.g2();
             if (arg2.field10062) {
                 arg2.field8619 = arg2.field8619 + arg2.field10052;
                 arg2.field8621 = arg2.field8621 + arg2.field10064;
@@ -411,35 +411,35 @@ public class ReceivePlayerPositions {
             }
             arg2.field8646 = 0;
         }
-        if ((arg3 & 0x4000) != 0) {
-            int var55 = arg0.g1_alt2();
+        if ((extendedInfo & 0x4000) != 0) {
+            int var55 = buf.g1_alt2();
             int[] var56 = new int[var55];
             int[] var57 = new int[var55];
             int[] var58 = new int[var55];
             for (int var59 = 0; var59 < var55; var59++) {
-                var56[var59] = arg0.gSmart2or4null();
-                var57[var59] = arg0.g1_alt3();
-                var58[var59] = arg0.g2_alt2();
+                var56[var59] = buf.gSmart2or4null();
+                var57[var59] = buf.g1_alt3();
+                var58[var59] = buf.g2_alt2();
             }
             client.method12477(arg2, var56, var57, var58);
         }
-        if ((arg3 & 0x800000) != 0) {
-            arg2.field10067 = arg0.g1_alt3() == 1;
+        if ((extendedInfo & 0x800000) != 0) {
+            arg2.field10067 = buf.g1_alt3() == 1;
         }
-        if ((arg3 & 0x400) != 0) {
-            String var60 = arg0.gjstr();
+        if ((extendedInfo & 0x400) != 0) {
+            String var60 = buf.gjstr();
             if (Statics.localPlayerEntity == arg2) {
                 ChatHistory.addMessage(2, 0, arg2.method16120(true), arg2.method16121(false), arg2.name, var60);
             }
             arg2.method16127(var60, 0, 0);
         }
-        if ((arg3 & 0x200000) != 0) {
-            int var61 = arg0.g2_alt2();
-            int var62 = arg0.g4s_alt1();
+        if ((extendedInfo & 0x200000) != 0) {
+            int var61 = buf.g2_alt2();
+            int var62 = buf.g4s_alt1();
             if (var61 == 65535) {
                 var61 = -1;
             }
-            int var63 = arg0.g1_alt2();
+            int var63 = buf.g1_alt2();
             int var64 = var63 & 0x7;
             int var65 = var63 >> 3 & 0xF;
             if (var65 == 15) {
@@ -448,13 +448,13 @@ public class ReceivePlayerPositions {
             boolean var66 = (var63 >> 7 & 0x1) == 1;
             arg2.method13950(var61, var62, var64, var65, var66, 2);
         }
-        if ((arg3 & 0x400000) != 0) {
-            int var67 = arg0.g2_alt3();
-            int var68 = arg0.g4s();
+        if ((extendedInfo & 0x400000) != 0) {
+            int var67 = buf.g2_alt1();
+            int var68 = buf.g4s();
             if (var67 == 65535) {
                 var67 = -1;
             }
-            int var69 = arg0.g1_alt2();
+            int var69 = buf.g1_alt1();
             int var70 = var69 & 0x7;
             int var71 = var69 >> 3 & 0xF;
             if (var71 == 15) {

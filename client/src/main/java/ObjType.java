@@ -1082,7 +1082,7 @@ public class ObjType implements PlayerTypeRelated {
             return arg1;
         } else {
             ObjectNode var3 = (ObjectNode) this.field7055.getNode((long) arg0);
-            return var3 == null ? arg1 : (String) var3.field9550;
+            return var3 == null ? arg1 : (String) var3.value;
         }
     }
 

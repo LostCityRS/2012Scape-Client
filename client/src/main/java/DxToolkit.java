@@ -223,7 +223,7 @@ public class DxToolkit extends GpuToolkit {
     @ObfuscatedName("ahh.oi()V")
     public void method13499() {
         for (ObjectNode var1 = (ObjectNode) this.field9977.method11563(); var1 != null; var1 = (ObjectNode) this.field9977.method11567()) {
-            DxInterface1 var2 = (DxInterface1) var1.field9550;
+            DxInterface1 var2 = (DxInterface1) var1.value;
             var2.method4914();
             if (this.field412 == var2) {
                 var2.method954();
@@ -235,7 +235,7 @@ public class DxToolkit extends GpuToolkit {
     @ObfuscatedName("ahh.ow()V")
     public void method13583() {
         for (ObjectNode var1 = (ObjectNode) this.field9977.method11563(); var1 != null; var1 = (ObjectNode) this.field9977.method11567()) {
-            DxInterface1 var2 = (DxInterface1) var1.field9550;
+            DxInterface1 var2 = (DxInterface1) var1.value;
             var2.method944();
         }
         super.method13583();
@@ -409,7 +409,7 @@ public class DxToolkit extends GpuToolkit {
     @ObfuscatedName("ahh.acc(Ljz;)Ladt;")
     public ObjectNode method16024(DxInterface1 arg0) {
         for (ObjectNode var2 = (ObjectNode) this.field9977.method11563(); var2 != null; var2 = (ObjectNode) this.field9977.method11567()) {
-            if (var2.field9550 == arg0) {
+            if (var2.value == arg0) {
                 return var2;
             }
         }

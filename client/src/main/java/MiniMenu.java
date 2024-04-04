@@ -632,7 +632,7 @@ public class MiniMenu {
                                         for (int var40 = 0; var40 < client.npcCount; var40++) {
                                             ObjectNode var41 = (ObjectNode) client.npcs.getNode((long) client.field9056[var40]);
                                             if (var41 != null) {
-                                                NpcEntity var42 = (NpcEntity) var41.field9550;
+                                                NpcEntity var42 = (NpcEntity) var41.value;
                                                 if (client.loopCycle != var42.field8635 && var42.field8634) {
                                                     Vector3 var43 = var42.getTransform().trans;
                                                     int var44 = (int) var43.x - (var42.field10075.field7213 - 1 << 8);
@@ -679,7 +679,7 @@ public class MiniMenu {
                                     for (int var57 = 0; var57 < client.npcCount; var57++) {
                                         ObjectNode var58 = (ObjectNode) client.npcs.getNode((long) client.field9056[var57]);
                                         if (var58 != null) {
-                                            NpcEntity var59 = (NpcEntity) var58.field9550;
+                                            NpcEntity var59 = (NpcEntity) var58.value;
                                             if (client.loopCycle != var59.field8635 && var53 != var59 && var59.field8634) {
                                                 Vector3 var60 = var59.getTransform().trans;
                                                 int var61 = (int) var60.x - (var59.field10075.field7213 - 1 << 8);

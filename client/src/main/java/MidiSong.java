@@ -354,7 +354,7 @@ public class MidiSong extends Node {
                                 var20 = new ObjectNode(new byte[128]);
                                 this.field9382.method11927(var20, (long) var19);
                             }
-                            ((byte[]) var20.field9550)[var17] = 1;
+                            ((byte[]) var20.value)[var17] = 1;
                         }
                     }
                     var4.method3025(var7);

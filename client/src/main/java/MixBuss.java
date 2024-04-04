@@ -156,7 +156,7 @@ public class MixBuss extends AudioBuss {
                 }
                 this.field10239.method11927(var9, (long) var8);
             }
-            if (!var9.method14918(arg2, (byte[]) var7.field9550, var6)) {
+            if (!var9.method14918(arg2, (byte[]) var7.value, var6)) {
                 var5 = false;
             }
         }

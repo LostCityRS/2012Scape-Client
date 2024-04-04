@@ -68,12 +68,14 @@ public class Packet extends Node {
     }
 
     @ObfuscatedName("aet.a(I)V")
-    public void method15282() {
+    public void release() {
         if (this.data != null) {
             ByteArrayPool.release(this.data);
         }
         this.data = null;
     }
+
+    // puts
 
     @ObfuscatedName("aet.s(II)V")
     public void p1(int arg0) {
@@ -214,7 +216,7 @@ public class Packet extends Node {
 
     @ObfuscatedName("aet.ay(II)V")
     public void pSmart1or2(int arg0) {
-        if (arg0 >= 0 && arg0 < 128) {
+        if (arg0 >= 0 && arg0 < 0x80) {
             this.p1(arg0);
         } else if (arg0 >= 0 && arg0 < 32768) {
             this.p2(arg0 + 32768);
@@ -240,6 +242,8 @@ public class Packet extends Node {
         this.p1(arg0 & 0x7F);
     }
 
+    // gets
+
     @ObfuscatedName("aet.ar(I)I")
     public int g1() {
         return this.data[++this.pos - 1] & 0xFF;
@@ -253,15 +257,17 @@ public class Packet extends Node {
     @ObfuscatedName("aet.ap(I)I")
     public int g2() {
         this.pos += 2;
-        return ((this.data[this.pos - 2] & 0xFF) << 8) + (this.data[this.pos - 1] & 0xFF);
+        return ((this.data[this.pos - 2] & 0xFF) << 8) +
+                (this.data[this.pos - 1] & 0xFF);
     }
 
     @ObfuscatedName("aet.ag(I)I")
     public int g2s() {
         this.pos += 2;
-        int var1 = ((this.data[this.pos - 2] & 0xFF) << 8) + (this.data[this.pos - 1] & 0xFF);
-        if (var1 > 32767) {
-            var1 -= 65536;
+        int var1 = ((this.data[this.pos - 2] & 0xFF) << 8) +
+                (this.data[this.pos - 1] & 0xFF);
+        if (var1 > 0x7fff) {
+            var1 -= 0x10000;
         }
         return var1;
     }
@@ -269,15 +275,19 @@ public class Packet extends Node {
     @ObfuscatedName("aet.as(B)I")
     public int g3() {
         this.pos += 3;
-        return (this.data[this.pos - 1] & 0xFF) + ((this.data[this.pos - 2] & 0xFF) << 8) + ((this.data[this.pos - 3] & 0xFF) << 16);
+        return ((this.data[this.pos - 3] & 0xFF) << 16) +
+                ((this.data[this.pos - 2] & 0xFF) << 8) +
+                (this.data[this.pos - 1] & 0xFF);
     }
 
     @ObfuscatedName("aet.ai(B)I")
     public int g3s() {
         this.pos += 3;
-        int var1 = (this.data[this.pos - 1] & 0xFF) + ((this.data[this.pos - 2] & 0xFF) << 8) + ((this.data[this.pos - 3] & 0xFF) << 16);
-        if (var1 > 8388607) {
-            var1 -= 16777216;
+        int var1 = ((this.data[this.pos - 3] & 0xFF) << 16) +
+                (this.data[this.pos - 1] & 0xFF) +
+                ((this.data[this.pos - 2] & 0xFF) << 8);
+        if (var1 > 0x7fffff) {
+            var1 -= 0x1000000;
         }
         return var1;
     }
@@ -285,13 +295,19 @@ public class Packet extends Node {
     @ObfuscatedName("aet.ao(I)I")
     public int g4s() {
         this.pos += 4;
-        return (this.data[this.pos - 1] & 0xFF) + ((this.data[this.pos - 2] & 0xFF) << 8) + ((this.data[this.pos - 4] & 0xFF) << 24) + ((this.data[this.pos - 3] & 0xFF) << 16);
+        return (this.data[this.pos - 1] & 0xFF) +
+                ((this.data[this.pos - 2] & 0xFF) << 8) +
+                ((this.data[this.pos - 3] & 0xFF) << 16) +
+                ((this.data[this.pos - 4] & 0xFF) << 24);
     }
 
     @ObfuscatedName("aet.al(I)I")
     public int ig4() {
         this.pos += 4;
-        return (this.data[this.pos - 4] & 0xFF) + ((this.data[this.pos - 3] & 0xFF) << 8) + ((this.data[this.pos - 1] & 0xFF) << 24) + ((this.data[this.pos - 2] & 0xFF) << 16);
+        return (this.data[this.pos - 4] & 0xFF) +
+                ((this.data[this.pos - 3] & 0xFF) << 8) +
+                ((this.data[this.pos - 2] & 0xFF) << 16) +
+                ((this.data[this.pos - 1] & 0xFF) << 24);
     }
 
     @ObfuscatedName("aet.at(B)J")
@@ -392,27 +408,27 @@ public class Packet extends Node {
     @ObfuscatedName("aet.ah(B)I")
     public int gSmart1or2s() {
         int var1 = this.data[this.pos] & 0xFF;
-        return var1 < 128 ? this.g1() - 64 : this.g2() - 49152;
+        return var1 < 0x80 ? this.g1() - 64 : this.g2() - 0xc000;
     }
 
     @ObfuscatedName("aet.au(I)I")
     public int gSmart1or2() {
         int var1 = this.data[this.pos] & 0xFF;
-        return var1 < 128 ? this.g1() : this.g2() - 32768;
+        return var1 < 0x80 ? this.g1() : this.g2() - 0x8000;
     }
 
     @ObfuscatedName("aet.ae(B)I")
     public int gSmart1or2null() {
         int var1 = this.data[this.pos] & 0xFF;
-        return var1 < 128 ? this.g1() - 1 : this.g2() - 32769;
+        return var1 < 0x80 ? this.g1() - 1 : this.g2() - 0x8000 - 1;
     }
 
     @ObfuscatedName("aet.ac(I)I")
     public int gExtended1or2() {
         int var1 = 0;
         int var2;
-        for (var2 = this.gSmart1or2(); var2 == 32767; var2 = this.gSmart1or2()) {
-            var1 += 32767;
+        for (var2 = this.gSmart1or2(); var2 == 0x7fff; var2 = this.gSmart1or2()) {
+            var1 += 0x7fff;
         }
         return var1 + var2;
     }
@@ -428,7 +444,7 @@ public class Packet extends Node {
             return this.g4s() & Integer.MAX_VALUE;
         } else {
             int var1 = this.g2();
-            return var1 == 32767 ? -1 : var1;
+            return var1 == 0x7fff ? -1 : var1;
         }
     }
 
@@ -450,8 +466,8 @@ public class Packet extends Node {
         for (int var3 = 0; var3 < var2; var3++) {
             int var4 = this.g4s();
             int var5 = this.g4s();
-            int var6 = -957401312;
-            int var7 = -1640531527;
+            int var6 = 0xc6ef3720;
+            int var7 = 0x9e3779b9;
             int var8 = 32;
             while (var8-- > 0) {
                 var5 -= (var4 << 4 ^ var4 >>> 5) + var4 ^ arg0[var6 >>> 11 & 0x3] + var6;
@@ -473,7 +489,7 @@ public class Packet extends Node {
             int var7 = this.g4s();
             int var8 = this.g4s();
             int var9 = 0;
-            int var10 = -1640531527;
+            int var10 = 0x9e3779b9;
             int var11 = 32;
             while (var11-- > 0) {
                 var7 += (var8 << 4 ^ var8 >>> 5) + var8 ^ arg0[var9 & 0x3] + var9;
@@ -495,8 +511,8 @@ public class Packet extends Node {
         for (int var6 = 0; var6 < var5; var6++) {
             int var7 = this.g4s();
             int var8 = this.g4s();
-            int var9 = -957401312;
-            int var10 = -1640531527;
+            int var9 = 0xc6ef3720;
+            int var10 = 0x9e3779b9;
             int var11 = 32;
             while (var11-- > 0) {
                 var8 -= (var7 << 4 ^ var7 >>> 5) + var7 ^ arg0[var9 >>> 11 & 0x3] + var9;
@@ -511,7 +527,7 @@ public class Packet extends Node {
     }
 
     @ObfuscatedName("aet.bf(Ljava/math/BigInteger;Ljava/math/BigInteger;B)V")
-    public void tinyenc(BigInteger arg0, BigInteger arg1) {
+    public void rsaenc(BigInteger arg0, BigInteger arg1) {
         int var3 = this.pos;
         this.pos = 0;
         byte[] var4 = new byte[var3];
@@ -521,6 +537,17 @@ public class Packet extends Node {
         byte[] var7 = var6.toByteArray();
         this.pos = 0;
         this.p2(var7.length);
+        this.pdata(var7, 0, var7.length);
+    }
+
+    public void rsadec(BigInteger arg0, BigInteger arg1) {
+        int var3 = this.g2();
+        byte[] var4 = new byte[var3];
+        this.gdata(var4, 0, var3);
+        BigInteger var5 = new BigInteger(var4);
+        BigInteger var6 = client.ENABLE_RSA ? var5.modPow(arg0, arg1) : var5;
+        byte[] var7 = var6.toByteArray();
+        this.pos = 0;
         this.pdata(var7, 0, var7.length);
     }
 
@@ -538,6 +565,8 @@ public class Packet extends Node {
         int var2 = this.g4s();
         return var1 == var2;
     }
+
+    // Protocol obfuscation
 
     @ObfuscatedName("aet.bl(II)V")
     public void p1_alt1(int arg0) {
@@ -605,27 +634,41 @@ public class Packet extends Node {
     @ObfuscatedName("aet.bb(I)I")
     public int g2_alt1() {
         this.pos += 2;
-        return ((this.data[this.pos - 1] & 0xFF) << 8) + (this.data[this.pos - 2] & 0xFF);
+        return (this.data[this.pos - 2] & 0xFF) +
+                ((this.data[this.pos - 1] & 0xFF) << 8);
     }
 
     @ObfuscatedName("aet.be(I)I")
     public int g2_alt2() {
         this.pos += 2;
-        return ((this.data[this.pos - 2] & 0xFF) << 8) + (this.data[this.pos - 1] - 128 & 0xFF);
+        return ((this.data[this.pos - 2] & 0xFF) << 8) +
+                (this.data[this.pos - 1] - 128 & 0xFF);
     }
 
     @ObfuscatedName("aet.bw(I)I")
     public int g2_alt3() {
         this.pos += 2;
-        return ((this.data[this.pos - 1] & 0xFF) << 8) + (this.data[this.pos - 2] - 128 & 0xFF);
+        return (this.data[this.pos - 2] - 128 & 0xFF) +
+                ((this.data[this.pos - 1] & 0xFF) << 8);
     }
 
     @ObfuscatedName("aet.bo(I)I")
     public int g2s_alt1() {
         this.pos += 2;
-        int var1 = ((this.data[this.pos - 1] & 0xFF) << 8) + (this.data[this.pos - 2] & 0xFF);
-        if (var1 > 32767) {
-            var1 -= 65536;
+        int var1 = (this.data[this.pos - 2] & 0xFF) +
+                ((this.data[this.pos - 1] & 0xFF) << 8);
+        if (var1 > 0x7fff) {
+            var1 -= 0x10000;
+        }
+        return var1;
+    }
+
+    public int g2s_alt2() {
+        this.pos += 2;
+        int var1 = ((this.data[this.pos - 2] & 0xFF) << 8) +
+                (this.data[this.pos - 1] - 128 & 0xFF);
+        if (var1 > 0x7fff) {
+            var1 -= 0x10000;
         }
         return var1;
     }
@@ -633,24 +676,50 @@ public class Packet extends Node {
     @ObfuscatedName("aet.bh(I)I")
     public int g2s_alt3() {
         this.pos += 2;
-        int var1 = ((this.data[this.pos - 1] & 0xFF) << 8) + (this.data[this.pos - 2] - 128 & 0xFF);
-        if (var1 > 32767) {
-            var1 -= 65536;
+        int var1 = (this.data[this.pos - 2] - 128 & 0xFF) +
+                ((this.data[this.pos - 1] & 0xFF) << 8);
+        if (var1 > 0x7fff) {
+            var1 -= 0x10000;
         }
         return var1;
     }
 
     @ObfuscatedName("aet.by(II)V")
-    public void p3_alt2(int arg0) {
+    public void p3_alt1(int arg0) {
         this.data[++this.pos - 1] = (byte) arg0;
         this.data[++this.pos - 1] = (byte) (arg0 >> 8);
         this.data[++this.pos - 1] = (byte) (arg0 >> 16);
+    }
+    public void p3_alt2(int arg0) {
+        this.data[++this.pos - 1] = (byte) (arg0 >> 16);
+        this.data[++this.pos - 1] = (byte) arg0;
+        this.data[++this.pos - 1] = (byte) (arg0 >> 8);
+    }
+    public void p3_alt3(int arg0) {
+        this.data[++this.pos - 1] = (byte) (arg0 >> 8);
+        this.data[++this.pos - 1] = (byte) (arg0 >> 16);
+        this.data[++this.pos - 1] = (byte) arg0;
+    }
+
+    public int g3_alt1() {
+        this.pos += 3;
+        return (this.data[this.pos - 3] & 0xFF) +
+                ((this.data[this.pos - 2] & 0xFF) << 8) +
+                ((this.data[this.pos - 1] & 0xFF) << 16);
+    }
+    public int g3_alt2() {
+        this.pos += 3;
+        return ((this.data[this.pos - 3] & 0xFF) << 16) +
+                (this.data[this.pos - 2] & 0xFF) +
+                ((this.data[this.pos - 1] & 0xFF) << 8);
     }
 
     @ObfuscatedName("aet.bu(I)I")
     public int g3_alt3() {
         this.pos += 3;
-        return (this.data[this.pos - 1] & 0xFF) + ((this.data[this.pos - 2] & 0xFF) << 16) + ((this.data[this.pos - 3] & 0xFF) << 8);
+        return ((this.data[this.pos - 3] & 0xFF) << 8) +
+                ((this.data[this.pos - 2] & 0xFF) << 16) +
+                (this.data[this.pos - 1] & 0xFF);
     }
 
     @ObfuscatedName("aet.cl(II)V")
@@ -680,25 +749,63 @@ public class Packet extends Node {
     @ObfuscatedName("aet.cb(I)I")
     public int g4s_alt1() {
         this.pos += 4;
-        return (this.data[this.pos - 4] & 0xFF) + ((this.data[this.pos - 3] & 0xFF) << 8) + ((this.data[this.pos - 2] & 0xFF) << 16) + ((this.data[this.pos - 1] & 0xFF) << 24);
+        return (this.data[this.pos - 4] & 0xFF) +
+                ((this.data[this.pos - 3] & 0xFF) << 8) +
+                ((this.data[this.pos - 2] & 0xFF) << 16) +
+                ((this.data[this.pos - 1] & 0xFF) << 24);
     }
 
     @ObfuscatedName("aet.cm(I)I")
-    public int g4s_alt3() {
+    public int g4s_alt2() {
         this.pos += 4;
-        return (this.data[this.pos - 3] & 0xFF) + ((this.data[this.pos - 4] & 0xFF) << 8) + ((this.data[this.pos - 2] & 0xFF) << 24) + ((this.data[this.pos - 1] & 0xFF) << 16);
+        return ((this.data[this.pos - 4] & 0xFF) << 8) +
+                (this.data[this.pos - 3] & 0xFF) +
+                ((this.data[this.pos - 2] & 0xFF) << 24) +
+                ((this.data[this.pos - 1] & 0xFF) << 16);
     }
 
     @ObfuscatedName("aet.cw(I)I")
-    public int g4s_alt2() {
+    public int g4s_alt3() {
         this.pos += 4;
-        return (this.data[this.pos - 2] & 0xFF) + ((this.data[this.pos - 1] & 0xFF) << 8) + ((this.data[this.pos - 4] & 0xFF) << 16) + ((this.data[this.pos - 3] & 0xFF) << 24);
+        return ((this.data[this.pos - 4] & 0xFF) << 16) +
+                ((this.data[this.pos - 3] & 0xFF) << 24) +
+                (this.data[this.pos - 2] & 0xFF) +
+                ((this.data[this.pos - 1] & 0xFF) << 8);
+    }
+
+    public void pdata_alt1(byte[] src, int off, int len) {
+        for (int i = len - 1; i >= off; i--) {
+            this.data[++this.pos - 1] = src[i];
+        }
+    }
+
+    public void pdata_alt2(byte[] src, int off, int len) {
+        for (int i = off; i < len; i++)
+            this.data[++this.pos - 1] = (byte) (src[i] + 128);
+    }
+
+    public void pdata_alt3(byte[] src, int off, int len) {
+        for (int i = len - 1; i >= off; i--) {
+            this.data[++this.pos - 1] = (byte) (src[i] + 128);
+        }
+    }
+
+    public void gdata_alt1(byte[] dest, int off, int len) {
+        for (int i = off + len - 1; i >= off; i--) {
+            dest[i] = this.data[++this.pos - 1];
+        }
+    }
+
+    public void gdata_alt2(byte[] dest, int off, int len) {
+        for (int i = off; i < off + len; i++) {
+            dest[i] = (byte) (this.data[++this.pos - 1] - 128);
+        }
     }
 
     @ObfuscatedName("aet.cx([BIII)V")
-    public void gdata_alt2(byte[] arg0, int arg1, int arg2) {
-        for (int var4 = arg1 + arg2 - 1; var4 >= arg1; var4--) {
-            arg0[var4] = (byte) (this.data[++this.pos - 1] - 128);
+    public void gdata_alt3(byte[] dest, int off, int len) {
+        for (int i = off + len - 1; i >= off; i--) {
+            dest[i] = (byte) (this.data[++this.pos - 1] - 128);
         }
     }
 }

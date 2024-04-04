@@ -311,7 +311,7 @@ public class PlayerEntity extends PathingEntity {
                     if (var14.field776 == 1) {
                         ObjectNode var15 = (ObjectNode) client.npcs.getNode((long) var14.field772);
                         if (var15 != null) {
-                            NpcEntity var16 = (NpcEntity) var15.field9550;
+                            NpcEntity var16 = (NpcEntity) var15.value;
                             Vector3 var17 = Vector3.method5377(var16.getTransform().trans, Statics.localPlayerEntity.getTransform().trans);
                             int var18 = (int) var17.x;
                             int var19 = (int) var17.z;

@@ -128,28 +128,28 @@ public class AccountCreationManager {
                 if (!client.lobbyConnection.getStream().method7212(1)) {
                     return;
                 }
-                client.lobbyConnection.getStream().method7196(client.lobbyConnection.field832.data, 0, 1);
-                Statics.field629 = (ConnectReply) SerializableEnums.decode(ConnectReply.method8658(), client.lobbyConnection.field832.data[0] & 0xFF);
+                client.lobbyConnection.getStream().method7196(client.lobbyConnection.in.data, 0, 1);
+                Statics.field629 = (ConnectReply) SerializableEnums.decode(ConnectReply.method8658(), client.lobbyConnection.in.data[0] & 0xFF);
                 if (Statics.field629 == ConnectReply.field6424) {
                     client.lobbyConnection.randomOut = new Isaac(Statics.field630);
                     int[] var5 = new int[4];
                     for (int var6 = 0; var6 < 4; var6++) {
                         var5[var6] = Statics.field630[var6] + 50;
                     }
-                    client.lobbyConnection.field833 = new Isaac(var5);
+                    client.lobbyConnection.randomIn = new Isaac(var5);
                     new Isaac(var5);
-                    client.lobbyConnection.field832.setIsaac(client.lobbyConnection.field833);
+                    client.lobbyConnection.in.setIsaac(client.lobbyConnection.randomIn);
                     client.setState(14);
                     client.lobbyConnection.method1935();
-                    client.lobbyConnection.field832.pos = 0;
-                    client.lobbyConnection.field843 = null;
-                    client.lobbyConnection.field844 = null;
-                    client.lobbyConnection.field831 = null;
-                    client.lobbyConnection.field837 = 0;
+                    client.lobbyConnection.in.pos = 0;
+                    client.lobbyConnection.lastPacketType0 = null;
+                    client.lobbyConnection.lastPacketType1 = null;
+                    client.lobbyConnection.lastPacketType2 = null;
+                    client.lobbyConnection.idleNetCycles = 0;
                 } else {
                     client.lobbyConnection.method1916();
                 }
-                client.lobbyConnection.field840 = null;
+                client.lobbyConnection.packetType = null;
                 Statics.field633 = null;
             }
         } catch (IOException var8) {
@@ -173,7 +173,7 @@ public class AccountCreationManager {
             var1.p4((int) (Math.random() * 9.9999999E7D));
         }
         var1.p2((int) (Math.random() * 9.9999999E7D));
-        var1.tinyenc(PublicKeys.field666, PublicKeys.field667);
+        var1.rsaenc(PublicKeys.field666, PublicKeys.field667);
         arg0.buf.pdata(var1.data, 0, var1.pos);
         return var2;
     }

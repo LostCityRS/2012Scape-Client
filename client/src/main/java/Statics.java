@@ -3698,13 +3698,13 @@ public class Statics {
     @ObfuscatedName("u.ap(I)V")
     public static void method1237() {
         field501.method1935();
-        field501.field832.pos = 0;
-        field501.field840 = null;
-        field501.field843 = null;
-        field501.field844 = null;
-        field501.field831 = null;
-        field501.field835 = 0;
-        field501.field837 = 0;
+        field501.in.pos = 0;
+        field501.packetType = null;
+        field501.lastPacketType0 = null;
+        field501.lastPacketType1 = null;
+        field501.lastPacketType2 = null;
+        field501.packetSize = 0;
+        field501.idleNetCycles = 0;
         client.systemUpdateTimer = 0;
         MiniMenu.method11300();
         MiniMap.method1202();
@@ -3713,7 +3713,7 @@ public class Statics {
         }
         localPlayerEntity = null;
         for (int var1 = 0; var1 < client.field8966; var1++) {
-            PathingEntity var2 = (PathingEntity) client.field8965[var1].field9550;
+            PathingEntity var2 = (PathingEntity) client.field8965[var1].value;
             if (var2 != null) {
                 var2.field8624 = -1;
             }
@@ -3752,7 +3752,7 @@ public class Statics {
         } else if (MiniMenu.method8731(arg0.field10340)) {
             ObjectNode var2 = (ObjectNode) client.npcs.getNode((long) arg0.field10333);
             if (var2 != null) {
-                NpcEntity var3 = (NpcEntity) var2.field9550;
+                NpcEntity var3 = (NpcEntity) var2.value;
                 NPCType var4 = var3.field10075;
                 if (var4.field7244 != null) {
                     var4 = var4.method12516(field2669);
@@ -4126,7 +4126,7 @@ public class Statics {
         if (action == 8) {
             ObjectNode var28 = (ObjectNode) client.npcs.getNode((long) var6);
             if (var28 != null) {
-                NpcEntity var29 = (NpcEntity) var28.field9550;
+                NpcEntity var29 = (NpcEntity) var28.value;
                 client.crossX = arg1;
                 client.crossY = arg2;
                 client.crossMode = 2;
@@ -4158,7 +4158,7 @@ public class Statics {
         if (var31 != null) {
             ObjectNode var32 = (ObjectNode) client.npcs.getNode((long) var6);
             if (var32 != null) {
-                NpcEntity var33 = (NpcEntity) var32.field9550;
+                NpcEntity var33 = (NpcEntity) var32.value;
                 client.crossX = arg1;
                 client.crossY = arg2;
                 client.crossMode = 2;
@@ -4412,9 +4412,9 @@ public class Statics {
         ChangeLocationRequest.method3590();
         AudioRenderer.method1677();
         if (client.field9017 > 10) {
-            client.gameConnection.field837++;
+            client.gameConnection.idleNetCycles++;
         }
-        if (client.gameConnection.field837 > 2250) {
+        if (client.gameConnection.idleNetCycles > 2250) {
             client.method8047();
             return;
         }
@@ -4741,7 +4741,7 @@ public class Statics {
             if (arg0.field8624 < 32768) {
                 ObjectNode var2 = (ObjectNode) client.npcs.getNode((long) arg0.field8624);
                 if (var2 != null) {
-                    var1 = (PathingEntity) var2.field9550;
+                    var1 = (PathingEntity) var2.value;
                 }
             } else if (arg0.field8624 >= 32768) {
                 var1 = client.players[arg0.field8624 - 32768];
@@ -5150,7 +5150,7 @@ public class Statics {
                     } else {
                         ObjectNode var4 = (ObjectNode) client.npcs.getNode((long) (var1.field10626 - 1));
                         if (var4 != null) {
-                            NpcEntity var5 = (NpcEntity) var4.field9550;
+                            NpcEntity var5 = (NpcEntity) var4.value;
                             Vector3 var6 = var5.getTransform().trans;
                             if ((int) var6.x >= 0 && (int) var6.x < client.world.getSizeX() * 512 && (int) var6.z >= 0 && (int) var6.z < client.world.getSizeZ() * 512) {
                                 var1.method17162((int) var6.x, (int) var6.z, client.getHeightmapY((int) var6.x, (int) var6.z, var1.level) - var1.field10620, client.loopCycle);
@@ -6207,7 +6207,7 @@ public class Statics {
                 int var18 = arg1 - 1;
                 ObjectNode var19 = (ObjectNode) client.npcs.getNode((long) var18);
                 if (var19 != null) {
-                    var16 = (PathingEntity) var19.field9550;
+                    var16 = (PathingEntity) var19.value;
                 }
             }
             if (var16 != null) {

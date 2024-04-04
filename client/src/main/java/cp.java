@@ -36,7 +36,7 @@ public class cp {
             if (var0 == null) {
                 return;
             }
-            ((ua) var0.field9550).ma(true);
+            ((ua) var0.value).ma(true);
             var0.method6979();
         }
     }

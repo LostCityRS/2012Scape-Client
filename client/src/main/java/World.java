@@ -765,7 +765,7 @@ public class World {
             for (int var4 = 0; var4 < client.field8966; var4++) {
                 ObjectNode var5 = client.field8965[var4];
                 if (var5 != null) {
-                    NpcEntity var6 = (NpcEntity) var5.field9550;
+                    NpcEntity var6 = (NpcEntity) var5.value;
                     for (int var7 = 0; var7 < var6.routeWaypointX.length; var7++) {
                         var6.routeWaypointX[var7] -= var2;
                         var6.routeWaypointZ[var7] -= var3;
@@ -785,7 +785,7 @@ public class World {
             for (int var12 = 0; var12 < client.field8966; var12++) {
                 ObjectNode var13 = client.field8965[var12];
                 if (var13 != null) {
-                    NpcEntity var14 = (NpcEntity) var13.field9550;
+                    NpcEntity var14 = (NpcEntity) var13.value;
                     Vector3 var15 = Vector3.create(var14.getTransform().trans);
                     var15.x -= var2 * 512;
                     var15.z -= var3 * 512;
@@ -1039,7 +1039,7 @@ public class World {
             for (int var13 = 0; var13 < client.field8965.length; var13++) {
                 ObjectNode var14 = client.field8965[var13];
                 if (var14 != null) {
-                    ((GraphEntity) var14.field9550).field9808 = null;
+                    ((GraphEntity) var14.value).field9808 = null;
                 }
             }
         }

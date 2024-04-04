@@ -190,7 +190,7 @@ public class ClanSettings {
             return null;
         } else {
             Node var2 = this.field2368.getNode((long) arg0);
-            return var2 != null && var2 instanceof ObjectNode ? (String) ((ObjectNode) var2).field9550 : null;
+            return var2 != null && var2 instanceof ObjectNode ? (String) ((ObjectNode) var2).value : null;
         }
     }
 
@@ -457,8 +457,8 @@ public class ClanSettings {
             if (var3 != null) {
                 if (var3 instanceof ObjectNode) {
                     ObjectNode var4 = (ObjectNode) var3;
-                    if (var4.field9550 instanceof String) {
-                        if (arg1.equals(var4.field9550)) {
+                    if (var4.value instanceof String) {
+                        if (arg1.equals(var4.value)) {
                             return false;
                         }
                         var4.method6979();
