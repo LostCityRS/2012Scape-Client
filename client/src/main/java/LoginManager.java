@@ -802,7 +802,7 @@ public class LoginManager {
                     }
                     Statics.field501.getStream().method7196(var36.data, 3, 1);
                 }
-                Statics.field501.field840 = ServerProt.method14807()[var36.gIsaac1or2()];
+                Statics.field501.field840 = ServerProt.values()[var36.gIsaac1or2()];
                 Statics.field501.field835 = var36.g2();
                 field531 = 153;
             }

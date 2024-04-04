@@ -5989,7 +5989,7 @@ public final class client extends GameShell {
             }
         } catch (Exception var7) {
             CoordGrid var3 = world.getBase();
-            String var4 = (arg0.field840 == null ? -1 : arg0.field840.field3138) + TextUtil.field488 + (arg0.field844 == null ? -1 : arg0.field844.field3138) + TextUtil.field488 + (arg0.field831 == null ? -1 : arg0.field831.field3138) + " " + arg0.field835 + TextUtil.field488 + (var3.x + Statics.localPlayerEntity.routeWaypointX[0]) + TextUtil.field488 + (var3.z + Statics.localPlayerEntity.routeWaypointZ[0]) + " ";
+            String var4 = (arg0.field840 == null ? -1 : arg0.field840.id) + TextUtil.field488 + (arg0.field844 == null ? -1 : arg0.field844.id) + TextUtil.field488 + (arg0.field831 == null ? -1 : arg0.field831.id) + " " + arg0.field835 + TextUtil.field488 + (var3.x + Statics.localPlayerEntity.routeWaypointX[0]) + TextUtil.field488 + (var3.z + Statics.localPlayerEntity.routeWaypointZ[0]) + " ";
             for (int var5 = 0; var5 < arg0.field835 && var5 < 50; var5++) {
                 var4 = var4 + arg0.field832.data[var5] + TextUtil.field488;
             }
@@ -6026,13 +6026,13 @@ public final class client extends GameShell {
                 arg0.field837 = 0;
             }
             arg0.field836 = true;
-            ServerProt[] var3 = ServerProt.method14807();
+            ServerProt[] var3 = ServerProt.values();
             int var4 = var2.gIsaac1or2();
             if (var4 < 0 || var4 >= var3.length) {
                 throw new IOException(var4 + " " + var2.pos);
             }
             arg0.field840 = var3[var4];
-            arg0.field835 = arg0.field840.field3139;
+            arg0.field835 = arg0.field840.size;
         }
         if (arg0.field835 == -1) {
             if (!var1.method7212(1)) {
@@ -6086,7 +6086,7 @@ public final class client extends GameShell {
             int var14 = var13 >> 2;
             int var15 = var13 & 0x3;
             CoordGrid var16 = new CoordGrid(var2.g4s_alt3());
-            method2793();
+            incrementVerifyId();
             method3589(var10, new SubInterfaceActiveLoc(var9, var11, new LocReference(var16, var14, var15, var8)), new int[]{var12, var5, var6, var7}, false);
             arg0.field840 = null;
             return true;
@@ -6100,7 +6100,7 @@ public final class client extends GameShell {
             AudioRenderer.method5596(var17, var19, var18);
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field3004 == arg0.field840) {
+        } else if (ServerProt.RUNCLIENTSCRIPT == arg0.field840) {
             String var20 = var2.gjstr();
             Object[] var21 = new Object[var20.length() + 1];
             for (int var22 = var20.length() - 1; var22 >= 0; var22--) {
@@ -6111,16 +6111,16 @@ public final class client extends GameShell {
                 }
             }
             var21[0] = Integer.valueOf(var2.g4s());
-            method2793();
+            incrementVerifyId();
             HookRequest var23 = new HookRequest();
             var23.onop = var21;
             ScriptRunner.runHook(var23);
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field3106 == arg0.field840) {
+        } else if (ServerProt.CLIENT_SETVARCSTR_LARGE == arg0.field840) {
             String var24 = var2.gjstr();
             int var25 = var2.g2();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method14096(var25, var24);
             arg0.field840 = null;
             return true;
@@ -6141,7 +6141,7 @@ public final class client extends GameShell {
         } else if (ServerProt.field3057 == arg0.field840) {
             int var28 = var2.g1_alt3();
             byte var29 = var2.g1b_alt2();
-            method2793();
+            incrementVerifyId();
             AudioRenderer.method1349(var29, var28);
             arg0.field840 = null;
             return true;
@@ -6152,7 +6152,7 @@ public final class client extends GameShell {
         } else if (ServerProt.field3070 == arg0.field840) {
             int var30 = var2.g4s_alt3();
             int var31 = var2.g4s();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method1639(var30, var31);
             arg0.field840 = null;
             return true;
@@ -6160,19 +6160,19 @@ public final class client extends GameShell {
             int var32 = var2.g4s_alt1();
             int var33 = var2.g4s_alt3();
             int var34 = var2.g2();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method2995(var33, 5, var34, var32);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3117 == arg0.field840) {
             int var35 = var2.g4s_alt3();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method2995(var35, 5, currentPlayerUid, 0);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3038 == arg0.field840) {
             int var36 = var2.g4s_alt1();
-            method2793();
+            incrementVerifyId();
             if (var36 == -1) {
                 Statics.field1941 = -1;
                 Statics.field3308 = -1;
@@ -6197,10 +6197,10 @@ public final class client extends GameShell {
             }
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field2997 == arg0.field840) {
+        } else if (ServerProt.VARC_SMALL == arg0.field840) {
             byte var42 = var2.g1b();
             int var43 = var2.g2_alt3();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method3667(var43, var42);
             arg0.field840 = null;
             return true;
@@ -6244,7 +6244,7 @@ public final class client extends GameShell {
             int var51 = var2.g1_alt3();
             int var52 = var2.g2_alt3();
             int var53 = var2.g4s_alt3();
-            method2793();
+            incrementVerifyId();
             method3589(var46, new SubInterfaceActiveObj(var52, var51, new ObjReference(var45, var47)), new int[]{var49, var50, var48, var53}, false);
             arg0.field840 = null;
             return true;
@@ -6268,7 +6268,7 @@ public final class client extends GameShell {
             int var66 = var2.g4s();
             int var67 = var2.g2_alt1();
             int var68 = var2.g4s_alt2();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method2995(var66, 3, var67, var68);
             arg0.field840 = null;
             return true;
@@ -6435,7 +6435,7 @@ public final class client extends GameShell {
             }
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field3029 == arg0.field840) {
+        } else if (ServerProt.UPDATE_RUNWEIGHT == arg0.field840) {
             field8905 = var2.g2s();
             miscTransmitNum = interfaceUpdateNum;
             arg0.field840 = null;
@@ -6443,7 +6443,7 @@ public final class client extends GameShell {
         } else if (ServerProt.field3103 == arg0.field840) {
             int var107 = var2.g2();
             int var108 = var2.g1();
-            method2793();
+            incrementVerifyId();
             VideoTypeList.method7358(var107, var108, true);
             arg0.field840 = null;
             return true;
@@ -6462,14 +6462,14 @@ public final class client extends GameShell {
         } else if (ServerProt.field2992 == arg0.field840) {
             int var114 = var2.g4s_alt3();
             int var115 = var2.g4s_alt2();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method1974(var115, var114);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field2989 == arg0.field840) {
             int var116 = var2.g4s_alt3();
             int var117 = var2.g4s_alt1();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method12119(var116, var117);
             arg0.field840 = null;
             return true;
@@ -6481,10 +6481,10 @@ public final class client extends GameShell {
             }
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field3081 == arg0.field840) {
+        } else if (ServerProt.CLIENT_SETVARCSTR_SMALL == arg0.field840) {
             int var119 = var2.g2_alt2();
             String var120 = var2.gjstr();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method14096(var119, var120);
             arg0.field840 = null;
             return true;
@@ -6560,7 +6560,7 @@ public final class client extends GameShell {
             int var141 = var2.g2_alt3();
             int key3 = var2.g4s_alt3();
             int key4 = var2.g4s_alt3();
-            method2793();
+            incrementVerifyId();
             method3589(var139, new SubInterface(var141, var140), new int[]{key1, key2, key3, key4}, false);
             arg0.field840 = null;
             return true;
@@ -6575,7 +6575,7 @@ public final class client extends GameShell {
             }
             int var146 = var2.g4s_alt1();
             int var147 = var2.g2_alt1();
-            method2793();
+            incrementVerifyId();
             for (int var148 = var145; var148 <= var144; var148++) {
                 long var149 = ((long) var146 << 32) + (long) var148;
                 ServerKeyProperties var151 = (ServerKeyProperties) field9010.getNode(var149);
@@ -6601,7 +6601,7 @@ public final class client extends GameShell {
             int var154 = var2.g2_alt3();
             int var155 = var2.g4s_alt1();
             int var156 = var2.g2_alt3();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method2995(var155, 7, var156 << 16 | var154, var153);
             arg0.field840 = null;
             return true;
@@ -6627,7 +6627,7 @@ public final class client extends GameShell {
             int var161 = var2.g2();
             int var162 = var2.g2();
             int var163 = var2.g2();
-            method2793();
+            incrementVerifyId();
             if (Statics.field1756[var161] != null) {
                 for (int var164 = var162; var164 < var163; var164++) {
                     int var165 = var2.g3();
@@ -6720,7 +6720,7 @@ public final class client extends GameShell {
             if (var190 == 65535) {
                 var190 = -1;
             }
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method15973(var188, var190, var189);
             ObjType var191 = Statics.objTypes.get(var190);
             DelayedStateChange.method3599(var188, var191.field7073, var191.field7077, var191.field7072);
@@ -6769,14 +6769,14 @@ public final class client extends GameShell {
             var200.start();
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field3012 == arg0.field840) {
+        } else if (ServerProt.IF_SETHIDE == arg0.field840) {
             int var201 = var2.g4s_alt3();
             int var202 = var2.g1_alt2();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method7351(var201, var202);
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field3025 == arg0.field840) {
+        } else if (ServerProt.MESSAGE_GAME == arg0.field840) {
             int var203 = var2.gSmart1or2();
             int var204 = var2.g4s();
             int var205 = var2.g1();
@@ -6803,7 +6803,7 @@ public final class client extends GameShell {
             }
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field2981 == arg0.field840) {
+        } else if (ServerProt.UPDATE_ZONE_PARTIAL_FOLLOWS == arg0.field840) {
             Statics.field3161 = var2.g1();
             Statics.field6803 = var2.g1b() << 3;
             Statics.field3907 = var2.g1b() << 3;
@@ -6891,14 +6891,14 @@ public final class client extends GameShell {
             return true;
         } else if (ServerProt.field3075 == arg0.field840) {
             int var229 = var2.g2_alt2();
-            method2793();
+            incrementVerifyId();
             VideoTypeList.method2930(var229);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3087 == arg0.field840) {
             boolean var230 = var2.g1_alt2() == 1;
             int var231 = var2.g4s_alt2();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method15850(var231, var230);
             arg0.field840 = null;
             return true;
@@ -6921,7 +6921,7 @@ public final class client extends GameShell {
             field9152 = interfaceUpdateNum;
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field3044 == arg0.field840) {
+        } else if (ServerProt.UPDATE_RUNENERGY == arg0.field840) {
             field9109 = var2.g1();
             miscTransmitNum = interfaceUpdateNum;
             arg0.field840 = null;
@@ -7010,7 +7010,7 @@ public final class client extends GameShell {
             if (var258 == 65535) {
                 var258 = -1;
             }
-            method2793();
+            incrementVerifyId();
             for (int var259 = var258; var259 <= var256; var259++) {
                 long var260 = ((long) var257 << 32) + (long) var259;
                 ServerKeyProperties var262 = (ServerKeyProperties) field9010.getNode(var260);
@@ -7070,33 +7070,33 @@ public final class client extends GameShell {
             int var278 = var2.g4s_alt1();
             int var279 = var2.g2_alt3();
             int var280 = var2.g4s_alt2();
-            method2793();
+            incrementVerifyId();
             method3589(var277, new SubInterfaceActiveNpc(var274, var276, var279), new int[]{var275, var278, var280, var273}, false);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3028 == arg0.field840) {
             int var281 = var2.g2_alt2();
             int var282 = var2.g4s_alt2();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method12737(var282, var281);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3079 == arg0.field840) {
             int var283 = var2.g2_alt2();
-            method2793();
+            incrementVerifyId();
             VideoTypeList.method11689(var283);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3083 == arg0.field840) {
             int var284 = var2.g2_alt1();
             int var285 = var2.g4s();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method11469(var285, var284);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.IF_CLOSESUB == arg0.field840) {
             int var286 = var2.g4s_alt1();
-            method2793();
+            incrementVerifyId();
             SubInterface var287 = (SubInterface) field9075.getNode((long) var286);
             if (var287 != null) {
                 closeSubInterface(var287, true, false);
@@ -7154,11 +7154,11 @@ public final class client extends GameShell {
             handleZoneProt(ZoneProt.field2812);
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field2987 == arg0.field840) {
+        } else if (ServerProt.NO_TIMEOUT == arg0.field840) {
             arg0.field840 = null;
             return false;
-        } else if (ServerProt.field3003 == arg0.field840) {
-            method2793();
+        } else if (ServerProt.CAM_RESET == arg0.field840) {
+            incrementVerifyId();
             cameraReset();
             arg0.field840 = null;
             return true;
@@ -7273,7 +7273,7 @@ public final class client extends GameShell {
         } else if (ServerProt.IF_SETTEXT == arg0.field840) {
             String var313 = var2.gjstr();
             int var314 = var2.g4s_alt2();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method16188(var314, var313);
             arg0.field840 = null;
             return true;
@@ -7421,14 +7421,14 @@ public final class client extends GameShell {
             int var341 = var2.g4s_alt2();
             int var342 = var2.g4s_alt3();
             int var343 = var2.g4s();
-            method2793();
+            incrementVerifyId();
             method3589(var343, new SubInterfaceActivePlayer(var339, var337, var340), new int[]{var342, var341, var338, var336}, false);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3053 == arg0.field840) {
             int var344 = var2.g4s_alt1();
             int var345 = var2.g4s_alt3();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method2995(var344, 1, var345, -1);
             arg0.field840 = null;
             return true;
@@ -7436,14 +7436,14 @@ public final class client extends GameShell {
             int var346 = var2.g2_alt1();
             int var347 = var2.g2();
             int var348 = var2.g4s();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method7186(var348, (var346 << 16) + var347);
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field3063 == arg0.field840) {
             int var349 = var2.g2_alt2();
             int var350 = var2.g2_alt3();
-            method2793();
+            incrementVerifyId();
             method8486(var349, var350, 0);
             arg0.field840 = null;
             return true;
@@ -7457,7 +7457,7 @@ public final class client extends GameShell {
             int var353 = var2.g1_alt2();
             int var354 = var2.g1();
             int var355 = var2.g2_alt2() << 2;
-            method2793();
+            incrementVerifyId();
             cameraLookAt(var354, var351, var355, var353, var352);
             arg0.field840 = null;
             return true;
@@ -7475,7 +7475,7 @@ public final class client extends GameShell {
             arg0.field840 = null;
             return true;
         } else if (ServerProt.field2984 == arg0.field840) {
-            method2793();
+            incrementVerifyId();
             cameraSmoothReset();
             arg0.field840 = null;
             return true;
@@ -7489,19 +7489,19 @@ public final class client extends GameShell {
             field9145[++field9146 - 1 & 0x1F] = var359;
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field2977 == arg0.field840) {
+        } else if (ServerProt.VARBIT_LARGE == arg0.field840) {
             int var361 = var2.g4s_alt1();
             int var362 = var2.g2();
             Statics.field2669.method1663(var362, var361);
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field3030 == arg0.field840) {
+        } else if (ServerProt.VARP_LARGE == arg0.field840) {
             int var363 = var2.g4s_alt1();
             int var364 = var2.g2_alt2();
             Statics.field2669.method1643(var364, var363);
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field2996 == arg0.field840) {
+        } else if (ServerProt.LOGOUT == arg0.field840) {
             logout(false);
             arg0.field840 = null;
             return false;
@@ -7512,7 +7512,7 @@ public final class client extends GameShell {
         } else if (ServerProt.field3013 == arg0.field840) {
             int var365 = var2.g4s();
             int var366 = var2.g2_alt2();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method4033(var365, var366);
             arg0.field840 = null;
             return true;
@@ -7612,7 +7612,7 @@ public final class client extends GameShell {
             return true;
         } else if (ServerProt.field3129 == arg0.field840) {
             boolean var413 = var2.g1() == 1;
-            method2793();
+            incrementVerifyId();
             Statics.field6371 = var413;
             arg0.field840 = null;
             return true;
@@ -7643,11 +7643,11 @@ public final class client extends GameShell {
         } else if (ServerProt.field3058 == arg0.field840) {
             int var422 = var2.g4s_alt2();
             boolean var423 = var2.g1() == 1;
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method3226(var422, var423);
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field2978 == arg0.field840) {
+        } else if (ServerProt.URL_OPEN == arg0.field840) {
             if (Fullscreen.allowed && Statics.fsFrame != null) {
                 setWindowMode(Statics.options.maxScreenSize.getValue(), -1, -1, false);
             }
@@ -7687,11 +7687,11 @@ public final class client extends GameShell {
             return true;
         } else if (ServerProt.field3048 == arg0.field840) {
             int var432 = var2.g1_alt1();
-            method2793();
+            incrementVerifyId();
             field9047 = var432;
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field3131 == arg0.field840) {
+        } else if (ServerProt.VARBIT_SMALL == arg0.field840) {
             int var433 = var2.g2_alt3();
             int var434 = var2.g1_alt2();
             Statics.field2669.method1663(var433, var434);
@@ -7790,11 +7790,11 @@ public final class client extends GameShell {
             int var456 = var2.g2();
             int var457 = var2.g2();
             int var458 = var2.g2_alt2();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method3599(var455, var458, var457, var456);
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field2985 == arg0.field840) {
+        } else if (ServerProt.VARP_SMALL == arg0.field840) {
             byte var459 = var2.g1b_alt3();
             int var460 = var2.g2_alt1();
             Statics.field2669.method1643(var460, var459);
@@ -8004,17 +8004,17 @@ public final class client extends GameShell {
             return true;
         } else if (ServerProt.field3024 == arg0.field840) {
             int var525 = var2.g4s_alt1();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method2995(var525, 3, currentPlayerUid, 0);
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field2980 == arg0.field840) {
+        } else if (ServerProt.CAM_SHAKE == arg0.field840) {
             int var526 = var2.g1_alt2();
             int var527 = var2.g1_alt2();
             int var528 = var2.g1_alt3();
             int var529 = var2.g2();
             int var530 = var2.g1_alt1();
-            method2793();
+            incrementVerifyId();
             cameraModifierEnabled[var526] = true;
             field9189[var526] = var528;
             field9190[var526] = var530;
@@ -8025,7 +8025,7 @@ public final class client extends GameShell {
         } else if (ServerProt.field3072 == arg0.field840) {
             int var531 = var2.g4s_alt2();
             int var532 = var2.g4s();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method2995(var532, 2, var531, -1);
             arg0.field840 = null;
             return true;
@@ -8073,7 +8073,7 @@ public final class client extends GameShell {
             }
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field3040 == arg0.field840) {
+        } else if (ServerProt.NPC_INFO_LARGE == arg0.field840) {
             method3676(true);
             arg0.field840 = null;
             return true;
@@ -8101,7 +8101,7 @@ public final class client extends GameShell {
             field9148 = interfaceUpdateNum;
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field3095 == arg0.field840) {
+        } else if (ServerProt.UPDATE_REBOOT_TIMER == arg0.field840) {
             if (isStateLobby(state)) {
                 systemUpdateTimer = (int) ((float) var2.g2() * 2.5F);
             } else {
@@ -8114,7 +8114,7 @@ public final class client extends GameShell {
             int var547 = var2.g2s_alt1();
             int var548 = var2.g4s_alt2();
             int var549 = var2.g2s_alt3();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method6312(var548, var549, var547);
             arg0.field840 = null;
             return true;
@@ -8133,11 +8133,11 @@ public final class client extends GameShell {
             int var554 = var2.g4s_alt1();
             int var555 = var2.g1_alt1();
             int var556 = var2.g2_alt2();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method2497(var554, var555, var556, var553);
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field2979 == arg0.field840) {
+        } else if (ServerProt.UPDATE_STAT == arg0.field840) {
             int var557 = var2.g1_alt1();
             int var558 = var2.g1();
             int var559 = var2.g4s_alt2();
@@ -8153,10 +8153,10 @@ public final class client extends GameShell {
             field9139[++field9140 - 1 & 0x1F] = var557;
             arg0.field840 = null;
             return true;
-        } else if (ServerProt.field3089 == arg0.field840) {
+        } else if (ServerProt.CLIENT_SETVARC_LARGE == arg0.field840) {
             int var562 = var2.g4s_alt1();
             int var563 = var2.g2_alt3();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method3667(var563, var562);
             arg0.field840 = null;
             return true;
@@ -8171,7 +8171,7 @@ public final class client extends GameShell {
             int var566 = var2.g1();
             int var567 = var2.g1_alt3();
             int var568 = var2.g2_alt3() << 2;
-            method2793();
+            incrementVerifyId();
             cameraMoveTo(var567, var566, var568, var564, var565, true);
             arg0.field840 = null;
             return true;
@@ -8184,7 +8184,7 @@ public final class client extends GameShell {
             int var570 = var2.g2_alt3();
             int var571 = var2.g1();
             int var572 = var2.g2();
-            method2793();
+            incrementVerifyId();
             DelayedStateChange.method15139(var569, var571, var572, var570);
             arg0.field840 = null;
             return true;
@@ -8204,7 +8204,7 @@ public final class client extends GameShell {
             int type = var2.g1_alt3();
             int key4 = var2.g4s();
             int key3 = var2.g4s();
-            method2793();
+            incrementVerifyId();
             if (type == 2) {
                 closeMAp();
             }
@@ -8221,7 +8221,7 @@ public final class client extends GameShell {
         } else if (ServerProt.field3099 == arg0.field840) {
             int var582 = var2.g4s_alt2();
             int var583 = var2.g4s_alt3();
-            method2793();
+            incrementVerifyId();
             SubInterface var584 = (SubInterface) field9075.getNode((long) var582);
             SubInterface var585 = (SubInterface) field9075.getNode((long) var583);
             if (var585 != null) {
@@ -8312,7 +8312,7 @@ public final class client extends GameShell {
             arg0.field840 = null;
             return true;
         } else {
-            JagException.method16252((arg0.field840 == null ? -1 : arg0.field840.field3138) + TextUtil.field488 + (arg0.field844 == null ? -1 : arg0.field844.field3138) + TextUtil.field488 + (arg0.field831 == null ? -1 : arg0.field831.field3138) + " " + arg0.field835, new RuntimeException());
+            JagException.method16252((arg0.field840 == null ? -1 : arg0.field840.id) + TextUtil.field488 + (arg0.field844 == null ? -1 : arg0.field844.id) + TextUtil.field488 + (arg0.field831 == null ? -1 : arg0.field831.id) + " " + arg0.field835, new RuntimeException());
             logout(false);
             return true;
         }
@@ -11739,7 +11739,7 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("dc.mg(B)Z")
-    public static boolean method2793() {
+    public static boolean incrementVerifyId() {
         currentIncrementVerifyId++;
         field8978 = true;
         return true;

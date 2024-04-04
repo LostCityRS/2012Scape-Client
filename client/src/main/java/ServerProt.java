@@ -10,19 +10,19 @@ public class ServerProt {
     public static final ServerProt field2976 = new ServerProt(1, -2);
 
     @ObfuscatedName("jx.a")
-    public static final ServerProt field3025 = new ServerProt(2, -1); // sendMessage
+    public static final ServerProt MESSAGE_GAME = new ServerProt(2, -1); // sendMessage
 
     @ObfuscatedName("jx.s")
     public static final ServerProt field3127 = new ServerProt(3, 10);
 
     @ObfuscatedName("jx.c")
-    public static final ServerProt field2979 = new ServerProt(4, 6); // sendSkillLevel
+    public static final ServerProt UPDATE_STAT = new ServerProt(4, 6); // sendSkillLevel
 
     @ObfuscatedName("jx.m")
     public static final ServerProt field3008 = new ServerProt(5, 10);
 
     @ObfuscatedName("jx.t")
-    public static final ServerProt field2981 = new ServerProt(6, 3); // "createWorldTileStream"
+    public static final ServerProt UPDATE_ZONE_PARTIAL_FOLLOWS = new ServerProt(6, 3); // "createWorldTileStream"
 
     @ObfuscatedName("jx.l")
     public static final ServerProt field2982 = new ServerProt(7, 32);
@@ -34,13 +34,13 @@ public class ServerProt {
     public static final ServerProt field2984 = new ServerProt(9, 0);
 
     @ObfuscatedName("jx.z")
-    public static final ServerProt field2985 = new ServerProt(10, 3); // sendConfig1
+    public static final ServerProt VARP_SMALL = new ServerProt(10, 3); // sendConfig1
 
     @ObfuscatedName("jx.n")
     public static final ServerProt field2986 = new ServerProt(11, 2);
 
     @ObfuscatedName("jx.o")
-    public static final ServerProt field2987 = new ServerProt(12, 0); // ping reply?
+    public static final ServerProt NO_TIMEOUT = new ServerProt(12, 0); // ping reply?
 
     @ObfuscatedName("jx.q")
     public static final ServerProt field2988 = new ServerProt(13, 8);
@@ -67,10 +67,10 @@ public class ServerProt {
     public static final ServerProt field2995 = new ServerProt(20, 10);
 
     @ObfuscatedName("jx.h")
-    public static final ServerProt field2996 = new ServerProt(21, 0); // sendLogout
+    public static final ServerProt LOGOUT = new ServerProt(21, 0); // sendLogout
 
     @ObfuscatedName("jx.r")
-    public static final ServerProt field2997 = new ServerProt(22, 3); // sendGlobalConfig1
+    public static final ServerProt VARC_SMALL = new ServerProt(22, 3); // sendGlobalConfig1
 
     @ObfuscatedName("jx.g")
     public static final ServerProt field2998 = new ServerProt(23, -2); // sendFriendsChatChannel
@@ -88,10 +88,10 @@ public class ServerProt {
     public static final ServerProt field3002 = new ServerProt(27, 0);
 
     @ObfuscatedName("jx.ar")
-    public static final ServerProt field3003 = new ServerProt(28, 0); // sendStopCameraShake
+    public static final ServerProt CAM_RESET = new ServerProt(28, 0); // sendStopCameraShake
 
     @ObfuscatedName("jx.an")
-    public static final ServerProt field3004 = new ServerProt(29, -2); // sendRunScript
+    public static final ServerProt RUNCLIENTSCRIPT = new ServerProt(29, -2); // sendRunScript
 
     @ObfuscatedName("jx.ap")
     public static final ServerProt field3005 = new ServerProt(30, 5); // sendGroundItem
@@ -154,7 +154,7 @@ public class ServerProt {
     public static final ServerProt field3024 = new ServerProt(49, 4); // sendPlayerOnIComponent
 
     @ObfuscatedName("jx.aq")
-    public static final ServerProt field3081 = new ServerProt(50, -1); // sendGlobalString
+    public static final ServerProt CLIENT_SETVARCSTR_SMALL = new ServerProt(50, -1); // sendGlobalString
 
     @ObfuscatedName("jx.ab")
     public static final ServerProt field3026 = new ServerProt(51, 5);
@@ -166,10 +166,10 @@ public class ServerProt {
     public static final ServerProt field3028 = new ServerProt(53, 6);
 
     @ObfuscatedName("jx.bv")
-    public static final ServerProt field3029 = new ServerProt(54, 2); // sendWeight
+    public static final ServerProt UPDATE_RUNWEIGHT = new ServerProt(54, 2); // sendWeight
 
     @ObfuscatedName("jx.bj")
-    public static final ServerProt field3106 = new ServerProt(55, -2); // sendGlobalString
+    public static final ServerProt CLIENT_SETVARCSTR_LARGE = new ServerProt(55, -2); // sendGlobalString
 
     @ObfuscatedName("jx.bf")
     public static final ServerProt field3063 = new ServerProt(56, 4);
@@ -187,7 +187,7 @@ public class ServerProt {
     public static final ServerProt field3041 = new ServerProt(60, -1); // receiveClanChatQuickMessage
 
     @ObfuscatedName("jx.bs")
-    public static final ServerProt field2978 = new ServerProt(61, -2); // sendOpenURL
+    public static final ServerProt URL_OPEN = new ServerProt(61, -2); // sendOpenURL
 
     @ObfuscatedName("jx.bn")
     public static final ServerProt field3037 = new ServerProt(62, 3);
@@ -199,7 +199,7 @@ public class ServerProt {
     public static final ServerProt field3039 = new ServerProt(64, 25);
 
     @ObfuscatedName("jx.bc")
-    public static final ServerProt field3040 = new ServerProt(65, -2); // LocalNPCUpdate.large
+    public static final ServerProt NPC_INFO_LARGE = new ServerProt(65, -2); // LocalNPCUpdate.large
 
     @ObfuscatedName("jx.br")
     public static final ServerProt field3013 = new ServerProt(66, 6);
@@ -211,7 +211,7 @@ public class ServerProt {
     public static final ServerProt field3112 = new ServerProt(68, 20); // "sendGE" / "resetGE"
 
     @ObfuscatedName("jx.bx")
-    public static final ServerProt field3044 = new ServerProt(69, 1); // sendRunEnergy
+    public static final ServerProt UPDATE_RUNENERGY = new ServerProt(69, 1); // sendRunEnergy
 
     @ObfuscatedName("jx.bm")
     public static final ServerProt field3001 = new ServerProt(70, 3);
@@ -250,7 +250,7 @@ public class ServerProt {
     public static final ServerProt field3056 = new ServerProt(81, 4);
 
     @ObfuscatedName("jx.cm")
-    public static final ServerProt field3030 = new ServerProt(82, 6); // sendConfig2
+    public static final ServerProt VARP_LARGE = new ServerProt(82, 6); // sendConfig2
 
     @ObfuscatedName("jx.cw")
     public static final ServerProt field3058 = new ServerProt(83, 5);
@@ -277,7 +277,7 @@ public class ServerProt {
     public static final ServerProt PLAYER_INFO = new ServerProt(90, -2); // LocalPlayerUpdate
 
     @ObfuscatedName("jx.ca")
-    public static final ServerProt field2980 = new ServerProt(91, 6); // sendCameraShake
+    public static final ServerProt CAM_SHAKE = new ServerProt(91, 6); // sendCameraShake
 
     @ObfuscatedName("jx.ch")
     public static final ServerProt field3067 = new ServerProt(92, 2);
@@ -301,7 +301,7 @@ public class ServerProt {
     public static final ServerProt field3109 = new ServerProt(98, -2); // sendIgnore / sendIgnores
 
     @ObfuscatedName("jx.cc")
-    public static final ServerProt field2977 = new ServerProt(99, 6); // sendConfigByFile
+    public static final ServerProt VARBIT_LARGE = new ServerProt(99, 6); // sendConfigByFile
 
     @ObfuscatedName("jx.cg")
     public static final ServerProt field3080 = new ServerProt(100, 8);
@@ -343,7 +343,7 @@ public class ServerProt {
     public static final ServerProt field3087 = new ServerProt(112, 5);
 
     @ObfuscatedName("jx.dh")
-    public static final ServerProt field3012 = new ServerProt(113, 5); // "sendHideIComponent" / "sendInterfaceConfig"
+    public static final ServerProt IF_SETHIDE = new ServerProt(113, 5); // "sendHideIComponent" / "sendInterfaceConfig"
 
     @ObfuscatedName("jx.de")
     public static final ServerProt field3097 = new ServerProt(114, -2);
@@ -445,7 +445,7 @@ public class ServerProt {
     public static final ServerProt field3121 = new ServerProt(146, -1); // sendSpecialStringOnInterface
 
     @ObfuscatedName("jx.ef")
-    public static final ServerProt field3095 = new ServerProt(147, 2); // sendSystemUpdate
+    public static final ServerProt UPDATE_REBOOT_TIMER = new ServerProt(147, 2); // sendSystemUpdate
 
     @ObfuscatedName("jx.ex")
     public static final ServerProt IF_CLOSESUB = new ServerProt(148, 4); // close interface?
@@ -460,7 +460,7 @@ public class ServerProt {
     public static final ServerProt field2975 = new ServerProt(151, -1); // sendPlayerOption
 
     @ObfuscatedName("jx.em")
-    public static final ServerProt field3089 = new ServerProt(152, 6); // sendGlobalConfig2
+    public static final ServerProt CLIENT_SETVARC_LARGE = new ServerProt(152, 6); // sendGlobalConfig2
 
     @ObfuscatedName("jx.ey")
     public static final ServerProt REBUILD_REGION = new ServerProt(153, -2); // sendDynamicMapRegion
@@ -472,7 +472,7 @@ public class ServerProt {
     public static final ServerProt field3130 = new ServerProt(155, 22);
 
     @ObfuscatedName("jx.fd")
-    public static final ServerProt field3131 = new ServerProt(156, 3); // sendConfigByFile
+    public static final ServerProt VARBIT_SMALL = new ServerProt(156, 3); // sendConfigByFile
 
     @ObfuscatedName("jx.fr")
     public static final ServerProt field3132 = new ServerProt(157, 6);
@@ -495,21 +495,21 @@ public class ServerProt {
     public static final ServerProt CUSTOM_OLDITEMSLOOK = new ServerProt(163, 1);
 
     @ObfuscatedName("jx.fl")
-    public final int field3138;
+    public final int id;
 
     @ObfuscatedName("jx.ff")
-    public final int field3139;
+    public final int size;
 
     @ObfuscatedName("acz.u(B)[Ljx;")
-    public static ServerProt[] method14807() {
+    public static ServerProt[] values() {
         return new ServerProt[]{
-            field3099, field2976, field3025, field3127, field2979, field3008, field2981, field2982, field2983, field2984, field2985, field2986, field2987, field2988, field2989, field2990, field2991, field2992, field2993, field2994, field2995, field2996, field2997, field2998, field3000, field3045, field3077, field3002, field3003, field3004, field3005, field3118, field3007, field3052, field3009, field3010, field3011, field3051, field2999, field3068, field3015, field3016, field3017, field3018, field3019, IF_OPENTOP, field3111, IF_OPENSUB, field3023, field3024, field3081, field3026, field3057, field3028, field3029, field3106, field3063, field3092, field3033, field3034, field3041, field2978, field3037, field3038, field3039, field3040, field3013, field3042, field3112, field3044, field3001, field3046, NPC_INFO, field3048, field3049, field3050, field3133, field3125, field3053, field3054, field3055, field3056, field3030, field3058, field3059, field3060, field3061, field3062, field3116, REBUILD_NORMAL, PLAYER_INFO, field2980, field3067, field3066, field3069, field3119, field3071, field3070, field3109, field2977, field3080, field3076, field3031, field3078, field3079, field3014, field3043, IF_SETTEXT, field3083, field3084, field3085, field3086, field3087, field3012, field3097, field3090, field3091, field3035, IF_SETEVENTS, field3094, field3082, field3096, field3075, field3098, field3073, field3032, field3101, field3102, field3103, field3104, field3105, field3124, field3107, field3108, field3072, field3110, field3088, field3006, field3113, field3114, field3115, field3021, field3117, field3074, field3036, field3120, field3121, field3095, IF_CLOSESUB, field3100, field3126, field2975, field3089, REBUILD_REGION, field3129, field3130, field3131, field3132, field3027, field3134, field3135, field3136, field3137,
+            field3099, field2976, MESSAGE_GAME, field3127, UPDATE_STAT, field3008, UPDATE_ZONE_PARTIAL_FOLLOWS, field2982, field2983, field2984, VARP_SMALL, field2986, NO_TIMEOUT, field2988, field2989, field2990, field2991, field2992, field2993, field2994, field2995, LOGOUT, VARC_SMALL, field2998, field3000, field3045, field3077, field3002, CAM_RESET, RUNCLIENTSCRIPT, field3005, field3118, field3007, field3052, field3009, field3010, field3011, field3051, field2999, field3068, field3015, field3016, field3017, field3018, field3019, IF_OPENTOP, field3111, IF_OPENSUB, field3023, field3024, CLIENT_SETVARCSTR_SMALL, field3026, field3057, field3028, UPDATE_RUNWEIGHT, CLIENT_SETVARCSTR_LARGE, field3063, field3092, field3033, field3034, field3041, URL_OPEN, field3037, field3038, field3039, NPC_INFO_LARGE, field3013, field3042, field3112, UPDATE_RUNENERGY, field3001, field3046, NPC_INFO, field3048, field3049, field3050, field3133, field3125, field3053, field3054, field3055, field3056, VARP_LARGE, field3058, field3059, field3060, field3061, field3062, field3116, REBUILD_NORMAL, PLAYER_INFO, CAM_SHAKE, field3067, field3066, field3069, field3119, field3071, field3070, field3109, VARBIT_LARGE, field3080, field3076, field3031, field3078, field3079, field3014, field3043, IF_SETTEXT, field3083, field3084, field3085, field3086, field3087, IF_SETHIDE, field3097, field3090, field3091, field3035, IF_SETEVENTS, field3094, field3082, field3096, field3075, field3098, field3073, field3032, field3101, field3102, field3103, field3104, field3105, field3124, field3107, field3108, field3072, field3110, field3088, field3006, field3113, field3114, field3115, field3021, field3117, field3074, field3036, field3120, field3121, UPDATE_REBOOT_TIMER, IF_CLOSESUB, field3100, field3126, field2975, CLIENT_SETVARC_LARGE, REBUILD_REGION, field3129, field3130, VARBIT_SMALL, field3132, field3027, field3134, field3135, field3136, field3137,
             CUSTOM_OLDITEMSLOOK
         };
     }
 
-    public ServerProt(int arg0, int arg1) {
-        this.field3138 = arg0;
-        this.field3139 = arg1;
+    public ServerProt(int id, int size) {
+        this.id = id;
+        this.size = size;
     }
 }
