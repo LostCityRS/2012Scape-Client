@@ -16,22 +16,22 @@ public class ClientOptionsLoadingScreen extends ClientOption {
     }
 
     @ObfuscatedName("aft.u(I)I")
-    public int method11386() {
+    public int getDefault() {
         return 0;
     }
 
     @ObfuscatedName("aft.j(IB)I")
-    public int method11387(int arg0) {
+    public int canSetValue(int arg0) {
         return 1;
     }
 
     @ObfuscatedName("aft.s(II)V")
-    public void method11389(int arg0) {
-        this.field6461 = arg0;
+    public void setValue(int arg0) {
+        this.value = arg0;
     }
 
     @ObfuscatedName("aft.n(I)I")
     public int method15859() {
-        return this.field6461;
+        return this.value;
     }
 }

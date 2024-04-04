@@ -13,13 +13,13 @@ public class ClientOptionsOrthographic extends ClientOption {
 
     @ObfuscatedName("afc.z(I)V")
     public void method15746() {
-        if (this.field6461 < 0 || this.field6461 > 2) {
-            this.field6461 = this.method11386();
+        if (this.value < 0 || this.value > 2) {
+            this.value = this.getDefault();
         }
     }
 
     @ObfuscatedName("afc.u(I)I")
-    public int method11386() {
+    public int getDefault() {
         return 0;
     }
 
@@ -29,17 +29,17 @@ public class ClientOptionsOrthographic extends ClientOption {
     }
 
     @ObfuscatedName("afc.j(IB)I")
-    public int method11387(int arg0) {
+    public int canSetValue(int arg0) {
         return arg0 == 2 ? 2 : 1;
     }
 
     @ObfuscatedName("afc.s(II)V")
-    public void method11389(int arg0) {
-        this.field6461 = arg0;
+    public void setValue(int arg0) {
+        this.value = arg0;
     }
 
     @ObfuscatedName("afc.o(B)I")
     public int method15741() {
-        return this.field6461;
+        return this.value;
     }
 }

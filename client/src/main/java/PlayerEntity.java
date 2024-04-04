@@ -286,7 +286,7 @@ public class PlayerEntity extends PathingEntity {
         var2.method5116(0.0F, (float) (-20 - this.field8604), 0.0F);
         PickableEntity var8 = null;
         this.field8650 = false;
-        if (Statics.options.field9658.method15709() == 1) {
+        if (Statics.options.characterShadows.method15709() == 1) {
             BASType var9 = this.getBASType();
             if (var9.field4714 && (this.model.field5006 == -1 || Statics.field3774.method12565(this.model.field5006).field7249)) {
                 AnimationNode var10 = this.field8597.method11767() && this.field8597.method11776() ? this.field8597 : null;

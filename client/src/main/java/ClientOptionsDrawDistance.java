@@ -13,28 +13,28 @@ public class ClientOptionsDrawDistance extends ClientOption {
 
     @ObfuscatedName("afv.z(I)V")
     public void method15851() {
-        if (this.field6461 < DrawDistance.field2148.field2145 || this.field6461 > DrawDistance.field2147.field2145) {
-            this.field6461 = this.method11386();
+        if (this.value < DrawDistance.field2148.field2145 || this.value > DrawDistance.field2147.field2145) {
+            this.value = this.getDefault();
         }
     }
 
     @ObfuscatedName("afv.u(I)I")
-    public int method11386() {
+    public int getDefault() {
         return DrawDistance.field2148.field2145;
     }
 
     @ObfuscatedName("afv.j(IB)I")
-    public int method11387(int arg0) {
+    public int canSetValue(int arg0) {
         return 1;
     }
 
     @ObfuscatedName("afv.s(II)V")
-    public void method11389(int arg0) {
-        this.field6461 = arg0;
+    public void setValue(int arg0) {
+        this.value = arg0;
     }
 
     @ObfuscatedName("afv.n(I)I")
     public int method15853() {
-        return this.field6461;
+        return this.value;
     }
 }

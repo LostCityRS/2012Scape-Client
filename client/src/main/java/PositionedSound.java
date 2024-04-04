@@ -73,7 +73,7 @@ public class PositionedSound extends Node {
     public VorbisSoundPacket field9539;
 
     @ObfuscatedName("adg.as")
-    public SoundAudioBuss field9540;
+    public SoundAudioBuss primaryStream;
 
     @ObfuscatedName("adg.ai")
     public int maxdelay;
@@ -99,12 +99,12 @@ public class PositionedSound extends Node {
     @ObfuscatedName("mp.u(ZI)V")
     public static void method6259(boolean arg0) {
         for (PositionedSound var1 = (PositionedSound) field9514.last(); var1 != null; var1 = (PositionedSound) field9514.prev()) {
-            if (var1.field9540 != null) {
-                Statics.field4201.method16445(var1.field9540);
-                var1.field9540 = null;
+            if (var1.primaryStream != null) {
+                Statics.soundStream.removeSubStream(var1.primaryStream);
+                var1.primaryStream = null;
             }
             if (var1.field9548 != null) {
-                Statics.field4201.method16445(var1.field9548);
+                Statics.soundStream.removeSubStream(var1.field9548);
                 var1.field9548 = null;
             }
             var1.remove();
@@ -113,16 +113,16 @@ public class PositionedSound extends Node {
             return;
         }
         for (PositionedSound var2 = (PositionedSound) field9528.last(); var2 != null; var2 = (PositionedSound) field9528.prev()) {
-            if (var2.field9540 != null) {
-                Statics.field4201.method16445(var2.field9540);
-                var2.field9540 = null;
+            if (var2.primaryStream != null) {
+                Statics.soundStream.removeSubStream(var2.primaryStream);
+                var2.primaryStream = null;
             }
             var2.remove();
         }
         for (PositionedSound var3 = (PositionedSound) field9516.method11928(); var3 != null; var3 = (PositionedSound) field9516.method11929()) {
-            if (var3.field9540 != null) {
-                Statics.field4201.method16445(var3.field9540);
-                var3.field9540 = null;
+            if (var3.primaryStream != null) {
+                Statics.soundStream.removeSubStream(var3.primaryStream);
+                var3.primaryStream = null;
             }
             var3.remove();
         }
@@ -144,11 +144,11 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("adg.a(I)V")
     public void computeProperties() {
-        int var1 = this.sound;
+        int prevSound = this.sound;
         boolean var2 = this.field9537;
         if (this.loc != null) {
-            LocType var3 = this.loc.getMultiLoc(client.field8988 == 0 ? CutsceneManager.field1538 : Statics.field2669);
-            if (var3 == null) {
+            LocType loc = this.loc.getMultiLoc(client.field8988 == 0 ? CutsceneManager.field1538 : Statics.field2669);
+            if (loc == null) {
                 this.sound = -1;
                 this.field9537 = false;
                 this.range = 0;
@@ -161,20 +161,20 @@ public class PositionedSound extends Node {
                 this.minspeed = 256;
                 this.size = 0;
             } else {
-                this.sound = var3.bgsound_sound;
-                this.field9537 = var3.field6520;
-                this.range = var3.bgsound_range << 9;
-                this.volume = var3.bgsound_volume;
-                this.mindelay = var3.bgsound_mindelay;
-                this.maxdelay = var3.bgsound_maxdelay;
-                this.sounds = var3.bgsound_random;
-                this.field9544 = var3.field6540;
-                this.maxspeed = var3.bgsound_maxrate;
-                this.minspeed = var3.bgsound_minrate;
+                this.sound = loc.bgsound_sound;
+                this.field9537 = loc.field6520;
+                this.range = loc.bgsound_range << 9;
+                this.volume = loc.bgsound_volume;
+                this.mindelay = loc.bgsound_mindelay;
+                this.maxdelay = loc.bgsound_maxdelay;
+                this.sounds = loc.bgsound_random;
+                this.field9544 = loc.field6540;
+                this.maxspeed = loc.bgsound_maxrate;
+                this.minspeed = loc.bgsound_minrate;
             }
         } else if (this.npc != null) {
             int var4 = method5936(this.npc);
-            if (var1 != var4) {
+            if (prevSound != var4) {
                 this.sound = var4;
                 NPCType var5 = this.npc.type;
                 if (var5.multinpc != null) {
@@ -205,9 +205,10 @@ public class PositionedSound extends Node {
             this.maxspeed = 256;
             this.minspeed = 256;
         }
-        if ((this.sound != var1 || this.field9537 != var2) && this.field9540 != null) {
-            Statics.field4201.method16445(this.field9540);
-            this.field9540 = null;
+
+        if ((this.sound != prevSound || this.field9537 != var2) && this.primaryStream != null) {
+            Statics.soundStream.removeSubStream(this.primaryStream);
+            this.primaryStream = null;
             this.field9539 = null;
             this.field9538 = null;
         }
@@ -286,12 +287,12 @@ public class PositionedSound extends Node {
     public static void method1370(int arg0, int arg1, int arg2, LocType arg3) {
         for (PositionedSound var4 = (PositionedSound) field9514.last(); var4 != null; var4 = (PositionedSound) field9514.prev()) {
             if (var4.level == arg0 && arg1 << 9 == var4.minX && arg2 << 9 == var4.minZ && var4.loc.field6474 == arg3.field6474) {
-                if (var4.field9540 != null) {
-                    Statics.field4201.method16445(var4.field9540);
-                    var4.field9540 = null;
+                if (var4.primaryStream != null) {
+                    Statics.soundStream.removeSubStream(var4.primaryStream);
+                    var4.primaryStream = null;
                 }
                 if (var4.field9548 != null) {
-                    Statics.field4201.method16445(var4.field9548);
+                    Statics.soundStream.removeSubStream(var4.field9548);
                     var4.field9548 = null;
                 }
                 var4.remove();
@@ -304,9 +305,9 @@ public class PositionedSound extends Node {
     public static void method2547(NpcEntity arg0) {
         for (PositionedSound var1 = (PositionedSound) field9528.last(); var1 != null; var1 = (PositionedSound) field9528.prev()) {
             if (var1.npc == arg0) {
-                if (var1.field9540 != null) {
-                    Statics.field4201.method16445(var1.field9540);
-                    var1.field9540 = null;
+                if (var1.primaryStream != null) {
+                    Statics.soundStream.removeSubStream(var1.primaryStream);
+                    var1.primaryStream = null;
                 }
                 var1.remove();
                 return;
@@ -320,9 +321,9 @@ public class PositionedSound extends Node {
         if (var1 == null) {
             return;
         }
-        if (var1.field9540 != null) {
-            Statics.field4201.method16445(var1.field9540);
-            var1.field9540 = null;
+        if (var1.primaryStream != null) {
+            Statics.soundStream.removeSubStream(var1.primaryStream);
+            var1.primaryStream = null;
         }
         var1.remove();
     }
@@ -405,13 +406,13 @@ public class PositionedSound extends Node {
                     var5.volume = var10.bgsound_volume;
                 } else {
                     boolean var11 = false;
-                    if (var5.field9540 == null) {
+                    if (var5.primaryStream == null) {
                         var11 = true;
                     } else {
                         var5.volume -= 512;
                         if (var5.volume <= 0) {
-                            Statics.field4201.method16445(var5.field9540);
-                            var5.field9540 = null;
+                            Statics.soundStream.removeSubStream(var5.primaryStream);
+                            var5.primaryStream = null;
                             var11 = true;
                         }
                     }
@@ -451,13 +452,13 @@ public class PositionedSound extends Node {
                     var13.field9534 = var14;
                 } else {
                     boolean var18 = false;
-                    if (var13.field9540 == null) {
+                    if (var13.primaryStream == null) {
                         var18 = true;
                     } else {
                         var13.volume -= 512;
                         if (var13.volume <= 0) {
-                            Statics.field4201.method16445(var13.field9540);
-                            var13.field9540 = null;
+                            Statics.soundStream.removeSubStream(var13.primaryStream);
+                            var13.primaryStream = null;
                             var18 = true;
                         }
                     }
@@ -487,7 +488,7 @@ public class PositionedSound extends Node {
             return;
         }
         int var5 = 0;
-        int var6 = arg0.volume * 512 * Statics.options.field9672.method15899() >> 8;
+        int var6 = arg0.volume * Statics.options.volumeBackgroundEffects.getValue() >> 8;
         if (arg2 > arg0.maxX) {
             var5 += arg2 - arg0.maxX;
         } else if (arg2 < arg0.minX) {
@@ -498,15 +499,15 @@ public class PositionedSound extends Node {
         } else if (arg3 < arg0.minZ) {
             var5 += arg0.minZ - arg3;
         }
-        if (arg0.range == 0 || var5 - 256 > arg0.range || Statics.options.field9672.method15899() == 0 || arg0.level != arg1) {
-            if (arg0.field9540 != null) {
-                Statics.field4201.method16445(arg0.field9540);
-                arg0.field9540 = null;
+        if (arg0.range == 0 || var5 - 256 > arg0.range || Statics.options.volumeBackgroundEffects.getValue() == 0 || arg0.level != arg1) {
+            if (arg0.primaryStream != null) {
+                Statics.soundStream.removeSubStream(arg0.primaryStream);
+                arg0.primaryStream = null;
                 arg0.field9539 = null;
                 arg0.field9538 = null;
             }
             if (arg0.field9548 != null) {
-                Statics.field4201.method16445(arg0.field9548);
+                Statics.soundStream.removeSubStream(arg0.field9548);
                 arg0.field9548 = null;
                 arg0.field9545 = null;
                 arg0.field9542 = null;
@@ -545,9 +546,9 @@ public class PositionedSound extends Node {
             }
             var10 = (16384 - var14 >> 1) + var13 * var14 / 8192;
         }
-        if (arg0.field9540 != null) {
-            arg0.field9540.method16402(var8);
-            arg0.field9540.method16387(var10);
+        if (arg0.primaryStream != null) {
+            arg0.primaryStream.method16402(var8);
+            arg0.primaryStream.method16387(var10);
         } else if (arg0.sound >= 0) {
             int var15 = arg0.maxspeed == 256 && arg0.minspeed == 256 ? 256 : AudioRenderer.method4688(arg0.minspeed, arg0.maxspeed);
             if (arg0.field9537) {
@@ -561,8 +562,8 @@ public class PositionedSound extends Node {
                     if (arg0.field9539 != null) {
                         VorbisSoundAudioBuss var16 = (VorbisSoundAudioBuss) arg0.field9539.create(var15, var8 << 6, var10);
                         var16.setLoops(-1);
-                        Statics.field4201.method16452(var16);
-                        arg0.field9540 = var16;
+                        Statics.soundStream.method16452(var16);
+                        arg0.primaryStream = var16;
                     }
                 }
             } else {
@@ -571,8 +572,8 @@ public class PositionedSound extends Node {
                     SynthSoundPacket var18 = var17.toSoundPacket().method17108(Statics.field3160);
                     SynthSoundAudioBuss var19 = (SynthSoundAudioBuss) var18.create(var15, var8 << 6, var10);
                     var19.setLoops(-1);
-                    Statics.field4201.method16452(var19);
-                    arg0.field9540 = var19;
+                    Statics.soundStream.method16452(var19);
+                    arg0.primaryStream = var19;
                 }
             }
         }
@@ -598,7 +599,7 @@ public class PositionedSound extends Node {
                     if (arg0.field9542 != null) {
                         VorbisSoundAudioBuss var22 = (VorbisSoundAudioBuss) arg0.field9542.create(var20, var8 << 6, var10);
                         var22.setLoops(0);
-                        Statics.field4201.method16452(var22);
+                        Statics.soundStream.method16452(var22);
                         arg0.field9548 = var22;
                         arg0.delay = arg0.mindelay + (int) (Math.random() * (double) (arg0.maxdelay - arg0.mindelay));
                     }
@@ -610,7 +611,7 @@ public class PositionedSound extends Node {
                     SynthSoundPacket var25 = var24.toSoundPacket().method17108(Statics.field3160);
                     SynthSoundAudioBuss var26 = (SynthSoundAudioBuss) var25.create(var20, var8 << 6, var10);
                     var26.setLoops(0);
-                    Statics.field4201.method16452(var26);
+                    Statics.soundStream.method16452(var26);
                     arg0.field9548 = var26;
                     arg0.delay = arg0.mindelay + (int) (Math.random() * (double) (arg0.maxdelay - arg0.mindelay));
                 }

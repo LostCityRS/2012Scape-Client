@@ -372,7 +372,7 @@ public class DeveloperConsole {
             }
             if (arg0.equals("renderer")) {
                 RendererInfo var3 = Statics.renderer.method456();
-                addLine("Toolkit ID: " + Statics.options.field9661.getValue());
+                addLine("Toolkit ID: " + Statics.options.toolkit.getValue());
                 addLine("Vendor: " + var3.field1285);
                 addLine("Name: " + var3.field1288);
                 addLine("Version: " + var3.field1281);
@@ -447,9 +447,9 @@ public class DeveloperConsole {
                 }
                 if (arg0.equalsIgnoreCase("tk0")) {
                     Statics.method5600(0, false);
-                    if (Statics.options.field9661.getValue() == 0) {
+                    if (Statics.options.toolkit.getValue() == 0) {
                         addLine("Success");
-                        Statics.options.method15448(Statics.options.field9670, 0);
+                        Statics.options.method15448(Statics.options.toolkitDefault, 0);
                         Statics.method1245();
                         client.preferencesChangeNotified = false;
                     } else {
@@ -459,9 +459,9 @@ public class DeveloperConsole {
                 }
                 if (arg0.equalsIgnoreCase("tk1")) {
                     Statics.method5600(1, false);
-                    if (Statics.options.field9661.getValue() == 1) {
+                    if (Statics.options.toolkit.getValue() == 1) {
                         addLine("Success");
-                        Statics.options.method15448(Statics.options.field9670, 1);
+                        Statics.options.method15448(Statics.options.toolkitDefault, 1);
                         Statics.method1245();
                         client.preferencesChangeNotified = false;
                     } else {
@@ -471,9 +471,9 @@ public class DeveloperConsole {
                 }
                 if (arg0.equalsIgnoreCase("tk2")) {
                     Statics.method5600(2, false);
-                    if (Statics.options.field9661.getValue() == 2) {
+                    if (Statics.options.toolkit.getValue() == 2) {
                         addLine("Success");
-                        Statics.options.method15448(Statics.options.field9670, 2);
+                        Statics.options.method15448(Statics.options.toolkitDefault, 2);
                         Statics.method1245();
                         client.preferencesChangeNotified = false;
                     } else {
@@ -483,9 +483,9 @@ public class DeveloperConsole {
                 }
                 if (arg0.equalsIgnoreCase("tk3")) {
                     Statics.method5600(3, false);
-                    if (Statics.options.field9661.getValue() == 3) {
+                    if (Statics.options.toolkit.getValue() == 3) {
                         addLine("Success");
-                        Statics.options.method15448(Statics.options.field9670, 3);
+                        Statics.options.method15448(Statics.options.toolkitDefault, 3);
                         Statics.method1245();
                         client.preferencesChangeNotified = false;
                     } else {
@@ -495,9 +495,9 @@ public class DeveloperConsole {
                 }
                 if (arg0.equalsIgnoreCase("tk5")) {
                     Statics.method5600(5, false);
-                    if (Statics.options.field9661.getValue() == 5) {
+                    if (Statics.options.toolkit.getValue() == 5) {
                         addLine("Success");
-                        Statics.options.method15448(Statics.options.field9670, 5);
+                        Statics.options.method15448(Statics.options.toolkitDefault, 5);
                         Statics.method1245();
                         client.preferencesChangeNotified = false;
                     } else {

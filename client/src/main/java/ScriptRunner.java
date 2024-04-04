@@ -1192,7 +1192,7 @@ public final class ScriptRunner {
                 method12368(arg1);
                 return;
             case 539:
-                method3621(arg1);
+                setup_messagebox(arg1);
                 return;
             case 247:
                 cam2_setpositionspline_spline(arg1);
@@ -7442,7 +7442,7 @@ public final class ScriptRunner {
     }
 
     @ObfuscatedName("fo.ty(Lrn;I)V")
-    public static final void method3621(ClientScriptState arg0) {
+    public static final void setup_messagebox(ClientScriptState arg0) {
         arg0.field5216 -= 11;
         LoadingScreenAlignmentX[] var1 = LoadingScreenAlignmentX.method15177();
         LoadingScreenAlignmentY[] var2 = LoadingScreenAlignmentY.method3623();
@@ -9997,7 +9997,7 @@ public final class ScriptRunner {
         String var1 = (String) arg0.field5222[--arg0.field5230];
         boolean var2 = arg0.field5215[--arg0.field5216] == 1;
         String var3 = client.method11406() + var1;
-        Browser.method3613(var3, var2, Statics.options.field9661.getValue() == 5, client.field8915, client.field9218);
+        Browser.method3613(var3, var2, Statics.options.toolkit.getValue() == 5, client.field8915, client.field9218);
     }
 
     @ObfuscatedName("el.afi(Lrn;I)V")
@@ -10894,7 +10894,7 @@ public final class ScriptRunner {
     @ObfuscatedName("ajo.aji(Lrn;I)V")
     public static final void method16721(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        Statics.options.method15448(Statics.options.field9642, var1);
+        Statics.options.method15448(Statics.options.brightness, var1);
         client.world.method6102();
         Statics.method1245();
         client.preferencesChangeNotified = false;
@@ -10903,8 +10903,8 @@ public final class ScriptRunner {
     @ObfuscatedName("aj.ajq(Lrn;I)V")
     public static final void method1960(ClientScriptState arg0) {
         boolean var1 = arg0.field5215[--arg0.field5216] == 1;
-        Statics.options.method15448(Statics.options.field9660, var1 ? 2 : 1);
-        Statics.options.method15448(Statics.options.field9655, var1 ? 2 : 1);
+        Statics.options.method15448(Statics.options.removeRoof, var1 ? 2 : 1);
+        Statics.options.method15448(Statics.options.removeRoofOverride, var1 ? 2 : 1);
         Statics.method7076();
         Statics.method1245();
         client.preferencesChangeNotified = false;
@@ -10912,7 +10912,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("vg.ajd(Lrn;I)V")
     public static final void method12223(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9671, arg0.field5215[--arg0.field5216] == 1 ? 1 : 0);
+        Statics.options.method15448(Statics.options.groundDecor, arg0.field5215[--arg0.field5216] == 1 ? 1 : 0);
         client.world.method6102();
         Statics.method1245();
         client.preferencesChangeNotified = false;
@@ -10920,28 +10920,28 @@ public final class ScriptRunner {
 
     @ObfuscatedName("r.ajh(Lrn;B)V")
     public static final void method1620(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9649, arg0.field5215[--arg0.field5216]);
+        Statics.options.method15448(Statics.options.idleAnims, arg0.field5215[--arg0.field5216]);
         Statics.method1245();
         client.preferencesChangeNotified = false;
     }
 
     @ObfuscatedName("nn.ajj(Lrn;I)V")
     public static final void method6885(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9645, arg0.field5215[--arg0.field5216] == 1 ? 1 : 0);
+        Statics.options.method15448(Statics.options.flickeringEffects, arg0.field5215[--arg0.field5216] == 1 ? 1 : 0);
         Statics.method1245();
         client.preferencesChangeNotified = false;
     }
 
     @ObfuscatedName("nd.akm(Lrn;I)V")
     public static final void method7063(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9658, arg0.field5215[--arg0.field5216] == 1 ? 1 : 0);
+        Statics.options.method15448(Statics.options.characterShadows, arg0.field5215[--arg0.field5216] == 1 ? 1 : 0);
         Statics.method1245();
         client.preferencesChangeNotified = false;
     }
 
     @ObfuscatedName("cd.akv(Lrn;B)V")
     public static final void method2492(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9651, arg0.field5215[--arg0.field5216]);
+        Statics.options.method15448(Statics.options.sceneryShadows, arg0.field5215[--arg0.field5216]);
         client.world.method6102();
         Statics.method1245();
         client.preferencesChangeNotified = false;
@@ -10949,7 +10949,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("on.akr(Lrn;B)V")
     public static final void method7183(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9650, arg0.field5215[--arg0.field5216] == 1 ? 1 : 0);
+        Statics.options.method15448(Statics.options.lightDetail, arg0.field5215[--arg0.field5216] == 1 ? 1 : 0);
         client.method13901();
         client.world.getEnvironmentManager().method8154();
         Statics.method1245();
@@ -10958,7 +10958,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("pj.akb(Lrn;B)V")
     public static final void method7896(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9666, arg0.field5215[--arg0.field5216] == 1 ? 2 : 0);
+        Statics.options.method15448(Statics.options.waterDetail, arg0.field5215[--arg0.field5216] == 1 ? 2 : 0);
         client.world.method6102();
         Statics.method1245();
         client.preferencesChangeNotified = false;
@@ -10966,7 +10966,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("lq.aku(Lrn;B)V")
     public static final void method5922(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9646, arg0.field5215[--arg0.field5216] == 1 ? 1 : 0);
+        Statics.options.method15448(Statics.options.fog, arg0.field5215[--arg0.field5216] == 1 ? 1 : 0);
         client.world.method6102();
         Statics.method1245();
         client.preferencesChangeNotified = false;
@@ -10974,8 +10974,8 @@ public final class ScriptRunner {
 
     @ObfuscatedName("jv.akx(Lrn;I)V")
     public static final void method4723(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9665, arg0.field5215[--arg0.field5216]);
-        Statics.method5600(Statics.options.field9661.getValue(), false);
+        Statics.options.method15448(Statics.options.antialiasing, arg0.field5215[--arg0.field5216]);
+        Statics.method5600(Statics.options.toolkit.getValue(), false);
         Statics.method1245();
     }
 
@@ -10989,7 +10989,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("s.akq(Lrn;I)V")
     public static final void method1317(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9654, arg0.field5215[--arg0.field5216]);
+        Statics.options.method15448(Statics.options.volumeMainEffects, arg0.field5215[--arg0.field5216]);
         Statics.method1245();
         client.preferencesChangeNotified = false;
     }
@@ -10997,7 +10997,7 @@ public final class ScriptRunner {
     @ObfuscatedName("df.akk(Lrn;I)V")
     public static final void method2837(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        int var2 = Statics.options.field9674.method15899();
+        int var2 = Statics.options.volumeMainMusic.getValue();
         if (var1 == var2) {
             return;
         }
@@ -11013,29 +11013,29 @@ public final class ScriptRunner {
                 MidiPlayer.method1315(var1);
             }
         }
-        Statics.options.method15448(Statics.options.field9674, var1);
+        Statics.options.method15448(Statics.options.volumeMainMusic, var1);
         Statics.method1245();
         client.preferencesChangeNotified = false;
     }
 
     @ObfuscatedName("ml.akz(Lrn;I)V")
     public static final void method6242(ClientScriptState arg0) {
-        int var1 = Statics.options.field9660.method15735();
-        Statics.options.method15448(Statics.options.field9655, arg0.field5215[--arg0.field5216] == 1 ? 0 : var1);
+        int var1 = Statics.options.removeRoof.getValue();
+        Statics.options.method15448(Statics.options.removeRoofOverride, arg0.field5215[--arg0.field5216] == 1 ? 0 : var1);
         Statics.method7076();
     }
 
     @ObfuscatedName("nv.ako(Lrn;I)V")
     public static final void method6794(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        Statics.options.method15448(Statics.options.field9648, var1);
+        Statics.options.method15448(Statics.options.particles, var1);
         Statics.method1245();
         client.preferencesChangeNotified = false;
     }
 
     @ObfuscatedName("eb.aky(Lrn;I)V")
     public static final void method3317(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9637, arg0.field5215[--arg0.field5216]);
+        Statics.options.method15448(Statics.options.antialiasingDefault, arg0.field5215[--arg0.field5216]);
         Statics.method1245();
     }
 
@@ -11050,19 +11050,19 @@ public final class ScriptRunner {
 
     @ObfuscatedName("aha.akn(Lrn;I)V")
     public static final void method16190(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9640, arg0.field5215[--arg0.field5216] == 0 ? 0 : 1);
+        Statics.options.method15448(Statics.options.customCursors, arg0.field5215[--arg0.field5216] == 0 ? 0 : 1);
         Statics.method1245();
     }
 
     @ObfuscatedName("sk.akd(Lrn;I)V")
     public static final void method11328(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9649, arg0.field5215[--arg0.field5216]);
+        Statics.options.method15448(Statics.options.idleAnims, arg0.field5215[--arg0.field5216]);
         Statics.method1245();
     }
 
     @ObfuscatedName("tn.akh(Lrn;I)V")
     public static final void method11506(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9647, arg0.field5215[--arg0.field5216] == 0 ? 0 : 1);
+        Statics.options.method15448(Statics.options.groundBlending, arg0.field5215[--arg0.field5216] == 0 ? 0 : 1);
         Statics.method1245();
         client.world.method6102();
     }
@@ -11078,13 +11078,13 @@ public final class ScriptRunner {
 
     @ObfuscatedName("dr.ake(Lrn;I)V")
     public static final void method2825(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9652, arg0.field5215[--arg0.field5216]);
+        Statics.options.method15448(Statics.options.cpuUsage, arg0.field5215[--arg0.field5216]);
         Statics.method1245();
     }
 
     @ObfuscatedName("t.akp(Lrn;I)V")
     public static final void method1345(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9659, arg0.field5215[--arg0.field5216] == 1 ? 1 : 0);
+        Statics.options.method15448(Statics.options.texturing, arg0.field5215[--arg0.field5216] == 1 ? 1 : 0);
         Statics.method1245();
         client.method13901();
         client.preferencesChangeNotified = false;
@@ -11092,14 +11092,14 @@ public final class ScriptRunner {
 
     @ObfuscatedName("of.akg(Lrn;B)V")
     public static final void method7072(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9677, arg0.field5215[--arg0.field5216]);
+        Statics.options.method15448(Statics.options.maxScreensize, arg0.field5215[--arg0.field5216]);
         Statics.method1245();
         client.field9165 = true;
     }
 
     @ObfuscatedName("lw.akj(Lrn;S)V")
     public static final void method5941(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9653, arg0.field5215[--arg0.field5216]);
+        Statics.options.method15448(Statics.options.volumeSpeech, arg0.field5215[--arg0.field5216]);
         Statics.method1245();
         client.preferencesChangeNotified = false;
     }
@@ -11107,7 +11107,7 @@ public final class ScriptRunner {
     @ObfuscatedName("fw.akw(Lrn;I)V")
     public static final void method3675(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        int var2 = Statics.options.field9675.method15899();
+        int var2 = Statics.options.volumeLoginMusic.getValue();
         if (var1 == var2 || AudioRenderer.field4205 != AudioRenderer.field4202) {
             return;
         }
@@ -11123,7 +11123,7 @@ public final class ScriptRunner {
                 MidiPlayer.method1315(var1);
             }
         }
-        Statics.options.method15448(Statics.options.field9675, var1);
+        Statics.options.method15448(Statics.options.volumeLoginMusic, var1);
         Statics.method1245();
         client.preferencesChangeNotified = false;
     }
@@ -11134,8 +11134,8 @@ public final class ScriptRunner {
         if (var1 > 255 || var1 < 0) {
             var1 = 0;
         }
-        if (var1 != Statics.options.field9668.method15859()) {
-            Statics.options.method15448(Statics.options.field9668, var1);
+        if (var1 != Statics.options.loadingScreen.method15859()) {
+            Statics.options.method15448(Statics.options.loadingScreen, var1);
             Statics.method1245();
             client.preferencesChangeNotified = false;
         }
@@ -11153,62 +11153,62 @@ public final class ScriptRunner {
 
     @ObfuscatedName("ew.alu(Lrn;B)V")
     public static final void method3206(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9642.method15672();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.brightness.method15672();
     }
 
     @ObfuscatedName("ob.alk(Lrn;B)V")
     public static final void method7283(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9671.method15725() == 1 ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.groundDecor.method15725() == 1 ? 1 : 0;
     }
 
     @ObfuscatedName("li.ale(Lrn;I)V")
     public static final void method5591(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9649.method15837();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.idleAnims.method15837();
     }
 
     @ObfuscatedName("go.alj(Lrn;B)V")
     public static final void method4032(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9645.method15679() == 1 ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.flickeringEffects.method15679() == 1 ? 1 : 0;
     }
 
     @ObfuscatedName("lc.alx(Lrn;I)V")
     public static final void method5968(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9658.method15709() == 1 ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.characterShadows.method15709() == 1 ? 1 : 0;
     }
 
     @ObfuscatedName("aem.alp(Lrn;B)V")
     public static final void method15592(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9651.method15747();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.sceneryShadows.method15747();
     }
 
     @ObfuscatedName("afl.alq(Lrn;I)V")
     public static final void method15823(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9650.method15667() == 1 ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.lightDetail.method15667() == 1 ? 1 : 0;
     }
 
     @ObfuscatedName("z.alz(Lrn;I)V")
     public static final void method1369(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9666.method15755() == 2 ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.waterDetail.method15755() == 2 ? 1 : 0;
     }
 
     @ObfuscatedName("qv.alr(Lrn;I)V")
     public static final void method8302(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9646.method15696() == 1 ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.fog.method15696() == 1 ? 1 : 0;
     }
 
     @ObfuscatedName("vu.alg(Lrn;I)V")
     public static final void method12189(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9665.method15829();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.antialiasing.getValue();
     }
 
     @ObfuscatedName("zw.alv(Lrn;B)V")
     public static final void method13864(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9654.method15899();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.volumeMainEffects.getValue();
     }
 
     @ObfuscatedName("vw.alb(Lrn;B)V")
     public static final void method12346(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9672.method15899();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.volumeBackgroundEffects.getValue();
     }
 
     @ObfuscatedName("jh.als(Lrn;I)V")
@@ -11218,7 +11218,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("ra.alw(Lrn;B)V")
     public static final void method827(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9637.method15829();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.antialiasingDefault.getValue();
     }
 
     @ObfuscatedName("sn.alh(Lrn;I)V")
@@ -11228,62 +11228,62 @@ public final class ScriptRunner {
 
     @ObfuscatedName("ql.alc(Lrn;B)V")
     public static final void method8139(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9673.method15816() == 1 ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.bloom.method15816() == 1 ? 1 : 0;
     }
 
     @ObfuscatedName("aea.alt(Lrn;I)V")
     public static final void method15669(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9640.method15908() == 1 ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.customCursors.method15908() == 1 ? 1 : 0;
     }
 
     @ObfuscatedName("pc.ald(Lrn;I)V")
     public static final void method7889(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9649.method15837();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.idleAnims.method15837();
     }
 
     @ObfuscatedName("ms.alo(Lrn;I)V")
     public static final void method6491(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9647.method15843() == 1 ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.groundBlending.method15843() == 1 ? 1 : 0;
     }
 
     @ObfuscatedName("yy.all(Lrn;S)V")
     public static final void method12940(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9661.getValue();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.toolkit.getValue();
     }
 
     @ObfuscatedName("tv.ala(Lrn;B)V")
     public static final void method11763(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9670.getValue();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.toolkitDefault.getValue();
     }
 
     @ObfuscatedName("ed.alm(Lrn;B)V")
     public static final void method3086(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9652.method15874();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.cpuUsage.method15874();
     }
 
     @ObfuscatedName("pa.ams(Lrn;S)V")
     public static final void method7742(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9659.method15686() == 1 ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.texturing.method15686() == 1 ? 1 : 0;
     }
 
     @ObfuscatedName("ms.amy(Lrn;I)V")
     public static final void method6488(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = client.method1380(Statics.options.field9661.getValue(), 200);
+        arg0.field5215[++arg0.field5216 - 1] = client.method1380(Statics.options.toolkit.getValue(), 200);
     }
 
     @ObfuscatedName("js.ame(Lrn;B)V")
     public static final void method4806(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9677.method15794();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.maxScreensize.method15794();
     }
 
     @ObfuscatedName("ud.amb(Lrn;I)V")
     public static final void method12145(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9653.method15899();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.volumeSpeech.getValue();
     }
 
     @ObfuscatedName("jv.amw(Lrn;I)V")
     public static final void method4722(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9675.method15899();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.volumeLoginMusic.getValue();
     }
 
     @ObfuscatedName("l.amm(Lrn;B)V")
@@ -11293,12 +11293,12 @@ public final class ScriptRunner {
 
     @ObfuscatedName("ov.amp(Lrn;I)V")
     public static final void method7215(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9668.method15859();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.loadingScreen.method15859();
     }
 
     @ObfuscatedName("dv.ami(Lrn;I)V")
     public static final void method2844(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9641.method15741();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.orthographic.method15741();
     }
 
     @ObfuscatedName("rm.amn(Lrn;I)V")
@@ -11897,7 +11897,7 @@ public final class ScriptRunner {
     @ObfuscatedName("pj.aoh(Lrn;I)V")
     public static final void method7894(ClientScriptState arg0) {
         int var1 = Preferences.method12606();
-        arg0.field5215[++arg0.field5216 - 1] = Statics.field6658 = Statics.options.field9661.getValue();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.field6658 = Statics.options.toolkit.getValue();
         arg0.field5215[++arg0.field5216 - 1] = var1;
         client.world.method6102();
         Statics.method1245();
@@ -11930,7 +11930,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("it.apl(Lrn;I)V")
     public static final void method4715(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9633, 0);
+        Statics.options.method15448(Statics.options.preset, 0);
         Statics.method1245();
         client.preferencesChangeNotified = false;
     }
@@ -11948,7 +11948,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("wx.apv(Lrn;B)V")
     public static final void method12649(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9633.method15868();
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.preset.method15868();
     }
 
     @ObfuscatedName("s.aps(Lrn;B)V")
@@ -12062,32 +12062,32 @@ public final class ScriptRunner {
 
     @ObfuscatedName("ic.apw(Lrn;I)V")
     public static final void method4691(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9671.method15724() ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.groundDecor.method15724() ? 1 : 0;
     }
 
     @ObfuscatedName("cg.apy(Lrn;I)V")
     public static final void method2557(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9658.method15707() ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.characterShadows.method15707() ? 1 : 0;
     }
 
     @ObfuscatedName("ck.apo(Lrn;B)V")
     public static final void method2470(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9651.method15750() ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.sceneryShadows.method15750() ? 1 : 0;
     }
 
     @ObfuscatedName("nb.apq(Lrn;I)V")
     public static final void method6817(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9666.method15757() ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.waterDetail.method15757() ? 1 : 0;
     }
 
     @ObfuscatedName("mx.ape(Lrn;I)V")
     public static final void method6075(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9637.method15828() && Statics.renderer.method452() ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.antialiasingDefault.method15828() && Statics.renderer.method452() ? 1 : 0;
     }
 
     @ObfuscatedName("xb.app(Lrn;B)V")
     public static final void method12750(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9648.method15717() ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.particles.method15717() ? 1 : 0;
     }
 
     @ObfuscatedName("ro.apc(Lrn;B)V")
@@ -12097,37 +12097,37 @@ public final class ScriptRunner {
 
     @ObfuscatedName("cd.apr(Lrn;B)V")
     public static final void method2493(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9673.method15815() && Statics.renderer.method450() ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.bloom.method15815() && Statics.renderer.method450() ? 1 : 0;
     }
 
     @ObfuscatedName("fe.apd(Lrn;B)V")
     public static final void method3844(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9647.method15842() ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.groundBlending.method15842() ? 1 : 0;
     }
 
     @ObfuscatedName("oo.apx(Lrn;S)V")
     public static final void method7555(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9659.method15687() ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.texturing.method15687() ? 1 : 0;
     }
 
     @ObfuscatedName("bj.apz(Lrn;I)V")
     public static final void method2023(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9677.method15795() ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.maxScreensize.method15795() ? 1 : 0;
     }
 
     @ObfuscatedName("fu.aqs(Lrn;I)V")
     public static final void method3646(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9646.method15698() ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.fog.method15698() ? 1 : 0;
     }
 
     @ObfuscatedName("nn.aqv(Lrn;I)V")
     public static final void method6887(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9641.method15740() ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.orthographic.method15740() ? 1 : 0;
     }
 
     @ObfuscatedName("ot.aqn(Lrn;B)V")
     public static final void method7375(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9670.method15775() ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.toolkitDefault.method15775() ? 1 : 0;
     }
 
     @ObfuscatedName("n.aqq(Lrn;B)V")
@@ -12138,26 +12138,26 @@ public final class ScriptRunner {
     @ObfuscatedName("ei.aqr(Lrn;I)V")
     public static final void method3221(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9671.method11387(var1);
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.groundDecor.canSetValue(var1);
     }
 
     @ObfuscatedName("gm.aqz(Lrn;I)V")
     public static final void method3968(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9658.method11387(var1);
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.characterShadows.canSetValue(var1);
     }
 
     @ObfuscatedName("oo.aqg(Lrn;I)V")
     public static final void method7556(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9666.method11387(var1);
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.waterDetail.canSetValue(var1);
     }
 
     @ObfuscatedName("fh.aql(Lrn;B)V")
     public static final void method3652(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
         if (Statics.renderer.method452()) {
-            arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9637.method11387(var1);
+            arg0.field5215[++arg0.field5216 - 1] = Statics.options.antialiasingDefault.canSetValue(var1);
         } else {
             arg0.field5215[++arg0.field5216 - 1] = 3;
         }
@@ -12166,20 +12166,20 @@ public final class ScriptRunner {
     @ObfuscatedName("gk.aqj(Lrn;I)V")
     public static final void method3952(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9648.method11387(var1);
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.particles.canSetValue(var1);
     }
 
     @ObfuscatedName("oc.aqc(Lrn;S)V")
     public static final void method7381(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.buildArea.method11387(var1);
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.buildArea.canSetValue(var1);
     }
 
     @ObfuscatedName("mz.aqo(Lrn;I)V")
     public static final void method6346(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
         if (Statics.renderer.method450()) {
-            arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9673.method11387(var1);
+            arg0.field5215[++arg0.field5216 - 1] = Statics.options.bloom.canSetValue(var1);
         } else {
             arg0.field5215[++arg0.field5216 - 1] = 3;
         }
@@ -12188,25 +12188,25 @@ public final class ScriptRunner {
     @ObfuscatedName("adw.aqe(Lrn;I)V")
     public static final void method15165(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9647.method11387(var1);
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.groundBlending.canSetValue(var1);
     }
 
     @ObfuscatedName("ur.aqu(Lrn;I)V")
     public static final void method12158(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9646.method11387(var1);
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.fog.canSetValue(var1);
     }
 
     @ObfuscatedName("ti.aqw(Lrn;S)V")
     public static final void method11688(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.field9670.method11387(var1);
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.toolkitDefault.canSetValue(var1);
     }
 
     @ObfuscatedName("ib.aqp(Lrn;I)V")
     public static final void method4611(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        arg0.field5215[++arg0.field5216 - 1] = Statics.options.skyDetail.method11387(var1);
+        arg0.field5215[++arg0.field5216 - 1] = Statics.options.skyDetail.canSetValue(var1);
     }
 
     @ObfuscatedName("ec.aqd(Lrn;I)V")

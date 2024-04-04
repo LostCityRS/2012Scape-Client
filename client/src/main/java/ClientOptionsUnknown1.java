@@ -13,28 +13,28 @@ public class ClientOptionsUnknown1 extends ClientOption {
 
     @ObfuscatedName("afw.z(I)V")
     public void method15878() {
-        if (this.field6461 != 1 && this.field6461 != 0) {
-            this.field6461 = this.method11386();
+        if (this.value != 1 && this.value != 0) {
+            this.value = this.getDefault();
         }
     }
 
     @ObfuscatedName("afw.u(I)I")
-    public int method11386() {
+    public int getDefault() {
         return 0;
     }
 
     @ObfuscatedName("afw.j(IB)I")
-    public int method11387(int arg0) {
+    public int canSetValue(int arg0) {
         return 1;
     }
 
     @ObfuscatedName("afw.s(II)V")
-    public void method11389(int arg0) {
-        this.field6461 = arg0;
+    public void setValue(int arg0) {
+        this.value = arg0;
     }
 
     @ObfuscatedName("afw.n(B)I")
     public int method15877() {
-        return this.field6461;
+        return this.value;
     }
 }

@@ -14,15 +14,15 @@ public class ClientOptionsTextures extends ClientOption {
     @ObfuscatedName("afg.z(I)V")
     public void method15685() {
         if (this.field6462.method15452() != ModeGame.field6407) {
-            this.field6461 = 1;
+            this.value = 1;
         }
-        if (this.field6461 != 0 && this.field6461 != 1) {
-            this.field6461 = this.method11386();
+        if (this.value != 0 && this.value != 1) {
+            this.value = this.getDefault();
         }
     }
 
     @ObfuscatedName("afg.u(I)I")
-    public int method11386() {
+    public int getDefault() {
         return 1;
     }
 
@@ -32,21 +32,21 @@ public class ClientOptionsTextures extends ClientOption {
     }
 
     @ObfuscatedName("afg.j(IB)I")
-    public int method11387(int arg0) {
+    public int canSetValue(int arg0) {
         if (this.field6462.method15452() == ModeGame.field6407) {
-            return arg0 == 0 || this.field6462.field9647.method15843() == 1 ? 1 : 2;
+            return arg0 == 0 || this.field6462.groundBlending.method15843() == 1 ? 1 : 2;
         } else {
             return 3;
         }
     }
 
     @ObfuscatedName("afg.s(II)V")
-    public void method11389(int arg0) {
-        this.field6461 = arg0;
+    public void setValue(int arg0) {
+        this.value = arg0;
     }
 
     @ObfuscatedName("afg.o(I)I")
     public int method15686() {
-        return this.field6461;
+        return this.value;
     }
 }

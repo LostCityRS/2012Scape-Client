@@ -13,28 +13,28 @@ public class ClientOptionsMaxScreenSize extends ClientOption {
 
     @ObfuscatedName("afo.z(B)V")
     public void method15764() {
-        if (this.field6461 < 1 || this.field6461 > 3) {
-            this.field6461 = this.method11386();
+        if (this.value < 1 || this.value > 3) {
+            this.value = this.getDefault();
         }
     }
 
     @ObfuscatedName("afo.u(I)I")
-    public int method11386() {
+    public int getDefault() {
         return this.field6462.method15462().method11400() ? 3 : 2;
     }
 
     @ObfuscatedName("afo.j(IB)I")
-    public int method11387(int arg0) {
+    public int canSetValue(int arg0) {
         return 1;
     }
 
     @ObfuscatedName("afo.s(II)V")
-    public void method11389(int arg0) {
-        this.field6461 = arg0;
+    public void setValue(int arg0) {
+        this.value = arg0;
     }
 
     @ObfuscatedName("afo.n(I)I")
     public int getValue() {
-        return this.field6461;
+        return this.value;
     }
 }

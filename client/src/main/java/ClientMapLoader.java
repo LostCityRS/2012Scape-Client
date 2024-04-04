@@ -380,7 +380,7 @@ public class ClientMapLoader extends MapLoader {
                     int var18 = arg3 + var14;
                     if (var17 > 0 && var18 > 0 && var17 < arg4 - 1 && var18 < arg5 - 1) {
                         LocType var19 = arg0.get(var8);
-                        if (LocShape.field6589.field6590 != var16 || Statics.options.field9671.method15725() != 0 || var19.active != 0 || var19.field6491 == 1 || var19.field6523) {
+                        if (LocShape.field6589.field6590 != var16 || Statics.options.groundDecor.method15725() != 0 || var19.active != 0 || var19.field6491 == 1 || var19.field6523) {
                             if (!var19.method11442()) {
                                 var6++;
                             }
@@ -502,7 +502,7 @@ public class ClientMapLoader extends MapLoader {
             this.field8893 = arg2;
         }
         LocType var11 = this.field8894.get(arg5);
-        if (Statics.options.field9659.method15686() == 0 && var11.field6522) {
+        if (Statics.options.texturing.method15686() == 0 && var11.field6522) {
             return;
         }
         int var12;
@@ -545,7 +545,7 @@ public class ClientMapLoader extends MapLoader {
             return;
         }
         if (LocShape.field6589.field6590 == arg7) {
-            if (Statics.options.field9671.method15725() != 0 || var11.active != 0 || var11.field6491 == 1 || var11.field6523) {
+            if (Statics.options.groundDecor.method15725() != 0 || var11.active != 0 || var11.field6491 == 1 || var11.field6523) {
                 GroundDecorLayerEntity var25;
                 if (var23) {
                     StaticGroundDecorEntity var24 = new StaticGroundDecorEntity(this.field3619, arg0, this.field8894, var11, arg2, arg1, var20, var19, var21, this.field3644, arg6, var22);

@@ -12,29 +12,29 @@ public class ClientOptionsVolume extends ClientOption {
     }
 
     @ObfuscatedName("agi.z(I)V")
-    public void method15897() {
-        if (this.field6461 < 0 && this.field6461 > 127) {
-            this.field6461 = this.method11386();
+    public void checkValue() {
+        if (this.value < 0 || this.value > 255) {
+            this.value = this.getDefault();
         }
     }
 
     @ObfuscatedName("agi.u(I)I")
-    public int method11386() {
+    public int getDefault() {
         return 127;
     }
 
     @ObfuscatedName("agi.j(IB)I")
-    public int method11387(int arg0) {
+    public int canSetValue(int value) {
         return 1;
     }
 
     @ObfuscatedName("agi.s(II)V")
-    public void method11389(int arg0) {
-        this.field6461 = arg0;
+    public void setValue(int value) {
+        this.value = value;
     }
 
     @ObfuscatedName("agi.n(I)I")
-    public int method15899() {
-        return this.field6461;
+    public int getValue() {
+        return this.value;
     }
 }

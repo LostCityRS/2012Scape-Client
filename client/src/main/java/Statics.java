@@ -696,7 +696,7 @@ public class Statics {
     public static int cameraMoveToY;
 
     @ObfuscatedName("ne.q")
-    public static MixerAudioBuss field4201;
+    public static MixerAudioBuss soundStream;
 
     @ObfuscatedName("ne.o")
     public static MidiSoundRelated4 field4206;
@@ -2312,8 +2312,8 @@ public class Statics {
         musicChannel = AudioChannel.create(canvas, 0, 22050);
         AudioRenderer.method3658(true, AudioRenderer.method6082(null));
         soundChannel = AudioChannel.create(canvas, 1, 2048);
-        field4201 = new MixerAudioBuss();
-        soundChannel.setStream(field4201);
+        soundStream = new MixerAudioBuss();
+        soundChannel.setStream(soundStream);
         field3160 = new SampleRateConverter(22050, sampleRate);
         AudioRenderer.method2572();
     }
@@ -2864,7 +2864,7 @@ public class Statics {
         if (var1) {
             try {
                 var5 = client.method1380(2, 1000);
-                if (options.field9661.getValue() == 2) {
+                if (options.toolkit.getValue() == 2) {
                     var0.method15941(1);
                 }
             } catch (Exception var20) {
@@ -2874,7 +2874,7 @@ public class Statics {
         if (var3) {
             try {
                 var7 = client.method1380(3, 1000);
-                if (options.field9661.getValue() == 3) {
+                if (options.toolkit.getValue() == 3) {
                     var0.method15941(4);
                     RendererInfo var9 = renderer.method456();
                     long var10 = var9.field1289 & 0xFFFFFFFFFFFFL;
@@ -2901,7 +2901,7 @@ public class Statics {
         if (var4) {
             try {
                 var6 = client.method1380(1, 1000);
-                if (options.field9661.getValue() == 1) {
+                if (options.toolkit.getValue() == 1) {
                     var0.method15941(2);
                 }
             } catch (Exception var18) {
@@ -3246,10 +3246,10 @@ public class Statics {
         int var9 = arg0.field6335 == null ? 255 : arg0.field6335[arg1];
         if (var6 != 0) {
             if (localPlayerEntity == arg2) {
-                if (options.field9654.method15899() == 0) {
+                if (options.volumeMainEffects.getValue() == 0) {
                     return;
                 }
-            } else if (options.field9672.method15899() == 0) {
+            } else if (options.volumeBackgroundEffects.getValue() == 0) {
                 return;
             }
             if (arg0.field6339 != -1) {
@@ -3572,7 +3572,7 @@ public class Statics {
         if (arg0.field4188 == null) {
             arg0.field4179 = Integer.MIN_VALUE;
         } else {
-            field4201.method16445(arg0.field4188);
+            soundStream.removeSubStream(arg0.field4188);
         }
     }
 
@@ -4194,7 +4194,7 @@ public class Statics {
 
     @ObfuscatedName("pf.gc(II)V")
     public static void method7913(int arg0) {
-        if (options.field9640.method15908() == 0) {
+        if (options.customCursors.method15908() == 0) {
             arg0 = -1;
         }
         if (client.field9018 == arg0) {
@@ -4999,7 +4999,7 @@ public class Statics {
 
     @ObfuscatedName("ol.ig(S)V")
     public static final void method7076() {
-        int var0 = options.field9655.method15735();
+        int var0 = options.removeRoofOverride.getValue();
         if (var0 == 0) {
             client.world.method6107(null);
             client.method8389(0);
@@ -6035,7 +6035,7 @@ public class Statics {
 
     @ObfuscatedName("rt.akt(Lrn;I)V")
     public static final void method8622(ClientScriptState arg0) {
-        options.method15448(options.field9672, arg0.field5215[--arg0.field5216]);
+        options.method15448(options.volumeBackgroundEffects, arg0.field5215[--arg0.field5216]);
         method1245();
         client.preferencesChangeNotified = false;
     }
@@ -6059,9 +6059,9 @@ public class Statics {
         arg0.field5216 -= 2;
         int var1 = arg0.field5215[arg0.field5216];
         boolean var2 = arg0.field5215[arg0.field5216 + 1] == 1;
-        options.method15448(options.field9670, var1);
+        options.method15448(options.toolkitDefault, var1);
         if (!var2) {
-            options.method15448(options.field9633, 0);
+            options.method15448(options.preset, 0);
         }
         method1245();
         client.preferencesChangeNotified = false;
@@ -6069,7 +6069,7 @@ public class Statics {
 
     @ObfuscatedName("abq.aln(Lrn;B)V")
     public static final void method14199(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = options.field9660.method15735() == 2 ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = options.removeRoof.getValue() == 2 ? 1 : 0;
     }
 
     @ObfuscatedName("gm.ali(Lrn;I)V")
@@ -6079,7 +6079,7 @@ public class Statics {
 
     @ObfuscatedName("wb.alf(Lrn;I)V")
     public static final void method12728(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = options.field9674.method15899();
+        arg0.field5215[++arg0.field5216 - 1] = options.volumeMainMusic.getValue();
     }
 
     @ObfuscatedName("rf.le(Lew;I)V")
@@ -6251,25 +6251,25 @@ public class Statics {
     @ObfuscatedName("cj.aqk(Lrn;I)V")
     public static final void method2577(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        arg0.field5215[++arg0.field5216 - 1] = options.field9651.method11387(var1);
+        arg0.field5215[++arg0.field5216 - 1] = options.sceneryShadows.canSetValue(var1);
     }
 
     @ObfuscatedName("pu.aqi(Lrn;B)V")
     public static final void method7991(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        arg0.field5215[++arg0.field5216 - 1] = options.field9659.method11387(var1);
+        arg0.field5215[++arg0.field5216 - 1] = options.texturing.canSetValue(var1);
     }
 
     @ObfuscatedName("ix.aqm(Lrn;B)V")
     public static final void method4615(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        arg0.field5215[++arg0.field5216 - 1] = options.field9677.method11387(var1);
+        arg0.field5215[++arg0.field5216 - 1] = options.maxScreensize.canSetValue(var1);
     }
 
     @ObfuscatedName("xa.aqb(Lrn;B)V")
     public static final void method234(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        arg0.field5215[++arg0.field5216 - 1] = options.field9641.method11387(var1);
+        arg0.field5215[++arg0.field5216 - 1] = options.orthographic.canSetValue(var1);
     }
 
     @ObfuscatedName("al.aqf(Lrn;I)V")

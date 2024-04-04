@@ -366,7 +366,7 @@ public class LoginManager {
                 Statics.field501.in.pos = 0;
                 String var7 = JavascriptFunction.field3152.method4757();
                 if (!client.field8903 || !Browser.method1814(var6, 1, var7)) {
-                    Browser.method5599(var6, true, Statics.options.field9661.getValue() == 5, var7, client.field8915, client.field9218);
+                    Browser.method5599(var6, true, Statics.options.toolkit.getValue() == 5, var7, client.field8915, client.field9218);
                 }
                 field531 = 61;
             }
@@ -431,7 +431,7 @@ public class LoginManager {
                     var9.p1(client.method12476());
                     var9.p2(Statics.canvasWid);
                     var9.p2(Statics.canvasHei);
-                    var9.p1(Statics.options.field9665.method15829());
+                    var9.p1(Statics.options.antialiasing.getValue());
                     GameShell.method3615(var9);
                     var9.pjstr(client.field8947);
                     var9.p4(client.field9043);
@@ -665,7 +665,7 @@ public class LoginManager {
                 Statics.field501.in.pos = 0;
                 Packet var29 = new Packet(var28);
                 String var30 = var29.gjstr();
-                Browser.method3613(var30, true, Statics.options.field9661.getValue() == 5, client.field8915, client.field9218);
+                Browser.method3613(var30, true, Statics.options.toolkit.getValue() == 5, client.field8915, client.field9218);
                 method7972(Statics.field1025);
                 if (Statics.field500 == 154 && client.state != 4) {
                     field531 = 96;
@@ -1087,7 +1087,7 @@ public class LoginManager {
         client.field9028 = true;
         Statics.field2744 = LocType.field6530 = NPCType.field7209 = ObjType.field7118 = new short[256];
         Statics.field2400 = LocalisedText.field6994.get(Statics.language);
-        Statics.options.method15448(Statics.options.field9655, Statics.options.field9660.method15735());
+        Statics.options.method15448(Statics.options.removeRoofOverride, Statics.options.removeRoof.getValue());
         client.currentIncrementVerifyId = 0;
         MiniMenu.method11300();
         client.method15612();

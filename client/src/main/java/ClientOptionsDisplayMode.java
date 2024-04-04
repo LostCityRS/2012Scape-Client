@@ -19,13 +19,13 @@ public class ClientOptionsDisplayMode extends ClientOption {
 
     @ObfuscatedName("afs.z(I)V")
     public void method15773() {
-        if (this.field6461 < 0 || this.field6461 > 5) {
-            this.field6461 = this.method11386();
+        if (this.value < 0 || this.value > 5) {
+            this.value = this.getDefault();
         }
     }
 
     @ObfuscatedName("afs.u(I)I")
-    public int method11386() {
+    public int getDefault() {
         this.field9844 = true;
         return 2;
     }
@@ -36,19 +36,19 @@ public class ClientOptionsDisplayMode extends ClientOption {
     }
 
     @ObfuscatedName("afs.j(IB)I")
-    public int method11387(int arg0) {
+    public int canSetValue(int arg0) {
         return arg0 == 3 && !NativeLibraries.method11710().method6803("jagdx") ? 3 : 2;
     }
 
     @ObfuscatedName("afs.s(II)V")
-    public void method11389(int arg0) {
+    public void setValue(int arg0) {
         this.field9844 = false;
-        this.field6461 = arg0;
+        this.value = arg0;
     }
 
     @ObfuscatedName("afs.o(B)I")
     public int getValue() {
-        return this.field6461;
+        return this.value;
     }
 
     @ObfuscatedName("afs.q(I)Z")

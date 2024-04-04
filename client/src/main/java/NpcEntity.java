@@ -66,7 +66,7 @@ public class NpcEntity extends PathingEntity {
         this.field10081 = (int) (Math.random() * 4.0D) + 32;
         this.field10082 = (int) (Math.random() * 2.0D) + 3;
         this.field10083 = (int) (Math.random() * 3.0D) + 16;
-        if (Statics.options.field9659.method15686() == 1) {
+        if (Statics.options.texturing.method15686() == 1) {
             this.field10084 = (int) (Math.random() * 6.0D);
         } else {
             this.field10084 = (int) (Math.random() * 12.0D);
@@ -115,7 +115,7 @@ public class NpcEntity extends PathingEntity {
         NPCType var9 = this.type.multinpc == null ? this.type : this.type.getMultiNPC(Statics.field2669);
         this.field8650 = false;
         PickableEntity var10 = null;
-        if (Statics.options.field9658.method15709() == 1 && var9.field7249 && var8.field4714) {
+        if (Statics.options.characterShadows.method15709() == 1 && var9.field7249 && var8.field4714) {
             AnimationNode var11 = this.field8597.method11767() && this.field8597.method11776() ? this.field8597 : null;
             EntityWalkAnimationNode var12 = this.field8616.method11767() && (!this.field8616.field9899 || var11 == null) ? this.field8616 : null;
             Model var13 = SpotShadowFactory.method1417(arg0, var5, this.field8601, this.field8644, this.field8603, this.type.field7213, this.field8651[0], this.type.field7236 & 0xFFFF, this.type.field7251 & 0xFFFF, this.type.field7252 & 0xFF, this.type.field7253 & 0xFF, var12 == null ? var11 : var12);

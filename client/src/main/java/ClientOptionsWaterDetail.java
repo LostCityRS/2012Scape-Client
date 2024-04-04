@@ -13,13 +13,13 @@ public class ClientOptionsWaterDetail extends ClientOption {
 
     @ObfuscatedName("afm.z(I)V")
     public void method15754() {
-        if (this.field6461 < 0 && this.field6461 > 2) {
-            this.field6461 = this.method11386();
+        if (this.value < 0 && this.value > 2) {
+            this.value = this.getDefault();
         }
     }
 
     @ObfuscatedName("afm.u(I)I")
-    public int method11386() {
+    public int getDefault() {
         return 1;
     }
 
@@ -29,17 +29,17 @@ public class ClientOptionsWaterDetail extends ClientOption {
     }
 
     @ObfuscatedName("afm.j(IB)I")
-    public int method11387(int arg0) {
-        return arg0 == 0 || this.field6462.field9647.method15843() == 1 ? 1 : 2;
+    public int canSetValue(int arg0) {
+        return arg0 == 0 || this.field6462.groundBlending.method15843() == 1 ? 1 : 2;
     }
 
     @ObfuscatedName("afm.s(II)V")
-    public void method11389(int arg0) {
-        this.field6461 = arg0;
+    public void setValue(int arg0) {
+        this.value = arg0;
     }
 
     @ObfuscatedName("afm.o(I)I")
     public int method15755() {
-        return this.field6461;
+        return this.value;
     }
 }

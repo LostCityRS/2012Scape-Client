@@ -13,31 +13,31 @@ public class ClientOptionsRemoveRoofs extends ClientOption {
 
     @ObfuscatedName("afh.z(B)V")
     public void method15734() {
-        if (this.field6462.field9641.method15741() == 2 && this.field6461 == 2) {
-            this.field6461 = 1;
+        if (this.field6462.orthographic.method15741() == 2 && this.value == 2) {
+            this.value = 1;
         }
-        if (this.field6461 < 0 || this.field6461 > 2) {
-            this.field6461 = this.method11386();
+        if (this.value < 0 || this.value > 2) {
+            this.value = this.getDefault();
         }
     }
 
     @ObfuscatedName("afh.u(I)I")
-    public int method11386() {
+    public int getDefault() {
         return 2;
     }
 
     @ObfuscatedName("afh.j(IB)I")
-    public int method11387(int arg0) {
+    public int canSetValue(int arg0) {
         return 1;
     }
 
     @ObfuscatedName("afh.s(II)V")
-    public void method11389(int arg0) {
-        this.field6461 = arg0;
+    public void setValue(int arg0) {
+        this.value = arg0;
     }
 
     @ObfuscatedName("afh.n(B)I")
-    public int method15735() {
-        return this.field6461;
+    public int getValue() {
+        return this.value;
     }
 }

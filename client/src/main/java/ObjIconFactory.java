@@ -27,7 +27,7 @@ public class ObjIconFactory {
             return;
         }
 
-        if (Statics.options.field9661.getValue() == 0) {
+        if (Statics.options.toolkit.getValue() == 0) {
             for (ObjIconRequest var1 = (ObjIconRequest) requests.last(); var1 != null; var1 = (ObjIconRequest) requests.prev()) {
                 Statics.objTypes.getIcon(arg0, arg0, var1.object, var1.count, var1.outline, var1.shadow, false, false, var1.countvis, Statics.field2163, var1.wearcol ? Statics.localPlayerEntity.model : null);
                 var1.remove();

@@ -21,7 +21,7 @@ public class MixerAudioBuss extends AudioBuss {
     }
 
     @ObfuscatedName("aiu.ap(Ladc;)V")
-    public final synchronized void method16445(AudioBuss arg0) {
+    public final synchronized void removeSubStream(AudioBuss arg0) {
         arg0.remove();
     }
 

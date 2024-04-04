@@ -13,28 +13,28 @@ public class ClientOptionsBrightness extends ClientOption {
 
     @ObfuscatedName("aed.z(B)V")
     public void method15673() {
-        if (this.field6461 < 0 || this.field6461 > 4) {
-            this.field6461 = this.method11386();
+        if (this.value < 0 || this.value > 4) {
+            this.value = this.getDefault();
         }
     }
 
     @ObfuscatedName("aed.u(I)I")
-    public int method11386() {
+    public int getDefault() {
         return 3;
     }
 
     @ObfuscatedName("aed.j(IB)I")
-    public int method11387(int arg0) {
+    public int canSetValue(int arg0) {
         return 1;
     }
 
     @ObfuscatedName("aed.s(II)V")
-    public void method11389(int arg0) {
-        this.field6461 = arg0;
+    public void setValue(int arg0) {
+        this.value = arg0;
     }
 
     @ObfuscatedName("aed.n(I)I")
     public int method15672() {
-        return this.field6461;
+        return this.value;
     }
 }

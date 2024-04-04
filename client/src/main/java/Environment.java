@@ -112,7 +112,7 @@ public class Environment {
     @ObfuscatedName("qf.s(Laet;Lqp;I)V")
     public void method8205(Packet arg0, EnvironmentManager arg1) {
         int var3 = arg0.g1();
-        if (Statics.options.field9650.method15667() == 1 && Statics.renderer.method768() > 0) {
+        if (Statics.options.lightDetail.method15667() == 1 && Statics.renderer.method768() > 0) {
             if ((var3 & 0x1) == 0) {
                 this.field4991 = EnvironmentManager.field4983;
             } else {

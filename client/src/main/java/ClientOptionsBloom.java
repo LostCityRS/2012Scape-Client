@@ -13,36 +13,36 @@ public class ClientOptionsBloom extends ClientOption {
 
     @ObfuscatedName("afl.z(I)V")
     public void method15818() {
-        if (this.field6462.field9661.method15776() && !RendererToolkit.method3321(this.field6462.field9661.getValue())) {
-            this.field6461 = 0;
+        if (this.field6462.toolkit.method15776() && !RendererToolkit.method3321(this.field6462.toolkit.getValue())) {
+            this.value = 0;
         }
-        if (this.field6461 < 0 || this.field6461 > 1) {
-            this.field6461 = this.method11386();
+        if (this.value < 0 || this.value > 1) {
+            this.value = this.getDefault();
         }
     }
 
     @ObfuscatedName("afl.u(I)I")
-    public int method11386() {
+    public int getDefault() {
         return 0;
     }
 
     @ObfuscatedName("afl.n(I)Z")
     public boolean method15815() {
-        return RendererToolkit.method3321(this.field6462.field9661.getValue());
+        return RendererToolkit.method3321(this.field6462.toolkit.getValue());
     }
 
     @ObfuscatedName("afl.j(IB)I")
-    public int method11387(int arg0) {
-        return RendererToolkit.method3321(this.field6462.field9661.getValue()) ? 1 : 3;
+    public int canSetValue(int arg0) {
+        return RendererToolkit.method3321(this.field6462.toolkit.getValue()) ? 1 : 3;
     }
 
     @ObfuscatedName("afl.s(II)V")
-    public void method11389(int arg0) {
-        this.field6461 = arg0;
+    public void setValue(int arg0) {
+        this.value = arg0;
     }
 
     @ObfuscatedName("afl.o(I)I")
     public int method15816() {
-        return this.field6461;
+        return this.value;
     }
 }

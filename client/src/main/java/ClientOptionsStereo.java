@@ -13,28 +13,28 @@ public class ClientOptionsStereo extends ClientOption {
 
     @ObfuscatedName("afu.z(I)V")
     public void method15888() {
-        if (this.field6461 != 1 && this.field6461 != 0) {
-            this.field6461 = this.method11386();
+        if (this.value != 1 && this.value != 0) {
+            this.value = this.getDefault();
         }
     }
 
     @ObfuscatedName("afu.u(I)I")
-    public int method11386() {
+    public int getDefault() {
         return 1;
     }
 
     @ObfuscatedName("afu.j(IB)I")
-    public int method11387(int arg0) {
+    public int canSetValue(int arg0) {
         return 1;
     }
 
     @ObfuscatedName("afu.s(II)V")
-    public void method11389(int arg0) {
-        this.field6461 = arg0;
+    public void setValue(int arg0) {
+        this.value = arg0;
     }
 
     @ObfuscatedName("afu.n(B)I")
     public int getValue() {
-        return this.field6461;
+        return this.value;
     }
 }

@@ -809,10 +809,10 @@ public class ClientWorldMap extends WorldMap {
 
     @ObfuscatedName("ru.cb(IIIZB)V")
     public static void setMap(int arg0, int arg1, int arg2, boolean arg3) {
-        if (Statics.options.field9661.getValue() == 0) {
+        if (Statics.options.toolkit.getValue() == 0) {
             reset(false);
         } else {
-            field9764 = Statics.options.field9661.getValue();
+            field9764 = Statics.options.toolkit.getValue();
             Statics.method5600(0, true);
         }
         field9759 = arg1;
@@ -828,7 +828,7 @@ public class ClientWorldMap extends WorldMap {
             return;
         }
         Statics.method5600(field9764, false);
-        if (Statics.options.field9661.getValue() != field9764) {
+        if (Statics.options.toolkit.getValue() != field9764) {
             switch (field9764) {
                 case 1:
                     GraphicsPacketQueue.method12023(ToolkitType.field7359);

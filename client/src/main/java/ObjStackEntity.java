@@ -53,7 +53,7 @@ public class ObjStackEntity extends ObjLayerEntity {
         this.field10614 = (int) (Math.random() * 4.0D) + 32;
         this.field10615 = (int) (Math.random() * 2.0D) + 3;
         this.field10616 = (int) (Math.random() * 3.0D) + 16;
-        if (Statics.options.field9659.method15686() == 1) {
+        if (Statics.options.texturing.method15686() == 1) {
             this.field10617 = (int) (Math.random() * 10.0D);
         } else {
             this.field10617 = (int) (Math.random() * 20.0D);

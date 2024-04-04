@@ -1050,7 +1050,7 @@ public class World {
             VideoTypeList.method4743();
         }
         boolean var15 = false;
-        if (Statics.options.field9666.method15755() == 2) {
+        if (Statics.options.waterDetail.method15755() == 2) {
             for (int var16 = 0; var16 < this.field3800.length; var16++) {
                 if (this.field3832[var16] != null || this.field3830[var16] != null) {
                     var15 = true;
@@ -1058,7 +1058,7 @@ public class World {
                 }
             }
         }
-        int var17 = DrawDistance.method5012(Statics.options.field9644.method15853()).field2149 * 64;
+        int var17 = DrawDistance.method5012(Statics.options.drawDistance.method15853()).field2149 * 64;
         if (Statics.renderer.method454()) {
             var17++;
         }
@@ -1076,11 +1076,11 @@ public class World {
         this.field3809 = -0.05F + (float) (Math.random() / 10.0D);
         this.field3794 = new ClientMapLoader(this.scene, this.field3815, 4, this.mapSizeX, this.mapSizeZ, false, this.sceneLevelTileFlags, this.field3802);
         this.field3794.method5834();
-        this.field3794.field3629 = Statics.options.field9651.method15747();
-        this.field3794.field3622 = Statics.options.field9666.method15755() == 2;
-        this.field3794.field3623 = Statics.options.field9650.method15667() == 1;
-        this.field3794.field3624 = Statics.options.field9647.method15843() == 1;
-        this.field3794.field3625 = Statics.options.field9659.method15686() == 1;
+        this.field3794.field3629 = Statics.options.sceneryShadows.method15747();
+        this.field3794.field3622 = Statics.options.waterDetail.method15755() == 2;
+        this.field3794.field3623 = Statics.options.lightDetail.method15667() == 1;
+        this.field3794.field3624 = Statics.options.groundBlending.method15843() == 1;
+        this.field3794.field3625 = Statics.options.texturing.method15686() == 1;
         if (this.rebuildType.isRegionType()) {
             this.method6131(this.field3794, this.field3800);
         } else {
@@ -1095,11 +1095,11 @@ public class World {
             this.scene.method7404(true);
             this.field3793 = new ClientMapLoader(this.scene, this.field3815, 1, this.mapSizeX, this.mapSizeZ, true, this.sceneLevelTileFlags, this.field3802);
             this.field3793.method5834();
-            this.field3793.field3629 = Statics.options.field9651.method15747();
-            this.field3793.field3622 = Statics.options.field9666.method15755() == 2;
-            this.field3793.field3623 = Statics.options.field9650.method15667() == 1;
-            this.field3793.field3624 = Statics.options.field9647.method15843() == 1;
-            this.field3793.field3625 = Statics.options.field9659.method15686() == 1;
+            this.field3793.field3629 = Statics.options.sceneryShadows.method15747();
+            this.field3793.field3622 = Statics.options.waterDetail.method15755() == 2;
+            this.field3793.field3623 = Statics.options.lightDetail.method15667() == 1;
+            this.field3793.field3624 = Statics.options.groundBlending.method15843() == 1;
+            this.field3793.field3625 = Statics.options.texturing.method15686() == 1;
             if (this.rebuildType.isRegionType()) {
                 this.method6131(this.field3793, this.field3830);
                 if (!this.asyncRebuilding) {

@@ -176,7 +176,7 @@ public class Loading {
             Statics.field9896 = Statics.field4761.method5622();
             Statics.field1625 = Statics.field1937.method5622();
             DefaultSprites.method11376(Statics.field4761);
-            int var6 = Statics.options.field9668.method15859();
+            int var6 = Statics.options.loadingScreen.method15859();
             Statics.field7348 = new LoadingRelated3(client.modeGame, Statics.language, Statics.field1937);
             LoadingRelated1[] var7 = Statics.field7348.method12706(var6);
             if (var7.length == 0) {
@@ -410,9 +410,9 @@ public class Loading {
             client.field8911 = Statics.options.field9669.method15877() == 1;
             Statics.options.method15448(Statics.options.field9669, 1);
             if (client.field8911) {
-                Statics.options.method15448(Statics.options.field9670, 0);
-            } else if (Statics.options.field9670.field9844 && Statics.field2305.field9703 < 512 && Statics.field2305.field9703 != 0) {
-                Statics.options.method15448(Statics.options.field9670, 0);
+                Statics.options.method15448(Statics.options.toolkitDefault, 0);
+            } else if (Statics.options.toolkitDefault.field9844 && Statics.field2305.field9703 < 512 && Statics.field2305.field9703 != 0) {
+                Statics.options.method15448(Statics.options.toolkitDefault, 0);
             }
             Statics.method1245();
             if (client.field8911) {
@@ -421,8 +421,8 @@ public class Loading {
                     GraphicsPacketQueue.method12023(ToolkitType.field7356);
                 }
             } else {
-                Statics.method5600(Statics.options.field9670.getValue(), false);
-                if (Statics.options.field9670.getValue() == 0) {
+                Statics.method5600(Statics.options.toolkitDefault.getValue(), false);
+                if (Statics.options.toolkitDefault.getValue() == 0) {
                     GraphicsPacketQueue.method12023(ToolkitType.field7364);
                 }
             }

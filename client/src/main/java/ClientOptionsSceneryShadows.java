@@ -13,36 +13,36 @@ public class ClientOptionsSceneryShadows extends ClientOption {
 
     @ObfuscatedName("afz.z(I)V")
     public void method15748() {
-        if (this.field6462.field9659.method15686() == 0) {
-            this.field6461 = 0;
+        if (this.field6462.texturing.method15686() == 0) {
+            this.value = 0;
         }
-        if (this.field6461 < 0 || this.field6461 > 2) {
-            this.field6461 = this.method11386();
+        if (this.value < 0 || this.value > 2) {
+            this.value = this.getDefault();
         }
     }
 
     @ObfuscatedName("afz.u(I)I")
-    public int method11386() {
+    public int getDefault() {
         return 2;
     }
 
     @ObfuscatedName("afz.n(I)Z")
     public boolean method15750() {
-        return this.field6462.field9659.method15686() != 0;
+        return this.field6462.texturing.method15686() != 0;
     }
 
     @ObfuscatedName("afz.j(IB)I")
-    public int method11387(int arg0) {
-        return this.field6462.field9659.method15686() == 0 ? 3 : 1;
+    public int canSetValue(int arg0) {
+        return this.field6462.texturing.method15686() == 0 ? 3 : 1;
     }
 
     @ObfuscatedName("afz.s(II)V")
-    public void method11389(int arg0) {
-        this.field6461 = arg0;
+    public void setValue(int arg0) {
+        this.value = arg0;
     }
 
     @ObfuscatedName("afz.o(I)I")
     public int method15747() {
-        return this.field6461;
+        return this.value;
     }
 }

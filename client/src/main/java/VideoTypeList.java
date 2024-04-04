@@ -105,7 +105,7 @@ public class VideoTypeList {
                         VorbisAudioBuss var3 = var2.method16795();
                         if (var3 != null) {
                             var3.method16466(var0.field9619);
-                            Statics.field4201.method16452(var3);
+                            Statics.soundStream.method16452(var3);
                             var0.field9623 = true;
                         }
                     }

@@ -13,28 +13,28 @@ public class ClientOptionsFlickeringEffects extends ClientOption {
 
     @ObfuscatedName("afp.z(B)V")
     public void method15677() {
-        if (this.field6461 != 1 && this.field6461 != 0) {
-            this.field6461 = this.method11386();
+        if (this.value != 1 && this.value != 0) {
+            this.value = this.getDefault();
         }
     }
 
     @ObfuscatedName("afp.u(I)I")
-    public int method11386() {
+    public int getDefault() {
         return 1;
     }
 
     @ObfuscatedName("afp.j(IB)I")
-    public int method11387(int arg0) {
+    public int canSetValue(int arg0) {
         return 1;
     }
 
     @ObfuscatedName("afp.s(II)V")
-    public void method11389(int arg0) {
-        this.field6461 = arg0;
+    public void setValue(int arg0) {
+        this.value = arg0;
     }
 
     @ObfuscatedName("afp.n(B)I")
     public int method15679() {
-        return this.field6461;
+        return this.value;
     }
 }

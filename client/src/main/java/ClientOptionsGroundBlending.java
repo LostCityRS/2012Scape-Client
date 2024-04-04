@@ -14,15 +14,15 @@ public class ClientOptionsGroundBlending extends ClientOption {
     @ObfuscatedName("afj.z(I)V")
     public void method15841() {
         if (this.field6462.method15452() != ModeGame.field6407) {
-            this.field6461 = 1;
+            this.value = 1;
         }
-        if (this.field6461 != 0 && this.field6461 != 1) {
-            this.field6461 = this.method11386();
+        if (this.value != 0 && this.value != 1) {
+            this.value = this.getDefault();
         }
     }
 
     @ObfuscatedName("afj.u(I)I")
-    public int method11386() {
+    public int getDefault() {
         return 1;
     }
 
@@ -32,18 +32,18 @@ public class ClientOptionsGroundBlending extends ClientOption {
     }
 
     @ObfuscatedName("afj.j(IB)I")
-    public int method11387(int arg0) {
+    public int canSetValue(int arg0) {
         if (this.field6462.method15452() != ModeGame.field6407) {
             return 3;
         }
         if (arg0 == 0) {
-            if (this.field6462.field9646.method15696() == 1) {
+            if (this.field6462.fog.method15696() == 1) {
                 return 2;
             }
-            if (this.field6462.field9659.method15686() == 1) {
+            if (this.field6462.texturing.method15686() == 1) {
                 return 2;
             }
-            if (this.field6462.field9666.method15755() > 0) {
+            if (this.field6462.waterDetail.method15755() > 0) {
                 return 2;
             }
         }
@@ -51,12 +51,12 @@ public class ClientOptionsGroundBlending extends ClientOption {
     }
 
     @ObfuscatedName("afj.s(II)V")
-    public void method11389(int arg0) {
-        this.field6461 = arg0;
+    public void setValue(int arg0) {
+        this.value = arg0;
     }
 
     @ObfuscatedName("afj.o(I)I")
     public int method15843() {
-        return this.field6461;
+        return this.value;
     }
 }
