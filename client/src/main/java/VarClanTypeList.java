@@ -17,7 +17,7 @@ public class VarClanTypeList {
         if (this.field7344 == null) {
             this.field7345 = 0;
         } else {
-            this.field7345 = this.field7344.method5637(Js5ConfigGroup.VARCLAN.field1668);
+            this.field7345 = this.field7344.getGroupCapacity(Js5ConfigGroup.VARCLAN.field1668);
         }
     }
 

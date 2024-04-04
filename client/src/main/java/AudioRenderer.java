@@ -49,7 +49,7 @@ public class AudioRenderer {
     public static void method3658(boolean arg0, MidiAudioBuss arg1) {
         Statics.musicChannel.setStream(arg1);
         if (arg0) {
-            Statics.method3612(Statics.field5104, Statics.field3156, Statics.field5197, arg1, Statics.musicChannel);
+            Statics.method3612(Statics.midiInstruments, Statics.vorbis, Statics.synthSounds, arg1, Statics.musicChannel);
         }
     }
 
@@ -87,14 +87,14 @@ public class AudioRenderer {
                 var1.field4179--;
                 if (var1.field4179 >= (var1.method6878() ? -1500 : -10)) {
                     if (var1.field4186 == 1 && var1.field4176 == null) {
-                        var1.field4176 = SynthSound.method6466(Statics.field5197, var1.field4173, 0);
+                        var1.field4176 = SynthSound.method6466(Statics.synthSounds, var1.field4173, 0);
                         if (var1.field4176 == null) {
                             continue;
                         }
                         var1.field4179 += var1.field4176.getStart();
                     } else if (var1.method6878() && (var1.field4184 == null || var1.field4185 == null)) {
                         if (var1.field4184 == null) {
-                            var1.field4184 = VorbisSound.method15066(Statics.field3156, var1.field4173);
+                            var1.field4184 = VorbisSound.method15066(Statics.vorbis, var1.field4173);
                         }
                         if (var1.field4184 == null) {
                             continue;
@@ -156,7 +156,7 @@ public class AudioRenderer {
                         if (var13 > 0) {
                             if (var1.field4186 == 1) {
                                 Object var18 = null;
-                                SynthVariableRateSoundPacket var19 = var1.field4176.toSoundPacket().method17108(Statics.field3160);
+                                SynthSoundPacket var19 = var1.field4176.toSoundPacket().method17108(Statics.field3160);
                                 var1.field4188 = var19.create(var1.field4182, var13, var3);
                             } else if (var1.method6878()) {
                                 var1.field4188 = var1.field4185.create(var1.field4182, var13, var3);
@@ -182,9 +182,9 @@ public class AudioRenderer {
         if (field4203 && !MidiPlayer.method13899()) {
             if (Statics.options.field9674.method15899() != 0 && field4202 != -1) {
                 if (Statics.field2327 == null) {
-                    MidiPlayer.method3986(Statics.field9367, field4202, 0, Statics.options.field9674.method15899(), false);
+                    MidiPlayer.method3986(Statics.midiSongs, field4202, 0, Statics.options.field9674.method15899(), false);
                 } else {
-                    MidiPlayer.method6359(Statics.field9367, field4202, 0, Statics.options.field9674.method15899(), false, Statics.field2327);
+                    MidiPlayer.method6359(Statics.midiSongs, field4202, 0, Statics.options.field9674.method15899(), false, Statics.field2327);
                 }
             }
             field4203 = false;
@@ -296,7 +296,7 @@ public class AudioRenderer {
         if (arg0 == -1 && !field4203) {
             MidiPlayer.method8662();
         } else if (arg0 != -1 && (field4202 != arg0 || !MidiPlayer.method13899()) && var4 != 0 && !field4203) {
-            MidiPlayer.method16250(arg2, Statics.field9367, arg0, 0, var4, false, new SoundRelated30());
+            MidiPlayer.method16250(arg2, Statics.midiSongs, arg0, 0, var4, false, new MidiSoundRelated3_Sub1());
             method2572();
         }
         if (field4202 != arg0) {
@@ -307,7 +307,7 @@ public class AudioRenderer {
     }
 
     @ObfuscatedName("js.v(Leq;IB)V")
-    public static void method4800(SoundRelated14 arg0, int arg1) {
+    public static void method4800(MidiSoundRelated4 arg0, int arg1) {
         int var2 = arg1 * Statics.options.field9674.method15899() >> 8;
         if (arg0 == null) {
             MidiPlayer.method8662();
@@ -367,7 +367,7 @@ public class AudioRenderer {
         ClientMessage var1 = ClientMessage.createMessage(ClientProt.field2881, client.gameConnection.randomOut);
         var1.buf.p4(-1);
         client.gameConnection.queue(var1);
-        Statics.field4206 = new SoundRelated14(Statics.field9367, arg0);
+        Statics.field4206 = new MidiSoundRelated4(Statics.midiSongs, arg0);
     }
 
     @ObfuscatedName("aip.af(I)V")

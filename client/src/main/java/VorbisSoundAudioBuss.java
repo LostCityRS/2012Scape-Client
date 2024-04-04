@@ -1,9 +1,9 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aks")
-public class VariableRateSoundStream extends SoundAudioBuss {
+public class VorbisSoundAudioBuss extends SoundAudioBuss {
 
-    public VariableRateSoundStream(VariableRateSoundPacket arg0, int arg1, int arg2, int arg3) {
+    public VorbisSoundAudioBuss(VorbisSoundPacket arg0, int arg1, int arg2, int arg3) {
         this.sound = arg0;
         this.field10272 = arg0.field10294;
         this.field10275 = arg0.field10292;
@@ -23,7 +23,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
         }
         int var4 = this.field10272 << 8;
         int var5 = this.field10275 << 8;
-        int var6 = ((VariableRateSoundPacket) this.sound).method16496() << 8;
+        int var6 = ((VorbisSoundPacket) this.sound).method16496() << 8;
         int var7 = var5 - var4;
         if (var7 <= 0) {
             this.field10265 = 0;
@@ -52,7 +52,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
                     label131:
                     {
                         if (this.field10264 < 0) {
-                            var8 = this.method17052(arg0, arg1, var4, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10272]);
+                            var8 = this.method17052(arg0, arg1, var4, var9, ((VorbisSoundPacket) this.sound).method17104()[this.field10272]);
                             if (this.field10266 >= var4) {
                                 return;
                             }
@@ -63,7 +63,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
                             }
                         }
                         do {
-                            var8 = this.method17051(arg0, var8, var5, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10275 - 1]);
+                            var8 = this.method17051(arg0, var8, var5, var9, ((VorbisSoundPacket) this.sound).method17104()[this.field10275 - 1]);
                             if (this.field10266 < var5) {
                                 return;
                             }
@@ -72,7 +72,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
                             if (--this.field10265 == 0) {
                                 break;
                             }
-                            var8 = this.method17052(arg0, var8, var4, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10272]);
+                            var8 = this.method17052(arg0, var8, var4, var9, ((VorbisSoundPacket) this.sound).method17104()[this.field10272]);
                             if (this.field10266 >= var4) {
                                 return;
                             }
@@ -82,7 +82,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
                     }
                 } else if (this.field10264 < 0) {
                     while (true) {
-                        var8 = this.method17052(arg0, var8, var4, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10275 - 1]);
+                        var8 = this.method17052(arg0, var8, var4, var9, ((VorbisSoundPacket) this.sound).method17104()[this.field10275 - 1]);
                         if (this.field10266 >= var4) {
                             return;
                         }
@@ -97,7 +97,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
                     }
                 } else {
                     while (true) {
-                        var8 = this.method17051(arg0, var8, var5, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10272]);
+                        var8 = this.method17051(arg0, var8, var5, var9, ((VorbisSoundPacket) this.sound).method17104()[this.field10272]);
                         if (this.field10266 < var5) {
                             return;
                         }
@@ -129,7 +129,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
             }
         } else if (this.field10276) {
             if (this.field10264 < 0) {
-                var8 = this.method17052(arg0, arg1, var4, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10272]);
+                var8 = this.method17052(arg0, arg1, var4, var9, ((VorbisSoundPacket) this.sound).method17104()[this.field10272]);
                 if (this.field10266 >= var4) {
                     return;
                 }
@@ -137,13 +137,13 @@ public class VariableRateSoundStream extends SoundAudioBuss {
                 this.field10264 = -(this.field10264);
             }
             while (true) {
-                int var10 = this.method17051(arg0, var8, var5, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10275 - 1]);
+                int var10 = this.method17051(arg0, var8, var5, var9, ((VorbisSoundPacket) this.sound).method17104()[this.field10275 - 1]);
                 if (this.field10266 < var5) {
                     return;
                 }
                 this.field10266 = var5 + var5 - 1 - this.field10266;
                 this.field10264 = -(this.field10264);
-                var8 = this.method17052(arg0, var10, var4, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10272]);
+                var8 = this.method17052(arg0, var10, var4, var9, ((VorbisSoundPacket) this.sound).method17104()[this.field10272]);
                 if (this.field10266 >= var4) {
                     return;
                 }
@@ -152,7 +152,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
             }
         } else if (this.field10264 < 0) {
             while (true) {
-                var8 = this.method17052(arg0, var8, var4, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10275 - 1]);
+                var8 = this.method17052(arg0, var8, var4, var9, ((VorbisSoundPacket) this.sound).method17104()[this.field10275 - 1]);
                 if (this.field10266 >= var4) {
                     return;
                 }
@@ -160,7 +160,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
             }
         } else {
             while (true) {
-                var8 = this.method17051(arg0, var8, var5, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10272]);
+                var8 = this.method17051(arg0, var8, var5, var9, ((VorbisSoundPacket) this.sound).method17104()[this.field10272]);
                 if (this.field10266 < var5) {
                     return;
                 }
@@ -180,14 +180,14 @@ public class VariableRateSoundStream extends SoundAudioBuss {
                 this.field10273 += arg1;
                 if (this.field10264 == 256 && (this.field10266 & 0xFF) == 0) {
                     if (Statics.stereo) {
-                        arg1 = method17100(0.0F, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this);
+                        arg1 = method17100(0.0F, ((VorbisSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this);
                     } else {
-                        arg1 = method17061(((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this);
+                        arg1 = method17061(((VorbisSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this);
                     }
                 } else if (Statics.stereo) {
-                    arg1 = method17066(0.0F, 0, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this, this.field10264, arg4);
+                    arg1 = method17066(0.0F, 0, ((VorbisSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this, this.field10264, arg4);
                 } else {
-                    arg1 = method17065(0.0F, 0, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this, this.field10264, arg4);
+                    arg1 = method17065(0.0F, 0, ((VorbisSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this, this.field10264, arg4);
                 }
                 this.field10273 -= arg1;
                 if (this.field10273 != 0) {
@@ -200,14 +200,14 @@ public class VariableRateSoundStream extends SoundAudioBuss {
             }
             if (this.field10264 == 256 && (this.field10266 & 0xFF) == 0) {
                 if (Statics.stereo) {
-                    return method17054(0.0F, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this);
+                    return method17054(0.0F, ((VorbisSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this);
                 }
-                return method17050(((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this);
+                return method17050(((VorbisSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this);
             }
             if (Statics.stereo) {
-                return method17058(0.0F, 0, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this, this.field10264, arg4);
+                return method17058(0.0F, 0, ((VorbisSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this, this.field10264, arg4);
             }
-            return method17057(0.0F, 0, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this, this.field10264, arg4);
+            return method17057(0.0F, 0, ((VorbisSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this, this.field10264, arg4);
         }
     }
 
@@ -222,14 +222,14 @@ public class VariableRateSoundStream extends SoundAudioBuss {
                 this.field10273 += arg1;
                 if (this.field10264 == -256 && (this.field10266 & 0xFF) == 0) {
                     if (Statics.stereo) {
-                        arg1 = method17064(0.0F, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this);
+                        arg1 = method17064(0.0F, ((VorbisSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this);
                     } else {
-                        arg1 = method17063(((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this);
+                        arg1 = method17063(((VorbisSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this);
                     }
                 } else if (Statics.stereo) {
-                    arg1 = method17062(0.0F, 0, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this, this.field10264, arg4);
+                    arg1 = method17062(0.0F, 0, ((VorbisSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this, this.field10264, arg4);
                 } else {
-                    arg1 = method17070(0.0F, 0, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this, this.field10264, arg4);
+                    arg1 = method17070(0.0F, 0, ((VorbisSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this, this.field10264, arg4);
                 }
                 this.field10273 -= arg1;
                 if (this.field10273 != 0) {
@@ -242,19 +242,19 @@ public class VariableRateSoundStream extends SoundAudioBuss {
             }
             if (this.field10264 == -256 && (this.field10266 & 0xFF) == 0) {
                 if (Statics.stereo) {
-                    return method17056(0.0F, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this);
+                    return method17056(0.0F, ((VorbisSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this);
                 }
-                return method17055(((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this);
+                return method17055(((VorbisSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this);
             }
             if (Statics.stereo) {
-                return method17060(0.0F, 0, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this, this.field10264, arg4);
+                return method17060(0.0F, 0, ((VorbisSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this, this.field10264, arg4);
             }
-            return method17059(0.0F, 0, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this, this.field10264, arg4);
+            return method17059(0.0F, 0, ((VorbisSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this, this.field10264, arg4);
         }
     }
 
     @ObfuscatedName("aks.cd([F[IIIIIIILaks;)I")
-    public static int method17050(float[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, VariableRateSoundStream arg8) {
+    public static int method17050(float[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, VorbisSoundAudioBuss arg8) {
         int var9 = arg2 >> 8;
         int var10 = arg7 >> 8;
         int var11 = arg4 << 2;
@@ -285,7 +285,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
     }
 
     @ObfuscatedName("aks.ce(F[F[IIIIIIIILaks;)I")
-    public static int method17054(float arg0, float[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, VariableRateSoundStream arg10) {
+    public static int method17054(float arg0, float[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, VorbisSoundAudioBuss arg10) {
         int var11 = arg3 >> 8;
         int var12 = arg9 >> 8;
         int var13 = arg5 << 2;
@@ -334,7 +334,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
     }
 
     @ObfuscatedName("aks.ct([F[IIIIIIILaks;)I")
-    public static int method17055(float[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, VariableRateSoundStream arg8) {
+    public static int method17055(float[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, VorbisSoundAudioBuss arg8) {
         int var9 = arg2 >> 8;
         int var10 = arg7 >> 8;
         int var11 = arg4 << 2;
@@ -365,7 +365,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
     }
 
     @ObfuscatedName("aks.cu(F[F[IIIIIIIILaks;)I")
-    public static int method17056(float arg0, float[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, VariableRateSoundStream arg10) {
+    public static int method17056(float arg0, float[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, VorbisSoundAudioBuss arg10) {
         int var11 = arg3 >> 8;
         int var12 = arg9 >> 8;
         int var13 = arg5 << 2;
@@ -414,7 +414,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
     }
 
     @ObfuscatedName("aks.cc(FI[F[IIIIIIILaks;IF)I")
-    public static int method17057(float arg0, int arg1, float[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, VariableRateSoundStream arg10, int arg11, float arg12) {
+    public static int method17057(float arg0, int arg1, float[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, VorbisSoundAudioBuss arg10, int arg11, float arg12) {
         int var13 = arg6 * 128;
         int var14;
         if (arg11 == 0 || (var14 = (arg9 - arg4 + arg11 - 257) / arg11 + arg5) > arg8) {
@@ -443,7 +443,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
     }
 
     @ObfuscatedName("aks.cg(FI[F[IIIIIIIILaks;IF)I")
-    public static int method17058(float arg0, int arg1, float[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, VariableRateSoundStream arg11, int arg12, float arg13) {
+    public static int method17058(float arg0, int arg1, float[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, VorbisSoundAudioBuss arg11, int arg12, float arg13) {
         int var14 = arg6 * 128;
         int var15 = arg7 * 128;
         int var16;
@@ -482,7 +482,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
     }
 
     @ObfuscatedName("aks.cj(FI[F[IIIIIIILaks;IF)I")
-    public static int method17059(float arg0, int arg1, float[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, VariableRateSoundStream arg10, int arg11, float arg12) {
+    public static int method17059(float arg0, int arg1, float[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, VorbisSoundAudioBuss arg10, int arg11, float arg12) {
         int var13 = arg6 * 128;
         int var14;
         if (arg11 == 0 || (var14 = (arg9 + 256 - arg4 + arg11) / arg11 + arg5) > arg8) {
@@ -511,7 +511,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
     }
 
     @ObfuscatedName("aks.cy(FI[F[IIIIIIIILaks;IF)I")
-    public static int method17060(float arg0, int arg1, float[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, VariableRateSoundStream arg11, int arg12, float arg13) {
+    public static int method17060(float arg0, int arg1, float[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, VorbisSoundAudioBuss arg11, int arg12, float arg13) {
         int var14 = arg6 * 128;
         int var15 = arg7 * 128;
         int var16;
@@ -549,7 +549,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
     }
 
     @ObfuscatedName("aks.cz([F[IIIIIIIILaks;)I")
-    public static int method17061(float[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, VariableRateSoundStream arg9) {
+    public static int method17061(float[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, VorbisSoundAudioBuss arg9) {
         int var10 = arg2 >> 8;
         int var11 = arg8 >> 8;
         int var12 = arg4 << 2;
@@ -590,7 +590,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
     }
 
     @ObfuscatedName("aks.dl(F[F[IIIIIIIIIILaks;)I")
-    public static int method17100(float arg0, float[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, VariableRateSoundStream arg12) {
+    public static int method17100(float arg0, float[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, VorbisSoundAudioBuss arg12) {
         int var13 = arg3 >> 8;
         int var14 = arg11 >> 8;
         int var15 = arg5 << 2;
@@ -656,7 +656,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
     }
 
     @ObfuscatedName("aks.dj([F[IIIIIIIILaks;)I")
-    public static int method17063(float[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, VariableRateSoundStream arg9) {
+    public static int method17063(float[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, VorbisSoundAudioBuss arg9) {
         int var10 = arg2 >> 8;
         int var11 = arg8 >> 8;
         int var12 = arg4 << 2;
@@ -697,7 +697,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
     }
 
     @ObfuscatedName("aks.dp(F[F[IIIIIIIIIILaks;)I")
-    public static int method17064(float arg0, float[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, VariableRateSoundStream arg12) {
+    public static int method17064(float arg0, float[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, VorbisSoundAudioBuss arg12) {
         int var13 = arg3 >> 8;
         int var14 = arg11 >> 8;
         int var15 = arg5 << 2;
@@ -763,7 +763,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
     }
 
     @ObfuscatedName("aks.dw(FI[F[IIIIIIIILaks;IF)I")
-    public static int method17065(float arg0, int arg1, float[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, VariableRateSoundStream arg11, int arg12, float arg13) {
+    public static int method17065(float arg0, int arg1, float[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, VorbisSoundAudioBuss arg11, int arg12, float arg13) {
         int var14 = arg6 * 128;
         int var15 = arg7 * 128;
         arg11.field10268 -= arg11.field10271 * arg5;
@@ -800,7 +800,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
     }
 
     @ObfuscatedName("aks.di(FI[F[IIIIIIIIIILaks;IF)I")
-    public static int method17066(float arg0, int arg1, float[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, VariableRateSoundStream arg13, int arg14, float arg15) {
+    public static int method17066(float arg0, int arg1, float[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, VorbisSoundAudioBuss arg13, int arg14, float arg15) {
         int var16 = arg6 * 128;
         int var17 = arg8 * 128;
         int var18 = arg7 * 128;
@@ -850,7 +850,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
     }
 
     @ObfuscatedName("aks.dg(FI[F[IIIIIIIILaks;IF)I")
-    public static int method17070(float arg0, int arg1, float[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, VariableRateSoundStream arg11, int arg12, float arg13) {
+    public static int method17070(float arg0, int arg1, float[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, VorbisSoundAudioBuss arg11, int arg12, float arg13) {
         int var14 = arg6 * 128;
         int var15 = arg7 * 128;
         arg11.field10268 -= arg11.field10271 * arg5;
@@ -887,7 +887,7 @@ public class VariableRateSoundStream extends SoundAudioBuss {
     }
 
     @ObfuscatedName("aks.do(FI[F[IIIIIIIIIILaks;IF)I")
-    public static int method17062(float arg0, int arg1, float[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, VariableRateSoundStream arg13, int arg14, float arg15) {
+    public static int method17062(float arg0, int arg1, float[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, VorbisSoundAudioBuss arg13, int arg14, float arg15) {
         int var16 = arg6 * 128;
         int var17 = arg8 * 128;
         int var18 = arg7 * 128;

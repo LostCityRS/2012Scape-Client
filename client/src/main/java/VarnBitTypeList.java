@@ -12,7 +12,7 @@ public class VarnBitTypeList {
     public VarnBitTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field6414 = arg2;
         if (this.field6414 != null) {
-            this.field6414.method5637(Js5ConfigGroup.VARNBIT.field1668);
+            this.field6414.getGroupCapacity(Js5ConfigGroup.VARNBIT.field1668);
         }
     }
 

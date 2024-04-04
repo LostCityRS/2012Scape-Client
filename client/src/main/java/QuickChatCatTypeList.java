@@ -16,10 +16,10 @@ public class QuickChatCatTypeList {
         this.field3704 = arg1;
         this.field3705 = arg2;
         if (this.field3704 != null) {
-            this.field3704.method5637(0);
+            this.field3704.getGroupCapacity(0);
         }
         if (this.field3705 != null) {
-            this.field3705.method5637(0);
+            this.field3705.getGroupCapacity(0);
         }
     }
 

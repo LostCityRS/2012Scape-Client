@@ -1,12 +1,12 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aly")
-public class VariableRateSoundPacket extends BasicVariableRateSoundPacket {
+public class VorbisSoundPacket extends BasicSoundPacket {
 
     @ObfuscatedName("aly.f")
     public float[] field10573;
 
-    public VariableRateSoundPacket(int arg0, VorbisSound arg1, float[] arg2, int arg3, int arg4, boolean arg5) {
+    public VorbisSoundPacket(int arg0, VorbisSound arg1, float[] arg2, int arg3, int arg4, boolean arg5) {
         this.field10295 = arg0;
         this.field10573 = arg2;
         this.field10294 = arg3;
@@ -21,7 +21,7 @@ public class VariableRateSoundPacket extends BasicVariableRateSoundPacket {
 
     @ObfuscatedName("aly.j(III)Laib;")
     public SoundAudioBuss create(int arg0, int arg1, int arg2) {
-        return this.field10573 == null || this.field10573.length == 0 ? null : new VariableRateSoundStream(this, arg0, arg1, arg2);
+        return this.field10573 == null || this.field10573.length == 0 ? null : new VorbisSoundAudioBuss(this, arg0, arg1, arg2);
     }
 
     @ObfuscatedName("aly.f()[F")

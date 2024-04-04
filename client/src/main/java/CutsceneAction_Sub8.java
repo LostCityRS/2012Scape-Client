@@ -10,7 +10,7 @@ public class CutsceneAction_Sub8 extends CutsceneAction {
     public final int field8511;
 
     @ObfuscatedName("zx.s")
-    public SoundRelated14 field8512;
+    public MidiSoundRelated4 field8512;
 
     public CutsceneAction_Sub8(Packet arg0) {
         super(arg0);
@@ -26,7 +26,7 @@ public class CutsceneAction_Sub8 extends CutsceneAction {
     @ObfuscatedName("zx.s(B)Z")
     public boolean method2883() {
         if (this.field8512 == null) {
-            this.field8512 = new SoundRelated14(Statics.field9367, this.field8510);
+            this.field8512 = new MidiSoundRelated4(Statics.midiSongs, this.field8510);
         }
         return this.field8512.method2999();
     }

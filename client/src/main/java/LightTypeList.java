@@ -11,7 +11,7 @@ public class LightTypeList {
 
     public LightTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field7185 = arg2;
-        this.field7185.method5637(Js5ConfigGroup.LIGHTTYPE.field1668);
+        this.field7185.getGroupCapacity(Js5ConfigGroup.LIGHTTYPE.field1668);
     }
 
     @ObfuscatedName("vp.u(II)Lvy;")

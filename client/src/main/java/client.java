@@ -1719,7 +1719,7 @@ public final class client extends GameShell {
                 if (Statics.options.field9675.method15899() == 0) {
                     MidiPlayer.method3311(2);
                 } else {
-                    MidiPlayer.method11764(2, Statics.field9367, AudioRenderer.field4205, 0, Statics.options.field9675.method15899(), false);
+                    MidiPlayer.method11764(2, Statics.midiSongs, AudioRenderer.field4205, 0, Statics.options.field9675.method15899(), false);
                     AudioRenderer.method2572();
                 }
                 Statics.field848.method5744(false);

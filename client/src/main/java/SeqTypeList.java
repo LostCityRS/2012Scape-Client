@@ -15,9 +15,9 @@ public class SeqTypeList {
     public SeqTypeList(ModeGame arg0, Language arg1, Js5 arg2, Js5 arg3, Js5 arg4) {
         this.field6342 = arg2;
         if (this.field6342 != null) {
-            int var6 = this.field6342.method5638() - 1;
+            int var6 = this.field6342.capacity() - 1;
             Js5ConfigGroup.SEQTYPE.method3071();
-            this.field6342.method5637(var6);
+            this.field6342.getGroupCapacity(var6);
         }
         FrameSet.method16191(arg3, arg4, 2);
     }

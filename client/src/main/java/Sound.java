@@ -31,7 +31,7 @@ public class Sound {
     public VorbisSound field4184;
 
     @ObfuscatedName("np.o")
-    public VariableRateSoundPacket field4185;
+    public VorbisSoundPacket field4185;
 
     @ObfuscatedName("np.q")
     public SoundAudioBuss field4188;

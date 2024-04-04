@@ -14,7 +14,7 @@ public class VarClientTypeList {
 
     public VarClientTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field7161 = arg2;
-        this.field7160 = this.field7161.method5637(Js5ConfigGroup.VARCINT.field1668);
+        this.field7160 = this.field7161.getGroupCapacity(Js5ConfigGroup.VARCINT.field1668);
     }
 
     @ObfuscatedName("vb.u(IS)Lvr;")

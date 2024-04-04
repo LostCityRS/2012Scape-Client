@@ -606,7 +606,7 @@ public class Component {
         if (!Statics.field1928.method5631(arg0)) {
             return null;
         }
-        int var4 = Statics.field1928.method5637(arg0);
+        int var4 = Statics.field1928.getGroupCapacity(arg0);
         Component[] var5;
         if (var4 == 0) {
             var5 = new Component[0];

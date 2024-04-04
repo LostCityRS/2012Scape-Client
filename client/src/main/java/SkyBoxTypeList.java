@@ -11,7 +11,7 @@ public class SkyBoxTypeList {
 
     public SkyBoxTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field4463 = arg2;
-        this.field4463.method5637(Js5ConfigGroup.SKYBOXTYPE.field1668);
+        this.field4463.getGroupCapacity(Js5ConfigGroup.SKYBOXTYPE.field1668);
     }
 
     @ObfuscatedName("ot.u(II)Loi;")

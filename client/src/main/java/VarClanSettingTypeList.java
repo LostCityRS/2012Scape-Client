@@ -12,7 +12,7 @@ public class VarClanSettingTypeList {
     public VarClanSettingTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field5038 = arg2;
         if (this.field5038 != null) {
-            this.field5038.method5637(Js5ConfigGroup.VARCLANSETTING.field1668);
+            this.field5038.getGroupCapacity(Js5ConfigGroup.VARCLANSETTING.field1668);
         }
     }
 

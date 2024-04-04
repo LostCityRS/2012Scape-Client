@@ -11,7 +11,7 @@ public class FloorUnderlayTypeList {
 
     public FloorUnderlayTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field6710 = arg2;
-        this.field6710.method5637(Js5ConfigGroup.FLUTYPE.field1668);
+        this.field6710.getGroupCapacity(Js5ConfigGroup.FLUTYPE.field1668);
     }
 
     @ObfuscatedName("ux.u(IB)Luc;")

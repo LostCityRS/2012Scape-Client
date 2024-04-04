@@ -32,9 +32,9 @@ public class SynthSound {
     }
 
     @ObfuscatedName("mr.j()Lalu;")
-    public SynthVariableRateSoundPacket toSoundPacket() {
+    public SynthSoundPacket toSoundPacket() {
         byte[] var1 = this.getSamples();
-        return new SynthVariableRateSoundPacket(22050, var1, this.start * 22050 / 1000, this.end * 22050 / 1000);
+        return new SynthSoundPacket(22050, var1, this.start * 22050 / 1000, this.end * 22050 / 1000);
     }
 
     @ObfuscatedName("mr.a()I")
@@ -80,7 +80,7 @@ public class SynthSound {
             if (this.instruments[var5] != null) {
                 int var6 = this.instruments[var5].length * 22050 / 1000;
                 int var7 = this.instruments[var5].start * 22050 / 1000;
-                int[] var8 = this.instruments[var5].method6598(var6, this.instruments[var5].length);
+                int[] var8 = this.instruments[var5].getSamples(var6, this.instruments[var5].length);
                 for (int var9 = 0; var9 < var6; var9++) {
                     int var10 = (var8[var9] >> 8) + var4[var7 + var9];
                     if ((var10 + 128 & 0xFFFFFF00) != 0) {

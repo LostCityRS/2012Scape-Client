@@ -17,7 +17,7 @@ public class VarPlayerTypeList implements PlayerTypeListRelated {
         if (this.field3314 == null) {
             this.field3312 = 0;
         } else {
-            this.field3312 = this.field3314.method5637(Js5ConfigGroup.VARP.field1668);
+            this.field3312 = this.field3314.getGroupCapacity(Js5ConfigGroup.VARP.field1668);
         }
     }
 

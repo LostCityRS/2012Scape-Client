@@ -12,9 +12,9 @@ public class VarBitTypeList implements PlayerTypeListRelated {
     public VarBitTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field4664 = arg2;
         if (this.field4664 != null) {
-            int var4 = this.field4664.method5638() - 1;
+            int var4 = this.field4664.capacity() - 1;
             Js5ConfigGroup.VARBIT.method3071();
-            this.field4664.method5637(var4);
+            this.field4664.getGroupCapacity(var4);
         }
     }
 

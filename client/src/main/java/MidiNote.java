@@ -10,7 +10,7 @@ public class MidiNote extends Node {
     public MidiInstrument field9384;
 
     @ObfuscatedName("aci.m")
-    public BasicVariableRateSoundPacket field9385;
+    public BasicSoundPacket field9385;
 
     @ObfuscatedName("aci.t")
     public MidiRelated2 field9391;

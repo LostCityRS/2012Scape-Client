@@ -937,9 +937,9 @@ public class LoginManager {
         arg0.p4(Statics.field6690.method5622());
         arg0.p4(Statics.field7435.method5622());
         arg0.p4(Statics.field2653.method5622());
-        arg0.p4(Statics.field5197.method5622());
+        arg0.p4(Statics.synthSounds.method5622());
         arg0.p4(Statics.field7343.method5622());
-        arg0.p4(Statics.field9367.method5622());
+        arg0.p4(Statics.midiSongs.method5622());
         arg0.p4(Statics.field4560.method5622());
         arg0.p4(Statics.field7387.method5622());
         arg0.p4(Statics.field808.method5622());
@@ -947,8 +947,8 @@ public class LoginManager {
         arg0.p4(Statics.field1509.method5622());
         arg0.p4(Statics.field6651.method5622());
         arg0.p4(Statics.field8745.method5622());
-        arg0.p4(Statics.field3156.method5622());
-        arg0.p4(Statics.field5104.method5622());
+        arg0.p4(Statics.vorbis.method5622());
+        arg0.p4(Statics.midiInstruments.method5622());
         arg0.p4(Statics.field1565.method5622());
         arg0.p4(Statics.field6451.method5622());
         arg0.p4(Statics.field5080.method5622());

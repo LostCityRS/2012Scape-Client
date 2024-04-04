@@ -55,8 +55,8 @@ public class ObjTypeList implements PlayerTypeListRelated {
         if (this.field7143 == null) {
             this.field7144 = 0;
         } else {
-            int var7 = this.field7143.method5638() - 1;
-            this.field7144 = var7 * Js5ConfigGroup.OBJTYPE.method3071() + this.field7143.method5637(var7);
+            int var7 = this.field7143.capacity() - 1;
+            this.field7144 = var7 * Js5ConfigGroup.OBJTYPE.method3071() + this.field7143.getGroupCapacity(var7);
         }
         if (ModeGame.field6407 == this.field7139) {
             this.field7151 = new String[]{null, null, LocalisedText.field6875.get(this.field7140), null, null, LocalisedText.field6874.get(this.field7140)};

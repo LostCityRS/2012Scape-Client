@@ -263,12 +263,12 @@ public final class Js5 {
     }
 
     @ObfuscatedName("ls.b(IB)I")
-    public int method5637(int arg0) {
+    public int getGroupCapacity(int arg0) {
         return this.method5623(arg0) ? this.field3572.field3561[arg0] : 0;
     }
 
     @ObfuscatedName("ls.x(I)I")
-    public int method5638() {
+    public int capacity() {
         return this.method5689() ? this.field3572.field3561.length : -1;
     }
 

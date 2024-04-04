@@ -12,7 +12,7 @@ public class VarnTypeList {
     public VarnTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field6759 = arg2;
         if (this.field6759 != null) {
-            this.field6759.method5637(Js5ConfigGroup.VARN.field1668);
+            this.field6759.getGroupCapacity(Js5ConfigGroup.VARN.field1668);
         }
     }
 

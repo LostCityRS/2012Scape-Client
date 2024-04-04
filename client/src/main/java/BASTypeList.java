@@ -17,7 +17,7 @@ public class BASTypeList {
 
     public BASTypeList(ModeGame arg0, Language arg1, Js5 arg2, WearposDefaults arg3) {
         this.field4734 = arg2;
-        this.field4734.method5637(Js5ConfigGroup.BASTYPE.field1668);
+        this.field4734.getGroupCapacity(Js5ConfigGroup.BASTYPE.field1668);
         this.field4735 = arg3;
     }
 

@@ -17,7 +17,7 @@ public class FloorOverlayTypeList {
 
     public FloorOverlayTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field5106 = arg2;
-        this.field5105 = this.field5106.method5637(Js5ConfigGroup.FLOTYPE.field1668);
+        this.field5105 = this.field5106.getGroupCapacity(Js5ConfigGroup.FLOTYPE.field1668);
     }
 
     @ObfuscatedName("rd.u(IS)Lry;")

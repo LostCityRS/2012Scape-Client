@@ -11,7 +11,7 @@ public class SkyDecorTypeList {
 
     public SkyDecorTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field2161 = arg2;
-        this.field2161.method5637(Js5ConfigGroup.SKYDECORTYPE.field1668);
+        this.field2161.getGroupCapacity(Js5ConfigGroup.SKYDECORTYPE.field1668);
     }
 
     @ObfuscatedName("fj.u(II)Lfy;")

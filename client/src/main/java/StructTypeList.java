@@ -14,7 +14,7 @@ public class StructTypeList {
 
     public StructTypeList(ModeGame arg0, Language arg1, Js5 arg2, boolean arg3) {
         this.field7172 = arg2;
-        this.field7171 = this.field7172.method5637(Js5ConfigGroup.STRUCTTYPE.field1668);
+        this.field7171 = this.field7172.getGroupCapacity(Js5ConfigGroup.STRUCTTYPE.field1668);
         if (arg3) {
             this.field7170 = new StructType[this.field7171];
             for (int var5 = 0; var5 < this.field7171; var5++) {

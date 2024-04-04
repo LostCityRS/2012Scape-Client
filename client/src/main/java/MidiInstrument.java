@@ -7,7 +7,7 @@ public class MidiInstrument extends Node {
     public int field9411;
 
     @ObfuscatedName("acu.c")
-    public BasicVariableRateSoundPacket[] field9408 = new BasicVariableRateSoundPacket[128];
+    public BasicSoundPacket[] field9408 = new BasicSoundPacket[128];
 
     @ObfuscatedName("acu.m")
     public short[] field9406 = new short[128];
@@ -363,10 +363,10 @@ public class MidiInstrument extends Node {
     }
 
     @ObfuscatedName("acu.j(Lmd;[B[II)Z")
-    public boolean method14918(SynthSoundRelated12 arg0, byte[] arg1, int[] arg2) {
+    public boolean method14918(SoundBank arg0, byte[] arg1, int[] arg2) {
         boolean var4 = true;
         int var5 = 0;
-        BasicVariableRateSoundPacket var6 = null;
+        BasicSoundPacket var6 = null;
         for (int var7 = 0; var7 < 128; var7++) {
             if (arg1 == null || arg1[var7] != 0) {
                 int var8 = this.field9407[var7];
@@ -374,9 +374,9 @@ public class MidiInstrument extends Node {
                     if (var5 != var8) {
                         var5 = var8--;
                         if ((var8 & 0x1) == 0) {
-                            var6 = arg0.method6567(var8 >> 2, arg2);
+                            var6 = arg0.getSynthSound(var8 >> 2, arg2);
                         } else {
-                            var6 = arg0.method6568(var8 >> 2, arg2);
+                            var6 = arg0.getVorbisSound(var8 >> 2, arg2);
                         }
                         if (var6 == null) {
                             var4 = false;

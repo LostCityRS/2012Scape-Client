@@ -18,7 +18,7 @@ public class CursorTypeList {
     public CursorTypeList(ModeGame arg0, Language arg1, Js5 arg2, Js5 arg3) {
         this.field7169 = arg2;
         this.field7167 = arg3;
-        this.field7169.method5637(Js5ConfigGroup.CURSORTYPE.field1668);
+        this.field7169.getGroupCapacity(Js5ConfigGroup.CURSORTYPE.field1668);
     }
 
     @ObfuscatedName("vk.u(II)Lvv;")

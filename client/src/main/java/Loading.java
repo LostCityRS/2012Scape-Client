@@ -219,17 +219,17 @@ public class Loading {
             Statics.field6690 = client.method7706(Js5Archive.BASES, false, 1, false);
             Statics.field7435 = client.method7706(Js5Archive.CONFIG, false, 1, true);
             Statics.field2653 = client.method7706(Js5Archive.INTERFACES, false, 1, true);
-            Statics.field5197 = client.method7706(Js5Archive.SYNTH_SOUNDS, false, 1, false);
+            Statics.synthSounds = client.method7706(Js5Archive.SYNTH_SOUNDS, false, 1, false);
             Statics.field7343 = client.method7706(Js5Archive.MAPS, true, 1, false);
-            Statics.field9367 = client.method7706(Js5Archive.MIDI_SONGS, true, 1, false);
+            Statics.midiSongs = client.method7706(Js5Archive.MIDI_SONGS, true, 1, false);
             Statics.field4560 = client.method7706(Js5Archive.MODELS, false, 1, false);
             Statics.field808 = client.method7706(Js5Archive.TEXTURES, true, 1, false);
             Statics.field6435 = client.method7706(Js5Archive.field1723, true, 1, false);
             Statics.field3523 = client.method7706(Js5Archive.BINARY, false, 1, false);
             Statics.field1509 = client.method7706(Js5Archive.MIDI_JINGLES, false, 1, false);
             Statics.field6651 = client.method7706(Js5Archive.CLIENTSCRIPTS, false, 1, true);
-            Statics.field3156 = client.method7706(Js5Archive.VORBIS, false, 1, false);
-            Statics.field5104 = client.method7706(Js5Archive.MIDI_INSTRUMENTS, false, 1, false);
+            Statics.vorbis = client.method7706(Js5Archive.VORBIS, false, 1, false);
+            Statics.midiInstruments = client.method7706(Js5Archive.MIDI_INSTRUMENTS, false, 1, false);
             Statics.field1565 = client.method7706(Js5Archive.CONFIG_LOC, false, 1, true);
             Statics.field6451 = client.method7706(Js5Archive.CONFIG_ENUM, false, 1, true);
             Statics.field5080 = client.method7706(Js5Archive.CONFIG_NPC, false, 1, true);
@@ -369,7 +369,7 @@ public class Loading {
             }
             method2862();
             Statics.field7343.method5636(false, true);
-            Statics.field9367.method5636(true, true);
+            Statics.midiSongs.method5636(true, true);
             Statics.field7387.method5636(true, true);
             Statics.field8745.method5636(true, true);
             Statics.field3523.method5636(true, true);

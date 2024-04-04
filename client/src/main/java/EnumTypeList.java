@@ -12,9 +12,9 @@ public class EnumTypeList {
     public EnumTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field6804 = arg2;
         if (this.field6804 != null) {
-            int var4 = this.field6804.method5638() - 1;
+            int var4 = this.field6804.capacity() - 1;
             Js5ConfigGroup.ENUMTYPE.method3071();
-            this.field6804.method5637(var4);
+            this.field6804.getGroupCapacity(var4);
         }
     }
 

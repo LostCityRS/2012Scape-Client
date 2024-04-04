@@ -18,7 +18,7 @@ public class MSITypeList {
     public MSITypeList(ModeGame arg0, Language arg1, Js5 arg2, Js5 arg3) {
         this.field7200 = arg2;
         this.field7199 = arg3;
-        this.field7200.method5637(Js5ConfigGroup.MSITYPE.field1668);
+        this.field7200.getGroupCapacity(Js5ConfigGroup.MSITYPE.field1668);
         Math.random();
         Math.random();
         Math.random();

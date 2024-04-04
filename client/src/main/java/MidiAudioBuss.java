@@ -138,7 +138,7 @@ public class MidiAudioBuss extends AudioBuss {
     }
 
     @ObfuscatedName("aih.ai(Lacw;Lls;Lmd;II)Z")
-    public synchronized boolean method16375(MidiSong arg0, Js5 arg1, SynthSoundRelated12 arg2, int arg3) {
+    public synchronized boolean method16375(MidiSong arg0, Js5 arg1, SoundBank arg2, int arg3) {
         arg0.method14906();
         boolean var5 = true;
         int[] var6 = null;
@@ -268,7 +268,7 @@ public class MidiAudioBuss extends AudioBuss {
         if (var6 == null) {
             return;
         }
-        BasicVariableRateSoundPacket var7 = var6.field9408[arg1];
+        BasicSoundPacket var7 = var6.field9408[arg1];
         if (var7 == null) {
             return;
         }

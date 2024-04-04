@@ -114,7 +114,7 @@ public class Statics {
     public static EnumTypeList field1244;
 
     @ObfuscatedName("cc.r")
-    public static SynthSoundRelated12 field1279;
+    public static SoundBank field1279;
 
     @ObfuscatedName("cg.ay")
     public static int field1290;
@@ -441,7 +441,7 @@ public class Statics {
     public static ClanSettings field2972;
 
     @ObfuscatedName("jj.fj")
-    public static Js5 field3156;
+    public static Js5 vorbis;
 
     @ObfuscatedName("jr.b")
     public static SampleRateConverter field3160;
@@ -651,16 +651,16 @@ public class Statics {
     public static AudioRelatedPcm12 field4027;
 
     @ObfuscatedName("md.v")
-    public static SoundRelated13 field4058;
+    public static MidiSoundRelated3 field4058;
 
     @ObfuscatedName("md.gq")
     public static Js5 field4059;
 
     @ObfuscatedName("ng.f")
-    public static int field4093;
+    public static int inverseA0;
 
     @ObfuscatedName("ng.l")
-    public static float field4100;
+    public static float floatingInverseA0;
 
     @ObfuscatedName("nv.n")
     public static int canvasWid;
@@ -699,7 +699,7 @@ public class Statics {
     public static MixerAudioBuss field4201;
 
     @ObfuscatedName("ne.o")
-    public static SoundRelated14 field4206;
+    public static MidiSoundRelated4 field4206;
 
     @ObfuscatedName("ne.hm")
     public static EffectAnimTypeList field4213;
@@ -1020,7 +1020,7 @@ public class Statics {
     public static int field5086;
 
     @ObfuscatedName("ry.fo")
-    public static Js5 field5104;
+    public static Js5 midiInstruments;
 
     @ObfuscatedName("rd.v")
     public static boolean field5109;
@@ -1053,7 +1053,7 @@ public class Statics {
     public static SkyBox field5193;
 
     @ObfuscatedName("ro.ep")
-    public static Js5 field5197;
+    public static Js5 synthSounds;
 
     @ObfuscatedName("ro.p")
     public static AudioChannel musicChannel;
@@ -1719,7 +1719,7 @@ public class Statics {
     public static int[] field9319;
 
     @ObfuscatedName("aco.fr")
-    public static Js5 field9367;
+    public static Js5 midiSongs;
 
     @ObfuscatedName("aci.qf")
     public static int field9405;
@@ -2093,12 +2093,12 @@ public class Statics {
     }
 
     @ObfuscatedName("fj.u(Lls;Lls;Lls;Laih;Lmg;I)Z")
-    public static boolean method3612(Js5 arg0, Js5 arg1, Js5 arg2, MidiAudioBuss arg3, AudioChannel arg4) {
-        field1586 = arg0;
-        field1580 = arg1;
-        field1581 = arg2;
+    public static boolean method3612(Js5 midiInstruments, Js5 vorbis, Js5 synthSounds, MidiAudioBuss arg3, AudioChannel musicChannel) {
+        field1586 = midiInstruments;
+        field1580 = vorbis;
+        field1581 = synthSounds;
         field1735 = arg3;
-        field4165 = arg4;
+        field4165 = musicChannel;
         field4559 = new int[16];
         for (int var5 = 0; var5 < 16; var5++) {
             field4559[var5] = 255;
@@ -3359,8 +3359,8 @@ public class Statics {
         field1928 = arg0;
         field1191 = arg1;
         field1600 = arg2;
-        field1756 = new Interface[field1928.method5638()];
-        field1834 = new boolean[field1928.method5638()];
+        field1756 = new Interface[field1928.capacity()];
+        field1834 = new boolean[field1928.capacity()];
     }
 
     @ObfuscatedName("jv.z(Lso;IB)V")
@@ -3653,8 +3653,8 @@ public class Statics {
 
     @ObfuscatedName("id.h(I)V")
     public static void method4591() {
-        field1756 = new Interface[field1928.method5638()];
-        field1834 = new boolean[field1928.method5638()];
+        field1756 = new Interface[field1928.capacity()];
+        field1834 = new boolean[field1928.capacity()];
     }
 
     @ObfuscatedName("wq.w(Lew;Lta;IIIILce;I)V")

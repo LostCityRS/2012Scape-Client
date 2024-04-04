@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aid")
-public abstract class BasicVariableRateSoundPacket extends SoundPacket {
+public abstract class BasicSoundPacket extends SoundPacket {
 
     @ObfuscatedName("aid.c")
     public int field10295;

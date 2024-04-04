@@ -17,7 +17,7 @@ public class QuestTypeList {
         if (this.field5054 == null) {
             this.field5053 = 0;
         } else {
-            this.field5053 = this.field5054.method5637(Js5ConfigGroup.QUESTTYPE.field1668);
+            this.field5053 = this.field5054.getGroupCapacity(Js5ConfigGroup.QUESTTYPE.field1668);
         }
         if (arg3) {
             this.field5055 = new QuestType[this.field5053];

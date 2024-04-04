@@ -18,7 +18,7 @@ public class HeadbarTypeList {
     public HeadbarTypeList(ModeGame arg0, Language arg1, Js5 arg2, Js5 arg3) {
         this.field4451 = arg3;
         this.field4452 = arg2;
-        this.field4452.method5637(Js5ConfigGroup.HEADBARTYPE.field1668);
+        this.field4452.getGroupCapacity(Js5ConfigGroup.HEADBARTYPE.field1668);
     }
 
     @ObfuscatedName("ow.u(IB)Loe;")

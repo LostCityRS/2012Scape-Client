@@ -11003,7 +11003,7 @@ public final class ScriptRunner {
         }
         if (client.isStateGame(client.state)) {
             if (var2 == 0 && AudioRenderer.field4202 != -1) {
-                MidiPlayer.method3986(Statics.field9367, AudioRenderer.field4202, 0, var1, false);
+                MidiPlayer.method3986(Statics.midiSongs, AudioRenderer.field4202, 0, var1, false);
                 AudioRenderer.method2572();
                 AudioRenderer.field4203 = false;
             } else if (var1 == 0) {
@@ -11113,7 +11113,7 @@ public final class ScriptRunner {
         }
         if (!client.isStateGame(client.state)) {
             if (var2 == 0) {
-                MidiPlayer.method3986(Statics.field9367, AudioRenderer.field4202, 0, var1, false);
+                MidiPlayer.method3986(Statics.midiSongs, AudioRenderer.field4202, 0, var1, false);
                 AudioRenderer.method2572();
                 AudioRenderer.field4203 = false;
             } else if (var1 == 0) {

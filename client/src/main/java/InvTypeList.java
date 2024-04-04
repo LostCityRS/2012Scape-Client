@@ -11,7 +11,7 @@ public class InvTypeList implements PlayerTypeListRelated {
 
     public InvTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field7325 = arg2;
-        this.field7325.method5637(Js5ConfigGroup.INVTYPE.field1668);
+        this.field7325.getGroupCapacity(Js5ConfigGroup.INVTYPE.field1668);
     }
 
     @ObfuscatedName("wo.u(II)Laez;")

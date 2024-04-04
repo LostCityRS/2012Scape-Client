@@ -18,7 +18,7 @@ public class MapElementTypeList {
     public MapElementTypeList(ModeGame arg0, Language arg1, Js5 arg2, Js5 arg3) {
         this.field4809 = arg2;
         this.field4806 = arg3;
-        this.field4809.method5637(Js5ConfigGroup.MELTYPE.field1668);
+        this.field4809.getGroupCapacity(Js5ConfigGroup.MELTYPE.field1668);
     }
 
     @ObfuscatedName("ph.u(II)Lpw;")

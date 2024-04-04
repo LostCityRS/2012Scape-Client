@@ -18,7 +18,7 @@ public class HitmarkTypeList {
     public HitmarkTypeList(ModeGame arg0, Language arg1, Js5 arg2, Js5 arg3) {
         this.field4757 = arg3;
         this.field4760 = arg2;
-        this.field4760.method5637(Js5ConfigGroup.HITMARKTYPE.field1668);
+        this.field4760.getGroupCapacity(Js5ConfigGroup.HITMARKTYPE.field1668);
     }
 
     @ObfuscatedName("pb.u(II)Lpo;")

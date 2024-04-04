@@ -70,9 +70,9 @@ public abstract class SoundAudioBuss extends AudioBuss {
         int var1 = this.field10267 * 3 >> 6;
         int var2 = (var1 >>> 31) + (var1 ^ var1 >> 31);
         if (this.field10265 == 0) {
-            var2 -= this.field10266 * var2 / (((BasicVariableRateSoundPacket) this.sound).method16496() << 8);
+            var2 -= this.field10266 * var2 / (((BasicSoundPacket) this.sound).method16496() << 8);
         } else if (this.field10265 >= 0) {
-            var2 -= this.field10272 * var2 / ((BasicVariableRateSoundPacket) this.sound).method16496();
+            var2 -= this.field10272 * var2 / ((BasicSoundPacket) this.sound).method16496();
         }
         return var2 > 255 ? 255 : var2;
     }
@@ -122,7 +122,7 @@ public abstract class SoundAudioBuss extends AudioBuss {
 
     @ObfuscatedName("aib.am(II)V")
     public final synchronized void method16421(int arg0) {
-        int var2 = ((BasicVariableRateSoundPacket) this.sound).method16496() << 8;
+        int var2 = ((BasicSoundPacket) this.sound).method16496() << 8;
         if (arg0 < -1) {
             arg0 = -1;
         }
@@ -142,7 +142,7 @@ public abstract class SoundAudioBuss extends AudioBuss {
 
     @ObfuscatedName("aib.az(B)Z")
     public final synchronized boolean method16393() {
-        return this.field10266 < 0 || this.field10266 >= ((BasicVariableRateSoundPacket) this.sound).method16496() << 8;
+        return this.field10266 < 0 || this.field10266 >= ((BasicSoundPacket) this.sound).method16496() << 8;
     }
 
     @ObfuscatedName("aib.ak(B)V")
@@ -344,7 +344,7 @@ public abstract class SoundAudioBuss extends AudioBuss {
         }
         int var2 = this.field10272 << 8;
         int var3 = this.field10275 << 8;
-        int var4 = ((BasicVariableRateSoundPacket) this.sound).method16496() << 8;
+        int var4 = ((BasicSoundPacket) this.sound).method16496() << 8;
         int var5 = var3 - var2;
         if (var5 <= 0) {
             this.field10265 = 0;

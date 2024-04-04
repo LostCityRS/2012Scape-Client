@@ -12,7 +12,7 @@ public class ParamTypeList {
     public ParamTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field7291 = arg2;
         if (this.field7291 != null) {
-            this.field7291.method5637(Js5ConfigGroup.PARAMTYPE.field1668);
+            this.field7291.getGroupCapacity(Js5ConfigGroup.PARAMTYPE.field1668);
         }
     }
 

@@ -103,7 +103,7 @@ public class MidiPlayer {
     }
 
     @ObfuscatedName("aic.n(ILls;IIIZLer;B)V")
-    public static void method16250(int arg0, Js5 arg1, int arg2, int arg3, int arg4, boolean arg5, SoundRelated13 arg6) {
+    public static void method16250(int arg0, Js5 arg1, int arg2, int arg3, int arg4, boolean arg5, MidiSoundRelated3 arg6) {
         if (arg0 <= 0) {
             if (arg6 != null) {
                 arg6.method2988();
@@ -189,7 +189,7 @@ public class MidiPlayer {
                     }
                 }
                 if (Statics.field1279 == null) {
-                    Statics.field1279 = new SynthSoundRelated12(Statics.field1581, Statics.field1580);
+                    Statics.field1279 = new SoundBank(Statics.field1581, Statics.field1580);
                 }
                 MidiAudioBuss var0 = Statics.field1735;
                 if (Statics.field4262 != null) {
@@ -244,7 +244,7 @@ public class MidiPlayer {
     }
 
     @ObfuscatedName("pl.b(Leq;IB)V")
-    public static void method7908(SoundRelated14 arg0, int arg1) {
+    public static void method7908(MidiSoundRelated4 arg0, int arg1) {
         Statics.field1735.method16273();
         MidiAudioBuss var2 = arg0.method3002();
         if (var2 == null) {

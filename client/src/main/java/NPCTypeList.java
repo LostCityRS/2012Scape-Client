@@ -40,9 +40,9 @@ public class NPCTypeList {
         this.field7277 = arg3;
         this.field7280 = arg4;
         if (this.field7277 != null) {
-            int var6 = this.field7277.method5638() - 1;
+            int var6 = this.field7277.capacity() - 1;
             Js5ConfigGroup.NPCTYPE.method3071();
-            this.field7277.method5637(var6);
+            this.field7277.getGroupCapacity(var6);
         }
         if (ModeGame.field6407 == this.field7279) {
             this.field7282 = new String[]{null, null, null, null, null, LocalisedText.field6874.get(this.field7284)};

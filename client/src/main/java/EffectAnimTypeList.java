@@ -21,9 +21,9 @@ public class EffectAnimTypeList {
     public EffectAnimTypeList(ModeGame arg0, Language arg1, Js5 arg2, Js5 arg3) {
         this.field5246 = arg2;
         this.field5244 = arg3;
-        int var5 = this.field5246.method5638() - 1;
+        int var5 = this.field5246.capacity() - 1;
         Js5ConfigGroup.SPOTTYPE.method3071();
-        this.field5246.method5637(var5);
+        this.field5246.getGroupCapacity(var5);
     }
 
     @ObfuscatedName("rv.u(II)Lse;")

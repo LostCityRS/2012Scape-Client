@@ -15,7 +15,7 @@ public class IDKTypeList implements PlayerTypeListRelated {
     public IDKTypeList(ModeGame arg0, Language arg1, Js5 arg2, Js5 arg3) {
         this.field2298 = arg2;
         this.field2299 = arg3;
-        this.field2298.method5637(Js5ConfigGroup.IDKTYPE.field1668);
+        this.field2298.getGroupCapacity(Js5ConfigGroup.IDKTYPE.field1668);
     }
 
     @ObfuscatedName("gq.u(II)Lgp;")

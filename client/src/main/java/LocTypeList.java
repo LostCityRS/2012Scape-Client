@@ -49,9 +49,9 @@ public class LocTypeList {
         this.field6554 = arg3;
         this.field6555 = arg4;
         if (this.field6554 != null) {
-            int var6 = this.field6554.method5638() - 1;
+            int var6 = this.field6554.capacity() - 1;
             Js5ConfigGroup.LOCTYPE.method3071();
-            this.field6554.method5637(var6);
+            this.field6554.getGroupCapacity(var6);
         }
         if (ModeGame.field6407 == this.field6557) {
             this.field6563 = new String[]{null, null, null, null, null, LocalisedText.field6874.get(this.field6552)};

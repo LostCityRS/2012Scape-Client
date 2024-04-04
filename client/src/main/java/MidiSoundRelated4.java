@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("eq")
-public class SoundRelated14 {
+public class MidiSoundRelated4 {
 
     @ObfuscatedName("eq.s")
     public final Js5 field1594;
@@ -16,12 +16,12 @@ public class SoundRelated14 {
     public MidiAudioBuss field1588;
 
     @ObfuscatedName("eq.l")
-    public SynthSoundRelated12 field1595 = null;
+    public SoundBank field1595 = null;
 
     @ObfuscatedName("eq.f")
     public int field1596 = 0;
 
-    public SoundRelated14(Js5 arg0, int arg1) {
+    public MidiSoundRelated4(Js5 arg0, int arg1) {
         this.field1594 = arg0;
         this.field1591 = arg1;
         this.field1588 = new MidiAudioBuss();
@@ -46,7 +46,7 @@ public class SoundRelated14 {
             if (this.field1593 == null) {
                 return false;
             }
-            this.field1595 = new SynthSoundRelated12(Statics.field1581, Statics.field1580);
+            this.field1595 = new SoundBank(Statics.field1581, Statics.field1580);
             this.field1596 = 1;
         }
         if (this.field1596 == 1) {
