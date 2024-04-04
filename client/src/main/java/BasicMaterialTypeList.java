@@ -23,7 +23,7 @@ public class BasicMaterialTypeList implements MaterialTypeList {
     public BasicMaterialTypeList(Js5 arg0, Js5 arg1, Js5 arg2) {
         this.field1292 = arg1;
         this.field1293 = arg2;
-        Packet var4 = new Packet(arg0.method5627(0, 0));
+        Packet var4 = new Packet(arg0.fetchFile(0, 0));
         this.field1294 = var4.g2();
         this.field1291 = new Material[this.field1294];
         for (int var5 = 0; var5 < this.field1294; var5++) {

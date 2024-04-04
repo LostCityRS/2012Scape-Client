@@ -38,7 +38,7 @@ public class BillboardType {
         if (var1 != null) {
             return var1;
         }
-        byte[] var2 = Statics.field2663.method5627(0, arg0);
+        byte[] var2 = Statics.field2663.fetchFile(0, arg0);
         BillboardType var3 = new BillboardType();
         if (var2 != null) {
             var3.method4641(new Packet(var2), arg0);

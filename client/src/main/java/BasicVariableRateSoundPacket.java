@@ -19,5 +19,5 @@ public abstract class BasicVariableRateSoundPacket extends SoundPacket {
     public abstract int method16496();
 
     @ObfuscatedName("aid.j(III)Laib;")
-    public abstract SoundAudioBuss method16502(int arg0, int arg1, int arg2);
+    public abstract SoundAudioBuss create(int arg0, int arg1, int arg2);
 }

@@ -31,7 +31,7 @@ public class VarBitTypeList implements PlayerTypeListRelated {
         Js5 var5 = this.field4664;
         byte[] var6;
         synchronized (this.field4664) {
-            var6 = this.field4664.method5627(Js5ConfigGroup.VARBIT.method3073(arg0), Js5ConfigGroup.VARBIT.method3075(arg0));
+            var6 = this.field4664.fetchFile(Js5ConfigGroup.VARBIT.method3073(arg0), Js5ConfigGroup.VARBIT.method3075(arg0));
         }
         VarBitType var8 = new VarBitType();
         if (var6 != null) {

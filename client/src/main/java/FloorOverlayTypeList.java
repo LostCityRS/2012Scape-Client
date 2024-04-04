@@ -33,7 +33,7 @@ public class FloorOverlayTypeList {
         Js5 var5 = this.field5106;
         byte[] var6;
         synchronized (this.field5106) {
-            var6 = this.field5106.method5627(Js5ConfigGroup.FLOTYPE.field1668, arg0);
+            var6 = this.field5106.fetchFile(Js5ConfigGroup.FLOTYPE.field1668, arg0);
         }
         FloorOverlayType var8 = new FloorOverlayType();
         var8.field5088 = this;

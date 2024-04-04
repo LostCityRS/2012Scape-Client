@@ -38,36 +38,36 @@ public class AudioRenderer {
     @ObfuscatedName("wu.a(I)V")
     public static void method12701() {
         Statics.method12330();
-        PcmPlayer.method6512(22050, Statics.options.field9676.method15891() == 1, 2);
-        Statics.field5198 = PcmPlayer.method6494(Statics.canvas, 0, 22050);
+        AudioChannel.init(22050, Statics.options.stereo.getValue() == 1, 2);
+        Statics.musicChannel = AudioChannel.create(Statics.canvas, 0, 22050);
         method3658(true, method6082(null));
-        Statics.field3536 = PcmPlayer.method6494(Statics.canvas, 1, 2048);
-        Statics.field3536.method6521(Statics.field4201);
+        Statics.soundChannel = AudioChannel.create(Statics.canvas, 1, 2048);
+        Statics.soundChannel.setStream(Statics.field4201);
     }
 
     @ObfuscatedName("fz.s(ZLaih;I)V")
     public static void method3658(boolean arg0, MidiAudioBuss arg1) {
-        Statics.field5198.method6521(arg1);
+        Statics.musicChannel.setStream(arg1);
         if (arg0) {
-            Statics.method3612(Statics.field5104, Statics.field3156, Statics.field5197, arg1, Statics.field5198);
+            Statics.method3612(Statics.field5104, Statics.field3156, Statics.field5197, arg1, Statics.musicChannel);
         }
     }
 
     @ObfuscatedName("os.m(I)V")
     public static void method7228() {
-        VorbisRelated1.method6640();
-        SoundRelated12.method5618();
+        VorbisPlayer.loop();
+        MidiPlayer.loop();
         method3461();
         method15770();
     }
 
     @ObfuscatedName("em.t(I)V")
     public static void method3461() {
-        if (Statics.field5198 != null) {
-            Statics.field5198.update();
+        if (Statics.musicChannel != null) {
+            Statics.musicChannel.update();
         }
-        if (Statics.field3536 != null) {
-            Statics.field3536.update();
+        if (Statics.soundChannel != null) {
+            Statics.soundChannel.update();
         }
     }
 
@@ -91,7 +91,7 @@ public class AudioRenderer {
                         if (var1.field4176 == null) {
                             continue;
                         }
-                        var1.field4179 += var1.field4176.method6462();
+                        var1.field4179 += var1.field4176.getStart();
                     } else if (var1.method6878() && (var1.field4184 == null || var1.field4185 == null)) {
                         if (var1.field4184 == null) {
                             var1.field4184 = VorbisSound.method15066(Statics.field3156, var1.field4173);
@@ -156,12 +156,12 @@ public class AudioRenderer {
                         if (var13 > 0) {
                             if (var1.field4186 == 1) {
                                 Object var18 = null;
-                                SynthVariableRateSoundPacket var19 = var1.field4176.method6463().method17108(Statics.field3160);
-                                var1.field4188 = var19.method16502(var1.field4182, var13, var3);
+                                SynthVariableRateSoundPacket var19 = var1.field4176.toSoundPacket().method17108(Statics.field3160);
+                                var1.field4188 = var19.create(var1.field4182, var13, var3);
                             } else if (var1.method6878()) {
-                                var1.field4188 = var1.field4185.method16502(var1.field4182, var13, var3);
+                                var1.field4188 = var1.field4185.create(var1.field4182, var13, var3);
                             }
-                            var1.field4188.method16384(var1.field4178 - 1);
+                            var1.field4188.setLoops(var1.field4178 - 1);
                             Statics.field4201.method16452(var1.field4188);
                         }
                     }
@@ -179,17 +179,17 @@ public class AudioRenderer {
                 var0--;
             }
         }
-        if (field4203 && !SoundRelated12.method13899()) {
+        if (field4203 && !MidiPlayer.method13899()) {
             if (Statics.options.field9674.method15899() != 0 && field4202 != -1) {
                 if (Statics.field2327 == null) {
-                    SoundRelated12.method3986(Statics.field9367, field4202, 0, Statics.options.field9674.method15899(), false);
+                    MidiPlayer.method3986(Statics.field9367, field4202, 0, Statics.options.field9674.method15899(), false);
                 } else {
-                    SoundRelated12.method6359(Statics.field9367, field4202, 0, Statics.options.field9674.method15899(), false, Statics.field2327);
+                    MidiPlayer.method6359(Statics.field9367, field4202, 0, Statics.options.field9674.method15899(), false, Statics.field2327);
                 }
             }
             field4203 = false;
             Statics.field2327 = null;
-        } else if (Statics.options.field9674.method15899() != 0 && field4202 != -1 && !SoundRelated12.method13899()) {
+        } else if (Statics.options.field9674.method15899() != 0 && field4202 != -1 && !MidiPlayer.method13899()) {
             ClientMessage var21 = ClientMessage.createMessage(ClientProt.field2868, client.gameConnection.randomOut);
             var21.buf.p4(field4202);
             client.gameConnection.queue(var21);
@@ -269,14 +269,14 @@ public class AudioRenderer {
             float var5 = var2 - (float) field4196.field4191;
             var4 = 1.0F - var5 / (float) field4196.field4193;
         }
-        SoundRelated12.method4553((int) (var4 * 256.0F));
+        MidiPlayer.method4553((int) (var4 * 256.0F));
     }
 
     @ObfuscatedName("ei.x(I)V")
     public static void method3225() {
         if (field4196 != null) {
             field4196 = null;
-            SoundRelated12.method4553(256);
+            MidiPlayer.method4553(256);
         }
     }
 
@@ -294,9 +294,9 @@ public class AudioRenderer {
         }
         int var4 = arg1 * Statics.options.field9674.method15899() >> 8;
         if (arg0 == -1 && !field4203) {
-            SoundRelated12.method8662();
-        } else if (arg0 != -1 && (field4202 != arg0 || !SoundRelated12.method13899()) && var4 != 0 && !field4203) {
-            SoundRelated12.method16250(arg2, Statics.field9367, arg0, 0, var4, false, new SoundRelated30());
+            MidiPlayer.method8662();
+        } else if (arg0 != -1 && (field4202 != arg0 || !MidiPlayer.method13899()) && var4 != 0 && !field4203) {
+            MidiPlayer.method16250(arg2, Statics.field9367, arg0, 0, var4, false, new SoundRelated30());
             method2572();
         }
         if (field4202 != arg0) {
@@ -310,9 +310,9 @@ public class AudioRenderer {
     public static void method4800(SoundRelated14 arg0, int arg1) {
         int var2 = arg1 * Statics.options.field9674.method15899() >> 8;
         if (arg0 == null) {
-            SoundRelated12.method8662();
+            MidiPlayer.method8662();
         } else {
-            SoundRelated12.method7908(arg0, var2);
+            MidiPlayer.method7908(arg0, var2);
             method3225();
         }
     }
@@ -323,14 +323,14 @@ public class AudioRenderer {
         if (var3 == 0 || arg0 == -1) {
             return;
         }
-        if (!field4203 && field4202 != -1 && SoundRelated12.method13899() && !SoundRelated12.method15138()) {
-            Statics.field2327 = SoundRelated12.method7705();
+        if (!field4203 && field4202 != -1 && MidiPlayer.method13899() && !MidiPlayer.method15138()) {
+            Statics.field2327 = MidiPlayer.method7705();
             method3225();
             MidiAudioBuss var4 = method6082(Statics.field2327);
             method3658(true, var4);
         }
-        SoundRelated12.method3986(Statics.field1509, arg0, 0, var3, false);
-        SoundRelated12.method11835(-1, 255);
+        MidiPlayer.method3986(Statics.field1509, arg0, 0, var3, false);
+        MidiPlayer.method11835(-1, 255);
         field4203 = true;
     }
 
@@ -354,12 +354,12 @@ public class AudioRenderer {
 
     @ObfuscatedName("cj.y(I)V")
     public static void method2572() {
-        SoundRelated12.method11835(-1, 255);
+        MidiPlayer.method11835(-1, 255);
     }
 
     @ObfuscatedName("t.e(IIB)V")
     public static void method1349(int arg0, int arg1) {
-        SoundRelated12.method11835(arg0, arg1);
+        MidiPlayer.method11835(arg0, arg1);
     }
 
     @ObfuscatedName("ls.ay(II)V")

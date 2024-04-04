@@ -34,7 +34,7 @@ public class ClientOptionsStereo extends ClientOption {
     }
 
     @ObfuscatedName("afu.n(B)I")
-    public int method15891() {
+    public int getValue() {
         return this.field6461;
     }
 }

@@ -34,7 +34,7 @@ public class BASTypeList {
         Js5 var5 = this.field4734;
         byte[] var6;
         synchronized (this.field4734) {
-            var6 = this.field4734.method5627(Js5ConfigGroup.BASTYPE.field1668, arg0);
+            var6 = this.field4734.fetchFile(Js5ConfigGroup.BASTYPE.field1668, arg0);
         }
         BASType var8 = new BASType();
         var8.field4698 = this;

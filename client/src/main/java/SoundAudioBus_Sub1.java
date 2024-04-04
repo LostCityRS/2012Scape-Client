@@ -1,9 +1,9 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("akw")
-public class SoundStreamRelated1 extends SoundAudioBuss {
+public class SoundAudioBus_Sub1 extends SoundAudioBuss {
 
-    public SoundStreamRelated1(SynthVariableRateSoundPacket arg0, int arg1, int arg2, int arg3) {
+    public SoundAudioBus_Sub1(SynthVariableRateSoundPacket arg0, int arg1, int arg2, int arg3) {
         this.sound = arg0;
         this.field10272 = arg0.field10294;
         this.field10275 = arg0.field10292;
@@ -254,7 +254,7 @@ public class SoundStreamRelated1 extends SoundAudioBuss {
     }
 
     @ObfuscatedName("akw.cd([B[IIIIIIILakw;)I")
-    public static int method16998(byte[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, SoundStreamRelated1 arg8) {
+    public static int method16998(byte[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, SoundAudioBus_Sub1 arg8) {
         int var9 = arg2 >> 8;
         int var10 = arg7 >> 8;
         int var11 = arg4 << 2;
@@ -284,7 +284,7 @@ public class SoundStreamRelated1 extends SoundAudioBuss {
     }
 
     @ObfuscatedName("akw.ce(I[B[IIIIIIIILakw;)I")
-    public static int method17027(int arg0, byte[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, SoundStreamRelated1 arg10) {
+    public static int method17027(int arg0, byte[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, SoundAudioBus_Sub1 arg10) {
         int var11 = arg3 >> 8;
         int var12 = arg9 >> 8;
         int var13 = arg5 << 2;
@@ -331,7 +331,7 @@ public class SoundStreamRelated1 extends SoundAudioBuss {
     }
 
     @ObfuscatedName("akw.ct([B[IIIIIIILakw;)I")
-    public static int method17008(byte[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, SoundStreamRelated1 arg8) {
+    public static int method17008(byte[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, SoundAudioBus_Sub1 arg8) {
         int var9 = arg2 >> 8;
         int var10 = arg7 >> 8;
         int var11 = arg4 << 2;
@@ -361,7 +361,7 @@ public class SoundStreamRelated1 extends SoundAudioBuss {
     }
 
     @ObfuscatedName("akw.cu(I[B[IIIIIIIILakw;)I")
-    public static int method17000(int arg0, byte[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, SoundStreamRelated1 arg10) {
+    public static int method17000(int arg0, byte[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, SoundAudioBus_Sub1 arg10) {
         int var11 = arg3 >> 8;
         int var12 = arg9 >> 8;
         int var13 = arg5 << 2;
@@ -408,7 +408,7 @@ public class SoundStreamRelated1 extends SoundAudioBuss {
     }
 
     @ObfuscatedName("akw.cc(II[B[IIIIIIILakw;II)I")
-    public static int method17001(int arg0, int arg1, byte[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, SoundStreamRelated1 arg10, int arg11, int arg12) {
+    public static int method17001(int arg0, int arg1, byte[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, SoundAudioBus_Sub1 arg10, int arg11, int arg12) {
         int var13;
         if (arg11 == 0 || (var13 = (arg9 - arg4 + arg11 - 257) / arg11 + arg5) > arg8) {
             var13 = arg8;
@@ -437,7 +437,7 @@ public class SoundStreamRelated1 extends SoundAudioBuss {
     }
 
     @ObfuscatedName("akw.cg(II[B[IIIIIIIILakw;II)I")
-    public static int method17002(int arg0, int arg1, byte[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, SoundStreamRelated1 arg11, int arg12, int arg13) {
+    public static int method17002(int arg0, int arg1, byte[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, SoundAudioBus_Sub1 arg11, int arg12, int arg13) {
         int var14;
         if (arg12 == 0 || (var14 = (arg10 - arg4 + arg12 - 257) / arg12 + arg5) > arg9) {
             var14 = arg9;
@@ -475,7 +475,7 @@ public class SoundStreamRelated1 extends SoundAudioBuss {
     }
 
     @ObfuscatedName("akw.cj(II[B[IIIIIIILakw;II)I")
-    public static int method17006(int arg0, int arg1, byte[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, SoundStreamRelated1 arg10, int arg11, int arg12) {
+    public static int method17006(int arg0, int arg1, byte[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, SoundAudioBus_Sub1 arg10, int arg11, int arg12) {
         int var13;
         if (arg11 == 0 || (var13 = (arg9 + 256 - arg4 + arg11) / arg11 + arg5) > arg8) {
             var13 = arg8;
@@ -504,7 +504,7 @@ public class SoundStreamRelated1 extends SoundAudioBuss {
     }
 
     @ObfuscatedName("akw.cy(II[B[IIIIIIIILakw;II)I")
-    public static int method17031(int arg0, int arg1, byte[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, SoundStreamRelated1 arg11, int arg12, int arg13) {
+    public static int method17031(int arg0, int arg1, byte[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, SoundAudioBus_Sub1 arg11, int arg12, int arg13) {
         int var14;
         if (arg12 == 0 || (var14 = (arg10 + 256 - arg4 + arg12) / arg12 + arg5) > arg9) {
             var14 = arg9;
@@ -541,7 +541,7 @@ public class SoundStreamRelated1 extends SoundAudioBuss {
     }
 
     @ObfuscatedName("akw.cz([B[IIIIIIIILakw;)I")
-    public static int method17047(byte[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, SoundStreamRelated1 arg9) {
+    public static int method17047(byte[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, SoundAudioBus_Sub1 arg9) {
         int var10 = arg2 >> 8;
         int var11 = arg8 >> 8;
         int var12 = arg4 << 2;
@@ -580,7 +580,7 @@ public class SoundStreamRelated1 extends SoundAudioBuss {
     }
 
     @ObfuscatedName("akw.dl(I[B[IIIIIIIIIILakw;)I")
-    public static int method17005(int arg0, byte[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, SoundStreamRelated1 arg12) {
+    public static int method17005(int arg0, byte[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, SoundAudioBus_Sub1 arg12) {
         int var13 = arg3 >> 8;
         int var14 = arg11 >> 8;
         int var15 = arg5 << 2;
@@ -642,7 +642,7 @@ public class SoundStreamRelated1 extends SoundAudioBuss {
     }
 
     @ObfuscatedName("akw.dj([B[IIIIIIIILakw;)I")
-    public static int method17015(byte[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, SoundStreamRelated1 arg9) {
+    public static int method17015(byte[] arg0, int[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, SoundAudioBus_Sub1 arg9) {
         int var10 = arg2 >> 8;
         int var11 = arg8 >> 8;
         int var12 = arg4 << 2;
@@ -681,7 +681,7 @@ public class SoundStreamRelated1 extends SoundAudioBuss {
     }
 
     @ObfuscatedName("akw.dp(I[B[IIIIIIIIIILakw;)I")
-    public static int method17022(int arg0, byte[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, SoundStreamRelated1 arg12) {
+    public static int method17022(int arg0, byte[] arg1, int[] arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, SoundAudioBus_Sub1 arg12) {
         int var13 = arg3 >> 8;
         int var14 = arg11 >> 8;
         int var15 = arg5 << 2;
@@ -743,7 +743,7 @@ public class SoundStreamRelated1 extends SoundAudioBuss {
     }
 
     @ObfuscatedName("akw.dw(II[B[IIIIIIIILakw;II)I")
-    public static int method17048(int arg0, int arg1, byte[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, SoundStreamRelated1 arg11, int arg12, int arg13) {
+    public static int method17048(int arg0, int arg1, byte[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, SoundAudioBus_Sub1 arg11, int arg12, int arg13) {
         arg11.field10268 -= arg11.field10271 * arg5;
         arg11.field10269 -= arg11.field10274 * arg5;
         int var14;
@@ -779,7 +779,7 @@ public class SoundStreamRelated1 extends SoundAudioBuss {
     }
 
     @ObfuscatedName("akw.di(II[B[IIIIIIIIIILakw;II)I")
-    public static int method17007(int arg0, int arg1, byte[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, SoundStreamRelated1 arg13, int arg14, int arg15) {
+    public static int method17007(int arg0, int arg1, byte[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, SoundAudioBus_Sub1 arg13, int arg14, int arg15) {
         arg13.field10267 -= arg13.field10270 * arg5;
         int var16;
         if (arg14 == 0 || (var16 = (arg12 - arg4 + arg14 - 257) / arg14 + arg5) > arg11) {
@@ -826,7 +826,7 @@ public class SoundStreamRelated1 extends SoundAudioBuss {
     }
 
     @ObfuscatedName("akw.dg(II[B[IIIIIIIILakw;II)I")
-    public static int method17046(int arg0, int arg1, byte[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, SoundStreamRelated1 arg11, int arg12, int arg13) {
+    public static int method17046(int arg0, int arg1, byte[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, SoundAudioBus_Sub1 arg11, int arg12, int arg13) {
         arg11.field10268 -= arg11.field10271 * arg5;
         arg11.field10269 -= arg11.field10274 * arg5;
         int var14;
@@ -862,7 +862,7 @@ public class SoundStreamRelated1 extends SoundAudioBuss {
     }
 
     @ObfuscatedName("akw.do(II[B[IIIIIIIIIILakw;II)I")
-    public static int method17012(int arg0, int arg1, byte[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, SoundStreamRelated1 arg13, int arg14, int arg15) {
+    public static int method17012(int arg0, int arg1, byte[] arg2, int[] arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12, SoundAudioBus_Sub1 arg13, int arg14, int arg15) {
         arg13.field10267 -= arg13.field10270 * arg5;
         int var16;
         if (arg14 == 0 || (var16 = (arg12 + 256 - arg4 + arg14) / arg14 + arg5) > arg11) {

@@ -26,7 +26,7 @@ public class VarnBitTypeList {
         if (var3 != null) {
             return var3;
         }
-        byte[] var5 = this.field6414.method5627(Js5ConfigGroup.VARNBIT.field1668, arg0);
+        byte[] var5 = this.field6414.fetchFile(Js5ConfigGroup.VARNBIT.field1668, arg0);
         VarnBitType var6 = new VarnBitType();
         if (var5 != null) {
             var6.method11304(new Packet(var5));

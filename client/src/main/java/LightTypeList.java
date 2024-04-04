@@ -27,7 +27,7 @@ public class LightTypeList {
         Js5 var5 = this.field7185;
         byte[] var6;
         synchronized (this.field7185) {
-            var6 = this.field7185.method5627(Js5ConfigGroup.LIGHTTYPE.field1668, arg0);
+            var6 = this.field7185.fetchFile(Js5ConfigGroup.LIGHTTYPE.field1668, arg0);
         }
         LightType var8 = new LightType();
         if (var6 != null) {

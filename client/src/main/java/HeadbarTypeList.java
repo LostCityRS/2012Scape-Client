@@ -34,7 +34,7 @@ public class HeadbarTypeList {
         Js5 var5 = this.field4452;
         byte[] var6;
         synchronized (this.field4452) {
-            var6 = this.field4452.method5627(Js5ConfigGroup.HEADBARTYPE.field1668, arg0);
+            var6 = this.field4452.fetchFile(Js5ConfigGroup.HEADBARTYPE.field1668, arg0);
         }
         HeadbarType var8 = new HeadbarType();
         var8.field4439 = this;

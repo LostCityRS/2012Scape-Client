@@ -79,7 +79,7 @@ public class ObjTypeList implements PlayerTypeListRelated {
         Js5 var5 = this.field7143;
         byte[] var6;
         synchronized (this.field7143) {
-            var6 = this.field7143.method5627(Js5ConfigGroup.OBJTYPE.method3073(arg0), Js5ConfigGroup.OBJTYPE.method3075(arg0));
+            var6 = this.field7143.fetchFile(Js5ConfigGroup.OBJTYPE.method3073(arg0), Js5ConfigGroup.OBJTYPE.method3075(arg0));
         }
         ObjType var8 = new ObjType();
         var8.field7061 = this;

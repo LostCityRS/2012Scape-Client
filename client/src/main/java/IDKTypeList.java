@@ -31,7 +31,7 @@ public class IDKTypeList implements PlayerTypeListRelated {
         Js5 var5 = this.field2298;
         byte[] var6;
         synchronized (this.field2298) {
-            var6 = this.field2298.method5627(Js5ConfigGroup.IDKTYPE.field1668, arg0);
+            var6 = this.field2298.fetchFile(Js5ConfigGroup.IDKTYPE.field1668, arg0);
         }
         IDKType var8 = new IDKType();
         var8.field2296 = this;

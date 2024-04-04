@@ -28,7 +28,7 @@ public class EnumTypeList {
         if (var3 != null) {
             return var3;
         }
-        byte[] var5 = this.field6804.method5627(Js5ConfigGroup.ENUMTYPE.method3073(arg0), Js5ConfigGroup.ENUMTYPE.method3075(arg0));
+        byte[] var5 = this.field6804.fetchFile(Js5ConfigGroup.ENUMTYPE.method3073(arg0), Js5ConfigGroup.ENUMTYPE.method3075(arg0));
         EnumType var6 = new EnumType();
         if (var5 != null) {
             var6.method12121(new Packet(var5));

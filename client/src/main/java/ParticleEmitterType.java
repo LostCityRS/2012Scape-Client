@@ -215,7 +215,7 @@ public class ParticleEmitterType {
         if (var1 != null) {
             return var1;
         }
-        byte[] var2 = Statics.field2675.method5627(0, arg0);
+        byte[] var2 = Statics.field2675.fetchFile(0, arg0);
         ParticleEmitterType var3 = new ParticleEmitterType();
         if (var2 != null) {
             var3.method4657(new Packet(var2));

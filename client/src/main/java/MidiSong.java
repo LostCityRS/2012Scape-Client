@@ -11,7 +11,7 @@ public class MidiSong extends Node {
 
     @ObfuscatedName("acw.u(Lls;II)Lacw;")
     public static MidiSong method14909(Js5 arg0, int arg1, int arg2) {
-        byte[] var3 = arg0.method5627(arg1, arg2);
+        byte[] var3 = arg0.fetchFile(arg1, arg2);
         return var3 == null ? null : new MidiSong(new Packet(var3));
     }
 

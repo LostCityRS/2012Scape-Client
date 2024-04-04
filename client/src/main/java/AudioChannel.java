@@ -3,7 +3,7 @@ import deob.ObfuscatedName;
 import java.util.Arrays;
 
 @ObfuscatedName("mg")
-public class PcmPlayer {
+public class AudioChannel {
 
     @ObfuscatedName("mg.u")
     public static boolean field4041 = false;
@@ -60,7 +60,7 @@ public class PcmPlayer {
     public AudioBuss[] field4022 = new AudioBuss[8];
 
     @ObfuscatedName("mg.u(IZI)V")
-    public static final void method6512(int arg0, boolean arg1, int arg2) {
+    public static final void init(int arg0, boolean arg1, int arg2) {
         if (arg0 < 8000 || arg0 > 48000) {
             throw new IllegalArgumentException();
         }
@@ -70,7 +70,7 @@ public class PcmPlayer {
     }
 
     @ObfuscatedName("mg.j(Ljava/awt/Component;II)Lmg;")
-    public static final PcmPlayer method6494(java.awt.Component arg0, int arg1, int arg2) {
+    public static final AudioChannel create(java.awt.Component arg0, int arg1, int arg2) {
         if (Statics.sampleRate == 0) {
             throw new IllegalStateException();
         } else if (arg1 >= 0 && arg1 < 2) {
@@ -106,14 +106,14 @@ public class PcmPlayer {
                 } catch (Throwable var7) {
                 }
             }
-            return new PcmPlayer();
+            return new AudioChannel();
         } else {
             throw new IllegalArgumentException();
         }
     }
 
     @ObfuscatedName("mg.a(Ladc;)V")
-    public final synchronized void method6521(AudioBuss arg0) {
+    public final synchronized void setStream(AudioBuss arg0) {
         this.stream = arg0;
     }
 

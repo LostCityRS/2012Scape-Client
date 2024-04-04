@@ -40,7 +40,7 @@ public class SoundRelated14 {
 
     @ObfuscatedName("eq.a(B)Z")
     public boolean method2999() {
-        SoundRelated12.method7561();
+        MidiPlayer.method7561();
         if (this.field1596 == 0) {
             this.field1593 = MidiSong.method14909(this.field1594, this.field1591, 0);
             if (this.field1593 == null) {

@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("acu")
-public class SoundRelated2 extends Node {
+public class MidiInstrument extends Node {
 
     @ObfuscatedName("acu.s")
     public int field9411;
@@ -19,7 +19,7 @@ public class SoundRelated2 extends Node {
     public byte[] field9410 = new byte[128];
 
     @ObfuscatedName("acu.f")
-    public SoundRelated3[] field9413 = new SoundRelated3[128];
+    public MidiRelated2[] field9413 = new MidiRelated2[128];
 
     @ObfuscatedName("acu.d")
     public byte[] field9412 = new byte[128];
@@ -28,12 +28,12 @@ public class SoundRelated2 extends Node {
     public int[] field9407 = new int[128];
 
     @ObfuscatedName("aaf.u(Lls;IB)Lacu;")
-    public static SoundRelated2 method14060(Js5 arg0, int arg1) {
+    public static MidiInstrument method14060(Js5 arg0, int arg1) {
         byte[] var2 = arg0.method5635(arg1);
-        return var2 == null ? null : new SoundRelated2(var2);
+        return var2 == null ? null : new MidiInstrument(var2);
     }
 
-    public SoundRelated2(byte[] arg0) {
+    public MidiInstrument(byte[] arg0) {
         Packet var2 = new Packet(arg0);
         int var3;
         for (var3 = 0; var2.data[var2.pos + var3] != 0; var3++) {
@@ -87,9 +87,9 @@ public class SoundRelated2 extends Node {
         } else {
             var16 = var11;
         }
-        SoundRelated3[] var19 = new SoundRelated3[var16];
+        MidiRelated2[] var19 = new MidiRelated2[var16];
         for (int var20 = 0; var20 < var19.length; var20++) {
-            SoundRelated3 var21 = var19[var20] = new SoundRelated3();
+            MidiRelated2 var21 = var19[var20] = new MidiRelated2();
             int var22 = var2.g1();
             if (var22 > 0) {
                 var21.field1622 = new byte[var22 * 2];
@@ -175,7 +175,7 @@ public class SoundRelated2 extends Node {
         }
         int var47 = 0;
         int var48 = 0;
-        SoundRelated3 var49 = null;
+        MidiRelated2 var49 = null;
         for (int var50 = 0; var50 < 128; var50++) {
             if (this.field9407[var50] != 0) {
                 if (var47 == 0) {
@@ -209,7 +209,7 @@ public class SoundRelated2 extends Node {
         }
         this.field9411 = var2.g1() + 1;
         for (int var55 = 0; var55 < var16; var55++) {
-            SoundRelated3 var56 = var19[var55];
+            MidiRelated2 var56 = var19[var55];
             if (var56.field1622 != null) {
                 for (int var57 = 1; var57 < var56.field1622.length; var57 += 2) {
                     var56.field1622[var57] = var2.g1b();
@@ -232,7 +232,7 @@ public class SoundRelated2 extends Node {
             }
         }
         for (int var61 = 0; var61 < var16; var61++) {
-            SoundRelated3 var62 = var19[var61];
+            MidiRelated2 var62 = var19[var61];
             if (var62.field1616 != null) {
                 int var63 = 0;
                 for (int var64 = 2; var64 < var62.field1616.length; var64 += 2) {
@@ -242,7 +242,7 @@ public class SoundRelated2 extends Node {
             }
         }
         for (int var65 = 0; var65 < var16; var65++) {
-            SoundRelated3 var66 = var19[var65];
+            MidiRelated2 var66 = var19[var65];
             if (var66.field1622 != null) {
                 int var67 = 0;
                 for (int var68 = 2; var68 < var66.field1622.length; var68 += 2) {
@@ -334,7 +334,7 @@ public class SoundRelated2 extends Node {
             var19[var98].field1618 = var2.g1();
         }
         for (int var99 = 0; var99 < var16; var99++) {
-            SoundRelated3 var100 = var19[var99];
+            MidiRelated2 var100 = var19[var99];
             if (var100.field1622 != null) {
                 var100.field1615 = var2.g1();
             }
@@ -349,13 +349,13 @@ public class SoundRelated2 extends Node {
             var19[var101].field1620 = var2.g1();
         }
         for (int var102 = 0; var102 < var16; var102++) {
-            SoundRelated3 var103 = var19[var102];
+            MidiRelated2 var103 = var19[var102];
             if (var103.field1620 > 0) {
                 var103.field1621 = var2.g1();
             }
         }
         for (int var104 = 0; var104 < var16; var104++) {
-            SoundRelated3 var105 = var19[var104];
+            MidiRelated2 var105 = var19[var104];
             if (var105.field1621 > 0) {
                 var105.field1623 = var2.g1();
             }

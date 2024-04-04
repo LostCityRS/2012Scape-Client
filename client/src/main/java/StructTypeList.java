@@ -21,7 +21,7 @@ public class StructTypeList {
                 Js5 var6 = this.field7172;
                 byte[] var7;
                 synchronized (this.field7172) {
-                    var7 = this.field7172.method5627(Js5ConfigGroup.STRUCTTYPE.field1668, var5);
+                    var7 = this.field7172.fetchFile(Js5ConfigGroup.STRUCTTYPE.field1668, var5);
                 }
                 StructType var9 = new StructType();
                 if (var7 != null) {

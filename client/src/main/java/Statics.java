@@ -540,7 +540,7 @@ public class Statics {
     public static Stream field3529;
 
     @ObfuscatedName("lk.w")
-    public static PcmPlayer field3536;
+    public static AudioChannel soundChannel;
 
     @ObfuscatedName("lk.b")
     public static int field3537;
@@ -684,7 +684,7 @@ public class Statics {
     public static File field4162;
 
     @ObfuscatedName("nx.c")
-    public static PcmPlayer field4165;
+    public static AudioChannel field4165;
 
     @ObfuscatedName("nx.od")
     public static int activeComponentParentLayer;
@@ -1056,7 +1056,7 @@ public class Statics {
     public static Js5 field5197;
 
     @ObfuscatedName("ro.p")
-    public static PcmPlayer field5198;
+    public static AudioChannel musicChannel;
 
     @ObfuscatedName("rq.n")
     public static SpriteData field5243;
@@ -1413,7 +1413,7 @@ public class Statics {
     public static VarnBitTypeList field7196;
 
     @ObfuscatedName("wf.p")
-    public static int field7207;
+    public static int volumeFadeRate;
 
     @ObfuscatedName("ap.bk")
     public static String field726;
@@ -2093,7 +2093,7 @@ public class Statics {
     }
 
     @ObfuscatedName("fj.u(Lls;Lls;Lls;Laih;Lmg;I)Z")
-    public static boolean method3612(Js5 arg0, Js5 arg1, Js5 arg2, MidiAudioBuss arg3, PcmPlayer arg4) {
+    public static boolean method3612(Js5 arg0, Js5 arg1, Js5 arg2, MidiAudioBuss arg3, AudioChannel arg4) {
         field1586 = arg0;
         field1580 = arg1;
         field1581 = arg2;
@@ -2308,12 +2308,12 @@ public class Statics {
 
     @ObfuscatedName("ji.u(I)V")
     public static void method4790() {
-        PcmPlayer.method6512(22050, options.field9676.method15891() == 1, 2);
-        field5198 = PcmPlayer.method6494(canvas, 0, 22050);
+        AudioChannel.init(22050, options.stereo.getValue() == 1, 2);
+        musicChannel = AudioChannel.create(canvas, 0, 22050);
         AudioRenderer.method3658(true, AudioRenderer.method6082(null));
-        field3536 = PcmPlayer.method6494(canvas, 1, 2048);
+        soundChannel = AudioChannel.create(canvas, 1, 2048);
         field4201 = new MixerAudioBuss();
-        field3536.method6521(field4201);
+        soundChannel.setStream(field4201);
         field3160 = new SampleRateConverter(22050, sampleRate);
         AudioRenderer.method2572();
     }
@@ -2393,11 +2393,11 @@ public class Statics {
 
     @ObfuscatedName("vj.c(I)V")
     public static void method12330() {
-        if (field5198 != null) {
-            field5198.method6498();
+        if (musicChannel != null) {
+            musicChannel.method6498();
         }
-        if (field3536 != null) {
-            field3536.method6498();
+        if (soundChannel != null) {
+            soundChannel.method6498();
         }
     }
 
@@ -6074,7 +6074,7 @@ public class Statics {
 
     @ObfuscatedName("gm.ali(Lrn;I)V")
     public static final void method3967(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = options.field9676.method15891() == 1 ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = options.stereo.getValue() == 1 ? 1 : 0;
     }
 
     @ObfuscatedName("wb.alf(Lrn;I)V")

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 @ObfuscatedName("mu")
-public class Instrument {
+public class SynthInstrument {
 
     @ObfuscatedName("mu.u")
     public SoundEnvelope field4074;
@@ -52,10 +52,10 @@ public class Instrument {
     public SoundEnvelope field4081;
 
     @ObfuscatedName("mu.w")
-    public int field4075 = 500;
+    public int length = 500;
 
     @ObfuscatedName("mu.b")
-    public int field4083 = 0;
+    public int start = 0;
 
     @ObfuscatedName("mu.x")
     public static int[] field4084;
@@ -318,8 +318,8 @@ public class Instrument {
         }
         this.field4078 = arg0.gSmart1or2();
         this.field4079 = arg0.gSmart1or2();
-        this.field4075 = arg0.g2();
-        this.field4083 = arg0.g2();
+        this.length = arg0.g2();
+        this.start = arg0.g2();
         this.field4080 = new SoundFilter();
         this.field4081 = new SoundEnvelope();
         this.field4080.method6623(arg0, this.field4081);

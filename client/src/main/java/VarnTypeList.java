@@ -26,7 +26,7 @@ public class VarnTypeList {
         if (var3 != null) {
             return var3;
         }
-        byte[] var5 = this.field6759.method5627(Js5ConfigGroup.VARN.field1668, arg0);
+        byte[] var5 = this.field6759.fetchFile(Js5ConfigGroup.VARN.field1668, arg0);
         VarnType var6 = new VarnType();
         if (var5 != null) {
             var6.method12016(new Packet(var5));

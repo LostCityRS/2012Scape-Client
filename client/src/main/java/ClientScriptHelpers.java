@@ -16,7 +16,7 @@ public class ClientScriptHelpers {
         if (var1 != null) {
             return var1;
         }
-        byte[] var2 = Statics.field6651.method5627(arg0, 0);
+        byte[] var2 = Statics.field6651.fetchFile(arg0, 0);
         if (var2 == null || var2.length <= 1) {
             return null;
         }

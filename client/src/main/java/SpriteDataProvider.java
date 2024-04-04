@@ -14,7 +14,7 @@ public class SpriteDataProvider {
 
     @ObfuscatedName("cz.u(Lls;II)Lds;")
     public static SpriteData method2590(Js5 arg0, int arg1, int arg2) {
-        byte[] var3 = arg0.method5627(arg1, arg2);
+        byte[] var3 = arg0.fetchFile(arg1, arg2);
         return var3 == null ? null : method2594(var3)[0];
     }
 
@@ -26,7 +26,7 @@ public class SpriteDataProvider {
 
     @ObfuscatedName("cz.a(Lls;II)[Lds;")
     public static SpriteData[] get(Js5 arg0, int arg1, int arg2) {
-        byte[] var3 = arg0.method5627(arg1, arg2);
+        byte[] var3 = arg0.fetchFile(arg1, arg2);
         return var3 == null ? null : method2594(var3);
     }
 

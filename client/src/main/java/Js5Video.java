@@ -38,7 +38,7 @@ public class Js5Video extends Video {
             if (!this.field9747.method5629(this.field9748, 0)) {
                 return 0;
             }
-            byte[] var2 = this.field9747.method5627(this.field9748, 0);
+            byte[] var2 = this.field9747.fetchFile(this.field9748, 0);
             if (var2 == null) {
                 throw new IllegalStateException("");
             }
@@ -95,7 +95,7 @@ public class Js5Video extends Video {
         }
         for (int var1 = 0; var1 < 10 && this.field9746 + var1 < this.field9750.length; var1++) {
             if (this.field9749[var1] == null && this.field9747.method5629(this.field9750[this.field9746 + var1], 0)) {
-                this.field9749[var1] = this.field9747.method5627(this.field9750[this.field9746 + var1], 0);
+                this.field9749[var1] = this.field9747.fetchFile(this.field9750[this.field9746 + var1], 0);
             }
         }
     }

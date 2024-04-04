@@ -4,17 +4,17 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 @ObfuscatedName("ms")
-public class VorbisRelated1 {
+public class VorbisPlayer {
 
     @ObfuscatedName("ms.u")
     public static LinkedList field4012 = new LinkedList();
 
-    public VorbisRelated1() throws Throwable {
+    public VorbisPlayer() throws Throwable {
         throw new Error();
     }
 
     @ObfuscatedName("nf.u(I)V")
-    public static void method6640() {
+    public static void loop() {
         int var0 = field4012.size();
         Iterator var1 = field4012.iterator();
         while (var1.hasNext()) {

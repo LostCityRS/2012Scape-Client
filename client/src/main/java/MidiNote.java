@@ -1,19 +1,19 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aci")
-public class SoundRelated1 extends Node {
+public class MidiNote extends Node {
 
     @ObfuscatedName("aci.s")
-    public int field9400;
+    public int channel;
 
     @ObfuscatedName("aci.c")
-    public SoundRelated2 field9384;
+    public MidiInstrument field9384;
 
     @ObfuscatedName("aci.m")
     public BasicVariableRateSoundPacket field9385;
 
     @ObfuscatedName("aci.t")
-    public SoundRelated3 field9391;
+    public MidiRelated2 field9391;
 
     @ObfuscatedName("aci.l")
     public int field9387;
@@ -58,7 +58,7 @@ public class SoundRelated1 extends Node {
     public int field9383;
 
     @ObfuscatedName("aci.h")
-    public SoundAudioBuss field9401;
+    public SoundAudioBuss stream;
 
     @ObfuscatedName("aci.r")
     public int field9392;
@@ -71,6 +71,6 @@ public class SoundRelated1 extends Node {
         this.field9384 = null;
         this.field9385 = null;
         this.field9391 = null;
-        this.field9401 = null;
+        this.stream = null;
     }
 }

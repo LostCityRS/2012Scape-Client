@@ -35,7 +35,7 @@ public class SynthVariableRateSoundPacket extends BasicVariableRateSoundPacket {
     }
 
     @ObfuscatedName("alu.j(III)Laib;")
-    public SoundAudioBuss method16502(int arg0, int arg1, int arg2) {
-        return this.field10574 == null || this.field10574.length == 0 ? null : new SoundStreamRelated1(this, arg0, arg1, arg2);
+    public SoundAudioBuss create(int arg0, int arg1, int arg2) {
+        return this.field10574 == null || this.field10574.length == 0 ? null : new SoundAudioBus_Sub1(this, arg0, arg1, arg2);
     }
 }

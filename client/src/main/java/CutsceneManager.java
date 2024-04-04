@@ -177,7 +177,7 @@ public class CutsceneManager {
                 var3.method2874();
             }
             if (field1536 != -1) {
-                SoundRelated12.method8662();
+                MidiPlayer.method8662();
                 AudioRenderer.field4202 = -1;
                 AudioRenderer.method11057(field1536, 255, 50);
             }

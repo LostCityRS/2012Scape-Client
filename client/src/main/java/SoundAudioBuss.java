@@ -83,7 +83,7 @@ public abstract class SoundAudioBuss extends AudioBuss {
     }
 
     @ObfuscatedName("aib.ai(IS)V")
-    public final synchronized void method16384(int arg0) {
+    public final synchronized void setLoops(int arg0) {
         this.field10265 = arg0;
     }
 

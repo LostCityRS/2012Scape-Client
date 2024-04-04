@@ -35,7 +35,7 @@ public class SeqTypeList {
         Js5 var5 = this.field6342;
         byte[] var6;
         synchronized (this.field6342) {
-            var6 = this.field6342.method5627(Js5ConfigGroup.SEQTYPE.method3073(arg0), Js5ConfigGroup.SEQTYPE.method3075(arg0));
+            var6 = this.field6342.fetchFile(Js5ConfigGroup.SEQTYPE.method3073(arg0), Js5ConfigGroup.SEQTYPE.method3075(arg0));
         }
         SeqType var8 = new SeqType();
         var8.field6318 = arg0;

@@ -27,7 +27,7 @@ public class SkyDecorTypeList {
         Js5 var5 = this.field2161;
         byte[] var6;
         synchronized (this.field2161) {
-            var6 = this.field2161.method5627(Js5ConfigGroup.SKYDECORTYPE.field1668, arg0);
+            var6 = this.field2161.fetchFile(Js5ConfigGroup.SKYDECORTYPE.field1668, arg0);
         }
         SkyDecorType var8 = new SkyDecorType();
         if (var6 != null) {

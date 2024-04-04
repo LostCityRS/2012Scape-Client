@@ -34,7 +34,7 @@ public class VarPlayerTypeList implements PlayerTypeListRelated {
         Js5 var5 = this.field3314;
         byte[] var6;
         synchronized (this.field3314) {
-            var6 = this.field3314.method5627(Js5ConfigGroup.VARP.field1668, arg0);
+            var6 = this.field3314.fetchFile(Js5ConfigGroup.VARP.field1668, arg0);
         }
         VarPlayerType var8 = new VarPlayerType();
         if (var6 != null) {

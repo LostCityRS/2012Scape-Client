@@ -1405,9 +1405,9 @@ public final class client extends GameShell {
         }
         long var1 = GameShell.method13883() / 1000000L - field8927;
         field8927 = GameShell.method13883() / 1000000L;
-        boolean var3 = SoundRelated12.method7075();
-        if (var3 && AudioRenderer.field4203 && Statics.field5198 != null) {
-            Statics.field5198.method6497();
+        boolean var3 = MidiPlayer.method7075();
+        if (var3 && AudioRenderer.field4203 && Statics.musicChannel != null) {
+            Statics.musicChannel.method6497();
         }
         if (method6478(state)) {
             if (field9063 != 0L && MonotonicTime.get() > field9063) {
@@ -1717,14 +1717,14 @@ public final class client extends GameShell {
             if (var1) {
                 AudioRenderer.field4202 = AudioRenderer.field4205;
                 if (Statics.options.field9675.method15899() == 0) {
-                    SoundRelated12.method3311(2);
+                    MidiPlayer.method3311(2);
                 } else {
-                    SoundRelated12.method11764(2, Statics.field9367, AudioRenderer.field4205, 0, Statics.options.field9675.method15899(), false);
+                    MidiPlayer.method11764(2, Statics.field9367, AudioRenderer.field4205, 0, Statics.options.field9675.method15899(), false);
                     AudioRenderer.method2572();
                 }
                 Statics.field848.method5744(false);
             } else {
-                SoundRelated12.method3311(2);
+                MidiPlayer.method3311(2);
                 Statics.field848.method5744(true);
             }
         }
@@ -2506,7 +2506,7 @@ public final class client extends GameShell {
         world.method6110();
         ClientWorldMap.reset(false);
         CameraManager.method8391();
-        SoundRelated12.method3311(2);
+        MidiPlayer.method3311(2);
         AudioRenderer.field4202 = -1;
         AudioRenderer.field4203 = false;
         AudioRenderer.method2572();

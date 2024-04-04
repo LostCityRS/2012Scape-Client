@@ -64,7 +64,7 @@ public class NPCTypeList {
         Js5 var5 = this.field7277;
         byte[] var6;
         synchronized (this.field7277) {
-            var6 = this.field7277.method5627(Js5ConfigGroup.NPCTYPE.method3073(arg0), Js5ConfigGroup.NPCTYPE.method3075(arg0));
+            var6 = this.field7277.fetchFile(Js5ConfigGroup.NPCTYPE.method3073(arg0), Js5ConfigGroup.NPCTYPE.method3075(arg0));
         }
         NPCType var8 = new NPCType();
         var8.field7211 = arg0;

@@ -101,7 +101,7 @@ public final class Js5 {
     }
 
     @ObfuscatedName("ls.t(III)[B")
-    public byte[] method5627(int arg0, int arg1) {
+    public byte[] fetchFile(int arg0, int arg1) {
         return this.method5699(arg0, arg1, null);
     }
 
@@ -236,11 +236,11 @@ public final class Js5 {
         if (!this.method5689()) {
             return null;
         } else if (this.field3572.field3561.length == 1) {
-            return this.method5627(0, arg0);
+            return this.fetchFile(0, arg0);
         } else if (!this.method5623(arg0)) {
             return null;
         } else if (this.field3572.field3561[arg0] == 1) {
-            return this.method5627(arg0, 0);
+            return this.fetchFile(arg0, 0);
         } else {
             throw new RuntimeException();
         }
@@ -509,7 +509,7 @@ public final class Js5 {
         int var5 = this.field3572.field3560.method3564(StringTools.method5016(var3));
         if (this.method5623(var5)) {
             int var6 = this.field3572.field3558[var5].method3564(StringTools.method5016(var4));
-            return this.method5627(var5, var6);
+            return this.fetchFile(var5, var6);
         } else {
             return null;
         }

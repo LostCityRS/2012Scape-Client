@@ -10981,7 +10981,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("ef.aka(Lrn;I)V")
     public static final void method3301(ClientScriptState arg0) {
-        Statics.options.method15448(Statics.options.field9676, arg0.field5215[--arg0.field5216] == 1 ? 1 : 0);
+        Statics.options.method15448(Statics.options.stereo, arg0.field5215[--arg0.field5216] == 1 ? 1 : 0);
         AudioRenderer.method12701();
         Statics.method1245();
         client.preferencesChangeNotified = false;
@@ -11003,14 +11003,14 @@ public final class ScriptRunner {
         }
         if (client.isStateGame(client.state)) {
             if (var2 == 0 && AudioRenderer.field4202 != -1) {
-                SoundRelated12.method3986(Statics.field9367, AudioRenderer.field4202, 0, var1, false);
+                MidiPlayer.method3986(Statics.field9367, AudioRenderer.field4202, 0, var1, false);
                 AudioRenderer.method2572();
                 AudioRenderer.field4203 = false;
             } else if (var1 == 0) {
-                SoundRelated12.method8662();
+                MidiPlayer.method8662();
                 AudioRenderer.field4203 = false;
             } else {
-                SoundRelated12.method1315(var1);
+                MidiPlayer.method1315(var1);
             }
         }
         Statics.options.method15448(Statics.options.field9674, var1);
@@ -11113,14 +11113,14 @@ public final class ScriptRunner {
         }
         if (!client.isStateGame(client.state)) {
             if (var2 == 0) {
-                SoundRelated12.method3986(Statics.field9367, AudioRenderer.field4202, 0, var1, false);
+                MidiPlayer.method3986(Statics.field9367, AudioRenderer.field4202, 0, var1, false);
                 AudioRenderer.method2572();
                 AudioRenderer.field4203 = false;
             } else if (var1 == 0) {
-                SoundRelated12.method8662();
+                MidiPlayer.method8662();
                 AudioRenderer.field4203 = false;
             } else {
-                SoundRelated12.method1315(var1);
+                MidiPlayer.method1315(var1);
             }
         }
         Statics.options.method15448(Statics.options.field9675, var1);

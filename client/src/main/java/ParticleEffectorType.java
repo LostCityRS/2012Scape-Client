@@ -68,7 +68,7 @@ public class ParticleEffectorType {
         if (var1 != null) {
             return var1;
         }
-        byte[] var2 = Statics.field2757.method5627(1, arg0);
+        byte[] var2 = Statics.field2757.fetchFile(1, arg0);
         ParticleEffectorType var3 = new ParticleEffectorType();
         var3.field2748 = arg0;
         if (var2 != null) {

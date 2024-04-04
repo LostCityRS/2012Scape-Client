@@ -25,7 +25,7 @@ public class QuestTypeList {
                 Js5 var6 = this.field5054;
                 byte[] var7;
                 synchronized (this.field5054) {
-                    var7 = this.field5054.method5627(Js5ConfigGroup.QUESTTYPE.field1668, var5);
+                    var7 = this.field5054.fetchFile(Js5ConfigGroup.QUESTTYPE.field1668, var5);
                 }
                 QuestType var9 = new QuestType();
                 if (var7 != null) {

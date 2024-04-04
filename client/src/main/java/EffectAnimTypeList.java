@@ -39,7 +39,7 @@ public class EffectAnimTypeList {
         Js5 var5 = this.field5246;
         byte[] var6;
         synchronized (this.field5246) {
-            var6 = this.field5246.method5627(Js5ConfigGroup.SPOTTYPE.method3073(arg0), Js5ConfigGroup.SPOTTYPE.method3075(arg0));
+            var6 = this.field5246.fetchFile(Js5ConfigGroup.SPOTTYPE.method3073(arg0), Js5ConfigGroup.SPOTTYPE.method3075(arg0));
         }
         EffectAnimType var8 = new EffectAnimType();
         var8.field5256 = this;

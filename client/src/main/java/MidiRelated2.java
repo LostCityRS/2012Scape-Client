@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("ez")
-public class SoundRelated3 {
+public class MidiRelated2 {
 
     @ObfuscatedName("ez.u")
     public byte[] field1622;

@@ -27,7 +27,7 @@ public class SkyBoxTypeList {
         Js5 var5 = this.field4463;
         byte[] var6;
         synchronized (this.field4463) {
-            var6 = this.field4463.method5627(Js5ConfigGroup.SKYBOXTYPE.field1668, arg0);
+            var6 = this.field4463.fetchFile(Js5ConfigGroup.SKYBOXTYPE.field1668, arg0);
         }
         SkyBoxType var8 = new SkyBoxType();
         if (var6 != null) {

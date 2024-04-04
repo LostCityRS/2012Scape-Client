@@ -36,7 +36,7 @@ public class SynthSoundRelated12 {
             if (var9 == null) {
                 return null;
             }
-            SynthVariableRateSoundPacket var10 = var9.method6463();
+            SynthVariableRateSoundPacket var10 = var9.toSoundPacket();
             this.field4054.put(var10, var6);
             if (arg2 != null) {
                 arg2[0] -= var10.field10574.length;

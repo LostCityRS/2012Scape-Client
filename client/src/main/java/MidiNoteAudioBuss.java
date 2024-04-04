@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class MidiNoteAudioBuss extends AudioBuss {
 
     @ObfuscatedName("aij.l")
-    public MidiAudioBuss field10226;
+    public MidiAudioBuss parent;
 
     @ObfuscatedName("aij.f")
     public IterableQueue notes = new IterableQueue();
@@ -13,31 +13,31 @@ public class MidiNoteAudioBuss extends AudioBuss {
     public MixerAudioBuss mixer = new MixerAudioBuss();
 
     public MidiNoteAudioBuss(MidiAudioBuss arg0) {
-        this.field10226 = arg0;
+        this.parent = arg0;
     }
 
     @ObfuscatedName("aij.j()Ladc;")
     public AudioBuss firstSubStream() {
-        SoundRelated1 var1 = (SoundRelated1) this.notes.last();
+        MidiNote var1 = (MidiNote) this.notes.last();
         if (var1 == null) {
             return null;
-        } else if (var1.field9401 == null) {
+        } else if (var1.stream == null) {
             return this.nextSubStream();
         } else {
-            return var1.field9401;
+            return var1.stream;
         }
     }
 
     @ObfuscatedName("aij.a()Ladc;")
     public AudioBuss nextSubStream() {
-        SoundRelated1 var1;
+        MidiNote var1;
         do {
-            var1 = (SoundRelated1) this.notes.prev();
+            var1 = (MidiNote) this.notes.prev();
             if (var1 == null) {
                 return null;
             }
-        } while (var1.field9401 == null);
-        return var1.field9401;
+        } while (var1.stream == null);
+        return var1.stream;
     }
 
     @ObfuscatedName("aij.s()I")
@@ -48,8 +48,8 @@ public class MidiNoteAudioBuss extends AudioBuss {
     @ObfuscatedName("aij.m([III)V")
     public void read(int[] arg0, int arg1, int arg2) {
         this.mixer.read(arg0, arg1, arg2);
-        for (SoundRelated1 var4 = (SoundRelated1) this.notes.last(); var4 != null; var4 = (SoundRelated1) this.notes.prev()) {
-            if (!this.field10226.method16296(var4)) {
+        for (MidiNote var4 = (MidiNote) this.notes.last(); var4 != null; var4 = (MidiNote) this.notes.prev()) {
+            if (!this.parent.method16296(var4)) {
                 int var5 = arg1;
                 int var6 = arg2;
                 do {
@@ -61,7 +61,7 @@ public class MidiNoteAudioBuss extends AudioBuss {
                     this.method16255(var4, arg0, var5, var4.field9392, var5 + var6);
                     var5 += var4.field9392;
                     var6 -= var4.field9392;
-                } while (!this.field10226.method16338(var4, arg0, var5, var6));
+                } while (!this.parent.method16338(var4, arg0, var5, var6));
             }
         }
     }
@@ -69,8 +69,8 @@ public class MidiNoteAudioBuss extends AudioBuss {
     @ObfuscatedName("aij.t(I)V")
     public void skip(int arg0) {
         this.mixer.skip(arg0);
-        for (SoundRelated1 var2 = (SoundRelated1) this.notes.last(); var2 != null; var2 = (SoundRelated1) this.notes.prev()) {
-            if (!this.field10226.method16296(var2)) {
+        for (MidiNote var2 = (MidiNote) this.notes.last(); var2 != null; var2 = (MidiNote) this.notes.prev()) {
+            if (!this.parent.method16296(var2)) {
                 int var3 = arg0;
                 do {
                     if (var3 <= var2.field9392) {
@@ -80,22 +80,22 @@ public class MidiNoteAudioBuss extends AudioBuss {
                     }
                     this.method16256(var2, var2.field9392);
                     var3 -= var2.field9392;
-                } while (!this.field10226.method16338(var2, null, 0, var3));
+                } while (!this.parent.method16338(var2, null, 0, var3));
             }
         }
     }
 
     @ObfuscatedName("aij.an(Laci;[IIIII)V")
-    public void method16255(SoundRelated1 arg0, int[] arg1, int arg2, int arg3, int arg4) {
-        if ((this.field10226.field10245[arg0.field9400] & 0x4) != 0 && arg0.field9402 < 0) {
-            int var6 = this.field10226.field10250[arg0.field9400] / Statics.sampleRate;
+    public void method16255(MidiNote arg0, int[] arg1, int arg2, int arg3, int arg4) {
+        if ((this.parent.channelFlags[arg0.channel] & 0x4) != 0 && arg0.field9402 < 0) {
+            int var6 = this.parent.field10250[arg0.channel] / Statics.sampleRate;
             while (true) {
                 int var7 = (var6 + 1048575 - arg0.field9398) / var6;
                 if (var7 > arg3) {
                     arg0.field9398 += arg3 * var6;
                     break;
                 }
-                arg0.field9401.read(arg1, arg2, var7);
+                arg0.stream.read(arg1, arg2, var7);
                 arg2 += var7;
                 arg3 -= var7;
                 arg0.field9398 += var6 * var7 - 1048576;
@@ -104,16 +104,16 @@ public class MidiNoteAudioBuss extends AudioBuss {
                 if (var9 < var8) {
                     var8 = var9;
                 }
-                SoundAudioBuss var10 = arg0.field9401;
-                if (this.field10226.field10248[arg0.field9400] == 0) {
-                    arg0.field9401 = arg0.field9385.method16502(var10.method16397(), var10.method16442(), var10.method16426());
+                SoundAudioBuss var10 = arg0.stream;
+                if (this.parent.field10248[arg0.channel] == 0) {
+                    arg0.stream = arg0.field9385.create(var10.method16397(), var10.method16442(), var10.method16426());
                 } else {
-                    arg0.field9401 = arg0.field9385.method16502(var10.method16397(), 0, var10.method16426());
-                    this.field10226.method16280(arg0, arg0.field9384.field9406[arg0.field9388] < 0);
-                    arg0.field9401.method16399(var8, var10.method16442());
+                    arg0.stream = arg0.field9385.create(var10.method16397(), 0, var10.method16426());
+                    this.parent.method16280(arg0, arg0.field9384.field9406[arg0.field9388] < 0);
+                    arg0.stream.method16399(var8, var10.method16442());
                 }
                 if (arg0.field9384.field9406[arg0.field9388] < 0) {
-                    arg0.field9401.method16384(-1);
+                    arg0.stream.setLoops(-1);
                 }
                 var10.method16418(var8);
                 var10.read(arg1, arg2, arg4 - arg2);
@@ -122,29 +122,29 @@ public class MidiNoteAudioBuss extends AudioBuss {
                 }
             }
         }
-        arg0.field9401.read(arg1, arg2, arg3);
+        arg0.stream.read(arg1, arg2, arg3);
     }
 
     @ObfuscatedName("aij.ap(Laci;II)V")
-    public void method16256(SoundRelated1 arg0, int arg1) {
-        if ((this.field10226.field10245[arg0.field9400] & 0x4) != 0 && arg0.field9402 < 0) {
-            int var3 = this.field10226.field10250[arg0.field9400] / Statics.sampleRate;
-            int var4 = (var3 + 1048575 - arg0.field9398) / var3;
-            arg0.field9398 = arg0.field9398 + arg1 * var3 & 0xFFFFF;
+    public void method16256(MidiNote instrument, int arg1) {
+        if ((this.parent.channelFlags[instrument.channel] & 0x4) != 0 && instrument.field9402 < 0) {
+            int var3 = this.parent.field10250[instrument.channel] / Statics.sampleRate;
+            int var4 = (var3 + 1048575 - instrument.field9398) / var3;
+            instrument.field9398 = instrument.field9398 + arg1 * var3 & 0xFFFFF;
             if (var4 <= arg1) {
-                SoundAudioBuss var5 = arg0.field9401;
-                if (this.field10226.field10248[arg0.field9400] == 0) {
-                    arg0.field9401 = arg0.field9385.method16502(var5.method16397(), var5.method16442(), var5.method16426());
+                SoundAudioBuss var5 = instrument.stream;
+                if (this.parent.field10248[instrument.channel] == 0) {
+                    instrument.stream = instrument.field9385.create(var5.method16397(), var5.method16442(), var5.method16426());
                 } else {
-                    arg0.field9401 = arg0.field9385.method16502(var5.method16397(), 0, var5.method16426());
-                    this.field10226.method16280(arg0, arg0.field9384.field9406[arg0.field9388] < 0);
+                    instrument.stream = instrument.field9385.create(var5.method16397(), 0, var5.method16426());
+                    this.parent.method16280(instrument, instrument.field9384.field9406[instrument.field9388] < 0);
                 }
-                if (arg0.field9384.field9406[arg0.field9388] < 0) {
-                    arg0.field9401.method16384(-1);
+                if (instrument.field9384.field9406[instrument.field9388] < 0) {
+                    instrument.stream.setLoops(-1);
                 }
-                arg1 = arg0.field9398 / var3;
+                arg1 = instrument.field9398 / var3;
             }
         }
-        arg0.field9401.skip(arg1);
+        instrument.stream.skip(arg1);
     }
 }

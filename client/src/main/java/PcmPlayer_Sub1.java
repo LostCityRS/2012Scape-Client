@@ -7,7 +7,7 @@ import javax.sound.sampled.Mixer.Info;
 import javax.sound.sampled.SourceDataLine;
 
 @ObfuscatedName("aba")
-public class PcmPlayer_Sub1 extends PcmPlayer {
+public class PcmPlayer_Sub1 extends AudioChannel {
 
     @ObfuscatedName("aba.an")
     public AudioFormat field8898;

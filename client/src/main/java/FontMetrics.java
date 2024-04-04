@@ -25,7 +25,7 @@ public class FontMetrics {
 
     @ObfuscatedName("ur.u(Lls;III)Lvm;")
     public static FontMetrics create(Js5 arg0, int arg1, int arg2) {
-        byte[] var3 = arg0.method5627(arg1, arg2);
+        byte[] var3 = arg0.fetchFile(arg1, arg2);
         return var3 == null ? null : new FontMetrics(var3);
     }
 

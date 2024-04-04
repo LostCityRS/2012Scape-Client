@@ -416,7 +416,7 @@ public class VorbisSound extends Node {
     @ObfuscatedName("adr.l(Lls;)Z")
     public static boolean method15064(Js5 arg0) {
         if (!field9479) {
-            byte[] var1 = arg0.method5627(0, 0);
+            byte[] var1 = arg0.fetchFile(0, 0);
             if (var1 == null) {
                 return false;
             }
@@ -431,7 +431,7 @@ public class VorbisSound extends Node {
             arg0.method5629(arg1, arg2);
             return null;
         }
-        byte[] var3 = arg0.method5627(arg1, arg2);
+        byte[] var3 = arg0.fetchFile(arg1, arg2);
         if (var3 == null) {
             return null;
         }
@@ -469,7 +469,7 @@ public class VorbisSound extends Node {
 
     @ObfuscatedName("adr.z()Laly;")
     public VariableRateSoundPacket method15099() {
-        VorbisRelated1.method4778(this);
+        VorbisPlayer.method4778(this);
         return this.method15071() && (this.field9510 <= this.field9495 || this.field9512 <= this.field9495 / GameShell.method2809()) ? null : new VariableRateSoundPacket(this.field9495, this, this.field9509, this.field9487, this.field9482, this.field9483);
     }
 

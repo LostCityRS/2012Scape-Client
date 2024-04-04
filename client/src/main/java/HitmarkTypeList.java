@@ -34,7 +34,7 @@ public class HitmarkTypeList {
         Js5 var5 = this.field4760;
         byte[] var6;
         synchronized (this.field4760) {
-            var6 = this.field4760.method5627(Js5ConfigGroup.HITMARKTYPE.field1668, arg0);
+            var6 = this.field4760.fetchFile(Js5ConfigGroup.HITMARKTYPE.field1668, arg0);
         }
         HitmarkType var8 = new HitmarkType();
         var8.field4754 = this;

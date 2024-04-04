@@ -16,7 +16,7 @@ public class LoadingRelated3 {
 
     public LoadingRelated3(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field7391 = arg2;
-        Packet var4 = new Packet(this.field7391.method5627(0, 0));
+        Packet var4 = new Packet(this.field7391.fetchFile(0, 0));
         int var5 = var4.data == null || var4.data.length < 1 ? -1 : var4.g1();
         if (var5 < 4) {
             this.field7393 = new LoadingRelated2[0];
@@ -101,7 +101,7 @@ public class LoadingRelated3 {
 
     @ObfuscatedName("wk.j(II)Lwb;")
     public LoadingScreenType method12708(int arg0) {
-        byte[] var2 = this.field7391.method5627(arg0, 0);
+        byte[] var2 = this.field7391.fetchFile(arg0, 0);
         LoadingScreenType var3 = new LoadingScreenType();
         var3.method12719(new Packet(var2));
         return var3;

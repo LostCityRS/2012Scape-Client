@@ -20,7 +20,7 @@ public class VariableRateSoundPacket extends BasicVariableRateSoundPacket {
     }
 
     @ObfuscatedName("aly.j(III)Laib;")
-    public SoundAudioBuss method16502(int arg0, int arg1, int arg2) {
+    public SoundAudioBuss create(int arg0, int arg1, int arg2) {
         return this.field10573 == null || this.field10573.length == 0 ? null : new VariableRateSoundStream(this, arg0, arg1, arg2);
     }
 

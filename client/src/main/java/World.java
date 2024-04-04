@@ -940,7 +940,7 @@ public class World {
         this.field3816 = 0;
         for (int var1 = 0; var1 < this.field3800.length; var1++) {
             if (this.field3821[var1] != -1 && this.field3800[var1] == null) {
-                this.field3800[var1] = Statics.field7343.method5627(this.field3821[var1], 0);
+                this.field3800[var1] = Statics.field7343.fetchFile(this.field3821[var1], 0);
                 if (this.field3800[var1] == null) {
                     this.field3816++;
                 }
@@ -952,13 +952,13 @@ public class World {
                 }
             }
             if (this.field3797[var1] != -1 && this.field3830[var1] == null) {
-                this.field3830[var1] = Statics.field7343.method5627(this.field3797[var1], 0);
+                this.field3830[var1] = Statics.field7343.fetchFile(this.field3797[var1], 0);
                 if (this.field3830[var1] == null) {
                     this.field3816++;
                 }
             }
             if (this.field3825[var1] != -1 && this.field3832[var1] == null) {
-                this.field3832[var1] = Statics.field7343.method5627(this.field3825[var1], 0);
+                this.field3832[var1] = Statics.field7343.fetchFile(this.field3825[var1], 0);
                 if (this.field3832[var1] == null) {
                     this.field3816++;
                 }

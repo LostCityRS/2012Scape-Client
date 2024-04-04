@@ -73,7 +73,7 @@ public class LocTypeList {
         Js5 var5 = this.field6554;
         byte[] var6;
         synchronized (this.field6554) {
-            var6 = this.field6554.method5627(Js5ConfigGroup.LOCTYPE.method3073(arg0), Js5ConfigGroup.LOCTYPE.method3075(arg0));
+            var6 = this.field6554.fetchFile(Js5ConfigGroup.LOCTYPE.method3073(arg0), Js5ConfigGroup.LOCTYPE.method3075(arg0));
         }
         LocType var8 = new LocType();
         var8.field6474 = arg0;

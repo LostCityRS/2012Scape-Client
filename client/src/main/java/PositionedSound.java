@@ -559,8 +559,8 @@ public class PositionedSound extends Node {
                         arg0.field9539 = arg0.field9538.method15099();
                     }
                     if (arg0.field9539 != null) {
-                        VariableRateSoundStream var16 = (VariableRateSoundStream) arg0.field9539.method16502(var15, var8 << 6, var10);
-                        var16.method16384(-1);
+                        VariableRateSoundStream var16 = (VariableRateSoundStream) arg0.field9539.create(var15, var8 << 6, var10);
+                        var16.setLoops(-1);
                         Statics.field4201.method16452(var16);
                         arg0.field9540 = var16;
                     }
@@ -568,9 +568,9 @@ public class PositionedSound extends Node {
             } else {
                 SynthSound var17 = SynthSound.method6466(Statics.field5197, arg0.sound, 0);
                 if (var17 != null) {
-                    SynthVariableRateSoundPacket var18 = var17.method6463().method17108(Statics.field3160);
-                    SoundStreamRelated1 var19 = (SoundStreamRelated1) var18.method16502(var15, var8 << 6, var10);
-                    var19.method16384(-1);
+                    SynthVariableRateSoundPacket var18 = var17.toSoundPacket().method17108(Statics.field3160);
+                    SoundAudioBus_Sub1 var19 = (SoundAudioBus_Sub1) var18.create(var15, var8 << 6, var10);
+                    var19.setLoops(-1);
                     Statics.field4201.method16452(var19);
                     arg0.field9540 = var19;
                 }
@@ -596,8 +596,8 @@ public class PositionedSound extends Node {
                         arg0.field9542 = arg0.field9545.method15099();
                     }
                     if (arg0.field9542 != null) {
-                        VariableRateSoundStream var22 = (VariableRateSoundStream) arg0.field9542.method16502(var20, var8 << 6, var10);
-                        var22.method16384(0);
+                        VariableRateSoundStream var22 = (VariableRateSoundStream) arg0.field9542.create(var20, var8 << 6, var10);
+                        var22.setLoops(0);
                         Statics.field4201.method16452(var22);
                         arg0.field9548 = var22;
                         arg0.delay = arg0.mindelay + (int) (Math.random() * (double) (arg0.maxdelay - arg0.mindelay));
@@ -607,9 +607,9 @@ public class PositionedSound extends Node {
                 int var23 = (int) (Math.random() * (double) arg0.sounds.length);
                 SynthSound var24 = SynthSound.method6466(Statics.field5197, arg0.sounds[var23], 0);
                 if (var24 != null) {
-                    SynthVariableRateSoundPacket var25 = var24.method6463().method17108(Statics.field3160);
-                    SoundStreamRelated1 var26 = (SoundStreamRelated1) var25.method16502(var20, var8 << 6, var10);
-                    var26.method16384(0);
+                    SynthVariableRateSoundPacket var25 = var24.toSoundPacket().method17108(Statics.field3160);
+                    SoundAudioBus_Sub1 var26 = (SoundAudioBus_Sub1) var25.create(var20, var8 << 6, var10);
+                    var26.setLoops(0);
                     Statics.field4201.method16452(var26);
                     arg0.field9548 = var26;
                     arg0.delay = arg0.mindelay + (int) (Math.random() * (double) (arg0.maxdelay - arg0.mindelay));

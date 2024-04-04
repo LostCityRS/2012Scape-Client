@@ -27,7 +27,7 @@ public class FloorUnderlayTypeList {
         Js5 var5 = this.field6710;
         byte[] var6;
         synchronized (this.field6710) {
-            var6 = this.field6710.method5627(Js5ConfigGroup.FLUTYPE.field1668, arg0);
+            var6 = this.field6710.fetchFile(Js5ConfigGroup.FLUTYPE.field1668, arg0);
         }
         FloorUnderlayType var8 = new FloorUnderlayType();
         if (var6 != null) {

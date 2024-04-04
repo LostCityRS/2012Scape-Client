@@ -29,7 +29,7 @@ public class VarClanSettingTypeList {
         Js5 var5 = this.field5038;
         byte[] var6;
         synchronized (this.field5038) {
-            var6 = this.field5038.method5627(Js5ConfigGroup.VARCLANSETTING.field1668, arg0);
+            var6 = this.field5038.fetchFile(Js5ConfigGroup.VARCLANSETTING.field1668, arg0);
         }
         VarClanSettingType var8 = new VarClanSettingType();
         if (var6 != null) {

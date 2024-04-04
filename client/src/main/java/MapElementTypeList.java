@@ -34,7 +34,7 @@ public class MapElementTypeList {
         Js5 var5 = this.field4809;
         byte[] var6;
         synchronized (this.field4809) {
-            var6 = this.field4809.method5627(Js5ConfigGroup.MELTYPE.field1668, arg0);
+            var6 = this.field4809.fetchFile(Js5ConfigGroup.MELTYPE.field1668, arg0);
         }
         MapElementType var8 = new MapElementType();
         var8.field4763 = arg0;

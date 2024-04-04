@@ -31,9 +31,9 @@ public class QuickChatCatTypeList {
         }
         byte[] var3;
         if (arg0 >= 32768) {
-            var3 = this.field3705.method5627(0, arg0 & 0x7FFF);
+            var3 = this.field3705.fetchFile(0, arg0 & 0x7FFF);
         } else {
-            var3 = this.field3704.method5627(0, arg0);
+            var3 = this.field3704.fetchFile(0, arg0);
         }
         QuickChatCatType var4 = new QuickChatCatType();
         if (var3 != null) {

@@ -27,7 +27,7 @@ public class InvTypeList implements PlayerTypeListRelated {
         Js5 var5 = this.field7325;
         byte[] var6;
         synchronized (this.field7325) {
-            var6 = this.field7325.method5627(Js5ConfigGroup.INVTYPE.field1668, arg0);
+            var6 = this.field7325.fetchFile(Js5ConfigGroup.INVTYPE.field1668, arg0);
         }
         InvType var8 = new InvType();
         if (var6 != null) {

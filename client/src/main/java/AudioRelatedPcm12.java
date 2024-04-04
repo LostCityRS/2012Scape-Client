@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public abstract class AudioRelatedPcm12 implements Runnable {
 
     @ObfuscatedName("mb.u")
-    public volatile PcmPlayer[] field4010 = new PcmPlayer[2];
+    public volatile AudioChannel[] field4010 = new AudioChannel[2];
 
     @ObfuscatedName("mb.j")
     public volatile boolean field4008 = false;

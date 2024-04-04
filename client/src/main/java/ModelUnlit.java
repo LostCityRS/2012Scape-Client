@@ -116,7 +116,7 @@ public class ModelUnlit {
 
     @ObfuscatedName("dw.u(Lls;II)Ldw;")
     public static ModelUnlit method2664(Js5 arg0, int arg1, int arg2) {
-        byte[] var3 = arg0.method5627(arg1, arg2);
+        byte[] var3 = arg0.fetchFile(arg1, arg2);
         return var3 == null ? null : new ModelUnlit(var3);
     }
 

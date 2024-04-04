@@ -38,7 +38,7 @@ public class MSITypeList {
         Js5 var5 = this.field7200;
         byte[] var6;
         synchronized (this.field7200) {
-            var6 = this.field7200.method5627(Js5ConfigGroup.MSITYPE.field1668, arg0);
+            var6 = this.field7200.fetchFile(Js5ConfigGroup.MSITYPE.field1668, arg0);
         }
         MSIType var8 = new MSIType();
         var8.field7193 = this;

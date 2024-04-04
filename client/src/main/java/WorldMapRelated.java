@@ -30,7 +30,7 @@ public class WorldMapRelated {
         int var7 = 0;
         while (true) {
             while (var6 < var5.field4255) {
-                Packet var8 = new Packet(arg0.method5627(var3, var4[var7++]));
+                Packet var8 = new Packet(arg0.fetchFile(var3, var4[var7++]));
                 int var9 = var8.g4s();
                 int var10 = var8.g2();
                 int var11 = var8.g1();

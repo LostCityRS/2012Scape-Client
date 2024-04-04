@@ -30,7 +30,7 @@ public class VarClientTypeList {
         Js5 var5 = this.field7161;
         byte[] var6;
         synchronized (this.field7161) {
-            var6 = this.field7161.method5627(Js5ConfigGroup.VARCINT.field1668, arg0);
+            var6 = this.field7161.fetchFile(Js5ConfigGroup.VARCINT.field1668, arg0);
         }
         VarClientType var8 = new VarClientType();
         if (var6 != null) {

@@ -29,7 +29,7 @@ public class ParamTypeList {
         Js5 var5 = this.field7291;
         byte[] var6;
         synchronized (this.field7291) {
-            var6 = this.field7291.method5627(Js5ConfigGroup.PARAMTYPE.field1668, arg0);
+            var6 = this.field7291.fetchFile(Js5ConfigGroup.PARAMTYPE.field1668, arg0);
         }
         ParamType var8 = new ParamType();
         if (var6 != null) {

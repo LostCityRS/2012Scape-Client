@@ -121,7 +121,7 @@ public class ClientOptions extends Node {
     public ClientOptionsVolume field9675;
 
     @ObfuscatedName("aeg.ah")
-    public ClientOptionsStereo field9676;
+    public ClientOptionsStereo stereo;
 
     public ClientOptions(ModeGame arg0, int arg1) {
         this.field9639 = arg0;
@@ -202,7 +202,7 @@ public class ClientOptions extends Node {
                 this.field9653 = new ClientOptionsVolume(arg0.g1(), this);
                 this.field9674 = new ClientOptionsVolume(arg0.g1(), this);
                 this.field9675 = new ClientOptionsVolume(arg0.g1(), this);
-                this.field9676 = new ClientOptionsStereo(arg0.g1(), this);
+                this.stereo = new ClientOptionsStereo(arg0.g1(), this);
                 this.method15445(false);
             }
         }
@@ -322,8 +322,8 @@ public class ClientOptions extends Node {
         if (arg0 || this.field9675 == null) {
             this.field9675 = new ClientOptionsVolume(this);
         }
-        if (arg0 || this.field9676 == null) {
-            this.field9676 = new ClientOptionsStereo(this);
+        if (arg0 || this.stereo == null) {
+            this.stereo = new ClientOptionsStereo(this);
         }
     }
 
@@ -360,7 +360,7 @@ public class ClientOptions extends Node {
         this.field9666 = new ClientOptionsWaterDetail(arg0.g1(), this);
         this.field9646 = new ClientOptionsFog(arg0.g1(), this);
         this.field9637 = new ClientOptionsAntiAliasing(arg0.g1(), this);
-        this.field9676 = new ClientOptionsStereo(arg0.g1(), this);
+        this.stereo = new ClientOptionsStereo(arg0.g1(), this);
         this.field9654 = new ClientOptionsVolume(arg0.g1(), this);
         if (arg1 >= 20) {
             this.field9653 = new ClientOptionsVolume(arg0.g1(), this);
@@ -467,7 +467,7 @@ public class ClientOptions extends Node {
         var1.p1(this.field9653.method15899());
         var1.p1(this.field9674.method15899());
         var1.p1(this.field9675.method15899());
-        var1.p1(this.field9676.method15891());
+        var1.p1(this.stereo.getValue());
         return var1;
     }
 
@@ -522,7 +522,7 @@ public class ClientOptions extends Node {
         this.field9653.method15897();
         this.field9674.method15897();
         this.field9675.method15897();
-        this.field9676.method15888();
+        this.stereo.method15888();
     }
 
     @ObfuscatedName("aeg.l(I)Lsv;")

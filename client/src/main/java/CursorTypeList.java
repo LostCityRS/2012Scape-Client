@@ -34,7 +34,7 @@ public class CursorTypeList {
         Js5 var5 = this.field7169;
         byte[] var6;
         synchronized (this.field7169) {
-            var6 = this.field7169.method5627(Js5ConfigGroup.CURSORTYPE.field1668, arg0);
+            var6 = this.field7169.fetchFile(Js5ConfigGroup.CURSORTYPE.field1668, arg0);
         }
         CursorType var8 = new CursorType();
         var8.field7162 = this;
