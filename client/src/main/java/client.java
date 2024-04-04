@@ -11617,7 +11617,7 @@ public final class client extends GameShell {
             return;
         }
         ServerConnection var10 = getCurrentConnection();
-        ClientMessage var11 = ClientMessage.createMessage(ClientProt.field2887, var10.randomOut);
+        ClientMessage var11 = ClientMessage.createMessage(ClientProt.FRIENDLIST_ADD, var10.randomOut);
         var11.buf.p1(Packet.pjstrlen(arg0));
         var11.buf.pjstr(arg0);
         var10.queue(var11);
@@ -11671,7 +11671,7 @@ public final class client extends GameShell {
             return;
         }
         ServerConnection var11 = getCurrentConnection();
-        ClientMessage var12 = ClientMessage.createMessage(ClientProt.FRIENDLIST_ADD, var11.randomOut);
+        ClientMessage var12 = ClientMessage.createMessage(ClientProt.IGNORELIST_ADD, var11.randomOut);
         var12.buf.p1(Packet.pjstrlen(arg0) + 1);
         var12.buf.pjstr(arg0);
         var12.buf.p1(arg1 ? 1 : 0);

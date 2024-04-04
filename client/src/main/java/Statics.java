@@ -5791,7 +5791,7 @@ public class Statics {
             }
         }
         ServerConnection var6 = client.getCurrentConnection();
-        ClientMessage var7 = ClientMessage.createMessage(ClientProt.field2935, var6.randomOut);
+        ClientMessage var7 = ClientMessage.createMessage(ClientProt.MESSAGE_PUBLIC, var6.randomOut);
         var7.buf.p1(0);
         int var8 = var7.buf.pos;
         var7.buf.p1(var3);
@@ -6134,7 +6134,7 @@ public class Statics {
                 }
                 client.field9148 = client.interfaceUpdateNum;
                 ServerConnection var7 = client.getCurrentConnection();
-                ClientMessage var8 = ClientMessage.createMessage(ClientProt.field2930, var7.randomOut);
+                ClientMessage var8 = ClientMessage.createMessage(ClientProt.FRIENDLIST_DEL, var7.randomOut);
                 var8.buf.p1(Packet.pjstrlen(arg0));
                 var8.buf.pjstr(arg0);
                 var7.queue(var8);
@@ -6163,7 +6163,7 @@ public class Statics {
                 }
                 client.field9148 = client.interfaceUpdateNum;
                 ServerConnection var7 = client.getCurrentConnection();
-                ClientMessage var8 = ClientMessage.createMessage(ClientProt.field2931, var7.randomOut);
+                ClientMessage var8 = ClientMessage.createMessage(ClientProt.IGNORELIST_DEL, var7.randomOut);
                 var8.buf.p1(Packet.pjstrlen(arg0));
                 var8.buf.pjstr(arg0);
                 var7.queue(var8);

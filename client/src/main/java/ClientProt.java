@@ -40,7 +40,7 @@ public class ClientProt {
     public static final ClientProt URL_REQUEST = new ClientProt(11, -2);
 
     @ObfuscatedName("jm.o")
-    public static final ClientProt field2861 = new ClientProt(12, -1);
+    public static final ClientProt field2861 = new ClientProt(12, -1); // lobby
 
     @ObfuscatedName("jm.q")
     public static final ClientProt IF_BUTTON3 = new ClientProt(13, 8);
@@ -55,7 +55,7 @@ public class ClientProt {
     public static final ClientProt OPLOC3 = new ClientProt(16, 9);
 
     @ObfuscatedName("jm.x")
-    public static final ClientProt field2931 = new ClientProt(17, -1);
+    public static final ClientProt IGNORELIST_DEL = new ClientProt(17, -1);
 
     @ObfuscatedName("jm.i")
     public static final ClientProt field2867 = new ClientProt(18, 2);
@@ -118,7 +118,7 @@ public class ClientProt {
     public static final ClientProt IF_BUTTON7 = new ClientProt(37, 8);
 
     @ObfuscatedName("jm.aw")
-    public static final ClientProt FRIENDLIST_ADD = new ClientProt(38, -1);
+    public static final ClientProt IGNORELIST_ADD = new ClientProt(38, -1);
 
     @ObfuscatedName("jm.aa")
     public static final ClientProt CLIENT_DETAILOPTIONS_STATUS = new ClientProt(39, -1);
@@ -217,7 +217,7 @@ public class ClientProt {
     public static final ClientProt CHAT_SETMODE = new ClientProt(70, 1);
 
     @ObfuscatedName("jm.bb")
-    public static final ClientProt field2887 = new ClientProt(71, -1);
+    public static final ClientProt FRIENDLIST_ADD = new ClientProt(71, -1);
 
     @ObfuscatedName("jm.be")
     public static final ClientProt OPNPC1 = new ClientProt(72, 3);
@@ -247,7 +247,7 @@ public class ClientProt {
     public static final ClientProt IF_BUTTON9 = new ClientProt(80, 8);
 
     @ObfuscatedName("jm.cb")
-    public static final ClientProt field2930 = new ClientProt(81, -1);
+    public static final ClientProt FRIENDLIST_DEL = new ClientProt(81, -1);
 
     @ObfuscatedName("jm.cm")
     public static final ClientProt OPLOC5 = new ClientProt(82, 9);
@@ -262,7 +262,7 @@ public class ClientProt {
     public static final ClientProt OPLOC4 = new ClientProt(85, 9);
 
     @ObfuscatedName("jm.cf")
-    public static final ClientProt field2935 = new ClientProt(86, -1);
+    public static final ClientProt MESSAGE_PUBLIC = new ClientProt(86, -1);
 
     @ObfuscatedName("jm.cs")
     public static final ClientProt MESSAGE_QUICKCHAT_PUBLIC = new ClientProt(87, -1);
@@ -289,7 +289,7 @@ public class ClientProt {
     public static final ClientProt EVENT_APPLET_FOCUS = new ClientProt(94, 1);
 
     @ObfuscatedName("jm.cd")
-    public static final ClientProt field2919 = new ClientProt(95, -2);
+    public static final ClientProt MESSAGE_PRIVATE = new ClientProt(95, -2);
 
     @ObfuscatedName("jm.ce")
     public static final ClientProt OPOBJT = new ClientProt(96, 15);

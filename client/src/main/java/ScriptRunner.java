@@ -9204,7 +9204,7 @@ public final class ScriptRunner {
             return;
         }
         ServerConnection var3 = client.getCurrentConnection();
-        ClientMessage var4 = ClientMessage.createMessage(ClientProt.field2919, var3.randomOut);
+        ClientMessage var4 = ClientMessage.createMessage(ClientProt.MESSAGE_PRIVATE, var3.randomOut);
         var4.buf.p2(0);
         int var5 = var4.buf.pos;
         var4.buf.pjstr(var1);
