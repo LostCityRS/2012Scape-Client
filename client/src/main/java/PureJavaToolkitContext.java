@@ -19,7 +19,7 @@ public class PureJavaToolkitContext {
     public float field864 = 1.0F - this.field867;
 
     @ObfuscatedName("ak.t")
-    public int field869 = 0;
+    public int fadeColour = 0;
 
     @ObfuscatedName("ak.l")
     public int field870 = 0;
@@ -43,7 +43,7 @@ public class PureJavaToolkitContext {
     public Matrix4x3 field877 = new Matrix4x3();
 
     @ObfuscatedName("ak.p")
-    public PureJavaRasteriser field868;
+    public PureJavaRasteriser rasteriser;
 
     @ObfuscatedName("ak.w")
     public Matrix4x3 field878 = new Matrix4x3();
@@ -140,7 +140,7 @@ public class PureJavaToolkitContext {
 
     public PureJavaToolkitContext(PureJavaToolkit arg0) {
         this.field882 = arg0;
-        this.field868 = new PureJavaRasteriser(arg0, this);
+        this.rasteriser = new PureJavaRasteriser(arg0, this);
         for (int var2 = 0; var2 < 7; var2++) {
             this.field901[var2] = new PureJavaModel(this.field882);
             this.field899[var2] = new PureJavaModel(this.field882);
@@ -153,7 +153,7 @@ public class PureJavaToolkitContext {
 
     @ObfuscatedName("ak.u(I)V")
     public void method1948() {
-        this.field868 = new PureJavaRasteriser(this.field882, this);
+        this.rasteriser = new PureJavaRasteriser(this.field882, this);
     }
 
     @ObfuscatedName("ak.j(Ljava/lang/Runnable;I)V")

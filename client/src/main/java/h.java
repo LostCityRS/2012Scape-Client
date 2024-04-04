@@ -153,7 +153,7 @@ public class h extends Model implements ua {
     public void method239(Matrix4x3 arg0, int arg1, boolean arg2) {
         Matrix4x4 var4 = this.field474.method987().field376;
         var4.method5385(arg0);
-        this.aa(var4.field3480, arg1, arg2);
+        this.aa(var4.entries, arg1, arg2);
     }
 
     @ObfuscatedName("h.as(Lkc;Ldy;I)V")

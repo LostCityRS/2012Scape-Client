@@ -291,10 +291,10 @@ public class SkyBox {
         } else if (arg11) {
             Matrix4x4 var23 = arg0.method528();
             Matrix4x4 var24 = arg0.method528();
-            var23.field3480[2] = var23.field3480[3];
-            var23.field3480[6] = var23.field3480[7];
-            var23.field3480[10] = var23.field3480[11];
-            var23.field3480[14] = var23.field3480[15];
+            var23.entries[2] = var23.entries[3];
+            var23.entries[6] = var23.entries[7];
+            var23.entries[10] = var23.entries[11];
+            var23.entries[14] = var23.entries[15];
             arg0.method784(var23);
             this.method6375(arg0, arg6, arg7, arg8, arg12);
             arg0.method784(var24);

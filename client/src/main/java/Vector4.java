@@ -71,10 +71,10 @@ public class Vector4 {
         float var3 = this.field3427;
         float var4 = this.field3428;
         float var5 = this.field3429;
-        this.field3426 = arg0.field3480[12] * var5 + arg0.field3480[8] * var4 + arg0.field3480[0] * var2 + arg0.field3480[4] * var3;
-        this.field3427 = arg0.field3480[13] * var5 + arg0.field3480[9] * var4 + arg0.field3480[1] * var2 + arg0.field3480[5] * var3;
-        this.field3428 = arg0.field3480[14] * var5 + arg0.field3480[10] * var4 + arg0.field3480[2] * var2 + arg0.field3480[6] * var3;
-        this.field3429 = arg0.field3480[15] * var5 + arg0.field3480[11] * var4 + arg0.field3480[3] * var2 + arg0.field3480[7] * var3;
+        this.field3426 = arg0.entries[12] * var5 + arg0.entries[8] * var4 + arg0.entries[0] * var2 + arg0.entries[4] * var3;
+        this.field3427 = arg0.entries[13] * var5 + arg0.entries[9] * var4 + arg0.entries[1] * var2 + arg0.entries[5] * var3;
+        this.field3428 = arg0.entries[14] * var5 + arg0.entries[10] * var4 + arg0.entries[2] * var2 + arg0.entries[6] * var3;
+        this.field3429 = arg0.entries[15] * var5 + arg0.entries[11] * var4 + arg0.entries[3] * var2 + arg0.entries[7] * var3;
     }
 
     public String toString() {

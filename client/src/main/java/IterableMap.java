@@ -28,8 +28,8 @@ public final class IterableMap implements Iterable {
         this.field6725 = new Node[arg0];
         for (int var2 = 0; var2 < arg0; var2++) {
             Node var3 = this.field6725[var2] = new Node();
-            var3.field4226 = var3;
-            var3.field4227 = var3;
+            var3.prev = var3;
+            var3.next = var3;
         }
     }
 
@@ -37,10 +37,10 @@ public final class IterableMap implements Iterable {
     public Node getNode(long arg0) {
         this.field6724 = arg0;
         Node var3 = this.field6725[(int) (arg0 & (long) (this.field6722 - 1))];
-        for (this.field6727 = var3.field4226; this.field6727 != var3; this.field6727 = this.field6727.field4226) {
+        for (this.field6727 = var3.prev; this.field6727 != var3; this.field6727 = this.field6727.prev) {
             if (this.field6727.field4228 == arg0) {
                 Node var4 = this.field6727;
-                this.field6727 = this.field6727.field4226;
+                this.field6727 = this.field6727.prev;
                 return var4;
             }
         }
@@ -57,10 +57,10 @@ public final class IterableMap implements Iterable {
         while (this.field6727 != var1) {
             if (this.field6727.field4228 == this.field6724) {
                 Node var2 = this.field6727;
-                this.field6727 = this.field6727.field4226;
+                this.field6727 = this.field6727.prev;
                 return var2;
             }
-            this.field6727 = this.field6727.field4226;
+            this.field6727 = this.field6727.prev;
         }
         this.field6727 = null;
         return null;
@@ -71,7 +71,7 @@ public final class IterableMap implements Iterable {
         int var2 = 0;
         for (int var3 = 0; var3 < this.field6722; var3++) {
             Node var4 = this.field6725[var3];
-            for (Node var5 = var4.field4226; var5 != var4; var5 = var5.field4226) {
+            for (Node var5 = var4.prev; var5 != var4; var5 = var5.prev) {
                 arg0[var2++] = var5;
             }
         }
@@ -83,7 +83,7 @@ public final class IterableMap implements Iterable {
         int var1 = 0;
         for (int var2 = 0; var2 < this.field6722; var2++) {
             Node var3 = this.field6725[var2];
-            for (Node var4 = var3.field4226; var4 != var3; var4 = var4.field4226) {
+            for (Node var4 = var3.prev; var4 != var3; var4 = var4.prev) {
                 var1++;
             }
         }
@@ -91,24 +91,24 @@ public final class IterableMap implements Iterable {
     }
 
     @ObfuscatedName("uo.c(Lnz;J)V")
-    public void method11927(Node arg0, long arg1) {
-        if (arg0.field4227 != null) {
+    public void put(Node arg0, long arg1) {
+        if (arg0.next != null) {
             arg0.remove();
         }
         Node var4 = this.field6725[(int) (arg1 & (long) (this.field6722 - 1))];
-        arg0.field4227 = var4.field4227;
-        arg0.field4226 = var4;
-        arg0.field4227.field4226 = arg0;
-        arg0.field4226.field4227 = arg0;
+        arg0.next = var4.next;
+        arg0.prev = var4;
+        arg0.next.prev = arg0;
+        arg0.prev.next = arg0;
         arg0.field4228 = arg1;
     }
 
     @ObfuscatedName("uo.m(I)V")
-    public void method11925() {
+    public void clear() {
         for (int var1 = 0; var1 < this.field6722; var1++) {
             Node var2 = this.field6725[var1];
             while (true) {
-                Node var3 = var2.field4226;
+                Node var3 = var2.prev;
                 if (var2 == var3) {
                     break;
                 }
@@ -129,7 +129,7 @@ public final class IterableMap implements Iterable {
     public Node method11929() {
         if (this.field6723 > 0 && this.field6725[this.field6723 - 1] != this.field6726) {
             Node var1 = this.field6726;
-            this.field6726 = var1.field4226;
+            this.field6726 = var1.prev;
             return var1;
         }
         Node var2;
@@ -137,9 +137,9 @@ public final class IterableMap implements Iterable {
             if (this.field6723 >= this.field6722) {
                 return null;
             }
-            var2 = this.field6725[++this.field6723 - 1].field4226;
+            var2 = this.field6725[++this.field6723 - 1].prev;
         } while (this.field6725[this.field6723 - 1] == var2);
-        this.field6726 = var2.field4226;
+        this.field6726 = var2.prev;
         return var2;
     }
 

@@ -17,8 +17,8 @@ public class CutsceneAction_Sub15 extends CutsceneAction {
 
     @ObfuscatedName("zy.j(I)V")
     public void method2873() {
-        if (client.field9059 != -1) {
-            Statics.method3211(client.field9059, this.field8471, this.field8470);
+        if (client.cutsceneId != -1) {
+            Statics.method3211(client.cutsceneId, this.field8471, this.field8470);
         }
     }
 }

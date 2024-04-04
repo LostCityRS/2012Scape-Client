@@ -68,7 +68,7 @@ public class FrameSet extends SecondaryNode {
             var19.pos = 1;
             int var20 = var19.g2();
             AnimBase var21 = null;
-            for (AnimBase var22 = (AnimBase) var12.last(); var22 != null; var22 = (AnimBase) var12.method11567()) {
+            for (AnimBase var22 = (AnimBase) var12.last(); var22 != null; var22 = (AnimBase) var12.prev()) {
                 if (var22.field9357 == var20) {
                     var21 = var22;
                     break;

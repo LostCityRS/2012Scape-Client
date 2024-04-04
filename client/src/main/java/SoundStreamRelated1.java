@@ -1,10 +1,10 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("akw")
-public class SoundStreamRelated1 extends SoundStream {
+public class SoundStreamRelated1 extends SoundAudioBuss {
 
     public SoundStreamRelated1(SynthVariableRateSoundPacket arg0, int arg1, int arg2, int arg3) {
-        this.field9474 = arg0;
+        this.sound = arg0;
         this.field10272 = arg0.field10294;
         this.field10275 = arg0.field10292;
         this.field10276 = arg0.field10293;
@@ -16,14 +16,14 @@ public class SoundStreamRelated1 extends SoundStream {
     }
 
     @ObfuscatedName("akw.m([III)V")
-    public synchronized void method15034(int[] arg0, int arg1, int arg2) {
+    public synchronized void read(int[] arg0, int arg1, int arg2) {
         if (this.field10263 == 0 && this.field10273 == 0) {
-            this.method15046(arg2);
+            this.skip(arg2);
             return;
         }
         int var4 = this.field10272 << 8;
         int var5 = this.field10275 << 8;
-        int var6 = ((SynthVariableRateSoundPacket) this.field9474).field10574.length << 8;
+        int var6 = ((SynthVariableRateSoundPacket) this.sound).field10574.length << 8;
         int var7 = var5 - var4;
         if (var7 <= 0) {
             this.field10265 = 0;
@@ -52,7 +52,7 @@ public class SoundStreamRelated1 extends SoundStream {
                     label131:
                     {
                         if (this.field10264 < 0) {
-                            var8 = this.method16997(arg0, arg1, var4, var9, ((SynthVariableRateSoundPacket) this.field9474).field10574[this.field10272]);
+                            var8 = this.method16997(arg0, arg1, var4, var9, ((SynthVariableRateSoundPacket) this.sound).field10574[this.field10272]);
                             if (this.field10266 >= var4) {
                                 return;
                             }
@@ -63,7 +63,7 @@ public class SoundStreamRelated1 extends SoundStream {
                             }
                         }
                         do {
-                            var8 = this.method17025(arg0, var8, var5, var9, ((SynthVariableRateSoundPacket) this.field9474).field10574[this.field10275 - 1]);
+                            var8 = this.method17025(arg0, var8, var5, var9, ((SynthVariableRateSoundPacket) this.sound).field10574[this.field10275 - 1]);
                             if (this.field10266 < var5) {
                                 return;
                             }
@@ -72,7 +72,7 @@ public class SoundStreamRelated1 extends SoundStream {
                             if (--this.field10265 == 0) {
                                 break;
                             }
-                            var8 = this.method16997(arg0, var8, var4, var9, ((SynthVariableRateSoundPacket) this.field9474).field10574[this.field10272]);
+                            var8 = this.method16997(arg0, var8, var4, var9, ((SynthVariableRateSoundPacket) this.sound).field10574[this.field10272]);
                             if (this.field10266 >= var4) {
                                 return;
                             }
@@ -82,7 +82,7 @@ public class SoundStreamRelated1 extends SoundStream {
                     }
                 } else if (this.field10264 < 0) {
                     while (true) {
-                        var8 = this.method16997(arg0, var8, var4, var9, ((SynthVariableRateSoundPacket) this.field9474).field10574[this.field10275 - 1]);
+                        var8 = this.method16997(arg0, var8, var4, var9, ((SynthVariableRateSoundPacket) this.sound).field10574[this.field10275 - 1]);
                         if (this.field10266 >= var4) {
                             return;
                         }
@@ -97,7 +97,7 @@ public class SoundStreamRelated1 extends SoundStream {
                     }
                 } else {
                     while (true) {
-                        var8 = this.method17025(arg0, var8, var5, var9, ((SynthVariableRateSoundPacket) this.field9474).field10574[this.field10272]);
+                        var8 = this.method17025(arg0, var8, var5, var9, ((SynthVariableRateSoundPacket) this.sound).field10574[this.field10272]);
                         if (this.field10266 < var5) {
                             return;
                         }
@@ -129,7 +129,7 @@ public class SoundStreamRelated1 extends SoundStream {
             }
         } else if (this.field10276) {
             if (this.field10264 < 0) {
-                var8 = this.method16997(arg0, arg1, var4, var9, ((SynthVariableRateSoundPacket) this.field9474).field10574[this.field10272]);
+                var8 = this.method16997(arg0, arg1, var4, var9, ((SynthVariableRateSoundPacket) this.sound).field10574[this.field10272]);
                 if (this.field10266 >= var4) {
                     return;
                 }
@@ -137,13 +137,13 @@ public class SoundStreamRelated1 extends SoundStream {
                 this.field10264 = -(this.field10264);
             }
             while (true) {
-                int var10 = this.method17025(arg0, var8, var5, var9, ((SynthVariableRateSoundPacket) this.field9474).field10574[this.field10275 - 1]);
+                int var10 = this.method17025(arg0, var8, var5, var9, ((SynthVariableRateSoundPacket) this.sound).field10574[this.field10275 - 1]);
                 if (this.field10266 < var5) {
                     return;
                 }
                 this.field10266 = var5 + var5 - 1 - this.field10266;
                 this.field10264 = -(this.field10264);
-                var8 = this.method16997(arg0, var10, var4, var9, ((SynthVariableRateSoundPacket) this.field9474).field10574[this.field10272]);
+                var8 = this.method16997(arg0, var10, var4, var9, ((SynthVariableRateSoundPacket) this.sound).field10574[this.field10272]);
                 if (this.field10266 >= var4) {
                     return;
                 }
@@ -152,7 +152,7 @@ public class SoundStreamRelated1 extends SoundStream {
             }
         } else if (this.field10264 < 0) {
             while (true) {
-                var8 = this.method16997(arg0, var8, var4, var9, ((SynthVariableRateSoundPacket) this.field9474).field10574[this.field10275 - 1]);
+                var8 = this.method16997(arg0, var8, var4, var9, ((SynthVariableRateSoundPacket) this.sound).field10574[this.field10275 - 1]);
                 if (this.field10266 >= var4) {
                     return;
                 }
@@ -160,7 +160,7 @@ public class SoundStreamRelated1 extends SoundStream {
             }
         } else {
             while (true) {
-                var8 = this.method17025(arg0, var8, var5, var9, ((SynthVariableRateSoundPacket) this.field9474).field10574[this.field10272]);
+                var8 = this.method17025(arg0, var8, var5, var9, ((SynthVariableRateSoundPacket) this.sound).field10574[this.field10272]);
                 if (this.field10266 < var5) {
                     return;
                 }
@@ -179,15 +179,15 @@ public class SoundStreamRelated1 extends SoundStream {
                 }
                 this.field10273 += arg1;
                 if (this.field10264 == 256 && (this.field10266 & 0xFF) == 0) {
-                    if (Statics.field4016) {
-                        arg1 = method17005(0, ((SynthVariableRateSoundPacket) this.field9474).field10574, arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this);
+                    if (Statics.stereo) {
+                        arg1 = method17005(0, ((SynthVariableRateSoundPacket) this.sound).field10574, arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this);
                     } else {
-                        arg1 = method17047(((SynthVariableRateSoundPacket) this.field9474).field10574, arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this);
+                        arg1 = method17047(((SynthVariableRateSoundPacket) this.sound).field10574, arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this);
                     }
-                } else if (Statics.field4016) {
-                    arg1 = method17007(0, 0, ((SynthVariableRateSoundPacket) this.field9474).field10574, arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this, this.field10264, arg4);
+                } else if (Statics.stereo) {
+                    arg1 = method17007(0, 0, ((SynthVariableRateSoundPacket) this.sound).field10574, arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this, this.field10264, arg4);
                 } else {
-                    arg1 = method17048(0, 0, ((SynthVariableRateSoundPacket) this.field9474).field10574, arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this, this.field10264, arg4);
+                    arg1 = method17048(0, 0, ((SynthVariableRateSoundPacket) this.sound).field10574, arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this, this.field10264, arg4);
                 }
                 this.field10273 -= arg1;
                 if (this.field10273 != 0) {
@@ -199,15 +199,15 @@ public class SoundStreamRelated1 extends SoundStream {
                 return arg3;
             }
             if (this.field10264 == 256 && (this.field10266 & 0xFF) == 0) {
-                if (Statics.field4016) {
-                    return method17027(0, ((SynthVariableRateSoundPacket) this.field9474).field10574, arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this);
+                if (Statics.stereo) {
+                    return method17027(0, ((SynthVariableRateSoundPacket) this.sound).field10574, arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this);
                 }
-                return method16998(((SynthVariableRateSoundPacket) this.field9474).field10574, arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this);
+                return method16998(((SynthVariableRateSoundPacket) this.sound).field10574, arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this);
             }
-            if (Statics.field4016) {
-                return method17002(0, 0, ((SynthVariableRateSoundPacket) this.field9474).field10574, arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this, this.field10264, arg4);
+            if (Statics.stereo) {
+                return method17002(0, 0, ((SynthVariableRateSoundPacket) this.sound).field10574, arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this, this.field10264, arg4);
             }
-            return method17001(0, 0, ((SynthVariableRateSoundPacket) this.field9474).field10574, arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this, this.field10264, arg4);
+            return method17001(0, 0, ((SynthVariableRateSoundPacket) this.sound).field10574, arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this, this.field10264, arg4);
         }
     }
 
@@ -221,15 +221,15 @@ public class SoundStreamRelated1 extends SoundStream {
                 }
                 this.field10273 += arg1;
                 if (this.field10264 == -256 && (this.field10266 & 0xFF) == 0) {
-                    if (Statics.field4016) {
-                        arg1 = method17022(0, ((SynthVariableRateSoundPacket) this.field9474).field10574, arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this);
+                    if (Statics.stereo) {
+                        arg1 = method17022(0, ((SynthVariableRateSoundPacket) this.sound).field10574, arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this);
                     } else {
-                        arg1 = method17015(((SynthVariableRateSoundPacket) this.field9474).field10574, arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this);
+                        arg1 = method17015(((SynthVariableRateSoundPacket) this.sound).field10574, arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this);
                     }
-                } else if (Statics.field4016) {
-                    arg1 = method17012(0, 0, ((SynthVariableRateSoundPacket) this.field9474).field10574, arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this, this.field10264, arg4);
+                } else if (Statics.stereo) {
+                    arg1 = method17012(0, 0, ((SynthVariableRateSoundPacket) this.sound).field10574, arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this, this.field10264, arg4);
                 } else {
-                    arg1 = method17046(0, 0, ((SynthVariableRateSoundPacket) this.field9474).field10574, arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this, this.field10264, arg4);
+                    arg1 = method17046(0, 0, ((SynthVariableRateSoundPacket) this.sound).field10574, arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this, this.field10264, arg4);
                 }
                 this.field10273 -= arg1;
                 if (this.field10273 != 0) {
@@ -241,15 +241,15 @@ public class SoundStreamRelated1 extends SoundStream {
                 return arg3;
             }
             if (this.field10264 == -256 && (this.field10266 & 0xFF) == 0) {
-                if (Statics.field4016) {
-                    return method17000(0, ((SynthVariableRateSoundPacket) this.field9474).field10574, arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this);
+                if (Statics.stereo) {
+                    return method17000(0, ((SynthVariableRateSoundPacket) this.sound).field10574, arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this);
                 }
-                return method17008(((SynthVariableRateSoundPacket) this.field9474).field10574, arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this);
+                return method17008(((SynthVariableRateSoundPacket) this.sound).field10574, arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this);
             }
-            if (Statics.field4016) {
-                return method17031(0, 0, ((SynthVariableRateSoundPacket) this.field9474).field10574, arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this, this.field10264, arg4);
+            if (Statics.stereo) {
+                return method17031(0, 0, ((SynthVariableRateSoundPacket) this.sound).field10574, arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this, this.field10264, arg4);
             }
-            return method17006(0, 0, ((SynthVariableRateSoundPacket) this.field9474).field10574, arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this, this.field10264, arg4);
+            return method17006(0, 0, ((SynthVariableRateSoundPacket) this.sound).field10574, arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this, this.field10264, arg4);
         }
     }
 

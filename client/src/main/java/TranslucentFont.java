@@ -48,7 +48,7 @@ public class TranslucentFont extends Font {
 
     @ObfuscatedName("zu.UA(CIIIZ)V")
     public void UA(char arg0, int arg1, int arg2, int arg3, boolean arg4) {
-        if (this.field8419.field8001 == null) {
+        if (this.field8419.colour == null) {
             return;
         }
         int var6 = this.field8422[arg0] + arg1;
@@ -60,20 +60,20 @@ public class TranslucentFont extends Font {
         int var12 = var10 - var8;
         int var13 = 0;
         int var14 = 0;
-        if (var7 < this.field8419.field8027) {
-            int var15 = this.field8419.field8027 - var7;
+        if (var7 < this.field8419.clipMaxX) {
+            int var15 = this.field8419.clipMaxX - var7;
             var9 -= var15;
-            var7 = this.field8419.field8027;
+            var7 = this.field8419.clipMaxX;
             var14 += var8 * var15;
             var11 += var10 * var15;
         }
         if (var7 + var9 > this.field8419.field8008) {
             var9 -= var7 + var9 - this.field8419.field8008;
         }
-        if (var6 < this.field8419.field8005) {
-            int var16 = this.field8419.field8005 - var6;
+        if (var6 < this.field8419.clipMinX) {
+            int var16 = this.field8419.clipMinX - var6;
             var8 -= var16;
-            var6 = this.field8419.field8005;
+            var6 = this.field8419.clipMinX;
             var14 += var16;
             var11 += var16;
             var13 += var16;
@@ -86,7 +86,7 @@ public class TranslucentFont extends Font {
             var12 += var17;
         }
         if (var8 > 0 && var9 > 0) {
-            this.method13848(this.field8418[arg0], this.field8419.field8001, arg3, var14, var11, var8, var9, var12, var13);
+            this.method13848(this.field8418[arg0], this.field8419.colour, arg3, var14, var11, var8, var9, var12, var13);
         }
     }
 
@@ -111,7 +111,7 @@ public class TranslucentFont extends Font {
 
     @ObfuscatedName("zu.b(CIIIZLta;II)V")
     public void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, GraphicsRelated arg5, int arg6, int arg7) {
-        if (this.field8419.field8001 == null) {
+        if (this.field8419.colour == null) {
             return;
         }
         if (arg5 == null) {
@@ -127,20 +127,20 @@ public class TranslucentFont extends Font {
         int var15 = var13 - var11;
         int var16 = 0;
         int var17 = 0;
-        if (var10 < this.field8419.field8027) {
-            int var18 = this.field8419.field8027 - var10;
+        if (var10 < this.field8419.clipMaxX) {
+            int var18 = this.field8419.clipMaxX - var10;
             var12 -= var18;
-            var10 = this.field8419.field8027;
+            var10 = this.field8419.clipMaxX;
             var17 += var11 * var18;
             var14 += var13 * var18;
         }
         if (var10 + var12 > this.field8419.field8008) {
             var12 -= var10 + var12 - this.field8419.field8008;
         }
-        if (var9 < this.field8419.field8005) {
-            int var19 = this.field8419.field8005 - var9;
+        if (var9 < this.field8419.clipMinX) {
+            int var19 = this.field8419.clipMinX - var9;
             var11 -= var19;
-            var9 = this.field8419.field8005;
+            var9 = this.field8419.clipMinX;
             var17 += var19;
             var14 += var19;
             var16 += var19;
@@ -153,7 +153,7 @@ public class TranslucentFont extends Font {
             var15 += var20;
         }
         if (var11 > 0 && var12 > 0) {
-            this.method13849(this.field8418[arg0], this.field8419.field8001, arg3, var17, var14, var11, var12, var15, var16, var9, var10, this.field8420[arg0], arg5, arg6, arg7);
+            this.method13849(this.field8418[arg0], this.field8419.colour, arg3, var17, var14, var11, var12, var15, var16, var9, var10, this.field8420[arg0], arg5, arg6, arg7);
         }
     }
 
@@ -162,7 +162,7 @@ public class TranslucentFont extends Font {
         PureJavaGraphicsRelated var16 = (PureJavaGraphicsRelated) arg12;
         int[] var17 = var16.field7648;
         int[] var18 = var16.field7649;
-        int var19 = arg9 - this.field8419.field8005;
+        int var19 = arg9 - this.field8419.clipMinX;
         int var20 = arg10;
         if (arg14 > arg10) {
             var20 = arg14;

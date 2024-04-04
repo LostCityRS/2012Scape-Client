@@ -37,14 +37,14 @@ public class StaticSceneryEntity extends PrimaryLayerEntity implements Location 
     public boolean field10512;
 
     public StaticSceneryEntity(Scene arg0, RendererToolkit arg1, LocTypeList arg2, LocType arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11, int arg12, int arg13, int arg14, int arg15, boolean arg16) {
-        super(arg0, arg4, arg5, arg6, arg7, arg8, arg10, arg11, arg12, arg13, arg3.field6527 == 1, method1416(arg14, arg15));
+        super(arg0, arg4, arg5, arg6, arg7, arg8, arg10, arg11, arg12, arg13, arg3.raiseobject == 1, method1416(arg14, arg15));
         this.field7540 = arg2;
         this.field9810 = arg3.field6474;
         this.field9809 = (byte) arg5;
         this.field7539 = arg9;
         this.field7541 = (byte) arg14;
         this.field7538 = (byte) arg15;
-        this.field7536 = arg3.field6493 != 0 && !arg9;
+        this.field7536 = arg3.active != 0 && !arg9;
         this.field7533 = arg16;
         this.field10512 = arg1.method449() && arg3.field6541 && !this.field7539 && Statics.options.field9651.method15747() != 0;
         int var18 = 2048;
@@ -109,7 +109,7 @@ public class StaticSceneryEntity extends PrimaryLayerEntity implements Location 
 
     @ObfuscatedName("yp.cx(Lra;IZI)Luz;")
     public Pair method12864(RendererToolkit arg0, int arg1, boolean arg2) {
-        LocType var4 = this.field7540.method11471(this.field9810);
+        LocType var4 = this.field7540.get(this.field9810);
         FloorModel var5;
         FloorModel var6;
         if (this.field7539) {
@@ -192,7 +192,7 @@ public class StaticSceneryEntity extends PrimaryLayerEntity implements Location 
     }
 
     @ObfuscatedName("yp.u(B)I")
-    public int method2401() {
+    public int getType() {
         return this.field9810;
     }
 

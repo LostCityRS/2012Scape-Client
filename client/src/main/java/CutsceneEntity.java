@@ -46,8 +46,8 @@ public final class CutsceneEntity {
                 this.field1558.localPlayerIndex = this.field1559;
                 this.field1558.field8618 = client.loopCycle;
                 this.field1558.method16149(Statics.field3774.method12565(this.field1560));
-                this.field1558.setSize(this.field1558.field10075.field7213);
-                this.field1558.field8636 = this.field1558.field10075.field7241 << 3;
+                this.field1558.setSize(this.field1558.type.field7213);
+                this.field1558.field8636 = this.field1558.type.field7241 << 3;
                 this.field1558.field8600 = ++CutsceneManager.field1530 - 1;
             } else {
                 this.field1562 = new PlayerEntity(client.world.getScene(), 25);

@@ -13,7 +13,7 @@ public class SoundRelated14 {
     public MidiSong field1593;
 
     @ObfuscatedName("eq.t")
-    public MixBuss field1588;
+    public MidiAudioBuss field1588;
 
     @ObfuscatedName("eq.l")
     public SynthSoundRelated12 field1595 = null;
@@ -24,12 +24,12 @@ public class SoundRelated14 {
     public SoundRelated14(Js5 arg0, int arg1) {
         this.field1594 = arg0;
         this.field1591 = arg1;
-        this.field1588 = new MixBuss();
+        this.field1588 = new MidiAudioBuss();
         this.field1588.method16283(9, 128);
     }
 
     @ObfuscatedName("eq.u(B)Laih;")
-    public MixBuss method3002() {
+    public MidiAudioBuss method3002() {
         return this.field1588;
     }
 

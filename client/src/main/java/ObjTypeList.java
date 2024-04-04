@@ -108,7 +108,7 @@ public class ObjTypeList implements PlayerTypeListRelated {
             if (var8.field7055 != null) {
                 boolean var9 = false;
                 for (Node var10 = var8.field7055.method11928(); var10 != null; var10 = var8.field7055.method11929()) {
-                    ParamType var11 = this.field7141.method12600((int) var10.field4228);
+                    ParamType var11 = this.field7141.get((int) var10.field4228);
                     if (var11.field7289) {
                         var10.remove();
                     } else {

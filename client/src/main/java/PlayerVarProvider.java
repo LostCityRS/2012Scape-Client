@@ -16,7 +16,7 @@ public final class PlayerVarProvider {
     @ObfuscatedName("ci.u(I)V")
     public void method2377() {
         if (this.field1196 != null) {
-            this.field1196.method11925();
+            this.field1196.clear();
         }
     }
 
@@ -28,7 +28,7 @@ public final class PlayerVarProvider {
         IntNode var3 = (IntNode) this.field1196.getNode((long) arg0);
         if (var3 == null) {
             IntNode var4 = new IntNode(arg1);
-            this.field1196.method11927(var4, (long) arg0);
+            this.field1196.put(var4, (long) arg0);
         } else {
             var3.field9556 = arg1;
         }

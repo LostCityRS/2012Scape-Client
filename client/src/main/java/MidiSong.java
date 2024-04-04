@@ -352,7 +352,7 @@ public class MidiSong extends Node {
                             ObjectNode var20 = (ObjectNode) this.field9382.getNode((long) var19);
                             if (var20 == null) {
                                 var20 = new ObjectNode(new byte[128]);
-                                this.field9382.method11927(var20, (long) var19);
+                                this.field9382.put(var20, (long) var19);
                             }
                             ((byte[]) var20.value)[var17] = 1;
                         }

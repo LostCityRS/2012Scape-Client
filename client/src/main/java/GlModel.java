@@ -2841,15 +2841,15 @@ public class GlModel extends Model {
                 if (var4.field1372 != null) {
                     var5 = var4.field1372;
                 }
-                var5.field1378 = (int) (var2.field3480[8] * (float) this.field7904[var4.field1374] + var2.field3480[0] * (float) this.field7865[var4.field1374] + var2.field3480[4] * (float) this.field7866[var4.field1374] + var2.field3480[12]);
-                var5.field1379 = (int) (var2.field3480[9] * (float) this.field7904[var4.field1374] + var2.field3480[1] * (float) this.field7865[var4.field1374] + var2.field3480[5] * (float) this.field7866[var4.field1374] + var2.field3480[13]);
-                var5.field1380 = (int) (var2.field3480[10] * (float) this.field7904[var4.field1374] + var2.field3480[2] * (float) this.field7865[var4.field1374] + var2.field3480[6] * (float) this.field7866[var4.field1374] + var2.field3480[14]);
-                var5.field1381 = (int) (var2.field3480[8] * (float) this.field7904[var4.field1375] + var2.field3480[0] * (float) this.field7865[var4.field1375] + var2.field3480[4] * (float) this.field7866[var4.field1375] + var2.field3480[12]);
-                var5.field1377 = (int) (var2.field3480[9] * (float) this.field7904[var4.field1375] + var2.field3480[1] * (float) this.field7865[var4.field1375] + var2.field3480[5] * (float) this.field7866[var4.field1375] + var2.field3480[13]);
-                var5.field1373 = (int) (var2.field3480[10] * (float) this.field7904[var4.field1375] + var2.field3480[2] * (float) this.field7865[var4.field1375] + var2.field3480[6] * (float) this.field7866[var4.field1375] + var2.field3480[14]);
-                var5.field1384 = (int) (var2.field3480[8] * (float) this.field7904[var4.field1376] + var2.field3480[0] * (float) this.field7865[var4.field1376] + var2.field3480[4] * (float) this.field7866[var4.field1376] + var2.field3480[12]);
-                var5.field1385 = (int) (var2.field3480[9] * (float) this.field7904[var4.field1376] + var2.field3480[1] * (float) this.field7865[var4.field1376] + var2.field3480[5] * (float) this.field7866[var4.field1376] + var2.field3480[13]);
-                var5.field1386 = (int) (var2.field3480[10] * (float) this.field7904[var4.field1376] + var2.field3480[2] * (float) this.field7865[var4.field1376] + var2.field3480[6] * (float) this.field7866[var4.field1376] + var2.field3480[14]);
+                var5.field1378 = (int) (var2.entries[8] * (float) this.field7904[var4.field1374] + var2.entries[0] * (float) this.field7865[var4.field1374] + var2.entries[4] * (float) this.field7866[var4.field1374] + var2.entries[12]);
+                var5.field1379 = (int) (var2.entries[9] * (float) this.field7904[var4.field1374] + var2.entries[1] * (float) this.field7865[var4.field1374] + var2.entries[5] * (float) this.field7866[var4.field1374] + var2.entries[13]);
+                var5.field1380 = (int) (var2.entries[10] * (float) this.field7904[var4.field1374] + var2.entries[2] * (float) this.field7865[var4.field1374] + var2.entries[6] * (float) this.field7866[var4.field1374] + var2.entries[14]);
+                var5.field1381 = (int) (var2.entries[8] * (float) this.field7904[var4.field1375] + var2.entries[0] * (float) this.field7865[var4.field1375] + var2.entries[4] * (float) this.field7866[var4.field1375] + var2.entries[12]);
+                var5.field1377 = (int) (var2.entries[9] * (float) this.field7904[var4.field1375] + var2.entries[1] * (float) this.field7865[var4.field1375] + var2.entries[5] * (float) this.field7866[var4.field1375] + var2.entries[13]);
+                var5.field1373 = (int) (var2.entries[10] * (float) this.field7904[var4.field1375] + var2.entries[2] * (float) this.field7865[var4.field1375] + var2.entries[6] * (float) this.field7866[var4.field1375] + var2.entries[14]);
+                var5.field1384 = (int) (var2.entries[8] * (float) this.field7904[var4.field1376] + var2.entries[0] * (float) this.field7865[var4.field1376] + var2.entries[4] * (float) this.field7866[var4.field1376] + var2.entries[12]);
+                var5.field1385 = (int) (var2.entries[9] * (float) this.field7904[var4.field1376] + var2.entries[1] * (float) this.field7865[var4.field1376] + var2.entries[5] * (float) this.field7866[var4.field1376] + var2.entries[13]);
+                var5.field1386 = (int) (var2.entries[10] * (float) this.field7904[var4.field1376] + var2.entries[2] * (float) this.field7865[var4.field1376] + var2.entries[6] * (float) this.field7866[var4.field1376] + var2.entries[14]);
             }
         }
         if (this.field7909 == null) {
@@ -2866,9 +2866,9 @@ public class GlModel extends Model {
             } else {
                 var7.field1237.method5412(var2);
             }
-            var8.field1240 = (int) (var2.field3480[8] * (float) this.field7904[var7.field1239] + var2.field3480[0] * (float) this.field7865[var7.field1239] + var2.field3480[4] * (float) this.field7866[var7.field1239] + var2.field3480[12]);
-            var8.field1241 = (int) (var2.field3480[9] * (float) this.field7904[var7.field1239] + var2.field3480[1] * (float) this.field7865[var7.field1239] + var2.field3480[5] * (float) this.field7866[var7.field1239] + var2.field3480[13]);
-            var8.field1242 = (int) (var2.field3480[10] * (float) this.field7904[var7.field1239] + var2.field3480[2] * (float) this.field7865[var7.field1239] + var2.field3480[6] * (float) this.field7866[var7.field1239] + var2.field3480[14]);
+            var8.field1240 = (int) (var2.entries[8] * (float) this.field7904[var7.field1239] + var2.entries[0] * (float) this.field7865[var7.field1239] + var2.entries[4] * (float) this.field7866[var7.field1239] + var2.entries[12]);
+            var8.field1241 = (int) (var2.entries[9] * (float) this.field7904[var7.field1239] + var2.entries[1] * (float) this.field7865[var7.field1239] + var2.entries[5] * (float) this.field7866[var7.field1239] + var2.entries[13]);
+            var8.field1242 = (int) (var2.entries[10] * (float) this.field7904[var7.field1239] + var2.entries[2] * (float) this.field7865[var7.field1239] + var2.entries[6] * (float) this.field7866[var7.field1239] + var2.entries[14]);
         }
     }
 
@@ -2925,11 +2925,11 @@ public class GlModel extends Model {
             int var25 = field7916[var24];
             int var26 = field7917[var24];
             int var27 = field7918[var24];
-            float var28 = var6.field3480[10] * (float) var27 + var6.field3480[2] * (float) var25 + var6.field3480[6] * (float) var26 + var6.field3480[14];
-            float var29 = var6.field3480[11] * (float) var27 + var6.field3480[3] * (float) var25 + var6.field3480[7] * (float) var26 + var6.field3480[15];
+            float var28 = var6.entries[10] * (float) var27 + var6.entries[2] * (float) var25 + var6.entries[6] * (float) var26 + var6.entries[14];
+            float var29 = var6.entries[11] * (float) var27 + var6.entries[3] * (float) var25 + var6.entries[7] * (float) var26 + var6.entries[15];
             if (var28 >= -var29) {
-                float var30 = var6.field3480[8] * (float) var27 + var6.field3480[0] * (float) var25 + var6.field3480[4] * (float) var26 + var6.field3480[12];
-                float var31 = var6.field3480[9] * (float) var27 + var6.field3480[1] * (float) var25 + var6.field3480[5] * (float) var26 + var6.field3480[13];
+                float var30 = var6.entries[8] * (float) var27 + var6.entries[0] * (float) var25 + var6.entries[4] * (float) var26 + var6.entries[12];
+                float var31 = var6.entries[9] * (float) var27 + var6.entries[1] * (float) var25 + var6.entries[5] * (float) var26 + var6.entries[13];
                 int var32 = (int) (this.field7891.field8124 * var30 / var29 + this.field7891.field8123);
                 int var33 = (int) (this.field7891.field8224 * var31 / var29 + this.field7891.field8125);
                 if (var32 < var8) {
@@ -2961,11 +2961,11 @@ public class GlModel extends Model {
                 int var37 = this.field7865[var36];
                 int var38 = this.field7866[var36];
                 int var39 = this.field7904[var36];
-                float var40 = var6.field3480[10] * (float) var39 + var6.field3480[2] * (float) var37 + var6.field3480[6] * (float) var38 + var6.field3480[14];
-                float var41 = var6.field3480[11] * (float) var39 + var6.field3480[3] * (float) var37 + var6.field3480[7] * (float) var38 + var6.field3480[15];
+                float var40 = var6.entries[10] * (float) var39 + var6.entries[2] * (float) var37 + var6.entries[6] * (float) var38 + var6.entries[14];
+                float var41 = var6.entries[11] * (float) var39 + var6.entries[3] * (float) var37 + var6.entries[7] * (float) var38 + var6.entries[15];
                 if (var40 >= -var41) {
-                    float var42 = var6.field3480[8] * (float) var39 + var6.field3480[0] * (float) var37 + var6.field3480[4] * (float) var38 + var6.field3480[12];
-                    float var43 = var6.field3480[9] * (float) var39 + var6.field3480[1] * (float) var37 + var6.field3480[5] * (float) var38 + var6.field3480[13];
+                    float var42 = var6.entries[8] * (float) var39 + var6.entries[0] * (float) var37 + var6.entries[4] * (float) var38 + var6.entries[12];
+                    float var43 = var6.entries[9] * (float) var39 + var6.entries[1] * (float) var37 + var6.entries[5] * (float) var38 + var6.entries[13];
                     int var44 = this.field7906[var36];
                     int var45 = this.field7906[var36 + 1];
                     for (int var46 = var44; var46 < var45; var46++) {
@@ -3131,10 +3131,10 @@ public class GlModel extends Model {
             int var20 = this.field7880 + this.field7871 >> 1;
             int var21 = this.field7911 + this.field7895 >> 1;
             short var23 = this.field7899;
-            float var25 = var6.field3480[8] * (float) var21 + var6.field3480[0] * (float) var20 + var6.field3480[4] * (float) var23 + var6.field3480[12];
-            float var26 = var6.field3480[9] * (float) var21 + var6.field3480[1] * (float) var20 + var6.field3480[5] * (float) var23 + var6.field3480[13];
-            float var27 = var6.field3480[10] * (float) var21 + var6.field3480[2] * (float) var20 + var6.field3480[6] * (float) var23 + var6.field3480[14];
-            float var28 = var6.field3480[11] * (float) var21 + var6.field3480[3] * (float) var20 + var6.field3480[7] * (float) var23 + var6.field3480[15];
+            float var25 = var6.entries[8] * (float) var21 + var6.entries[0] * (float) var20 + var6.entries[4] * (float) var23 + var6.entries[12];
+            float var26 = var6.entries[9] * (float) var21 + var6.entries[1] * (float) var20 + var6.entries[5] * (float) var23 + var6.entries[13];
+            float var27 = var6.entries[10] * (float) var21 + var6.entries[2] * (float) var20 + var6.entries[6] * (float) var23 + var6.entries[14];
+            float var28 = var6.entries[11] * (float) var21 + var6.entries[3] * (float) var20 + var6.entries[7] * (float) var23 + var6.entries[15];
             if (var27 >= -var28) {
                 arg1.field1516 = (int) (this.field7891.field8124 * var25 / var28 + this.field7891.field8123);
                 arg1.field1518 = (int) (this.field7891.field8224 * var26 / var28 + this.field7891.field8125);
@@ -3142,10 +3142,10 @@ public class GlModel extends Model {
                 var18 = true;
             }
             short var30 = this.field7884;
-            float var32 = var6.field3480[8] * (float) var21 + var6.field3480[0] * (float) var20 + var6.field3480[4] * (float) var30 + var6.field3480[12];
-            float var33 = var6.field3480[9] * (float) var21 + var6.field3480[1] * (float) var20 + var6.field3480[5] * (float) var30 + var6.field3480[13];
-            float var34 = var6.field3480[10] * (float) var21 + var6.field3480[2] * (float) var20 + var6.field3480[6] * (float) var30 + var6.field3480[14];
-            float var35 = var6.field3480[11] * (float) var21 + var6.field3480[3] * (float) var20 + var6.field3480[7] * (float) var30 + var6.field3480[15];
+            float var32 = var6.entries[8] * (float) var21 + var6.entries[0] * (float) var20 + var6.entries[4] * (float) var30 + var6.entries[12];
+            float var33 = var6.entries[9] * (float) var21 + var6.entries[1] * (float) var20 + var6.entries[5] * (float) var30 + var6.entries[13];
+            float var34 = var6.entries[10] * (float) var21 + var6.entries[2] * (float) var20 + var6.entries[6] * (float) var30 + var6.entries[14];
+            float var35 = var6.entries[11] * (float) var21 + var6.entries[3] * (float) var20 + var6.entries[7] * (float) var30 + var6.entries[15];
             if (var34 >= -var35) {
                 arg1.field1519 = (int) (this.field7891.field8124 * var32 / var35 + this.field7891.field8123);
                 arg1.field1520 = (int) (this.field7891.field8224 * var33 / var35 + this.field7891.field8125);
@@ -3173,12 +3173,12 @@ public class GlModel extends Model {
             }
             if (var19) {
                 if (var27 / var28 > var34 / var35) {
-                    float var44 = var4.field3480[0] * (float) this.field7850 + var25 + var4.field3480[12];
-                    float var45 = var4.field3480[3] * (float) this.field7850 + var28 + var4.field3480[15];
+                    float var44 = var4.entries[0] * (float) this.field7850 + var25 + var4.entries[12];
+                    float var45 = var4.entries[3] * (float) this.field7850 + var28 + var4.entries[15];
                     arg1.field1517 = (int) (this.field7891.field8124 * var44 / var45 + (this.field7891.field8123 - (float) arg1.field1516));
                 } else {
-                    float var46 = var4.field3480[0] * (float) this.field7850 + var32 + var4.field3480[12];
-                    float var47 = var4.field3480[3] * (float) this.field7850 + var35 + var4.field3480[15];
+                    float var46 = var4.entries[0] * (float) this.field7850 + var32 + var4.entries[12];
+                    float var47 = var4.entries[3] * (float) this.field7850 + var35 + var4.entries[15];
                     arg1.field1517 = (int) (this.field7891.field8124 * var46 / var47 + (this.field7891.field8123 - (float) arg1.field1519));
                 }
                 arg1.field1521 = true;
@@ -3244,9 +3244,9 @@ public class GlModel extends Model {
                 float var6 = (float) (this.field7865[var4.field1179] + this.field7865[var4.field1175] + this.field7865[var4.field1177]) * 0.3333333F;
                 float var7 = (float) (this.field7866[var4.field1179] + this.field7866[var4.field1175] + this.field7866[var4.field1177]) * 0.3333333F;
                 float var8 = (float) (this.field7904[var4.field1179] + this.field7904[var4.field1175] + this.field7904[var4.field1177]) * 0.3333333F;
-                float var9 = arg0.field3480[8] * var8 + arg0.field3480[0] * var6 + arg0.field3480[4] * var7 + arg0.field3480[12];
-                float var10 = arg0.field3480[9] * var8 + arg0.field3480[1] * var6 + arg0.field3480[5] * var7 + arg0.field3480[13];
-                float var11 = arg0.field3480[10] * var8 + arg0.field3480[2] * var6 + arg0.field3480[6] * var7 + arg0.field3480[14];
+                float var9 = arg0.entries[8] * var8 + arg0.entries[0] * var6 + arg0.entries[4] * var7 + arg0.entries[12];
+                float var10 = arg0.entries[9] * var8 + arg0.entries[1] * var6 + arg0.entries[5] * var7 + arg0.entries[13];
+                float var11 = arg0.entries[10] * var8 + arg0.entries[2] * var6 + arg0.entries[6] * var7 + arg0.entries[14];
                 float var12 = (float) (1.0D / Math.sqrt((double) (var11 * var11 + var9 * var9 + var10 * var10))) * (float) var4.field1184;
                 var2.method5415(var5.field1093, var4.field1176 * var5.field1091 >> 7, var4.field1181 * var5.field1095 >> 7, (float) var5.field1092 + var9 - var9 * var12, (float) var5.field1094 + var10 - var10 * var12, var11 - var11 * var12);
                 this.field7891.method13360(var2);

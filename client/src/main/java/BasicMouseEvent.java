@@ -12,10 +12,10 @@ public abstract class BasicMouseEvent extends Node {
     public abstract int method15181();
 
     @ObfuscatedName("adv.j(B)I")
-    public abstract int method15182();
+    public abstract int getX();
 
     @ObfuscatedName("adv.a(I)I")
-    public abstract int method15183();
+    public abstract int getY();
 
     @ObfuscatedName("adv.s(I)I")
     public abstract int method15184();

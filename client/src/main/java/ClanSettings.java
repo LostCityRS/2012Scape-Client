@@ -389,7 +389,7 @@ public class ClanSettings {
                 var3.remove();
             }
         }
-        this.field2368.method11927(new IntNode(arg1), (long) arg0);
+        this.field2368.put(new IntNode(arg1), (long) arg0);
         return true;
     }
 
@@ -417,7 +417,7 @@ public class ClanSettings {
                 var10.remove();
             }
         }
-        this.field2368.method11927(new IntNode(var9), (long) arg0);
+        this.field2368.put(new IntNode(var9), (long) arg0);
         return true;
     }
 
@@ -439,7 +439,7 @@ public class ClanSettings {
                 var4.remove();
             }
         }
-        this.field2368.method11927(new LongNode(arg1), (long) arg0);
+        this.field2368.put(new LongNode(arg1), (long) arg0);
         return true;
     }
 
@@ -463,14 +463,14 @@ public class ClanSettings {
                         }
                         var4.remove();
                         var4.remove();
-                        this.field2368.method11927(new ObjectNode(arg1), var4.field4228);
+                        this.field2368.put(new ObjectNode(arg1), var4.field4228);
                         return true;
                     }
                 }
                 var3.remove();
             }
         }
-        this.field2368.method11927(new ObjectNode(arg1), (long) arg0);
+        this.field2368.put(new ObjectNode(arg1), (long) arg0);
         return true;
     }
 
@@ -576,13 +576,13 @@ public class ClanSettings {
             int var9 = var7 >>> 30;
             if (var9 == 0) {
                 int var10 = arg0.g4s();
-                this.field2368.method11927(new IntNode(var10), (long) var8);
+                this.field2368.put(new IntNode(var10), (long) var8);
             } else if (var9 == 1) {
                 long var11 = arg0.g8();
-                this.field2368.method11927(new LongNode(var11), (long) var8);
+                this.field2368.put(new LongNode(var11), (long) var8);
             } else if (var9 == 2) {
                 String var13 = arg0.gjstr();
-                this.field2368.method11927(new ObjectNode(var13), (long) var8);
+                this.field2368.put(new ObjectNode(var13), (long) var8);
             }
         }
     }

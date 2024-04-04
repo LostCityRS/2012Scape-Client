@@ -201,7 +201,7 @@ public class GlFloorModelRelated1 extends Node {
         this.field9350.method13305(this.field9342.field7708, this.field9342.field7710, this.field9349, this.field9342.field7701);
         this.field9350.method13473(this.field9343, (this.field9342.field7692 & 0x7) != 0, (this.field9342.field7692 & 0x8) != 0);
         if (this.field9350.field8174) {
-            this.field9350.method547(Integer.MAX_VALUE, this.field9345);
+            this.field9350.setWaterFog(Integer.MAX_VALUE, this.field9345);
         }
         OpenGL.glMatrixMode(5890);
         OpenGL.glPushMatrix();

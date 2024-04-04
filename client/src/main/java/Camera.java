@@ -126,7 +126,7 @@ public abstract class Camera {
         this.field2243 = true;
         this.field2244 = 0;
         this.field2236 = 1.0F;
-        this.field2225.method11925();
+        this.field2225.clear();
     }
 
     @ObfuscatedName("fe.j(FLmv;[[[II)V")
@@ -331,7 +331,7 @@ public abstract class Camera {
 
     @ObfuscatedName("fe.h(Laja;I)V")
     public void method3709(CameraEffect arg0) {
-        this.field2225.method11927(arg0, (long) arg0.field10351);
+        this.field2225.put(arg0, (long) arg0.field10351);
     }
 
     @ObfuscatedName("fe.r(II)V")
@@ -349,7 +349,7 @@ public abstract class Camera {
 
     @ObfuscatedName("fe.y(I)V")
     public void method3750() {
-        this.field2225.method11925();
+        this.field2225.clear();
     }
 
     @ObfuscatedName("fe.e(I)Z")

@@ -88,19 +88,19 @@ public class a implements ua {
     @ObfuscatedName("a.t(Lqa;Lkc;[II)V")
     public void method102(Model arg0, Matrix4x3 arg1, int[] arg2, int arg3) {
         this.field376.method5385(arg1);
-        this.wa(this.nativeid, ((h) arg0).nativeid, this.field376.field3480, arg2, arg3);
+        this.wa(this.nativeid, ((h) arg0).nativeid, this.field376.entries, arg2, arg3);
     }
 
     @ObfuscatedName("a.l(Lqa;IILkc;Z)Z")
     public boolean method104(Model arg0, int arg1, int arg2, Matrix4x3 arg3, boolean arg4) {
         this.field376.method5385(arg3);
-        return this.ya(this.nativeid, ((h) arg0).nativeid, arg1, arg2, this.field376.field3480, arg4);
+        return this.ya(this.nativeid, ((h) arg0).nativeid, arg1, arg2, this.field376.entries, arg4);
     }
 
     @ObfuscatedName("a.f(Lqa;[ILkc;)V")
     public void method89(Model arg0, int[] arg1, Matrix4x3 arg2) {
         this.field376.method5385(arg2);
-        this.J(this.nativeid, ((h) arg0).nativeid, arg1, this.field376.field3480);
+        this.J(this.nativeid, ((h) arg0).nativeid, arg1, this.field376.entries);
     }
 
     @ObfuscatedName("a.d(Lxa;II)V")

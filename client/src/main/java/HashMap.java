@@ -61,7 +61,7 @@ public class HashMap {
             for (int var6 = 0; var6 < this.field2133.length; var6++) {
                 HashMapValue var7 = this.field2133[var6];
                 if (var7 != null) {
-                    this.field2134.method11927(var7, var7.field4228);
+                    this.field2134.put(var7, var7.field4228);
                 }
             }
             HashMapValue[] var8 = new HashMapValue[var5];
@@ -72,7 +72,7 @@ public class HashMap {
         }
         arg2.field9425 = arg0;
         arg2.field9424 = arg1;
-        this.field2134.method11927(arg2, this.field2132.method3209(arg1));
+        this.field2134.put(arg2, this.field2132.method3209(arg1));
         this.field2133[arg0] = arg2;
     }
 }

@@ -39,13 +39,13 @@ public abstract class MouseLogger {
                         break label102;
                     }
                     var6.remove();
-                    int var7 = var6.method15183();
+                    int var7 = var6.getY();
                     if (var7 < -1) {
                         var7 = -1;
                     } else if (var7 > 65534) {
                         var7 = 65534;
                     }
-                    int var8 = var6.method15182();
+                    int var8 = var6.getX();
                     if (var8 < -1) {
                         var8 = -1;
                     } else if (var8 > 65534) {
@@ -123,7 +123,7 @@ public abstract class MouseLogger {
 
     @ObfuscatedName("qs.j(B)V")
     public void method8350() {
-        this.field5050.method11557();
+        this.field5050.clearBridged();
         this.field5047 = -1L;
         this.field5048 = -1L;
         this.field5049 = -1;

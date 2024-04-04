@@ -233,7 +233,7 @@ public class World {
     }
 
     @ObfuscatedName("ml.x(S)Ltz;")
-    public LocTypeList method6103() {
+    public LocTypeList getLocTypeList() {
         return this.field3815;
     }
 
@@ -586,7 +586,7 @@ public class World {
                 }
             }
         }
-        for (CutsceneTemplate var4 = (CutsceneTemplate) CutsceneManager.field1534.last(); var4 != null; var4 = (CutsceneTemplate) CutsceneManager.field1534.method11567()) {
+        for (CutsceneTemplate var4 = (CutsceneTemplate) CutsceneManager.field1534.last(); var4 != null; var4 = (CutsceneTemplate) CutsceneManager.field1534.prev()) {
             int var5 = var4.field9380;
             boolean var6 = (var5 & 0x1) == 1;
             int var7 = var4.field9373 >> 3;
@@ -644,7 +644,7 @@ public class World {
         this.field3830 = new byte[var22][];
         this.field3832 = new byte[var22][];
         int var23 = 0;
-        for (CutsceneTemplate var24 = (CutsceneTemplate) CutsceneManager.field1534.last(); var24 != null; var24 = (CutsceneTemplate) CutsceneManager.field1534.method11567()) {
+        for (CutsceneTemplate var24 = (CutsceneTemplate) CutsceneManager.field1534.last(); var24 != null; var24 = (CutsceneTemplate) CutsceneManager.field1534.prev()) {
             int var25 = var24.field9373 >>> 3;
             int var26 = var24.field9374 >>> 3;
             int var27 = var24.field9378 + var25;
@@ -721,7 +721,7 @@ public class World {
         if (RebuildType.REBUILD_REGION == this.rebuildType || RebuildType.field3840 == this.rebuildType || this.rebuildType != this.field3796 && (RebuildType.REBUILD_NORMAL == this.rebuildType || RebuildType.REBUILD_NORMAL == this.field3796)) {
             client.npcCount = 0;
             client.field8966 = 0;
-            client.npcs.method11925();
+            client.npcs.clear();
         }
         this.field3796 = this.rebuildType;
     }
@@ -733,7 +733,7 @@ public class World {
                 throw new IllegalStateException();
             }
             client.field8988 = 2;
-            client.field9059 = -1;
+            client.cutsceneId = -1;
         }
         if (!arg3 && this.field3790 == arg0 && this.field3798 == arg1) {
             return;
@@ -846,14 +846,14 @@ public class World {
                 var27.field777 -= var3 * 512;
             }
         }
-        for (ChangeLocationRequest var28 = (ChangeLocationRequest) ChangeLocationRequest.field9278.last(); var28 != null; var28 = (ChangeLocationRequest) ChangeLocationRequest.field9278.method11567()) {
+        for (ChangeLocationRequest var28 = (ChangeLocationRequest) ChangeLocationRequest.field9278.last(); var28 != null; var28 = (ChangeLocationRequest) ChangeLocationRequest.field9278.prev()) {
             var28.field9291 -= var2;
             var28.field9280 -= var3;
             if (RebuildType.field3841 != this.rebuildType && (var28.field9291 < 0 || var28.field9280 < 0 || var28.field9291 >= this.mapSizeX || var28.field9280 >= this.mapSizeZ)) {
                 var28.remove();
             }
         }
-        for (ChangeLocationRequest var29 = (ChangeLocationRequest) ChangeLocationRequest.field9292.last(); var29 != null; var29 = (ChangeLocationRequest) ChangeLocationRequest.field9292.method11567()) {
+        for (ChangeLocationRequest var29 = (ChangeLocationRequest) ChangeLocationRequest.field9292.last(); var29 != null; var29 = (ChangeLocationRequest) ChangeLocationRequest.field9292.prev()) {
             var29.field9291 -= var2;
             var29.field9280 -= var3;
             if (RebuildType.field3841 != this.rebuildType && (var29.field9291 < 0 || var29.field9280 < 0 || var29.field9291 >= this.mapSizeX || var29.field9280 >= this.mapSizeZ)) {
@@ -876,9 +876,9 @@ public class World {
                 }
             }
         }
-        if (MiniMap.field763 != 0) {
-            MiniMap.field763 -= var2;
-            MiniMap.field764 -= var3;
+        if (MiniMap.mapFlagX != 0) {
+            MiniMap.mapFlagX -= var2;
+            MiniMap.mapFlagZ -= var3;
         }
         AudioRenderer.method2387();
         PositionedSound.method6259(false);
@@ -905,8 +905,8 @@ public class World {
         }
         MiniMenu.method11300();
         MiniMap.method7992();
-        client.field9090.method11925();
-        client.field9007.method11557();
+        client.field9090.clear();
+        client.field9007.clearBridged();
         client.field9091.method11653();
         Statics.method1638();
     }
@@ -1435,14 +1435,14 @@ public class World {
                         NpcEntity var16 = new NpcEntity(this.scene);
                         var16.localPlayerIndex = var7;
                         ObjectNode var17 = new ObjectNode(var16);
-                        client.npcs.method11927(var17, (long) var7);
+                        client.npcs.put(var17, (long) var7);
                         client.field8965[++client.field8966 - 1] = var17;
                         client.field9056[++client.npcCount - 1] = var7;
                         var16.field8618 = client.loopCycle;
                         var16.method16149(var14);
-                        var16.setSize(var16.field10075.field7213);
-                        var16.field8636 = var16.field10075.field7241 << 3;
-                        var16.method13946(var16.field10075.field7243.method6342().getId() << 11 & 0x3FFF, true);
+                        var16.setSize(var16.type.field7213);
+                        var16.field8636 = var16.type.field7241 << 3;
+                        var16.method13946(var16.type.field7243.method6342().getId() << 11 & 0x3FFF, true);
                         var16.method16153(var9, var12, var13, true, var16.size());
                     }
                 }

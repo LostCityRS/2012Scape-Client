@@ -102,7 +102,7 @@ public abstract class PureJavaSprite extends Sprite {
             this.field7596 = new int[4];
         }
         this.field7602.qa(this.field7596);
-        this.field7602.o(this.field7602.field8005, this.field7602.field8027, arg0 + arg2, arg1 + arg3);
+        this.field7602.o(this.field7602.clipMinX, this.field7602.clipMaxX, arg0 + arg2, arg1 + arg3);
         int var8 = this.method1042();
         int var9 = this.method1047();
         int var10 = (arg2 + var8 - 1) / var8;
@@ -184,14 +184,14 @@ public abstract class PureJavaSprite extends Sprite {
         if (var22 > var26) {
             var26 = var22;
         }
-        if (var23 < (float) this.field7602.field8005) {
-            var23 = this.field7602.field8005;
+        if (var23 < (float) this.field7602.clipMinX) {
+            var23 = this.field7602.clipMinX;
         }
         if (var24 > (float) this.field7602.field8024) {
             var24 = this.field7602.field8024;
         }
-        if (var25 < (float) this.field7602.field8027) {
-            var25 = this.field7602.field8027;
+        if (var25 < (float) this.field7602.clipMaxX) {
+            var25 = this.field7602.clipMaxX;
         }
         if (var26 > (float) this.field7602.field8008) {
             var26 = this.field7602.field8008;

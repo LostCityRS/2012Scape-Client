@@ -17,7 +17,7 @@ public class ParamTypeList {
     }
 
     @ObfuscatedName("wp.u(IB)Lwv;")
-    public ParamType method12600(int arg0) {
+    public ParamType get(int arg0) {
         WeightedCache var2 = this.field7292;
         ParamType var3;
         synchronized (this.field7292) {

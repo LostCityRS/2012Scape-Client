@@ -783,8 +783,8 @@ public class MapLoader {
                     }
                     WaterFogData var50 = new WaterFogData();
                     if (this.field3644) {
-                        var50.field1475 = this.field3619.method7411(var7, var8);
-                        var50.field1471 = this.field3619.method7410(var7, var8);
+                        var50.colour = this.field3619.method7411(var7, var8);
+                        var50.scale = this.field3619.method7410(var7, var8);
                         var50.field1474 = this.field3619.method7489(var7, var8);
                         var50.field1470 = this.field3619.method7413(var7, var8);
                         var50.field1476 = this.field3619.method7505(var7, var8);
@@ -876,8 +876,8 @@ public class MapLoader {
                         this.method5894(arg1, var19, var23, arg2, var12, var14, var13, var15, var17, var16);
                         WaterFogData var38 = new WaterFogData();
                         if (this.field3644) {
-                            var38.field1475 = this.field3619.method7411(var12, var14);
-                            var38.field1471 = this.field3619.method7410(var12, var14);
+                            var38.colour = this.field3619.method7411(var12, var14);
+                            var38.scale = this.field3619.method7410(var12, var14);
                             var38.field1474 = this.field3619.method7489(var12, var14);
                             var38.field1470 = this.field3619.method7413(var12, var14);
                             var38.field1476 = this.field3619.method7505(var12, var14);

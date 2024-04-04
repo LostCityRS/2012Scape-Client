@@ -25,7 +25,7 @@ public class i extends FloorModel implements ua {
 
     @ObfuscatedName("i.u(II[I[I[I[I[I[I[I[ILdk;Z)V")
     public final void method193(int arg0, int arg1, int[] arg2, int[] arg3, int[] arg4, int[] arg5, int[] arg6, int[] arg7, int[] arg8, int[] arg9, WaterFogData arg10, boolean arg11) {
-        this.ya(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10.field1475, arg10.field1471, arg10.field1474, arg11);
+        this.ya(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10.colour, arg10.scale, arg10.field1474, arg11);
     }
 
     @ObfuscatedName("i.j(II[I[I[I[I[I[I[I[I[I[I[ILdk;Z)V")
@@ -102,7 +102,7 @@ public class i extends FloorModel implements ua {
             var29++;
         }
         if (var16 || var26 != null) {
-            this.ya(arg0, arg1, var21, var27, var22, var28, var23, var26, var24, var25, arg13.field1475, arg13.field1471, arg13.field1474, arg14);
+            this.ya(arg0, arg1, var21, var27, var22, var28, var23, var26, var24, var25, arg13.colour, arg13.scale, arg13.field1474, arg14);
         }
     }
 
@@ -110,7 +110,7 @@ public class i extends FloorModel implements ua {
     public void method212(int arg0, int arg1, int arg2, boolean[][] arg3, boolean arg4, int arg5) {
         int var7 = 0;
         float[] var8 = new float[this.field476.sizeBridged()];
-        for (Light var9 = (Light) this.field476.last(); var9 != null; var9 = (Light) this.field476.method11567()) {
+        for (Light var9 = (Light) this.field476.last(); var9 != null; var9 = (Light) this.field476.prev()) {
             var8[var7++] = var9.method14893();
         }
         this.t(var8);

@@ -37,13 +37,13 @@ public class WorldMap {
         Statics.field4290 = arg4;
         Statics.field4268 = arg5;
         Statics.field4299 = arg6;
-        field4272.method11925();
+        field4272.clear();
         int var7 = Statics.field4264.method5688("details");
         int[] var8 = Statics.field4264.method5683(var7);
         if (var8 != null) {
             for (int var9 = 0; var9 < var8.length; var9++) {
                 WorldMapAreaMetadata var10 = WorldMapAreaMetadata.method13263(Statics.field4264, var7, var8[var9]);
-                field4272.method11927(var10, (long) var10.id);
+                field4272.put(var10, (long) var10.id);
             }
         }
         ColourUtils.method8092(true, false);
@@ -98,7 +98,7 @@ public class WorldMap {
         DualIterableQueue var2 = new DualIterableQueue();
         for (WorldMapAreaMetadata var3 = (WorldMapAreaMetadata) field4272.method11928(); var3 != null; var3 = (WorldMapAreaMetadata) field4272.method11929()) {
             if (var3.field10361 && var3.method16717(arg0, arg1)) {
-                var2.method11728(var3);
+                var2.addFirst(var3);
             }
         }
         return var2;
@@ -319,10 +319,10 @@ public class WorldMap {
                         WorldMapRelated14 var3 = (WorldMapRelated14) var2;
                         if (var3 != null) {
                             for (int var4 = 0; var4 < var3.field9562.length; var4++) {
-                                LocType var5 = Statics.field4266.method11471(var3.field9562[var4]);
+                                LocType var5 = Statics.field4266.get(var3.field9562[var4]);
                                 int var6 = var5.field6495;
-                                if (var5.field6534 != null) {
-                                    LocType var7 = var5.method11431(Statics.field4299);
+                                if (var5.multiloc != null) {
+                                    LocType var7 = var5.getMultiLoc(Statics.field4299);
                                     if (var7 != null) {
                                         var6 = var7.field6495;
                                     }
@@ -337,10 +337,10 @@ public class WorldMap {
                         }
                     } else {
                         Integer var9 = (Integer) var2;
-                        LocType var10 = Statics.field4266.method11471(var9);
+                        LocType var10 = Statics.field4266.get(var9);
                         int var11 = var10.field6495;
-                        if (var10.field6534 != null) {
-                            LocType var12 = var10.method11431(Statics.field4299);
+                        if (var10.multiloc != null) {
+                            LocType var12 = var10.getMultiLoc(Statics.field4299);
                             if (var12 != null) {
                                 var11 = var12.field6495;
                             }
@@ -371,10 +371,10 @@ public class WorldMap {
                                 var19 = (WorldMapRelated1) var18.next();
                             } while (var19.field4251 == null);
                             for (int var20 = 0; var20 < var19.field4251.length; var20++) {
-                                LocType var21 = Statics.field4266.method11471(var19.field4251[var20]);
+                                LocType var21 = Statics.field4266.get(var19.field4251[var20]);
                                 int var22 = var21.field6495;
-                                if (var21.field6534 != null) {
-                                    LocType var23 = var21.method11431(Statics.field4299);
+                                if (var21.multiloc != null) {
+                                    LocType var23 = var21.getMultiLoc(Statics.field4299);
                                     if (var23 != null) {
                                         var22 = var23.field6495;
                                     }
@@ -725,10 +725,10 @@ public class WorldMap {
         for (int var16 = 0; var16 < arg8.length; var16++) {
             int var17 = arg9[var16] & 0x3F;
             if (LocShape.field6591.field6590 == var17 || LocShape.field6569.field6590 == var17 || LocShape.field6570.field6590 == var17 || LocShape.field6567.field6590 == var17) {
-                LocType var18 = Statics.field4266.method11471(arg8[var16]);
+                LocType var18 = Statics.field4266.get(arg8[var16]);
                 if (var18.field6508 == -1) {
                     int var19 = -3355444;
-                    if (var18.field6493 == 1) {
+                    if (var18.active == 1) {
                         var19 = -3407872;
                     }
                     int var20 = arg9[var16] >> 6 & 0x3;
@@ -788,7 +788,7 @@ public class WorldMap {
             return;
         }
         for (int var7 = 0; var7 < arg5.length; var7++) {
-            LocType var8 = Statics.field4266.method11471(arg5[var7]);
+            LocType var8 = Statics.field4266.get(arg5[var7]);
             int var9 = var8.field6508;
             if (var9 != -1) {
                 MSIType var10 = Statics.field4268.method12491(var9);
@@ -797,8 +797,8 @@ public class WorldMap {
                     int var12 = arg3 * var11.method1042() >> 2;
                     int var13 = arg4 * var11.method1047() >> 2;
                     if (var10.field7195) {
-                        int var14 = var8.field6489;
-                        int var15 = var8.field6503;
+                        int var14 = var8.width;
+                        int var15 = var8.length;
                         if ((arg6[var7] >> 6 & 0x1) == 1) {
                             int var16 = var14;
                             var14 = var15;
@@ -830,7 +830,7 @@ public class WorldMap {
 
     @ObfuscatedName("om.k(Lra;IIII)Ltq;")
     public static IterableQueue method7100(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4) {
-        for (WorldMapElement var5 = (WorldMapElement) field4301.last(); var5 != null; var5 = (WorldMapElement) field4301.method11567()) {
+        for (WorldMapElement var5 = (WorldMapElement) field4301.last(); var5 != null; var5 = (WorldMapElement) field4301.prev()) {
             method7101(arg0, var5, arg1, arg2, arg3, arg4);
         }
         return field4301;

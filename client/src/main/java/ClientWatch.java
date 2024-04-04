@@ -76,7 +76,7 @@ public class ClientWatch {
                     }
                     if (var1 != null && Statics.canvas.isShowing() && Statics.field578) {
                         var2.method16843(var1);
-                        if (!var2.method16850() && var2.method15182() < Statics.canvasWid && var2.method15183() < Statics.canvasHei && var2.method15182() >= 0 && var2.method15183() >= 0) {
+                        if (!var2.method16850() && var2.getX() < Statics.canvasWid && var2.getY() < Statics.canvasHei && var2.getX() >= 0 && var2.getY() >= 0) {
                             int var3 = var2.method15181();
                             if (var2.method15181() == -1) {
                                 field5045.method8370(var2);
@@ -115,7 +115,7 @@ public class ClientWatch {
             ClientMessage var0 = ClientMessage.createMessage(ClientProt.EVENT_KEYBOARD, client.gameConnection.randomOut);
             var0.buf.p2(client.field8953 * 4);
             for (int var1 = 0; var1 < client.field8953; var1++) {
-                KeyboardEvent var2 = client.field9072[var1];
+                KeyboardEvent var2 = client.keyboardEvents[var1];
                 long var3 = var2.method7287() - field5044;
                 if (var3 > 16777215L) {
                     var3 = 16777215L;

@@ -28,13 +28,13 @@ public class MiniMap {
     public static IterableQueue field758 = new IterableQueue();
 
     @ObfuscatedName("ao.f")
-    public static int field763 = -1;
+    public static int mapFlagX = -1;
 
     @ObfuscatedName("ao.d")
-    public static int field764 = -1;
+    public static int mapFlagZ = -1;
 
     @ObfuscatedName("ao.z")
-    public static boolean field766 = true;
+    public static boolean mapFlag = true;
 
     @ObfuscatedName("ao.n")
     public static boolean field755 = false;
@@ -50,15 +50,15 @@ public class MiniMap {
     public static void method7163() {
         field762 = 0;
         field765 = -1;
-        field763 = -1;
-        field764 = -1;
+        mapFlagX = -1;
+        mapFlagZ = -1;
     }
 
     @ObfuscatedName("v.j(I)V")
     public static void method1202() {
         field762 = 0;
-        field763 = -1;
-        field764 = -1;
+        mapFlagX = -1;
+        mapFlagZ = -1;
     }
 
     @ObfuscatedName("pu.a(B)V")
@@ -98,7 +98,7 @@ public class MiniMap {
 
     @ObfuscatedName("aiq.t(Lca;B)Z")
     public static boolean method16491(Location arg0) {
-        LocType var1 = client.world.method6103().method11471(arg0.method2401());
+        LocType var1 = client.world.getLocTypeList().get(arg0.getType());
         if (var1.field6508 == -1) {
             return true;
         } else {
@@ -112,12 +112,12 @@ public class MiniMap {
         Scene var8 = client.world.getScene();
         Location var9 = (Location) var8.method7433(arg1, arg2, arg3);
         if (var9 != null) {
-            LocType var10 = client.world.method6103().method11471(var9.method2401());
+            LocType var10 = client.world.getLocTypeList().get(var9.getType());
             int var11 = var9.method2391() & 0x3;
             int var12 = var9.method2390();
             if (var10.field6508 == -1) {
                 int var13 = arg6;
-                if (var10.field6493 > 0) {
+                if (var10.active > 0) {
                     var13 = arg7;
                 }
                 if (LocShape.field6591.field6590 == var12 || LocShape.field6569.field6590 == var12) {
@@ -159,14 +159,14 @@ public class MiniMap {
         }
         Location var14 = (Location) var8.method7437(arg1, arg2, arg3, client.field9216);
         if (var14 != null) {
-            LocType var15 = client.world.method6103().method11471(var14.method2401());
+            LocType var15 = client.world.getLocTypeList().get(var14.getType());
             int var16 = var14.method2391() & 0x3;
             int var17 = var14.method2390();
             if (var15.field6508 != -1) {
                 method3634(arg0, var15, var16, arg4, arg5);
             } else if (LocShape.field6567.field6590 == var17) {
                 int var18 = -1118482;
-                if (var15.field6493 > 0) {
+                if (var15.active > 0) {
                     var18 = -1179648;
                 }
                 if (var16 == 0 || var16 == 2) {
@@ -180,7 +180,7 @@ public class MiniMap {
         if (var19 == null) {
             return;
         }
-        LocType var20 = client.world.method6103().method11471(var19.method2401());
+        LocType var20 = client.world.getLocTypeList().get(var19.getType());
         int var21 = var19.method2391() & 0x3;
         if (var20.field6508 != -1) {
             method3634(arg0, var20, var21, arg4, arg5);
@@ -204,11 +204,11 @@ public class MiniMap {
         if (var8 == null) {
             return;
         }
-        int var9 = arg1.field6489;
-        int var10 = arg1.field6503;
+        int var9 = arg1.width;
+        int var10 = arg1.length;
         if ((var7 & 0x1) == 1) {
-            var9 = arg1.field6503;
-            var10 = arg1.field6489;
+            var9 = arg1.length;
+            var10 = arg1.width;
         }
         int var11 = var8.method1042();
         int var12 = var8.method1047();
@@ -261,7 +261,7 @@ public class MiniMap {
             int var13 = client.world.getSizeZ() * 4 + 48 - var8 / 128;
             Statics.field6357.method2512((float) arg1.renderwidth / 2.0F + (float) arg2, (float) arg1.renderheight / 2.0F + (float) arg3, (float) var12, (float) var13, var10, var9 << 2, var5, arg2, arg3);
             WorldMapRelated var14 = client.world.method6093();
-            for (IntNode var15 = (IntNode) field758.last(); var15 != null; var15 = (IntNode) field758.method11567()) {
+            for (IntNode var15 = (IntNode) field758.last(); var15 != null; var15 = (IntNode) field758.prev()) {
                 int var16 = var15.field9556;
                 int var17 = (var14.field4254[var16] >> 14 & 0x3FFF) - var6.x;
                 int var18 = (var14.field4254[var16] & 0x3FFF) - var6.z;
@@ -272,9 +272,9 @@ public class MiniMap {
             for (int var21 = 0; var21 < field767; var21++) {
                 int var22 = field759[var21] * 4 + 2 - var7 / 128;
                 int var23 = field757[var21] * 4 + 2 - var8 / 128;
-                LocType var24 = client.world.method6103().method11471(field761[var21]);
-                if (var24.field6534 != null) {
-                    var24 = var24.method11431(Statics.field2669);
+                LocType var24 = client.world.getLocTypeList().get(field761[var21]);
+                if (var24.multiloc != null) {
+                    var24 = var24.getMultiLoc(Statics.field2669);
                     if (var24 == null || var24.field6495 == -1) {
                         continue;
                     }
@@ -295,10 +295,10 @@ public class MiniMap {
             method1592(var7, var8, arg1, var5, arg2, arg3);
             method2472(var7, var8, arg1, var4, arg2, arg3);
             if (Statics.cameraState != 5) {
-                if (field763 != 0) {
-                    int var31 = field763 * 4 + 2 - var7 / 128 + (Statics.localPlayerEntity.size() - 1) * 2;
-                    int var32 = field764 * 4 + 2 - var8 / 128 + (Statics.localPlayerEntity.size() - 1) * 2;
-                    Statics.method12552(arg1, var5, arg2, arg3, var31, var32, Statics.field9826[field766 ? 1 : 0]);
+                if (mapFlagX != 0) {
+                    int var31 = mapFlagX * 4 + 2 - var7 / 128 + (Statics.localPlayerEntity.size() - 1) * 2;
+                    int var32 = mapFlagZ * 4 + 2 - var8 / 128 + (Statics.localPlayerEntity.size() - 1) * 2;
+                    Statics.method12552(arg1, var5, arg2, arg3, var31, var32, Statics.field9826[mapFlag ? 1 : 0]);
                 }
                 if (!Statics.localPlayerEntity.visibility) {
                     arg0.fillRectangle(arg1.renderwidth / 2 + arg2 - 1, arg1.renderheight / 2 + arg3 - 1, 3, 3, -1);
@@ -314,11 +314,11 @@ public class MiniMap {
             if (var8 != null) {
                 NpcEntity var9 = (NpcEntity) var8.value;
                 if (var9.method16154() && Statics.localPlayerEntity.level == var9.level) {
-                    NPCType var10 = var9.field10075;
-                    if (var10 != null && var10.field7244 != null) {
-                        var10 = var10.method12516(Statics.field2669);
+                    NPCType var10 = var9.type;
+                    if (var10 != null && var10.multinpc != null) {
+                        var10 = var10.getMultiNPC(Statics.field2669);
                     }
-                    if (var10 != null && var10.field7232 && var10.field7271) {
+                    if (var10 != null && var10.field7232 && var10.active) {
                         Vector3 var11 = var9.getTransform().trans;
                         int var12 = (int) var11.x / 128 - arg1 / 128;
                         int var13 = (int) var11.z / 128 - arg2 / 128;

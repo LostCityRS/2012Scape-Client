@@ -18,12 +18,12 @@ public final class ServerKeyProperties extends Node {
     }
 
     @ObfuscatedName("ace.u(S)Z")
-    public final boolean method14927() {
+    public final boolean isPauseButton() {
         return (this.field9416 & 0x1) != 0;
     }
 
     @ObfuscatedName("ace.j(IB)Z")
-    public final boolean method14948(int arg0) {
+    public final boolean isOpTransmitted(int arg0) {
         return (this.field9416 >> arg0 + 1 & 0x1) != 0;
     }
 

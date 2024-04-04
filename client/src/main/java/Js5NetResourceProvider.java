@@ -231,7 +231,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
             } else {
                 throw new RuntimeException();
             }
-            this.field8868.method11927(var3, (long) arg0);
+            this.field8868.put(var3, (long) arg0);
         }
         if (var3.field10352) {
             return null;
@@ -273,7 +273,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
                 var3.remove();
                 if (var3.field10354 && !this.field8853.method5738()) {
                     Js5NetRequest var17 = this.field8853.method5765(this.field8860, arg0, (byte) 2, true);
-                    this.field8868.method11927(var17, (long) arg0);
+                    this.field8868.put(var17, (long) arg0);
                 }
                 return null;
             }
@@ -329,7 +329,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
             var3.remove();
             if (var3.field10354 && !this.field8853.method5738()) {
                 Js5NetRequest var11 = this.field8853.method5765(this.field8860, arg0, (byte) 2, true);
-                this.field8868.method11927(var11, (long) arg0);
+                this.field8868.put(var11, (long) arg0);
             }
             return null;
         }
@@ -340,7 +340,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
         if (this.field8872 == null || this.method5604() == null) {
             return;
         }
-        for (Node var1 = this.field8873.last(); var1 != null; var1 = this.field8873.method11567()) {
+        for (Node var1 = this.field8873.last(); var1 != null; var1 = this.field8873.prev()) {
             int var2 = (int) var1.field4228;
             if (var2 < 0 || var2 >= this.field8862.field3553 || this.field8862.field3557[var2] == 0) {
                 var1.remove();
@@ -366,7 +366,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
             }
             if (this.field8870) {
                 boolean var1 = true;
-                for (Node var2 = this.field8872.last(); var2 != null; var2 = this.field8872.method11567()) {
+                for (Node var2 = this.field8872.last(); var2 != null; var2 = this.field8872.prev()) {
                     int var3 = (int) var2.field4228;
                     if (this.field8866[var3] == 0) {
                         this.method14237(var3, 1);
@@ -403,7 +403,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
                 }
             } else if (this.field8857) {
                 boolean var5 = true;
-                for (Node var6 = this.field8872.last(); var6 != null; var6 = this.field8872.method11567()) {
+                for (Node var6 = this.field8872.last(); var6 != null; var6 = this.field8872.prev()) {
                     int var7 = (int) var6.field4228;
                     if (this.field8866[var7] != 1) {
                         this.method14237(var7, 2);
@@ -497,7 +497,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
         if (this.field8855 == null) {
             return;
         }
-        for (Node var2 = this.field8873.last(); var2 != null; var2 = this.field8873.method11567()) {
+        for (Node var2 = this.field8873.last(); var2 != null; var2 = this.field8873.prev()) {
             if (var2.field4228 == (long) arg0) {
                 return;
             }

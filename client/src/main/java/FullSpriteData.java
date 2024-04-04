@@ -170,7 +170,7 @@ public class FullSpriteData extends SpriteData {
     }
 
     @ObfuscatedName("yi.p()V")
-    public void method2757() {
+    public void flipHorizontally() {
         int[] var1 = this.field8406;
         for (int var2 = this.field8405 - 1; var2 >= 0; var2--) {
             int var3 = this.field8407 * var2;

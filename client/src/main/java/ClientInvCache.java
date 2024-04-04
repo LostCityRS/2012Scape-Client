@@ -67,7 +67,7 @@ public class ClientInvCache extends Node {
         for (int var6 = 0; var6 < var4.field9276.length; var6++) {
             if (var4.field9276[var6] >= 0 && var4.field9276[var6] < Statics.objTypes.field7144) {
                 ObjType var7 = Statics.objTypes.get(var4.field9276[var6]);
-                int var8 = var7.method12250(arg1, Statics.field4464.method12600(arg1).field7287);
+                int var8 = var7.method12250(arg1, Statics.paramTypes.get(arg1).defaultint);
                 if (arg2) {
                     var5 += var4.field9275[var6] * var8;
                 } else {
@@ -108,7 +108,7 @@ public class ClientInvCache extends Node {
         ClientInvCache var7 = (ClientInvCache) field9273.getNode(var5);
         if (var7 == null) {
             var7 = new ClientInvCache();
-            field9273.method11927(var7, var5);
+            field9273.put(var7, var5);
         }
         if (var7.field9276.length <= arg1) {
             int[] var8 = new int[arg1 + 1];
@@ -149,7 +149,7 @@ public class ClientInvCache extends Node {
 
     @ObfuscatedName("qi.d(B)V")
     public static void method8048() {
-        field9273.method11925();
+        field9273.clear();
     }
 
     @ObfuscatedName("acx.z([II[IZI)J")

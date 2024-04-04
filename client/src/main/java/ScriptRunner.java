@@ -396,9 +396,9 @@ public final class ScriptRunner {
 
     @ObfuscatedName("ck.x(Lajs;Lrn;I)V")
     public static final void method2473(MiniMenuEntry arg0, ClientScriptState arg1) {
-        arg1.field5215[++arg1.field5216 - 1] = MiniMenu.method11220(arg0);
+        arg1.field5215[++arg1.field5216 - 1] = MiniMenu.getEntryEntityType(arg0);
         arg1.field5222[++arg1.field5230 - 1] = Statics.method1246(arg0);
-        arg1.field5222[++arg1.field5230 - 1] = MiniMenu.method3629(arg0);
+        arg1.field5222[++arg1.field5230 - 1] = MiniMenu.getEntryOpBase(arg0);
         arg1.field5222[++arg1.field5230 - 1] = MiniMenu.method6256(arg0);
     }
 
@@ -4865,7 +4865,7 @@ public final class ScriptRunner {
     public static final void method11850(Component arg0, Interface arg1, ClientScriptState arg2) {
         int var3 = arg2.field5215[--arg2.field5216];
         String var4 = (String) arg2.field5222[--arg2.field5230];
-        ParamType var5 = Statics.field4464.method12600(var3);
+        ParamType var5 = Statics.paramTypes.get(var3);
         if (var5.field7288.equals(var4)) {
             arg0.method3129(var3);
         } else {
@@ -5486,7 +5486,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("ux.jh(Lew;Lej;Lrn;I)V")
     public static final void method11906(Component arg0, Interface arg1, ClientScriptState arg2) {
-        arg0.field1795 = (String) arg2.field5222[--arg2.field5230];
+        arg0.opbase = (String) arg2.field5222[--arg2.field5230];
     }
 
     @ObfuscatedName("ac.js(Lrn;I)V")
@@ -5583,7 +5583,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("it.jq(Lew;Lej;Lrn;I)V")
     public static final void method4712(Component arg0, Interface arg1, ClientScriptState arg2) {
-        arg0.field1853 = (String) arg2.field5222[--arg2.field5230];
+        arg0.pausetext = (String) arg2.field5222[--arg2.field5230];
     }
 
     @ObfuscatedName("pg.jk(Lrn;I)V")
@@ -6031,7 +6031,7 @@ public final class ScriptRunner {
         if (method3662(var3, arg2) != null) {
             var3 = var3.substring(0, var3.length() - 1);
         }
-        arg0.field1887 = method8142(var3, arg2);
+        arg0.op = method8142(var3, arg2);
         arg0.hashook = true;
     }
 
@@ -6777,11 +6777,11 @@ public final class ScriptRunner {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
         Component var2 = var1.field5240;
         int var3 = arg0.field5215[--arg0.field5216];
-        ParamType var4 = Statics.field4464.method12600(var3);
+        ParamType var4 = Statics.paramTypes.get(var3);
         if (var4.method12586()) {
             arg0.field5222[++arg0.field5230 - 1] = var2.method3126(var3, var4.field7288);
         } else {
-            arg0.field5215[++arg0.field5216 - 1] = var2.method3132(var3, var4.field7287);
+            arg0.field5215[++arg0.field5216 - 1] = var2.getIntParam(var3, var4.defaultint);
         }
     }
 
@@ -6836,7 +6836,7 @@ public final class ScriptRunner {
     public static final void method7214(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
         Component var2 = var1.field5240;
-        arg0.field5215[++arg0.field5216 - 1] = client.method14331(var2).method14928();
+        arg0.field5215[++arg0.field5216 - 1] = client.getComponentEvents(var2).method14928();
     }
 
     @ObfuscatedName("dq.qq(Lrn;B)V")
@@ -6856,10 +6856,10 @@ public final class ScriptRunner {
     public static final void method15141(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
         Component var2 = var1.field5240;
-        if (var2.field1795 == null) {
+        if (var2.opbase == null) {
             arg0.field5222[++arg0.field5230 - 1] = "";
         } else {
-            arg0.field5222[++arg0.field5230 - 1] = var2.field1795;
+            arg0.field5222[++arg0.field5230 - 1] = var2.opbase;
         }
     }
 
@@ -7304,7 +7304,7 @@ public final class ScriptRunner {
     public static final void method14260(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
         Component var2 = Component.method11381(var1);
-        arg0.field5215[++arg0.field5216 - 1] = client.method14331(var2).method14928();
+        arg0.field5215[++arg0.field5216 - 1] = client.getComponentEvents(var2).method14928();
     }
 
     @ObfuscatedName("ae.sm(Lrn;I)V")
@@ -7324,10 +7324,10 @@ public final class ScriptRunner {
     public static final void method5570(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
         Component var2 = Component.method11381(var1);
-        if (var2.field1795 == null) {
+        if (var2.opbase == null) {
             arg0.field5222[++arg0.field5230 - 1] = "";
         } else {
-            arg0.field5222[++arg0.field5230 - 1] = var2.field1795;
+            arg0.field5222[++arg0.field5230 - 1] = var2.opbase;
         }
     }
 
@@ -7748,7 +7748,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("tr.va(Lrn;I)V")
     public static final void method11403(ClientScriptState arg0) {
-        method2473(MiniMenu.method11098(), arg0);
+        method2473(MiniMenu.getActiveEntry(), arg0);
     }
 
     @ObfuscatedName("mo.ve(Lrn;S)V")
@@ -7758,7 +7758,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("jp.vu(Lrn;I)V")
     public static final void method4809(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = MiniMenu.field588;
+        arg0.field5215[++arg0.field5216 - 1] = MiniMenu.length;
         arg0.field5215[++arg0.field5216 - 1] = MiniMenu.field594;
     }
 
@@ -8932,11 +8932,11 @@ public final class ScriptRunner {
         arg0.field5216 -= 2;
         int var1 = arg0.field5215[arg0.field5216];
         int var2 = arg0.field5215[arg0.field5216 + 1];
-        ParamType var3 = Statics.field4464.method12600(var2);
+        ParamType var3 = Statics.paramTypes.get(var2);
         if (var3.method12586()) {
             arg0.field5222[++arg0.field5230 - 1] = Statics.objTypes.get(var1).method12248(var2, var3.field7288);
         } else {
-            arg0.field5215[++arg0.field5216 - 1] = Statics.objTypes.get(var1).method12250(var2, var3.field7287);
+            arg0.field5215[++arg0.field5216 - 1] = Statics.objTypes.get(var1).method12250(var2, var3.defaultint);
         }
     }
 
@@ -9021,11 +9021,11 @@ public final class ScriptRunner {
         arg0.field5216 -= 2;
         int var1 = arg0.field5215[arg0.field5216];
         int var2 = arg0.field5215[arg0.field5216 + 1];
-        ParamType var3 = Statics.field4464.method12600(var2);
+        ParamType var3 = Statics.paramTypes.get(var2);
         if (var3.method12586()) {
             arg0.field5222[++arg0.field5230 - 1] = Statics.field3774.method12565(var1).method12515(var2, var3.field7288);
         } else {
-            arg0.field5215[++arg0.field5216 - 1] = Statics.field3774.method12565(var1).method12514(var2, var3.field7287);
+            arg0.field5215[++arg0.field5216 - 1] = Statics.field3774.method12565(var1).method12514(var2, var3.defaultint);
         }
     }
 
@@ -9034,11 +9034,11 @@ public final class ScriptRunner {
         arg0.field5216 -= 2;
         int var1 = arg0.field5215[arg0.field5216];
         int var2 = arg0.field5215[arg0.field5216 + 1];
-        ParamType var3 = Statics.field4464.method12600(var2);
+        ParamType var3 = Statics.paramTypes.get(var2);
         if (var3.method12586()) {
-            arg0.field5222[++arg0.field5230 - 1] = client.world.method6103().method11471(var1).method11417(var2, var3.field7288);
+            arg0.field5222[++arg0.field5230 - 1] = client.world.getLocTypeList().get(var1).method11417(var2, var3.field7288);
         } else {
-            arg0.field5215[++arg0.field5216 - 1] = client.world.method6103().method11471(var1).method11444(var2, var3.field7287);
+            arg0.field5215[++arg0.field5216 - 1] = client.world.getLocTypeList().get(var1).method11444(var2, var3.defaultint);
         }
     }
 
@@ -9047,11 +9047,11 @@ public final class ScriptRunner {
         arg0.field5216 -= 2;
         int var1 = arg0.field5215[arg0.field5216];
         int var2 = arg0.field5215[arg0.field5216 + 1];
-        ParamType var3 = Statics.field4464.method12600(var2);
+        ParamType var3 = Statics.paramTypes.get(var2);
         if (var3.method12586()) {
             arg0.field5222[++arg0.field5230 - 1] = Statics.field4214.method12383(var1).method16782(var2, var3.field7288);
         } else {
-            arg0.field5215[++arg0.field5216 - 1] = Statics.field4214.method12383(var1).method16777(var2, var3.field7287);
+            arg0.field5215[++arg0.field5216 - 1] = Statics.field4214.method12383(var1).method16777(var2, var3.defaultint);
         }
     }
 
@@ -9060,11 +9060,11 @@ public final class ScriptRunner {
         arg0.field5216 -= 2;
         int var1 = arg0.field5215[arg0.field5216];
         int var2 = arg0.field5215[arg0.field5216 + 1];
-        ParamType var3 = Statics.field4464.method12600(var2);
+        ParamType var3 = Statics.paramTypes.get(var2);
         if (var3.method12586()) {
             arg0.field5222[++arg0.field5230 - 1] = Statics.field566.method11144(var1).method11127(var2, var3.field7288);
         } else {
-            arg0.field5215[++arg0.field5216 - 1] = Statics.field566.method11144(var1).method11121(var2, var3.field7287);
+            arg0.field5215[++arg0.field5216 - 1] = Statics.field566.method11144(var1).method11121(var2, var3.defaultint);
         }
     }
 
@@ -9801,7 +9801,7 @@ public final class ScriptRunner {
             var3.remove();
         } else if (var3 == null && var2) {
             Node var4 = new Node();
-            ClientWorldMap.field9766.method11927(var4, (long) var1);
+            ClientWorldMap.field9766.put(var4, (long) var1);
         }
     }
 
@@ -9829,7 +9829,7 @@ public final class ScriptRunner {
             var3.remove();
         } else if (var3 == null && var2) {
             Node var4 = new Node();
-            ClientWorldMap.field9765.method11927(var4, (long) var1);
+            ClientWorldMap.field9765.put(var4, (long) var1);
         }
     }
 
@@ -10008,8 +10008,8 @@ public final class ScriptRunner {
     @ObfuscatedName("aga.aff(Lrn;I)V")
     public static final void method15920(ClientScriptState arg0) {
         arg0.field5216 -= 12;
-        MiniMenu.method3561();
-        MiniMenu.method13886();
+        MiniMenu.close();
+        MiniMenu.clearFormatting();
         Statics.field9426 = arg0.field5215[arg0.field5216];
         Statics.field6566 = arg0.field5215[arg0.field5216 + 1];
         Statics.field1477 = arg0.field5215[arg0.field5216 + 2];
@@ -10037,13 +10037,13 @@ public final class ScriptRunner {
         Statics.field2652 = null;
         Statics.field6819 = null;
         Statics.field6392 = null;
-        MiniMenu.field613 = true;
+        MiniMenu.formatted = true;
     }
 
     @ObfuscatedName("jv.afw(Lrn;B)V")
     public static final void method4726(ClientScriptState arg0) {
-        MiniMenu.method3963();
-        MiniMenu.field613 = false;
+        MiniMenu.setFormattingDefault();
+        MiniMenu.formatted = false;
     }
 
     @ObfuscatedName("acm.afu(Lrn;I)V")
@@ -10056,7 +10056,7 @@ public final class ScriptRunner {
         arg0.field5216 -= 2;
         int var1 = arg0.field5215[arg0.field5216];
         int var2 = arg0.field5215[arg0.field5216 + 1];
-        arg0.field5215[++arg0.field5216 - 1] = MiniMenu.method8097(var1, var2) ? 1 : 0;
+        arg0.field5215[++arg0.field5216 - 1] = MiniMenu.isOpen(var1, var2) ? 1 : 0;
     }
 
     @ObfuscatedName("aie.agd(Lrn;I)V")
@@ -10094,7 +10094,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("ra.agw(Lrn;I)V")
     public static final void method828(ClientScriptState arg0) {
-        MiniMenu.field616 = arg0.field5215[--arg0.field5216];
+        MiniMenu.subMenuMinLength = arg0.field5215[--arg0.field5216];
     }
 
     @ObfuscatedName("eo.agf(Lrn;B)V")
@@ -11758,7 +11758,7 @@ public final class ScriptRunner {
         int var3 = arg0.field5215[arg0.field5216 + 2];
         Component var4 = Component.get(var1 << 16 | var2, var3);
         client.cancelTargetMode();
-        ServerKeyProperties var5 = client.method14331(var4);
+        ServerKeyProperties var5 = client.getComponentEvents(var4);
         Statics.method11974(var4, var5.method14928(), var5.field9423);
     }
 
@@ -11804,11 +11804,11 @@ public final class ScriptRunner {
         arg0.field5216 -= 2;
         int var1 = arg0.field5215[arg0.field5216];
         int var2 = arg0.field5215[arg0.field5216 + 1];
-        ParamType var3 = Statics.field4464.method12600(var2);
+        ParamType var3 = Statics.paramTypes.get(var2);
         if (var3.method12586()) {
             arg0.field5222[++arg0.field5230 - 1] = Statics.field8499.method7862(var1).method7840(var2, var3.field7288);
         } else {
-            arg0.field5215[++arg0.field5216 - 1] = Statics.field8499.method7862(var1).method7842(var2, var3.field7287);
+            arg0.field5215[++arg0.field5216 - 1] = Statics.field8499.method7862(var1).method7842(var2, var3.defaultint);
         }
     }
 
@@ -12246,14 +12246,14 @@ public final class ScriptRunner {
     @ObfuscatedName("jm.aqt(Lrn;B)V")
     public static final void method4730(ClientScriptState arg0) {
         NpcEntity var1 = (NpcEntity) arg0.field5228;
-        String var2 = var1.field10077;
-        NPCType var3 = var1.field10075;
-        if (var3.field7244 != null) {
-            NPCType var4 = var3.method12516(Statics.field2669);
+        String var2 = var1.name;
+        NPCType var3 = var1.type;
+        if (var3.multinpc != null) {
+            NPCType var4 = var3.getMultiNPC(Statics.field2669);
             if (var4 == null) {
                 var2 = "";
             } else {
-                var2 = var4.field7212;
+                var2 = var4.name;
             }
         }
         if (var2 == null) {
@@ -12306,12 +12306,12 @@ public final class ScriptRunner {
     public static final void method15810(ClientScriptState arg0) {
         NpcEntity var1 = (NpcEntity) arg0.field5228;
         boolean var2 = false;
-        NPCType var3 = var1.field10075;
-        if (var3.field7244 != null) {
-            var3 = var3.method12516(Statics.field2669);
+        NPCType var3 = var1.type;
+        if (var3.multinpc != null) {
+            var3 = var3.getMultiNPC(Statics.field2669);
         }
         if (var3 != null) {
-            var2 = var3.field7271;
+            var2 = var3.active;
         }
         arg0.field5215[++arg0.field5216 - 1] = var2 ? 1 : 0;
     }
@@ -12319,9 +12319,9 @@ public final class ScriptRunner {
     @ObfuscatedName("ms.arq(Lrn;I)V")
     public static final void method6489(ClientScriptState arg0) {
         NpcEntity var1 = (NpcEntity) arg0.field5228;
-        NPCType var2 = var1.field10075;
-        if (var2.field7244 != null) {
-            var2 = var2.method12516(Statics.field2669);
+        NPCType var2 = var1.type;
+        if (var2.multinpc != null) {
+            var2 = var2.getMultiNPC(Statics.field2669);
         }
         arg0.field5215[++arg0.field5216 - 1] = var2 == null ? 0 : 1;
     }

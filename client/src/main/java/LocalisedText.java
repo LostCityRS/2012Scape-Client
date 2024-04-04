@@ -16,7 +16,7 @@ public class LocalisedText {
     public static final LocalisedText field6894 = new LocalisedText("Unknown developer command: ", "Unbekannter Befehl: ", "Commande inconnue : ", "Comando desconhecido: ");
 
     @ObfuscatedName("vt.s")
-    public static final LocalisedText field6937 = new LocalisedText("Cancel", "Abbrechen", "Annuler", "Cancelar");
+    public static final LocalisedText MINIMENU_CANCEL = new LocalisedText("Cancel", "Abbrechen", "Annuler", "Cancelar");
 
     @ObfuscatedName("vt.c")
     public static final LocalisedText field7003 = new LocalisedText("#Player", "#Spieler", "#Joueur", "#Jogador");
@@ -46,7 +46,7 @@ public class LocalisedText {
     public static final LocalisedText field6956 = new LocalisedText("Select", "Auswählen", "Sélectionner", "Selecionar");
 
     @ObfuscatedName("vt.q")
-    public static final LocalisedText field6914 = new LocalisedText("Continue", "Weiter", "Continuer", "Continuar");
+    public static final LocalisedText MINIMENU_CONTINUE = new LocalisedText("Continue", "Weiter", "Continuer", "Continuar");
 
     @ObfuscatedName("vt.p")
     public static final LocalisedText field6880 = new LocalisedText("Invalid player name.", "Unzulässiger Charaktername!", "Nom de joueur incorrect.", "Nome de jogador inválido.");

@@ -826,7 +826,7 @@ public abstract class GpuToolkit extends RendererToolkit {
         }
         this.method13583();
         this.field8336.method4352();
-        for (Node var1 = this.field8362.last(); var1 != null; var1 = this.field8362.method11567()) {
+        for (Node var1 = this.field8362.last(); var1 != null; var1 = this.field8362.prev()) {
             ((GpuHeap) var1).method16230();
         }
         ColourUtils.method2790(false, true);
@@ -1467,8 +1467,8 @@ public abstract class GpuToolkit extends RendererToolkit {
     public final void method13533() {
         this.field8332.method5412(this.field8276);
         this.method13638(this.field8332);
-        this.field8290 = (this.field8332.field3480[14] - this.field8332.field3480[15]) / (this.field8332.field3480[11] - this.field8332.field3480[10]);
-        this.field8289 = -this.field8332.field3480[14] / this.field8332.field3480[10];
+        this.field8290 = (this.field8332.entries[14] - this.field8332.entries[15]) / (this.field8332.entries[11] - this.field8332.entries[10]);
+        this.field8289 = -this.field8332.entries[14] / this.field8332.entries[10];
         this.method13579();
     }
 
@@ -1498,10 +1498,10 @@ public abstract class GpuToolkit extends RendererToolkit {
 
     @ObfuscatedName("yk.do(FFF[F)V")
     public void method550(float arg0, float arg1, float arg2, float[] arg3) {
-        float var5 = this.field8318.field3480[11] * arg2 + this.field8318.field3480[7] * arg1 + this.field8318.field3480[3] * arg0 + this.field8318.field3480[15];
-        float var6 = this.field8318.field3480[8] * arg2 + this.field8318.field3480[4] * arg1 + this.field8318.field3480[0] * arg0 + this.field8318.field3480[12];
-        float var7 = this.field8318.field3480[9] * arg2 + this.field8318.field3480[5] * arg1 + this.field8318.field3480[1] * arg0 + this.field8318.field3480[13];
-        float var8 = this.field8258.field3480[10] * arg2 + this.field8258.field3480[6] * arg1 + this.field8258.field3480[2] * arg0 + this.field8258.field3480[14];
+        float var5 = this.field8318.entries[11] * arg2 + this.field8318.entries[7] * arg1 + this.field8318.entries[3] * arg0 + this.field8318.entries[15];
+        float var6 = this.field8318.entries[8] * arg2 + this.field8318.entries[4] * arg1 + this.field8318.entries[0] * arg0 + this.field8318.entries[12];
+        float var7 = this.field8318.entries[9] * arg2 + this.field8318.entries[5] * arg1 + this.field8318.entries[1] * arg0 + this.field8318.entries[13];
+        float var8 = this.field8258.entries[10] * arg2 + this.field8258.entries[6] * arg1 + this.field8258.entries[2] * arg0 + this.field8258.entries[14];
         arg3[0] = this.field8282 * var6 / var5 + this.field8281;
         arg3[1] = this.field8284 * var7 / var5 + this.field8283;
         arg3[2] = var8;
@@ -1509,28 +1509,28 @@ public abstract class GpuToolkit extends RendererToolkit {
 
     @ObfuscatedName("yk.dg(FFF[F)V")
     public void method567(float arg0, float arg1, float arg2, float[] arg3) {
-        float var5 = this.field8318.field3480[10] * arg2 + this.field8318.field3480[6] * arg1 + this.field8318.field3480[2] * arg0 + this.field8318.field3480[14];
-        float var6 = this.field8318.field3480[11] * arg2 + this.field8318.field3480[7] * arg1 + this.field8318.field3480[3] * arg0 + this.field8318.field3480[15];
+        float var5 = this.field8318.entries[10] * arg2 + this.field8318.entries[6] * arg1 + this.field8318.entries[2] * arg0 + this.field8318.entries[14];
+        float var6 = this.field8318.entries[11] * arg2 + this.field8318.entries[7] * arg1 + this.field8318.entries[3] * arg0 + this.field8318.entries[15];
         if (var5 < -var6 || var5 > var6) {
             arg3[2] = Float.NaN;
             arg3[1] = Float.NaN;
             arg3[0] = Float.NaN;
             return;
         }
-        float var7 = this.field8318.field3480[8] * arg2 + this.field8318.field3480[4] * arg1 + this.field8318.field3480[0] * arg0 + this.field8318.field3480[12];
+        float var7 = this.field8318.entries[8] * arg2 + this.field8318.entries[4] * arg1 + this.field8318.entries[0] * arg0 + this.field8318.entries[12];
         if (var7 < -var6 || var7 > var6) {
             arg3[2] = Float.NaN;
             arg3[1] = Float.NaN;
             arg3[0] = Float.NaN;
             return;
         }
-        float var8 = this.field8318.field3480[9] * arg2 + this.field8318.field3480[5] * arg1 + this.field8318.field3480[1] * arg0 + this.field8318.field3480[13];
+        float var8 = this.field8318.entries[9] * arg2 + this.field8318.entries[5] * arg1 + this.field8318.entries[1] * arg0 + this.field8318.entries[13];
         if (var8 < -var6 || var8 > var6) {
             arg3[2] = Float.NaN;
             arg3[1] = Float.NaN;
             arg3[0] = Float.NaN;
         } else {
-            float var9 = this.field8258.field3480[10] * arg2 + this.field8258.field3480[6] * arg1 + this.field8258.field3480[2] * arg0 + this.field8258.field3480[14];
+            float var9 = this.field8258.entries[10] * arg2 + this.field8258.entries[6] * arg1 + this.field8258.entries[2] * arg0 + this.field8258.entries[14];
             arg3[0] = this.field8282 * var7 / var6 + this.field8281;
             arg3[1] = this.field8284 * var8 / var6 + this.field8283;
             arg3[2] = var9;
@@ -1540,25 +1540,25 @@ public abstract class GpuToolkit extends RendererToolkit {
     @ObfuscatedName("yk.bp(IIIIII)I")
     public int method500(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
         int var7 = 0;
-        float var8 = this.field8318.field3480[10] * (float) arg2 + this.field8318.field3480[6] * (float) arg1 + this.field8318.field3480[2] * (float) arg0 + this.field8318.field3480[14];
-        float var9 = this.field8318.field3480[10] * (float) arg5 + this.field8318.field3480[6] * (float) arg4 + this.field8318.field3480[2] * (float) arg3 + this.field8318.field3480[14];
-        float var10 = this.field8318.field3480[11] * (float) arg2 + this.field8318.field3480[7] * (float) arg1 + this.field8318.field3480[3] * (float) arg0 + this.field8318.field3480[15];
-        float var11 = this.field8318.field3480[11] * (float) arg5 + this.field8318.field3480[7] * (float) arg4 + this.field8318.field3480[3] * (float) arg3 + this.field8318.field3480[15];
+        float var8 = this.field8318.entries[10] * (float) arg2 + this.field8318.entries[6] * (float) arg1 + this.field8318.entries[2] * (float) arg0 + this.field8318.entries[14];
+        float var9 = this.field8318.entries[10] * (float) arg5 + this.field8318.entries[6] * (float) arg4 + this.field8318.entries[2] * (float) arg3 + this.field8318.entries[14];
+        float var10 = this.field8318.entries[11] * (float) arg2 + this.field8318.entries[7] * (float) arg1 + this.field8318.entries[3] * (float) arg0 + this.field8318.entries[15];
+        float var11 = this.field8318.entries[11] * (float) arg5 + this.field8318.entries[7] * (float) arg4 + this.field8318.entries[3] * (float) arg3 + this.field8318.entries[15];
         if (var8 < -var10 && var9 < -var11) {
             var7 |= 0x10;
         } else if (var8 > var10 && var9 > var11) {
             var7 |= 0x20;
         }
-        float var12 = this.field8318.field3480[8] * (float) arg2 + this.field8318.field3480[4] * (float) arg1 + this.field8318.field3480[0] * (float) arg0 + this.field8318.field3480[12];
-        float var13 = this.field8318.field3480[8] * (float) arg5 + this.field8318.field3480[4] * (float) arg4 + this.field8318.field3480[0] * (float) arg3 + this.field8318.field3480[12];
+        float var12 = this.field8318.entries[8] * (float) arg2 + this.field8318.entries[4] * (float) arg1 + this.field8318.entries[0] * (float) arg0 + this.field8318.entries[12];
+        float var13 = this.field8318.entries[8] * (float) arg5 + this.field8318.entries[4] * (float) arg4 + this.field8318.entries[0] * (float) arg3 + this.field8318.entries[12];
         if (var12 < -var10 && var13 < -var11) {
             var7 |= 0x1;
         }
         if (var12 > var10 && var13 > var11) {
             var7 |= 0x2;
         }
-        float var14 = this.field8318.field3480[9] * (float) arg2 + this.field8318.field3480[5] * (float) arg1 + this.field8318.field3480[1] * (float) arg0 + this.field8318.field3480[13];
-        float var15 = this.field8318.field3480[9] * (float) arg5 + this.field8318.field3480[5] * (float) arg4 + this.field8318.field3480[1] * (float) arg3 + this.field8318.field3480[13];
+        float var14 = this.field8318.entries[9] * (float) arg2 + this.field8318.entries[5] * (float) arg1 + this.field8318.entries[1] * (float) arg0 + this.field8318.entries[13];
+        float var15 = this.field8318.entries[9] * (float) arg5 + this.field8318.entries[5] * (float) arg4 + this.field8318.entries[1] * (float) arg3 + this.field8318.entries[13];
         if (var14 < -var10 && var15 < -var11) {
             var7 |= 0x4;
         }
@@ -1798,7 +1798,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.di(ILdk;)V")
-    public final void method547(int arg0, WaterFogData arg1) {
+    public final void setWaterFog(int arg0, WaterFogData arg1) {
         if (!this.field8274) {
             throw new RuntimeException("");
         }

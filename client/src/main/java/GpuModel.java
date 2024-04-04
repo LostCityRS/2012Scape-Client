@@ -2920,15 +2920,15 @@ public class GpuModel extends Model {
                 if (var4.field1372 != null) {
                     var5 = var4.field1372;
                 }
-                var5.field1378 = (int) (var2.field3480[8] * (float) this.field7934[var4.field1374] + var2.field3480[0] * (float) this.field7932[var4.field1374] + var2.field3480[4] * (float) this.field7931[var4.field1374] + var2.field3480[12]);
-                var5.field1379 = (int) (var2.field3480[9] * (float) this.field7934[var4.field1374] + var2.field3480[1] * (float) this.field7932[var4.field1374] + var2.field3480[5] * (float) this.field7931[var4.field1374] + var2.field3480[13]);
-                var5.field1380 = (int) (var2.field3480[10] * (float) this.field7934[var4.field1374] + var2.field3480[2] * (float) this.field7932[var4.field1374] + var2.field3480[6] * (float) this.field7931[var4.field1374] + var2.field3480[14]);
-                var5.field1381 = (int) (var2.field3480[8] * (float) this.field7934[var4.field1375] + var2.field3480[0] * (float) this.field7932[var4.field1375] + var2.field3480[4] * (float) this.field7931[var4.field1375] + var2.field3480[12]);
-                var5.field1377 = (int) (var2.field3480[9] * (float) this.field7934[var4.field1375] + var2.field3480[1] * (float) this.field7932[var4.field1375] + var2.field3480[5] * (float) this.field7931[var4.field1375] + var2.field3480[13]);
-                var5.field1373 = (int) (var2.field3480[10] * (float) this.field7934[var4.field1375] + var2.field3480[2] * (float) this.field7932[var4.field1375] + var2.field3480[6] * (float) this.field7931[var4.field1375] + var2.field3480[14]);
-                var5.field1384 = (int) (var2.field3480[8] * (float) this.field7934[var4.field1376] + var2.field3480[0] * (float) this.field7932[var4.field1376] + var2.field3480[4] * (float) this.field7931[var4.field1376] + var2.field3480[12]);
-                var5.field1385 = (int) (var2.field3480[9] * (float) this.field7934[var4.field1376] + var2.field3480[1] * (float) this.field7932[var4.field1376] + var2.field3480[5] * (float) this.field7931[var4.field1376] + var2.field3480[13]);
-                var5.field1386 = (int) (var2.field3480[10] * (float) this.field7934[var4.field1376] + var2.field3480[2] * (float) this.field7932[var4.field1376] + var2.field3480[6] * (float) this.field7931[var4.field1376] + var2.field3480[14]);
+                var5.field1378 = (int) (var2.entries[8] * (float) this.field7934[var4.field1374] + var2.entries[0] * (float) this.field7932[var4.field1374] + var2.entries[4] * (float) this.field7931[var4.field1374] + var2.entries[12]);
+                var5.field1379 = (int) (var2.entries[9] * (float) this.field7934[var4.field1374] + var2.entries[1] * (float) this.field7932[var4.field1374] + var2.entries[5] * (float) this.field7931[var4.field1374] + var2.entries[13]);
+                var5.field1380 = (int) (var2.entries[10] * (float) this.field7934[var4.field1374] + var2.entries[2] * (float) this.field7932[var4.field1374] + var2.entries[6] * (float) this.field7931[var4.field1374] + var2.entries[14]);
+                var5.field1381 = (int) (var2.entries[8] * (float) this.field7934[var4.field1375] + var2.entries[0] * (float) this.field7932[var4.field1375] + var2.entries[4] * (float) this.field7931[var4.field1375] + var2.entries[12]);
+                var5.field1377 = (int) (var2.entries[9] * (float) this.field7934[var4.field1375] + var2.entries[1] * (float) this.field7932[var4.field1375] + var2.entries[5] * (float) this.field7931[var4.field1375] + var2.entries[13]);
+                var5.field1373 = (int) (var2.entries[10] * (float) this.field7934[var4.field1375] + var2.entries[2] * (float) this.field7932[var4.field1375] + var2.entries[6] * (float) this.field7931[var4.field1375] + var2.entries[14]);
+                var5.field1384 = (int) (var2.entries[8] * (float) this.field7934[var4.field1376] + var2.entries[0] * (float) this.field7932[var4.field1376] + var2.entries[4] * (float) this.field7931[var4.field1376] + var2.entries[12]);
+                var5.field1385 = (int) (var2.entries[9] * (float) this.field7934[var4.field1376] + var2.entries[1] * (float) this.field7932[var4.field1376] + var2.entries[5] * (float) this.field7931[var4.field1376] + var2.entries[13]);
+                var5.field1386 = (int) (var2.entries[10] * (float) this.field7934[var4.field1376] + var2.entries[2] * (float) this.field7932[var4.field1376] + var2.entries[6] * (float) this.field7931[var4.field1376] + var2.entries[14]);
             }
         }
         if (this.field7981 == null) {
@@ -2945,9 +2945,9 @@ public class GpuModel extends Model {
             } else {
                 var7.field1237.method5412(var2);
             }
-            var8.field1240 = (int) (var2.field3480[8] * (float) this.field7934[var7.field1239] + var2.field3480[0] * (float) this.field7932[var7.field1239] + var2.field3480[4] * (float) this.field7931[var7.field1239] + var2.field3480[12]);
-            var8.field1241 = (int) (var2.field3480[9] * (float) this.field7934[var7.field1239] + var2.field3480[1] * (float) this.field7932[var7.field1239] + var2.field3480[5] * (float) this.field7931[var7.field1239] + var2.field3480[13]);
-            var8.field1242 = (int) (var2.field3480[10] * (float) this.field7934[var7.field1239] + var2.field3480[2] * (float) this.field7932[var7.field1239] + var2.field3480[6] * (float) this.field7931[var7.field1239] + var2.field3480[14]);
+            var8.field1240 = (int) (var2.entries[8] * (float) this.field7934[var7.field1239] + var2.entries[0] * (float) this.field7932[var7.field1239] + var2.entries[4] * (float) this.field7931[var7.field1239] + var2.entries[12]);
+            var8.field1241 = (int) (var2.entries[9] * (float) this.field7934[var7.field1239] + var2.entries[1] * (float) this.field7932[var7.field1239] + var2.entries[5] * (float) this.field7931[var7.field1239] + var2.entries[13]);
+            var8.field1242 = (int) (var2.entries[10] * (float) this.field7934[var7.field1239] + var2.entries[2] * (float) this.field7932[var7.field1239] + var2.entries[6] * (float) this.field7931[var7.field1239] + var2.entries[14]);
         }
     }
 
@@ -3009,11 +3009,11 @@ public class GpuModel extends Model {
             float var27 = (float) this.field7990[var26];
             float var28 = (float) this.field7976[var26];
             float var29 = (float) this.field7992[var26];
-            float var30 = var8.field3480[10] * var29 + var8.field3480[2] * var27 + var8.field3480[6] * var28 + var8.field3480[14];
-            float var31 = var8.field3480[11] * var29 + var8.field3480[3] * var27 + var8.field3480[7] * var28 + var8.field3480[15];
+            float var30 = var8.entries[10] * var29 + var8.entries[2] * var27 + var8.entries[6] * var28 + var8.entries[14];
+            float var31 = var8.entries[11] * var29 + var8.entries[3] * var27 + var8.entries[7] * var28 + var8.entries[15];
             if (var30 >= -var31) {
-                float var32 = var8.field3480[8] * var29 + var8.field3480[0] * var27 + var8.field3480[4] * var28 + var8.field3480[12];
-                float var33 = var8.field3480[9] * var29 + var8.field3480[1] * var27 + var8.field3480[5] * var28 + var8.field3480[13];
+                float var32 = var8.entries[8] * var29 + var8.entries[0] * var27 + var8.entries[4] * var28 + var8.entries[12];
+                float var33 = var8.entries[9] * var29 + var8.entries[1] * var27 + var8.entries[5] * var28 + var8.entries[13];
                 float var34 = this.field7925.field8282 * var32 / var31 + this.field7925.field8281;
                 float var35 = this.field7925.field8284 * var33 / var31 + this.field7925.field8283;
                 if (var34 < var10) {
@@ -3045,11 +3045,11 @@ public class GpuModel extends Model {
                 float var39 = (float) this.field7932[var38];
                 float var40 = (float) this.field7931[var38];
                 float var41 = (float) this.field7934[var38];
-                float var42 = var8.field3480[10] * var41 + var8.field3480[2] * var39 + var8.field3480[6] * var40 + var8.field3480[14];
-                float var43 = var8.field3480[11] * var41 + var8.field3480[3] * var39 + var8.field3480[7] * var40 + var8.field3480[15];
+                float var42 = var8.entries[10] * var41 + var8.entries[2] * var39 + var8.entries[6] * var40 + var8.entries[14];
+                float var43 = var8.entries[11] * var41 + var8.entries[3] * var39 + var8.entries[7] * var40 + var8.entries[15];
                 if (var42 >= -var43) {
-                    float var44 = var8.field3480[8] * var41 + var8.field3480[0] * var39 + var8.field3480[4] * var40 + var8.field3480[12];
-                    float var45 = var8.field3480[9] * var41 + var8.field3480[1] * var39 + var8.field3480[5] * var40 + var8.field3480[13];
+                    float var44 = var8.entries[8] * var41 + var8.entries[0] * var39 + var8.entries[4] * var40 + var8.entries[12];
+                    float var45 = var8.entries[9] * var41 + var8.entries[1] * var39 + var8.entries[5] * var40 + var8.entries[13];
                     int var46 = this.field7993[var38];
                     int var47 = this.field7993[var38 + 1];
                     for (int var48 = var46; var48 < var47; var48++) {
@@ -3216,10 +3216,10 @@ public class GpuModel extends Model {
             int var20 = this.field7972 + this.field7971 >> 1;
             int var21 = this.field7982 + this.field7939 >> 1;
             int var23 = this.field7969;
-            float var25 = var6.field3480[8] * (float) var21 + var6.field3480[0] * (float) var20 + var6.field3480[4] * (float) var23 + var6.field3480[12];
-            float var26 = var6.field3480[9] * (float) var21 + var6.field3480[1] * (float) var20 + var6.field3480[5] * (float) var23 + var6.field3480[13];
-            float var27 = var6.field3480[10] * (float) var21 + var6.field3480[2] * (float) var20 + var6.field3480[6] * (float) var23 + var6.field3480[14];
-            float var28 = var6.field3480[11] * (float) var21 + var6.field3480[3] * (float) var20 + var6.field3480[7] * (float) var23 + var6.field3480[15];
+            float var25 = var6.entries[8] * (float) var21 + var6.entries[0] * (float) var20 + var6.entries[4] * (float) var23 + var6.entries[12];
+            float var26 = var6.entries[9] * (float) var21 + var6.entries[1] * (float) var20 + var6.entries[5] * (float) var23 + var6.entries[13];
+            float var27 = var6.entries[10] * (float) var21 + var6.entries[2] * (float) var20 + var6.entries[6] * (float) var23 + var6.entries[14];
+            float var28 = var6.entries[11] * (float) var21 + var6.entries[3] * (float) var20 + var6.entries[7] * (float) var23 + var6.entries[15];
             if (var27 >= -var28) {
                 arg1.field1516 = (int) (this.field7925.field8282 * var25 / var28 + this.field7925.field8281);
                 arg1.field1518 = (int) (this.field7925.field8284 * var26 / var28 + this.field7925.field8283);
@@ -3227,10 +3227,10 @@ public class GpuModel extends Model {
                 var18 = true;
             }
             int var30 = this.field7970;
-            float var32 = var6.field3480[8] * (float) var21 + var6.field3480[0] * (float) var20 + var6.field3480[4] * (float) var30 + var6.field3480[12];
-            float var33 = var6.field3480[9] * (float) var21 + var6.field3480[1] * (float) var20 + var6.field3480[5] * (float) var30 + var6.field3480[13];
-            float var34 = var6.field3480[10] * (float) var21 + var6.field3480[2] * (float) var20 + var6.field3480[6] * (float) var30 + var6.field3480[14];
-            float var35 = var6.field3480[11] * (float) var21 + var6.field3480[3] * (float) var20 + var6.field3480[7] * (float) var30 + var6.field3480[15];
+            float var32 = var6.entries[8] * (float) var21 + var6.entries[0] * (float) var20 + var6.entries[4] * (float) var30 + var6.entries[12];
+            float var33 = var6.entries[9] * (float) var21 + var6.entries[1] * (float) var20 + var6.entries[5] * (float) var30 + var6.entries[13];
+            float var34 = var6.entries[10] * (float) var21 + var6.entries[2] * (float) var20 + var6.entries[6] * (float) var30 + var6.entries[14];
+            float var35 = var6.entries[11] * (float) var21 + var6.entries[3] * (float) var20 + var6.entries[7] * (float) var30 + var6.entries[15];
             if (var34 >= -var35) {
                 arg1.field1519 = (int) (this.field7925.field8282 * var32 / var35 + this.field7925.field8281);
                 arg1.field1520 = (int) (this.field7925.field8284 * var33 / var35 + this.field7925.field8283);
@@ -3258,12 +3258,12 @@ public class GpuModel extends Model {
             }
             if (var19) {
                 if (var27 / var28 > var34 / var35) {
-                    float var44 = var4.field3480[0] * (float) this.field7967 + var25 + var4.field3480[12];
-                    float var45 = var4.field3480[3] * (float) this.field7967 + var28 + var4.field3480[15];
+                    float var44 = var4.entries[0] * (float) this.field7967 + var25 + var4.entries[12];
+                    float var45 = var4.entries[3] * (float) this.field7967 + var28 + var4.entries[15];
                     arg1.field1517 = (int) (this.field7925.field8282 * var44 / var45 + (this.field7925.field8281 - (float) arg1.field1516));
                 } else {
-                    float var46 = var4.field3480[0] * (float) this.field7967 + var32 + var4.field3480[12];
-                    float var47 = var4.field3480[3] * (float) this.field7967 + var35 + var4.field3480[15];
+                    float var46 = var4.entries[0] * (float) this.field7967 + var32 + var4.entries[12];
+                    float var47 = var4.entries[3] * (float) this.field7967 + var35 + var4.entries[15];
                     arg1.field1517 = (int) (this.field7925.field8282 * var46 / var47 + (this.field7925.field8281 - (float) arg1.field1519));
                 }
                 arg1.field1521 = true;
@@ -3296,8 +3296,8 @@ public class GpuModel extends Model {
         if (this.field7925.field8274) {
             WaterFogData var3 = this.field7925.method13573();
             var2.field2266.method5074(0.0F, 1.0F, 0.0F, (float) -this.field7925.field8236);
-            var2.field2266.method5079(3.0F / (float) var3.field1471);
-            var2.field2259.method5373((float) (var3.field1475 >> 16 & 0xFF) / 255.0F, (float) (var3.field1475 >> 8 & 0xFF) / 255.0F, (float) (var3.field1475 >> 0 & 0xFF) / 255.0F);
+            var2.field2266.method5079(3.0F / (float) var3.scale);
+            var2.field2259.method5373((float) (var3.colour >> 16 & 0xFF) / 255.0F, (float) (var3.colour >> 8 & 0xFF) / 255.0F, (float) (var3.colour >> 0 & 0xFF) / 255.0F);
         } else {
             var2.field2266.method5074(0.0F, 0.0F, 0.0F, 0.0F);
             var2.field2259.method5373(0.0F, 0.0F, 0.0F);
@@ -3329,15 +3329,15 @@ public class GpuModel extends Model {
                 boolean var8 = false;
                 if (var7 == 65535) {
                     var2.field2268 = this.field7925.field8312;
-                    float[] var10 = var2.field2248.field3480;
-                    var2.field2248.field3480[13] = 0.0F;
+                    float[] var10 = var2.field2248.entries;
+                    var2.field2248.entries[13] = 0.0F;
                     var10[12] = 0.0F;
                 } else {
                     var2.field2268 = this.field7925.field8336.method4359(var7);
                     Material var9 = this.field7925.field400.method889(var7);
                     var8 = !Material.method12638(var9.field1270);
-                    var2.field2248.field3480[12] = (float) (this.field7925.field8391 % 128000) / 1000.0F * (float) var9.field1268 / 64.0F % 1.0F;
-                    var2.field2248.field3480[13] = (float) (this.field7925.field8391 % 128000) / 1000.0F * (float) var9.field1261 / 64.0F % 1.0F;
+                    var2.field2248.entries[12] = (float) (this.field7925.field8391 % 128000) / 1000.0F * (float) var9.field1268 / 64.0F % 1.0F;
+                    var2.field2248.entries[13] = (float) (this.field7925.field8391 % 128000) / 1000.0F * (float) var9.field1261 / 64.0F % 1.0F;
                 }
                 var2.field2267 = this.field7966[var4];
                 var2.field2261 = this.field7977[var4];
@@ -3387,16 +3387,16 @@ public class GpuModel extends Model {
                 byte var22 = 11;
                 if (var21 == 65535) {
                     var2.field2268 = this.field7925.field8312;
-                    float[] var24 = var2.field2248.field3480;
-                    var2.field2248.field3480[13] = 0.0F;
+                    float[] var24 = var2.field2248.entries;
+                    var2.field2248.entries[13] = 0.0F;
                     var24[12] = 0.0F;
                 } else {
                     var2.field2268 = this.field7925.field8336.method4359(var21);
                     Material var23 = this.field7925.field400.method889(var21);
                     var22 = var23.field1270;
                     var2.method3862(var23);
-                    var2.field2248.field3480[12] = (float) (this.field7925.field8391 % 128000) / 1000.0F * (float) var23.field1268 / 64.0F % 1.0F;
-                    var2.field2248.field3480[13] = (float) (this.field7925.field8391 % 128000) / 1000.0F * (float) var23.field1261 / 64.0F % 1.0F;
+                    var2.field2248.entries[12] = (float) (this.field7925.field8391 % 128000) / 1000.0F * (float) var23.field1268 / 64.0F % 1.0F;
+                    var2.field2248.entries[13] = (float) (this.field7925.field8391 % 128000) / 1000.0F * (float) var23.field1261 / 64.0F % 1.0F;
                 }
                 var2.field2267 = this.field7966[var18];
                 var2.field2261 = this.field7977[var18];
@@ -3404,7 +3404,7 @@ public class GpuModel extends Model {
                 var2.field2252 = var20 - var19;
                 switch (var22) {
                     case 1:
-                        var2.field2258.method5373(this.field7925.field8322.field3480[12], this.field7925.field8322.field3480[13], this.field7925.field8322.field3480[14]);
+                        var2.field2258.method5373(this.field7925.field8322.entries[12], this.field7925.field8322.entries[13], this.field7925.field8322.entries[14]);
                         var2.field2258.method5319(var11);
                         var2.method3851(var12);
                         break;
@@ -3435,7 +3435,7 @@ public class GpuModel extends Model {
                         var2.method3849(!Material.method12638(var22));
                         break;
                     case 7:
-                        var2.field2258.method5373(this.field7925.field8322.field3480[12], this.field7925.field8322.field3480[13], this.field7925.field8322.field3480[14]);
+                        var2.field2258.method5373(this.field7925.field8322.entries[12], this.field7925.field8322.entries[13], this.field7925.field8322.entries[14]);
                         var2.field2258.method5319(var11);
                         var2.field2256.method5385(arg0);
                         var2.field2253 = this.field7925.method13516();
@@ -3461,9 +3461,9 @@ public class GpuModel extends Model {
                 float var7 = (float) (this.field7932[var5.field2526] + this.field7932[var5.field2522] + this.field7932[var5.field2521]) * 0.3333333F;
                 float var8 = (float) (this.field7931[var5.field2526] + this.field7931[var5.field2522] + this.field7931[var5.field2521]) * 0.3333333F;
                 float var9 = (float) (this.field7934[var5.field2526] + this.field7934[var5.field2522] + this.field7934[var5.field2521]) * 0.3333333F;
-                float var10 = arg0.field3480[8] * var9 + arg0.field3480[0] * var7 + arg0.field3480[4] * var8 + arg0.field3480[12];
-                float var11 = arg0.field3480[9] * var9 + arg0.field3480[1] * var7 + arg0.field3480[5] * var8 + arg0.field3480[13];
-                float var12 = arg0.field3480[10] * var9 + arg0.field3480[2] * var7 + arg0.field3480[6] * var8 + arg0.field3480[14];
+                float var10 = arg0.entries[8] * var9 + arg0.entries[0] * var7 + arg0.entries[4] * var8 + arg0.entries[12];
+                float var11 = arg0.entries[9] * var9 + arg0.entries[1] * var7 + arg0.entries[5] * var8 + arg0.entries[13];
+                float var12 = arg0.entries[10] * var9 + arg0.entries[2] * var7 + arg0.entries[6] * var8 + arg0.entries[14];
                 float var13 = (float) (1.0D / Math.sqrt((double) (var12 * var12 + var10 * var10 + var11 * var11))) * (float) var5.field2529;
                 var2.method5188(var6.field2478, var5.field2528 * var6.field2474 >> 7, var5.field2525 * var6.field2475 >> 7, (float) var6.field2476 + var10 - var10 * var13, (float) var6.field2473 + var11 - var11 * var13, var12 - var12 * var13);
                 var2.method5117(this.field7925.field8257);

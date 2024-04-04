@@ -39,7 +39,7 @@ public class StaticGroundDecorEntity extends GroundDecorLayerEntity implements L
         this.field9810 = arg3.field6474;
         this.field7585 = arg9;
         this.field7584 = (byte) arg10;
-        this.field7579 = arg3.field6493 != 0 && !arg9;
+        this.field7579 = arg3.active != 0 && !arg9;
         this.field7587 = arg11;
         this.field7586 = arg1.method449() && arg3.field6541 && !this.field7585 && Statics.options.field9651.method15747() != 0;
         int var13 = 2048;
@@ -95,7 +95,7 @@ public class StaticGroundDecorEntity extends GroundDecorLayerEntity implements L
 
     @ObfuscatedName("yw.bm(Lra;IZI)Luz;")
     public Pair method12906(RendererToolkit arg0, int arg1, boolean arg2) {
-        LocType var4 = this.field7588.method11471(this.field9810);
+        LocType var4 = this.field7588.get(this.field9810);
         FloorModel var5;
         FloorModel var6;
         if (this.field7585) {
@@ -173,7 +173,7 @@ public class StaticGroundDecorEntity extends GroundDecorLayerEntity implements L
     }
 
     @ObfuscatedName("yw.u(B)I")
-    public int method2401() {
+    public int getType() {
         return this.field9810;
     }
 

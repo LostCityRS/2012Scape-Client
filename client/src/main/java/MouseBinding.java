@@ -19,7 +19,7 @@ public class MouseBinding implements Binding {
     }
 
     @ObfuscatedName("pc.u(Ladv;[Lox;ILoq;I)Z")
-    public boolean method7884(BasicMouseEvent arg0, KeyboardEvent[] arg1, int arg2, Keyboard arg3) {
+    public boolean test(BasicMouseEvent arg0, KeyboardEvent[] arg1, int arg2, Keyboard arg3) {
         if (arg0 != null) {
             if (this.field4811 != arg0.method15181()) {
                 return false;

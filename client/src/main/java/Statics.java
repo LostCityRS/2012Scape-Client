@@ -237,7 +237,7 @@ public class Statics {
     public static int field1685;
 
     @ObfuscatedName("ej.s")
-    public static MixBuss field1735;
+    public static MidiAudioBuss field1735;
 
     @ObfuscatedName("ej.bw")
     public static MiniMenuDefaults field1736;
@@ -345,7 +345,7 @@ public class Statics {
     public static int field2325;
 
     @ObfuscatedName("gr.d")
-    public static MixBuss field2327;
+    public static MidiAudioBuss field2327;
 
     @ObfuscatedName("gr.kd")
     public static int cameraPitch;
@@ -639,10 +639,10 @@ public class Statics {
     public static FullscreenImpl field4013;
 
     @ObfuscatedName("mg.j")
-    public static int field4015;
+    public static int sampleRate;
 
     @ObfuscatedName("mg.a")
-    public static boolean field4016;
+    public static boolean stereo;
 
     @ObfuscatedName("mg.s")
     public static int field4017;
@@ -696,7 +696,7 @@ public class Statics {
     public static int cameraMoveToY;
 
     @ObfuscatedName("ne.q")
-    public static AudioBuss_Sub1 field4201;
+    public static MixerAudioBuss field4201;
 
     @ObfuscatedName("ne.o")
     public static SoundRelated14 field4206;
@@ -720,7 +720,7 @@ public class Statics {
     public static BufferedFile[] field4245;
 
     @ObfuscatedName("ol.k")
-    public static MixBuss field4262;
+    public static MidiAudioBuss field4262;
 
     @ObfuscatedName("ol.eb")
     public static long field4263;
@@ -846,7 +846,7 @@ public class Statics {
     public static Js5NetResourceProvider[] field4456;
 
     @ObfuscatedName("ot.he")
-    public static ParamTypeList field4464;
+    public static ParamTypeList paramTypes;
 
     @ObfuscatedName("ot.ae")
     public static int displayX;
@@ -1443,7 +1443,7 @@ public class Statics {
     public static byte field7353;
 
     @ObfuscatedName("wt.pd")
-    public static int field7366;
+    public static int targetParam;
 
     @ObfuscatedName("wu.fc")
     public static Js5 field7387;
@@ -2093,7 +2093,7 @@ public class Statics {
     }
 
     @ObfuscatedName("fj.u(Lls;Lls;Lls;Laih;Lmg;I)Z")
-    public static boolean method3612(Js5 arg0, Js5 arg1, Js5 arg2, MixBuss arg3, PcmPlayer arg4) {
+    public static boolean method3612(Js5 arg0, Js5 arg1, Js5 arg2, MidiAudioBuss arg3, PcmPlayer arg4) {
         field1586 = arg0;
         field1580 = arg1;
         field1581 = arg2;
@@ -2275,9 +2275,9 @@ public class Statics {
 
     @ObfuscatedName("ws.j(I)V")
     public static void method12620() {
-        DelayedStateChange.field10326.method11925();
-        DelayedStateChange.field10317.method11733();
-        DelayedStateChange.field10323.method11733();
+        DelayedStateChange.field10326.clear();
+        DelayedStateChange.field10317.clear();
+        DelayedStateChange.field10323.clear();
     }
 
     @ObfuscatedName("dd.u(I)Laeg;")
@@ -2312,9 +2312,9 @@ public class Statics {
         field5198 = PcmPlayer.method6494(canvas, 0, 22050);
         AudioRenderer.method3658(true, AudioRenderer.method6082(null));
         field3536 = PcmPlayer.method6494(canvas, 1, 2048);
-        field4201 = new AudioBuss_Sub1();
+        field4201 = new MixerAudioBuss();
         field3536.method6521(field4201);
-        field3160 = new SampleRateConverter(22050, field4015);
+        field3160 = new SampleRateConverter(22050, sampleRate);
         AudioRenderer.method2572();
     }
 
@@ -2431,11 +2431,11 @@ public class Statics {
             int var15 = field6761.method4574(var13, client.field9068) + field752;
             arg2.method517(field8719, false).method1070(var14 + field753.method2721(), var15 + field753.method2763(), var12 - field753.method2721() * 2, var13 - field753.method2763() * 2, 1, -1, 0);
             arg2.method517(field753, true).method2500(var14, var15);
-            field753.method2757();
+            field753.flipHorizontally();
             arg2.method517(field753, true).method2500(var12 + var14 - var10, var15);
             field753.method2778();
             arg2.method517(field753, true).method2500(var12 + var14 - var10, var13 + var15 - var10);
-            field753.method2757();
+            field753.flipHorizontally();
             arg2.method517(field753, true).method2500(var14, var13 + var15 - var10);
             field753.method2778();
             arg2.method517(field5243, true).method2511(var14, var15 + field753.method2763(), var10, var13 - field753.method2763() * 2);
@@ -2447,7 +2447,7 @@ public class Statics {
             arg2.method517(field5243, true).method2511(var14 + field753.method2721(), var13 + var15 - var10, var12 - field753.method2721() * 2, var10);
             field5243.method2733();
             var7.method836(arg0, var11 + var14, var11 + var15, var12 - var11 * 2, var13 - var11 * 2, field754 | 0xFF000000, -1, 1, 1, 0, null, null, null, 0, 0);
-            client.method7910(var14, var15, var12, var13);
+            client.requestRedrawAtPoint(var14, var15, var12, var13);
         } else {
             int var16 = arg4.method12393(arg0, 250, null);
             int var17 = arg4.method12394(arg0, 250, null) * 13;
@@ -2457,7 +2457,7 @@ public class Statics {
             arg2.B(var19 - var18, var20 - var18, var16 + var18 + var18, var17 + var18 + var18, -16777216, 0);
             arg2.drawRectangle(var19 - var18, var20 - var18, var16 + var18 + var18, var17 + var18 + var18, -1, 0);
             arg3.method836(arg0, var19, var20, var16, var17, -1, -1, 1, 1, 0, null, null, null, 0, 0);
-            client.method7910(var19 - var18, var20 - var18, var16 + var18 + var18, var17 + var18 + var18);
+            client.requestRedrawAtPoint(var19 - var18, var20 - var18, var16 + var18 + var18, var17 + var18 + var18);
         }
         if (!arg1) {
             return;
@@ -2636,9 +2636,9 @@ public class Statics {
         arg0.L();
         arg0.ba(1, 1);
         client.method1703();
-        LocTypeList var50 = client.world.method6103();
+        LocTypeList var50 = client.world.getLocTypeList();
         MiniMap.field767 = 0;
-        MiniMap.field758.method11557();
+        MiniMap.field758.clearBridged();
         if (!MiniMap.field755) {
             for (int var51 = var7; var51 < var2 + var7; var51++) {
                 for (int var52 = var8; var52 < var3 + var8; var52++) {
@@ -2655,13 +2655,13 @@ public class Statics {
                                 var54 = (Location) var5.method7435(var53, var51, var52);
                             }
                             if (var54 != null) {
-                                LocType var55 = var50.method11471(var54.method2401());
+                                LocType var55 = var50.get(var54.getType());
                                 if (!var55.field6542 || client.field9142) {
                                     int var56 = var55.field6495;
-                                    if (var55.field6534 != null) {
-                                        for (int var57 = 0; var57 < var55.field6534.length; var57++) {
-                                            if (var55.field6534[var57] != -1) {
-                                                LocType var58 = var50.method11471(var55.field6534[var57]);
+                                    if (var55.multiloc != null) {
+                                        for (int var57 = 0; var57 < var55.multiloc.length; var57++) {
+                                            if (var55.multiloc[var57] != -1) {
+                                                LocType var58 = var50.get(var55.multiloc[var57]);
                                                 if (var58.field6495 >= 0) {
                                                     var56 = var58.field6495;
                                                 }
@@ -2981,7 +2981,7 @@ public class Statics {
 
     @ObfuscatedName("s.a(I)Z")
     public static boolean method1314() {
-        return MiniMenu.method3635(field1736.field5126);
+        return MiniMenu.testBinding(field1736.field5126);
     }
 
     @ObfuscatedName("yu.o(CI)Z")
@@ -3507,12 +3507,12 @@ public class Statics {
     }
 
     @ObfuscatedName("lh.d(III)V")
-    public static void method5718(int arg0, int arg1) {
+    public static void open(int arg0, int arg1) {
         if (!field4825.field5159) {
-            if (MiniMenu.field588 == 1) {
+            if (MiniMenu.length == 1) {
                 return;
             }
-            if (field6371 && MiniMenu.field588 == 2 && field2654.field10339.equals(LocalisedText.MINIMENU_FACE_HERE.get(language))) {
+            if (field6371 && MiniMenu.length == 2 && field2654.field10339.equals(LocalisedText.MINIMENU_FACE_HERE.get(language))) {
                 return;
             }
         }
@@ -3520,10 +3520,10 @@ public class Statics {
         int var3 = var2.method12418(LocalisedText.field6992.get(language));
         int var6;
         if (MiniMenu.field586) {
-            for (MiniMenuSubMenu var7 = (MiniMenuSubMenu) MiniMenu.field592.last(); var7 != null; var7 = (MiniMenuSubMenu) MiniMenu.field592.previous()) {
+            for (MiniMenuSubMenu var7 = (MiniMenuSubMenu) MiniMenu.submenus.last(); var7 != null; var7 = (MiniMenuSubMenu) MiniMenu.submenus.previous()) {
                 int var8;
                 if (var7.field10346 == 1) {
-                    var8 = MiniMenu.method5560((MiniMenuEntry) var7.field10345.field6662.field9552, var2);
+                    var8 = MiniMenu.method5560((MiniMenuEntry) var7.field10345.sentinel.dualPrev, var2);
                 } else {
                     var8 = MiniMenu.method1399(var7, var2);
                 }
@@ -3533,17 +3533,17 @@ public class Statics {
             }
             var3 += 8;
             var6 = MiniMenu.field594 * MiniMenu.field582 + 21;
-            field611 = (MiniMenu.field613 ? 26 : 22) + MiniMenu.field594 * MiniMenu.field582;
+            field611 = (MiniMenu.formatted ? 26 : 22) + MiniMenu.field594 * MiniMenu.field582;
         } else {
-            for (MiniMenuEntry var4 = (MiniMenuEntry) MiniMenu.field595.last(); var4 != null; var4 = (MiniMenuEntry) MiniMenu.field595.method11567()) {
+            for (MiniMenuEntry var4 = (MiniMenuEntry) MiniMenu.entries.last(); var4 != null; var4 = (MiniMenuEntry) MiniMenu.entries.prev()) {
                 int var5 = MiniMenu.method5560(var4, var2);
                 if (var5 > var3) {
                     var3 = var5;
                 }
             }
             var3 += 8;
-            var6 = MiniMenu.field588 * MiniMenu.field582 + 21;
-            field611 = (MiniMenu.field613 ? 26 : 22) + MiniMenu.field588 * MiniMenu.field582;
+            var6 = MiniMenu.length * MiniMenu.field582 + 21;
+            field611 = (MiniMenu.formatted ? 26 : 22) + MiniMenu.length * MiniMenu.field582;
         }
         var3 += 10;
         int var9 = arg0 - var3 / 2;
@@ -3644,10 +3644,10 @@ public class Statics {
 
     @ObfuscatedName("ql.p(Ljava/lang/String;Ljava/lang/String;IIIJIIZZJZI)V")
     public static void addEntry(String arg0, String arg1, int arg2, int arg3, int arg4, long arg5, int arg6, int arg7, boolean arg8, boolean arg9, long arg10, boolean arg11) {
-        if (!MiniMenu.open && MiniMenu.field588 < 502) {
+        if (!MiniMenu.open && MiniMenu.length < 502) {
             int var14 = arg2 == -1 ? client.defaultCursor : arg2;
             MiniMenuEntry var15 = new MiniMenuEntry(arg0, arg1, var14, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
-            MiniMenu.method2494(var15);
+            MiniMenu.addEntry(var15);
         }
     }
 
@@ -3745,26 +3745,26 @@ public class Statics {
     @ObfuscatedName("eo.ah(Lajs;I)[I")
     public static int[] method3289(MiniMenuEntry arg0) {
         int[] var1 = null;
-        if (MiniMenu.method5562(arg0.field10340)) {
+        if (MiniMenu.method5562(arg0.opcode)) {
             var1 = objTypes.get((int) arg0.field10333).field7057;
         } else if (arg0.field10332 != -1) {
             var1 = objTypes.get(arg0.field10332).field7057;
-        } else if (MiniMenu.method8731(arg0.field10340)) {
+        } else if (MiniMenu.method8731(arg0.opcode)) {
             ObjectNode var2 = (ObjectNode) client.npcs.getNode((long) arg0.field10333);
             if (var2 != null) {
                 NpcEntity var3 = (NpcEntity) var2.value;
-                NPCType var4 = var3.field10075;
-                if (var4.field7244 != null) {
-                    var4 = var4.method12516(field2669);
+                NPCType var4 = var3.type;
+                if (var4.multinpc != null) {
+                    var4 = var4.getMultiNPC(field2669);
                 }
                 if (var4 != null) {
                     var1 = var4.field7269;
                 }
             }
-        } else if (MiniMenu.method1676(arg0.field10340)) {
-            LocType var5 = client.world.method6103().method11471((int) (arg0.field10333 >>> 32 & 0x7FFFFFFFL));
-            if (var5.field6534 != null) {
-                var5 = var5.method11431(field2669);
+        } else if (MiniMenu.method1676(arg0.opcode)) {
+            LocType var5 = client.world.getLocTypeList().get((int) (arg0.field10333 >>> 32 & 0x7FFFFFFFL));
+            if (var5.multiloc != null) {
+                var5 = var5.getMultiLoc(field2669);
             }
             if (var5 != null) {
                 var1 = var5.field6545;
@@ -3800,8 +3800,8 @@ public class Statics {
     }
 
     @ObfuscatedName("aar.bd(Lahg;ZI)V")
-    public static void method13909(PlayerEntity arg0, boolean arg1) {
-        if (MiniMenu.field588 >= 406) {
+    public static void addPlayerEntityEntries(PlayerEntity arg0, boolean arg1) {
+        if (MiniMenu.length >= 406) {
             return;
         }
         if (localPlayerEntity != arg0) {
@@ -3861,8 +3861,8 @@ public class Statics {
                 }
             }
             if (!arg1) {
-                for (MiniMenuEntry var11 = (MiniMenuEntry) MiniMenu.field595.last(); var11 != null; var11 = (MiniMenuEntry) MiniMenu.field595.method11567()) {
-                    if (var11.field10340 == 23) {
+                for (MiniMenuEntry var11 = (MiniMenuEntry) MiniMenu.entries.last(); var11 != null; var11 = (MiniMenuEntry) MiniMenu.entries.prev()) {
+                    if (var11.opcode == 23) {
                         var11.field10341 = TextUtil.createColourTag(16777215) + var6;
                         break;
                     }
@@ -3879,13 +3879,13 @@ public class Statics {
     }
 
     @ObfuscatedName("agw.bp(Lajs;III)V")
-    public static void method15936(MiniMenuEntry arg0, int arg1, int arg2) {
-        if (arg0 == null || MiniMenu.field595.field6647 == arg0) {
+    public static void handleEntryClicked(MiniMenuEntry arg0, int arg1, int arg2) {
+        if (arg0 == null || MiniMenu.entries.sentinel == arg0) {
             return;
         }
         int var3 = arg0.field10329;
         int var4 = arg0.field10335;
-        int action = arg0.field10340;
+        int action = arg0.opcode;
         int var6 = (int) arg0.field10333;
         long var7 = arg0.field10333;
         if (action >= 2000) {
@@ -4001,13 +4001,13 @@ public class Statics {
             }
         }
         if (action == 57 || action == 1007) {
-            client.method5716(var6, var4, var3, arg0.field10334);
+            client.method5716(var6, var4, var3, arg0.opbase);
         }
         if (action == 23) {
             if (client.userStaffModLevel > 0 && method1314()) {
                 method2617(localPlayerEntity.level, var9.x + var3, var9.z + var4);
             } else {
-                ClientMessage var18 = MiniMenu.method1910(var3, var4, var6);
+                ClientMessage var18 = MiniMenu.createMoveMessage(var3, var4, var6);
                 if (var6 == 1) {
                     var18.buf.p1(-1);
                     var18.buf.p1(-1);
@@ -4047,13 +4047,13 @@ public class Statics {
             Component var21 = Component.get(var4, var3);
             if (var21 != null) {
                 client.cancelTargetMode();
-                ServerKeyProperties var22 = client.method14331(var21);
+                ServerKeyProperties var22 = client.getComponentEvents(var21);
                 method11974(var21, var22.method14928(), var22.field9423);
-                client.field9103 = client.method14722(var21);
+                client.field9103 = client.getComponentTargetVerb(var21);
                 if (client.field9103 == null) {
                     client.field9103 = "Null";
                 }
-                client.field9151 = var21.field1795 + TextUtil.createColourTag(16777215);
+                client.field9151 = var21.opbase + TextUtil.createColourTag(16777215);
             }
             return;
         }
@@ -4231,9 +4231,9 @@ public class Statics {
             client.players[var2] = null;
         }
         client.npcCount = 0;
-        client.npcs.method11925();
+        client.npcs.clear();
         client.field8966 = 0;
-        client.field9088.method11925();
+        client.field9088.clear();
         client.cameraReset();
         client.currentIncrementVerifyId = 0;
         field2669.method1647();
@@ -4243,7 +4243,7 @@ public class Statics {
         field8458 = null;
         field3357 = null;
         field3307 = 0L;
-        MiniMenu.method3561();
+        MiniMenu.close();
         MiniMenu.method1401();
     }
 
@@ -4252,7 +4252,7 @@ public class Statics {
         field3615.method8502();
         field4450.method11899();
         field7650.method3917();
-        client.world.method6103().method11477();
+        client.world.getLocTypeList().method11477();
         field3774.method12555();
         objTypes.method12300();
         field566.method11148();
@@ -4266,7 +4266,7 @@ public class Statics {
         field3769.method7776();
         field850.method12494();
         field8499.method7866();
-        field4464.method12597();
+        paramTypes.method12597();
         field4678.method7364();
         field6360.method3600();
         field785.method12456();
@@ -4421,15 +4421,15 @@ public class Statics {
         if (client.field8988 == 2) {
             client.updatePlayers();
             client.updateNpcs();
-        } else if (field2190.field5132.method7884(var16, client.field9072, client.field8953, keyboard)) {
+        } else if (field2190.field5132.test(var16, client.keyboardEvents, client.field8953, keyboard)) {
             CutsceneManager.method14961(false);
         } else {
-            if (client.field8988 == 4 && CutsceneManager.method2467(client.field9059)) {
+            if (client.field8988 == 4 && CutsceneManager.method2467(client.cutsceneId)) {
                 client.world.method6135(new RebuildRequest(RebuildType.field3839, null));
                 client.field8988 = 3;
             }
             if (client.field8988 == 3 && client.state != 16) {
-                CutsceneManager.field1529.method11925();
+                CutsceneManager.field1529.clear();
                 client.field8988 = 0;
                 client.field8906 = client.loopCycle;
                 client.field9029 = 0;
@@ -4517,7 +4517,7 @@ public class Statics {
                                             if (client.dragComponent != null) {
                                                 client.method7350();
                                             }
-                                            MiniMenu.method3534();
+                                            MiniMenu.update();
                                             if (client.userStaffModLevel > 0 && keyboard.isKeyHeld(82) && keyboard.isKeyHeld(81) && client.field9002 != 0) {
                                                 int var36 = localPlayerEntity.level - client.field9002;
                                                 if (var36 < 0) {
@@ -4907,7 +4907,7 @@ public class Statics {
 
     @ObfuscatedName("ge.cm(Lew;Lrn;B)V")
     public static final void method3983(Component arg0, ClientScriptState arg1) {
-        if (client.method14331(arg0).method14927() && client.field9108 == null) {
+        if (client.getComponentEvents(arg0).isPauseButton() && client.field9108 == null) {
             method11509(arg0.id, arg0.parentlayer);
             client.field9108 = Component.get(arg0.id, arg0.parentlayer);
             client.requestRedrawComponent(client.field9108);
@@ -5091,8 +5091,8 @@ public class Statics {
         arg2.field5216 -= 2;
         int var3 = arg2.field5215[arg2.field5216];
         int var4 = arg2.field5215[arg2.field5216 + 1];
-        ParamType var5 = field4464.method12600(var3);
-        if (var5.field7287 == var4) {
+        ParamType var5 = paramTypes.get(var3);
+        if (var5.defaultint == var4) {
             arg0.method3129(var3);
         } else {
             arg0.method3127(var3, var4);
@@ -5121,8 +5121,8 @@ public class Statics {
         arg0.field5216 -= 2;
         int var3 = arg0.field5215[arg0.field5216];
         int var4 = arg0.field5215[arg0.field5216 + 1];
-        ParamType var5 = field4464.method12600(var3);
-        if (var5.field7287 == var4) {
+        ParamType var5 = paramTypes.get(var3);
+        if (var5.defaultint == var4) {
             var2.method3129(var3);
         } else {
             var2.method3127(var3, var4);
@@ -5131,7 +5131,7 @@ public class Statics {
 
     @ObfuscatedName("vx.iy(B)V")
     public static final void method12183() {
-        for (ProjectileEntityNode var0 = (ProjectileEntityNode) client.field9007.last(); var0 != null; var0 = (ProjectileEntityNode) client.field9007.method11567()) {
+        for (ProjectileEntityNode var0 = (ProjectileEntityNode) client.field9007.last(); var0 != null; var0 = (ProjectileEntityNode) client.field9007.prev()) {
             ProjectileAnimation var1 = var0.field10342;
             if (client.loopCycle > var1.field10622) {
                 var0.remove();
@@ -5280,7 +5280,7 @@ public class Statics {
         int var17 = arg2 % 4 * 18 + var15;
         var11.method2500(var16, var17);
         if (arg0 == arg1) {
-            renderer.method482(var16 - 1, var17 - 1, 18, 18, -256);
+            renderer.drawRectangle(var16 - 1, var17 - 1, 18, 18, -256);
         }
         CoverMarkerClickbox var18 = CoverMarkerClickbox.method12327();
         var18.field9250 = arg1;
@@ -5864,7 +5864,7 @@ public class Statics {
         activeComponentParentLayer = arg0.id;
         client.activeComponentId = arg0.parentlayer;
         targetMask = arg1;
-        field7366 = arg2;
+        targetParam = arg2;
         client.activeComponentInvobject = arg0.invobject;
         targetCursor = arg0.field1827;
         client.defaultCursor = arg0.field1763;
@@ -6288,7 +6288,7 @@ public class Statics {
 
     @ObfuscatedName("va.arw(Lrn;B)V")
     public static final void method12185(ClientScriptState arg0) {
-        arg0.field5215[++arg0.field5216 - 1] = ((NpcEntity) arg0.field5228).field10075.field7211;
+        arg0.field5215[++arg0.field5216 - 1] = ((NpcEntity) arg0.field5228).type.field7211;
     }
 
     @ObfuscatedName("ak.ark(Lrn;I)V")

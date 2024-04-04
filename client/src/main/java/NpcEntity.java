@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class NpcEntity extends PathingEntity {
 
     @ObfuscatedName("ahs.bo")
-    public NPCType field10075;
+    public NPCType type;
 
     @ObfuscatedName("ahs.bh")
     public int field10080 = -1;
@@ -25,10 +25,10 @@ public class NpcEntity extends PathingEntity {
     public int field10069 = -1;
 
     @ObfuscatedName("ahs.cb")
-    public int field10072;
+    public int vislevel;
 
     @ObfuscatedName("ahs.cm")
-    public String field10077;
+    public String name;
 
     @ObfuscatedName("ahs.cw")
     public final NpcVarProvider field10078 = new NpcVarProvider(32);
@@ -75,13 +75,13 @@ public class NpcEntity extends PathingEntity {
 
     @ObfuscatedName("ahs.gb(Lwq;I)V")
     public void method16149(NPCType arg0) {
-        if (this.field10075 != arg0 && MiniMenu.open && MiniMenu.method11169(this.localPlayerIndex)) {
-            MiniMenu.method3561();
+        if (this.type != arg0 && MiniMenu.open && MiniMenu.method11169(this.localPlayerIndex)) {
+            MiniMenu.close();
         }
-        this.field10075 = arg0;
-        if (this.field10075 != null) {
-            this.field10077 = this.field10075.field7212;
-            this.field10072 = this.field10075.field7233;
+        this.type = arg0;
+        if (this.type != null) {
+            this.name = this.type.name;
+            this.vislevel = this.type.field7233;
         }
         if (this.field8640 != null) {
             this.field8640.method8100();
@@ -95,7 +95,7 @@ public class NpcEntity extends PathingEntity {
 
     @ObfuscatedName("ahs.bi(Lra;B)Loz;")
     public PickableEntity method12812(RendererToolkit arg0) {
-        if (this.field10075 == null || !this.method16151(arg0, 526336)) {
+        if (this.type == null || !this.method16151(arg0, 526336)) {
             return null;
         }
         Matrix4x3 var2 = this.method8558();
@@ -112,13 +112,13 @@ public class NpcEntity extends PathingEntity {
         var4.method5115(var2);
         var4.method5116(0.0F, (float) (-20 - this.field8604), 0.0F);
         BASType var8 = this.getBASType();
-        NPCType var9 = this.field10075.field7244 == null ? this.field10075 : this.field10075.method12516(Statics.field2669);
+        NPCType var9 = this.type.multinpc == null ? this.type : this.type.getMultiNPC(Statics.field2669);
         this.field8650 = false;
         PickableEntity var10 = null;
         if (Statics.options.field9658.method15709() == 1 && var9.field7249 && var8.field4714) {
             AnimationNode var11 = this.field8597.method11767() && this.field8597.method11776() ? this.field8597 : null;
             EntityWalkAnimationNode var12 = this.field8616.method11767() && (!this.field8616.field9899 || var11 == null) ? this.field8616 : null;
-            Model var13 = SpotShadowFactory.method1417(arg0, var5, this.field8601, this.field8644, this.field8603, this.field10075.field7213, this.field8651[0], this.field10075.field7236 & 0xFFFF, this.field10075.field7251 & 0xFFFF, this.field10075.field7252 & 0xFF, this.field10075.field7253 & 0xFF, var12 == null ? var11 : var12);
+            Model var13 = SpotShadowFactory.method1417(arg0, var5, this.field8601, this.field8644, this.field8603, this.type.field7213, this.field8651[0], this.type.field7236 & 0xFFFF, this.type.field7251 & 0xFFFF, this.type.field7252 & 0xFF, this.type.field7253 & 0xFF, var12 == null ? var11 : var12);
             if (var13 != null) {
                 if (this.field9811 == null || this.field9811.length < this.field8651.length + 1) {
                     this.method15642(this.field8651.length + 1);
@@ -139,7 +139,7 @@ public class NpcEntity extends PathingEntity {
         this.method14023(arg0, this.field8651, var4, false);
         for (int var14 = 0; var14 < this.field8651.length; var14++) {
             if (this.field8651[var14] != null) {
-                if (this.field10075.field7275) {
+                if (this.type.field7275) {
                     this.field8651[var14].PA(this.field10081, this.field10082, this.field10083, this.field10084);
                 }
                 this.field8651[var14].method271(var4, this.field9811[var14], 0);
@@ -175,7 +175,7 @@ public class NpcEntity extends PathingEntity {
             arg1 |= 0x80000;
         }
         int var10 = this.field8638.method1387();
-        Model var11 = this.field8651[0] = this.field10075.method12541(arg0, arg1, Statics.field3769, Statics.field2669, var5, var6, this.field8633, this.field8654, var10, this.field10073, this.method13960(), false);
+        Model var11 = this.field8651[0] = this.type.method12541(arg0, arg1, Statics.field3769, Statics.field2669, var5, var6, this.field8633, this.field8654, var10, this.field10073, this.method13960(), false);
         if (var11 == null) {
             return false;
         }
@@ -205,7 +205,7 @@ public class NpcEntity extends PathingEntity {
 
     @ObfuscatedName("ahs.bx(Lra;B)V")
     public void method12851(RendererToolkit arg0) {
-        if (this.field10075 == null || !this.field8613 && !this.method16151(arg0, 0)) {
+        if (this.type == null || !this.field8613 && !this.method16151(arg0, 0)) {
             return;
         }
         Matrix4x3 var2 = arg0.method516();
@@ -330,7 +330,7 @@ public class NpcEntity extends PathingEntity {
 
     @ObfuscatedName("ahs.gs(I)Z")
     public final boolean method16154() {
-        return this.field10075 != null;
+        return this.type != null;
     }
 
     @ObfuscatedName("ahs.bm(I)I")
@@ -338,50 +338,50 @@ public class NpcEntity extends PathingEntity {
         if (this.field10069 != -1) {
             return this.field10069;
         }
-        if (this.field10075.field7244 != null) {
-            NPCType var1 = this.field10075.method12516(Statics.field2669);
+        if (this.type.multinpc != null) {
+            NPCType var1 = this.type.getMultiNPC(Statics.field2669);
             if (var1 != null && var1.field7217 != -1) {
                 return var1.field7217;
             }
         }
-        return this.field10075.field7217;
+        return this.type.field7217;
     }
 
     @ObfuscatedName("ahs.cx(I)I")
     public int method13961() {
-        if (this.field10075.field7244 != null) {
-            NPCType var1 = this.field10075.method12516(Statics.field2669);
+        if (this.type.multinpc != null) {
+            NPCType var1 = this.type.getMultiNPC(Statics.field2669);
             if (var1 != null && var1.field7242 != -1) {
                 return var1.field7242;
             }
         }
-        return this.field10075.field7242;
+        return this.type.field7242;
     }
 
     @ObfuscatedName("ahs.bp(I)I")
     public int method12811() {
-        if (this.field10075.field7244 != null) {
-            NPCType var1 = this.field10075.method12516(Statics.field2669);
+        if (this.type.multinpc != null) {
+            NPCType var1 = this.type.getMultiNPC(Statics.field2669);
             if (var1 != null && var1.field7266 != -1) {
                 return var1.field7266;
             }
         }
-        return this.field10075.field7266 == -1 ? super.method12811() : this.field10075.field7266;
+        return this.type.field7266 == -1 ? super.method12811() : this.type.field7266;
     }
 
     @ObfuscatedName("ahs.gd(I)Z")
     public boolean method16155() {
-        return this.field10075.field7271;
+        return this.type.active;
     }
 
     @ObfuscatedName("ahs.fg(I)I")
     public int method15633() {
-        return this.field10075 == null ? 0 : this.field10075.field7274;
+        return this.type == null ? 0 : this.type.field7274;
     }
 
     @ObfuscatedName("ahs.bb(Lra;III)Z")
     public boolean method12814(RendererToolkit arg0, int arg1, int arg2) {
-        if (this.field10075 == null || !this.method16151(arg0, 131072)) {
+        if (this.type == null || !this.method16151(arg0, 131072)) {
             return false;
         }
         Matrix4x3 var4 = this.method8558();
@@ -393,12 +393,12 @@ public class NpcEntity extends PathingEntity {
                 {
                     label41:
                     {
-                        if (this.field10075.field7274 <= 0) {
-                            if (this.field10075.field7229 == -1) {
-                                if (this.field10075.field7213 != 1) {
+                        if (this.type.field7274 <= 0) {
+                            if (this.type.field7229 == -1) {
+                                if (this.type.field7213 != 1) {
                                     break label41;
                                 }
-                            } else if (this.field10075.field7229 != 1) {
+                            } else if (this.type.field7229 != 1) {
                                 break label41;
                             }
                         }
@@ -408,7 +408,7 @@ public class NpcEntity extends PathingEntity {
                     var10000 = false;
                 }
                 boolean var7 = var10000;
-                boolean var8 = this.field8651[var6].method272(arg1, arg2, var4, var7, this.field10075.field7274);
+                boolean var8 = this.field8651[var6].method272(arg1, arg2, var4, var7, this.type.field7274);
                 if (var8) {
                     var5 = true;
                     break;

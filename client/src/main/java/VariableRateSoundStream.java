@@ -1,10 +1,10 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aks")
-public class VariableRateSoundStream extends SoundStream {
+public class VariableRateSoundStream extends SoundAudioBuss {
 
     public VariableRateSoundStream(VariableRateSoundPacket arg0, int arg1, int arg2, int arg3) {
-        this.field9474 = arg0;
+        this.sound = arg0;
         this.field10272 = arg0.field10294;
         this.field10275 = arg0.field10292;
         this.field10276 = arg0.field10293;
@@ -16,14 +16,14 @@ public class VariableRateSoundStream extends SoundStream {
     }
 
     @ObfuscatedName("aks.m([III)V")
-    public synchronized void method15034(int[] arg0, int arg1, int arg2) throws IllegalStateException {
+    public synchronized void read(int[] arg0, int arg1, int arg2) throws IllegalStateException {
         if (this.field10263 == 0 && this.field10273 == 0) {
-            this.method15046(arg2);
+            this.skip(arg2);
             return;
         }
         int var4 = this.field10272 << 8;
         int var5 = this.field10275 << 8;
-        int var6 = ((VariableRateSoundPacket) this.field9474).method16496() << 8;
+        int var6 = ((VariableRateSoundPacket) this.sound).method16496() << 8;
         int var7 = var5 - var4;
         if (var7 <= 0) {
             this.field10265 = 0;
@@ -52,7 +52,7 @@ public class VariableRateSoundStream extends SoundStream {
                     label131:
                     {
                         if (this.field10264 < 0) {
-                            var8 = this.method17052(arg0, arg1, var4, var9, ((VariableRateSoundPacket) this.field9474).method17104()[this.field10272]);
+                            var8 = this.method17052(arg0, arg1, var4, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10272]);
                             if (this.field10266 >= var4) {
                                 return;
                             }
@@ -63,7 +63,7 @@ public class VariableRateSoundStream extends SoundStream {
                             }
                         }
                         do {
-                            var8 = this.method17051(arg0, var8, var5, var9, ((VariableRateSoundPacket) this.field9474).method17104()[this.field10275 - 1]);
+                            var8 = this.method17051(arg0, var8, var5, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10275 - 1]);
                             if (this.field10266 < var5) {
                                 return;
                             }
@@ -72,7 +72,7 @@ public class VariableRateSoundStream extends SoundStream {
                             if (--this.field10265 == 0) {
                                 break;
                             }
-                            var8 = this.method17052(arg0, var8, var4, var9, ((VariableRateSoundPacket) this.field9474).method17104()[this.field10272]);
+                            var8 = this.method17052(arg0, var8, var4, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10272]);
                             if (this.field10266 >= var4) {
                                 return;
                             }
@@ -82,7 +82,7 @@ public class VariableRateSoundStream extends SoundStream {
                     }
                 } else if (this.field10264 < 0) {
                     while (true) {
-                        var8 = this.method17052(arg0, var8, var4, var9, ((VariableRateSoundPacket) this.field9474).method17104()[this.field10275 - 1]);
+                        var8 = this.method17052(arg0, var8, var4, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10275 - 1]);
                         if (this.field10266 >= var4) {
                             return;
                         }
@@ -97,7 +97,7 @@ public class VariableRateSoundStream extends SoundStream {
                     }
                 } else {
                     while (true) {
-                        var8 = this.method17051(arg0, var8, var5, var9, ((VariableRateSoundPacket) this.field9474).method17104()[this.field10272]);
+                        var8 = this.method17051(arg0, var8, var5, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10272]);
                         if (this.field10266 < var5) {
                             return;
                         }
@@ -129,7 +129,7 @@ public class VariableRateSoundStream extends SoundStream {
             }
         } else if (this.field10276) {
             if (this.field10264 < 0) {
-                var8 = this.method17052(arg0, arg1, var4, var9, ((VariableRateSoundPacket) this.field9474).method17104()[this.field10272]);
+                var8 = this.method17052(arg0, arg1, var4, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10272]);
                 if (this.field10266 >= var4) {
                     return;
                 }
@@ -137,13 +137,13 @@ public class VariableRateSoundStream extends SoundStream {
                 this.field10264 = -(this.field10264);
             }
             while (true) {
-                int var10 = this.method17051(arg0, var8, var5, var9, ((VariableRateSoundPacket) this.field9474).method17104()[this.field10275 - 1]);
+                int var10 = this.method17051(arg0, var8, var5, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10275 - 1]);
                 if (this.field10266 < var5) {
                     return;
                 }
                 this.field10266 = var5 + var5 - 1 - this.field10266;
                 this.field10264 = -(this.field10264);
-                var8 = this.method17052(arg0, var10, var4, var9, ((VariableRateSoundPacket) this.field9474).method17104()[this.field10272]);
+                var8 = this.method17052(arg0, var10, var4, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10272]);
                 if (this.field10266 >= var4) {
                     return;
                 }
@@ -152,7 +152,7 @@ public class VariableRateSoundStream extends SoundStream {
             }
         } else if (this.field10264 < 0) {
             while (true) {
-                var8 = this.method17052(arg0, var8, var4, var9, ((VariableRateSoundPacket) this.field9474).method17104()[this.field10275 - 1]);
+                var8 = this.method17052(arg0, var8, var4, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10275 - 1]);
                 if (this.field10266 >= var4) {
                     return;
                 }
@@ -160,7 +160,7 @@ public class VariableRateSoundStream extends SoundStream {
             }
         } else {
             while (true) {
-                var8 = this.method17051(arg0, var8, var5, var9, ((VariableRateSoundPacket) this.field9474).method17104()[this.field10272]);
+                var8 = this.method17051(arg0, var8, var5, var9, ((VariableRateSoundPacket) this.sound).method17104()[this.field10272]);
                 if (this.field10266 < var5) {
                     return;
                 }
@@ -179,15 +179,15 @@ public class VariableRateSoundStream extends SoundStream {
                 }
                 this.field10273 += arg1;
                 if (this.field10264 == 256 && (this.field10266 & 0xFF) == 0) {
-                    if (Statics.field4016) {
-                        arg1 = method17100(0.0F, ((VariableRateSoundPacket) this.field9474).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this);
+                    if (Statics.stereo) {
+                        arg1 = method17100(0.0F, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this);
                     } else {
-                        arg1 = method17061(((VariableRateSoundPacket) this.field9474).method17104(), arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this);
+                        arg1 = method17061(((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this);
                     }
-                } else if (Statics.field4016) {
-                    arg1 = method17066(0.0F, 0, ((VariableRateSoundPacket) this.field9474).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this, this.field10264, arg4);
+                } else if (Statics.stereo) {
+                    arg1 = method17066(0.0F, 0, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this, this.field10264, arg4);
                 } else {
-                    arg1 = method17065(0.0F, 0, ((VariableRateSoundPacket) this.field9474).method17104(), arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this, this.field10264, arg4);
+                    arg1 = method17065(0.0F, 0, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this, this.field10264, arg4);
                 }
                 this.field10273 -= arg1;
                 if (this.field10273 != 0) {
@@ -199,15 +199,15 @@ public class VariableRateSoundStream extends SoundStream {
                 return arg3;
             }
             if (this.field10264 == 256 && (this.field10266 & 0xFF) == 0) {
-                if (Statics.field4016) {
-                    return method17054(0.0F, ((VariableRateSoundPacket) this.field9474).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this);
+                if (Statics.stereo) {
+                    return method17054(0.0F, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this);
                 }
-                return method17050(((VariableRateSoundPacket) this.field9474).method17104(), arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this);
+                return method17050(((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this);
             }
-            if (Statics.field4016) {
-                return method17058(0.0F, 0, ((VariableRateSoundPacket) this.field9474).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this, this.field10264, arg4);
+            if (Statics.stereo) {
+                return method17058(0.0F, 0, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this, this.field10264, arg4);
             }
-            return method17057(0.0F, 0, ((VariableRateSoundPacket) this.field9474).method17104(), arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this, this.field10264, arg4);
+            return method17057(0.0F, 0, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this, this.field10264, arg4);
         }
     }
 
@@ -221,15 +221,15 @@ public class VariableRateSoundStream extends SoundStream {
                 }
                 this.field10273 += arg1;
                 if (this.field10264 == -256 && (this.field10266 & 0xFF) == 0) {
-                    if (Statics.field4016) {
-                        arg1 = method17064(0.0F, ((VariableRateSoundPacket) this.field9474).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this);
+                    if (Statics.stereo) {
+                        arg1 = method17064(0.0F, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this);
                     } else {
-                        arg1 = method17063(((VariableRateSoundPacket) this.field9474).method17104(), arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this);
+                        arg1 = method17063(((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this);
                     }
-                } else if (Statics.field4016) {
-                    arg1 = method17062(0.0F, 0, ((VariableRateSoundPacket) this.field9474).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this, this.field10264, arg4);
+                } else if (Statics.stereo) {
+                    arg1 = method17062(0.0F, 0, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, this.field10271, this.field10274, 0, var6, arg2, this, this.field10264, arg4);
                 } else {
-                    arg1 = method17070(0.0F, 0, ((VariableRateSoundPacket) this.field9474).method17104(), arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this, this.field10264, arg4);
+                    arg1 = method17070(0.0F, 0, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, this.field10270, 0, var6, arg2, this, this.field10264, arg4);
                 }
                 this.field10273 -= arg1;
                 if (this.field10273 != 0) {
@@ -241,15 +241,15 @@ public class VariableRateSoundStream extends SoundStream {
                 return arg3;
             }
             if (this.field10264 == -256 && (this.field10266 & 0xFF) == 0) {
-                if (Statics.field4016) {
-                    return method17056(0.0F, ((VariableRateSoundPacket) this.field9474).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this);
+                if (Statics.stereo) {
+                    return method17056(0.0F, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this);
                 }
-                return method17055(((VariableRateSoundPacket) this.field9474).method17104(), arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this);
+                return method17055(((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this);
             }
-            if (Statics.field4016) {
-                return method17060(0.0F, 0, ((VariableRateSoundPacket) this.field9474).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this, this.field10264, arg4);
+            if (Statics.stereo) {
+                return method17060(0.0F, 0, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10268, this.field10269, 0, arg3, arg2, this, this.field10264, arg4);
             }
-            return method17059(0.0F, 0, ((VariableRateSoundPacket) this.field9474).method17104(), arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this, this.field10264, arg4);
+            return method17059(0.0F, 0, ((VariableRateSoundPacket) this.sound).method17104(), arg0, this.field10266, arg1, this.field10267, 0, arg3, arg2, this, this.field10264, arg4);
         }
     }
 

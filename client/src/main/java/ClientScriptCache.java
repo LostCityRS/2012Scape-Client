@@ -31,7 +31,7 @@ public final class ClientScriptCache {
     public SecondaryNode method7965(long arg0) {
         SecondaryNode var3 = (SecondaryNode) this.field4833.getNode(arg0);
         if (var3 != null) {
-            this.field4830.method11728(var3);
+            this.field4830.addFirst(var3);
         }
         return var3;
     }
@@ -41,23 +41,23 @@ public final class ClientScriptCache {
         if (this.field4832 == 0) {
             SecondaryNode var4 = this.field4830.method11729();
             var4.remove();
-            var4.method15142();
+            var4.dualRemove();
             if (this.field4834 == var4) {
                 SecondaryNode var5 = this.field4830.method11729();
                 var5.remove();
-                var5.method15142();
+                var5.dualRemove();
             }
         } else {
             this.field4832--;
         }
-        this.field4833.method11927(arg0, arg1);
-        this.field4830.method11728(arg0);
+        this.field4833.put(arg0, arg1);
+        this.field4830.addFirst(arg0);
     }
 
     @ObfuscatedName("pk.a(B)V")
     public void method7959() {
-        this.field4830.method11733();
-        this.field4833.method11925();
+        this.field4830.clear();
+        this.field4833.clear();
         this.field4834 = new SecondaryNode();
         this.field4832 = this.field4831;
     }

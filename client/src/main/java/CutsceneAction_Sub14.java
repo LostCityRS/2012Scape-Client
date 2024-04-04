@@ -29,6 +29,6 @@ public class CutsceneAction_Sub14 extends CutsceneAction_Sub25 {
             var3++;
         }
         SpotAnimation var4 = new SpotAnimation(client.world.getScene(), this.field8498, 0, this.field10033, var3, var1, client.getHeightmapY(var1, var2, this.field10033) - this.field8497, var2, this.field10035, this.field10035, this.field10034, this.field10034, this.field8496, false, 0);
-        client.field9090.method11927(new SpotAnimationEntityNode(var4), (long) (this.field10035 << 16 | this.field10034));
+        client.field9090.put(new SpotAnimationEntityNode(var4), (long) (this.field10035 << 16 | this.field10034));
     }
 }

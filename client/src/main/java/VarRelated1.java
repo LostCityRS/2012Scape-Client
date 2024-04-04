@@ -55,7 +55,7 @@ public class VarRelated1 implements VarIntDomain {
         LongNode var3 = (LongNode) this.field662.getNode((long) arg0);
         if (var3 == null) {
             LongNode var4 = new LongNode(MonotonicTime.get() + 500L);
-            this.field662.method11927(var4, (long) arg0);
+            this.field662.put(var4, (long) arg0);
         } else {
             var3.field9555 = MonotonicTime.get() + 500L;
         }
@@ -67,7 +67,7 @@ public class VarRelated1 implements VarIntDomain {
         LongNode var3 = (LongNode) this.field662.getNode((long) arg0);
         if (var3 == null) {
             LongNode var4 = new LongNode(4611686018427387905L);
-            this.field662.method11927(var4, (long) arg0);
+            this.field662.put(var4, (long) arg0);
         } else if (var3.field9555 != 4611686018427387905L) {
             var3.field9555 = MonotonicTime.get() + 500L | 0x4000000000000000L;
         }

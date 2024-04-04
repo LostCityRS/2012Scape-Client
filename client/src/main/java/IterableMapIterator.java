@@ -24,7 +24,7 @@ public class IterableMapIterator implements Iterator {
 
     @ObfuscatedName("uk.f(I)V")
     public void method11950() {
-        this.field6729 = this.field6730.field6725[0].field4226;
+        this.field6729 = this.field6730.field6725[0].prev;
         this.field6731 = 1;
         this.field6728 = null;
     }
@@ -38,7 +38,7 @@ public class IterableMapIterator implements Iterator {
     public Object next() {
         if (this.field6730.field6725[this.field6731 - 1] != this.field6729) {
             Node var1 = this.field6729;
-            this.field6729 = var1.field4226;
+            this.field6729 = var1.prev;
             this.field6728 = var1;
             return var1;
         }
@@ -47,9 +47,9 @@ public class IterableMapIterator implements Iterator {
             if (this.field6731 >= this.field6730.field6722) {
                 return null;
             }
-            var2 = this.field6730.field6725[++this.field6731 - 1].field4226;
+            var2 = this.field6730.field6725[++this.field6731 - 1].prev;
         } while (this.field6730.field6725[this.field6731 - 1] == var2);
-        this.field6729 = var2.field4226;
+        this.field6729 = var2.prev;
         this.field6728 = var2;
         return var2;
     }
@@ -59,8 +59,8 @@ public class IterableMapIterator implements Iterator {
             return true;
         }
         while (this.field6731 < this.field6730.field6722) {
-            if (this.field6730.field6725[++this.field6731 - 1].field4226 != this.field6730.field6725[this.field6731 - 1]) {
-                this.field6729 = this.field6730.field6725[this.field6731 - 1].field4226;
+            if (this.field6730.field6725[++this.field6731 - 1].prev != this.field6730.field6725[this.field6731 - 1]) {
+                this.field6729 = this.field6730.field6725[this.field6731 - 1].prev;
                 return true;
             }
             this.field6729 = this.field6730.field6725[this.field6731 - 1];

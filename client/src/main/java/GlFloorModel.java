@@ -171,7 +171,7 @@ public class GlFloorModel extends FloorModel {
                 var17 = 128;
                 var16 = -1;
             }
-            long var18 = (long) arg10.field1474 << 48 | (long) arg10.field1471 << 42 | (long) arg10.field1475 << 28 | (long) (var17 << 14) | (long) var16;
+            long var18 = (long) arg10.field1474 << 48 | (long) arg10.scale << 42 | (long) arg10.colour << 28 | (long) (var17 << 14) | (long) var16;
             Node var20;
             for (var20 = this.field7697.getNode(var18); var20 != null; var20 = this.field7697.method11924()) {
                 GlFloorModelRelated1 var21 = (GlFloorModelRelated1) var20;
@@ -181,7 +181,7 @@ public class GlFloorModel extends FloorModel {
             }
             if (var20 == null) {
                 var14[var15] = new GlFloorModelRelated1(this, var16, var17, arg10);
-                this.field7697.method11927(var14[var15], var18);
+                this.field7697.put(var14[var15], var18);
             } else {
                 var14[var15] = (GlFloorModelRelated1) var20;
             }
@@ -484,7 +484,7 @@ public class GlFloorModel extends FloorModel {
                                 if (var47 != -1) {
                                     var8[var84] = var14[var42];
                                 }
-                                var10.method11927(new FloorModelNode(var41[var42]), var50);
+                                var10.put(new FloorModelNode(var41[var42]), var50);
                             } else {
                                 var41[var42] = ((FloorModelNode) var73).field9551;
                                 var84 = var41[var42] & 0xFFFF;
@@ -663,7 +663,7 @@ public class GlFloorModel extends FloorModel {
             this.field7688.method13271(8448, 7681);
             this.field7688.method13318(0, 34166, 770);
             this.field7688.method13267(0, 34167, 770);
-            for (Node var23 = this.field7705.last(); var23 != null; var23 = this.field7705.method11567()) {
+            for (Node var23 = this.field7705.last(); var23 != null; var23 = this.field7705.prev()) {
                 GlFloorModelRelated var24 = (GlFloorModelRelated) var23;
                 var24.method14849(arg0, arg1, arg2, arg3);
             }

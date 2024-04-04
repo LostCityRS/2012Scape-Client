@@ -704,8 +704,8 @@ public class LoginManager {
                     Statics.field8469 = var31.g3s();
                     client.field9142 = var31.g1() == 1;
                     Statics.field4685 = var31.gjstr();
-                    client.world.method6103().method11472(client.field9142);
-                    Statics.asyncRebuild.method6040().method6103().method11472(client.field9142);
+                    client.world.getLocTypeList().method11472(client.field9142);
+                    Statics.asyncRebuild.method6040().getLocTypeList().method11472(client.field9142);
                     Statics.objTypes.method12304(client.field9142);
                     Statics.field3774.method12561(client.field9142);
                 } else if (Statics.field501.getStream().method7212(Statics.field8459)) {
@@ -1030,11 +1030,11 @@ public class LoginManager {
         Statics.localPlayerEntity = null;
         client.npcCount = 0;
         client.field8966 = 0;
-        client.npcs.method11925();
-        client.field9007.method11557();
-        client.field9090.method11925();
+        client.npcs.clear();
+        client.field9007.clearBridged();
+        client.field9090.clear();
         client.field9091.method11653();
-        client.field9088.method11925();
+        client.field9088.clear();
         ChangeLocationRequest.field9278 = new IterableQueue();
         ChangeLocationRequest.field9292 = new IterableQueue();
         Statics.field2669.method1647();

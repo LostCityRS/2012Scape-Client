@@ -300,7 +300,7 @@ public class Loading {
                 return 99;
             }
             Statics.field8465 = new BasicMaterialTypeList(Statics.field7572, Statics.field808, Statics.field6435);
-            Statics.field4464 = new ParamTypeList(client.modeGame, Statics.language, Statics.field7435);
+            Statics.paramTypes = new ParamTypeList(client.modeGame, Statics.language, Statics.field7435);
             Statics.field3769 = new BASTypeList(client.modeGame, Statics.language, Statics.field7435, Statics.wearposDefaults);
             Statics.field3770 = new CursorTypeList(client.modeGame, Statics.language, Statics.field7435, Statics.field7387);
             Statics.field1244 = new EnumTypeList(client.modeGame, Statics.language, Statics.field6451);
@@ -317,7 +317,7 @@ public class Loading {
             Statics.field8499 = new MapElementTypeList(client.modeGame, Statics.language, Statics.field7435, Statics.field7387);
             Statics.field850 = new MSITypeList(client.modeGame, Statics.language, Statics.field7435, Statics.field7387);
             Statics.field3774 = new NPCTypeList(client.modeGame, Statics.language, true, Statics.field5080, Statics.field4560);
-            Statics.objTypes = new ObjTypeList(client.modeGame, Statics.language, true, Statics.field4464, Statics.field5130, Statics.field4560);
+            Statics.objTypes = new ObjTypeList(client.modeGame, Statics.language, true, Statics.paramTypes, Statics.field5130, Statics.field4560);
             Statics.field4959 = new QuestTypeList(client.modeGame, Statics.language, Statics.field7435, true);
             Statics.field566 = new SeqTypeList(client.modeGame, Statics.language, Statics.field3897, Statics.field7567, Statics.field6690);
             Statics.field4678 = new SkyBoxTypeList(client.modeGame, Statics.language, Statics.field7435);
@@ -354,7 +354,7 @@ public class Loading {
             }
         }
         if (Statics.field1208 == LoadingStage.field3408) {
-            WorldMap.method7080(Statics.field4059, Statics.field3615, Statics.field4450, client.world.method6103(), Statics.field8499, Statics.field850, Statics.field2669);
+            WorldMap.method7080(Statics.field4059, Statics.field3615, Statics.field4450, client.world.getLocTypeList(), Statics.field8499, Statics.field850, Statics.field2669);
         }
         if (Statics.field1208 == LoadingStage.field3399) {
             Statics.field6666 = new int[Statics.field8455.field7160];

@@ -50,9 +50,9 @@ public abstract class Js5TcpClient {
             if (this.method5764() >= 50) {
                 throw new RuntimeException();
             }
-            this.field3594.method11728(var7);
+            this.field3594.addFirst(var7);
         } else if (this.method5739() < 20) {
-            this.field3605.method11728(var7);
+            this.field3605.addFirst(var7);
         } else {
             throw new RuntimeException();
         }

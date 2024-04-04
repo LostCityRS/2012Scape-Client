@@ -19,16 +19,16 @@ public class MiniMenuSubMenu extends SecondaryNode {
 
     @ObfuscatedName("ajz.u(I)I")
     public int method16648() {
-        return this.field10345.field6662.field9552 == this.field10345.field6662 ? -1 : ((MiniMenuEntry) this.field10345.field6662.field9552).field10340;
+        return this.field10345.sentinel.dualPrev == this.field10345.sentinel ? -1 : ((MiniMenuEntry) this.field10345.sentinel.dualPrev).opcode;
     }
 
     @ObfuscatedName("ajz.j(Lajs;I)Z")
     public boolean method16644(MiniMenuEntry arg0) {
         boolean var2 = true;
-        arg0.method15142();
+        arg0.dualRemove();
         MiniMenuEntry var3 = (MiniMenuEntry) this.field10345.last();
         while (var3 != null) {
-            if (MiniMenu.method5825(arg0.field10340, var3.field10340)) {
+            if (MiniMenu.method5825(arg0.opcode, var3.opcode)) {
                 DualIterableQueue.method8542(arg0, var3);
                 this.field10346++;
                 return !var2;
@@ -36,7 +36,7 @@ public class MiniMenuSubMenu extends SecondaryNode {
             var3 = (MiniMenuEntry) this.field10345.previous();
             var2 = false;
         }
-        this.field10345.method11728(arg0);
+        this.field10345.addFirst(arg0);
         this.field10346++;
         return var2;
     }
@@ -44,13 +44,13 @@ public class MiniMenuSubMenu extends SecondaryNode {
     @ObfuscatedName("ajz.a(Lajs;I)Z")
     public boolean method16650(MiniMenuEntry arg0) {
         int var2 = this.method16648();
-        arg0.method15142();
+        arg0.dualRemove();
         this.field10346--;
         if (this.field10346 != 0) {
             return var2 != this.method16648();
         }
         this.remove();
-        this.method15142();
+        this.dualRemove();
         MiniMenu.field594--;
         MiniMenu.field600.method7937(this, arg0.field10330);
         return false;

@@ -106,12 +106,12 @@ public class GlEffectRelated2 extends GlEffect {
             OpenGL.glBindProgramARB(34336, this.field1062.field8143 == Integer.MAX_VALUE ? this.field7493.field1065 : this.field7491.field1065);
         }
         float var2 = (float) this.field1062.field8143;
-        float var3 = var1.field3480[4] * var2 + var1.field3480[12];
-        float var4 = var1.field3480[5] * var2 + var1.field3480[13];
-        float var5 = var1.field3480[6] * var2 + var1.field3480[14];
-        field7485[0] = -var1.field3480[4];
-        field7485[1] = -var1.field3480[5];
-        field7485[2] = -var1.field3480[6];
+        float var3 = var1.entries[4] * var2 + var1.entries[12];
+        float var4 = var1.entries[5] * var2 + var1.entries[13];
+        float var5 = var1.entries[6] * var2 + var1.entries[14];
+        field7485[0] = -var1.entries[4];
+        field7485[1] = -var1.entries[5];
+        field7485[2] = -var1.entries[6];
         field7485[3] = -(field7485[2] * var5 + field7485[0] * var3 + field7485[1] * var4);
         OpenGL.glProgramLocalParameter4fARB(34336, 1, field7485[0], field7485[1], field7485[2], field7485[3]);
         OpenGL.glEnable(34336);
@@ -128,9 +128,9 @@ public class GlEffectRelated2 extends GlEffect {
         float var2 = this.field1062.field8196;
         float var3 = var1 - (var1 - var2) * 0.125F;
         float var4 = var1 - (var1 - var2) * 0.25F;
-        OpenGL.glProgramLocalParameter4fARB(34336, 0, var4, var3, 256.0F / (float) this.field1062.field8177.field1471, (float) this.field1062.field8177.field1474 / 255.0F);
+        OpenGL.glProgramLocalParameter4fARB(34336, 0, var4, var3, 256.0F / (float) this.field1062.field8177.scale, (float) this.field1062.field8177.field1474 / 255.0F);
         this.field1062.method13314(1);
-        this.field1062.method13319(this.field1062.field8177.field1475);
+        this.field1062.method13319(this.field1062.field8177.colour);
         this.field1062.method13314(0);
     }
 

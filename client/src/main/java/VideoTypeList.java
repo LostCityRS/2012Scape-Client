@@ -21,7 +21,7 @@ public class VideoTypeList {
         if (client.field8944) {
             VideoType var3 = new VideoType(arg0, new Js5Video(4096, Statics.field2117, arg0), arg1, arg2);
             var3.field9618.method7003(Statics.language.method11187());
-            field6388.method11927(var3, (long) arg0);
+            field6388.put(var3, (long) arg0);
         } else {
             method5563(arg0, arg2);
         }
@@ -102,7 +102,7 @@ public class VideoTypeList {
                 if (!var0.field9623 && !var0.field9622) {
                     OggVorbisStream var2 = var0.field9618.method7009();
                     if (var2 != null) {
-                        OggVorbisStreamRelated1 var3 = var2.method16795();
+                        VorbisAudioBuss var3 = var2.method16795();
                         if (var3 != null) {
                             var3.method16466(var0.field9619);
                             Statics.field4201.method16452(var3);

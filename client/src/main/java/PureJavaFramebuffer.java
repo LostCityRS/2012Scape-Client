@@ -97,11 +97,11 @@ public class PureJavaFramebuffer extends Framebuffer {
         float[] var12 = null;
         if (arg6 && this.field9921 != null) {
             var9 = this.field9921.field932;
-            var10 = this.field9919.field8001;
+            var10 = this.field9919.colour;
         }
         if (arg7 && this.field9920 != null) {
             var11 = this.field9920.field1024;
-            var12 = this.field9919.field8023;
+            var12 = this.field9919.toolkit;
         }
         method7656(this.field9922, this.field9919.field8002, var9, var10, var11, var12, arg0, arg1, arg4, arg5, arg2, arg3);
     }

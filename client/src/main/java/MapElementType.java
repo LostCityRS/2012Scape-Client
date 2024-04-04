@@ -232,7 +232,7 @@ public class MapElementType {
                 } else {
                     var14 = new IntNode(arg0.g4s());
                 }
-                this.field4804.method11927(var14, (long) var13);
+                this.field4804.put(var14, (long) var13);
             }
         }
     }

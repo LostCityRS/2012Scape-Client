@@ -47,14 +47,14 @@ public class ClientJs5TcpClient extends Js5TcpClient {
                 this.field3597.p1(1);
                 this.field3597.p5(var5.field9554);
                 this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
-                this.field3595.method11728(var5);
+                this.field3595.addFirst(var5);
             }
             for (Js5NetRequest var6 = (Js5NetRequest) this.field3605.last(); var6 != null; var6 = (Js5NetRequest) this.field3605.previous()) {
                 this.field3597.pos = 0;
                 this.field3597.p1(0);
                 this.field3597.p5(var6.field9554);
                 this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
-                this.field3596.method11728(var6);
+                this.field3596.addFirst(var6);
             }
             for (int var7 = 0; var7 < 100; var7++) {
                 int var8 = this.field8882.method7189();
@@ -139,7 +139,7 @@ public class ClientJs5TcpClient extends Js5TcpClient {
                     this.field3592.field10599.pos += var24;
                     this.field3592.field10600 += var24;
                     if (this.field3592.field10599.pos == var23) {
-                        this.field3592.method15142();
+                        this.field3592.dualRemove();
                         this.field3592.field10352 = false;
                         this.field3592 = null;
                     } else if (this.field3592.field10600 == 512) {
@@ -201,10 +201,10 @@ public class ClientJs5TcpClient extends Js5TcpClient {
                         this.field3599 = MonotonicTime.get();
                         return;
                     }
-                    this.field3605.method11728(var5);
+                    this.field3605.addFirst(var5);
                 }
             }
-            this.field3594.method11728(var4);
+            this.field3594.addFirst(var4);
         }
     }
 

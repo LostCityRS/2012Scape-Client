@@ -102,9 +102,9 @@ public class DynamicLoc {
 
     @ObfuscatedName("ck.c(Lra;IZZI)Lqa;")
     public final Model method2437(RendererToolkit arg0, int arg1, boolean arg2, boolean arg3) {
-        LocType var5 = this.field1215.method11471(this.field1219);
-        if (var5.field6534 != null) {
-            var5 = var5.method11431(client.field8988 == 0 ? CutsceneManager.field1538 : Statics.field2669);
+        LocType var5 = this.field1215.get(this.field1219);
+        if (var5.multiloc != null) {
+            var5 = var5.getMultiLoc(client.field8988 == 0 ? CutsceneManager.field1538 : Statics.field2669);
         }
         if (var5 == null) {
             this.method2441(arg0);
@@ -193,9 +193,9 @@ public class DynamicLoc {
         ModelParticleEmitter[] var9 = arg1.method276();
         ModelParticleEffector[] var10 = arg1.method413();
         if ((this.field1229 == null || this.field1229.field4945) && (var9 != null || var10 != null)) {
-            LocType var11 = this.field1215.method11471(this.field1219);
-            if (var11.field6534 != null) {
-                var11 = var11.method11431(client.field8988 == 0 ? CutsceneManager.field1538 : Statics.field2669);
+            LocType var11 = this.field1215.get(this.field1219);
+            if (var11.multiloc != null) {
+                var11 = var11.getMultiLoc(client.field8988 == 0 ? CutsceneManager.field1538 : Statics.field2669);
             }
             if (var11 != null) {
                 this.field1229 = ParticleSystem.method8123(client.loopCycle, true);
@@ -255,10 +255,10 @@ public class DynamicLoc {
         int var4 = arg1;
         boolean var5 = false;
         if (arg1 == -1) {
-            LocType var6 = this.field1215.method11471(this.field1219);
+            LocType var6 = this.field1215.get(this.field1219);
             LocType var7 = var6;
-            if (var6.field6534 != null) {
-                var6 = var6.method11431(client.field8988 == 0 ? CutsceneManager.field1538 : Statics.field2669);
+            if (var6.multiloc != null) {
+                var6 = var6.getMultiLoc(client.field8988 == 0 ? CutsceneManager.field1538 : Statics.field2669);
             }
             if (var6 == null) {
                 return;

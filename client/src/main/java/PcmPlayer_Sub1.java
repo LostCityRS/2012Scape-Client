@@ -5,7 +5,6 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.Mixer.Info;
 import javax.sound.sampled.SourceDataLine;
-import java.awt.*;
 
 @ObfuscatedName("aba")
 public class PcmPlayer_Sub1 extends PcmPlayer {
@@ -43,12 +42,12 @@ public class PcmPlayer_Sub1 extends PcmPlayer {
                 }
             }
         }
-        this.field8898 = new AudioFormat((float) Statics.field4015, 16, Statics.field4016 ? 2 : 1, true, false);
-        this.field8900 = new byte[0x100 << (Statics.field4016 ? 2 : 1)];
+        this.field8898 = new AudioFormat((float) Statics.sampleRate, 16, Statics.stereo ? 2 : 1, true, false);
+        this.field8900 = new byte[0x100 << (Statics.stereo ? 2 : 1)];
     }
 
     @ObfuscatedName("aba.q(I)V")
-    public void method6538(int arg0) throws LineUnavailableException {
+    public void open(int arg0) throws LineUnavailableException {
         if (this.field8897 != null) {
             if (!this.field8901) {
                 throw new IllegalStateException("");
@@ -62,7 +61,7 @@ public class PcmPlayer_Sub1 extends PcmPlayer {
             }
         }
         try {
-            javax.sound.sampled.DataLine.Info var2 = new javax.sound.sampled.DataLine.Info(SourceDataLine.class, this.field8898, arg0 << (Statics.field4016 ? 2 : 1));
+            javax.sound.sampled.DataLine.Info var2 = new javax.sound.sampled.DataLine.Info(SourceDataLine.class, this.field8898, arg0 << (Statics.stereo ? 2 : 1));
             this.field8897 = (SourceDataLine) AudioSystem.getLine(var2);
             this.field8897.open();
             this.field8897.start();
@@ -73,23 +72,23 @@ public class PcmPlayer_Sub1 extends PcmPlayer {
                 this.field8901 = true;
                 throw var4;
             } else {
-                this.method6538(IntMath.method2839(arg0));
+                this.open(IntMath.method2839(arg0));
             }
         }
     }
 
     @ObfuscatedName("aba.p()I")
-    public int method6495() {
-        return this.field8896 - (this.field8897.available() >> (Statics.field4016 ? 2 : 1));
+    public int getBufferSize() {
+        return this.field8896 - (this.field8897.available() >> (Statics.stereo ? 2 : 1));
     }
 
     @ObfuscatedName("aba.w()V")
-    public void method6547() {
+    public void write() {
         if (this.field8901) {
             return;
         }
         int var1 = 256;
-        if (Statics.field4016) {
+        if (Statics.stereo) {
             var1 <<= 0x1;
         }
         for (int var2 = 0; var2 < var1; var2++) {
@@ -104,7 +103,7 @@ public class PcmPlayer_Sub1 extends PcmPlayer {
     }
 
     @ObfuscatedName("aba.b(Z)V")
-    public void method6509(boolean arg0) {
+    public void flush(boolean arg0) {
         if (arg0) {
             this.method14312();
             return;
@@ -169,7 +168,7 @@ public class PcmPlayer_Sub1 extends PcmPlayer {
         if (!this.method14312()) {
             return;
         }
-        javax.sound.sampled.DataLine.Info var1 = new javax.sound.sampled.DataLine.Info(SourceDataLine.class, this.field8898, this.field8896 << (Statics.field4016 ? 2 : 1));
+        javax.sound.sampled.DataLine.Info var1 = new javax.sound.sampled.DataLine.Info(SourceDataLine.class, this.field8898, this.field8896 << (Statics.stereo ? 2 : 1));
         this.field8897 = (SourceDataLine) AudioSystem.getLine(var1);
         this.field8897.open();
         this.field8897.start();

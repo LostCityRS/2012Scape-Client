@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aih")
-public class MixBuss extends AudioBuss {
+public class MidiAudioBuss extends AudioBuss {
 
     @ObfuscatedName("aih.l")
     public IterableMap field10239;
@@ -88,7 +88,7 @@ public class MixBuss extends AudioBuss {
     public long field10258;
 
     @ObfuscatedName("aih.aw")
-    public AudioBuss_Sub2 field10251 = new AudioBuss_Sub2(this);
+    public MidiNoteAudioBuss field10251 = new MidiNoteAudioBuss(this);
 
     @ObfuscatedName("aih.aa")
     public MidiSong field10260;
@@ -99,13 +99,13 @@ public class MixBuss extends AudioBuss {
     @ObfuscatedName("aih.ad")
     public boolean field10238;
 
-    public MixBuss() {
+    public MidiAudioBuss() {
         this.field10239 = new IterableMap(128);
         this.method16266(-1, 256);
         this.method16287(true);
     }
 
-    public MixBuss(MixBuss arg0) {
+    public MidiAudioBuss(MidiAudioBuss arg0) {
         this.field10239 = arg0.field10239;
         this.method16266(-1, 256);
         this.method16287(true);
@@ -154,7 +154,7 @@ public class MixBuss extends AudioBuss {
                     var5 = false;
                     continue;
                 }
-                this.field10239.method11927(var9, (long) var8);
+                this.field10239.put(var9, (long) var8);
             }
             if (!var9.method14918(arg2, (byte[]) var7.value, var6)) {
                 var5 = false;
@@ -251,7 +251,7 @@ public class MixBuss extends AudioBuss {
     public void method16270(int arg0, int arg1, int arg2) {
         this.method16380(arg0, arg1, 64);
         if ((this.field10245[arg0] & 0x2) != 0) {
-            for (SoundRelated1 var4 = (SoundRelated1) this.field10251.field10227.method11565(); var4 != null; var4 = (SoundRelated1) this.field10251.field10227.method11568()) {
+            for (SoundRelated1 var4 = (SoundRelated1) this.field10251.notes.method11565(); var4 != null; var4 = (SoundRelated1) this.field10251.notes.method11568()) {
                 if (var4.field9400 == arg0 && var4.field9402 < 0) {
                     this.field10240[arg0][var4.field9388] = null;
                     this.field10240[arg0][arg1] = var4;
@@ -304,7 +304,7 @@ public class MixBuss extends AudioBuss {
             }
             this.field10252[arg0][var8.field9387] = var8;
         }
-        this.field10251.field10227.addFirst(var8);
+        this.field10251.notes.addFirst(var8);
         this.field10240[arg0][arg1] = var8;
     }
 
@@ -337,7 +337,7 @@ public class MixBuss extends AudioBuss {
             var4.field9402 = 0;
             return;
         }
-        for (SoundRelated1 var5 = (SoundRelated1) this.field10251.field10227.last(); var5 != null; var5 = (SoundRelated1) this.field10251.field10227.method11567()) {
+        for (SoundRelated1 var5 = (SoundRelated1) this.field10251.notes.last(); var5 != null; var5 = (SoundRelated1) this.field10251.notes.prev()) {
             if (var4.field9400 == var5.field9400 && var5.field9402 < 0 && var4 != var5) {
                 var4.field9402 = 0;
                 break;
@@ -360,12 +360,12 @@ public class MixBuss extends AudioBuss {
 
     @ObfuscatedName("aih.ab(II)V")
     public void method16262(int arg0) {
-        for (SoundRelated1 var2 = (SoundRelated1) this.field10251.field10227.last(); var2 != null; var2 = (SoundRelated1) this.field10251.field10227.method11567()) {
+        for (SoundRelated1 var2 = (SoundRelated1) this.field10251.notes.last(); var2 != null; var2 = (SoundRelated1) this.field10251.notes.prev()) {
             if (arg0 < 0 || var2.field9400 == arg0) {
                 if (var2.field9401 != null) {
-                    var2.field9401.method16418(Statics.field4015 / 100);
+                    var2.field9401.method16418(Statics.sampleRate / 100);
                     if (var2.field9401.method16383()) {
-                        this.field10251.field10225.method16452(var2.field9401);
+                        this.field10251.mixer.method16452(var2.field9401);
                     }
                     var2.method14911();
                 }
@@ -402,7 +402,7 @@ public class MixBuss extends AudioBuss {
 
     @ObfuscatedName("aih.bz(II)V")
     public void method16286(int arg0) {
-        for (SoundRelated1 var2 = (SoundRelated1) this.field10251.field10227.last(); var2 != null; var2 = (SoundRelated1) this.field10251.field10227.method11567()) {
+        for (SoundRelated1 var2 = (SoundRelated1) this.field10251.notes.last(); var2 != null; var2 = (SoundRelated1) this.field10251.notes.prev()) {
             if ((arg0 < 0 || var2.field9400 == arg0) && var2.field9402 < 0) {
                 this.field10240[var2.field9400][var2.field9388] = null;
                 var2.field9402 = 0;
@@ -431,7 +431,7 @@ public class MixBuss extends AudioBuss {
         if ((this.field10245[arg0] & 0x2) == 0) {
             return;
         }
-        for (SoundRelated1 var2 = (SoundRelated1) this.field10251.field10227.last(); var2 != null; var2 = (SoundRelated1) this.field10251.field10227.method11567()) {
+        for (SoundRelated1 var2 = (SoundRelated1) this.field10251.notes.last(); var2 != null; var2 = (SoundRelated1) this.field10251.notes.prev()) {
             if (var2.field9400 == arg0 && this.field10240[arg0][var2.field9388] == null && var2.field9402 < 0) {
                 var2.field9402 = 0;
             }
@@ -443,7 +443,7 @@ public class MixBuss extends AudioBuss {
         if ((this.field10245[arg0] & 0x4) == 0) {
             return;
         }
-        for (SoundRelated1 var2 = (SoundRelated1) this.field10251.field10227.last(); var2 != null; var2 = (SoundRelated1) this.field10251.field10227.method11567()) {
+        for (SoundRelated1 var2 = (SoundRelated1) this.field10251.notes.last(); var2 != null; var2 = (SoundRelated1) this.field10251.notes.prev()) {
             if (var2.field9400 == arg0) {
                 var2.field9398 = 0;
             }
@@ -621,7 +621,7 @@ public class MixBuss extends AudioBuss {
             double var8 = Math.sin((double) (arg0.field9383 & 0x1FF) * 0.01227184630308513D);
             var3 += (int) ((double) var7 * var8);
         }
-        int var10 = (int) ((double) (arg0.field9385.field10295 * 256) * Math.pow(2.0D, (double) var3 * 3.255208333333333E-4D) / (double) Statics.field4015 + 0.5D);
+        int var10 = (int) ((double) (arg0.field9385.field10295 * 256) * Math.pow(2.0D, (double) var3 * 3.255208333333333E-4D) / (double) Statics.sampleRate + 0.5D);
         return var10 < 1 ? 1 : var10;
     }
 
@@ -670,12 +670,12 @@ public class MixBuss extends AudioBuss {
     }
 
     @ObfuscatedName("aih.j()Ladc;")
-    public synchronized AudioBuss method15031() {
+    public synchronized AudioBuss firstSubStream() {
         return this.field10251;
     }
 
     @ObfuscatedName("aih.a()Ladc;")
-    public synchronized AudioBuss method15032() {
+    public synchronized AudioBuss nextSubStream() {
         return null;
     }
 
@@ -685,9 +685,9 @@ public class MixBuss extends AudioBuss {
     }
 
     @ObfuscatedName("aih.m([III)V")
-    public synchronized void method15034(int[] arg0, int arg1, int arg2) {
+    public synchronized void read(int[] arg0, int arg1, int arg2) {
         if (this.field10253.method3017()) {
-            int var4 = this.field10231 * this.field10253.field1606 / Statics.field4015;
+            int var4 = this.field10231 * this.field10253.field1606 / Statics.sampleRate;
             do {
                 long var5 = (long) arg2 * (long) var4 + this.field10257;
                 if (this.field10258 - var5 >= 0L) {
@@ -696,19 +696,19 @@ public class MixBuss extends AudioBuss {
                 }
                 int var7 = (int) ((this.field10258 - this.field10257 + (long) var4 - 1L) / (long) var4);
                 this.field10257 += (long) var4 * (long) var7;
-                this.field10251.method15034(arg0, arg1, var7);
+                this.field10251.read(arg0, arg1, var7);
                 arg1 += var7;
                 arg2 -= var7;
                 this.method16362();
             } while (this.field10253.method3017());
         }
-        this.field10251.method15034(arg0, arg1, arg2);
+        this.field10251.read(arg0, arg1, arg2);
     }
 
     @ObfuscatedName("aih.t(I)V")
-    public synchronized void method15046(int arg0) {
+    public synchronized void skip(int arg0) {
         if (this.field10253.method3017()) {
-            int var2 = this.field10231 * this.field10253.field1606 / Statics.field4015;
+            int var2 = this.field10231 * this.field10253.field1606 / Statics.sampleRate;
             do {
                 long var3 = (long) arg0 * (long) var2 + this.field10257;
                 if (this.field10258 - var3 >= 0L) {
@@ -717,12 +717,12 @@ public class MixBuss extends AudioBuss {
                 }
                 int var5 = (int) ((this.field10258 - this.field10257 + (long) var2 - 1L) / (long) var2);
                 this.field10257 += (long) var2 * (long) var5;
-                this.field10251.method15046(var5);
+                this.field10251.skip(var5);
                 arg0 -= var5;
                 this.method16362();
             } while (this.field10253.method3017());
         }
-        this.field10251.method15046(arg0);
+        this.field10251.skip(arg0);
     }
 
     @ObfuscatedName("aih.bn(J)V")
@@ -833,7 +833,7 @@ public class MixBuss extends AudioBuss {
 
     @ObfuscatedName("aih.bc(Laci;[IIIB)Z")
     public boolean method16338(SoundRelated1 arg0, int[] arg1, int arg2, int arg3) {
-        arg0.field9392 = Statics.field4015 / 100;
+        arg0.field9392 = Statics.sampleRate / 100;
         if (arg0.field9402 >= 0 && (arg0.field9401 == null || arg0.field9401.method16393())) {
             arg0.method14911();
             arg0.remove();
@@ -898,12 +898,12 @@ public class MixBuss extends AudioBuss {
         }
         arg0.field9401.method16418(arg0.field9392);
         if (arg1 == null) {
-            arg0.field9401.method15046(arg3);
+            arg0.field9401.skip(arg3);
         } else {
-            arg0.field9401.method15034(arg1, arg2, arg3);
+            arg0.field9401.read(arg1, arg2, arg3);
         }
         if (arg0.field9401.method16383()) {
-            this.field10251.field10225.method16452(arg0.field9401);
+            this.field10251.mixer.method16452(arg0.field9401);
         }
         arg0.method14911();
         if (arg0.field9402 >= 0) {

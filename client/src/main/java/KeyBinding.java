@@ -15,7 +15,7 @@ public class KeyBinding implements Binding {
     }
 
     @ObfuscatedName("pi.u(Ladv;[Lox;ILoq;I)Z")
-    public boolean method7884(BasicMouseEvent arg0, KeyboardEvent[] arg1, int arg2, Keyboard arg3) {
+    public boolean test(BasicMouseEvent arg0, KeyboardEvent[] arg1, int arg2, Keyboard arg3) {
         for (int var5 = 0; var5 < arg2 && var5 < arg1.length; var5++) {
             KeyboardEvent var6 = arg1[var5];
             if (var6 != null && var6.method7286() == this.field4815 && var6.method7285() == this.field4816) {

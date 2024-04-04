@@ -15,7 +15,7 @@ public class NPCType {
     public int field7211;
 
     @ObfuscatedName("wq.c")
-    public String field7212 = "null";
+    public String name = "null";
 
     @ObfuscatedName("wq.m")
     public int field7213 = 1;
@@ -66,7 +66,7 @@ public class NPCType {
     public byte field7228 = 0;
 
     @ObfuscatedName("wq.h")
-    public String[] field7227;
+    public String[] op;
 
     @ObfuscatedName("wq.r")
     public int[] field7230;
@@ -111,7 +111,7 @@ public class NPCType {
     public int field7241 = 32;
 
     @ObfuscatedName("wq.at")
-    public int[] field7244;
+    public int[] multinpc;
 
     @ObfuscatedName("wq.ax")
     public int field7245 = -1;
@@ -120,7 +120,7 @@ public class NPCType {
     public int field7219 = -1;
 
     @ObfuscatedName("wq.aa")
-    public boolean field7271 = true;
+    public boolean active = true;
 
     @ObfuscatedName("wq.am")
     public boolean field7259 = true;
@@ -144,22 +144,22 @@ public class NPCType {
     public byte field7220 = 0;
 
     @ObfuscatedName("wq.ac")
-    public int field7257 = -1;
+    public int bgsound = -1;
 
     @ObfuscatedName("wq.aq")
-    public int field7258 = -1;
+    public int bgsound_crawl = -1;
 
     @ObfuscatedName("wq.ab")
-    public int field7223 = -1;
+    public int bgsound_walk = -1;
 
     @ObfuscatedName("wq.bq")
-    public int field7260 = -1;
+    public int bgsound_run = -1;
 
     @ObfuscatedName("wq.bz")
-    public int field7261 = 0;
+    public int bgsound_range = 0;
 
     @ObfuscatedName("wq.bv")
-    public int field7262 = 0;
+    public int bgsound_size = 0;
 
     @ObfuscatedName("wq.bj")
     public int bgsound_volume = 255;
@@ -189,10 +189,10 @@ public class NPCType {
     public int field7229 = -1;
 
     @ObfuscatedName("wq.bd")
-    public int field7250 = 256;
+    public int bgsound_minrate = 256;
 
     @ObfuscatedName("wq.bc")
-    public int field7273 = 256;
+    public int bgsound_maxrate = 256;
 
     @ObfuscatedName("wq.br")
     public int field7274 = 0;
@@ -220,11 +220,11 @@ public class NPCType {
                 this.field7214[var4] = arg0.gSmart2or4null();
             }
         } else if (arg1 == 2) {
-            this.field7212 = arg0.gjstr();
+            this.name = arg0.gjstr();
         } else if (arg1 == 12) {
             this.field7213 = arg0.g1();
         } else if (arg1 >= 30 && arg1 < 35) {
-            this.field7227[arg1 - 30] = arg0.gjstr();
+            this.op[arg1 - 30] = arg0.gjstr();
         } else if (arg1 == 40) {
             int var5 = arg0.g1();
             this.field7218 = new short[var5];
@@ -318,16 +318,16 @@ public class NPCType {
                 }
             }
             int var37 = arg0.g1();
-            this.field7244 = new int[var37 + 2];
+            this.multinpc = new int[var37 + 2];
             for (int var38 = 0; var38 <= var37; var38++) {
-                this.field7244[var38] = arg0.g2();
-                if (this.field7244[var38] == 65535) {
-                    this.field7244[var38] = -1;
+                this.multinpc[var38] = arg0.g2();
+                if (this.multinpc[var38] == 65535) {
+                    this.multinpc[var38] = -1;
                 }
             }
-            this.field7244[var37 + 1] = var36;
+            this.multinpc[var37 + 1] = var36;
         } else if (arg1 == 107) {
-            this.field7271 = false;
+            this.active = false;
         } else if (arg1 == 109) {
             this.field7259 = false;
         } else if (arg1 == 111) {
@@ -359,23 +359,23 @@ public class NPCType {
         } else if (arg1 == 128) {
             SerializableEnums.decode(MoveSpeed.values(), arg0.g1());
         } else if (arg1 == 134) {
-            this.field7257 = arg0.g2();
-            if (this.field7257 == 65535) {
-                this.field7257 = -1;
+            this.bgsound = arg0.g2();
+            if (this.bgsound == 65535) {
+                this.bgsound = -1;
             }
-            this.field7258 = arg0.g2();
-            if (this.field7258 == 65535) {
-                this.field7258 = -1;
+            this.bgsound_crawl = arg0.g2();
+            if (this.bgsound_crawl == 65535) {
+                this.bgsound_crawl = -1;
             }
-            this.field7223 = arg0.g2();
-            if (this.field7223 == 65535) {
-                this.field7223 = -1;
+            this.bgsound_walk = arg0.g2();
+            if (this.bgsound_walk == 65535) {
+                this.bgsound_walk = -1;
             }
-            this.field7260 = arg0.g2();
-            if (this.field7260 == 65535) {
-                this.field7260 = -1;
+            this.bgsound_run = arg0.g2();
+            if (this.bgsound_run == 65535) {
+                this.bgsound_run = -1;
             }
-            this.field7261 = arg0.g1();
+            this.bgsound_range = arg0.g1();
         } else if (arg1 == 135 || arg1 == 136) {
             arg0.g1();
             arg0.g2();
@@ -392,9 +392,9 @@ public class NPCType {
         } else if (arg1 == 143) {
             this.field7237 = true;
         } else if (arg1 >= 150 && arg1 < 155) {
-            this.field7227[arg1 - 150] = arg0.gjstr();
+            this.op[arg1 - 150] = arg0.gjstr();
             if (!this.field7210.field7278) {
-                this.field7227[arg1 - 150] = null;
+                this.op[arg1 - 150] = null;
             }
         } else if (arg1 == 155) {
             this.field7225 = arg0.g1b();
@@ -416,12 +416,12 @@ public class NPCType {
         } else if (arg1 == 163) {
             this.field7229 = arg0.g1();
         } else if (arg1 == 164) {
-            this.field7250 = arg0.g2();
-            this.field7273 = arg0.g2();
+            this.bgsound_minrate = arg0.g2();
+            this.bgsound_maxrate = arg0.g2();
         } else if (arg1 == 165) {
             this.field7274 = arg0.g1();
         } else if (arg1 == 168) {
-            this.field7262 = arg0.g1();
+            this.bgsound_size = arg0.g1();
         } else if (arg1 == 169) {
             this.field7275 = false;
         } else if (arg1 >= 170 && arg1 < 176) {
@@ -449,7 +449,7 @@ public class NPCType {
                 } else {
                     var35 = new IntNode(arg0.g4s());
                 }
-                this.field7265.method11927(var35, (long) var34);
+                this.field7265.put(var35, (long) var34);
             }
         }
     }
@@ -476,8 +476,8 @@ public class NPCType {
 
     @ObfuscatedName("wq.c(Lra;ILpn;Lug;Ltt;Ltt;[Ltt;[IILwf;IZB)Lqa;")
     public final Model method12541(RendererToolkit arg0, int arg1, BASTypeList arg2, VarIntDomain arg3, AnimationNode arg4, AnimationNode arg5, AnimationNode[] arg6, int[] arg7, int arg8, NPCTypeCustomisation arg9, int arg10, boolean arg11) {
-        if (this.field7244 != null) {
-            NPCType var13 = this.method12516(arg3);
+        if (this.multinpc != null) {
+            NPCType var13 = this.getMultiNPC(arg3);
             return var13 == null ? null : var13.method12541(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
         }
         int var14 = arg1;
@@ -696,8 +696,8 @@ public class NPCType {
 
     @ObfuscatedName("wq.m(Lra;ILug;Ltt;Lwf;B)Lqa;")
     public final Model method12512(RendererToolkit arg0, int arg1, VarIntDomain arg2, AnimationNode arg3, NPCTypeCustomisation arg4) {
-        if (this.field7244 != null) {
-            NPCType var6 = this.method12516(arg2);
+        if (this.multinpc != null) {
+            NPCType var6 = this.getMultiNPC(arg2);
             return var6 == null ? null : var6.method12512(arg0, arg1, arg2, arg3, arg4);
         } else if (this.field7215 == null && (arg4 == null || arg4.field7204 == null)) {
             return null;
@@ -847,24 +847,24 @@ public class NPCType {
     }
 
     @ObfuscatedName("wq.d(Lug;I)Lwq;")
-    public final NPCType method12516(VarIntDomain arg0) {
+    public final NPCType getMultiNPC(VarIntDomain arg0) {
         int var2 = -1;
         if (this.field7245 != -1) {
             var2 = arg0.method1646(this.field7245);
         } else if (this.field7219 != -1) {
             var2 = arg0.method1664(this.field7219);
         }
-        if (var2 >= 0 && var2 < this.field7244.length - 1) {
-            return this.field7244[var2] == -1 ? null : this.field7210.method12565(this.field7244[var2]);
+        if (var2 >= 0 && var2 < this.multinpc.length - 1) {
+            return this.multinpc[var2] == -1 ? null : this.field7210.method12565(this.multinpc[var2]);
         } else {
-            int var3 = this.field7244[this.field7244.length - 1];
+            int var3 = this.multinpc[this.multinpc.length - 1];
             return var3 == -1 ? null : this.field7210.method12565(var3);
         }
     }
 
     @ObfuscatedName("wq.z(Lug;B)Z")
     public boolean method12517(VarIntDomain arg0) {
-        if (this.field7244 == null) {
+        if (this.multinpc == null) {
             return true;
         }
         int var2 = -1;
@@ -873,23 +873,23 @@ public class NPCType {
         } else if (this.field7219 != -1) {
             var2 = arg0.method1664(this.field7219);
         }
-        if (var2 >= 0 && var2 < this.field7244.length - 1) {
-            return this.field7244[var2] != -1;
+        if (var2 >= 0 && var2 < this.multinpc.length - 1) {
+            return this.multinpc[var2] != -1;
         } else {
-            int var3 = this.field7244[this.field7244.length - 1];
+            int var3 = this.multinpc[this.multinpc.length - 1];
             return var3 != -1;
         }
     }
 
     @ObfuscatedName("wq.n(B)Z")
     public boolean method12511() {
-        if (this.field7244 == null) {
-            return this.field7257 != -1 || this.field7223 != -1 || this.field7260 != -1;
+        if (this.multinpc == null) {
+            return this.bgsound != -1 || this.bgsound_walk != -1 || this.bgsound_run != -1;
         }
-        for (int var1 = 0; var1 < this.field7244.length; var1++) {
-            if (this.field7244[var1] != -1) {
-                NPCType var2 = this.field7210.method12565(this.field7244[var1]);
-                if (var2.field7257 != -1 || var2.field7223 != -1 || var2.field7260 != -1) {
+        for (int var1 = 0; var1 < this.multinpc.length; var1++) {
+            if (this.multinpc[var1] != -1) {
+                NPCType var2 = this.field7210.method12565(this.multinpc[var1]);
+                if (var2.bgsound != -1 || var2.bgsound_walk != -1 || var2.bgsound_run != -1) {
                     return true;
                 }
             }

@@ -334,7 +334,7 @@ public class PureJavaModel extends Model {
         this.field7792 = new float[this.field7788][];
         this.field7773 = new float[this.field7788][];
         ModelRelated1 var35 = this.method349(arg1, var8, this.field7788);
-        PureJavaToolkitContext var36 = this.field7839.method13206(Thread.currentThread());
+        PureJavaToolkitContext var36 = this.field7839.getContext(Thread.currentThread());
         float[] var37 = var36.field900;
         boolean var38 = false;
         for (int var39 = 0; var39 < this.field7788; var39++) {
@@ -572,7 +572,7 @@ public class PureJavaModel extends Model {
 
     @ObfuscatedName("yx.x(Lak;)V")
     public void method12999(PureJavaToolkitContext arg0) {
-        this.field7768 = arg0.field868;
+        this.field7768 = arg0.rasteriser;
         if (this.field7785 == arg0) {
             return;
         }
@@ -592,7 +592,7 @@ public class PureJavaModel extends Model {
 
     @ObfuscatedName("yx.y(Ljava/lang/Thread;)V")
     public void method13000(Thread arg0) {
-        PureJavaToolkitContext var2 = this.field7839.method13206(arg0);
+        PureJavaToolkitContext var2 = this.field7839.getContext(arg0);
         if (this.field7767 != var2) {
             this.field7767 = var2;
             this.field7846 = this.field7767.field901;
@@ -947,7 +947,7 @@ public class PureJavaModel extends Model {
         if ((this.field7777 & 0x10000) != 65536) {
             throw new IllegalStateException("");
         } else if ((var6.field7777 & 0x10000) == 65536) {
-            this.method12999(this.field7839.method13206(Thread.currentThread()));
+            this.method12999(this.field7839.getContext(Thread.currentThread()));
             this.method13001();
             this.method13065();
             var6.method13001();
@@ -2740,7 +2740,7 @@ public class PureJavaModel extends Model {
         if (this.field7821 == null) {
             return;
         }
-        PureJavaToolkitContext var4 = this.field7839.method13206(Thread.currentThread());
+        PureJavaToolkitContext var4 = this.field7839.getContext(Thread.currentThread());
         Matrix4x3 var5 = var4.field878;
         var5.method5115(arg0);
         if (arg2) {
@@ -2769,7 +2769,7 @@ public class PureJavaModel extends Model {
         if (this.field7781 < 1) {
             return;
         }
-        PureJavaToolkitContext var4 = this.field7839.method13206(Thread.currentThread());
+        PureJavaToolkitContext var4 = this.field7839.getContext(Thread.currentThread());
         Matrix4x4 var5 = var4.field879;
         var5.method5385(arg0);
         Matrix4x4 var6 = this.field7839.field8016;
@@ -2798,16 +2798,16 @@ public class PureJavaModel extends Model {
         float var20;
         float var21;
         if (var8) {
-            var20 = var6.field3480[14];
-            var21 = var6.field3480[6];
+            var20 = var6.entries[14];
+            var21 = var6.entries[6];
         } else {
-            var20 = var5.field3480[14] * var6.field3480[10] + var5.field3480[12] * var6.field3480[2] + var5.field3480[13] * var6.field3480[6] + var6.field3480[14];
-            var21 = var5.field3480[6] * var6.field3480[10] + var5.field3480[4] * var6.field3480[2] + var5.field3480[5] * var6.field3480[6];
+            var20 = var5.entries[14] * var6.entries[10] + var5.entries[12] * var6.entries[2] + var5.entries[13] * var6.entries[6] + var6.entries[14];
+            var21 = var5.entries[6] * var6.entries[10] + var5.entries[4] * var6.entries[2] + var5.entries[5] * var6.entries[6];
         }
         float var22 = (float) this.field7771 * var21 + var20;
         float var23 = (float) this.field7786 * var21 + var20;
         float var24 = var22 > var23 ? (float) this.field7824 + var22 : (float) this.field7824 + var23;
-        float var25 = var7.field3480[10] * var24 + var7.field3480[14];
+        float var25 = var7.entries[10] * var24 + var7.entries[14];
         if (this.field7839.field8030 > 1) {
             synchronized (this) {
                 while (this.field7765) {
@@ -2841,10 +2841,10 @@ public class PureJavaModel extends Model {
             int var32 = this.field7807[var31];
             int var33 = this.field7783[var31];
             int var34 = this.field7820[var31];
-            float var35 = var29.field3480[8] * (float) var34 + var29.field3480[0] * (float) var32 + var29.field3480[4] * (float) var33 + var29.field3480[12];
-            float var36 = var29.field3480[9] * (float) var34 + var29.field3480[1] * (float) var32 + var29.field3480[5] * (float) var33 + var29.field3480[13];
-            float var37 = var29.field3480[10] * (float) var34 + var29.field3480[2] * (float) var32 + var29.field3480[6] * (float) var33 + var29.field3480[14];
-            float var38 = var29.field3480[11] * (float) var34 + var29.field3480[3] * (float) var32 + var29.field3480[7] * (float) var33 + var29.field3480[15];
+            float var35 = var29.entries[8] * (float) var34 + var29.entries[0] * (float) var32 + var29.entries[4] * (float) var33 + var29.entries[12];
+            float var36 = var29.entries[9] * (float) var34 + var29.entries[1] * (float) var32 + var29.entries[5] * (float) var33 + var29.entries[13];
+            float var37 = var29.entries[10] * (float) var34 + var29.entries[2] * (float) var32 + var29.entries[6] * (float) var33 + var29.entries[14];
+            float var38 = var29.entries[11] * (float) var34 + var29.entries[3] * (float) var32 + var29.entries[7] * (float) var33 + var29.entries[15];
             this.field7769[var31] = this.field7785.field896 * var37 / var38 + this.field7785.field906;
             this.field7791[var31] = var38;
             if (var37 >= -var38) {
@@ -2855,7 +2855,7 @@ public class PureJavaModel extends Model {
                 var30 = true;
             }
             if (this.field7785.field871) {
-                this.field7835[var31] = (int) (var5.field3480[9] * (float) var34 + var5.field3480[1] * (float) var32 + var5.field3480[5] * (float) var33 + var5.field3480[13]);
+                this.field7835[var31] = (int) (var5.entries[9] * (float) var34 + var5.entries[1] * (float) var32 + var5.entries[5] * (float) var33 + var5.entries[13]);
             }
         }
         if (this.field7794 != null) {
@@ -2868,27 +2868,27 @@ public class PureJavaModel extends Model {
                 int var45 = (this.field7807[var42] + this.field7807[var43] + this.field7807[var44]) / 3;
                 int var46 = (this.field7783[var42] + this.field7783[var43] + this.field7783[var44]) / 3;
                 int var47 = (this.field7820[var42] + this.field7820[var43] + this.field7820[var44]) / 3;
-                float var48 = var29.field3480[8] * (float) var47 + var29.field3480[0] * (float) var45 + var29.field3480[4] * (float) var46 + var29.field3480[12];
-                float var49 = var29.field3480[9] * (float) var47 + var29.field3480[1] * (float) var45 + var29.field3480[5] * (float) var46 + var29.field3480[13];
-                float var50 = var29.field3480[10] * (float) var47 + var29.field3480[2] * (float) var45 + var29.field3480[6] * (float) var46 + var29.field3480[14];
-                float var51 = var29.field3480[11] * (float) var47 + var29.field3480[3] * (float) var45 + var29.field3480[7] * (float) var46 + var29.field3480[15];
-                float var52 = var7.field3480[2] * (float) var41.field854 + var7.field3480[6] * (float) var41.field860 + var50;
-                float var53 = var7.field3480[3] * (float) var41.field854 + var7.field3480[7] * (float) var41.field860 + var51;
+                float var48 = var29.entries[8] * (float) var47 + var29.entries[0] * (float) var45 + var29.entries[4] * (float) var46 + var29.entries[12];
+                float var49 = var29.entries[9] * (float) var47 + var29.entries[1] * (float) var45 + var29.entries[5] * (float) var46 + var29.entries[13];
+                float var50 = var29.entries[10] * (float) var47 + var29.entries[2] * (float) var45 + var29.entries[6] * (float) var46 + var29.entries[14];
+                float var51 = var29.entries[11] * (float) var47 + var29.entries[3] * (float) var45 + var29.entries[7] * (float) var46 + var29.entries[15];
+                float var52 = var7.entries[2] * (float) var41.field854 + var7.entries[6] * (float) var41.field860 + var50;
+                float var53 = var7.entries[3] * (float) var41.field854 + var7.entries[7] * (float) var41.field860 + var51;
                 if (var52 > -var53) {
-                    float var54 = var7.field3480[0] * (float) var41.field854 + var7.field3480[4] * (float) var41.field860 + var48;
-                    float var55 = var7.field3480[1] * (float) var41.field854 + var7.field3480[5] * (float) var41.field860 + var49;
+                    float var54 = var7.entries[0] * (float) var41.field854 + var7.entries[4] * (float) var41.field860 + var48;
+                    float var55 = var7.entries[1] * (float) var41.field854 + var7.entries[5] * (float) var41.field860 + var49;
                     float var56 = this.field7839.field8011 * var54 / var53 + this.field7839.field8007;
                     float var57 = this.field7839.field8026 * var55 / var53 + this.field7839.field8010;
                     float var58 = (float) var40.field936 * var41.field852;
                     float var59 = (float) var40.field937 * var41.field861;
-                    float var60 = var7.field3480[4] * var59 + var7.field3480[0] * var58 + var54;
-                    float var61 = var7.field3480[5] * var59 + var7.field3480[1] * var58 + var55;
-                    float var62 = var7.field3480[7] * var59 + var7.field3480[3] * var58 + var53;
+                    float var60 = var7.entries[4] * var59 + var7.entries[0] * var58 + var54;
+                    float var61 = var7.entries[5] * var59 + var7.entries[1] * var58 + var55;
+                    float var62 = var7.entries[7] * var59 + var7.entries[3] * var58 + var53;
                     float var63 = this.field7839.field8011 * var60 / var62 + this.field7839.field8007;
                     float var64 = this.field7839.field8026 * var61 / var62 + this.field7839.field8010;
                     var41.field857 = (int) var56;
                     var41.field855 = (int) var57;
-                    var41.field851 = (var52 - var7.field3480[10] * (float) var40.field942) * this.field7839.field8028 / var53 + this.field7839.field8006;
+                    var41.field851 = (var52 - var7.entries[10] * (float) var40.field942) * this.field7839.field8028 / var53 + this.field7839.field8006;
                     var41.field859 = (int) (var63 < var56 ? var56 - var63 : var63 - var56);
                     var41.field858 = (int) (var64 < var57 ? var57 - var64 : var64 - var57);
                 } else {
@@ -2903,10 +2903,10 @@ public class PureJavaModel extends Model {
             int var68 = this.field7829 + this.field7828 >> 1;
             int var69 = this.field7830 + this.field7784 >> 1;
             short var71 = this.field7771;
-            float var73 = var29.field3480[8] * (float) var69 + var29.field3480[0] * (float) var68 + var29.field3480[4] * (float) var71 + var29.field3480[12];
-            float var74 = var29.field3480[9] * (float) var69 + var29.field3480[1] * (float) var68 + var29.field3480[5] * (float) var71 + var29.field3480[13];
-            float var75 = var29.field3480[10] * (float) var69 + var29.field3480[2] * (float) var68 + var29.field3480[6] * (float) var71 + var29.field3480[14];
-            float var76 = var29.field3480[11] * (float) var69 + var29.field3480[3] * (float) var68 + var29.field3480[7] * (float) var71 + var29.field3480[15];
+            float var73 = var29.entries[8] * (float) var69 + var29.entries[0] * (float) var68 + var29.entries[4] * (float) var71 + var29.entries[12];
+            float var74 = var29.entries[9] * (float) var69 + var29.entries[1] * (float) var68 + var29.entries[5] * (float) var71 + var29.entries[13];
+            float var75 = var29.entries[10] * (float) var69 + var29.entries[2] * (float) var68 + var29.entries[6] * (float) var71 + var29.entries[14];
+            float var76 = var29.entries[11] * (float) var69 + var29.entries[3] * (float) var68 + var29.entries[7] * (float) var71 + var29.entries[15];
             if (var75 >= -var76) {
                 arg1.field1516 = (int) (this.field7839.field8011 * var73 / var76 + this.field7839.field8007);
                 arg1.field1518 = (int) (this.field7839.field8026 * var74 / var76 + this.field7839.field8010);
@@ -2914,10 +2914,10 @@ public class PureJavaModel extends Model {
                 var66 = true;
             }
             short var78 = this.field7786;
-            float var80 = var29.field3480[8] * (float) var69 + var29.field3480[0] * (float) var68 + var29.field3480[4] * (float) var78 + var29.field3480[12];
-            float var81 = var29.field3480[9] * (float) var69 + var29.field3480[1] * (float) var68 + var29.field3480[5] * (float) var78 + var29.field3480[13];
-            float var82 = var29.field3480[10] * (float) var69 + var29.field3480[2] * (float) var68 + var29.field3480[6] * (float) var78 + var29.field3480[14];
-            float var83 = var29.field3480[11] * (float) var69 + var29.field3480[3] * (float) var68 + var29.field3480[7] * (float) var78 + var29.field3480[15];
+            float var80 = var29.entries[8] * (float) var69 + var29.entries[0] * (float) var68 + var29.entries[4] * (float) var78 + var29.entries[12];
+            float var81 = var29.entries[9] * (float) var69 + var29.entries[1] * (float) var68 + var29.entries[5] * (float) var78 + var29.entries[13];
+            float var82 = var29.entries[10] * (float) var69 + var29.entries[2] * (float) var68 + var29.entries[6] * (float) var78 + var29.entries[14];
+            float var83 = var29.entries[11] * (float) var69 + var29.entries[3] * (float) var68 + var29.entries[7] * (float) var78 + var29.entries[15];
             if (var82 >= -var83) {
                 arg1.field1519 = (int) (this.field7839.field8011 * var80 / var83 + this.field7839.field8007);
                 arg1.field1520 = (int) (this.field7839.field8026 * var81 / var83 + this.field7839.field8010);
@@ -2945,12 +2945,12 @@ public class PureJavaModel extends Model {
             }
             if (var67) {
                 if (var75 / var76 > var82 / var83) {
-                    float var92 = var7.field3480[0] * (float) this.field7824 + var73 + var7.field3480[12];
-                    float var93 = var7.field3480[3] * (float) this.field7824 + var76 + var7.field3480[15];
+                    float var92 = var7.entries[0] * (float) this.field7824 + var73 + var7.entries[12];
+                    float var93 = var7.entries[3] * (float) this.field7824 + var76 + var7.entries[15];
                     arg1.field1517 = (int) (this.field7839.field8011 * var92 / var93 + (this.field7839.field8007 - (float) arg1.field1516));
                 } else {
-                    float var94 = var7.field3480[0] * (float) this.field7824 + var80 + var7.field3480[12];
-                    float var95 = var7.field3480[3] * (float) this.field7824 + var83 + var7.field3480[15];
+                    float var94 = var7.entries[0] * (float) this.field7824 + var80 + var7.entries[12];
+                    float var95 = var7.entries[3] * (float) this.field7824 + var83 + var7.entries[15];
                     arg1.field1517 = (int) (this.field7839.field8011 * var94 / var95 + (this.field7839.field8007 - (float) arg1.field1519));
                 }
                 arg1.field1521 = true;
@@ -2960,7 +2960,7 @@ public class PureJavaModel extends Model {
         this.field7768.field1006 = (arg2 & 0x1) == 0;
         this.field7768.field986 = false;
         try {
-            this.method13019(this.field7839.field8001 != null, this.field7839.field8023 != null, (arg2 & 0x4) != 0, var30, this.field7785.field866 && var25 > this.field7785.field867 || this.field7785.field871);
+            this.method13019(this.field7839.colour != null, this.field7839.toolkit != null, (arg2 & 0x4) != 0, var30, this.field7785.field866 && var25 > this.field7785.field867 || this.field7785.field871);
         } catch (Exception var102) {
         }
         if (this.field7794 != null) {
@@ -3094,9 +3094,9 @@ public class PureJavaModel extends Model {
             }
             if (this.field7796[arg3] == -1) {
                 int var9 = var8 | this.field7840[arg3] & 0xFFFFFF;
-                this.field7768.method2015(arg0, arg1, arg2, this.field7837[var5], this.field7837[var6], this.field7837[var7], this.field7836[var5], this.field7836[var6], this.field7836[var7], this.field7769[var5], this.field7769[var6], this.field7769[var7], this.field7791[var5], this.field7791[var6], this.field7791[var7], this.field7792[arg3][0], this.field7792[arg3][1], this.field7792[arg3][2], this.field7773[arg3][0], this.field7773[arg3][1], this.field7773[arg3][2], var9, var9, var9, this.field7785.field869, 0.0F, 0.0F, 0.0F, this.field7819[arg3]);
+                this.field7768.method2015(arg0, arg1, arg2, this.field7837[var5], this.field7837[var6], this.field7837[var7], this.field7836[var5], this.field7836[var6], this.field7836[var7], this.field7769[var5], this.field7769[var6], this.field7769[var7], this.field7791[var5], this.field7791[var6], this.field7791[var7], this.field7792[arg3][0], this.field7792[arg3][1], this.field7792[arg3][2], this.field7773[arg3][0], this.field7773[arg3][1], this.field7773[arg3][2], var9, var9, var9, this.field7785.fadeColour, 0.0F, 0.0F, 0.0F, this.field7819[arg3]);
             } else {
-                this.field7768.method2015(arg0, arg1, arg2, this.field7837[var5], this.field7837[var6], this.field7837[var7], this.field7836[var5], this.field7836[var6], this.field7836[var7], this.field7769[var5], this.field7769[var6], this.field7769[var7], this.field7791[var5], this.field7791[var6], this.field7791[var7], this.field7792[arg3][0], this.field7792[arg3][1], this.field7792[arg3][2], this.field7773[arg3][0], this.field7773[arg3][1], this.field7773[arg3][2], var8 | this.field7840[arg3] & 0xFFFFFF, var8 | this.field7795[arg3] & 0xFFFFFF, var8 | this.field7796[arg3] & 0xFFFFFF, this.field7785.field869, 0.0F, 0.0F, 0.0F, this.field7819[arg3]);
+                this.field7768.method2015(arg0, arg1, arg2, this.field7837[var5], this.field7837[var6], this.field7837[var7], this.field7836[var5], this.field7836[var6], this.field7836[var7], this.field7769[var5], this.field7769[var6], this.field7769[var7], this.field7791[var5], this.field7791[var6], this.field7791[var7], this.field7792[arg3][0], this.field7792[arg3][1], this.field7792[arg3][2], this.field7773[arg3][0], this.field7773[arg3][1], this.field7773[arg3][2], var8 | this.field7840[arg3] & 0xFFFFFF, var8 | this.field7795[arg3] & 0xFFFFFF, var8 | this.field7796[arg3] & 0xFFFFFF, this.field7785.fadeColour, 0.0F, 0.0F, 0.0F, this.field7819[arg3]);
             }
             return;
         }
@@ -3148,14 +3148,14 @@ public class PureJavaModel extends Model {
                 }
                 if (this.field7796[arg3] == -1) {
                     int var33 = var32 | this.field7840[arg3] & 0xFFFFFF;
-                    this.field7768.method2015(arg0, arg1, arg2, this.field7837[var26], this.field7837[var27], this.field7837[var28], this.field7836[var26], this.field7836[var27], this.field7836[var28], this.field7769[var26], this.field7769[var27], this.field7769[var28], this.field7791[var26], this.field7791[var27], this.field7791[var28], this.field7792[arg3][0], this.field7792[arg3][1], this.field7792[arg3][2], this.field7773[arg3][0], this.field7773[arg3][1], this.field7773[arg3][2], var33, var33, var33, this.field7785.field869, var29 * 255.0F, var30 * 255.0F, var31 * 255.0F, this.field7819[arg3]);
+                    this.field7768.method2015(arg0, arg1, arg2, this.field7837[var26], this.field7837[var27], this.field7837[var28], this.field7836[var26], this.field7836[var27], this.field7836[var28], this.field7769[var26], this.field7769[var27], this.field7769[var28], this.field7791[var26], this.field7791[var27], this.field7791[var28], this.field7792[arg3][0], this.field7792[arg3][1], this.field7792[arg3][2], this.field7773[arg3][0], this.field7773[arg3][1], this.field7773[arg3][2], var33, var33, var33, this.field7785.fadeColour, var29 * 255.0F, var30 * 255.0F, var31 * 255.0F, this.field7819[arg3]);
                 } else {
-                    this.field7768.method2015(arg0, arg1, arg2, this.field7837[var26], this.field7837[var27], this.field7837[var28], this.field7836[var26], this.field7836[var27], this.field7836[var28], this.field7769[var26], this.field7769[var27], this.field7769[var28], this.field7791[var26], this.field7791[var27], this.field7791[var28], this.field7792[arg3][0], this.field7792[arg3][1], this.field7792[arg3][2], this.field7773[arg3][0], this.field7773[arg3][1], this.field7773[arg3][2], var32 | this.field7840[arg3] & 0xFFFFFF, var32 | this.field7795[arg3] & 0xFFFFFF, var32 | this.field7796[arg3] & 0xFFFFFF, this.field7785.field869, var29 * 255.0F, var30 * 255.0F, var31 * 255.0F, this.field7819[arg3]);
+                    this.field7768.method2015(arg0, arg1, arg2, this.field7837[var26], this.field7837[var27], this.field7837[var28], this.field7836[var26], this.field7836[var27], this.field7836[var28], this.field7769[var26], this.field7769[var27], this.field7769[var28], this.field7791[var26], this.field7791[var27], this.field7791[var28], this.field7792[arg3][0], this.field7792[arg3][1], this.field7792[arg3][2], this.field7773[arg3][0], this.field7773[arg3][1], this.field7773[arg3][2], var32 | this.field7840[arg3] & 0xFFFFFF, var32 | this.field7795[arg3] & 0xFFFFFF, var32 | this.field7796[arg3] & 0xFFFFFF, this.field7785.fadeColour, var29 * 255.0F, var30 * 255.0F, var31 * 255.0F, this.field7819[arg3]);
                 }
             } else if (this.field7796[arg3] == -1) {
-                this.field7768.method1989(arg0, arg1, arg2, this.field7837[var26], this.field7837[var27], this.field7837[var28], this.field7836[var26], this.field7836[var27], this.field7836[var28], this.field7769[var26], this.field7769[var27], this.field7769[var28], ColourUtils.method15824(Statics.field5083[this.field7840[arg3] & 0xFFFF], this.field7785.field869, var29 * 255.0F), ColourUtils.method15824(Statics.field5083[this.field7840[arg3] & 0xFFFF], this.field7785.field869, var30 * 255.0F), ColourUtils.method15824(Statics.field5083[this.field7840[arg3] & 0xFFFF], this.field7785.field869, var31 * 255.0F));
+                this.field7768.method1989(arg0, arg1, arg2, this.field7837[var26], this.field7837[var27], this.field7837[var28], this.field7836[var26], this.field7836[var27], this.field7836[var28], this.field7769[var26], this.field7769[var27], this.field7769[var28], ColourUtils.method15824(Statics.field5083[this.field7840[arg3] & 0xFFFF], this.field7785.fadeColour, var29 * 255.0F), ColourUtils.method15824(Statics.field5083[this.field7840[arg3] & 0xFFFF], this.field7785.fadeColour, var30 * 255.0F), ColourUtils.method15824(Statics.field5083[this.field7840[arg3] & 0xFFFF], this.field7785.fadeColour, var31 * 255.0F));
             } else {
-                this.field7768.method1989(arg0, arg1, arg2, this.field7837[var26], this.field7837[var27], this.field7837[var28], this.field7836[var26], this.field7836[var27], this.field7836[var28], this.field7769[var26], this.field7769[var27], this.field7769[var28], ColourUtils.method15824(Statics.field5083[this.field7840[arg3] & 0xFFFF], this.field7785.field869, var29 * 255.0F), ColourUtils.method15824(Statics.field5083[this.field7795[arg3] & 0xFFFF], this.field7785.field869, var30 * 255.0F), ColourUtils.method15824(Statics.field5083[this.field7796[arg3] & 0xFFFF], this.field7785.field869, var31 * 255.0F));
+                this.field7768.method1989(arg0, arg1, arg2, this.field7837[var26], this.field7837[var27], this.field7837[var28], this.field7836[var26], this.field7836[var27], this.field7836[var28], this.field7769[var26], this.field7769[var27], this.field7769[var28], ColourUtils.method15824(Statics.field5083[this.field7840[arg3] & 0xFFFF], this.field7785.fadeColour, var29 * 255.0F), ColourUtils.method15824(Statics.field5083[this.field7795[arg3] & 0xFFFF], this.field7785.fadeColour, var30 * 255.0F), ColourUtils.method15824(Statics.field5083[this.field7796[arg3] & 0xFFFF], this.field7785.fadeColour, var31 * 255.0F));
             }
             return;
         }
@@ -3163,10 +3163,10 @@ public class PureJavaModel extends Model {
         short var6 = this.field7790[arg3];
         short var7 = this.field7838[arg3];
         Matrix4x4 var8 = this.field7839.field8017;
-        float var9 = var8.field3480[10];
-        float var10 = var8.field3480[14];
-        float var11 = var8.field3480[11];
-        float var12 = var8.field3480[15];
+        float var9 = var8.entries[10];
+        float var10 = var8.entries[14];
+        float var11 = var8.entries[11];
+        float var12 = var8.entries[15];
         float var13 = var10 * var11 - var9 * var12;
         float var14 = (this.field7769[var5] - this.field7785.field906) * this.field7785.field892;
         float var15 = (this.field7769[var6] - this.field7785.field906) * this.field7785.field892;
@@ -3212,20 +3212,20 @@ public class PureJavaModel extends Model {
             }
             if (this.field7796[arg3] == -1) {
                 int var25 = var24 | this.field7840[arg3] & 0xFFFFFF;
-                this.field7768.method2015(arg0, arg1, arg2, this.field7837[var5], this.field7837[var6], this.field7837[var7], this.field7836[var5], this.field7836[var6], this.field7836[var7], this.field7769[var5], this.field7769[var6], this.field7769[var7], this.field7791[var5], this.field7791[var6], this.field7791[var7], this.field7792[arg3][0], this.field7792[arg3][1], this.field7792[arg3][2], this.field7773[arg3][0], this.field7773[arg3][1], this.field7773[arg3][2], var25, var25, var25, this.field7785.field869, var20 * 255.0F, var21 * 255.0F, var22 * 255.0F, this.field7819[arg3]);
+                this.field7768.method2015(arg0, arg1, arg2, this.field7837[var5], this.field7837[var6], this.field7837[var7], this.field7836[var5], this.field7836[var6], this.field7836[var7], this.field7769[var5], this.field7769[var6], this.field7769[var7], this.field7791[var5], this.field7791[var6], this.field7791[var7], this.field7792[arg3][0], this.field7792[arg3][1], this.field7792[arg3][2], this.field7773[arg3][0], this.field7773[arg3][1], this.field7773[arg3][2], var25, var25, var25, this.field7785.fadeColour, var20 * 255.0F, var21 * 255.0F, var22 * 255.0F, this.field7819[arg3]);
             } else {
-                this.field7768.method2015(arg0, arg1, arg2, this.field7837[var5], this.field7837[var6], this.field7837[var7], this.field7836[var5], this.field7836[var6], this.field7836[var7], this.field7769[var5], this.field7769[var6], this.field7769[var7], this.field7791[var5], this.field7791[var6], this.field7791[var7], this.field7792[arg3][0], this.field7792[arg3][1], this.field7792[arg3][2], this.field7773[arg3][0], this.field7773[arg3][1], this.field7773[arg3][2], var24 | this.field7840[arg3] & 0xFFFFFF, var24 | this.field7795[arg3] & 0xFFFFFF, var24 | this.field7796[arg3] & 0xFFFFFF, this.field7785.field869, var20 * 255.0F, var21 * 255.0F, var22 * 255.0F, this.field7819[arg3]);
+                this.field7768.method2015(arg0, arg1, arg2, this.field7837[var5], this.field7837[var6], this.field7837[var7], this.field7836[var5], this.field7836[var6], this.field7836[var7], this.field7769[var5], this.field7769[var6], this.field7769[var7], this.field7791[var5], this.field7791[var6], this.field7791[var7], this.field7792[arg3][0], this.field7792[arg3][1], this.field7792[arg3][2], this.field7773[arg3][0], this.field7773[arg3][1], this.field7773[arg3][2], var24 | this.field7840[arg3] & 0xFFFFFF, var24 | this.field7795[arg3] & 0xFFFFFF, var24 | this.field7796[arg3] & 0xFFFFFF, this.field7785.fadeColour, var20 * 255.0F, var21 * 255.0F, var22 * 255.0F, this.field7819[arg3]);
             }
         } else if (this.field7796[arg3] == -1) {
-            this.field7768.method1989(arg0, arg1, arg2, this.field7837[var5], this.field7837[var6], this.field7837[var7], this.field7836[var5], this.field7836[var6], this.field7836[var7], this.field7769[var5], this.field7769[var6], this.field7769[var7], ColourUtils.method15824(Statics.field5083[this.field7840[arg3] & 0xFFFF], this.field7785.field869, var20 * 255.0F), ColourUtils.method15824(Statics.field5083[this.field7840[arg3] & 0xFFFF], this.field7785.field869, var21 * 255.0F), ColourUtils.method15824(Statics.field5083[this.field7840[arg3] & 0xFFFF], this.field7785.field869, var22 * 255.0F));
+            this.field7768.method1989(arg0, arg1, arg2, this.field7837[var5], this.field7837[var6], this.field7837[var7], this.field7836[var5], this.field7836[var6], this.field7836[var7], this.field7769[var5], this.field7769[var6], this.field7769[var7], ColourUtils.method15824(Statics.field5083[this.field7840[arg3] & 0xFFFF], this.field7785.fadeColour, var20 * 255.0F), ColourUtils.method15824(Statics.field5083[this.field7840[arg3] & 0xFFFF], this.field7785.fadeColour, var21 * 255.0F), ColourUtils.method15824(Statics.field5083[this.field7840[arg3] & 0xFFFF], this.field7785.fadeColour, var22 * 255.0F));
         } else {
-            this.field7768.method1989(arg0, arg1, arg2, this.field7837[var5], this.field7837[var6], this.field7837[var7], this.field7836[var5], this.field7836[var6], this.field7836[var7], this.field7769[var5], this.field7769[var6], this.field7769[var7], ColourUtils.method15824(Statics.field5083[this.field7840[arg3] & 0xFFFF], this.field7785.field869, var20 * 255.0F), ColourUtils.method15824(Statics.field5083[this.field7795[arg3] & 0xFFFF], this.field7785.field869, var21 * 255.0F), ColourUtils.method15824(Statics.field5083[this.field7796[arg3] & 0xFFFF], this.field7785.field869, var22 * 255.0F));
+            this.field7768.method1989(arg0, arg1, arg2, this.field7837[var5], this.field7837[var6], this.field7837[var7], this.field7836[var5], this.field7836[var6], this.field7836[var7], this.field7769[var5], this.field7769[var6], this.field7769[var7], ColourUtils.method15824(Statics.field5083[this.field7840[arg3] & 0xFFFF], this.field7785.fadeColour, var20 * 255.0F), ColourUtils.method15824(Statics.field5083[this.field7795[arg3] & 0xFFFF], this.field7785.fadeColour, var21 * 255.0F), ColourUtils.method15824(Statics.field5083[this.field7796[arg3] & 0xFFFF], this.field7785.fadeColour, var22 * 255.0F));
         }
     }
 
     @ObfuscatedName("yx.ai(IILkc;ZI)Z")
     public boolean method272(int arg0, int arg1, Matrix4x3 arg2, boolean arg3, int arg4) {
-        this.method12999(this.field7839.method13206(Thread.currentThread()));
+        this.method12999(this.field7839.getContext(Thread.currentThread()));
         Matrix4x4 var6 = this.field7785.field879;
         var6.method5385(arg2);
         Matrix4x4 var7 = this.field7785.field880;
@@ -3279,11 +3279,11 @@ public class PureJavaModel extends Model {
             int var26 = this.field7845[var25];
             int var27 = this.field7841[var25];
             int var28 = this.field7827[var25];
-            float var29 = var7.field3480[10] * (float) var28 + var7.field3480[2] * (float) var26 + var7.field3480[6] * (float) var27 + var7.field3480[14];
-            float var30 = var7.field3480[11] * (float) var28 + var7.field3480[3] * (float) var26 + var7.field3480[7] * (float) var27 + var7.field3480[15];
+            float var29 = var7.entries[10] * (float) var28 + var7.entries[2] * (float) var26 + var7.entries[6] * (float) var27 + var7.entries[14];
+            float var30 = var7.entries[11] * (float) var28 + var7.entries[3] * (float) var26 + var7.entries[7] * (float) var27 + var7.entries[15];
             if (var29 >= -var30) {
-                float var31 = var7.field3480[8] * (float) var28 + var7.field3480[0] * (float) var26 + var7.field3480[4] * (float) var27 + var7.field3480[12];
-                float var32 = var7.field3480[9] * (float) var28 + var7.field3480[1] * (float) var26 + var7.field3480[5] * (float) var27 + var7.field3480[13];
+                float var31 = var7.entries[8] * (float) var28 + var7.entries[0] * (float) var26 + var7.entries[4] * (float) var27 + var7.entries[12];
+                float var32 = var7.entries[9] * (float) var28 + var7.entries[1] * (float) var26 + var7.entries[5] * (float) var27 + var7.entries[13];
                 int var33 = (int) (this.field7839.field8011 * var31 / var30 + this.field7839.field8007);
                 int var34 = (int) (this.field7839.field8026 * var32 / var30 + this.field7839.field8010);
                 if (var33 < var9) {
@@ -3309,11 +3309,11 @@ public class PureJavaModel extends Model {
                 int var36 = this.field7807[var35];
                 int var37 = this.field7783[var35];
                 int var38 = this.field7820[var35];
-                float var39 = var7.field3480[10] * (float) var38 + var7.field3480[2] * (float) var36 + var7.field3480[6] * (float) var37 + var7.field3480[14];
-                float var40 = var7.field3480[11] * (float) var38 + var7.field3480[3] * (float) var36 + var7.field3480[7] * (float) var37 + var7.field3480[15];
+                float var39 = var7.entries[10] * (float) var38 + var7.entries[2] * (float) var36 + var7.entries[6] * (float) var37 + var7.entries[14];
+                float var40 = var7.entries[11] * (float) var38 + var7.entries[3] * (float) var36 + var7.entries[7] * (float) var37 + var7.entries[15];
                 if (var39 >= -var40) {
-                    float var41 = var7.field3480[8] * (float) var38 + var7.field3480[0] * (float) var36 + var7.field3480[4] * (float) var37 + var7.field3480[12];
-                    float var42 = var7.field3480[9] * (float) var38 + var7.field3480[1] * (float) var36 + var7.field3480[5] * (float) var37 + var7.field3480[13];
+                    float var41 = var7.entries[8] * (float) var38 + var7.entries[0] * (float) var36 + var7.entries[4] * (float) var37 + var7.entries[12];
+                    float var42 = var7.entries[9] * (float) var38 + var7.entries[1] * (float) var36 + var7.entries[5] * (float) var37 + var7.entries[13];
                     this.field7836[var35] = (float) (this.field7839.field8011 * var41 / var40 + this.field7839.field8007);
                     this.field7837[var35] = (float) (this.field7839.field8026 * var42 / var40 + this.field7839.field8010);
                 } else {
@@ -3344,7 +3344,7 @@ public class PureJavaModel extends Model {
 
     @ObfuscatedName("yx.ax(Lkc;)V")
     public void method294(Matrix4x3 arg0) {
-        this.method12999(this.field7839.method13206(Thread.currentThread()));
+        this.method12999(this.field7839.getContext(Thread.currentThread()));
         Matrix4x4 var2 = this.field7785.field879;
         var2.method5385(arg0);
         if (this.field7817 != null) {
@@ -3354,15 +3354,15 @@ public class PureJavaModel extends Model {
                 if (var4.field1372 != null) {
                     var5 = var4.field1372;
                 }
-                var5.field1378 = (int) (var2.field3480[8] * (float) this.field7820[var4.field1374] + var2.field3480[0] * (float) this.field7807[var4.field1374] + var2.field3480[4] * (float) this.field7783[var4.field1374] + var2.field3480[12]);
-                var5.field1379 = (int) (var2.field3480[9] * (float) this.field7820[var4.field1374] + var2.field3480[1] * (float) this.field7807[var4.field1374] + var2.field3480[5] * (float) this.field7783[var4.field1374] + var2.field3480[13]);
-                var5.field1380 = (int) (var2.field3480[10] * (float) this.field7820[var4.field1374] + var2.field3480[2] * (float) this.field7807[var4.field1374] + var2.field3480[6] * (float) this.field7783[var4.field1374] + var2.field3480[14]);
-                var5.field1381 = (int) (var2.field3480[8] * (float) this.field7820[var4.field1375] + var2.field3480[0] * (float) this.field7807[var4.field1375] + var2.field3480[4] * (float) this.field7783[var4.field1375] + var2.field3480[12]);
-                var5.field1377 = (int) (var2.field3480[9] * (float) this.field7820[var4.field1375] + var2.field3480[1] * (float) this.field7807[var4.field1375] + var2.field3480[5] * (float) this.field7783[var4.field1375] + var2.field3480[13]);
-                var5.field1373 = (int) (var2.field3480[10] * (float) this.field7820[var4.field1375] + var2.field3480[2] * (float) this.field7807[var4.field1375] + var2.field3480[6] * (float) this.field7783[var4.field1375] + var2.field3480[14]);
-                var5.field1384 = (int) (var2.field3480[8] * (float) this.field7820[var4.field1376] + var2.field3480[0] * (float) this.field7807[var4.field1376] + var2.field3480[4] * (float) this.field7783[var4.field1376] + var2.field3480[12]);
-                var5.field1385 = (int) (var2.field3480[9] * (float) this.field7820[var4.field1376] + var2.field3480[1] * (float) this.field7807[var4.field1376] + var2.field3480[5] * (float) this.field7783[var4.field1376] + var2.field3480[13]);
-                var5.field1386 = (int) (var2.field3480[10] * (float) this.field7820[var4.field1376] + var2.field3480[2] * (float) this.field7807[var4.field1376] + var2.field3480[6] * (float) this.field7783[var4.field1376] + var2.field3480[14]);
+                var5.field1378 = (int) (var2.entries[8] * (float) this.field7820[var4.field1374] + var2.entries[0] * (float) this.field7807[var4.field1374] + var2.entries[4] * (float) this.field7783[var4.field1374] + var2.entries[12]);
+                var5.field1379 = (int) (var2.entries[9] * (float) this.field7820[var4.field1374] + var2.entries[1] * (float) this.field7807[var4.field1374] + var2.entries[5] * (float) this.field7783[var4.field1374] + var2.entries[13]);
+                var5.field1380 = (int) (var2.entries[10] * (float) this.field7820[var4.field1374] + var2.entries[2] * (float) this.field7807[var4.field1374] + var2.entries[6] * (float) this.field7783[var4.field1374] + var2.entries[14]);
+                var5.field1381 = (int) (var2.entries[8] * (float) this.field7820[var4.field1375] + var2.entries[0] * (float) this.field7807[var4.field1375] + var2.entries[4] * (float) this.field7783[var4.field1375] + var2.entries[12]);
+                var5.field1377 = (int) (var2.entries[9] * (float) this.field7820[var4.field1375] + var2.entries[1] * (float) this.field7807[var4.field1375] + var2.entries[5] * (float) this.field7783[var4.field1375] + var2.entries[13]);
+                var5.field1373 = (int) (var2.entries[10] * (float) this.field7820[var4.field1375] + var2.entries[2] * (float) this.field7807[var4.field1375] + var2.entries[6] * (float) this.field7783[var4.field1375] + var2.entries[14]);
+                var5.field1384 = (int) (var2.entries[8] * (float) this.field7820[var4.field1376] + var2.entries[0] * (float) this.field7807[var4.field1376] + var2.entries[4] * (float) this.field7783[var4.field1376] + var2.entries[12]);
+                var5.field1385 = (int) (var2.entries[9] * (float) this.field7820[var4.field1376] + var2.entries[1] * (float) this.field7807[var4.field1376] + var2.entries[5] * (float) this.field7783[var4.field1376] + var2.entries[13]);
+                var5.field1386 = (int) (var2.entries[10] * (float) this.field7820[var4.field1376] + var2.entries[2] * (float) this.field7807[var4.field1376] + var2.entries[6] * (float) this.field7783[var4.field1376] + var2.entries[14]);
             }
         }
         if (this.field7818 == null) {
@@ -3379,9 +3379,9 @@ public class PureJavaModel extends Model {
             } else {
                 var7.field1237.method5412(var2);
             }
-            var8.field1240 = (int) (var2.field3480[8] * (float) this.field7820[var7.field1239] + var2.field3480[0] * (float) this.field7807[var7.field1239] + var2.field3480[4] * (float) this.field7783[var7.field1239] + var2.field3480[12]);
-            var8.field1241 = (int) (var2.field3480[9] * (float) this.field7820[var7.field1239] + var2.field3480[1] * (float) this.field7807[var7.field1239] + var2.field3480[5] * (float) this.field7783[var7.field1239] + var2.field3480[13]);
-            var8.field1242 = (int) (var2.field3480[10] * (float) this.field7820[var7.field1239] + var2.field3480[2] * (float) this.field7807[var7.field1239] + var2.field3480[6] * (float) this.field7783[var7.field1239] + var2.field3480[14]);
+            var8.field1240 = (int) (var2.entries[8] * (float) this.field7820[var7.field1239] + var2.entries[0] * (float) this.field7807[var7.field1239] + var2.entries[4] * (float) this.field7783[var7.field1239] + var2.entries[12]);
+            var8.field1241 = (int) (var2.entries[9] * (float) this.field7820[var7.field1239] + var2.entries[1] * (float) this.field7807[var7.field1239] + var2.entries[5] * (float) this.field7783[var7.field1239] + var2.entries[13]);
+            var8.field1242 = (int) (var2.entries[10] * (float) this.field7820[var7.field1239] + var2.entries[2] * (float) this.field7807[var7.field1239] + var2.entries[6] * (float) this.field7783[var7.field1239] + var2.entries[14]);
         }
     }
 

@@ -248,7 +248,7 @@ public class ClientWorldMap extends WorldMap {
         loadingProgress = 0;
         Statics.field4960 = null;
         method7082();
-        field4301.method11557();
+        field4301.clearBridged();
         Statics.field4281 = null;
         Statics.field2214 = null;
         field9762 = -1;
@@ -276,8 +276,8 @@ public class ClientWorldMap extends WorldMap {
 
     @ObfuscatedName("eb.bm(B)V")
     public static void method3318() {
-        field9765.method11925();
-        field9766.method11925();
+        field9765.clear();
+        field9766.clear();
     }
 
     @ObfuscatedName("zb.bb(Lra;Lma;IIIIB)V")
@@ -335,11 +335,11 @@ public class ClientWorldMap extends WorldMap {
 
     @ObfuscatedName("cr.be(Lra;Ltq;III)V")
     public static void method2356(RendererToolkit arg0, IterableQueue arg1, int arg2, int arg3) {
-        Statics.elements.method11557();
+        Statics.elements.clearBridged();
         if (disableElements) {
             return;
         }
-        for (WorldMapElement var4 = (WorldMapElement) arg1.last(); var4 != null; var4 = (WorldMapElement) arg1.method11567()) {
+        for (WorldMapElement var4 = (WorldMapElement) arg1.last(); var4 != null; var4 = (WorldMapElement) arg1.prev()) {
             MapElementType var5 = Statics.field4290.method7862(var4.field9564);
             if (method1371(var5)) {
                 boolean var6 = method1358(arg0, var4, var5, arg2, arg3);
@@ -555,7 +555,7 @@ public class ClientWorldMap extends WorldMap {
                 arg0.fillRectangle(var17, var15, var19 - var17, var20 - var15, arg2.field4801);
             }
             if (arg2.field4782 != 0) {
-                arg0.method482(var17, var15, var19 - var17, var20 - var15, arg2.field4782);
+                arg0.drawRectangle(var17, var15, var19 - var17, var20 - var15, arg2.field4782);
             }
             for (int var21 = 0; var21 < var8; var21++) {
                 String var22 = field9761[var21];
@@ -635,7 +635,7 @@ public class ClientWorldMap extends WorldMap {
             arg0.fillRectangle(var8, var9, arg6 + 10, arg5 + arg3 * arg7.method1746() - var9 + 1, arg2.field4801);
         }
         if (arg2.field4782 != 0) {
-            arg0.method482(var8, var9, arg6 + 10, arg5 + arg3 * arg7.method1746() - var9 + 1, arg2.field4782);
+            arg0.drawRectangle(var8, var9, arg6 + 10, arg5 + arg3 * arg7.method1746() - var9 + 1, arg2.field4782);
         }
         int var10 = arg2.field4767;
         if (arg1.field9570 && arg2.field4768 != -1) {
@@ -693,7 +693,7 @@ public class ClientWorldMap extends WorldMap {
         } else {
             var15 = Statics.field10208 * 5;
         }
-        for (WorldMapElement var16 = (WorldMapElement) field4301.last(); var16 != null; var16 = (WorldMapElement) field4301.method11567()) {
+        for (WorldMapElement var16 = (WorldMapElement) field4301.last(); var16 != null; var16 = (WorldMapElement) field4301.prev()) {
             MapElementType var17 = Statics.field4290.method7862(var16.field9564);
             if (method1371(var17)) {
                 if (field9755 == var16.field9564) {
@@ -758,7 +758,7 @@ public class ClientWorldMap extends WorldMap {
         if (!field9754 || Statics.elements == null) {
             return;
         }
-        for (MapElementContainer var4 = (MapElementContainer) Statics.elements.last(); var4 != null; var4 = (MapElementContainer) Statics.elements.method11567()) {
+        for (MapElementContainer var4 = (MapElementContainer) Statics.elements.last(); var4 != null; var4 = (MapElementContainer) Statics.elements.prev()) {
             MapElementType var5 = Statics.field4290.method7862(var4.field9303.field9564);
             if (var4.method14803(arg0, arg1)) {
                 if (var5.field4778 != null) {
@@ -949,7 +949,7 @@ public class ClientWorldMap extends WorldMap {
         int var4 = Integer.MAX_VALUE;
         int var5 = arg1 - Statics.currentAreaDisplayMinX;
         int var6 = arg2 - Statics.currentAreaDisplayMinZ;
-        for (WorldMapElement var7 = (WorldMapElement) field4301.last(); var7 != null; var7 = (WorldMapElement) field4301.method11567()) {
+        for (WorldMapElement var7 = (WorldMapElement) field4301.last(); var7 != null; var7 = (WorldMapElement) field4301.prev()) {
             if (var7.field9564 == arg0) {
                 int var8 = var7.field9566;
                 int var9 = var7.field9567;

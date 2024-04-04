@@ -228,7 +228,7 @@ public abstract class RendererToolkit {
     }
 
     @ObfuscatedName("ra.bz(IIIIII)V")
-    public final void method482(int arg0, int arg1, int arg2, int arg3, int arg4) {
+    public final void drawRectangle(int arg0, int arg1, int arg2, int arg3, int arg4) {
         this.drawRectangle(arg0, arg1, arg2, arg3, arg4, 1);
     }
 
@@ -441,6 +441,9 @@ public abstract class RendererToolkit {
     @ObfuscatedName("ra.J(I)V")
     public abstract void J(int arg0);
 
+    /**
+     * setFog: this function is obfuscated because sw3d links to native dll functions
+     */
     @ObfuscatedName("ra.c(III)V")
     public abstract void c(int arg0, int arg1, int arg2);
 
@@ -463,7 +466,7 @@ public abstract class RendererToolkit {
     public abstract void method545();
 
     @ObfuscatedName("ra.di(ILdk;)V")
-    public abstract void method547(int arg0, WaterFogData arg1);
+    public abstract void setWaterFog(int arg0, WaterFogData arg1);
 
     @ObfuscatedName("ra.O()V")
     public abstract void O();

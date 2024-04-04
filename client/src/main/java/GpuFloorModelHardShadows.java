@@ -74,8 +74,8 @@ public class GpuFloorModelHardShadows {
                                 for (int var15 = var9; var15 < var10; var15++) {
                                     if (var15 - arg2 >= -arg3 && var15 - arg2 <= arg3 && arg4[var14 - arg1 + arg3][var15 - arg2 + arg3]) {
                                         arg0.field2248.method5435(var7, var7, 1.0F, 1.0F);
-                                        arg0.field2248.field3480[12] = -var11;
-                                        arg0.field2248.field3480[13] = -var8;
+                                        arg0.field2248.entries[12] = -var11;
+                                        arg0.field2248.entries[13] = -var8;
                                         this.field2464[var11][var8].method4363(arg0);
                                         continue label144;
                                     }
@@ -131,8 +131,8 @@ public class GpuFloorModelHardShadows {
                     for (int var37 = 0; var37 < this.field2472; var37++) {
                         if (var16[var35] != 0) {
                             arg0.field2248.method5435(var7, var7, 1.0F, 1.0F);
-                            arg0.field2248.field3480[12] = -var37;
-                            arg0.field2248.field3480[13] = -var36;
+                            arg0.field2248.entries[12] = -var37;
+                            arg0.field2248.entries[13] = -var36;
                             this.field2464[var37][var36].method4371(arg0, var33, var34, var16[var35] / 3);
                             var34 += var16[var35];
                         }

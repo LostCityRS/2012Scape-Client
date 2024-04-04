@@ -76,7 +76,7 @@ public class ServerConnection {
 
     @ObfuscatedName("ad.u(I)V")
     public final void method1935() {
-        this.writeQueue.method11557();
+        this.writeQueue.clearBridged();
         this.writePos = 0;
     }
 

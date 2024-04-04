@@ -416,7 +416,7 @@ public class ObjType implements PlayerTypeRelated {
                 } else {
                     var26 = new IntNode(buf.g4s());
                 }
-                this.field7055.method11927(var26, (long) var25);
+                this.field7055.put(var26, (long) var25);
             }
         } else if (code == 242) {
             buf.gSmart2or4();

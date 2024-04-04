@@ -29,8 +29,8 @@ public class AudioRenderer {
     }
 
     @ObfuscatedName("mf.j(Laih;I)Laih;")
-    public static MixBuss method6082(MixBuss arg0) {
-        MixBuss var1 = arg0 == null ? new MixBuss() : new MixBuss(arg0);
+    public static MidiAudioBuss method6082(MidiAudioBuss arg0) {
+        MidiAudioBuss var1 = arg0 == null ? new MidiAudioBuss() : new MidiAudioBuss(arg0);
         var1.method16283(9, 128);
         return var1;
     }
@@ -46,7 +46,7 @@ public class AudioRenderer {
     }
 
     @ObfuscatedName("fz.s(ZLaih;I)V")
-    public static void method3658(boolean arg0, MixBuss arg1) {
+    public static void method3658(boolean arg0, MidiAudioBuss arg1) {
         Statics.field5198.method6521(arg1);
         if (arg0) {
             Statics.method3612(Statics.field5104, Statics.field3156, Statics.field5197, arg1, Statics.field5198);
@@ -64,10 +64,10 @@ public class AudioRenderer {
     @ObfuscatedName("em.t(I)V")
     public static void method3461() {
         if (Statics.field5198 != null) {
-            Statics.field5198.method6496();
+            Statics.field5198.update();
         }
         if (Statics.field3536 != null) {
-            Statics.field3536.method6496();
+            Statics.field3536.update();
         }
     }
 
@@ -326,7 +326,7 @@ public class AudioRenderer {
         if (!field4203 && field4202 != -1 && SoundRelated12.method13899() && !SoundRelated12.method15138()) {
             Statics.field2327 = SoundRelated12.method7705();
             method3225();
-            MixBuss var4 = method6082(Statics.field2327);
+            MidiAudioBuss var4 = method6082(Statics.field2327);
             method3658(true, var4);
         }
         SoundRelated12.method3986(Statics.field1509, arg0, 0, var3, false);

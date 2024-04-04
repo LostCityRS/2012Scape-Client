@@ -172,9 +172,9 @@ public class GpuFont extends Font {
         float var9 = (float) this.field8447.method457().method921();
         float var10 = (float) this.field8447.method457().method922();
         var8.field2280.method5435(2.0F / var9, 2.0F / var10, 1.0F, 1.0F);
-        var8.field2280.field3480[12] = ((float) arg1 + this.field8447.method13750()) * 2.0F / var9 - 1.0F;
-        var8.field2280.field3480[13] = ((float) arg2 + this.field8447.method13750()) * 2.0F / var10 - 1.0F;
-        var8.field2280.field3480[14] = -1.0F;
+        var8.field2280.entries[12] = ((float) arg1 + this.field8447.method13750()) * 2.0F / var9 - 1.0F;
+        var8.field2280.entries[13] = ((float) arg2 + this.field8447.method13750()) * 2.0F / var10 - 1.0F;
+        var8.field2280.entries[14] = -1.0F;
         var8.field2281.method5453();
         var8.field2283 = this.field8446;
         var8.field2277 = arg0 * 4;

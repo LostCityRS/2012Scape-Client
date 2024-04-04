@@ -222,7 +222,7 @@ public class DxToolkit extends GpuToolkit {
 
     @ObfuscatedName("ahh.oi()V")
     public void method13499() {
-        for (ObjectNode var1 = (ObjectNode) this.field9977.last(); var1 != null; var1 = (ObjectNode) this.field9977.method11567()) {
+        for (ObjectNode var1 = (ObjectNode) this.field9977.last(); var1 != null; var1 = (ObjectNode) this.field9977.prev()) {
             DxInterface1 var2 = (DxInterface1) var1.value;
             var2.method4914();
             if (this.field412 == var2) {
@@ -234,7 +234,7 @@ public class DxToolkit extends GpuToolkit {
 
     @ObfuscatedName("ahh.ow()V")
     public void method13583() {
-        for (ObjectNode var1 = (ObjectNode) this.field9977.last(); var1 != null; var1 = (ObjectNode) this.field9977.method11567()) {
+        for (ObjectNode var1 = (ObjectNode) this.field9977.last(); var1 != null; var1 = (ObjectNode) this.field9977.prev()) {
             DxInterface1 var2 = (DxInterface1) var1.value;
             var2.method944();
         }
@@ -408,7 +408,7 @@ public class DxToolkit extends GpuToolkit {
 
     @ObfuscatedName("ahh.acc(Ljz;)Ladt;")
     public ObjectNode method16024(DxInterface1 arg0) {
-        for (ObjectNode var2 = (ObjectNode) this.field9977.last(); var2 != null; var2 = (ObjectNode) this.field9977.method11567()) {
+        for (ObjectNode var2 = (ObjectNode) this.field9977.last(); var2 != null; var2 = (ObjectNode) this.field9977.prev()) {
             if (var2.value == arg0) {
                 return var2;
             }
@@ -498,9 +498,9 @@ public class DxToolkit extends GpuToolkit {
 
     @ObfuscatedName("ahh.of(Lka;Lka;Lka;)V")
     public void method13764(Matrix4x4 arg0, Matrix4x4 arg1, Matrix4x4 arg2) {
-        IDirect3DDevice.SetTransform(this.field9975, 256, arg0.field3480);
-        IDirect3DDevice.SetTransform(this.field9975, 2, arg1.field3480);
-        IDirect3DDevice.SetTransform(this.field9975, 3, arg2.field3480);
+        IDirect3DDevice.SetTransform(this.field9975, 256, arg0.entries);
+        IDirect3DDevice.SetTransform(this.field9975, 2, arg1.entries);
+        IDirect3DDevice.SetTransform(this.field9975, 3, arg2.entries);
     }
 
     @ObfuscatedName("ahh.ph(Lka;)V")

@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class MiniMenuEntry extends SecondaryNode {
 
     @ObfuscatedName("ajs.t")
-    public final String field10334;
+    public final String opbase;
 
     @ObfuscatedName("ajs.l")
     public final String field10339;
@@ -37,16 +37,16 @@ public class MiniMenuEntry extends SecondaryNode {
     public final boolean field10338;
 
     @ObfuscatedName("ajs.x")
-    public int field10340;
+    public int opcode;
 
     @ObfuscatedName("ajs.i")
     public String field10341;
 
     public MiniMenuEntry(String arg0, String arg1, int arg2, int arg3, int arg4, long arg5, int arg6, int arg7, boolean arg8, boolean arg9, long arg10, boolean arg11) {
-        this.field10334 = arg1;
+        this.opbase = arg1;
         this.field10339 = arg0;
         this.field10331 = arg2;
-        this.field10340 = arg3;
+        this.opcode = arg3;
         this.field10332 = arg4;
         this.field10333 = arg5;
         this.field10329 = arg6;

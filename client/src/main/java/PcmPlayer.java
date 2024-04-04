@@ -15,40 +15,40 @@ public class PcmPlayer {
     public boolean field4035 = false;
 
     @ObfuscatedName("mg.d")
-    public AudioBuss field4023;
+    public AudioBuss stream;
 
     @ObfuscatedName("mg.z")
     public int field4026 = 32;
 
     @ObfuscatedName("mg.n")
-    public long field4025 = MonotonicTime.get();
+    public long time = MonotonicTime.get();
 
     @ObfuscatedName("mg.o")
-    public int field4014;
+    public int bufferCapacity;
 
     @ObfuscatedName("mg.q")
-    public int field4020;
+    public int sampleRate2;
 
     @ObfuscatedName("mg.p")
     public int field4024;
 
     @ObfuscatedName("mg.w")
-    public long field4029 = 0L;
+    public long closeUntil = 0L;
 
     @ObfuscatedName("mg.b")
-    public int field4030 = 0;
+    public int consumedSamples = 0;
 
     @ObfuscatedName("mg.x")
-    public int field4031 = 0;
+    public int prevConsumedSamples = 0;
 
     @ObfuscatedName("mg.i")
-    public int field4032 = 0;
+    public int prevBufferSize = 0;
 
     @ObfuscatedName("mg.v")
-    public long field4033 = 0L;
+    public long calculateConsumptionAt = 0L;
 
     @ObfuscatedName("mg.k")
-    public boolean field4034 = true;
+    public boolean skipConsumptionCheck = true;
 
     @ObfuscatedName("mg.ay")
     public int field4040 = 0;
@@ -64,14 +64,14 @@ public class PcmPlayer {
         if (arg0 < 8000 || arg0 > 48000) {
             throw new IllegalArgumentException();
         }
-        Statics.field4015 = arg0;
-        Statics.field4016 = arg1;
+        Statics.sampleRate = arg0;
+        Statics.stereo = arg1;
         Statics.field4017 = arg2;
     }
 
     @ObfuscatedName("mg.j(Ljava/awt/Component;II)Lmg;")
     public static final PcmPlayer method6494(java.awt.Component arg0, int arg1, int arg2) {
-        if (Statics.field4015 == 0) {
+        if (Statics.sampleRate == 0) {
             throw new IllegalStateException();
         } else if (arg1 >= 0 && arg1 < 2) {
             int var3 = arg2;
@@ -81,14 +81,14 @@ public class PcmPlayer {
             if (!field4041) {
                 try {
                     PcmPlayer_Sub1 var4 = new PcmPlayer_Sub1();
-                    var4.field4042 = new int[(Statics.field4016 ? 2 : 1) * 256];
-                    var4.field4020 = var3;
+                    var4.field4042 = new int[(Statics.stereo ? 2 : 1) * 256];
+                    var4.sampleRate2 = var3;
                     var4.method6505(arg0);
-                    var4.field4014 = (var3 & 0xFFFFFC00) + 1024;
-                    if (var4.field4014 > 16384) {
-                        var4.field4014 = 16384;
+                    var4.bufferCapacity = (var3 & 0xFFFFFC00) + 1024;
+                    if (var4.bufferCapacity > 16384) {
+                        var4.bufferCapacity = 16384;
                     }
-                    var4.method6538(var4.field4014);
+                    var4.open(var4.bufferCapacity);
                     if (Statics.field4017 > 0 && Statics.field4027 == null) {
                         Statics.field4027 = new AudioRelatedPcm12_Sub1();
                         Thread var5 = new Thread(Statics.field4027);
@@ -114,102 +114,102 @@ public class PcmPlayer {
 
     @ObfuscatedName("mg.a(Ladc;)V")
     public final synchronized void method6521(AudioBuss arg0) {
-        this.field4023 = arg0;
+        this.stream = arg0;
     }
 
     @ObfuscatedName("mg.s()V")
-    public final synchronized void method6496() {
+    public final synchronized void update() {
         if (this.field4035) {
             return;
         }
         long var1 = MonotonicTime.get();
         try {
-            if (var1 > this.field4025 + 6000L) {
-                this.field4025 = var1 - 6000L;
+            if (var1 > this.time + 6000L) {
+                this.time = var1 - 6000L;
             }
-            while (var1 > this.field4025 + 5000L) {
-                this.method6501(256);
-                this.field4025 += 256000 / Statics.field4015;
+            while (var1 > this.time + 5000L) {
+                this.skip(256);
+                this.time += 256000 / Statics.sampleRate;
                 var1 = MonotonicTime.get();
             }
         } catch (Exception var8) {
-            this.field4025 = var1;
+            this.time = var1;
         }
         if (this.field4042 == null) {
             return;
         }
         try {
-            if (this.field4029 != 0L) {
-                if (var1 < this.field4029) {
+            if (this.closeUntil != 0L) {
+                if (var1 < this.closeUntil) {
                     return;
                 }
-                this.method6538(this.field4014);
-                this.field4029 = 0L;
-                this.field4034 = true;
+                this.open(this.bufferCapacity);
+                this.closeUntil = 0L;
+                this.skipConsumptionCheck = true;
             }
-            int var4 = this.method6495();
-            if (this.field4032 - var4 > this.field4030) {
-                this.field4030 = this.field4032 - var4;
+            int var4 = this.getBufferSize();
+            if (this.prevBufferSize - var4 > this.consumedSamples) {
+                this.consumedSamples = this.prevBufferSize - var4;
             }
-            int var5 = this.field4024 + this.field4020;
+            int var5 = this.field4024 + this.sampleRate2;
             if (var5 + 256 > 16384) {
                 var5 = 16128;
             }
-            if (var5 + 256 > this.field4014) {
-                this.field4014 += 1024;
-                if (this.field4014 > 16384) {
-                    this.field4014 = 16384;
+            if (var5 + 256 > this.bufferCapacity) {
+                this.bufferCapacity += 1024;
+                if (this.bufferCapacity > 16384) {
+                    this.bufferCapacity = 16384;
                 }
-                this.method6509(false);
-                this.method6538(this.field4014);
+                this.flush(false);
+                this.open(this.bufferCapacity);
                 var4 = 0;
-                this.field4034 = true;
-                if (var5 + 256 > this.field4014) {
-                    var5 = this.field4014 - 256;
-                    this.field4024 = var5 - this.field4020;
+                this.skipConsumptionCheck = true;
+                if (var5 + 256 > this.bufferCapacity) {
+                    var5 = this.bufferCapacity - 256;
+                    this.field4024 = var5 - this.sampleRate2;
                 }
             }
             while (var4 < var5) {
-                this.method6502(this.field4042, 256);
-                this.method6547();
+                this.read(this.field4042, 256);
+                this.write();
                 var4 += 256;
             }
-            if (var1 > this.field4033) {
-                if (this.field4034) {
-                    this.field4034 = false;
-                } else if (this.field4030 == 0 && this.field4031 == 0) {
-                    this.method6509(false);
-                    this.field4029 = var1 + 2000L;
+            if (var1 > this.calculateConsumptionAt) {
+                if (this.skipConsumptionCheck) {
+                    this.skipConsumptionCheck = false;
+                } else if (this.consumedSamples == 0 && this.prevConsumedSamples == 0) {
+                    this.flush(false);
+                    this.closeUntil = var1 + 2000L;
                     return;
                 } else {
-                    this.field4024 = Math.min(this.field4031, this.field4030);
-                    this.field4031 = this.field4030;
+                    this.field4024 = Math.min(this.prevConsumedSamples, this.consumedSamples);
+                    this.prevConsumedSamples = this.consumedSamples;
                 }
-                this.field4030 = 0;
-                this.field4033 = var1 + 2000L;
+                this.consumedSamples = 0;
+                this.calculateConsumptionAt = var1 + 2000L;
             }
-            this.field4032 = var4;
+            this.prevBufferSize = var4;
         } catch (Exception var7) {
-            this.method6509(false);
-            this.field4029 = var1 + 2000L;
+            this.flush(false);
+            this.closeUntil = var1 + 2000L;
         }
     }
 
     @ObfuscatedName("mg.c()V")
     public final synchronized void method6497() {
-        this.field4034 = true;
+        this.skipConsumptionCheck = true;
         try {
             this.method6510();
         } catch (Exception var2) {
-            this.method6509(false);
-            this.field4029 = MonotonicTime.get() + 2000L;
+            this.flush(false);
+            this.closeUntil = MonotonicTime.get() + 2000L;
         }
     }
 
     @ObfuscatedName("mg.m()V")
     public final synchronized void method6498() {
         this.method6499(false);
-        this.method6509(true);
+        this.flush(true);
         this.field4042 = null;
         this.field4035 = true;
     }
@@ -247,28 +247,28 @@ public class PcmPlayer {
     }
 
     @ObfuscatedName("mg.f(I)V")
-    public final void method6501(int arg0) {
+    public final void skip(int arg0) {
         this.field4040 -= arg0;
         if (this.field4040 < 0) {
             this.field4040 = 0;
         }
-        if (this.field4023 != null) {
-            this.field4023.method15046(arg0);
+        if (this.stream != null) {
+            this.stream.skip(arg0);
         }
     }
 
     @ObfuscatedName("mg.d([II)V")
-    public final void method6502(int[] arg0, int arg1) {
+    public final void read(int[] arg0, int arg1) {
         int var3 = arg1;
-        if (Statics.field4016) {
+        if (Statics.stereo) {
             var3 = arg1 << 1;
         }
         Arrays.fill(arg0, 0, var3, 0);
         this.field4040 -= arg1;
-        if (this.field4023 != null && this.field4040 <= 0) {
-            this.field4040 += Statics.field4015 >> 4;
-            method6513(this.field4023);
-            this.method6504(this.field4023, this.field4023.method15049());
+        if (this.stream != null && this.field4040 <= 0) {
+            this.field4040 += Statics.sampleRate >> 4;
+            setInactive(this.stream);
+            this.method6504(this.stream, this.stream.method15049());
             int var4 = 0;
             int var5 = 255;
             int var6 = 7;
@@ -294,23 +294,23 @@ public class PcmPlayer {
                                 if (var11 == null) {
                                     break label99;
                                 }
-                                SoundPacket var12 = var11.field9474;
-                                if (var12 == null || var12.field9477 <= var8) {
-                                    var11.field9472 = true;
+                                SoundPacket var12 = var11.sound;
+                                if (var12 == null || var12.position <= var8) {
+                                    var11.active = true;
                                     int var13 = var11.method15035();
                                     var4 += var13;
                                     if (var12 != null) {
-                                        var12.field9477 += var13;
+                                        var12.position += var13;
                                     }
                                     if (var4 >= this.field4026) {
                                         break label105;
                                     }
-                                    AudioBuss var14 = var11.method15031();
+                                    AudioBuss var14 = var11.firstSubStream();
                                     if (var14 != null) {
                                         int var15 = var11.field9475;
                                         while (var14 != null) {
                                             this.method6504(var14, var15 * var14.method15049() >> 8);
-                                            var14 = var11.method15032();
+                                            var14 = var11.nextSubStream();
                                         }
                                     }
                                     AudioBuss var16 = var11.field9473;
@@ -352,20 +352,20 @@ public class PcmPlayer {
         if (this.field4040 < 0) {
             this.field4040 = 0;
         }
-        if (this.field4023 != null) {
-            this.field4023.method15034(arg0, 0, arg1);
+        if (this.stream != null) {
+            this.stream.read(arg0, 0, arg1);
         }
-        this.field4025 = MonotonicTime.get();
+        this.time = MonotonicTime.get();
     }
 
     @ObfuscatedName("mg.z(Ladc;)V")
-    public static final void method6513(AudioBuss arg0) {
-        arg0.field9472 = false;
-        if (arg0.field9474 != null) {
-            arg0.field9474.field9477 = 0;
+    public static final void setInactive(AudioBuss arg0) {
+        arg0.active = false;
+        if (arg0.sound != null) {
+            arg0.sound.position = 0;
         }
-        for (AudioBuss var1 = arg0.method15031(); var1 != null; var1 = arg0.method15032()) {
-            method6513(var1);
+        for (AudioBuss var1 = arg0.firstSubStream(); var1 != null; var1 = arg0.nextSubStream()) {
+            setInactive(var1);
         }
     }
 
@@ -387,20 +387,20 @@ public class PcmPlayer {
     }
 
     @ObfuscatedName("mg.q(I)V")
-    public void method6538(int arg0) throws Exception {
+    public void open(int arg0) throws Exception {
     }
 
     @ObfuscatedName("mg.p()I")
-    public int method6495() throws Exception {
-        return this.field4014;
+    public int getBufferSize() throws Exception {
+        return this.bufferCapacity;
     }
 
     @ObfuscatedName("mg.w()V")
-    public void method6547() throws Exception {
+    public void write() throws Exception {
     }
 
     @ObfuscatedName("mg.b(Z)V")
-    public void method6509(boolean arg0) {
+    public void flush(boolean arg0) {
     }
 
     @ObfuscatedName("mg.x()V")

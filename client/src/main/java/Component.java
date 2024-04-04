@@ -319,13 +319,13 @@ public class Component {
     public int[] field1846;
 
     @ObfuscatedName("ew.dz")
-    public String field1795 = "";
+    public String opbase = "";
 
     @ObfuscatedName("ew.ds")
     public String[] field1852;
 
     @ObfuscatedName("ew.dc")
-    public String field1853;
+    public String pausetext;
 
     @ObfuscatedName("ew.dy")
     public int[] field1854;
@@ -427,7 +427,7 @@ public class Component {
     public Object[] field1784;
 
     @ObfuscatedName("ew.ey")
-    public Object[] field1887;
+    public Object[] op;
 
     @ObfuscatedName("ew.ek")
     public Object[] field1788;
@@ -785,7 +785,7 @@ public class Component {
                 var8 = arg0.g1();
             }
         }
-        this.field1795 = arg0.gjstr();
+        this.opbase = arg0.gjstr();
         int var14 = arg0.g1();
         int var15 = var14 & 0xF;
         int var16 = var14 >> 4;
@@ -807,9 +807,9 @@ public class Component {
             int var20 = arg0.g1();
             this.field1854[var20] = arg0.g2();
         }
-        this.field1853 = arg0.gjstr();
-        if (this.field1853.equals("")) {
-            this.field1853 = null;
+        this.pausetext = arg0.gjstr();
+        if (this.pausetext.equals("")) {
+            this.pausetext = null;
         }
         this.field1848 = arg0.g1();
         this.field1870 = arg0.g1();
@@ -842,13 +842,13 @@ public class Component {
             for (int var23 = 0; var23 < var22; var23++) {
                 int var24 = arg0.g3();
                 int var25 = arg0.g4s();
-                this.field1902.method11927(new IntNode(var25), (long) var24);
+                this.field1902.put(new IntNode(var25), (long) var24);
             }
             int var26 = arg0.g1();
             for (int var27 = 0; var27 < var26; var27++) {
                 int var28 = arg0.g3();
                 String var29 = arg0.gjstr2();
-                this.field1902.method11927(new ObjectNode(var29), (long) var28);
+                this.field1902.put(new ObjectNode(var29), (long) var28);
             }
         }
         this.field1862 = this.method3198(arg0);
@@ -860,7 +860,7 @@ public class Component {
         this.field1876 = this.method3198(arg0);
         this.field1878 = this.method3198(arg0);
         this.field1784 = this.method3198(arg0);
-        this.field1887 = this.method3198(arg0);
+        this.op = this.method3198(arg0);
         if (var2 >= 0) {
             this.field1788 = this.method3198(arg0);
         }
@@ -930,7 +930,7 @@ public class Component {
             var5.method2778();
         }
         if (this.field1803) {
-            var5.method2757();
+            var5.flipHorizontally();
         }
         if (this.outline > 0) {
             var5.method2729(this.outline);
@@ -1166,7 +1166,7 @@ public class Component {
         this.field1882 = null;
         this.field1883 = null;
         this.field1784 = null;
-        this.field1887 = null;
+        this.op = null;
         this.field1788 = null;
         this.onscrollwheel = null;
         this.field1890 = null;
@@ -1263,7 +1263,7 @@ public class Component {
     }
 
     @ObfuscatedName("ew.ay(IIB)I")
-    public int method3132(int arg0, int arg1) {
+    public int getIntParam(int arg0, int arg1) {
         if (this.field1902 == null) {
             return arg1;
         } else {
@@ -1286,12 +1286,12 @@ public class Component {
     public void method3127(int arg0, int arg1) {
         if (this.field1902 == null) {
             this.field1902 = new IterableMap(16);
-            this.field1902.method11927(new IntNode(arg1), (long) arg0);
+            this.field1902.put(new IntNode(arg1), (long) arg0);
             return;
         }
         IntNode var3 = (IntNode) this.field1902.getNode((long) arg0);
         if (var3 == null) {
-            this.field1902.method11927(new IntNode(arg1), (long) arg0);
+            this.field1902.put(new IntNode(arg1), (long) arg0);
         } else {
             var3.field9556 = arg1;
         }
@@ -1301,14 +1301,14 @@ public class Component {
     public void method3128(int arg0, String arg1) {
         if (this.field1902 == null) {
             this.field1902 = new IterableMap(16);
-            this.field1902.method11927(new ObjectNode(arg1), (long) arg0);
+            this.field1902.put(new ObjectNode(arg1), (long) arg0);
             return;
         }
         ObjectNode var3 = (ObjectNode) this.field1902.getNode((long) arg0);
         if (var3 != null) {
             var3.remove();
         }
-        this.field1902.method11927(new ObjectNode(arg1), (long) arg0);
+        this.field1902.put(new ObjectNode(arg1), (long) arg0);
     }
 
     @ObfuscatedName("ew.ap(IB)V")

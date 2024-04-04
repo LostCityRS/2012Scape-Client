@@ -240,7 +240,7 @@ public class ParticleSystem {
                         ParticleEffector var8 = null;
                         if (arg0[var7].method2534().field2760 == 1 && ParticleSystemRenderer.field4920 < 32) {
                             var8 = new ParticleEffector(arg0[var7], this);
-                            ParticleSystemRenderer.field4924.method11927(var8, (long) arg0[var7].field1243);
+                            ParticleSystemRenderer.field4924.put(var8, (long) arg0[var7].field1243);
                             ParticleSystemRenderer.field4920++;
                         }
                         if (var8 == null) {

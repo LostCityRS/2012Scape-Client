@@ -49,7 +49,7 @@ public class StaticWallEntity extends WallLayerEntity implements Location {
         this.field7566 = arg9;
         this.field7559 = (byte) arg10;
         this.field7561 = (byte) arg11;
-        this.field7564 = arg3.field6493 != 0 && !arg9;
+        this.field7564 = arg3.active != 0 && !arg9;
         this.field7563 = arg12;
         this.field7562 = arg1.method449() && arg3.field6541 && !this.field7566 && Statics.options.field9651.method15747() != 0;
         int var14 = 2048;
@@ -110,7 +110,7 @@ public class StaticWallEntity extends WallLayerEntity implements Location {
 
     @ObfuscatedName("ye.cx(Lra;IZI)Luz;")
     public Pair method12887(RendererToolkit arg0, int arg1, boolean arg2) {
-        LocType var4 = this.field7556.method11471(this.field10505);
+        LocType var4 = this.field7556.get(this.field10505);
         FloorModel var5;
         FloorModel var6;
         if (this.field7566) {
@@ -193,7 +193,7 @@ public class StaticWallEntity extends WallLayerEntity implements Location {
     }
 
     @ObfuscatedName("ye.u(B)I")
-    public int method2401() {
+    public int getType() {
         return this.field10505;
     }
 

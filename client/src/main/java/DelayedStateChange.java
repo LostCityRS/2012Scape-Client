@@ -29,7 +29,7 @@ public class DelayedStateChange extends SecondaryNode {
         DelayedStateChange var3 = (DelayedStateChange) field10326.getNode((long) arg0 << 56 | arg1);
         if (var3 == null) {
             var3 = new DelayedStateChange(arg0, arg1);
-            field10326.method11927(var3, var3.field4228);
+            field10326.put(var3, var3.field4228);
         }
         return var3;
     }
@@ -39,7 +39,7 @@ public class DelayedStateChange extends SecondaryNode {
         DelayedStateChange var0 = (DelayedStateChange) field10323.last();
         if (var0 != null) {
             var0.remove();
-            var0.method15142();
+            var0.dualRemove();
             return var0;
         }
         DelayedStateChange var1;
@@ -52,7 +52,7 @@ public class DelayedStateChange extends SecondaryNode {
                 return null;
             }
             var1.remove();
-            var1.method15142();
+            var1.dualRemove();
         } while ((var1.field9554 & Long.MIN_VALUE) == 0L);
         return var1;
     }
@@ -160,7 +160,7 @@ public class DelayedStateChange extends SecondaryNode {
     }
 
     @ObfuscatedName("aaw.an(I)V")
-    public static void method13915() {
+    public static void onMapFlag() {
         DelayedStateChange var0 = method8304(15, 0L);
         var0.method16506();
     }
@@ -342,14 +342,14 @@ public class DelayedStateChange extends SecondaryNode {
     @ObfuscatedName("aif.bz(I)V")
     public void method16506() {
         this.field9554 = this.field9554 & Long.MIN_VALUE | MonotonicTime.get() + 500L;
-        field10317.method11728(this);
+        field10317.addFirst(this);
     }
 
     @ObfuscatedName("aif.bv(I)V")
     public void method16598() {
         this.field9554 |= Long.MIN_VALUE;
         if (this.method16510() == 0L) {
-            field10323.method11728(this);
+            field10323.addFirst(this);
         }
     }
 

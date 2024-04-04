@@ -14,5 +14,5 @@ public abstract class AudioBuss_Sub1Related extends Node {
     public abstract void method15053();
 
     @ObfuscatedName("ade.j(Laiu;)I")
-    public abstract int method15054(AudioBuss_Sub1 arg0);
+    public abstract int method15054(MixerAudioBuss arg0);
 }

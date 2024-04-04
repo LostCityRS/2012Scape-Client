@@ -1289,13 +1289,13 @@ public class Scene {
                 var8 = (int) var6.z >> this.field4510;
             }
             WaterFogData var9 = new WaterFogData();
-            var9.field1475 = this.method7411(var7, var8);
-            var9.field1471 = this.method7410(var7, var8);
+            var9.colour = this.method7411(var7, var8);
+            var9.scale = this.method7410(var7, var8);
             var9.field1474 = this.method7489(var7, var8);
             var9.field1470 = this.method7413(var7, var8);
             var9.field1476 = this.method7505(var7, var8);
             var9.field1472 = this.method7501(var7, var8);
-            this.field4489.method547(this.field4527[0].getFineHeight((int) var6.x, (int) var6.z), var9);
+            this.field4489.setWaterFog(this.field4527[0].getFineHeight((int) var6.x, (int) var6.z), var9);
         }
         PickableEntity var10 = arg0.method12812(this.field4489);
         if (var10 == null) {

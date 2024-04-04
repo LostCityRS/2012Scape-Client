@@ -53,12 +53,12 @@ public final class JavaMouseEvent extends BasicMouseEvent {
     }
 
     @ObfuscatedName("ajw.j(B)I")
-    public int method15182() {
+    public int getX() {
         return this.field10434;
     }
 
     @ObfuscatedName("ajw.a(I)I")
-    public int method15183() {
+    public int getY() {
         return this.field10431;
     }
 

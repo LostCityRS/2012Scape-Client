@@ -111,7 +111,7 @@ public abstract class Video {
                         var4 = new OggOtherStream(var3);
                     }
                 }
-                this.field4234.method11927(var4, (long) var2);
+                this.field4234.put(var4, (long) var2);
                 return var4;
             } else {
                 throw new IllegalStateException();
@@ -322,7 +322,7 @@ public abstract class Video {
     @ObfuscatedName("nw.p(ZS)V")
     public void method7018(boolean arg0) {
         if (this.field4243 != null) {
-            OggVorbisStreamRelated1 var2 = this.field4243.method16795();
+            VorbisAudioBuss var2 = this.field4243.method16795();
             if (var2 != null) {
                 var2.method16473(arg0);
             }

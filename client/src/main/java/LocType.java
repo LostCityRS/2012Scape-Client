@@ -57,10 +57,10 @@ public class LocType {
     public byte field6488 = 0;
 
     @ObfuscatedName("tg.i")
-    public int field6489 = 1;
+    public int width = 1;
 
     @ObfuscatedName("tg.v")
-    public int field6503 = 1;
+    public int length = 1;
 
     @ObfuscatedName("tg.k")
     public int field6491 = 2;
@@ -69,7 +69,7 @@ public class LocType {
     public boolean field6492 = true;
 
     @ObfuscatedName("tg.r")
-    public int field6493 = -1;
+    public int active = -1;
 
     @ObfuscatedName("tg.g")
     public byte field6494 = 0;
@@ -165,13 +165,13 @@ public class LocType {
     public boolean field6481 = false;
 
     @ObfuscatedName("tg.bv")
-    public int field6527 = -1;
+    public int raiseobject = -1;
 
     @ObfuscatedName("tg.bj")
     public int field6477 = 0;
 
     @ObfuscatedName("tg.bf")
-    public int[] field6534;
+    public int[] multiloc;
 
     @ObfuscatedName("tg.bt")
     public int field6528 = -1;
@@ -180,13 +180,13 @@ public class LocType {
     public int field6529 = -1;
 
     @ObfuscatedName("tg.bl")
-    public int field6547 = -1;
+    public int bgsound_sound = -1;
 
     @ObfuscatedName("tg.bk")
-    public int field6531 = 0;
+    public int bgsound_range = 0;
 
     @ObfuscatedName("tg.bs")
-    public int field6532 = 0;
+    public int bgsound_size = 0;
 
     @ObfuscatedName("tg.bn")
     public int bgsound_volume = 255;
@@ -195,13 +195,13 @@ public class LocType {
     public boolean field6520 = false;
 
     @ObfuscatedName("tg.bd")
-    public int field6476 = 0;
+    public int bgsound_mindelay = 0;
 
     @ObfuscatedName("tg.bc")
-    public int field6536 = 0;
+    public int bgsound_maxdelay = 0;
 
     @ObfuscatedName("tg.br")
-    public int[] field6484;
+    public int[] bgsound_random;
 
     @ObfuscatedName("tg.bp")
     public boolean field6540 = false;
@@ -228,10 +228,10 @@ public class LocType {
     public int[] field6545;
 
     @ObfuscatedName("tg.bh")
-    public int field6546 = 256;
+    public int bgsound_minrate = 256;
 
     @ObfuscatedName("tg.by")
-    public int field6507 = 256;
+    public int bgsound_maxrate = 256;
 
     @ObfuscatedName("tg.bu")
     public boolean field6548 = false;
@@ -267,16 +267,16 @@ public class LocType {
         } else if (arg1 == 2) {
             this.field6490 = arg0.gjstr();
         } else if (arg1 == 14) {
-            this.field6489 = arg0.g1();
+            this.width = arg0.g1();
         } else if (arg1 == 15) {
-            this.field6503 = arg0.g1();
+            this.length = arg0.g1();
         } else if (arg1 == 17) {
             this.field6491 = 0;
             this.field6492 = false;
         } else if (arg1 == 18) {
             this.field6492 = false;
         } else if (arg1 == 19) {
-            this.field6493 = arg0.g1();
+            this.active = arg0.g1();
         } else if (arg1 == 21) {
             this.field6494 = 1;
         } else if (arg1 == 22) {
@@ -373,7 +373,7 @@ public class LocType {
         } else if (arg1 == 74) {
             this.field6481 = true;
         } else if (arg1 == 75) {
-            this.field6527 = arg0.g1();
+            this.raiseobject = arg0.g1();
         } else if (arg1 == 77 || arg1 == 92) {
             this.field6528 = arg0.g2();
             if (this.field6528 == 65535) {
@@ -388,22 +388,22 @@ public class LocType {
                 var38 = arg0.gSmart2or4null();
             }
             int var39 = arg0.g1();
-            this.field6534 = new int[var39 + 2];
+            this.multiloc = new int[var39 + 2];
             for (int var40 = 0; var40 <= var39; var40++) {
-                this.field6534[var40] = arg0.gSmart2or4null();
+                this.multiloc[var40] = arg0.gSmart2or4null();
             }
-            this.field6534[var39 + 1] = var38;
+            this.multiloc[var39 + 1] = var38;
         } else if (arg1 == 78) {
-            this.field6547 = arg0.g2();
-            this.field6531 = arg0.g1();
+            this.bgsound_sound = arg0.g2();
+            this.bgsound_range = arg0.g1();
         } else if (arg1 == 79) {
-            this.field6476 = arg0.g2();
-            this.field6536 = arg0.g2();
-            this.field6531 = arg0.g1();
+            this.bgsound_mindelay = arg0.g2();
+            this.bgsound_maxdelay = arg0.g2();
+            this.bgsound_range = arg0.g1();
             int var24 = arg0.g1();
-            this.field6484 = new int[var24];
+            this.bgsound_random = new int[var24];
             for (int var25 = 0; var25 < var24; var25++) {
-                this.field6484[var25] = arg0.g2();
+                this.bgsound_random[var25] = arg0.g2();
             }
         } else if (arg1 == 81) {
             this.field6494 = 2;
@@ -491,12 +491,12 @@ public class LocType {
         } else if (arg1 == 171) {
             this.field6499 = arg0.gSmart1or2();
         } else if (arg1 == 173) {
-            this.field6546 = arg0.g2();
-            this.field6507 = arg0.g2();
+            this.bgsound_minrate = arg0.g2();
+            this.bgsound_maxrate = arg0.g2();
         } else if (arg1 == 177) {
             this.field6548 = true;
         } else if (arg1 == 178) {
-            this.field6532 = arg0.g1();
+            this.bgsound_size = arg0.g1();
         } else if (arg1 == 189) {
             this.field6472 = true;
         } else if (arg1 >= 190 && arg1 < 196) {
@@ -520,29 +520,29 @@ public class LocType {
                 } else {
                     var37 = new IntNode(arg0.g4s());
                 }
-                this.field6543.method11927(var37, (long) var36);
+                this.field6543.put(var37, (long) var36);
             }
         }
     }
 
     @ObfuscatedName("tg.a(B)V")
     public void method11410() {
-        if (this.field6493 == -1) {
-            this.field6493 = 0;
+        if (this.active == -1) {
+            this.active = 0;
             if (this.field6475 != null && this.field6475.length == 1 && LocShape.field6572.field6590 == this.field6475[0]) {
-                this.field6493 = 1;
+                this.active = 1;
             }
             for (int var1 = 0; var1 < 5; var1++) {
                 if (this.field6505[var1] != null) {
-                    this.field6493 = 1;
+                    this.active = 1;
                     break;
                 }
             }
         }
-        if (this.field6527 == -1) {
-            this.field6527 = this.field6491 == 0 ? 0 : 1;
+        if (this.raiseobject == -1) {
+            this.raiseobject = this.field6491 == 0 ? 0 : 1;
         }
-        if (this.method11409() || this.field6544 || this.field6534 != null) {
+        if (this.method11409() || this.field6544 || this.multiloc != null) {
             this.field6548 = true;
         }
     }
@@ -920,18 +920,18 @@ public class LocType {
     }
 
     @ObfuscatedName("tg.f(Lug;B)Ltg;")
-    public final LocType method11431(VarIntDomain arg0) {
+    public final LocType getMultiLoc(VarIntDomain arg0) {
         int var2 = -1;
         if (this.field6528 != -1) {
             var2 = arg0.method1646(this.field6528);
         } else if (this.field6529 != -1) {
             var2 = arg0.method1664(this.field6529);
         }
-        if (var2 >= 0 && var2 < this.field6534.length - 1) {
-            return this.field6534[var2] == -1 ? null : this.field6473.method11471(this.field6534[var2]);
+        if (var2 >= 0 && var2 < this.multiloc.length - 1) {
+            return this.multiloc[var2] == -1 ? null : this.field6473.get(this.multiloc[var2]);
         } else {
-            int var3 = this.field6534[this.field6534.length - 1];
-            return var3 == -1 ? null : this.field6473.method11471(var3);
+            int var3 = this.multiloc[this.multiloc.length - 1];
+            return var3 == -1 ? null : this.field6473.get(var3);
         }
     }
 
@@ -957,13 +957,13 @@ public class LocType {
 
     @ObfuscatedName("tg.n(I)Z")
     public boolean method11443() {
-        if (this.field6534 == null) {
-            return this.field6547 != -1 || this.field6484 != null;
+        if (this.multiloc == null) {
+            return this.bgsound_sound != -1 || this.bgsound_random != null;
         }
-        for (int var1 = 0; var1 < this.field6534.length; var1++) {
-            if (this.field6534[var1] != -1) {
-                LocType var2 = this.field6473.method11471(this.field6534[var1]);
-                if (var2.field6547 != -1 || var2.field6484 != null) {
+        for (int var1 = 0; var1 < this.multiloc.length; var1++) {
+            if (this.multiloc[var1] != -1) {
+                LocType var2 = this.field6473.get(this.multiloc[var1]);
+                if (var2.bgsound_sound != -1 || var2.bgsound_random != null) {
                     return true;
                 }
             }

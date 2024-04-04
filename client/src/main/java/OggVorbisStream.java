@@ -25,7 +25,7 @@ public class OggVorbisStream extends OggStream {
     public SampleRateConverter field10401;
 
     @ObfuscatedName("ajp.z")
-    public OggVorbisStreamRelated1 field10402;
+    public VorbisAudioBuss field10402;
 
     @ObfuscatedName("ajp.n")
     public double field10403;
@@ -50,8 +50,8 @@ public class OggVorbisStream extends OggStream {
                 }
                 this.field10399 = new DSPState(this.field10397);
                 this.field10400 = new VorbisBlock(this.field10399);
-                this.field10401 = new SampleRateConverter(this.field10397.rate, Statics.field4015);
-                this.field10402 = new OggVorbisStreamRelated1(this.field10397.channels);
+                this.field10401 = new SampleRateConverter(this.field10397.rate, Statics.sampleRate);
+                this.field10402 = new VorbisAudioBuss(this.field10397.channels);
             }
             return;
         }
@@ -84,7 +84,7 @@ public class OggVorbisStream extends OggStream {
     }
 
     @ObfuscatedName("ajp.n(I)Laiq;")
-    public OggVorbisStreamRelated1 method16795() {
+    public VorbisAudioBuss method16795() {
         return this.field10402;
     }
 
@@ -112,7 +112,7 @@ public class OggVorbisStream extends OggStream {
                 var1 = this.field10403;
             }
         }
-        return var1 - (double) (256.0F / (float) Statics.field4015);
+        return var1 - (double) (256.0F / (float) Statics.sampleRate);
     }
 
     @ObfuscatedName("ajp.q(I)I")

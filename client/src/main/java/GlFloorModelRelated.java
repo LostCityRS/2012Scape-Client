@@ -221,7 +221,7 @@ public class GlFloorModelRelated extends Node {
         }
         short var13 = (short) this.field9331++;
         if (var7 != -1L) {
-            this.field9340.method11927(new FloorModelNode(var13), var7);
+            this.field9340.put(new FloorModelNode(var13), var7);
         }
         float var14;
         float var15;

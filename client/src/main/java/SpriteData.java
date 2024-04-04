@@ -49,7 +49,7 @@ public abstract class SpriteData {
     public abstract boolean method2749();
 
     @ObfuscatedName("ds.p()V")
-    public abstract void method2757();
+    public abstract void flipHorizontally();
 
     @ObfuscatedName("ds.d()I")
     public abstract int method2762();

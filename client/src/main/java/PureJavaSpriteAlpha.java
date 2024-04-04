@@ -35,7 +35,7 @@ public class PureJavaSpriteAlpha extends PureJavaSprite {
 
     @ObfuscatedName("agy.h(IIIIII)V")
     public void method1086(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
-        int[] var7 = this.field7602.field8001;
+        int[] var7 = this.field7602.colour;
         if (var7 == null) {
             throw new IllegalStateException("");
         }
@@ -50,7 +50,7 @@ public class PureJavaSpriteAlpha extends PureJavaSprite {
 
     @ObfuscatedName("agy.r(III)V")
     public void method1052(int arg0, int arg1, int arg2) {
-        int[] var4 = this.field7602.field8001;
+        int[] var4 = this.field7602.colour;
         if (var4 == null) {
             throw new IllegalStateException("");
         } else if (arg2 == 0) {
@@ -98,7 +98,7 @@ public class PureJavaSpriteAlpha extends PureJavaSprite {
         if (this.field7602.method13191()) {
             throw new IllegalStateException();
         }
-        int[] var6 = this.field7602.field8001;
+        int[] var6 = this.field7602.colour;
         if (var6 == null) {
             return;
         }
@@ -111,20 +111,20 @@ public class PureJavaSpriteAlpha extends PureJavaSprite {
         int var13 = this.field7590;
         int var14 = var7 - var13;
         int var15 = 0;
-        if (var9 < this.field7602.field8027) {
-            int var16 = this.field7602.field8027 - var9;
+        if (var9 < this.field7602.clipMaxX) {
+            int var16 = this.field7602.clipMaxX - var9;
             var12 -= var16;
-            var9 = this.field7602.field8027;
+            var9 = this.field7602.clipMaxX;
             var11 += var13 * var16;
             var10 += var7 * var16;
         }
         if (var9 + var12 > this.field7602.field8008) {
             var12 -= var9 + var12 - this.field7602.field8008;
         }
-        if (var8 < this.field7602.field8005) {
-            int var17 = this.field7602.field8005 - var8;
+        if (var8 < this.field7602.clipMinX) {
+            int var17 = this.field7602.clipMinX - var8;
             var13 -= var17;
-            var8 = this.field7602.field8005;
+            var8 = this.field7602.clipMinX;
             var11 += var17;
             var10 += var17;
             var15 += var17;
@@ -393,7 +393,7 @@ public class PureJavaSpriteAlpha extends PureJavaSprite {
         if (this.field7602.method13191()) {
             throw new IllegalStateException();
         }
-        int[] var6 = this.field7602.field8001;
+        int[] var6 = this.field7602.colour;
         if (var6 == null) {
             return;
         }
@@ -406,20 +406,20 @@ public class PureJavaSpriteAlpha extends PureJavaSprite {
         int var13 = var10 - var11;
         int var14 = 0;
         int var15 = var8 * var10 + var7;
-        if (var8 < this.field7602.field8027) {
-            int var16 = this.field7602.field8027 - var8;
+        if (var8 < this.field7602.clipMaxX) {
+            int var16 = this.field7602.clipMaxX - var8;
             var12 -= var16;
-            var8 = this.field7602.field8027;
+            var8 = this.field7602.clipMaxX;
             var9 += var11 * var16;
             var15 += var10 * var16;
         }
         if (var8 + var12 > this.field7602.field8008) {
             var12 -= var8 + var12 - this.field7602.field8008;
         }
-        if (var7 < this.field7602.field8005) {
-            int var17 = this.field7602.field8005 - var7;
+        if (var7 < this.field7602.clipMinX) {
+            int var17 = this.field7602.clipMinX - var7;
             var11 -= var17;
-            var7 = this.field7602.field8005;
+            var7 = this.field7602.clipMinX;
             var9 += var17;
             var15 += var17;
             var14 += var17;
@@ -490,7 +490,7 @@ public class PureJavaSpriteAlpha extends PureJavaSprite {
         if (this.field7602.method13191()) {
             throw new IllegalStateException();
         } else if (arg2 > 0 && arg3 > 0) {
-            int[] var9 = this.field7602.field8001;
+            int[] var9 = this.field7602.colour;
             if (var9 != null) {
                 int var10 = 0;
                 int var11 = 0;
@@ -520,8 +520,8 @@ public class PureJavaSpriteAlpha extends PureJavaSprite {
                 if (arg1 + arg3 > this.field7602.field8008) {
                     arg3 -= arg1 + arg3 - this.field7602.field8008;
                 }
-                if (arg1 < this.field7602.field8027) {
-                    int var21 = this.field7602.field8027 - arg1;
+                if (arg1 < this.field7602.clipMaxX) {
+                    int var21 = this.field7602.clipMaxX - arg1;
                     arg3 -= var21;
                     var19 += var12 * var21;
                     var11 += var16 * var21;
@@ -531,8 +531,8 @@ public class PureJavaSpriteAlpha extends PureJavaSprite {
                     arg2 -= var22;
                     var20 += var22;
                 }
-                if (arg0 < this.field7602.field8005) {
-                    int var23 = this.field7602.field8005 - arg0;
+                if (arg0 < this.field7602.clipMinX) {
+                    int var23 = this.field7602.clipMinX - arg0;
                     arg2 -= var23;
                     var19 += var23;
                     var10 += var15 * var23;
@@ -864,8 +864,8 @@ public class PureJavaSpriteAlpha extends PureJavaSprite {
         if (arg4 + arg7 > this.field7602.field8008) {
             arg7 -= arg4 + arg7 - this.field7602.field8008;
         }
-        if (arg4 < this.field7602.field8027) {
-            int var24 = this.field7602.field8027 - arg4;
+        if (arg4 < this.field7602.clipMaxX) {
+            int var24 = this.field7602.clipMaxX - arg4;
             arg7 -= var24;
             var22 += this.field7602.field8002 * var24;
             var15 += var19 * var24;
@@ -875,15 +875,15 @@ public class PureJavaSpriteAlpha extends PureJavaSprite {
             arg6 -= var25;
             var23 += var25;
         }
-        if (arg3 < this.field7602.field8005) {
-            int var26 = this.field7602.field8005 - arg3;
+        if (arg3 < this.field7602.clipMinX) {
+            int var26 = this.field7602.clipMinX - arg3;
             arg6 -= var26;
             var22 += var26;
             var14 += var18 * var26;
             var23 += var26;
         }
-        float[] var27 = this.field7602.field8023;
-        int[] var28 = this.field7602.field8001;
+        float[] var27 = this.field7602.toolkit;
+        int[] var28 = this.field7602.colour;
         if (arg10 == 0) {
             if (arg8 == 1) {
                 int var29 = var14;
@@ -1288,7 +1288,7 @@ public class PureJavaSpriteAlpha extends PureJavaSprite {
 
     @ObfuscatedName("agy.a(II)V")
     public void method12913(int arg0, int arg1) {
-        int[] var3 = this.field7602.field8001;
+        int[] var3 = this.field7602.colour;
         if (var3 == null) {
             return;
         }
@@ -1592,7 +1592,7 @@ public class PureJavaSpriteAlpha extends PureJavaSprite {
 
     @ObfuscatedName("agy.s([I[III)V")
     public void method12914(int[] arg0, int[] arg1, int arg2, int arg3) {
-        int[] var5 = this.field7602.field8001;
+        int[] var5 = this.field7602.colour;
         if (var5 == null) {
             return;
         }

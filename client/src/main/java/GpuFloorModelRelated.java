@@ -218,7 +218,7 @@ public class GpuFloorModelRelated extends Node {
         }
         short var14 = (short) this.field9455;
         if (var7 != -1L) {
-            this.field9463.method11927(new FloorModelNode(var14), var7);
+            this.field9463.put(new FloorModelNode(var14), var7);
         }
         float var15;
         float var16;

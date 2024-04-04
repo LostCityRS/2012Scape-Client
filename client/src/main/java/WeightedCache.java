@@ -38,19 +38,19 @@ public final class WeightedCache {
         Object var4 = var3.method16722();
         if (var4 == null) {
             var3.remove();
-            var3.method15142();
+            var3.dualRemove();
             this.field4827 += var3.field10373;
             return null;
         }
         if (var3.method16724()) {
             HardWeightedNode var5 = new HardWeightedNode(var4, var3.field10373);
-            this.field4828.method11927(var5, var3.field4228);
-            this.field4829.method11728(var5);
+            this.field4828.put(var5, var3.field4228);
+            this.field4829.addFirst(var5);
             var5.field9554 = 0L;
             var3.remove();
-            var3.method15142();
+            var3.dualRemove();
         } else {
-            this.field4829.method11728(var3);
+            this.field4829.addFirst(var3);
             var3.field9554 = 0L;
         }
         return var4;
@@ -66,7 +66,7 @@ public final class WeightedCache {
     public void method7950(WeightedNode arg0) {
         if (arg0 != null) {
             arg0.remove();
-            arg0.method15142();
+            arg0.dualRemove();
             this.field4827 += arg0.field10373;
         }
     }
@@ -88,8 +88,8 @@ public final class WeightedCache {
             this.method7950(var5);
         }
         HardWeightedNode var6 = new HardWeightedNode(arg0, arg2);
-        this.field4828.method11927(var6, arg1);
-        this.field4829.method11728(var6);
+        this.field4828.put(var6, arg1);
+        this.field4829.addFirst(var6);
         var6.field9554 = 0L;
     }
 
@@ -99,23 +99,23 @@ public final class WeightedCache {
             if (var2.method16724()) {
                 if (var2.method16722() == null) {
                     var2.remove();
-                    var2.method15142();
+                    var2.dualRemove();
                     this.field4827 += var2.field10373;
                 }
             } else if (++var2.field9554 > (long) arg0) {
                 SoftWeightedNode var3 = new SoftWeightedNode(var2.method16722(), var2.field10373);
-                this.field4828.method11927(var3, var2.field4228);
+                this.field4828.put(var3, var2.field4228);
                 DualIterableQueue.method2355(var3, var2);
                 var2.remove();
-                var2.method15142();
+                var2.dualRemove();
             }
         }
     }
 
     @ObfuscatedName("pm.t(S)V")
     public void method7922() {
-        this.field4829.method11733();
-        this.field4828.method11925();
+        this.field4829.clear();
+        this.field4828.clear();
         this.field4827 = this.field4826;
     }
 
@@ -145,7 +145,7 @@ public final class WeightedCache {
         for (WeightedNode var1 = (WeightedNode) this.field4829.last(); var1 != null; var1 = (WeightedNode) this.field4829.previous()) {
             if (var1.method16724()) {
                 var1.remove();
-                var1.method15142();
+                var1.dualRemove();
                 this.field4827 += var1.field10373;
             }
         }
@@ -162,7 +162,7 @@ public final class WeightedCache {
             WeightedNode var3 = var1;
             var1 = (WeightedNode) this.field4828.method11929();
             var3.remove();
-            var3.method15142();
+            var3.dualRemove();
             this.field4827 += var3.field10373;
         }
         return null;
@@ -179,7 +179,7 @@ public final class WeightedCache {
             WeightedNode var3 = var1;
             var1 = (WeightedNode) this.field4828.method11929();
             var3.remove();
-            var3.method15142();
+            var3.dualRemove();
             this.field4827 += var3.field10373;
         }
         return null;

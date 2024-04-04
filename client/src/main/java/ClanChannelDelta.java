@@ -43,7 +43,7 @@ public class ClanChannelDelta {
         if (this.field2393 != arg0.field4228 || this.field2392 != arg0.field9435) {
             throw new RuntimeException("");
         }
-        for (ClanChannelDeltaEntry var2 = (ClanChannelDeltaEntry) this.field2394.last(); var2 != null; var2 = (ClanChannelDeltaEntry) this.field2394.method11567()) {
+        for (ClanChannelDeltaEntry var2 = (ClanChannelDeltaEntry) this.field2394.last(); var2 != null; var2 = (ClanChannelDeltaEntry) this.field2394.prev()) {
             var2.method14986(arg0);
         }
         arg0.field9435++;

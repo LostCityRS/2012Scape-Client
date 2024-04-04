@@ -121,8 +121,8 @@ public class PureJavaRasteriser {
         this.field999 = arg0;
         this.field1000 = arg1;
         this.field1001 = this.field999.field8002;
-        this.field1002 = this.field999.field8001;
-        this.field1003 = this.field999.field8023;
+        this.field1002 = this.field999.colour;
+        this.field1003 = this.field999.toolkit;
         this.field993 = MaterialAlphaMode.field4854;
     }
 

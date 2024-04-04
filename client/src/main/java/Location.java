@@ -13,7 +13,7 @@ public interface Location {
     boolean method2393();
 
     @ObfuscatedName("ca.u(B)I")
-    int method2401();
+    int getType();
 
     @ObfuscatedName("ca.m(Lra;I)V")
     void method2406(RendererToolkit arg0);

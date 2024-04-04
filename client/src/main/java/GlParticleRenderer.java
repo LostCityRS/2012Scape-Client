@@ -69,10 +69,10 @@ public class GlParticleRenderer {
             return;
         }
         this.method2274(arg0);
-        float var3 = arg0.field8116.field3480[2];
-        float var4 = arg0.field8116.field3480[6];
-        float var5 = arg0.field8116.field3480[10];
-        float var6 = arg0.field8116.field3480[14];
+        float var3 = arg0.field8116.entries[2];
+        float var4 = arg0.field8116.entries[6];
+        float var5 = arg0.field8116.entries[10];
+        float var6 = arg0.field8116.entries[14];
         try {
             int var7 = 0;
             int var8 = Integer.MAX_VALUE;

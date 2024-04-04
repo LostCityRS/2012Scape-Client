@@ -76,7 +76,7 @@ public class ParticleEffectorType {
         }
         var3.method4675();
         if (var3.field2760 == 2 && field2745.getNode((long) arg0) == null) {
-            field2745.method11927(new IntNode(field2764), (long) arg0);
+            field2745.put(new IntNode(field2764), (long) arg0);
             field2756[++field2764 - 1] = var3;
         }
         field2758.method7937(var3, (long) arg0);

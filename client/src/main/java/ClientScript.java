@@ -85,7 +85,7 @@ public class ClientScript extends SecondaryNode {
                 while (var7-- > 0) {
                     int var9 = arg0.g4s();
                     int var10 = arg0.g4s();
-                    var8.method11927(new IntNode(var10), (long) var9);
+                    var8.put(new IntNode(var10), (long) var9);
                 }
             }
         }

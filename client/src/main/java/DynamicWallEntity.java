@@ -24,7 +24,7 @@ public class DynamicWallEntity extends WallLayerEntity implements Location {
     public DynamicWallEntity(Scene arg0, RendererToolkit arg1, LocTypeList arg2, LocType arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11, int arg12) {
         super(arg0, arg6, arg7, arg8, arg4, arg5, method12063(arg10, arg11));
         this.field7576 = new DynamicLoc(arg1, arg2, arg3, arg10, arg11, this.level, arg5, this, arg9, arg12);
-        this.field7577 = arg3.field6493 != 0 && !arg9;
+        this.field7577 = arg3.active != 0 && !arg9;
         this.method15642(1);
     }
 
@@ -124,7 +124,7 @@ public class DynamicWallEntity extends WallLayerEntity implements Location {
     }
 
     @ObfuscatedName("yf.u(B)I")
-    public int method2401() {
+    public int getType() {
         return this.field7576.field1219;
     }
 

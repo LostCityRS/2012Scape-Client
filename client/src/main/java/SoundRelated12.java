@@ -16,7 +16,7 @@ public class SoundRelated12 {
     }
 
     @ObfuscatedName("mk.a(Lls;IIIZLaih;B)V")
-    public static void method6359(Js5 arg0, int arg1, int arg2, int arg3, boolean arg4, MixBuss arg5) {
+    public static void method6359(Js5 arg0, int arg1, int arg2, int arg3, boolean arg4, MidiAudioBuss arg5) {
         method3986(arg0, arg1, arg2, arg3, arg4);
         Statics.field4262 = arg5;
     }
@@ -191,7 +191,7 @@ public class SoundRelated12 {
                 if (Statics.field1279 == null) {
                     Statics.field1279 = new SynthSoundRelated12(Statics.field1581, Statics.field1580);
                 }
-                MixBuss var0 = Statics.field1735;
+                MidiAudioBuss var0 = Statics.field1735;
                 if (Statics.field4262 != null) {
                     var0 = Statics.field4262;
                 }
@@ -246,7 +246,7 @@ public class SoundRelated12 {
     @ObfuscatedName("pl.b(Leq;IB)V")
     public static void method7908(SoundRelated14 arg0, int arg1) {
         Statics.field1735.method16273();
-        MixBuss var2 = arg0.method3002();
+        MidiAudioBuss var2 = arg0.method3002();
         if (var2 == null) {
             return;
         }
@@ -270,7 +270,7 @@ public class SoundRelated12 {
     }
 
     @ObfuscatedName("pp.i(I)Laih;")
-    public static MixBuss method7705() {
+    public static MidiAudioBuss method7705() {
         return Statics.field1735;
     }
 }

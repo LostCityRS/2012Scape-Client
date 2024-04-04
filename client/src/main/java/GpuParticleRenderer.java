@@ -101,10 +101,10 @@ public class GpuParticleRenderer {
     public void method4478(GpuToolkit arg0, ParticleList arg1) {
         arg0.RA(false);
         Statics.field2514 = arg0.field8319;
-        float var3 = arg0.field8258.field3480[2];
-        float var4 = arg0.field8258.field3480[6];
-        float var5 = arg0.field8258.field3480[10];
-        float var6 = arg0.field8258.field3480[14];
+        float var3 = arg0.field8258.entries[2];
+        float var4 = arg0.field8258.entries[6];
+        float var5 = arg0.field8258.entries[10];
+        float var6 = arg0.field8258.entries[14];
         int var7 = 0;
         int var8 = Integer.MAX_VALUE;
         int var9 = 0;
@@ -202,12 +202,12 @@ public class GpuParticleRenderer {
     public void method4469(GpuToolkit arg0, int arg1) {
         int var3 = 0;
         Matrix4x4 var4 = arg0.field8258;
-        float var5 = var4.field3480[0];
-        float var6 = var4.field3480[4];
-        float var7 = var4.field3480[8];
-        float var8 = var4.field3480[1];
-        float var9 = var4.field3480[5];
-        float var10 = var4.field3480[9];
+        float var5 = var4.entries[0];
+        float var6 = var4.entries[4];
+        float var7 = var4.entries[8];
+        float var8 = var4.entries[1];
+        float var9 = var4.entries[5];
+        float var10 = var4.entries[9];
         float var11 = var5 + var8;
         float var12 = var6 + var9;
         float var13 = var7 + var10;

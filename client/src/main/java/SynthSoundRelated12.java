@@ -37,7 +37,7 @@ public class SynthSoundRelated12 {
                 return null;
             }
             SynthVariableRateSoundPacket var10 = var9.method6463();
-            this.field4054.method11927(var10, var6);
+            this.field4054.put(var10, var6);
             if (arg2 != null) {
                 arg2[0] -= var10.field10574.length;
             }
@@ -62,14 +62,14 @@ public class SynthSoundRelated12 {
                 if (var9 == null) {
                     return null;
                 }
-                this.field4055.method11927(var9, var6);
+                this.field4055.put(var9, var6);
             }
             VariableRateSoundPacket var10 = var9.method15099();
             if (var10 == null) {
                 return null;
             } else {
                 var9.remove();
-                this.field4057.method11927(var10, var6);
+                this.field4057.put(var10, var6);
                 return var10;
             }
         } else {

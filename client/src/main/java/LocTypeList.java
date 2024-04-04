@@ -61,7 +61,7 @@ public class LocTypeList {
     }
 
     @ObfuscatedName("tz.u(II)Ltg;")
-    public LocType method11471(int arg0) {
+    public LocType get(int arg0) {
         WeightedCache var2 = this.field6561;
         LocType var3;
         synchronized (this.field6561) {

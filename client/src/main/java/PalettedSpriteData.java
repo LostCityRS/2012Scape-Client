@@ -268,7 +268,7 @@ public class PalettedSpriteData extends SpriteData {
     }
 
     @ObfuscatedName("zv.p()V")
-    public void method2757() {
+    public void flipHorizontally() {
         byte[] var1 = this.field8408;
         if (this.field8416 == null) {
             for (int var2 = this.field8409 - 1; var2 >= 0; var2--) {

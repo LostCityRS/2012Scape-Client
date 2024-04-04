@@ -28,7 +28,7 @@ public class ObjIconFactory {
         }
 
         if (Statics.options.field9661.getValue() == 0) {
-            for (ObjIconRequest var1 = (ObjIconRequest) requests.last(); var1 != null; var1 = (ObjIconRequest) requests.method11567()) {
+            for (ObjIconRequest var1 = (ObjIconRequest) requests.last(); var1 != null; var1 = (ObjIconRequest) requests.prev()) {
                 Statics.objTypes.getIcon(arg0, arg0, var1.object, var1.count, var1.outline, var1.shadow, false, false, var1.countvis, Statics.field2163, var1.wearcol ? Statics.localPlayerEntity.model : null);
                 var1.remove();
             }
@@ -41,7 +41,7 @@ public class ObjIconFactory {
                 Statics.softwareRenderer = RendererToolkit.create(0, var2, Statics.field8465, Statics.field2670, 0);
                 Statics.softwareFont = Statics.softwareRenderer.createFont(FontMetrics.create(Statics.field8745, Statics.field551, 0), (PalettedSpriteData[]) SpriteDataProvider.get(Statics.field7387, Statics.field551, 0), true);
             }
-            for (ObjIconRequest var3 = (ObjIconRequest) requests.last(); var3 != null; var3 = (ObjIconRequest) requests.method11567()) {
+            for (ObjIconRequest var3 = (ObjIconRequest) requests.last(); var3 != null; var3 = (ObjIconRequest) requests.prev()) {
                 Statics.objTypes.getIcon(Statics.softwareRenderer, arg0, var3.object, var3.count, var3.outline, var3.shadow, false, false, var3.countvis, Statics.softwareFont, var3.wearcol ? Statics.localPlayerEntity.model : null);
                 var3.remove();
             }

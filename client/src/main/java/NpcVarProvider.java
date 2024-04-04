@@ -16,7 +16,7 @@ public final class NpcVarProvider {
     @ObfuscatedName("ch.u(I)V")
     public void method2420() {
         if (this.field1199 != null) {
-            this.field1199.method11925();
+            this.field1199.clear();
         }
     }
 
@@ -28,7 +28,7 @@ public final class NpcVarProvider {
         IntNode var3 = (IntNode) this.field1199.getNode((long) arg0);
         if (var3 == null) {
             IntNode var4 = new IntNode(arg1);
-            this.field1199.method11927(var4, (long) arg0);
+            this.field1199.put(var4, (long) arg0);
         } else {
             var3.field9556 = arg1;
         }

@@ -189,7 +189,7 @@ public class SeqType {
                     } else {
                         var24 = new IntNode(arg0.g4s());
                     }
-                    this.field6322.method11927(var24, (long) var23);
+                    this.field6322.put(var24, (long) var23);
                 }
             }
         }

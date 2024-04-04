@@ -129,9 +129,9 @@ public final class QuestCommands {
         arg0.field5216 -= 2;
         int var1 = arg0.field5215[arg0.field5216];
         int var2 = arg0.field5215[arg0.field5216 + 1];
-        ParamType var3 = Statics.field4464.method12600(var2);
+        ParamType var3 = Statics.paramTypes.get(var2);
         if (!var3.method12586()) {
-            int var5 = var3.field7287;
+            int var5 = var3.defaultint;
             if (var1 == -1) {
                 arg0.field5215[++arg0.field5216 - 1] = var5;
             } else {

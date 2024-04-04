@@ -28,7 +28,7 @@ public class LocReference {
         Location var1 = this.method8723();
         if (var1 == null) {
             return null;
-        } else if (var1.method2401() == this.field5194) {
+        } else if (var1.getType() == this.field5194) {
             return var1;
         } else {
             return null;

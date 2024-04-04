@@ -127,8 +127,8 @@ public class CutsceneManager {
 
     @ObfuscatedName("et.a(I)V")
     public static void method2911() {
-        field1529.method11925();
-        field1534.method11557();
+        field1529.clear();
+        field1534.clearBridged();
         Statics.field10534 = null;
         Statics.field1537 = null;
         Statics.field1528 = null;

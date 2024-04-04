@@ -69,7 +69,7 @@ public class NPCTypeList {
         NPCType var8 = new NPCType();
         var8.field7211 = arg0;
         var8.field7210 = this;
-        var8.field7227 = (String[]) this.field7282.clone();
+        var8.op = (String[]) this.field7282.clone();
         if (var6 != null) {
             var8.method12507(new Packet(var6));
         }

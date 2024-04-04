@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class PositionedSound extends Node {
 
     @ObfuscatedName("adg.s")
-    public int field9520;
+    public int mindelay;
 
     @ObfuscatedName("adg.m")
     public static IterableQueue field9514 = new IterableQueue();
@@ -16,52 +16,52 @@ public class PositionedSound extends Node {
     public static IterableMap field9516 = new IterableMap(16);
 
     @ObfuscatedName("adg.f")
-    public int field9517;
+    public int level;
 
     @ObfuscatedName("adg.d")
-    public int field9518;
+    public int minX;
 
     @ObfuscatedName("adg.z")
-    public int field9547;
+    public int maxX;
 
     @ObfuscatedName("adg.n")
-    public int field9519;
+    public int minZ;
 
     @ObfuscatedName("adg.o")
-    public int field9521;
+    public int maxZ;
 
     @ObfuscatedName("adg.q")
-    public int field9522;
+    public int size;
 
     @ObfuscatedName("adg.p")
-    public int field9523;
+    public int range;
 
     @ObfuscatedName("adg.w")
-    public int field9546;
+    public int volume;
 
     @ObfuscatedName("adg.b")
-    public LocType field9525;
+    public LocType loc;
 
     @ObfuscatedName("adg.x")
-    public NpcEntity field9527;
+    public NpcEntity npc;
 
     @ObfuscatedName("adg.i")
-    public PlayerEntity field9513;
+    public PlayerEntity player;
 
     @ObfuscatedName("adg.y")
     public int field9534 = 0;
 
     @ObfuscatedName("adg.e")
-    public boolean field9530;
+    public boolean multi;
 
     @ObfuscatedName("adg.ay")
-    public int field9524;
+    public int minspeed;
 
     @ObfuscatedName("adg.af")
-    public int field9532;
+    public int maxspeed;
 
     @ObfuscatedName("adg.ar")
-    public int field9536;
+    public int sound;
 
     @ObfuscatedName("adg.an")
     public boolean field9537;
@@ -73,13 +73,13 @@ public class PositionedSound extends Node {
     public VariableRateSoundPacket field9539;
 
     @ObfuscatedName("adg.as")
-    public SoundStream field9540;
+    public SoundAudioBuss field9540;
 
     @ObfuscatedName("adg.ai")
-    public int field9535;
+    public int maxdelay;
 
     @ObfuscatedName("adg.ao")
-    public int[] field9543;
+    public int[] sounds;
 
     @ObfuscatedName("adg.al")
     public boolean field9544;
@@ -91,14 +91,14 @@ public class PositionedSound extends Node {
     public VariableRateSoundPacket field9542;
 
     @ObfuscatedName("adg.aw")
-    public int field9526;
+    public int delay;
 
     @ObfuscatedName("adg.aa")
-    public SoundStream field9548;
+    public SoundAudioBuss field9548;
 
     @ObfuscatedName("mp.u(ZI)V")
     public static void method6259(boolean arg0) {
-        for (PositionedSound var1 = (PositionedSound) field9514.last(); var1 != null; var1 = (PositionedSound) field9514.method11567()) {
+        for (PositionedSound var1 = (PositionedSound) field9514.last(); var1 != null; var1 = (PositionedSound) field9514.prev()) {
             if (var1.field9540 != null) {
                 Statics.field4201.method16445(var1.field9540);
                 var1.field9540 = null;
@@ -112,7 +112,7 @@ public class PositionedSound extends Node {
         if (!arg0) {
             return;
         }
-        for (PositionedSound var2 = (PositionedSound) field9528.last(); var2 != null; var2 = (PositionedSound) field9528.method11567()) {
+        for (PositionedSound var2 = (PositionedSound) field9528.last(); var2 != null; var2 = (PositionedSound) field9528.prev()) {
             if (var2.field9540 != null) {
                 Statics.field4201.method16445(var2.field9540);
                 var2.field9540 = null;
@@ -130,82 +130,82 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("vf.j(I)V")
     public static void method12174() {
-        for (PositionedSound var0 = (PositionedSound) field9514.last(); var0 != null; var0 = (PositionedSound) field9514.method11567()) {
-            if (var0.field9530) {
-                var0.method15106();
+        for (PositionedSound var0 = (PositionedSound) field9514.last(); var0 != null; var0 = (PositionedSound) field9514.prev()) {
+            if (var0.multi) {
+                var0.computeProperties();
             }
         }
-        for (PositionedSound var1 = (PositionedSound) field9528.last(); var1 != null; var1 = (PositionedSound) field9528.method11567()) {
-            if (var1.field9530) {
-                var1.method15106();
+        for (PositionedSound var1 = (PositionedSound) field9528.last(); var1 != null; var1 = (PositionedSound) field9528.prev()) {
+            if (var1.multi) {
+                var1.computeProperties();
             }
         }
     }
 
     @ObfuscatedName("adg.a(I)V")
-    public void method15106() {
-        int var1 = this.field9536;
+    public void computeProperties() {
+        int var1 = this.sound;
         boolean var2 = this.field9537;
-        if (this.field9525 != null) {
-            LocType var3 = this.field9525.method11431(client.field8988 == 0 ? CutsceneManager.field1538 : Statics.field2669);
+        if (this.loc != null) {
+            LocType var3 = this.loc.getMultiLoc(client.field8988 == 0 ? CutsceneManager.field1538 : Statics.field2669);
             if (var3 == null) {
-                this.field9536 = -1;
+                this.sound = -1;
                 this.field9537 = false;
-                this.field9523 = 0;
-                this.field9546 = 0;
-                this.field9520 = 0;
-                this.field9535 = 0;
-                this.field9543 = null;
+                this.range = 0;
+                this.volume = 0;
+                this.mindelay = 0;
+                this.maxdelay = 0;
+                this.sounds = null;
                 this.field9544 = false;
-                this.field9532 = 256;
-                this.field9524 = 256;
-                this.field9522 = 0;
+                this.maxspeed = 256;
+                this.minspeed = 256;
+                this.size = 0;
             } else {
-                this.field9536 = var3.field6547;
+                this.sound = var3.bgsound_sound;
                 this.field9537 = var3.field6520;
-                this.field9523 = var3.field6531 << 9;
-                this.field9546 = var3.bgsound_volume;
-                this.field9520 = var3.field6476;
-                this.field9535 = var3.field6536;
-                this.field9543 = var3.field6484;
+                this.range = var3.bgsound_range << 9;
+                this.volume = var3.bgsound_volume;
+                this.mindelay = var3.bgsound_mindelay;
+                this.maxdelay = var3.bgsound_maxdelay;
+                this.sounds = var3.bgsound_random;
                 this.field9544 = var3.field6540;
-                this.field9532 = var3.field6507;
-                this.field9524 = var3.field6546;
+                this.maxspeed = var3.bgsound_maxrate;
+                this.minspeed = var3.bgsound_minrate;
             }
-        } else if (this.field9527 != null) {
-            int var4 = method5936(this.field9527);
+        } else if (this.npc != null) {
+            int var4 = method5936(this.npc);
             if (var1 != var4) {
-                this.field9536 = var4;
-                NPCType var5 = this.field9527.field10075;
-                if (var5.field7244 != null) {
-                    var5 = var5.method12516(Statics.field2669);
+                this.sound = var4;
+                NPCType var5 = this.npc.type;
+                if (var5.multinpc != null) {
+                    var5 = var5.getMultiNPC(Statics.field2669);
                 }
                 if (var5 == null) {
-                    this.field9522 = 0;
-                    this.field9523 = 0;
-                    this.field9546 = 0;
-                    this.field9537 = this.field9527.field10075.field7264;
-                    this.field9532 = 256;
-                    this.field9524 = 256;
+                    this.size = 0;
+                    this.range = 0;
+                    this.volume = 0;
+                    this.field9537 = this.npc.type.field7264;
+                    this.maxspeed = 256;
+                    this.minspeed = 256;
                 } else {
-                    this.field9523 = var5.field7261 << 9;
-                    this.field9522 = var5.field7262 << 9;
-                    this.field9546 = var5.bgsound_volume;
+                    this.range = var5.bgsound_range << 9;
+                    this.size = var5.bgsound_size << 9;
+                    this.volume = var5.bgsound_volume;
                     this.field9537 = var5.field7264;
-                    this.field9532 = var5.field7273;
-                    this.field9524 = var5.field7250;
+                    this.maxspeed = var5.bgsound_maxrate;
+                    this.minspeed = var5.bgsound_minrate;
                 }
             }
-        } else if (this.field9513 != null) {
-            this.field9536 = method11761(this.field9513);
-            this.field9537 = this.field9513.field10051;
-            this.field9523 = this.field9513.bgsound_range << 9;
-            this.field9522 = 0;
-            this.field9546 = this.field9513.bgsound_volume;
-            this.field9532 = 256;
-            this.field9524 = 256;
+        } else if (this.player != null) {
+            this.sound = getPlayerSound(this.player);
+            this.field9537 = this.player.field10051;
+            this.range = this.player.bgsound_range << 9;
+            this.size = 0;
+            this.volume = this.player.bgsound_volume;
+            this.maxspeed = 256;
+            this.minspeed = 256;
         }
-        if ((this.field9536 != var1 || this.field9537 != var2) && this.field9540 != null) {
+        if ((this.sound != var1 || this.field9537 != var2) && this.field9540 != null) {
             Statics.field4201.method16445(this.field9540);
             this.field9540 = null;
             this.field9539 = null;
@@ -214,78 +214,78 @@ public class PositionedSound extends Node {
     }
 
     @ObfuscatedName("acn.s(IIIILtg;Lahs;Lahg;I)V")
-    public static void method14954(int arg0, int arg1, int arg2, int arg3, LocType arg4, NpcEntity arg5, PlayerEntity arg6) {
+    public static void add(int arg0, int arg1, int arg2, int arg3, LocType arg4, NpcEntity arg5, PlayerEntity arg6) {
         PositionedSound var7 = new PositionedSound();
-        var7.field9517 = arg0;
-        var7.field9518 = arg1 << 9;
-        var7.field9519 = arg2 << 9;
+        var7.level = arg0;
+        var7.minX = arg1 << 9;
+        var7.minZ = arg2 << 9;
         if (arg4 != null) {
-            var7.field9525 = arg4;
-            int var8 = arg4.field6489;
-            int var9 = arg4.field6503;
+            var7.loc = arg4;
+            int var8 = arg4.width;
+            int var9 = arg4.length;
             if (arg3 == 1 || arg3 == 3) {
-                var8 = arg4.field6503;
-                var9 = arg4.field6489;
+                var8 = arg4.length;
+                var9 = arg4.width;
             }
-            var7.field9547 = arg1 + var8 << 9;
-            var7.field9521 = arg2 + var9 << 9;
-            var7.field9536 = arg4.field6547;
+            var7.maxX = arg1 + var8 << 9;
+            var7.maxZ = arg2 + var9 << 9;
+            var7.sound = arg4.bgsound_sound;
             var7.field9537 = arg4.field6520;
-            var7.field9523 = arg4.field6531 << 9;
-            var7.field9546 = arg4.bgsound_volume;
-            var7.field9520 = arg4.field6476;
-            var7.field9535 = arg4.field6536;
-            var7.field9543 = arg4.field6484;
+            var7.range = arg4.bgsound_range << 9;
+            var7.volume = arg4.bgsound_volume;
+            var7.mindelay = arg4.bgsound_mindelay;
+            var7.maxdelay = arg4.bgsound_maxdelay;
+            var7.sounds = arg4.bgsound_random;
             var7.field9544 = arg4.field6540;
-            var7.field9532 = arg4.field6507;
-            var7.field9524 = arg4.field6546;
-            var7.field9522 = arg4.field6532 << 9;
-            if (arg4.field6534 != null) {
-                var7.field9530 = true;
-                var7.method15106();
+            var7.maxspeed = arg4.bgsound_maxrate;
+            var7.minspeed = arg4.bgsound_minrate;
+            var7.size = arg4.bgsound_size << 9;
+            if (arg4.multiloc != null) {
+                var7.multi = true;
+                var7.computeProperties();
             }
-            if (var7.field9543 != null) {
-                var7.field9526 = var7.field9520 + (int) (Math.random() * (double) (var7.field9535 - var7.field9520));
+            if (var7.sounds != null) {
+                var7.delay = var7.mindelay + (int) (Math.random() * (double) (var7.maxdelay - var7.mindelay));
             }
             field9514.addFirst(var7);
         } else if (arg5 != null) {
-            var7.field9527 = arg5;
-            NPCType var10 = arg5.field10075;
-            if (var10.field7244 != null) {
-                var7.field9530 = true;
-                var10 = var10.method12516(Statics.field2669);
+            var7.npc = arg5;
+            NPCType var10 = arg5.type;
+            if (var10.multinpc != null) {
+                var7.multi = true;
+                var10 = var10.getMultiNPC(Statics.field2669);
             }
             if (var10 != null) {
-                var7.field9547 = var10.field7213 + arg1 << 9;
-                var7.field9521 = var10.field7213 + arg2 << 9;
-                var7.field9536 = method5936(arg5);
+                var7.maxX = var10.field7213 + arg1 << 9;
+                var7.maxZ = var10.field7213 + arg2 << 9;
+                var7.sound = method5936(arg5);
                 var7.field9537 = var10.field7264;
-                var7.field9523 = var10.field7261 << 9;
-                var7.field9546 = var10.bgsound_volume;
-                var7.field9532 = var10.field7273;
-                var7.field9524 = var10.field7250;
-                var7.field9522 = var10.field7262 << 9;
+                var7.range = var10.bgsound_range << 9;
+                var7.volume = var10.bgsound_volume;
+                var7.maxspeed = var10.bgsound_maxrate;
+                var7.minspeed = var10.bgsound_minrate;
+                var7.size = var10.bgsound_size << 9;
             }
             field9528.addFirst(var7);
         } else if (arg6 != null) {
-            var7.field9513 = arg6;
-            var7.field9547 = arg1 + arg6.size() << 9;
-            var7.field9521 = arg2 + arg6.size() << 9;
-            var7.field9536 = method11761(arg6);
+            var7.player = arg6;
+            var7.maxX = arg1 + arg6.size() << 9;
+            var7.maxZ = arg2 + arg6.size() << 9;
+            var7.sound = getPlayerSound(arg6);
             var7.field9537 = arg6.field10051;
-            var7.field9523 = arg6.bgsound_range << 9;
-            var7.field9546 = arg6.bgsound_volume;
-            var7.field9532 = 256;
-            var7.field9524 = 256;
-            var7.field9522 = 0;
-            field9516.method11927(var7, (long) arg6.localPlayerIndex);
+            var7.range = arg6.bgsound_range << 9;
+            var7.volume = arg6.bgsound_volume;
+            var7.maxspeed = 256;
+            var7.minspeed = 256;
+            var7.size = 0;
+            field9516.put(var7, (long) arg6.localPlayerIndex);
         }
     }
 
     @ObfuscatedName("z.c(IIILtg;I)V")
     public static void method1370(int arg0, int arg1, int arg2, LocType arg3) {
-        for (PositionedSound var4 = (PositionedSound) field9514.last(); var4 != null; var4 = (PositionedSound) field9514.method11567()) {
-            if (var4.field9517 == arg0 && arg1 << 9 == var4.field9518 && arg2 << 9 == var4.field9519 && var4.field9525.field6474 == arg3.field6474) {
+        for (PositionedSound var4 = (PositionedSound) field9514.last(); var4 != null; var4 = (PositionedSound) field9514.prev()) {
+            if (var4.level == arg0 && arg1 << 9 == var4.minX && arg2 << 9 == var4.minZ && var4.loc.field6474 == arg3.field6474) {
                 if (var4.field9540 != null) {
                     Statics.field4201.method16445(var4.field9540);
                     var4.field9540 = null;
@@ -302,8 +302,8 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("cu.m(Lahs;I)V")
     public static void method2547(NpcEntity arg0) {
-        for (PositionedSound var1 = (PositionedSound) field9528.last(); var1 != null; var1 = (PositionedSound) field9528.method11567()) {
-            if (var1.field9527 == arg0) {
+        for (PositionedSound var1 = (PositionedSound) field9528.last(); var1 != null; var1 = (PositionedSound) field9528.prev()) {
+            if (var1.npc == arg0) {
                 if (var1.field9540 != null) {
                     Statics.field4201.method16445(var1.field9540);
                     var1.field9540 = null;
@@ -331,36 +331,36 @@ public class PositionedSound extends Node {
     public static void method1807(PlayerEntity arg0) {
         PositionedSound var1 = (PositionedSound) field9516.getNode((long) arg0.localPlayerIndex);
         if (var1 == null) {
-            method14954(arg0.level, arg0.routeWaypointX[0], arg0.routeWaypointZ[0], 0, null, null, arg0);
+            add(arg0.level, arg0.routeWaypointX[0], arg0.routeWaypointZ[0], 0, null, null, arg0);
         } else {
-            var1.method15106();
+            var1.computeProperties();
         }
     }
 
     @ObfuscatedName("lt.f(Lahs;I)I")
     public static int method5936(NpcEntity arg0) {
-        NPCType var1 = arg0.field10075;
-        if (var1.field7244 != null) {
-            var1 = var1.method12516(Statics.field2669);
+        NPCType var1 = arg0.type;
+        if (var1.multinpc != null) {
+            var1 = var1.getMultiNPC(Statics.field2669);
             if (var1 == null) {
                 return -1;
             }
         }
-        int var2 = var1.field7223;
+        int var2 = var1.bgsound_walk;
         BASType var3 = arg0.getBASType();
         int var4 = arg0.field8616.getSeqTypeId();
         if (var4 == -1 || arg0.field8616.field9899) {
-            var2 = var1.field7257;
+            var2 = var1.bgsound;
         } else if (var3.field4710 == var4 || var3.field4699 == var4 || var3.field4701 == var4 || var3.field4726 == var4) {
-            var2 = var1.field7260;
+            var2 = var1.bgsound_run;
         } else if (var3.field4702 == var4 || var3.field4692 == var4 || var3.field4705 == var4 || var3.field4697 == var4) {
-            var2 = var1.field7258;
+            var2 = var1.bgsound_crawl;
         }
         return var2;
     }
 
     @ObfuscatedName("tv.d(Lahg;I)I")
-    public static int method11761(PlayerEntity arg0) {
+    public static int getPlayerSound(PlayerEntity arg0) {
         int var1 = arg0.bgsound_walk_player;
         BASType var2 = arg0.getBASType();
         int var3 = arg0.field8616.getSeqTypeId();
@@ -376,14 +376,14 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("lr.z(IIIII)V")
     public static void method6033(int arg0, int arg1, int arg2, int arg3) {
-        for (PositionedSound var4 = (PositionedSound) field9514.last(); var4 != null; var4 = (PositionedSound) field9514.method11567()) {
+        for (PositionedSound var4 = (PositionedSound) field9514.last(); var4 != null; var4 = (PositionedSound) field9514.prev()) {
             method4977(var4, arg0, arg1, arg2, arg3);
         }
-        for (PositionedSound var5 = (PositionedSound) field9528.last(); var5 != null; var5 = (PositionedSound) field9528.method11567()) {
+        for (PositionedSound var5 = (PositionedSound) field9528.last(); var5 != null; var5 = (PositionedSound) field9528.prev()) {
             byte var6 = 1;
-            BASType var7 = var5.field9527.getBASType();
-            int var8 = var5.field9527.field8616.getSeqTypeId();
-            if (var8 == -1 || var5.field9527.field8616.field9899) {
+            BASType var7 = var5.npc.getBASType();
+            int var8 = var5.npc.field8616.getSeqTypeId();
+            if (var8 == -1 || var5.npc.field8616.field9899) {
                 var6 = 0;
             } else if (var7.field4710 == var8 || var7.field4699 == var8 || var7.field4701 == var8 || var7.field4726 == var8) {
                 var6 = 2;
@@ -391,53 +391,53 @@ public class PositionedSound extends Node {
                 var6 = 3;
             }
             if (var5.field9534 != var6) {
-                int var9 = method5936(var5.field9527);
-                NPCType var10 = var5.field9527.field10075;
-                if (var10.field7244 != null) {
-                    var10 = var10.method12516(Statics.field2669);
+                int var9 = method5936(var5.npc);
+                NPCType var10 = var5.npc.type;
+                if (var10.multinpc != null) {
+                    var10 = var10.getMultiNPC(Statics.field2669);
                 }
                 if (var10 == null || var9 == -1) {
-                    var5.field9536 = -1;
+                    var5.sound = -1;
                     var5.field9537 = false;
                     var5.field9534 = var6;
-                } else if (var5.field9536 == var9 && var5.field9537 == var10.field7264) {
+                } else if (var5.sound == var9 && var5.field9537 == var10.field7264) {
                     var5.field9534 = var6;
-                    var5.field9546 = var10.bgsound_volume;
+                    var5.volume = var10.bgsound_volume;
                 } else {
                     boolean var11 = false;
                     if (var5.field9540 == null) {
                         var11 = true;
                     } else {
-                        var5.field9546 -= 512;
-                        if (var5.field9546 <= 0) {
+                        var5.volume -= 512;
+                        if (var5.volume <= 0) {
                             Statics.field4201.method16445(var5.field9540);
                             var5.field9540 = null;
                             var11 = true;
                         }
                     }
                     if (var11) {
-                        var5.field9546 = var10.bgsound_volume;
+                        var5.volume = var10.bgsound_volume;
                         var5.field9539 = null;
                         var5.field9538 = null;
-                        var5.field9536 = var9;
+                        var5.sound = var9;
                         var5.field9537 = var10.field7264;
                         var5.field9534 = var6;
                     }
                 }
             }
-            Vector3 var12 = var5.field9527.getTransform().trans;
-            var5.field9518 = (int) var12.x;
-            var5.field9547 = (int) var12.x + (var5.field9527.size() << 8);
-            var5.field9519 = (int) var12.z;
-            var5.field9521 = (int) var12.z + (var5.field9527.size() << 8);
-            var5.field9517 = var5.field9527.level;
+            Vector3 var12 = var5.npc.getTransform().trans;
+            var5.minX = (int) var12.x;
+            var5.maxX = (int) var12.x + (var5.npc.size() << 8);
+            var5.minZ = (int) var12.z;
+            var5.maxZ = (int) var12.z + (var5.npc.size() << 8);
+            var5.level = var5.npc.level;
             method4977(var5, arg0, arg1, arg2, arg3);
         }
         for (PositionedSound var13 = (PositionedSound) field9516.method11928(); var13 != null; var13 = (PositionedSound) field9516.method11929()) {
             byte var14 = 1;
-            BASType var15 = var13.field9513.getBASType();
-            int var16 = var13.field9513.field8616.getSeqTypeId();
-            if (var16 == -1 || var13.field9513.field8616.field9899) {
+            BASType var15 = var13.player.getBASType();
+            int var16 = var13.player.field8616.getSeqTypeId();
+            if (var16 == -1 || var13.player.field8616.field9899) {
                 var14 = 0;
             } else if (var15.field4710 == var16 || var15.field4699 == var16 || var15.field4701 == var16 || var15.field4726 == var16) {
                 var14 = 2;
@@ -445,60 +445,60 @@ public class PositionedSound extends Node {
                 var14 = 3;
             }
             if (var13.field9534 != var14) {
-                int var17 = method11761(var13.field9513);
-                if (var13.field9536 == var17 && var13.field9513.field10051 == var13.field9537) {
-                    var13.field9546 = var13.field9513.bgsound_volume;
+                int var17 = getPlayerSound(var13.player);
+                if (var13.sound == var17 && var13.player.field10051 == var13.field9537) {
+                    var13.volume = var13.player.bgsound_volume;
                     var13.field9534 = var14;
                 } else {
                     boolean var18 = false;
                     if (var13.field9540 == null) {
                         var18 = true;
                     } else {
-                        var13.field9546 -= 512;
-                        if (var13.field9546 <= 0) {
+                        var13.volume -= 512;
+                        if (var13.volume <= 0) {
                             Statics.field4201.method16445(var13.field9540);
                             var13.field9540 = null;
                             var18 = true;
                         }
                     }
                     if (var18) {
-                        var13.field9546 = var13.field9513.bgsound_volume;
+                        var13.volume = var13.player.bgsound_volume;
                         var13.field9539 = null;
                         var13.field9538 = null;
-                        var13.field9536 = var17;
-                        var13.field9537 = var13.field9513.field10051;
+                        var13.sound = var17;
+                        var13.field9537 = var13.player.field10051;
                         var13.field9534 = var14;
                     }
                 }
             }
-            Vector3 var19 = var13.field9513.getTransform().trans;
-            var13.field9518 = (int) var19.x;
-            var13.field9547 = (int) var19.x + (var13.field9513.size() << 8);
-            var13.field9519 = (int) var19.z;
-            var13.field9521 = (int) var19.z + (var13.field9513.size() << 8);
-            var13.field9517 = var13.field9513.level;
+            Vector3 var19 = var13.player.getTransform().trans;
+            var13.minX = (int) var19.x;
+            var13.maxX = (int) var19.x + (var13.player.size() << 8);
+            var13.minZ = (int) var19.z;
+            var13.maxZ = (int) var19.z + (var13.player.size() << 8);
+            var13.level = var13.player.level;
             method4977(var13, arg0, arg1, arg2, arg3);
         }
     }
 
     @ObfuscatedName("kh.n(Ladg;IIIII)V")
     public static void method4977(PositionedSound arg0, int arg1, int arg2, int arg3, int arg4) {
-        if (arg0.field9536 == -1 && arg0.field9543 == null) {
+        if (arg0.sound == -1 && arg0.sounds == null) {
             return;
         }
         int var5 = 0;
-        int var6 = arg0.field9546 * 512 * Statics.options.field9672.method15899() >> 8;
-        if (arg2 > arg0.field9547) {
-            var5 += arg2 - arg0.field9547;
-        } else if (arg2 < arg0.field9518) {
-            var5 += arg0.field9518 - arg2;
+        int var6 = arg0.volume * 512 * Statics.options.field9672.method15899() >> 8;
+        if (arg2 > arg0.maxX) {
+            var5 += arg2 - arg0.maxX;
+        } else if (arg2 < arg0.minX) {
+            var5 += arg0.minX - arg2;
         }
-        if (arg3 > arg0.field9521) {
-            var5 += arg3 - arg0.field9521;
-        } else if (arg3 < arg0.field9519) {
-            var5 += arg0.field9519 - arg3;
+        if (arg3 > arg0.maxZ) {
+            var5 += arg3 - arg0.maxZ;
+        } else if (arg3 < arg0.minZ) {
+            var5 += arg0.minZ - arg3;
         }
-        if (arg0.field9523 == 0 || var5 - 256 > arg0.field9523 || Statics.options.field9672.method15899() == 0 || arg0.field9517 != arg1) {
+        if (arg0.range == 0 || var5 - 256 > arg0.range || Statics.options.field9672.method15899() == 0 || arg0.level != arg1) {
             if (arg0.field9540 != null) {
                 Statics.field4201.method16445(arg0.field9540);
                 arg0.field9540 = null;
@@ -517,19 +517,19 @@ public class PositionedSound extends Node {
         if (var5 < 0) {
             var5 = 0;
         }
-        int var7 = arg0.field9523 - arg0.field9522;
+        int var7 = arg0.range - arg0.size;
         if (var7 < 0) {
-            var7 = arg0.field9523;
+            var7 = arg0.range;
         }
         int var8 = var6;
-        int var9 = var5 - arg0.field9522;
+        int var9 = var5 - arg0.size;
         if (var9 > 0 && var7 > 0) {
             var8 = (var7 - var9) * var6 / var7;
         }
         Statics.localPlayerEntity.size();
         int var10 = 8192;
-        int var11 = (arg0.field9547 + arg0.field9518) / 2 - arg2;
-        int var12 = (arg0.field9521 + arg0.field9519) / 2 - arg3;
+        int var11 = (arg0.maxX + arg0.minX) / 2 - arg2;
+        int var12 = (arg0.maxZ + arg0.minZ) / 2 - arg3;
         if (var11 != 0 || var12 != 0) {
             int var13 = -Statics.cameraYaw - (int) (Math.atan2((double) var11, (double) var12) * 2607.5945876176133D) - 4096 & 0x3FFF;
             if (var13 > 8192) {
@@ -548,11 +548,11 @@ public class PositionedSound extends Node {
         if (arg0.field9540 != null) {
             arg0.field9540.method16402(var8);
             arg0.field9540.method16387(var10);
-        } else if (arg0.field9536 >= 0) {
-            int var15 = arg0.field9532 == 256 && arg0.field9524 == 256 ? 256 : AudioRenderer.method4688(arg0.field9524, arg0.field9532);
+        } else if (arg0.sound >= 0) {
+            int var15 = arg0.maxspeed == 256 && arg0.minspeed == 256 ? 256 : AudioRenderer.method4688(arg0.minspeed, arg0.maxspeed);
             if (arg0.field9537) {
                 if (arg0.field9538 == null) {
-                    arg0.field9538 = VorbisSound.method15066(Statics.field3156, arg0.field9536);
+                    arg0.field9538 = VorbisSound.method15066(Statics.field3156, arg0.sound);
                 }
                 if (arg0.field9538 != null) {
                     if (arg0.field9539 == null) {
@@ -566,7 +566,7 @@ public class PositionedSound extends Node {
                     }
                 }
             } else {
-                SynthSound var17 = SynthSound.method6466(Statics.field5197, arg0.field9536, 0);
+                SynthSound var17 = SynthSound.method6466(Statics.field5197, arg0.sound, 0);
                 if (var17 != null) {
                     SynthVariableRateSoundPacket var18 = var17.method6463().method17108(Statics.field3160);
                     SoundStreamRelated1 var19 = (SoundStreamRelated1) var18.method16502(var15, var8 << 6, var10);
@@ -584,12 +584,12 @@ public class PositionedSound extends Node {
                 arg0.field9545 = null;
                 arg0.field9542 = null;
             }
-        } else if (arg0.field9543 != null && (arg0.field9526 -= arg4) <= 0) {
-            int var20 = arg0.field9532 == 256 && arg0.field9524 == 256 ? 256 : (int) (Math.random() * (double) (arg0.field9532 - arg0.field9524)) + arg0.field9524;
+        } else if (arg0.sounds != null && (arg0.delay -= arg4) <= 0) {
+            int var20 = arg0.maxspeed == 256 && arg0.minspeed == 256 ? 256 : (int) (Math.random() * (double) (arg0.maxspeed - arg0.minspeed)) + arg0.minspeed;
             if (arg0.field9544) {
                 if (arg0.field9545 == null) {
-                    int var21 = (int) (Math.random() * (double) arg0.field9543.length);
-                    arg0.field9545 = VorbisSound.method15066(Statics.field3156, arg0.field9543[var21]);
+                    int var21 = (int) (Math.random() * (double) arg0.sounds.length);
+                    arg0.field9545 = VorbisSound.method15066(Statics.field3156, arg0.sounds[var21]);
                 }
                 if (arg0.field9545 != null) {
                     if (arg0.field9542 == null) {
@@ -600,19 +600,19 @@ public class PositionedSound extends Node {
                         var22.method16384(0);
                         Statics.field4201.method16452(var22);
                         arg0.field9548 = var22;
-                        arg0.field9526 = arg0.field9520 + (int) (Math.random() * (double) (arg0.field9535 - arg0.field9520));
+                        arg0.delay = arg0.mindelay + (int) (Math.random() * (double) (arg0.maxdelay - arg0.mindelay));
                     }
                 }
             } else {
-                int var23 = (int) (Math.random() * (double) arg0.field9543.length);
-                SynthSound var24 = SynthSound.method6466(Statics.field5197, arg0.field9543[var23], 0);
+                int var23 = (int) (Math.random() * (double) arg0.sounds.length);
+                SynthSound var24 = SynthSound.method6466(Statics.field5197, arg0.sounds[var23], 0);
                 if (var24 != null) {
                     SynthVariableRateSoundPacket var25 = var24.method6463().method17108(Statics.field3160);
                     SoundStreamRelated1 var26 = (SoundStreamRelated1) var25.method16502(var20, var8 << 6, var10);
                     var26.method16384(0);
                     Statics.field4201.method16452(var26);
                     arg0.field9548 = var26;
-                    arg0.field9526 = arg0.field9520 + (int) (Math.random() * (double) (arg0.field9535 - arg0.field9520));
+                    arg0.delay = arg0.mindelay + (int) (Math.random() * (double) (arg0.maxdelay - arg0.mindelay));
                 }
             }
         }

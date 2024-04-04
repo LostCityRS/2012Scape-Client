@@ -96,7 +96,7 @@ public class JavaMouse extends Mouse implements MouseListener, MouseMotionListen
         IterableQueue var1 = this.field9784;
         this.field9784 = this.field9782;
         this.field9782 = var1;
-        this.field9782.method11557();
+        this.field9782.clearBridged();
     }
 
     @ObfuscatedName("aeo.s(B)Z")

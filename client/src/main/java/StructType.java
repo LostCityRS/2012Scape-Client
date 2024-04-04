@@ -36,7 +36,7 @@ public class StructType extends SecondaryNode {
             } else {
                 var8 = new IntNode(arg0.g4s());
             }
-            this.field10396.method11927(var8, (long) var7);
+            this.field10396.put(var8, (long) var7);
         }
     }
 

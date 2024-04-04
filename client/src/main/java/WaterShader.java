@@ -217,7 +217,7 @@ public abstract class WaterShader extends GpuRendererRelated2 {
             return;
         }
         Matrix4x4 var3 = this.field2414.method13522();
-        float[] var4 = new float[]{var3.field3480[12], var3.field3480[13], var3.field3480[14]};
+        float[] var4 = new float[]{var3.entries[12], var3.entries[13], var3.entries[14]};
         float[] var5 = new float[]{0.0F, 0.0F, 0.0F};
         var3.method5470(var5);
         float[] var6 = new float[]{0.0F, 0.0F, 0.0F};

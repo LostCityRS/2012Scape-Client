@@ -340,8 +340,8 @@ public class PureJavaFloorModel extends FloorModel {
                     int var26 = 0;
                     if (arg5 != null) {
                         short var27 = var16.field976[var17] = (short) arg5[var17];
-                        if (arg10.field1471 != 0) {
-                            var26 = var27 * 255 / arg10.field1471;
+                        if (arg10.scale != 0) {
+                            var26 = var27 * 255 / arg10.scale;
                             if (var26 < 0) {
                                 var26 = 0;
                             } else if (var26 > 255) {
@@ -353,7 +353,7 @@ public class PureJavaFloorModel extends FloorModel {
                     if (arg8[var17] != -1 && this.method12952(this.field7658.field400.method889(arg8[var17]).field1270)) {
                         var28 = -1694498816;
                     }
-                    var16.field978[var17] = var28 | ColourUtils.method8590(method12948(arg6[var17] >> 8, var21), arg10.field1475, var26);
+                    var16.field978[var17] = var28 | ColourUtils.method8590(method12948(arg6[var17] >> 8, var21), arg10.colour, var26);
                     if (arg7 != null) {
                         var16.field982[var17] = (byte) var21;
                     }
@@ -475,8 +475,8 @@ public class PureJavaFloorModel extends FloorModel {
                     int var60 = 0;
                     if (arg5 != null) {
                         short var61 = var50.field965[var51] = (short) arg5[var51];
-                        if (arg10.field1471 != 0) {
-                            var60 = var61 * 255 / arg10.field1471;
+                        if (arg10.scale != 0) {
+                            var60 = var61 * 255 / arg10.scale;
                             if (var60 < 0) {
                                 var60 = 0;
                             } else if (var60 > 255) {
@@ -484,7 +484,7 @@ public class PureJavaFloorModel extends FloorModel {
                             }
                         }
                     }
-                    var50.field962[var51] = ColourUtils.method8590(method12948(arg6[var51] >> 8, var55), arg10.field1475, var60);
+                    var50.field962[var51] = ColourUtils.method8590(method12948(arg6[var51] >> 8, var55), arg10.colour, var60);
                     if (arg7 != null) {
                         var50.field962[var51] |= var55 << 25;
                     }
@@ -576,124 +576,124 @@ public class PureJavaFloorModel extends FloorModel {
         }
         if (var41 == -1 || (var39.field944 & 0x2) != 0 || this.field7658.field400.method889(var41).field1250) {
             int var46;
-            if (arg5 == null || arg10.field1471 == 0) {
+            if (arg5 == null || arg10.scale == 0) {
                 var46 = 0;
             } else {
-                var46 = arg5[var32] * 255 / arg10.field1471;
+                var46 = arg5[var32] * 255 / arg10.scale;
                 if (var46 < 0) {
                     var46 = 0;
                 } else if (var46 > 255) {
                     var46 = 255;
                 }
             }
-            var39.field945 = ColourUtils.method8590(method12948(arg6[var32] >> 8, this.field7682[arg0][arg1] - this.field7659[arg0][arg1]), arg10.field1475, var46);
+            var39.field945 = ColourUtils.method8590(method12948(arg6[var32] >> 8, this.field7682[arg0][arg1] - this.field7659[arg0][arg1]), arg10.colour, var46);
             if (var39.field953 != 0) {
                 var39.field945 |= 255 - (this.field7682[arg0][arg1] - this.field7659[arg0][arg1]) << 25;
             }
             int var47;
-            if (arg5 == null || arg10.field1471 == 0) {
+            if (arg5 == null || arg10.scale == 0) {
                 var47 = 0;
             } else {
-                var47 = arg5[var33] * 255 / arg10.field1471;
+                var47 = arg5[var33] * 255 / arg10.scale;
                 if (var47 < 0) {
                     var47 = 0;
                 } else if (var47 > 255) {
                     var47 = 255;
                 }
             }
-            var39.field946 = ColourUtils.method8590(method12948(arg6[var33] >> 8, this.field7682[arg0 + 1][arg1] - this.field7659[arg0 + 1][arg1]), arg10.field1475, var47);
+            var39.field946 = ColourUtils.method8590(method12948(arg6[var33] >> 8, this.field7682[arg0 + 1][arg1] - this.field7659[arg0 + 1][arg1]), arg10.colour, var47);
             if (var39.field953 != 0) {
                 var39.field946 |= 255 - (this.field7682[arg0 + 1][arg1] - this.field7659[arg0 + 1][arg1]) << 25;
             }
             int var48;
-            if (arg5 == null || arg10.field1471 == 0) {
+            if (arg5 == null || arg10.scale == 0) {
                 var48 = 0;
             } else {
-                var48 = arg5[var34] * 255 / arg10.field1471;
+                var48 = arg5[var34] * 255 / arg10.scale;
                 if (var48 < 0) {
                     var48 = 0;
                 } else if (var48 > 255) {
                     var48 = 255;
                 }
             }
-            var39.field947 = ColourUtils.method8590(method12948(arg6[var34] >> 8, this.field7682[arg0 + 1][arg1 + 1] - this.field7659[arg0 + 1][arg1 + 1]), arg10.field1475, var48);
+            var39.field947 = ColourUtils.method8590(method12948(arg6[var34] >> 8, this.field7682[arg0 + 1][arg1 + 1] - this.field7659[arg0 + 1][arg1 + 1]), arg10.colour, var48);
             if (var39.field953 != 0) {
                 var39.field947 |= 255 - (this.field7682[arg0 + 1][arg1 + 1] - this.field7659[arg0 + 1][arg1 + 1]) << 25;
             }
             int var49;
-            if (arg5 == null || arg10.field1471 == 0) {
+            if (arg5 == null || arg10.scale == 0) {
                 var49 = 0;
             } else {
-                var49 = arg5[var35] * 255 / arg10.field1471;
+                var49 = arg5[var35] * 255 / arg10.scale;
                 if (var49 < 0) {
                     var49 = 0;
                 } else if (var49 > 255) {
                     var49 = 255;
                 }
             }
-            var39.field951 = ColourUtils.method8590(method12948(arg6[var35] >> 8, this.field7682[arg0][arg1 + 1] - this.field7659[arg0][arg1 + 1]), arg10.field1475, var49);
+            var39.field951 = ColourUtils.method8590(method12948(arg6[var35] >> 8, this.field7682[arg0][arg1 + 1] - this.field7659[arg0][arg1 + 1]), arg10.colour, var49);
             if (var39.field953 != 0) {
                 var39.field951 |= 255 - (this.field7682[arg0][arg1 + 1] - this.field7659[arg0][arg1 + 1]) << 25;
             }
             var39.field954 = -1;
         } else {
             int var42;
-            if (arg5 == null || arg10.field1471 == 0) {
+            if (arg5 == null || arg10.scale == 0) {
                 var42 = 0;
             } else {
-                var42 = arg5[var32] * 255 / arg10.field1471;
+                var42 = arg5[var32] * 255 / arg10.scale;
                 if (var42 < 0) {
                     var42 = 0;
                 } else if (var42 > 255) {
                     var42 = 255;
                 }
             }
-            var39.field945 = ColourUtils.method8590(method12948(arg6[var32] >> 8, this.field7682[arg0][arg1] - this.field7659[arg0][arg1]), arg10.field1475, var42);
+            var39.field945 = ColourUtils.method8590(method12948(arg6[var32] >> 8, this.field7682[arg0][arg1] - this.field7659[arg0][arg1]), arg10.colour, var42);
             if (var39.field953 != 0) {
                 var39.field945 |= 255 - (this.field7682[arg0][arg1] - this.field7659[arg0][arg1]) << 25;
             }
             int var43;
-            if (arg5 == null || arg10.field1471 == 0) {
+            if (arg5 == null || arg10.scale == 0) {
                 var43 = 0;
             } else {
-                var43 = arg5[var33] * 255 / arg10.field1471;
+                var43 = arg5[var33] * 255 / arg10.scale;
                 if (var43 < 0) {
                     var43 = 0;
                 } else if (var43 > 255) {
                     var43 = 255;
                 }
             }
-            var39.field946 = ColourUtils.method8590(method12948(arg6[var33] >> 8, this.field7682[arg0 + 1][arg1] - this.field7659[arg0 + 1][arg1]), arg10.field1475, var43);
+            var39.field946 = ColourUtils.method8590(method12948(arg6[var33] >> 8, this.field7682[arg0 + 1][arg1] - this.field7659[arg0 + 1][arg1]), arg10.colour, var43);
             if (var39.field953 != 0) {
                 var39.field946 |= 255 - (this.field7682[arg0 + 1][arg1] - this.field7659[arg0 + 1][arg1]) << 25;
             }
             int var44;
-            if (arg5 == null || arg10.field1471 == 0) {
+            if (arg5 == null || arg10.scale == 0) {
                 var44 = 0;
             } else {
-                var44 = arg5[var34] * 255 / arg10.field1471;
+                var44 = arg5[var34] * 255 / arg10.scale;
                 if (var44 < 0) {
                     var44 = 0;
                 } else if (var44 > 255) {
                     var44 = 255;
                 }
             }
-            var39.field947 = ColourUtils.method8590(method12948(arg6[var34] >> 8, this.field7682[arg0 + 1][arg1 + 1] - this.field7659[arg0 + 1][arg1 + 1]), arg10.field1475, var44);
+            var39.field947 = ColourUtils.method8590(method12948(arg6[var34] >> 8, this.field7682[arg0 + 1][arg1 + 1] - this.field7659[arg0 + 1][arg1 + 1]), arg10.colour, var44);
             if (var39.field953 != 0) {
                 var39.field947 |= 255 - (this.field7682[arg0 + 1][arg1 + 1] - this.field7659[arg0 + 1][arg1 + 1]) << 25;
             }
             int var45;
-            if (arg5 == null || arg10.field1471 == 0) {
+            if (arg5 == null || arg10.scale == 0) {
                 var45 = 0;
             } else {
-                var45 = arg5[var35] * 255 / arg10.field1471;
+                var45 = arg5[var35] * 255 / arg10.scale;
                 if (var45 < 0) {
                     var45 = 0;
                 } else if (var45 > 255) {
                     var45 = 255;
                 }
             }
-            var39.field951 = ColourUtils.method8590(method12948(arg6[var35] >> 8, this.field7682[arg0][arg1 + 1] - this.field7659[arg0][arg1 + 1]), arg10.field1475, var45);
+            var39.field951 = ColourUtils.method8590(method12948(arg6[var35] >> 8, this.field7682[arg0][arg1 + 1] - this.field7659[arg0][arg1 + 1]), arg10.colour, var45);
             var39.field954 = (short) var41;
         }
         if (arg5 != null) {
@@ -736,26 +736,26 @@ public class PureJavaFloorModel extends FloorModel {
 
     @ObfuscatedName("ym.a(III[[ZZI)V")
     public void method212(int arg0, int arg1, int arg2, boolean[][] arg3, boolean arg4, int arg5) {
-        if (this.field7658.field8001 == null || this.field7658.field8023 == null) {
+        if (this.field7658.colour == null || this.field7658.toolkit == null) {
             throw new IllegalStateException("");
         }
         Matrix4x4 var7 = this.field7658.field8018;
-        this.field7665 = var7.field3480[0];
-        this.field7666 = var7.field3480[1];
-        this.field7667 = var7.field3480[2];
-        this.field7668 = var7.field3480[3];
-        this.field7654 = var7.field3480[4];
-        this.field7670 = var7.field3480[5];
-        this.field7663 = var7.field3480[6];
-        this.field7653 = var7.field3480[7];
-        this.field7656 = var7.field3480[8];
-        this.field7674 = var7.field3480[9];
-        this.field7675 = var7.field3480[10];
-        this.field7676 = var7.field3480[11];
-        this.field7677 = var7.field3480[12];
-        this.field7678 = var7.field3480[13];
-        this.field7669 = var7.field3480[14];
-        this.field7680 = var7.field3480[15];
+        this.field7665 = var7.entries[0];
+        this.field7666 = var7.entries[1];
+        this.field7667 = var7.entries[2];
+        this.field7668 = var7.entries[3];
+        this.field7654 = var7.entries[4];
+        this.field7670 = var7.entries[5];
+        this.field7663 = var7.entries[6];
+        this.field7653 = var7.entries[7];
+        this.field7656 = var7.entries[8];
+        this.field7674 = var7.entries[9];
+        this.field7675 = var7.entries[10];
+        this.field7676 = var7.entries[11];
+        this.field7677 = var7.entries[12];
+        this.field7678 = var7.entries[13];
+        this.field7669 = var7.entries[14];
+        this.field7680 = var7.entries[15];
         for (int var8 = 0; var8 < arg2 + arg2; var8++) {
             for (int var9 = 0; var9 < arg2 + arg2; var9++) {
                 if (arg3[var8][var9]) {
@@ -771,14 +771,14 @@ public class PureJavaFloorModel extends FloorModel {
 
     @ObfuscatedName("ym.x(III)V")
     public void method12949(int arg0, int arg1, int arg2) {
-        PureJavaToolkitContext var4 = this.field7658.method13206(Thread.currentThread());
-        var4.field868.field987 = 0;
+        PureJavaToolkitContext var4 = this.field7658.getContext(Thread.currentThread());
+        var4.rasteriser.field987 = 0;
         if (this.field7673 != null) {
-            this.method12950(arg0, arg1, var4.field871, var4, var4.field868, var4.field903, var4.field904, var4.field905, var4.field863, var4.field907, arg2);
+            this.method12950(arg0, arg1, var4.field871, var4, var4.rasteriser, var4.field903, var4.field904, var4.field905, var4.field863, var4.field907, arg2);
         } else if (this.field7660 != null) {
-            this.method12972(arg0, arg1, var4.field868, var4.field903, var4.field904, var4.field905, var4.field863, var4.field907, arg2);
+            this.method12972(arg0, arg1, var4.rasteriser, var4.field903, var4.field904, var4.field905, var4.field863, var4.field907, arg2);
         } else if (this.field7664 != null) {
-            this.method12951(arg0, arg1, var4.field871, var4, var4.field868, var4.field903, var4.field904, var4.field905, var4.field863, var4.field907, arg2);
+            this.method12951(arg0, arg1, var4.field871, var4, var4.rasteriser, var4.field903, var4.field904, var4.field905, var4.field863, var4.field907, arg2);
         }
     }
 
@@ -1069,10 +1069,10 @@ public class PureJavaFloorModel extends FloorModel {
                         if ((var129 - var130) * (var134 - var133) - (var131 - var130) * (var132 - var133) > 0.0F) {
                             arg4.field988 = var129 < 0.0F || var130 < 0.0F || var131 < 0.0F || var129 > arg4.field1010 || var130 > arg4.field1010 || var131 > arg4.field1010;
                             if (var135 >= 3.0F) {
-                                arg4.method1991(true, true, false, var132, var133, var134, var129, var130, var131, arg7[var126], arg7[var127], arg7[var128], arg3.field869);
+                                arg4.method1991(true, true, false, var132, var133, var134, var129, var130, var131, arg7[var126], arg7[var127], arg7[var128], arg3.fadeColour);
                             } else if (var135 > 0.0F) {
                                 if ((var97.field962[var126] & 0xFFFFFF) != 0) {
-                                    arg4.method1989(true, true, false, var132, var133, var134, var129, var130, var131, arg7[var126], arg7[var127], arg7[var128], ColourUtils.method15824(var97.field962[var126], arg3.field869, arg9[var126] * 255.0F), ColourUtils.method15824(var97.field962[var127], arg3.field869, arg9[var127] * 255.0F), ColourUtils.method15824(var97.field962[var128], arg3.field869, arg9[var128] * 255.0F));
+                                    arg4.method1989(true, true, false, var132, var133, var134, var129, var130, var131, arg7[var126], arg7[var127], arg7[var128], ColourUtils.method15824(var97.field962[var126], arg3.fadeColour, arg9[var126] * 255.0F), ColourUtils.method15824(var97.field962[var127], arg3.fadeColour, arg9[var127] * 255.0F), ColourUtils.method15824(var97.field962[var128], arg3.fadeColour, arg9[var128] * 255.0F));
                                 }
                             } else if ((var97.field962[var126] & 0xFFFFFF) != 0) {
                                 arg4.method1989(true, true, false, var132, var133, var134, var129, var130, var131, arg7[var126], arg7[var127], arg7[var128], var97.field962[var126], var97.field962[var127], var97.field962[var128]);
@@ -1095,19 +1095,19 @@ public class PureJavaFloorModel extends FloorModel {
                             arg4.field988 = var115 < 0.0F || var116 < 0.0F || var117 < 0.0F || var115 > arg4.field1010 || var116 > arg4.field1010 || var117 > arg4.field1010;
                             short var122 = var97.field963[var111];
                             if (var121 >= 3.0F) {
-                                arg4.method1991(true, true, false, var118, var119, var120, var115, var116, var117, arg7[var112], arg7[var113], arg7[var114], arg3.field869);
+                                arg4.method1991(true, true, false, var118, var119, var120, var115, var116, var117, arg7[var112], arg7[var113], arg7[var114], arg3.fadeColour);
                             } else if (var121 > 0.0F) {
                                 if (var122 != -1) {
                                     int var123 = -16777216;
                                     if (var122 != -1 && this.method12952(this.field7658.field400.method889(var122).field1270)) {
                                         var123 = -1694498816;
                                     }
-                                    arg4.method2015(true, true, false, var118, var119, var120, var115, var116, var117, arg7[var112], arg7[var113], arg7[var114], arg8[var112], arg8[var113], arg8[var114], (float) var97.field958[var112] / (float) this.field385, (float) var97.field958[var113] / (float) this.field385, (float) var97.field958[var114] / (float) this.field385, (float) var97.field960[var112] / (float) this.field385, (float) var97.field960[var113] / (float) this.field385, (float) var97.field960[var114] / (float) this.field385, var123 | var97.field962[var112] & 0xFFFFFF, var123 | var97.field962[var113] & 0xFFFFFF, var123 | var97.field962[var114] & 0xFFFFFF, arg3.field869, arg9[var112] * 255.0F, arg9[var113] * 255.0F, arg9[var114] * 255.0F, var122);
+                                    arg4.method2015(true, true, false, var118, var119, var120, var115, var116, var117, arg7[var112], arg7[var113], arg7[var114], arg8[var112], arg8[var113], arg8[var114], (float) var97.field958[var112] / (float) this.field385, (float) var97.field958[var113] / (float) this.field385, (float) var97.field958[var114] / (float) this.field385, (float) var97.field960[var112] / (float) this.field385, (float) var97.field960[var113] / (float) this.field385, (float) var97.field960[var114] / (float) this.field385, var123 | var97.field962[var112] & 0xFFFFFF, var123 | var97.field962[var113] & 0xFFFFFF, var123 | var97.field962[var114] & 0xFFFFFF, arg3.fadeColour, arg9[var112] * 255.0F, arg9[var113] * 255.0F, arg9[var114] * 255.0F, var122);
                                 } else if ((var97.field962[var112] & 0xFFFFFF) != 0) {
                                     if (var122 != -1 && this.method12952(this.field7658.field400.method889(var122).field1270)) {
                                         arg4.field987 = -1694498816;
                                     }
-                                    arg4.method1989(true, true, false, var118, var119, var120, var115, var116, var117, arg7[var112], arg7[var113], arg7[var114], ColourUtils.method1378(var97.field962[var112], (int) (arg9[var112] * 255.0F) << 24 | arg3.field869), ColourUtils.method1378(var97.field962[var113], (int) (arg9[var113] * 255.0F) << 24 | arg3.field869), ColourUtils.method1378(var97.field962[var114], (int) (arg9[var114] * 255.0F) << 24 | arg3.field869));
+                                    arg4.method1989(true, true, false, var118, var119, var120, var115, var116, var117, arg7[var112], arg7[var113], arg7[var114], ColourUtils.method1378(var97.field962[var112], (int) (arg9[var112] * 255.0F) << 24 | arg3.fadeColour), ColourUtils.method1378(var97.field962[var113], (int) (arg9[var113] * 255.0F) << 24 | arg3.fadeColour), ColourUtils.method1378(var97.field962[var114], (int) (arg9[var114] * 255.0F) << 24 | arg3.fadeColour));
                                     arg4.field987 = 0;
                                 }
                             } else if (var122 != -1) {
@@ -1367,19 +1367,19 @@ public class PureJavaFloorModel extends FloorModel {
             if ((var49 - var57) * (var51 - var55) - (var47 - var55) * (var53 - var57) > 0.0F) {
                 arg4.field988 = var51 < 0.0F || var55 < 0.0F || var47 < 0.0F || var51 > arg4.field1010 || var55 > arg4.field1010 || var47 > arg4.field1010;
                 if (var91 >= 3.0F) {
-                    arg4.method1991(true, true, false, var53, var57, var49, var51, var55, var47, var34, var35, var33, arg3.field869);
+                    arg4.method1991(true, true, false, var53, var57, var49, var51, var55, var47, var34, var35, var33, arg3.fadeColour);
                 } else if (var91 > 0.0F) {
                     if (var12.field954 >= 0) {
                         int var92 = -16777216;
                         if (var90) {
                             var92 = -1694498816;
                         }
-                        arg4.method2015(true, true, false, var53, var57, var49, var51, var55, var47, var34, var35, var33, var29, var31, var27, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, var92 | var12.field947 & 0xFFFFFF, var92 | var12.field951 & 0xFFFFFF, var92 | var12.field946 & 0xFFFFFF, arg3.field869, var19 * 255.0F, var20 * 255.0F, var18 * 255.0F, var12.field954);
+                        arg4.method2015(true, true, false, var53, var57, var49, var51, var55, var47, var34, var35, var33, var29, var31, var27, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, var92 | var12.field947 & 0xFFFFFF, var92 | var12.field951 & 0xFFFFFF, var92 | var12.field946 & 0xFFFFFF, arg3.fadeColour, var19 * 255.0F, var20 * 255.0F, var18 * 255.0F, var12.field954);
                     } else {
                         if (var90) {
                             arg4.field987 = 100;
                         }
-                        arg4.method1989(true, true, false, var53, var57, var49, var51, var55, var47, var34, var35, var33, ColourUtils.method1378(var12.field947, (int) (var19 * 255.0F) << 24 | arg3.field869), ColourUtils.method1378(var12.field951, (int) (var20 * 255.0F) << 24 | arg3.field869), ColourUtils.method1378(var12.field946, (int) (var18 * 255.0F) << 24 | arg3.field869));
+                        arg4.method1989(true, true, false, var53, var57, var49, var51, var55, var47, var34, var35, var33, ColourUtils.method1378(var12.field947, (int) (var19 * 255.0F) << 24 | arg3.fadeColour), ColourUtils.method1378(var12.field951, (int) (var20 * 255.0F) << 24 | arg3.fadeColour), ColourUtils.method1378(var12.field946, (int) (var18 * 255.0F) << 24 | arg3.fadeColour));
                         arg4.field987 = 0;
                     }
                 } else if (var12.field954 >= 0) {
@@ -1409,12 +1409,12 @@ public class PureJavaFloorModel extends FloorModel {
                             if (var90) {
                                 var95 = -1694498816;
                             }
-                            arg4.method2015(true, true, false, var45, var49, var57, var43, var47, var55, var32, var33, var35, var25, var27, var31, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, var95 | var12.field945 & 0xFFFFFF, var95 | var12.field946 & 0xFFFFFF, var95 | var12.field951 & 0xFFFFFF, arg3.field869, var17 * 255.0F, var18 * 255.0F, var20 * 255.0F, var12.field954);
+                            arg4.method2015(true, true, false, var45, var49, var57, var43, var47, var55, var32, var33, var35, var25, var27, var31, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, var95 | var12.field945 & 0xFFFFFF, var95 | var12.field946 & 0xFFFFFF, var95 | var12.field951 & 0xFFFFFF, arg3.fadeColour, var17 * 255.0F, var18 * 255.0F, var20 * 255.0F, var12.field954);
                         } else {
                             if (var90) {
                                 arg4.field987 = 100;
                             }
-                            arg4.method1989(true, true, false, var45, var49, var57, var43, var47, var55, var32, var33, var35, ColourUtils.method1378(var12.field945, (int) (var17 * 255.0F) << 24 | arg3.field869), ColourUtils.method1378(var12.field946, (int) (var18 * 255.0F) << 24 | arg3.field869), ColourUtils.method1378(var12.field951, (int) (var20 * 255.0F) << 24 | arg3.field869));
+                            arg4.method1989(true, true, false, var45, var49, var57, var43, var47, var55, var32, var33, var35, ColourUtils.method1378(var12.field945, (int) (var17 * 255.0F) << 24 | arg3.fadeColour), ColourUtils.method1378(var12.field946, (int) (var18 * 255.0F) << 24 | arg3.fadeColour), ColourUtils.method1378(var12.field951, (int) (var20 * 255.0F) << 24 | arg3.fadeColour));
                             arg4.field987 = 0;
                         }
                     } else if (var12.field954 >= 0) {
@@ -1431,7 +1431,7 @@ public class PureJavaFloorModel extends FloorModel {
                         arg4.field987 = 0;
                     }
                 } else {
-                    arg4.method1991(true, true, false, var45, var49, var57, var43, var47, var55, var32, var33, var35, arg3.field869);
+                    arg4.method1991(true, true, false, var45, var49, var57, var43, var47, var55, var32, var33, var35, arg3.fadeColour);
                 }
             }
         }
@@ -1500,13 +1500,13 @@ public class PureJavaFloorModel extends FloorModel {
                     int var37 = arg1 << this.field388;
                     if ((var12.field978[var27] & 0xFFFFFF) != 0) {
                         if (var12.field979[var27] == var12.field979[var28] && var12.field979[var27] == var12.field979[var29] && var12.field981[var27] == var12.field981[var28] && var12.field981[var27] == var12.field981[var29]) {
-                            arg4.method2015(true, true, false, var33, var34, var35, var30, var31, var32, arg7[var27], arg7[var28], arg7[var29], arg8[var27], arg8[var28], arg8[var29], (float) (var12.field975[var27] + var36) / (float) var12.field981[var27], (float) (var12.field975[var28] + var36) / (float) var12.field981[var28], (float) (var12.field975[var29] + var36) / (float) var12.field981[var29], (float) (var12.field977[var27] + var37) / (float) var12.field981[var27], (float) (var12.field977[var28] + var37) / (float) var12.field981[var28], (float) (var12.field977[var29] + var37) / (float) var12.field981[var29], var12.field978[var27], var12.field978[var28], var12.field978[var29], arg3.field869, arg9[var27] * 255.0F, arg9[var28] * 255.0F, arg9[var29] * 255.0F, var12.field979[var27]);
+                            arg4.method2015(true, true, false, var33, var34, var35, var30, var31, var32, arg7[var27], arg7[var28], arg7[var29], arg8[var27], arg8[var28], arg8[var29], (float) (var12.field975[var27] + var36) / (float) var12.field981[var27], (float) (var12.field975[var28] + var36) / (float) var12.field981[var28], (float) (var12.field975[var29] + var36) / (float) var12.field981[var29], (float) (var12.field977[var27] + var37) / (float) var12.field981[var27], (float) (var12.field977[var28] + var37) / (float) var12.field981[var28], (float) (var12.field977[var29] + var37) / (float) var12.field981[var29], var12.field978[var27], var12.field978[var28], var12.field978[var29], arg3.fadeColour, arg9[var27] * 255.0F, arg9[var28] * 255.0F, arg9[var29] * 255.0F, var12.field979[var27]);
                         } else {
-                            arg4.method1995(true, true, false, var33, var34, var35, var30, var31, var32, arg7[var27], arg7[var28], arg7[var29], arg8[var27], arg8[var28], arg8[var29], (float) (var12.field975[var27] + var36) / var25, (float) (var12.field975[var28] + var36) / var25, (float) (var12.field975[var29] + var36) / var25, (float) (var12.field977[var27] + var37) / var25, (float) (var12.field977[var28] + var37) / var25, (float) (var12.field977[var29] + var37) / var25, var12.field978[var27], var12.field978[var28], var12.field978[var29], arg3.field869, arg9[var27] * 255.0F, arg9[var28] * 255.0F, arg9[var29] * 255.0F, var12.field979[var27], var25 / (float) var12.field981[var27], var12.field979[var28], var25 / (float) var12.field981[var28], var12.field979[var29], var25 / (float) var12.field981[var29]);
+                            arg4.method1995(true, true, false, var33, var34, var35, var30, var31, var32, arg7[var27], arg7[var28], arg7[var29], arg8[var27], arg8[var28], arg8[var29], (float) (var12.field975[var27] + var36) / var25, (float) (var12.field975[var28] + var36) / var25, (float) (var12.field975[var29] + var36) / var25, (float) (var12.field977[var27] + var37) / var25, (float) (var12.field977[var28] + var37) / var25, (float) (var12.field977[var29] + var37) / var25, var12.field978[var27], var12.field978[var28], var12.field978[var29], arg3.fadeColour, arg9[var27] * 255.0F, arg9[var28] * 255.0F, arg9[var29] * 255.0F, var12.field979[var27], var25 / (float) var12.field981[var27], var12.field979[var28], var25 / (float) var12.field981[var28], var12.field979[var29], var25 / (float) var12.field981[var29]);
                         }
                     }
                 } else {
-                    arg4.method1991(true, true, false, var33, var34, var35, var30, var31, var32, arg7[var27], arg7[var28], arg7[var29], arg3.field869);
+                    arg4.method1991(true, true, false, var33, var34, var35, var30, var31, var32, arg7[var27], arg7[var28], arg7[var29], arg3.fadeColour);
                 }
             }
         }
@@ -1527,8 +1527,8 @@ public class PureJavaFloorModel extends FloorModel {
 
     @ObfuscatedName("ym.s(IIIIIII[[Z)V")
     public void method191(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, boolean[][] arg7) {
-        PureJavaToolkitContext var9 = this.field7658.method13206(Thread.currentThread());
-        PureJavaRasteriser var10 = var9.field868;
+        PureJavaToolkitContext var9 = this.field7658.getContext(Thread.currentThread());
+        PureJavaRasteriser var10 = var9.rasteriser;
         var10.field987 = 0;
         var10.field988 = true;
         this.field7658.method13198();

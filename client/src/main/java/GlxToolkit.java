@@ -464,14 +464,14 @@ public final class GlxToolkit extends GpuToolkit {
     public void method13764(Matrix4x4 arg0, Matrix4x4 arg1, Matrix4x4 arg2) {
         OpenGL.glMatrixMode(5888);
         this.field8264.method5383(arg0, arg1);
-        OpenGL.glLoadMatrixf(this.field8264.field3480, 0);
+        OpenGL.glLoadMatrixf(this.field8264.entries, 0);
         OpenGL.glMatrixMode(5889);
-        OpenGL.glLoadMatrixf(arg2.field3480, 0);
+        OpenGL.glLoadMatrixf(arg2.entries, 0);
     }
 
     @ObfuscatedName("ahv.ph(Lka;)V")
     public void method13638(Matrix4x4 arg0) {
-        float[] var2 = arg0.field3480;
+        float[] var2 = arg0.entries;
         var2[1] = -var2[1];
         var2[5] = -var2[5];
         var2[9] = -var2[9];
@@ -527,7 +527,7 @@ public final class GlxToolkit extends GpuToolkit {
     @ObfuscatedName("ahv.qx()V")
     public void method13842() {
         OpenGL.glMatrixMode(5888);
-        OpenGL.glLoadMatrixf(this.field8258.field3480, 0);
+        OpenGL.glLoadMatrixf(this.field8258.entries, 0);
         OpenGL.glLightfv(16384, 4611, this.field8272, 0);
         OpenGL.glLightfv(16385, 4611, this.field8308, 0);
     }
@@ -550,7 +550,7 @@ public final class GlxToolkit extends GpuToolkit {
     @ObfuscatedName("ahv.qo()V")
     public void method13545() {
         OpenGL.glMatrixMode(5888);
-        OpenGL.glLoadMatrixf(this.field8258.field3480, 0);
+        OpenGL.glLoadMatrixf(this.field8258.entries, 0);
         int var1;
         for (var1 = 0; var1 < this.field8324; var1++) {
             Light var2 = this.field8365[var1];

@@ -7,23 +7,23 @@ public class Node {
     public long field4228;
 
     @ObfuscatedName("nz.j")
-    public Node field4226;
+    public Node prev;
 
     @ObfuscatedName("nz.a")
-    public Node field4227;
+    public Node next;
 
     @ObfuscatedName("nz.p(I)V")
     public void remove() {
-        if (this.field4227 != null) {
-            this.field4227.field4226 = this.field4226;
-            this.field4226.field4227 = this.field4227;
-            this.field4226 = null;
-            this.field4227 = null;
+        if (this.next != null) {
+            this.next.prev = this.prev;
+            this.prev.next = this.next;
+            this.prev = null;
+            this.next = null;
         }
     }
 
     @ObfuscatedName("nz.w(B)Z")
     public boolean method6982() {
-        return this.field4227 != null;
+        return this.next != null;
     }
 }

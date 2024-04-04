@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("aiq")
-public class OggVorbisStreamRelated1 extends AudioBuss {
+public class VorbisAudioBuss extends AudioBuss {
 
     @ObfuscatedName("aiq.f")
     public static PrioritizedCache field10291 = new PrioritizedCache(64, PrioritizedCacheMode.field3710);
@@ -30,7 +30,7 @@ public class OggVorbisStreamRelated1 extends AudioBuss {
     @ObfuscatedName("aiq.b")
     public boolean field10284;
 
-    public OggVorbisStreamRelated1(int arg0) {
+    public VorbisAudioBuss(int arg0) {
         this.field10282 = arg0;
     }
 
@@ -41,13 +41,13 @@ public class OggVorbisStreamRelated1 extends AudioBuss {
     }
 
     @ObfuscatedName("aiq.m([III)V")
-    public synchronized void method15034(int[] arg0, int arg1, int arg2) {
+    public synchronized void read(int[] arg0, int arg1, int arg2) {
         if (this.field10284) {
             return;
         }
         if (this.method16468() != null) {
             int var4 = arg1 + arg2;
-            if (Statics.field4016) {
+            if (Statics.stereo) {
                 var4 <<= 0x1;
             }
             byte var5 = 0;
@@ -62,7 +62,7 @@ public class OggVorbisStreamRelated1 extends AudioBuss {
                 }
                 short[][] var8 = var7.field9559;
                 while (arg1 < var4 && this.field10283 < var8[0].length) {
-                    if (Statics.field4016) {
+                    if (Statics.stereo) {
                         arg0[arg1++] = this.field10288 * var8[var5][this.field10283];
                         arg0[arg1++] = this.field10289 * var8[var6][this.field10283];
                     } else {
@@ -82,7 +82,7 @@ public class OggVorbisStreamRelated1 extends AudioBuss {
     }
 
     @ObfuscatedName("aiq.t(I)V")
-    public synchronized void method15046(int arg0) {
+    public synchronized void skip(int arg0) {
         if (this.field10284) {
             return;
         }
@@ -154,7 +154,7 @@ public class OggVorbisStreamRelated1 extends AudioBuss {
             return -1.0D;
         } else {
             OggVorbisStreamRelated2 var1 = (OggVorbisStreamRelated2) this.field10285.last();
-            return var1 == null ? -1.0D : var1.field9560 - (double) ((float) var1.field9559[0].length / (float) Statics.field4015);
+            return var1 == null ? -1.0D : var1.field9560 - (double) ((float) var1.field9559[0].length / (float) Statics.sampleRate);
         }
     }
 
@@ -174,12 +174,12 @@ public class OggVorbisStreamRelated1 extends AudioBuss {
     }
 
     @ObfuscatedName("aiq.a()Ladc;")
-    public AudioBuss method15032() {
+    public AudioBuss nextSubStream() {
         return null;
     }
 
     @ObfuscatedName("aiq.j()Ladc;")
-    public AudioBuss method15031() {
+    public AudioBuss firstSubStream() {
         return null;
     }
 }

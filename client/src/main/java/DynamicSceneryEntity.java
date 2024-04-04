@@ -16,9 +16,9 @@ public class DynamicSceneryEntity extends PrimaryLayerEntity implements Location
     public boolean field7527 = true;
 
     public DynamicSceneryEntity(Scene arg0, RendererToolkit arg1, LocTypeList arg2, LocType arg3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean arg9, int arg10, int arg11, int arg12, int arg13, int arg14, int arg15, int arg16) {
-        super(arg0, arg4, arg5, arg6, arg7, arg8, arg10, arg11, arg12, arg13, arg3.field6527 == 1, method3987(arg14, arg15));
+        super(arg0, arg4, arg5, arg6, arg7, arg8, arg10, arg11, arg12, arg13, arg3.raiseobject == 1, method3987(arg14, arg15));
         this.field7524 = new DynamicLoc(arg1, arg2, arg3, arg14, arg15, this.level, arg5, this, arg9, arg16);
-        this.field7526 = arg3.field6493 != 0 && !arg9;
+        this.field7526 = arg3.active != 0 && !arg9;
         this.method15642(1);
     }
 
@@ -115,7 +115,7 @@ public class DynamicSceneryEntity extends PrimaryLayerEntity implements Location
     }
 
     @ObfuscatedName("xz.u(B)I")
-    public int method2401() {
+    public int getType() {
         return this.field7524.field1219;
     }
 

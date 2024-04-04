@@ -58,7 +58,7 @@ public class SoundRelated1 extends Node {
     public int field9383;
 
     @ObfuscatedName("aci.h")
-    public SoundStream field9401;
+    public SoundAudioBuss field9401;
 
     @ObfuscatedName("aci.r")
     public int field9392;

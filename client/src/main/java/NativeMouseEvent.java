@@ -158,12 +158,12 @@ public class NativeMouseEvent extends BasicMouseEvent {
     }
 
     @ObfuscatedName("ajn.j(B)I")
-    public int method15182() {
+    public int getX() {
         return this.field10441;
     }
 
     @ObfuscatedName("ajn.a(I)I")
-    public int method15183() {
+    public int getY() {
         return this.field10472;
     }
 }

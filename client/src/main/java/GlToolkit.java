@@ -755,7 +755,7 @@ public class GlToolkit extends RendererToolkit {
 
     @ObfuscatedName("yq.w()V")
     public void method443() {
-        for (Node var1 = this.field8170.last(); var1 != null; var1 = this.field8170.method11567()) {
+        for (Node var1 = this.field8170.last(); var1 != null; var1 = this.field8170.prev()) {
             ((GlHeap) var1).method16226();
         }
         if (this.field8093 != null) {
@@ -1301,10 +1301,10 @@ public class GlToolkit extends RendererToolkit {
 
     @ObfuscatedName("yq.do(FFF[F)V")
     public void method550(float arg0, float arg1, float arg2, float[] arg3) {
-        float var5 = this.field8120.field3480[11] * arg2 + this.field8120.field3480[7] * arg1 + this.field8120.field3480[3] * arg0 + this.field8120.field3480[15];
-        float var6 = this.field8120.field3480[8] * arg2 + this.field8120.field3480[4] * arg1 + this.field8120.field3480[0] * arg0 + this.field8120.field3480[12];
-        float var7 = this.field8120.field3480[9] * arg2 + this.field8120.field3480[5] * arg1 + this.field8120.field3480[1] * arg0 + this.field8120.field3480[13];
-        float var8 = this.field8116.field3480[10] * arg2 + this.field8116.field3480[6] * arg1 + this.field8116.field3480[2] * arg0 + this.field8116.field3480[14];
+        float var5 = this.field8120.entries[11] * arg2 + this.field8120.entries[7] * arg1 + this.field8120.entries[3] * arg0 + this.field8120.entries[15];
+        float var6 = this.field8120.entries[8] * arg2 + this.field8120.entries[4] * arg1 + this.field8120.entries[0] * arg0 + this.field8120.entries[12];
+        float var7 = this.field8120.entries[9] * arg2 + this.field8120.entries[5] * arg1 + this.field8120.entries[1] * arg0 + this.field8120.entries[13];
+        float var8 = this.field8116.entries[10] * arg2 + this.field8116.entries[6] * arg1 + this.field8116.entries[2] * arg0 + this.field8116.entries[14];
         arg3[0] = this.field8124 * var6 / var5 + this.field8123;
         arg3[1] = this.field8224 * var7 / var5 + this.field8125;
         arg3[2] = var8;
@@ -1312,28 +1312,28 @@ public class GlToolkit extends RendererToolkit {
 
     @ObfuscatedName("yq.dg(FFF[F)V")
     public void method567(float arg0, float arg1, float arg2, float[] arg3) {
-        float var5 = this.field8120.field3480[10] * arg2 + this.field8120.field3480[6] * arg1 + this.field8120.field3480[2] * arg0 + this.field8120.field3480[14];
-        float var6 = this.field8120.field3480[11] * arg2 + this.field8120.field3480[7] * arg1 + this.field8120.field3480[3] * arg0 + this.field8120.field3480[15];
+        float var5 = this.field8120.entries[10] * arg2 + this.field8120.entries[6] * arg1 + this.field8120.entries[2] * arg0 + this.field8120.entries[14];
+        float var6 = this.field8120.entries[11] * arg2 + this.field8120.entries[7] * arg1 + this.field8120.entries[3] * arg0 + this.field8120.entries[15];
         if (var5 < -var6 || var5 > var6) {
             arg3[2] = Float.NaN;
             arg3[1] = Float.NaN;
             arg3[0] = Float.NaN;
             return;
         }
-        float var7 = this.field8120.field3480[8] * arg2 + this.field8120.field3480[4] * arg1 + this.field8120.field3480[0] * arg0 + this.field8120.field3480[12];
+        float var7 = this.field8120.entries[8] * arg2 + this.field8120.entries[4] * arg1 + this.field8120.entries[0] * arg0 + this.field8120.entries[12];
         if (var7 < -var6 || var7 > var6) {
             arg3[2] = Float.NaN;
             arg3[1] = Float.NaN;
             arg3[0] = Float.NaN;
             return;
         }
-        float var8 = this.field8120.field3480[9] * arg2 + this.field8120.field3480[5] * arg1 + this.field8120.field3480[1] * arg0 + this.field8120.field3480[13];
+        float var8 = this.field8120.entries[9] * arg2 + this.field8120.entries[5] * arg1 + this.field8120.entries[1] * arg0 + this.field8120.entries[13];
         if (var8 < -var6 || var8 > var6) {
             arg3[2] = Float.NaN;
             arg3[1] = Float.NaN;
             arg3[0] = Float.NaN;
         } else {
-            float var9 = this.field8116.field3480[10] * arg2 + this.field8116.field3480[6] * arg1 + this.field8116.field3480[2] * arg0 + this.field8116.field3480[14];
+            float var9 = this.field8116.entries[10] * arg2 + this.field8116.entries[6] * arg1 + this.field8116.entries[2] * arg0 + this.field8116.entries[14];
             arg3[0] = this.field8124 * var7 / var6 + this.field8123;
             arg3[1] = this.field8224 * var8 / var6 + this.field8125;
             arg3[2] = var9;
@@ -1343,25 +1343,25 @@ public class GlToolkit extends RendererToolkit {
     @ObfuscatedName("yq.bp(IIIIII)I")
     public int method500(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
         int var7 = 0;
-        float var8 = this.field8120.field3480[10] * (float) arg2 + this.field8120.field3480[6] * (float) arg1 + this.field8120.field3480[2] * (float) arg0 + this.field8120.field3480[14];
-        float var9 = this.field8120.field3480[10] * (float) arg5 + this.field8120.field3480[6] * (float) arg4 + this.field8120.field3480[2] * (float) arg3 + this.field8120.field3480[14];
-        float var10 = this.field8120.field3480[11] * (float) arg2 + this.field8120.field3480[7] * (float) arg1 + this.field8120.field3480[3] * (float) arg0 + this.field8120.field3480[15];
-        float var11 = this.field8120.field3480[11] * (float) arg5 + this.field8120.field3480[7] * (float) arg4 + this.field8120.field3480[3] * (float) arg3 + this.field8120.field3480[15];
+        float var8 = this.field8120.entries[10] * (float) arg2 + this.field8120.entries[6] * (float) arg1 + this.field8120.entries[2] * (float) arg0 + this.field8120.entries[14];
+        float var9 = this.field8120.entries[10] * (float) arg5 + this.field8120.entries[6] * (float) arg4 + this.field8120.entries[2] * (float) arg3 + this.field8120.entries[14];
+        float var10 = this.field8120.entries[11] * (float) arg2 + this.field8120.entries[7] * (float) arg1 + this.field8120.entries[3] * (float) arg0 + this.field8120.entries[15];
+        float var11 = this.field8120.entries[11] * (float) arg5 + this.field8120.entries[7] * (float) arg4 + this.field8120.entries[3] * (float) arg3 + this.field8120.entries[15];
         if (var8 < -var10 && var9 < -var11) {
             var7 |= 0x10;
         } else if (var8 > var10 && var9 > var11) {
             var7 |= 0x20;
         }
-        float var12 = this.field8120.field3480[8] * (float) arg2 + this.field8120.field3480[4] * (float) arg1 + this.field8120.field3480[0] * (float) arg0 + this.field8120.field3480[12];
-        float var13 = this.field8120.field3480[8] * (float) arg5 + this.field8120.field3480[4] * (float) arg4 + this.field8120.field3480[0] * (float) arg3 + this.field8120.field3480[12];
+        float var12 = this.field8120.entries[8] * (float) arg2 + this.field8120.entries[4] * (float) arg1 + this.field8120.entries[0] * (float) arg0 + this.field8120.entries[12];
+        float var13 = this.field8120.entries[8] * (float) arg5 + this.field8120.entries[4] * (float) arg4 + this.field8120.entries[0] * (float) arg3 + this.field8120.entries[12];
         if (var12 < -var10 && var13 < -var11) {
             var7 |= 0x1;
         }
         if (var12 > var10 && var13 > var11) {
             var7 |= 0x2;
         }
-        float var14 = this.field8120.field3480[9] * (float) arg2 + this.field8120.field3480[5] * (float) arg1 + this.field8120.field3480[1] * (float) arg0 + this.field8120.field3480[13];
-        float var15 = this.field8120.field3480[9] * (float) arg5 + this.field8120.field3480[5] * (float) arg4 + this.field8120.field3480[1] * (float) arg3 + this.field8120.field3480[13];
+        float var14 = this.field8120.entries[9] * (float) arg2 + this.field8120.entries[5] * (float) arg1 + this.field8120.entries[1] * (float) arg0 + this.field8120.entries[13];
+        float var15 = this.field8120.entries[9] * (float) arg5 + this.field8120.entries[5] * (float) arg4 + this.field8120.entries[1] * (float) arg3 + this.field8120.entries[13];
         if (var14 < -var10 && var15 < -var11) {
             var7 |= 0x4;
         }
@@ -1539,7 +1539,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.di(ILdk;)V")
-    public void method547(int arg0, WaterFogData arg1) {
+    public void setWaterFog(int arg0, WaterFogData arg1) {
         if (!this.field8174) {
             throw new RuntimeException("");
         }
@@ -1711,12 +1711,12 @@ public class GlToolkit extends RendererToolkit {
     @ObfuscatedName("yq.oq(Lka;)V")
     public final void method13282(Matrix4x4 arg0) {
         OpenGL.glPushMatrix();
-        OpenGL.glMultMatrixf(arg0.field3480, 0);
+        OpenGL.glMultMatrixf(arg0.entries, 0);
     }
 
     @ObfuscatedName("yq.ob(Lka;)V")
     public final void method13360(Matrix4x4 arg0) {
-        OpenGL.glLoadMatrixf(arg0.field3480, 0);
+        OpenGL.glLoadMatrixf(arg0.entries, 0);
     }
 
     @ObfuscatedName("yq.ox()V")
@@ -1745,7 +1745,7 @@ public class GlToolkit extends RendererToolkit {
     @ObfuscatedName("yq.oe()V")
     public final void method13284() {
         OpenGL.glLoadIdentity();
-        OpenGL.glMultMatrixf(this.field8116.field3480, 0);
+        OpenGL.glMultMatrixf(this.field8116.entries, 0);
         if (this.field8175) {
             this.field8082.field1073.method12794();
         }
@@ -1795,7 +1795,7 @@ public class GlToolkit extends RendererToolkit {
             return;
         }
         this.field8135 = 2;
-        this.method13290(this.field8118.field3480);
+        this.method13290(this.field8118.entries);
         this.method13284();
         this.method13279();
         this.method13460();
@@ -1808,9 +1808,9 @@ public class GlToolkit extends RendererToolkit {
         this.field8196 = this.field8118.method5399();
         this.method13296();
         if (this.field8135 == 2) {
-            this.method13290(this.field8118.field3480);
+            this.method13290(this.field8118.entries);
         } else if (this.field8135 == 1) {
-            this.method13290(this.field8119.field3480);
+            this.method13290(this.field8119.entries);
         }
     }
 

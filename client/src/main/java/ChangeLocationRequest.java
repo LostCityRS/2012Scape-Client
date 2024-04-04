@@ -54,7 +54,7 @@ public final class ChangeLocationRequest extends Node {
     @ObfuscatedName("zb.u(IIIIIIII)V")
     public static void method13876(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
         ChangeLocationRequest var7 = null;
-        for (ChangeLocationRequest var8 = (ChangeLocationRequest) field9278.last(); var8 != null; var8 = (ChangeLocationRequest) field9278.method11567()) {
+        for (ChangeLocationRequest var8 = (ChangeLocationRequest) field9278.last(); var8 != null; var8 = (ChangeLocationRequest) field9278.prev()) {
             if (var8.field9281 == arg0 && var8.field9291 == arg1 && var8.field9280 == arg2 && var8.field9293 == arg3) {
                 var7 = var8;
                 break;
@@ -81,7 +81,7 @@ public final class ChangeLocationRequest extends Node {
     @ObfuscatedName("abz.j(IIIIIILto;I)V")
     public static void method14721(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, LocTypeCustomisation arg6) {
         ChangeLocationRequest var7 = null;
-        for (ChangeLocationRequest var8 = (ChangeLocationRequest) field9292.last(); var8 != null; var8 = (ChangeLocationRequest) field9292.method11567()) {
+        for (ChangeLocationRequest var8 = (ChangeLocationRequest) field9292.last(); var8 != null; var8 = (ChangeLocationRequest) field9292.prev()) {
             if (var8.field9281 == arg0 && var8.field9291 == arg1 && var8.field9280 == arg2 && var8.field9293 == arg3) {
                 var7 = var8;
                 break;
@@ -104,7 +104,7 @@ public final class ChangeLocationRequest extends Node {
 
     @ObfuscatedName("th.a(I)V")
     public static final void method11709() {
-        for (ChangeLocationRequest var0 = (ChangeLocationRequest) field9278.last(); var0 != null; var0 = (ChangeLocationRequest) field9278.method11567()) {
+        for (ChangeLocationRequest var0 = (ChangeLocationRequest) field9278.last(); var0 != null; var0 = (ChangeLocationRequest) field9278.prev()) {
             if (var0.field9290) {
                 var0.remove();
             } else {
@@ -114,7 +114,7 @@ public final class ChangeLocationRequest extends Node {
                 }
             }
         }
-        for (ChangeLocationRequest var1 = (ChangeLocationRequest) field9292.last(); var1 != null; var1 = (ChangeLocationRequest) field9292.method11567()) {
+        for (ChangeLocationRequest var1 = (ChangeLocationRequest) field9292.last(); var1 != null; var1 = (ChangeLocationRequest) field9292.prev()) {
             if (var1.field9290) {
                 var1.remove();
             } else {
@@ -147,7 +147,7 @@ public final class ChangeLocationRequest extends Node {
             arg0.field9284 = 0;
             arg0.field9283 = 0;
         } else {
-            arg0.field9282 = var2.method2401();
+            arg0.field9282 = var2.getType();
             arg0.field9284 = var2.method2390();
             arg0.field9283 = var2.method2391();
         }
@@ -155,10 +155,10 @@ public final class ChangeLocationRequest extends Node {
 
     @ObfuscatedName("fx.c(I)V")
     public static final void method3590() {
-        for (ChangeLocationRequest var0 = (ChangeLocationRequest) field9278.last(); var0 != null; var0 = (ChangeLocationRequest) field9278.method11567()) {
+        for (ChangeLocationRequest var0 = (ChangeLocationRequest) field9278.last(); var0 != null; var0 = (ChangeLocationRequest) field9278.prev()) {
             method4624(var0, false);
         }
-        for (ChangeLocationRequest var1 = (ChangeLocationRequest) field9292.last(); var1 != null; var1 = (ChangeLocationRequest) field9292.method11567()) {
+        for (ChangeLocationRequest var1 = (ChangeLocationRequest) field9292.last(); var1 != null; var1 = (ChangeLocationRequest) field9292.prev()) {
             method4624(var1, true);
         }
     }
@@ -166,7 +166,7 @@ public final class ChangeLocationRequest extends Node {
     @ObfuscatedName("iz.m(Lach;ZI)V")
     public static final void method4624(ChangeLocationRequest arg0, boolean arg1) {
         if (arg0.field9290) {
-            if (arg0.field9282 < 0 || ClientMapLoader.method8598(client.world.method6103(), arg0.field9282, arg0.field9284)) {
+            if (arg0.field9282 < 0 || ClientMapLoader.method8598(client.world.getLocTypeList(), arg0.field9282, arg0.field9284)) {
                 if (arg1) {
                     method12070(arg0.field9281, arg0.field9293, arg0.field9291, arg0.field9280, null);
                 } else {
@@ -174,7 +174,7 @@ public final class ChangeLocationRequest extends Node {
                 }
                 arg0.remove();
             }
-        } else if (arg0.field9289 && arg0.field9291 >= 1 && arg0.field9280 >= 1 && arg0.field9291 <= client.world.getSizeX() - 2 && arg0.field9280 <= client.world.getSizeZ() - 2 && (arg0.field9285 < 0 || ClientMapLoader.method8598(client.world.method6103(), arg0.field9285, arg0.field9287))) {
+        } else if (arg0.field9289 && arg0.field9291 >= 1 && arg0.field9280 >= 1 && arg0.field9291 <= client.world.getSizeX() - 2 && arg0.field9280 <= client.world.getSizeZ() - 2 && (arg0.field9285 < 0 || ClientMapLoader.method8598(client.world.getLocTypeList(), arg0.field9285, arg0.field9287))) {
             if (arg1) {
                 method12070(arg0.field9281, arg0.field9293, arg0.field9291, arg0.field9280, arg0.field9288);
             } else {

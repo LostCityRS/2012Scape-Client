@@ -73,7 +73,7 @@ public class Js5DiskCache implements Runnable {
     public void method5722(Js5WorkerRequest arg0) {
         DualIterableQueue var2 = this.field3588;
         synchronized (this.field3588) {
-            this.field3588.method11728(arg0);
+            this.field3588.addFirst(arg0);
             this.field3587++;
             this.field3588.notifyAll();
         }

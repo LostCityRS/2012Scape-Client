@@ -34,7 +34,7 @@ public class Sound {
     public VariableRateSoundPacket field4185;
 
     @ObfuscatedName("np.q")
-    public SoundStream field4188;
+    public SoundAudioBuss field4188;
 
     @ObfuscatedName("np.p")
     public int field4180 = -1;

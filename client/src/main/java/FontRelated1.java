@@ -43,7 +43,7 @@ public class FontRelated1 extends Font {
 
     @ObfuscatedName("zw.UA(CIIIZ)V")
     public void UA(char arg0, int arg1, int arg2, int arg3, boolean arg4) {
-        if (this.field8430.field8001 == null) {
+        if (this.field8430.colour == null) {
             return;
         }
         int var6 = this.field8431[arg0] + arg1;
@@ -55,20 +55,20 @@ public class FontRelated1 extends Font {
         int var12 = var10 - var8;
         int var13 = 0;
         int var14 = 0;
-        if (var7 < this.field8430.field8027) {
-            int var15 = this.field8430.field8027 - var7;
+        if (var7 < this.field8430.clipMaxX) {
+            int var15 = this.field8430.clipMaxX - var7;
             var9 -= var15;
-            var7 = this.field8430.field8027;
+            var7 = this.field8430.clipMaxX;
             var14 += var8 * var15;
             var11 += var10 * var15;
         }
         if (var7 + var9 > this.field8430.field8008) {
             var9 -= var7 + var9 - this.field8430.field8008;
         }
-        if (var6 < this.field8430.field8005) {
-            int var16 = this.field8430.field8005 - var6;
+        if (var6 < this.field8430.clipMinX) {
+            int var16 = this.field8430.clipMinX - var6;
             var8 -= var16;
-            var6 = this.field8430.field8005;
+            var6 = this.field8430.clipMinX;
             var14 += var16;
             var11 += var16;
             var13 += var16;
@@ -84,9 +84,9 @@ public class FontRelated1 extends Font {
             return;
         }
         if (arg4) {
-            this.method13855(this.field8426[arg0], this.field8430.field8001, arg3, var14, var11, var8, var9, var12, var13);
+            this.method13855(this.field8426[arg0], this.field8430.colour, arg3, var14, var11, var8, var9, var12, var13);
         } else {
-            this.method13861(this.field8426[arg0], this.field8430.field8001, this.field8428, var14, var11, var8, var9, var12, var13);
+            this.method13861(this.field8426[arg0], this.field8430.colour, this.field8428, var14, var11, var8, var9, var12, var13);
         }
     }
 
@@ -176,7 +176,7 @@ public class FontRelated1 extends Font {
 
     @ObfuscatedName("zw.b(CIIIZLta;II)V")
     public void method867(char arg0, int arg1, int arg2, int arg3, boolean arg4, GraphicsRelated arg5, int arg6, int arg7) {
-        if (this.field8430.field8001 == null) {
+        if (this.field8430.colour == null) {
             return;
         }
         if (arg5 == null) {
@@ -192,20 +192,20 @@ public class FontRelated1 extends Font {
         int var15 = var13 - var11;
         int var16 = 0;
         int var17 = 0;
-        if (var10 < this.field8430.field8027) {
-            int var18 = this.field8430.field8027 - var10;
+        if (var10 < this.field8430.clipMaxX) {
+            int var18 = this.field8430.clipMaxX - var10;
             var12 -= var18;
-            var10 = this.field8430.field8027;
+            var10 = this.field8430.clipMaxX;
             var17 += var11 * var18;
             var14 += var13 * var18;
         }
         if (var10 + var12 > this.field8430.field8008) {
             var12 -= var10 + var12 - this.field8430.field8008;
         }
-        if (var9 < this.field8430.field8005) {
-            int var19 = this.field8430.field8005 - var9;
+        if (var9 < this.field8430.clipMinX) {
+            int var19 = this.field8430.clipMinX - var9;
             var11 -= var19;
-            var9 = this.field8430.field8005;
+            var9 = this.field8430.clipMinX;
             var17 += var19;
             var14 += var19;
             var16 += var19;
@@ -221,9 +221,9 @@ public class FontRelated1 extends Font {
             return;
         }
         if (arg4) {
-            this.method13857(this.field8426[arg0], this.field8430.field8001, arg3, var17, var14, var11, var12, var15, var16, var9, var10, this.field8427[arg0], arg5, arg6, arg7);
+            this.method13857(this.field8426[arg0], this.field8430.colour, arg3, var17, var14, var11, var12, var15, var16, var9, var10, this.field8427[arg0], arg5, arg6, arg7);
         } else {
-            this.method13856(this.field8426[arg0], this.field8430.field8001, this.field8428, arg3, var17, var14, var11, var12, var15, var16, var9, var10, this.field8427[arg0], arg5, arg6, arg7);
+            this.method13856(this.field8426[arg0], this.field8430.colour, this.field8428, arg3, var17, var14, var11, var12, var15, var16, var9, var10, this.field8427[arg0], arg5, arg6, arg7);
         }
     }
 
@@ -232,7 +232,7 @@ public class FontRelated1 extends Font {
         PureJavaGraphicsRelated var17 = (PureJavaGraphicsRelated) arg13;
         int[] var18 = var17.field7648;
         int[] var19 = var17.field7649;
-        int var20 = arg10 - this.field8430.field8005;
+        int var20 = arg10 - this.field8430.clipMinX;
         int var21 = arg11;
         if (arg15 > arg11) {
             var21 = arg15;
@@ -288,7 +288,7 @@ public class FontRelated1 extends Font {
         PureJavaGraphicsRelated var16 = (PureJavaGraphicsRelated) arg12;
         int[] var17 = var16.field7648;
         int[] var18 = var16.field7649;
-        int var19 = arg9 - this.field8430.field8005;
+        int var19 = arg9 - this.field8430.clipMinX;
         int var20 = arg10;
         if (arg14 > arg10) {
             var20 = arg14;

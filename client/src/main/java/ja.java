@@ -196,10 +196,10 @@ public class ja extends RendererToolkit implements ua {
         this.field452 = null;
         this.field437 = null;
         this.field441 = null;
-        for (ba var1 = (ba) this.field438.last(); var1 != null; var1 = (ba) this.field438.method11567()) {
+        for (ba var1 = (ba) this.field438.last(); var1 != null; var1 = (ba) this.field438.prev()) {
             var1.ha();
         }
-        this.field438.method11557();
+        this.field438.clearBridged();
         this.da();
         if (this.field449) {
             ColourUtils.method2790(false, true);
@@ -214,7 +214,7 @@ public class ja extends RendererToolkit implements ua {
     public void method444(int arg0) {
         cp.method2359();
         this.Y(arg0);
-        for (ba var2 = (ba) this.field438.last(); var2 != null; var2 = (ba) this.field438.method11567()) {
+        for (ba var2 = (ba) this.field438.last(); var2 != null; var2 = (ba) this.field438.prev()) {
             var2.u();
         }
     }
@@ -344,25 +344,25 @@ public class ja extends RendererToolkit implements ua {
     @ObfuscatedName("ja.bp(IIIIII)I")
     public int method500(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
         int var7 = 0;
-        float var8 = this.field436.field3480[10] * (float) arg2 + this.field436.field3480[6] * (float) arg1 + this.field436.field3480[2] * (float) arg0 + this.field436.field3480[14];
-        float var9 = this.field436.field3480[10] * (float) arg5 + this.field436.field3480[6] * (float) arg4 + this.field436.field3480[2] * (float) arg3 + this.field436.field3480[14];
-        float var10 = this.field436.field3480[11] * (float) arg2 + this.field436.field3480[7] * (float) arg1 + this.field436.field3480[3] * (float) arg0 + this.field436.field3480[15];
-        float var11 = this.field436.field3480[11] * (float) arg5 + this.field436.field3480[7] * (float) arg4 + this.field436.field3480[3] * (float) arg3 + this.field436.field3480[15];
+        float var8 = this.field436.entries[10] * (float) arg2 + this.field436.entries[6] * (float) arg1 + this.field436.entries[2] * (float) arg0 + this.field436.entries[14];
+        float var9 = this.field436.entries[10] * (float) arg5 + this.field436.entries[6] * (float) arg4 + this.field436.entries[2] * (float) arg3 + this.field436.entries[14];
+        float var10 = this.field436.entries[11] * (float) arg2 + this.field436.entries[7] * (float) arg1 + this.field436.entries[3] * (float) arg0 + this.field436.entries[15];
+        float var11 = this.field436.entries[11] * (float) arg5 + this.field436.entries[7] * (float) arg4 + this.field436.entries[3] * (float) arg3 + this.field436.entries[15];
         if (var8 < -var10 && var9 < -var11) {
             var7 |= 0x10;
         } else if (var8 > var10 && var9 > var11) {
             var7 |= 0x20;
         }
-        float var12 = this.field436.field3480[8] * (float) arg2 + this.field436.field3480[4] * (float) arg1 + this.field436.field3480[0] * (float) arg0 + this.field436.field3480[12];
-        float var13 = this.field436.field3480[8] * (float) arg5 + this.field436.field3480[4] * (float) arg4 + this.field436.field3480[0] * (float) arg3 + this.field436.field3480[12];
+        float var12 = this.field436.entries[8] * (float) arg2 + this.field436.entries[4] * (float) arg1 + this.field436.entries[0] * (float) arg0 + this.field436.entries[12];
+        float var13 = this.field436.entries[8] * (float) arg5 + this.field436.entries[4] * (float) arg4 + this.field436.entries[0] * (float) arg3 + this.field436.entries[12];
         if (var12 < -var10 && var13 < -var11) {
             var7 |= 0x1;
         }
         if (var12 > var10 && var13 > var11) {
             var7 |= 0x2;
         }
-        float var14 = this.field436.field3480[9] * (float) arg2 + this.field436.field3480[5] * (float) arg1 + this.field436.field3480[1] * (float) arg0 + this.field436.field3480[13];
-        float var15 = this.field436.field3480[9] * (float) arg5 + this.field436.field3480[5] * (float) arg4 + this.field436.field3480[1] * (float) arg3 + this.field436.field3480[13];
+        float var14 = this.field436.entries[9] * (float) arg2 + this.field436.entries[5] * (float) arg1 + this.field436.entries[1] * (float) arg0 + this.field436.entries[13];
+        float var15 = this.field436.entries[9] * (float) arg5 + this.field436.entries[5] * (float) arg4 + this.field436.entries[1] * (float) arg3 + this.field436.entries[13];
         if (var14 < -var10 && var15 < -var11) {
             var7 |= 0x4;
         }
@@ -374,10 +374,10 @@ public class ja extends RendererToolkit implements ua {
 
     @ObfuscatedName("ja.do(FFF[F)V")
     public void method550(float arg0, float arg1, float arg2, float[] arg3) {
-        float var5 = this.field436.field3480[11] * arg2 + this.field436.field3480[7] * arg1 + this.field436.field3480[3] * arg0 + this.field436.field3480[15];
-        float var6 = this.field436.field3480[8] * arg2 + this.field436.field3480[4] * arg1 + this.field436.field3480[0] * arg0 + this.field436.field3480[12];
-        float var7 = this.field436.field3480[9] * arg2 + this.field436.field3480[5] * arg1 + this.field436.field3480[1] * arg0 + this.field436.field3480[13];
-        float var8 = this.field464.field3480[10] * arg2 + this.field464.field3480[6] * arg1 + this.field464.field3480[2] * arg0 + this.field464.field3480[14];
+        float var5 = this.field436.entries[11] * arg2 + this.field436.entries[7] * arg1 + this.field436.entries[3] * arg0 + this.field436.entries[15];
+        float var6 = this.field436.entries[8] * arg2 + this.field436.entries[4] * arg1 + this.field436.entries[0] * arg0 + this.field436.entries[12];
+        float var7 = this.field436.entries[9] * arg2 + this.field436.entries[5] * arg1 + this.field436.entries[1] * arg0 + this.field436.entries[13];
+        float var8 = this.field464.entries[10] * arg2 + this.field464.entries[6] * arg1 + this.field464.entries[2] * arg0 + this.field464.entries[14];
         arg3[0] = this.field447 * var6 / var5 + this.field448;
         arg3[1] = this.field450 * var7 / var5 + this.field451;
         arg3[2] = var8;
@@ -385,28 +385,28 @@ public class ja extends RendererToolkit implements ua {
 
     @ObfuscatedName("ja.dg(FFF[F)V")
     public void method567(float arg0, float arg1, float arg2, float[] arg3) {
-        float var5 = this.field436.field3480[10] * arg2 + this.field436.field3480[6] * arg1 + this.field436.field3480[2] * arg0 + this.field436.field3480[14];
-        float var6 = this.field436.field3480[11] * arg2 + this.field436.field3480[7] * arg1 + this.field436.field3480[3] * arg0 + this.field436.field3480[15];
+        float var5 = this.field436.entries[10] * arg2 + this.field436.entries[6] * arg1 + this.field436.entries[2] * arg0 + this.field436.entries[14];
+        float var6 = this.field436.entries[11] * arg2 + this.field436.entries[7] * arg1 + this.field436.entries[3] * arg0 + this.field436.entries[15];
         if (var5 < -var6 || var5 > var6) {
             arg3[2] = Float.NaN;
             arg3[1] = Float.NaN;
             arg3[0] = Float.NaN;
             return;
         }
-        float var7 = this.field436.field3480[8] * arg2 + this.field436.field3480[4] * arg1 + this.field436.field3480[0] * arg0 + this.field436.field3480[12];
+        float var7 = this.field436.entries[8] * arg2 + this.field436.entries[4] * arg1 + this.field436.entries[0] * arg0 + this.field436.entries[12];
         if (var7 < -var6 || var7 > var6) {
             arg3[2] = Float.NaN;
             arg3[1] = Float.NaN;
             arg3[0] = Float.NaN;
             return;
         }
-        float var8 = this.field436.field3480[9] * arg2 + this.field436.field3480[5] * arg1 + this.field436.field3480[1] * arg0 + this.field436.field3480[13];
+        float var8 = this.field436.entries[9] * arg2 + this.field436.entries[5] * arg1 + this.field436.entries[1] * arg0 + this.field436.entries[13];
         if (var8 < -var6 || var8 > var6) {
             arg3[2] = Float.NaN;
             arg3[1] = Float.NaN;
             arg3[0] = Float.NaN;
         } else {
-            float var9 = this.field464.field3480[10] * arg2 + this.field464.field3480[6] * arg1 + this.field464.field3480[2] * arg0 + this.field464.field3480[14];
+            float var9 = this.field464.entries[10] * arg2 + this.field464.entries[6] * arg1 + this.field464.entries[2] * arg0 + this.field464.entries[14];
             arg3[0] = this.field447 * var7 / var6 + this.field448;
             arg3[1] = this.field450 * var8 / var6 + this.field451;
             arg3[2] = var9;
@@ -556,7 +556,7 @@ public class ja extends RendererToolkit implements ua {
     public void method524(Matrix4x3 arg0) {
         this.field443 = arg0;
         this.field464.method5385(arg0);
-        this.AA(this.field464.field3480);
+        this.AA(this.field464.entries);
         this.field436.method5383(this.field464, this.field445);
     }
 
@@ -568,7 +568,7 @@ public class ja extends RendererToolkit implements ua {
     @ObfuscatedName("ja.ch(Lka;)V")
     public void method784(Matrix4x4 arg0) {
         this.field445 = arg0;
-        this.wa(this.field445.field3480);
+        this.wa(this.field445.entries);
         this.field436.method5383(this.field464, this.field445);
     }
 
@@ -632,13 +632,13 @@ public class ja extends RendererToolkit implements ua {
     }
 
     @ObfuscatedName("ja.di(ILdk;)V")
-    public final void method547(int arg0, WaterFogData arg1) {
-        this.JA(arg0, arg1.field1475, arg1.field1471, arg1.field1474);
+    public final void setWaterFog(int arg0, WaterFogData arg1) {
+        this.JA(arg0, arg1.colour, arg1.scale, arg1.field1474);
     }
 
     @ObfuscatedName("ja.dw(ILdk;)V")
     public final void method503(int arg0, WaterFogData arg1) {
-        this.M(arg0, arg1.field1475, arg1.field1471, arg1.field1474);
+        this.M(arg0, arg1.colour, arg1.scale, arg1.field1474);
     }
 
     @ObfuscatedName("ja.av()Lyu;")

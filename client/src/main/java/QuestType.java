@@ -179,7 +179,7 @@ public class QuestType {
                 } else {
                     var22 = new IntNode(arg0.g4s());
                 }
-                this.field5069.method11927(var22, (long) var21);
+                this.field5069.put(var22, (long) var21);
             }
         }
     }
