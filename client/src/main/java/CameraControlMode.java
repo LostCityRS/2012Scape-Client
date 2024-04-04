@@ -10,17 +10,17 @@ public class CameraControlMode {
     public static final CameraControlMode field2203 = new CameraControlMode(1);
 
     @ObfuscatedName("fh.a")
-    public int field2201;
+    public int index;
 
     public CameraControlMode(int arg0) {
-        this.field2201 = arg0;
+        this.index = arg0;
     }
 
     @ObfuscatedName("p.u(II)Lfh;")
     public static CameraControlMode method1411(int arg0) {
-        if (field2202.field2201 == arg0) {
+        if (field2202.index == arg0) {
             return field2202;
-        } else if (field2203.field2201 == arg0) {
+        } else if (field2203.index == arg0) {
             return field2203;
         } else {
             return null;

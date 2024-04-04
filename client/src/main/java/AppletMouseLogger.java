@@ -26,15 +26,15 @@ public class AppletMouseLogger extends MouseLogger {
         if (var1.method15181() == 2) {
             var5 = 1;
         }
-        ClientMessage var6 = ClientMessage.createMessage(ClientProt.field2893, client.gameConnection.randomOut);
-        var6.field9467.p4_alt1(var4 | var3 << 16);
-        var6.field9467.p2(var2 | var5 << 15);
+        ClientMessage var6 = ClientMessage.createMessage(ClientProt.EVENT_MOUSE_CLICK, client.gameConnection.randomOut);
+        var6.buf.p4_alt1(var4 | var3 << 16);
+        var6.buf.p2(var2 | var5 << 15);
         client.gameConnection.queue(var6);
     }
 
     @ObfuscatedName("ael.l(I)Z")
     public boolean method8358() {
-        return this.method15630() != null || this.field5048 < MonotonicTime.method5554() - 2000L;
+        return this.method15630() != null || this.field5048 < MonotonicTime.get() - 2000L;
     }
 
     @ObfuscatedName("ael.al(B)Ladv;")
@@ -44,7 +44,7 @@ public class AppletMouseLogger extends MouseLogger {
 
     @ObfuscatedName("ael.f(I)Lada;")
     public ClientMessage method8375() {
-        return ClientMessage.createMessage(ClientProt.field2879, client.gameConnection.randomOut);
+        return ClientMessage.createMessage(ClientProt.EVENT_MOUSE_MOVE, client.gameConnection.randomOut);
     }
 
     @ObfuscatedName("ael.m(Laet;Ladv;B)V")

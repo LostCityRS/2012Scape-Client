@@ -145,8 +145,8 @@ public final class GlxToolkit extends GpuToolkit {
                 throw new RuntimeException("");
             }
             try {
-                int var11 = StringTools.method5598(var10[0]);
-                int var12 = StringTools.method5598(var10[1]);
+                int var11 = StringTools.parseInt(var10[0]);
+                int var12 = StringTools.parseInt(var10[1]);
                 this.field10023 = var11 * 10 + var12;
             } catch (NumberFormatException var25) {
                 throw new RuntimeException("");
@@ -205,7 +205,7 @@ public final class GlxToolkit extends GpuToolkit {
                                     var15 = true;
                                 }
                                 if (var19.length() >= 4 && StringTools.method7735(var19.substring(0, 4))) {
-                                    var14 = StringTools.method5598(var19.substring(0, 4));
+                                    var14 = StringTools.parseInt(var19.substring(0, 4));
                                     break;
                                 }
                             }
@@ -1097,9 +1097,9 @@ public final class GlxToolkit extends GpuToolkit {
             IntNode var12 = (IntNode) this.field10031.method11560();
             OpenGL.glDeleteLists((int) var12.field4228, var12.field9556);
         }
-        if (this.za() > 100663296 && MonotonicTime.method5554() > this.field10011 + 60000L) {
+        if (this.za() > 100663296 && MonotonicTime.get() > this.field10011 + 60000L) {
             System.gc();
-            this.field10011 = MonotonicTime.method5554();
+            this.field10011 = MonotonicTime.get();
         }
         super.method444(var3);
     }

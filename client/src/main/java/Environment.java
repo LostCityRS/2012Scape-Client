@@ -50,7 +50,7 @@ public class Environment {
     @ObfuscatedName("qf.u(I)V")
     public void method8202() {
         this.field4991 = EnvironmentManager.field4983;
-        this.field4990 = Vector3.method5294(-50.0F, -60.0F, -50.0F);
+        this.field4990 = Vector3.create(-50.0F, -60.0F, -50.0F);
         this.field4987 = 1.1523438F;
         this.field4988 = 0.69921875F;
         this.field4996 = 1.2F;
@@ -112,7 +112,7 @@ public class Environment {
     @ObfuscatedName("qf.s(Laet;Lqp;I)V")
     public void method8205(Packet arg0, EnvironmentManager arg1) {
         int var3 = arg0.g1();
-        if (Statics.clientOptions.field9650.method15667() == 1 && Statics.field5187.method768() > 0) {
+        if (Statics.options.field9650.method15667() == 1 && Statics.renderer.method768() > 0) {
             if ((var3 & 0x1) == 0) {
                 this.field4991 = EnvironmentManager.field4983;
             } else {
@@ -152,9 +152,9 @@ public class Environment {
             this.field4987 = 1.1523438F;
         }
         if ((var3 & 0x10) == 0) {
-            this.field4990 = Vector3.method5294(-50.0F, -60.0F, -50.0F);
+            this.field4990 = Vector3.create(-50.0F, -60.0F, -50.0F);
         } else {
-            this.field4990 = Vector3.method5294((float) arg0.g2s(), (float) arg0.g2s(), (float) arg0.g2s());
+            this.field4990 = Vector3.create((float) arg0.g2s(), (float) arg0.g2s(), (float) arg0.g2s());
         }
         if ((var3 & 0x20) == 0) {
             this.field4989 = EnvironmentManager.field4982;
@@ -208,7 +208,7 @@ public class Environment {
     }
 
     @ObfuscatedName("qf.f(I)Lmq;")
-    public SkyBox method8210() {
+    public SkyBox getSkybox() {
         return this.field4986;
     }
 }

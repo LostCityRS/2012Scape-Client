@@ -90,12 +90,12 @@ public class PreLoadingScreen implements LoadingScreen {
 
     @ObfuscatedName("kb.u(II)I")
     public final int method4980(int arg0) {
-        return this.field3373 ? (Statics.field4125 - arg0) / 2 : 0;
+        return this.field3373 ? (Statics.canvasWid - arg0) / 2 : 0;
     }
 
     @ObfuscatedName("kb.j(IB)I")
     public final int method4989(int arg0) {
-        return this.field3366 ? (Statics.field4677 - arg0) / 2 : 0;
+        return this.field3366 ? (Statics.canvasHei - arg0) / 2 : 0;
     }
 
     @ObfuscatedName("kb.a(ZB)V")
@@ -108,21 +108,21 @@ public class PreLoadingScreen implements LoadingScreen {
                 }
                 this.field3373 = Boolean.parseBoolean(var2[0]);
                 this.field3366 = Boolean.parseBoolean(var2[1]);
-                this.field3375 = StringTools.method5598(var2[2]);
-                this.field3382 = StringTools.method5598(var2[3]);
-                this.field3377 = StringTools.method5598(var2[4]);
-                this.field3378 = StringTools.method5598(var2[5]);
-                this.field3379 = StringTools.method5598(var2[6]);
-                this.field3380 = StringTools.method5598(var2[7]);
-                this.field3381 = StringTools.method5598(var2[8]);
-                this.field3376 = StringTools.method5598(var2[9]);
+                this.field3375 = StringTools.parseInt(var2[2]);
+                this.field3382 = StringTools.parseInt(var2[3]);
+                this.field3377 = StringTools.parseInt(var2[4]);
+                this.field3378 = StringTools.parseInt(var2[5]);
+                this.field3379 = StringTools.parseInt(var2[6]);
+                this.field3380 = StringTools.parseInt(var2[7]);
+                this.field3381 = StringTools.parseInt(var2[8]);
+                this.field3376 = StringTools.parseInt(var2[9]);
                 String var3 = var2[10];
-                int var4 = StringTools.method5598(var2[11]);
+                int var4 = StringTools.parseInt(var2[11]);
                 int var5 = StringTools.method4773(var2[12].substring(2), 16);
                 this.field3360 = new Font(var3, 0, var4);
-                this.field3361 = Statics.field1231.getFontMetrics(this.field3360);
+                this.field3361 = Statics.canvas.getFontMetrics(this.field3360);
                 this.field3359 = new Color(var5);
-                MediaTracker var6 = new MediaTracker(Statics.field1231);
+                MediaTracker var6 = new MediaTracker(Statics.canvas);
                 this.field3362 = this.method5008(var2[13]);
                 var6.addImage(this.field3362, 0);
                 this.field3383 = this.method5008(var2[14]);
@@ -142,7 +142,7 @@ public class PreLoadingScreen implements LoadingScreen {
                 this.field3369 = this.method5008(var2[21]);
                 var6.addImage(this.field3369, 8);
                 var6.waitForAll();
-                this.field3374 = StringTools.method5598(var2[22]);
+                this.field3374 = StringTools.parseInt(var2[22]);
             } catch (Exception var49) {
                 this.field3364 = true;
             }
@@ -151,20 +151,20 @@ public class PreLoadingScreen implements LoadingScreen {
             this.method4984();
             return;
         }
-        Graphics var8 = Statics.field1231.getGraphics();
+        Graphics var8 = Statics.canvas.getGraphics();
         if (var8 == null) {
-            Statics.field1231.repaint();
+            Statics.canvas.repaint();
             return;
         }
         try {
             int var9 = Statics.field6789.method4974();
             String var10 = Statics.field6789.method4959();
             if (Statics.field1209 == null) {
-                Statics.field1209 = Statics.field1231.createImage(Statics.field4125, Statics.field4677);
+                Statics.field1209 = Statics.canvas.createImage(Statics.canvasWid, Statics.canvasHei);
             }
             Graphics var11 = Statics.field1209.getGraphics();
             var11.setColor(Color.BLACK);
-            var11.fillRect(0, 0, Statics.field4125, Statics.field4677);
+            var11.fillRect(0, 0, Statics.canvasWid, Statics.canvasHei);
             int var12 = this.field3371.getWidth(null);
             int var13 = this.field3370.getWidth(null);
             int var14 = this.field3369.getWidth(null);
@@ -193,7 +193,7 @@ public class PreLoadingScreen implements LoadingScreen {
             var11.drawImage(this.field3365, var31, (this.field3378 - var22) / 2 + var32, null);
             var11.drawImage(this.field3363, this.field3377 + var31 - var23, (this.field3378 - var24) / 2 + var32, null);
             if (this.field3372 == null) {
-                this.field3372 = Statics.field1231.createImage(this.field3377 - var21 - var23, this.field3378);
+                this.field3372 = Statics.canvas.createImage(this.field3377 - var21 - var23, this.field3378);
             }
             Graphics var33 = this.field3372.getGraphics();
             for (int var34 = 0; var34 < this.field3377 - var21 - var23; var34 += var26) {
@@ -204,7 +204,7 @@ public class PreLoadingScreen implements LoadingScreen {
             }
             int var36 = (this.field3377 - var21 - var23) * var9 / 100;
             if (var36 > 0) {
-                Image var37 = Statics.field1231.createImage(var36, this.field3378 - var27 - var25);
+                Image var37 = Statics.canvas.createImage(var36, this.field3378 - var27 - var25);
                 int var38 = var37.getWidth(null);
                 Graphics var39 = var37.getGraphics();
                 int var40 = this.field3374 * Loading.method3587() / 10 % var29;
@@ -215,7 +215,7 @@ public class PreLoadingScreen implements LoadingScreen {
             }
             int var43 = this.field3377 - var21 - var23 - var36;
             if (var43 > 0) {
-                Image var44 = Statics.field1231.createImage(var43, this.field3378 - var27 - var25);
+                Image var44 = Statics.canvas.createImage(var43, this.field3378 - var27 - var25);
                 int var45 = var44.getWidth(null);
                 Graphics var46 = var44.getGraphics();
                 for (int var47 = 0; var47 < var45; var47 += var30) {
@@ -251,7 +251,7 @@ public class PreLoadingScreen implements LoadingScreen {
 
     @ObfuscatedName("kb.c(I)V")
     public void method4984() {
-        GameShell.method4801(Statics.field6789.method4974(), Statics.field6789.method4959(), client.field8974[client.field8907], client.field8956[client.field8907], client.field8902[client.field8907]);
+        GameShell.method4801(Statics.field6789.method4974(), Statics.field6789.method4959(), client.loadingBarFillColour[client.loadingBarTheme], client.loadingBarOutlineColour[client.loadingBarTheme], client.loadingBarTextColour[client.loadingBarTheme]);
     }
 
     @ObfuscatedName("kb.m(I)V")

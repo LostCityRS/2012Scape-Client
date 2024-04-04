@@ -20,16 +20,16 @@ public class LoadingScreenRelated5 extends LoadingScreenProgressDisplay {
     public void method3955(boolean arg0, int arg1, int arg2) {
         int var4 = this.method3956() * this.field2311.field2602 / 10000;
         int[] var5 = new int[4];
-        Statics.field5187.qa(var5);
-        Statics.field5187.r(arg1, arg2 + 2, arg1 + var4, this.field2311.field2607 + arg2);
+        Statics.renderer.qa(var5);
+        Statics.renderer.r(arg1, arg2 + 2, arg1 + var4, this.field2311.field2607 + arg2);
         this.field8728.method2511(arg1, arg2 + 2, this.field2311.field2602, this.field2311.field2607);
-        Statics.field5187.r(var5[0], var5[1], var5[2], var5[3]);
+        Statics.renderer.r(var5[0], var5[1], var5[2], var5[3]);
     }
 
     @ObfuscatedName("aau.f(ZIIS)V")
     public void method3957(boolean arg0, int arg1, int arg2) {
-        Statics.field5187.method488(arg1 - 2, arg2, this.field2311.field2602 + 4, this.field2311.field2607 + 2, ((LoadingScreenRelated5_Sub1) this.field2311).field8825, 0);
-        Statics.field5187.method488(arg1 - 1, arg2 + 1, this.field2311.field2602 + 2, this.field2311.field2607, 0, 0);
+        Statics.renderer.drawRectangle(arg1 - 2, arg2, this.field2311.field2602 + 4, this.field2311.field2607 + 2, ((LoadingScreenRelated5_Sub1) this.field2311).field8825, 0);
+        Statics.renderer.drawRectangle(arg1 - 1, arg2 + 1, this.field2311.field2602 + 2, this.field2311.field2607, 0, 0);
     }
 
     @ObfuscatedName("aau.a(I)Z")

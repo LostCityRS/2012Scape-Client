@@ -487,7 +487,7 @@ public class PositionedSound extends Node {
             return;
         }
         int var5 = 0;
-        int var6 = arg0.field9546 * 512 * Statics.clientOptions.field9672.method15899() >> 8;
+        int var6 = arg0.field9546 * 512 * Statics.options.field9672.method15899() >> 8;
         if (arg2 > arg0.field9547) {
             var5 += arg2 - arg0.field9547;
         } else if (arg2 < arg0.field9518) {
@@ -498,7 +498,7 @@ public class PositionedSound extends Node {
         } else if (arg3 < arg0.field9519) {
             var5 += arg0.field9519 - arg3;
         }
-        if (arg0.field9523 == 0 || var5 - 256 > arg0.field9523 || Statics.clientOptions.field9672.method15899() == 0 || arg0.field9517 != arg1) {
+        if (arg0.field9523 == 0 || var5 - 256 > arg0.field9523 || Statics.options.field9672.method15899() == 0 || arg0.field9517 != arg1) {
             if (arg0.field9540 != null) {
                 Statics.field4201.method16445(arg0.field9540);
                 arg0.field9540 = null;

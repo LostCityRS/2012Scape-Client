@@ -311,7 +311,7 @@ public class HardwarePlatform extends Node {
     }
 
     @ObfuscatedName("aeb.j(Laet;I)V")
-    public void method15475(Packet arg0) {
+    public void createHardwareBlock(Packet arg0) {
         arg0.p1(6);
         arg0.p1(this.field9698);
         arg0.p1(this.field9687 ? 1 : 0);

@@ -11,6 +11,6 @@ public class PathFinderEntitySize_Sub3 extends PathFinderEntitySize {
 
     @ObfuscatedName("aev.u(IIILmv;I)Z")
     public boolean method7708(int arg0, int arg1, int arg2, CollisionMap arg3) {
-        return arg3.method6273(arg1, arg2, arg0, this.field4682, this.field4680, this.field9794.method6339(), this.field9795);
+        return arg3.method6273(arg1, arg2, arg0, this.field4682, this.field4680, this.field9794.getId(), this.field9795);
     }
 }

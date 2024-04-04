@@ -49,7 +49,7 @@ public class Namespace implements SerializableEnum {
     }
 
     @ObfuscatedName("wx.j(B)I")
-    public int method6339() {
+    public int getId() {
         return this.field7336;
     }
 

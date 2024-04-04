@@ -17,7 +17,7 @@ public class SkyBoxFillMode implements SerializableEnum {
     }
 
     @ObfuscatedName("oc.j(B)I")
-    public int method6339() {
+    public int getId() {
         return this.field4466;
     }
 }

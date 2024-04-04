@@ -19,7 +19,7 @@ public class LoadingScreenAlignmentY {
 
     @ObfuscatedName("iv.j(III)I")
     public int method4574(int arg0, int arg1) {
-        int var3 = Statics.field4677 > arg1 ? Statics.field4677 : arg1;
+        int var3 = Statics.canvasHei > arg1 ? Statics.canvasHei : arg1;
         if (field2612 == this) {
             return 0;
         } else if (field2614 == this) {

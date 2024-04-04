@@ -910,14 +910,14 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
     @ObfuscatedName("aay.dx(IIIIIIIIB)V")
     public void method13967(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
         if (this.method13976()) {
-            client.method14330(this.field8652, this.field8652.method3104(), -1, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+            client.updateLayer(this.field8652, this.field8652.getComponents(), -1, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
     }
 
     @ObfuscatedName("aay.dh(IIIIIIII)V")
     public void method13968(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
         if (this.method13976()) {
-            client.method2709(this.field8652.method3104(), -1, arg1, arg2, arg3, arg4, arg5, arg6, arg0, false);
+            client.method2709(this.field8652.getComponents(), -1, arg1, arg2, arg3, arg4, arg5, arg6, arg0, false);
         } else if (arg0 == -1) {
             for (int var8 = 0; var8 < 100; var8++) {
                 client.field9204[var8] = true;

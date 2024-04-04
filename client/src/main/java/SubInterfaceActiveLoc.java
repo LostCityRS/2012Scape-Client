@@ -12,7 +12,7 @@ public class SubInterfaceActiveLoc extends SubInterface {
     }
 
     @ObfuscatedName("ajq.u(B)Z")
-    public boolean method15469() {
+    public boolean process() {
         Location var1 = this.field10477.method8725();
         if (var1 == null) {
             return false;

@@ -41,7 +41,7 @@ public class StaticWallDecorLayerEntity extends WallDecorLayerEntity implements 
         this.field7546 = (byte) arg13;
         this.field7549 = (byte) arg12;
         this.field7552 = arg3.field6493 != 0 && !arg9;
-        this.field7553 = arg1.method449() && arg3.field6541 && !this.field7551 && Statics.clientOptions.field9651.method15747() != 0;
+        this.field7553 = arg1.method449() && arg3.field6541 && !this.field7551 && Statics.options.field9651.method15747() != 0;
         int var15 = 2048;
         if (arg3.field6472) {
             var15 |= 0x80000;

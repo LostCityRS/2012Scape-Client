@@ -70,7 +70,7 @@ public class MiniMap {
     @ObfuscatedName("ff.s(Lra;I)V")
     public static void method3580(RendererToolkit arg0) {
         if (field765 != Statics.localPlayerEntity.level && client.world.getScene() != null) {
-            MonotonicTime.method5554();
+            MonotonicTime.get();
             if (Statics.method2581(arg0, Statics.localPlayerEntity.level)) {
                 field765 = Statics.localPlayerEntity.level;
             }
@@ -133,13 +133,13 @@ public class MiniMap {
                 }
                 if (LocShape.field6570.field6590 == var12) {
                     if (var11 == 0) {
-                        arg0.method496(arg4, arg5, 1, 1, var13);
+                        arg0.fillRectangle(arg4, arg5, 1, 1, var13);
                     } else if (var11 == 1) {
-                        arg0.method496(arg4 + 3, arg5, 1, 1, var13);
+                        arg0.fillRectangle(arg4 + 3, arg5, 1, 1, var13);
                     } else if (var11 == 2) {
-                        arg0.method496(arg4 + 3, arg5 + 3, 1, 1, var13);
+                        arg0.fillRectangle(arg4 + 3, arg5 + 3, 1, 1, var13);
                     } else if (var11 == 3) {
-                        arg0.method496(arg4, arg5 + 3, 1, 1, var13);
+                        arg0.fillRectangle(arg4, arg5 + 3, 1, 1, var13);
                     }
                 }
                 if (LocShape.field6569.field6590 == var12) {
@@ -234,13 +234,13 @@ public class MiniMap {
             return;
         }
         GraphicsRelated var5 = var4.field1730;
-        arg0.r(arg2, arg3, arg1.field1863 + arg2, arg1.field1929 + arg3);
-        if (arg1.field1863 != var4.field1728 || arg1.field1929 != var4.field1727) {
+        arg0.r(arg2, arg3, arg1.renderwidth + arg2, arg1.renderheight + arg3);
+        if (arg1.renderwidth != var4.field1728 || arg1.renderheight != var4.field1727) {
             throw new IllegalStateException("");
         } else if (field762 == 2 || field762 == 5 || Statics.field6357 == null) {
             arg0.DA(-16777216, var5, arg2, arg3);
         } else {
-            CoordGrid var6 = client.world.method6214();
+            CoordGrid var6 = client.world.getBase();
             int var7;
             int var8;
             int var9;
@@ -259,7 +259,7 @@ public class MiniMap {
             }
             int var12 = var7 / 128 + 48;
             int var13 = client.world.getSizeZ() * 4 + 48 - var8 / 128;
-            Statics.field6357.method2512((float) arg1.field1863 / 2.0F + (float) arg2, (float) arg1.field1929 / 2.0F + (float) arg3, (float) var12, (float) var13, var10, var9 << 2, var5, arg2, arg3);
+            Statics.field6357.method2512((float) arg1.renderwidth / 2.0F + (float) arg2, (float) arg1.renderheight / 2.0F + (float) arg3, (float) var12, (float) var13, var10, var9 << 2, var5, arg2, arg3);
             WorldMapRelated var14 = client.world.method6093();
             for (IntNode var15 = (IntNode) field758.method11563(); var15 != null; var15 = (IntNode) field758.method11567()) {
                 int var16 = var15.field9556;
@@ -301,7 +301,7 @@ public class MiniMap {
                     Statics.method12552(arg1, var5, arg2, arg3, var31, var32, Statics.field9826[field766 ? 1 : 0]);
                 }
                 if (!Statics.localPlayerEntity.field10066) {
-                    arg0.method496(arg1.field1863 / 2 + arg2 - 1, arg1.field1929 / 2 + arg3 - 1, 3, 3, -1);
+                    arg0.fillRectangle(arg1.renderwidth / 2 + arg2 - 1, arg1.renderheight / 2 + arg3 - 1, 3, 3, -1);
                 }
             }
         }
@@ -436,8 +436,8 @@ public class MiniMap {
                     var12 = var12 * 256 / (client.field8976 + 256);
                     var13 = var13 * 256 / (client.field8976 + 256);
                 }
-                var9[var10 * 2] = ((var8.field4788[var10 * 2] * 4 + arg5) * var13 + (var8.field4788[var10 * 2 + 1] * 4 + arg6) * var12 >> 14) + arg2.field1863 / 2 + arg3;
-                var9[var10 * 2 + 1] = arg2.field1929 / 2 + arg4 - ((var8.field4788[var10 * 2 + 1] * 4 + arg6) * var13 - (var8.field4788[var10 * 2] * 4 + arg5) * var12 >> 14);
+                var9[var10 * 2] = ((var8.field4788[var10 * 2] * 4 + arg5) * var13 + (var8.field4788[var10 * 2 + 1] * 4 + arg6) * var12 >> 14) + arg2.renderwidth / 2 + arg3;
+                var9[var10 * 2 + 1] = arg2.renderheight / 2 + arg4 - ((var8.field4788[var10 * 2 + 1] * 4 + arg6) * var13 - (var8.field4788[var10 * 2] * 4 + arg5) * var12 >> 14);
             }
             Graphic var14 = arg2.method3124(arg0);
             if (var14 != null) {
@@ -537,20 +537,20 @@ public class MiniMap {
         Sprite var15 = Statics.field3311[arg6];
         int var16 = var15.method1061();
         int var17 = var15.method1045();
-        int var18 = arg0.field1863 / 2 + var13 - var16 / 2;
+        int var18 = arg0.renderwidth / 2 + var13 - var16 / 2;
         int var19 = var16 + var18;
-        int var20 = arg0.field1929 / 2 + -var14 - var17;
+        int var20 = arg0.renderheight / 2 + -var14 - var17;
         int var21 = var17 + var20;
         if (arg1.method3099(var18, var20) && arg1.method3099(var19, var20) && arg1.method3099(var18, var21) && arg1.method3099(var19, var21)) {
             var15.method1056(arg2 + var18, arg3 + var20, arg1.field1730, arg2, arg3);
             return;
         }
         double var22 = Math.atan2((double) var13, (double) var14);
-        int var24 = Math.min(arg0.field1863 / 2, arg0.field1929 / 2);
+        int var24 = Math.min(arg0.renderwidth / 2, arg0.renderheight / 2);
         int var27 = var24 - 6;
         int var25 = (int) (Math.sin(var22) * (double) var27);
         int var26 = (int) (Math.cos(var22) * (double) var27);
-        Statics.field4878[arg6].method2503((float) arg0.field1863 / 2.0F + (float) arg2 + (float) var25, (float) arg0.field1929 / 2.0F + (float) arg3 - (float) var26, 4096, (int) (-var22 / 6.283185307179586D * 65535.0D));
+        Statics.field4878[arg6].method2503((float) arg0.renderwidth / 2.0F + (float) arg2 + (float) var25, (float) arg0.renderheight / 2.0F + (float) arg3 - (float) var26, 4096, (int) (-var22 / 6.283185307179586D * 65535.0D));
     }
 
     @ObfuscatedName("aam.b(Lew;Lta;IIIIILjava/lang/String;Ll;Lvm;II)V")
@@ -561,7 +561,7 @@ public class MiniMap {
         } else {
             var11 = client.field9087 + (int) client.field9021 & 0x3FFF;
         }
-        int var12 = Math.max(arg0.field1863 / 2, arg0.field1929 / 2) + 10;
+        int var12 = Math.max(arg0.renderwidth / 2, arg0.renderheight / 2) + 10;
         int var13 = arg4 * arg4 + arg5 * arg5;
         if (var13 > var12 * var12) {
             return;
@@ -577,8 +577,8 @@ public class MiniMap {
         int var18 = arg9.method12393(arg7, 100, null);
         int var19 = arg9.method12395(arg7, 100, 0, null);
         int var20 = var16 - var18 / 2;
-        if (var20 >= -arg0.field1863 && var20 <= arg0.field1863 && var17 >= -arg0.field1929 && var17 <= arg0.field1929) {
-            arg8.method836(arg7, arg0.field1863 / 2 + arg2 + var20, arg0.field1929 / 2 + arg3 - var17 - arg6 - var19, var18, 50, arg10, 0, 1, 0, 0, null, null, arg1, arg2, arg3);
+        if (var20 >= -arg0.renderwidth && var20 <= arg0.renderwidth && var17 >= -arg0.renderheight && var17 <= arg0.renderheight) {
+            arg8.method836(arg7, arg0.renderwidth / 2 + arg2 + var20, arg0.renderheight / 2 + arg3 - var17 - arg6 - var19, var18, 50, arg10, 0, 1, 0, 0, null, null, arg1, arg2, arg3);
         }
     }
 }

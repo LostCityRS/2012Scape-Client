@@ -23,22 +23,22 @@ public class NativeMouseLogger extends MouseLogger {
         if (var1 == null) {
             return;
         }
-        ClientMessage var2 = ClientMessage.createMessage(ClientProt.field2956, client.gameConnection.randomOut);
-        var2.field9467.p1_alt1(var1.method16844() << 1 | var1.method16842() & 0x1);
-        var2.field9467.p2_alt2(this.method8354(var1, 65535));
-        var2.field9467.p4_alt3(var1.method15182() | var1.method15183() << 16);
+        ClientMessage var2 = ClientMessage.createMessage(ClientProt.EVENT_NATIVE_MOUSE_CLICK, client.gameConnection.randomOut);
+        var2.buf.p1_alt1(var1.method16844() << 1 | var1.method16842() & 0x1);
+        var2.buf.p2_alt2(this.method8354(var1, 65535));
+        var2.buf.p4_alt3(var1.method15182() | var1.method15183() << 16);
         client.gameConnection.queue(var2);
         var1.method15186();
     }
 
     @ObfuscatedName("aec.l(I)Z")
     public boolean method8358() {
-        return !this.field9805.isEmpty() || this.field5048 < MonotonicTime.method5554() - 2000L;
+        return !this.field9805.isEmpty() || this.field5048 < MonotonicTime.get() - 2000L;
     }
 
     @ObfuscatedName("aec.f(I)Lada;")
     public ClientMessage method8375() {
-        return ClientMessage.createMessage(ClientProt.field2947, client.gameConnection.randomOut);
+        return ClientMessage.createMessage(ClientProt.EVENT_NATIVE_MOUSE_MOVE, client.gameConnection.randomOut);
     }
 
     @ObfuscatedName("aec.at(Laet;Lajn;I)V")

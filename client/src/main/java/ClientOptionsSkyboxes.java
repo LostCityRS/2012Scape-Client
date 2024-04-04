@@ -39,7 +39,7 @@ public class ClientOptionsSkyboxes extends ClientOption {
     }
 
     @ObfuscatedName("afb.o(I)I")
-    public int method15807() {
+    public int getValue() {
         return this.field6461;
     }
 }

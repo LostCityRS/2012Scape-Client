@@ -51,7 +51,7 @@ public class StaticWallEntity extends WallLayerEntity implements Location {
         this.field7561 = (byte) arg11;
         this.field7564 = arg3.field6493 != 0 && !arg9;
         this.field7563 = arg12;
-        this.field7562 = arg1.method449() && arg3.field6541 && !this.field7566 && Statics.clientOptions.field9651.method15747() != 0;
+        this.field7562 = arg1.method449() && arg3.field6541 && !this.field7566 && Statics.options.field9651.method15747() != 0;
         int var14 = 2048;
         if (this.field7563) {
             var14 |= 0x10000;

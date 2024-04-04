@@ -6,12 +6,12 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 @ObfuscatedName("vo")
-public class ClassCheck {
+public class ReflectionChecker {
 
     @ObfuscatedName("vo.u")
     public static IterableQueue field7044 = new IterableQueue();
 
-    public ClassCheck() throws Throwable {
+    public ReflectionChecker() throws Throwable {
         throw new Error();
     }
 
@@ -21,13 +21,13 @@ public class ClassCheck {
     }
 
     @ObfuscatedName("eb.j(I)Z")
-    public static boolean method3320() {
+    public static boolean hasCheck() {
         ClassCheckNode var0 = (ClassCheckNode) field7044.method11563();
         return var0 != null;
     }
 
     @ObfuscatedName("kw.a(Lajl;I)V")
-    public static void method5552(PacketBit arg0) {
+    public static void performCheck(PacketBit arg0) {
         ClassCheckNode var1 = (ClassCheckNode) field7044.method11563();
         if (var1 == null) {
             return;

@@ -7,7 +7,7 @@ public class ModeGame {
     public static final ModeGame field6407 = new ModeGame("runescape", "RuneScape", 0);
 
     @ObfuscatedName("sv.j")
-    public static final ModeGame field6402 = new ModeGame("stellardawn", "Stellar Dawn", 1);
+    public static final ModeGame STELLARDAWN = new ModeGame("stellardawn", "Stellar Dawn", 1);
 
     @ObfuscatedName("sv.a")
     public static final ModeGame field6403 = new ModeGame("game3", "Game 3", 2);
@@ -25,17 +25,17 @@ public class ModeGame {
     public final String field6401;
 
     @ObfuscatedName("sv.l")
-    public final int field6408;
+    public final int game;
 
     @ObfuscatedName("vh.u(S)[Lsv;")
     public static ModeGame[] method12452() {
-        return new ModeGame[]{field6406, field6403, field6402, field6405, field6407};
+        return new ModeGame[]{field6406, field6403, STELLARDAWN, field6405, field6407};
     }
 
     public ModeGame(String arg0, String arg1, int arg2) {
         this.field6404 = arg0;
         this.field6401 = arg1;
-        this.field6408 = arg2;
+        this.game = arg2;
     }
 
     @ObfuscatedName("aaf.j(II)Lsv;")
@@ -43,7 +43,7 @@ public class ModeGame {
         ModeGame[] var1 = method12452();
         for (int var2 = 0; var2 < var1.length; var2++) {
             ModeGame var3 = var1[var2];
-            if (var3.field6408 == arg0) {
+            if (var3.game == arg0) {
                 return var3;
             }
         }

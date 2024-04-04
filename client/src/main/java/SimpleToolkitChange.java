@@ -12,8 +12,8 @@ public class SimpleToolkitChange implements SendablePacket {
 
     @ObfuscatedName("tj.u(I)V")
     public void method11847() {
-        ClientMessage var1 = ClientMessage.createMessage(ClientProt.field2850, client.gameConnection.randomOut);
-        var1.field9467.p1_alt2(this.field6691.method6339());
+        ClientMessage var1 = ClientMessage.createMessage(ClientProt.SIMPLE_TOOLKIT_CHANGE, client.gameConnection.randomOut);
+        var1.buf.p1_alt2(this.field6691.getId());
         client.gameConnection.queue(var1);
     }
 }

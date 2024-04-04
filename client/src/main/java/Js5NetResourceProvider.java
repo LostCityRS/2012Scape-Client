@@ -442,7 +442,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
                 this.field8872 = null;
             }
         }
-        if (!this.field8874 || MonotonicTime.method5554() < this.field8875) {
+        if (!this.field8874 || MonotonicTime.get() < this.field8875) {
             return;
         }
         for (Js5Request var9 = (Js5Request) this.field8868.method11928(); var9 != null; var9 = (Js5Request) this.field8868.method11929()) {
@@ -457,7 +457,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
                 }
             }
         }
-        this.field8875 = MonotonicTime.method5554() + 1000L;
+        this.field8875 = MonotonicTime.get() + 1000L;
     }
 
     @ObfuscatedName("abt.x(I)I")

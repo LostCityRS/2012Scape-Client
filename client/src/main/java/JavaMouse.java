@@ -1,6 +1,5 @@
 import deob.ObfuscatedName;
 
-import java.awt.*;
 import java.awt.event.*;
 
 @ObfuscatedName("aeo")
@@ -71,7 +70,7 @@ public class JavaMouse extends Mouse implements MouseListener, MouseMotionListen
 
     @ObfuscatedName("aeo.as(IIIII)V")
     public void method15595(int arg0, int arg1, int arg2, int arg3) {
-        JavaMouseEvent var5 = JavaMouseEvent.method7559(arg0, arg1, arg2, MonotonicTime.method5554(), arg3);
+        JavaMouseEvent var5 = JavaMouseEvent.method7559(arg0, arg1, arg2, MonotonicTime.get(), arg3);
         this.field9782.method11558(var5);
     }
 
@@ -116,12 +115,12 @@ public class JavaMouse extends Mouse implements MouseListener, MouseMotionListen
     }
 
     @ObfuscatedName("aeo.l(I)I")
-    public int method7254() {
+    public int getX() {
         return this.field9787;
     }
 
     @ObfuscatedName("aeo.f(I)I")
-    public int method7255() {
+    public int getY() {
         return this.field9781;
     }
 

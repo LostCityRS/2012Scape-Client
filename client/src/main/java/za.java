@@ -39,12 +39,12 @@ public class za extends Surface implements ua {
     @ObfuscatedName("za.r(Ljava/lang/Exception;)V")
     public void method916(Exception arg0) {
         if (field434) {
-            if (MonotonicTime.method5554() - Statics.field435 >= 30000L) {
+            if (MonotonicTime.get() - Statics.field435 >= 30000L) {
                 throw new RuntimeException(arg0.getMessage());
             }
             this.field430.repaint();
         } else {
-            Statics.field435 = MonotonicTime.method5554();
+            Statics.field435 = MonotonicTime.get();
             field434 = true;
         }
     }

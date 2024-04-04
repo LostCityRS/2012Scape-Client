@@ -5,14 +5,14 @@ public class ClientAutoSetupResult extends AutoSetupResult implements SendablePa
 
     @ObfuscatedName("agp.u(I)V")
     public void method11847() {
-        ClientMessage var1 = ClientMessage.createMessage(ClientProt.field2952, client.gameConnection.randomOut);
-        var1.field9467.p2_alt1(this.field7384);
-        var1.field9467.p3(this.field7382);
-        var1.field9467.p1(this.field7386);
-        var1.field9467.p3_alt2(this.field7373);
-        var1.field9467.p1_alt3(this.field7380);
-        var1.field9467.p2(this.field7378);
-        var1.field9467.p3_alt2(this.field7381);
+        ClientMessage var1 = ClientMessage.createMessage(ClientProt.AUTO_SETUP_RESULT, client.gameConnection.randomOut);
+        var1.buf.p2_alt1(this.field7384);
+        var1.buf.p3(this.field7382);
+        var1.buf.p1(this.field7386);
+        var1.buf.p3_alt2(this.field7373);
+        var1.buf.p1_alt3(this.field7380);
+        var1.buf.p2(this.field7378);
+        var1.buf.p3_alt2(this.field7381);
         client.gameConnection.queue(var1);
     }
 

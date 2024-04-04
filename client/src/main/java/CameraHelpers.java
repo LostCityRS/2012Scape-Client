@@ -9,7 +9,7 @@ public class CameraHelpers {
 
     @ObfuscatedName("or.u(Lkn;I)F")
     public static float method7588(Quaternion arg0) {
-        Vector3 var1 = Vector3.method5294(0.0F, 0.0F, 1.0F);
+        Vector3 var1 = Vector3.create(0.0F, 0.0F, 1.0F);
         var1.method5318(arg0);
         double var2 = 1.5707963267948966D - Math.acos((double) var1.y);
         var1.release();
@@ -27,7 +27,7 @@ public class CameraHelpers {
 
     @ObfuscatedName("ap.a(Lkn;I)F")
     public static float method1721(Quaternion arg0) {
-        Vector3 var1 = Vector3.method5294(0.0F, 0.0F, 1.0F);
+        Vector3 var1 = Vector3.create(0.0F, 0.0F, 1.0F);
         var1.method5318(arg0);
         double var2 = Math.atan2((double) var1.x, (double) var1.z);
         var1.release();

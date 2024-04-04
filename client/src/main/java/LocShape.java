@@ -89,7 +89,7 @@ public class LocShape implements SerializableEnum {
     }
 
     @ObfuscatedName("tn.j(B)I")
-    public int method6339() {
+    public int getId() {
         return this.field6590;
     }
 

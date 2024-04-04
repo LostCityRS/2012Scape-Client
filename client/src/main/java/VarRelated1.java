@@ -25,7 +25,7 @@ public class VarRelated1 implements VarIntDomain {
 
     @ObfuscatedName("e.u(ZB)I")
     public int method1640(boolean arg0) {
-        long var2 = MonotonicTime.method5554();
+        long var2 = MonotonicTime.get();
         for (LongNode var4 = (LongNode) (arg0 ? this.field662.method11928() : this.field662.method11929()); var4 != null; var4 = (LongNode) this.field662.method11929()) {
             if ((var4.field9555 & 0x3FFFFFFFFFFFFFFFL) < var2) {
                 if ((var4.field9555 & 0x4000000000000000L) != 0L) {
@@ -54,10 +54,10 @@ public class VarRelated1 implements VarIntDomain {
         this.field661[arg0] = arg1;
         LongNode var3 = (LongNode) this.field662.getNode((long) arg0);
         if (var3 == null) {
-            LongNode var4 = new LongNode(MonotonicTime.method5554() + 500L);
+            LongNode var4 = new LongNode(MonotonicTime.get() + 500L);
             this.field662.method11927(var4, (long) arg0);
         } else {
-            var3.field9555 = MonotonicTime.method5554() + 500L;
+            var3.field9555 = MonotonicTime.get() + 500L;
         }
     }
 
@@ -69,7 +69,7 @@ public class VarRelated1 implements VarIntDomain {
             LongNode var4 = new LongNode(4611686018427387905L);
             this.field662.method11927(var4, (long) arg0);
         } else if (var3.field9555 != 4611686018427387905L) {
-            var3.field9555 = MonotonicTime.method5554() + 500L | 0x4000000000000000L;
+            var3.field9555 = MonotonicTime.get() + 500L | 0x4000000000000000L;
         }
     }
 

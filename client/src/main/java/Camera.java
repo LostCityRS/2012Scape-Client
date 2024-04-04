@@ -166,11 +166,11 @@ public abstract class Camera {
             throw new CameraException();
         }
         this.field2221 = arg0;
-        if (LookatMode.field2165 == arg0) {
+        if (LookatMode.ENTITY == arg0) {
             this.field2222 = new LookatEntity(this);
         } else if (LookatMode.field2169 == arg0) {
             this.field2222 = new LookatOrientation(this);
-        } else if (LookatMode.field2167 == arg0) {
+        } else if (LookatMode.POINT == arg0) {
             this.field2222 = new LookatPoint(this);
         } else if (LookatMode.field2164 == arg0) {
             this.field2222 = new LookatSpline_Sub1(this);
@@ -188,9 +188,9 @@ public abstract class Camera {
             throw new CameraException();
         }
         this.field2234 = arg0;
-        if (PositionMode.field2193 == arg0) {
+        if (PositionMode.ENTITY == arg0) {
             this.field2224 = new PositionEntity(this);
-        } else if (PositionMode.field2192 == arg0) {
+        } else if (PositionMode.POINT == arg0) {
             this.field2224 = new PositionPoint(this);
         } else if (PositionMode.field2191 == arg0) {
             this.field2224 = new PositionSpline_Sub1(this);
@@ -210,14 +210,14 @@ public abstract class Camera {
     }
 
     @ObfuscatedName("fe.l(FI)V")
-    public void method3695(float arg0) throws CameraException {
+    public void setLookatAngularInterpolation(float arg0) throws CameraException {
         if (!this.method3715()) {
             throw new CameraException();
         }
     }
 
     @ObfuscatedName("fe.f(FB)V")
-    public void method3696(float arg0) throws CameraException {
+    public void setPositionAngularInterpolation(float arg0) throws CameraException {
         if (!this.method3715()) {
             throw new CameraException();
         }
@@ -233,7 +233,7 @@ public abstract class Camera {
     }
 
     @ObfuscatedName("fe.z(Lko;I)V")
-    public void method3698(Vector3 arg0) throws CameraException {
+    public void setLookatAcceleration(Vector3 arg0) throws CameraException {
         if (!this.method3715() || !this.field2226.field2200) {
             throw new CameraException();
         }
@@ -241,7 +241,7 @@ public abstract class Camera {
     }
 
     @ObfuscatedName("fe.n(Lko;I)V")
-    public void method3755(Vector3 arg0) throws CameraException {
+    public void setPositionAcceleration(Vector3 arg0) throws CameraException {
         if (!this.method3715() || !this.field2226.field2200) {
             throw new CameraException();
         }
@@ -249,7 +249,7 @@ public abstract class Camera {
     }
 
     @ObfuscatedName("fe.o(Lko;B)V")
-    public void method3700(Vector3 arg0) throws CameraException {
+    public void setLookatMaxSpeed(Vector3 arg0) throws CameraException {
         if (!this.method3715() || !this.field2226.field2200) {
             throw new CameraException();
         }
@@ -257,7 +257,7 @@ public abstract class Camera {
     }
 
     @ObfuscatedName("fe.q(Lko;B)V")
-    public void method3771(Vector3 arg0) throws CameraException {
+    public void setPositionMaxSpeed(Vector3 arg0) throws CameraException {
         if (!this.method3715() || !this.field2226.field2200) {
             throw new CameraException();
         }
@@ -294,7 +294,7 @@ public abstract class Camera {
     }
 
     @ObfuscatedName("fe.x(FFS)V")
-    public void method3705(float arg0, float arg1) throws CameraException {
+    public void setDepthPlanes(float arg0, float arg1) throws CameraException {
         if (!this.method3715()) {
             throw new CameraException();
         }
@@ -303,7 +303,7 @@ public abstract class Camera {
     }
 
     @ObfuscatedName("fe.i(FFB)V")
-    public void method3739(float arg0, float arg1) throws CameraException {
+    public void setFieldOfView(float arg0, float arg1) throws CameraException {
         if (!this.method3715()) {
             throw new CameraException();
         }
@@ -335,7 +335,7 @@ public abstract class Camera {
     }
 
     @ObfuscatedName("fe.r(II)V")
-    public void method3710(int arg0) {
+    public void removeEffect(int arg0) {
         CameraEffect var2 = (CameraEffect) this.field2225.getNode((long) arg0);
         if (var2 != null) {
             var2.method6979();
@@ -383,17 +383,17 @@ public abstract class Camera {
     }
 
     @ObfuscatedName("fe.af(I)Lfh;")
-    public CameraControlMode method3764() {
+    public CameraControlMode getControlMode() {
         return this.field2219;
     }
 
     @ObfuscatedName("fe.ar(I)Lgo;")
-    public Position method3699() {
+    public Position getPosition() {
         return this.field2224;
     }
 
     @ObfuscatedName("fe.an(I)Ltd;")
-    public Lookat method3716() {
+    public Lookat getLookat() {
         return this.field2222;
     }
 
@@ -403,12 +403,12 @@ public abstract class Camera {
     }
 
     @ObfuscatedName("fe.ag(I)Lfo;")
-    public LookatMode method3751() {
+    public LookatMode getLookatMode() {
         return this.field2221;
     }
 
     @ObfuscatedName("fe.as(B)Lfg;")
-    public PositionMode method3719() {
+    public PositionMode getPositionMode() {
         return this.field2234;
     }
 

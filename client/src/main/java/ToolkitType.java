@@ -44,7 +44,7 @@ public class ToolkitType implements SerializableEnum {
     }
 
     @ObfuscatedName("wt.j(B)I")
-    public int method6339() {
+    public int getId() {
         return this.field7354;
     }
 }

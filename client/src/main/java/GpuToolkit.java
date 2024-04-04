@@ -1912,7 +1912,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.bl(IIIIII)V")
-    public final void method488(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+    public final void drawRectangle(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
         int var8 = arg2 - 1;
         int var9 = arg3 - 1;
         byte var7 = 0;

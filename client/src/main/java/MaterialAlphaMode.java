@@ -25,7 +25,7 @@ public class MaterialAlphaMode implements SerializableEnum {
     }
 
     @ObfuscatedName("pu.j(B)I")
-    public int method6339() {
+    public int getId() {
         return this.field4851;
     }
 }

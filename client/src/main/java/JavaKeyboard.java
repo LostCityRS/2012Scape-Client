@@ -1,6 +1,5 @@
 import deob.ObfuscatedName;
 
-import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.KeyEvent;
@@ -74,7 +73,7 @@ public final class JavaKeyboard extends Keyboard implements KeyListener, FocusLi
         var4.field9581 = arg0;
         var4.field9582 = arg1;
         var4.field9583 = arg2;
-        var4.field9584 = MonotonicTime.method5554();
+        var4.field9584 = MonotonicTime.get();
         this.field9771.method11558(var4);
     }
 
@@ -84,7 +83,7 @@ public final class JavaKeyboard extends Keyboard implements KeyListener, FocusLi
     }
 
     @ObfuscatedName("aem.a(IB)Z")
-    public boolean method7243(int arg0) {
+    public boolean isKeyHeld(int arg0) {
         return arg0 >= 0 && arg0 < 112 ? this.field9775[arg0] : false;
     }
 

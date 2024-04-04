@@ -69,7 +69,7 @@ public class VarBitTypeList implements PlayerTypeListRelated {
     }
 
     @ObfuscatedName("pd.c(II)V")
-    public void method7658(int arg0) {
+    public void resizeCache(int arg0) {
         WeightedCache var2 = this.field4665;
         synchronized (this.field4665) {
             this.field4665.method7922();

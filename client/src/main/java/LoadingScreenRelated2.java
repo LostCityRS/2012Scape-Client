@@ -27,8 +27,8 @@ public class LoadingScreenRelated2 implements LoadingScreenElement {
         if (!arg0) {
             return;
         }
-        int var2 = Statics.field4125 > client.field9067 ? Statics.field4125 : client.field9067;
-        int var3 = Statics.field4677 > client.field9068 ? Statics.field4677 : client.field9068;
+        int var2 = Statics.canvasWid > client.field9067 ? Statics.canvasWid : client.field9067;
+        int var3 = Statics.canvasHei > client.field9068 ? Statics.canvasHei : client.field9068;
         int var4 = this.field2323.method1042();
         int var5 = this.field2323.method1047();
         int var6 = 0;

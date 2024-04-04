@@ -43,20 +43,20 @@ public class LoadingScreenRelated4 extends LoadingScreenProgressDisplay {
             return;
         }
         int[] var4 = new int[4];
-        Statics.field5187.qa(var4);
-        Statics.field5187.r(arg1, arg2, this.field2311.field2602 + arg1, this.field2311.field2607 + arg2);
+        Statics.renderer.qa(var4);
+        Statics.renderer.r(arg1, arg2, this.field2311.field2602 + arg1, this.field2311.field2607 + arg2);
         int var5 = this.field8720.method1042();
         int var6 = this.field8720.method1047();
         int var7 = this.field8723.method1042();
         int var8 = this.field8723.method1047();
         this.field8720.method2500(arg1, (this.field2311.field2607 - var6) / 2 + arg2);
         this.field8723.method2500(this.field2311.field2602 + arg1 - var7, (this.field2311.field2607 - var8) / 2 + arg2);
-        Statics.field5187.r(arg1, arg2, this.field2311.field2602 + arg1, arg2 + this.field8724.method1047());
+        Statics.renderer.r(arg1, arg2, this.field2311.field2602 + arg1, arg2 + this.field8724.method1047());
         this.field8724.method2511(arg1 + var5, arg2, this.field2311.field2602 - var5 - var7, this.field2311.field2607);
         int var9 = this.field8722.method1047();
-        Statics.field5187.r(arg1, this.field2311.field2607 + arg2 - var9, this.field2311.field2602 + arg1, this.field2311.field2607 + arg2);
+        Statics.renderer.r(arg1, this.field2311.field2607 + arg2 - var9, this.field2311.field2602 + arg1, this.field2311.field2607 + arg2);
         this.field8722.method2511(arg1 + var5, this.field2311.field2607 + arg2 - var9, this.field2311.field2602 - var5 - var7, this.field2311.field2607);
-        Statics.field5187.r(var4[0], var4[1], var4[2], var4[3]);
+        Statics.renderer.r(var4[0], var4[1], var4[2], var4[3]);
     }
 
     @ObfuscatedName("aai.d(ZIII)V")
@@ -69,12 +69,12 @@ public class LoadingScreenRelated4 extends LoadingScreenProgressDisplay {
         int var9 = var7 - var6;
         int var10 = this.method3956() * var8 / 10000;
         int[] var11 = new int[4];
-        Statics.field5187.qa(var11);
-        Statics.field5187.r(var4, var6, var4 + var10, var7);
+        Statics.renderer.qa(var11);
+        Statics.renderer.r(var4, var6, var4 + var10, var7);
         this.method14085(var4, var6, var8, var9);
-        Statics.field5187.r(var4 + var10, var6, var5, var7);
+        Statics.renderer.r(var4 + var10, var6, var5, var7);
         this.field8721.method2511(var4, var6, var8, var9);
-        Statics.field5187.r(var11[0], var11[1], var11[2], var11[3]);
+        Statics.renderer.r(var11[0], var11[1], var11[2], var11[3]);
     }
 
     @ObfuscatedName("aai.i(IIIII)V")

@@ -28,7 +28,7 @@ public class MoveSpeed implements SerializableEnum {
     }
 
     @ObfuscatedName("mk.j(B)I")
-    public int method6339() {
+    public int getId() {
         return this.id;
     }
 

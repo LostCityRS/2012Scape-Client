@@ -229,11 +229,11 @@ public abstract class RendererToolkit {
 
     @ObfuscatedName("ra.bz(IIIIII)V")
     public final void method482(int arg0, int arg1, int arg2, int arg3, int arg4) {
-        this.method488(arg0, arg1, arg2, arg3, arg4, 1);
+        this.drawRectangle(arg0, arg1, arg2, arg3, arg4, 1);
     }
 
     @ObfuscatedName("ra.bv(IIIIII)V")
-    public final void method496(int arg0, int arg1, int arg2, int arg3, int arg4) {
+    public final void fillRectangle(int arg0, int arg1, int arg2, int arg3, int arg4) {
         this.B(arg0, arg1, arg2, arg3, arg4, 1);
     }
 
@@ -355,8 +355,11 @@ public abstract class RendererToolkit {
     public abstract void o(int arg0, int arg1, int arg2, int arg3);
 
     @ObfuscatedName("ra.bl(IIIIII)V")
-    public abstract void method488(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
+    public abstract void drawRectangle(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
 
+    /**
+     * fillRectangle: this function is obfuscated because sw3d links to native dll functions
+     */
     @ObfuscatedName("ra.B(IIIIII)V")
     public abstract void B(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
 
@@ -510,6 +513,9 @@ public abstract class RendererToolkit {
     @ObfuscatedName("ra.bb(IIZZ)Lce;")
     public abstract Sprite method658(int arg0, int arg1, boolean arg2, boolean arg3);
 
+    /**
+     * setClip: this function is obfuscated because sw3d links to native dll functions
+     */
     @ObfuscatedName("ra.r(IIII)V")
     public abstract void r(int arg0, int arg1, int arg2, int arg3);
 

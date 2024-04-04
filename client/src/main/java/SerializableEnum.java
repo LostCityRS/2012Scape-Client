@@ -4,5 +4,5 @@ import deob.ObfuscatedName;
 public interface SerializableEnum {
 
     @ObfuscatedName("sy.j(B)I")
-    int method6339();
+    int getId();
 }

@@ -123,7 +123,7 @@ public class ja extends RendererToolkit implements ua {
             for (short var6 = 0; var6 < var5; var6++) {
                 Material var7 = this.field400.method889(var6);
                 if (var7 != null) {
-                    this.V(var6, var7.field1260, var7.field1262.method6339(), var7.field1270, var7.field1248, var7.field1264, var7.field1252 == 64, var7.field1266, var7.field1267, var7.field1268, var7.field1261, var7.field1250, var7.field1265, var7.field1276, var7.field1273, var7.field1274, var7.field1275, var7.field1245, var7.field1277, var7.field1278);
+                    this.V(var6, var7.field1260, var7.field1262.getId(), var7.field1270, var7.field1248, var7.field1264, var7.field1252 == 64, var7.field1266, var7.field1267, var7.field1268, var7.field1261, var7.field1250, var7.field1265, var7.field1276, var7.field1273, var7.field1274, var7.field1275, var7.field1245, var7.field1277, var7.field1278);
                 }
             }
         } catch (Throwable var9) {
@@ -306,7 +306,7 @@ public class ja extends RendererToolkit implements ua {
     }
 
     @ObfuscatedName("ja.bl(IIIIII)V")
-    public void method488(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+    public void drawRectangle(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
         this.XA(arg0, arg1, arg2, arg4, arg5);
         this.XA(arg0, arg1 + arg3 - 1, arg2, arg4, arg5);
         this.G(arg0, arg1 + 1, arg3 - 1, arg4, arg5);
@@ -714,7 +714,7 @@ public class ja extends RendererToolkit implements ua {
                         var6 = var5;
                     }
 
-                    this.F(arg0, var6, var3.field1260, var3.field1262.method6339(), var3.field1270, var3.field1248, var3.field1264, var3.field1252 == 64, var3.field1266, var3.field1267, var3.field1268, var3.field1261, var3.field1250, var3.field1265, var3.field1276, var3.field1273, var3.field1274, var3.field1275, var3.field1245, var3.field1277, var3.field1278);
+                    this.F(arg0, var6, var3.field1260, var3.field1262.getId(), var3.field1270, var3.field1248, var3.field1264, var3.field1252 == 64, var3.field1266, var3.field1267, var3.field1268, var3.field1261, var3.field1250, var3.field1265, var3.field1276, var3.field1273, var3.field1274, var3.field1275, var3.field1245, var3.field1277, var3.field1278);
                     return true;
                 }
             }

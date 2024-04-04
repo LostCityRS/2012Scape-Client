@@ -53,7 +53,7 @@ public class MSITypeList {
     }
 
     @ObfuscatedName("wd.j(IIB)V")
-    public void method12502(int arg0, int arg1) {
+    public void resizeCache(int arg0, int arg1) {
         this.field7201 = new WeightedCache(arg0);
         this.field7202 = new WeightedCache(arg1);
     }

@@ -25,7 +25,7 @@ public class ModeWhere implements SerializableEnum {
     public static final ModeWhere field6367 = new ModeWhere("", 6);
 
     @ObfuscatedName("sf.l")
-    public static final ModeWhere field6368 = new ModeWhere("", 0);
+    public static final ModeWhere LIVE = new ModeWhere("", 0);
 
     @ObfuscatedName("sf.f")
     public final int field6370;
@@ -36,7 +36,7 @@ public class ModeWhere implements SerializableEnum {
 
     @ObfuscatedName("sf.u(I)[Lsf;")
     public static ModeWhere[] method11173() {
-        return new ModeWhere[]{field6362, field6368, field6366, field6363, field6367, field6369, field6365, field6364};
+        return new ModeWhere[]{field6362, LIVE, field6366, field6363, field6367, field6369, field6365, field6364};
     }
 
     public ModeWhere(String arg0, int arg1) {
@@ -49,7 +49,7 @@ public class ModeWhere implements SerializableEnum {
     }
 
     @ObfuscatedName("sf.j(B)I")
-    public int method6339() {
+    public int getId() {
         return this.field6370;
     }
 }

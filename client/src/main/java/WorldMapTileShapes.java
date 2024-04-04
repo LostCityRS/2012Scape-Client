@@ -28,7 +28,7 @@ public class WorldMapTileShapes {
     }
 
     @ObfuscatedName("nz.j(II)[[[B")
-    public static byte[][][] method6983(int arg0) {
+    public static byte[][][] buildTileShapes(int arg0) {
         byte[][][] var1 = new byte[8][4][];
         int var2 = arg0;
         int var3 = arg0;

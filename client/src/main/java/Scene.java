@@ -177,7 +177,7 @@ public class Scene {
     public boolean[] field4540;
 
     @ObfuscatedName("oo.bt")
-    public PickableEntityList field4541;
+    public PickableEntityList pickableEntities;
 
     @ObfuscatedName("oo.bg")
     public boolean[][] field4542;
@@ -234,7 +234,7 @@ public class Scene {
         this.field4544 = new boolean[this.field4531 + this.field4531 + 1][this.field4531 + this.field4531 + 1];
         this.field4542 = new boolean[this.field4531 + this.field4531 + 2][this.field4531 + this.field4531 + 2];
         this.field4543 = new int[this.field4531 + this.field4531 + 2];
-        this.field4541 = new PickableEntityList(false);
+        this.pickableEntities = new PickableEntityList(false);
     }
 
     @ObfuscatedName("oo.u(II)V")
@@ -1026,8 +1026,8 @@ public class Scene {
             this.field4493.field4613 = false;
         }
         ParticleSystemRenderer.method3619(this, this.field4489);
-        if (!this.field4541.field4473) {
-            Iterator var34 = this.field4541.field4471.iterator();
+        if (!this.pickableEntities.field4473) {
+            Iterator var34 = this.pickableEntities.field4471.iterator();
             while (var34.hasNext()) {
                 PickableEntity var35 = (PickableEntity) var34.next();
                 var34.remove();
@@ -1303,7 +1303,7 @@ public class Scene {
         }
         if (var10.field4564) {
             var10.field4563 = arg0;
-            this.field4541.method7390(var10);
+            this.pickableEntities.method7390(var10);
         } else {
             PickableEntity.method2573(var10);
         }

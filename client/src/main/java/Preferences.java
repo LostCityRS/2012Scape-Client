@@ -48,10 +48,10 @@ public class Preferences {
             var2 = 1;
             arg0.method15941(64);
         }
-        if (Statics.clientOptions.field9661.method15781() == 0) {
-            Statics.clientOptions.method15449(Statics.clientOptions.field9661, true);
+        if (Statics.options.field9661.method15781() == 0) {
+            Statics.options.method15449(Statics.options.field9661, true);
         } else {
-            Statics.clientOptions.method15448(Statics.clientOptions.field9670, 0);
+            Statics.options.method15448(Statics.options.field9670, 0);
             Statics.method5600(0, false);
         }
         Statics.method1245();
@@ -75,10 +75,10 @@ public class Preferences {
             method1886(true);
             var2 = 1;
         }
-        if (Statics.clientOptions.field9661.method15781() == 2) {
-            Statics.clientOptions.method15449(Statics.clientOptions.field9661, true);
+        if (Statics.options.field9661.method15781() == 2) {
+            Statics.options.method15449(Statics.options.field9661, true);
         } else {
-            Statics.clientOptions.method15448(Statics.clientOptions.field9670, 2);
+            Statics.options.method15448(Statics.options.field9670, 2);
             Statics.method5600(2, false);
         }
         Statics.method1245();
@@ -102,10 +102,10 @@ public class Preferences {
             method1886(true);
             var3 = 1;
         }
-        if (Statics.clientOptions.field9661.method15781() == arg1) {
-            Statics.clientOptions.method15449(Statics.clientOptions.field9661, true);
+        if (Statics.options.field9661.method15781() == arg1) {
+            Statics.options.method15449(Statics.options.field9661, true);
         } else {
-            Statics.clientOptions.method15448(Statics.clientOptions.field9670, arg1);
+            Statics.options.method15448(Statics.options.field9670, arg1);
             Statics.method5600(arg1, false);
         }
         Statics.method1245();
@@ -114,134 +114,134 @@ public class Preferences {
 
     @ObfuscatedName("lh.l(I)V")
     public static void method5717() {
-        Statics.clientOptions.method15448(Statics.clientOptions.field9660, 2);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9655, 2);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9671, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9647, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9649, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9645, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9658, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9659, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9651, 2);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9650, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9666, 2);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9646, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9637, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9665, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9648, 2);
-        Statics.clientOptions.method15448(Statics.clientOptions.buildArea, BuildAreaSize.field2139.field2143);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9673, 0);
-        if (Statics.field5187 != null && Statics.field5187.method450() && Statics.field5187.method600()) {
-            Statics.field5187.method558();
+        Statics.options.method15448(Statics.options.field9660, 2);
+        Statics.options.method15448(Statics.options.field9655, 2);
+        Statics.options.method15448(Statics.options.field9671, 1);
+        Statics.options.method15448(Statics.options.field9647, 1);
+        Statics.options.method15448(Statics.options.field9649, 1);
+        Statics.options.method15448(Statics.options.field9645, 1);
+        Statics.options.method15448(Statics.options.field9658, 1);
+        Statics.options.method15448(Statics.options.field9659, 1);
+        Statics.options.method15448(Statics.options.field9651, 2);
+        Statics.options.method15448(Statics.options.field9650, 1);
+        Statics.options.method15448(Statics.options.field9666, 2);
+        Statics.options.method15448(Statics.options.field9646, 1);
+        Statics.options.method15448(Statics.options.field9637, 0);
+        Statics.options.method15448(Statics.options.field9665, 0);
+        Statics.options.method15448(Statics.options.field9648, 2);
+        Statics.options.method15448(Statics.options.buildArea, BuildAreaSize.field2139.field2143);
+        Statics.options.method15448(Statics.options.field9673, 0);
+        if (Statics.renderer != null && Statics.renderer.method450() && Statics.renderer.method600()) {
+            Statics.renderer.method558();
         }
-        Statics.clientOptions.method15448(Statics.clientOptions.field9657, 1);
+        Statics.options.method15448(Statics.options.skyDetail, 1);
         method7165();
-        Statics.clientOptions.method15448(Statics.clientOptions.field9677, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9633, 4);
+        Statics.options.method15448(Statics.options.field9677, 0);
+        Statics.options.method15448(Statics.options.field9633, 4);
         client.method13901();
-        client.world.method6139().method8154();
+        client.world.getEnvironmentManager().method8154();
         client.field9165 = true;
     }
 
     @ObfuscatedName("lq.f(I)V")
     public static void method5928() {
-        Statics.clientOptions.method15448(Statics.clientOptions.field9660, 2);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9655, 2);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9671, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9647, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9649, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9645, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9658, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9659, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9651, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9650, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9666, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9646, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9637, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9665, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9648, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.buildArea, BuildAreaSize.field2139.field2143);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9673, 0);
-        if (Statics.field5187 != null && Statics.field5187.method450() && Statics.field5187.method600()) {
-            Statics.field5187.method558();
+        Statics.options.method15448(Statics.options.field9660, 2);
+        Statics.options.method15448(Statics.options.field9655, 2);
+        Statics.options.method15448(Statics.options.field9671, 1);
+        Statics.options.method15448(Statics.options.field9647, 1);
+        Statics.options.method15448(Statics.options.field9649, 1);
+        Statics.options.method15448(Statics.options.field9645, 1);
+        Statics.options.method15448(Statics.options.field9658, 1);
+        Statics.options.method15448(Statics.options.field9659, 1);
+        Statics.options.method15448(Statics.options.field9651, 1);
+        Statics.options.method15448(Statics.options.field9650, 1);
+        Statics.options.method15448(Statics.options.field9666, 0);
+        Statics.options.method15448(Statics.options.field9646, 1);
+        Statics.options.method15448(Statics.options.field9637, 0);
+        Statics.options.method15448(Statics.options.field9665, 0);
+        Statics.options.method15448(Statics.options.field9648, 1);
+        Statics.options.method15448(Statics.options.buildArea, BuildAreaSize.field2139.field2143);
+        Statics.options.method15448(Statics.options.field9673, 0);
+        if (Statics.renderer != null && Statics.renderer.method450() && Statics.renderer.method600()) {
+            Statics.renderer.method558();
         }
-        Statics.clientOptions.method15448(Statics.clientOptions.field9657, 1);
+        Statics.options.method15448(Statics.options.skyDetail, 1);
         method7165();
-        Statics.clientOptions.method15448(Statics.clientOptions.field9677, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9633, 3);
+        Statics.options.method15448(Statics.options.field9677, 1);
+        Statics.options.method15448(Statics.options.field9633, 3);
         client.method13901();
-        client.world.method6139().method8154();
+        client.world.getEnvironmentManager().method8154();
         client.field9165 = true;
     }
 
     @ObfuscatedName("oi.d(I)V")
     public static void method7359() {
-        Statics.clientOptions.method15448(Statics.clientOptions.field9660, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9655, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9671, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9647, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9649, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9645, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9658, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9651, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9659, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9650, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9666, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9646, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9637, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9665, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9648, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.buildArea, BuildAreaSize.field2139.field2143);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9673, 0);
-        if (Statics.field5187 != null && Statics.field5187.method450() && Statics.field5187.method600()) {
-            Statics.field5187.method558();
+        Statics.options.method15448(Statics.options.field9660, 1);
+        Statics.options.method15448(Statics.options.field9655, 1);
+        Statics.options.method15448(Statics.options.field9671, 1);
+        Statics.options.method15448(Statics.options.field9647, 1);
+        Statics.options.method15448(Statics.options.field9649, 0);
+        Statics.options.method15448(Statics.options.field9645, 0);
+        Statics.options.method15448(Statics.options.field9658, 0);
+        Statics.options.method15448(Statics.options.field9651, 0);
+        Statics.options.method15448(Statics.options.field9659, 0);
+        Statics.options.method15448(Statics.options.field9650, 0);
+        Statics.options.method15448(Statics.options.field9666, 0);
+        Statics.options.method15448(Statics.options.field9646, 0);
+        Statics.options.method15448(Statics.options.field9637, 0);
+        Statics.options.method15448(Statics.options.field9665, 0);
+        Statics.options.method15448(Statics.options.field9648, 0);
+        Statics.options.method15448(Statics.options.buildArea, BuildAreaSize.field2139.field2143);
+        Statics.options.method15448(Statics.options.field9673, 0);
+        if (Statics.renderer != null && Statics.renderer.method450() && Statics.renderer.method600()) {
+            Statics.renderer.method558();
         }
-        Statics.clientOptions.method15448(Statics.clientOptions.field9657, 0);
+        Statics.options.method15448(Statics.options.skyDetail, 0);
         method7165();
-        Statics.clientOptions.method15448(Statics.clientOptions.field9677, 2);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9633, 2);
+        Statics.options.method15448(Statics.options.field9677, 2);
+        Statics.options.method15448(Statics.options.field9633, 2);
         client.method13901();
-        client.world.method6139().method8154();
+        client.world.getEnvironmentManager().method8154();
         client.field9165 = true;
     }
 
     @ObfuscatedName("aw.z(ZI)V")
     public static void method1886(boolean arg0) {
-        Statics.clientOptions.method15448(Statics.clientOptions.field9660, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9655, 1);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9671, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9646, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9647, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9649, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9645, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9658, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9651, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9659, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9650, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9666, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9637, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9665, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9648, 0);
-        Statics.clientOptions.method15448(Statics.clientOptions.buildArea, BuildAreaSize.field2139.field2143);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9673, 0);
-        if (Statics.field5187 != null && Statics.field5187.method450() && Statics.field5187.method600()) {
-            Statics.field5187.method558();
+        Statics.options.method15448(Statics.options.field9660, 1);
+        Statics.options.method15448(Statics.options.field9655, 1);
+        Statics.options.method15448(Statics.options.field9671, 0);
+        Statics.options.method15448(Statics.options.field9646, 0);
+        Statics.options.method15448(Statics.options.field9647, 0);
+        Statics.options.method15448(Statics.options.field9649, 0);
+        Statics.options.method15448(Statics.options.field9645, 0);
+        Statics.options.method15448(Statics.options.field9658, 0);
+        Statics.options.method15448(Statics.options.field9651, 0);
+        Statics.options.method15448(Statics.options.field9659, 0);
+        Statics.options.method15448(Statics.options.field9650, 0);
+        Statics.options.method15448(Statics.options.field9666, 0);
+        Statics.options.method15448(Statics.options.field9637, 0);
+        Statics.options.method15448(Statics.options.field9665, 0);
+        Statics.options.method15448(Statics.options.field9648, 0);
+        Statics.options.method15448(Statics.options.buildArea, BuildAreaSize.field2139.field2143);
+        Statics.options.method15448(Statics.options.field9673, 0);
+        if (Statics.renderer != null && Statics.renderer.method450() && Statics.renderer.method600()) {
+            Statics.renderer.method558();
         }
-        Statics.clientOptions.method15448(Statics.clientOptions.field9657, 0);
+        Statics.options.method15448(Statics.options.skyDetail, 0);
         method7165();
-        Statics.clientOptions.method15448(Statics.clientOptions.field9677, 2);
-        Statics.clientOptions.method15448(Statics.clientOptions.field9633, 1);
+        Statics.options.method15448(Statics.options.field9677, 2);
+        Statics.options.method15448(Statics.options.field9633, 1);
         client.method13901();
-        client.world.method6139().method8154();
+        client.world.getEnvironmentManager().method8154();
         client.field9165 = true;
     }
 
     @ObfuscatedName("og.n(I)V")
     public static void method7165() {
         if (GameShell.field4144 > 1) {
-            Statics.clientOptions.method15448(Statics.clientOptions.field9652, 4);
+            Statics.options.method15448(Statics.options.field9652, 4);
         } else {
-            Statics.clientOptions.method15448(Statics.clientOptions.field9652, 2);
+            Statics.options.method15448(Statics.options.field9652, 2);
         }
     }
 }

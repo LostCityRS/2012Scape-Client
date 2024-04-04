@@ -74,7 +74,7 @@ public class PlayerModel {
     public void method8234(int arg0, int arg1, ObjTypeList arg2) {
         if (arg1 == -1) {
             this.field5001[arg0] = 0;
-        } else if (arg2.method12316(arg1) == null) {
+        } else if (arg2.get(arg1) == null) {
             return;
         } else {
             this.field5001[arg0] = arg1 | 0x40000000;
@@ -253,7 +253,7 @@ public class PlayerModel {
                             if (!var51 && this.field5011 != null && this.field5011[var48] != null) {
                                 var50 = this.field5011[var48];
                             }
-                            ModelUnlit var52 = arg5.method12316(var49 & 0x3FFFFFFF).method12245(this.field5005, var50);
+                            ModelUnlit var52 = arg5.get(var49 & 0x3FFFFFFF).method12245(this.field5005, var50);
                             if (var52 != null) {
                                 var47[var48] = var52;
                             }
@@ -341,7 +341,7 @@ public class PlayerModel {
                     if (!var42 && this.field5011 != null && this.field5011[var39] != null) {
                         var41 = this.field5011[var39];
                     }
-                    if (!arg5.method12316(var40 & 0x3FFFFFFF).method12246(this.field5005, var41)) {
+                    if (!arg5.get(var40 & 0x3FFFFFFF).method12246(this.field5005, var41)) {
                         var38 = true;
                     }
                 } else if ((var40 & Integer.MIN_VALUE) != 0 && !arg3.method3909(var40 & 0x3FFFFFFF).method3889()) {
@@ -425,7 +425,7 @@ public class PlayerModel {
                     if (this.field5011 != null && this.field5011[var15] != null) {
                         var17 = this.field5011[var15];
                     }
-                    if (!arg4.method12316(var16 & 0x3FFFFFFF).method12275(this.field5005, var17)) {
+                    if (!arg4.get(var16 & 0x3FFFFFFF).method12275(this.field5005, var17)) {
                         var14 = true;
                     }
                 } else if ((var16 & Integer.MIN_VALUE) != 0 && !arg2.method3909(var16 & 0x3FFFFFFF).method3891()) {
@@ -444,7 +444,7 @@ public class PlayerModel {
                     if (this.field5011 != null && this.field5011[var20] != null) {
                         var22 = this.field5011[var20];
                     }
-                    ModelUnlit var23 = arg4.method12316(var21 & 0x3FFFFFFF).method12249(this.field5005, var22);
+                    ModelUnlit var23 = arg4.get(var21 & 0x3FFFFFFF).method12249(this.field5005, var22);
                     if (var23 != null) {
                         var18[var19++] = var23;
                     }

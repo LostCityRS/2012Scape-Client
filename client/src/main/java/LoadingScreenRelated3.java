@@ -24,7 +24,7 @@ public class LoadingScreenRelated3 implements LoadingScreenElement {
     @ObfuscatedName("gb.u(B)V")
     public void method3936() {
         FontMetrics var1 = FontMetrics.method14876(this.field2336, this.field2337.field2644);
-        this.field2334 = Statics.field5187.method712(var1, (PalettedSpriteData[]) SpriteDataProvider.method2593(this.field2335, this.field2337.field2644), true);
+        this.field2334 = Statics.renderer.method712(var1, (PalettedSpriteData[]) SpriteDataProvider.method2593(this.field2335, this.field2337.field2644), true);
     }
 
     @ObfuscatedName("gb.j(ZI)V")

@@ -26,7 +26,7 @@ public class Loading {
         field3421 = true;
         Statics.field6391 = LoginManager.field533;
         Statics.field4814 = LoginManager.field534;
-        client.method13897(false);
+        client.logout(false);
         Statics.field3420 = null;
         Statics.field3562 = null;
         client.setState(12);
@@ -37,7 +37,7 @@ public class Loading {
         if (Statics.field3420 == null) {
             Statics.field3420 = Statics.method5013();
             Statics.field1208 = Statics.field3420[0];
-            Statics.field1931 = MonotonicTime.method5554();
+            Statics.field1931 = MonotonicTime.get();
         }
         if (Statics.field6789 == null) {
             method3460();
@@ -45,7 +45,7 @@ public class Loading {
         LoadingStage var0 = Statics.field1208;
         int var1 = method1610();
         if (Statics.field1208 == var0) {
-            Statics.field2324 = Statics.field1208.field3405.method12206(Statics.field2308);
+            Statics.field2324 = Statics.field1208.field3405.get(Statics.language);
             if (Statics.field1208.field3406) {
                 Statics.field4455 = (Statics.field1208.field3398 - Statics.field1208.field3410) * var1 / 100 + Statics.field1208.field3410;
             }
@@ -60,13 +60,13 @@ public class Loading {
                 LoginManager.method12220(Statics.field6391, Statics.field4814);
             }
         } else {
-            Statics.field2324 = var0.field3397.method12206(Statics.field2308);
+            Statics.field2324 = var0.field3397.get(Statics.language);
             if (Statics.field1208.field3409) {
                 Statics.field2324 = Statics.field2324 + var0.field3398 + "%";
             }
             Statics.field4455 = var0.field3398;
             if (Statics.field1208.field3406 || var0.field3406) {
-                Statics.field1931 = MonotonicTime.method5554();
+                Statics.field1931 = MonotonicTime.get();
             }
         }
         if (Statics.field6789 == null) {
@@ -97,7 +97,7 @@ public class Loading {
     public static void method3460() {
         if (Statics.field1208 != null) {
             Statics.field6789 = new LoadingScreenRenderer();
-            Statics.field6789.method4956(Statics.field1931, Statics.field1208.field3405.method12206(Statics.field2308), Statics.field1208.field3410, Statics.field1208);
+            Statics.field6789.method4956(Statics.field1931, Statics.field1208.field3405.get(Statics.language), Statics.field1208.field3410, Statics.field1208);
             Statics.field2668 = new Thread(Statics.field6789, "");
             Statics.field2668.start();
         }
@@ -141,10 +141,10 @@ public class Loading {
 
     @ObfuscatedName("k.l(I)I")
     public static int method1610() {
-        if (Statics.clientOptions.field9669.method15877() == 0) {
+        if (Statics.options.field9669.method15877() == 0) {
             for (int var0 = 0; var0 < client.field8950; var0++) {
                 if (client.field8951[var0].method7298() == 's' || client.field8951[var0].method7298() == 'S') {
-                    Statics.clientOptions.method15448(Statics.clientOptions.field9669, 1);
+                    Statics.options.method15448(Statics.options.field9669, 1);
                     client.field8912 = true;
                     GraphicsPacketQueue.method12023(ToolkitType.field7363);
                     break;
@@ -176,8 +176,8 @@ public class Loading {
             Statics.field9896 = Statics.field4761.method5622();
             Statics.field1625 = Statics.field1937.method5622();
             DefaultSprites.method11376(Statics.field4761);
-            int var6 = Statics.clientOptions.field9668.method15859();
-            Statics.field7348 = new LoadingRelated3(client.field9163, Statics.field2308, Statics.field1937);
+            int var6 = Statics.options.field9668.method15859();
+            Statics.field7348 = new LoadingRelated3(client.modeGame, Statics.language, Statics.field1937);
             LoadingRelated1[] var7 = Statics.field7348.method12706(var6);
             if (var7.length == 0) {
                 var7 = Statics.field7348.method12706(0);
@@ -210,7 +210,7 @@ public class Loading {
                 }
             }
             Statics.field6784.method4837(client.field8914);
-            DefaultSprites.method2931(Statics.field5187);
+            DefaultSprites.method2931(Statics.renderer);
             client.setState(2);
         }
         if (Statics.field1208 == LoadingStage.field3389) {
@@ -300,42 +300,42 @@ public class Loading {
                 return 99;
             }
             Statics.field8465 = new BasicMaterialTypeList(Statics.field7572, Statics.field808, Statics.field6435);
-            Statics.field4464 = new ParamTypeList(client.field9163, Statics.field2308, Statics.field7435);
-            Statics.field3769 = new BASTypeList(client.field9163, Statics.field2308, Statics.field7435, Statics.wearposDefaults);
-            Statics.field3770 = new CursorTypeList(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
-            Statics.field1244 = new EnumTypeList(client.field9163, Statics.field2308, Statics.field6451);
-            Statics.field3615 = new FloorOverlayTypeList(client.field9163, Statics.field2308, Statics.field7435);
-            Statics.field4450 = new FloorUnderlayTypeList(client.field9163, Statics.field2308, Statics.field7435);
-            Statics.field5037 = new HitmarkTypeList(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
-            Statics.field6705 = new HeadbarTypeList(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
-            Statics.field7650 = new IDKTypeList(client.field9163, Statics.field2308, Statics.field7435, Statics.field4560);
-            Statics.field495 = new InvTypeList(client.field9163, Statics.field2308, Statics.field7435);
-            Statics.field785 = new LightTypeList(client.field9163, Statics.field2308, Statics.field7435);
-            Statics.field10355 = new LocTypeList(client.field9163, Statics.field2308, true, Statics.field1565, Statics.field4560);
+            Statics.field4464 = new ParamTypeList(client.modeGame, Statics.language, Statics.field7435);
+            Statics.field3769 = new BASTypeList(client.modeGame, Statics.language, Statics.field7435, Statics.wearposDefaults);
+            Statics.field3770 = new CursorTypeList(client.modeGame, Statics.language, Statics.field7435, Statics.field7387);
+            Statics.field1244 = new EnumTypeList(client.modeGame, Statics.language, Statics.field6451);
+            Statics.field3615 = new FloorOverlayTypeList(client.modeGame, Statics.language, Statics.field7435);
+            Statics.field4450 = new FloorUnderlayTypeList(client.modeGame, Statics.language, Statics.field7435);
+            Statics.field5037 = new HitmarkTypeList(client.modeGame, Statics.language, Statics.field7435, Statics.field7387);
+            Statics.field6705 = new HeadbarTypeList(client.modeGame, Statics.language, Statics.field7435, Statics.field7387);
+            Statics.field7650 = new IDKTypeList(client.modeGame, Statics.language, Statics.field7435, Statics.field4560);
+            Statics.field495 = new InvTypeList(client.modeGame, Statics.language, Statics.field7435);
+            Statics.field785 = new LightTypeList(client.modeGame, Statics.language, Statics.field7435);
+            Statics.field10355 = new LocTypeList(client.modeGame, Statics.language, true, Statics.field1565, Statics.field4560);
             client.world.method6159(Statics.field10355);
-            Statics.field8656.method6038(new LocTypeList(client.field9163, Statics.field2308, true, Statics.field1565, Statics.field4560));
-            Statics.field8499 = new MapElementTypeList(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
-            Statics.field850 = new MSITypeList(client.field9163, Statics.field2308, Statics.field7435, Statics.field7387);
-            Statics.field3774 = new NPCTypeList(client.field9163, Statics.field2308, true, Statics.field5080, Statics.field4560);
-            Statics.field3492 = new ObjTypeList(client.field9163, Statics.field2308, true, Statics.field4464, Statics.field5130, Statics.field4560);
-            Statics.field4959 = new QuestTypeList(client.field9163, Statics.field2308, Statics.field7435, true);
-            Statics.field566 = new SeqTypeList(client.field9163, Statics.field2308, Statics.field3897, Statics.field7567, Statics.field6690);
-            Statics.field4678 = new SkyBoxTypeList(client.field9163, Statics.field2308, Statics.field7435);
-            Statics.field6360 = new SkyDecorTypeList(client.field9163, Statics.field2308, Statics.field7435);
-            Statics.field4213 = new EffectAnimTypeList(client.field9163, Statics.field2308, Statics.field2070, Statics.field4560);
-            Statics.field4214 = new StructTypeList(client.field9163, Statics.field2308, Statics.field7435, true);
-            Statics.field8514 = new VarcStrTypeList(client.field9163, Statics.field2308, Statics.field7435);
-            Statics.field8455 = new VarClientTypeList(client.field9163, Statics.field2308, Statics.field7435);
-            Statics.field4645 = new VarBitTypeList(client.field9163, Statics.field2308, Statics.field4229);
-            Statics.field6667 = new VarPlayerTypeList(client.field9163, Statics.field2308, Statics.field7435);
-            Statics.field1510 = new VarnTypeList(client.field9163, Statics.field2308, Statics.field7435);
-            Statics.field7196 = new VarnBitTypeList(client.field9163, Statics.field2308, Statics.field7435);
-            Statics.field7390 = new VarClanTypeList(client.field9163, Statics.field2308, Statics.field7435);
-            Statics.field1202 = new VarClanSettingTypeList(client.field9163, Statics.field2308, Statics.field7435);
+            Statics.asyncRebuild.method6038(new LocTypeList(client.modeGame, Statics.language, true, Statics.field1565, Statics.field4560));
+            Statics.field8499 = new MapElementTypeList(client.modeGame, Statics.language, Statics.field7435, Statics.field7387);
+            Statics.field850 = new MSITypeList(client.modeGame, Statics.language, Statics.field7435, Statics.field7387);
+            Statics.field3774 = new NPCTypeList(client.modeGame, Statics.language, true, Statics.field5080, Statics.field4560);
+            Statics.objTypes = new ObjTypeList(client.modeGame, Statics.language, true, Statics.field4464, Statics.field5130, Statics.field4560);
+            Statics.field4959 = new QuestTypeList(client.modeGame, Statics.language, Statics.field7435, true);
+            Statics.field566 = new SeqTypeList(client.modeGame, Statics.language, Statics.field3897, Statics.field7567, Statics.field6690);
+            Statics.field4678 = new SkyBoxTypeList(client.modeGame, Statics.language, Statics.field7435);
+            Statics.field6360 = new SkyDecorTypeList(client.modeGame, Statics.language, Statics.field7435);
+            Statics.field4213 = new EffectAnimTypeList(client.modeGame, Statics.language, Statics.field2070, Statics.field4560);
+            Statics.field4214 = new StructTypeList(client.modeGame, Statics.language, Statics.field7435, true);
+            Statics.field8514 = new VarcStrTypeList(client.modeGame, Statics.language, Statics.field7435);
+            Statics.field8455 = new VarClientTypeList(client.modeGame, Statics.language, Statics.field7435);
+            Statics.field4645 = new VarBitTypeList(client.modeGame, Statics.language, Statics.field4229);
+            Statics.field6667 = new VarPlayerTypeList(client.modeGame, Statics.language, Statics.field7435);
+            Statics.field1510 = new VarnTypeList(client.modeGame, Statics.language, Statics.field7435);
+            Statics.field7196 = new VarnBitTypeList(client.modeGame, Statics.language, Statics.field7435);
+            Statics.field7390 = new VarClanTypeList(client.modeGame, Statics.language, Statics.field7435);
+            Statics.field1202 = new VarClanSettingTypeList(client.modeGame, Statics.language, Statics.field7435);
             Statics.method3529(Statics.field2653, Statics.field4560, Statics.field7387, Statics.field8745);
             BillboardType.method8409(Statics.field8734);
-            Statics.field3262 = new QuickChatCatTypeList(Statics.field2308, Statics.field6343, Statics.field6712);
-            Statics.field3779 = new QuickChatPhraseTypeList(Statics.field2308, Statics.field6343, Statics.field6712, new ClientDynamicProvider());
+            Statics.field3262 = new QuickChatCatTypeList(Statics.language, Statics.field6343, Statics.field6712);
+            Statics.field3779 = new QuickChatPhraseTypeList(Statics.language, Statics.field6343, Statics.field6712, new ClientDynamicProvider());
             Statics.field2669 = new VarRelated1();
             client.method13901();
             AnimationNode.method6490(Statics.field566);
@@ -376,13 +376,13 @@ public class Loading {
             client.field8938 = true;
         }
         if (Statics.field1208 == LoadingStage.field3400) {
-            if (!Component.method6404(Statics.field4825.field5162, null)) {
+            if (!Component.openInterface(Statics.field4825.field5162, null)) {
                 return 0;
             }
             boolean var20 = true;
             for (int var21 = 0; var21 < Statics.field1756[Statics.field4825.field5162].field1732.length; var21++) {
                 Component var22 = Statics.field1756[Statics.field4825.field5162].field1732[var21];
-                if (var22.field1766 == 5 && var22.field1797 != -1 && !Statics.field7387.method5629(var22.field1797, 0)) {
+                if (var22.type == 5 && var22.field1797 != -1 && !Statics.field7387.method5629(var22.field1797, 0)) {
                     var20 = false;
                 }
             }
@@ -407,12 +407,12 @@ public class Loading {
             Statics.field7348 = null;
             Statics.field3422 = null;
             MainLoadingScreen.method6065();
-            client.field8911 = Statics.clientOptions.field9669.method15877() == 1;
-            Statics.clientOptions.method15448(Statics.clientOptions.field9669, 1);
+            client.field8911 = Statics.options.field9669.method15877() == 1;
+            Statics.options.method15448(Statics.options.field9669, 1);
             if (client.field8911) {
-                Statics.clientOptions.method15448(Statics.clientOptions.field9670, 0);
-            } else if (Statics.clientOptions.field9670.field9844 && Statics.field2305.field9703 < 512 && Statics.field2305.field9703 != 0) {
-                Statics.clientOptions.method15448(Statics.clientOptions.field9670, 0);
+                Statics.options.method15448(Statics.options.field9670, 0);
+            } else if (Statics.options.field9670.field9844 && Statics.field2305.field9703 < 512 && Statics.field2305.field9703 != 0) {
+                Statics.options.method15448(Statics.options.field9670, 0);
             }
             Statics.method1245();
             if (client.field8911) {
@@ -421,15 +421,15 @@ public class Loading {
                     GraphicsPacketQueue.method12023(ToolkitType.field7356);
                 }
             } else {
-                Statics.method5600(Statics.clientOptions.field9670.method15781(), false);
-                if (Statics.clientOptions.field9670.method15781() == 0) {
+                Statics.method5600(Statics.options.field9670.method15781(), false);
+                if (Statics.options.field9670.method15781() == 0) {
                     GraphicsPacketQueue.method12023(ToolkitType.field7364);
                 }
             }
-            client.method7282(Statics.clientOptions.field9663.method15766(), -1, -1, false);
+            client.setWindowMode(Statics.options.maxScreenSize.getValue(), -1, -1, false);
             Statics.field6784.method4837(client.field8914);
-            DefaultSprites.method2931(Statics.field5187);
-            DefaultSprites.method15812(Statics.field5187, Statics.field7387);
+            DefaultSprites.method2931(Statics.renderer);
+            DefaultSprites.method15812(Statics.renderer, Statics.field7387);
             MiniMenu.method3288(Statics.field8538);
         }
         return method4789();
@@ -476,7 +476,7 @@ public class Loading {
     public static void method2862() {
         FileOnDisk var0 = null;
         try {
-            var0 = GameShell.method4031("2", client.field9163.field6404, false);
+            var0 = GameShell.method4031("2", client.modeGame.field6404, false);
             byte[] var1 = new byte[(int) var0.method12077()];
             int var3;
             for (int var2 = 0; var2 < var1.length; var2 += var3) {

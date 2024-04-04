@@ -37,7 +37,7 @@ public class NativeMouseEvent extends BasicMouseEvent {
             var5.field10472 = arg1;
             var5.field10456 = arg2;
             var5.field10469 = arg3;
-            var5.field10463 = MonotonicTime.method5554();
+            var5.field10463 = MonotonicTime.get();
             return var5;
         }
     }

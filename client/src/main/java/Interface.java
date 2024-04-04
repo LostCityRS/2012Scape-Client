@@ -18,7 +18,7 @@ public class Interface {
     }
 
     @ObfuscatedName("ej.u(S)[Lew;")
-    public Component[] method3104() {
+    public Component[] getComponents() {
         return this.field1733 == null ? this.field1732 : this.field1733;
     }
 
@@ -34,7 +34,7 @@ public class Interface {
 
     @ObfuscatedName("ej.a(II)Lew;")
     public Component method3108(int arg0) {
-        if (this.field1732[0].field1764 >>> 16 != arg0 >>> 16) {
+        if (this.field1732[0].id >>> 16 != arg0 >>> 16) {
             throw new IllegalArgumentException();
         }
         return this.field1732[arg0 & 0xFFFF];

@@ -84,7 +84,7 @@ public class WorldMapFont {
         int var10 = arg2.getMaxAscent();
         int var11 = arg2.getMaxAscent() + arg2.getMaxDescent();
         int var12 = arg2.getHeight();
-        Image var13 = Statics.field1231.createImage(var7, var11);
+        Image var13 = Statics.canvas.createImage(var7, var11);
         Graphics var14 = var13.getGraphics();
         var14.setColor(Color.black);
         var14.fillRect(0, 0, var7, var11);

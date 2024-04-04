@@ -47,7 +47,7 @@ public class ReceivePlayerPositions {
         byte var4 = (byte) (var3 >> 28);
         int var5 = var3 >> 14 & 0x3FFF;
         int var6 = var3 & 0x3FFF;
-        CoordGrid var7 = client.world.method6214();
+        CoordGrid var7 = client.world.getBase();
         var2.routeWaypointX[0] = var5 - var7.x;
         var2.routeWaypointZ[0] = var6 - var7.z;
         var2.method8552((float) ((var2.routeWaypointX[0] << 9) + (var2.size() << 8)), var2.method8545().trans.y, (float) ((var2.routeWaypointZ[0] << 9) + (var2.size() << 8)));
@@ -381,7 +381,7 @@ public class ReceivePlayerPositions {
             String var53 = arg0.gjstr();
             int var54 = arg0.g1_alt3();
             if ((var54 & 0x1) != 0) {
-                ChatHistory.method3943(2, var54, arg2.method16120(true), arg2.method16121(false), arg2.name, var53);
+                ChatHistory.addMessage(2, var54, arg2.method16120(true), arg2.method16121(false), arg2.name, var53);
             }
             arg2.method16127(var53, 0, 0);
         }
@@ -429,7 +429,7 @@ public class ReceivePlayerPositions {
         if ((arg3 & 0x400) != 0) {
             String var60 = arg0.gjstr();
             if (Statics.localPlayerEntity == arg2) {
-                ChatHistory.method3943(2, 0, arg2.method16120(true), arg2.method16121(false), arg2.name, var60);
+                ChatHistory.addMessage(2, 0, arg2.method16120(true), arg2.method16121(false), arg2.name, var60);
             }
             arg2.method16127(var60, 0, 0);
         }

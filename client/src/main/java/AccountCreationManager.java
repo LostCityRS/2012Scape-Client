@@ -28,23 +28,23 @@ public class AccountCreationManager {
         if (client.state != 14) {
             return;
         }
-        ClientMessage var1 = ClientMessage.createMessage(ClientProt.field2859, client.field8959.randomOut);
-        var1.field9467.p2(0);
-        int var2 = var1.field9467.pos;
-        var1.field9467.pjstr(arg0);
-        var1.field9467.pos += 7;
-        var1.field9467.tinyenc(Statics.field630, var2, var1.field9467.pos);
-        var1.field9467.psize2(var1.field9467.pos - var2);
-        client.field8959.queue(var1);
+        ClientMessage var1 = ClientMessage.createMessage(ClientProt.CREATE_CHECK_EMAIL, client.lobbyConnection.randomOut);
+        var1.buf.p2(0);
+        int var2 = var1.buf.pos;
+        var1.buf.pjstr(arg0);
+        var1.buf.pos += 7;
+        var1.buf.tinyenc(Statics.field630, var2, var1.buf.pos);
+        var1.buf.psize2(var1.buf.pos - var2);
+        client.lobbyConnection.queue(var1);
         Statics.field9312 = CheckEmailReply.field6453;
     }
 
     @ObfuscatedName("gz.m(II)V")
     public static void method3942(int arg0) {
         if (client.state == 14) {
-            ClientMessage var1 = ClientMessage.createMessage(ClientProt.field2917, client.field8959.randomOut);
-            var1.field9467.p1(arg0);
-            client.field8959.queue(var1);
+            ClientMessage var1 = ClientMessage.createMessage(ClientProt.CREATE_LOG_PROGRESS, client.lobbyConnection.randomOut);
+            var1.buf.p1(arg0);
+            client.lobbyConnection.queue(var1);
         }
     }
 
@@ -90,66 +90,66 @@ public class AccountCreationManager {
                 Statics.method5540();
             }
             if (Statics.field633 == CreateConnectStage.field564) {
-                client.field8959.method1911(Stream.method12184(Statics.field6782.method12025(), 15000), Statics.field6782.field6765);
-                client.field8959.method1935();
+                client.lobbyConnection.method1911(Stream.method12184(Statics.field6782.method12025(), 15000), Statics.field6782.field6765);
+                client.lobbyConnection.method1935();
                 ClientMessage var1 = ClientMessage.method4876();
-                var1.field9467.p1(LoginProt.field2959.field2970);
-                var1.field9467.p2(0);
-                int var2 = var1.field9467.pos;
-                var1.field9467.p2(client.REVISION);
-                var1.field9467.p2(client.SUBREVISION);
+                var1.buf.p1(LoginProt.CREATE_ACCOUNT_CONNECT.id);
+                var1.buf.p2(0);
+                int var2 = var1.buf.pos;
+                var1.buf.p2(client.REVISION);
+                var1.buf.p2(client.SUBREVISION);
                 Statics.field630 = method11380(var1);
-                int var3 = var1.field9467.pos;
-                var1.field9467.pjstr(client.field8921);
-                var1.field9467.p2(client.field9043);
-                var1.field9467.p8(client.field8910);
-                var1.field9467.pjstr(Statics.field6817);
-                var1.field9467.p1(Statics.field2308.method6339());
-                var1.field9467.p1(client.field9163.field6408);
-                GameShell.method3615(var1.field9467);
-                String var4 = client.field9099;
-                var1.field9467.p1(var4 == null ? 0 : 1);
+                int var3 = var1.buf.pos;
+                var1.buf.pjstr(client.gamepack);
+                var1.buf.p2(client.field9043);
+                var1.buf.p8(client.field8910);
+                var1.buf.pjstr(Statics.field6817);
+                var1.buf.p1(Statics.language.getId());
+                var1.buf.p1(client.modeGame.game);
+                GameShell.method3615(var1.buf);
+                String var4 = client.createAdditionalInfo;
+                var1.buf.p1(var4 == null ? 0 : 1);
                 if (var4 != null) {
-                    var1.field9467.pjstr(var4);
+                    var1.buf.pjstr(var4);
                 }
-                Statics.field2305.method15475(var1.field9467);
-                var1.field9467.pos += 7;
-                var1.field9467.tinyenc(Statics.field630, var3, var1.field9467.pos);
-                var1.field9467.psize2(var1.field9467.pos - var2);
-                client.field8959.queue(var1);
-                client.field8959.method1912();
+                Statics.field2305.createHardwareBlock(var1.buf);
+                var1.buf.pos += 7;
+                var1.buf.tinyenc(Statics.field630, var3, var1.buf.pos);
+                var1.buf.psize2(var1.buf.pos - var2);
+                client.lobbyConnection.queue(var1);
+                client.lobbyConnection.method1912();
                 Statics.field633 = CreateConnectStage.field565;
             }
             if (Statics.field633 == CreateConnectStage.field565) {
-                if (client.field8959.getStream() == null) {
+                if (client.lobbyConnection.getStream() == null) {
                     Statics.method5540();
                     return;
                 }
-                if (!client.field8959.getStream().method7212(1)) {
+                if (!client.lobbyConnection.getStream().method7212(1)) {
                     return;
                 }
-                client.field8959.getStream().method7196(client.field8959.field832.data, 0, 1);
-                Statics.field629 = (ConnectReply) SerializableEnums.decode(ConnectReply.method8658(), client.field8959.field832.data[0] & 0xFF);
+                client.lobbyConnection.getStream().method7196(client.lobbyConnection.field832.data, 0, 1);
+                Statics.field629 = (ConnectReply) SerializableEnums.decode(ConnectReply.method8658(), client.lobbyConnection.field832.data[0] & 0xFF);
                 if (Statics.field629 == ConnectReply.field6424) {
-                    client.field8959.randomOut = new Isaac(Statics.field630);
+                    client.lobbyConnection.randomOut = new Isaac(Statics.field630);
                     int[] var5 = new int[4];
                     for (int var6 = 0; var6 < 4; var6++) {
                         var5[var6] = Statics.field630[var6] + 50;
                     }
-                    client.field8959.field833 = new Isaac(var5);
+                    client.lobbyConnection.field833 = new Isaac(var5);
                     new Isaac(var5);
-                    client.field8959.field832.setIsaac(client.field8959.field833);
+                    client.lobbyConnection.field832.setIsaac(client.lobbyConnection.field833);
                     client.setState(14);
-                    client.field8959.method1935();
-                    client.field8959.field832.pos = 0;
-                    client.field8959.field843 = null;
-                    client.field8959.field844 = null;
-                    client.field8959.field831 = null;
-                    client.field8959.field837 = 0;
+                    client.lobbyConnection.method1935();
+                    client.lobbyConnection.field832.pos = 0;
+                    client.lobbyConnection.field843 = null;
+                    client.lobbyConnection.field844 = null;
+                    client.lobbyConnection.field831 = null;
+                    client.lobbyConnection.field837 = 0;
                 } else {
-                    client.field8959.method1916();
+                    client.lobbyConnection.method1916();
                 }
-                client.field8959.field840 = null;
+                client.lobbyConnection.field840 = null;
                 Statics.field633 = null;
             }
         } catch (IOException var8) {
@@ -174,7 +174,7 @@ public class AccountCreationManager {
         }
         var1.p2((int) (Math.random() * 9.9999999E7D));
         var1.tinyenc(PublicKeys.field666, PublicKeys.field667);
-        arg0.field9467.pdata(var1.data, 0, var1.pos);
+        arg0.buf.pdata(var1.data, 0, var1.pos);
         return var2;
     }
 }

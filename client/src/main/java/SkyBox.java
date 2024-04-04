@@ -268,10 +268,10 @@ public class SkyBox {
                             this.field3937.method2502(arg2 + var20, arg3 + var18, arg5, arg5, 0, var14 << 24 | 0xFFFFFF, var17);
                         }
                         if ((this.field3941 & 0xFF000000) != 0) {
-                            arg0.method496(0, 0, arg4, arg3 + var18 + 1, this.field3941);
+                            arg0.fillRectangle(0, 0, arg4, arg3 + var18 + 1, this.field3941);
                         }
                         if ((this.field3940 & 0xFF000000) != 0) {
-                            arg0.method496(0, arg3 + var18 + arg5, arg4, arg5 - (arg3 + var18 + arg5), this.field3940);
+                            arg0.fillRectangle(0, arg3 + var18 + arg5, arg4, arg5 - (arg3 + var18 + arg5), this.field3940);
                         }
                     } else {
                         while (var18 > arg5) {

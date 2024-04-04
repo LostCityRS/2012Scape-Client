@@ -157,7 +157,7 @@ public class PureJavaToolkit extends RendererToolkit {
             this.method13204(0);
             ColourUtils.method8092(true, true);
             this.field8000 = true;
-            this.field7999 = (int) MonotonicTime.method5554();
+            this.field7999 = (int) MonotonicTime.get();
         } catch (Throwable var3) {
             var3.printStackTrace();
             this.method442();
@@ -567,7 +567,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.bl(IIIIII)V")
-    public void method488(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+    public void drawRectangle(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
         this.XA(arg0, arg1, arg2, arg4, arg5);
         this.XA(arg0, arg1 + arg3 - 1, arg2, arg4, arg5);
         this.G(arg0, arg1 + 1, arg3 - 2, arg4, arg5);

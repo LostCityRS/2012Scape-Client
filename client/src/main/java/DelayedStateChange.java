@@ -36,7 +36,7 @@ public class DelayedStateChange extends SecondaryNode {
 
     @ObfuscatedName("yw.a(I)Laif;")
     public static DelayedStateChange method12910() {
-        DelayedStateChange var0 = (DelayedStateChange) field10323.method11756();
+        DelayedStateChange var0 = (DelayedStateChange) field10323.last();
         if (var0 != null) {
             var0.method6979();
             var0.method15142();
@@ -44,11 +44,11 @@ public class DelayedStateChange extends SecondaryNode {
         }
         DelayedStateChange var1;
         do {
-            var1 = (DelayedStateChange) field10317.method11756();
+            var1 = (DelayedStateChange) field10317.last();
             if (var1 == null) {
                 return null;
             }
-            if (var1.method16510() > MonotonicTime.method5554()) {
+            if (var1.method16510() > MonotonicTime.get()) {
                 return null;
             }
             var1.method6979();
@@ -341,7 +341,7 @@ public class DelayedStateChange extends SecondaryNode {
 
     @ObfuscatedName("aif.bz(I)V")
     public void method16506() {
-        this.field9554 = this.field9554 & Long.MIN_VALUE | MonotonicTime.method5554() + 500L;
+        this.field9554 = this.field9554 & Long.MIN_VALUE | MonotonicTime.get() + 500L;
         field10317.method11728(this);
     }
 

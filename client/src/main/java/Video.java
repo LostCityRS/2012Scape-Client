@@ -220,7 +220,7 @@ public abstract class Video {
     public boolean method7042() {
         if (this.field4243 == null) {
             double var1 = (double) this.field4240.method16812();
-            return var1 == 0.0D || (double) MonotonicTime.method5554() >= (double) this.field4240.method16816() + 1000.0D / var1;
+            return var1 == 0.0D || (double) MonotonicTime.get() >= (double) this.field4240.method16816() + 1000.0D / var1;
         } else {
             return !this.field4240.method16810() || this.method7039() > this.field4240.method16809();
         }

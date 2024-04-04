@@ -20,11 +20,11 @@ public class ChatHistory {
 
     @ObfuscatedName("b.a(ILjava/lang/String;S)V")
     public static void method1587(int arg0, String arg1) {
-        method3943(arg0, 0, "", "", "", arg1);
+        addMessage(arg0, 0, "", "", "", arg1);
     }
 
     @ObfuscatedName("gz.s(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V")
-    public static void method3943(int arg0, int arg1, String arg2, String arg3, String arg4, String arg5) {
+    public static void addMessage(int arg0, int arg1, String arg2, String arg3, String arg4, String arg5) {
         method13903(arg0, arg1, arg2, arg3, arg4, arg5, null, -1);
     }
 
@@ -41,7 +41,7 @@ public class ChatHistory {
         }
         field2097[0] = var8;
         Statics.field2098++;
-        client.field9130 = client.field9132;
+        client.field9130 = client.interfaceUpdateNum;
     }
 
     @ObfuscatedName("gz.m(II)Lep;")

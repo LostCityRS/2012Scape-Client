@@ -52,7 +52,7 @@ public class LoadingScreenRenderer implements Runnable {
     public synchronized void method4973(LoadingScreen arg0) {
         this.field3350 = this.field3349;
         this.field3349 = arg0;
-        this.field3347 = MonotonicTime.method5554();
+        this.field3347 = MonotonicTime.get();
     }
 
     @ObfuscatedName("kh.c(JLjava/lang/String;ILky;I)V")
@@ -105,15 +105,15 @@ public class LoadingScreenRenderer implements Runnable {
 
     public void run() {
         while (!this.field3353) {
-            long var1 = MonotonicTime.method5554();
+            long var1 = MonotonicTime.get();
             synchronized (this) {
                 try {
                     this.field3352++;
                     if (this.field3349 instanceof PreLoadingScreen) {
                         this.field3349.method4982(this.field3348);
                     } else {
-                        long var4 = MonotonicTime.method5554();
-                        if (Statics.field5187 == null || this.field3350 == null || this.field3350.method4983() == 0 || this.field3347 < var4 - (long) this.field3350.method4983()) {
+                        long var4 = MonotonicTime.get();
+                        if (Statics.renderer == null || this.field3350 == null || this.field3350.method4983() == 0 || this.field3347 < var4 - (long) this.field3350.method4983()) {
                             if (this.field3350 != null) {
                                 this.field3348 = true;
                                 this.field3350.method4985();
@@ -121,34 +121,34 @@ public class LoadingScreenRenderer implements Runnable {
                             }
                             if (this.field3348) {
                                 client.method3536();
-                                if (Statics.field5187 != null) {
-                                    Statics.field5187.ba(1, 0);
+                                if (Statics.renderer != null) {
+                                    Statics.renderer.ba(1, 0);
                                 }
                             }
-                            this.field3349.method4982(this.field3348 || Statics.field5187 != null && Statics.field5187.method447());
+                            this.field3349.method4982(this.field3348 || Statics.renderer != null && Statics.renderer.method447());
                         } else {
                             int var6 = (int) ((var4 - this.field3347) * 255L / (long) this.field3350.method4983());
                             int var7 = 255 - var6;
                             int var8 = var6 << 24 | 0xFFFFFF;
                             int var9 = var7 << 24 | 0xFFFFFF;
                             client.method3536();
-                            Statics.field5187.ba(1, 0);
-                            Sprite var10 = Statics.field5187.method777(Statics.field4125, Statics.field4677, true);
-                            Framebuffer var11 = Statics.field5187.method467();
+                            Statics.renderer.ba(1, 0);
+                            Sprite var10 = Statics.renderer.method777(Statics.canvasWid, Statics.canvasHei, true);
+                            Framebuffer var11 = Statics.renderer.method467();
                             var11.method1206(0, var10.method1049());
-                            Statics.field5187.method464(var11);
+                            Statics.renderer.method464(var11);
                             this.field3350.method4982(true);
-                            Statics.field5187.method696(var11);
+                            Statics.renderer.method696(var11);
                             var10.method1054(0, 0, 0, var9, 1);
-                            Statics.field5187.method464(var11);
-                            Statics.field5187.ba(1, 0);
+                            Statics.renderer.method464(var11);
+                            Statics.renderer.ba(1, 0);
                             this.field3349.method4982(true);
-                            Statics.field5187.method696(var11);
+                            Statics.renderer.method696(var11);
                             var10.method1054(0, 0, 0, var8, 1);
                         }
                         try {
-                            if (Statics.field5187 != null && !(this.field3349 instanceof PreLoadingScreen)) {
-                                Statics.field5187.method466();
+                            if (Statics.renderer != null && !(this.field3349 instanceof PreLoadingScreen)) {
+                                Statics.renderer.method466();
                             }
                         } catch (RendererException var18) {
                             JagException.method16252(var18.getMessage() + Statics.field1543.method6701(), var18);
@@ -156,14 +156,14 @@ public class LoadingScreenRenderer implements Runnable {
                         }
                     }
                     this.field3348 = false;
-                    if (Statics.field5187 != null && !(this.field3349 instanceof PreLoadingScreen) && this.field3356.field3404 < LoadingStage.field3401.field3404) {
+                    if (Statics.renderer != null && !(this.field3349 instanceof PreLoadingScreen) && this.field3356.field3404 < LoadingStage.field3401.field3404) {
                         client.method13896();
                     }
                 } catch (Exception var19) {
                     continue;
                 }
             }
-            long var15 = MonotonicTime.method5554();
+            long var15 = MonotonicTime.get();
             int var17 = (int) (20L - (var15 - var1));
             if (var17 > 0) {
                 PreciseSleep.method7052((long) var17);

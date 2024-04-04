@@ -45,7 +45,7 @@ public class NPCTypeList {
             this.field7277.method5637(var6);
         }
         if (ModeGame.field6407 == this.field7279) {
-            this.field7282 = new String[]{null, null, null, null, null, LocalisedText.field6874.method12206(this.field7284)};
+            this.field7282 = new String[]{null, null, null, null, null, LocalisedText.field6874.get(this.field7284)};
         } else {
             this.field7282 = new String[]{null, null, null, null, null, null};
         }

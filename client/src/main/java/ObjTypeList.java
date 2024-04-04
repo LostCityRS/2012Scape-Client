@@ -59,15 +59,15 @@ public class ObjTypeList implements PlayerTypeListRelated {
             this.field7144 = var7 * Js5ConfigGroup.OBJTYPE.method3071() + this.field7143.method5637(var7);
         }
         if (ModeGame.field6407 == this.field7139) {
-            this.field7151 = new String[]{null, null, LocalisedText.field6875.method12206(this.field7140), null, null, LocalisedText.field6874.method12206(this.field7140)};
+            this.field7151 = new String[]{null, null, LocalisedText.field6875.get(this.field7140), null, null, LocalisedText.field6874.get(this.field7140)};
         } else {
-            this.field7151 = new String[]{null, null, LocalisedText.field6875.method12206(this.field7140), null, null, null};
+            this.field7151 = new String[]{null, null, LocalisedText.field6875.get(this.field7140), null, null, null};
         }
-        this.field7152 = new String[]{null, null, null, null, LocalisedText.field6876.method12206(this.field7140)};
+        this.field7152 = new String[]{null, null, null, null, LocalisedText.field6876.get(this.field7140)};
     }
 
     @ObfuscatedName("vj.u(II)Lvn;")
-    public ObjType method12316(int arg0) {
+    public ObjType get(int arg0) {
         WeightedCache var2 = this.field7145;
         ObjType var3;
         synchronized (this.field7145) {
@@ -91,13 +91,13 @@ public class ObjTypeList implements PlayerTypeListRelated {
         }
         var8.method12235();
         if (var8.field7108 != -1) {
-            var8.method12238(this.method12316(var8.field7108), this.method12316(var8.field7107));
+            var8.method12238(this.get(var8.field7108), this.get(var8.field7107));
         }
         if (var8.field7064 != -1) {
-            var8.method12258(this.method12316(var8.field7064), this.method12316(var8.field7109));
+            var8.method12258(this.get(var8.field7064), this.get(var8.field7109));
         }
         if (var8.field7123 != -1) {
-            var8.method12240(this.method12316(var8.field7123), this.method12316(var8.field7122));
+            var8.method12240(this.get(var8.field7123), this.get(var8.field7122));
         }
         if (!this.field7142 && var8.field7099) {
             var8.field7116 = 0;
@@ -147,7 +147,7 @@ public class ObjTypeList implements PlayerTypeListRelated {
                 return var12;
             }
         }
-        ObjType var13 = this.method12316(arg2);
+        ObjType var13 = this.get(arg2);
         if (arg3 > 1 && var13.field7105 != null) {
             int var14 = -1;
             for (int var15 = 0; var15 < 10; var15++) {
@@ -156,7 +156,7 @@ public class ObjTypeList implements PlayerTypeListRelated {
                 }
             }
             if (var14 != -1) {
-                var13 = this.method12316(var14);
+                var13 = this.get(var14);
             }
         }
         int[] var16 = var13.method12276(arg0, arg1, arg3, arg4, arg5, arg6, arg8, arg9, arg10);

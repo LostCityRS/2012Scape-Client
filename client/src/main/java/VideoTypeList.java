@@ -20,7 +20,7 @@ public class VideoTypeList {
         }
         if (client.field8944) {
             VideoType var3 = new VideoType(arg0, new Js5Video(4096, Statics.field2117, arg0), arg1, arg2);
-            var3.field9618.method7003(Statics.field2308.method11187());
+            var3.field9618.method7003(Statics.language.method11187());
             field6388.method11927(var3, (long) arg0);
         } else {
             method5563(arg0, arg2);
@@ -50,7 +50,7 @@ public class VideoTypeList {
     public static void method5563(int arg0, boolean arg1) {
         if (arg1) {
             ClientMessage var2 = ClientMessage.createMessage(ClientProt.field2867, client.gameConnection.randomOut);
-            var2.field9467.p2(arg0);
+            var2.buf.p2(arg0);
             client.gameConnection.queue(var2);
         } else {
             ScriptRunner.method1372(ClientTriggerType.field7307, arg0, -1);

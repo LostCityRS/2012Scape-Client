@@ -80,7 +80,7 @@ public class HintTrail {
     public void method6953(Scene arg0) {
         this.field4219 = new LinkedList();
         SceneLevelTileFlags var2 = client.world.getSceneLevelTileFlags();
-        CoordGrid var3 = client.world.method6214();
+        CoordGrid var3 = client.world.getBase();
         CoordGrid var4 = new CoordGrid(Statics.currentPlayerLevel, this.field4216[0], this.field4220[0]);
         for (int var5 = 1; var5 < this.field4218; var5++) {
             CoordGrid var6 = new CoordGrid(Statics.currentPlayerLevel, this.field4216[var5], this.field4220[var5]);

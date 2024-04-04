@@ -4,10 +4,10 @@ import deob.ObfuscatedName;
 public class PositionMode {
 
     @ObfuscatedName("fg.u")
-    public static final PositionMode field2192 = new PositionMode(0);
+    public static final PositionMode POINT = new PositionMode(0);
 
     @ObfuscatedName("fg.j")
-    public static final PositionMode field2193 = new PositionMode(1);
+    public static final PositionMode ENTITY = new PositionMode(1);
 
     @ObfuscatedName("fg.a")
     public static final PositionMode field2191 = new PositionMode(2);
@@ -24,10 +24,10 @@ public class PositionMode {
 
     @ObfuscatedName("ec.u(II)Lfg;")
     public static PositionMode method3450(int arg0) {
-        if (field2192.field2195 == arg0) {
-            return field2192;
-        } else if (field2193.field2195 == arg0) {
-            return field2193;
+        if (POINT.field2195 == arg0) {
+            return POINT;
+        } else if (ENTITY.field2195 == arg0) {
+            return ENTITY;
         } else if (field2191.field2195 == arg0) {
             return field2191;
         } else if (field2194.field2195 == arg0) {

@@ -102,7 +102,7 @@ public final class StringTools {
     }
 
     @ObfuscatedName("lb.c(Ljava/lang/CharSequence;I)I")
-    public static int method5598(CharSequence arg0) {
+    public static int parseInt(CharSequence arg0) {
         return method4600(arg0, 10, true);
     }
 

@@ -54,7 +54,7 @@ public class LocTypeList {
             this.field6554.method5637(var6);
         }
         if (ModeGame.field6407 == this.field6557) {
-            this.field6563 = new String[]{null, null, null, null, null, LocalisedText.field6874.method12206(this.field6552)};
+            this.field6563 = new String[]{null, null, null, null, null, LocalisedText.field6874.get(this.field6552)};
         } else {
             this.field6563 = new String[]{null, null, null, null, null, null};
         }
@@ -124,7 +124,7 @@ public class LocTypeList {
     }
 
     @ObfuscatedName("tz.s(II)V")
-    public void method11474(int arg0) {
+    public void resizeCache(int arg0) {
         this.field6561 = new WeightedCache(arg0);
     }
 

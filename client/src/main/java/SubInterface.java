@@ -15,7 +15,7 @@ public class SubInterface extends Node {
     }
 
     @ObfuscatedName("aep.u(B)Z")
-    public boolean method15469() {
+    public boolean process() {
         return true;
     }
 }

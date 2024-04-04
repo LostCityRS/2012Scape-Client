@@ -60,7 +60,7 @@ public class WorldSwitcher {
         Statics.field6772 = new ServerAddress();
         Statics.field6772.field6768 = arg0;
         Statics.field6772.field6765 = arg1;
-        if (Statics.field6683 != ModeWhere.field6368) {
+        if (Statics.field6683 != ModeWhere.LIVE) {
             Statics.field6772.field6764 = Statics.field6772.field6768 + 40000;
             Statics.field6772.field6766 = Statics.field6772.field6768 + 50000;
         }
@@ -97,7 +97,7 @@ public class WorldSwitcher {
             }
         }
         field6777 = false;
-        Statics.field6356 = MonotonicTime.method5554();
+        Statics.field6356 = MonotonicTime.get();
         Statics.field6778 = null;
     }
 
@@ -175,7 +175,7 @@ public class WorldSwitcher {
             }
             return var4 - var5;
         } else if (arg2 == 2) {
-            return StringComparator.method4794(arg0.method15615().field4860, arg1.method15615().field4860, Statics.field2308);
+            return StringComparator.method4794(arg0.method15615().field4860, arg1.method15615().field4860, Statics.language);
         } else if (arg2 == 3) {
             if (arg0.field9798.equals("-")) {
                 if (arg1.field9798.equals("-")) {
@@ -188,7 +188,7 @@ public class WorldSwitcher {
             } else if (arg1.field9798.equals("-")) {
                 return arg3 ? 1 : -1;
             } else {
-                return StringComparator.method4794(arg0.field9798, arg1.field9798, Statics.field2308);
+                return StringComparator.method4794(arg0.field9798, arg1.field9798, Statics.language);
             }
         } else if (arg2 == 4) {
             return arg0.method8036() ? (arg1.method8036() ? 0 : 1) : (arg1.method8036() ? -1 : 0);

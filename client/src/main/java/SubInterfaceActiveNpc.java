@@ -12,7 +12,7 @@ public class SubInterfaceActiveNpc extends SubInterface {
     }
 
     @ObfuscatedName("aji.u(B)Z")
-    public boolean method15469() {
+    public boolean process() {
         ObjectNode var1 = (ObjectNode) client.npcs.getNode((long) this.field10476);
         if (var1 == null) {
             return false;

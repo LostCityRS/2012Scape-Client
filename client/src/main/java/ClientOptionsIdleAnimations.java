@@ -13,7 +13,7 @@ public class ClientOptionsIdleAnimations extends ClientOption {
 
     @ObfuscatedName("afq.z(I)V")
     public void method15835() {
-        if (this.field6462.method15452() == ModeGame.field6402) {
+        if (this.field6462.method15452() == ModeGame.STELLARDAWN) {
             this.field6461 = 2;
         }
         if (this.field6461 < 0 || this.field6461 > 2) {

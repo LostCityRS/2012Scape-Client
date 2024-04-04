@@ -67,7 +67,7 @@ public class PositionEntity extends Position {
         if (this.field8738) {
             Vector3 var2 = this.field8741.method3683();
             if (var2.method5338() < (float) this.field8742) {
-                var2 = Vector3.method5294(0.0F, 0.0F, 1.0F);
+                var2 = Vector3.create(0.0F, 0.0F, 1.0F);
                 Quaternion var3 = this.field8741.method3680();
                 var2.method5318(var3);
             }

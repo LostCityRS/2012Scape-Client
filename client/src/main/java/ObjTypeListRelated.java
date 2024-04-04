@@ -96,7 +96,7 @@ public class ObjTypeListRelated {
 
     @ObfuscatedName("qd.m(I)V")
     public final void method8022(int arg0) {
-        for (CacheEntry var2 = (CacheEntry) this.field4858.method11756(); var2 != null; var2 = (CacheEntry) this.field4858.method11744()) {
+        for (CacheEntry var2 = (CacheEntry) this.field4858.last(); var2 != null; var2 = (CacheEntry) this.field4858.previous()) {
             if (var2.method16730()) {
                 if (var2.method16728() == null) {
                     var2.method6979();
@@ -132,7 +132,7 @@ public class ObjTypeListRelated {
 
     @ObfuscatedName("qd.d()V")
     public final void method8010() {
-        for (CacheEntry var1 = (CacheEntry) this.field4858.method11756(); var1 != null; var1 = (CacheEntry) this.field4858.method11744()) {
+        for (CacheEntry var1 = (CacheEntry) this.field4858.last(); var1 != null; var1 = (CacheEntry) this.field4858.previous()) {
             if (var1.method16730()) {
                 var1.method6979();
                 var1.method15142();

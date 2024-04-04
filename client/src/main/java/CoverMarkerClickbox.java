@@ -13,16 +13,16 @@ public class CoverMarkerClickbox extends Link {
     public PathingEntity field9250;
 
     @ObfuscatedName("acp.m")
-    public int field9251;
+    public int minX;
 
     @ObfuscatedName("acp.t")
-    public int field9252;
+    public int minY;
 
     @ObfuscatedName("acp.l")
-    public int field9253;
+    public int maxX;
 
     @ObfuscatedName("acp.f")
-    public int field9254;
+    public int maxY;
 
     @ObfuscatedName("vj.a(I)Lacp;")
     public static CoverMarkerClickbox method12327() {

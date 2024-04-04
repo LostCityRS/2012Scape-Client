@@ -1,6 +1,5 @@
 import deob.ObfuscatedName;
 
-import java.awt.*;
 import java.util.Arrays;
 
 @ObfuscatedName("mg")
@@ -22,7 +21,7 @@ public class PcmPlayer {
     public int field4026 = 32;
 
     @ObfuscatedName("mg.n")
-    public long field4025 = MonotonicTime.method5554();
+    public long field4025 = MonotonicTime.get();
 
     @ObfuscatedName("mg.o")
     public int field4014;
@@ -123,7 +122,7 @@ public class PcmPlayer {
         if (this.field4035) {
             return;
         }
-        long var1 = MonotonicTime.method5554();
+        long var1 = MonotonicTime.get();
         try {
             if (var1 > this.field4025 + 6000L) {
                 this.field4025 = var1 - 6000L;
@@ -131,7 +130,7 @@ public class PcmPlayer {
             while (var1 > this.field4025 + 5000L) {
                 this.method6501(256);
                 this.field4025 += 256000 / Statics.field4015;
-                var1 = MonotonicTime.method5554();
+                var1 = MonotonicTime.get();
             }
         } catch (Exception var8) {
             this.field4025 = var1;
@@ -203,7 +202,7 @@ public class PcmPlayer {
             this.method6510();
         } catch (Exception var2) {
             this.method6509(false);
-            this.field4029 = MonotonicTime.method5554() + 2000L;
+            this.field4029 = MonotonicTime.get() + 2000L;
         }
     }
 
@@ -356,7 +355,7 @@ public class PcmPlayer {
         if (this.field4023 != null) {
             this.field4023.method15034(arg0, 0, arg1);
         }
-        this.field4025 = MonotonicTime.method5554();
+        this.field4025 = MonotonicTime.get();
     }
 
     @ObfuscatedName("mg.z(Ladc;)V")

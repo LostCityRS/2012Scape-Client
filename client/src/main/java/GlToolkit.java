@@ -506,7 +506,7 @@ public class GlToolkit extends RendererToolkit {
                                         var8 = true;
                                     }
                                     if (var12.length() >= 4 && StringTools.method7735(var12.substring(0, 4))) {
-                                        var7 = StringTools.method5598(var12.substring(0, 4));
+                                        var7 = StringTools.parseInt(var12.substring(0, 4));
                                         break;
                                     }
                                 }
@@ -598,8 +598,8 @@ public class GlToolkit extends RendererToolkit {
         String[] var3 = StringTools.method11508(var2.replace('.', ' '), ' ');
         if (var3.length >= 2) {
             try {
-                int var4 = StringTools.method5598(var3[0]);
-                int var5 = StringTools.method5598(var3[1]);
+                int var4 = StringTools.parseInt(var3[0]);
+                int var5 = StringTools.parseInt(var3[1]);
                 this.field8192 = var4 * 10 + var5;
             } catch (NumberFormatException var8) {
                 var1 |= 0x4;
@@ -913,7 +913,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.bl(IIIIII)V")
-    public void method488(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+    public void drawRectangle(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
         float var7 = (float) arg0 + 0.35F;
         float var8 = (float) arg1 + 0.35F;
         float var9 = (float) arg2 + var7 - 1.0F;
@@ -2632,9 +2632,9 @@ public class GlToolkit extends RendererToolkit {
             OpenGL.glDeleteLists((int) var12.field4228, var12.field9556);
         }
         this.field8083.method2326();
-        if (this.za() > 100663296 && MonotonicTime.method5554() > this.field8078 + 60000L) {
+        if (this.za() > 100663296 && MonotonicTime.get() > this.field8078 + 60000L) {
             System.gc();
-            this.field8078 = MonotonicTime.method5554();
+            this.field8078 = MonotonicTime.get();
         }
         this.field8109 = var3;
     }

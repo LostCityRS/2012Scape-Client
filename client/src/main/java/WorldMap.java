@@ -43,20 +43,20 @@ public class WorldMap {
         if (var8 != null) {
             for (int var9 = 0; var9 < var8.length; var9++) {
                 WorldMapAreaMetadata var10 = WorldMapAreaMetadata.method13263(Statics.field4264, var7, var8[var9]);
-                field4272.method11927(var10, (long) var10.field10370);
+                field4272.method11927(var10, (long) var10.id);
             }
         }
         ColourUtils.method8092(true, false);
     }
 
     @ObfuscatedName("om.j()V")
-    public static void method7106() {
-        Statics.field4288 = new byte[Statics.field4285 * Statics.field4282];
-        Statics.field4287 = new byte[Statics.field4285 * Statics.field4282];
-        Statics.field4291 = new byte[Statics.field4285 * Statics.field4282];
-        Statics.field4293 = new Object[Statics.field4285 * Statics.field4282];
-        Statics.field4294 = new byte[Statics.field4285 * Statics.field4282];
-        Statics.field4295 = new ArrayList[3][Statics.field4285 >> 6][Statics.field4282 >> 6];
+    public static void createDataArrays() {
+        Statics.field4288 = new byte[Statics.currentAreaDisplaySizeX * Statics.currentAreaDisplaySizeZ];
+        Statics.field4287 = new byte[Statics.currentAreaDisplaySizeX * Statics.currentAreaDisplaySizeZ];
+        Statics.field4291 = new byte[Statics.currentAreaDisplaySizeX * Statics.currentAreaDisplaySizeZ];
+        Statics.field4293 = new Object[Statics.currentAreaDisplaySizeX * Statics.currentAreaDisplaySizeZ];
+        Statics.field4294 = new byte[Statics.currentAreaDisplaySizeX * Statics.currentAreaDisplaySizeZ];
+        Statics.field4295 = new ArrayList[3][Statics.currentAreaDisplaySizeX >> 6][Statics.currentAreaDisplaySizeZ >> 6];
         Statics.field4267 = new int[Statics.field4278.field5105 + 1];
     }
 
@@ -75,7 +75,7 @@ public class WorldMap {
 
     @ObfuscatedName("om.s(I)V")
     public static void method7122(int arg0) {
-        Statics.field4292 = (WorldMapAreaMetadata) field4272.getNode((long) arg0);
+        Statics.currentArea = (WorldMapAreaMetadata) field4272.getNode((long) arg0);
     }
 
     @ObfuscatedName("om.c(II)Lajo;")
@@ -94,7 +94,7 @@ public class WorldMap {
     }
 
     @ObfuscatedName("om.t(II)Ltv;")
-    public static DualIterableQueue method7086(int arg0, int arg1) {
+    public static DualIterableQueue getAreaListByCoord(int arg0, int arg1) {
         DualIterableQueue var2 = new DualIterableQueue();
         for (WorldMapAreaMetadata var3 = (WorldMapAreaMetadata) field4272.method11928(); var3 != null; var3 = (WorldMapAreaMetadata) field4272.method11929()) {
             if (var3.field10361 && var3.method16717(arg0, arg1)) {
@@ -105,7 +105,7 @@ public class WorldMap {
     }
 
     @ObfuscatedName("om.l(Lma;II)V")
-    public static void method7087(MaterialTypeList arg0, int arg1, int arg2) {
+    public static void computeFloorOverlayColours(MaterialTypeList arg0, int arg1, int arg2) {
         for (int var3 = 0; var3 < Statics.field4278.field5105; var3++) {
             Statics.field4267[var3 + 1] = method7088(arg0, var3, arg1, arg2);
         }
@@ -152,7 +152,7 @@ public class WorldMap {
 
     @ObfuscatedName("om.d(Lra;II)V")
     public static void method7120(RendererToolkit arg0, int arg1, int arg2) {
-        Packet var3 = new Packet(Statics.field4264.method5645(Statics.field4292.field10362, "area"));
+        Packet var3 = new Packet(Statics.field4264.method5645(Statics.currentArea.debugname, "area"));
         int var4 = var3.g1();
         int[] var5 = new int[var4];
         for (int var6 = 0; var6 < var4; var6++) {
@@ -170,8 +170,8 @@ public class WorldMap {
                     int var11 = var3.g1();
                     for (int var12 = 0; var12 < 64; var12++) {
                         for (int var13 = 0; var13 < 64; var13++) {
-                            int var14 = var10 * 64 + var12 - Statics.field4283;
-                            int var15 = var11 * 64 + var13 - Statics.field4284;
+                            int var14 = var10 * 64 + var12 - Statics.currentAreaDisplayMinX;
+                            int var15 = var11 * 64 + var13 - Statics.currentAreaDisplayMinZ;
                             method7085(arg0, var3, var10, var11, var14, var15, var5, var8);
                         }
                     }
@@ -182,18 +182,18 @@ public class WorldMap {
                     int var19 = var3.g1();
                     for (int var20 = 0; var20 < 8; var20++) {
                         for (int var21 = 0; var21 < 8; var21++) {
-                            int var22 = var16 * 64 + var18 * 8 + var20 - Statics.field4283;
-                            int var23 = var17 * 64 + var19 * 8 + var21 - Statics.field4284;
+                            int var22 = var16 * 64 + var18 * 8 + var20 - Statics.currentAreaDisplayMinX;
+                            int var23 = var17 * 64 + var19 * 8 + var21 - Statics.currentAreaDisplayMinZ;
                             method7085(arg0, var3, var16, var17, var22, var23, var5, var8);
                         }
                     }
                 }
             }
             Object var24 = null;
-            Statics.field4289 = new byte[Statics.field4285 * Statics.field4282];
-            Statics.field4280 = new short[Statics.field4285 * Statics.field4282];
+            Statics.field4289 = new byte[Statics.currentAreaDisplaySizeX * Statics.currentAreaDisplaySizeZ];
+            Statics.field4280 = new short[Statics.currentAreaDisplaySizeX * Statics.currentAreaDisplaySizeZ];
             for (int var25 = 0; var25 < 3; var25++) {
-                byte[] var26 = new byte[Statics.field4285 * Statics.field4282];
+                byte[] var26 = new byte[Statics.currentAreaDisplaySizeX * Statics.currentAreaDisplaySizeZ];
                 for (int var27 = 0; var27 < Statics.field4295[var25].length; var27++) {
                     for (int var28 = 0; var28 < Statics.field4295[var25][0].length; var28++) {
                         ArrayList var29 = Statics.field4295[var25][var27][var28];
@@ -201,7 +201,7 @@ public class WorldMap {
                             Iterator var30 = var29.iterator();
                             while (var30.hasNext()) {
                                 WorldMapRelated1 var31 = (WorldMapRelated1) var30.next();
-                                var26[(var28 * 64 + var31.field4247) * Statics.field4285 + var27 * 64 + var31.field4248] = (byte) var31.field4250;
+                                var26[(var28 * 64 + var31.field4247) * Statics.currentAreaDisplaySizeX + var27 * 64 + var31.field4248] = (byte) var31.field4250;
                             }
                         }
                     }
@@ -214,7 +214,7 @@ public class WorldMap {
                             Iterator var35 = var34.iterator();
                             while (var35.hasNext()) {
                                 WorldMapRelated1 var36 = (WorldMapRelated1) var35.next();
-                                int var37 = (var33 * 64 + var36.field4247) * Statics.field4285 + var32 * 64 + var36.field4248;
+                                int var37 = (var33 * 64 + var36.field4247) * Statics.currentAreaDisplaySizeX + var32 * 64 + var36.field4248;
                                 var36.field4250 = (Statics.field4289[var37] & 0xFF) << 16 | Statics.field4280[var37] & 0xFFFF;
                                 if (var36.field4250 != 0) {
                                     var36.field4250 |= 0xFF000000;
@@ -249,12 +249,12 @@ public class WorldMap {
                 var11 = arg7[var10];
             }
             if (var9) {
-                Statics.field4288[Statics.field4285 * arg5 + arg4] = (byte) var11;
-                Statics.field4287[Statics.field4285 * arg5 + arg4] = 0;
+                Statics.field4288[Statics.currentAreaDisplaySizeX * arg5 + arg4] = (byte) var11;
+                Statics.field4287[Statics.currentAreaDisplaySizeX * arg5 + arg4] = 0;
             } else {
-                Statics.field4287[Statics.field4285 * arg5 + arg4] = (byte) var11;
-                Statics.field4291[Statics.field4285 * arg5 + arg4] = 0;
-                Statics.field4288[Statics.field4285 * arg5 + arg4] = arg1.g1b();
+                Statics.field4287[Statics.currentAreaDisplaySizeX * arg5 + arg4] = (byte) var11;
+                Statics.field4291[Statics.currentAreaDisplaySizeX * arg5 + arg4] = 0;
+                Statics.field4288[Statics.currentAreaDisplaySizeX * arg5 + arg4] = arg1.g1b();
             }
             return;
         }
@@ -274,12 +274,12 @@ public class WorldMap {
                 var19 = arg1.g1();
             }
             if (var15 == 0) {
-                Statics.field4288[Statics.field4285 * arg5 + arg4] = (byte) var16;
-                Statics.field4287[Statics.field4285 * arg5 + arg4] = (byte) var17;
-                Statics.field4291[Statics.field4285 * arg5 + arg4] = (byte) var18;
+                Statics.field4288[Statics.currentAreaDisplaySizeX * arg5 + arg4] = (byte) var16;
+                Statics.field4287[Statics.currentAreaDisplaySizeX * arg5 + arg4] = (byte) var17;
+                Statics.field4291[Statics.currentAreaDisplaySizeX * arg5 + arg4] = (byte) var18;
                 if (var19 == 1) {
-                    Statics.field4293[Statics.field4285 * arg5 + arg4] = Integer.valueOf(arg1.gSmart2or4null());
-                    Statics.field4294[Statics.field4285 * arg5 + arg4] = arg1.g1b();
+                    Statics.field4293[Statics.currentAreaDisplaySizeX * arg5 + arg4] = Integer.valueOf(arg1.gSmart2or4null());
+                    Statics.field4294[Statics.currentAreaDisplaySizeX * arg5 + arg4] = arg1.g1b();
                 } else if (var19 > 1) {
                     int[] var20 = new int[var19];
                     byte[] var21 = new byte[var19];
@@ -287,7 +287,7 @@ public class WorldMap {
                         var20[var22] = arg1.gSmart2or4null();
                         var21[var22] = arg1.g1b();
                     }
-                    Statics.field4293[Statics.field4285 * arg5 + arg4] = new WorldMapRelated14(var20, var21);
+                    Statics.field4293[Statics.currentAreaDisplaySizeX * arg5 + arg4] = new WorldMapRelated14(var20, var21);
                 }
             } else {
                 int[] var23 = null;
@@ -300,20 +300,20 @@ public class WorldMap {
                         var24[var25] = arg1.g1b();
                     }
                 }
-                if (Statics.field4295[var15 - 1][arg2 - (Statics.field4283 >> 6)][arg3 - (Statics.field4284 >> 6)] == null) {
-                    Statics.field4295[var15 - 1][arg2 - (Statics.field4283 >> 6)][arg3 - (Statics.field4284 >> 6)] = new ArrayList();
+                if (Statics.field4295[var15 - 1][arg2 - (Statics.currentAreaDisplayMinX >> 6)][arg3 - (Statics.currentAreaDisplayMinZ >> 6)] == null) {
+                    Statics.field4295[var15 - 1][arg2 - (Statics.currentAreaDisplayMinX >> 6)][arg3 - (Statics.currentAreaDisplayMinZ >> 6)] = new ArrayList();
                 }
                 WorldMapRelated1 var26 = new WorldMapRelated1(arg4 & 0x3F, arg5 & 0x3F, var16, var17, var18, var23, var24);
-                Statics.field4295[var15 - 1][arg2 - (Statics.field4283 >> 6)][arg3 - (Statics.field4284 >> 6)].add(var26);
+                Statics.field4295[var15 - 1][arg2 - (Statics.currentAreaDisplayMinX >> 6)][arg3 - (Statics.currentAreaDisplayMinZ >> 6)].add(var26);
             }
         }
     }
 
     @ObfuscatedName("om.n()V")
     public static void method7091() {
-        for (int var0 = 0; var0 < Statics.field4285; var0++) {
-            for (int var1 = 0; var1 < Statics.field4282; var1++) {
-                Object var2 = Statics.field4293[Statics.field4285 * var1 + var0];
+        for (int var0 = 0; var0 < Statics.currentAreaDisplaySizeX; var0++) {
+            for (int var1 = 0; var1 < Statics.currentAreaDisplaySizeZ; var1++) {
+                Object var2 = Statics.field4293[Statics.currentAreaDisplaySizeX * var1 + var0];
                 if (var2 != null) {
                     if (var2 instanceof WorldMapRelated14) {
                         WorldMapRelated14 var3 = (WorldMapRelated14) var2;
@@ -381,8 +381,8 @@ public class WorldMap {
                                 }
                                 if (var22 != -1) {
                                     WorldMapElement var24 = new WorldMapElement(var22);
-                                    var24.field9566 = ((Statics.field4283 >> 6) + var15) * 64 + var19.field4248 - Statics.field4283;
-                                    var24.field9567 = ((Statics.field4284 >> 6) + var16) * 64 + var19.field4247 - Statics.field4284;
+                                    var24.field9566 = ((Statics.currentAreaDisplayMinX >> 6) + var15) * 64 + var19.field4248 - Statics.currentAreaDisplayMinX;
+                                    var24.field9567 = ((Statics.currentAreaDisplayMinZ >> 6) + var16) * 64 + var19.field4247 - Statics.currentAreaDisplayMinZ;
                                     field4301.method11558(var24);
                                 }
                             }
@@ -395,18 +395,18 @@ public class WorldMap {
 
     @ObfuscatedName("om.o([B[B[SII)V")
     public static void method7092(byte[] arg0, byte[] arg1, short[] arg2, int arg3, int arg4) {
-        int[] var5 = new int[Statics.field4282];
-        int[] var6 = new int[Statics.field4282];
-        int[] var7 = new int[Statics.field4282];
-        int[] var8 = new int[Statics.field4282];
-        int[] var9 = new int[Statics.field4282];
-        for (int var10 = -5; var10 < Statics.field4285; var10++) {
+        int[] var5 = new int[Statics.currentAreaDisplaySizeZ];
+        int[] var6 = new int[Statics.currentAreaDisplaySizeZ];
+        int[] var7 = new int[Statics.currentAreaDisplaySizeZ];
+        int[] var8 = new int[Statics.currentAreaDisplaySizeZ];
+        int[] var9 = new int[Statics.currentAreaDisplaySizeZ];
+        for (int var10 = -5; var10 < Statics.currentAreaDisplaySizeX; var10++) {
             int var11 = var10 + 5;
             int var12 = var10 - 5;
-            for (int var13 = 0; var13 < Statics.field4282; var13++) {
+            for (int var13 = 0; var13 < Statics.currentAreaDisplaySizeZ; var13++) {
                 int var10002;
-                if (var11 < Statics.field4285) {
-                    int var14 = arg0[Statics.field4285 * var13 + var11] & 0xFF;
+                if (var11 < Statics.currentAreaDisplaySizeX) {
+                    int var14 = arg0[Statics.currentAreaDisplaySizeX * var13 + var11] & 0xFF;
                     if (var14 > 0) {
                         FloorUnderlayType var15 = Statics.field4265.method11895(var14 - 1);
                         var5[var13] += var15.field6718;
@@ -417,7 +417,7 @@ public class WorldMap {
                     }
                 }
                 if (var12 >= 0) {
-                    int var16 = arg0[Statics.field4285 * var13 + var12] & 0xFF;
+                    int var16 = arg0[Statics.currentAreaDisplaySizeX * var13 + var12] & 0xFF;
                     if (var16 > 0) {
                         FloorUnderlayType var17 = Statics.field4265.method11895(var16 - 1);
                         var5[var13] -= var17.field6718;
@@ -434,9 +434,9 @@ public class WorldMap {
                 int var20 = 0;
                 int var21 = 0;
                 int var22 = 0;
-                for (int var23 = -5; var23 < Statics.field4282; var23++) {
+                for (int var23 = -5; var23 < Statics.currentAreaDisplaySizeZ; var23++) {
                     int var24 = var23 + 5;
-                    if (var24 < Statics.field4282) {
+                    if (var24 < Statics.currentAreaDisplaySizeZ) {
                         var18 += var5[var24];
                         var19 += var6[var24];
                         var20 += var7[var24];
@@ -452,8 +452,8 @@ public class WorldMap {
                         var22 -= var9[var25];
                     }
                     if (var23 >= 0 && var22 > 0) {
-                        if ((arg0[Statics.field4285 * var23 + var10] & 0xFF) == 0) {
-                            int var26 = Statics.field4285 * var23 + var10;
+                        if ((arg0[Statics.currentAreaDisplaySizeX * var23 + var10] & 0xFF) == 0) {
+                            int var26 = Statics.currentAreaDisplaySizeX * var23 + var10;
                             arg1[var26] = 0;
                             arg2[var26] = 0;
                         } else {
@@ -465,7 +465,7 @@ public class WorldMap {
                                 var28 = 127;
                             }
                             int var29 = (arg3 + var27 & 0xFC00) + (var27 & 0x380) + var28;
-                            int var30 = Statics.field4285 * var23 + var10;
+                            int var30 = Statics.currentAreaDisplaySizeX * var23 + var10;
                             int var31 = Statics.field5083[ColourUtils.method3444(Statics.method14030(var29, 96)) & 0xFFFF];
                             arg1[var30] = (byte) (var31 >> 16 & 0xFF);
                             arg2[var30] = (short) (var31 & 0xFFFF);
@@ -480,11 +480,11 @@ public class WorldMap {
     public static void method7093() {
         int[] var0 = new int[3];
         for (int var1 = 0; var1 < Statics.field4281.field4255; var1++) {
-            boolean var2 = Statics.field4292.method16705(Statics.field4281.field4254[var1] >> 28 & 0x3, Statics.field4281.field4254[var1] >> 14 & 0x3FFF, Statics.field4281.field4254[var1] & 0x3FFF, var0);
+            boolean var2 = Statics.currentArea.getDisplayCoord(Statics.field4281.field4254[var1] >> 28 & 0x3, Statics.field4281.field4254[var1] >> 14 & 0x3FFF, Statics.field4281.field4254[var1] & 0x3FFF, var0);
             if (var2) {
                 WorldMapElement var3 = new WorldMapElement(Statics.field4281.field4253[var1]);
-                var3.field9566 = var0[1] - Statics.field4283;
-                var3.field9567 = var0[2] - Statics.field4284;
+                var3.field9566 = var0[1] - Statics.currentAreaDisplayMinX;
+                var3.field9567 = var0[2] - Statics.currentAreaDisplayMinZ;
                 field4301.method11558(var3);
             }
         }
@@ -492,10 +492,10 @@ public class WorldMap {
 
     @ObfuscatedName("om.p(IIIIIIII)V")
     public static void method7094(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
-        Statics.field4296 = arg0 - Statics.field4283;
-        Statics.field4297 = arg1 - Statics.field4284;
-        Statics.field4298 = arg2 - Statics.field4283;
-        Statics.field4302 = arg3 - Statics.field4284;
+        Statics.field4296 = arg0 - Statics.currentAreaDisplayMinX;
+        Statics.field4297 = arg1 - Statics.currentAreaDisplayMinZ;
+        Statics.field4298 = arg2 - Statics.currentAreaDisplayMinX;
+        Statics.field4302 = arg3 - Statics.currentAreaDisplayMinZ;
         Statics.field4300 = arg4;
         Statics.field4286 = arg5;
         Statics.field4270 = arg6;
@@ -515,10 +515,10 @@ public class WorldMap {
     public static void method7090(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4) {
         int var5 = Statics.field4298 - Statics.field4296;
         int var6 = Statics.field4297 - Statics.field4302;
-        if (Statics.field4298 < Statics.field4285) {
+        if (Statics.field4298 < Statics.currentAreaDisplaySizeX) {
             var5++;
         }
-        if (Statics.field4297 < Statics.field4282) {
+        if (Statics.field4297 < Statics.currentAreaDisplaySizeZ) {
             var6++;
         }
         for (int var7 = 0; var7 < var5; var7++) {
@@ -527,18 +527,18 @@ public class WorldMap {
             int var10 = var9 - var8;
             if (var10 > 0) {
                 int var11 = Statics.field4296 + var7;
-                if (var11 >= 0 && var11 < Statics.field4285) {
+                if (var11 >= 0 && var11 < Statics.currentAreaDisplaySizeX) {
                     for (int var12 = 0; var12 < var6; var12++) {
                         int var13 = Statics.field4303 - ((var12 + 1) * arg2 + arg4 >> 16);
                         int var14 = Statics.field4303 - (arg2 * var12 + arg4 >> 16);
                         int var15 = var14 - var13;
                         if (var15 > 0) {
                             int var16 = Statics.field4302 + var12;
-                            int var17 = Statics.field4285 * var16 + var11;
+                            int var17 = Statics.currentAreaDisplaySizeX * var16 + var11;
                             int var18 = 0;
                             int var19 = 0;
                             Object var20 = null;
-                            if (var16 >= 0 && var16 < Statics.field4282) {
+                            if (var16 >= 0 && var16 < Statics.currentAreaDisplaySizeZ) {
                                 var18 = (Statics.field4289[var17] & 0xFF) << 16 | Statics.field4280[var17] & 0xFFFF;
                                 if (var18 != 0) {
                                     var18 |= 0xFF000000;
@@ -548,8 +548,8 @@ public class WorldMap {
                             }
                             if (var18 == 0 && var19 == 0 && var20 == null) {
                                 int var21;
-                                if (Statics.field4292.field10366 != -1) {
-                                    var21 = Statics.field4292.field10366 | 0xFF000000;
+                                if (Statics.currentArea.field10366 != -1) {
+                                    var21 = Statics.currentArea.field10366 | 0xFF000000;
                                 } else if ((Statics.field4297 + var12 & 0x4) == (Statics.field4296 + var7 & 0x4)) {
                                     var21 = Statics.field4267[Statics.field4278.field5108 + 1];
                                 } else {
@@ -580,8 +580,8 @@ public class WorldMap {
                         int var26 = Statics.field4303 - (arg2 * var24 + arg4 >> 16);
                         int var27 = var26 - var25;
                         int var28;
-                        if (Statics.field4292.field10366 != -1) {
-                            var28 = Statics.field4292.field10366 | 0xFF000000;
+                        if (Statics.currentArea.field10366 != -1) {
+                            var28 = Statics.currentArea.field10366 | 0xFF000000;
                         } else if ((Statics.field4297 + var24 & 0x4) == (Statics.field4296 + var7 & 0x4)) {
                             var28 = Statics.field4267[Statics.field4278.field5108 + 1];
                         } else {
@@ -601,15 +601,15 @@ public class WorldMap {
             int var32 = var31 - var30;
             if (var32 > 0) {
                 int var33 = Statics.field4296 + var29;
-                if (var33 >= 0 && var33 < Statics.field4285) {
+                if (var33 >= 0 && var33 < Statics.currentAreaDisplaySizeX) {
                     for (int var34 = -16; var34 < var6 + 16; var34++) {
                         int var35 = Statics.field4303 - ((var34 + 1) * arg2 + arg4 >> 16);
                         int var36 = Statics.field4303 - (arg2 * var34 + arg4 >> 16);
                         int var37 = var36 - var35;
                         if (var37 > 0) {
                             int var38 = Statics.field4302 + var34;
-                            if (var38 >= 0 && var38 < Statics.field4282) {
-                                Object var39 = Statics.field4293[Statics.field4285 * var38 + var33];
+                            if (var38 >= 0 && var38 < Statics.currentAreaDisplaySizeZ) {
+                                Object var39 = Statics.field4293[Statics.currentAreaDisplaySizeX * var38 + var33];
                                 if (var39 == null) {
                                     method7098(arg0, var30, var35, var32, var37, null, null);
                                 } else if (var39 instanceof WorldMapRelated14) {
@@ -620,7 +620,7 @@ public class WorldMap {
                                 } else {
                                     Integer var41 = (Integer) var39;
                                     field4277[0] = var41;
-                                    field4271[0] = Statics.field4294[Statics.field4285 * var38 + var33];
+                                    field4271[0] = Statics.field4294[Statics.currentAreaDisplaySizeX * var38 + var33];
                                     method7098(arg0, var30, var35, var32, var37, field4277, field4271);
                                 }
                             }
@@ -650,13 +650,13 @@ public class WorldMap {
                 for (int var48 = var43; var48 <= var45; var48++) {
                     ArrayList var49 = Statics.field4295[var46][var47][var48];
                     if (var49 != null) {
-                        int var50 = ((Statics.field4283 >> 6) + var47) * 64;
-                        int var51 = ((Statics.field4284 >> 6) + var48) * 64;
+                        int var50 = ((Statics.currentAreaDisplayMinX >> 6) + var47) * 64;
+                        int var51 = ((Statics.currentAreaDisplayMinZ >> 6) + var48) * 64;
                         Iterator var52 = var49.iterator();
                         while (var52.hasNext()) {
                             WorldMapRelated1 var53 = (WorldMapRelated1) var52.next();
-                            int var54 = var53.field4248 + var50 - Statics.field4283 - Statics.field4296;
-                            int var55 = var53.field4247 + var51 - Statics.field4284 - Statics.field4302;
+                            int var54 = var53.field4248 + var50 - Statics.currentAreaDisplayMinX - Statics.field4296;
+                            int var55 = var53.field4247 + var51 - Statics.currentAreaDisplayMinZ - Statics.field4302;
                             int var56 = (arg1 * var54 + arg3 >> 16) + Statics.field4300;
                             int var57 = ((var54 + 1) * arg1 + arg3 >> 16) + Statics.field4300;
                             int var58 = Statics.field4303 - ((var55 + 1) * arg2 + arg4 >> 16);
@@ -670,13 +670,13 @@ public class WorldMap {
                 for (int var61 = var43; var61 <= var45; var61++) {
                     ArrayList var62 = Statics.field4295[var46][var60][var61];
                     if (var62 != null) {
-                        int var63 = ((Statics.field4283 >> 6) + var60) * 64;
-                        int var64 = ((Statics.field4284 >> 6) + var61) * 64;
+                        int var63 = ((Statics.currentAreaDisplayMinX >> 6) + var60) * 64;
+                        int var64 = ((Statics.currentAreaDisplayMinZ >> 6) + var61) * 64;
                         Iterator var65 = var62.iterator();
                         while (var65.hasNext()) {
                             WorldMapRelated1 var66 = (WorldMapRelated1) var65.next();
-                            int var67 = var66.field4248 + var63 - Statics.field4283 - Statics.field4296;
-                            int var68 = var66.field4247 + var64 - Statics.field4284 - Statics.field4302;
+                            int var67 = var66.field4248 + var63 - Statics.currentAreaDisplayMinX - Statics.field4296;
+                            int var68 = var66.field4247 + var64 - Statics.currentAreaDisplayMinZ - Statics.field4302;
                             int var69 = (arg1 * var67 + arg3 >> 16) + Statics.field4300;
                             int var70 = ((var67 + 1) * arg1 + arg3 >> 16) + Statics.field4300;
                             int var71 = Statics.field4303 - ((var68 + 1) * arg2 + arg4 >> 16);
@@ -703,7 +703,7 @@ public class WorldMap {
                     }
                 } else {
                     int var12 = arg10 ? 0 : 1;
-                    WorldMapTileShapes.method4630(arg0, Statics.field4275, Statics.field4276, arg1, arg2, arg5, Statics.field4267[arg6], arg3, arg4, var11, arg7 >> 6 & 0x3, var12);
+                    WorldMapTileShapes.method4630(arg0, Statics.tileShapes, Statics.tileSize, arg1, arg2, arg5, Statics.field4267[arg6], arg3, arg4, var11, arg7 >> 6 & 0x3, var12);
                 }
             }
         }

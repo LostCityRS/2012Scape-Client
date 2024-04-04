@@ -3142,7 +3142,7 @@ public class ClientScriptCommand {
     public static final ClientScriptCommand field5900 = new ClientScriptCommand(853);
 
     @ObfuscatedName("sd.anz")
-    public final int field6283;
+    public final int opcode;
 
     @ObfuscatedName("sd.ana")
     public final boolean field6315;
@@ -3158,12 +3158,12 @@ public class ClientScriptCommand {
     static {
         ClientScriptCommand[] all = ClientScriptCommand.method7977();
         for (int i = 0; i < all.length; i++) {
-            TRANSLATE_BY_ID[all[i].field6283] = all[i];
+            TRANSLATE_BY_ID[all[i].opcode] = all[i];
         }
     }
 
     public ClientScriptCommand(int arg0, boolean arg1) {
-        this.field6283 = arg0;
+        this.opcode = arg0;
         this.field6315 = arg1;
     }
 

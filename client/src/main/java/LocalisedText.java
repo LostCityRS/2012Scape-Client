@@ -355,7 +355,7 @@ public class LocalisedText {
     public static final LocalisedText field7027 = new LocalisedText("Loaded client variable data", "Client-Variablen geladen", "Variables du client chargées", "As variáveis do sistema foram carregadas");
 
     @ObfuscatedName("vt.du")
-    public static final LocalisedText field7014 = new LocalisedText("Loading...", "Lade...", "Chargement en cours...", "Carregando...");
+    public static final LocalisedText WORLDMAP_LOADING = new LocalisedText("Loading...", "Lade...", "Chargement en cours...", "Carregando...");
 
     @ObfuscatedName("vt.dz")
     public static final LocalisedText field6983 = new LocalisedText("Please close the interface you have open before using 'Report Abuse'.", "Bitte schließ die momentan geöffnete Benutzeroberfläche,", "Fermez l'interface que vous avez ouverte avant d'utiliser le bouton « Signaler un abus ».", "Feche a interface aberta antes de usar o recurso \"Denunciar abuso\".");
@@ -394,7 +394,7 @@ public class LocalisedText {
     public static final LocalisedText field6994 = new LocalisedText("Walk here", "Hierhin gehen", "Atteindre", "Caminhar para cá");
 
     @ObfuscatedName("vt.dq")
-    public static final LocalisedText field6995 = new LocalisedText("Face here", "Hierhin drehen", "Regarder dans cette direction", "Virar para cá");
+    public static final LocalisedText MINIMENU_FACE_HERE = new LocalisedText("Face here", "Hierhin drehen", "Regarder dans cette direction", "Virar para cá");
 
     @ObfuscatedName("vt.et")
     public static final LocalisedText field6996 = new LocalisedText("level: ", "Stufe: ", "niveau ", "nível: ");
@@ -527,7 +527,7 @@ public class LocalisedText {
     }
 
     @ObfuscatedName("vt.u(Lsn;I)Ljava/lang/String;")
-    public String method12206(Language arg0) {
+    public String get(Language arg0) {
         return (String) this.field7036.get(arg0);
     }
 }

@@ -89,8 +89,8 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
     public final void method6717(GameShellFrameParameters arg0, String arg1, String arg2, int arg3, int arg4, int arg5, int arg6, boolean arg7) {
         try {
             this.method6678(GameShellEnvironment.field4117, arg7);
-            Statics.field2204 = Statics.field4125 = arg0.method6856();
-            Statics.field10343 = Statics.field4677 = arg0.method6868();
+            Statics.field2204 = Statics.canvasWid = arg0.method6856();
+            Statics.field10343 = Statics.canvasHei = arg0.method6868();
             field4147 = 0;
             field4127 = 0;
             if (Statics.getEnvironment() == GameShellEnvironment.field4116) {
@@ -200,7 +200,7 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
         try {
             Statics.field4013 = new FullscreenImpl();
         } catch (Exception var26) {
-            Fullscreen.field6700 = false;
+            Fullscreen.allowed = false;
         }
         Statics.field4133 = new CursorManager();
         ThreadGroup var21 = Thread.currentThread().getThreadGroup();
@@ -470,19 +470,19 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
     }
 
     @ObfuscatedName("nv.q(I)V")
-    public synchronized void method6657() {
+    public synchronized void addcanvas() {
         this.method6679();
         Container var1 = method16494();
-        Statics.field1231 = new GameCanvas(var1);
+        Statics.canvas = new GameCanvas(var1);
         this.method6667(var1);
     }
 
     @ObfuscatedName("aiq.p(I)Ljava/awt/Container;")
     public static Container method16494() {
-        if (Statics.field1587 == null) {
+        if (Statics.fsFrame == null) {
             return Statics.field1197 == null ? Statics.field6387 : Statics.field1197;
         } else {
-            return Statics.field1587;
+            return Statics.fsFrame;
         }
     }
 
@@ -490,31 +490,31 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
     public void method6667(Container arg0) {
         arg0.setBackground(Color.black);
         arg0.setLayout(null);
-        arg0.add(Statics.field1231);
-        Statics.field1231.setSize(Statics.field4125, Statics.field4677);
-        Statics.field1231.setVisible(true);
+        arg0.add(Statics.canvas);
+        Statics.canvas.setSize(Statics.canvasWid, Statics.canvasHei);
+        Statics.canvas.setVisible(true);
         if (Statics.field1197 == arg0) {
             Insets var2 = Statics.field1197.getInsets();
-            Statics.field1231.setLocation(field4147 + var2.left, field4127 + var2.top);
+            Statics.canvas.setLocation(field4147 + var2.left, field4127 + var2.top);
         } else {
-            Statics.field1231.setLocation(field4147, field4127);
+            Statics.canvas.setLocation(field4147, field4127);
         }
-        Statics.field1231.addFocusListener(this);
-        Statics.field1231.requestFocus();
+        Statics.canvas.addFocusListener(this);
+        Statics.canvas.requestFocus();
         Statics.field578 = true;
         field4134 = true;
-        Statics.field1231.setFocusTraversalKeysEnabled(false);
+        Statics.canvas.setFocusTraversalKeysEnabled(false);
         field4143 = true;
         field4131 = false;
-        field4132 = MonotonicTime.method5554();
+        field4132 = MonotonicTime.get();
     }
 
     @ObfuscatedName("nv.b(I)V")
     public void method6679() {
-        if (Statics.field1231 != null) {
-            Statics.field1231.removeFocusListener(this);
-            Statics.field1231.getParent().setBackground(Color.black);
-            Statics.field1231.getParent().remove(Statics.field1231);
+        if (Statics.canvas != null) {
+            Statics.canvas.removeFocusListener(this);
+            Statics.canvas.getParent().setBackground(Color.black);
+            Statics.canvas.getParent().remove(Statics.canvas);
         }
     }
 
@@ -548,7 +548,7 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
 
     public void run() {
         try {
-            this.method6755();
+            this.run_inner();
         } catch (ThreadDeath var7) {
             throw var7;
         } catch (Throwable var8) {
@@ -560,7 +560,7 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
     }
 
     @ObfuscatedName("nv.i(I)V")
-    public void method6755() {
+    public void run_inner() {
         if (Statics.field3788 != null) {
             String var1 = Statics.field3788.toLowerCase();
             if (var1.indexOf("sun") != -1 || var1.indexOf("apple") != -1) {
@@ -574,7 +574,7 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
                     for (var3 = 6; var3 < var2.length() && StringTools.method14808(var2.charAt(var3)); var3++) {
                     }
                     String var4 = var2.substring(6, var3);
-                    if (StringTools.method7735(var4) && StringTools.method5598(var4) < 10) {
+                    if (StringTools.method7735(var4) && StringTools.parseInt(var4) < 10) {
                         this.method6675("wrongjava");
                         return;
                     }
@@ -584,16 +584,16 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
         method16494().setFocusCycleRoot(true);
         field4152 = (int) (Runtime.getRuntime().maxMemory() / 1048576L) + 1;
         field4144 = Runtime.getRuntime().availableProcessors();
-        this.method6657();
-        this.method6671();
+        this.addcanvas();
+        this.maininit();
         Statics.field8481 = Statics.method4777();
-        while (field4149 == 0L || MonotonicTime.method5554() < field4149) {
+        while (field4149 == 0L || MonotonicTime.get() < field4149) {
             Statics.field4138 = Statics.field8481.method6831(field4120);
             for (int var5 = 0; var5 < Statics.field4138; var5++) {
-                this.method6661();
+                this.mainloopwrapper();
             }
-            this.method6662();
-            method1840(Statics.field1231);
+            this.mainredrawwrapper();
+            method1840(Statics.canvas);
         }
     }
 
@@ -614,8 +614,8 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
     }
 
     @ObfuscatedName("nv.k(B)V")
-    public void method6661() {
-        long var1 = MonotonicTime.method5554();
+    public void mainloopwrapper() {
+        long var1 = MonotonicTime.get();
         long var3 = field4145[Statics.field6664];
         field4145[Statics.field6664] = var1;
         Statics.field6664 = Statics.field6664 + 1 & 0x1F;
@@ -624,12 +624,12 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
         synchronized (this) {
             Statics.field578 = field4134;
         }
-        this.method6672();
+        this.mainloop();
     }
 
     @ObfuscatedName("nv.h(I)V")
-    public void method6662() {
-        long var1 = MonotonicTime.method5554();
+    public void mainredrawwrapper() {
+        long var1 = MonotonicTime.get();
         long var3 = field4123[Statics.field1198];
         field4123[Statics.field1198] = var1;
         Statics.field1198 = Statics.field1198 + 1 & 0x1F;
@@ -640,13 +640,13 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
         if (++field4130 - 1 > 50) {
             field4130 -= 50;
             field4143 = true;
-            Statics.field1231.setSize(Statics.field4125, Statics.field4677);
-            Statics.field1231.setVisible(true);
-            if (Statics.field1197 != null && Statics.field1587 == null) {
+            Statics.canvas.setSize(Statics.canvasWid, Statics.canvasHei);
+            Statics.canvas.setVisible(true);
+            if (Statics.field1197 != null && Statics.fsFrame == null) {
                 Insets var6 = Statics.field1197.getInsets();
-                Statics.field1231.setLocation(field4147 + var6.left, field4127 + var6.top);
+                Statics.canvas.setLocation(field4147 + var6.left, field4127 + var6.top);
             } else {
-                Statics.field1231.setLocation(field4147, field4127);
+                Statics.canvas.setLocation(field4147, field4127);
             }
         }
         this.method6673();
@@ -688,10 +688,10 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
         if (NativeLibraries.method5944()) {
             NativeLibraries.method11710().method6802();
         }
-        if (Statics.field1231 != null) {
+        if (Statics.canvas != null) {
             try {
-                Statics.field1231.removeFocusListener(this);
-                Statics.field1231.getParent().remove(Statics.field1231);
+                Statics.canvas.removeFocusListener(this);
+                Statics.canvas.getParent().remove(Statics.canvas);
             } catch (Exception var9) {
             }
         }
@@ -732,13 +732,13 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
 
     public void stop() {
         if (!field4153) {
-            field4149 = MonotonicTime.method5554() + 4000L;
+            field4149 = MonotonicTime.get() + 4000L;
         }
     }
 
     public void destroy() {
         if (!field4153) {
-            field4149 = MonotonicTime.method5554();
+            field4149 = MonotonicTime.get();
             PreciseSleep.method7052(5000L);
             this.method6664(false);
         }
@@ -753,7 +753,7 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
             return;
         }
         field4143 = true;
-        if (MonotonicTime.method5554() - field4132 > 1000L) {
+        if (MonotonicTime.get() - field4132 > 1000L) {
             Rectangle var2 = arg0.getClipBounds();
             if (var2 == null || var2.width >= Statics.field2204 && var2.height >= Statics.field10343) {
                 field4131 = true;
@@ -796,7 +796,7 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
     @ObfuscatedName("js.ag(ILjava/lang/String;Ljava/awt/Color;Ljava/awt/Color;Ljava/awt/Color;I)V")
     public static final void method4801(int arg0, String arg1, Color arg2, Color arg3, Color arg4) {
         try {
-            Graphics var5 = Statics.field1231.getGraphics();
+            Graphics var5 = Statics.canvas.getGraphics();
             if (Statics.field2112 == null) {
                 Statics.field2112 = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -811,13 +811,13 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
             }
             try {
                 if (Statics.field1209 == null) {
-                    Statics.field1209 = Statics.field1231.createImage(Statics.field4125, Statics.field4677);
+                    Statics.field1209 = Statics.canvas.createImage(Statics.canvasWid, Statics.canvasHei);
                 }
                 Graphics var6 = Statics.field1209.getGraphics();
                 var6.setColor(Color.black);
-                var6.fillRect(0, 0, Statics.field4125, Statics.field4677);
-                int var7 = Statics.field4125 / 2 - 152;
-                int var8 = Statics.field4677 / 2 - 18;
+                var6.fillRect(0, 0, Statics.canvasWid, Statics.canvasHei);
+                int var7 = Statics.canvasWid / 2 - 152;
+                int var8 = Statics.canvasHei / 2 - 18;
                 var6.setColor(arg3);
                 var6.drawRect(var7, var8, 303, 33);
                 var6.setColor(arg2);
@@ -831,14 +831,14 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
                 if (field4128 != null) {
                     var6.setFont(Statics.field2112);
                     var6.setColor(arg4);
-                    var6.drawString(field4128, Statics.field4125 / 2 - field4128.length() * 6 / 2, Statics.field4677 / 2 - 26);
+                    var6.drawString(field4128, Statics.canvasWid / 2 - field4128.length() * 6 / 2, Statics.canvasHei / 2 - 26);
                 }
                 var5.drawImage(Statics.field1209, 0, 0, null);
             } catch (Exception var13) {
                 var5.setColor(Color.black);
-                var5.fillRect(0, 0, Statics.field4125, Statics.field4677);
-                int var10 = Statics.field4125 / 2 - 152;
-                int var11 = Statics.field4677 / 2 - 18;
+                var5.fillRect(0, 0, Statics.canvasWid, Statics.canvasHei);
+                int var10 = Statics.canvasWid / 2 - 152;
+                int var11 = Statics.canvasHei / 2 - 18;
                 var5.setColor(arg3);
                 var5.drawRect(var10, var11, 303, 33);
                 var5.setColor(arg2);
@@ -851,12 +851,12 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
                 if (field4128 != null) {
                     var5.setFont(Statics.field2112);
                     var5.setColor(arg4);
-                    var5.drawString(field4128, Statics.field4125 / 2 - field4128.length() * 6 / 2, Statics.field4677 / 2 - 26);
+                    var5.drawString(field4128, Statics.canvasWid / 2 - field4128.length() * 6 / 2, Statics.canvasHei / 2 - 26);
                 }
                 var5.drawString(arg1, var10 + (304 - arg1.length() * 6) / 2, var11 + 22);
             }
         } catch (Exception var14) {
-            Statics.field1231.repaint();
+            Statics.canvas.repaint();
         }
     }
 
@@ -915,10 +915,10 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
     }
 
     @ObfuscatedName("nv.af(B)V")
-    public abstract void method6671();
+    public abstract void maininit();
 
     @ObfuscatedName("nv.ar(B)V")
-    public abstract void method6672();
+    public abstract void mainloop();
 
     @ObfuscatedName("nv.an(I)V")
     public abstract void method6673();

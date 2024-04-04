@@ -41,7 +41,7 @@ public class Lookat_Sub1 extends Lookat {
         var9.method5313();
         Quaternion var10 = new Quaternion();
         var10.method5215(var9, var8);
-        Vector3 var11 = Vector3.method5294(0.0F, 1.0F, 0.0F);
+        Vector3 var11 = Vector3.create(0.0F, 1.0F, 0.0F);
         Vector3 var12 = Vector3.method5308(var9, var11);
         Vector3 var13 = Vector3.method5308(var12, var9);
         var13.method5318(var10);

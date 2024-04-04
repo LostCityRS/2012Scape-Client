@@ -16,7 +16,7 @@ public class TextUtil {
     public static String field487 = ")";
 
     @ObfuscatedName("j.c")
-    public static String field491 = "->";
+    public static String ARROW = "->";
 
     @ObfuscatedName("j.m")
     public static String field494 = "127.0.0.1";
@@ -25,7 +25,7 @@ public class TextUtil {
     public static String field492 = "<br>";
 
     @ObfuscatedName("j.l")
-    public static String field490 = "</col>";
+    public static String END_COLOUR_TAG = "</col>";
 
     public TextUtil() throws Throwable {
         throw new Error();
@@ -37,7 +37,7 @@ public class TextUtil {
     }
 
     @ObfuscatedName("gh.j(IB)Ljava/lang/String;")
-    public static String method3978(int arg0) {
+    public static String createColourTag(int arg0) {
         return "<col=" + Integer.toHexString(arg0) + ">";
     }
 }

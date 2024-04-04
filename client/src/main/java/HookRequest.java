@@ -4,19 +4,19 @@ import deob.ObfuscatedName;
 public class HookRequest extends Node {
 
     @ObfuscatedName("ady.s")
-    public Object[] field9613;
+    public Object[] onop;
 
     @ObfuscatedName("ady.c")
-    public boolean field9608;
+    public boolean isMouseHook;
 
     @ObfuscatedName("ady.m")
-    public Component field9609;
+    public Component component;
 
     @ObfuscatedName("ady.t")
     public int field9610;
 
     @ObfuscatedName("ady.l")
-    public int field9617;
+    public int mouseY;
 
     @ObfuscatedName("ady.f")
     public int field9612;

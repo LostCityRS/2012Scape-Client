@@ -65,7 +65,7 @@ public class DeveloperConsole {
         for (int var0 = 0; var0 < Statics.field792.length; var0++) {
             Statics.field792[var0] = "";
         }
-        method1958(LocalisedText.field6975.method12206(Statics.field2308));
+        addLine(LocalisedText.field6975.get(Statics.language));
     }
 
     @ObfuscatedName("aji.s(S)V")
@@ -104,10 +104,10 @@ public class DeveloperConsole {
                     var2 = Integer.parseInt(arg0[var1].substring(6));
                 } catch (Exception var4) {
                 }
-                method1958("Pausing for " + var2 + " seconds...");
+                addLine("Pausing for " + var2 + " seconds...");
                 Statics.field4817 = arg0;
                 field802 = var1 + 1;
-                Statics.field3306 = MonotonicTime.method5554() + (long) (var2 * 1000);
+                Statics.field3306 = MonotonicTime.get() + (long) (var2 * 1000);
                 return;
             }
             field798 = arg0[var1];
@@ -120,7 +120,7 @@ public class DeveloperConsole {
         if (field793 * 36 < 102) {
             field793 = field793 * 36 + 6;
         }
-        if (field802 != -1 && Statics.field3306 < MonotonicTime.method5554()) {
+        if (field802 != -1 && Statics.field3306 < MonotonicTime.get()) {
             for (int var0 = field802; var0 < Statics.field4817.length; var0++) {
                 if (Statics.field4817[var0].startsWith("pause")) {
                     int var1 = 5;
@@ -128,9 +128,9 @@ public class DeveloperConsole {
                         var1 = Integer.parseInt(Statics.field4817[var0].substring(6));
                     } catch (Exception var14) {
                     }
-                    method1958("Pausing for " + var1 + " seconds...");
+                    addLine("Pausing for " + var1 + " seconds...");
                     field802 = var0 + 1;
-                    Statics.field3306 = MonotonicTime.method5554() + (long) (var1 * 1000);
+                    Statics.field3306 = MonotonicTime.get() + (long) (var1 * 1000);
                     return;
                 }
                 field798 = Statics.field4817[var0];
@@ -243,7 +243,7 @@ public class DeveloperConsole {
         if (field798.length() == 0) {
             return;
         }
-        method1958("--> " + field798);
+        addLine("--> " + field798);
         method7065(field798, false, arg0);
         field799 = 0;
         if (arg0) {
@@ -255,11 +255,11 @@ public class DeveloperConsole {
     }
 
     @ObfuscatedName("aj.n(Ljava/lang/String;I)V")
-    public static void method1958(String arg0) {
+    public static void addLine(String arg0) {
         if (Statics.field792 == null) {
             method11854();
         }
-        client.field9214.setTime(new Date(MonotonicTime.method5554()));
+        client.field9214.setTime(new Date(MonotonicTime.get()));
         int var1 = client.field9214.get(11);
         int var2 = client.field9214.get(12);
         int var3 = client.field9214.get(13);
@@ -287,8 +287,8 @@ public class DeveloperConsole {
 
     @ObfuscatedName("va.o(Lra;B)V")
     public static void method12188(RendererToolkit arg0) {
-        arg0.r(0, 0, Statics.field4125, 350);
-        arg0.B(0, 0, Statics.field4125, 350, field793 * 36 << 24 | 0x332277, 1);
+        arg0.r(0, 0, Statics.canvasWid, 350);
+        arg0.B(0, 0, Statics.canvasWid, 350, field793 * 36 << 24 | 0x332277, 1);
         int var1 = 350 / Statics.field794;
         if (field796 > 0) {
             int var2 = 346 - Statics.field794 - 4;
@@ -297,10 +297,10 @@ public class DeveloperConsole {
             if (field796 > 1) {
                 var4 += (field796 - 1 - field797) * (var2 - var3) / (field796 - 1);
             }
-            arg0.B(Statics.field4125 - 16, var4, 12, var3, field793 * 36 << 24 | 0x332277, 2);
+            arg0.B(Statics.canvasWid - 16, var4, 12, var3, field793 * 36 << 24 | 0x332277, 2);
             for (int var5 = field797; var5 < field797 + var1 && var5 < field796; var5++) {
                 String[] var6 = StringTools.method11508(Statics.field792[var5], '\b');
-                int var7 = (Statics.field4125 - 8 - 16) / var6.length;
+                int var7 = (Statics.canvasWid - 8 - 16) / var6.length;
                 for (int var8 = 0; var8 < var6.length; var8++) {
                     int var9 = var7 * var8 + 8;
                     arg0.r(var9, 0, var7 + var9 - 8, 350);
@@ -308,9 +308,9 @@ public class DeveloperConsole {
                 }
             }
         }
-        Statics.field2163.method862(client.REVISION + " " + client.SUBREVISION, Statics.field4125 - 25, 330, -1, -16777216);
-        arg0.r(0, 0, Statics.field4125, 350);
-        arg0.method485(0, 350 - Statics.field803, Statics.field4125, -1);
+        Statics.field2163.method862(client.REVISION + " " + client.SUBREVISION, Statics.canvasWid - 25, 330, -1, -16777216);
+        arg0.r(0, 0, Statics.canvasWid, 350);
+        arg0.method485(0, 350 - Statics.field803, Statics.canvasWid, -1);
         Statics.field670.method833("--> " + method3505(field798), 10, 350 - Statics.field2399.field7177 - 1, -1, -16777216);
         if (Statics.field578) {
             int var10 = -1;
@@ -348,12 +348,12 @@ public class DeveloperConsole {
     public static void method7065(String arg0, boolean arg1, boolean arg2) {
         try {
             if (arg0.equalsIgnoreCase("commands") || arg0.equalsIgnoreCase("help")) {
-                method1958("commands - This command");
-                method1958("cls - Clear console");
-                method1958("displayfps - Toggle FPS and other information");
-                method1958("renderer - Print graphics renderer information");
-                method1958("heap - Print java memory information");
-                method1958("getcamerapos - Print location and direction of camera for use in bug reports");
+                addLine("commands - This command");
+                addLine("cls - Clear console");
+                addLine("displayfps - Toggle FPS and other information");
+                addLine("renderer - Print graphics renderer information");
+                addLine("heap - Print java memory information");
+                addLine("getcamerapos - Print location and direction of camera for use in bug reports");
                 return;
             }
             if (arg0.equalsIgnoreCase("cls")) {
@@ -364,62 +364,62 @@ public class DeveloperConsole {
             if (arg0.equalsIgnoreCase("displayfps")) {
                 client.field8926 = !client.field8926;
                 if (client.field8926) {
-                    method1958("FPS on");
+                    addLine("FPS on");
                 } else {
-                    method1958("FPS off");
+                    addLine("FPS off");
                 }
                 return;
             }
             if (arg0.equals("renderer")) {
-                RendererInfo var3 = Statics.field5187.method456();
-                method1958("Toolkit ID: " + Statics.clientOptions.field9661.method15781());
-                method1958("Vendor: " + var3.field1285);
-                method1958("Name: " + var3.field1288);
-                method1958("Version: " + var3.field1281);
-                method1958("Device: " + var3.field1280);
-                method1958("Driver Version: " + var3.field1289);
+                RendererInfo var3 = Statics.renderer.method456();
+                addLine("Toolkit ID: " + Statics.options.field9661.method15781());
+                addLine("Vendor: " + var3.field1285);
+                addLine("Name: " + var3.field1288);
+                addLine("Version: " + var3.field1281);
+                addLine("Device: " + var3.field1280);
+                addLine("Driver Version: " + var3.field1289);
                 return;
             }
             if (arg0.equals("heap")) {
-                method1958("Heap: " + GameShell.field4152 + "MB");
+                addLine("Heap: " + GameShell.field4152 + "MB");
                 return;
             }
             if (arg0.equalsIgnoreCase("getcamerapos")) {
-                CoordGrid var4 = client.world.method6214();
-                method1958("Pos: " + Statics.localPlayerEntity.level + "," + ((Statics.cameraX >> 9) + var4.x >> 6) + "," + ((Statics.cameraZ >> 9) + var4.z >> 6) + "," + ((Statics.cameraX >> 9) + var4.x & 0x3F) + "," + ((Statics.cameraZ >> 9) + var4.z & 0x3F) + " Height: " + (client.getHeightmapY(Statics.cameraX, Statics.cameraZ, Statics.localPlayerEntity.level) - Statics.cameraY));
-                method1958("Look: " + Statics.localPlayerEntity.level + "," + (Statics.cameraLookX + var4.x >> 6) + "," + (Statics.cameraLookZ + var4.z >> 6) + "," + (Statics.cameraLookX + var4.x & 0x3F) + "," + (Statics.cameraLookZ + var4.z & 0x3F) + " Height: " + (client.getHeightmapY(Statics.cameraLookX, Statics.cameraLookZ, Statics.localPlayerEntity.level) - Statics.cameraLookY));
+                CoordGrid var4 = client.world.getBase();
+                addLine("Pos: " + Statics.localPlayerEntity.level + "," + ((Statics.cameraX >> 9) + var4.x >> 6) + "," + ((Statics.cameraZ >> 9) + var4.z >> 6) + "," + ((Statics.cameraX >> 9) + var4.x & 0x3F) + "," + ((Statics.cameraZ >> 9) + var4.z & 0x3F) + " Height: " + (client.getHeightmapY(Statics.cameraX, Statics.cameraZ, Statics.localPlayerEntity.level) - Statics.cameraY));
+                addLine("Look: " + Statics.localPlayerEntity.level + "," + (Statics.cameraLookX + var4.x >> 6) + "," + (Statics.cameraLookZ + var4.z >> 6) + "," + (Statics.cameraLookX + var4.x & 0x3F) + "," + (Statics.cameraLookZ + var4.z & 0x3F) + " Height: " + (client.getHeightmapY(Statics.cameraLookX, Statics.cameraLookZ, Statics.localPlayerEntity.level) - Statics.cameraLookY));
                 return;
             }
         } catch (Exception var33) {
-            method1958(LocalisedText.field6867.method12206(Statics.field2308));
+            addLine(LocalisedText.field6867.get(Statics.language));
             return;
         }
-        if (true || Statics.field6683 != ModeWhere.field6368 || client.field9074 >= 2) {
+        if (true || Statics.field6683 != ModeWhere.LIVE || client.userStaffModLevel >= 2) {
             try {
                 if (arg0.equalsIgnoreCase("wm1")) {
-                    client.method7282(1, -1, -1, false);
+                    client.setWindowMode(1, -1, -1, false);
                     if (client.method12476() == 1) {
-                        method1958("Success");
+                        addLine("Success");
                     } else {
-                        method1958("Failure");
+                        addLine("Failure");
                     }
                     return;
                 }
                 if (arg0.equalsIgnoreCase("wm2")) {
-                    client.method7282(2, -1, -1, false);
+                    client.setWindowMode(2, -1, -1, false);
                     if (client.method12476() == 2) {
-                        method1958("Success");
+                        addLine("Success");
                     } else {
-                        method1958("Failure");
+                        addLine("Failure");
                     }
                     return;
                 }
-                if (Fullscreen.field6700 && arg0.equalsIgnoreCase("wm3")) {
-                    client.method7282(3, 1024, 768, false);
+                if (Fullscreen.allowed && arg0.equalsIgnoreCase("wm3")) {
+                    client.setWindowMode(3, 1024, 768, false);
                     if (client.method12476() == 3) {
-                        method1958("Success");
+                        addLine("Success");
                     } else {
-                        method1958("Failure");
+                        addLine("Failure");
                     }
                     return;
                 }
@@ -429,7 +429,7 @@ public class DeveloperConsole {
                     String var8 = arg0.substring(9);
                     int var9 = var8.indexOf(32);
                     if (var9 == -1) {
-                        method1958("Failure");
+                        addLine("Failure");
                         return;
                     }
                     try {
@@ -437,71 +437,71 @@ public class DeveloperConsole {
                     } catch (NumberFormatException var29) {
                     }
                     if (var6 == -1) {
-                        method1958("Failure");
+                        addLine("Failure");
                         return;
                     }
                     String var11 = var8.substring(var9 + 1).trim() + ".runescape.com";
                     WorldSwitcher.method1716(var11, var6);
-                    method1958("Success");
+                    addLine("Success");
                     return;
                 }
                 if (arg0.equalsIgnoreCase("tk0")) {
                     Statics.method5600(0, false);
-                    if (Statics.clientOptions.field9661.method15781() == 0) {
-                        method1958("Success");
-                        Statics.clientOptions.method15448(Statics.clientOptions.field9670, 0);
+                    if (Statics.options.field9661.method15781() == 0) {
+                        addLine("Success");
+                        Statics.options.method15448(Statics.options.field9670, 0);
                         Statics.method1245();
-                        client.field8932 = false;
+                        client.preferencesChangeNotified = false;
                     } else {
-                        method1958("Failure");
+                        addLine("Failure");
                     }
                     return;
                 }
                 if (arg0.equalsIgnoreCase("tk1")) {
                     Statics.method5600(1, false);
-                    if (Statics.clientOptions.field9661.method15781() == 1) {
-                        method1958("Success");
-                        Statics.clientOptions.method15448(Statics.clientOptions.field9670, 1);
+                    if (Statics.options.field9661.method15781() == 1) {
+                        addLine("Success");
+                        Statics.options.method15448(Statics.options.field9670, 1);
                         Statics.method1245();
-                        client.field8932 = false;
+                        client.preferencesChangeNotified = false;
                     } else {
-                        method1958("Failure");
+                        addLine("Failure");
                     }
                     return;
                 }
                 if (arg0.equalsIgnoreCase("tk2")) {
                     Statics.method5600(2, false);
-                    if (Statics.clientOptions.field9661.method15781() == 2) {
-                        method1958("Success");
-                        Statics.clientOptions.method15448(Statics.clientOptions.field9670, 2);
+                    if (Statics.options.field9661.method15781() == 2) {
+                        addLine("Success");
+                        Statics.options.method15448(Statics.options.field9670, 2);
                         Statics.method1245();
-                        client.field8932 = false;
+                        client.preferencesChangeNotified = false;
                     } else {
-                        method1958("Failure");
+                        addLine("Failure");
                     }
                     return;
                 }
                 if (arg0.equalsIgnoreCase("tk3")) {
                     Statics.method5600(3, false);
-                    if (Statics.clientOptions.field9661.method15781() == 3) {
-                        method1958("Success");
-                        Statics.clientOptions.method15448(Statics.clientOptions.field9670, 3);
+                    if (Statics.options.field9661.method15781() == 3) {
+                        addLine("Success");
+                        Statics.options.method15448(Statics.options.field9670, 3);
                         Statics.method1245();
-                        client.field8932 = false;
+                        client.preferencesChangeNotified = false;
                     } else {
-                        method1958("Failure");
+                        addLine("Failure");
                     }
                     return;
                 }
                 if (arg0.equalsIgnoreCase("tk5")) {
                     Statics.method5600(5, false);
-                    if (Statics.clientOptions.field9661.method15781() == 5) {
-                        method1958("Success");
-                        Statics.clientOptions.method15448(Statics.clientOptions.field9670, 5);
+                    if (Statics.options.field9661.method15781() == 5) {
+                        addLine("Success");
+                        Statics.options.method15448(Statics.options.field9670, 5);
                         Statics.method1245();
-                        client.field8932 = false;
+                        client.preferencesChangeNotified = false;
                     } else {
-                        method1958("Failure");
+                        addLine("Failure");
                     }
                     return;
                 }
@@ -509,12 +509,12 @@ public class DeveloperConsole {
                     if (client.state == 1) {
                         client.method8047();
                     } else if (client.state == 16) {
-                        client.gameConnection.field846 = true;
+                        client.gameConnection.disconnected = true;
                     }
                     return;
                 }
                 if (arg0.equalsIgnoreCase("breakcon")) {
-                    ServerConnection[] var12 = client.field9011;
+                    ServerConnection[] var12 = client.connections;
                     for (int var13 = 0; var13 < var12.length; var13++) {
                         ServerConnection var14 = var12[var13];
                         if (var14.getStream() != null) {
@@ -526,12 +526,12 @@ public class DeveloperConsole {
                 }
                 if (arg0.startsWith("getclientvarpbit")) {
                     int var15 = Integer.parseInt(arg0.substring(17));
-                    method1958("varpbit=" + Statics.field2669.method1646(var15));
+                    addLine("varpbit=" + Statics.field2669.method1646(var15));
                     return;
                 }
                 if (arg0.startsWith("getclientvarp")) {
                     int var16 = Integer.parseInt(arg0.substring(14));
-                    method1958("varp=" + Statics.field2669.method1664(var16));
+                    addLine("varp=" + Statics.field2669.method1664(var16));
                     return;
                 }
                 if (arg0.startsWith("directlogin")) {
@@ -550,9 +550,9 @@ public class DeveloperConsole {
                 if (arg0.startsWith("setoutput ")) {
                     File var20 = new File(arg0.substring(10));
                     if (var20.exists()) {
-                        var20 = new File(arg0.substring(10) + "." + MonotonicTime.method5554() + ".log");
+                        var20 = new File(arg0.substring(10) + "." + MonotonicTime.get() + ".log");
                         if (var20.exists()) {
-                            method1958("file already exists!");
+                            addLine("file already exists!");
                             return;
                         }
                     }
@@ -564,10 +564,10 @@ public class DeveloperConsole {
                         Statics.field804 = new FileOutputStream(var20);
                         return;
                     } catch (FileNotFoundException var30) {
-                        method1958("Could not create " + var20.getName());
+                        addLine("Could not create " + var20.getName());
                         return;
                     } catch (SecurityException var31) {
-                        method1958("Cannot write to " + var20.getName());
+                        addLine("Cannot write to " + var20.getName());
                         return;
                     }
                 }
@@ -581,33 +581,33 @@ public class DeveloperConsole {
                 if (arg0.startsWith("runscript ")) {
                     File var23 = new File(arg0.substring(10));
                     if (!var23.exists()) {
-                        method1958("No such file");
+                        addLine("No such file");
                         return;
                     }
                     byte[] var24 = FileUtil.method15684(var23);
                     if (var24 == null) {
-                        method1958("Failed to read file");
+                        addLine("Failed to read file");
                         return;
                     }
                     String[] var25 = StringTools.method11508(Statics.method12093(Statics.method8318(var24), '\r', ""), '\n');
                     method14213(var25);
                 }
                 if (client.state == 1 || client.state == 15) {
-                    ServerConnection var26 = client.method4104();
-                    ClientMessage var27 = ClientMessage.createMessage(ClientProt.field2951, var26.randomOut);
-                    var27.field9467.p1(arg0.length() + 3);
-                    var27.field9467.p1(arg1 ? 1 : 0);
-                    var27.field9467.p1(arg2 ? 1 : 0);
-                    var27.field9467.pjstr(arg0);
+                    ServerConnection var26 = client.getCurrentConnection();
+                    ClientMessage var27 = ClientMessage.createMessage(ClientProt.CLIENT_CHEAT, var26.randomOut);
+                    var27.buf.p1(arg0.length() + 3);
+                    var27.buf.p1(arg1 ? 1 : 0);
+                    var27.buf.p1(arg2 ? 1 : 0);
+                    var27.buf.pjstr(arg0);
                     var26.queue(var27);
                 }
             } catch (Exception var32) {
-                method1958(LocalisedText.field6867.method12206(Statics.field2308));
+                addLine(LocalisedText.field6867.get(Statics.language));
                 return;
             }
         }
         if (client.state != 1 && client.state != 15) {
-            method1958(LocalisedText.field6894.method12206(Statics.field2308) + arg0);
+            addLine(LocalisedText.field6894.get(Statics.language) + arg0);
         }
     }
 
@@ -622,7 +622,7 @@ public class DeveloperConsole {
                 if (arg0 == 25) {
                     method16885();
                 } else if (arg0 == 9) {
-                    method1958("" + GameShell.field4121);
+                    addLine("" + GameShell.field4121);
                 } else if (arg0 == 19) {
                     OcclusionManager var1 = client.world.getScene().field4493;
                     var1.field4624 = !var1.field4624;
@@ -639,7 +639,7 @@ public class DeveloperConsole {
                     }
                     Runtime var3 = Runtime.getRuntime();
                     int var4 = (int) ((var3.totalMemory() - var3.freeMemory()) / 1024L);
-                    method1958("" + var4);
+                    addLine("" + var4);
                 } else if (arg0 == 6) {
                     Statics.method5715();
                     for (int var5 = 0; var5 < 10; var5++) {
@@ -647,16 +647,16 @@ public class DeveloperConsole {
                     }
                     Runtime var6 = Runtime.getRuntime();
                     int var7 = (int) ((var6.totalMemory() - var6.freeMemory()) / 1024L);
-                    method1958("" + var7);
+                    addLine("" + var7);
                     SceneManager.method16899();
                     Statics.method5715();
                     for (int var8 = 0; var8 < 10; var8++) {
                         System.gc();
                     }
                     int var9 = (int) ((var6.totalMemory() - var6.freeMemory()) / 1024L);
-                    method1958("" + var9);
+                    addLine("" + var9);
                 } else if (arg0 == 24) {
-                    method1958(Statics.field2137.method6802() ? "Success" : "Failure");
+                    addLine(Statics.field2137.method6802() ? "Success" : "Failure");
                 } else if (arg0 == 13) {
                     Statics.field6772.method12026();
                 } else if (arg0 == 14) {
@@ -664,30 +664,30 @@ public class DeveloperConsole {
                 } else if (arg0 == 21) {
                     Statics.field848.method5745();
                 } else if (arg0 == 11) {
-                    Statics.field1231.setLocation(50, 50);
+                    Statics.canvas.setLocation(50, 50);
                 } else if (arg0 == 17) {
-                    Statics.field1231.setLocation(GameShell.field4147, GameShell.field4127);
+                    Statics.canvas.setLocation(GameShell.field4147, GameShell.field4127);
                 } else if (arg0 == 8) {
                     method1623();
                 } else if (arg0 == 28) {
-                    client.world.field3789 = MonotonicTime.method5554();
+                    client.world.field3789 = MonotonicTime.get();
                     client.world.field3833 = true;
                     method1623();
                 } else if (arg0 == 22) {
                     Vector3 var10 = Statics.localPlayerEntity.getTransform().trans;
-                    method1958(((int) var10.x >> 9) + " " + ((int) var10.z >> 9));
+                    addLine(((int) var10.x >> 9) + " " + ((int) var10.z >> 9));
                 } else if (arg0 == 26) {
                     Vector3 var11 = Statics.localPlayerEntity.getTransform().trans;
-                    method1958("" + client.world.getScene().field4498[Statics.localPlayerEntity.level].method199((int) var11.x >> 9, (int) var11.z >> 9));
+                    addLine("" + client.world.getScene().field4498[Statics.localPlayerEntity.level].method199((int) var11.x >> 9, (int) var11.z >> 9));
                 } else if (arg0 == 1) {
-                    method1958(Component.field1757.method7924() + " " + Component.field1757.method7923());
-                    method1958(Component.field1760.method7924() + " " + Component.field1760.method7923());
-                    method1958(Statics.field3492.field7147.method8000() + " " + Statics.field3492.field7147.method8008());
+                    addLine(Component.field1757.method7924() + " " + Component.field1757.method7923());
+                    addLine(Component.field1760.method7924() + " " + Component.field1760.method7923());
+                    addLine(Statics.objTypes.field7147.method8000() + " " + Statics.objTypes.field7147.method8008());
                 } else if (arg0 == 10) {
                     client.method5025(false);
                 } else if (arg0 == 27) {
                     client.field9169 = !client.field9169;
-                    Statics.field5187.method471(client.field9169);
+                    Statics.renderer.method471(client.field9169);
                     Statics.method12860();
                     return;
                 } else if (arg0 == 23) {
@@ -701,15 +701,15 @@ public class DeveloperConsole {
                     client.world.method6102();
                 }
             } catch (Exception var13) {
-                method1958(LocalisedText.field6867.method12206(Statics.field2308));
+                addLine(LocalisedText.field6867.get(Statics.language));
             }
         }
     }
 
     @ObfuscatedName("r.x(I)V")
     public static void method1623() {
-        if (Statics.clientOptions.field9667.method15884() == 1) {
-            Statics.field8656.method6053(new RebuildRequest(RebuildType.field3842, null));
+        if (Statics.options.field9667.method15884() == 1) {
+            Statics.asyncRebuild.method6053(new RebuildRequest(RebuildType.field3842, null));
         } else {
             client.world.method6102();
             MiniMap.method7992();

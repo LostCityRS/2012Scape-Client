@@ -131,7 +131,7 @@ public class PlayerEntity extends PathingEntity {
         this.field10045 = buf.g1b();
         this.field10053 = buf.g1b();
         this.field10066 = buf.g1b() == 1;
-        if (Statics.field6683 == ModeWhere.field6368 && client.field9074 >= 2) {
+        if (Statics.field6683 == ModeWhere.LIVE && client.userStaffModLevel >= 2) {
             this.field10066 = false;
         }
         int var9 = -1;
@@ -155,7 +155,7 @@ public class PlayerEntity extends PathingEntity {
                     if (var16 >= 16384) {
                         int var17 = var16 - 16384;
                         var10[var13] = var17 | 0x40000000;
-                        var12[var13] = Statics.field3492.method12316(var17);
+                        var12[var13] = Statics.objTypes.get(var17);
                         int var18 = var12[var13].field7116;
                         if (var18 != 0) {
                             this.field10061 = var18;
@@ -243,7 +243,7 @@ public class PlayerEntity extends PathingEntity {
         if (client.currentPlayerUid == this.localPlayerIndex && var32 != null) {
             for (int var34 = 0; var34 < var22.length; var34++) {
                 if (var22[var34] != var32[var34]) {
-                    Statics.field3492.method12297();
+                    Statics.objTypes.method12297();
                     break;
                 }
             }
@@ -286,7 +286,7 @@ public class PlayerEntity extends PathingEntity {
         var2.method5116(0.0F, (float) (-20 - this.field8604), 0.0F);
         PickableEntity var8 = null;
         this.field8650 = false;
-        if (Statics.clientOptions.field9658.method15709() == 1) {
+        if (Statics.options.field9658.method15709() == 1) {
             BASType var9 = this.getBASType();
             if (var9.field4714 && (this.field10044.field5006 == -1 || Statics.field3774.method12565(this.field10044.field5006).field7249)) {
                 AnimationNode var10 = this.field8597.method11767() && this.field8597.method11776() ? this.field8597 : null;
@@ -411,12 +411,12 @@ public class PlayerEntity extends PathingEntity {
         if (var10) {
             arg1 |= 0x80000;
         }
-        Model var11 = this.field8651[0] = this.field10044.method8244(arg0, arg1, Statics.field3769, Statics.field7650, Statics.field3774, Statics.field3492, Statics.field566, Statics.field2669, var5, var6, this.field8633, this.field8654, var9, true, Statics.wearposDefaults);
+        Model var11 = this.field8651[0] = this.field10044.method8244(arg0, arg1, Statics.field3769, Statics.field7650, Statics.field3774, Statics.objTypes, Statics.field566, Statics.field2669, var5, var6, this.field8633, this.field8654, var9, true, Statics.wearposDefaults);
         int var12 = PlayerModel.method3503();
         if (GameShell.field4152 < 96 && var12 > 50) {
             SceneManager.method16899();
         }
-        if (Statics.field6683 != ModeWhere.field6368 && var12 < 50) {
+        if (Statics.field6683 != ModeWhere.LIVE && var12 < 50) {
             int var13 = 50 - var12;
             while (var13 > client.field8930) {
                 Statics.field2391[client.field8930] = new byte[102400];
@@ -426,7 +426,7 @@ public class PlayerEntity extends PathingEntity {
                 client.field8930--;
                 Statics.field2391[client.field8930] = null;
             }
-        } else if (Statics.field6683 != ModeWhere.field6368) {
+        } else if (Statics.field6683 != ModeWhere.LIVE) {
             Statics.field2391 = new byte[50][];
             client.field8930 = 0;
         }
@@ -524,7 +524,7 @@ public class PlayerEntity extends PathingEntity {
         this.method8551(var4);
         var4.release();
         if (Statics.localPlayerEntity == this) {
-            client.world.method6139().method8154();
+            client.world.getEnvironmentManager().method8154();
         }
         if (this.field8640 != null) {
             this.field8640.method8100();
@@ -625,7 +625,7 @@ public class PlayerEntity extends PathingEntity {
 
     @ObfuscatedName("ahg.u(I)Ladu;")
     public CoordFine method3684() {
-        CoordGrid var1 = client.world.method6214();
+        CoordGrid var1 = client.world.getBase();
         return CoordFine.method8611(this.level, (int) this.getTransform().trans.x + var1.x * 512, -((int) this.getTransform().trans.y), (int) this.getTransform().trans.z + var1.z * 512);
     }
 

@@ -42,7 +42,7 @@ public class World {
     public int mapSizeZ;
 
     @ObfuscatedName("ml.o")
-    public Scene field3791;
+    public Scene scene;
 
     @ObfuscatedName("ml.q")
     public EnvironmentManager field3802;
@@ -168,7 +168,7 @@ public class World {
     }
 
     @ObfuscatedName("ml.c(I)Lpz;")
-    public CoordGrid method6214() {
+    public CoordGrid getBase() {
         return this.field3795;
     }
 
@@ -209,7 +209,7 @@ public class World {
 
     @ObfuscatedName("ml.o(B)Loo;")
     public Scene getScene() {
-        return this.field3791;
+        return this.scene;
     }
 
     @ObfuscatedName("ml.q(II)[[B")
@@ -228,7 +228,7 @@ public class World {
     }
 
     @ObfuscatedName("ml.b(I)Lqp;")
-    public EnvironmentManager method6139() {
+    public EnvironmentManager getEnvironmentManager() {
         return this.field3802;
     }
 
@@ -276,10 +276,10 @@ public class World {
 
     @ObfuscatedName("ml.e(B)V")
     public void method6111() {
-        if (this.field3791 != null) {
+        if (this.scene != null) {
             Statics.method3616();
-            this.field3791.field4541.method7384();
-            this.field3791 = null;
+            this.scene.pickableEntities.method7384();
+            this.scene = null;
         }
     }
 
@@ -294,7 +294,7 @@ public class World {
 
     @ObfuscatedName("ml.af(I)V")
     public void method6086() {
-        this.field3802 = new EnvironmentManager(Statics.field5187, this.mapSizeX >> 3, this.mapSizeZ >> 3);
+        this.field3802 = new EnvironmentManager(Statics.renderer, this.mapSizeX >> 3, this.mapSizeZ >> 3);
     }
 
     @ObfuscatedName("ml.ar(B)V")
@@ -302,7 +302,7 @@ public class World {
         this.field3804 = 200;
         this.field3805 = (int) ((double) this.mapSizeX * 34.46D);
         this.field3805 <<= 0x2;
-        if (Statics.field5187.method454()) {
+        if (Statics.renderer.method454()) {
             this.field3805 += 512;
         }
     }
@@ -317,14 +317,14 @@ public class World {
         this.field3796 = var3;
         arg0.field3824 = this.field3795;
         this.field3824 = arg0.field3795;
-        this.field3802.method8145(arg0.method6139());
+        this.field3802.method8145(arg0.getEnvironmentManager());
     }
 
     @ObfuscatedName("ml.ap(I)V")
     public void method6102() {
         if (this.asyncRebuilding) {
             this.method6112();
-            ClientWorldMap.method7184(true);
+            ClientWorldMap.reset(true);
             World var1 = client.world;
             this.field3820 = var1.field3820;
             this.field3821 = var1.field3821;
@@ -386,7 +386,7 @@ public class World {
 
     @ObfuscatedName("ml.as(I)V")
     public void method6168() {
-        this.setBuildAreaSize(BuildAreaSize.forId(Statics.clientOptions.buildArea.getValue()));
+        this.setBuildAreaSize(BuildAreaSize.forId(Statics.options.buildArea.getValue()));
         int var1 = this.field3795.x;
         int var2 = this.field3795.z;
         int var3 = (Statics.cameraX >> 12) + (var1 >> 3);
@@ -742,7 +742,7 @@ public class World {
         this.field3798 = arg1;
         if (!this.asyncRebuilding) {
             client.setState(arg2);
-            Statics.method2579(LocalisedText.field6938.method12206(Statics.field2308), true, Statics.field5187, Statics.field560, Statics.field9813);
+            Statics.method2579(LocalisedText.field6938.get(Statics.language), true, Statics.renderer, Statics.field560, Statics.field9813);
         }
         if (this.field3795 == null) {
             this.field3824 = new CoordGrid(0, 0, 0);
@@ -866,10 +866,10 @@ public class World {
             int var33 = var32 - this.field3795.x;
             int var34 = (int) (var30.field4228 >> 14 & 0x3FFFL);
             int var35 = var34 - this.field3795.z;
-            if (this.field3791 != null) {
-                if (var33 >= 0 && var35 >= 0 && var33 < this.mapSizeX && var35 < this.mapSizeZ && var33 < this.field3791.field4495 && var35 < this.field3791.field4496) {
-                    if (this.field3791.field4497 != null) {
-                        this.field3791.method7429(var31, var33, var35);
+            if (this.scene != null) {
+                if (var33 >= 0 && var35 >= 0 && var33 < this.mapSizeX && var35 < this.mapSizeZ && var33 < this.scene.field4495 && var35 < this.scene.field4496) {
+                    if (this.scene.field4497 != null) {
+                        this.scene.method7429(var31, var33, var35);
                     }
                 } else if (RebuildType.field3841 != this.rebuildType) {
                     var30.method6979();
@@ -926,9 +926,9 @@ public class World {
         if (this.field3802 != null) {
             this.field3802.method8150();
         }
-        if (this.field3791 != null) {
-            this.field3791.field4541.method7384();
-            this.field3791 = null;
+        if (this.scene != null) {
+            this.scene.pickableEntities.method7384();
+            this.scene = null;
         }
     }
 
@@ -971,10 +971,10 @@ public class World {
             }
         }
         if (this.field3806 == null) {
-            if (this.field3829 == null || !Statics.field4059.method5680(this.field3829.field10362 + "_staticelements")) {
+            if (this.field3829 == null || !Statics.field4059.method5680(this.field3829.debugname + "_staticelements")) {
                 this.field3806 = new WorldMapRelated(0);
-            } else if (Statics.field4059.method5648(this.field3829.field10362 + "_staticelements")) {
-                this.field3806 = WorldMapRelated.method2791(Statics.field4059, this.field3829.field10362 + "_staticelements", client.field9142);
+            } else if (Statics.field4059.method5648(this.field3829.debugname + "_staticelements")) {
+                this.field3806 = WorldMapRelated.method2791(Statics.field4059, this.field3829.debugname + "_staticelements", client.field9142);
             } else {
                 this.field3816++;
             }
@@ -1023,7 +1023,7 @@ public class World {
             return false;
         }
         if (!this.asyncRebuilding && RebuildStage.field3777 != this.field3834) {
-            Statics.method2579(LocalisedText.field6938.method12206(Statics.field2308) + TextUtil.field492 + "(100%)", true, Statics.field5187, Statics.field560, Statics.field9813);
+            Statics.method2579(LocalisedText.field6938.get(Statics.language) + TextUtil.field492 + "(100%)", true, Statics.renderer, Statics.field560, Statics.field9813);
         }
         this.field3834 = RebuildStage.field3778;
         if (!this.asyncRebuilding) {
@@ -1050,7 +1050,7 @@ public class World {
             VideoTypeList.method4743();
         }
         boolean var15 = false;
-        if (Statics.clientOptions.field9666.method15755() == 2) {
+        if (Statics.options.field9666.method15755() == 2) {
             for (int var16 = 0; var16 < this.field3800.length; var16++) {
                 if (this.field3832[var16] != null || this.field3830[var16] != null) {
                     var15 = true;
@@ -1058,29 +1058,29 @@ public class World {
                 }
             }
         }
-        int var17 = DrawDistance.method5012(Statics.clientOptions.field9644.method15853()).field2149 * 64;
-        if (Statics.field5187.method454()) {
+        int var17 = DrawDistance.method5012(Statics.options.field9644.method15853()).field2149 * 64;
+        if (Statics.renderer.method454()) {
             var17++;
         }
         this.method6235();
         this.method6127();
-        this.field3791 = new Scene(Statics.field5187, 9, 4, this.mapSizeX, this.mapSizeZ, var17, var15, Statics.field5187.method768() > 0);
-        this.field3791.method7404(false);
-        this.field3791.method7546(client.field8943);
+        this.scene = new Scene(Statics.renderer, 9, 4, this.mapSizeX, this.mapSizeZ, var17, var15, Statics.renderer.method768() > 0);
+        this.scene.method7404(false);
+        this.scene.method7546(client.field8943);
         if (client.field8943 == 0) {
-            this.field3791.method7403(null);
+            this.scene.method7403(null);
         } else {
-            this.field3791.method7403(Statics.field2163);
+            this.scene.method7403(Statics.field2163);
         }
         this.field3808 = new LocTint();
         this.field3809 = -0.05F + (float) (Math.random() / 10.0D);
-        this.field3794 = new ClientMapLoader(this.field3791, this.field3815, 4, this.mapSizeX, this.mapSizeZ, false, this.sceneLevelTileFlags, this.field3802);
+        this.field3794 = new ClientMapLoader(this.scene, this.field3815, 4, this.mapSizeX, this.mapSizeZ, false, this.sceneLevelTileFlags, this.field3802);
         this.field3794.method5834();
-        this.field3794.field3629 = Statics.clientOptions.field9651.method15747();
-        this.field3794.field3622 = Statics.clientOptions.field9666.method15755() == 2;
-        this.field3794.field3623 = Statics.clientOptions.field9650.method15667() == 1;
-        this.field3794.field3624 = Statics.clientOptions.field9647.method15843() == 1;
-        this.field3794.field3625 = Statics.clientOptions.field9659.method15686() == 1;
+        this.field3794.field3629 = Statics.options.field9651.method15747();
+        this.field3794.field3622 = Statics.options.field9666.method15755() == 2;
+        this.field3794.field3623 = Statics.options.field9650.method15667() == 1;
+        this.field3794.field3624 = Statics.options.field9647.method15843() == 1;
+        this.field3794.field3625 = Statics.options.field9659.method15686() == 1;
         if (this.rebuildType.isRegionType()) {
             this.method6131(this.field3794, this.field3800);
         } else {
@@ -1092,14 +1092,14 @@ public class World {
         this.field3802.method8159(this.mapSizeX >> 4, this.mapSizeZ >> 4);
         this.field3802.method8144(this);
         if (var15) {
-            this.field3791.method7404(true);
-            this.field3793 = new ClientMapLoader(this.field3791, this.field3815, 1, this.mapSizeX, this.mapSizeZ, true, this.sceneLevelTileFlags, this.field3802);
+            this.scene.method7404(true);
+            this.field3793 = new ClientMapLoader(this.scene, this.field3815, 1, this.mapSizeX, this.mapSizeZ, true, this.sceneLevelTileFlags, this.field3802);
             this.field3793.method5834();
-            this.field3793.field3629 = Statics.clientOptions.field9651.method15747();
-            this.field3793.field3622 = Statics.clientOptions.field9666.method15755() == 2;
-            this.field3793.field3623 = Statics.clientOptions.field9650.method15667() == 1;
-            this.field3793.field3624 = Statics.clientOptions.field9647.method15843() == 1;
-            this.field3793.field3625 = Statics.clientOptions.field9659.method15686() == 1;
+            this.field3793.field3629 = Statics.options.field9651.method15747();
+            this.field3793.field3622 = Statics.options.field9666.method15755() == 2;
+            this.field3793.field3623 = Statics.options.field9650.method15667() == 1;
+            this.field3793.field3624 = Statics.options.field9647.method15843() == 1;
+            this.field3793.field3625 = Statics.options.field9659.method15686() == 1;
             if (this.rebuildType.isRegionType()) {
                 this.method6131(this.field3793, this.field3830);
                 if (!this.asyncRebuilding) {
@@ -1112,13 +1112,13 @@ public class World {
                 }
             }
             this.field3793.method5841(0, this.field3794.field3697[0]);
-            this.field3793.method5842(Statics.field5187, null, null);
-            this.field3791.method7404(false);
+            this.field3793.method5842(Statics.renderer, null, null);
+            this.scene.method7404(false);
             if (this.asyncRebuilding) {
                 this.method6174(50);
             }
         }
-        this.field3794.method5842(Statics.field5187, var15 ? this.field3793.field3697 : (int[][][]) null, this.field3811);
+        this.field3794.method5842(Statics.renderer, var15 ? this.field3793.field3697 : (int[][][]) null, this.field3811);
         if (this.rebuildType.isRegionType()) {
             if (!this.asyncRebuilding) {
                 MapLogicRelated.method8512(true);
@@ -1136,11 +1136,11 @@ public class World {
         if (!this.asyncRebuilding) {
             MapLogicRelated.method8512(true);
         }
-        this.field3794.method5833(Statics.field5187, var15 ? this.field3791.field4502[0] : null, null);
+        this.field3794.method5833(Statics.renderer, var15 ? this.scene.field4502[0] : null, null);
         if (this.asyncRebuilding) {
             this.method6174(75);
         }
-        this.field3794.method14291(Statics.field5187, false);
+        this.field3794.method14291(Statics.renderer, false);
         if (this.asyncRebuilding) {
             this.method6174(75);
         }
@@ -1148,7 +1148,7 @@ public class World {
             MapLogicRelated.method8512(true);
         }
         if (var15) {
-            this.field3791.method7404(true);
+            this.scene.method7404(true);
             if (!this.asyncRebuilding) {
                 MapLogicRelated.method8512(true);
             }
@@ -1160,12 +1160,12 @@ public class World {
             if (!this.asyncRebuilding) {
                 MapLogicRelated.method8512(true);
             }
-            this.field3793.method5833(Statics.field5187, null, this.field3791.field4527[0]);
-            this.field3793.method14291(Statics.field5187, true);
+            this.field3793.method5833(Statics.renderer, null, this.scene.field4527[0]);
+            this.field3793.method14291(Statics.renderer, true);
             if (!this.asyncRebuilding) {
                 MapLogicRelated.method8512(true);
             }
-            this.field3791.method7404(false);
+            this.scene.method7404(false);
             if (this.asyncRebuilding) {
                 this.method6174(50);
             }
@@ -1174,10 +1174,10 @@ public class World {
         if (this.field3793 != null) {
             this.field3793.method5888();
         }
-        this.field3791.method7405();
+        this.scene.method7405();
         if (this.asyncRebuilding) {
-            MonotonicTime.method5554();
-            while (!Statics.field5187.method495()) {
+            MonotonicTime.get();
+            while (!Statics.renderer.method495()) {
                 this.method6174(1);
             }
         }
@@ -1185,9 +1185,9 @@ public class World {
         if (this.asyncRebuilding) {
             World var19 = client.world;
             this.method6090(var19);
-            Statics.field8656.method6041(var19);
+            Statics.asyncRebuild.method6041(var19);
             var18 = true;
-            MonotonicTime.method5554();
+            MonotonicTime.get();
             Object var20 = client.field8983;
             synchronized (client.field8983) {
                 client.field8981 = true;
@@ -1214,14 +1214,14 @@ public class World {
         }
         for (int var26 = 0; var26 < client.field9044.length; var26++) {
             if (client.field9044[var26] != null) {
-                client.field9044[var26].method6951(this.field3791);
+                client.field9044[var26].method6951(this.scene);
             }
         }
         Statics.method7076();
         ChangeLocationRequest.method11709();
         if (Statics.getEnvironment() == GameShellEnvironment.APPLICATION && client.gameConnection.getStream() != null && client.state == 16) {
             ClientMessage var27 = ClientMessage.createMessage(ClientProt.DETECT_MODIFIED_CLIENT, client.gameConnection.randomOut);
-            var27.field9467.p4(1057001181);
+            var27.buf.p4(1057001181);
             client.gameConnection.queue(var27);
         }
         if (!this.rebuildType.isRegionType()) {
@@ -1257,7 +1257,7 @@ public class World {
         }
         ClientWorldMap.method7071();
         if (this.field3833) {
-            DeveloperConsole.method1958(Long.toString(MonotonicTime.method5554() - this.field3789));
+            DeveloperConsole.addLine(Long.toString(MonotonicTime.get() - this.field3789));
             this.field3833 = false;
         }
         if (var18) {
@@ -1292,7 +1292,7 @@ public class World {
                     AudioRenderer.method3461();
                 }
                 arg0.method5838(var6, var9, var10, this.field3795.x, this.field3795.z, this.field3811);
-                arg0.method14269(Statics.field5187, var6, var9, var10);
+                arg0.method14269(Statics.renderer, var6, var9, var10);
             }
         }
         for (int var11 = 0; var11 < var3; var11++) {
@@ -1328,7 +1328,7 @@ public class World {
                                 if (this.field3820[var12] == var11 && arg1[var12] != null) {
                                     Packet var13 = new Packet(arg1[var12]);
                                     arg0.method5839(var13, var3, var4 * 8, var5 * 8, var7, var9, var10, var8, this.field3811);
-                                    arg0.method14270(Statics.field5187, var13, var3, var4 * 8, var5 * 8, var7, var9, var10, var8);
+                                    arg0.method14270(Statics.renderer, var13, var3, var4 * 8, var5 * 8, var7, var9, var10, var8);
                                     break;
                                 }
                             }
@@ -1363,7 +1363,7 @@ public class World {
                 if (!this.asyncRebuilding) {
                     AudioRenderer.method3461();
                 }
-                arg0.method14271(Statics.field5187, var5, var6, var7, this.field3811);
+                arg0.method14271(Statics.renderer, var5, var6, var7, this.field3811);
                 if (this.asyncRebuilding) {
                     this.method6174(10);
                 }
@@ -1389,7 +1389,7 @@ public class World {
                             int var11 = (var9 / 8 << 8) + var10 / 8;
                             for (int var12 = 0; var12 < this.field3820.length; var12++) {
                                 if (this.field3820[var12] == var11 && arg1[var12] != null) {
-                                    arg0.method14272(Statics.field5187, arg1[var12], var3, var4 * 8, var5 * 8, var7, (var9 & 0x7) * 8, (var10 & 0x7) * 8, var8, this.field3811);
+                                    arg0.method14272(Statics.renderer, arg1[var12], var3, var4 * 8, var5 * 8, var7, (var9 & 0x7) * 8, (var10 & 0x7) * 8, var8, this.field3811);
                                     break;
                                 }
                             }
@@ -1432,7 +1432,7 @@ public class World {
                     NPCType var14 = Statics.field3774.method12565(var5.g2());
                     ObjectNode var15 = (ObjectNode) client.npcs.getNode((long) var7);
                     if (var15 == null && (var14.field7220 & 0x1) > 0 && var12 >= 0 && var14.field7213 + var12 < this.mapSizeX && var13 >= 0 && var14.field7213 + var13 < this.mapSizeZ) {
-                        NpcEntity var16 = new NpcEntity(this.field3791);
+                        NpcEntity var16 = new NpcEntity(this.scene);
                         var16.localPlayerIndex = var7;
                         ObjectNode var17 = new ObjectNode(var16);
                         client.npcs.method11927(var17, (long) var7);
@@ -1442,7 +1442,7 @@ public class World {
                         var16.method16149(var14);
                         var16.setSize(var16.field10075.field7213);
                         var16.field8636 = var16.field10075.field7241 << 3;
-                        var16.method13946(var16.field10075.field7243.method6342().method6339() << 11 & 0x3FFF, true);
+                        var16.method13946(var16.field10075.field7243.method6342().getId() << 11 & 0x3FFF, true);
                         var16.method16153(var9, var12, var13, true, var16.size());
                     }
                 }

@@ -34,7 +34,7 @@ public class ClientOptionsMaxScreenSize extends ClientOption {
     }
 
     @ObfuscatedName("afo.n(I)I")
-    public int method15766() {
+    public int getValue() {
         return this.field6461;
     }
 }

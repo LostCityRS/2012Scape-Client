@@ -53,7 +53,7 @@ public class CreateAccountReply implements SerializableEnum {
     }
 
     @ObfuscatedName("tk.j(B)I")
-    public int method6339() {
+    public int getId() {
         return this.field6450;
     }
 }

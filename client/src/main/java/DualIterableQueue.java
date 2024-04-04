@@ -68,7 +68,7 @@ public class DualIterableQueue implements Iterable {
     }
 
     @ObfuscatedName("tv.m(I)Ladi;")
-    public SecondaryNode method11756() {
+    public SecondaryNode last() {
         return this.method11731(null);
     }
 
@@ -90,7 +90,7 @@ public class DualIterableQueue implements Iterable {
     }
 
     @ObfuscatedName("tv.l(I)Ladi;")
-    public SecondaryNode method11744() {
+    public SecondaryNode previous() {
         SecondaryNode var1 = this.field6663;
         if (this.field6662 == var1) {
             this.field6663 = null;

@@ -18,7 +18,7 @@ public class SerializableEnums {
         SerializableEnum[] var2 = arg0;
         for (int var3 = 0; var3 < var2.length; var3++) {
             SerializableEnum var4 = var2[var3];
-            if (arg1 == var4.method6339()) {
+            if (arg1 == var4.getId()) {
                 return var4;
             }
         }

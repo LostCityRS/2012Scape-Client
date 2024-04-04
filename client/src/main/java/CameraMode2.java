@@ -12,7 +12,7 @@ public class CameraMode2 {
         if (arg3.method5296(arg1)) {
             return;
         }
-        Vector3 var9 = Vector3.method5294(0.0F, 0.0F, 0.0F);
+        Vector3 var9 = Vector3.create(0.0F, 0.0F, 0.0F);
         Vector3 var10 = Vector3.create(Vector3.method5377(arg3, arg1));
         var10.method5318(arg2);
         Vector3 var11 = Vector3.method5377(var10, var9);
@@ -27,13 +27,13 @@ public class CameraMode2 {
             return;
         }
         arg2.method5220();
-        Vector3 var13 = Vector3.method5294(1.0F, 0.0F, 0.0F);
-        Vector3 var14 = Vector3.method5294(0.0F, 1.0F, 0.0F);
-        Vector3 var15 = Vector3.method5294(0.0F, 0.0F, 1.0F);
+        Vector3 var13 = Vector3.create(1.0F, 0.0F, 0.0F);
+        Vector3 var14 = Vector3.create(0.0F, 1.0F, 0.0F);
+        Vector3 var15 = Vector3.create(0.0F, 0.0F, 1.0F);
         var13.method5318(arg2);
         var14.method5318(arg2);
         var15.method5318(arg2);
-        Vector3 var16 = Vector3.method5294(Vector3.method5306(var13, arg4), Vector3.method5306(var14, arg4), Vector3.method5306(var15, arg4));
+        Vector3 var16 = Vector3.create(Vector3.method5306(var13, arg4), Vector3.method5306(var14, arg4), Vector3.method5306(var15, arg4));
         Vector3 var17 = Vector3.create(var16);
         var17.method5310();
         Vector3 var18 = Vector3.method5315(Vector3.method5312(var17, var17), Vector3.method5317(arg5, 2.0F));

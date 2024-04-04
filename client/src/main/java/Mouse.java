@@ -1,7 +1,5 @@
 import deob.ObfuscatedName;
 
-import java.awt.*;
-
 @ObfuscatedName("ob")
 public abstract class Mouse {
 
@@ -33,10 +31,10 @@ public abstract class Mouse {
     public abstract boolean method7252();
 
     @ObfuscatedName("ob.l(I)I")
-    public abstract int method7254();
+    public abstract int getX();
 
     @ObfuscatedName("ob.f(I)I")
-    public abstract int method7255();
+    public abstract int getY();
 
     @ObfuscatedName("ob.d(B)Ladv;")
     public abstract BasicMouseEvent method7256();

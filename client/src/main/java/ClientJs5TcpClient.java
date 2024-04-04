@@ -23,7 +23,7 @@ public class ClientJs5TcpClient extends Js5TcpClient {
     @ObfuscatedName("abs.t(I)Z")
     public boolean method5742() {
         if (this.field8882 != null) {
-            long var1 = MonotonicTime.method5554();
+            long var1 = MonotonicTime.get();
             int var3 = (int) (var1 - this.field3599);
             this.field3599 = var1;
             if (var3 > 200) {
@@ -42,14 +42,14 @@ public class ClientJs5TcpClient extends Js5TcpClient {
             return this.method5764() == 0 && this.method5739() == 0;
         }
         try {
-            for (Js5NetRequest var5 = (Js5NetRequest) this.field3594.method11756(); var5 != null; var5 = (Js5NetRequest) this.field3594.method11744()) {
+            for (Js5NetRequest var5 = (Js5NetRequest) this.field3594.last(); var5 != null; var5 = (Js5NetRequest) this.field3594.previous()) {
                 this.field3597.pos = 0;
                 this.field3597.p1(1);
                 this.field3597.p5(var5.field9554);
                 this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
                 this.field3595.method11728(var5);
             }
-            for (Js5NetRequest var6 = (Js5NetRequest) this.field3605.method11756(); var6 != null; var6 = (Js5NetRequest) this.field3605.method11744()) {
+            for (Js5NetRequest var6 = (Js5NetRequest) this.field3605.last(); var6 != null; var6 = (Js5NetRequest) this.field3605.previous()) {
                 this.field3597.pos = 0;
                 this.field3597.p1(0);
                 this.field3597.p5(var6.field9554);
@@ -96,10 +96,10 @@ public class ClientJs5TcpClient extends Js5TcpClient {
                             Object var20 = null;
                             Js5NetRequest var21;
                             if (var17) {
-                                for (var21 = (Js5NetRequest) this.field3596.method11756(); var21 != null && var21.field9554 != var18; var21 = (Js5NetRequest) this.field3596.method11744()) {
+                                for (var21 = (Js5NetRequest) this.field3596.last(); var21 != null && var21.field9554 != var18; var21 = (Js5NetRequest) this.field3596.previous()) {
                                 }
                             } else {
-                                for (var21 = (Js5NetRequest) this.field3595.method11756(); var21 != null && var21.field9554 != var18; var21 = (Js5NetRequest) this.field3595.method11744()) {
+                                for (var21 = (Js5NetRequest) this.field3595.last(); var21 != null && var21.field9554 != var18; var21 = (Js5NetRequest) this.field3595.previous()) {
                                 }
                             }
                             if (var21 == null) {
@@ -198,7 +198,7 @@ public class ClientJs5TcpClient extends Js5TcpClient {
                             }
                         }
                         this.field3598 = 0;
-                        this.field3599 = MonotonicTime.method5554();
+                        this.field3599 = MonotonicTime.get();
                         return;
                     }
                     this.field3605.method11728(var5);

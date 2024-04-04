@@ -11,12 +11,12 @@ public class ActiveComponent {
 
     @ObfuscatedName("rr.u(I)Lew;")
     public Component method11061() {
-        return this.field5239.method3108(this.field5240.field1764);
+        return this.field5239.method3108(this.field5240.id);
     }
 
     @ObfuscatedName("rr.j(III)Z")
     public boolean method11062(int arg0, int arg1) {
-        Component var3 = Component.method15145(arg0, arg1);
+        Component var3 = Component.get(arg0, arg1);
         if (var3 == null) {
             this.method11063();
             return false;

@@ -51,13 +51,13 @@ public class MapElementTypeList {
     }
 
     @ObfuscatedName("ph.j(III)V")
-    public void method7876(int arg0, int arg1) {
+    public void resizeCache(int arg0, int arg1) {
         this.field4808 = new WeightedCache(arg0);
         this.field4810 = new WeightedCache(arg1);
     }
 
     @ObfuscatedName("ph.a(I)V")
-    public void method7864() {
+    public void clearCache() {
         WeightedCache var1 = this.field4808;
         synchronized (this.field4808) {
             this.field4808.method7922();

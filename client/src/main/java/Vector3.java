@@ -41,7 +41,7 @@ public class Vector3 {
     }
 
     @ObfuscatedName("ko.a(FFF)Lko;")
-    public static Vector3 method5294(float arg0, float arg1, float arg2) {
+    public static Vector3 create(float arg0, float arg1, float arg2) {
         Vector3[] var3 = pool;
         synchronized (pool) {
             if (Statics.poolSize == 0) {

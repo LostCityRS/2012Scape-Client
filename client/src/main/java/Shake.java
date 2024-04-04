@@ -24,7 +24,7 @@ public class Shake extends CameraEffect {
 
     public Shake(int arg0, Packet arg1) {
         super(arg0);
-        this.field10590 = ShakeMode.method7070(arg1.g1());
+        this.field10590 = ShakeMode.forId(arg1.g1());
         this.field10589 = arg1.gFloat();
         this.field10591 = arg1.gFloat();
     }
@@ -58,7 +58,7 @@ public class Shake extends CameraEffect {
 
     @ObfuscatedName("alj.s(Laet;I)V")
     public void method16671(Packet arg0) {
-        this.field10590 = ShakeMode.method7070(arg0.g1());
+        this.field10590 = ShakeMode.forId(arg0.g1());
         this.field10589 = arg0.gFloat();
         this.field10591 = arg0.gFloat();
     }

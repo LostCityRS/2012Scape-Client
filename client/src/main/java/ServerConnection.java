@@ -39,7 +39,7 @@ public class ServerConnection {
     public int field837 = 0;
 
     @ObfuscatedName("ad.o")
-    public int field839 = 0;
+    public int numConnections = 0;
 
     @ObfuscatedName("ad.q")
     public int field845;
@@ -63,7 +63,7 @@ public class ServerConnection {
     public ServerProt field831;
 
     @ObfuscatedName("ad.k")
-    public boolean field846 = false;
+    public boolean disconnected = false;
 
     @ObfuscatedName("ad.h")
     public PingProvider field847 = new PingProvider();
@@ -91,13 +91,13 @@ public class ServerConnection {
             if (var1 == null || var1.field9465 > this.field830.data.length - this.field830.pos) {
                 this.field827.method7193(this.field830.data, 0, this.field830.pos);
                 this.field845 += this.field830.pos;
-                this.field839 = 0;
+                this.numConnections = 0;
                 break;
             }
-            this.field830.pdata(var1.field9467.data, 0, var1.field9465);
+            this.field830.pdata(var1.buf.data, 0, var1.field9465);
             this.field826 -= var1.field9465;
             var1.method6979();
-            var1.field9467.method15282();
+            var1.buf.method15282();
             var1.method15023();
         }
     }
@@ -105,8 +105,8 @@ public class ServerConnection {
     @ObfuscatedName("ad.a(Lada;B)V")
     public final void queue(ClientMessage arg0) {
         this.field829.method11558(arg0);
-        arg0.field9465 = arg0.field9467.pos;
-        arg0.field9467.pos = 0;
+        arg0.field9465 = arg0.buf.pos;
+        arg0.buf.pos = 0;
         this.field826 += arg0.field9465;
     }
 
@@ -136,7 +136,7 @@ public class ServerConnection {
     }
 
     @ObfuscatedName("ad.t(I)V")
-    public void method1917() {
+    public void closeForcefully() {
         this.field827 = null;
         this.field847.method1233(null);
     }

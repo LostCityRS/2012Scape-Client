@@ -29,7 +29,7 @@ public class ShakeMode {
     }
 
     @ObfuscatedName("of.u(IB)Lfp;")
-    public static ShakeMode method7070(int arg0) {
+    public static ShakeMode forId(int arg0) {
         if (field2127.field2124 == arg0) {
             return field2127;
         } else if (field2125.field2124 == arg0) {

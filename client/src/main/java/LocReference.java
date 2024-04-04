@@ -38,7 +38,7 @@ public class LocReference {
     @ObfuscatedName("ro.a(I)Lca;")
     public Location method8723() {
         int var1 = this.field5196.level;
-        CoordGrid var2 = client.world.method6214();
+        CoordGrid var2 = client.world.getBase();
         int var3 = this.field5196.x - var2.x;
         int var4 = this.field5196.z - var2.z;
         if (var3 < 0 || var4 < 0 || var3 >= client.world.getSizeX() || var4 >= client.world.getSizeZ()) {

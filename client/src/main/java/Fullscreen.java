@@ -6,7 +6,7 @@ import java.awt.*;
 public final class Fullscreen {
 
     @ObfuscatedName("uw.u")
-    public static boolean field6700 = true;
+    public static boolean allowed = true;
 
     public Fullscreen() throws Throwable {
         throw new Error();

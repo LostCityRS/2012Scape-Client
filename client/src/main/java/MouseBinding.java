@@ -30,7 +30,7 @@ public class MouseBinding implements Binding {
             int[] var5 = this.field4813;
             for (int var6 = 0; var6 < var5.length; var6++) {
                 int var7 = var5[var6];
-                if (!arg3.method7243(var7)) {
+                if (!arg3.isKeyHeld(var7)) {
                     return false;
                 }
             }

@@ -27,7 +27,7 @@ public class Js5DiskCache implements Runnable {
         var3.field10593 = 1;
         DualIterableQueue var4 = this.field3588;
         synchronized (this.field3588) {
-            Js5WorkerRequest var5 = (Js5WorkerRequest) this.field3588.method11756();
+            Js5WorkerRequest var5 = (Js5WorkerRequest) this.field3588.last();
             while (true) {
                 if (var5 == null) {
                     break;
@@ -37,7 +37,7 @@ public class Js5DiskCache implements Runnable {
                     var3.field10352 = false;
                     return var3;
                 }
-                var5 = (Js5WorkerRequest) this.field3588.method11744();
+                var5 = (Js5WorkerRequest) this.field3588.previous();
             }
         }
         var3.field10597 = arg1.method7168(arg0);

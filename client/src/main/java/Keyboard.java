@@ -13,5 +13,5 @@ public abstract class Keyboard {
     public abstract KeyboardEvent method7237();
 
     @ObfuscatedName("oq.a(IB)Z")
-    public abstract boolean method7243(int arg0);
+    public abstract boolean isKeyHeld(int arg0);
 }

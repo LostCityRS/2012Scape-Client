@@ -6,16 +6,16 @@ import java.util.Locale;
 public class Language implements SerializableEnum {
 
     @ObfuscatedName("sn.u")
-    public static final Language field6376 = new Language("EN", "en", "English", ModeWhere.field6368, 0, "GB");
+    public static final Language field6376 = new Language("EN", "en", "English", ModeWhere.LIVE, 0, "GB");
 
     @ObfuscatedName("sn.j")
-    public static final Language field6374 = new Language("DE", "de", "German", ModeWhere.field6368, 1, "DE");
+    public static final Language field6374 = new Language("DE", "de", "German", ModeWhere.LIVE, 1, "DE");
 
     @ObfuscatedName("sn.a")
-    public static final Language field6375 = new Language("FR", "fr", "French", ModeWhere.field6368, 2, "FR");
+    public static final Language field6375 = new Language("FR", "fr", "French", ModeWhere.LIVE, 2, "FR");
 
     @ObfuscatedName("sn.s")
-    public static final Language field6384 = new Language("PT", "pt", "Portuguese", ModeWhere.field6368, 3, "BR");
+    public static final Language field6384 = new Language("PT", "pt", "Portuguese", ModeWhere.LIVE, 3, "BR");
 
     @ObfuscatedName("sn.c")
     public static final Language field6377 = new Language("NL", "nl", "Dutch", ModeWhere.field6369, 4, "NL");
@@ -68,7 +68,7 @@ public class Language implements SerializableEnum {
     }
 
     @ObfuscatedName("sn.j(B)I")
-    public int method6339() {
+    public int getId() {
         return this.field6382;
     }
 

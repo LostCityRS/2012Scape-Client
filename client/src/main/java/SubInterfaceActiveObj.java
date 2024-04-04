@@ -12,7 +12,7 @@ public class SubInterfaceActiveObj extends SubInterface {
     }
 
     @ObfuscatedName("ajh.u(B)Z")
-    public boolean method15469() {
+    public boolean process() {
         ObjStackEntity var1 = this.field10479.method11076();
         if (var1 == null) {
             return false;

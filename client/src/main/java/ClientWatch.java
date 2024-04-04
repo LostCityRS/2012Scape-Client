@@ -51,7 +51,7 @@ public class ClientWatch {
 
     @ObfuscatedName("is.s(Ladv;I)V")
     public static void method4631(BasicMouseEvent arg0) {
-        if (client.method1608(client.state)) {
+        if (client.isStateGame(client.state)) {
             field5040.method8370(arg0);
         } else {
             arg0.method15186();
@@ -63,8 +63,8 @@ public class ClientWatch {
         Queue var0 = field5041;
         synchronized (field5041) {
             Point var1;
-            if (Statics.field1231.isShowing()) {
-                var1 = Statics.field1231.getLocationOnScreen();
+            if (Statics.canvas.isShowing()) {
+                var1 = Statics.canvas.getLocationOnScreen();
             } else {
                 var1 = null;
             }
@@ -74,9 +74,9 @@ public class ClientWatch {
                     if (var2 == null) {
                         return;
                     }
-                    if (var1 != null && Statics.field1231.isShowing() && Statics.field578) {
+                    if (var1 != null && Statics.canvas.isShowing() && Statics.field578) {
                         var2.method16843(var1);
-                        if (!var2.method16850() && var2.method15182() < Statics.field4125 && var2.method15183() < Statics.field4677 && var2.method15182() >= 0 && var2.method15183() >= 0) {
+                        if (!var2.method16850() && var2.method15182() < Statics.canvasWid && var2.method15183() < Statics.canvasHei && var2.method15182() >= 0 && var2.method15183() >= 0) {
                             int var3 = var2.method15181();
                             if (var2.method15181() == -1) {
                                 field5045.method8370(var2);
@@ -112,8 +112,8 @@ public class ClientWatch {
         field5040.method8371();
         field5045.method8371();
         if (client.field8953 > 0) {
-            ClientMessage var0 = ClientMessage.createMessage(ClientProt.field2878, client.gameConnection.randomOut);
-            var0.field9467.p2(client.field8953 * 4);
+            ClientMessage var0 = ClientMessage.createMessage(ClientProt.EVENT_KEYBOARD, client.gameConnection.randomOut);
+            var0.buf.p2(client.field8953 * 4);
             for (int var1 = 0; var1 < client.field8953; var1++) {
                 KeyboardEvent var2 = client.field9072[var1];
                 long var3 = var2.method7287() - field5044;
@@ -121,8 +121,8 @@ public class ClientWatch {
                     var3 = 16777215L;
                 }
                 field5044 = var2.method7287();
-                var0.field9467.p1(var2.method7286());
-                var0.field9467.p3((int) var3);
+                var0.buf.p1(var2.method7286());
+                var0.buf.p3((int) var3);
             }
             client.gameConnection.queue(var0);
         }
@@ -132,27 +132,26 @@ public class ClientWatch {
         if (client.field9028 && field5043 <= 0) {
             field5043 = 20;
             client.field9028 = false;
-            ClientMessage var5 = ClientMessage.createMessage(ClientProt.field2882, client.gameConnection.randomOut);
-            var5.field9467.p2_alt3((int) client.field9171 >> 3);
-            var5.field9467.p2_alt3((int) client.field9021 >> 3);
+            ClientMessage var5 = ClientMessage.createMessage(ClientProt.EVENT_CAMERA_POSITION, client.gameConnection.randomOut);
+            var5.buf.p2_alt3((int) client.field9171 >> 3);
+            var5.buf.p2_alt3((int) client.field9021 >> 3);
             client.gameConnection.queue(var5);
         }
         if (Statics.field578 != field5042) {
             field5042 = Statics.field578;
-            ClientMessage var6 = ClientMessage.createMessage(ClientProt.field2925, client.gameConnection.randomOut);
-            var6.field9467.p1(Statics.field578 ? 1 : 0);
+            ClientMessage var6 = ClientMessage.createMessage(ClientProt.EVENT_APPLET_FOCUS, client.gameConnection.randomOut);
+            var6.buf.p1(Statics.field578 ? 1 : 0);
             client.gameConnection.queue(var6);
         }
-        if (client.field8932) {
-            return;
+        if (!client.preferencesChangeNotified) {
+            ClientMessage var7 = ClientMessage.createMessage(ClientProt.CLIENT_DETAILOPTIONS_STATUS, client.gameConnection.randomOut);
+            var7.buf.p1(0);
+            int var8 = var7.buf.pos;
+            Packet var9 = Statics.options.createPreferencesBlock();
+            var7.buf.pdata(var9.data, 0, var9.pos);
+            var7.buf.psize1(var7.buf.pos - var8);
+            client.gameConnection.queue(var7);
+            client.preferencesChangeNotified = true;
         }
-        ClientMessage var7 = ClientMessage.createMessage(ClientProt.field2888, client.gameConnection.randomOut);
-        var7.field9467.p1(0);
-        int var8 = var7.field9467.pos;
-        Packet var9 = Statics.clientOptions.method15447();
-        var7.field9467.pdata(var9.data, 0, var9.pos);
-        var7.field9467.psize1(var7.field9467.pos - var8);
-        client.gameConnection.queue(var7);
-        client.field8932 = true;
     }
 }

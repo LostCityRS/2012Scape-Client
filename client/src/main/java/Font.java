@@ -60,7 +60,7 @@ public abstract class Font {
     }
 
     @ObfuscatedName("l.a(Ljava/lang/String;IIIII)V")
-    public void method834(String arg0, int arg1, int arg2, int arg3, int arg4) {
+    public void drawStringCentered(String arg0, int arg1, int arg2, int arg3, int arg4) {
         if (arg0 != null) {
             this.method843(arg3, arg4);
             this.method857(arg0, arg1 - this.field418.method12418(arg0) / 2, arg2, null, null, null, 0, 0);
@@ -354,7 +354,7 @@ public abstract class Font {
                         if (!var15.equals("reg")) {
                             if (var15.startsWith("img=")) {
                                 try {
-                                    int var16 = StringTools.method5598(var15.substring(4));
+                                    int var16 = StringTools.parseInt(var15.substring(4));
                                     Sprite var17 = arg3[var16];
                                     int var18 = arg4 == null ? var17.method1047() : arg4[var16];
                                     if ((field424 & -16777216) == -16777216) {
@@ -455,7 +455,7 @@ public abstract class Font {
                                         var17 = arg6[var11];
                                     }
                                     var11++;
-                                    int var18 = StringTools.method5598(var15.substring(4));
+                                    int var18 = StringTools.parseInt(var15.substring(4));
                                     Sprite var19 = arg3[var18];
                                     int var20 = arg4 == null ? var19.method1047() : arg4[var18];
                                     var19.method1054(arg1 + var16, this.field418.field7175 + var8 - var20 + var17, 1, -1, 1);

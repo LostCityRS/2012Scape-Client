@@ -66,7 +66,7 @@ public class NpcEntity extends PathingEntity {
         this.field10081 = (int) (Math.random() * 4.0D) + 32;
         this.field10082 = (int) (Math.random() * 2.0D) + 3;
         this.field10083 = (int) (Math.random() * 3.0D) + 16;
-        if (Statics.clientOptions.field9659.method15686() == 1) {
+        if (Statics.options.field9659.method15686() == 1) {
             this.field10084 = (int) (Math.random() * 6.0D);
         } else {
             this.field10084 = (int) (Math.random() * 12.0D);
@@ -75,7 +75,7 @@ public class NpcEntity extends PathingEntity {
 
     @ObfuscatedName("ahs.gb(Lwq;I)V")
     public void method16149(NPCType arg0) {
-        if (this.field10075 != arg0 && MiniMenu.field585 && MiniMenu.method11169(this.localPlayerIndex)) {
+        if (this.field10075 != arg0 && MiniMenu.open && MiniMenu.method11169(this.localPlayerIndex)) {
             MiniMenu.method3561();
         }
         this.field10075 = arg0;
@@ -115,7 +115,7 @@ public class NpcEntity extends PathingEntity {
         NPCType var9 = this.field10075.field7244 == null ? this.field10075 : this.field10075.method12516(Statics.field2669);
         this.field8650 = false;
         PickableEntity var10 = null;
-        if (Statics.clientOptions.field9658.method15709() == 1 && var9.field7249 && var8.field4714) {
+        if (Statics.options.field9658.method15709() == 1 && var9.field7249 && var8.field4714) {
             AnimationNode var11 = this.field8597.method11767() && this.field8597.method11776() ? this.field8597 : null;
             EntityWalkAnimationNode var12 = this.field8616.method11767() && (!this.field8616.field9899 || var11 == null) ? this.field8616 : null;
             Model var13 = SpotShadowFactory.method1417(arg0, var5, this.field8601, this.field8644, this.field8603, this.field10075.field7213, this.field8651[0], this.field10075.field7236 & 0xFFFF, this.field10075.field7251 & 0xFFFF, this.field10075.field7252 & 0xFF, this.field10075.field7253 & 0xFF, var12 == null ? var11 : var12);
@@ -475,7 +475,7 @@ public class NpcEntity extends PathingEntity {
 
     @ObfuscatedName("ahs.u(I)Ladu;")
     public CoordFine method3684() {
-        CoordGrid var1 = client.world.method6214();
+        CoordGrid var1 = client.world.getBase();
         return CoordFine.method8611(this.level, (int) this.getTransform().trans.x + var1.x * 512, -((int) this.getTransform().trans.y), (int) this.getTransform().trans.z + var1.z * 512);
     }
 

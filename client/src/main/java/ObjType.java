@@ -18,7 +18,7 @@ public class ObjType implements PlayerTypeRelated {
     public int field7063;
 
     @ObfuscatedName("vn.d")
-    public String field7125 = "null";
+    public String name = "null";
 
     @ObfuscatedName("vn.z")
     public short[] field7103;
@@ -223,7 +223,7 @@ public class ObjType implements PlayerTypeRelated {
         if (code == 1) {
             this.field7063 = buf.gSmart2or4null();
         } else if (code == 2) {
-            this.field7125 = buf.gjstr();
+            this.name = buf.gjstr();
         } else if (code == 4) {
             this.field7072 = buf.g2();
         } else if (code == 5) {
@@ -469,7 +469,7 @@ public class ObjType implements PlayerTypeRelated {
         this.field7067 = arg0.field7067;
         this.field7102 = arg0.field7102;
         this.field7100 = arg0.field7100;
-        this.field7125 = arg1.field7125;
+        this.name = arg1.name;
         this.field7099 = arg1.field7099;
         this.field7080 = arg1.field7080;
         this.field7078 = 1;
@@ -490,7 +490,7 @@ public class ObjType implements PlayerTypeRelated {
         this.field7067 = arg1.field7067;
         this.field7102 = arg1.field7102;
         this.field7100 = arg1.field7100;
-        this.field7125 = arg1.field7125;
+        this.name = arg1.name;
         this.field7099 = arg1.field7099;
         this.field7085 = arg1.field7085;
         this.field7087 = arg1.field7087;
@@ -520,7 +520,7 @@ public class ObjType implements PlayerTypeRelated {
                 this.field7083[var3] = arg1.field7083[var3];
             }
         }
-        this.field7083[4] = LocalisedText.field6931.method12206(this.field7061.field7140);
+        this.field7083[4] = LocalisedText.field6931.get(this.field7061.field7140);
     }
 
     @ObfuscatedName("vn.m(Lvn;Lvn;B)V")
@@ -538,7 +538,7 @@ public class ObjType implements PlayerTypeRelated {
         this.field7067 = arg1.field7067;
         this.field7102 = arg1.field7102;
         this.field7100 = arg1.field7100;
-        this.field7125 = arg1.field7125;
+        this.name = arg1.name;
         this.field7099 = arg1.field7099;
         this.field7085 = arg1.field7085;
         this.field7087 = arg1.field7087;
@@ -569,7 +569,7 @@ public class ObjType implements PlayerTypeRelated {
                 this.field7083[var3] = arg1.field7083[var3];
             }
         }
-        this.field7083[4] = LocalisedText.field6879.method12206(this.field7061.field7140);
+        this.field7083[4] = LocalisedText.field6879.get(this.field7061.field7140);
     }
 
     @ObfuscatedName("vn.t(Lra;IILqc;Ltt;IIIII)Lqa;")
@@ -582,7 +582,7 @@ public class ObjType implements PlayerTypeRelated {
                 }
             }
             if (var10 != -1) {
-                return this.field7061.method12316(var10).method12241(arg0, arg1, 1, arg3, arg4, arg5, arg6, arg7, arg8);
+                return this.field7061.get(var10).method12241(arg0, arg1, 1, arg3, arg4, arg5, arg6, arg7, arg8);
             }
         }
         int var12 = arg1;
@@ -677,7 +677,7 @@ public class ObjType implements PlayerTypeRelated {
                 }
             }
             if (var2 != -1) {
-                return this.field7061.method12316(var2);
+                return this.field7061.get(var2);
             }
         }
         return this;
@@ -847,9 +847,9 @@ public class ObjType implements PlayerTypeRelated {
         if (arg0 < 100000) {
             return "<col=ffff00>" + arg0 + "</col>";
         } else if (arg0 < 10000000) {
-            return "<col=ffffff>" + arg0 / 1000 + LocalisedText.field7005.method12206(arg1) + "</col>";
+            return "<col=ffffff>" + arg0 / 1000 + LocalisedText.field7005.get(arg1) + "</col>";
         } else {
-            return "<col=00ff80>" + arg0 / 1000000 + LocalisedText.field7001.method12206(arg1) + "</col>";
+            return "<col=00ff80>" + arg0 / 1000000 + LocalisedText.field7001.get(arg1) + "</col>";
         }
     }
 

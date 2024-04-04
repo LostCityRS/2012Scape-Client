@@ -4,19 +4,19 @@ import deob.ObfuscatedName;
 public class ClientTriggerType implements TriggerType {
 
     @ObfuscatedName("wy.u")
-    public static final ClientTriggerType field7317 = new ClientTriggerType("", 10);
+    public static final ClientTriggerType OPWORLDMAPELEMENT1 = new ClientTriggerType("", 10);
 
     @ObfuscatedName("wy.j")
-    public static final ClientTriggerType field7306 = new ClientTriggerType("", 11);
+    public static final ClientTriggerType OPWORLDMAPELEMENT2 = new ClientTriggerType("", 11);
 
     @ObfuscatedName("wy.a")
-    public static final ClientTriggerType field7301 = new ClientTriggerType("", 12);
+    public static final ClientTriggerType OPWORLDMAPELEMENT3 = new ClientTriggerType("", 12);
 
     @ObfuscatedName("wy.s")
-    public static final ClientTriggerType field7302 = new ClientTriggerType("", 13);
+    public static final ClientTriggerType OPWORLDMAPELEMENT4 = new ClientTriggerType("", 13);
 
     @ObfuscatedName("wy.c")
-    public static final ClientTriggerType field7303 = new ClientTriggerType("", 14);
+    public static final ClientTriggerType OPWORLDMAPELEMENT5 = new ClientTriggerType("", 14);
 
     @ObfuscatedName("wy.m")
     public static final ClientTriggerType field7304 = new ClientTriggerType("", 15);

@@ -29,7 +29,7 @@ public class AsyncRebuild implements Runnable {
     }
 
     @ObfuscatedName("la.a(S)Z")
-    public boolean method6042() {
+    public boolean processingRequest() {
         return this.field3771;
     }
 

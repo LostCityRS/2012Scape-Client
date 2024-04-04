@@ -26,14 +26,14 @@ public class MiniMenuSubMenu extends SecondaryNode {
     public boolean method16644(MiniMenuEntry arg0) {
         boolean var2 = true;
         arg0.method15142();
-        MiniMenuEntry var3 = (MiniMenuEntry) this.field10345.method11756();
+        MiniMenuEntry var3 = (MiniMenuEntry) this.field10345.last();
         while (var3 != null) {
             if (MiniMenu.method5825(arg0.field10340, var3.field10340)) {
                 DualIterableQueue.method8542(arg0, var3);
                 this.field10346++;
                 return !var2;
             }
-            var3 = (MiniMenuEntry) this.field10345.method11744();
+            var3 = (MiniMenuEntry) this.field10345.previous();
             var2 = false;
         }
         this.field10345.method11728(arg0);

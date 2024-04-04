@@ -82,7 +82,7 @@ public class BasicCamera extends Camera {
                     int var13 = arg0.g1();
                     int var14 = arg0.g1();
                     if (var13 == 0) {
-                        this.method3710(var14);
+                        this.removeEffect(var14);
                     } else {
                         CameraEffectType var15 = Statics.method7654(arg0.g1());
                         boolean var16 = true;

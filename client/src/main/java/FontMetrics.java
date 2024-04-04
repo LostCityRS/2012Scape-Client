@@ -172,7 +172,7 @@ public class FontMetrics {
                         if (!var9.equals("reg")) {
                             if (var9.startsWith("img=") && arg1 != null) {
                                 try {
-                                    int var10 = StringTools.method5598(var9.substring(4));
+                                    int var10 = StringTools.parseInt(var9.substring(4));
                                     var5 += arg1[var10].method1042();
                                     var4 = -1;
                                 } catch (Exception var12) {
@@ -232,7 +232,7 @@ public class FontMetrics {
                         if (!var12.equals("reg")) {
                             if (var12.startsWith("img=") && arg2 != null) {
                                 try {
-                                    int var13 = StringTools.method5598(var12.substring(4));
+                                    int var13 = StringTools.parseInt(var12.substring(4));
                                     var7 += arg2[var13].method1042();
                                     var6 = -1;
                                     if (var7 > var4) {
@@ -369,7 +369,7 @@ public class FontMetrics {
                         var12 = 174;
                     } else if (var19.startsWith("img=") && arg3 != null) {
                         try {
-                            int var20 = StringTools.method5598(var19.substring(4));
+                            int var20 = StringTools.parseInt(var19.substring(4));
                             var17 += arg3[var20].method1042();
                             var12 = -1;
                         } catch (Exception var22) {

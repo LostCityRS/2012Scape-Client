@@ -95,7 +95,7 @@ public final class WeightedCache {
 
     @ObfuscatedName("pm.m(II)V")
     public void method7921(int arg0) {
-        for (WeightedNode var2 = (WeightedNode) this.field4829.method11756(); var2 != null; var2 = (WeightedNode) this.field4829.method11744()) {
+        for (WeightedNode var2 = (WeightedNode) this.field4829.last(); var2 != null; var2 = (WeightedNode) this.field4829.previous()) {
             if (var2.method16724()) {
                 if (var2.method16722() == null) {
                     var2.method6979();
@@ -132,7 +132,7 @@ public final class WeightedCache {
     @ObfuscatedName("pm.d(I)I")
     public int method7926() {
         int var1 = 0;
-        for (WeightedNode var2 = (WeightedNode) this.field4829.method11756(); var2 != null; var2 = (WeightedNode) this.field4829.method11744()) {
+        for (WeightedNode var2 = (WeightedNode) this.field4829.last(); var2 != null; var2 = (WeightedNode) this.field4829.previous()) {
             if (!var2.method16724()) {
                 var1++;
             }
@@ -142,7 +142,7 @@ public final class WeightedCache {
 
     @ObfuscatedName("pm.z(B)V")
     public void method7925() {
-        for (WeightedNode var1 = (WeightedNode) this.field4829.method11756(); var1 != null; var1 = (WeightedNode) this.field4829.method11744()) {
+        for (WeightedNode var1 = (WeightedNode) this.field4829.last(); var1 != null; var1 = (WeightedNode) this.field4829.previous()) {
             if (var1.method16724()) {
                 var1.method6979();
                 var1.method15142();

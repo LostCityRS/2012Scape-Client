@@ -118,7 +118,7 @@ public class DynamicLoc {
         }
         this.method2432(this.field1217);
         if (arg3) {
-            arg3 &= this.field1225 & !this.field1227 & Statics.clientOptions.field9651.method15747() != 0;
+            arg3 &= this.field1225 & !this.field1227 & Statics.options.field9651.method15747() != 0;
         }
         if (arg2 && !arg3) {
             this.field1214 = var5.field6474;
@@ -238,7 +238,7 @@ public class DynamicLoc {
         if (!this.field1220.method11767()) {
             this.method2439(false, -1, 0);
         } else if (this.field1220.method11787(client.loopCycle - this.field1221)) {
-            if (Statics.clientOptions.field9651.method15747() == 2) {
+            if (Statics.options.field9651.method15747() == 2) {
                 this.field1227 = false;
             }
             if (this.field1220.method11784()) {
