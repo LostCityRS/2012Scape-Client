@@ -22,7 +22,7 @@ public class AudioBuss_Sub1 extends AudioBuss {
 
     @ObfuscatedName("aiu.ap(Ladc;)V")
     public final synchronized void method16445(AudioBuss arg0) {
-        arg0.method6979();
+        arg0.remove();
     }
 
     @ObfuscatedName("aiu.ag()V")
@@ -30,7 +30,7 @@ public class AudioBuss_Sub1 extends AudioBuss {
         if (this.field10278 <= 0) {
             return;
         }
-        for (AudioBuss_Sub1Related var1 = (AudioBuss_Sub1Related) this.field10279.method11563(); var1 != null; var1 = (AudioBuss_Sub1Related) this.field10279.method11567()) {
+        for (AudioBuss_Sub1Related var1 = (AudioBuss_Sub1Related) this.field10279.last(); var1 != null; var1 = (AudioBuss_Sub1Related) this.field10279.method11567()) {
             var1.field9476 -= this.field10278;
         }
         this.field10281 -= this.field10278;
@@ -48,7 +48,7 @@ public class AudioBuss_Sub1 extends AudioBuss {
 
     @ObfuscatedName("aiu.ai(Lade;)V")
     public void method16447(AudioBuss_Sub1Related arg0) {
-        arg0.method6979();
+        arg0.remove();
         arg0.method15053();
         Node var2 = this.field10279.field6647.field4226;
         if (this.field10279.field6647 == var2) {
@@ -60,7 +60,7 @@ public class AudioBuss_Sub1 extends AudioBuss {
 
     @ObfuscatedName("aiu.j()Ladc;")
     public AudioBuss method15031() {
-        return (AudioBuss) this.field10280.method11563();
+        return (AudioBuss) this.field10280.last();
     }
 
     @ObfuscatedName("aiu.a()Ladc;")
@@ -91,7 +91,7 @@ public class AudioBuss_Sub1 extends AudioBuss {
             arg2 -= var4;
             this.field10278 += var4;
             this.method16446();
-            AudioBuss_Sub1Related var5 = (AudioBuss_Sub1Related) this.field10279.method11563();
+            AudioBuss_Sub1Related var5 = (AudioBuss_Sub1Related) this.field10279.last();
             synchronized (var5) {
                 int var7 = var5.method15054(this);
                 if (var7 < 0) {
@@ -107,7 +107,7 @@ public class AudioBuss_Sub1 extends AudioBuss {
 
     @ObfuscatedName("aiu.ao([III)V")
     public void method16444(int[] arg0, int arg1, int arg2) {
-        for (AudioBuss var4 = (AudioBuss) this.field10280.method11563(); var4 != null; var4 = (AudioBuss) this.field10280.method11567()) {
+        for (AudioBuss var4 = (AudioBuss) this.field10280.last(); var4 != null; var4 = (AudioBuss) this.field10280.method11567()) {
             var4.method15033(arg0, arg1, arg2);
         }
     }
@@ -129,7 +129,7 @@ public class AudioBuss_Sub1 extends AudioBuss {
             arg0 -= var2;
             this.field10278 += var2;
             this.method16446();
-            AudioBuss_Sub1Related var3 = (AudioBuss_Sub1Related) this.field10279.method11563();
+            AudioBuss_Sub1Related var3 = (AudioBuss_Sub1Related) this.field10279.last();
             synchronized (var3) {
                 int var5 = var3.method15054(this);
                 if (var5 < 0) {
@@ -145,7 +145,7 @@ public class AudioBuss_Sub1 extends AudioBuss {
 
     @ObfuscatedName("aiu.al(I)V")
     public void method16449(int arg0) {
-        for (AudioBuss var2 = (AudioBuss) this.field10280.method11563(); var2 != null; var2 = (AudioBuss) this.field10280.method11567()) {
+        for (AudioBuss var2 = (AudioBuss) this.field10280.last(); var2 != null; var2 = (AudioBuss) this.field10280.method11567()) {
             var2.method15046(arg0);
         }
     }

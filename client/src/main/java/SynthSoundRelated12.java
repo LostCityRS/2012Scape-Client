@@ -68,7 +68,7 @@ public class SynthSoundRelated12 {
             if (var10 == null) {
                 return null;
             } else {
-                var9.method6979();
+                var9.remove();
                 this.field4057.method11927(var10, var6);
                 return var10;
             }

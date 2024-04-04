@@ -730,17 +730,17 @@ public class ObjType implements PlayerTypeRelated {
         }
         Sprite var18 = null;
         if (this.field7108 != -1) {
-            var18 = this.field7061.method12294(arg0, arg1, this.field7107, 10, 1, 0, true, true, 0, arg7, arg8);
+            var18 = this.field7061.getIcon(arg0, arg1, this.field7107, 10, 1, 0, true, true, 0, arg7, arg8);
             if (var18 == null) {
                 return null;
             }
         } else if (this.field7064 != -1) {
-            var18 = this.field7061.method12294(arg0, arg1, this.field7109, arg2, arg3, arg4, false, true, 0, arg7, arg8);
+            var18 = this.field7061.getIcon(arg0, arg1, this.field7109, arg2, arg3, arg4, false, true, 0, arg7, arg8);
             if (var18 == null) {
                 return null;
             }
         } else if (this.field7123 != -1) {
-            var18 = this.field7061.method12294(arg0, arg1, this.field7122, arg2, arg3, arg4, false, true, 0, arg7, arg8);
+            var18 = this.field7061.getIcon(arg0, arg1, this.field7122, arg2, arg3, arg4, false, true, 0, arg7, arg8);
             if (var18 == null) {
                 return null;
             }

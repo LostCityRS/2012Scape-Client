@@ -331,7 +331,7 @@ public class WorldMap {
                                     WorldMapElement var8 = new WorldMapElement(var6);
                                     var8.field9566 = var0;
                                     var8.field9567 = var1;
-                                    field4301.method11558(var8);
+                                    field4301.addFirst(var8);
                                 }
                             }
                         }
@@ -349,7 +349,7 @@ public class WorldMap {
                             WorldMapElement var13 = new WorldMapElement(var11);
                             var13.field9566 = var0;
                             var13.field9567 = var1;
-                            field4301.method11558(var13);
+                            field4301.addFirst(var13);
                         }
                     }
                 }
@@ -383,7 +383,7 @@ public class WorldMap {
                                     WorldMapElement var24 = new WorldMapElement(var22);
                                     var24.field9566 = ((Statics.currentAreaDisplayMinX >> 6) + var15) * 64 + var19.field4248 - Statics.currentAreaDisplayMinX;
                                     var24.field9567 = ((Statics.currentAreaDisplayMinZ >> 6) + var16) * 64 + var19.field4247 - Statics.currentAreaDisplayMinZ;
-                                    field4301.method11558(var24);
+                                    field4301.addFirst(var24);
                                 }
                             }
                         }
@@ -485,7 +485,7 @@ public class WorldMap {
                 WorldMapElement var3 = new WorldMapElement(Statics.field4281.field4253[var1]);
                 var3.field9566 = var0[1] - Statics.currentAreaDisplayMinX;
                 var3.field9567 = var0[2] - Statics.currentAreaDisplayMinZ;
-                field4301.method11558(var3);
+                field4301.addFirst(var3);
             }
         }
     }
@@ -830,7 +830,7 @@ public class WorldMap {
 
     @ObfuscatedName("om.k(Lra;IIII)Ltq;")
     public static IterableQueue method7100(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4) {
-        for (WorldMapElement var5 = (WorldMapElement) field4301.method11563(); var5 != null; var5 = (WorldMapElement) field4301.method11567()) {
+        for (WorldMapElement var5 = (WorldMapElement) field4301.last(); var5 != null; var5 = (WorldMapElement) field4301.method11567()) {
             method7101(arg0, var5, arg1, arg2, arg3, arg4);
         }
         return field4301;

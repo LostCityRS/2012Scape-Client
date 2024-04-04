@@ -38,7 +38,7 @@ public abstract class MouseLogger {
                     if (var1 != null && var1.buf.pos - var2 >= 252 - (this.method8355() + 6)) {
                         break label102;
                     }
-                    var6.method6979();
+                    var6.remove();
                     int var7 = var6.method15183();
                     if (var7 < -1) {
                         var7 = -1;
@@ -132,7 +132,7 @@ public abstract class MouseLogger {
 
     @ObfuscatedName("qs.a(Ladv;B)V")
     public void method8370(BasicMouseEvent arg0) {
-        this.field5050.method11558(arg0);
+        this.field5050.addFirst(arg0);
     }
 
     @ObfuscatedName("qs.s(Ladv;IB)I")

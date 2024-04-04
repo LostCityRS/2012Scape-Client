@@ -40,11 +40,11 @@ public final class ClientScriptCache {
     public void method7958(SecondaryNode arg0, long arg1) {
         if (this.field4832 == 0) {
             SecondaryNode var4 = this.field4830.method11729();
-            var4.method6979();
+            var4.remove();
             var4.method15142();
             if (this.field4834 == var4) {
                 SecondaryNode var5 = this.field4830.method11729();
-                var5.method6979();
+                var5.remove();
                 var5.method15142();
             }
         } else {

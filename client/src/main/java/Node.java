@@ -13,7 +13,7 @@ public class Node {
     public Node field4227;
 
     @ObfuscatedName("nz.p(I)V")
-    public void method6979() {
+    public void remove() {
         if (this.field4227 != null) {
             this.field4227.field4226 = this.field4226;
             this.field4226.field4227 = this.field4227;

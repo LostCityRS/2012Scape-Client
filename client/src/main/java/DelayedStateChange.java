@@ -38,7 +38,7 @@ public class DelayedStateChange extends SecondaryNode {
     public static DelayedStateChange method12910() {
         DelayedStateChange var0 = (DelayedStateChange) field10323.last();
         if (var0 != null) {
-            var0.method6979();
+            var0.remove();
             var0.method15142();
             return var0;
         }
@@ -51,7 +51,7 @@ public class DelayedStateChange extends SecondaryNode {
             if (var1.method16510() > MonotonicTime.get()) {
                 return null;
             }
-            var1.method6979();
+            var1.remove();
             var1.method15142();
         } while ((var1.field9554 & Long.MIN_VALUE) == 0L);
         return var1;

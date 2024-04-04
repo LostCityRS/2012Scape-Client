@@ -41,7 +41,7 @@ public class HashMap {
     public void method3551(int arg0) {
         HashMapValue var2 = this.method3557(arg0);
         if (var2 != null) {
-            var2.method6979();
+            var2.remove();
             this.field2133[var2.field9425] = null;
         }
     }

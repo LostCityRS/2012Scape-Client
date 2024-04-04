@@ -87,7 +87,7 @@ public class ServerConnection {
         }
         this.out.pos = 0;
         while (true) {
-            ClientMessage var1 = (ClientMessage) this.writeQueue.method11563();
+            ClientMessage var1 = (ClientMessage) this.writeQueue.last();
             if (var1 == null || var1.field9465 > this.out.data.length - this.out.pos) {
                 this.stream.method7193(this.out.data, 0, this.out.pos);
                 this.totalBytesSent += this.out.pos;
@@ -96,7 +96,7 @@ public class ServerConnection {
             }
             this.out.pdata(var1.buf.data, 0, var1.field9465);
             this.writePos -= var1.field9465;
-            var1.method6979();
+            var1.remove();
             var1.buf.release();
             var1.method15023();
         }
@@ -104,7 +104,7 @@ public class ServerConnection {
 
     @ObfuscatedName("ad.a(Lada;B)V")
     public final void queue(ClientMessage arg0) {
-        this.writeQueue.method11558(arg0);
+        this.writeQueue.addFirst(arg0);
         arg0.field9465 = arg0.buf.pos;
         arg0.buf.pos = 0;
         this.writePos += arg0.field9465;

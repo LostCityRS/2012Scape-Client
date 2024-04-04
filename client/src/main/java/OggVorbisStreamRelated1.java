@@ -76,7 +76,7 @@ public class OggVorbisStreamRelated1 extends AudioBuss {
                 }
             }
         } else if (this.field10290) {
-            this.method6979();
+            this.remove();
             field10291.method5955();
         }
     }
@@ -90,7 +90,7 @@ public class OggVorbisStreamRelated1 extends AudioBuss {
             OggVorbisStreamRelated2 var2 = this.method16468();
             if (var2 == null) {
                 if (this.field10290) {
-                    this.method6979();
+                    this.remove();
                     field10291.method5955();
                 }
                 return;
@@ -111,14 +111,14 @@ public class OggVorbisStreamRelated1 extends AudioBuss {
 
     @ObfuscatedName("aiq.ag(B)Ladk;")
     public synchronized OggVorbisStreamRelated2 method16468() {
-        return (OggVorbisStreamRelated2) this.field10285.method11563();
+        return (OggVorbisStreamRelated2) this.field10285.last();
     }
 
     @ObfuscatedName("aiq.as(B)V")
     public synchronized void method16465() {
         OggVorbisStreamRelated2 var1 = this.method16468();
         if (var1 != null) {
-            var1.method6979();
+            var1.remove();
             this.field10283 = 0;
             this.field10286--;
             field10291.method5954(var1.method15162(), var1);
@@ -144,7 +144,7 @@ public class OggVorbisStreamRelated1 extends AudioBuss {
             this.field10285.method11560();
             this.field10286--;
         }
-        this.field10285.method11558(arg0);
+        this.field10285.addFirst(arg0);
         this.field10286++;
     }
 
@@ -153,7 +153,7 @@ public class OggVorbisStreamRelated1 extends AudioBuss {
         if (this.field10286 < 1) {
             return -1.0D;
         } else {
-            OggVorbisStreamRelated2 var1 = (OggVorbisStreamRelated2) this.field10285.method11563();
+            OggVorbisStreamRelated2 var1 = (OggVorbisStreamRelated2) this.field10285.last();
             return var1 == null ? -1.0D : var1.field9560 - (double) ((float) var1.field9559[0].length / (float) Statics.field4015);
         }
     }

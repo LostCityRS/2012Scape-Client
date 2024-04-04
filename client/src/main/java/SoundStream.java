@@ -205,12 +205,12 @@ public abstract class SoundStream extends AudioBuss {
     public final synchronized void method16418(int arg0) {
         if (arg0 == 0) {
             this.method16386(0);
-            this.method6979();
+            this.remove();
         } else if (this.field10268 == 0 && this.field10269 == 0) {
             this.field10273 = 0;
             this.field10263 = 0;
             this.field10267 = 0;
-            this.method6979();
+            this.remove();
         } else {
             int var2 = -this.field10267;
             if (this.field10267 > var2) {
@@ -313,7 +313,7 @@ public abstract class SoundStream extends AudioBuss {
             this.field10269 = 0;
             this.field10268 = 0;
             this.field10267 = 0;
-            this.method6979();
+            this.remove();
             return true;
         } else {
             this.method16382();
@@ -330,7 +330,7 @@ public abstract class SoundStream extends AudioBuss {
                     this.field10269 = 0;
                     this.field10268 = 0;
                     this.field10267 = 0;
-                    this.method6979();
+                    this.remove();
                     arg0 = this.field10273;
                 }
                 this.field10273 = 0;
@@ -352,7 +352,7 @@ public abstract class SoundStream extends AudioBuss {
         if (this.field10266 < 0) {
             if (this.field10264 <= 0) {
                 this.method16394();
-                this.method6979();
+                this.remove();
                 return;
             }
             this.field10266 = 0;
@@ -360,7 +360,7 @@ public abstract class SoundStream extends AudioBuss {
         if (this.field10266 >= var4) {
             if (this.field10264 >= 0) {
                 this.method16394();
-                this.method6979();
+                this.remove();
                 return;
             }
             this.field10266 = var4 - 1;
@@ -432,12 +432,12 @@ public abstract class SoundStream extends AudioBuss {
                 if (this.field10266 < 0) {
                     this.field10266 = -1;
                     this.method16394();
-                    this.method6979();
+                    this.remove();
                 }
             } else if (this.field10266 >= var4) {
                 this.field10266 = var4;
                 this.method16394();
-                this.method6979();
+                this.remove();
             }
         } else if (this.field10276) {
             if (this.field10264 < 0) {

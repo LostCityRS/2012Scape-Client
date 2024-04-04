@@ -755,7 +755,7 @@ public class GlToolkit extends RendererToolkit {
 
     @ObfuscatedName("yq.w()V")
     public void method443() {
-        for (Node var1 = this.field8170.method11563(); var1 != null; var1 = this.field8170.method11567()) {
+        for (Node var1 = this.field8170.last(); var1 != null; var1 = this.field8170.method11567()) {
             ((GlHeap) var1).method16226();
         }
         if (this.field8093 != null) {
@@ -1374,7 +1374,7 @@ public class GlToolkit extends RendererToolkit {
     @ObfuscatedName("yq.bi(I)Lv;")
     public Heap method593(int arg0) {
         GlHeap var2 = new GlHeap(arg0);
-        this.field8170.method11558(var2);
+        this.field8170.addFirst(var2);
         return var2;
     }
 
@@ -1488,7 +1488,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.co(Lvm;[Lzv;Z)Ll;")
-    public Font method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
+    public Font createFont(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
         return new GlFont(this, arg0, arg1, arg2);
     }
 
@@ -2643,41 +2643,41 @@ public class GlToolkit extends RendererToolkit {
     public final synchronized void method13328(int arg0, int arg1) {
         IntNode var3 = new IntNode(arg1);
         var3.field4228 = arg0;
-        this.field8039.method11558(var3);
+        this.field8039.addFirst(var3);
     }
 
     @ObfuscatedName("yq.qr(II)V")
     public final synchronized void method13329(int arg0, int arg1) {
         IntNode var3 = new IntNode(arg1);
         var3.field4228 = arg0;
-        this.field8198.method11558(var3);
+        this.field8198.addFirst(var3);
     }
 
     @ObfuscatedName("yq.qw(I)V")
     public final synchronized void method13330(int arg0) {
         IntNode var2 = new IntNode(arg0);
-        this.field8102.method11558(var2);
+        this.field8102.addFirst(var2);
     }
 
     @ObfuscatedName("yq.ql(II)V")
     public final synchronized void method13331(int arg0, int arg1) {
         IntNode var3 = new IntNode(arg1);
         var3.field4228 = arg0;
-        this.field8103.method11558(var3);
+        this.field8103.addFirst(var3);
     }
 
     @ObfuscatedName("yq.qp(J)V")
     public final synchronized void method13332(long arg0) {
         Node var3 = new Node();
         var3.field4228 = arg0;
-        this.field8105.method11558(var3);
+        this.field8105.addFirst(var3);
     }
 
     @ObfuscatedName("yq.qf(I)V")
     public final synchronized void method13333(int arg0) {
         Node var2 = new Node();
         var2.field4228 = arg0;
-        this.field8194.method11558(var2);
+        this.field8194.addFirst(var2);
     }
 
     @ObfuscatedName("yq.qc(Lcy;)I")

@@ -50,7 +50,7 @@ public class CutsceneManager {
             method7325(var2);
             int var3 = var2.g1();
             for (int var4 = 0; var4 < var3; var4++) {
-                field1534.method11558(new CutsceneTemplate(var2));
+                field1534.addFirst(new CutsceneTemplate(var2));
             }
             int var5 = var2.gSmart1or2();
             Statics.field10534 = new CutsceneSpline[var5];

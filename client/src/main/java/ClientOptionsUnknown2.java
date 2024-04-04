@@ -13,7 +13,7 @@ public class ClientOptionsUnknown2 extends ClientOption {
 
     @ObfuscatedName("afe.z(B)V")
     public void method15883() {
-        int var1 = this.field6462.field9670.method15781();
+        int var1 = this.field6462.field9670.getValue();
         if (var1 != 3 && var1 != 5) {
             this.field6461 = 0;
         }
@@ -27,7 +27,7 @@ public class ClientOptionsUnknown2 extends ClientOption {
 
     @ObfuscatedName("afe.u(I)I")
     public int method11386() {
-        int var1 = this.field6462.field9670.method15781();
+        int var1 = this.field6462.field9670.getValue();
         return var1 == 3 || var1 == 5 ? 0 : 0;
     }
 
@@ -38,7 +38,7 @@ public class ClientOptionsUnknown2 extends ClientOption {
         } else if (this.field6462.method15462().method11398() < 2) {
             return 3;
         } else {
-            int var2 = this.field6462.field9670.method15781();
+            int var2 = this.field6462.field9670.getValue();
             return var2 == 3 || var2 == 5 ? 1 : 3;
         }
     }

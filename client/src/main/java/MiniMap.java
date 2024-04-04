@@ -261,7 +261,7 @@ public class MiniMap {
             int var13 = client.world.getSizeZ() * 4 + 48 - var8 / 128;
             Statics.field6357.method2512((float) arg1.renderwidth / 2.0F + (float) arg2, (float) arg1.renderheight / 2.0F + (float) arg3, (float) var12, (float) var13, var10, var9 << 2, var5, arg2, arg3);
             WorldMapRelated var14 = client.world.method6093();
-            for (IntNode var15 = (IntNode) field758.method11563(); var15 != null; var15 = (IntNode) field758.method11567()) {
+            for (IntNode var15 = (IntNode) field758.last(); var15 != null; var15 = (IntNode) field758.method11567()) {
                 int var16 = var15.field9556;
                 int var17 = (var14.field4254[var16] >> 14 & 0x3FFF) - var6.x;
                 int var18 = (var14.field4254[var16] & 0x3FFF) - var6.z;
@@ -300,7 +300,7 @@ public class MiniMap {
                     int var32 = field764 * 4 + 2 - var8 / 128 + (Statics.localPlayerEntity.size() - 1) * 2;
                     Statics.method12552(arg1, var5, arg2, arg3, var31, var32, Statics.field9826[field766 ? 1 : 0]);
                 }
-                if (!Statics.localPlayerEntity.field10066) {
+                if (!Statics.localPlayerEntity.visibility) {
                     arg0.fillRectangle(arg1.renderwidth / 2 + arg2 - 1, arg1.renderheight / 2 + arg3 - 1, 3, 3, -1);
                 }
             }
@@ -339,7 +339,7 @@ public class MiniMap {
         int[] var7 = ReceivePlayerPositions.highResolutionsIndices;
         for (int var8 = 0; var8 < var6; var8++) {
             PlayerEntity var9 = client.players[var7[var8]];
-            if (var9 != null && var9.method16125() && !var9.field10066 && Statics.localPlayerEntity != var9 && Statics.localPlayerEntity.level == var9.level) {
+            if (var9 != null && var9.method16125() && !var9.visibility && Statics.localPlayerEntity != var9 && Statics.localPlayerEntity.level == var9.level) {
                 Vector3 var10 = var9.getTransform().trans;
                 int var11 = (int) var10.x / 128 - arg0 / 128;
                 int var12 = (int) var10.z / 128 - arg1 / 128;

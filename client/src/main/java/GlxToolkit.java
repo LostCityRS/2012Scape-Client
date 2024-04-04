@@ -1108,41 +1108,41 @@ public final class GlxToolkit extends GpuToolkit {
     public final synchronized void method16083(int arg0, int arg1) {
         IntNode var3 = new IntNode(arg1);
         var3.field4228 = arg0;
-        this.field10005.method11558(var3);
+        this.field10005.addFirst(var3);
     }
 
     @ObfuscatedName("ahv.aca(II)V")
     public final synchronized void method16086(int arg0, int arg1) {
         IntNode var3 = new IntNode(arg1);
         var3.field4228 = arg0;
-        this.field10010.method11558(var3);
+        this.field10010.addFirst(var3);
     }
 
     @ObfuscatedName("ahv.acv(I)V")
     public final synchronized void method16087(int arg0) {
         IntNode var2 = new IntNode(arg0);
-        this.field10007.method11558(var2);
+        this.field10007.addFirst(var2);
     }
 
     @ObfuscatedName("ahv.acl(II)V")
     public final synchronized void method16088(int arg0, int arg1) {
         IntNode var3 = new IntNode(arg1);
         var3.field4228 = arg0;
-        this.field10008.method11558(var3);
+        this.field10008.addFirst(var3);
     }
 
     @ObfuscatedName("ahv.acm(J)V")
     public final synchronized void method16099(long arg0) {
         Node var3 = new Node();
         var3.field4228 = arg0;
-        this.field10004.method11558(var3);
+        this.field10004.addFirst(var3);
     }
 
     @ObfuscatedName("ahv.acr(I)V")
     public final synchronized void method16089(int arg0) {
         Node var2 = new Node();
         var2.field4228 = arg0;
-        this.field10009.method11558(var2);
+        this.field10009.addFirst(var2);
     }
 
     @ObfuscatedName("ahv.acx(Ldz;)I")

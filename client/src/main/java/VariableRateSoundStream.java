@@ -33,7 +33,7 @@ public class VariableRateSoundStream extends SoundStream {
         if (this.field10266 < 0) {
             if (this.field10264 <= 0) {
                 this.method16394();
-                this.method6979();
+                this.remove();
                 return;
             }
             this.field10266 = 0;
@@ -41,7 +41,7 @@ public class VariableRateSoundStream extends SoundStream {
         if (this.field10266 >= var6) {
             if (this.field10264 >= 0) {
                 this.method16394();
-                this.method6979();
+                this.remove();
                 return;
             }
             this.field10266 = var6 - 1;
@@ -117,14 +117,14 @@ public class VariableRateSoundStream extends SoundStream {
                 if (this.field10266 < 0) {
                     this.field10266 = -1;
                     this.method16394();
-                    this.method6979();
+                    this.remove();
                 }
             } else {
                 this.method17051(arg0, var8, var6, var9, 0.0F);
                 if (this.field10266 >= var6) {
                     this.field10266 = var6;
                     this.method16394();
-                    this.method6979();
+                    this.remove();
                 }
             }
         } else if (this.field10276) {

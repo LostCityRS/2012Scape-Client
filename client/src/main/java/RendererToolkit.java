@@ -34,7 +34,7 @@ public abstract class RendererToolkit {
     public final Framebuffer[] field407 = new Framebuffer[4];
 
     @ObfuscatedName("sh.u(ILjava/awt/Canvas;Lma;Lls;II)Lra;")
-    public static RendererToolkit method11222(int arg0, Canvas arg1, MaterialTypeList arg2, Js5 arg3, int arg4) {
+    public static RendererToolkit create(int arg0, Canvas arg1, MaterialTypeList arg2, Js5 arg3, int arg4) {
         int var5 = 0;
         int var6 = 0;
         if (arg1 != null) {
@@ -529,7 +529,7 @@ public abstract class RendererToolkit {
     public abstract int[] ae(int arg0, int arg1, int arg2, int arg3);
 
     @ObfuscatedName("ra.co(Lvm;[Lzv;Z)Ll;")
-    public abstract Font method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2);
+    public abstract Font createFont(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2);
 
     @ObfuscatedName("ra.cp(Ldp;)V")
     public abstract void method733(ParticleList arg0);

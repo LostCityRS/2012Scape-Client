@@ -339,7 +339,7 @@ public class ClientWorldMap extends WorldMap {
         if (disableElements) {
             return;
         }
-        for (WorldMapElement var4 = (WorldMapElement) arg1.method11563(); var4 != null; var4 = (WorldMapElement) arg1.method11567()) {
+        for (WorldMapElement var4 = (WorldMapElement) arg1.last(); var4 != null; var4 = (WorldMapElement) arg1.method11567()) {
             MapElementType var5 = Statics.field4290.method7862(var4.field9564);
             if (method1371(var5)) {
                 boolean var6 = method1358(arg0, var4, var5, arg2, arg3);
@@ -489,7 +489,7 @@ public class ClientWorldMap extends WorldMap {
             var29.field9300 = var20;
             var29.field9299 = var21;
             var29.field9302 = var22;
-            Statics.elements.method11558(var29);
+            Statics.elements.addFirst(var29);
         }
         return false;
     }
@@ -579,7 +579,7 @@ public class ClientWorldMap extends WorldMap {
         var23.field9300 = var19;
         var23.field9299 = var18;
         var23.field9302 = var20;
-        Statics.elements.method11558(var23);
+        Statics.elements.addFirst(var23);
     }
 
     @ObfuscatedName("ta.by(IB)Las;")
@@ -693,7 +693,7 @@ public class ClientWorldMap extends WorldMap {
         } else {
             var15 = Statics.field10208 * 5;
         }
-        for (WorldMapElement var16 = (WorldMapElement) field4301.method11563(); var16 != null; var16 = (WorldMapElement) field4301.method11567()) {
+        for (WorldMapElement var16 = (WorldMapElement) field4301.last(); var16 != null; var16 = (WorldMapElement) field4301.method11567()) {
             MapElementType var17 = Statics.field4290.method7862(var16.field9564);
             if (method1371(var17)) {
                 if (field9755 == var16.field9564) {
@@ -758,7 +758,7 @@ public class ClientWorldMap extends WorldMap {
         if (!field9754 || Statics.elements == null) {
             return;
         }
-        for (MapElementContainer var4 = (MapElementContainer) Statics.elements.method11563(); var4 != null; var4 = (MapElementContainer) Statics.elements.method11567()) {
+        for (MapElementContainer var4 = (MapElementContainer) Statics.elements.last(); var4 != null; var4 = (MapElementContainer) Statics.elements.method11567()) {
             MapElementType var5 = Statics.field4290.method7862(var4.field9303.field9564);
             if (var4.method14803(arg0, arg1)) {
                 if (var5.field4778 != null) {
@@ -809,10 +809,10 @@ public class ClientWorldMap extends WorldMap {
 
     @ObfuscatedName("ru.cb(IIIZB)V")
     public static void setMap(int arg0, int arg1, int arg2, boolean arg3) {
-        if (Statics.options.field9661.method15781() == 0) {
+        if (Statics.options.field9661.getValue() == 0) {
             reset(false);
         } else {
-            field9764 = Statics.options.field9661.method15781();
+            field9764 = Statics.options.field9661.getValue();
             Statics.method5600(0, true);
         }
         field9759 = arg1;
@@ -828,7 +828,7 @@ public class ClientWorldMap extends WorldMap {
             return;
         }
         Statics.method5600(field9764, false);
-        if (Statics.options.field9661.method15781() != field9764) {
+        if (Statics.options.field9661.getValue() != field9764) {
             switch (field9764) {
                 case 1:
                     GraphicsPacketQueue.method12023(ToolkitType.field7359);
@@ -949,7 +949,7 @@ public class ClientWorldMap extends WorldMap {
         int var4 = Integer.MAX_VALUE;
         int var5 = arg1 - Statics.currentAreaDisplayMinX;
         int var6 = arg2 - Statics.currentAreaDisplayMinZ;
-        for (WorldMapElement var7 = (WorldMapElement) field4301.method11563(); var7 != null; var7 = (WorldMapElement) field4301.method11567()) {
+        for (WorldMapElement var7 = (WorldMapElement) field4301.last(); var7 != null; var7 = (WorldMapElement) field4301.method11567()) {
             if (var7.field9564 == arg0) {
                 int var8 = var7.field9566;
                 int var9 = var7.field9567;

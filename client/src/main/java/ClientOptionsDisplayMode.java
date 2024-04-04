@@ -47,7 +47,7 @@ public class ClientOptionsDisplayMode extends ClientOption {
     }
 
     @ObfuscatedName("afs.o(B)I")
-    public int method15781() {
+    public int getValue() {
         return this.field6461;
     }
 

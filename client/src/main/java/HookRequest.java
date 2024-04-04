@@ -13,26 +13,26 @@ public class HookRequest extends Node {
     public Component component;
 
     @ObfuscatedName("ady.t")
-    public int field9610;
+    public int mouseX;
 
     @ObfuscatedName("ady.l")
     public int mouseY;
 
     @ObfuscatedName("ady.f")
-    public int field9612;
+    public int opindex;
 
     @ObfuscatedName("ady.d")
-    public Component field9607;
+    public Component drop;
 
     @ObfuscatedName("ady.z")
-    public int field9611;
+    public int key;
 
     @ObfuscatedName("ady.n")
-    public int field9614;
+    public int keychar;
 
     @ObfuscatedName("ady.o")
-    public String field9616;
+    public String opbase;
 
     @ObfuscatedName("ady.q")
-    public int field9615;
+    public int nestedCount;
 }

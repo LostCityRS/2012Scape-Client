@@ -13,7 +13,7 @@ public class CpuProfiling {
     public static int method4552() {
         Canvas var0 = new Canvas();
         var0.setSize(100, 100);
-        RendererToolkit var1 = RendererToolkit.method11222(0, var0, null, null, 0);
+        RendererToolkit var1 = RendererToolkit.create(0, var0, null, null, 0);
         long var2 = MonotonicTime.get();
         for (int var4 = 0; var4 < 10000; var4++) {
             var1.method491(5, 10, 100.0F, 75, 50, 100.0F, 15, 90, 100.0F, -65536, -65536, -65536, 1);

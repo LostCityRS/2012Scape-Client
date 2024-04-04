@@ -110,7 +110,7 @@ public class ObjTypeList implements PlayerTypeListRelated {
                 for (Node var10 = var8.field7055.method11928(); var10 != null; var10 = var8.field7055.method11929()) {
                     ParamType var11 = this.field7141.method12600((int) var10.field4228);
                     if (var11.field7289) {
-                        var10.method6979();
+                        var10.remove();
                     } else {
                         var9 = true;
                     }
@@ -128,7 +128,7 @@ public class ObjTypeList implements PlayerTypeListRelated {
     }
 
     @ObfuscatedName("vj.j(Lra;IIIIILqc;I)Lce;")
-    public Sprite method12293(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, PlayerModel arg6) {
+    public Sprite getCachedIcon(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5, PlayerModel arg6) {
         this.field7148.field7047 = arg0.field397;
         this.field7148.field7052 = arg1;
         this.field7148.field7049 = arg2;
@@ -140,9 +140,9 @@ public class ObjTypeList implements PlayerTypeListRelated {
     }
 
     @ObfuscatedName("vj.a(Lra;Lra;IIIIZZILl;Lqc;I)Lce;")
-    public Sprite method12294(RendererToolkit arg0, RendererToolkit arg1, int arg2, int arg3, int arg4, int arg5, boolean arg6, boolean arg7, int arg8, Font arg9, PlayerModel arg10) {
+    public Sprite getIcon(RendererToolkit arg0, RendererToolkit arg1, int arg2, int arg3, int arg4, int arg5, boolean arg6, boolean arg7, int arg8, Font arg9, PlayerModel arg10) {
         if (!arg7) {
-            Sprite var12 = this.method12293(arg1, arg2, arg3, arg4, arg5, arg8, arg10);
+            Sprite var12 = this.getCachedIcon(arg1, arg2, arg3, arg4, arg5, arg8, arg10);
             if (var12 != null) {
                 return var12;
             }

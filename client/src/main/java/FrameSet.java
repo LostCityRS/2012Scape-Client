@@ -68,7 +68,7 @@ public class FrameSet extends SecondaryNode {
             var19.pos = 1;
             int var20 = var19.g2();
             AnimBase var21 = null;
-            for (AnimBase var22 = (AnimBase) var12.method11563(); var22 != null; var22 = (AnimBase) var12.method11567()) {
+            for (AnimBase var22 = (AnimBase) var12.last(); var22 != null; var22 = (AnimBase) var12.method11567()) {
                 if (var22.field9357 == var20) {
                     var21 = var22;
                     break;
@@ -79,7 +79,7 @@ public class FrameSet extends SecondaryNode {
                 synchronized (Statics.field10347) {
                     var21 = new AnimBase(var20, Statics.field10347.method5635(var20));
                 }
-                var12.method11558(var21);
+                var12.addFirst(var21);
             }
             this.field10350[var15[var17]] = new AnimFrame(var18, var21);
         }

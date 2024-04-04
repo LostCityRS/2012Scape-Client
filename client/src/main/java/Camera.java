@@ -338,7 +338,7 @@ public abstract class Camera {
     public void removeEffect(int arg0) {
         CameraEffect var2 = (CameraEffect) this.field2225.getNode((long) arg0);
         if (var2 != null) {
-            var2.method6979();
+            var2.remove();
         }
     }
 

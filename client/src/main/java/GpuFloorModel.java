@@ -1010,6 +1010,6 @@ public class GpuFloorModel extends FloorModel {
 
     @ObfuscatedName("yn.f(Lacg;[I)V")
     public void method204(Light arg0, int[] arg1) {
-        this.field7741.method11558(new GpuFloorModelRelated(this.field7722, this, arg0, arg1));
+        this.field7741.addFirst(new GpuFloorModelRelated(this.field7722, this, arg0, arg1));
     }
 }

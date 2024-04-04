@@ -43,7 +43,7 @@ public abstract class LoadingScreenProgressDisplay implements LoadingScreenEleme
     @ObfuscatedName("gc.u(B)V")
     public void method3936() {
         FontMetrics var1 = FontMetrics.method14876(this.field2313, this.field2311.field2609);
-        this.field2312 = Statics.renderer.method712(var1, (PalettedSpriteData[]) SpriteDataProvider.method2593(this.field2310, this.field2311.field2609), true);
+        this.field2312 = Statics.renderer.createFont(var1, (PalettedSpriteData[]) SpriteDataProvider.method2593(this.field2310, this.field2311.field2609), true);
     }
 
     @ObfuscatedName("gc.a(I)Z")

@@ -59,7 +59,7 @@ public class IterableQueueIterator implements Iterator {
         if (this.field6656 == null) {
             throw new IllegalStateException();
         }
-        this.field6656.method6979();
+        this.field6656.remove();
         this.field6656 = null;
     }
 }

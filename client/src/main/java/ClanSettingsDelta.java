@@ -52,7 +52,7 @@ public class ClanSettingsDelta {
                 throw new RuntimeException("");
             }
             var3.method14956(arg0);
-            this.field2376.method11558(var3);
+            this.field2376.addFirst(var3);
         }
     }
 
@@ -61,7 +61,7 @@ public class ClanSettingsDelta {
         if (this.field2379 != arg0.field2347 || this.field2375 != arg0.field2348) {
             throw new RuntimeException("");
         }
-        for (ClanSettingsDeltaEntry var2 = (ClanSettingsDeltaEntry) this.field2376.method11563(); var2 != null; var2 = (ClanSettingsDeltaEntry) this.field2376.method11567()) {
+        for (ClanSettingsDeltaEntry var2 = (ClanSettingsDeltaEntry) this.field2376.last(); var2 != null; var2 = (ClanSettingsDeltaEntry) this.field2376.method11567()) {
             var2.method14955(arg0);
         }
         arg0.field2348++;

@@ -20,7 +20,7 @@ public class ClientOptionsScreenSize extends ClientOption {
 
     @ObfuscatedName("afn.u(I)I")
     public int method11386() {
-        return this.field6462.field9661.method15776() && RendererToolkit.method14198(this.field6462.field9661.method15781()) ? 1 : 0;
+        return this.field6462.field9661.method15776() && RendererToolkit.method14198(this.field6462.field9661.getValue()) ? 1 : 0;
     }
 
     @ObfuscatedName("afn.n(B)Z")

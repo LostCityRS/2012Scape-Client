@@ -450,14 +450,14 @@ public class World {
 
     @ObfuscatedName("ml.ai(Lajl;I)V")
     public void rebuildNormalMap(PacketBit arg0) {
-        int var2 = arg0.g1_alt1();
-        int var3 = arg0.g2();
-        boolean var4 = arg0.g1_alt1() == 1;
-        int var5 = arg0.g2_alt2();
+        int size = arg0.g1_alt1();
+        int originX = arg0.g2();
+        boolean forceRebuild = arg0.g1_alt1() == 1;
+        int originZ = arg0.g2_alt2();
         if (!this.asyncRebuilding) {
             this.method6196();
         }
-        this.setBuildAreaSize(BuildAreaSize.forId(var2));
+        this.setBuildAreaSize(BuildAreaSize.forId(size));
         int var6 = (arg0.data.length - arg0.pos) / 16;
         this.field3831 = new int[var6][4];
         for (int var7 = 0; var7 < var6; var7++) {
@@ -477,8 +477,8 @@ public class World {
         this.field3830 = new byte[var6][];
         this.field3832 = new byte[var6][];
         int var9 = 0;
-        for (int var10 = (var3 - (this.mapSizeX >> 4)) / 8; var10 <= ((this.mapSizeX >> 4) + var3) / 8; var10++) {
-            for (int var11 = (var5 - (this.mapSizeZ >> 4)) / 8; var11 <= ((this.mapSizeZ >> 4) + var5) / 8; var11++) {
+        for (int var10 = (originX - (this.mapSizeX >> 4)) / 8; var10 <= ((this.mapSizeX >> 4) + originX) / 8; var10++) {
+            for (int var11 = (originZ - (this.mapSizeZ >> 4)) / 8; var11 <= ((this.mapSizeZ >> 4) + originZ) / 8; var11++) {
                 this.field3820[var9] = (var10 << 8) + var11;
                 this.field3821[var9] = Statics.field7343.method5688(this.method6208(true, false, var10, var11));
                 this.field3822[var9] = Statics.field7343.method5688(this.method6208(false, false, var10, var11));
@@ -487,49 +487,49 @@ public class World {
                 var9++;
             }
         }
-        this.method6178(var3, var5, 16, var4);
+        this.method6178(originX, originZ, 16, forceRebuild);
     }
 
     @ObfuscatedName("ml.ao(Lajl;B)V")
-    public void rebuildRegionMap(PacketBit arg0) {
-        int var2 = arg0.g2_alt2();
-        int var3 = arg0.g1();
-        boolean var4 = (var3 & 0x1) != 0;
-        int var5 = arg0.g2();
-        int var6 = arg0.g1();
-        int var7 = arg0.g1_alt2();
-        if (var7 == 1) {
+    public void rebuildRegionMap(PacketBit buf) {
+        int originZ = buf.g2_alt2();
+        int info = buf.g1();
+        boolean forceRebuild = (info & 0x1) != 0;
+        int originX = buf.g2();
+        int size = buf.g1();
+        int type = buf.g1_alt2();
+        if (type == 1) {
             this.rebuildType = RebuildType.REBUILD_REGION;
-        } else if (var7 == 2) {
+        } else if (type == 2) {
             this.rebuildType = RebuildType.field3837;
-        } else if (var7 == 3) {
+        } else if (type == 3) {
             this.rebuildType = RebuildType.field3840;
-        } else if (var7 == 4) {
+        } else if (type == 4) {
             this.rebuildType = RebuildType.field3841;
         }
         if (!this.asyncRebuilding) {
             this.method6196();
         }
-        this.setBuildAreaSize(BuildAreaSize.forId(var6));
-        arg0.bits();
+        this.setBuildAreaSize(BuildAreaSize.forId(size));
+        buf.bits();
         for (int var8 = 0; var8 < 4; var8++) {
             for (int var9 = 0; var9 < this.mapSizeX >> 3; var9++) {
                 for (int var10 = 0; var10 < this.mapSizeZ >> 3; var10++) {
-                    int var11 = arg0.gBit(1);
+                    int var11 = buf.gBit(1);
                     if (var11 == 1) {
-                        this.field3801[var8][var9][var10] = arg0.gBit(26);
+                        this.field3801[var8][var9][var10] = buf.gBit(26);
                     } else {
                         this.field3801[var8][var9][var10] = -1;
                     }
                 }
             }
         }
-        arg0.bytes();
-        int var12 = (arg0.data.length - arg0.pos) / 16;
+        buf.bytes();
+        int var12 = (buf.data.length - buf.pos) / 16;
         this.field3831 = new int[var12][4];
         for (int var13 = 0; var13 < var12; var13++) {
             for (int var14 = 0; var14 < 4; var14++) {
-                this.field3831[var13][var14] = arg0.g4s();
+                this.field3831[var13][var14] = buf.g4s();
             }
         }
         this.field3820 = new int[var12];
@@ -572,7 +572,7 @@ public class World {
                 }
             }
         }
-        this.method6178(var5, var2, 16, var4);
+        this.method6178(originX, originZ, 16, forceRebuild);
     }
 
     @ObfuscatedName("ml.al(I)V")
@@ -586,7 +586,7 @@ public class World {
                 }
             }
         }
-        for (CutsceneTemplate var4 = (CutsceneTemplate) CutsceneManager.field1534.method11563(); var4 != null; var4 = (CutsceneTemplate) CutsceneManager.field1534.method11567()) {
+        for (CutsceneTemplate var4 = (CutsceneTemplate) CutsceneManager.field1534.last(); var4 != null; var4 = (CutsceneTemplate) CutsceneManager.field1534.method11567()) {
             int var5 = var4.field9380;
             boolean var6 = (var5 & 0x1) == 1;
             int var7 = var4.field9373 >> 3;
@@ -644,7 +644,7 @@ public class World {
         this.field3830 = new byte[var22][];
         this.field3832 = new byte[var22][];
         int var23 = 0;
-        for (CutsceneTemplate var24 = (CutsceneTemplate) CutsceneManager.field1534.method11563(); var24 != null; var24 = (CutsceneTemplate) CutsceneManager.field1534.method11567()) {
+        for (CutsceneTemplate var24 = (CutsceneTemplate) CutsceneManager.field1534.last(); var24 != null; var24 = (CutsceneTemplate) CutsceneManager.field1534.method11567()) {
             int var25 = var24.field9373 >>> 3;
             int var26 = var24.field9374 >>> 3;
             int var27 = var24.field9378 + var25;
@@ -803,12 +803,12 @@ public class World {
                             client.field9056[++client.npcCount - 1] = var14.localPlayerIndex;
                         } else {
                             var14.method16149(null);
-                            var13.method6979();
+                            var13.remove();
                             var9 = true;
                         }
                     } else {
                         var14.method16149(null);
-                        var13.method6979();
+                        var13.remove();
                         var9 = true;
                     }
                     var15.release();
@@ -846,18 +846,18 @@ public class World {
                 var27.field777 -= var3 * 512;
             }
         }
-        for (ChangeLocationRequest var28 = (ChangeLocationRequest) ChangeLocationRequest.field9278.method11563(); var28 != null; var28 = (ChangeLocationRequest) ChangeLocationRequest.field9278.method11567()) {
+        for (ChangeLocationRequest var28 = (ChangeLocationRequest) ChangeLocationRequest.field9278.last(); var28 != null; var28 = (ChangeLocationRequest) ChangeLocationRequest.field9278.method11567()) {
             var28.field9291 -= var2;
             var28.field9280 -= var3;
             if (RebuildType.field3841 != this.rebuildType && (var28.field9291 < 0 || var28.field9280 < 0 || var28.field9291 >= this.mapSizeX || var28.field9280 >= this.mapSizeZ)) {
-                var28.method6979();
+                var28.remove();
             }
         }
-        for (ChangeLocationRequest var29 = (ChangeLocationRequest) ChangeLocationRequest.field9292.method11563(); var29 != null; var29 = (ChangeLocationRequest) ChangeLocationRequest.field9292.method11567()) {
+        for (ChangeLocationRequest var29 = (ChangeLocationRequest) ChangeLocationRequest.field9292.last(); var29 != null; var29 = (ChangeLocationRequest) ChangeLocationRequest.field9292.method11567()) {
             var29.field9291 -= var2;
             var29.field9280 -= var3;
             if (RebuildType.field3841 != this.rebuildType && (var29.field9291 < 0 || var29.field9280 < 0 || var29.field9291 >= this.mapSizeX || var29.field9280 >= this.mapSizeZ)) {
-                var29.method6979();
+                var29.remove();
             }
         }
         for (ObjStackList var30 = (ObjStackList) client.field9088.method11928(); var30 != null; var30 = (ObjStackList) client.field9088.method11929()) {
@@ -872,7 +872,7 @@ public class World {
                         this.scene.method7429(var31, var33, var35);
                     }
                 } else if (RebuildType.field3841 != this.rebuildType) {
-                    var30.method6979();
+                    var30.remove();
                 }
             }
         }

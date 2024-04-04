@@ -421,8 +421,8 @@ public class Loading {
                     GraphicsPacketQueue.method12023(ToolkitType.field7356);
                 }
             } else {
-                Statics.method5600(Statics.options.field9670.method15781(), false);
-                if (Statics.options.field9670.method15781() == 0) {
+                Statics.method5600(Statics.options.field9670.getValue(), false);
+                if (Statics.options.field9670.getValue() == 0) {
                     GraphicsPacketQueue.method12023(ToolkitType.field7364);
                 }
             }

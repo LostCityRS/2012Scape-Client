@@ -176,7 +176,7 @@ public class MixBuss extends AudioBuss {
     @ObfuscatedName("aih.al(I)V")
     public synchronized void method16269() {
         for (SoundRelated2 var1 = (SoundRelated2) this.field10239.method11928(); var1 != null; var1 = (SoundRelated2) this.field10239.method11929()) {
-            var1.method6979();
+            var1.remove();
         }
     }
 
@@ -304,7 +304,7 @@ public class MixBuss extends AudioBuss {
             }
             this.field10252[arg0][var8.field9387] = var8;
         }
-        this.field10251.field10227.method11558(var8);
+        this.field10251.field10227.addFirst(var8);
         this.field10240[arg0][arg1] = var8;
     }
 
@@ -337,7 +337,7 @@ public class MixBuss extends AudioBuss {
             var4.field9402 = 0;
             return;
         }
-        for (SoundRelated1 var5 = (SoundRelated1) this.field10251.field10227.method11563(); var5 != null; var5 = (SoundRelated1) this.field10251.field10227.method11567()) {
+        for (SoundRelated1 var5 = (SoundRelated1) this.field10251.field10227.last(); var5 != null; var5 = (SoundRelated1) this.field10251.field10227.method11567()) {
             if (var4.field9400 == var5.field9400 && var5.field9402 < 0 && var4 != var5) {
                 var4.field9402 = 0;
                 break;
@@ -360,7 +360,7 @@ public class MixBuss extends AudioBuss {
 
     @ObfuscatedName("aih.ab(II)V")
     public void method16262(int arg0) {
-        for (SoundRelated1 var2 = (SoundRelated1) this.field10251.field10227.method11563(); var2 != null; var2 = (SoundRelated1) this.field10251.field10227.method11567()) {
+        for (SoundRelated1 var2 = (SoundRelated1) this.field10251.field10227.last(); var2 != null; var2 = (SoundRelated1) this.field10251.field10227.method11567()) {
             if (arg0 < 0 || var2.field9400 == arg0) {
                 if (var2.field9401 != null) {
                     var2.field9401.method16418(Statics.field4015 / 100);
@@ -372,7 +372,7 @@ public class MixBuss extends AudioBuss {
                 if (var2.field9402 < 0) {
                     this.field10240[var2.field9400][var2.field9388] = null;
                 }
-                var2.method6979();
+                var2.remove();
             }
         }
     }
@@ -402,7 +402,7 @@ public class MixBuss extends AudioBuss {
 
     @ObfuscatedName("aih.bz(II)V")
     public void method16286(int arg0) {
-        for (SoundRelated1 var2 = (SoundRelated1) this.field10251.field10227.method11563(); var2 != null; var2 = (SoundRelated1) this.field10251.field10227.method11567()) {
+        for (SoundRelated1 var2 = (SoundRelated1) this.field10251.field10227.last(); var2 != null; var2 = (SoundRelated1) this.field10251.field10227.method11567()) {
             if ((arg0 < 0 || var2.field9400 == arg0) && var2.field9402 < 0) {
                 this.field10240[var2.field9400][var2.field9388] = null;
                 var2.field9402 = 0;
@@ -431,7 +431,7 @@ public class MixBuss extends AudioBuss {
         if ((this.field10245[arg0] & 0x2) == 0) {
             return;
         }
-        for (SoundRelated1 var2 = (SoundRelated1) this.field10251.field10227.method11563(); var2 != null; var2 = (SoundRelated1) this.field10251.field10227.method11567()) {
+        for (SoundRelated1 var2 = (SoundRelated1) this.field10251.field10227.last(); var2 != null; var2 = (SoundRelated1) this.field10251.field10227.method11567()) {
             if (var2.field9400 == arg0 && this.field10240[arg0][var2.field9388] == null && var2.field9402 < 0) {
                 var2.field9402 = 0;
             }
@@ -443,7 +443,7 @@ public class MixBuss extends AudioBuss {
         if ((this.field10245[arg0] & 0x4) == 0) {
             return;
         }
-        for (SoundRelated1 var2 = (SoundRelated1) this.field10251.field10227.method11563(); var2 != null; var2 = (SoundRelated1) this.field10251.field10227.method11567()) {
+        for (SoundRelated1 var2 = (SoundRelated1) this.field10251.field10227.last(); var2 != null; var2 = (SoundRelated1) this.field10251.field10227.method11567()) {
             if (var2.field9400 == arg0) {
                 var2.field9398 = 0;
             }
@@ -823,7 +823,7 @@ public class MixBuss extends AudioBuss {
             return false;
         }
         if (arg0.field9402 >= 0) {
-            arg0.method6979();
+            arg0.remove();
             if (arg0.field9387 > 0 && this.field10252[arg0.field9400][arg0.field9387] == arg0) {
                 this.field10252[arg0.field9400][arg0.field9387] = null;
             }
@@ -836,7 +836,7 @@ public class MixBuss extends AudioBuss {
         arg0.field9392 = Statics.field4015 / 100;
         if (arg0.field9402 >= 0 && (arg0.field9401 == null || arg0.field9401.method16393())) {
             arg0.method14911();
-            arg0.method6979();
+            arg0.remove();
             if (arg0.field9387 > 0 && this.field10252[arg0.field9400][arg0.field9387] == arg0) {
                 this.field10252[arg0.field9400][arg0.field9387] = null;
             }
@@ -907,7 +907,7 @@ public class MixBuss extends AudioBuss {
         }
         arg0.method14911();
         if (arg0.field9402 >= 0) {
-            arg0.method6979();
+            arg0.remove();
             if (arg0.field9387 > 0 && this.field10252[arg0.field9400][arg0.field9387] == arg0) {
                 this.field10252[arg0.field9400][arg0.field9387] = null;
             }

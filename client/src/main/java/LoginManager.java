@@ -366,7 +366,7 @@ public class LoginManager {
                 Statics.field501.in.pos = 0;
                 String var7 = JavascriptFunction.field3152.method4757();
                 if (!client.field8903 || !Browser.method1814(var6, 1, var7)) {
-                    Browser.method5599(var6, true, Statics.options.field9661.method15781() == 5, var7, client.field8915, client.field9218);
+                    Browser.method5599(var6, true, Statics.options.field9661.getValue() == 5, var7, client.field8915, client.field9218);
                 }
                 field531 = 61;
             }
@@ -665,7 +665,7 @@ public class LoginManager {
                 Statics.field501.in.pos = 0;
                 Packet var29 = new Packet(var28);
                 String var30 = var29.gjstr();
-                Browser.method3613(var30, true, Statics.options.field9661.method15781() == 5, client.field8915, client.field9218);
+                Browser.method3613(var30, true, Statics.options.field9661.getValue() == 5, client.field8915, client.field9218);
                 method7972(Statics.field1025);
                 if (Statics.field500 == 154 && client.state != 4) {
                     field531 = 96;

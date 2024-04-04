@@ -110,7 +110,7 @@ public class CutsceneAction_Sub12 extends CutsceneAction {
         int var10 = this.field8553 << 2;
         ProjectileAnimation var11 = new ProjectileAnimation(client.world.getScene(), this.field8550, var3, var3, var1, var2, this.field8544 << 2, client.loopCycle, client.loopCycle + this.field8542, this.field8552, var10, this.field8539 + 1, this.field8541 + 1, this.field8549 << 2, false, 0, 0);
         var11.method17162(var6, var7, this.field8549 << 2, client.loopCycle + this.field8542);
-        client.field9007.method11558(new ProjectileEntityNode(var11));
+        client.field9007.addFirst(new ProjectileEntityNode(var11));
     }
 
     @ObfuscatedName("aah.s(B)Z")

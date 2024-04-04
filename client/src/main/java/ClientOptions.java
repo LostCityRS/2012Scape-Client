@@ -184,7 +184,7 @@ public class ClientOptions extends Node {
                 }
                 this.field9659 = new ClientOptionsTextures(arg0.g1(), this);
                 this.field9670 = new ClientOptionsDisplayMode(arg0.g1(), this);
-                this.field9661 = new ClientOptionsDisplayMode(this.field9670.method15781(), this);
+                this.field9661 = new ClientOptionsDisplayMode(this.field9670.getValue(), this);
                 arg0.g1();
                 this.field9666 = new ClientOptionsWaterDetail(arg0.g1(), this);
                 this.maxScreenSize = new ClientOptionsMaxScreenSize(arg0.g1(), this);
@@ -278,7 +278,7 @@ public class ClientOptions extends Node {
             this.field9670 = new ClientOptionsDisplayMode(this);
         }
         if (arg0 || this.field9661 == null) {
-            this.field9661 = new ClientOptionsDisplayMode(this.field9670.method15781(), this);
+            this.field9661 = new ClientOptionsDisplayMode(this.field9670.getValue(), this);
         }
         if (arg0 || this.field9666 == null) {
             this.field9666 = new ClientOptionsWaterDetail(this);
@@ -452,7 +452,7 @@ public class ClientOptions extends Node {
         var1.p1(this.skyDetail.getValue());
         var1.p1(this.field9658.method15709());
         var1.p1(this.field9659.method15686());
-        var1.p1(this.field9670.method15781());
+        var1.p1(this.field9670.getValue());
         var1.p1(0);
         var1.p1(this.field9666.method15755());
         var1.p1(this.maxScreenSize.getValue());

@@ -10,7 +10,7 @@ public class PlayerEntity extends PathingEntity {
     public String nameUnfiltered;
 
     @ObfuscatedName("ahg.by")
-    public String field10041;
+    public String title;
 
     @ObfuscatedName("ahg.bu")
     public String field10042;
@@ -19,7 +19,7 @@ public class PlayerEntity extends PathingEntity {
     public byte gender = 0;
 
     @ObfuscatedName("ahg.cq")
-    public PlayerModel field10044;
+    public PlayerModel model;
 
     @ObfuscatedName("ahg.co")
     public int field10045 = -1;
@@ -85,7 +85,7 @@ public class PlayerEntity extends PathingEntity {
     public boolean field10065 = false;
 
     @ObfuscatedName("ahg.cj")
-    public boolean field10066 = false;
+    public boolean visibility = false;
 
     @ObfuscatedName("ahg.cy")
     public boolean field10067 = false;
@@ -119,9 +119,9 @@ public class PlayerEntity extends PathingEntity {
         this.method8551(var8);
         var8.release();
         if (showTitle) {
-            this.field10041 = buf.gjstr2();
+            this.title = buf.gjstr2();
         } else {
-            this.field10041 = null;
+            this.title = null;
         }
         if (var7) {
             this.field10042 = buf.gjstr2();
@@ -130,9 +130,9 @@ public class PlayerEntity extends PathingEntity {
         }
         this.field10045 = buf.g1b();
         this.field10053 = buf.g1b();
-        this.field10066 = buf.g1b() == 1;
+        this.visibility = buf.g1b() == 1;
         if (Statics.field6683 == ModeWhere.LIVE && client.userStaffModLevel >= 2) {
-            this.field10066 = false;
+            this.visibility = false;
         }
         int var9 = -1;
         this.field10061 = 0;
@@ -227,12 +227,12 @@ public class PlayerEntity extends PathingEntity {
                 PositionedSound.method1807(this);
             }
         }
-        if (this.field10044 == null) {
-            this.field10044 = new PlayerModel();
+        if (this.model == null) {
+            this.model = new PlayerModel();
         }
-        int var31 = this.field10044.field5006;
-        int[] var32 = this.field10044.field5000;
-        this.field10044.method8230(this.method13960(), var10, var11, var22, this.gender == 1, var9);
+        int var31 = this.model.field5006;
+        int[] var32 = this.model.field5000;
+        this.model.method8230(this.method13960(), var10, var11, var22, this.gender == 1, var9);
         if (var9 != var31) {
             Vector3 var33 = Vector3.create(this.getTransform().trans);
             var33.x = (this.routeWaypointX[0] << 9) + (this.size() << 8);
@@ -268,7 +268,7 @@ public class PlayerEntity extends PathingEntity {
 
     @ObfuscatedName("ahg.bi(Lra;B)Loz;")
     public PickableEntity method12812(RendererToolkit arg0) {
-        if (this.field10044 == null || !this.method16119(arg0, 2048)) {
+        if (this.model == null || !this.method16119(arg0, 2048)) {
             return null;
         }
         Matrix4x3 var2 = arg0.method516();
@@ -288,7 +288,7 @@ public class PlayerEntity extends PathingEntity {
         this.field8650 = false;
         if (Statics.options.field9658.method15709() == 1) {
             BASType var9 = this.getBASType();
-            if (var9.field4714 && (this.field10044.field5006 == -1 || Statics.field3774.method12565(this.field10044.field5006).field7249)) {
+            if (var9.field4714 && (this.model.field5006 == -1 || Statics.field3774.method12565(this.model.field5006).field7249)) {
                 AnimationNode var10 = this.field8597.method11767() && this.field8597.method11776() ? this.field8597 : null;
                 EntityWalkAnimationNode var11 = this.field8616.method11767() && (!this.field8616.field9899 || var10 == null) ? this.field8616 : null;
                 Model var12 = SpotShadowFactory.method1417(arg0, var5, this.field8601, this.field8644, this.field8603, 1, this.field8651[0], 0, 0, 160, 240, var11 == null ? var10 : var11);
@@ -368,7 +368,7 @@ public class PlayerEntity extends PathingEntity {
 
     @ObfuscatedName("ahg.bx(Lra;B)V")
     public void method12851(RendererToolkit arg0) {
-        if (this.field10044 == null || !this.field8613 && !this.method16119(arg0, 0)) {
+        if (this.model == null || !this.field8613 && !this.method16119(arg0, 0)) {
             return;
         }
         Matrix4x3 var2 = arg0.method516();
@@ -411,7 +411,7 @@ public class PlayerEntity extends PathingEntity {
         if (var10) {
             arg1 |= 0x80000;
         }
-        Model var11 = this.field8651[0] = this.field10044.method8244(arg0, arg1, Statics.field3769, Statics.field7650, Statics.field3774, Statics.objTypes, Statics.field566, Statics.field2669, var5, var6, this.field8633, this.field8654, var9, true, Statics.wearposDefaults);
+        Model var11 = this.field8651[0] = this.model.method8244(arg0, arg1, Statics.field3769, Statics.field7650, Statics.field3774, Statics.objTypes, Statics.field566, Statics.field2669, var5, var6, this.field8633, this.field8654, var9, true, Statics.wearposDefaults);
         int var12 = PlayerModel.method3503();
         if (GameShell.field4152 < 96 && var12 > 50) {
             SceneManager.method16899();
@@ -462,8 +462,8 @@ public class PlayerEntity extends PathingEntity {
     @ObfuscatedName("ahg.gi(ZI)Ljava/lang/String;")
     public String method16120(boolean arg0) {
         String var2 = "";
-        if (this.field10041 != null) {
-            var2 = this.field10041;
+        if (this.title != null) {
+            var2 = this.title;
         }
         String var3;
         if (arg0) {
@@ -548,12 +548,12 @@ public class PlayerEntity extends PathingEntity {
 
     @ObfuscatedName("ahg.gu(I)Z")
     public final boolean method16125() {
-        return this.field10044 != null;
+        return this.model != null;
     }
 
     @ObfuscatedName("ahg.k(I)I")
     public int size() {
-        return this.field10044 == null || this.field10044.field5006 == -1 ? super.size() : Statics.field3774.method12565(this.field10044.field5006).field7213;
+        return this.model == null || this.model.field5006 == -1 ? super.size() : Statics.field3774.method12565(this.model.field5006).field7213;
     }
 
     @ObfuscatedName("ahg.bm(I)I")
@@ -568,7 +568,7 @@ public class PlayerEntity extends PathingEntity {
 
     @ObfuscatedName("ahg.bb(Lra;III)Z")
     public boolean method12814(RendererToolkit arg0, int arg1, int arg2) {
-        if (this.field10044 == null || !this.method16119(arg0, 131072)) {
+        if (this.model == null || !this.method16119(arg0, 131072)) {
             return false;
         }
         Matrix4x3 var4 = this.method8558();

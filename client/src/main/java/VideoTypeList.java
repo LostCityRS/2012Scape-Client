@@ -42,7 +42,7 @@ public class VideoTypeList {
         if (var1 != null) {
             var1.field9618.method7022();
             method5563(var1.field9624, var1.field9621);
-            var1.method6979();
+            var1.remove();
         }
     }
 

@@ -20,14 +20,14 @@ public class IterableQueue implements Iterable, Collection {
     @ObfuscatedName("tq.u(S)V")
     public void method11557() {
         while (this.field6647.field4226 != this.field6647) {
-            this.field6647.field4226.method6979();
+            this.field6647.field4226.remove();
         }
     }
 
     @ObfuscatedName("tq.j(Lnz;I)V")
-    public void method11558(Node arg0) {
+    public void addFirst(Node arg0) {
         if (arg0.field4227 != null) {
-            arg0.method6979();
+            arg0.remove();
         }
         arg0.field4227 = this.field6647.field4227;
         arg0.field4226 = this.field6647;
@@ -38,7 +38,7 @@ public class IterableQueue implements Iterable, Collection {
     @ObfuscatedName("tq.a(Lnz;I)V")
     public void method11559(Node arg0) {
         if (arg0.field4227 != null) {
-            arg0.method6979();
+            arg0.remove();
         }
         arg0.field4227 = this.field6647;
         arg0.field4226 = this.field6647.field4226;
@@ -49,7 +49,7 @@ public class IterableQueue implements Iterable, Collection {
     @ObfuscatedName("cu.s(Lnz;Lnz;I)V")
     public static void method2546(Node arg0, Node arg1) {
         if (arg0.field4227 != null) {
-            arg0.method6979();
+            arg0.remove();
         }
         arg0.field4227 = arg1.field4227;
         arg0.field4226 = arg1;
@@ -63,7 +63,7 @@ public class IterableQueue implements Iterable, Collection {
         if (this.field6647 == var1) {
             return null;
         } else {
-            var1.method6979();
+            var1.remove();
             return var1;
         }
     }
@@ -89,7 +89,7 @@ public class IterableQueue implements Iterable, Collection {
     }
 
     @ObfuscatedName("tq.l(I)Lnz;")
-    public Node method11563() {
+    public Node last() {
         return this.method11564(null);
     }
 
@@ -157,7 +157,7 @@ public class IterableQueue implements Iterable, Collection {
     }
 
     @ObfuscatedName("tq.q(I)I")
-    public int method11613() {
+    public int sizeBridged() {
         int var1 = 0;
         for (Node var2 = this.field6647.field4226; var2 != this.field6647; var2 = var2.field4226) {
             var1++;
@@ -172,7 +172,7 @@ public class IterableQueue implements Iterable, Collection {
 
     @ObfuscatedName("tq.w(B)[Lnz;")
     public Node[] method11571() {
-        Node[] var1 = new Node[this.method11613()];
+        Node[] var1 = new Node[this.sizeBridged()];
         int var2 = 0;
         for (Node var3 = this.field6647.field4226; var3 != this.field6647; var3 = var3.field4226) {
             var1[var2++] = var3;
@@ -185,7 +185,7 @@ public class IterableQueue implements Iterable, Collection {
     }
 
     public int size() {
-        return this.method11613();
+        return this.sizeBridged();
     }
 
     public boolean isEmpty() {
@@ -210,7 +210,7 @@ public class IterableQueue implements Iterable, Collection {
 
     @ObfuscatedName("tq.b(Lnz;I)Z")
     public boolean method11575(Node arg0) {
-        this.method11558(arg0);
+        this.addFirst(arg0);
         return true;
     }
 

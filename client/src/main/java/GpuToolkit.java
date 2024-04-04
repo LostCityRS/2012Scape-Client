@@ -826,7 +826,7 @@ public abstract class GpuToolkit extends RendererToolkit {
         }
         this.method13583();
         this.field8336.method4352();
-        for (Node var1 = this.field8362.method11563(); var1 != null; var1 = this.field8362.method11567()) {
+        for (Node var1 = this.field8362.last(); var1 != null; var1 = this.field8362.method11567()) {
             ((GpuHeap) var1).method16230();
         }
         ColourUtils.method2790(false, true);
@@ -991,7 +991,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     @ObfuscatedName("yk.bi(I)Lv;")
     public final Heap method593(int arg0) {
         GpuHeap var2 = new GpuHeap(arg0);
-        this.field8362.method11558(var2);
+        this.field8362.addFirst(var2);
         return var2;
     }
 
@@ -1049,7 +1049,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.co(Lvm;[Lzv;Z)Ll;")
-    public final Font method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
+    public final Font createFont(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
         return new GpuFont(this, arg0, arg1, arg2);
     }
 

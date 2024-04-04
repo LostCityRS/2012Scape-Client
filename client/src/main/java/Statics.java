@@ -1296,10 +1296,10 @@ public class Statics {
     public static Js5 field6712;
 
     @ObfuscatedName("ar.u")
-    public static RendererToolkit field672;
+    public static RendererToolkit softwareRenderer;
 
     @ObfuscatedName("ar.j")
-    public static Font field673;
+    public static Font softwareFont;
 
     @ObfuscatedName("ar.t")
     public static Js5 field674;
@@ -2206,10 +2206,10 @@ public class Statics {
 
     @ObfuscatedName("pj.a(I)V")
     public static void method7897() {
-        if (field672 != null) {
-            field672.method442();
-            field672 = null;
-            field673 = null;
+        if (softwareRenderer != null) {
+            softwareRenderer.method442();
+            softwareRenderer = null;
+            softwareFont = null;
         }
     }
 
@@ -2414,7 +2414,7 @@ public class Statics {
         }
         if (field1201 && var5) {
             FontMetrics var6 = field10224;
-            Font var7 = arg2.method712(var6, field4566, true);
+            Font var7 = arg2.createFont(var6, field4566, true);
             int var8 = var6.method12393(arg0, 250, null);
             int var9 = var6.method12395(arg0, 250, var6.field7175, null);
             int var10 = field5243.method2721();
@@ -2719,11 +2719,11 @@ public class Statics {
                         int var72 = (var71 >> 14 & 0x3FFF) - var69.x;
                         int var73 = (var71 & 0x3FFF) - var69.z;
                         if (var72 >= 0 && var72 < var2 && var73 >= 0 && var73 < var3) {
-                            MiniMap.field758.method11558(new IntNode(var70));
+                            MiniMap.field758.addFirst(new IntNode(var70));
                         } else {
                             MapElementType var74 = field8499.method7862(var68.field4253[var70]);
                             if (var74.field4788 != null && var74.field4792 + var72 >= 0 && var74.field4790 + var72 < var2 && var74.field4773 + var73 >= 0 && var74.field4791 + var73 < var3) {
-                                MiniMap.field758.method11558(new IntNode(var70));
+                                MiniMap.field758.addFirst(new IntNode(var70));
                             }
                         }
                     }
@@ -2864,7 +2864,7 @@ public class Statics {
         if (var1) {
             try {
                 var5 = client.method1380(2, 1000);
-                if (options.field9661.method15781() == 2) {
+                if (options.field9661.getValue() == 2) {
                     var0.method15941(1);
                 }
             } catch (Exception var20) {
@@ -2874,7 +2874,7 @@ public class Statics {
         if (var3) {
             try {
                 var7 = client.method1380(3, 1000);
-                if (options.field9661.method15781() == 3) {
+                if (options.field9661.getValue() == 3) {
                     var0.method15941(4);
                     RendererInfo var9 = renderer.method456();
                     long var10 = var9.field1289 & 0xFFFFFFFFFFFFL;
@@ -2901,7 +2901,7 @@ public class Statics {
         if (var4) {
             try {
                 var6 = client.method1380(1, 1000);
-                if (options.field9661.method15781() == 1) {
+                if (options.field9661.getValue() == 1) {
                     var0.method15941(2);
                 }
             } catch (Exception var18) {
@@ -3535,7 +3535,7 @@ public class Statics {
             var6 = MiniMenu.field594 * MiniMenu.field582 + 21;
             field611 = (MiniMenu.field613 ? 26 : 22) + MiniMenu.field594 * MiniMenu.field582;
         } else {
-            for (MiniMenuEntry var4 = (MiniMenuEntry) MiniMenu.field595.method11563(); var4 != null; var4 = (MiniMenuEntry) MiniMenu.field595.method11567()) {
+            for (MiniMenuEntry var4 = (MiniMenuEntry) MiniMenu.field595.last(); var4 != null; var4 = (MiniMenuEntry) MiniMenu.field595.method11567()) {
                 int var5 = MiniMenu.method5560(var4, var2);
                 if (var5 > var3) {
                     var3 = var5;
@@ -3861,7 +3861,7 @@ public class Statics {
                 }
             }
             if (!arg1) {
-                for (MiniMenuEntry var11 = (MiniMenuEntry) MiniMenu.field595.method11563(); var11 != null; var11 = (MiniMenuEntry) MiniMenu.field595.method11567()) {
+                for (MiniMenuEntry var11 = (MiniMenuEntry) MiniMenu.field595.last(); var11 != null; var11 = (MiniMenuEntry) MiniMenu.field595.method11567()) {
                     if (var11.field10340 == 23) {
                         var11.field10341 = TextUtil.createColourTag(16777215) + var6;
                         break;
@@ -3900,7 +3900,7 @@ public class Statics {
                 client.crossMode = 2;
                 client.crossCycle = 0;
                 ClientMessage var11 = ClientMessage.createMessage(ClientProt.OPPLAYERT, client.gameConnection.randomOut);
-                var11.buf.p2_alt2(client.field9102);
+                var11.buf.p2_alt2(client.activeComponentInvobject);
                 var11.buf.p1(MiniMenu.method3496() ? 1 : 0);
                 var11.buf.p4(activeComponentParentLayer);
                 var11.buf.p2(client.activeComponentId);
@@ -3915,7 +3915,7 @@ public class Statics {
             client.crossMode = 1;
             client.crossCycle = 0;
             ClientMessage var12 = ClientMessage.createMessage(ClientProt.APCOORDT, client.gameConnection.randomOut);
-            var12.buf.p2_alt3(client.field9102);
+            var12.buf.p2_alt3(client.activeComponentInvobject);
             var12.buf.p2_alt3(var9.z + var4);
             var12.buf.p2(client.activeComponentId);
             var12.buf.p2(var9.x + var3);
@@ -3958,7 +3958,7 @@ public class Statics {
             ClientMessage var15 = ClientMessage.createMessage(ClientProt.OPLOCT, client.gameConnection.randomOut);
             var15.buf.p2_alt2(var9.z + var4);
             var15.buf.p2_alt3(var9.x + var3);
-            var15.buf.p2(client.field9102);
+            var15.buf.p2(client.activeComponentInvobject);
             var15.buf.p1_alt2(MiniMenu.method3496() ? 1 : 0);
             var15.buf.p4((int) (var7 >>> 32) & Integer.MAX_VALUE);
             var15.buf.p4_alt1(activeComponentParentLayer);
@@ -4036,7 +4036,7 @@ public class Statics {
             client.crossMode = 2;
             client.crossCycle = 0;
             ClientMessage var20 = ClientMessage.createMessage(ClientProt.OPPLAYERT, client.gameConnection.randomOut);
-            var20.buf.p2_alt2(client.field9102);
+            var20.buf.p2_alt2(client.activeComponentInvobject);
             var20.buf.p1(MiniMenu.method3496() ? 1 : 0);
             var20.buf.p4(activeComponentParentLayer);
             var20.buf.p2(client.activeComponentId);
@@ -4067,7 +4067,7 @@ public class Statics {
             var23.buf.p4(activeComponentParentLayer);
             var23.buf.p2_alt2(client.activeComponentId);
             var23.buf.p2_alt3(var6);
-            var23.buf.p2_alt2(client.field9102);
+            var23.buf.p2_alt2(client.activeComponentInvobject);
             var23.buf.p2(var9.x + var3);
             var23.buf.p1_alt3(MiniMenu.method3496() ? 1 : 0);
             client.gameConnection.queue(var23);
@@ -4134,7 +4134,7 @@ public class Statics {
                 ClientMessage var30 = ClientMessage.createMessage(ClientProt.OPNPCT, client.gameConnection.randomOut);
                 var30.buf.p2_alt3(var6);
                 var30.buf.p4_alt2(activeComponentParentLayer);
-                var30.buf.p2_alt2(client.field9102);
+                var30.buf.p2_alt2(client.activeComponentInvobject);
                 var30.buf.p2(client.activeComponentId);
                 var30.buf.p1_alt3(MiniMenu.method3496() ? 1 : 0);
                 client.gameConnection.queue(var30);
@@ -4353,7 +4353,7 @@ public class Statics {
         }
         ClientWatch.method2676();
         GraphicsPacketQueue.method4786();
-        BasicMouseEvent var16 = (BasicMouseEvent) client.field9136.method11563();
+        BasicMouseEvent var16 = (BasicMouseEvent) client.field9136.last();
         if (client.world.getScene() != null) {
             if (cameraState == 3) {
                 client.method11197();
@@ -4617,29 +4617,29 @@ public class Statics {
                                             return;
                                         }
                                         var34 = var33.component;
-                                        if (var34.field1765 < 0) {
+                                        if (var34.parentlayer < 0) {
                                             break;
                                         }
                                         var35 = Component.method11381(var34.field1886);
-                                    } while (var35 == null || var35.field1915 == null || var34.field1765 >= var35.field1915.length || var35.field1915[var34.field1765] != var34);
+                                    } while (var35 == null || var35.field1915 == null || var34.parentlayer >= var35.field1915.length || var35.field1915[var34.parentlayer] != var34);
                                     ScriptRunner.runHook(var33);
                                 }
                             }
                             var31 = var30.component;
-                            if (var31.field1765 < 0) {
+                            if (var31.parentlayer < 0) {
                                 break;
                             }
                             var32 = Component.method11381(var31.field1886);
-                        } while (var32 == null || var32.field1915 == null || var31.field1765 >= var32.field1915.length || var32.field1915[var31.field1765] != var31);
+                        } while (var32 == null || var32.field1915 == null || var31.parentlayer >= var32.field1915.length || var32.field1915[var31.parentlayer] != var31);
                         ScriptRunner.runHook(var30);
                     }
                 }
                 var28 = var27.component;
-                if (var28.field1765 < 0) {
+                if (var28.parentlayer < 0) {
                     break;
                 }
                 var29 = Component.method11381(var28.field1886);
-            } while (var29 == null || var29.field1915 == null || var28.field1765 >= var29.field1915.length || var29.field1915[var28.field1765] != var28);
+            } while (var29 == null || var29.field1915 == null || var28.parentlayer >= var29.field1915.length || var29.field1915[var28.parentlayer] != var28);
             ScriptRunner.runHook(var27);
         }
     }
@@ -4908,8 +4908,8 @@ public class Statics {
     @ObfuscatedName("ge.cm(Lew;Lrn;B)V")
     public static final void method3983(Component arg0, ClientScriptState arg1) {
         if (client.method14331(arg0).method14927() && client.field9108 == null) {
-            method11509(arg0.id, arg0.field1765);
-            client.field9108 = Component.get(arg0.id, arg0.field1765);
+            method11509(arg0.id, arg0.parentlayer);
+            client.field9108 = Component.get(arg0.id, arg0.parentlayer);
             client.requestRedrawComponent(client.field9108);
         }
     }
@@ -5131,10 +5131,10 @@ public class Statics {
 
     @ObfuscatedName("vx.iy(B)V")
     public static final void method12183() {
-        for (ProjectileEntityNode var0 = (ProjectileEntityNode) client.field9007.method11563(); var0 != null; var0 = (ProjectileEntityNode) client.field9007.method11567()) {
+        for (ProjectileEntityNode var0 = (ProjectileEntityNode) client.field9007.last(); var0 != null; var0 = (ProjectileEntityNode) client.field9007.method11567()) {
             ProjectileAnimation var1 = var0.field10342;
             if (client.loopCycle > var1.field10622) {
-                var0.method6979();
+                var0.remove();
                 var1.method17159();
             } else if (client.loopCycle >= var1.field10625) {
                 var1.method17152();
@@ -5184,7 +5184,7 @@ public class Statics {
         arg0.field1806 = 3;
         arg0.field1838 = client.currentPlayerUid;
         arg0.field1832 = 0;
-        if (arg0.field1765 == -1 && !arg1.field1734) {
+        if (arg0.parentlayer == -1 && !arg1.field1734) {
             method4107(arg0.id);
         }
     }
@@ -5201,7 +5201,7 @@ public class Statics {
     public static final void method6788(Component arg0, Interface arg1, ClientScriptState arg2) {
         arg0.field1806 = 5;
         arg0.field1838 = arg2.field5215[--arg2.field5216];
-        if (arg0.field1765 == -1 && !arg1.field1734) {
+        if (arg0.parentlayer == -1 && !arg1.field1734) {
             method4107(arg0.id);
         }
     }
@@ -5265,7 +5265,7 @@ public class Statics {
         Object var10 = null;
         Sprite var11 = (Sprite) client.field9131.method7916((long) var9);
         if (var11 == null) {
-            SpriteData[] var12 = SpriteDataProvider.method2591(field7387, var9, 0);
+            SpriteData[] var12 = SpriteDataProvider.get(field7387, var9, 0);
             if (var12 == null) {
                 return;
             }
@@ -5393,7 +5393,7 @@ public class Statics {
     public static final void method12369(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.field5238 ? arg0.field5210 : arg0.field5223;
         Component var2 = var1.field5240;
-        arg0.field5215[++arg0.field5216 - 1] = var2.field1765;
+        arg0.field5215[++arg0.field5216 - 1] = var2.parentlayer;
     }
 
     @ObfuscatedName("if.qp(Lrn;I)V")
@@ -5862,10 +5862,10 @@ public class Statics {
         }
         client.targetModeActive = true;
         activeComponentParentLayer = arg0.id;
-        client.activeComponentId = arg0.field1765;
+        client.activeComponentId = arg0.parentlayer;
         targetMask = arg1;
         field7366 = arg2;
-        client.field9102 = arg0.invobject;
+        client.activeComponentInvobject = arg0.invobject;
         targetCursor = arg0.field1827;
         client.defaultCursor = arg0.field1763;
         client.requestRedrawComponent(arg0);
@@ -6043,7 +6043,7 @@ public class Statics {
     @ObfuscatedName("kk.lh(Lew;I)V")
     public static void method5567(Component arg0) {
         if (arg0.type == 5 && arg0.invobject != -1) {
-            ObjIconFactory.method8730(renderer, arg0);
+            ObjIconFactory.ensureIconExists(renderer, arg0);
         }
     }
 
@@ -6180,7 +6180,7 @@ public class Statics {
     public static void method8587(int arg0) {
         for (Node var1 = client.field9010.method11928(); var1 != null; var1 = client.field9010.method11929()) {
             if ((var1.field4228 >> 48 & 0xFFFFL) == (long) arg0) {
-                var1.method6979();
+                var1.remove();
             }
         }
     }
@@ -6222,7 +6222,7 @@ public class Statics {
         }
         ProjectileAnimation var21 = new ProjectileAnimation(client.world.getScene(), arg0, field3161, field3161, arg6, arg7, arg4, client.loopCycle + arg10, client.loopCycle + arg11, arg12, arg13, arg1, arg2, arg5, arg14, arg3, arg15);
         var21.method17162(arg8, arg9, client.getHeightmapY(arg8, arg9, field3161) - arg5, client.loopCycle + arg10);
-        client.field9007.method11558(new ProjectileEntityNode(var21));
+        client.field9007.addFirst(new ProjectileEntityNode(var21));
     }
 
     @ObfuscatedName("lg.apb(Lrn;I)V")

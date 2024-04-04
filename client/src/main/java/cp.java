@@ -23,7 +23,7 @@ public class cp {
         }
         if (field1192 > 0) {
             ObjectNode var1 = new ObjectNode(arg0);
-            field1194.method11558(var1);
+            field1194.addFirst(var1);
         } else {
             arg0.ma(false);
         }
@@ -37,7 +37,7 @@ public class cp {
                 return;
             }
             ((ua) var0.value).ma(true);
-            var0.method6979();
+            var0.remove();
         }
     }
 

@@ -386,7 +386,7 @@ public class ClanSettings {
                     var4.field9556 = arg1;
                     return true;
                 }
-                var3.method6979();
+                var3.remove();
             }
         }
         this.field2368.method11927(new IntNode(arg1), (long) arg0);
@@ -414,7 +414,7 @@ public class ClanSettings {
                     var11.field9556 |= var9;
                     return true;
                 }
-                var10.method6979();
+                var10.remove();
             }
         }
         this.field2368.method11927(new IntNode(var9), (long) arg0);
@@ -436,7 +436,7 @@ public class ClanSettings {
                     var5.field9555 = arg1;
                     return true;
                 }
-                var4.method6979();
+                var4.remove();
             }
         }
         this.field2368.method11927(new LongNode(arg1), (long) arg0);
@@ -461,13 +461,13 @@ public class ClanSettings {
                         if (arg1.equals(var4.value)) {
                             return false;
                         }
-                        var4.method6979();
-                        var4.method6979();
+                        var4.remove();
+                        var4.remove();
                         this.field2368.method11927(new ObjectNode(arg1), var4.field4228);
                         return true;
                     }
                 }
-                var3.method6979();
+                var3.remove();
             }
         }
         this.field2368.method11927(new ObjectNode(arg1), (long) arg0);

@@ -92,7 +92,7 @@ public class ParticleSystem {
         while (var1.hasNext()) {
             ParticleEffector var2 = (ParticleEffector) var1.next();
             if (var2.field9602.field2760 == 1) {
-                var2.method6979();
+                var2.remove();
             }
         }
         for (int var3 = 0; var3 < this.field4933.length; var3++) {
@@ -226,10 +226,10 @@ public class ParticleSystem {
                     }
                 }
                 if (!arg1) {
-                    var5.method6979();
+                    var5.remove();
                     this.field4932--;
                     if (var5.method6982()) {
-                        var5.method6979();
+                        var5.remove();
                         ParticleSystemRenderer.field4920--;
                     }
                 }

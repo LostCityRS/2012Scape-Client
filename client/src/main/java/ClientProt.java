@@ -82,7 +82,7 @@ public class ClientProt {
     public static final ClientProt REFLECTION_CHECK_REPLY = new ClientProt(25, -1);
 
     @ObfuscatedName("jm.ay")
-    public static final ClientProt IF_PLAYER = new ClientProt(26, 16);
+    public static final ClientProt IF_BUTTONT = new ClientProt(26, 16);
 
     @ObfuscatedName("jm.af")
     public static final ClientProt OPOBJ4 = new ClientProt(27, 7);

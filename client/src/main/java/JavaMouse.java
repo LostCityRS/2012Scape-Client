@@ -71,7 +71,7 @@ public class JavaMouse extends Mouse implements MouseListener, MouseMotionListen
     @ObfuscatedName("aeo.as(IIIII)V")
     public void method15595(int arg0, int arg1, int arg2, int arg3) {
         JavaMouseEvent var5 = JavaMouseEvent.method7559(arg0, arg1, arg2, MonotonicTime.get(), arg3);
-        this.field9782.method11558(var5);
+        this.field9782.addFirst(var5);
     }
 
     @ObfuscatedName("aeo.ai(IIB)V")

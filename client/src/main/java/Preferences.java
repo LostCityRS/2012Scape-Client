@@ -48,7 +48,7 @@ public class Preferences {
             var2 = 1;
             arg0.method15941(64);
         }
-        if (Statics.options.field9661.method15781() == 0) {
+        if (Statics.options.field9661.getValue() == 0) {
             Statics.options.method15449(Statics.options.field9661, true);
         } else {
             Statics.options.method15448(Statics.options.field9670, 0);
@@ -75,7 +75,7 @@ public class Preferences {
             method1886(true);
             var2 = 1;
         }
-        if (Statics.options.field9661.method15781() == 2) {
+        if (Statics.options.field9661.getValue() == 2) {
             Statics.options.method15449(Statics.options.field9661, true);
         } else {
             Statics.options.method15448(Statics.options.field9670, 2);
@@ -102,7 +102,7 @@ public class Preferences {
             method1886(true);
             var3 = 1;
         }
-        if (Statics.options.field9661.method15781() == arg1) {
+        if (Statics.options.field9661.getValue() == arg1) {
             Statics.options.method15449(Statics.options.field9661, true);
         } else {
             Statics.options.method15448(Statics.options.field9670, arg1);

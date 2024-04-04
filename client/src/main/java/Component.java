@@ -73,7 +73,7 @@ public class Component {
     public int id = -1;
 
     @ObfuscatedName("ew.ag")
-    public int field1765 = -1;
+    public int parentlayer = -1;
 
     @ObfuscatedName("ew.as")
     public int type;
@@ -178,10 +178,10 @@ public class Component {
     public boolean field1799 = false;
 
     @ObfuscatedName("ew.br")
-    public int field1800 = 0;
+    public int outline = 0;
 
     @ObfuscatedName("ew.bp")
-    public int field1801 = 0;
+    public int graphicshadow = 0;
 
     @ObfuscatedName("ew.bi")
     public boolean field1770;
@@ -247,7 +247,7 @@ public class Component {
     public boolean field1822 = false;
 
     @ObfuscatedName("ew.cp")
-    public int field1823 = 2;
+    public int invcountvis = 2;
 
     @ObfuscatedName("ew.ci")
     public short[] field1754;
@@ -478,10 +478,10 @@ public class Component {
     public int invobject = -1;
 
     @ObfuscatedName("ew.fk")
-    public int field1904 = 0;
+    public int invcount = 0;
 
     @ObfuscatedName("ew.fg")
-    public boolean field1913 = false;
+    public boolean invwearcol = false;
 
     @ObfuscatedName("ew.fu")
     public int field1906 = -1;
@@ -693,8 +693,8 @@ public class Component {
             this.field1799 = (var4 & 0x1) != 0;
             this.field1804 = (var4 & 0x2) != 0;
             this.field1794 = arg0.g1();
-            this.field1800 = arg0.g1();
-            this.field1801 = arg0.g4s();
+            this.outline = arg0.g1();
+            this.graphicshadow = arg0.g4s();
             this.field1770 = arg0.g1() == 1;
             this.field1803 = arg0.g1() == 1;
             this.colour = arg0.g4s();
@@ -916,7 +916,7 @@ public class Component {
     @ObfuscatedName("ew.n(Lra;I)Lce;")
     public Sprite method3151(RendererToolkit arg0) {
         field1761 = false;
-        long var2 = ((this.field1803 ? 1L : 0L) << 39) + ((long) this.field1800 << 36) + ((this.field1804 ? 1L : 0L) << 35) + (long) this.field1797 + ((this.field1770 ? 1L : 0L) << 38) + ((long) this.field1801 << 40);
+        long var2 = ((this.field1803 ? 1L : 0L) << 39) + ((long) this.outline << 36) + ((this.field1804 ? 1L : 0L) << 35) + (long) this.field1797 + ((this.field1770 ? 1L : 0L) << 38) + ((long) this.graphicshadow << 40);
         Sprite var4 = (Sprite) field1757.method7916(var2);
         if (var4 != null) {
             return var4;
@@ -932,19 +932,19 @@ public class Component {
         if (this.field1803) {
             var5.method2757();
         }
-        if (this.field1800 > 0) {
-            var5.method2729(this.field1800);
-        } else if (this.field1801 != 0) {
+        if (this.outline > 0) {
+            var5.method2729(this.outline);
+        } else if (this.graphicshadow != 0) {
             var5.method2729(1);
         }
-        if (this.field1800 >= 1) {
+        if (this.outline >= 1) {
             var5.method2730(1);
         }
-        if (this.field1800 >= 2) {
+        if (this.outline >= 2) {
             var5.method2730(16777215);
         }
-        if (this.field1801 != 0) {
-            var5.method2731(this.field1801 | 0xFF000000);
+        if (this.graphicshadow != 0) {
+            var5.method2731(this.graphicshadow | 0xFF000000);
         }
         Sprite var6 = arg0.method517(var5, true);
         field1757.method7918(var6, var2, var6.method1061() * var6.method1045() * 4);
@@ -1215,7 +1215,7 @@ public class Component {
 
     @ObfuscatedName("ew.e(Lra;B)Les;")
     public Graphic method3124(RendererToolkit arg0) {
-        long var2 = (long) this.id << 32 | (long) this.field1765 & 0xFFFFFFFFL;
+        long var2 = (long) this.id << 32 | (long) this.parentlayer & 0xFFFFFFFFL;
         Graphic var4 = (Graphic) field1768.method7916(var2);
         if (var4 != null) {
             if (this.field1797 != var4.field1731) {
@@ -1306,7 +1306,7 @@ public class Component {
         }
         ObjectNode var3 = (ObjectNode) this.field1902.getNode((long) arg0);
         if (var3 != null) {
-            var3.method6979();
+            var3.remove();
         }
         this.field1902.method11927(new ObjectNode(arg1), (long) arg0);
     }
@@ -1316,7 +1316,7 @@ public class Component {
         if (this.field1902 != null) {
             Node var2 = this.field1902.getNode((long) arg0);
             if (var2 != null) {
-                var2.method6979();
+                var2.remove();
             }
         }
     }

@@ -190,7 +190,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
             return null;
         } else {
             byte[] var3 = var2.method16685();
-            var2.method6979();
+            var2.remove();
             return var3;
         }
     }
@@ -199,7 +199,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
     public Js5Request method14237(int arg0, int arg1) {
         Js5Request var3 = (Js5Request) this.field8868.getNode((long) arg0);
         if (var3 != null && arg1 == 0 && !var3.field10354 && var3.field10352) {
-            var3.method6979();
+            var3.remove();
             var3 = null;
         }
         if (var3 == null) {
@@ -270,7 +270,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
                 this.field8853.field3591 = 0;
             } catch (RuntimeException var19) {
                 this.field8853.method5741();
-                var3.method6979();
+                var3.remove();
                 if (var3.field10354 && !this.field8853.method5738()) {
                     Js5NetRequest var17 = this.field8853.method5765(this.field8860, arg0, (byte) 2, true);
                     this.field8868.method11927(var17, (long) arg0);
@@ -287,7 +287,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
                 }
             }
             if (!var3.field10354) {
-                var3.method6979();
+                var3.remove();
             }
             return var3;
         }
@@ -321,12 +321,12 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
                 this.field8866[arg0] = 1;
             }
             if (!var3.field10354) {
-                var3.method6979();
+                var3.remove();
             }
             return var3;
         } catch (Exception var18) {
             this.field8866[arg0] = -1;
-            var3.method6979();
+            var3.remove();
             if (var3.field10354 && !this.field8853.method5738()) {
                 Js5NetRequest var11 = this.field8853.method5765(this.field8860, arg0, (byte) 2, true);
                 this.field8868.method11927(var11, (long) arg0);
@@ -340,10 +340,10 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
         if (this.field8872 == null || this.method5604() == null) {
             return;
         }
-        for (Node var1 = this.field8873.method11563(); var1 != null; var1 = this.field8873.method11567()) {
+        for (Node var1 = this.field8873.last(); var1 != null; var1 = this.field8873.method11567()) {
             int var2 = (int) var1.field4228;
             if (var2 < 0 || var2 >= this.field8862.field3553 || this.field8862.field3557[var2] == 0) {
-                var1.method6979();
+                var1.remove();
             } else {
                 if (this.field8866[var2] == 0) {
                     this.method14237(var2, 1);
@@ -352,7 +352,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
                     this.method14237(var2, 2);
                 }
                 if (this.field8866[var2] == 1) {
-                    var1.method6979();
+                    var1.remove();
                 }
             }
         }
@@ -366,7 +366,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
             }
             if (this.field8870) {
                 boolean var1 = true;
-                for (Node var2 = this.field8872.method11563(); var2 != null; var2 = this.field8872.method11567()) {
+                for (Node var2 = this.field8872.last(); var2 != null; var2 = this.field8872.method11567()) {
                     int var3 = (int) var2.field4228;
                     if (this.field8866[var3] == 0) {
                         this.method14237(var3, 1);
@@ -374,7 +374,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
                     if (this.field8866[var3] == 0) {
                         var1 = false;
                     } else {
-                        var2.method6979();
+                        var2.remove();
                     }
                 }
                 while (this.field8871 < this.field8862.field3557.length) {
@@ -391,7 +391,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
                         if (this.field8866[this.field8871] == 0) {
                             Node var4 = new Node();
                             var4.field4228 = this.field8871;
-                            this.field8872.method11558(var4);
+                            this.field8872.addFirst(var4);
                             var1 = false;
                         }
                         this.field8871++;
@@ -403,13 +403,13 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
                 }
             } else if (this.field8857) {
                 boolean var5 = true;
-                for (Node var6 = this.field8872.method11563(); var6 != null; var6 = this.field8872.method11567()) {
+                for (Node var6 = this.field8872.last(); var6 != null; var6 = this.field8872.method11567()) {
                     int var7 = (int) var6.field4228;
                     if (this.field8866[var7] != 1) {
                         this.method14237(var7, 2);
                     }
                     if (this.field8866[var7] == 1) {
-                        var6.method6979();
+                        var6.remove();
                     } else {
                         var5 = false;
                     }
@@ -428,7 +428,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
                         if (this.field8866[this.field8871] != 1) {
                             Node var8 = new Node();
                             var8.field4228 = this.field8871;
-                            this.field8872.method11558(var8);
+                            this.field8872.addFirst(var8);
                             var5 = false;
                         }
                         this.field8871++;
@@ -451,7 +451,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
                     if (!var9.field10354) {
                         throw new RuntimeException();
                     }
-                    var9.method6979();
+                    var9.remove();
                 } else {
                     var9.field10353 = true;
                 }
@@ -475,7 +475,7 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
         if (this.field8862 == null) {
             return 0;
         } else if (this.field8870) {
-            Node var1 = this.field8872.method11563();
+            Node var1 = this.field8872.last();
             return var1 == null ? 0 : (int) var1.field4228;
         } else {
             return this.field8862.field3549;
@@ -497,14 +497,14 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
         if (this.field8855 == null) {
             return;
         }
-        for (Node var2 = this.field8873.method11563(); var2 != null; var2 = this.field8873.method11567()) {
+        for (Node var2 = this.field8873.last(); var2 != null; var2 = this.field8873.method11567()) {
             if (var2.field4228 == (long) arg0) {
                 return;
             }
         }
         Node var3 = new Node();
         var3.field4228 = arg0;
-        this.field8873.method11558(var3);
+        this.field8873.addFirst(var3);
     }
 
     @ObfuscatedName("abt.s(IB)I")

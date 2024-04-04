@@ -98,7 +98,7 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("mp.u(ZI)V")
     public static void method6259(boolean arg0) {
-        for (PositionedSound var1 = (PositionedSound) field9514.method11563(); var1 != null; var1 = (PositionedSound) field9514.method11567()) {
+        for (PositionedSound var1 = (PositionedSound) field9514.last(); var1 != null; var1 = (PositionedSound) field9514.method11567()) {
             if (var1.field9540 != null) {
                 Statics.field4201.method16445(var1.field9540);
                 var1.field9540 = null;
@@ -107,35 +107,35 @@ public class PositionedSound extends Node {
                 Statics.field4201.method16445(var1.field9548);
                 var1.field9548 = null;
             }
-            var1.method6979();
+            var1.remove();
         }
         if (!arg0) {
             return;
         }
-        for (PositionedSound var2 = (PositionedSound) field9528.method11563(); var2 != null; var2 = (PositionedSound) field9528.method11567()) {
+        for (PositionedSound var2 = (PositionedSound) field9528.last(); var2 != null; var2 = (PositionedSound) field9528.method11567()) {
             if (var2.field9540 != null) {
                 Statics.field4201.method16445(var2.field9540);
                 var2.field9540 = null;
             }
-            var2.method6979();
+            var2.remove();
         }
         for (PositionedSound var3 = (PositionedSound) field9516.method11928(); var3 != null; var3 = (PositionedSound) field9516.method11929()) {
             if (var3.field9540 != null) {
                 Statics.field4201.method16445(var3.field9540);
                 var3.field9540 = null;
             }
-            var3.method6979();
+            var3.remove();
         }
     }
 
     @ObfuscatedName("vf.j(I)V")
     public static void method12174() {
-        for (PositionedSound var0 = (PositionedSound) field9514.method11563(); var0 != null; var0 = (PositionedSound) field9514.method11567()) {
+        for (PositionedSound var0 = (PositionedSound) field9514.last(); var0 != null; var0 = (PositionedSound) field9514.method11567()) {
             if (var0.field9530) {
                 var0.method15106();
             }
         }
-        for (PositionedSound var1 = (PositionedSound) field9528.method11563(); var1 != null; var1 = (PositionedSound) field9528.method11567()) {
+        for (PositionedSound var1 = (PositionedSound) field9528.last(); var1 != null; var1 = (PositionedSound) field9528.method11567()) {
             if (var1.field9530) {
                 var1.method15106();
             }
@@ -247,7 +247,7 @@ public class PositionedSound extends Node {
             if (var7.field9543 != null) {
                 var7.field9526 = var7.field9520 + (int) (Math.random() * (double) (var7.field9535 - var7.field9520));
             }
-            field9514.method11558(var7);
+            field9514.addFirst(var7);
         } else if (arg5 != null) {
             var7.field9527 = arg5;
             NPCType var10 = arg5.field10075;
@@ -266,7 +266,7 @@ public class PositionedSound extends Node {
                 var7.field9524 = var10.field7250;
                 var7.field9522 = var10.field7262 << 9;
             }
-            field9528.method11558(var7);
+            field9528.addFirst(var7);
         } else if (arg6 != null) {
             var7.field9513 = arg6;
             var7.field9547 = arg1 + arg6.size() << 9;
@@ -284,7 +284,7 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("z.c(IIILtg;I)V")
     public static void method1370(int arg0, int arg1, int arg2, LocType arg3) {
-        for (PositionedSound var4 = (PositionedSound) field9514.method11563(); var4 != null; var4 = (PositionedSound) field9514.method11567()) {
+        for (PositionedSound var4 = (PositionedSound) field9514.last(); var4 != null; var4 = (PositionedSound) field9514.method11567()) {
             if (var4.field9517 == arg0 && arg1 << 9 == var4.field9518 && arg2 << 9 == var4.field9519 && var4.field9525.field6474 == arg3.field6474) {
                 if (var4.field9540 != null) {
                     Statics.field4201.method16445(var4.field9540);
@@ -294,7 +294,7 @@ public class PositionedSound extends Node {
                     Statics.field4201.method16445(var4.field9548);
                     var4.field9548 = null;
                 }
-                var4.method6979();
+                var4.remove();
                 return;
             }
         }
@@ -302,13 +302,13 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("cu.m(Lahs;I)V")
     public static void method2547(NpcEntity arg0) {
-        for (PositionedSound var1 = (PositionedSound) field9528.method11563(); var1 != null; var1 = (PositionedSound) field9528.method11567()) {
+        for (PositionedSound var1 = (PositionedSound) field9528.last(); var1 != null; var1 = (PositionedSound) field9528.method11567()) {
             if (var1.field9527 == arg0) {
                 if (var1.field9540 != null) {
                     Statics.field4201.method16445(var1.field9540);
                     var1.field9540 = null;
                 }
-                var1.method6979();
+                var1.remove();
                 return;
             }
         }
@@ -324,7 +324,7 @@ public class PositionedSound extends Node {
             Statics.field4201.method16445(var1.field9540);
             var1.field9540 = null;
         }
-        var1.method6979();
+        var1.remove();
     }
 
     @ObfuscatedName("ao.l(Lahg;I)V")
@@ -376,10 +376,10 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("lr.z(IIIII)V")
     public static void method6033(int arg0, int arg1, int arg2, int arg3) {
-        for (PositionedSound var4 = (PositionedSound) field9514.method11563(); var4 != null; var4 = (PositionedSound) field9514.method11567()) {
+        for (PositionedSound var4 = (PositionedSound) field9514.last(); var4 != null; var4 = (PositionedSound) field9514.method11567()) {
             method4977(var4, arg0, arg1, arg2, arg3);
         }
-        for (PositionedSound var5 = (PositionedSound) field9528.method11563(); var5 != null; var5 = (PositionedSound) field9528.method11567()) {
+        for (PositionedSound var5 = (PositionedSound) field9528.last(); var5 != null; var5 = (PositionedSound) field9528.method11567()) {
             byte var6 = 1;
             BASType var7 = var5.field9527.getBASType();
             int var8 = var5.field9527.field8616.getSeqTypeId();

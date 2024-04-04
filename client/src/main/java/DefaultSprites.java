@@ -94,46 +94,46 @@ public class DefaultSprites {
 
     @ObfuscatedName("afb.t(Lra;Lls;I)V")
     public static void method15812(RendererToolkit arg0, Js5 arg1) {
-        SpriteData[] var2 = SpriteDataProvider.method2591(arg1, Statics.field5179, 0);
+        SpriteData[] var2 = SpriteDataProvider.get(arg1, Statics.field5179, 0);
         Statics.field2209 = new Sprite[var2.length];
         for (int var3 = 0; var3 < var2.length; var3++) {
             Statics.field2209[var3] = arg0.method517(var2[var3], true);
         }
-        SpriteData[] var4 = SpriteDataProvider.method2591(arg1, Statics.field553, 0);
+        SpriteData[] var4 = SpriteDataProvider.get(arg1, Statics.field553, 0);
         Statics.field9904 = new Sprite[var4.length];
         for (int var5 = 0; var5 < var4.length; var5++) {
             Statics.field9904[var5] = arg0.method517(var4[var5], true);
         }
-        SpriteData[] var6 = SpriteDataProvider.method2591(arg1, Statics.field554, 0);
+        SpriteData[] var6 = SpriteDataProvider.get(arg1, Statics.field554, 0);
         Statics.field6361 = new Sprite[var6.length];
         for (int var7 = 0; var7 < var6.length; var7++) {
             Statics.field6361[var7] = arg0.method517(var6[var7], true);
         }
-        SpriteData[] var8 = SpriteDataProvider.method2591(arg1, Statics.field3489, 0);
+        SpriteData[] var8 = SpriteDataProvider.get(arg1, Statics.field3489, 0);
         Statics.field3311 = new Sprite[var8.length];
         for (int var9 = 0; var9 < var8.length; var9++) {
             Statics.field3311[var9] = arg0.method517(var8[var9], true);
         }
-        SpriteData[] var10 = SpriteDataProvider.method2591(arg1, Statics.field555, 0);
+        SpriteData[] var10 = SpriteDataProvider.get(arg1, Statics.field555, 0);
         Statics.field9826 = new Sprite[var10.length];
         byte var11 = 25;
         for (int var12 = 0; var12 < var10.length; var12++) {
             var10[var12].method2719(-var11 + (int) (Math.random() * (double) var11 * 2.0D), -var11 + (int) (Math.random() * (double) var11 * 2.0D), -var11 + (int) (Math.random() * (double) var11 * 2.0D));
             Statics.field9826[var12] = arg0.method517(var10[var12], true);
         }
-        SpriteData[] var13 = SpriteDataProvider.method2591(arg1, Statics.field556, 0);
+        SpriteData[] var13 = SpriteDataProvider.get(arg1, Statics.field556, 0);
         Statics.field2618 = new Sprite[var13.length];
         for (int var14 = 0; var14 < var13.length; var14++) {
             Statics.field2618[var14] = arg0.method517(var13[var14], true);
         }
-        SpriteData[] var15 = SpriteDataProvider.method2591(arg1, Statics.field550, 0);
+        SpriteData[] var15 = SpriteDataProvider.get(arg1, Statics.field550, 0);
         Statics.field561 = new Sprite[var15.length];
         byte var16 = 12;
         for (int var17 = 0; var17 < var15.length; var17++) {
             var15[var17].method2719(-var16 + (int) (Math.random() * (double) var16 * 2.0D), -var16 + (int) (Math.random() * (double) var16 * 2.0D), -var16 + (int) (Math.random() * (double) var16 * 2.0D));
             Statics.field561[var17] = arg0.method517(var15[var17], true);
         }
-        SpriteData[] var18 = SpriteDataProvider.method2591(arg1, Statics.field6816, 0);
+        SpriteData[] var18 = SpriteDataProvider.get(arg1, Statics.field6816, 0);
         Statics.field8538 = new Sprite[var18.length];
         byte var19 = 12;
         for (int var20 = 0; var20 < var18.length; var20++) {
@@ -142,7 +142,7 @@ public class DefaultSprites {
         }
         Statics.field7290 = arg0.method517(SpriteDataProvider.method2590(arg1, Statics.field4683, 0), true);
         Statics.field6385 = arg0.method517(SpriteDataProvider.method2590(arg1, Statics.field558, 0), true);
-        SpriteData[] var21 = SpriteDataProvider.method2591(arg1, Statics.field6648, 0);
+        SpriteData[] var21 = SpriteDataProvider.get(arg1, Statics.field6648, 0);
         Statics.field4878 = new Sprite[var21.length];
         for (int var22 = 0; var22 < var21.length; var22++) {
             Statics.field4878[var22] = arg0.method517(var21[var22], true);

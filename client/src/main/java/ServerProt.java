@@ -448,7 +448,7 @@ public class ServerProt {
     public static final ServerProt UPDATE_REBOOT_TIMER = new ServerProt(147, 2); // sendSystemUpdate
 
     @ObfuscatedName("jx.ex")
-    public static final ServerProt IF_CLOSESUB = new ServerProt(148, 4); // close interface?
+    public static final ServerProt IF_CLOSESUB = new ServerProt(148, 4); // closeInterface
 
     @ObfuscatedName("jx.eb")
     public static final ServerProt field3100 = new ServerProt(149, -2);

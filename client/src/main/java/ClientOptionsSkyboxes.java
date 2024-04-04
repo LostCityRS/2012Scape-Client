@@ -25,12 +25,12 @@ public class ClientOptionsSkyboxes extends ClientOption {
 
     @ObfuscatedName("afb.n(I)Z")
     public boolean method15806() {
-        return RendererToolkit.method3321(this.field6462.field9661.method15781());
+        return RendererToolkit.method3321(this.field6462.field9661.getValue());
     }
 
     @ObfuscatedName("afb.j(IB)I")
     public int method11387(int arg0) {
-        return RendererToolkit.method3321(this.field6462.field9661.method15781()) ? 1 : 3;
+        return RendererToolkit.method3321(this.field6462.field9661.getValue()) ? 1 : 3;
     }
 
     @ObfuscatedName("afb.s(II)V")

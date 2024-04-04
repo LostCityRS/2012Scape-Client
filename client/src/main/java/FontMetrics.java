@@ -24,7 +24,7 @@ public class FontMetrics {
     public static String[] field7174 = new String[100];
 
     @ObfuscatedName("ur.u(Lls;III)Lvm;")
-    public static FontMetrics method12156(Js5 arg0, int arg1, int arg2) {
+    public static FontMetrics create(Js5 arg0, int arg1, int arg2) {
         byte[] var3 = arg0.method5627(arg1, arg2);
         return var3 == null ? null : new FontMetrics(var3);
     }

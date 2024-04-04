@@ -18,7 +18,7 @@ public class AudioBuss_Sub2 extends AudioBuss {
 
     @ObfuscatedName("aij.j()Ladc;")
     public AudioBuss method15031() {
-        SoundRelated1 var1 = (SoundRelated1) this.field10227.method11563();
+        SoundRelated1 var1 = (SoundRelated1) this.field10227.last();
         if (var1 == null) {
             return null;
         } else if (var1.field9401 == null) {
@@ -48,7 +48,7 @@ public class AudioBuss_Sub2 extends AudioBuss {
     @ObfuscatedName("aij.m([III)V")
     public void method15034(int[] arg0, int arg1, int arg2) {
         this.field10225.method15034(arg0, arg1, arg2);
-        for (SoundRelated1 var4 = (SoundRelated1) this.field10227.method11563(); var4 != null; var4 = (SoundRelated1) this.field10227.method11567()) {
+        for (SoundRelated1 var4 = (SoundRelated1) this.field10227.last(); var4 != null; var4 = (SoundRelated1) this.field10227.method11567()) {
             if (!this.field10226.method16296(var4)) {
                 int var5 = arg1;
                 int var6 = arg2;
@@ -69,7 +69,7 @@ public class AudioBuss_Sub2 extends AudioBuss {
     @ObfuscatedName("aij.t(I)V")
     public void method15046(int arg0) {
         this.field10225.method15046(arg0);
-        for (SoundRelated1 var2 = (SoundRelated1) this.field10227.method11563(); var2 != null; var2 = (SoundRelated1) this.field10227.method11567()) {
+        for (SoundRelated1 var2 = (SoundRelated1) this.field10227.last(); var2 != null; var2 = (SoundRelated1) this.field10227.method11567()) {
             if (!this.field10226.method16296(var2)) {
                 int var3 = arg0;
                 do {

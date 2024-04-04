@@ -196,7 +196,7 @@ public class ja extends RendererToolkit implements ua {
         this.field452 = null;
         this.field437 = null;
         this.field441 = null;
-        for (ba var1 = (ba) this.field438.method11563(); var1 != null; var1 = (ba) this.field438.method11567()) {
+        for (ba var1 = (ba) this.field438.last(); var1 != null; var1 = (ba) this.field438.method11567()) {
             var1.ha();
         }
         this.field438.method11557();
@@ -214,7 +214,7 @@ public class ja extends RendererToolkit implements ua {
     public void method444(int arg0) {
         cp.method2359();
         this.Y(arg0);
-        for (ba var2 = (ba) this.field438.method11563(); var2 != null; var2 = (ba) this.field438.method11567()) {
+        for (ba var2 = (ba) this.field438.last(); var2 != null; var2 = (ba) this.field438.method11567()) {
             var2.u();
         }
     }
@@ -416,7 +416,7 @@ public class ja extends RendererToolkit implements ua {
     @ObfuscatedName("ja.bi(I)Lv;")
     public Heap method593(int arg0) {
         ba var2 = new ba(this, arg0);
-        this.field438.method11558(var2);
+        this.field438.addFirst(var2);
         return var2;
     }
 
@@ -454,7 +454,7 @@ public class ja extends RendererToolkit implements ua {
     }
 
     @ObfuscatedName("ja.co(Lvm;[Lzv;Z)Ll;")
-    public Font method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
+    public Font createFont(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
         int[] var4 = new int[arg1.length];
         int[] var5 = new int[arg1.length];
         boolean var6 = false;

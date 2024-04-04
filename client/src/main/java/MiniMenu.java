@@ -130,14 +130,14 @@ public class MiniMenu {
         }
         field598.method11557();
         field599.method11557();
-        for (MiniMenuEntry var1 = (MiniMenuEntry) field595.method11563(); var1 != null; var1 = (MiniMenuEntry) field595.method11567()) {
+        for (MiniMenuEntry var1 = (MiniMenuEntry) field595.last(); var1 != null; var1 = (MiniMenuEntry) field595.method11567()) {
             int var2 = var1.field10340;
             if (var2 < 1000) {
-                var1.method6979();
+                var1.remove();
                 if (var2 == 59 || var2 == 2 || var2 == 8 || var2 == 17 || var2 == 15 || var2 == 16 || var2 == 58) {
-                    field599.method11558(var1);
+                    field599.addFirst(var1);
                 } else {
-                    field598.method11558(var1);
+                    field598.addFirst(var1);
                 }
             }
         }
@@ -160,7 +160,7 @@ public class MiniMenu {
             Statics.field2654 = null;
             Statics.field627 = null;
         }
-        BasicMouseEvent var3 = (BasicMouseEvent) client.field9136.method11563();
+        BasicMouseEvent var3 = (BasicMouseEvent) client.field9136.last();
         int var4;
         int var5;
         if (var3 == null) {
@@ -435,7 +435,7 @@ public class MiniMenu {
         if (arg0 == null) {
             return;
         }
-        field595.method11558(arg0);
+        field595.addFirst(arg0);
         field588++;
         Object var1 = null;
         MiniMenuSubMenu var4;
@@ -484,32 +484,32 @@ public class MiniMenu {
         if (client.targetModeActive) {
             ParamType var3 = Statics.field7366 == -1 ? null : Statics.field4464.method12600(Statics.field7366);
             if (client.method14331(arg0).method14931() && (Statics.targetMask & 0x20) != 0 && (var3 == null || arg0.method3132(Statics.field7366, var3.field7287) != var3.field7287)) {
-                Statics.addEntry(client.field9103, client.field9151 + " " + TextUtil.ARROW + " " + arg0.field1795, Statics.targetCursor, 58, arg0.invobject, 0L, arg0.field1765, arg0.id, true, false, (long) (arg0.field1765 << 32 | arg0.id), false);
+                Statics.addEntry(client.field9103, client.field9151 + " " + TextUtil.ARROW + " " + arg0.field1795, Statics.targetCursor, 58, arg0.invobject, 0L, arg0.parentlayer, arg0.id, true, false, (long) (arg0.parentlayer << 32 | arg0.id), false);
             }
         }
         for (int var4 = 9; var4 >= 5; var4--) {
             String var5 = method3213(arg0, var4);
             if (var5 != null) {
-                Statics.addEntry(var5, arg0.field1795, client.method1956(arg0, var4), 1007, arg0.invobject, (long) (var4 + 1), arg0.field1765, arg0.id, true, false, (long) (arg0.field1765 << 32 | arg0.id), false);
+                Statics.addEntry(var5, arg0.field1795, client.method1956(arg0, var4), 1007, arg0.invobject, (long) (var4 + 1), arg0.parentlayer, arg0.id, true, false, (long) (arg0.parentlayer << 32 | arg0.id), false);
             }
         }
         String var6 = client.method14722(arg0);
         if (var6 != null) {
-            Statics.addEntry(var6, arg0.field1795, arg0.field1855, 25, arg0.invobject, 0L, arg0.field1765, arg0.id, true, false, (long) (arg0.field1765 << 32 | arg0.id), false);
+            Statics.addEntry(var6, arg0.field1795, arg0.field1855, 25, arg0.invobject, 0L, arg0.parentlayer, arg0.id, true, false, (long) (arg0.parentlayer << 32 | arg0.id), false);
         }
         for (int var7 = 4; var7 >= 0; var7--) {
             String var8 = method3213(arg0, var7);
             if (var8 != null) {
-                Statics.addEntry(var8, arg0.field1795, client.method1956(arg0, var7), 57, arg0.invobject, (long) (var7 + 1), arg0.field1765, arg0.id, true, false, (long) (arg0.field1765 << 32 | arg0.id), false);
+                Statics.addEntry(var8, arg0.field1795, client.method1956(arg0, var7), 57, arg0.invobject, (long) (var7 + 1), arg0.parentlayer, arg0.id, true, false, (long) (arg0.parentlayer << 32 | arg0.id), false);
             }
         }
         if (!client.method14331(arg0).method14927()) {
             return;
         }
         if (arg0.field1853 == null) {
-            Statics.addEntry(LocalisedText.field6914.get(Statics.language), "", -1, 30, arg0.invobject, 0L, arg0.field1765, arg0.id, true, false, (long) (arg0.field1765 << 32 | arg0.id), false);
+            Statics.addEntry(LocalisedText.field6914.get(Statics.language), "", -1, 30, arg0.invobject, 0L, arg0.parentlayer, arg0.id, true, false, (long) (arg0.parentlayer << 32 | arg0.id), false);
         } else {
-            Statics.addEntry(arg0.field1853, "", -1, 30, arg0.invobject, 0L, arg0.field1765, arg0.id, true, false, (long) (arg0.field1765 << 32 | arg0.id), false);
+            Statics.addEntry(arg0.field1853, "", -1, 30, arg0.invobject, 0L, arg0.parentlayer, arg0.id, true, false, (long) (arg0.parentlayer << 32 | arg0.id), false);
         }
     }
 
@@ -840,7 +840,7 @@ public class MiniMenu {
         if (open) {
             return;
         }
-        arg0.method6979();
+        arg0.remove();
         field588--;
         if (!arg0.field10338) {
             long var1 = arg0.field10330;
@@ -873,7 +873,7 @@ public class MiniMenu {
 
     @ObfuscatedName("ru.r(B)V")
     public static void method8628() {
-        for (MiniMenuEntry var0 = (MiniMenuEntry) field595.method11563(); var0 != null; var0 = (MiniMenuEntry) field595.method11567()) {
+        for (MiniMenuEntry var0 = (MiniMenuEntry) field595.last(); var0 != null; var0 = (MiniMenuEntry) field595.method11567()) {
             if (Statics.method1367(var0.field10340)) {
                 method6643(var0);
             }
@@ -882,7 +882,7 @@ public class MiniMenu {
 
     @ObfuscatedName("sl.g(II)Z")
     public static boolean method11169(int arg0) {
-        for (MiniMenuEntry var1 = (MiniMenuEntry) field595.method11563(); var1 != null; var1 = (MiniMenuEntry) field595.method11567()) {
+        for (MiniMenuEntry var1 = (MiniMenuEntry) field595.last(); var1 != null; var1 = (MiniMenuEntry) field595.method11567()) {
             if (method8731(var1.field10340) && var1.field10333 == (long) arg0) {
                 return true;
             }
@@ -1084,7 +1084,7 @@ public class MiniMenu {
         }
         Component var4 = Statics.field1756[var2].field1732[var3];
         if (arg1 == -1 && var4.type == 0) {
-            for (MiniMenuEntry var5 = (MiniMenuEntry) field595.method11563(); var5 != null; var5 = (MiniMenuEntry) field595.method11567()) {
+            for (MiniMenuEntry var5 = (MiniMenuEntry) field595.last(); var5 != null; var5 = (MiniMenuEntry) field595.method11567()) {
                 if (var5.field10340 == 58 || var5.field10340 == 1007 || var5.field10340 == 25 || var5.field10340 == 57 || var5.field10340 == 30) {
                     for (Component var6 = Component.method11381(var5.field10335); var6 != null; var6 = client.method4752(Statics.field1756[var6.id >> 16], var6)) {
                         if (var4.id == var6.id) {
@@ -1094,7 +1094,7 @@ public class MiniMenu {
                 }
             }
         } else {
-            for (MiniMenuEntry var7 = (MiniMenuEntry) field595.method11563(); var7 != null; var7 = (MiniMenuEntry) field595.method11567()) {
+            for (MiniMenuEntry var7 = (MiniMenuEntry) field595.last(); var7 != null; var7 = (MiniMenuEntry) field595.method11567()) {
                 if (var7.field10329 == arg1 && var4.id == var7.field10335 && (var7.field10340 == 58 || var7.field10340 == 1007 || var7.field10340 == 25 || var7.field10340 == 57 || var7.field10340 == 30)) {
                     return true;
                 }
@@ -1212,7 +1212,7 @@ public class MiniMenu {
         if (var4 == null) {
             var4 = Statics.field670;
         }
-        var4.method842(var1, field604, field593, field597.renderwidth, field597.renderheight, field597.colour, field597.field1801, field597.field1836, field597.field1837, client.field9207, Statics.field2113, client.field8920, Statics.field383, Statics.field2187);
+        var4.method842(var1, field604, field593, field597.renderwidth, field597.renderheight, field597.colour, field597.graphicshadow, field597.field1836, field597.field1837, client.field9207, Statics.field2113, client.field8920, Statics.field383, Statics.field2187);
         client.method7910(client.field8920[0], client.field8920[1], client.field8920[2], client.field8920[3]);
     }
 
@@ -1241,7 +1241,7 @@ public class MiniMenu {
         int var3 = Statics.mouse.getY();
         if (!field586) {
             int var4 = 0;
-            for (MiniMenuEntry var5 = (MiniMenuEntry) field595.method11563(); var5 != null; var5 = (MiniMenuEntry) field595.method11567()) {
+            for (MiniMenuEntry var5 = (MiniMenuEntry) field595.last(); var5 != null; var5 = (MiniMenuEntry) field595.method11567()) {
                 int var6 = field582 * (field588 - 1 - var4) + Statics.field2325 + 31;
                 Statics.method15995(var2, var3, Statics.field4756, Statics.field2325, Statics.field1571, Statics.field611, var6, var5, Statics.field670, Statics.field2399, -1, -256);
                 var4++;
@@ -1389,7 +1389,7 @@ public class MiniMenu {
             }
         } else {
             int var12 = 0;
-            for (MiniMenuEntry var13 = (MiniMenuEntry) field595.method11563(); var13 != null; var13 = (MiniMenuEntry) field595.method11567()) {
+            for (MiniMenuEntry var13 = (MiniMenuEntry) field595.last(); var13 != null; var13 = (MiniMenuEntry) field595.method11567()) {
                 int var14 = field582 * (field588 - 1 - var12) + var8.field7176 + var2 + var5 + 1;
                 if (var10 > Statics.field4756 && var10 < Statics.field4756 + Statics.field1571 && var11 > var14 - var8.field7176 - 1 && var11 < var8.field7177 + var14 && var13.field10336) {
                     arg0.B(Statics.field4756, var14 - var8.field7176, Statics.field1571, field582, var9 << 24 | Statics.field1477, 1);
@@ -1400,7 +1400,7 @@ public class MiniMenu {
         method1740(arg0, Statics.field4756, Statics.field2325, Statics.field1571, Statics.field611, var5);
         if (!field586) {
             int var21 = 0;
-            for (MiniMenuEntry var22 = (MiniMenuEntry) field595.method11563(); var22 != null; var22 = (MiniMenuEntry) field595.method11567()) {
+            for (MiniMenuEntry var22 = (MiniMenuEntry) field595.last(); var22 != null; var22 = (MiniMenuEntry) field595.method11567()) {
                 int var23 = field582 * (field588 - 1 - var21) + var8.field7176 + var2 + var5 + 1;
                 Statics.method15995(var10, var11, var1, var2, var3, var4, var23, var22, var7, var8, Statics.field8718 | 0xFF000000, Statics.field5086 | 0xFF000000);
                 var21++;

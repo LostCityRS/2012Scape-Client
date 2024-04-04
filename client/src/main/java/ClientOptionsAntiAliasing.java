@@ -13,7 +13,7 @@ public class ClientOptionsAntiAliasing extends ClientOption {
 
     @ObfuscatedName("afr.z(I)V")
     public void method15826() {
-        if (this.field6462.field9661.method15776() && !RendererToolkit.method3321(this.field6462.field9661.method15781())) {
+        if (this.field6462.field9661.method15776() && !RendererToolkit.method3321(this.field6462.field9661.getValue())) {
             this.field6461 = 0;
         }
         if (this.field6461 < 0 || this.field6461 > 2) {
@@ -28,12 +28,12 @@ public class ClientOptionsAntiAliasing extends ClientOption {
 
     @ObfuscatedName("afr.n(B)Z")
     public boolean method15828() {
-        return RendererToolkit.method3321(this.field6462.field9661.method15781());
+        return RendererToolkit.method3321(this.field6462.field9661.getValue());
     }
 
     @ObfuscatedName("afr.j(IB)I")
     public int method11387(int arg0) {
-        return RendererToolkit.method3321(this.field6462.field9661.method15781()) ? 1 : 3;
+        return RendererToolkit.method3321(this.field6462.field9661.getValue()) ? 1 : 3;
     }
 
     @ObfuscatedName("afr.s(II)V")

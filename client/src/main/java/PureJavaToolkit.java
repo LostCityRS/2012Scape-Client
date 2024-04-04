@@ -1957,7 +1957,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.co(Lvm;[Lzv;Z)Ll;")
-    public Font method712(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
+    public Font createFont(FontMetrics arg0, PalettedSpriteData[] arg1, boolean arg2) {
         int[] var4 = new int[arg1.length];
         int[] var5 = new int[arg1.length];
         boolean var6 = false;
@@ -2388,8 +2388,8 @@ public class PureJavaToolkit extends RendererToolkit {
 
     @ObfuscatedName("yt.m(IFFFFF)V")
     public void m(int arg0, float arg1, float arg2, float arg3, float arg4, float arg5) {
-        this.field7998 = (int) (arg1 * 65535.0F) * 768;
-        this.field8013 = (int) (arg2 * 65535.0F) * 589824;
+        this.field7998 = (int) (arg1 * 65535.0F);
+        this.field8013 = (int) (arg2 * 65535.0F);
         float var7 = (float) Math.sqrt((double) (arg5 * arg5 + arg3 * arg3 + arg4 * arg4));
         this.field8021 = (int) (arg3 * 65535.0F / var7);
         this.field8009 = (int) (arg4 * 65535.0F / var7);

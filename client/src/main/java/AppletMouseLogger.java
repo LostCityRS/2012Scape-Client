@@ -39,7 +39,7 @@ public class AppletMouseLogger extends MouseLogger {
 
     @ObfuscatedName("ael.al(B)Ladv;")
     public BasicMouseEvent method15630() {
-        return (BasicMouseEvent) client.field9136.method11563();
+        return (BasicMouseEvent) client.field9136.last();
     }
 
     @ObfuscatedName("ael.f(I)Lada;")
