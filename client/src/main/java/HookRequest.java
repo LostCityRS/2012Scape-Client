@@ -25,7 +25,7 @@ public class HookRequest extends Node {
     public Component drop;
 
     @ObfuscatedName("ady.z")
-    public int key;
+    public int keyHook;
 
     @ObfuscatedName("ady.n")
     public int keychar;

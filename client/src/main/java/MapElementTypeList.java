@@ -10,10 +10,10 @@ public class MapElementTypeList {
     public final Js5 field4806;
 
     @ObfuscatedName("ph.c")
-    public WeightedCache field4808 = new WeightedCache(128);
+    public SoftLruHashTable field4808 = new SoftLruHashTable(128);
 
     @ObfuscatedName("ph.m")
-    public WeightedCache field4810 = new WeightedCache(64);
+    public SoftLruHashTable field4810 = new SoftLruHashTable(64);
 
     public MapElementTypeList(ModeGame arg0, Language arg1, Js5 arg2, Js5 arg3) {
         this.field4809 = arg2;
@@ -23,10 +23,10 @@ public class MapElementTypeList {
 
     @ObfuscatedName("ph.u(II)Lpw;")
     public MapElementType method7862(int arg0) {
-        WeightedCache var2 = this.field4808;
+        SoftLruHashTable var2 = this.field4808;
         MapElementType var3;
         synchronized (this.field4808) {
-            var3 = (MapElementType) this.field4808.method7916((long) arg0);
+            var3 = (MapElementType) this.field4808.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -43,7 +43,7 @@ public class MapElementTypeList {
             var8.method7836(new Packet(var6));
         }
         var8.method7853();
-        WeightedCache var9 = this.field4808;
+        SoftLruHashTable var9 = this.field4808;
         synchronized (this.field4808) {
             this.field4808.method7937(var8, (long) arg0);
             return var8;
@@ -52,17 +52,17 @@ public class MapElementTypeList {
 
     @ObfuscatedName("ph.j(III)V")
     public void resizeCache(int arg0, int arg1) {
-        this.field4808 = new WeightedCache(arg0);
-        this.field4810 = new WeightedCache(arg1);
+        this.field4808 = new SoftLruHashTable(arg0);
+        this.field4810 = new SoftLruHashTable(arg1);
     }
 
     @ObfuscatedName("ph.a(I)V")
     public void clearCache() {
-        WeightedCache var1 = this.field4808;
+        SoftLruHashTable var1 = this.field4808;
         synchronized (this.field4808) {
             this.field4808.method7922();
         }
-        WeightedCache var3 = this.field4810;
+        SoftLruHashTable var3 = this.field4810;
         synchronized (this.field4810) {
             this.field4810.method7922();
         }
@@ -70,11 +70,11 @@ public class MapElementTypeList {
 
     @ObfuscatedName("ph.s(IS)V")
     public void method7865(int arg0) {
-        WeightedCache var2 = this.field4808;
+        SoftLruHashTable var2 = this.field4808;
         synchronized (this.field4808) {
             this.field4808.method7921(arg0);
         }
-        WeightedCache var4 = this.field4810;
+        SoftLruHashTable var4 = this.field4810;
         synchronized (this.field4810) {
             this.field4810.method7921(arg0);
         }
@@ -82,13 +82,13 @@ public class MapElementTypeList {
 
     @ObfuscatedName("ph.c(I)V")
     public void method7866() {
-        WeightedCache var1 = this.field4808;
+        SoftLruHashTable var1 = this.field4808;
         synchronized (this.field4808) {
-            this.field4808.method7925();
+            this.field4808.removeSoft();
         }
-        WeightedCache var3 = this.field4810;
+        SoftLruHashTable var3 = this.field4810;
         synchronized (this.field4810) {
-            this.field4810.method7925();
+            this.field4810.removeSoft();
         }
     }
 }

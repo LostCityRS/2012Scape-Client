@@ -32,7 +32,7 @@ public class GlPostProcessing {
     public boolean field1164;
 
     @ObfuscatedName("co.d")
-    public IterableQueue field1157 = new IterableQueue();
+    public LinkedList field1157 = new LinkedList();
 
     @ObfuscatedName("co.z")
     public boolean field1158 = true;
@@ -87,7 +87,7 @@ public class GlPostProcessing {
         this.field1162 = null;
         this.field1163 = null;
         if (!this.field1157.method11585()) {
-            for (Node var1 = this.field1157.head(); var1 != this.field1157.sentinel; var1 = var1.prev) {
+            for (Node var1 = this.field1157.head(); var1 != this.field1157.sentinel; var1 = var1.next) {
                 ((GlPostProcessEffect) var1).method14820();
             }
         }
@@ -200,7 +200,7 @@ public class GlPostProcessing {
         if (this.field1150 != arg2 || this.field1155 != arg3) {
             this.field1150 = arg2;
             this.field1155 = arg3;
-            for (Node var5 = this.field1157.head(); var5 != this.field1157.sentinel; var5 = var5.prev) {
+            for (Node var5 = this.field1157.head(); var5 != this.field1157.sentinel; var5 = var5.next) {
                 ((GlPostProcessEffect) var5).method14821(this.field1150, this.field1155);
             }
             this.field1158 = true;

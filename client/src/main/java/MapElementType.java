@@ -121,7 +121,7 @@ public class MapElementType {
     public int field4775 = -1;
 
     @ObfuscatedName("pw.az")
-    public IterableMap field4804;
+    public HashTable field4804;
 
     @ObfuscatedName("pw.u(Laet;I)V")
     public void method7836(Packet arg0) {
@@ -221,7 +221,7 @@ public class MapElementType {
             int var9 = arg0.g1();
             if (this.field4804 == null) {
                 int var10 = IntMath.method2839(var9);
-                this.field4804 = new IterableMap(var10);
+                this.field4804 = new HashTable(var10);
             }
             for (int var11 = 0; var11 < var9; var11++) {
                 boolean var12 = arg0.g1() == 1;
@@ -287,7 +287,7 @@ public class MapElementType {
     public Sprite method7847(RendererToolkit arg0, boolean arg1) {
         int var3 = arg1 ? this.field4769 : this.field4764;
         int var4 = var3 | arg0.field397 << 29;
-        Sprite var5 = (Sprite) this.field4798.field4810.method7916((long) var4);
+        Sprite var5 = (Sprite) this.field4798.field4810.get((long) var4);
         if (var5 != null) {
             return var5;
         } else if (this.field4798.field4806.method5630(var3)) {
@@ -304,7 +304,7 @@ public class MapElementType {
 
     @ObfuscatedName("pw.m(Lra;B)Lce;")
     public Sprite method7841(RendererToolkit arg0) {
-        Sprite var2 = (Sprite) this.field4798.field4810.method7916((long) (this.field4780 | 0x20000 | arg0.field397 << 29));
+        Sprite var2 = (Sprite) this.field4798.field4810.get((long) (this.field4780 | 0x20000 | arg0.field397 << 29));
         if (var2 != null) {
             return var2;
         }
@@ -322,7 +322,7 @@ public class MapElementType {
         if (this.field4804 == null) {
             return arg1;
         } else {
-            IntNode var3 = (IntNode) this.field4804.getNode((long) arg0);
+            IntNode var3 = (IntNode) this.field4804.get((long) arg0);
             return var3 == null ? arg1 : var3.field9556;
         }
     }
@@ -332,7 +332,7 @@ public class MapElementType {
         if (this.field4804 == null) {
             return arg1;
         } else {
-            ObjectNode var3 = (ObjectNode) this.field4804.getNode((long) arg0);
+            ObjectNode var3 = (ObjectNode) this.field4804.get((long) arg0);
             return var3 == null ? arg1 : (String) var3.value;
         }
     }

@@ -13,7 +13,7 @@ public class VarRelated1 implements VarIntDomain {
     public int[] field661 = new int[Statics.field6667.field3312];
 
     @ObfuscatedName("e.l")
-    public IterableMap field662 = new IterableMap(128);
+    public HashTable field662 = new HashTable(128);
 
     static {
         int var0 = 2;
@@ -26,10 +26,10 @@ public class VarRelated1 implements VarIntDomain {
     @ObfuscatedName("e.u(ZB)I")
     public int method1640(boolean arg0) {
         long var2 = MonotonicTime.get();
-        for (LongNode var4 = (LongNode) (arg0 ? this.field662.method11928() : this.field662.method11929()); var4 != null; var4 = (LongNode) this.field662.method11929()) {
+        for (LongNode var4 = (LongNode) (arg0 ? this.field662.head() : this.field662.next()); var4 != null; var4 = (LongNode) this.field662.next()) {
             if ((var4.field9555 & 0x3FFFFFFFFFFFFFFFL) < var2) {
                 if ((var4.field9555 & 0x4000000000000000L) != 0L) {
-                    int var5 = (int) var4.field4228;
+                    int var5 = (int) var4.key;
                     this.field661[var5] = this.field657[var5];
                     var4.unlink();
                     return var5;
@@ -46,13 +46,13 @@ public class VarRelated1 implements VarIntDomain {
             this.field657[var1] = 0;
             this.field661[var1] = 0;
         }
-        this.field662 = new IterableMap(128);
+        this.field662 = new HashTable(128);
     }
 
     @ObfuscatedName("e.a(III)V")
     public void method1642(int arg0, int arg1) {
         this.field661[arg0] = arg1;
-        LongNode var3 = (LongNode) this.field662.getNode((long) arg0);
+        LongNode var3 = (LongNode) this.field662.get((long) arg0);
         if (var3 == null) {
             LongNode var4 = new LongNode(MonotonicTime.get() + 500L);
             this.field662.put(var4, (long) arg0);
@@ -64,7 +64,7 @@ public class VarRelated1 implements VarIntDomain {
     @ObfuscatedName("e.s(III)V")
     public void method1643(int arg0, int arg1) {
         this.field657[arg0] = arg1;
-        LongNode var3 = (LongNode) this.field662.getNode((long) arg0);
+        LongNode var3 = (LongNode) this.field662.get((long) arg0);
         if (var3 == null) {
             LongNode var4 = new LongNode(4611686018427387905L);
             this.field662.put(var4, (long) arg0);

@@ -16,7 +16,7 @@ public class ObjReference {
 
     @ObfuscatedName("rq.u(I)Lali;")
     public ObjStackEntity method11076() {
-        ObjStackList var1 = (ObjStackList) client.field9088.getNode((long) (this.field5241.level << 28 | this.field5241.z << 14 | this.field5241.x));
+        ObjStackList var1 = (ObjStackList) client.field9088.get((long) (this.field5241.level << 28 | this.field5241.z << 14 | this.field5241.x));
         if (var1 == null) {
             return null;
         }

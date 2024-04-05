@@ -228,7 +228,7 @@ public class ParticleSystem {
                 if (!arg1) {
                     var5.unlink();
                     this.field4932--;
-                    if (var5.method6982()) {
+                    if (var5.isLinked()) {
                         var5.unlink();
                         ParticleSystemRenderer.field4920--;
                     }

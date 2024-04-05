@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class BillboardType {
 
     @ObfuscatedName("ik.a")
-    public static WeightedCache field2660 = new WeightedCache(64);
+    public static SoftLruHashTable field2660 = new SoftLruHashTable(64);
 
     @ObfuscatedName("ik.s")
     public int field2661 = -1;
@@ -34,7 +34,7 @@ public class BillboardType {
 
     @ObfuscatedName("fi.j(II)Lik;")
     public static BillboardType method3666(int arg0) {
-        BillboardType var1 = (BillboardType) field2660.method7916((long) arg0);
+        BillboardType var1 = (BillboardType) field2660.get((long) arg0);
         if (var1 != null) {
             return var1;
         }

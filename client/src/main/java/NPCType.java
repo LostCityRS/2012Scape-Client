@@ -168,7 +168,7 @@ public class NPCType {
     public boolean field7264;
 
     @ObfuscatedName("wq.bt")
-    public IterableMap field7265;
+    public HashTable field7265;
 
     @ObfuscatedName("wq.bg")
     public int field7266 = -1;
@@ -438,7 +438,7 @@ public class NPCType {
             int var30 = arg0.g1();
             if (this.field7265 == null) {
                 int var31 = IntMath.method2839(var30);
-                this.field7265 = new IterableMap(var31);
+                this.field7265 = new HashTable(var31);
             }
             for (int var32 = 0; var32 < var30; var32++) {
                 boolean var33 = arg0.g1() == 1;
@@ -507,10 +507,10 @@ public class NPCType {
         if (arg9 != null) {
             var18 |= arg9.field7203 << 24;
         }
-        WeightedCache var20 = this.field7210.field7285;
+        SoftLruHashTable var20 = this.field7210.field7285;
         Model var21;
         synchronized (this.field7210.field7285) {
-            var21 = (Model) this.field7210.field7285.method7916(var18);
+            var21 = (Model) this.field7210.field7285.get(var18);
         }
         BASType var23 = null;
         if (!arg11 && arg10 != -1) {
@@ -625,7 +625,7 @@ public class NPCType {
                 var21.PA(this.field7225, this.field7226, this.field7255, this.field7228 & 0xFF);
             }
             var21.KA(var14);
-            WeightedCache var46 = this.field7210.field7285;
+            SoftLruHashTable var46 = this.field7210.field7285;
             synchronized (this.field7210.field7285) {
                 this.field7210.field7285.method7937(var21, var18);
             }
@@ -710,10 +710,10 @@ public class NPCType {
             if (arg4 != null) {
                 var8 |= arg4.field7203 << 24;
             }
-            WeightedCache var10 = this.field7210.field7283;
+            SoftLruHashTable var10 = this.field7210.field7283;
             Model var11;
             synchronized (this.field7210.field7283) {
-                var11 = (Model) this.field7210.field7283.method7916(var8);
+                var11 = (Model) this.field7210.field7283.get(var8);
             }
             if (var11 == null || (var11.m() & var7) != var7) {
                 if (var11 != null) {
@@ -796,7 +796,7 @@ public class NPCType {
                     var11.PA(this.field7225, this.field7226, this.field7255, this.field7228 & 0xFF);
                 }
                 var11.KA(var7);
-                WeightedCache var29 = this.field7210.field7283;
+                SoftLruHashTable var29 = this.field7210.field7283;
                 synchronized (this.field7210.field7283) {
                     this.field7210.field7283.method7937(var11, var8);
                 }
@@ -831,7 +831,7 @@ public class NPCType {
         if (this.field7265 == null) {
             return arg1;
         } else {
-            IntNode var3 = (IntNode) this.field7265.getNode((long) arg0);
+            IntNode var3 = (IntNode) this.field7265.get((long) arg0);
             return var3 == null ? arg1 : var3.field9556;
         }
     }
@@ -841,7 +841,7 @@ public class NPCType {
         if (this.field7265 == null) {
             return arg1;
         } else {
-            ObjectNode var3 = (ObjectNode) this.field7265.getNode((long) arg0);
+            ObjectNode var3 = (ObjectNode) this.field7265.get((long) arg0);
             return var3 == null ? arg1 : (String) var3.value;
         }
     }

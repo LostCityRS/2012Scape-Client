@@ -49,16 +49,16 @@ public class Component {
     public static int COLOR_CHOOSER_SAT = 1409;
 
     @ObfuscatedName("ew.r")
-    public static WeightedCache field1757 = new WeightedCache(3000000, 200);
+    public static SoftLruHashTable field1757 = new SoftLruHashTable(3000000, 200);
 
     @ObfuscatedName("ew.g")
-    public static WeightedCache field1768 = new WeightedCache(8);
+    public static SoftLruHashTable field1768 = new SoftLruHashTable(8);
 
     @ObfuscatedName("ew.y")
-    public static WeightedCache field1745 = new WeightedCache(4);
+    public static SoftLruHashTable field1745 = new SoftLruHashTable(4);
 
     @ObfuscatedName("ew.e")
-    public static WeightedCache field1760 = new WeightedCache(50);
+    public static SoftLruHashTable field1760 = new SoftLruHashTable(50);
 
     @ObfuscatedName("ew.af")
     public static boolean field1761 = false;
@@ -472,7 +472,7 @@ public class Component {
     public Object[] field1778;
 
     @ObfuscatedName("ew.fo")
-    public IterableMap field1902;
+    public HashTable field1902;
 
     @ObfuscatedName("ew.fm")
     public int invobject = -1;
@@ -917,7 +917,7 @@ public class Component {
     public Sprite method3151(RendererToolkit arg0) {
         field1761 = false;
         long var2 = ((this.field1803 ? 1L : 0L) << 39) + ((long) this.outline << 36) + ((this.field1804 ? 1L : 0L) << 35) + (long) this.field1797 + ((this.field1770 ? 1L : 0L) << 38) + ((long) this.graphicshadow << 40);
-        Sprite var4 = (Sprite) field1757.method7916(var2);
+        Sprite var4 = (Sprite) field1757.get(var2);
         if (var4 != null) {
             return var4;
         }
@@ -998,7 +998,7 @@ public class Component {
                 arg1 |= 0x8000;
             }
             long var29 = (long) arg0.field397 << 59 | (long) this.field1806 << 54 | (long) this.field1838 << 38 | var12 & 0x3FFFFFFFFFL;
-            Model var31 = (Model) field1760.method7916(var29);
+            Model var31 = (Model) field1760.get(var29);
             if (var31 == null || arg0.method519(var31.m(), arg1) != 0) {
                 if (var31 != null) {
                     arg1 = arg0.method520(arg1, var31.m());
@@ -1103,7 +1103,7 @@ public class Component {
             return null;
         }
         long var3 = ((long) this.field1909 & 0xFFFFL) << 48 | ((long) this.field1785 & 0xFFFFL) << 32 | ((long) this.field1911 & 0xFFFFL) << 16 | (long) this.field1906 & 0xFFFFL;
-        SkyBox var5 = (SkyBox) field1745.method7916(var3);
+        SkyBox var5 = (SkyBox) field1745.get(var3);
         if (var5 == null) {
             var5 = arg0.method7361(this.field1906, this.field1909, this.field1785, this.field1911, arg1);
             field1745.method7937(var5, var3);
@@ -1135,10 +1135,10 @@ public class Component {
 
     @ObfuscatedName("gs.k(B)V")
     public static void method4114() {
-        field1757.method7925();
-        field1760.method7925();
-        field1768.method7925();
-        field1745.method7925();
+        field1757.removeSoft();
+        field1760.removeSoft();
+        field1768.removeSoft();
+        field1745.removeSoft();
     }
 
     @ObfuscatedName("ew.r(I)V")
@@ -1216,7 +1216,7 @@ public class Component {
     @ObfuscatedName("ew.e(Lra;B)Les;")
     public Graphic method3124(RendererToolkit arg0) {
         long var2 = (long) this.id << 32 | (long) this.parentlayer & 0xFFFFFFFFL;
-        Graphic var4 = (Graphic) field1768.method7916(var2);
+        Graphic var4 = (Graphic) field1768.get(var2);
         if (var4 != null) {
             if (this.field1797 != var4.field1731) {
                 field1768.method7917(var2);
@@ -1267,7 +1267,7 @@ public class Component {
         if (this.field1902 == null) {
             return arg1;
         } else {
-            IntNode var3 = (IntNode) this.field1902.getNode((long) arg0);
+            IntNode var3 = (IntNode) this.field1902.get((long) arg0);
             return var3 == null ? arg1 : var3.field9556;
         }
     }
@@ -1277,7 +1277,7 @@ public class Component {
         if (this.field1902 == null) {
             return arg1;
         } else {
-            ObjectNode var3 = (ObjectNode) this.field1902.getNode((long) arg0);
+            ObjectNode var3 = (ObjectNode) this.field1902.get((long) arg0);
             return var3 == null ? arg1 : (String) var3.value;
         }
     }
@@ -1285,11 +1285,11 @@ public class Component {
     @ObfuscatedName("ew.ar(IIB)V")
     public void method3127(int arg0, int arg1) {
         if (this.field1902 == null) {
-            this.field1902 = new IterableMap(16);
+            this.field1902 = new HashTable(16);
             this.field1902.put(new IntNode(arg1), (long) arg0);
             return;
         }
-        IntNode var3 = (IntNode) this.field1902.getNode((long) arg0);
+        IntNode var3 = (IntNode) this.field1902.get((long) arg0);
         if (var3 == null) {
             this.field1902.put(new IntNode(arg1), (long) arg0);
         } else {
@@ -1300,11 +1300,11 @@ public class Component {
     @ObfuscatedName("ew.an(ILjava/lang/String;B)V")
     public void method3128(int arg0, String arg1) {
         if (this.field1902 == null) {
-            this.field1902 = new IterableMap(16);
+            this.field1902 = new HashTable(16);
             this.field1902.put(new ObjectNode(arg1), (long) arg0);
             return;
         }
-        ObjectNode var3 = (ObjectNode) this.field1902.getNode((long) arg0);
+        ObjectNode var3 = (ObjectNode) this.field1902.get((long) arg0);
         if (var3 != null) {
             var3.unlink();
         }
@@ -1314,7 +1314,7 @@ public class Component {
     @ObfuscatedName("ew.ap(IB)V")
     public void method3129(int arg0) {
         if (this.field1902 != null) {
-            Node var2 = this.field1902.getNode((long) arg0);
+            Node var2 = this.field1902.get((long) arg0);
             if (var2 != null) {
                 var2.unlink();
             }

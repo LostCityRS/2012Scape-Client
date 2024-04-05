@@ -13,7 +13,7 @@ public class WorldMapAreaMetadata extends SecondaryNode {
     public String field10372;
 
     @ObfuscatedName("ajo.d")
-    public IterableQueue field10363;
+    public LinkedList field10363;
 
     @ObfuscatedName("ajo.z")
     public int field10365;
@@ -51,7 +51,7 @@ public class WorldMapAreaMetadata extends SecondaryNode {
             this.zoom = 0;
         }
         BuildAreaSize.forId(arg7);
-        this.field10363 = new IterableQueue();
+        this.field10363 = new LinkedList();
     }
 
     @ObfuscatedName("ajo.u(III)Z")

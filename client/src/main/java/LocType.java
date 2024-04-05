@@ -219,7 +219,7 @@ public class LocType {
     public boolean field6542 = false;
 
     @ObfuscatedName("tg.be")
-    public IterableMap field6543;
+    public HashTable field6543;
 
     @ObfuscatedName("tg.bw")
     public boolean field6544 = false;
@@ -509,7 +509,7 @@ public class LocType {
             int var32 = arg0.g1();
             if (this.field6543 == null) {
                 int var33 = IntMath.method2839(var32);
-                this.field6543 = new IterableMap(var33);
+                this.field6543 = new HashTable(var33);
             }
             for (int var34 = 0; var34 < var32; var34++) {
                 boolean var35 = arg0.g1() == 1;
@@ -614,10 +614,10 @@ public class LocType {
         }
         boolean var17 = this.field6494 != 0 && (arg4 != null || arg5 != null);
         boolean var18 = this.field6550 != 0 || this.field6521 != 0 || this.field6498 != 0;
-        WeightedCache var19 = this.field6473.field6559;
+        SoftLruHashTable var19 = this.field6473.field6559;
         Pair var20;
         synchronized (this.field6473.field6559) {
-            var20 = (Pair) this.field6473.field6559.method7916(var14);
+            var20 = (Pair) this.field6473.field6559.get(var14);
         }
         Model var22 = (Model) (var20 == null ? null : var20.field6757);
         HardShadow var23 = null;
@@ -646,7 +646,7 @@ public class LocType {
             }
             var22.KA(var16);
             Pair var25 = new Pair(var22, var23);
-            WeightedCache var26 = this.field6473.field6559;
+            SoftLruHashTable var26 = this.field6473.field6559;
             synchronized (this.field6473.field6559) {
                 this.field6473.field6559.method7937(var25, var14);
             }
@@ -702,10 +702,10 @@ public class LocType {
         if (LocShape.field6572.field6590 == arg2 && arg3 > 3) {
             arg1 |= 0x5;
         }
-        WeightedCache var17 = this.field6473.field6560;
+        SoftLruHashTable var17 = this.field6473.field6560;
         Model var18;
         synchronized (this.field6473.field6560) {
-            var18 = (Model) this.field6473.field6560.method7916(var15);
+            var18 = (Model) this.field6473.field6560.get(var15);
         }
         if (var18 == null || arg0.method519(var18.m(), arg1) != 0) {
             if (var18 != null) {
@@ -715,7 +715,7 @@ public class LocType {
             if (var18 == null) {
                 return null;
             }
-            WeightedCache var20 = this.field6473.field6560;
+            SoftLruHashTable var20 = this.field6473.field6560;
             synchronized (this.field6473.field6560) {
                 this.field6473.field6560.method7937(var18, var15);
             }
@@ -803,9 +803,9 @@ public class LocType {
                 for (int var17 = 0; var17 < var14; var17++) {
                     var15 = var15 * 67783L + (long) var13[var17];
                 }
-                WeightedCache var18 = this.field6473.field6558;
+                SoftLruHashTable var18 = this.field6473.field6558;
                 synchronized (this.field6473.field6558) {
-                    var10 = (Model) this.field6473.field6558.method7916(var15);
+                    var10 = (Model) this.field6473.field6558.get(var15);
                 }
                 if (var10 != null) {
                     if (var6 != var10.c()) {
@@ -848,7 +848,7 @@ public class LocType {
                         }
                     }
                     var10 = arg0.method625(var21, var20, this.field6473.field6551, var6, var7);
-                    WeightedCache var27 = this.field6473.field6558;
+                    SoftLruHashTable var27 = this.field6473.field6558;
                     synchronized (this.field6473.field6558) {
                         this.field6473.field6558.method7937(var10, var15);
                     }
@@ -940,7 +940,7 @@ public class LocType {
         if (this.field6543 == null) {
             return arg1;
         } else {
-            IntNode var3 = (IntNode) this.field6543.getNode((long) arg0);
+            IntNode var3 = (IntNode) this.field6543.get((long) arg0);
             return var3 == null ? arg1 : var3.field9556;
         }
     }
@@ -950,7 +950,7 @@ public class LocType {
         if (this.field6543 == null) {
             return arg1;
         } else {
-            ObjectNode var3 = (ObjectNode) this.field6543.getNode((long) arg0);
+            ObjectNode var3 = (ObjectNode) this.field6543.get((long) arg0);
             return var3 == null ? arg1 : (String) var3.value;
         }
     }

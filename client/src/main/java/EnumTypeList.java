@@ -7,7 +7,7 @@ public class EnumTypeList {
     public final Js5 field6804;
 
     @ObfuscatedName("uq.j")
-    public final WeightedCache field6805 = new WeightedCache(128);
+    public final SoftLruHashTable field6805 = new SoftLruHashTable(128);
 
     public EnumTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field6804 = arg2;
@@ -20,10 +20,10 @@ public class EnumTypeList {
 
     @ObfuscatedName("uq.u(II)Lud;")
     public EnumType method12116(int arg0) {
-        WeightedCache var2 = this.field6805;
+        SoftLruHashTable var2 = this.field6805;
         EnumType var3;
         synchronized (this.field6805) {
-            var3 = (EnumType) this.field6805.method7916((long) arg0);
+            var3 = (EnumType) this.field6805.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -33,7 +33,7 @@ public class EnumTypeList {
         if (var5 != null) {
             var6.method12121(new Packet(var5));
         }
-        WeightedCache var7 = this.field6805;
+        SoftLruHashTable var7 = this.field6805;
         synchronized (this.field6805) {
             this.field6805.method7937(var6, (long) arg0);
             return var6;

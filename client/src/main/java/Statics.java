@@ -1062,7 +1062,7 @@ public class Statics {
     public static SpriteData field5243;
 
     @ObfuscatedName("se.bm")
-    public static IterableQueue elements;
+    public static LinkedList elements;
 
     @ObfuscatedName("s.m")
     public static int[] field541;
@@ -2275,9 +2275,9 @@ public class Statics {
 
     @ObfuscatedName("ws.j(I)V")
     public static void method12620() {
-        DelayedStateChange.field10326.clear();
-        DelayedStateChange.field10317.clear();
-        DelayedStateChange.field10323.clear();
+        DelayedStateChange.changes.clear();
+        DelayedStateChange.eventQueue.clear();
+        DelayedStateChange.changeQueue.clear();
     }
 
     @ObfuscatedName("dd.u(I)Laeg;")
@@ -2365,7 +2365,7 @@ public class Statics {
 
     @ObfuscatedName("y.s(B)V")
     public static void method1638() {
-        ParticleSystemRenderer.field4924 = new IterableMap(8);
+        ParticleSystemRenderer.field4924 = new HashTable(8);
         ParticleSystemRenderer.field4920 = 0;
         Iterator var0 = field4686.iterator();
         while (var0.hasNext()) {
@@ -2736,8 +2736,8 @@ public class Statics {
 
     @ObfuscatedName("ga.l(IS)V")
     public static void method4107(int arg0) {
-        DelayedStateChange var1 = DelayedStateChange.method8304(4, (long) arg0);
-        var1.method16506();
+        DelayedStateChange var1 = DelayedStateChange.create(4, (long) arg0);
+        var1.enqueueEvent();
     }
 
     @ObfuscatedName("kw.s(B)V")
@@ -3316,27 +3316,27 @@ public class Statics {
     }
 
     @ObfuscatedName("aiv.c(Ljava/lang/String;S)Ljava/lang/Class;")
-    public static Class method16251(String arg0) throws ClassNotFoundException {
-        if (arg0.equals("B")) {
+    public static Class classForName(String name) throws ClassNotFoundException {
+        if (name.equals("B")) {
             return Byte.TYPE;
-        } else if (arg0.equals("I")) {
+        } else if (name.equals("I")) {
             return Integer.TYPE;
-        } else if (arg0.equals("S")) {
+        } else if (name.equals("S")) {
             return Short.TYPE;
-        } else if (arg0.equals("J")) {
+        } else if (name.equals("J")) {
             return Long.TYPE;
-        } else if (arg0.equals("Z")) {
+        } else if (name.equals("Z")) {
             return Boolean.TYPE;
-        } else if (arg0.equals("F")) {
+        } else if (name.equals("F")) {
             return Float.TYPE;
-        } else if (arg0.equals("D")) {
+        } else if (name.equals("D")) {
             return Double.TYPE;
-        } else if (arg0.equals("C")) {
+        } else if (name.equals("C")) {
             return Character.TYPE;
-        } else if (arg0.equals("void")) {
+        } else if (name.equals("void")) {
             return Void.TYPE;
         } else {
-            return Class.forName(arg0);
+            return Class.forName(name);
         }
     }
 
@@ -3520,10 +3520,10 @@ public class Statics {
         int var3 = var2.method12418(LocalisedText.field6992.get(language));
         int var6;
         if (MiniMenu.field586) {
-            for (MiniMenuSubMenu var7 = (MiniMenuSubMenu) MiniMenu.submenus.last(); var7 != null; var7 = (MiniMenuSubMenu) MiniMenu.submenus.previous()) {
+            for (MiniMenuSubMenu var7 = (MiniMenuSubMenu) MiniMenu.submenus.head(); var7 != null; var7 = (MiniMenuSubMenu) MiniMenu.submenus.next()) {
                 int var8;
                 if (var7.field10346 == 1) {
-                    var8 = MiniMenu.method5560((MiniMenuEntry) var7.field10345.sentinel.dualPrev, var2);
+                    var8 = MiniMenu.method5560((MiniMenuEntry) var7.field10345.sentinel.secondaryNext, var2);
                 } else {
                     var8 = MiniMenu.method1399(var7, var2);
                 }
@@ -3620,11 +3620,11 @@ public class Statics {
     @ObfuscatedName("pl.z(II)V")
     public static void method7906(int arg0) {
         field3537 = arg0;
-        WeightedCache var1 = PlayerModel.field4998;
+        SoftLruHashTable var1 = PlayerModel.field4998;
         synchronized (PlayerModel.field4998) {
             PlayerModel.field4998.method7922();
         }
-        WeightedCache var3 = PlayerModel.field5012;
+        SoftLruHashTable var3 = PlayerModel.field5012;
         synchronized (PlayerModel.field5012) {
             PlayerModel.field5012.method7922();
         }
@@ -3632,13 +3632,13 @@ public class Statics {
 
     @ObfuscatedName("oz.q(I)V")
     public static void method7573() {
-        WeightedCache var0 = PlayerModel.field5012;
+        SoftLruHashTable var0 = PlayerModel.field5012;
         synchronized (PlayerModel.field5012) {
-            PlayerModel.field5012.method7925();
+            PlayerModel.field5012.removeSoft();
         }
-        WeightedCache var2 = PlayerModel.field4998;
+        SoftLruHashTable var2 = PlayerModel.field4998;
         synchronized (PlayerModel.field4998) {
-            PlayerModel.field4998.method7925();
+            PlayerModel.field4998.removeSoft();
         }
     }
 
@@ -3750,7 +3750,7 @@ public class Statics {
         } else if (arg0.field10332 != -1) {
             var1 = objTypes.get(arg0.field10332).field7057;
         } else if (MiniMenu.method8731(arg0.opcode)) {
-            ObjectNode var2 = (ObjectNode) client.npcs.getNode((long) arg0.field10333);
+            ObjectNode var2 = (ObjectNode) client.npcs.get((long) arg0.field10333);
             if (var2 != null) {
                 NpcEntity var3 = (NpcEntity) var2.value;
                 NPCType var4 = var3.type;
@@ -4124,7 +4124,7 @@ public class Statics {
             }
         }
         if (action == 8) {
-            ObjectNode var28 = (ObjectNode) client.npcs.getNode((long) var6);
+            ObjectNode var28 = (ObjectNode) client.npcs.get((long) var6);
             if (var28 != null) {
                 NpcEntity var29 = (NpcEntity) var28.value;
                 client.crossX = arg1;
@@ -4156,7 +4156,7 @@ public class Statics {
             var31 = ClientProt.OPNPC6;
         }
         if (var31 != null) {
-            ObjectNode var32 = (ObjectNode) client.npcs.getNode((long) var6);
+            ObjectNode var32 = (ObjectNode) client.npcs.get((long) var6);
             if (var32 != null) {
                 NpcEntity var33 = (NpcEntity) var32.value;
                 client.crossX = arg1;
@@ -4278,9 +4278,9 @@ public class Statics {
         field6784.method4842();
         HintArrow.method5713();
         SpotShadowFactory.method6026();
-        client.field9131.method7925();
-        MiniMenu.field620.method7925();
-        ScriptRunner.field5207.method7925();
+        client.field9131.removeSoft();
+        MiniMenu.field620.removeSoft();
+        ScriptRunner.field5207.removeSoft();
     }
 
     @ObfuscatedName("nk.gs(I)V")
@@ -4302,11 +4302,11 @@ public class Statics {
         if (client.state != 1) {
             return;
         }
-        while (ReflectionChecker.hasCheck()) {
+        while (ReflectionCheck.hasCheck()) {
             ClientMessage var1 = ClientMessage.createMessage(ClientProt.REFLECTION_CHECK_REPLY, client.gameConnection.randomOut);
             var1.buf.p1(0);
             int var2 = var1.buf.pos;
-            ReflectionChecker.performCheck(var1.buf);
+            ReflectionCheck.performCheck(var1.buf);
             var1.buf.psize1(var1.buf.pos - var2);
             client.gameConnection.queue(var1);
         }
@@ -4739,7 +4739,7 @@ public class Statics {
         if (arg0.field8624 != -1) {
             PathingEntity var1 = null;
             if (arg0.field8624 < 32768) {
-                ObjectNode var2 = (ObjectNode) client.npcs.getNode((long) arg0.field8624);
+                ObjectNode var2 = (ObjectNode) client.npcs.get((long) arg0.field8624);
                 if (var2 != null) {
                     var1 = (PathingEntity) var2.value;
                 }
@@ -4779,8 +4779,8 @@ public class Statics {
 
     @ObfuscatedName("jm.bq(Lrn;I)V")
     public static final void method4729(ClientScriptState arg0) {
-        IterableMap var1 = arg0.field5218.field10383[arg0.field5227[arg0.field5236]];
-        IntNode var2 = (IntNode) var1.getNode((long) arg0.field5215[--arg0.field5216]);
+        HashTable var1 = arg0.field5218.field10383[arg0.field5227[arg0.field5236]];
+        IntNode var2 = (IntNode) var1.get((long) arg0.field5215[--arg0.field5216]);
         if (var2 != null) {
             arg0.field5236 += var2.field9556;
         }
@@ -5148,7 +5148,7 @@ public class Statics {
                             }
                         }
                     } else {
-                        ObjectNode var4 = (ObjectNode) client.npcs.getNode((long) (var1.field10626 - 1));
+                        ObjectNode var4 = (ObjectNode) client.npcs.get((long) (var1.field10626 - 1));
                         if (var4 != null) {
                             NpcEntity var5 = (NpcEntity) var4.value;
                             Vector3 var6 = var5.getTransform().trans;
@@ -5263,7 +5263,7 @@ public class Statics {
             return;
         }
         Object var10 = null;
-        Sprite var11 = (Sprite) client.field9131.method7916((long) var9);
+        Sprite var11 = (Sprite) client.field9131.get((long) var9);
         if (var11 == null) {
             SpriteData[] var12 = SpriteDataProvider.get(field7387, var9, 0);
             if (var12 == null) {
@@ -6178,8 +6178,8 @@ public class Statics {
 
     @ObfuscatedName("rx.mw(II)V")
     public static void method8587(int arg0) {
-        for (Node var1 = client.field9010.method11928(); var1 != null; var1 = client.field9010.method11929()) {
-            if ((var1.field4228 >> 48 & 0xFFFFL) == (long) arg0) {
+        for (Node var1 = client.field9010.head(); var1 != null; var1 = client.field9010.next()) {
+            if ((var1.key >> 48 & 0xFFFFL) == (long) arg0) {
                 var1.unlink();
             }
         }
@@ -6205,7 +6205,7 @@ public class Statics {
                 }
             } else {
                 int var18 = arg1 - 1;
-                ObjectNode var19 = (ObjectNode) client.npcs.getNode((long) var18);
+                ObjectNode var19 = (ObjectNode) client.npcs.get((long) var18);
                 if (var19 != null) {
                     var16 = (PathingEntity) var19.value;
                 }

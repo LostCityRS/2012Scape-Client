@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class StructType extends SecondaryNode {
 
     @ObfuscatedName("aju.t")
-    public IterableMap field10396;
+    public HashTable field10396;
 
     @ObfuscatedName("aju.u(Laet;I)V")
     public void method16778(Packet arg0) {
@@ -25,7 +25,7 @@ public class StructType extends SecondaryNode {
         int var3 = arg0.g1();
         if (this.field10396 == null) {
             int var4 = IntMath.method2839(var3);
-            this.field10396 = new IterableMap(var4);
+            this.field10396 = new HashTable(var4);
         }
         for (int var5 = 0; var5 < var3; var5++) {
             boolean var6 = arg0.g1() == 1;
@@ -45,7 +45,7 @@ public class StructType extends SecondaryNode {
         if (this.field10396 == null) {
             return arg1;
         } else {
-            IntNode var3 = (IntNode) this.field10396.getNode((long) arg0);
+            IntNode var3 = (IntNode) this.field10396.get((long) arg0);
             return var3 == null ? arg1 : var3.field9556;
         }
     }
@@ -55,7 +55,7 @@ public class StructType extends SecondaryNode {
         if (this.field10396 == null) {
             return arg1;
         } else {
-            ObjectNode var3 = (ObjectNode) this.field10396.getNode((long) arg0);
+            ObjectNode var3 = (ObjectNode) this.field10396.get((long) arg0);
             return var3 == null ? arg1 : (String) var3.value;
         }
     }

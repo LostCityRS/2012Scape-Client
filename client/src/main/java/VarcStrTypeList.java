@@ -10,7 +10,7 @@ public class VarcStrTypeList {
     public int field7322;
 
     public VarcStrTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
-        new WeightedCache(64);
+        new SoftLruHashTable(64);
         this.field7323 = arg2;
         this.field7322 = this.field7323.getGroupCapacity(Js5ConfigGroup.VARCSTR.field1668);
     }

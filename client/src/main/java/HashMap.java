@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class HashMap {
 
     @ObfuscatedName("fn.u")
-    public IterableMap field2134;
+    public HashTable field2134;
 
     @ObfuscatedName("fn.j")
     public HashMapValue[] field2133;
@@ -16,7 +16,7 @@ public class HashMap {
         int var3;
         for (var3 = 1; var3 < arg0; var3 += var3) {
         }
-        this.field2134 = new IterableMap(var3);
+        this.field2134 = new HashTable(var3);
         this.field2133 = new HashMapValue[var3];
         this.field2132 = arg1;
     }
@@ -29,7 +29,7 @@ public class HashMap {
     @ObfuscatedName("fn.j(Ljava/lang/String;I)Lacn;")
     public HashMapValue method3550(String arg0) {
         long var2 = this.field2132.method3209(arg0);
-        for (HashMapValue var4 = (HashMapValue) this.field2134.getNode(var2); var4 != null; var4 = (HashMapValue) this.field2134.method11924()) {
+        for (HashMapValue var4 = (HashMapValue) this.field2134.get(var2); var4 != null; var4 = (HashMapValue) this.field2134.nextWithKey()) {
             if (var4.field9424.equals(arg0)) {
                 return var4;
             }
@@ -57,11 +57,11 @@ public class HashMap {
             int var5;
             for (var5 = this.field2133.length; var5 <= arg0; var5 += var5) {
             }
-            this.field2134 = new IterableMap(var5);
+            this.field2134 = new HashTable(var5);
             for (int var6 = 0; var6 < this.field2133.length; var6++) {
                 HashMapValue var7 = this.field2133[var6];
                 if (var7 != null) {
-                    this.field2134.put(var7, var7.field4228);
+                    this.field2134.put(var7, var7.key);
                 }
             }
             HashMapValue[] var8 = new HashMapValue[var5];

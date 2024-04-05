@@ -14,7 +14,7 @@ public class ja extends RendererToolkit implements ua {
     public ba field437;
 
     @ObfuscatedName("ja.ay")
-    public IterableQueue field438 = new IterableQueue();
+    public LinkedList field438 = new LinkedList();
 
     @ObfuscatedName("ja.af")
     public int field453 = 4096;

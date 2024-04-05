@@ -58,7 +58,7 @@ public class GlFloorModelRelated extends Node {
     public GpuPacket field9339;
 
     @ObfuscatedName("acq.h")
-    public IterableMap field9340;
+    public HashTable field9340;
 
     public GlFloorModelRelated(GlToolkit arg0, GlFloorModel arg1, Light arg2, int[] arg3) {
         this.field9330 = arg0;
@@ -118,7 +118,7 @@ public class GlFloorModelRelated extends Node {
         if (this.field9336 > 0) {
             this.field9338 = new Packet(this.field9336 * 2);
             this.field9339 = new GpuPacket(this.field9336 * 16);
-            this.field9340 = new IterableMap(IntMath.method2839(this.field9336));
+            this.field9340 = new HashTable(IntMath.method2839(this.field9336));
             int var21 = 0;
             int var22 = 0;
             for (int var23 = this.field9327; var23 <= this.field9328; var23++) {
@@ -213,7 +213,7 @@ public class GlFloorModelRelated extends Node {
         int var11 = this.field9333.getFineHeight(var9, var10);
         if ((arg4 & 0x7F) == 0 || (arg5 & 0x7F) == 0) {
             var7 = ((long) var10 & 0xFFFFL) << 16 | (long) var9 & 0xFFFFL;
-            FloorModelNode var12 = (FloorModelNode) this.field9340.getNode(var7);
+            FloorModelNode var12 = (FloorModelNode) this.field9340.get(var7);
             if (var12 != null) {
                 this.method14850(var12.field9551);
                 return;

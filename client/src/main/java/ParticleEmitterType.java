@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class ParticleEmitterType {
 
     @ObfuscatedName("iu.c")
-    public static WeightedCache field2676 = new WeightedCache(64);
+    public static SoftLruHashTable field2676 = new SoftLruHashTable(64);
 
     @ObfuscatedName("iu.m")
     public short field2677;
@@ -211,7 +211,7 @@ public class ParticleEmitterType {
 
     @ObfuscatedName("df.j(IB)Liu;")
     public static ParticleEmitterType method2841(int arg0) {
-        ParticleEmitterType var1 = (ParticleEmitterType) field2676.method7916((long) arg0);
+        ParticleEmitterType var1 = (ParticleEmitterType) field2676.get((long) arg0);
         if (var1 != null) {
             return var1;
         }

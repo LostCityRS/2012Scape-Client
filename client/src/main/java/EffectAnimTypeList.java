@@ -10,10 +10,10 @@ public class EffectAnimTypeList {
     public final Js5 field5244;
 
     @ObfuscatedName("rv.a")
-    public final WeightedCache field5247 = new WeightedCache(64);
+    public final SoftLruHashTable field5247 = new SoftLruHashTable(64);
 
     @ObfuscatedName("rv.s")
-    public final WeightedCache field5245 = new WeightedCache(60);
+    public final SoftLruHashTable field5245 = new SoftLruHashTable(60);
 
     @ObfuscatedName("rv.c")
     public int field5248;
@@ -28,10 +28,10 @@ public class EffectAnimTypeList {
 
     @ObfuscatedName("rv.u(II)Lse;")
     public EffectAnimType method11082(int arg0) {
-        WeightedCache var2 = this.field5247;
+        SoftLruHashTable var2 = this.field5247;
         EffectAnimType var3;
         synchronized (this.field5247) {
-            var3 = (EffectAnimType) this.field5247.method7916((long) arg0);
+            var3 = (EffectAnimType) this.field5247.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -47,7 +47,7 @@ public class EffectAnimTypeList {
         if (var6 != null) {
             var8.method11100(new Packet(var6));
         }
-        WeightedCache var9 = this.field5247;
+        SoftLruHashTable var9 = this.field5247;
         synchronized (this.field5247) {
             this.field5247.method7937(var8, (long) arg0);
             return var8;
@@ -57,7 +57,7 @@ public class EffectAnimTypeList {
     @ObfuscatedName("rv.j(II)V")
     public void method11084(int arg0) {
         this.field5248 = arg0;
-        WeightedCache var2 = this.field5245;
+        SoftLruHashTable var2 = this.field5245;
         synchronized (this.field5245) {
             this.field5245.method7922();
         }
@@ -65,11 +65,11 @@ public class EffectAnimTypeList {
 
     @ObfuscatedName("rv.a(I)V")
     public void method11088() {
-        WeightedCache var1 = this.field5247;
+        SoftLruHashTable var1 = this.field5247;
         synchronized (this.field5247) {
             this.field5247.method7922();
         }
-        WeightedCache var3 = this.field5245;
+        SoftLruHashTable var3 = this.field5245;
         synchronized (this.field5245) {
             this.field5245.method7922();
         }
@@ -77,11 +77,11 @@ public class EffectAnimTypeList {
 
     @ObfuscatedName("rv.s(II)V")
     public void method11085(int arg0) {
-        WeightedCache var2 = this.field5247;
+        SoftLruHashTable var2 = this.field5247;
         synchronized (this.field5247) {
             this.field5247.method7921(arg0);
         }
-        WeightedCache var4 = this.field5245;
+        SoftLruHashTable var4 = this.field5245;
         synchronized (this.field5245) {
             this.field5245.method7921(arg0);
         }
@@ -89,13 +89,13 @@ public class EffectAnimTypeList {
 
     @ObfuscatedName("rv.c(I)V")
     public void method11087() {
-        WeightedCache var1 = this.field5247;
+        SoftLruHashTable var1 = this.field5247;
         synchronized (this.field5247) {
-            this.field5247.method7925();
+            this.field5247.removeSoft();
         }
-        WeightedCache var3 = this.field5245;
+        SoftLruHashTable var3 = this.field5245;
         synchronized (this.field5245) {
-            this.field5245.method7925();
+            this.field5245.removeSoft();
         }
     }
 }

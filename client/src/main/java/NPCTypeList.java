@@ -19,13 +19,13 @@ public class NPCTypeList {
     public final Js5 field7280;
 
     @ObfuscatedName("wi.m")
-    public final WeightedCache field7281 = new WeightedCache(64);
+    public final SoftLruHashTable field7281 = new SoftLruHashTable(64);
 
     @ObfuscatedName("wi.t")
-    public final WeightedCache field7285 = new WeightedCache(50);
+    public final SoftLruHashTable field7285 = new SoftLruHashTable(50);
 
     @ObfuscatedName("wi.l")
-    public final WeightedCache field7283 = new WeightedCache(5);
+    public final SoftLruHashTable field7283 = new SoftLruHashTable(5);
 
     @ObfuscatedName("wi.f")
     public int field7276;
@@ -53,10 +53,10 @@ public class NPCTypeList {
 
     @ObfuscatedName("wi.u(IB)Lwq;")
     public NPCType method12565(int arg0) {
-        WeightedCache var2 = this.field7281;
+        SoftLruHashTable var2 = this.field7281;
         NPCType var3;
         synchronized (this.field7281) {
-            var3 = (NPCType) this.field7281.method7916((long) arg0);
+            var3 = (NPCType) this.field7281.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -74,7 +74,7 @@ public class NPCTypeList {
             var8.method12507(new Packet(var6));
         }
         var8.method12509();
-        WeightedCache var9 = this.field7281;
+        SoftLruHashTable var9 = this.field7281;
         synchronized (this.field7281) {
             this.field7281.method7937(var8, (long) arg0);
             return var8;
@@ -92,11 +92,11 @@ public class NPCTypeList {
     @ObfuscatedName("wi.a(II)V")
     public void method12557(int arg0) {
         this.field7276 = arg0;
-        WeightedCache var2 = this.field7285;
+        SoftLruHashTable var2 = this.field7285;
         synchronized (this.field7285) {
             this.field7285.method7922();
         }
-        WeightedCache var4 = this.field7283;
+        SoftLruHashTable var4 = this.field7283;
         synchronized (this.field7283) {
             this.field7283.method7922();
         }
@@ -104,15 +104,15 @@ public class NPCTypeList {
 
     @ObfuscatedName("wi.s(B)V")
     public void method12558() {
-        WeightedCache var1 = this.field7281;
+        SoftLruHashTable var1 = this.field7281;
         synchronized (this.field7281) {
             this.field7281.method7922();
         }
-        WeightedCache var3 = this.field7285;
+        SoftLruHashTable var3 = this.field7285;
         synchronized (this.field7285) {
             this.field7285.method7922();
         }
-        WeightedCache var5 = this.field7283;
+        SoftLruHashTable var5 = this.field7283;
         synchronized (this.field7283) {
             this.field7283.method7922();
         }
@@ -120,11 +120,11 @@ public class NPCTypeList {
 
     @ObfuscatedName("wi.c(S)V")
     public void method12559() {
-        WeightedCache var1 = this.field7285;
+        SoftLruHashTable var1 = this.field7285;
         synchronized (this.field7285) {
             this.field7285.method7922();
         }
-        WeightedCache var3 = this.field7283;
+        SoftLruHashTable var3 = this.field7283;
         synchronized (this.field7283) {
             this.field7283.method7922();
         }
@@ -132,15 +132,15 @@ public class NPCTypeList {
 
     @ObfuscatedName("wi.m(II)V")
     public void method12556(int arg0) {
-        WeightedCache var2 = this.field7281;
+        SoftLruHashTable var2 = this.field7281;
         synchronized (this.field7281) {
             this.field7281.method7921(arg0);
         }
-        WeightedCache var4 = this.field7285;
+        SoftLruHashTable var4 = this.field7285;
         synchronized (this.field7285) {
             this.field7285.method7921(arg0);
         }
-        WeightedCache var6 = this.field7283;
+        SoftLruHashTable var6 = this.field7283;
         synchronized (this.field7283) {
             this.field7283.method7921(arg0);
         }
@@ -148,17 +148,17 @@ public class NPCTypeList {
 
     @ObfuscatedName("wi.t(I)V")
     public void method12555() {
-        WeightedCache var1 = this.field7281;
+        SoftLruHashTable var1 = this.field7281;
         synchronized (this.field7281) {
-            this.field7281.method7925();
+            this.field7281.removeSoft();
         }
-        WeightedCache var3 = this.field7285;
+        SoftLruHashTable var3 = this.field7285;
         synchronized (this.field7285) {
-            this.field7285.method7925();
+            this.field7285.removeSoft();
         }
-        WeightedCache var5 = this.field7283;
+        SoftLruHashTable var5 = this.field7283;
         synchronized (this.field7283) {
-            this.field7283.method7925();
+            this.field7283.removeSoft();
         }
     }
 }

@@ -43,10 +43,10 @@ public final class ChangeLocationRequest extends Node {
     public boolean field9290 = false;
 
     @ObfuscatedName("ach.b")
-    public static IterableQueue field9278 = new IterableQueue();
+    public static LinkedList field9278 = new LinkedList();
 
     @ObfuscatedName("ach.x")
-    public static IterableQueue field9292 = new IterableQueue();
+    public static LinkedList field9292 = new LinkedList();
 
     @ObfuscatedName("ach.i")
     public static long field9279 = 1L;

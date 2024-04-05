@@ -70,7 +70,7 @@ public class SeqType {
     public int[] field6337;
 
     @ObfuscatedName("so.r")
-    public IterableMap field6322;
+    public HashTable field6322;
 
     @ObfuscatedName("so.g")
     public int field6339 = -1;
@@ -178,7 +178,7 @@ public class SeqType {
                 int var19 = arg0.g1();
                 if (this.field6322 == null) {
                     int var20 = IntMath.method2839(var19);
-                    this.field6322 = new IterableMap(var20);
+                    this.field6322 = new HashTable(var20);
                 }
                 for (int var21 = 0; var21 < var19; var21++) {
                     boolean var22 = arg0.g1() == 1;
@@ -235,7 +235,7 @@ public class SeqType {
         if (this.field6322 == null) {
             return arg1;
         } else {
-            IntNode var3 = (IntNode) this.field6322.getNode((long) arg0);
+            IntNode var3 = (IntNode) this.field6322.get((long) arg0);
             return var3 == null ? arg1 : var3.field9556;
         }
     }
@@ -245,7 +245,7 @@ public class SeqType {
         if (this.field6322 == null) {
             return arg1;
         } else {
-            ObjectNode var3 = (ObjectNode) this.field6322.getNode((long) arg0);
+            ObjectNode var3 = (ObjectNode) this.field6322.get((long) arg0);
             return var3 == null ? arg1 : (String) var3.value;
         }
     }

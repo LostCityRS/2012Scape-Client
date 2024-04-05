@@ -6,7 +6,7 @@ import java.util.Iterator;
 public abstract class MouseLogger {
 
     @ObfuscatedName("qs.u")
-    public final IterableQueue field5050 = new IterableQueue();
+    public final LinkedList field5050 = new LinkedList();
 
     @ObfuscatedName("qs.j")
     public long field5047 = -1L;

@@ -22,7 +22,7 @@ public class DxToolkit extends GpuToolkit {
     public final D3DPRESENT_PARAMETERS field9976;
 
     @ObfuscatedName("ahh.ga")
-    public IterableQueue field9977 = new IterableQueue();
+    public LinkedList field9977 = new LinkedList();
 
     @ObfuscatedName("ahh.gs")
     public int field9978 = 0;

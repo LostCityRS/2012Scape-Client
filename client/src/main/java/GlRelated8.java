@@ -10,7 +10,7 @@ public class GlRelated8 {
     public final MaterialTypeList field1173;
 
     @ObfuscatedName("cm.a")
-    public final WeightedCache field1172 = new WeightedCache(6291456, 256);
+    public final SoftLruHashTable field1172 = new SoftLruHashTable(6291456, 256);
 
     public GlRelated8(GlToolkit arg0, MaterialTypeList arg1) {
         this.field1174 = arg0;
@@ -24,7 +24,7 @@ public class GlRelated8 {
 
     @ObfuscatedName("cm.j(II)Lxp;")
     public GlRelated2 method2324(int arg0, int arg1) {
-        GlRelated2 var3 = (GlRelated2) this.field1172.method7916((long) arg0);
+        GlRelated2 var3 = (GlRelated2) this.field1172.get((long) arg0);
         if (var3 != null) {
             return var3;
         } else if (this.method2322(arg0, arg1)) {

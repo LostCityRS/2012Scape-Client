@@ -168,7 +168,7 @@ public class AudioRenderer {
                 } else {
                     var2 = true;
                 }
-            } else if (!var1.field4188.method6982()) {
+            } else if (!var1.field4188.isLinked()) {
                 var2 = true;
             }
             if (var2) {

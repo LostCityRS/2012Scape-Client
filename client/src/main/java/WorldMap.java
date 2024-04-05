@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class WorldMap {
 
     @ObfuscatedName("om.f")
-    public static IterableMap field4272 = new IterableMap(16);
+    public static HashTable field4272 = new HashTable(16);
 
     @ObfuscatedName("om.d")
     public static int field4273 = (int) (Math.random() * 11.0D) - 5;
@@ -22,7 +22,7 @@ public class WorldMap {
     public static byte[] field4271 = new byte[1];
 
     @ObfuscatedName("om.i")
-    public static IterableQueue field4301 = new IterableQueue();
+    public static LinkedList field4301 = new LinkedList();
 
     public WorldMap() throws Throwable {
         throw new Error();
@@ -75,12 +75,12 @@ public class WorldMap {
 
     @ObfuscatedName("om.s(I)V")
     public static void method7122(int arg0) {
-        Statics.currentArea = (WorldMapAreaMetadata) field4272.getNode((long) arg0);
+        Statics.currentArea = (WorldMapAreaMetadata) field4272.get((long) arg0);
     }
 
     @ObfuscatedName("om.c(II)Lajo;")
     public static WorldMapAreaMetadata method7084(int arg0, int arg1) {
-        for (WorldMapAreaMetadata var2 = (WorldMapAreaMetadata) field4272.method11928(); var2 != null; var2 = (WorldMapAreaMetadata) field4272.method11929()) {
+        for (WorldMapAreaMetadata var2 = (WorldMapAreaMetadata) field4272.head(); var2 != null; var2 = (WorldMapAreaMetadata) field4272.next()) {
             if (var2.field10361 && var2.method16717(arg0, arg1)) {
                 return var2;
             }
@@ -90,13 +90,13 @@ public class WorldMap {
 
     @ObfuscatedName("om.m(I)Lajo;")
     public static WorldMapAreaMetadata method7117(int arg0) {
-        return (WorldMapAreaMetadata) field4272.getNode((long) arg0);
+        return (WorldMapAreaMetadata) field4272.get((long) arg0);
     }
 
     @ObfuscatedName("om.t(II)Ltv;")
-    public static DualIterableQueue getAreaListByCoord(int arg0, int arg1) {
-        DualIterableQueue var2 = new DualIterableQueue();
-        for (WorldMapAreaMetadata var3 = (WorldMapAreaMetadata) field4272.method11928(); var3 != null; var3 = (WorldMapAreaMetadata) field4272.method11929()) {
+    public static SecondaryLinkedList getAreaListByCoord(int arg0, int arg1) {
+        SecondaryLinkedList var2 = new SecondaryLinkedList();
+        for (WorldMapAreaMetadata var3 = (WorldMapAreaMetadata) field4272.head(); var3 != null; var3 = (WorldMapAreaMetadata) field4272.next()) {
             if (var3.field10361 && var3.method16717(arg0, arg1)) {
                 var2.addFirst(var3);
             }
@@ -820,7 +820,7 @@ public class WorldMap {
     }
 
     @ObfuscatedName("om.v(Lra;)Ltq;")
-    public static IterableQueue method7099(RendererToolkit arg0) {
+    public static LinkedList method7099(RendererToolkit arg0) {
         int var1 = Statics.field4298 - Statics.field4296;
         int var2 = Statics.field4297 - Statics.field4302;
         int var3 = (Statics.field4270 - Statics.field4300 << 16) / var1;
@@ -829,7 +829,7 @@ public class WorldMap {
     }
 
     @ObfuscatedName("om.k(Lra;IIII)Ltq;")
-    public static IterableQueue method7100(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4) {
+    public static LinkedList method7100(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4) {
         for (WorldMapElement var5 = (WorldMapElement) field4301.head(); var5 != null; var5 = (WorldMapElement) field4301.next()) {
             method7101(arg0, var5, arg1, arg2, arg3, arg4);
         }

@@ -65,7 +65,7 @@ public class GpuFloorModel extends FloorModel {
     public GpuFloorModelHardShadows field7740;
 
     @ObfuscatedName("yn.ay")
-    public IterableQueue field7741 = new IterableQueue();
+    public LinkedList field7741 = new LinkedList();
 
     @ObfuscatedName("yn.af")
     public Node[] field7742;
@@ -98,7 +98,7 @@ public class GpuFloorModel extends FloorModel {
     public float[][] field7731;
 
     @ObfuscatedName("yn.ax")
-    public IterableMap field7749;
+    public HashTable field7749;
 
     @ObfuscatedName("yn.aw")
     public Node[] field7753;
@@ -170,7 +170,7 @@ public class GpuFloorModel extends FloorModel {
         }
         this.field7744--;
         this.field7730++;
-        this.field7749 = new IterableMap(128);
+        this.field7749 = new HashTable(128);
         if ((this.field7752 & 0x10) != 0) {
             this.field7740 = new GpuFloorModelHardShadows(this.field7722, this);
         }
@@ -212,7 +212,7 @@ public class GpuFloorModel extends FloorModel {
             }
             long var18 = (long) arg10.field1474 << 48 | (long) arg10.scale << 42 | (long) arg10.colour << 28 | (long) (var17 << 14) | (long) var16;
             Node var20;
-            for (var20 = this.field7749.getNode(var18); var20 != null; var20 = this.field7749.method11924()) {
+            for (var20 = this.field7749.get(var18); var20 != null; var20 = this.field7749.nextWithKey()) {
                 GpuFloorModelRelated1 var21 = (GpuFloorModelRelated1) var20;
                 if (var21.field9438 == var16 && (float) var17 == var21.field9441 && var21.field9440.method2711(arg10)) {
                     break;
@@ -306,8 +306,8 @@ public class GpuFloorModel extends FloorModel {
                 var1[var2][var3] = (byte) ((this.field7728[var2][var3] >> 1) + (this.field7728[var2][var3 + 1] >> 3) + (this.field7728[var2][var3 - 1] >> 2) + (this.field7728[var2 - 1][var3] >> 2) + (this.field7728[var2 + 1][var3] >> 3));
             }
         }
-        this.field7753 = new Node[this.field7749.length()];
-        this.field7749.method11933(this.field7753);
+        this.field7753 = new Node[this.field7749.size()];
+        this.field7749.toArray(this.field7753);
         for (int var4 = 0; var4 < this.field7753.length; var4++) {
             ((GpuFloorModelRelated1) this.field7753[var4]).method14996(this.field7746);
         }
@@ -326,7 +326,7 @@ public class GpuFloorModel extends FloorModel {
         if (var6 < 1) {
             var6 = 1;
         }
-        IterableMap var7 = new IterableMap(var6);
+        HashTable var7 = new HashTable(var6);
         GpuFloorModelRelated1[] var8 = new GpuFloorModelRelated1[this.field7720];
         for (int var9 = 0; var9 < this.field387; var9++) {
             for (int var10 = 0; var10 < this.field386; var10++) {
@@ -359,13 +359,13 @@ public class GpuFloorModel extends FloorModel {
                         }
                         if (var22 != null) {
                             var22.method14998(var13, var14, var16);
-                            if (var24 == null || var22.field4228 < var24.field4228) {
+                            if (var24 == null || var22.key < var24.key) {
                                 var24 = var22;
                             }
                         }
                         if (var23 != null) {
                             var23.method14998(var13, var14, var16);
-                            if (var24 == null || var23.field4228 < var24.field4228) {
+                            if (var24 == null || var23.key < var24.key) {
                                 var24 = var23;
                             }
                         }
@@ -397,7 +397,7 @@ public class GpuFloorModel extends FloorModel {
         long[] var27 = new long[this.field7754];
         for (int var28 = 0; var28 < this.field7754; var28++) {
             GpuFloorModelRelated1 var29 = (GpuFloorModelRelated1) this.field7753[var28];
-            var27[var28] = var29.field4228;
+            var27[var28] = var29.key;
             this.field7742[var28] = var29;
         }
         Algorithms.method11178(var27, this.field7742);
@@ -454,7 +454,7 @@ public class GpuFloorModel extends FloorModel {
     }
 
     @ObfuscatedName("yn.y(II[[B[Ladd;Luo;[Ladd;)V")
-    public void method12982(int arg0, int arg1, byte[][] arg2, GpuFloorModelRelated1[] arg3, IterableMap arg4, GpuFloorModelRelated1[] arg5) {
+    public void method12982(int arg0, int arg1, byte[][] arg2, GpuFloorModelRelated1[] arg3, HashTable arg4, GpuFloorModelRelated1[] arg5) {
         if (this.field7733[arg0][arg1] == null) {
             return;
         }
@@ -565,7 +565,7 @@ public class GpuFloorModel extends FloorModel {
             }
             Node var66 = null;
             if ((var36 & this.field7745 - 1) == 0 && (var37 & this.field7745 - 1) == 0) {
-                var66 = arg4.getNode(var43);
+                var66 = arg4.get(var43);
             }
             int var81;
             if (var66 == null) {
@@ -647,7 +647,7 @@ public class GpuFloorModel extends FloorModel {
             } else {
                 var34[var35] = ((FloorModelNode) var66).field9551;
                 var81 = var34[var35] & 0xFFFF;
-                if (var40 != -1 && var7[var35].field4228 < arg5[var81].field4228) {
+                if (var40 != -1 && var7[var35].key < arg5[var81].key) {
                     arg5[var81] = var7[var35];
                 }
             }

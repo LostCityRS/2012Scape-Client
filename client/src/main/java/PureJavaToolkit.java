@@ -108,10 +108,10 @@ public class PureJavaToolkit extends RendererToolkit {
     public PureJavaToolkitContext[] field8031;
 
     @ObfuscatedName("yt.bg")
-    public WeightedCache field8032;
+    public SoftLruHashTable field8032;
 
     @ObfuscatedName("yt.bl")
-    public WeightedCache field8033;
+    public SoftLruHashTable field8033;
 
     @ObfuscatedName("yt.bk")
     public Sprite field8034;
@@ -145,10 +145,10 @@ public class PureJavaToolkit extends RendererToolkit {
         this.field8019 = new float[6][4];
         this.field8028 = 1.0F;
         this.field8006 = 0.0F;
-        this.field8033 = new WeightedCache(16);
+        this.field8033 = new SoftLruHashTable(16);
         this.field8035 = -1;
         try {
-            this.field8032 = new WeightedCache(6291456, 256);
+            this.field8032 = new SoftLruHashTable(6291456, 256);
             this.field8029 = new Matrix4x3();
             this.field8016 = new Matrix4x4();
             this.field8017 = new Matrix4x4();
@@ -224,10 +224,10 @@ public class PureJavaToolkit extends RendererToolkit {
 
     @ObfuscatedName("yt.n(I)[I")
     public int[] method13241(int arg0) {
-        WeightedCache var2 = this.field8032;
+        SoftLruHashTable var2 = this.field8032;
         PureJavaTexture var3;
         synchronized (this.field8032) {
-            var3 = (PureJavaTexture) this.field8032.method7916((long) arg0 | Long.MIN_VALUE);
+            var3 = (PureJavaTexture) this.field8032.get((long) arg0 | Long.MIN_VALUE);
             if (var3 == null) {
                 Material var4 = this.field400.method889(arg0);
                 int var5 = var4.field1252;
@@ -2105,7 +2105,7 @@ public class PureJavaToolkit extends RendererToolkit {
             return;
         }
         if (this.field8035 != var9) {
-            Sprite var12 = (Sprite) this.field8033.method7916((long) var9);
+            Sprite var12 = (Sprite) this.field8033.get((long) var9);
             if (var12 == null) {
                 int[] var13 = this.method13241(var9);
                 if (var13 == null) {
@@ -2131,7 +2131,7 @@ public class PureJavaToolkit extends RendererToolkit {
             Material var13 = this.field400.method889(arg8);
             if (!var13.field1250) {
                 if (this.field8035 != arg8) {
-                    Sprite var14 = (Sprite) this.field8033.method7916((long) arg8);
+                    Sprite var14 = (Sprite) this.field8033.get((long) arg8);
                     if (var14 == null) {
                         int[] var15 = this.method13241(arg8);
                         if (var15 == null) {

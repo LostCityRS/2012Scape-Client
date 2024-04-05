@@ -42,17 +42,17 @@ public class ClientJs5TcpClient extends Js5TcpClient {
             return this.method5764() == 0 && this.method5739() == 0;
         }
         try {
-            for (Js5NetRequest var5 = (Js5NetRequest) this.field3594.last(); var5 != null; var5 = (Js5NetRequest) this.field3594.previous()) {
+            for (Js5NetRequest var5 = (Js5NetRequest) this.field3594.head(); var5 != null; var5 = (Js5NetRequest) this.field3594.next()) {
                 this.field3597.pos = 0;
                 this.field3597.p1(1);
-                this.field3597.p5(var5.field9554);
+                this.field3597.p5(var5.secondaryKey);
                 this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
                 this.field3595.addFirst(var5);
             }
-            for (Js5NetRequest var6 = (Js5NetRequest) this.field3605.last(); var6 != null; var6 = (Js5NetRequest) this.field3605.previous()) {
+            for (Js5NetRequest var6 = (Js5NetRequest) this.field3605.head(); var6 != null; var6 = (Js5NetRequest) this.field3605.next()) {
                 this.field3597.pos = 0;
                 this.field3597.p1(0);
-                this.field3597.p5(var6.field9554);
+                this.field3597.p5(var6.secondaryKey);
                 this.field8882.method7193(this.field3597.data, 0, this.field3597.data.length);
                 this.field3596.addFirst(var6);
             }
@@ -96,10 +96,10 @@ public class ClientJs5TcpClient extends Js5TcpClient {
                             Object var20 = null;
                             Js5NetRequest var21;
                             if (var17) {
-                                for (var21 = (Js5NetRequest) this.field3596.last(); var21 != null && var21.field9554 != var18; var21 = (Js5NetRequest) this.field3596.previous()) {
+                                for (var21 = (Js5NetRequest) this.field3596.head(); var21 != null && var21.secondaryKey != var18; var21 = (Js5NetRequest) this.field3596.next()) {
                                 }
                             } else {
-                                for (var21 = (Js5NetRequest) this.field3595.last(); var21 != null && var21.field9554 != var18; var21 = (Js5NetRequest) this.field3595.previous()) {
+                                for (var21 = (Js5NetRequest) this.field3595.head(); var21 != null && var21.secondaryKey != var18; var21 = (Js5NetRequest) this.field3595.next()) {
                                 }
                             }
                             if (var21 == null) {
@@ -139,7 +139,7 @@ public class ClientJs5TcpClient extends Js5TcpClient {
                     this.field3592.field10599.pos += var24;
                     this.field3592.field10600 += var24;
                     if (this.field3592.field10599.pos == var23) {
-                        this.field3592.dualRemove();
+                        this.field3592.unlinkSecondary();
                         this.field3592.field10352 = false;
                         this.field3592 = null;
                     } else if (this.field3592.field10600 == 512) {
@@ -175,10 +175,10 @@ public class ClientJs5TcpClient extends Js5TcpClient {
         this.field3590.pos = 0;
         this.field3592 = null;
         while (true) {
-            Js5NetRequest var4 = (Js5NetRequest) this.field3595.method11729();
+            Js5NetRequest var4 = (Js5NetRequest) this.field3595.removeHead();
             if (var4 == null) {
                 while (true) {
-                    Js5NetRequest var5 = (Js5NetRequest) this.field3596.method11729();
+                    Js5NetRequest var5 = (Js5NetRequest) this.field3596.removeHead();
                     if (var5 == null) {
                         if (this.field3601 != 0) {
                             try {

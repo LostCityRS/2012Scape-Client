@@ -87,7 +87,7 @@ public abstract class Camera {
     public float field2236 = 1.0F;
 
     @ObfuscatedName("fe.ar")
-    public IterableMap field2225 = new IterableMap(8);
+    public HashTable field2225 = new HashTable(8);
 
     public Camera(CameraRelated arg0, CameraTrackableProvider arg1) {
         this.field2227 = arg0;
@@ -336,7 +336,7 @@ public abstract class Camera {
 
     @ObfuscatedName("fe.r(II)V")
     public void removeEffect(int arg0) {
-        CameraEffect var2 = (CameraEffect) this.field2225.getNode((long) arg0);
+        CameraEffect var2 = (CameraEffect) this.field2225.get((long) arg0);
         if (var2 != null) {
             var2.unlink();
         }
@@ -344,7 +344,7 @@ public abstract class Camera {
 
     @ObfuscatedName("fe.g(IB)Laja;")
     public CameraEffect method3711(int arg0) {
-        return (CameraEffect) this.field2225.getNode((long) arg0);
+        return (CameraEffect) this.field2225.get((long) arg0);
     }
 
     @ObfuscatedName("fe.y(I)V")

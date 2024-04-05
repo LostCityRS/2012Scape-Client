@@ -25,7 +25,7 @@ public class ParticleSystemRenderer {
     public static int field4926 = 0;
 
     @ObfuscatedName("qr.d")
-    public static IterableMap field4924 = new IterableMap(8);
+    public static HashTable field4924 = new HashTable(8);
 
     @ObfuscatedName("qr.z")
     public static int field4920 = 0;

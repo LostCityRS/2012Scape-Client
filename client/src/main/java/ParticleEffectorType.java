@@ -10,10 +10,10 @@ public class ParticleEffectorType {
     public static int field2764 = 0;
 
     @ObfuscatedName("ic.n")
-    public static IterableMap field2745 = new IterableMap(16);
+    public static HashTable field2745 = new HashTable(16);
 
     @ObfuscatedName("ic.q")
-    public static WeightedCache field2758 = new WeightedCache(64);
+    public static SoftLruHashTable field2758 = new SoftLruHashTable(64);
 
     @ObfuscatedName("ic.p")
     public int field2748;
@@ -64,7 +64,7 @@ public class ParticleEffectorType {
 
     @ObfuscatedName("eg.j(IS)Lic;")
     public static ParticleEffectorType method2938(int arg0) {
-        ParticleEffectorType var1 = (ParticleEffectorType) field2758.method7916((long) arg0);
+        ParticleEffectorType var1 = (ParticleEffectorType) field2758.get((long) arg0);
         if (var1 != null) {
             return var1;
         }
@@ -75,7 +75,7 @@ public class ParticleEffectorType {
             var3.method4679(new Packet(var2));
         }
         var3.method4675();
-        if (var3.field2760 == 2 && field2745.getNode((long) arg0) == null) {
+        if (var3.field2760 == 2 && field2745.get((long) arg0) == null) {
             field2745.put(new IntNode(field2764), (long) arg0);
             field2756[++field2764 - 1] = var3;
         }

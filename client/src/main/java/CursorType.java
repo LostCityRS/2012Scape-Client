@@ -38,7 +38,7 @@ public class CursorType {
 
     @ObfuscatedName("vv.a(B)Lds;")
     public synchronized SpriteData method12363() {
-        SpriteData var1 = (SpriteData) this.field7162.field7168.method7916((long) this.field7164);
+        SpriteData var1 = (SpriteData) this.field7162.field7168.get((long) this.field7164);
         if (var1 != null) {
             return var1;
         }

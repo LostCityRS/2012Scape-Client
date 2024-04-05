@@ -6,7 +6,7 @@ import java.util.Iterator;
 public class IterableQueueIterator implements Iterator {
 
     @ObfuscatedName("th.u")
-    public IterableQueue field6654;
+    public LinkedList field6654;
 
     @ObfuscatedName("th.j")
     public Node field6657;
@@ -14,22 +14,22 @@ public class IterableQueueIterator implements Iterator {
     @ObfuscatedName("th.a")
     public Node field6656 = null;
 
-    public IterableQueueIterator(IterableQueue arg0) {
+    public IterableQueueIterator(LinkedList arg0) {
         this.field6654 = arg0;
-        this.field6657 = this.field6654.sentinel.prev;
+        this.field6657 = this.field6654.sentinel.next;
         this.field6656 = null;
     }
 
     @ObfuscatedName("th.f(Ltq;I)V")
-    public void method11691(IterableQueue arg0) {
+    public void method11691(LinkedList arg0) {
         this.field6654 = arg0;
-        this.field6657 = this.field6654.sentinel.prev;
+        this.field6657 = this.field6654.sentinel.next;
         this.field6656 = null;
     }
 
     @ObfuscatedName("th.d(I)V")
     public void method11692() {
-        this.field6657 = this.field6654.sentinel.prev;
+        this.field6657 = this.field6654.sentinel.next;
         this.field6656 = null;
     }
 
@@ -45,7 +45,7 @@ public class IterableQueueIterator implements Iterator {
             var1 = null;
             this.field6657 = null;
         } else {
-            this.field6657 = var1.prev;
+            this.field6657 = var1.next;
         }
         this.field6656 = var1;
         return var1;

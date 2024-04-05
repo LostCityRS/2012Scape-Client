@@ -4,10 +4,10 @@ import deob.ObfuscatedName;
 public class ClientInvCache extends Node {
 
     @ObfuscatedName("acx.s")
-    public static final IterableMap field9273 = new IterableMap(32);
+    public static final HashTable field9273 = new HashTable(32);
 
     @ObfuscatedName("acx.c")
-    public static final WeightedCache field9274 = new WeightedCache(10);
+    public static final SoftLruHashTable field9274 = new SoftLruHashTable(10);
 
     @ObfuscatedName("acx.t")
     public int[] field9276 = new int[]{-1};
@@ -99,13 +99,13 @@ public class ClientInvCache extends Node {
     @ObfuscatedName("th.m(IZB)Lacx;")
     public static ClientInvCache method11708(int arg0, boolean arg1) {
         long var2 = (long) (arg0 | (arg1 ? Integer.MIN_VALUE : 0));
-        return (ClientInvCache) field9273.getNode(var2);
+        return (ClientInvCache) field9273.get(var2);
     }
 
     @ObfuscatedName("acp.t(IIIIZI)V")
     public static void method14728(int arg0, int arg1, int arg2, int arg3, boolean arg4) {
         long var5 = (long) (arg0 | (arg4 ? Integer.MIN_VALUE : 0));
-        ClientInvCache var7 = (ClientInvCache) field9273.getNode(var5);
+        ClientInvCache var7 = (ClientInvCache) field9273.get(var5);
         if (var7 == null) {
             var7 = new ClientInvCache();
             field9273.put(var7, var5);
@@ -197,7 +197,7 @@ public class ClientInvCache extends Node {
         }
         long var13 = this.method14760(var10, arg3, arg5 == null ? null : arg5.field5000, arg4);
         if (field9274 != null) {
-            var7 = (Model) field9274.method7916(var13);
+            var7 = (Model) field9274.get(var13);
         }
         if (var7 == null || arg0.method519(var7.m(), var8) != 0) {
             if (var7 != null) {

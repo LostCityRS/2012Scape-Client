@@ -10,7 +10,7 @@ public class VarClientTypeList {
     public int field7160;
 
     @ObfuscatedName("vb.a")
-    public final WeightedCache field7159 = new WeightedCache(64);
+    public final SoftLruHashTable field7159 = new SoftLruHashTable(64);
 
     public VarClientTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field7161 = arg2;
@@ -19,10 +19,10 @@ public class VarClientTypeList {
 
     @ObfuscatedName("vb.u(IS)Lvr;")
     public VarClientType method12359(int arg0) {
-        WeightedCache var2 = this.field7159;
+        SoftLruHashTable var2 = this.field7159;
         VarClientType var3;
         synchronized (this.field7159) {
-            var3 = (VarClientType) this.field7159.method7916((long) arg0);
+            var3 = (VarClientType) this.field7159.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -36,7 +36,7 @@ public class VarClientTypeList {
         if (var6 != null) {
             var8.method12349(new Packet(var6));
         }
-        WeightedCache var9 = this.field7159;
+        SoftLruHashTable var9 = this.field7159;
         synchronized (this.field7159) {
             this.field7159.method7937(var8, (long) arg0);
             return var8;

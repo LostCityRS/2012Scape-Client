@@ -815,7 +815,7 @@ public class World {
                 }
             }
             if (var9) {
-                client.field8966 = client.npcs.length();
+                client.field8966 = client.npcs.size();
                 int var18 = 0;
                 Iterator var19 = client.npcs.iterator();
                 while (var19.hasNext()) {
@@ -860,11 +860,11 @@ public class World {
                 var29.unlink();
             }
         }
-        for (ObjStackList var30 = (ObjStackList) client.field9088.method11928(); var30 != null; var30 = (ObjStackList) client.field9088.method11929()) {
-            int var31 = (int) (var30.field4228 >> 28 & 0x3L);
-            int var32 = (int) (var30.field4228 & 0x3FFFL);
+        for (ObjStackList var30 = (ObjStackList) client.field9088.head(); var30 != null; var30 = (ObjStackList) client.field9088.next()) {
+            int var31 = (int) (var30.key >> 28 & 0x3L);
+            int var32 = (int) (var30.key & 0x3FFFL);
             int var33 = var32 - this.field3795.x;
-            int var34 = (int) (var30.field4228 >> 14 & 0x3FFFL);
+            int var34 = (int) (var30.key >> 14 & 0x3FFFL);
             int var35 = var34 - this.field3795.z;
             if (this.scene != null) {
                 if (var33 >= 0 && var35 >= 0 && var33 < this.mapSizeX && var35 < this.mapSizeZ && var33 < this.scene.field4495 && var35 < this.scene.field4496) {
@@ -1430,7 +1430,7 @@ public class World {
                     int var12 = (this.field3820[var2] >> 8) * 64 - this.field3795.x + var10;
                     int var13 = (this.field3820[var2] & 0xFF) * 64 - this.field3795.z + var11;
                     NPCType var14 = Statics.field3774.method12565(var5.g2());
-                    ObjectNode var15 = (ObjectNode) client.npcs.getNode((long) var7);
+                    ObjectNode var15 = (ObjectNode) client.npcs.get((long) var7);
                     if (var15 == null && (var14.field7220 & 0x1) > 0 && var12 >= 0 && var14.field7213 + var12 < this.mapSizeX && var13 >= 0 && var14.field7213 + var13 < this.mapSizeZ) {
                         NpcEntity var16 = new NpcEntity(this.scene);
                         var16.localPlayerIndex = var7;

@@ -58,7 +58,7 @@ public class GlFloorModel extends FloorModel {
     public GlFloorModelRelated2 field7704;
 
     @ObfuscatedName("yj.y")
-    public IterableQueue field7705 = new IterableQueue();
+    public LinkedList field7705 = new LinkedList();
 
     @ObfuscatedName("yj.e")
     public Node[] field7703;
@@ -97,7 +97,7 @@ public class GlFloorModel extends FloorModel {
     public float[][] field7717;
 
     @ObfuscatedName("yj.ax")
-    public IterableMap field7697;
+    public HashTable field7697;
 
     @ObfuscatedName("yj.aw")
     public static final float[] field7719 = new float[16];
@@ -131,7 +131,7 @@ public class GlFloorModel extends FloorModel {
                 this.field7717[var10][var9] = (float) var12 * var13;
             }
         }
-        this.field7697 = new IterableMap(128);
+        this.field7697 = new HashTable(128);
         if ((this.field7692 & 0x10) != 0) {
             this.field7704 = new GlFloorModelRelated2(this.field7688, this);
         }
@@ -173,7 +173,7 @@ public class GlFloorModel extends FloorModel {
             }
             long var18 = (long) arg10.field1474 << 48 | (long) arg10.scale << 42 | (long) arg10.colour << 28 | (long) (var17 << 14) | (long) var16;
             Node var20;
-            for (var20 = this.field7697.getNode(var18); var20 != null; var20 = this.field7697.method11924()) {
+            for (var20 = this.field7697.get(var18); var20 != null; var20 = this.field7697.nextWithKey()) {
                 GlFloorModelRelated1 var21 = (GlFloorModelRelated1) var20;
                 if (var21.field9343 == var16 && (float) var17 == var21.field9341 && var21.field9345.method2711(arg10)) {
                     break;
@@ -269,8 +269,8 @@ public class GlFloorModel extends FloorModel {
                     var1[var2][var3] = (byte) ((this.field7700[var2][var3] >> 1) + (this.field7700[var2][var3 + 1] >> 3) + (this.field7700[var2][var3 - 1] >> 2) + (this.field7700[var2 - 1][var3] >> 2) + (this.field7700[var2 + 1][var3] >> 3));
                 }
             }
-            this.field7703 = new Node[this.field7697.length()];
-            this.field7697.method11933(this.field7703);
+            this.field7703 = new Node[this.field7697.size()];
+            this.field7697.toArray(this.field7703);
             for (int var4 = 0; var4 < this.field7703.length; var4++) {
                 ((GlFloorModelRelated1) this.field7703[var4]).method14874(this.field7712);
             }
@@ -288,7 +288,7 @@ public class GlFloorModel extends FloorModel {
             if (var9 < 1) {
                 var9 = 1;
             }
-            IterableMap var10 = new IterableMap(var9);
+            HashTable var10 = new HashTable(var9);
             GlFloorModelRelated1[] var11 = new GlFloorModelRelated1[this.field7713];
             for (int var12 = 0; var12 < this.field387; var12++) {
                 for (int var13 = 0; var13 < this.field386; var13++) {
@@ -400,7 +400,7 @@ public class GlFloorModel extends FloorModel {
                             }
                             Node var73 = null;
                             if ((var43 & this.field7695 - 1) == 0 && (var44 & this.field7695 - 1) == 0) {
-                                var73 = var10.getNode(var50);
+                                var73 = var10.get(var50);
                             }
                             int var84;
                             if (var73 == null) {
@@ -488,7 +488,7 @@ public class GlFloorModel extends FloorModel {
                             } else {
                                 var41[var42] = ((FloorModelNode) var73).field9551;
                                 var84 = var41[var42] & 0xFFFF;
-                                if (var47 != -1 && var14[var42].field4228 < var8[var84].field4228) {
+                                if (var47 != -1 && var14[var42].key < var8[var84].key) {
                                     var8[var84] = var14[var42];
                                 }
                             }
@@ -526,13 +526,13 @@ public class GlFloorModel extends FloorModel {
                             }
                             if (var97 != null) {
                                 var97.method14866(var88, var89, var91);
-                                if (var99 == null || var97.field4228 < var99.field4228) {
+                                if (var99 == null || var97.key < var99.key) {
                                     var99 = var97;
                                 }
                             }
                             if (var98 != null) {
                                 var98.method14866(var88, var89, var91);
-                                if (var99 == null || var98.field4228 < var99.field4228) {
+                                if (var99 == null || var98.key < var99.key) {
                                     var99 = var98;
                                 }
                             }
@@ -574,7 +574,7 @@ public class GlFloorModel extends FloorModel {
             long[] var101 = new long[this.field7703.length];
             for (int var102 = 0; var102 < this.field7703.length; var102++) {
                 GlFloorModelRelated1 var103 = (GlFloorModelRelated1) this.field7703[var102];
-                var101[var102] = var103.field4228;
+                var101[var102] = var103.key;
                 var103.method14861(this.field7709);
             }
             Algorithms.method11178(var101, this.field7703);

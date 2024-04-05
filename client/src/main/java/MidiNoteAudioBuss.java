@@ -7,7 +7,7 @@ public class MidiNoteAudioBuss extends AudioBuss {
     public MidiAudioBuss parent;
 
     @ObfuscatedName("aij.f")
-    public IterableQueue notes = new IterableQueue();
+    public LinkedList notes = new LinkedList();
 
     @ObfuscatedName("aij.d")
     public MixerAudioBuss mixer = new MixerAudioBuss();

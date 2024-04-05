@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class Js5DiskCache implements Runnable {
 
     @ObfuscatedName("ly.u")
-    public DualIterableQueue field3588 = new DualIterableQueue();
+    public SecondaryLinkedList field3588 = new SecondaryLinkedList();
 
     @ObfuscatedName("ly.j")
     public int field3587 = 0;
@@ -25,19 +25,19 @@ public class Js5DiskCache implements Runnable {
     public Js5WorkerRequest method5730(int arg0, DiskStore arg1) {
         Js5WorkerRequest var3 = new Js5WorkerRequest();
         var3.field10593 = 1;
-        DualIterableQueue var4 = this.field3588;
+        SecondaryLinkedList var4 = this.field3588;
         synchronized (this.field3588) {
-            Js5WorkerRequest var5 = (Js5WorkerRequest) this.field3588.last();
+            Js5WorkerRequest var5 = (Js5WorkerRequest) this.field3588.head();
             while (true) {
                 if (var5 == null) {
                     break;
                 }
-                if (var5.field9554 == (long) arg0 && var5.field10595 == arg1 && var5.field10593 == 2) {
+                if (var5.secondaryKey == (long) arg0 && var5.field10595 == arg1 && var5.field10593 == 2) {
                     var3.field10597 = var5.field10597;
                     var3.field10352 = false;
                     return var3;
                 }
-                var5 = (Js5WorkerRequest) this.field3588.previous();
+                var5 = (Js5WorkerRequest) this.field3588.next();
             }
         }
         var3.field10597 = arg1.method7168(arg0);
@@ -50,7 +50,7 @@ public class Js5DiskCache implements Runnable {
     public Js5WorkerRequest method5720(int arg0, byte[] arg1, DiskStore arg2) {
         Js5WorkerRequest var4 = new Js5WorkerRequest();
         var4.field10593 = 2;
-        var4.field9554 = arg0;
+        var4.secondaryKey = arg0;
         var4.field10597 = arg1;
         var4.field10595 = arg2;
         var4.field10354 = false;
@@ -62,7 +62,7 @@ public class Js5DiskCache implements Runnable {
     public Js5WorkerRequest method5721(int arg0, DiskStore arg1) {
         Js5WorkerRequest var3 = new Js5WorkerRequest();
         var3.field10593 = 3;
-        var3.field9554 = arg0;
+        var3.secondaryKey = arg0;
         var3.field10595 = arg1;
         var3.field10354 = false;
         this.method5722(var3);
@@ -71,7 +71,7 @@ public class Js5DiskCache implements Runnable {
 
     @ObfuscatedName("ly.s(Lalx;I)V")
     public void method5722(Js5WorkerRequest arg0) {
-        DualIterableQueue var2 = this.field3588;
+        SecondaryLinkedList var2 = this.field3588;
         synchronized (this.field3588) {
             this.field3588.addFirst(arg0);
             this.field3587++;
@@ -81,10 +81,10 @@ public class Js5DiskCache implements Runnable {
 
     public void run() {
         while (!this.field3589) {
-            DualIterableQueue var1 = this.field3588;
+            SecondaryLinkedList var1 = this.field3588;
             Js5WorkerRequest var2;
             synchronized (this.field3588) {
-                var2 = (Js5WorkerRequest) this.field3588.method11729();
+                var2 = (Js5WorkerRequest) this.field3588.removeHead();
                 if (var2 == null) {
                     try {
                         this.field3588.wait();
@@ -96,9 +96,9 @@ public class Js5DiskCache implements Runnable {
             }
             try {
                 if (var2.field10593 == 2) {
-                    var2.field10595.method7169((int) var2.field9554, var2.field10597, var2.field10597.length);
+                    var2.field10595.method7169((int) var2.secondaryKey, var2.field10597, var2.field10597.length);
                 } else if (var2.field10593 == 3) {
-                    var2.field10597 = var2.field10595.method7168((int) var2.field9554);
+                    var2.field10597 = var2.field10595.method7168((int) var2.secondaryKey);
                 }
             } catch (Exception var6) {
                 JagException.method16252(null, var6);
@@ -110,7 +110,7 @@ public class Js5DiskCache implements Runnable {
     @ObfuscatedName("ly.c(I)V")
     public void method5723() {
         this.field3589 = true;
-        DualIterableQueue var1 = this.field3588;
+        SecondaryLinkedList var1 = this.field3588;
         synchronized (this.field3588) {
             this.field3588.notifyAll();
         }

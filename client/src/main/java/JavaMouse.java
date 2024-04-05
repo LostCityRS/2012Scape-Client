@@ -15,7 +15,7 @@ public class JavaMouse extends Mouse implements MouseListener, MouseMotionListen
     public int field9783;
 
     @ObfuscatedName("aeo.t")
-    public IterableQueue field9784 = new IterableQueue();
+    public LinkedList field9784 = new LinkedList();
 
     @ObfuscatedName("aeo.l")
     public int field9785;
@@ -27,7 +27,7 @@ public class JavaMouse extends Mouse implements MouseListener, MouseMotionListen
     public int field9789;
 
     @ObfuscatedName("aeo.z")
-    public IterableQueue field9782 = new IterableQueue();
+    public LinkedList field9782 = new LinkedList();
 
     @ObfuscatedName("aeo.n")
     public java.awt.Component field9778;
@@ -93,7 +93,7 @@ public class JavaMouse extends Mouse implements MouseListener, MouseMotionListen
         this.field9787 = this.field9785;
         this.field9781 = this.field9786;
         this.field9783 = this.field9789;
-        IterableQueue var1 = this.field9784;
+        LinkedList var1 = this.field9784;
         this.field9784 = this.field9782;
         this.field9782 = var1;
         this.field9782.clearBridged();

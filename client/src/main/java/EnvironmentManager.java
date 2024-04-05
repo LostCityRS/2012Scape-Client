@@ -46,10 +46,10 @@ public class EnvironmentManager {
     public final Vector3 field4980 = new Vector3(-50.0F, -60.0F, -50.0F);
 
     @ObfuscatedName("qp.y")
-    public final WeightedCache field4984 = new WeightedCache(8);
+    public final SoftLruHashTable field4984 = new SoftLruHashTable(8);
 
     @ObfuscatedName("qp.e")
-    public final WeightedCache field4985 = new WeightedCache(8);
+    public final SoftLruHashTable field4985 = new SoftLruHashTable(8);
 
     public EnvironmentManager(RendererToolkit arg0, int arg1, int arg2) {
         this.field4973 = arg0;
@@ -112,7 +112,7 @@ public class EnvironmentManager {
     @ObfuscatedName("qp.c(IIIIIII)Ldj;")
     public EnvironmentSampler method8185(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
         long var7 = (long) arg0 * 67481L ^ (long) arg1 * 97549L ^ (long) arg2 * 475427L ^ (long) arg3 * 986053L ^ (long) arg4 * 32147369L ^ (long) arg5 * 76724863L;
-        EnvironmentSampler var9 = (EnvironmentSampler) this.field4984.method7916(var7);
+        EnvironmentSampler var9 = (EnvironmentSampler) this.field4984.get(var7);
         if (var9 == null) {
             EnvironmentSampler var10 = this.field4973.method788(arg0, arg1, arg2, arg3, arg4, arg5);
             this.field4984.method7937(var10, var7);
@@ -125,7 +125,7 @@ public class EnvironmentManager {
     @ObfuscatedName("qp.m(IIIII)Lmq;")
     public SkyBox method8193(int arg0, int arg1, int arg2, int arg3) {
         long var5 = ((long) arg1 & 0xFFFFL) << 48 | ((long) arg2 & 0xFFFFL) << 32 | ((long) arg3 & 0xFFFFL) << 16 | (long) arg0 & 0xFFFFL;
-        SkyBox var7 = (SkyBox) this.field4985.method7916(var5);
+        SkyBox var7 = (SkyBox) this.field4985.get(var5);
         if (var7 == null) {
             var7 = Statics.field4678.method7361(arg0, arg1, arg2, arg3, Statics.field6360);
             this.field4985.method7937(var7, var5);

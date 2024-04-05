@@ -10,7 +10,7 @@ public class GpuRelated13 {
     public final MaterialTypeList field2446;
 
     @ObfuscatedName("hm.a")
-    public WeightedCache field2448 = new WeightedCache(6291456, 256);
+    public SoftLruHashTable field2448 = new SoftLruHashTable(6291456, 256);
 
     public GpuRelated13(GpuToolkit arg0, MaterialTypeList arg1) {
         this.field2447 = arg0;
@@ -25,7 +25,7 @@ public class GpuRelated13 {
     @ObfuscatedName("hm.j(II)Lhc;")
     public GpuTexture method4349(int arg0, int arg1) {
         long var3 = (long) (arg1 << 16 | arg0);
-        GpuTexture var5 = (GpuTexture) this.field2448.method7916(var3);
+        GpuTexture var5 = (GpuTexture) this.field2448.get(var3);
         if (var5 != null) {
             return var5;
         } else if (this.method4350(arg0, arg1)) {

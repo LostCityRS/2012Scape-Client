@@ -174,10 +174,10 @@ public class EffectAnimType {
         if (this.field5259 != 128 || this.field5265 != 0) {
             var11 |= 0x5;
         }
-        WeightedCache var13 = this.field5256.field5245;
+        SoftLruHashTable var13 = this.field5256.field5245;
         Model var14;
         synchronized (this.field5256.field5245) {
-            var14 = (Model) this.field5256.field5245.method7916((long) (this.field5250 |= arg0.field397 << 29));
+            var14 = (Model) this.field5256.field5245.get((long) (this.field5250 |= arg0.field397 << 29));
         }
         if (var14 == null || arg0.method519(var14.m(), var11) != 0) {
             if (var14 != null) {
@@ -209,7 +209,7 @@ public class EffectAnimType {
                 }
             }
             var14.KA(var11);
-            WeightedCache var20 = this.field5256.field5245;
+            SoftLruHashTable var20 = this.field5256.field5245;
             synchronized (this.field5256.field5245) {
                 this.field5256.field5245.method7937(var14, (long) (this.field5250 |= arg0.field397 << 29));
             }

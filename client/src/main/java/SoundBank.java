@@ -10,13 +10,13 @@ public class SoundBank {
     public Js5 vorbisArchive;
 
     @ObfuscatedName("md.a")
-    public IterableMap vorbisCache = new IterableMap(256);
+    public HashTable vorbisCache = new HashTable(256);
 
     @ObfuscatedName("md.s")
-    public IterableMap vorbisPacketCache = new IterableMap(256);
+    public HashTable vorbisPacketCache = new HashTable(256);
 
     @ObfuscatedName("md.c")
-    public IterableMap synthPacketCache = new IterableMap(256);
+    public HashTable synthPacketCache = new HashTable(256);
 
     public SoundBank(Js5 arg0, Js5 arg1) {
         this.synthArchive = arg0;
@@ -28,7 +28,7 @@ public class SoundBank {
         int var4 = arg1 ^ (arg0 << 4 & 0xFFFF | arg0 >>> 12);
         int var5 = var4 | arg0 << 16;
         long var6 = (long) var5;
-        SynthSoundPacket var8 = (SynthSoundPacket) this.synthPacketCache.getNode(var6);
+        SynthSoundPacket var8 = (SynthSoundPacket) this.synthPacketCache.get(var6);
         if (var8 != null) {
             return var8;
         } else if (arg2 == null || arg2[0] > 0) {
@@ -52,11 +52,11 @@ public class SoundBank {
         int var4 = arg1 ^ (arg0 << 4 & 0xFFFF | arg0 >>> 12);
         int var5 = var4 | arg0 << 16;
         long var6 = (long) var5 ^ 0x100000000L;
-        VorbisSoundPacket var8 = (VorbisSoundPacket) this.vorbisPacketCache.getNode(var6);
+        VorbisSoundPacket var8 = (VorbisSoundPacket) this.vorbisPacketCache.get(var6);
         if (var8 != null) {
             return var8;
         } else if (arg2 == null || arg2[0] > 0) {
-            VorbisSound var9 = (VorbisSound) this.vorbisCache.getNode(var6);
+            VorbisSound var9 = (VorbisSound) this.vorbisCache.get(var6);
             if (var9 == null) {
                 var9 = VorbisSound.method15065(this.vorbisArchive, arg0, arg1);
                 if (var9 == null) {

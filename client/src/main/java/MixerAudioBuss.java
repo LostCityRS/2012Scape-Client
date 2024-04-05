@@ -4,10 +4,10 @@ import deob.ObfuscatedName;
 public class MixerAudioBuss extends AudioBuss {
 
     @ObfuscatedName("aiu.l")
-    public IterableQueue field10280 = new IterableQueue();
+    public LinkedList field10280 = new LinkedList();
 
     @ObfuscatedName("aiu.f")
-    public IterableQueue field10279 = new IterableQueue();
+    public LinkedList field10279 = new LinkedList();
 
     @ObfuscatedName("aiu.d")
     public int field10278 = 0;
@@ -40,17 +40,17 @@ public class MixerAudioBuss extends AudioBuss {
     @ObfuscatedName("aiu.as(Lnz;Lade;)V")
     public void method16448(Node arg0, AudioBuss_Sub1Related arg1) {
         while (this.field10279.sentinel != arg0 && ((AudioBuss_Sub1Related) arg0).field9476 <= arg1.field9476) {
-            arg0 = arg0.prev;
+            arg0 = arg0.next;
         }
-        IterableQueue.method2546(arg1, arg0);
-        this.field10281 = ((AudioBuss_Sub1Related) this.field10279.sentinel.prev).field9476;
+        LinkedList.method2546(arg1, arg0);
+        this.field10281 = ((AudioBuss_Sub1Related) this.field10279.sentinel.next).field9476;
     }
 
     @ObfuscatedName("aiu.ai(Lade;)V")
     public void method16447(AudioBuss_Sub1Related arg0) {
         arg0.unlink();
         arg0.method15053();
-        Node var2 = this.field10279.sentinel.prev;
+        Node var2 = this.field10279.sentinel.next;
         if (this.field10279.sentinel == var2) {
             this.field10281 = -1;
         } else {
@@ -99,7 +99,7 @@ public class MixerAudioBuss extends AudioBuss {
                     this.method16447(var5);
                 } else {
                     var5.field9476 = var7;
-                    this.method16448(var5.prev, var5);
+                    this.method16448(var5.next, var5);
                 }
             }
         } while (arg2 != 0);
@@ -137,7 +137,7 @@ public class MixerAudioBuss extends AudioBuss {
                     this.method16447(var3);
                 } else {
                     var3.field9476 = var5;
-                    this.method16448(var3.prev, var3);
+                    this.method16448(var3.next, var3);
                 }
             }
         } while (arg0 != 0);

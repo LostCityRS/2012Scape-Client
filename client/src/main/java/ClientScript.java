@@ -40,7 +40,7 @@ public class ClientScript extends SecondaryNode {
     public int field10376;
 
     @ObfuscatedName("ajg.i")
-    public IterableMap[] field10383;
+    public HashTable[] field10383;
 
     public ClientScript(Packet arg0) {
         int var2 = this.method16736(arg0);
@@ -77,10 +77,10 @@ public class ClientScript extends SecondaryNode {
         this.field10376 = arg0.g2();
         int var5 = arg0.g1();
         if (var5 > 0) {
-            this.field10383 = new IterableMap[var5];
+            this.field10383 = new HashTable[var5];
             for (int var6 = 0; var6 < var5; var6++) {
                 int var7 = arg0.g2();
-                IterableMap var8 = new IterableMap(IntMath.method2839(var7));
+                HashTable var8 = new HashTable(IntMath.method2839(var7));
                 this.field10383[var6] = var8;
                 while (var7-- > 0) {
                     int var9 = arg0.g4s();

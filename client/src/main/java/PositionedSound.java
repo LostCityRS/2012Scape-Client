@@ -7,13 +7,13 @@ public class PositionedSound extends Node {
     public int mindelay;
 
     @ObfuscatedName("adg.m")
-    public static IterableQueue field9514 = new IterableQueue();
+    public static LinkedList field9514 = new LinkedList();
 
     @ObfuscatedName("adg.t")
-    public static IterableQueue field9528 = new IterableQueue();
+    public static LinkedList field9528 = new LinkedList();
 
     @ObfuscatedName("adg.l")
-    public static IterableMap field9516 = new IterableMap(16);
+    public static HashTable field9516 = new HashTable(16);
 
     @ObfuscatedName("adg.f")
     public int level;
@@ -119,7 +119,7 @@ public class PositionedSound extends Node {
             }
             var2.unlink();
         }
-        for (PositionedSound var3 = (PositionedSound) field9516.method11928(); var3 != null; var3 = (PositionedSound) field9516.method11929()) {
+        for (PositionedSound var3 = (PositionedSound) field9516.head(); var3 != null; var3 = (PositionedSound) field9516.next()) {
             if (var3.primaryStream != null) {
                 Statics.soundStream.removeSubStream(var3.primaryStream);
                 var3.primaryStream = null;
@@ -317,7 +317,7 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("ot.t(Lahg;S)V")
     public static void method7377(PlayerEntity arg0) {
-        PositionedSound var1 = (PositionedSound) field9516.getNode((long) arg0.localPlayerIndex);
+        PositionedSound var1 = (PositionedSound) field9516.get((long) arg0.localPlayerIndex);
         if (var1 == null) {
             return;
         }
@@ -330,7 +330,7 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("ao.l(Lahg;I)V")
     public static void method1807(PlayerEntity arg0) {
-        PositionedSound var1 = (PositionedSound) field9516.getNode((long) arg0.localPlayerIndex);
+        PositionedSound var1 = (PositionedSound) field9516.get((long) arg0.localPlayerIndex);
         if (var1 == null) {
             add(arg0.level, arg0.routeWaypointX[0], arg0.routeWaypointZ[0], 0, null, null, arg0);
         } else {
@@ -434,7 +434,7 @@ public class PositionedSound extends Node {
             var5.level = var5.npc.level;
             method4977(var5, arg0, arg1, arg2, arg3);
         }
-        for (PositionedSound var13 = (PositionedSound) field9516.method11928(); var13 != null; var13 = (PositionedSound) field9516.method11929()) {
+        for (PositionedSound var13 = (PositionedSound) field9516.head(); var13 != null; var13 = (PositionedSound) field9516.next()) {
             byte var14 = 1;
             BASType var15 = var13.player.getBASType();
             int var16 = var13.player.field8616.getSeqTypeId();
@@ -580,7 +580,7 @@ public class PositionedSound extends Node {
         if (arg0.field9548 != null) {
             arg0.field9548.method16402(var8);
             arg0.field9548.method16387(var10);
-            if (!arg0.field9548.method6982()) {
+            if (!arg0.field9548.isLinked()) {
                 arg0.field9548 = null;
                 arg0.field9545 = null;
                 arg0.field9542 = null;

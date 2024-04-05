@@ -34,12 +34,12 @@ public class HintArrow {
     public int field774;
 
     @ObfuscatedName("at.z")
-    public static WeightedCache field782 = new WeightedCache(4);
+    public static SoftLruHashTable field782 = new SoftLruHashTable(4);
 
     @ObfuscatedName("rx.u(Lra;IIIIIB)Lqa;")
     public static Model method8588(RendererToolkit arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
         long var6 = (long) arg5;
-        Model var8 = (Model) field782.method7916(var6);
+        Model var8 = (Model) field782.get(var6);
         short var9 = 2055;
         if (var8 == null) {
             ModelUnlit var10 = ModelUnlit.method2664(Statics.field4560, arg5, 0);
@@ -86,6 +86,6 @@ public class HintArrow {
 
     @ObfuscatedName("ls.c(B)V")
     public static void method5713() {
-        field782.method7925();
+        field782.removeSoft();
     }
 }

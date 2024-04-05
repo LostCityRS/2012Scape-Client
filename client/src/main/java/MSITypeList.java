@@ -10,10 +10,10 @@ public class MSITypeList {
     public final Js5 field7199;
 
     @ObfuscatedName("wd.c")
-    public WeightedCache field7201 = new WeightedCache(64);
+    public SoftLruHashTable field7201 = new SoftLruHashTable(64);
 
     @ObfuscatedName("wd.m")
-    public WeightedCache field7202 = new WeightedCache(64);
+    public SoftLruHashTable field7202 = new SoftLruHashTable(64);
 
     public MSITypeList(ModeGame arg0, Language arg1, Js5 arg2, Js5 arg3) {
         this.field7200 = arg2;
@@ -27,10 +27,10 @@ public class MSITypeList {
 
     @ObfuscatedName("wd.u(II)Lvc;")
     public MSIType method12491(int arg0) {
-        WeightedCache var2 = this.field7201;
+        SoftLruHashTable var2 = this.field7201;
         MSIType var3;
         synchronized (this.field7201) {
-            var3 = (MSIType) this.field7201.method7916((long) arg0);
+            var3 = (MSIType) this.field7201.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -45,7 +45,7 @@ public class MSITypeList {
         if (var6 != null) {
             var8.method12486(new Packet(var6));
         }
-        WeightedCache var9 = this.field7201;
+        SoftLruHashTable var9 = this.field7201;
         synchronized (this.field7201) {
             this.field7201.method7937(var8, (long) arg0);
             return var8;
@@ -54,17 +54,17 @@ public class MSITypeList {
 
     @ObfuscatedName("wd.j(IIB)V")
     public void resizeCache(int arg0, int arg1) {
-        this.field7201 = new WeightedCache(arg0);
-        this.field7202 = new WeightedCache(arg1);
+        this.field7201 = new SoftLruHashTable(arg0);
+        this.field7202 = new SoftLruHashTable(arg1);
     }
 
     @ObfuscatedName("wd.a(I)V")
     public void method12496() {
-        WeightedCache var1 = this.field7201;
+        SoftLruHashTable var1 = this.field7201;
         synchronized (this.field7201) {
             this.field7201.method7922();
         }
-        WeightedCache var3 = this.field7202;
+        SoftLruHashTable var3 = this.field7202;
         synchronized (this.field7202) {
             this.field7202.method7922();
         }
@@ -72,11 +72,11 @@ public class MSITypeList {
 
     @ObfuscatedName("wd.s(IB)V")
     public void method12495(int arg0) {
-        WeightedCache var2 = this.field7201;
+        SoftLruHashTable var2 = this.field7201;
         synchronized (this.field7201) {
             this.field7201.method7921(arg0);
         }
-        WeightedCache var4 = this.field7202;
+        SoftLruHashTable var4 = this.field7202;
         synchronized (this.field7202) {
             this.field7202.method7921(arg0);
         }
@@ -84,13 +84,13 @@ public class MSITypeList {
 
     @ObfuscatedName("wd.c(I)V")
     public void method12494() {
-        WeightedCache var1 = this.field7201;
+        SoftLruHashTable var1 = this.field7201;
         synchronized (this.field7201) {
-            this.field7201.method7925();
+            this.field7201.removeSoft();
         }
-        WeightedCache var3 = this.field7202;
+        SoftLruHashTable var3 = this.field7202;
         synchronized (this.field7202) {
-            this.field7202.method7925();
+            this.field7202.removeSoft();
         }
     }
 }

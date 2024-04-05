@@ -10,7 +10,7 @@ public class ClanChannelDelta {
     public long field2392 = -1L;
 
     @ObfuscatedName("gd.a")
-    public IterableQueue field2394 = new IterableQueue();
+    public LinkedList field2394 = new LinkedList();
 
     public ClanChannelDelta(Packet arg0) {
         this.method4116(arg0);
@@ -40,7 +40,7 @@ public class ClanChannelDelta {
 
     @ObfuscatedName("gd.j(Ladh;B)V")
     public void method4115(ClanChannel arg0) {
-        if (this.field2393 != arg0.field4228 || this.field2392 != arg0.field9435) {
+        if (this.field2393 != arg0.key || this.field2392 != arg0.field9435) {
             throw new RuntimeException("");
         }
         for (ClanChannelDeltaEntry var2 = (ClanChannelDeltaEntry) this.field2394.head(); var2 != null; var2 = (ClanChannelDeltaEntry) this.field2394.next()) {

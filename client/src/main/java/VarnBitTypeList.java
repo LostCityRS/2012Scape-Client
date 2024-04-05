@@ -7,7 +7,7 @@ public class VarnBitTypeList {
     public final Js5 field6414;
 
     @ObfuscatedName("sr.j")
-    public final WeightedCache field6413 = new WeightedCache(64);
+    public final SoftLruHashTable field6413 = new SoftLruHashTable(64);
 
     public VarnBitTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field6414 = arg2;
@@ -18,10 +18,10 @@ public class VarnBitTypeList {
 
     @ObfuscatedName("sr.u(II)Lsj;")
     public VarnBitType method11311(int arg0) {
-        WeightedCache var2 = this.field6413;
+        SoftLruHashTable var2 = this.field6413;
         VarnBitType var3;
         synchronized (this.field6413) {
-            var3 = (VarnBitType) this.field6413.method7916((long) arg0);
+            var3 = (VarnBitType) this.field6413.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -31,7 +31,7 @@ public class VarnBitTypeList {
         if (var5 != null) {
             var6.method11304(new Packet(var5));
         }
-        WeightedCache var7 = this.field6413;
+        SoftLruHashTable var7 = this.field6413;
         synchronized (this.field6413) {
             this.field6413.method7937(var6, (long) arg0);
             return var6;
@@ -40,7 +40,7 @@ public class VarnBitTypeList {
 
     @ObfuscatedName("sr.j(B)V")
     public void method11312() {
-        WeightedCache var1 = this.field6413;
+        SoftLruHashTable var1 = this.field6413;
         synchronized (this.field6413) {
             this.field6413.method7922();
         }
@@ -48,7 +48,7 @@ public class VarnBitTypeList {
 
     @ObfuscatedName("sr.a(II)V")
     public void method11310(int arg0) {
-        WeightedCache var2 = this.field6413;
+        SoftLruHashTable var2 = this.field6413;
         synchronized (this.field6413) {
             this.field6413.method7921(arg0);
         }
@@ -56,9 +56,9 @@ public class VarnBitTypeList {
 
     @ObfuscatedName("sr.s(B)V")
     public void method11313() {
-        WeightedCache var1 = this.field6413;
+        SoftLruHashTable var1 = this.field6413;
         synchronized (this.field6413) {
-            this.field6413.method7925();
+            this.field6413.removeSoft();
         }
     }
 }

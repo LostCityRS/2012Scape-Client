@@ -22,7 +22,7 @@ public abstract class Video {
     public final OggSyncState field4235;
 
     @ObfuscatedName("nw.t")
-    public final IterableMap field4234;
+    public final HashTable field4234;
 
     @ObfuscatedName("nw.l")
     public boolean field4237;
@@ -56,7 +56,7 @@ public abstract class Video {
         this.field4235 = new OggSyncState();
         this.field4236 = new OggPage();
         this.field4230 = new OggPacket();
-        this.field4234 = new IterableMap(8);
+        this.field4234 = new HashTable(8);
     }
 
     @ObfuscatedName("nw.j(B)Ladp;")
@@ -81,7 +81,7 @@ public abstract class Video {
             }
             int var2 = this.field4236.getSerialNumber();
             if (!this.field4236.isBOS()) {
-                OggStream var9 = (OggStream) this.field4234.getNode((long) var2);
+                OggStream var9 = (OggStream) this.field4234.get((long) var2);
                 if (!var9.field9557.pageIn(this.field4236)) {
                     throw new IllegalStateException();
                 }
@@ -127,7 +127,7 @@ public abstract class Video {
         while (!this.field4238) {
             OggStream var1;
             if (this.field4237) {
-                var1 = (OggStream) this.field4234.getNode((long) this.field4236.getSerialNumber());
+                var1 = (OggStream) this.field4234.get((long) this.field4236.getSerialNumber());
             } else {
                 var1 = this.method7005();
                 if (var1 == null) {
@@ -205,7 +205,7 @@ public abstract class Video {
 
     @ObfuscatedName("nw.c(I)V")
     public void method7008() {
-        for (OggStream var1 = (OggStream) this.field4234.method11928(); var1 != null; var1 = (OggStream) this.field4234.method11929()) {
+        for (OggStream var1 = (OggStream) this.field4234.head(); var1 != null; var1 = (OggStream) this.field4234.next()) {
             if (var1 instanceof OggKateStream) {
                 OggKateStream var2 = (OggKateStream) var1;
                 while ((var2.field9558 <= 8 || this.method7039() > (double) var2.method16826()) && var2.field9557.packetOut(this.field4230) == 1) {
@@ -228,7 +228,7 @@ public abstract class Video {
 
     @ObfuscatedName("nw.t(I)V")
     public void method7010() {
-        for (OggStream var1 = (OggStream) this.field4234.method11928(); var1 != null; var1 = (OggStream) this.field4234.method11929()) {
+        for (OggStream var1 = (OggStream) this.field4234.head(); var1 != null; var1 = (OggStream) this.field4234.next()) {
             if (this.field4240 != var1) {
                 while (var1.field9557.packetOut() == 1) {
                     var1.method15152(this.field4230);
@@ -252,7 +252,7 @@ public abstract class Video {
         if (this.field4238) {
             return;
         }
-        for (OggStream var1 = (OggStream) this.field4234.method11928(); var1 != null; var1 = (OggStream) this.field4234.method11929()) {
+        for (OggStream var1 = (OggStream) this.field4234.head(); var1 != null; var1 = (OggStream) this.field4234.next()) {
             var1.method15153();
             var1.field9557.method53();
         }
@@ -299,7 +299,7 @@ public abstract class Video {
         if (this.field4241 != null) {
             return;
         }
-        for (OggStream var2 = (OggStream) this.field4234.method11928(); var2 != null; var2 = (OggStream) this.field4234.method11929()) {
+        for (OggStream var2 = (OggStream) this.field4234.head(); var2 != null; var2 = (OggStream) this.field4234.next()) {
             if (var2 instanceof OggKateStream) {
                 OggKateStream var3 = (OggKateStream) var2;
                 if (this.field4233.equals(var3.method16824())) {

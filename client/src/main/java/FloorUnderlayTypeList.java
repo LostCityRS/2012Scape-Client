@@ -7,7 +7,7 @@ public class FloorUnderlayTypeList {
     public final Js5 field6710;
 
     @ObfuscatedName("ux.j")
-    public final WeightedCache field6711 = new WeightedCache(128);
+    public final SoftLruHashTable field6711 = new SoftLruHashTable(128);
 
     public FloorUnderlayTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field6710 = arg2;
@@ -16,10 +16,10 @@ public class FloorUnderlayTypeList {
 
     @ObfuscatedName("ux.u(IB)Luc;")
     public FloorUnderlayType method11895(int arg0) {
-        WeightedCache var2 = this.field6711;
+        SoftLruHashTable var2 = this.field6711;
         FloorUnderlayType var3;
         synchronized (this.field6711) {
-            var3 = (FloorUnderlayType) this.field6711.method7916((long) arg0);
+            var3 = (FloorUnderlayType) this.field6711.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -33,7 +33,7 @@ public class FloorUnderlayTypeList {
         if (var6 != null) {
             var8.method11909(new Packet(var6));
         }
-        WeightedCache var9 = this.field6711;
+        SoftLruHashTable var9 = this.field6711;
         synchronized (this.field6711) {
             this.field6711.method7937(var8, (long) arg0);
             return var8;
@@ -42,7 +42,7 @@ public class FloorUnderlayTypeList {
 
     @ObfuscatedName("ux.j(I)V")
     public void method11894() {
-        WeightedCache var1 = this.field6711;
+        SoftLruHashTable var1 = this.field6711;
         synchronized (this.field6711) {
             this.field6711.method7922();
         }
@@ -50,7 +50,7 @@ public class FloorUnderlayTypeList {
 
     @ObfuscatedName("ux.a(IB)V")
     public void method11896(int arg0) {
-        WeightedCache var2 = this.field6711;
+        SoftLruHashTable var2 = this.field6711;
         synchronized (this.field6711) {
             this.field6711.method7921(arg0);
         }
@@ -58,9 +58,9 @@ public class FloorUnderlayTypeList {
 
     @ObfuscatedName("ux.s(B)V")
     public void method11899() {
-        WeightedCache var1 = this.field6711;
+        SoftLruHashTable var1 = this.field6711;
         synchronized (this.field6711) {
-            this.field6711.method7925();
+            this.field6711.removeSoft();
         }
     }
 }

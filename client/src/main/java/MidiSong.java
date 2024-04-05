@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class MidiSong extends Node {
 
     @ObfuscatedName("acw.s")
-    public IterableMap field9382;
+    public HashTable field9382;
 
     @ObfuscatedName("acw.c")
     public byte[] midiBytes;
@@ -301,7 +301,7 @@ public class MidiSong extends Node {
         if (this.field9382 != null) {
             return;
         }
-        this.field9382 = new IterableMap(16);
+        this.field9382 = new HashTable(16);
         int[] var1 = new int[16];
         int[] var2 = new int[16];
         var2[9] = 128;
@@ -349,7 +349,7 @@ public class MidiSong extends Node {
                         int var18 = var9 >> 16 & 0x7F;
                         if (var18 > 0) {
                             int var19 = var2[var16];
-                            ObjectNode var20 = (ObjectNode) this.field9382.getNode((long) var19);
+                            ObjectNode var20 = (ObjectNode) this.field9382.get((long) var19);
                             if (var20 == null) {
                                 var20 = new ObjectNode(new byte[128]);
                                 this.field9382.put(var20, (long) var19);

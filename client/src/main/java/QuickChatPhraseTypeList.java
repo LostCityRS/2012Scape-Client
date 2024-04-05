@@ -16,7 +16,7 @@ public class QuickChatPhraseTypeList {
     public int field6832 = 0;
 
     @ObfuscatedName("vx.c")
-    public final WeightedCache field6829 = new WeightedCache(64);
+    public final SoftLruHashTable field6829 = new SoftLruHashTable(64);
 
     @ObfuscatedName("vx.l")
     public QuickChatDynamicProvider field6830 = null;
@@ -35,7 +35,7 @@ public class QuickChatPhraseTypeList {
 
     @ObfuscatedName("vx.u(II)Lajt;")
     public QuickChatPhraseType method12176(int arg0) {
-        QuickChatPhraseType var2 = (QuickChatPhraseType) this.field6829.method7916((long) arg0);
+        QuickChatPhraseType var2 = (QuickChatPhraseType) this.field6829.get((long) arg0);
         if (var2 != null) {
             return var2;
         }

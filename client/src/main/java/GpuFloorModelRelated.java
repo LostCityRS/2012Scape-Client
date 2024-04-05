@@ -52,7 +52,7 @@ public class GpuFloorModelRelated extends Node {
     public float[][] field9462;
 
     @ObfuscatedName("adn.i")
-    public IterableMap field9463;
+    public HashTable field9463;
 
     @ObfuscatedName("adn.v")
     public ByteBuffer field9464;
@@ -113,7 +113,7 @@ public class GpuFloorModelRelated extends Node {
             }
         }
         if (this.field9456 > 0) {
-            this.field9463 = new IterableMap(IntMath.method2839(this.field9456));
+            this.field9463 = new HashTable(IntMath.method2839(this.field9456));
             this.field9464 = this.field9460.field8244;
             this.field9464.clear();
             this.field9464.position(2097152);
@@ -208,7 +208,7 @@ public class GpuFloorModelRelated extends Node {
         int var11 = this.field9448.getFineHeight(var9, var10);
         if ((arg4 & 0x7F) == 0 || (arg5 & 0x7F) == 0) {
             var7 = ((long) var10 & 0xFFFFL) << 16 | (long) var9 & 0xFFFFL;
-            Node var12 = this.field9463.getNode(var7);
+            Node var12 = this.field9463.get(var7);
             if (var12 != null) {
                 Unsafe var13 = this.field9460.field8247;
                 var13.putShort(this.field9460.field8245 + 2097152L + (long) (this.field9461 * 2), ((FloorModelNode) var12).field9551);

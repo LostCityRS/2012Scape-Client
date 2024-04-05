@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class SpotShadowFactory {
 
     @ObfuscatedName("y.u")
-    public static WeightedCache field654 = new WeightedCache(32);
+    public static SoftLruHashTable field654 = new SoftLruHashTable(32);
 
     public SpotShadowFactory() throws Throwable {
         throw new Error();
@@ -21,10 +21,10 @@ public class SpotShadowFactory {
             var12 = var13 & 0xFFFFFDFF;
         }
         long var14 = ((long) arg8 << 48) + ((long) arg7 << 32) + (long) ((arg10 << 24) + (arg9 << 16) + arg5);
-        WeightedCache var16 = field654;
+        SoftLruHashTable var16 = field654;
         Model var17;
         synchronized (field654) {
-            var17 = (Model) field654.method7916(var14);
+            var17 = (Model) field654.get(var14);
         }
         if (var17 == null || arg0.method519(var17.m(), var12) != 0) {
             if (var17 != null) {
@@ -72,7 +72,7 @@ public class SpotShadowFactory {
                 }
             }
             var17 = arg0.method625(var22, var12, Statics.field653, 64, 768);
-            WeightedCache var38 = field654;
+            SoftLruHashTable var38 = field654;
             synchronized (field654) {
                 field654.method7937(var17, var14);
             }
@@ -107,7 +107,7 @@ public class SpotShadowFactory {
     @ObfuscatedName("ob.j(II)V")
     public static void method7280(int arg0) {
         Statics.field653 = arg0;
-        WeightedCache var1 = field654;
+        SoftLruHashTable var1 = field654;
         synchronized (field654) {
             field654.method7922();
         }
@@ -115,7 +115,7 @@ public class SpotShadowFactory {
 
     @ObfuscatedName("gi.a(B)V")
     public static void method4036() {
-        WeightedCache var0 = field654;
+        SoftLruHashTable var0 = field654;
         synchronized (field654) {
             field654.method7922();
         }
@@ -123,7 +123,7 @@ public class SpotShadowFactory {
 
     @ObfuscatedName("qx.s(IB)V")
     public static void method8061(int arg0) {
-        WeightedCache var1 = field654;
+        SoftLruHashTable var1 = field654;
         synchronized (field654) {
             field654.method7921(arg0);
         }
@@ -131,9 +131,9 @@ public class SpotShadowFactory {
 
     @ObfuscatedName("lp.c(B)V")
     public static void method6026() {
-        WeightedCache var0 = field654;
+        SoftLruHashTable var0 = field654;
         synchronized (field654) {
-            field654.method7925();
+            field654.removeSoft();
         }
     }
 }

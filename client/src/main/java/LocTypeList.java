@@ -19,16 +19,16 @@ public class LocTypeList {
     public final Js5 field6555;
 
     @ObfuscatedName("tz.t")
-    public WeightedCache field6561 = new WeightedCache(256);
+    public SoftLruHashTable field6561 = new SoftLruHashTable(256);
 
     @ObfuscatedName("tz.l")
-    public final WeightedCache field6558 = new WeightedCache(500);
+    public final SoftLruHashTable field6558 = new SoftLruHashTable(500);
 
     @ObfuscatedName("tz.f")
-    public final WeightedCache field6559 = new WeightedCache(30);
+    public final SoftLruHashTable field6559 = new SoftLruHashTable(30);
 
     @ObfuscatedName("tz.d")
-    public final WeightedCache field6560 = new WeightedCache(50);
+    public final SoftLruHashTable field6560 = new SoftLruHashTable(50);
 
     @ObfuscatedName("tz.z")
     public int field6551;
@@ -62,10 +62,10 @@ public class LocTypeList {
 
     @ObfuscatedName("tz.u(II)Ltg;")
     public LocType get(int arg0) {
-        WeightedCache var2 = this.field6561;
+        SoftLruHashTable var2 = this.field6561;
         LocType var3;
         synchronized (this.field6561) {
-            var3 = (LocType) this.field6561.method7916((long) arg0);
+            var3 = (LocType) this.field6561.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -91,7 +91,7 @@ public class LocTypeList {
             var8.field6505 = null;
             var8.field6545 = null;
         }
-        WeightedCache var9 = this.field6561;
+        SoftLruHashTable var9 = this.field6561;
         synchronized (this.field6561) {
             this.field6561.method7937(var8, (long) arg0);
             return var8;
@@ -109,15 +109,15 @@ public class LocTypeList {
     @ObfuscatedName("tz.a(II)V")
     public void method11473(int arg0) {
         this.field6551 = arg0;
-        WeightedCache var2 = this.field6558;
+        SoftLruHashTable var2 = this.field6558;
         synchronized (this.field6558) {
             this.field6558.method7922();
         }
-        WeightedCache var4 = this.field6559;
+        SoftLruHashTable var4 = this.field6559;
         synchronized (this.field6559) {
             this.field6559.method7922();
         }
-        WeightedCache var6 = this.field6560;
+        SoftLruHashTable var6 = this.field6560;
         synchronized (this.field6560) {
             this.field6560.method7922();
         }
@@ -125,24 +125,24 @@ public class LocTypeList {
 
     @ObfuscatedName("tz.s(II)V")
     public void resizeCache(int arg0) {
-        this.field6561 = new WeightedCache(arg0);
+        this.field6561 = new SoftLruHashTable(arg0);
     }
 
     @ObfuscatedName("tz.c(I)V")
     public void method11479() {
-        WeightedCache var1 = this.field6561;
+        SoftLruHashTable var1 = this.field6561;
         synchronized (this.field6561) {
             this.field6561.method7922();
         }
-        WeightedCache var3 = this.field6558;
+        SoftLruHashTable var3 = this.field6558;
         synchronized (this.field6558) {
             this.field6558.method7922();
         }
-        WeightedCache var5 = this.field6559;
+        SoftLruHashTable var5 = this.field6559;
         synchronized (this.field6559) {
             this.field6559.method7922();
         }
-        WeightedCache var7 = this.field6560;
+        SoftLruHashTable var7 = this.field6560;
         synchronized (this.field6560) {
             this.field6560.method7922();
         }
@@ -152,19 +152,19 @@ public class LocTypeList {
 
     @ObfuscatedName("tz.m(IB)V")
     public void method11487(int arg0) {
-        WeightedCache var2 = this.field6561;
+        SoftLruHashTable var2 = this.field6561;
         synchronized (this.field6561) {
             this.field6561.method7921(arg0);
         }
-        WeightedCache var4 = this.field6558;
+        SoftLruHashTable var4 = this.field6558;
         synchronized (this.field6558) {
             this.field6558.method7921(arg0);
         }
-        WeightedCache var6 = this.field6559;
+        SoftLruHashTable var6 = this.field6559;
         synchronized (this.field6559) {
             this.field6559.method7921(arg0);
         }
-        WeightedCache var8 = this.field6560;
+        SoftLruHashTable var8 = this.field6560;
         synchronized (this.field6560) {
             this.field6560.method7921(arg0);
         }
@@ -172,21 +172,21 @@ public class LocTypeList {
 
     @ObfuscatedName("tz.t(I)V")
     public void method11477() {
-        WeightedCache var1 = this.field6561;
+        SoftLruHashTable var1 = this.field6561;
         synchronized (this.field6561) {
-            this.field6561.method7925();
+            this.field6561.removeSoft();
         }
-        WeightedCache var3 = this.field6558;
+        SoftLruHashTable var3 = this.field6558;
         synchronized (this.field6558) {
-            this.field6558.method7925();
+            this.field6558.removeSoft();
         }
-        WeightedCache var5 = this.field6559;
+        SoftLruHashTable var5 = this.field6559;
         synchronized (this.field6559) {
-            this.field6559.method7925();
+            this.field6559.removeSoft();
         }
-        WeightedCache var7 = this.field6560;
+        SoftLruHashTable var7 = this.field6560;
         synchronized (this.field6560) {
-            this.field6560.method7925();
+            this.field6560.removeSoft();
         }
     }
 }

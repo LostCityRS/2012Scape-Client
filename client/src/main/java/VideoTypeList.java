@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class VideoTypeList {
 
     @ObfuscatedName("sh.j")
-    public static IterableMap field6388 = new IterableMap(4);
+    public static HashTable field6388 = new HashTable(4);
 
     @ObfuscatedName("sh.a")
     public static final VideoOggTheoraRelated field6390 = new VideoOggTheoraRelated();
@@ -15,7 +15,7 @@ public class VideoTypeList {
 
     @ObfuscatedName("oi.u(IIZI)V")
     public static void method7358(int arg0, int arg1, boolean arg2) {
-        if (field6388.getNode((long) arg0) != null) {
+        if (field6388.get((long) arg0) != null) {
             return;
         }
         if (client.field8944) {
@@ -29,7 +29,7 @@ public class VideoTypeList {
 
     @ObfuscatedName("ti.j(IB)V")
     public static void method11689(int arg0) {
-        VideoType var1 = (VideoType) field6388.getNode((long) arg0);
+        VideoType var1 = (VideoType) field6388.get((long) arg0);
         if (var1 != null) {
             var1.field9622 = !var1.field9622;
             var1.field9618.method7018(var1.field9622);
@@ -38,7 +38,7 @@ public class VideoTypeList {
 
     @ObfuscatedName("eu.a(II)V")
     public static void method2930(int arg0) {
-        VideoType var1 = (VideoType) field6388.getNode((long) arg0);
+        VideoType var1 = (VideoType) field6388.get((long) arg0);
         if (var1 != null) {
             var1.field9618.method7022();
             method5563(var1.field9624, var1.field9621);
@@ -59,7 +59,7 @@ public class VideoTypeList {
 
     @ObfuscatedName("ap.c(IB)Ljava/lang/String;")
     public static String method1723(int arg0) {
-        VideoType var1 = (VideoType) field6388.getNode((long) arg0);
+        VideoType var1 = (VideoType) field6388.get((long) arg0);
         if (var1 != null) {
             OggKateStream var2 = var1.field9618.method7014();
             if (var2 != null) {
@@ -74,7 +74,7 @@ public class VideoTypeList {
 
     @ObfuscatedName("jf.m(Lra;II)Lce;")
     public static Sprite method4742(RendererToolkit arg0, int arg1) {
-        VideoType var2 = (VideoType) field6388.getNode((long) arg1);
+        VideoType var2 = (VideoType) field6388.get((long) arg1);
         if (var2 != null) {
             OggTheoraStream var3 = var2.field9618.method7029();
             var2.field9620 = true;
@@ -88,7 +88,7 @@ public class VideoTypeList {
 
     @ObfuscatedName("aje.t(I)V")
     public static void method16665() {
-        for (VideoType var0 = (VideoType) field6388.method11928(); var0 != null; var0 = (VideoType) field6388.method11929()) {
+        for (VideoType var0 = (VideoType) field6388.head(); var0 != null; var0 = (VideoType) field6388.next()) {
             if (var0.field9618.method7015()) {
                 method2930(var0.field9624);
             } else {
@@ -116,7 +116,7 @@ public class VideoTypeList {
 
     @ObfuscatedName("wl.l(I)V")
     public static void method12632() {
-        for (VideoType var0 = (VideoType) field6388.method11928(); var0 != null; var0 = (VideoType) field6388.method11929()) {
+        for (VideoType var0 = (VideoType) field6388.head(); var0 != null; var0 = (VideoType) field6388.next()) {
             if (var0.field9620) {
                 var0.field9620 = false;
             } else {
@@ -127,7 +127,7 @@ public class VideoTypeList {
 
     @ObfuscatedName("jf.f(I)V")
     public static void method4743() {
-        for (VideoType var0 = (VideoType) field6388.method11928(); var0 != null; var0 = (VideoType) field6388.method11929()) {
+        for (VideoType var0 = (VideoType) field6388.head(); var0 != null; var0 = (VideoType) field6388.next()) {
             method2930(var0.field9624);
         }
     }

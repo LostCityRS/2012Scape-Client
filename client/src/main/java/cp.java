@@ -10,7 +10,7 @@ public class cp {
     public static boolean field1193 = false;
 
     @ObfuscatedName("cp.a")
-    public static final IterableQueue field1194 = new IterableQueue();
+    public static final LinkedList field1194 = new LinkedList();
 
     public cp() throws Throwable {
         throw new Error();

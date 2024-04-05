@@ -4,367 +4,367 @@ import deob.ObfuscatedName;
 public class DelayedStateChange extends SecondaryNode {
 
     @ObfuscatedName("aif.t")
-    public int field10321;
+    public int intArg1;
 
     @ObfuscatedName("aif.l")
-    public int field10298;
+    public int intArg2;
 
     @ObfuscatedName("aif.f")
-    public int field10299;
+    public int intArg3;
 
     @ObfuscatedName("aif.d")
-    public String field10300;
+    public String stringArg;
 
     @ObfuscatedName("aif.as")
-    public static DualIterableQueue field10323 = new DualIterableQueue();
+    public static SecondaryLinkedList changeQueue = new SecondaryLinkedList();
 
     @ObfuscatedName("aif.ai")
-    public static DualIterableQueue field10317 = new DualIterableQueue();
+    public static SecondaryLinkedList eventQueue = new SecondaryLinkedList();
 
     @ObfuscatedName("aif.ao")
-    public static IterableMap field10326 = new IterableMap(16);
+    public static HashTable changes = new HashTable(16);
 
     @ObfuscatedName("qv.u(IJ)Laif;")
-    public static DelayedStateChange method8304(int arg0, long arg1) {
-        DelayedStateChange var3 = (DelayedStateChange) field10326.getNode((long) arg0 << 56 | arg1);
-        if (var3 == null) {
-            var3 = new DelayedStateChange(arg0, arg1);
-            field10326.put(var3, var3.field4228);
+    public static DelayedStateChange create(int type, long id) {
+        DelayedStateChange change = (DelayedStateChange) changes.get((long) type << 56 | id);
+        if (change == null) {
+            change = new DelayedStateChange(type, id);
+            changes.put(change, change.key);
         }
-        return var3;
+        return change;
     }
 
     @ObfuscatedName("yw.a(I)Laif;")
-    public static DelayedStateChange method12910() {
-        DelayedStateChange var0 = (DelayedStateChange) field10323.last();
-        if (var0 != null) {
-            var0.unlink();
-            var0.dualRemove();
-            return var0;
+    public static DelayedStateChange poll() {
+        DelayedStateChange serverChange = (DelayedStateChange) changeQueue.head();
+        if (serverChange != null) {
+            serverChange.unlink();
+            serverChange.unlinkSecondary();
+            return serverChange;
         }
-        DelayedStateChange var1;
+        DelayedStateChange clientChange;
         do {
-            var1 = (DelayedStateChange) field10317.last();
-            if (var1 == null) {
+            clientChange = (DelayedStateChange) eventQueue.head();
+            if (clientChange == null) {
                 return null;
             }
-            if (var1.method16510() > MonotonicTime.get()) {
+            if (clientChange.getTime() > MonotonicTime.get()) {
                 return null;
             }
-            var1.unlink();
-            var1.dualRemove();
-        } while ((var1.field9554 & Long.MIN_VALUE) == 0L);
-        return var1;
+            clientChange.unlink();
+            clientChange.unlinkSecondary();
+        } while ((clientChange.secondaryKey & Long.MIN_VALUE) == 0L);
+        return clientChange;
     }
 
     @ObfuscatedName("kw.s(IB)V")
-    public static void method5553(int arg0) {
-        DelayedStateChange var1 = method8304(1, (long) arg0);
-        var1.method16506();
+    public static void onVarClientInt(int id) {
+        DelayedStateChange change = create(1, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("uu.c(II)V")
-    public static void method12064(int arg0) {
-        DelayedStateChange var1 = method8304(2, (long) arg0);
-        var1.method16506();
+    public static void onVarClientString(int id) {
+        DelayedStateChange change = create(2, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("gq.m(II)V")
-    public static void method3929(int arg0) {
-        DelayedStateChange var1 = method8304(3, (long) arg0);
-        var1.method16506();
+    public static void onComponentText(int id) {
+        DelayedStateChange change = create(3, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("n.t(IS)V")
-    public static void method1382(int arg0) {
-        DelayedStateChange var1 = method8304(22, (long) arg0);
-        var1.method16506();
+    public static void onComponentClickMask(int id) {
+        DelayedStateChange change = create(22, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("pc.f(II)V")
-    public static void method7890(int arg0) {
-        DelayedStateChange var1 = method8304(5, (long) arg0);
-        var1.method16506();
+    public static void onComponentModelAnim(int id) {
+        DelayedStateChange change = create(5, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("aec.d(II)V")
-    public static void method15629(int arg0) {
-        DelayedStateChange var1 = method8304(6, (long) arg0);
-        var1.method16506();
+    public static void onComponentColour(int id) {
+        DelayedStateChange change = create(6, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("ee.z(II)V")
-    public static void method3097(int arg0) {
-        DelayedStateChange var1 = method8304(7, (long) arg0);
-        var1.method16506();
+    public static void onComponentHide(int id) {
+        DelayedStateChange change = create(7, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("rg.n(II)V")
-    public static void method8721(int arg0) {
-        DelayedStateChange var1 = method8304(8, (long) arg0);
-        var1.method16506();
+    public static void onComponentAngle(int id) {
+        DelayedStateChange change = create(8, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("me.o(II)V")
-    public static void method6563(int arg0) {
-        DelayedStateChange var1 = method8304(9, (long) arg0);
-        var1.method16506();
+    public static void onComponentObject(int id) {
+        DelayedStateChange change = create(9, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("vj.q(IS)V")
-    public static void method12329(int arg0) {
-        DelayedStateChange var1 = method8304(10, (long) arg0);
-        var1.method16506();
+    public static void onComponentModelAngle(int id) {
+        DelayedStateChange change = create(10, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("on.x(II)V")
-    public static void method7185(int arg0) {
-        DelayedStateChange var1 = method8304(11, (long) arg0);
-        var1.method16506();
+    public static void onComponentPosition(int id) {
+        DelayedStateChange change = create(11, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("afw.k(IB)V")
-    public static void method15881(int arg0) {
-        DelayedStateChange var1 = method8304(12, (long) arg0);
-        var1.method16506();
+    public static void onComponentScrollPos(int id) {
+        DelayedStateChange change = create(12, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("afp.h(IB)V")
-    public static void method15683(int arg0) {
-        DelayedStateChange var1 = method8304(14, (long) arg0);
-        var1.method16506();
+    public static void onType14(int id) {
+        DelayedStateChange change = create(14, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("tf.y(IB)V")
-    public static void method11667(int arg0) {
-        DelayedStateChange var1 = method8304(16, (long) arg0);
-        var1.method16506();
+    public static void onType16(int id) {
+        DelayedStateChange change = create(16, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("zg.ay(II)V")
-    public static void method13906(int arg0) {
-        DelayedStateChange var1 = method8304(20, (long) arg0);
-        var1.method16506();
+    public static void onType20(int id) {
+        DelayedStateChange change = create(20, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("iw.af(II)V")
-    public static void method4568(int arg0) {
-        DelayedStateChange var1 = method8304(21, (long) arg0);
-        var1.method16506();
+    public static void onType21(int id) {
+        DelayedStateChange change = create(21, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("lb.ar(IB)V")
-    public static void method5601(int arg0) {
-        DelayedStateChange var1 = method8304(17, (long) arg0);
-        var1.method16506();
+    public static void onType17(int id) {
+        DelayedStateChange change = create(17, id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("aaw.an(I)V")
-    public static void onMapFlag() {
-        DelayedStateChange var0 = method8304(15, 0L);
-        var0.method16506();
+    public static void onType15() {
+        DelayedStateChange change = create(15, 0L);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("ac.ap(III)V")
-    public static void method1981(int arg0, int arg1) {
-        DelayedStateChange var2 = method8304(18, (long) arg1 << 32 | (long) arg0);
-        var2.method16506();
+    public static void onType18(int id, int arg1) {
+        DelayedStateChange change = create(18, (long) arg1 << 32 | (long) id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("wt.ag(IIB)V")
-    public static void method12693(int arg0, int arg1) {
-        DelayedStateChange var2 = method8304(19, (long) arg1 << 32 | (long) arg0);
-        var2.method16506();
+    public static void onType19(int id, int arg1) {
+        DelayedStateChange change = create(19, (long) arg1 << 32 | (long) id);
+        change.enqueueEvent();
     }
 
     @ObfuscatedName("fi.as(III)V")
-    public static void method3667(int arg0, int arg1) {
-        DelayedStateChange var2 = method8304(1, (long) arg0);
-        var2.method16598();
-        var2.field10321 = arg1;
+    public static void setVarClientInt(int id, int value) {
+        DelayedStateChange change = create(1, id);
+        change.enqueueChange();
+        change.intArg1 = value;
     }
 
     @ObfuscatedName("aaq.ai(ILjava/lang/String;B)V")
-    public static void method14096(int arg0, String arg1) {
-        DelayedStateChange var2 = method8304(2, (long) arg0);
-        var2.method16598();
-        var2.field10300 = arg1;
+    public static void setVarClientString(int id, String value) {
+        DelayedStateChange change = create(2, id);
+        change.enqueueChange();
+        change.stringArg = value;
     }
 
     @ObfuscatedName("ahs.ao(ILjava/lang/String;B)V")
-    public static void method16188(int arg0, String arg1) {
-        DelayedStateChange var2 = method8304(3, (long) arg0);
-        var2.method16598();
-        var2.field10300 = arg1;
+    public static void setComponentText(int id, String text) {
+        DelayedStateChange change = create(3, id);
+        change.enqueueChange();
+        change.stringArg = text;
     }
 
     @ObfuscatedName("ei.al(IZI)V")
-    public static void method3226(int arg0, boolean arg1) {
-        DelayedStateChange var2 = method8304(22, (long) arg0);
-        var2.method16598();
-        var2.field10321 = arg1 ? 1 : 0;
+    public static void setComponentClickMask(int id, boolean arg1) {
+        DelayedStateChange change = create(22, id);
+        change.enqueueChange();
+        change.intArg1 = arg1 ? 1 : 0;
     }
 
     @ObfuscatedName("er.at(IIIII)V")
-    public static void method2995(int arg0, int arg1, int arg2, int arg3) {
-        DelayedStateChange var4 = method8304(4, (long) arg0);
-        var4.method16598();
-        var4.field10321 = arg1;
-        var4.field10298 = arg2;
-        var4.field10299 = arg3;
+    public static void setComponentModel(int id, int type, int modelId, int arg3) {
+        DelayedStateChange var4 = create(4, id);
+        var4.enqueueChange();
+        var4.intArg1 = type;
+        var4.intArg2 = modelId;
+        var4.intArg3 = arg3;
     }
 
     @ObfuscatedName("ae.ax(IIB)V")
-    public static void method1974(int arg0, int arg1) {
-        DelayedStateChange var2 = method8304(5, (long) arg0);
-        var2.method16598();
-        var2.field10321 = arg1;
+    public static void setComponentAnim(int id, int seqId) {
+        DelayedStateChange change = create(5, id);
+        change.enqueueChange();
+        change.intArg1 = seqId;
     }
 
     @ObfuscatedName("tg.aw(III)V")
-    public static void method11469(int arg0, int arg1) {
-        DelayedStateChange var2 = method8304(6, (long) arg0);
-        var2.method16598();
-        var2.field10321 = arg1;
+    public static void setComponentColour(int id, int color) {
+        DelayedStateChange change = create(6, id);
+        change.enqueueChange();
+        change.intArg1 = color;
     }
 
     @ObfuscatedName("ow.aa(III)V")
-    public static void method7351(int arg0, int arg1) {
-        DelayedStateChange var2 = method8304(7, (long) arg0);
-        var2.method16598();
-        var2.field10321 = arg1;
+    public static void setComponentHide(int id, int hidden) {
+        DelayedStateChange change = create(7, id);
+        change.enqueueChange();
+        change.intArg1 = hidden;
     }
 
     @ObfuscatedName("fy.am(IIIIB)V")
-    public static void method3599(int arg0, int arg1, int arg2, int arg3) {
-        DelayedStateChange var4 = method8304(8, (long) arg0);
-        var4.method16598();
-        var4.field10321 = arg1;
-        var4.field10298 = arg2;
-        var4.field10299 = arg3;
+    public static void setComponentModelAngle(int id, int xAngle, int yAngle, int zoom) {
+        DelayedStateChange change = create(8, id);
+        change.enqueueChange();
+        change.intArg1 = xAngle;
+        change.intArg2 = yAngle;
+        change.intArg3 = zoom;
     }
 
     @ObfuscatedName("agz.ad(IIIB)V")
-    public static void method15973(int arg0, int arg1, int arg2) {
-        DelayedStateChange var3 = method8304(9, (long) arg0);
-        var3.method16598();
-        var3.field10321 = arg1;
-        var3.field10298 = arg2;
+    public static void setComponentObject(int id, int objId, int count) {
+        DelayedStateChange change = create(9, id);
+        change.enqueueChange();
+        change.intArg1 = objId;
+        change.intArg2 = count;
     }
 
     @ObfuscatedName("wl.az(IIIII)V")
-    public static void method12633(int arg0, int arg1, int arg2, int arg3) {
-        DelayedStateChange var4 = method8304(10, (long) arg0);
-        var4.method16598();
-        var4.field10321 = arg1;
-        var4.field10298 = arg2;
-        var4.field10299 = arg3;
+    public static void setComponentModelOffset(int id, int xOffset2d, int yOffset2d, int zAngle2d) {
+        DelayedStateChange var4 = create(10, id);
+        var4.enqueueChange();
+        var4.intArg1 = xOffset2d;
+        var4.intArg2 = yOffset2d;
+        var4.intArg3 = zAngle2d;
     }
 
     @ObfuscatedName("mv.ak(IIII)V")
-    public static void method6312(int arg0, int arg1, int arg2) {
-        DelayedStateChange var3 = method8304(11, (long) arg0);
-        var3.method16598();
-        var3.field10321 = arg1;
-        var3.field10298 = arg2;
+    public static void setComponentPosition(int id, int x, int y) {
+        DelayedStateChange var3 = create(11, id);
+        var3.enqueueChange();
+        var3.intArg1 = x;
+        var3.intArg2 = y;
     }
 
     @ObfuscatedName("go.av(III)V")
-    public static void method4033(int arg0, int arg1) {
-        DelayedStateChange var2 = method8304(12, (long) arg0);
-        var2.method16598();
-        var2.field10321 = arg1;
+    public static void setType12(int id, int arg1) {
+        DelayedStateChange change = create(12, (long) id);
+        change.enqueueChange();
+        change.intArg1 = arg1;
     }
 
     @ObfuscatedName("on.aj(III)V")
-    public static void method7186(int arg0, int arg1) {
-        DelayedStateChange var2 = method8304(13, (long) arg0);
-        var2.method16598();
-        var2.field10321 = arg1;
+    public static void setType13(int id, int arg1) {
+        DelayedStateChange change = create(13, (long) id);
+        change.enqueueChange();
+        change.intArg1 = arg1;
     }
 
     @ObfuscatedName("uq.ah(III)V")
-    public static void method12119(int arg0, int arg1) {
-        DelayedStateChange var2 = method8304(14, (long) arg0);
-        var2.method16598();
-        var2.field10321 = arg1;
+    public static void setType14(int id, int arg1) {
+        DelayedStateChange change = create(14, id);
+        change.enqueueChange();
+        change.intArg1 = arg1;
     }
 
     @ObfuscatedName("y.au(III)V")
-    public static void method1639(int arg0, int arg1) {
-        DelayedStateChange var2 = method8304(16, (long) arg0);
-        var2.method16598();
-        var2.field10321 = arg1;
+    public static void setType16(int id, int arg1) {
+        DelayedStateChange change = create(16, id);
+        change.enqueueChange();
+        change.intArg1 = arg1;
     }
 
     @ObfuscatedName("afj.ae(IZI)V")
-    public static void method15850(int arg0, boolean arg1) {
-        DelayedStateChange var2 = method8304(21, (long) arg0);
-        var2.method16598();
-        var2.field10321 = arg1 ? 1 : 0;
+    public static void setType21(int id, boolean arg1) {
+        DelayedStateChange change = create(21, id);
+        change.enqueueChange();
+        change.intArg1 = arg1 ? 1 : 0;
     }
 
     @ObfuscatedName("xx.ac(III)V")
-    public static void method12737(int arg0, int arg1) {
-        DelayedStateChange var2 = method8304(17, (long) arg0);
-        var2.method16598();
-        var2.field10321 = arg1;
+    public static void setType17(int id, int arg1) {
+        DelayedStateChange change = create(17, id);
+        change.enqueueChange();
+        change.intArg1 = arg1;
     }
 
     @ObfuscatedName("eo.aq(III)V")
-    public static void method3292(int arg0, int arg1) {
-        DelayedStateChange var2 = method8304(15, 0L);
-        var2.method16598();
-        var2.field10321 = arg0;
-        var2.field10298 = arg1;
+    public static void setType15(int arg0, int arg1) {
+        DelayedStateChange change = create(15, 0L);
+        change.enqueueChange();
+        change.intArg1 = arg0;
+        change.intArg2 = arg1;
     }
 
     @ObfuscatedName("cd.ab(IIIII)V")
-    public static void method2497(int arg0, int arg1, int arg2, int arg3) {
-        DelayedStateChange var4 = method8304(18, (long) arg1 << 32 | (long) arg0);
-        var4.method16598();
-        var4.field10321 = arg2;
-        var4.field10298 = arg3;
+    public static void setType18(int id, int arg1, int arg2, int arg3) {
+        DelayedStateChange var4 = create(18, (long) arg1 << 32 | (long) id);
+        var4.enqueueChange();
+        var4.intArg1 = arg2;
+        var4.intArg2 = arg3;
     }
 
     @ObfuscatedName("adt.bq(IIIII)V")
-    public static void method15139(int arg0, int arg1, int arg2, int arg3) {
-        DelayedStateChange var4 = method8304(19, (long) arg1 << 32 | (long) arg0);
-        var4.method16598();
-        var4.field10321 = arg2;
-        var4.field10298 = arg3;
+    public static void setType19(int id, int arg1, int arg2, int arg3) {
+        DelayedStateChange var4 = create(19, (long) arg1 << 32 | (long) id);
+        var4.enqueueChange();
+        var4.intArg1 = arg2;
+        var4.intArg2 = arg3;
     }
 
-    public DelayedStateChange(int arg0, long arg1) {
-        this.field4228 = (long) arg0 << 56 | arg1;
+    public DelayedStateChange(int type, long id) {
+        this.key = (long) type << 56 | id;
     }
 
     @ObfuscatedName("aif.bz(I)V")
-    public void method16506() {
-        this.field9554 = this.field9554 & Long.MIN_VALUE | MonotonicTime.get() + 500L;
-        field10317.addFirst(this);
+    public void enqueueEvent() {
+        this.secondaryKey = this.secondaryKey & Long.MIN_VALUE | MonotonicTime.get() + 500L;
+        eventQueue.addFirst(this);
     }
 
     @ObfuscatedName("aif.bv(I)V")
-    public void method16598() {
-        this.field9554 |= Long.MIN_VALUE;
-        if (this.method16510() == 0L) {
-            field10323.addFirst(this);
+    public void enqueueChange() {
+        this.secondaryKey |= Long.MIN_VALUE;
+        if (this.getTime() == 0L) {
+            changeQueue.addFirst(this);
         }
     }
 
     @ObfuscatedName("aif.bj(I)I")
-    public int method16508() {
-        return (int) (this.field4228 >>> 56 & 0xFFL);
+    public int getType() {
+        return (int) (this.key >>> 56 & 0xFFL);
     }
 
     @ObfuscatedName("aif.bf(I)J")
-    public long method16612() {
-        return this.field4228 & 0xFFFFFFFFFFFFFFL;
+    public long getId() {
+        return this.key & 0xFFFFFFFFFFFFFFL;
     }
 
     @ObfuscatedName("aif.bt(I)J")
-    public long method16510() {
-        return this.field9554 & Long.MAX_VALUE;
+    public long getTime() {
+        return this.secondaryKey & Long.MAX_VALUE;
     }
 }

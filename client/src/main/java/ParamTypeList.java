@@ -7,7 +7,7 @@ public class ParamTypeList {
     public final Js5 field7291;
 
     @ObfuscatedName("wp.j")
-    public final WeightedCache field7292 = new WeightedCache(64);
+    public final SoftLruHashTable field7292 = new SoftLruHashTable(64);
 
     public ParamTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field7291 = arg2;
@@ -18,10 +18,10 @@ public class ParamTypeList {
 
     @ObfuscatedName("wp.u(IB)Lwv;")
     public ParamType get(int arg0) {
-        WeightedCache var2 = this.field7292;
+        SoftLruHashTable var2 = this.field7292;
         ParamType var3;
         synchronized (this.field7292) {
-            var3 = (ParamType) this.field7292.method7916((long) arg0);
+            var3 = (ParamType) this.field7292.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -35,7 +35,7 @@ public class ParamTypeList {
         if (var6 != null) {
             var8.method12580(new Packet(var6));
         }
-        WeightedCache var9 = this.field7292;
+        SoftLruHashTable var9 = this.field7292;
         synchronized (this.field7292) {
             this.field7292.method7937(var8, (long) arg0);
             return var8;
@@ -44,7 +44,7 @@ public class ParamTypeList {
 
     @ObfuscatedName("wp.j(B)V")
     public void method12595() {
-        WeightedCache var1 = this.field7292;
+        SoftLruHashTable var1 = this.field7292;
         synchronized (this.field7292) {
             this.field7292.method7922();
         }
@@ -52,7 +52,7 @@ public class ParamTypeList {
 
     @ObfuscatedName("wp.a(II)V")
     public void method12596(int arg0) {
-        WeightedCache var2 = this.field7292;
+        SoftLruHashTable var2 = this.field7292;
         synchronized (this.field7292) {
             this.field7292.method7921(arg0);
         }
@@ -60,9 +60,9 @@ public class ParamTypeList {
 
     @ObfuscatedName("wp.s(B)V")
     public void method12597() {
-        WeightedCache var1 = this.field7292;
+        SoftLruHashTable var1 = this.field7292;
         synchronized (this.field7292) {
-            this.field7292.method7925();
+            this.field7292.removeSoft();
         }
     }
 }

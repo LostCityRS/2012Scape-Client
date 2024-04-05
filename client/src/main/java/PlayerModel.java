@@ -31,10 +31,10 @@ public class PlayerModel {
     public static final int[] field5003 = new int[]{8, 11, 4, 6, 9, 7, 10, 0};
 
     @ObfuscatedName("qc.p")
-    public static WeightedCache field5012 = new WeightedCache(260);
+    public static SoftLruHashTable field5012 = new SoftLruHashTable(260);
 
     @ObfuscatedName("qc.w")
-    public static WeightedCache field4998 = new WeightedCache(5);
+    public static SoftLruHashTable field4998 = new SoftLruHashTable(5);
 
     @ObfuscatedName("qc.u(I[I[Lvq;[IZIB)V")
     public void method8230(int arg0, int[] arg1, ObjTypeCustomisation[] arg2, int[] arg3, boolean arg4, int arg5) {
@@ -215,10 +215,10 @@ public class PlayerModel {
                 }
             }
         }
-        WeightedCache var33 = field5012;
+        SoftLruHashTable var33 = field5012;
         Model var34;
         synchronized (field5012) {
-            var34 = (Model) field5012.method7916(var17);
+            var34 = (Model) field5012.get(var17);
         }
         BASType var36 = null;
         if (this.field5002 != -1) {
@@ -234,9 +234,9 @@ public class PlayerModel {
                 if (var39 >= var19.length) {
                     if (var38) {
                         if (this.field5008 != -1L) {
-                            WeightedCache var45 = field5012;
+                            SoftLruHashTable var45 = field5012;
                             synchronized (field5012) {
-                                var34 = (Model) field5012.method7916(this.field5008);
+                                var34 = (Model) field5012.get(this.field5008);
                             }
                         }
                         if (var34 != null && arg0.method519(var34.m(), var16) == 0) {
@@ -302,7 +302,7 @@ public class PlayerModel {
                     }
                     if (arg13) {
                         var34.KA(var16);
-                        WeightedCache var65 = field5012;
+                        SoftLruHashTable var65 = field5012;
                         synchronized (field5012) {
                             field5012.method7937(var34, var17);
                         }
@@ -408,10 +408,10 @@ public class PlayerModel {
             return arg3.method12565(this.field5006).method12512(arg0, arg1, arg6, arg7, null);
         }
         int var9 = arg7 == null ? arg1 : arg1 | arg7.method11779();
-        WeightedCache var10 = field4998;
+        SoftLruHashTable var10 = field4998;
         Model var11;
         synchronized (field4998) {
-            var11 = (Model) field4998.method7916(this.field5007);
+            var11 = (Model) field4998.get(this.field5007);
         }
         if (var11 == null || arg0.method519(var11.m(), var9) != 0) {
             if (var11 != null) {
@@ -466,7 +466,7 @@ public class PlayerModel {
                 }
             }
             var11.KA(var9);
-            WeightedCache var29 = field4998;
+            SoftLruHashTable var29 = field4998;
             synchronized (field4998) {
                 field4998.method7937(var11, this.field5007);
             }
@@ -484,10 +484,10 @@ public class PlayerModel {
     public Model method8257(RendererToolkit arg0, int arg1, IDKTypeList arg2, SeqTypeList arg3, AnimationNode arg4, int arg5, int arg6, int arg7) {
         int var9 = arg4 == null ? arg1 : arg1 | arg4.method11779();
         long var10 = (long) arg7 << 32 | (long) (arg6 << 16) | (long) arg5;
-        WeightedCache var12 = field4998;
+        SoftLruHashTable var12 = field4998;
         Model var13;
         synchronized (field4998) {
-            var13 = (Model) field4998.method7916(var10);
+            var13 = (Model) field4998.get(var10);
         }
         if (var13 == null || arg0.method519(var13.m(), var9) != 0) {
             if (var13 != null) {
@@ -521,7 +521,7 @@ public class PlayerModel {
                 }
             }
             var13.KA(var9);
-            WeightedCache var25 = field4998;
+            SoftLruHashTable var25 = field4998;
             synchronized (field4998) {
                 field4998.method7937(var13, var10);
             }
@@ -537,19 +537,19 @@ public class PlayerModel {
 
     @ObfuscatedName("fd.d(I)I")
     public static int method3503() {
-        WeightedCache var0 = field5012;
+        SoftLruHashTable var0 = field5012;
         synchronized (field5012) {
-            return field5012.method7926();
+            return field5012.size();
         }
     }
 
     @ObfuscatedName("c.n(I)V")
     public static void method1323() {
-        WeightedCache var0 = field5012;
+        SoftLruHashTable var0 = field5012;
         synchronized (field5012) {
             field5012.method7922();
         }
-        WeightedCache var2 = field4998;
+        SoftLruHashTable var2 = field4998;
         synchronized (field4998) {
             field4998.method7922();
         }
@@ -557,11 +557,11 @@ public class PlayerModel {
 
     @ObfuscatedName("jr.o(IB)V")
     public static void method4781(int arg0) {
-        WeightedCache var1 = field5012;
+        SoftLruHashTable var1 = field5012;
         synchronized (field5012) {
             field5012.method7921(arg0);
         }
-        WeightedCache var3 = field4998;
+        SoftLruHashTable var3 = field4998;
         synchronized (field4998) {
             field4998.method7921(arg0);
         }

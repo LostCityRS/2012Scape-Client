@@ -1011,7 +1011,7 @@ public class LoginManager {
         method3988();
         client.lobbyConnection.method1916();
         Statics.field578 = true;
-        ReflectionChecker.method11905();
+        ReflectionCheck.clear();
         for (int var0 = 0; var0 < client.field8936.length; var0++) {
             client.field8936[var0] = null;
         }
@@ -1035,8 +1035,8 @@ public class LoginManager {
         client.field9090.clear();
         client.field9091.method11653();
         client.field9088.clear();
-        ChangeLocationRequest.field9278 = new IterableQueue();
-        ChangeLocationRequest.field9292 = new IterableQueue();
+        ChangeLocationRequest.field9278 = new LinkedList();
+        ChangeLocationRequest.field9292 = new LinkedList();
         Statics.field2669.method1647();
         Statics.method12620();
         Statics.cameraMoveToX = 0;
@@ -1057,9 +1057,9 @@ public class LoginManager {
         if (client.topLevelInterface != -1) {
             Component.method13890(client.topLevelInterface);
         }
-        for (SubInterface var3 = (SubInterface) client.field9075.method11928(); var3 != null; var3 = (SubInterface) client.field9075.method11929()) {
-            if (!var3.method6982()) {
-                var3 = (SubInterface) client.field9075.method11928();
+        for (SubInterface var3 = (SubInterface) client.field9075.head(); var3 != null; var3 = (SubInterface) client.field9075.next()) {
+            if (!var3.isLinked()) {
+                var3 = (SubInterface) client.field9075.head();
                 if (var3 == null) {
                     break;
                 }
@@ -1067,7 +1067,7 @@ public class LoginManager {
             client.closeSubInterface(var3, true, false);
         }
         client.topLevelInterface = -1;
-        client.field9075 = new IterableMap(8);
+        client.field9075 = new HashTable(8);
         Statics.method4591();
         client.field9108 = null;
         for (int var4 = 0; var4 < 8; var4++) {

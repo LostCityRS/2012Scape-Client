@@ -4,5 +4,5 @@ import deob.ObfuscatedName;
 public class ObjStackList extends Node {
 
     @ObfuscatedName("acf.s")
-    public IterableQueue field9313 = new IterableQueue();
+    public LinkedList field9313 = new LinkedList();
 }

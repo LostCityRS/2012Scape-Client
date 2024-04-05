@@ -4,10 +4,10 @@ import deob.ObfuscatedName;
 public class CutsceneManager {
 
     @ObfuscatedName("dd.u")
-    public static IterableQueue field1534 = new IterableQueue();
+    public static LinkedList field1534 = new LinkedList();
 
     @ObfuscatedName("dd.t")
-    public static IterableMap field1529 = new IterableMap(32);
+    public static HashTable field1529 = new HashTable(32);
 
     @ObfuscatedName("dd.l")
     public static int field1530 = 1;

@@ -9,10 +9,10 @@ import java.awt.event.KeyListener;
 public final class JavaKeyboard extends Keyboard implements KeyListener, FocusListener {
 
     @ObfuscatedName("aem.di")
-    public IterableQueue field9773 = new IterableQueue();
+    public LinkedList field9773 = new LinkedList();
 
     @ObfuscatedName("aem.dg")
-    public IterableQueue field9771 = new IterableQueue();
+    public LinkedList field9771 = new LinkedList();
 
     @ObfuscatedName("aem.do")
     public boolean[] field9775 = new boolean[112];

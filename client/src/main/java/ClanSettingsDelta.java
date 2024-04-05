@@ -10,7 +10,7 @@ public class ClanSettingsDelta {
     public int field2375 = -1;
 
     @ObfuscatedName("gs.a")
-    public IterableQueue field2376 = new IterableQueue();
+    public LinkedList field2376 = new LinkedList();
 
     public ClanSettingsDelta(Packet arg0) {
         this.method4110(arg0);

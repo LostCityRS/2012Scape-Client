@@ -10,7 +10,7 @@ public class VorbisAudioBuss extends AudioBuss {
     public final int field10282;
 
     @ObfuscatedName("aiq.z")
-    public final IterableQueue field10285 = new IterableQueue();
+    public final LinkedList field10285 = new LinkedList();
 
     @ObfuscatedName("aiq.n")
     public int field10286 = 0;

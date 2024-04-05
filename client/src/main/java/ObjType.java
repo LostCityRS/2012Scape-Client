@@ -183,7 +183,7 @@ public class ObjType implements PlayerTypeRelated {
     public int field7060 = 0;
 
     @ObfuscatedName("vn.bd")
-    public IterableMap field7055;
+    public HashTable field7055;
 
     @ObfuscatedName("vn.bc")
     public int[] field7057;
@@ -405,7 +405,7 @@ public class ObjType implements PlayerTypeRelated {
             int var21 = buf.g1();
             if (this.field7055 == null) {
                 int var22 = IntMath.method2839(var21);
-                this.field7055 = new IterableMap(var22);
+                this.field7055 = new HashTable(var22);
             }
             for (int var23 = 0; var23 < var21; var23++) {
                 boolean var24 = buf.g1() == 1;
@@ -589,10 +589,10 @@ public class ObjType implements PlayerTypeRelated {
         if (arg4 != null) {
             var12 = arg1 | arg4.method11779();
         }
-        WeightedCache var13 = this.field7061.field7146;
+        SoftLruHashTable var13 = this.field7061.field7146;
         Model var14;
         synchronized (this.field7061.field7146) {
-            var14 = (Model) this.field7061.field7146.method7916((long) (this.field7062 | arg0.field397 << 29));
+            var14 = (Model) this.field7061.field7146.get((long) (this.field7062 | arg0.field397 << 29));
         }
         if (var14 == null || arg0.method519(var14.m(), var12) != 0) {
             if (var14 != null) {
@@ -649,7 +649,7 @@ public class ObjType implements PlayerTypeRelated {
                 }
             }
             var14.KA(var12);
-            WeightedCache var22 = this.field7061.field7146;
+            SoftLruHashTable var22 = this.field7061.field7146;
             synchronized (this.field7061.field7146) {
                 this.field7061.field7146.method7937(var14, (long) (this.field7062 | arg0.field397 << 29));
             }
@@ -1071,7 +1071,7 @@ public class ObjType implements PlayerTypeRelated {
         if (this.field7055 == null) {
             return arg1;
         } else {
-            IntNode var3 = (IntNode) this.field7055.getNode((long) arg0);
+            IntNode var3 = (IntNode) this.field7055.get((long) arg0);
             return var3 == null ? arg1 : var3.field9556;
         }
     }
@@ -1081,7 +1081,7 @@ public class ObjType implements PlayerTypeRelated {
         if (this.field7055 == null) {
             return arg1;
         } else {
-            ObjectNode var3 = (ObjectNode) this.field7055.getNode((long) arg0);
+            ObjectNode var3 = (ObjectNode) this.field7055.get((long) arg0);
             return var3 == null ? arg1 : (String) var3.value;
         }
     }

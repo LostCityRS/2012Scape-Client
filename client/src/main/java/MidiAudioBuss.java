@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class MidiAudioBuss extends AudioBuss {
 
     @ObfuscatedName("aih.l")
-    public IterableMap instruments;
+    public HashTable instruments;
 
     @ObfuscatedName("aih.f")
     public int volume = 256;
@@ -100,7 +100,7 @@ public class MidiAudioBuss extends AudioBuss {
     public boolean field10238;
 
     public MidiAudioBuss() {
-        this.instruments = new IterableMap(128);
+        this.instruments = new HashTable(128);
         this.method16266(-1, 256);
         this.reset(true);
     }
@@ -145,9 +145,9 @@ public class MidiAudioBuss extends AudioBuss {
         if (arg3 > 0) {
             var6 = new int[]{arg3};
         }
-        for (ObjectNode var7 = (ObjectNode) arg0.field9382.method11928(); var7 != null; var7 = (ObjectNode) arg0.field9382.method11929()) {
-            int var8 = (int) var7.field4228;
-            MidiInstrument var9 = (MidiInstrument) this.instruments.getNode((long) var8);
+        for (ObjectNode var7 = (ObjectNode) arg0.field9382.head(); var7 != null; var7 = (ObjectNode) arg0.field9382.next()) {
+            int var8 = (int) var7.key;
+            MidiInstrument var9 = (MidiInstrument) this.instruments.get((long) var8);
             if (var9 == null) {
                 var9 = MidiInstrument.method14060(arg1, var8);
                 if (var9 == null) {
@@ -168,14 +168,14 @@ public class MidiAudioBuss extends AudioBuss {
 
     @ObfuscatedName("aih.ao(B)V")
     public synchronized void method16324() {
-        for (MidiInstrument var1 = (MidiInstrument) this.instruments.method11928(); var1 != null; var1 = (MidiInstrument) this.instruments.method11929()) {
+        for (MidiInstrument var1 = (MidiInstrument) this.instruments.head(); var1 != null; var1 = (MidiInstrument) this.instruments.next()) {
             var1.method14916();
         }
     }
 
     @ObfuscatedName("aih.al(I)V")
     public synchronized void method16269() {
-        for (MidiInstrument var1 = (MidiInstrument) this.instruments.method11928(); var1 != null; var1 = (MidiInstrument) this.instruments.method11929()) {
+        for (MidiInstrument var1 = (MidiInstrument) this.instruments.head(); var1 != null; var1 = (MidiInstrument) this.instruments.next()) {
             var1.unlink();
         }
     }
@@ -264,7 +264,7 @@ public class MidiAudioBuss extends AudioBuss {
                 }
             }
         }
-        MidiInstrument instrument = (MidiInstrument) this.instruments.getNode((long) this.channelProgram[channel]);
+        MidiInstrument instrument = (MidiInstrument) this.instruments.get((long) this.channelProgram[channel]);
         if (instrument == null) {
             return;
         }

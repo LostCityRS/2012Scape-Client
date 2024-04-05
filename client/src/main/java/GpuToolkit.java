@@ -48,7 +48,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     public NativeHeap field8338;
 
     @ObfuscatedName("yk.ak")
-    public IterableQueue field8362 = new IterableQueue();
+    public LinkedList field8362 = new LinkedList();
 
     @ObfuscatedName("yk.av")
     public int field8325;

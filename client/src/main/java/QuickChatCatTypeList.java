@@ -10,7 +10,7 @@ public class QuickChatCatTypeList {
     public final Js5 field3705;
 
     @ObfuscatedName("lt.a")
-    public final WeightedCache field3706 = new WeightedCache(64);
+    public final SoftLruHashTable field3706 = new SoftLruHashTable(64);
 
     public QuickChatCatTypeList(Language arg0, Js5 arg1, Js5 arg2) {
         this.field3704 = arg1;
@@ -25,7 +25,7 @@ public class QuickChatCatTypeList {
 
     @ObfuscatedName("lt.u(IB)Lajx;")
     public QuickChatCatType method5933(int arg0) {
-        QuickChatCatType var2 = (QuickChatCatType) this.field3706.method7916((long) arg0);
+        QuickChatCatType var2 = (QuickChatCatType) this.field3706.get((long) arg0);
         if (var2 != null) {
             return var2;
         }

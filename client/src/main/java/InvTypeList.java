@@ -7,7 +7,7 @@ public class InvTypeList implements PlayerTypeListRelated {
     public final Js5 field7325;
 
     @ObfuscatedName("wo.j")
-    public final WeightedCache field7326 = new WeightedCache(64);
+    public final SoftLruHashTable field7326 = new SoftLruHashTable(64);
 
     public InvTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field7325 = arg2;
@@ -16,10 +16,10 @@ public class InvTypeList implements PlayerTypeListRelated {
 
     @ObfuscatedName("wo.u(II)Laez;")
     public InvType method12644(int arg0) {
-        WeightedCache var2 = this.field7326;
+        SoftLruHashTable var2 = this.field7326;
         InvType var3;
         synchronized (this.field7326) {
-            var3 = (InvType) this.field7326.method7916((long) arg0);
+            var3 = (InvType) this.field7326.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -33,7 +33,7 @@ public class InvTypeList implements PlayerTypeListRelated {
         if (var6 != null) {
             var8.method15624(new Packet(var6));
         }
-        WeightedCache var9 = this.field7326;
+        SoftLruHashTable var9 = this.field7326;
         synchronized (this.field7326) {
             this.field7326.method7937(var8, (long) arg0);
             return var8;

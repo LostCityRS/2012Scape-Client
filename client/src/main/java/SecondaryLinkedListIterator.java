@@ -3,26 +3,26 @@ import deob.ObfuscatedName;
 import java.util.Iterator;
 
 @ObfuscatedName("tp")
-public class DualIterableQueueIterator implements Iterator {
+public class SecondaryLinkedListIterator implements Iterator {
 
     @ObfuscatedName("tp.u")
-    public DualIterableQueue field6661;
+    public SecondaryLinkedList list;
 
     @ObfuscatedName("tp.j")
-    public SecondaryNode field6660;
+    public SecondaryNode cursor;
 
     @ObfuscatedName("tp.a")
     public SecondaryNode field6659 = null;
 
-    public DualIterableQueueIterator(DualIterableQueue arg0) {
-        this.field6661 = arg0;
-        this.field6660 = this.field6661.sentinel.dualPrev;
+    public SecondaryLinkedListIterator(SecondaryLinkedList list) {
+        this.list = list;
+        this.cursor = this.list.sentinel.secondaryNext;
         this.field6659 = null;
     }
 
     @ObfuscatedName("tp.f(I)V")
     public void method11713() {
-        this.field6660 = this.field6661.sentinel.dualPrev;
+        this.cursor = this.list.sentinel.secondaryNext;
         this.field6659 = null;
     }
 
@@ -33,26 +33,26 @@ public class DualIterableQueueIterator implements Iterator {
     }
 
     public Object next() {
-        SecondaryNode var1 = this.field6660;
-        if (this.field6661.sentinel == var1) {
-            var1 = null;
-            this.field6660 = null;
+        SecondaryNode node = this.cursor;
+        if (this.list.sentinel == node) {
+            node = null;
+            this.cursor = null;
         } else {
-            this.field6660 = var1.dualPrev;
+            this.cursor = node.secondaryNext;
         }
-        this.field6659 = var1;
-        return var1;
+        this.field6659 = node;
+        return node;
     }
 
     public boolean hasNext() {
-        return this.field6661.sentinel != this.field6660;
+        return this.list.sentinel != this.cursor;
     }
 
     public void remove() {
         if (this.field6659 == null) {
             throw new IllegalStateException();
         }
-        this.field6659.dualRemove();
+        this.field6659.unlinkSecondary();
         this.field6659 = null;
     }
 }

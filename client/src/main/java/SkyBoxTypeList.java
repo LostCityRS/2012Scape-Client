@@ -7,7 +7,7 @@ public class SkyBoxTypeList {
     public final Js5 field4463;
 
     @ObfuscatedName("ot.j")
-    public final WeightedCache field4462 = new WeightedCache(16);
+    public final SoftLruHashTable field4462 = new SoftLruHashTable(16);
 
     public SkyBoxTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field4463 = arg2;
@@ -16,10 +16,10 @@ public class SkyBoxTypeList {
 
     @ObfuscatedName("ot.u(II)Loi;")
     public SkyBoxType method7360(int arg0) {
-        WeightedCache var2 = this.field4462;
+        SoftLruHashTable var2 = this.field4462;
         SkyBoxType var3;
         synchronized (this.field4462) {
-            var3 = (SkyBoxType) this.field4462.method7916((long) arg0);
+            var3 = (SkyBoxType) this.field4462.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -33,7 +33,7 @@ public class SkyBoxTypeList {
         if (var6 != null) {
             var8.method7354(new Packet(var6));
         }
-        WeightedCache var9 = this.field4462;
+        SoftLruHashTable var9 = this.field4462;
         synchronized (this.field4462) {
             this.field4462.method7937(var8, (long) arg0);
             return var8;
@@ -56,7 +56,7 @@ public class SkyBoxTypeList {
 
     @ObfuscatedName("ot.a(B)V")
     public void method7363() {
-        WeightedCache var1 = this.field4462;
+        SoftLruHashTable var1 = this.field4462;
         synchronized (this.field4462) {
             this.field4462.method7922();
         }
@@ -64,7 +64,7 @@ public class SkyBoxTypeList {
 
     @ObfuscatedName("ot.s(IB)V")
     public void method7368(int arg0) {
-        WeightedCache var2 = this.field4462;
+        SoftLruHashTable var2 = this.field4462;
         synchronized (this.field4462) {
             this.field4462.method7921(arg0);
         }
@@ -72,9 +72,9 @@ public class SkyBoxTypeList {
 
     @ObfuscatedName("ot.c(I)V")
     public void method7364() {
-        WeightedCache var1 = this.field4462;
+        SoftLruHashTable var1 = this.field4462;
         synchronized (this.field4462) {
-            this.field4462.method7925();
+            this.field4462.removeSoft();
         }
     }
 }

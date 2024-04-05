@@ -7,10 +7,10 @@ public class SeqTypeList {
     public final Js5 field6342;
 
     @ObfuscatedName("st.j")
-    public final WeightedCache field6341 = new WeightedCache(64);
+    public final SoftLruHashTable field6341 = new SoftLruHashTable(64);
 
     @ObfuscatedName("st.a")
-    public final WeightedCache field6340 = new WeightedCache(100);
+    public final SoftLruHashTable field6340 = new SoftLruHashTable(100);
 
     public SeqTypeList(ModeGame arg0, Language arg1, Js5 arg2, Js5 arg3, Js5 arg4) {
         this.field6342 = arg2;
@@ -24,10 +24,10 @@ public class SeqTypeList {
 
     @ObfuscatedName("st.u(II)Lso;")
     public SeqType method11144(int arg0) {
-        WeightedCache var2 = this.field6341;
+        SoftLruHashTable var2 = this.field6341;
         SeqType var3;
         synchronized (this.field6341) {
-            var3 = (SeqType) this.field6341.method7916((long) arg0);
+            var3 = (SeqType) this.field6341.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -44,7 +44,7 @@ public class SeqTypeList {
             var8.method11122(new Packet(var6));
         }
         var8.method11124();
-        WeightedCache var9 = this.field6341;
+        SoftLruHashTable var9 = this.field6341;
         synchronized (this.field6341) {
             this.field6341.method7937(var8, (long) arg0);
             return var8;
@@ -53,9 +53,9 @@ public class SeqTypeList {
 
     @ObfuscatedName("st.j(II)Laje;")
     public FrameSet method11146(int arg0) {
-        WeightedCache var2 = this.field6340;
+        SoftLruHashTable var2 = this.field6340;
         synchronized (this.field6340) {
-            FrameSet var3 = (FrameSet) this.field6340.method7916((long) arg0);
+            FrameSet var3 = (FrameSet) this.field6340.get((long) arg0);
             if (var3 == null) {
                 var3 = new FrameSet(arg0);
                 this.field6340.method7937(var3, (long) arg0);
@@ -66,11 +66,11 @@ public class SeqTypeList {
 
     @ObfuscatedName("st.a(I)V")
     public void method11143() {
-        WeightedCache var1 = this.field6341;
+        SoftLruHashTable var1 = this.field6341;
         synchronized (this.field6341) {
             this.field6341.method7922();
         }
-        WeightedCache var3 = this.field6340;
+        SoftLruHashTable var3 = this.field6340;
         synchronized (this.field6340) {
             this.field6340.method7922();
         }
@@ -78,11 +78,11 @@ public class SeqTypeList {
 
     @ObfuscatedName("st.s(II)V")
     public void method11147(int arg0) {
-        WeightedCache var2 = this.field6341;
+        SoftLruHashTable var2 = this.field6341;
         synchronized (this.field6341) {
             this.field6341.method7921(arg0);
         }
-        WeightedCache var4 = this.field6340;
+        SoftLruHashTable var4 = this.field6340;
         synchronized (this.field6340) {
             this.field6340.method7921(arg0);
         }
@@ -90,13 +90,13 @@ public class SeqTypeList {
 
     @ObfuscatedName("st.c(I)V")
     public void method11148() {
-        WeightedCache var1 = this.field6341;
+        SoftLruHashTable var1 = this.field6341;
         synchronized (this.field6341) {
-            this.field6341.method7925();
+            this.field6341.removeSoft();
         }
-        WeightedCache var3 = this.field6340;
+        SoftLruHashTable var3 = this.field6340;
         synchronized (this.field6340) {
-            this.field6340.method7925();
+            this.field6340.removeSoft();
         }
     }
 }

@@ -349,7 +349,7 @@ public class BASType {
 
     @ObfuscatedName("ps.m(B)[I")
     public int[] method7754() {
-        IterableMap var1 = new IterableMap(16);
+        HashTable var1 = new HashTable(16);
         method12356(this.field4688, var1);
         if (this.field4689 != null) {
             int[] var2 = this.field4689;
@@ -378,19 +378,19 @@ public class BASType {
         method12356(this.field4709, var1);
         method12356(this.field4693, var1);
         method12356(this.field4711, var1);
-        int[] var5 = new int[var1.length()];
+        int[] var5 = new int[var1.size()];
         int var6 = 0;
         Iterator var7 = var1.iterator();
         while (var7.hasNext()) {
             Node var8 = (Node) var7.next();
-            var5[var6++] = (int) var8.field4228;
+            var5[var6++] = (int) var8.key;
         }
         return var5;
     }
 
     @ObfuscatedName("vr.t(ILuo;I)V")
-    public static final void method12356(int arg0, IterableMap arg1) {
-        if (arg0 != -1 && arg1.getNode((long) arg0) == null) {
+    public static final void method12356(int arg0, HashTable arg1) {
+        if (arg0 != -1 && arg1.get((long) arg0) == null) {
             arg1.put(new Node(), (long) arg0);
         }
     }

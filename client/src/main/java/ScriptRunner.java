@@ -16,7 +16,7 @@ public final class ScriptRunner {
     public static int[] field5200 = new int[3];
 
     @ObfuscatedName("rb.c")
-    public static WeightedCache field5207 = new WeightedCache(4);
+    public static SoftLruHashTable field5207 = new SoftLruHashTable(4);
 
     @ObfuscatedName("rb.m")
     public static Vector3[] field5204 = new Vector3[2];
@@ -121,7 +121,7 @@ public final class ScriptRunner {
                     var10 = arg0.drop == null ? -1 : arg0.drop.parentlayer;
                 }
                 if (var10 == -2147483640) {
-                    var10 = arg0.key;
+                    var10 = arg0.keyHook;
                 }
                 if (var10 == -2147483639) {
                     var10 = arg0.keychar;
@@ -231,9 +231,9 @@ public final class ScriptRunner {
             }
         } catch (Exception var10) {
             StringBuilder var5 = new StringBuilder(30);
-            var5.append("").append(arg2.field5218.field4228).append(" ");
+            var5.append("").append(arg2.field5218.key).append(" ");
             for (int var6 = arg2.field5221 - 1; var6 >= 0; var6--) {
-                var5.append("").append(arg2.field5225[var6].field5191.field4228).append(" ");
+                var5.append("").append(arg2.field5225[var6].field5191.key).append(" ");
             }
             var5.append("").append(var3.opcode);
             JagException.method16252(var5.toString(), var10);
@@ -3725,7 +3725,7 @@ public final class ScriptRunner {
     public static final void method8300(ClientScriptState arg0) {
         int var1 = arg0.field5227[arg0.field5236];
         Statics.field6666[var1] = arg0.field5215[--arg0.field5216];
-        DelayedStateChange.method5553(var1);
+        DelayedStateChange.onVarClientInt(var1);
         client.field9156 |= Statics.field2210[var1];
     }
 
@@ -3781,7 +3781,7 @@ public final class ScriptRunner {
     public static final void method1908(ClientScriptState arg0) {
         int var1 = arg0.field5227[arg0.field5236];
         Statics.field3498[var1] = (String) arg0.field5222[--arg0.field5230];
-        DelayedStateChange.method12064(var1);
+        DelayedStateChange.onVarClientString(var1);
     }
 
     @ObfuscatedName("lv.bv(Lrn;I)V")
@@ -4104,7 +4104,7 @@ public final class ScriptRunner {
             client.method12722(arg1, arg0, false);
         }
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method7185(arg0.id);
+            DelayedStateChange.onComponentPosition(arg0.id);
         }
     }
 
@@ -4176,7 +4176,7 @@ public final class ScriptRunner {
             client.requestRedrawComponent(arg0);
         }
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method3097(arg0.id);
+            DelayedStateChange.onComponentHide(arg0.id);
         }
     }
 
@@ -4264,7 +4264,7 @@ public final class ScriptRunner {
         }
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method15881(arg0.id);
+            DelayedStateChange.onComponentScrollPos(arg0.id);
         }
     }
 
@@ -4289,7 +4289,7 @@ public final class ScriptRunner {
         arg0.colour = arg2.field5215[--arg2.field5216];
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method15629(arg0.id);
+            DelayedStateChange.onComponentColour(arg0.id);
         }
     }
 
@@ -4361,7 +4361,7 @@ public final class ScriptRunner {
             client.requestRedrawComponent(arg0);
         }
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method15683(arg0.id);
+            DelayedStateChange.onType14(arg0.id);
         }
     }
 
@@ -4454,8 +4454,8 @@ public final class ScriptRunner {
         arg0.field1818 = arg2.field5215[arg2.field5216 + 5];
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method8721(arg0.id);
-            DelayedStateChange.method12329(arg0.id);
+            DelayedStateChange.onComponentAngle(arg0.id);
+            DelayedStateChange.onComponentModelAngle(arg0.id);
         }
     }
 
@@ -4491,7 +4491,7 @@ public final class ScriptRunner {
             client.requestRedrawComponent(arg0);
         }
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method7890(arg0.id);
+            DelayedStateChange.onComponentModelAnim(arg0.id);
         }
     }
 
@@ -4559,7 +4559,7 @@ public final class ScriptRunner {
             client.requestRedrawComponent(arg0);
         }
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method3929(arg0.id);
+            DelayedStateChange.onComponentText(arg0.id);
         }
     }
 
@@ -4584,7 +4584,7 @@ public final class ScriptRunner {
         arg0.field1793 = arg2.field5215[--arg2.field5216];
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method11667(arg0.id);
+            DelayedStateChange.onType16(arg0.id);
         }
     }
 
@@ -4648,7 +4648,7 @@ public final class ScriptRunner {
         arg0.field1860 = arg2.field5215[--arg2.field5216] == 1;
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method1382(arg0.id);
+            DelayedStateChange.onComponentClickMask(arg0.id);
         }
     }
 
@@ -4780,7 +4780,7 @@ public final class ScriptRunner {
         arg0.field1818 = arg2.field5215[--arg2.field5216];
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method8721(arg0.id);
+            DelayedStateChange.onComponentAngle(arg0.id);
         }
     }
 
@@ -4901,7 +4901,7 @@ public final class ScriptRunner {
         arg0.method3158(var3, var4, var5);
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method1981(arg0.id, var3);
+            DelayedStateChange.onType18(arg0.id, var3);
         }
     }
 
@@ -4929,7 +4929,7 @@ public final class ScriptRunner {
             client.requestRedrawComponent(arg0);
         }
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method5601(arg0.id);
+            DelayedStateChange.onType17(arg0.id);
         }
     }
 
@@ -4984,7 +4984,7 @@ public final class ScriptRunner {
         arg0.method3131(var3, var4, var5);
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method12693(arg0.id, var3);
+            DelayedStateChange.onType19(arg0.id, var3);
         }
     }
 
@@ -5009,7 +5009,7 @@ public final class ScriptRunner {
         arg0.field1833 = arg2.field5215[--arg2.field5216] == 1;
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method13906(arg0.id);
+            DelayedStateChange.onType20(arg0.id);
         }
     }
 
@@ -5034,7 +5034,7 @@ public final class ScriptRunner {
         arg0.field1805 = arg2.field5215[--arg2.field5216] == 1;
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method4568(arg0.id);
+            DelayedStateChange.onType21(arg0.id);
         }
     }
 
@@ -5102,9 +5102,9 @@ public final class ScriptRunner {
         int var5 = arg4.field5215[arg4.field5216];
         int var6 = arg4.field5215[arg4.field5216 + 1];
         if (arg0.parentlayer == -1 && !arg1.field1734) {
-            DelayedStateChange.method6563(arg0.id);
-            DelayedStateChange.method8721(arg0.id);
-            DelayedStateChange.method12329(arg0.id);
+            DelayedStateChange.onComponentObject(arg0.id);
+            DelayedStateChange.onComponentAngle(arg0.id);
+            DelayedStateChange.onComponentModelAngle(arg0.id);
         }
         if (var5 == -1) {
             arg0.field1806 = 1;
@@ -7252,7 +7252,7 @@ public final class ScriptRunner {
     @ObfuscatedName("dr.sb(Lrn;I)V")
     public static final void method2824(ClientScriptState arg0) {
         int var1 = arg0.field5215[--arg0.field5216];
-        SubInterface var2 = (SubInterface) client.field9075.getNode((long) var1);
+        SubInterface var2 = (SubInterface) client.field9075.get((long) var1);
         if (var2 == null) {
             arg0.field5215[++arg0.field5216 - 1] = 0;
         } else {
@@ -7282,7 +7282,7 @@ public final class ScriptRunner {
         arg0.field5216 -= 2;
         int var1 = arg0.field5215[arg0.field5216];
         int var2 = arg0.field5215[arg0.field5216 + 1];
-        SubInterface var3 = (SubInterface) client.field9075.getNode((long) var1);
+        SubInterface var3 = (SubInterface) client.field9075.get((long) var1);
         if (var3 != null && var3.field9679 == var2) {
             arg0.field5215[++arg0.field5216 - 1] = 1;
         } else {
@@ -7415,7 +7415,7 @@ public final class ScriptRunner {
     public static final void if_closesubclient(ClientScriptState arg0) {
         arg0.field5216--;
         int var1 = arg0.field5215[arg0.field5216];
-        SubInterface var2 = (SubInterface) client.field9075.getNode((long) var1);
+        SubInterface var2 = (SubInterface) client.field9075.get((long) var1);
         if (var2 != null && var2.field9678 == 3) {
             client.closeSubInterface(var2, true, true);
         }
@@ -9687,9 +9687,9 @@ public final class ScriptRunner {
         arg0.field5216 -= 2;
         int var1 = arg0.field5215[arg0.field5216];
         int var2 = arg0.field5215[arg0.field5216 + 1];
-        DualIterableQueue var3 = WorldMap.getAreaListByCoord(var1 >> 14 & 0x3FFF, var1 & 0x3FFF);
+        SecondaryLinkedList var3 = WorldMap.getAreaListByCoord(var1 >> 14 & 0x3FFF, var1 & 0x3FFF);
         boolean var4 = false;
-        for (WorldMapAreaMetadata var5 = (WorldMapAreaMetadata) var3.last(); var5 != null; var5 = (WorldMapAreaMetadata) var3.previous()) {
+        for (WorldMapAreaMetadata var5 = (WorldMapAreaMetadata) var3.head(); var5 != null; var5 = (WorldMapAreaMetadata) var3.next()) {
             if (var5.id == var2) {
                 var4 = true;
                 break;
@@ -9796,7 +9796,7 @@ public final class ScriptRunner {
         if (ClientWorldMap.field9766 == null) {
             return;
         }
-        Node var3 = ClientWorldMap.field9766.getNode((long) var1);
+        Node var3 = ClientWorldMap.field9766.get((long) var1);
         if (var3 != null && !var2) {
             var3.unlink();
         } else if (var3 == null && var2) {
@@ -9811,7 +9811,7 @@ public final class ScriptRunner {
         if (ClientWorldMap.field9766 == null) {
             arg0.field5215[++arg0.field5216 - 1] = 0;
         } else {
-            Node var2 = ClientWorldMap.field9766.getNode((long) var1);
+            Node var2 = ClientWorldMap.field9766.get((long) var1);
             arg0.field5215[++arg0.field5216 - 1] = var2 == null ? 0 : 1;
         }
     }
@@ -9824,7 +9824,7 @@ public final class ScriptRunner {
         if (ClientWorldMap.field9765 == null) {
             return;
         }
-        Node var3 = ClientWorldMap.field9765.getNode((long) var1);
+        Node var3 = ClientWorldMap.field9765.get((long) var1);
         if (var3 != null && !var2) {
             var3.unlink();
         } else if (var3 == null && var2) {
@@ -9839,7 +9839,7 @@ public final class ScriptRunner {
         if (ClientWorldMap.field9765 == null) {
             arg0.field5215[++arg0.field5216 - 1] = 0;
         } else {
-            Node var2 = ClientWorldMap.field9765.getNode((long) var1);
+            Node var2 = ClientWorldMap.field9765.get((long) var1);
             arg0.field5215[++arg0.field5216 - 1] = var2 == null ? 0 : 1;
         }
     }
@@ -11582,7 +11582,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("wf.ank(Lrn;I)V")
     public static final void method12505(ClientScriptState arg0) {
-        int var1 = client.field9075.length();
+        int var1 = client.field9075.size();
         if (client.topLevelInterface != -1) {
             var1++;
         }
@@ -11599,9 +11599,9 @@ public final class ScriptRunner {
             }
             var1--;
         }
-        SubInterface var2 = (SubInterface) client.field9075.method11928();
+        SubInterface var2 = (SubInterface) client.field9075.head();
         while (var1-- > 0) {
-            var2 = (SubInterface) client.field9075.method11929();
+            var2 = (SubInterface) client.field9075.next();
         }
         arg0.field5215[++arg0.field5216 - 1] = var2.field9679;
     }

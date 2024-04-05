@@ -60,7 +60,7 @@ public class GlToolkit extends RendererToolkit {
     public NativeHeap field8094;
 
     @ObfuscatedName("yq.cw")
-    public IterableQueue field8170 = new IterableQueue();
+    public LinkedList field8170 = new LinkedList();
 
     @ObfuscatedName("yq.cx")
     public int field8096;
@@ -72,25 +72,25 @@ public class GlToolkit extends RendererToolkit {
     public int field8098;
 
     @ObfuscatedName("yq.cs")
-    public IterableQueue field8099 = new IterableQueue();
+    public LinkedList field8099 = new LinkedList();
 
     @ObfuscatedName("yq.cr")
-    public IterableQueue field8039 = new IterableQueue();
+    public LinkedList field8039 = new LinkedList();
 
     @ObfuscatedName("yq.cp")
-    public IterableQueue field8198 = new IterableQueue();
+    public LinkedList field8198 = new LinkedList();
 
     @ObfuscatedName("yq.ci")
-    public IterableQueue field8102 = new IterableQueue();
+    public LinkedList field8102 = new LinkedList();
 
     @ObfuscatedName("yq.ca")
-    public IterableQueue field8103 = new IterableQueue();
+    public LinkedList field8103 = new LinkedList();
 
     @ObfuscatedName("yq.ch")
-    public IterableQueue field8194 = new IterableQueue();
+    public LinkedList field8194 = new LinkedList();
 
     @ObfuscatedName("yq.cv")
-    public IterableQueue field8105 = new IterableQueue();
+    public LinkedList field8105 = new LinkedList();
 
     @ObfuscatedName("yq.ck")
     public long field8078;
@@ -2566,7 +2566,7 @@ public class GlToolkit extends RendererToolkit {
         int var3 = arg0 & Integer.MAX_VALUE;
         while (!this.field8039.method11585()) {
             IntNode var4 = (IntNode) this.field8039.method11560();
-            field8228[var2++] = (int) var4.field4228;
+            field8228[var2++] = (int) var4.key;
             this.field8157 -= var4.field9556;
             if (var2 == 1000) {
                 OpenGL.glDeleteBuffersARB(var2, field8228, 0);
@@ -2579,7 +2579,7 @@ public class GlToolkit extends RendererToolkit {
         }
         while (!this.field8198.method11585()) {
             IntNode var5 = (IntNode) this.field8198.method11560();
-            field8228[var2++] = (int) var5.field4228;
+            field8228[var2++] = (int) var5.key;
             this.field8096 -= var5.field9556;
             if (var2 == 1000) {
                 OpenGL.glDeleteTextures(var2, field8228, 0);
@@ -2604,7 +2604,7 @@ public class GlToolkit extends RendererToolkit {
         }
         while (!this.field8103.method11585()) {
             IntNode var7 = (IntNode) this.field8103.method11560();
-            field8228[var2++] = (int) var7.field4228;
+            field8228[var2++] = (int) var7.key;
             this.field8098 -= var7.field9556;
             if (var2 == 1000) {
                 OpenGL.glDeleteRenderbuffersEXT(var2, field8228, 0);
@@ -2617,19 +2617,19 @@ public class GlToolkit extends RendererToolkit {
         }
         while (!this.field8099.method11585()) {
             IntNode var9 = (IntNode) this.field8099.method11560();
-            OpenGL.glDeleteLists((int) var9.field4228, var9.field9556);
+            OpenGL.glDeleteLists((int) var9.key, var9.field9556);
         }
         while (!this.field8194.method11585()) {
             Node var10 = this.field8194.method11560();
-            OpenGL.glDeleteProgramARB((int) var10.field4228);
+            OpenGL.glDeleteProgramARB((int) var10.key);
         }
         while (!this.field8105.method11585()) {
             Node var11 = this.field8105.method11560();
-            OpenGL.glDeleteShader((int) var11.field4228);
+            OpenGL.glDeleteShader((int) var11.key);
         }
         while (!this.field8099.method11585()) {
             IntNode var12 = (IntNode) this.field8099.method11560();
-            OpenGL.glDeleteLists((int) var12.field4228, var12.field9556);
+            OpenGL.glDeleteLists((int) var12.key, var12.field9556);
         }
         this.field8083.method2326();
         if (this.za() > 100663296 && MonotonicTime.get() > this.field8078 + 60000L) {
@@ -2642,14 +2642,14 @@ public class GlToolkit extends RendererToolkit {
     @ObfuscatedName("yq.qo(II)V")
     public final synchronized void method13328(int arg0, int arg1) {
         IntNode var3 = new IntNode(arg1);
-        var3.field4228 = arg0;
+        var3.key = arg0;
         this.field8039.addTail(var3);
     }
 
     @ObfuscatedName("yq.qr(II)V")
     public final synchronized void method13329(int arg0, int arg1) {
         IntNode var3 = new IntNode(arg1);
-        var3.field4228 = arg0;
+        var3.key = arg0;
         this.field8198.addTail(var3);
     }
 
@@ -2662,21 +2662,21 @@ public class GlToolkit extends RendererToolkit {
     @ObfuscatedName("yq.ql(II)V")
     public final synchronized void method13331(int arg0, int arg1) {
         IntNode var3 = new IntNode(arg1);
-        var3.field4228 = arg0;
+        var3.key = arg0;
         this.field8103.addTail(var3);
     }
 
     @ObfuscatedName("yq.qp(J)V")
     public final synchronized void method13332(long arg0) {
         Node var3 = new Node();
-        var3.field4228 = arg0;
+        var3.key = arg0;
         this.field8105.addTail(var3);
     }
 
     @ObfuscatedName("yq.qf(I)V")
     public final synchronized void method13333(int arg0) {
         Node var2 = new Node();
-        var2.field4228 = arg0;
+        var2.key = arg0;
         this.field8194.addTail(var2);
     }
 

@@ -22,10 +22,10 @@ public class ObjTypeList implements PlayerTypeListRelated {
     public int field7144;
 
     @ObfuscatedName("vj.t")
-    public final WeightedCache field7145 = new WeightedCache(64);
+    public final SoftLruHashTable field7145 = new SoftLruHashTable(64);
 
     @ObfuscatedName("vj.l")
-    public final WeightedCache field7146 = new WeightedCache(50);
+    public final SoftLruHashTable field7146 = new SoftLruHashTable(50);
 
     @ObfuscatedName("vj.f")
     public final ObjTypeListRelated field7147 = new ObjTypeListRelated(250);
@@ -68,10 +68,10 @@ public class ObjTypeList implements PlayerTypeListRelated {
 
     @ObfuscatedName("vj.u(II)Lvn;")
     public ObjType get(int arg0) {
-        WeightedCache var2 = this.field7145;
+        SoftLruHashTable var2 = this.field7145;
         ObjType var3;
         synchronized (this.field7145) {
-            var3 = (ObjType) this.field7145.method7916((long) arg0);
+            var3 = (ObjType) this.field7145.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -107,8 +107,8 @@ public class ObjTypeList implements PlayerTypeListRelated {
             var8.field7057 = null;
             if (var8.field7055 != null) {
                 boolean var9 = false;
-                for (Node var10 = var8.field7055.method11928(); var10 != null; var10 = var8.field7055.method11929()) {
-                    ParamType var11 = this.field7141.get((int) var10.field4228);
+                for (Node var10 = var8.field7055.head(); var10 != null; var10 = var8.field7055.next()) {
+                    ParamType var11 = this.field7141.get((int) var10.key);
                     if (var11.field7289) {
                         var10.unlink();
                     } else {
@@ -120,7 +120,7 @@ public class ObjTypeList implements PlayerTypeListRelated {
                 }
             }
         }
-        WeightedCache var12 = this.field7145;
+        SoftLruHashTable var12 = this.field7145;
         synchronized (this.field7145) {
             this.field7145.method7937(var8, (long) arg0);
             return var8;
@@ -194,7 +194,7 @@ public class ObjTypeList implements PlayerTypeListRelated {
     @ObfuscatedName("vj.c(IB)V")
     public void method12295(int arg0) {
         this.field7150 = arg0;
-        WeightedCache var2 = this.field7146;
+        SoftLruHashTable var2 = this.field7146;
         synchronized (this.field7146) {
             this.field7146.method7922();
         }
@@ -202,11 +202,11 @@ public class ObjTypeList implements PlayerTypeListRelated {
 
     @ObfuscatedName("vj.m(I)V")
     public void method12296() {
-        WeightedCache var1 = this.field7145;
+        SoftLruHashTable var1 = this.field7145;
         synchronized (this.field7145) {
             this.field7145.method7922();
         }
-        WeightedCache var3 = this.field7146;
+        SoftLruHashTable var3 = this.field7146;
         synchronized (this.field7146) {
             this.field7146.method7922();
         }
@@ -226,7 +226,7 @@ public class ObjTypeList implements PlayerTypeListRelated {
 
     @ObfuscatedName("vj.l(I)V")
     public void method12298() {
-        WeightedCache var1 = this.field7146;
+        SoftLruHashTable var1 = this.field7146;
         synchronized (this.field7146) {
             this.field7146.method7922();
         }
@@ -234,11 +234,11 @@ public class ObjTypeList implements PlayerTypeListRelated {
 
     @ObfuscatedName("vj.f(II)V")
     public void method12291(int arg0) {
-        WeightedCache var2 = this.field7145;
+        SoftLruHashTable var2 = this.field7145;
         synchronized (this.field7145) {
             this.field7145.method7921(arg0);
         }
-        WeightedCache var4 = this.field7146;
+        SoftLruHashTable var4 = this.field7146;
         synchronized (this.field7146) {
             this.field7146.method7921(arg0);
         }
@@ -250,13 +250,13 @@ public class ObjTypeList implements PlayerTypeListRelated {
 
     @ObfuscatedName("vj.d(S)V")
     public void method12300() {
-        WeightedCache var1 = this.field7145;
+        SoftLruHashTable var1 = this.field7145;
         synchronized (this.field7145) {
-            this.field7145.method7925();
+            this.field7145.removeSoft();
         }
-        WeightedCache var3 = this.field7146;
+        SoftLruHashTable var3 = this.field7146;
         synchronized (this.field7146) {
-            this.field7146.method7925();
+            this.field7146.removeSoft();
         }
         ObjTypeListRelated var5 = this.field7147;
         synchronized (this.field7147) {

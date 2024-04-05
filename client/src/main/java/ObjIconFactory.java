@@ -6,7 +6,7 @@ import java.awt.Canvas;
 public class ObjIconFactory {
 
     @ObfuscatedName("ar.a")
-    public static IterableQueue requests = new IterableQueue();
+    public static LinkedList requests = new LinkedList();
 
     public ObjIconFactory() throws Throwable {
         throw new Error();

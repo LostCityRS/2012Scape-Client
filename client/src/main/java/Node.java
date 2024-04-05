@@ -4,26 +4,26 @@ import deob.ObfuscatedName;
 public class Node {
 
     @ObfuscatedName("nz.u")
-    public long field4228;
+    public long key;
 
     @ObfuscatedName("nz.j")
-    public Node prev;
+    public Node next;
 
     @ObfuscatedName("nz.a")
-    public Node next;
+    public Node prev;
 
     @ObfuscatedName("nz.p(I)V")
     public void unlink() {
-        if (this.next != null) {
-            this.next.prev = this.prev;
+        if (this.prev != null) {
             this.prev.next = this.next;
-            this.prev = null;
+            this.next.prev = this.prev;
             this.next = null;
+            this.prev = null;
         }
     }
 
     @ObfuscatedName("nz.w(B)Z")
-    public boolean method6982() {
-        return this.next != null;
+    public boolean isLinked() {
+        return this.prev != null;
     }
 }

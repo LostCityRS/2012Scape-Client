@@ -67,7 +67,7 @@ public class QuestType {
     public String[] field5077;
 
     @ObfuscatedName("qb.h")
-    public IterableMap field5069;
+    public HashTable field5069;
 
     @ObfuscatedName("qb.r")
     public int field5079 = -1;
@@ -168,7 +168,7 @@ public class QuestType {
             int var17 = arg0.g1();
             if (this.field5069 == null) {
                 int var18 = IntMath.method2839(var17);
-                this.field5069 = new IterableMap(var18);
+                this.field5069 = new HashTable(var18);
             }
             for (int var19 = 0; var19 < var17; var19++) {
                 boolean var20 = arg0.g1() == 1;
@@ -196,7 +196,7 @@ public class QuestType {
         if (this.field5069 == null) {
             return arg1;
         } else {
-            IntNode var3 = (IntNode) this.field5069.getNode((long) arg0);
+            IntNode var3 = (IntNode) this.field5069.get((long) arg0);
             return var3 == null ? arg1 : var3.field9556;
         }
     }
@@ -206,7 +206,7 @@ public class QuestType {
         if (this.field5069 == null) {
             return arg1;
         } else {
-            ObjectNode var3 = (ObjectNode) this.field5069.getNode((long) arg0);
+            ObjectNode var3 = (ObjectNode) this.field5069.get((long) arg0);
             return var3 == null ? arg1 : (String) var3.value;
         }
     }

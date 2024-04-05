@@ -25,7 +25,7 @@ public class MiniMap {
     public static int[] field761 = new int[1003];
 
     @ObfuscatedName("ao.l")
-    public static IterableQueue field758 = new IterableQueue();
+    public static LinkedList field758 = new LinkedList();
 
     @ObfuscatedName("ao.f")
     public static int mapFlagX = -1;
@@ -281,11 +281,11 @@ public class MiniMap {
                 }
                 method1712(arg0, var5, arg1, arg2, arg3, var22, var23, var24.field6495);
             }
-            for (ObjStackList var25 = (ObjStackList) client.field9088.method11928(); var25 != null; var25 = (ObjStackList) client.field9088.method11929()) {
-                int var26 = (int) (var25.field4228 >> 28 & 0x3L);
+            for (ObjStackList var25 = (ObjStackList) client.field9088.head(); var25 != null; var25 = (ObjStackList) client.field9088.next()) {
+                int var26 = (int) (var25.key >> 28 & 0x3L);
                 if (field765 == var26) {
-                    int var27 = (int) (var25.field4228 & 0x3FFFL) - var6.x;
-                    int var28 = (int) (var25.field4228 >> 14 & 0x3FFFL) - var6.z;
+                    int var27 = (int) (var25.key & 0x3FFFL) - var6.x;
+                    int var28 = (int) (var25.key >> 14 & 0x3FFFL) - var6.z;
                     int var29 = var27 * 4 + 2 - var7 / 128;
                     int var30 = var28 * 4 + 2 - var8 / 128;
                     Statics.method12552(arg1, var5, arg2, arg3, var29, var30, Statics.field561[0]);
@@ -310,7 +310,7 @@ public class MiniMap {
     @ObfuscatedName("ci.z(Lra;IILew;Lta;III)V")
     public static void method2388(RendererToolkit arg0, int arg1, int arg2, Component arg3, GraphicsRelated arg4, int arg5, int arg6) {
         for (int var7 = 0; var7 < client.npcCount; var7++) {
-            ObjectNode var8 = (ObjectNode) client.npcs.getNode((long) client.field9056[var7]);
+            ObjectNode var8 = (ObjectNode) client.npcs.get((long) client.field9056[var7]);
             if (var8 != null) {
                 NpcEntity var9 = (NpcEntity) var8.value;
                 if (var9.method16154() && Statics.localPlayerEntity.level == var9.level) {
@@ -386,7 +386,7 @@ public class MiniMap {
             HintArrow var8 = var6[var7];
             if (var8 != null && var8.field776 != 0 && client.loopCycle % 20 < 10) {
                 if (var8.field776 == 1) {
-                    ObjectNode var9 = (ObjectNode) client.npcs.getNode((long) var8.field772);
+                    ObjectNode var9 = (ObjectNode) client.npcs.get((long) var8.field772);
                     if (var9 != null) {
                         NpcEntity var10 = (NpcEntity) var9.value;
                         Vector3 var11 = var10.getTransform().trans;

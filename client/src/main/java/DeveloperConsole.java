@@ -680,8 +680,8 @@ public class DeveloperConsole {
                     Vector3 var11 = Statics.localPlayerEntity.getTransform().trans;
                     addLine("" + client.world.getScene().field4498[Statics.localPlayerEntity.level].method199((int) var11.x >> 9, (int) var11.z >> 9));
                 } else if (arg0 == 1) {
-                    addLine(Component.field1757.method7924() + " " + Component.field1757.method7923());
-                    addLine(Component.field1760.method7924() + " " + Component.field1760.method7923());
+                    addLine(Component.field1757.getAvailable() + " " + Component.field1757.method7923());
+                    addLine(Component.field1760.getAvailable() + " " + Component.field1760.method7923());
                     addLine(Statics.objTypes.field7147.method8000() + " " + Statics.objTypes.field7147.method8008());
                 } else if (arg0 == 10) {
                     client.method5025(false);

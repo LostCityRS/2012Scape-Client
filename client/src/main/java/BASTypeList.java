@@ -7,7 +7,7 @@ public class BASTypeList {
     public final Js5 field4734;
 
     @ObfuscatedName("pn.j")
-    public final WeightedCache field4732 = new WeightedCache(64);
+    public final SoftLruHashTable field4732 = new SoftLruHashTable(64);
 
     @ObfuscatedName("pn.a")
     public static final BASType field4733 = new BASType();
@@ -23,10 +23,10 @@ public class BASTypeList {
 
     @ObfuscatedName("pn.u(II)Lps;")
     public BASType method7784(int arg0) {
-        WeightedCache var2 = this.field4732;
+        SoftLruHashTable var2 = this.field4732;
         BASType var3;
         synchronized (this.field4732) {
-            var3 = (BASType) this.field4732.method7916((long) arg0);
+            var3 = (BASType) this.field4732.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -41,7 +41,7 @@ public class BASTypeList {
         if (var6 != null) {
             var8.method7752(new Packet(var6));
         }
-        WeightedCache var9 = this.field4732;
+        SoftLruHashTable var9 = this.field4732;
         synchronized (this.field4732) {
             this.field4732.method7937(var8, (long) arg0);
             return var8;
@@ -50,7 +50,7 @@ public class BASTypeList {
 
     @ObfuscatedName("pn.j(I)V")
     public void method7774() {
-        WeightedCache var1 = this.field4732;
+        SoftLruHashTable var1 = this.field4732;
         synchronized (this.field4732) {
             this.field4732.method7922();
         }
@@ -58,7 +58,7 @@ public class BASTypeList {
 
     @ObfuscatedName("pn.a(IB)V")
     public void method7775(int arg0) {
-        WeightedCache var2 = this.field4732;
+        SoftLruHashTable var2 = this.field4732;
         synchronized (this.field4732) {
             this.field4732.method7921(arg0);
         }
@@ -66,9 +66,9 @@ public class BASTypeList {
 
     @ObfuscatedName("pn.s(I)V")
     public void method7776() {
-        WeightedCache var1 = this.field4732;
+        SoftLruHashTable var1 = this.field4732;
         synchronized (this.field4732) {
-            this.field4732.method7925();
+            this.field4732.removeSoft();
         }
     }
 }

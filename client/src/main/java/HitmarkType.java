@@ -110,10 +110,10 @@ public class HitmarkType {
         if (this.field4746 < 0) {
             return null;
         }
-        Sprite var2 = (Sprite) this.field4754.field4759.method7916((long) this.field4746);
+        Sprite var2 = (Sprite) this.field4754.field4759.get((long) this.field4746);
         if (var2 == null) {
             this.method7798(arg0);
-            var2 = (Sprite) this.field4754.field4759.method7916((long) this.field4746);
+            var2 = (Sprite) this.field4754.field4759.get((long) this.field4746);
         }
         return var2;
     }
@@ -123,10 +123,10 @@ public class HitmarkType {
         if (this.field4747 < 0) {
             return null;
         }
-        Sprite var2 = (Sprite) this.field4754.field4759.method7916((long) this.field4747);
+        Sprite var2 = (Sprite) this.field4754.field4759.get((long) this.field4747);
         if (var2 == null) {
             this.method7798(arg0);
-            var2 = (Sprite) this.field4754.field4759.method7916((long) this.field4747);
+            var2 = (Sprite) this.field4754.field4759.get((long) this.field4747);
         }
         return var2;
     }
@@ -136,10 +136,10 @@ public class HitmarkType {
         if (this.field4748 < 0) {
             return null;
         }
-        Sprite var2 = (Sprite) this.field4754.field4759.method7916((long) this.field4748);
+        Sprite var2 = (Sprite) this.field4754.field4759.get((long) this.field4748);
         if (var2 == null) {
             this.method7798(arg0);
-            var2 = (Sprite) this.field4754.field4759.method7916((long) this.field4748);
+            var2 = (Sprite) this.field4754.field4759.get((long) this.field4748);
         }
         return var2;
     }
@@ -149,10 +149,10 @@ public class HitmarkType {
         if (this.field4749 < 0) {
             return null;
         }
-        Sprite var2 = (Sprite) this.field4754.field4759.method7916((long) this.field4749);
+        Sprite var2 = (Sprite) this.field4754.field4759.get((long) this.field4749);
         if (var2 == null) {
             this.method7798(arg0);
-            var2 = (Sprite) this.field4754.field4759.method7916((long) this.field4749);
+            var2 = (Sprite) this.field4754.field4759.get((long) this.field4749);
         }
         return var2;
     }
@@ -160,19 +160,19 @@ public class HitmarkType {
     @ObfuscatedName("po.l(Lra;I)V")
     public void method7798(RendererToolkit arg0) {
         Js5 var2 = this.field4754.field4757;
-        if (this.field4746 >= 0 && this.field4754.field4759.method7916((long) this.field4746) == null && var2.method5630(this.field4746)) {
+        if (this.field4746 >= 0 && this.field4754.field4759.get((long) this.field4746) == null && var2.method5630(this.field4746)) {
             SpriteData var3 = SpriteDataProvider.method2598(var2, this.field4746);
             this.field4754.field4759.method7937(arg0.method517(var3, true), (long) this.field4746);
         }
-        if (this.field4747 >= 0 && this.field4754.field4759.method7916((long) this.field4747) == null && var2.method5630(this.field4747)) {
+        if (this.field4747 >= 0 && this.field4754.field4759.get((long) this.field4747) == null && var2.method5630(this.field4747)) {
             SpriteData var4 = SpriteDataProvider.method2598(var2, this.field4747);
             this.field4754.field4759.method7937(arg0.method517(var4, true), (long) this.field4747);
         }
-        if (this.field4748 >= 0 && this.field4754.field4759.method7916((long) this.field4748) == null && var2.method5630(this.field4748)) {
+        if (this.field4748 >= 0 && this.field4754.field4759.get((long) this.field4748) == null && var2.method5630(this.field4748)) {
             SpriteData var5 = SpriteDataProvider.method2598(var2, this.field4748);
             this.field4754.field4759.method7937(arg0.method517(var5, true), (long) this.field4748);
         }
-        if (this.field4749 >= 0 && this.field4754.field4759.method7916((long) this.field4749) == null && var2.method5630(this.field4749)) {
+        if (this.field4749 >= 0 && this.field4754.field4759.get((long) this.field4749) == null && var2.method5630(this.field4749)) {
             SpriteData var6 = SpriteDataProvider.method2598(var2, this.field4749);
             this.field4754.field4759.method7937(arg0.method517(var6, true), (long) this.field4749);
         }

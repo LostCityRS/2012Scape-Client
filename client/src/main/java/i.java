@@ -9,7 +9,7 @@ public class i extends FloorModel implements ua {
     public ja field475;
 
     @ObfuscatedName("i.t")
-    public IterableQueue field476 = new IterableQueue();
+    public LinkedList field476 = new LinkedList();
 
     public i(ja arg0, ba arg1, int arg2, int arg3, int[][] arg4, int[][] arg5, int arg6, int arg7, int arg8) {
         super(arg2, arg3, arg6, arg4);

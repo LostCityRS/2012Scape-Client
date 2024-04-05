@@ -7,7 +7,7 @@ public class LightTypeList {
     public final Js5 field7185;
 
     @ObfuscatedName("vp.j")
-    public final WeightedCache field7186 = new WeightedCache(64);
+    public final SoftLruHashTable field7186 = new SoftLruHashTable(64);
 
     public LightTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field7185 = arg2;
@@ -16,10 +16,10 @@ public class LightTypeList {
 
     @ObfuscatedName("vp.u(II)Lvy;")
     public LightType method12453(int arg0) {
-        WeightedCache var2 = this.field7186;
+        SoftLruHashTable var2 = this.field7186;
         LightType var3;
         synchronized (this.field7186) {
-            var3 = (LightType) this.field7186.method7916((long) arg0);
+            var3 = (LightType) this.field7186.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -33,7 +33,7 @@ public class LightTypeList {
         if (var6 != null) {
             var8.method12467(new Packet(var6));
         }
-        WeightedCache var9 = this.field7186;
+        SoftLruHashTable var9 = this.field7186;
         synchronized (this.field7186) {
             this.field7186.method7937(var8, (long) arg0);
             return var8;
@@ -42,7 +42,7 @@ public class LightTypeList {
 
     @ObfuscatedName("vp.j(I)V")
     public void method12464() {
-        WeightedCache var1 = this.field7186;
+        SoftLruHashTable var1 = this.field7186;
         synchronized (this.field7186) {
             this.field7186.method7922();
         }
@@ -50,7 +50,7 @@ public class LightTypeList {
 
     @ObfuscatedName("vp.a(II)V")
     public void method12455(int arg0) {
-        WeightedCache var2 = this.field7186;
+        SoftLruHashTable var2 = this.field7186;
         synchronized (this.field7186) {
             this.field7186.method7921(arg0);
         }
@@ -58,9 +58,9 @@ public class LightTypeList {
 
     @ObfuscatedName("vp.s(B)V")
     public void method12456() {
-        WeightedCache var1 = this.field7186;
+        SoftLruHashTable var1 = this.field7186;
         synchronized (this.field7186) {
-            this.field7186.method7925();
+            this.field7186.removeSoft();
         }
     }
 }

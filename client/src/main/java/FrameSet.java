@@ -54,7 +54,7 @@ public class FrameSet extends SecondaryNode {
         if (!var5) {
             return false;
         }
-        IterableQueue var12 = new IterableQueue();
+        LinkedList var12 = new LinkedList();
         Js5 var13 = Statics.field674;
         int[] var15;
         synchronized (Statics.field674) {

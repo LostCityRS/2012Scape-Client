@@ -12,25 +12,25 @@ public final class GlxToolkit extends GpuToolkit {
     public OpenGL field10029;
 
     @ObfuscatedName("ahv.gl")
-    public IterableQueue field10031 = new IterableQueue();
+    public LinkedList field10031 = new LinkedList();
 
     @ObfuscatedName("ahv.gb")
-    public IterableQueue field10005 = new IterableQueue();
+    public LinkedList field10005 = new LinkedList();
 
     @ObfuscatedName("ahv.go")
-    public IterableQueue field10010 = new IterableQueue();
+    public LinkedList field10010 = new LinkedList();
 
     @ObfuscatedName("ahv.gi")
-    public IterableQueue field10007 = new IterableQueue();
+    public LinkedList field10007 = new LinkedList();
 
     @ObfuscatedName("ahv.ga")
-    public IterableQueue field10008 = new IterableQueue();
+    public LinkedList field10008 = new LinkedList();
 
     @ObfuscatedName("ahv.gs")
-    public IterableQueue field10009 = new IterableQueue();
+    public LinkedList field10009 = new LinkedList();
 
     @ObfuscatedName("ahv.gd")
-    public IterableQueue field10004 = new IterableQueue();
+    public LinkedList field10004 = new LinkedList();
 
     @ObfuscatedName("ahv.gj")
     public long field10011;
@@ -1032,7 +1032,7 @@ public final class GlxToolkit extends GpuToolkit {
         int var3 = arg0 & Integer.MAX_VALUE;
         while (!this.field10005.method11585()) {
             IntNode var4 = (IntNode) this.field10005.method11560();
-            this.field10012[var2++] = (int) var4.field4228;
+            this.field10012[var2++] = (int) var4.key;
             this.field8252 -= var4.field9556;
             if (var2 == 1000) {
                 OpenGL.glDeleteBuffersARB(var2, this.field10012, 0);
@@ -1045,7 +1045,7 @@ public final class GlxToolkit extends GpuToolkit {
         }
         while (!this.field10010.method11585()) {
             IntNode var5 = (IntNode) this.field10010.method11560();
-            this.field10012[var2++] = (int) var5.field4228;
+            this.field10012[var2++] = (int) var5.key;
             this.field8325 -= var5.field9556;
             if (var2 == 1000) {
                 OpenGL.glDeleteTextures(var2, this.field10012, 0);
@@ -1070,7 +1070,7 @@ public final class GlxToolkit extends GpuToolkit {
         }
         while (!this.field10008.method11585()) {
             IntNode var7 = (IntNode) this.field10008.method11560();
-            this.field10012[var2++] = (int) var7.field4228;
+            this.field10012[var2++] = (int) var7.key;
             this.field8334 -= var7.field9556;
             if (var2 == 1000) {
                 OpenGL.glDeleteRenderbuffersEXT(var2, this.field10012, 0);
@@ -1083,19 +1083,19 @@ public final class GlxToolkit extends GpuToolkit {
         }
         while (!this.field10031.method11585()) {
             IntNode var9 = (IntNode) this.field10031.method11560();
-            OpenGL.glDeleteLists((int) var9.field4228, var9.field9556);
+            OpenGL.glDeleteLists((int) var9.key, var9.field9556);
         }
         while (!this.field10009.method11585()) {
             Node var10 = this.field10009.method11560();
-            OpenGL.glDeleteProgram((int) var10.field4228);
+            OpenGL.glDeleteProgram((int) var10.key);
         }
         while (!this.field10004.method11585()) {
             Node var11 = this.field10004.method11560();
-            OpenGL.glDeleteShader((int) var11.field4228);
+            OpenGL.glDeleteShader((int) var11.key);
         }
         while (!this.field10031.method11585()) {
             IntNode var12 = (IntNode) this.field10031.method11560();
-            OpenGL.glDeleteLists((int) var12.field4228, var12.field9556);
+            OpenGL.glDeleteLists((int) var12.key, var12.field9556);
         }
         if (this.za() > 100663296 && MonotonicTime.get() > this.field10011 + 60000L) {
             System.gc();
@@ -1107,14 +1107,14 @@ public final class GlxToolkit extends GpuToolkit {
     @ObfuscatedName("ahv.acp(II)V")
     public final synchronized void method16083(int arg0, int arg1) {
         IntNode var3 = new IntNode(arg1);
-        var3.field4228 = arg0;
+        var3.key = arg0;
         this.field10005.addTail(var3);
     }
 
     @ObfuscatedName("ahv.aca(II)V")
     public final synchronized void method16086(int arg0, int arg1) {
         IntNode var3 = new IntNode(arg1);
-        var3.field4228 = arg0;
+        var3.key = arg0;
         this.field10010.addTail(var3);
     }
 
@@ -1127,21 +1127,21 @@ public final class GlxToolkit extends GpuToolkit {
     @ObfuscatedName("ahv.acl(II)V")
     public final synchronized void method16088(int arg0, int arg1) {
         IntNode var3 = new IntNode(arg1);
-        var3.field4228 = arg0;
+        var3.key = arg0;
         this.field10008.addTail(var3);
     }
 
     @ObfuscatedName("ahv.acm(J)V")
     public final synchronized void method16099(long arg0) {
         Node var3 = new Node();
-        var3.field4228 = arg0;
+        var3.key = arg0;
         this.field10004.addTail(var3);
     }
 
     @ObfuscatedName("ahv.acr(I)V")
     public final synchronized void method16089(int arg0) {
         Node var2 = new Node();
-        var2.field4228 = arg0;
+        var2.key = arg0;
         this.field10009.addTail(var2);
     }
 

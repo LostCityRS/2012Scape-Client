@@ -40,13 +40,13 @@ public class ClientWorldMap extends WorldMap {
     public static boolean disableElements = false;
 
     @ObfuscatedName("aeq.be")
-    public static IterableMap field9765 = new IterableMap(8);
+    public static HashTable field9765 = new HashTable(8);
 
     @ObfuscatedName("aeq.bw")
-    public static IterableMap field9766 = new IterableMap(8);
+    public static HashTable field9766 = new HashTable(8);
 
     @ObfuscatedName("aeq.bo")
-    public static IterableQueueIterator field9767 = new IterableQueueIterator(new IterableQueue());
+    public static IterableQueueIterator field9767 = new IterableQueueIterator(new LinkedList());
 
     public ClientWorldMap() throws Throwable {
         throw new Error();
@@ -127,7 +127,7 @@ public class ClientWorldMap extends WorldMap {
             Statics.tileShapes = WorldMapTileShapes.buildTileShapes(Statics.tileSize);
             clampDisplayCoord();
             createDataArrays();
-            Statics.elements = new IterableQueue();
+            Statics.elements = new LinkedList();
             field4273 += (int) (Math.random() * 5.0D) - 2;
             if (field4273 < -8) {
                 field4273 = -8;
@@ -306,7 +306,7 @@ public class ClientWorldMap extends WorldMap {
             Statics.field6344 = (int) ((float) (arg5 * 2) / Statics.zoom);
             method7094(Statics.currentAreaDisplayMinX + var9, Statics.currentAreaDisplayMinZ + var10, Statics.currentAreaDisplayMinX + var11, Statics.currentAreaDisplayMinZ + var12, arg2, arg3, arg2 + arg4, arg3 + arg5 + 1);
             method7095(arg0);
-            IterableQueue var13 = method7099(arg0);
+            LinkedList var13 = method7099(arg0);
             method2356(arg0, var13, 0, 0);
             if (Statics.field4469 > 0) {
                 Statics.field10208--;
@@ -334,7 +334,7 @@ public class ClientWorldMap extends WorldMap {
     }
 
     @ObfuscatedName("cr.be(Lra;Ltq;III)V")
-    public static void method2356(RendererToolkit arg0, IterableQueue arg1, int arg2, int arg3) {
+    public static void method2356(RendererToolkit arg0, LinkedList arg1, int arg2, int arg3) {
         Statics.elements.clearBridged();
         if (disableElements) {
             return;
@@ -358,8 +358,8 @@ public class ClientWorldMap extends WorldMap {
             return false;
         } else if (!arg0.method7835(Statics.field4299)) {
             return false;
-        } else if (field9765.getNode((long) arg0.field4763) == null) {
-            return field9766.getNode((long) arg0.field4775) == null;
+        } else if (field9765.get((long) arg0.field4763) == null) {
+            return field9766.get((long) arg0.field4775) == null;
         } else {
             return false;
         }

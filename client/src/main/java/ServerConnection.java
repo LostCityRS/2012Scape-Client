@@ -9,7 +9,7 @@ public class ServerConnection {
     public Stream stream;
 
     @ObfuscatedName("ad.a")
-    public IterableQueue writeQueue = new IterableQueue();
+    public LinkedList writeQueue = new LinkedList();
 
     @ObfuscatedName("ad.s")
     public int writePos = 0;

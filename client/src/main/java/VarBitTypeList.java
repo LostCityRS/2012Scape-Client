@@ -7,7 +7,7 @@ public class VarBitTypeList implements PlayerTypeListRelated {
     public final Js5 field4664;
 
     @ObfuscatedName("pd.a")
-    public WeightedCache field4665 = new WeightedCache(64);
+    public SoftLruHashTable field4665 = new SoftLruHashTable(64);
 
     public VarBitTypeList(ModeGame arg0, Language arg1, Js5 arg2) {
         this.field4664 = arg2;
@@ -20,10 +20,10 @@ public class VarBitTypeList implements PlayerTypeListRelated {
 
     @ObfuscatedName("pd.u(II)Lpe;")
     public VarBitType method7668(int arg0) {
-        WeightedCache var2 = this.field4665;
+        SoftLruHashTable var2 = this.field4665;
         VarBitType var3;
         synchronized (this.field4665) {
-            var3 = (VarBitType) this.field4665.method7916((long) arg0);
+            var3 = (VarBitType) this.field4665.get((long) arg0);
         }
         if (var3 != null) {
             return var3;
@@ -37,7 +37,7 @@ public class VarBitTypeList implements PlayerTypeListRelated {
         if (var6 != null) {
             var8.method7682(new Packet(var6));
         }
-        WeightedCache var9 = this.field4665;
+        SoftLruHashTable var9 = this.field4665;
         synchronized (this.field4665) {
             this.field4665.method7937(var8, (long) arg0);
             return var8;
@@ -46,7 +46,7 @@ public class VarBitTypeList implements PlayerTypeListRelated {
 
     @ObfuscatedName("pd.j(I)V")
     public void method7660() {
-        WeightedCache var1 = this.field4665;
+        SoftLruHashTable var1 = this.field4665;
         synchronized (this.field4665) {
             this.field4665.method7922();
         }
@@ -54,7 +54,7 @@ public class VarBitTypeList implements PlayerTypeListRelated {
 
     @ObfuscatedName("pd.a(II)V")
     public void method7661(int arg0) {
-        WeightedCache var2 = this.field4665;
+        SoftLruHashTable var2 = this.field4665;
         synchronized (this.field4665) {
             this.field4665.method7921(arg0);
         }
@@ -62,18 +62,18 @@ public class VarBitTypeList implements PlayerTypeListRelated {
 
     @ObfuscatedName("pd.s(B)V")
     public void method7662() {
-        WeightedCache var1 = this.field4665;
+        SoftLruHashTable var1 = this.field4665;
         synchronized (this.field4665) {
-            this.field4665.method7925();
+            this.field4665.removeSoft();
         }
     }
 
     @ObfuscatedName("pd.c(II)V")
     public void resizeCache(int arg0) {
-        WeightedCache var2 = this.field4665;
+        SoftLruHashTable var2 = this.field4665;
         synchronized (this.field4665) {
             this.field4665.method7922();
-            this.field4665 = new WeightedCache(arg0);
+            this.field4665 = new SoftLruHashTable(arg0);
         }
     }
 }

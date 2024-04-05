@@ -10,10 +10,10 @@ public class ObjTypeListRelated {
     public int field4859;
 
     @ObfuscatedName("qd.a")
-    public IterableMap field4856;
+    public HashTable field4856;
 
     @ObfuscatedName("qd.s")
-    public DualIterableQueue field4858 = new DualIterableQueue();
+    public SecondaryLinkedList field4858 = new SecondaryLinkedList();
 
     public ObjTypeListRelated(int arg0) {
         this.field4857 = arg0;
@@ -21,31 +21,31 @@ public class ObjTypeListRelated {
         int var2;
         for (var2 = 1; var2 + var2 < arg0; var2 += var2) {
         }
-        this.field4856 = new IterableMap(var2);
+        this.field4856 = new HashTable(var2);
     }
 
     @ObfuscatedName("qd.u(Lqu;)Ljava/lang/Object;")
     public final Object method8006(CacheKey arg0) {
         long var2 = arg0.method7998();
-        for (CacheEntry var4 = (CacheEntry) this.field4856.getNode(var2); var4 != null; var4 = (CacheEntry) this.field4856.method11924()) {
+        for (CacheEntry var4 = (CacheEntry) this.field4856.get(var2); var4 != null; var4 = (CacheEntry) this.field4856.nextWithKey()) {
             if (var4.field10375.method7994(arg0)) {
                 Object var5 = var4.method16728();
                 if (var5 != null) {
                     if (var4.method16730()) {
                         HardCacheEntry var6 = new HardCacheEntry(arg0, var5, var4.field10374);
-                        this.field4856.put(var6, var4.field4228);
+                        this.field4856.put(var6, var4.key);
                         this.field4858.addFirst(var6);
-                        var6.field9554 = 0L;
+                        var6.secondaryKey = 0L;
                         var4.unlink();
-                        var4.dualRemove();
+                        var4.unlinkSecondary();
                     } else {
                         this.field4858.addFirst(var4);
-                        var4.field9554 = 0L;
+                        var4.secondaryKey = 0L;
                     }
                     return var5;
                 }
                 var4.unlink();
-                var4.dualRemove();
+                var4.unlinkSecondary();
                 this.field4859 += var4.field10374;
             }
         }
@@ -55,7 +55,7 @@ public class ObjTypeListRelated {
     @ObfuscatedName("qd.j(Lqu;)V")
     public final void method8002(CacheKey arg0) {
         long var2 = arg0.method7998();
-        for (CacheEntry var4 = (CacheEntry) this.field4856.getNode(var2); var4 != null; var4 = (CacheEntry) this.field4856.method11924()) {
+        for (CacheEntry var4 = (CacheEntry) this.field4856.get(var2); var4 != null; var4 = (CacheEntry) this.field4856.nextWithKey()) {
             if (var4.field10375.method7994(arg0)) {
                 this.method8003(var4);
                 break;
@@ -67,7 +67,7 @@ public class ObjTypeListRelated {
     public final void method8003(CacheEntry arg0) {
         if (arg0 != null) {
             arg0.unlink();
-            arg0.dualRemove();
+            arg0.unlinkSecondary();
             this.field4859 += arg0.field10374;
         }
     }
@@ -85,30 +85,30 @@ public class ObjTypeListRelated {
         this.method8002(arg1);
         this.field4859 -= arg2;
         while (this.field4859 < 0) {
-            CacheEntry var4 = (CacheEntry) this.field4858.method11729();
+            CacheEntry var4 = (CacheEntry) this.field4858.removeHead();
             this.method8003(var4);
         }
         HardCacheEntry var5 = new HardCacheEntry(arg1, arg0, arg2);
         this.field4856.put(var5, arg1.method7998());
         this.field4858.addFirst(var5);
-        var5.field9554 = 0L;
+        var5.secondaryKey = 0L;
     }
 
     @ObfuscatedName("qd.m(I)V")
     public final void method8022(int arg0) {
-        for (CacheEntry var2 = (CacheEntry) this.field4858.last(); var2 != null; var2 = (CacheEntry) this.field4858.previous()) {
+        for (CacheEntry var2 = (CacheEntry) this.field4858.head(); var2 != null; var2 = (CacheEntry) this.field4858.next()) {
             if (var2.method16730()) {
                 if (var2.method16728() == null) {
                     var2.unlink();
-                    var2.dualRemove();
+                    var2.unlinkSecondary();
                     this.field4859 += var2.field10374;
                 }
-            } else if (++var2.field9554 > (long) arg0) {
+            } else if (++var2.secondaryKey > (long) arg0) {
                 SoftCacheEntry var3 = new SoftCacheEntry(var2.field10375, var2.method16728(), var2.field10374);
-                this.field4856.put(var3, var2.field4228);
-                DualIterableQueue.method2355(var3, var2);
+                this.field4856.put(var3, var2.key);
+                SecondaryLinkedList.insertAfter(var3, var2);
                 var2.unlink();
-                var2.dualRemove();
+                var2.unlinkSecondary();
             }
         }
     }
@@ -132,10 +132,10 @@ public class ObjTypeListRelated {
 
     @ObfuscatedName("qd.d()V")
     public final void method8010() {
-        for (CacheEntry var1 = (CacheEntry) this.field4858.last(); var1 != null; var1 = (CacheEntry) this.field4858.previous()) {
+        for (CacheEntry var1 = (CacheEntry) this.field4858.head(); var1 != null; var1 = (CacheEntry) this.field4858.next()) {
             if (var1.method16730()) {
                 var1.unlink();
-                var1.dualRemove();
+                var1.unlinkSecondary();
                 this.field4859 += var1.field10374;
             }
         }

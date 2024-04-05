@@ -4,16 +4,16 @@ import deob.ObfuscatedName;
 public abstract class Js5TcpClient {
 
     @ObfuscatedName("lo.c")
-    public DualIterableQueue field3594 = new DualIterableQueue();
+    public SecondaryLinkedList field3594 = new SecondaryLinkedList();
 
     @ObfuscatedName("lo.m")
-    public DualIterableQueue field3595 = new DualIterableQueue();
+    public SecondaryLinkedList field3595 = new SecondaryLinkedList();
 
     @ObfuscatedName("lo.t")
-    public DualIterableQueue field3605 = new DualIterableQueue();
+    public SecondaryLinkedList field3605 = new SecondaryLinkedList();
 
     @ObfuscatedName("lo.l")
-    public DualIterableQueue field3596 = new DualIterableQueue();
+    public SecondaryLinkedList field3596 = new SecondaryLinkedList();
 
     @ObfuscatedName("lo.f")
     public int field3598;
@@ -43,7 +43,7 @@ public abstract class Js5TcpClient {
     public Js5NetRequest method5765(int arg0, int arg1, byte arg2, boolean arg3) {
         long var5 = ((long) arg0 << 32) + (long) arg1;
         Js5NetRequest var7 = new Js5NetRequest();
-        var7.field9554 = var5;
+        var7.secondaryKey = var5;
         var7.field10598 = arg2;
         var7.field10354 = arg3;
         if (arg3) {
@@ -71,12 +71,12 @@ public abstract class Js5TcpClient {
 
     @ObfuscatedName("lo.s(B)I")
     public int method5739() {
-        return this.field3605.method11732() + this.field3596.method11732();
+        return this.field3605.size() + this.field3596.size();
     }
 
     @ObfuscatedName("lo.c(B)I")
     public int method5764() {
-        return this.field3594.method11732() + this.field3595.method11732();
+        return this.field3594.size() + this.field3595.size();
     }
 
     @ObfuscatedName("lo.m(I)V")

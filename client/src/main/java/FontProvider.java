@@ -13,7 +13,7 @@ public class FontProvider {
     public final Js5 field3302;
 
     @ObfuscatedName("je.a")
-    public final WeightedCache field3303 = new WeightedCache(20);
+    public final SoftLruHashTable field3303 = new SoftLruHashTable(20);
 
     @ObfuscatedName("je.s")
     public final int[] field3304;
@@ -103,7 +103,7 @@ public class FontProvider {
                 }
             }
         }
-        Pair var6 = (Pair) this.field3303.method7916((long) (arg1 << 1 | (arg3 ? 1 : 0)));
+        Pair var6 = (Pair) this.field3303.get((long) (arg1 << 1 | (arg3 ? 1 : 0)));
         if (var6 != null) {
             if (arg2 && var6.field6756 == null) {
                 FontMetrics var7 = FontMetrics.method14876(this.field3302, arg1);
@@ -144,6 +144,6 @@ public class FontProvider {
 
     @ObfuscatedName("je.z(B)V")
     public void method4842() {
-        this.field3303.method7925();
+        this.field3303.removeSoft();
     }
 }
