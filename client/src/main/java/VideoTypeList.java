@@ -42,7 +42,7 @@ public class VideoTypeList {
         if (var1 != null) {
             var1.field9618.method7022();
             method5563(var1.field9624, var1.field9621);
-            var1.remove();
+            var1.unlink();
         }
     }
 
@@ -105,7 +105,7 @@ public class VideoTypeList {
                         VorbisAudioBuss var3 = var2.method16795();
                         if (var3 != null) {
                             var3.method16466(var0.field9619);
-                            Statics.soundStream.method16452(var3);
+                            Statics.soundStream.addSubStream(var3);
                             var0.field9623 = true;
                         }
                     }

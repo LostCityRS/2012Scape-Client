@@ -68,7 +68,7 @@ public class SoundBank {
             if (var10 == null) {
                 return null;
             } else {
-                var9.remove();
+                var9.unlink();
                 this.vorbisPacketCache.put(var10, var6);
                 return var10;
             }

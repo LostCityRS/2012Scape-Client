@@ -9,13 +9,13 @@ public class VorbisSoundPacket extends BasicSoundPacket {
     public VorbisSoundPacket(int arg0, VorbisSound arg1, float[] arg2, int arg3, int arg4, boolean arg5) {
         this.field10295 = arg0;
         this.field10573 = arg2;
-        this.field10294 = arg3;
+        this.start = arg3;
         this.field10292 = arg4;
         this.field10293 = arg5;
     }
 
     @ObfuscatedName("aly.u()I")
-    public int method16496() {
+    public int getSampleLength() {
         return this.field10573.length;
     }
 

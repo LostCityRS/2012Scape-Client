@@ -98,7 +98,7 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("mp.u(ZI)V")
     public static void method6259(boolean arg0) {
-        for (PositionedSound var1 = (PositionedSound) field9514.last(); var1 != null; var1 = (PositionedSound) field9514.prev()) {
+        for (PositionedSound var1 = (PositionedSound) field9514.head(); var1 != null; var1 = (PositionedSound) field9514.next()) {
             if (var1.primaryStream != null) {
                 Statics.soundStream.removeSubStream(var1.primaryStream);
                 var1.primaryStream = null;
@@ -107,35 +107,35 @@ public class PositionedSound extends Node {
                 Statics.soundStream.removeSubStream(var1.field9548);
                 var1.field9548 = null;
             }
-            var1.remove();
+            var1.unlink();
         }
         if (!arg0) {
             return;
         }
-        for (PositionedSound var2 = (PositionedSound) field9528.last(); var2 != null; var2 = (PositionedSound) field9528.prev()) {
+        for (PositionedSound var2 = (PositionedSound) field9528.head(); var2 != null; var2 = (PositionedSound) field9528.next()) {
             if (var2.primaryStream != null) {
                 Statics.soundStream.removeSubStream(var2.primaryStream);
                 var2.primaryStream = null;
             }
-            var2.remove();
+            var2.unlink();
         }
         for (PositionedSound var3 = (PositionedSound) field9516.method11928(); var3 != null; var3 = (PositionedSound) field9516.method11929()) {
             if (var3.primaryStream != null) {
                 Statics.soundStream.removeSubStream(var3.primaryStream);
                 var3.primaryStream = null;
             }
-            var3.remove();
+            var3.unlink();
         }
     }
 
     @ObfuscatedName("vf.j(I)V")
     public static void method12174() {
-        for (PositionedSound var0 = (PositionedSound) field9514.last(); var0 != null; var0 = (PositionedSound) field9514.prev()) {
+        for (PositionedSound var0 = (PositionedSound) field9514.head(); var0 != null; var0 = (PositionedSound) field9514.next()) {
             if (var0.multi) {
                 var0.computeProperties();
             }
         }
-        for (PositionedSound var1 = (PositionedSound) field9528.last(); var1 != null; var1 = (PositionedSound) field9528.prev()) {
+        for (PositionedSound var1 = (PositionedSound) field9528.head(); var1 != null; var1 = (PositionedSound) field9528.next()) {
             if (var1.multi) {
                 var1.computeProperties();
             }
@@ -248,7 +248,7 @@ public class PositionedSound extends Node {
             if (var7.sounds != null) {
                 var7.delay = var7.mindelay + (int) (Math.random() * (double) (var7.maxdelay - var7.mindelay));
             }
-            field9514.addFirst(var7);
+            field9514.addTail(var7);
         } else if (arg5 != null) {
             var7.npc = arg5;
             NPCType var10 = arg5.type;
@@ -267,7 +267,7 @@ public class PositionedSound extends Node {
                 var7.minspeed = var10.bgsound_minrate;
                 var7.size = var10.bgsound_size << 9;
             }
-            field9528.addFirst(var7);
+            field9528.addTail(var7);
         } else if (arg6 != null) {
             var7.player = arg6;
             var7.maxX = arg1 + arg6.size() << 9;
@@ -285,7 +285,7 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("z.c(IIILtg;I)V")
     public static void method1370(int arg0, int arg1, int arg2, LocType arg3) {
-        for (PositionedSound var4 = (PositionedSound) field9514.last(); var4 != null; var4 = (PositionedSound) field9514.prev()) {
+        for (PositionedSound var4 = (PositionedSound) field9514.head(); var4 != null; var4 = (PositionedSound) field9514.next()) {
             if (var4.level == arg0 && arg1 << 9 == var4.minX && arg2 << 9 == var4.minZ && var4.loc.field6474 == arg3.field6474) {
                 if (var4.primaryStream != null) {
                     Statics.soundStream.removeSubStream(var4.primaryStream);
@@ -295,7 +295,7 @@ public class PositionedSound extends Node {
                     Statics.soundStream.removeSubStream(var4.field9548);
                     var4.field9548 = null;
                 }
-                var4.remove();
+                var4.unlink();
                 return;
             }
         }
@@ -303,13 +303,13 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("cu.m(Lahs;I)V")
     public static void method2547(NpcEntity arg0) {
-        for (PositionedSound var1 = (PositionedSound) field9528.last(); var1 != null; var1 = (PositionedSound) field9528.prev()) {
+        for (PositionedSound var1 = (PositionedSound) field9528.head(); var1 != null; var1 = (PositionedSound) field9528.next()) {
             if (var1.npc == arg0) {
                 if (var1.primaryStream != null) {
                     Statics.soundStream.removeSubStream(var1.primaryStream);
                     var1.primaryStream = null;
                 }
-                var1.remove();
+                var1.unlink();
                 return;
             }
         }
@@ -325,7 +325,7 @@ public class PositionedSound extends Node {
             Statics.soundStream.removeSubStream(var1.primaryStream);
             var1.primaryStream = null;
         }
-        var1.remove();
+        var1.unlink();
     }
 
     @ObfuscatedName("ao.l(Lahg;I)V")
@@ -377,10 +377,10 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("lr.z(IIIII)V")
     public static void method6033(int arg0, int arg1, int arg2, int arg3) {
-        for (PositionedSound var4 = (PositionedSound) field9514.last(); var4 != null; var4 = (PositionedSound) field9514.prev()) {
+        for (PositionedSound var4 = (PositionedSound) field9514.head(); var4 != null; var4 = (PositionedSound) field9514.next()) {
             method4977(var4, arg0, arg1, arg2, arg3);
         }
-        for (PositionedSound var5 = (PositionedSound) field9528.last(); var5 != null; var5 = (PositionedSound) field9528.prev()) {
+        for (PositionedSound var5 = (PositionedSound) field9528.head(); var5 != null; var5 = (PositionedSound) field9528.next()) {
             byte var6 = 1;
             BASType var7 = var5.npc.getBASType();
             int var8 = var5.npc.field8616.getSeqTypeId();
@@ -562,7 +562,7 @@ public class PositionedSound extends Node {
                     if (arg0.field9539 != null) {
                         VorbisSoundAudioBuss var16 = (VorbisSoundAudioBuss) arg0.field9539.create(var15, var8 << 6, var10);
                         var16.setLoops(-1);
-                        Statics.soundStream.method16452(var16);
+                        Statics.soundStream.addSubStream(var16);
                         arg0.primaryStream = var16;
                     }
                 }
@@ -572,7 +572,7 @@ public class PositionedSound extends Node {
                     SynthSoundPacket var18 = var17.toSoundPacket().method17108(Statics.field3160);
                     SynthSoundAudioBuss var19 = (SynthSoundAudioBuss) var18.create(var15, var8 << 6, var10);
                     var19.setLoops(-1);
-                    Statics.soundStream.method16452(var19);
+                    Statics.soundStream.addSubStream(var19);
                     arg0.primaryStream = var19;
                 }
             }
@@ -599,7 +599,7 @@ public class PositionedSound extends Node {
                     if (arg0.field9542 != null) {
                         VorbisSoundAudioBuss var22 = (VorbisSoundAudioBuss) arg0.field9542.create(var20, var8 << 6, var10);
                         var22.setLoops(0);
-                        Statics.soundStream.method16452(var22);
+                        Statics.soundStream.addSubStream(var22);
                         arg0.field9548 = var22;
                         arg0.delay = arg0.mindelay + (int) (Math.random() * (double) (arg0.maxdelay - arg0.mindelay));
                     }
@@ -611,7 +611,7 @@ public class PositionedSound extends Node {
                     SynthSoundPacket var25 = var24.toSoundPacket().method17108(Statics.field3160);
                     SynthSoundAudioBuss var26 = (SynthSoundAudioBuss) var25.create(var20, var8 << 6, var10);
                     var26.setLoops(0);
-                    Statics.soundStream.method16452(var26);
+                    Statics.soundStream.addSubStream(var26);
                     arg0.field9548 = var26;
                     arg0.delay = arg0.mindelay + (int) (Math.random() * (double) (arg0.maxdelay - arg0.mindelay));
                 }

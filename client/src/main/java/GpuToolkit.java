@@ -826,7 +826,7 @@ public abstract class GpuToolkit extends RendererToolkit {
         }
         this.method13583();
         this.field8336.method4352();
-        for (Node var1 = this.field8362.last(); var1 != null; var1 = this.field8362.prev()) {
+        for (Node var1 = this.field8362.head(); var1 != null; var1 = this.field8362.next()) {
             ((GpuHeap) var1).method16230();
         }
         ColourUtils.method2790(false, true);
@@ -991,7 +991,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     @ObfuscatedName("yk.bi(I)Lv;")
     public final Heap method593(int arg0) {
         GpuHeap var2 = new GpuHeap(arg0);
-        this.field8362.addFirst(var2);
+        this.field8362.addTail(var2);
         return var2;
     }
 

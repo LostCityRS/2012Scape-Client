@@ -586,7 +586,7 @@ public class World {
                 }
             }
         }
-        for (CutsceneTemplate var4 = (CutsceneTemplate) CutsceneManager.field1534.last(); var4 != null; var4 = (CutsceneTemplate) CutsceneManager.field1534.prev()) {
+        for (CutsceneTemplate var4 = (CutsceneTemplate) CutsceneManager.field1534.head(); var4 != null; var4 = (CutsceneTemplate) CutsceneManager.field1534.next()) {
             int var5 = var4.field9380;
             boolean var6 = (var5 & 0x1) == 1;
             int var7 = var4.field9373 >> 3;
@@ -644,7 +644,7 @@ public class World {
         this.field3830 = new byte[var22][];
         this.field3832 = new byte[var22][];
         int var23 = 0;
-        for (CutsceneTemplate var24 = (CutsceneTemplate) CutsceneManager.field1534.last(); var24 != null; var24 = (CutsceneTemplate) CutsceneManager.field1534.prev()) {
+        for (CutsceneTemplate var24 = (CutsceneTemplate) CutsceneManager.field1534.head(); var24 != null; var24 = (CutsceneTemplate) CutsceneManager.field1534.next()) {
             int var25 = var24.field9373 >>> 3;
             int var26 = var24.field9374 >>> 3;
             int var27 = var24.field9378 + var25;
@@ -803,12 +803,12 @@ public class World {
                             client.field9056[++client.npcCount - 1] = var14.localPlayerIndex;
                         } else {
                             var14.method16149(null);
-                            var13.remove();
+                            var13.unlink();
                             var9 = true;
                         }
                     } else {
                         var14.method16149(null);
-                        var13.remove();
+                        var13.unlink();
                         var9 = true;
                     }
                     var15.release();
@@ -846,18 +846,18 @@ public class World {
                 var27.field777 -= var3 * 512;
             }
         }
-        for (ChangeLocationRequest var28 = (ChangeLocationRequest) ChangeLocationRequest.field9278.last(); var28 != null; var28 = (ChangeLocationRequest) ChangeLocationRequest.field9278.prev()) {
+        for (ChangeLocationRequest var28 = (ChangeLocationRequest) ChangeLocationRequest.field9278.head(); var28 != null; var28 = (ChangeLocationRequest) ChangeLocationRequest.field9278.next()) {
             var28.field9291 -= var2;
             var28.field9280 -= var3;
             if (RebuildType.field3841 != this.rebuildType && (var28.field9291 < 0 || var28.field9280 < 0 || var28.field9291 >= this.mapSizeX || var28.field9280 >= this.mapSizeZ)) {
-                var28.remove();
+                var28.unlink();
             }
         }
-        for (ChangeLocationRequest var29 = (ChangeLocationRequest) ChangeLocationRequest.field9292.last(); var29 != null; var29 = (ChangeLocationRequest) ChangeLocationRequest.field9292.prev()) {
+        for (ChangeLocationRequest var29 = (ChangeLocationRequest) ChangeLocationRequest.field9292.head(); var29 != null; var29 = (ChangeLocationRequest) ChangeLocationRequest.field9292.next()) {
             var29.field9291 -= var2;
             var29.field9280 -= var3;
             if (RebuildType.field3841 != this.rebuildType && (var29.field9291 < 0 || var29.field9280 < 0 || var29.field9291 >= this.mapSizeX || var29.field9280 >= this.mapSizeZ)) {
-                var29.remove();
+                var29.unlink();
             }
         }
         for (ObjStackList var30 = (ObjStackList) client.field9088.method11928(); var30 != null; var30 = (ObjStackList) client.field9088.method11929()) {
@@ -872,7 +872,7 @@ public class World {
                         this.scene.method7429(var31, var33, var35);
                     }
                 } else if (RebuildType.field3841 != this.rebuildType) {
-                    var30.remove();
+                    var30.unlink();
                 }
             }
         }

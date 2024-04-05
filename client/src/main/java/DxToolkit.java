@@ -222,7 +222,7 @@ public class DxToolkit extends GpuToolkit {
 
     @ObfuscatedName("ahh.oi()V")
     public void method13499() {
-        for (ObjectNode var1 = (ObjectNode) this.field9977.last(); var1 != null; var1 = (ObjectNode) this.field9977.prev()) {
+        for (ObjectNode var1 = (ObjectNode) this.field9977.head(); var1 != null; var1 = (ObjectNode) this.field9977.next()) {
             DxInterface1 var2 = (DxInterface1) var1.value;
             var2.method4914();
             if (this.field412 == var2) {
@@ -234,7 +234,7 @@ public class DxToolkit extends GpuToolkit {
 
     @ObfuscatedName("ahh.ow()V")
     public void method13583() {
-        for (ObjectNode var1 = (ObjectNode) this.field9977.last(); var1 != null; var1 = (ObjectNode) this.field9977.prev()) {
+        for (ObjectNode var1 = (ObjectNode) this.field9977.head(); var1 != null; var1 = (ObjectNode) this.field9977.next()) {
             DxInterface1 var2 = (DxInterface1) var1.value;
             var2.method944();
         }
@@ -408,7 +408,7 @@ public class DxToolkit extends GpuToolkit {
 
     @ObfuscatedName("ahh.acc(Ljz;)Ladt;")
     public ObjectNode method16024(DxInterface1 arg0) {
-        for (ObjectNode var2 = (ObjectNode) this.field9977.last(); var2 != null; var2 = (ObjectNode) this.field9977.prev()) {
+        for (ObjectNode var2 = (ObjectNode) this.field9977.head(); var2 != null; var2 = (ObjectNode) this.field9977.next()) {
             if (var2.value == arg0) {
                 return var2;
             }
@@ -419,14 +419,14 @@ public class DxToolkit extends GpuToolkit {
     @ObfuscatedName("ahh.acp(Ljz;)V")
     public void method16025(DxInterface1 arg0) {
         if (this.method16024(arg0) == null) {
-            this.field9977.addFirst(new ObjectNode(arg0));
+            this.field9977.addTail(new ObjectNode(arg0));
         }
     }
 
     public void add(DxInterface1 arg0) {
         ObjectNode var2 = this.method16024(arg0);
         if (var2 != null) {
-            var2.remove();
+            var2.unlink();
         }
     }
 
@@ -434,7 +434,7 @@ public class DxToolkit extends GpuToolkit {
     public void method16026(DxInterface1 arg0) {
         ObjectNode var2 = this.method16024(arg0);
         if (var2 != null) {
-            var2.remove();
+            var2.unlink();
         }
     }
 

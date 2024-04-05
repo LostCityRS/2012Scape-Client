@@ -16,7 +16,7 @@ public class ObjIconFactory {
     public static void ensureIconExists(RendererToolkit arg0, Component arg1) {
         boolean var2 = Statics.objTypes.getCachedIcon(arg0, arg1.invobject, arg1.invcount, arg1.outline, arg1.graphicshadow | 0xFF000000, arg1.invcountvis, arg1.invwearcol ? Statics.localPlayerEntity.model : null) == null;
         if (var2) {
-            requests.addFirst(new ObjIconRequest(arg1.invobject, arg1.invcount, arg1.outline, arg1.graphicshadow | 0xFF000000, arg1.invcountvis, arg1.invwearcol));
+            requests.addTail(new ObjIconRequest(arg1.invobject, arg1.invcount, arg1.outline, arg1.graphicshadow | 0xFF000000, arg1.invcountvis, arg1.invwearcol));
             client.requestRedrawComponent(arg1);
         }
     }
@@ -28,9 +28,9 @@ public class ObjIconFactory {
         }
 
         if (Statics.options.toolkit.getValue() == 0) {
-            for (ObjIconRequest var1 = (ObjIconRequest) requests.last(); var1 != null; var1 = (ObjIconRequest) requests.prev()) {
+            for (ObjIconRequest var1 = (ObjIconRequest) requests.head(); var1 != null; var1 = (ObjIconRequest) requests.next()) {
                 Statics.objTypes.getIcon(arg0, arg0, var1.object, var1.count, var1.outline, var1.shadow, false, false, var1.countvis, Statics.field2163, var1.wearcol ? Statics.localPlayerEntity.model : null);
-                var1.remove();
+                var1.unlink();
             }
 
             client.method1703();
@@ -41,9 +41,9 @@ public class ObjIconFactory {
                 Statics.softwareRenderer = RendererToolkit.create(0, var2, Statics.field8465, Statics.field2670, 0);
                 Statics.softwareFont = Statics.softwareRenderer.createFont(FontMetrics.create(Statics.field8745, Statics.field551, 0), (PalettedSpriteData[]) SpriteDataProvider.get(Statics.field7387, Statics.field551, 0), true);
             }
-            for (ObjIconRequest var3 = (ObjIconRequest) requests.last(); var3 != null; var3 = (ObjIconRequest) requests.prev()) {
+            for (ObjIconRequest var3 = (ObjIconRequest) requests.head(); var3 != null; var3 = (ObjIconRequest) requests.next()) {
                 Statics.objTypes.getIcon(Statics.softwareRenderer, arg0, var3.object, var3.count, var3.outline, var3.shadow, false, false, var3.countvis, Statics.softwareFont, var3.wearcol ? Statics.localPlayerEntity.model : null);
-                var3.remove();
+                var3.unlink();
             }
         }
     }

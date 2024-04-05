@@ -261,7 +261,7 @@ public class MiniMap {
             int var13 = client.world.getSizeZ() * 4 + 48 - var8 / 128;
             Statics.field6357.method2512((float) arg1.renderwidth / 2.0F + (float) arg2, (float) arg1.renderheight / 2.0F + (float) arg3, (float) var12, (float) var13, var10, var9 << 2, var5, arg2, arg3);
             WorldMapRelated var14 = client.world.method6093();
-            for (IntNode var15 = (IntNode) field758.last(); var15 != null; var15 = (IntNode) field758.prev()) {
+            for (IntNode var15 = (IntNode) field758.head(); var15 != null; var15 = (IntNode) field758.next()) {
                 int var16 = var15.field9556;
                 int var17 = (var14.field4254[var16] >> 14 & 0x3FFF) - var6.x;
                 int var18 = (var14.field4254[var16] & 0x3FFF) - var6.z;

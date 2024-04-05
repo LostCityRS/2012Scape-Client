@@ -22,13 +22,13 @@ public class ReflectionChecker {
 
     @ObfuscatedName("eb.j(I)Z")
     public static boolean hasCheck() {
-        ClassCheckNode var0 = (ClassCheckNode) field7044.last();
+        ClassCheckNode var0 = (ClassCheckNode) field7044.head();
         return var0 != null;
     }
 
     @ObfuscatedName("kw.a(Lajl;I)V")
     public static void performCheck(PacketBit arg0) {
-        ClassCheckNode var1 = (ClassCheckNode) field7044.last();
+        ClassCheckNode var1 = (ClassCheckNode) field7044.head();
         if (var1 == null) {
             return;
         }
@@ -109,7 +109,7 @@ public class ReflectionChecker {
             }
         }
         arg0.addcrc(var2);
-        var1.remove();
+        var1.unlink();
     }
 
     @ObfuscatedName("dc.s(Laet;II)V")
@@ -199,6 +199,6 @@ public class ReflectionChecker {
                 var2.field9738[var3] = -5;
             }
         }
-        field7044.addFirst(var2);
+        field7044.addTail(var2);
     }
 }

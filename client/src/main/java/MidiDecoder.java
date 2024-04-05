@@ -1,7 +1,7 @@
 import deob.ObfuscatedName;
 
 @ObfuscatedName("en")
-public class MidiRelated1 {
+public class MidiDecoder {
 
     @ObfuscatedName("en.u")
     public Packet field1614 = new Packet(null);
@@ -16,7 +16,7 @@ public class MidiRelated1 {
     public int[] field1604;
 
     @ObfuscatedName("en.c")
-    public int[] field1605;
+    public int[] times;
 
     @ObfuscatedName("en.m")
     public int[] field1613;
@@ -30,15 +30,15 @@ public class MidiRelated1 {
     @ObfuscatedName("en.d")
     public static final byte[] field1607 = new byte[]{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
-    public MidiRelated1() {
+    public MidiDecoder() {
     }
 
-    public MidiRelated1(byte[] arg0) {
-        this.method3015(arg0);
+    public MidiDecoder(byte[] arg0) {
+        this.init(arg0);
     }
 
     @ObfuscatedName("en.u([B)V")
-    public void method3015(byte[] arg0) {
+    public void init(byte[] arg0) {
         this.field1614.data = arg0;
         this.field1614.pos = 10;
         int var2 = this.field1614.g2();
@@ -60,52 +60,52 @@ public class MidiRelated1 {
         for (int var6 = 0; var6 < var2; var6++) {
             this.field1604[var6] = this.field1610[var6];
         }
-        this.field1605 = new int[var2];
+        this.times = new int[var2];
         this.field1613 = new int[var2];
     }
 
     @ObfuscatedName("en.j()V")
-    public void method3016() {
+    public void release() {
         this.field1614.data = null;
         this.field1610 = null;
         this.field1604 = null;
-        this.field1605 = null;
+        this.times = null;
         this.field1613 = null;
     }
 
     @ObfuscatedName("en.a()Z")
-    public boolean method3017() {
+    public boolean isValid() {
         return this.field1614.data != null;
     }
 
     @ObfuscatedName("en.s()I")
-    public int method3018() {
+    public int getTrackCount() {
         return this.field1604.length;
     }
 
     @ObfuscatedName("en.c(I)V")
-    public void method3030(int arg0) {
+    public void loadTrackPosition(int arg0) {
         this.field1614.pos = this.field1604[arg0];
     }
 
     @ObfuscatedName("en.m(I)V")
-    public void method3020(int arg0) {
+    public void saveTrackPosition(int arg0) {
         this.field1604[arg0] = this.field1614.pos;
     }
 
     @ObfuscatedName("en.t()V")
-    public void method3043() {
+    public void loadEndOfTrackPosition() {
         this.field1614.pos = -1;
     }
 
     @ObfuscatedName("en.l(I)V")
-    public void method3025(int arg0) {
+    public void addDeltaTime(int arg0) {
         int var2 = this.field1614.gVarInt();
-        this.field1605[arg0] += var2;
+        this.times[arg0] += var2;
     }
 
     @ObfuscatedName("en.f(I)I")
-    public int method3029(int arg0) {
+    public int getNextEvent(int arg0) {
         return this.method3024(arg0);
     }
 
@@ -157,7 +157,7 @@ public class MidiRelated1 {
         } else if (var3 == 81) {
             int var5 = this.field1614.g3();
             var4 -= 3;
-            int var6 = this.field1605[arg0];
+            int var6 = this.times[arg0];
             this.field1609 += (long) (this.field1603 - var5) * (long) var6;
             this.field1603 = var5;
             this.field1614.pos += var4;
@@ -169,26 +169,26 @@ public class MidiRelated1 {
     }
 
     @ObfuscatedName("en.n(I)J")
-    public long method3026(int arg0) {
+    public long getTimeMillis(int arg0) {
         return (long) this.field1603 * (long) arg0 + this.field1609;
     }
 
     @ObfuscatedName("en.o()I")
-    public int method3027() {
+    public int getNextTrack() {
         int var1 = this.field1604.length;
         int var2 = -1;
         int var3 = Integer.MAX_VALUE;
         for (int var4 = 0; var4 < var1; var4++) {
-            if (this.field1604[var4] >= 0 && this.field1605[var4] < var3) {
+            if (this.field1604[var4] >= 0 && this.times[var4] < var3) {
                 var2 = var4;
-                var3 = this.field1605[var4];
+                var3 = this.times[var4];
             }
         }
         return var2;
     }
 
     @ObfuscatedName("en.q()Z")
-    public boolean method3019() {
+    public boolean hasNextTrack() {
         int var1 = this.field1604.length;
         for (int var2 = 0; var2 < var1; var2++) {
             if (this.field1604[var2] >= 0) {
@@ -199,14 +199,14 @@ public class MidiRelated1 {
     }
 
     @ObfuscatedName("en.p(J)V")
-    public void method3028(long arg0) {
+    public void setStartMillis(long arg0) {
         this.field1609 = arg0;
         int var3 = this.field1604.length;
         for (int var4 = 0; var4 < var3; var4++) {
-            this.field1605[var4] = 0;
+            this.times[var4] = 0;
             this.field1613[var4] = 0;
             this.field1614.pos = this.field1610[var4];
-            this.method3025(var4);
+            this.addDeltaTime(var4);
             this.field1604[var4] = this.field1614.pos;
         }
     }

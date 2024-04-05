@@ -31,10 +31,10 @@ public class VarRelated1 implements VarIntDomain {
                 if ((var4.field9555 & 0x4000000000000000L) != 0L) {
                     int var5 = (int) var4.field4228;
                     this.field661[var5] = this.field657[var5];
-                    var4.remove();
+                    var4.unlink();
                     return var5;
                 }
-                var4.remove();
+                var4.unlink();
             }
         }
         return -1;

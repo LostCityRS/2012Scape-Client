@@ -7,7 +7,7 @@ public class MidiInstrument extends Node {
     public int field9411;
 
     @ObfuscatedName("acu.c")
-    public BasicSoundPacket[] field9408 = new BasicSoundPacket[128];
+    public BasicSoundPacket[] sounds = new BasicSoundPacket[128];
 
     @ObfuscatedName("acu.m")
     public short[] field9406 = new short[128];
@@ -383,7 +383,7 @@ public class MidiInstrument extends Node {
                         }
                     }
                     if (var6 != null) {
-                        this.field9408[var7] = var6;
+                        this.sounds[var7] = var6;
                         this.field9407[var7] = 0;
                     }
                 }

@@ -1306,7 +1306,7 @@ public class Component {
         }
         ObjectNode var3 = (ObjectNode) this.field1902.getNode((long) arg0);
         if (var3 != null) {
-            var3.remove();
+            var3.unlink();
         }
         this.field1902.put(new ObjectNode(arg1), (long) arg0);
     }
@@ -1316,7 +1316,7 @@ public class Component {
         if (this.field1902 != null) {
             Node var2 = this.field1902.getNode((long) arg0);
             if (var2 != null) {
-                var2.remove();
+                var2.unlink();
             }
         }
     }

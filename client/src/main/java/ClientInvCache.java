@@ -143,7 +143,7 @@ public class ClientInvCache extends Node {
     public static void method5568(int arg0, boolean arg1) {
         ClientInvCache var2 = method11708(arg0, arg1);
         if (var2 != null) {
-            var2.remove();
+            var2.unlink();
         }
     }
 

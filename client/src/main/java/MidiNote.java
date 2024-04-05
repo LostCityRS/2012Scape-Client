@@ -7,10 +7,10 @@ public class MidiNote extends Node {
     public int channel;
 
     @ObfuscatedName("aci.c")
-    public MidiInstrument field9384;
+    public MidiInstrument instrument;
 
     @ObfuscatedName("aci.m")
-    public BasicSoundPacket field9385;
+    public BasicSoundPacket sound;
 
     @ObfuscatedName("aci.t")
     public MidiRelated2 field9391;
@@ -19,13 +19,13 @@ public class MidiNote extends Node {
     public int field9387;
 
     @ObfuscatedName("aci.f")
-    public int field9388;
+    public int midiKey;
 
     @ObfuscatedName("aci.d")
     public int field9404;
 
     @ObfuscatedName("aci.z")
-    public int field9390;
+    public int pan;
 
     @ObfuscatedName("aci.n")
     public int field9386;
@@ -67,9 +67,9 @@ public class MidiNote extends Node {
     public int field9398;
 
     @ObfuscatedName("aci.u(I)V")
-    public void method14911() {
-        this.field9384 = null;
-        this.field9385 = null;
+    public void release() {
+        this.instrument = null;
+        this.sound = null;
         this.field9391 = null;
         this.stream = null;
     }

@@ -7,7 +7,7 @@ public abstract class BasicSoundPacket extends SoundPacket {
     public int field10295;
 
     @ObfuscatedName("aid.m")
-    public int field10294;
+    public int start;
 
     @ObfuscatedName("aid.t")
     public int field10292;
@@ -16,7 +16,7 @@ public abstract class BasicSoundPacket extends SoundPacket {
     public boolean field10293;
 
     @ObfuscatedName("aid.u()I")
-    public abstract int method16496();
+    public abstract int getSampleLength();
 
     @ObfuscatedName("aid.j(III)Laib;")
     public abstract SoundAudioBuss create(int arg0, int arg1, int arg2);

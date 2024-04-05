@@ -1328,7 +1328,7 @@ public final class client extends GameShell {
                 field9002 += var10.method15184();
                 var10.method15186();
             } else if (BasicMouseEvent.method3926(var11)) {
-                field9136.addFirst(var10);
+                field9136.addTail(var10);
                 if (field9136.sizeBridged() > 10) {
                     BasicMouseEvent var12 = (BasicMouseEvent) field9136.method11560();
                     if (var12 != null) {
@@ -5029,7 +5029,7 @@ public final class client extends GameShell {
             SpotAnimation var2 = var1.field10296;
             var2.method17177(1);
             if (var2.method17184()) {
-                var1.remove();
+                var1.unlink();
                 var2.method17182();
             }
         }
@@ -6582,7 +6582,7 @@ public final class client extends GameShell {
                 ServerKeyProperties var152;
                 if (var151 != null) {
                     var152 = new ServerKeyProperties(var151.field9416, var147);
-                    var151.remove();
+                    var151.unlink();
                 } else if (var148 == -1) {
                     var152 = new ServerKeyProperties(Component.method11381(var146).field1841.field9416, var147);
                 } else {
@@ -7017,7 +7017,7 @@ public final class client extends GameShell {
                 ServerKeyProperties var263;
                 if (var262 != null) {
                     var263 = new ServerKeyProperties(var255, var262.field9423);
-                    var262.remove();
+                    var262.unlink();
                 } else if (var259 == -1) {
                     var263 = new ServerKeyProperties(var255, Component.method11381(var257).field1841.field9423);
                 } else {
@@ -7043,18 +7043,18 @@ public final class client extends GameShell {
                 int var269 = (int) (var265.field4228 >> 14 & 0x3FFFL);
                 int var270 = var269 - var264.z;
                 if (Statics.field3161 == var266 && var268 >= Statics.field6803 && var268 < Statics.field6803 + 8 && var270 >= Statics.field3907 && var270 < Statics.field3907 + 8) {
-                    var265.remove();
+                    var265.unlink();
                     if (var268 >= 0 && var270 >= 0 && var268 < world.getSizeX() && var270 < world.getSizeZ()) {
                         sortObjStacks(Statics.field3161, var268, var270);
                     }
                 }
             }
-            for (ChangeLocationRequest var271 = (ChangeLocationRequest) ChangeLocationRequest.field9278.last(); var271 != null; var271 = (ChangeLocationRequest) ChangeLocationRequest.field9278.prev()) {
+            for (ChangeLocationRequest var271 = (ChangeLocationRequest) ChangeLocationRequest.field9278.head(); var271 != null; var271 = (ChangeLocationRequest) ChangeLocationRequest.field9278.next()) {
                 if (var271.field9291 >= Statics.field6803 && var271.field9291 < Statics.field6803 + 8 && var271.field9280 >= Statics.field3907 && var271.field9280 < Statics.field3907 + 8 && Statics.field3161 == var271.field9281) {
                     var271.field9290 = true;
                 }
             }
-            for (ChangeLocationRequest var272 = (ChangeLocationRequest) ChangeLocationRequest.field9292.last(); var272 != null; var272 = (ChangeLocationRequest) ChangeLocationRequest.field9292.prev()) {
+            for (ChangeLocationRequest var272 = (ChangeLocationRequest) ChangeLocationRequest.field9292.head(); var272 != null; var272 = (ChangeLocationRequest) ChangeLocationRequest.field9292.next()) {
                 if (var272.field9291 >= Statics.field6803 && var272.field9291 < Statics.field6803 + 8 && var272.field9280 >= Statics.field3907 && var272.field9280 < Statics.field3907 + 8 && Statics.field3161 == var272.field9281) {
                     var272.field9290 = true;
                 }
@@ -7826,7 +7826,7 @@ public final class client extends GameShell {
                         SpotAnimationEntityNode var474 = (SpotAnimationEntityNode) field9090.getNode((long) (var472 << 16 | var473));
                         if (var474 != null) {
                             var474.field10296.method17182();
-                            var474.remove();
+                            var474.unlink();
                         }
                     } else {
                         int var475 = var472 * 512 + 256;
@@ -8228,7 +8228,7 @@ public final class client extends GameShell {
                 closeSubInterface(var585, var584 == null || var584.field9679 != var585.field9679, false);
             }
             if (var584 != null) {
-                var584.remove();
+                var584.unlink();
                 field9075.put(var584, (long) var583);
             }
             Component var586 = Component.method11381(var582);
@@ -8334,9 +8334,9 @@ public final class client extends GameShell {
             if (field9088 != null) {
                 ObjStackList var11 = (ObjStackList) field9088.getNode((long) (Statics.field3161 << 28 | var5 << 14 | var7));
                 if (var11 != null) {
-                    for (Obj var12 = (Obj) var11.field9313.last(); var12 != null; var12 = (Obj) var11.field9313.prev()) {
+                    for (Obj var12 = (Obj) var11.field9313.head(); var12 != null; var12 = (Obj) var11.field9313.next()) {
                         if ((var8 & 0x7FFF) == var12.field9311 && var12.field9310 == var9) {
-                            var12.remove();
+                            var12.unlink();
                             var12.field9310 = var10;
                             method11367(Statics.field3161, var7, var5, var12);
                             break;
@@ -8357,14 +8357,14 @@ public final class client extends GameShell {
             int var19 = var15.x + var18;
             ObjStackList var20 = (ObjStackList) field9088.getNode((long) (Statics.field3161 << 28 | var17 << 14 | var19));
             if (var20 != null) {
-                for (Obj var21 = (Obj) var20.field9313.last(); var21 != null; var21 = (Obj) var20.field9313.prev()) {
+                for (Obj var21 = (Obj) var20.field9313.head(); var21 != null; var21 = (Obj) var20.field9313.next()) {
                     if ((var13 & 0x7FFF) == var21.field9311) {
-                        var21.remove();
+                        var21.unlink();
                         break;
                     }
                 }
                 if (var20.field9313.method11585()) {
-                    var20.remove();
+                    var20.unlink();
                 }
                 if (var18 >= 0 && var16 >= 0 && var18 < world.getSizeX() && var16 < world.getSizeZ()) {
                     sortObjStacks(Statics.field3161, var18, var16);
@@ -8474,7 +8474,7 @@ public final class client extends GameShell {
                     SpotAnimationEntityNode var67 = (SpotAnimationEntityNode) field9090.getNode((long) (var60 << 16 | var61));
                     if (var67 != null) {
                         var67.field10296.method17182();
-                        var67.remove();
+                        var67.unlink();
                     }
                 } else {
                     int var68 = var60 * 512 + 256;
@@ -8532,7 +8532,7 @@ public final class client extends GameShell {
                 int var102 = var94 << 2;
                 ProjectileAnimation var103 = new ProjectileAnimation(world.getScene(), var88, Statics.field3161, Statics.field3161, var96, var97, var100, loopCycle + var91, loopCycle + var92, var93, var102, 0, var87, var101, var82, -1, var95);
                 var103.method17162(var98, var99, getHeightmapY(var98, var99, Statics.field3161) - var101, loopCycle + var91);
-                field9007.addFirst(new ProjectileEntityNode(var103));
+                field9007.addTail(new ProjectileEntityNode(var103));
             }
         } else if (ZoneProt.field2807 == arg0) {
             int var104 = buf.g1();
@@ -8669,7 +8669,7 @@ public final class client extends GameShell {
         if (var6 == null) {
             ObjStackList var7 = new ObjStackList();
             field9088.put(var7, var4);
-            var7.field9313.addFirst(arg3);
+            var7.field9313.addTail(arg3);
             return;
         }
         ObjType var8 = Statics.objTypes.get(arg3.field9311);
@@ -8677,7 +8677,7 @@ public final class client extends GameShell {
         if (var8.field7078 == 1) {
             var9 = (arg3.field9310 + 1) * var9;
         }
-        for (Obj var10 = (Obj) var6.field9313.last(); var10 != null; var10 = (Obj) var6.field9313.prev()) {
+        for (Obj var10 = (Obj) var6.field9313.head(); var10 != null; var10 = (Obj) var6.field9313.next()) {
             ObjType var11 = Statics.objTypes.get(var10.field9311);
             int var12 = var11.field7080;
             if (var11.field7078 == 1) {
@@ -8688,7 +8688,7 @@ public final class client extends GameShell {
                 return;
             }
         }
-        var6.field9313.addFirst(arg3);
+        var6.field9313.addTail(arg3);
     }
 
     @ObfuscatedName("ads.jn(IIII)V")
@@ -8705,7 +8705,7 @@ public final class client extends GameShell {
             world.getScene().method7429(arg0, arg1, arg2);
             return;
         }
-        Obj var9 = (Obj) var8.field9313.last();
+        Obj var9 = (Obj) var8.field9313.head();
         if (var9 == null) {
             world.getScene().method7429(arg0, arg1, arg2);
             return;
@@ -8722,7 +8722,7 @@ public final class client extends GameShell {
         var10.field10605 = var9.field9310;
         label53:
         while (true) {
-            Obj var12 = (Obj) var8.field9313.prev();
+            Obj var12 = (Obj) var8.field9313.next();
             if (var12 == null) {
                 break;
             }
@@ -8730,7 +8730,7 @@ public final class client extends GameShell {
                 var10.field10607 = var12.field9311;
                 var10.field10608 = var12.field9310;
                 while (true) {
-                    Obj var13 = (Obj) var8.field9313.prev();
+                    Obj var13 = (Obj) var8.field9313.next();
                     if (var13 == null) {
                         break label53;
                     }
@@ -8776,7 +8776,7 @@ public final class client extends GameShell {
                     PositionedSound.method2547(var5);
                 }
                 var5.method16149(null);
-                var4.remove();
+                var4.unlink();
                 var1 = true;
             }
         }
@@ -10286,7 +10286,7 @@ public final class client extends GameShell {
             HookRequest var6 = new HookRequest();
             var6.component = arg0;
             var6.onop = arg0.field1778;
-            hookRequests.addFirst(var6);
+            hookRequests.addTail(var6);
         }
     }
 
@@ -10357,7 +10357,7 @@ public final class client extends GameShell {
         }
         int var0 = Statics.mouse.getX();
         int var1 = Statics.mouse.getY();
-        BasicMouseEvent var2 = (BasicMouseEvent) field9136.last();
+        BasicMouseEvent var2 = (BasicMouseEvent) field9136.head();
         if (var2 != null) {
             var0 = var2.getX();
             var1 = var2.getY();
@@ -10426,9 +10426,9 @@ public final class client extends GameShell {
                         }
                         if (var12.field1842 || var15 < var17 && var16 < var18) {
                             if (var12.field1787 && mouseX >= var15 && mouseY >= var16 && mouseX < var17 && mouseY < var18) {
-                                for (HookRequest var21 = (HookRequest) hookRequests.last(); var21 != null; var21 = (HookRequest) hookRequests.prev()) {
+                                for (HookRequest var21 = (HookRequest) hookRequests.head(); var21 != null; var21 = (HookRequest) hookRequests.next()) {
                                     if (var21.isMouseHook) {
-                                        var21.remove();
+                                        var21.unlink();
                                         var21.component.field1917 = false;
                                     }
                                 }
@@ -10479,7 +10479,7 @@ public final class client extends GameShell {
                                 var28 = true;
                             }
                             boolean var29 = false;
-                            BasicMouseEvent var30 = (BasicMouseEvent) field9136.last();
+                            BasicMouseEvent var30 = (BasicMouseEvent) field9136.head();
                             if (var30 != null && var30.method15181() == 0 && var30.getX() >= var15 && var30.getY() >= var16 && var30.getX() < var17 && var30.getY() < var18) {
                                 if (var22) {
                                     Graphic var31 = var12.method3124(Statics.renderer);
@@ -10578,7 +10578,7 @@ public final class client extends GameShell {
                                     var43.component = var12;
                                     var43.mouseY = field9002;
                                     var43.onop = var12.onscrollwheel;
-                                    hookRequests.addFirst(var43);
+                                    hookRequests.addTail(var43);
                                 }
 
                                 if (dragComponent != null) {
@@ -10789,7 +10789,7 @@ public final class client extends GameShell {
                                         var75.mouseX = var30.getX() - var13;
                                         var75.mouseY = var30.getY() - var14;
                                         var75.onop = var12.field1912;
-                                        hookRequests.addFirst(var75);
+                                        hookRequests.addTail(var75);
                                     }
                                 }
                                 if (var12.field1858 && var28 && var12.field1864 != null) {
@@ -10799,7 +10799,7 @@ public final class client extends GameShell {
                                     var76.mouseX = Statics.mouse.getX() - var13;
                                     var76.mouseY = Statics.mouse.getY() - var14;
                                     var76.onop = var12.field1864;
-                                    hookRequests.addFirst(var76);
+                                    hookRequests.addTail(var76);
                                 }
                                 if (var12.field1858 && !var28) {
                                     var12.field1858 = false;
@@ -10810,7 +10810,7 @@ public final class client extends GameShell {
                                         var77.mouseX = Statics.mouse.getX() - var13;
                                         var77.mouseY = Statics.mouse.getY() - var14;
                                         var77.onop = var12.field1773;
-                                        field9125.addFirst(var77);
+                                        field9125.addTail(var77);
                                     }
                                 }
                                 if (var28 && var12.field1866 != null) {
@@ -10820,7 +10820,7 @@ public final class client extends GameShell {
                                     var78.mouseX = Statics.mouse.getX() - var13;
                                     var78.mouseY = Statics.mouse.getY() - var14;
                                     var78.onop = var12.field1866;
-                                    hookRequests.addFirst(var78);
+                                    hookRequests.addTail(var78);
                                 }
                                 if (!var12.field1917 && var23) {
                                     var12.field1917 = true;
@@ -10831,7 +10831,7 @@ public final class client extends GameShell {
                                         var79.mouseX = Statics.mouse.getX() - var13;
                                         var79.mouseY = Statics.mouse.getY() - var14;
                                         var79.onop = var12.field1867;
-                                        hookRequests.addFirst(var79);
+                                        hookRequests.addTail(var79);
                                     }
                                 }
                                 if (var12.field1917 && var23 && var12.field1868 != null) {
@@ -10841,7 +10841,7 @@ public final class client extends GameShell {
                                     var80.mouseX = Statics.mouse.getX() - var13;
                                     var80.mouseY = Statics.mouse.getY() - var14;
                                     var80.onop = var12.field1868;
-                                    hookRequests.addFirst(var80);
+                                    hookRequests.addTail(var80);
                                 }
                                 if (var12.field1917 && !var23) {
                                     var12.field1917 = false;
@@ -10852,21 +10852,21 @@ public final class client extends GameShell {
                                         var81.mouseX = Statics.mouse.getX() - var13;
                                         var81.mouseY = Statics.mouse.getY() - var14;
                                         var81.onop = var12.field1888;
-                                        field9125.addFirst(var81);
+                                        field9125.addTail(var81);
                                     }
                                 }
                                 if (var12.field1784 != null) {
                                     HookRequest var82 = new HookRequest();
                                     var82.component = var12;
                                     var82.onop = var12.field1784;
-                                    field9159.addFirst(var82);
+                                    field9159.addTail(var82);
                                 }
                                 if (var12.field1880 != null && field9036 > var12.field1869) {
                                     if (var12.field1843 == null || field9036 - var12.field1869 > 32) {
                                         HookRequest var87 = new HookRequest();
                                         var87.component = var12;
                                         var87.onop = var12.field1880;
-                                        hookRequests.addFirst(var87);
+                                        hookRequests.addTail(var87);
                                     } else {
                                         label835:
                                         for (int var83 = var12.field1869; var83 < field9036; var83++) {
@@ -10876,7 +10876,7 @@ public final class client extends GameShell {
                                                     HookRequest var86 = new HookRequest();
                                                     var86.component = var12;
                                                     var86.onop = var12.field1880;
-                                                    hookRequests.addFirst(var86);
+                                                    hookRequests.addTail(var86);
                                                     break label835;
                                                 }
                                             }
@@ -10889,7 +10889,7 @@ public final class client extends GameShell {
                                         HookRequest var92 = new HookRequest();
                                         var92.component = var12;
                                         var92.onop = var12.field1882;
-                                        hookRequests.addFirst(var92);
+                                        hookRequests.addTail(var92);
                                     } else {
                                         label811:
                                         for (int var88 = var12.field1924; var88 < field9144; var88++) {
@@ -10899,7 +10899,7 @@ public final class client extends GameShell {
                                                     HookRequest var91 = new HookRequest();
                                                     var91.component = var12;
                                                     var91.onop = var12.field1882;
-                                                    hookRequests.addFirst(var91);
+                                                    hookRequests.addTail(var91);
                                                     break label811;
                                                 }
                                             }
@@ -10912,7 +10912,7 @@ public final class client extends GameShell {
                                         HookRequest var97 = new HookRequest();
                                         var97.component = var12;
                                         var97.onop = var12.field1874;
-                                        hookRequests.addFirst(var97);
+                                        hookRequests.addTail(var97);
                                     } else {
                                         label787:
                                         for (int var93 = var12.field1920; var93 < field9183; var93++) {
@@ -10922,7 +10922,7 @@ public final class client extends GameShell {
                                                     HookRequest var96 = new HookRequest();
                                                     var96.component = var12;
                                                     var96.onop = var12.field1874;
-                                                    hookRequests.addFirst(var96);
+                                                    hookRequests.addTail(var96);
                                                     break label787;
                                                 }
                                             }
@@ -10935,7 +10935,7 @@ public final class client extends GameShell {
                                         HookRequest var102 = new HookRequest();
                                         var102.component = var12;
                                         var102.onop = var12.field1876;
-                                        hookRequests.addFirst(var102);
+                                        hookRequests.addTail(var102);
                                     } else {
                                         label763:
                                         for (int var98 = var12.field1820; var98 < field9158; var98++) {
@@ -10945,7 +10945,7 @@ public final class client extends GameShell {
                                                     HookRequest var101 = new HookRequest();
                                                     var101.component = var12;
                                                     var101.onop = var12.field1876;
-                                                    hookRequests.addFirst(var101);
+                                                    hookRequests.addTail(var101);
                                                     break label763;
                                                 }
                                             }
@@ -10958,7 +10958,7 @@ public final class client extends GameShell {
                                         HookRequest var107 = new HookRequest();
                                         var107.component = var12;
                                         var107.onop = var12.field1878;
-                                        hookRequests.addFirst(var107);
+                                        hookRequests.addTail(var107);
                                     } else {
                                         label739:
                                         for (int var103 = var12.field1922; var103 < field9140; var103++) {
@@ -10968,7 +10968,7 @@ public final class client extends GameShell {
                                                     HookRequest var106 = new HookRequest();
                                                     var106.component = var12;
                                                     var106.onop = var12.field1878;
-                                                    hookRequests.addFirst(var106);
+                                                    hookRequests.addTail(var106);
                                                     break label739;
                                                 }
                                             }
@@ -10981,7 +10981,7 @@ public final class client extends GameShell {
                                         HookRequest var112 = new HookRequest();
                                         var112.component = var12;
                                         var112.onop = var12.field1884;
-                                        hookRequests.addFirst(var112);
+                                        hookRequests.addTail(var112);
                                     } else {
                                         label715:
                                         for (int var108 = var12.field1925; var108 < field9146; var108++) {
@@ -10991,7 +10991,7 @@ public final class client extends GameShell {
                                                     HookRequest var111 = new HookRequest();
                                                     var111.component = var12;
                                                     var111.onop = var12.field1884;
-                                                    hookRequests.addFirst(var111);
+                                                    hookRequests.addTail(var111);
                                                     break label715;
                                                 }
                                             }
@@ -11003,43 +11003,43 @@ public final class client extends GameShell {
                                     HookRequest var113 = new HookRequest();
                                     var113.component = var12;
                                     var113.onop = var12.field1890;
-                                    hookRequests.addFirst(var113);
+                                    hookRequests.addTail(var113);
                                 }
                                 if (field9148 > var12.field1919 && var12.field1892 != null) {
                                     HookRequest var114 = new HookRequest();
                                     var114.component = var12;
                                     var114.onop = var12.field1892;
-                                    hookRequests.addFirst(var114);
+                                    hookRequests.addTail(var114);
                                 }
                                 if (field9161 > var12.field1919 && var12.field1893 != null) {
                                     HookRequest var115 = new HookRequest();
                                     var115.component = var12;
                                     var115.onop = var12.field1893;
-                                    hookRequests.addFirst(var115);
+                                    hookRequests.addTail(var115);
                                 }
                                 if (field9149 > var12.field1919 && var12.field1758 != null) {
                                     HookRequest var116 = new HookRequest();
                                     var116.component = var12;
                                     var116.onop = var12.field1758;
-                                    hookRequests.addFirst(var116);
+                                    hookRequests.addTail(var116);
                                 }
                                 if (field8917 > var12.field1919 && var12.field1881 != null) {
                                     HookRequest var117 = new HookRequest();
                                     var117.component = var12;
                                     var117.onop = var12.field1881;
-                                    hookRequests.addFirst(var117);
+                                    hookRequests.addTail(var117);
                                 }
                                 if (field9152 > var12.field1919 && var12.field1897 != null) {
                                     HookRequest var118 = new HookRequest();
                                     var118.component = var12;
                                     var118.onop = var12.field1897;
-                                    hookRequests.addFirst(var118);
+                                    hookRequests.addTail(var118);
                                 }
                                 if (miscTransmitNum > var12.field1919 && var12.field1896 != null) {
                                     HookRequest var119 = new HookRequest();
                                     var119.component = var12;
                                     var119.onop = var12.field1896;
-                                    hookRequests.addFirst(var119);
+                                    hookRequests.addTail(var119);
                                 }
                                 var12.field1919 = interfaceUpdateNum;
                                 if (var12.field1891 != null) {
@@ -11049,14 +11049,14 @@ public final class client extends GameShell {
                                         var121.key = field8951[var120].method7286();
                                         var121.keychar = field8951[var120].method7298();
                                         var121.onop = var12.field1891;
-                                        hookRequests.addFirst(var121);
+                                        hookRequests.addTail(var121);
                                     }
                                 }
                                 if (cameraFinished && var12.field1900 != null) {
                                     HookRequest var122 = new HookRequest();
                                     var122.component = var12;
                                     var122.onop = var12.field1900;
-                                    hookRequests.addFirst(var122);
+                                    hookRequests.addTail(var122);
                                 }
                             }
                             if (var12.type == 5 && var12.field1906 != -1) {
@@ -11382,7 +11382,7 @@ public final class client extends GameShell {
     public static final void closeSubInterface(SubInterface arg0, boolean arg1, boolean arg2) {
         int var3 = arg0.field9679;
         int var4 = (int) arg0.field4228;
-        arg0.remove();
+        arg0.unlink();
         if (arg1) {
             Component.method13890(var3);
         }

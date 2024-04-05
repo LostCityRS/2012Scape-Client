@@ -20,14 +20,14 @@ public class IterableQueue implements Iterable, Collection {
     @ObfuscatedName("tq.u(S)V")
     public void clearBridged() {
         while (this.sentinel.prev != this.sentinel) {
-            this.sentinel.prev.remove();
+            this.sentinel.prev.unlink();
         }
     }
 
     @ObfuscatedName("tq.j(Lnz;I)V")
-    public void addFirst(Node arg0) {
+    public void addTail(Node arg0) {
         if (arg0.next != null) {
-            arg0.remove();
+            arg0.unlink();
         }
         arg0.next = this.sentinel.next;
         arg0.prev = this.sentinel;
@@ -38,7 +38,7 @@ public class IterableQueue implements Iterable, Collection {
     @ObfuscatedName("tq.a(Lnz;I)V")
     public void method11559(Node arg0) {
         if (arg0.next != null) {
-            arg0.remove();
+            arg0.unlink();
         }
         arg0.next = this.sentinel;
         arg0.prev = this.sentinel.prev;
@@ -49,7 +49,7 @@ public class IterableQueue implements Iterable, Collection {
     @ObfuscatedName("cu.s(Lnz;Lnz;I)V")
     public static void method2546(Node arg0, Node arg1) {
         if (arg0.next != null) {
-            arg0.remove();
+            arg0.unlink();
         }
         arg0.next = arg1.next;
         arg0.prev = arg1;
@@ -63,7 +63,7 @@ public class IterableQueue implements Iterable, Collection {
         if (this.sentinel == var1) {
             return null;
         } else {
-            var1.remove();
+            var1.unlink();
             return var1;
         }
     }
@@ -89,7 +89,7 @@ public class IterableQueue implements Iterable, Collection {
     }
 
     @ObfuscatedName("tq.l(I)Lnz;")
-    public Node last() {
+    public Node head() {
         return this.method11564(null);
     }
 
@@ -111,7 +111,7 @@ public class IterableQueue implements Iterable, Collection {
     }
 
     @ObfuscatedName("tq.d(I)Lnz;")
-    public Node method11565() {
+    public Node tail() {
         return this.method11566(null);
     }
 
@@ -133,7 +133,7 @@ public class IterableQueue implements Iterable, Collection {
     }
 
     @ObfuscatedName("tq.n(I)Lnz;")
-    public Node prev() {
+    public Node next() {
         Node var1 = this.current;
         if (this.sentinel == var1) {
             this.current = null;
@@ -145,7 +145,7 @@ public class IterableQueue implements Iterable, Collection {
     }
 
     @ObfuscatedName("tq.o(I)Lnz;")
-    public Node method11568() {
+    public Node prev() {
         Node var1 = this.current;
         if (this.sentinel == var1) {
             this.current = null;
@@ -210,7 +210,7 @@ public class IterableQueue implements Iterable, Collection {
 
     @ObfuscatedName("tq.b(Lnz;I)Z")
     public boolean method11575(Node arg0) {
-        this.addFirst(arg0);
+        this.addTail(arg0);
         return true;
     }
 

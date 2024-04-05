@@ -15,128 +15,128 @@ public class BasicMaterialTypeList implements MaterialTypeList {
     public Js5 field1293;
 
     @ObfuscatedName("cj.a")
-    public Material[] field1291;
+    public Material[] materials;
 
     @ObfuscatedName("cj.s")
-    public int field1294;
+    public int count;
 
     public BasicMaterialTypeList(Js5 arg0, Js5 arg1, Js5 arg2) {
         this.field1292 = arg1;
         this.field1293 = arg2;
         Packet var4 = new Packet(arg0.fetchFile(0, 0));
-        this.field1294 = var4.g2();
-        this.field1291 = new Material[this.field1294];
-        for (int var5 = 0; var5 < this.field1294; var5++) {
+        this.count = var4.g2();
+        this.materials = new Material[this.count];
+        for (int var5 = 0; var5 < this.count; var5++) {
             if (var4.g1() == 1) {
-                this.field1291[var5] = new Material();
+                this.materials[var5] = new Material();
             }
         }
-        for (int var6 = 0; var6 < this.field1294; var6++) {
-            if (this.field1291[var6] != null) {
-                this.field1291[var6].field1250 = var4.g1() == 0;
+        for (int var6 = 0; var6 < this.count; var6++) {
+            if (this.materials[var6] != null) {
+                this.materials[var6].field1250 = var4.g1() == 0;
             }
         }
-        for (int var7 = 0; var7 < this.field1294; var7++) {
-            if (this.field1291[var7] != null) {
-                this.field1291[var7].field1252 = Material.method1839(var4.g1());
+        for (int var7 = 0; var7 < this.count; var7++) {
+            if (this.materials[var7] != null) {
+                this.materials[var7].field1252 = Material.method1839(var4.g1());
             }
         }
-        for (int var8 = 0; var8 < this.field1294; var8++) {
-            if (this.field1291[var8] != null) {
-                this.field1291[var8].field1265 = var4.g1() == 1;
+        for (int var8 = 0; var8 < this.count; var8++) {
+            if (this.materials[var8] != null) {
+                this.materials[var8].field1265 = var4.g1() == 1;
             }
         }
-        for (int var9 = 0; var9 < this.field1294; var9++) {
-            if (this.field1291[var9] != null) {
-                this.field1291[var9].field1267 = var4.g1b();
+        for (int var9 = 0; var9 < this.count; var9++) {
+            if (this.materials[var9] != null) {
+                this.materials[var9].field1267 = var4.g1b();
             }
         }
-        for (int var10 = 0; var10 < this.field1294; var10++) {
-            if (this.field1291[var10] != null) {
-                this.field1291[var10].field1266 = var4.g1b();
+        for (int var10 = 0; var10 < this.count; var10++) {
+            if (this.materials[var10] != null) {
+                this.materials[var10].field1266 = var4.g1b();
             }
         }
-        for (int var11 = 0; var11 < this.field1294; var11++) {
-            if (this.field1291[var11] != null) {
-                this.field1291[var11].field1270 = var4.g1b();
+        for (int var11 = 0; var11 < this.count; var11++) {
+            if (this.materials[var11] != null) {
+                this.materials[var11].field1270 = var4.g1b();
             }
         }
-        for (int var12 = 0; var12 < this.field1294; var12++) {
-            if (this.field1291[var12] != null) {
-                this.field1291[var12].field1248 = var4.g1b();
+        for (int var12 = 0; var12 < this.count; var12++) {
+            if (this.materials[var12] != null) {
+                this.materials[var12].field1248 = var4.g1b();
             }
         }
-        for (int var13 = 0; var13 < this.field1294; var13++) {
-            if (this.field1291[var13] != null) {
-                this.field1291[var13].field1260 = (short) var4.g2();
+        for (int var13 = 0; var13 < this.count; var13++) {
+            if (this.materials[var13] != null) {
+                this.materials[var13].field1260 = (short) var4.g2();
             }
         }
-        for (int var14 = 0; var14 < this.field1294; var14++) {
-            if (this.field1291[var14] != null) {
-                this.field1291[var14].field1268 = var4.g1b();
+        for (int var14 = 0; var14 < this.count; var14++) {
+            if (this.materials[var14] != null) {
+                this.materials[var14].field1268 = var4.g1b();
             }
         }
-        for (int var15 = 0; var15 < this.field1294; var15++) {
-            if (this.field1291[var15] != null) {
-                this.field1291[var15].field1261 = var4.g1b();
+        for (int var15 = 0; var15 < this.count; var15++) {
+            if (this.materials[var15] != null) {
+                this.materials[var15].field1261 = var4.g1b();
             }
         }
-        for (int var16 = 0; var16 < this.field1294; var16++) {
-            if (this.field1291[var16] != null) {
-                this.field1291[var16].field1276 = var4.g1() == 1;
+        for (int var16 = 0; var16 < this.count; var16++) {
+            if (this.materials[var16] != null) {
+                this.materials[var16].field1276 = var4.g1() == 1;
             }
         }
-        for (int var17 = 0; var17 < this.field1294; var17++) {
-            if (this.field1291[var17] != null) {
-                this.field1291[var17].field1277 = var4.g1() == 1;
+        for (int var17 = 0; var17 < this.count; var17++) {
+            if (this.materials[var17] != null) {
+                this.materials[var17].field1277 = var4.g1() == 1;
             }
         }
-        for (int var18 = 0; var18 < this.field1294; var18++) {
-            if (this.field1291[var18] != null) {
-                this.field1291[var18].field1275 = var4.g1b();
+        for (int var18 = 0; var18 < this.count; var18++) {
+            if (this.materials[var18] != null) {
+                this.materials[var18].field1275 = var4.g1b();
             }
         }
-        for (int var19 = 0; var19 < this.field1294; var19++) {
-            if (this.field1291[var19] != null) {
-                this.field1291[var19].field1273 = var4.g1() == 1;
+        for (int var19 = 0; var19 < this.count; var19++) {
+            if (this.materials[var19] != null) {
+                this.materials[var19].field1273 = var4.g1() == 1;
             }
         }
-        for (int var20 = 0; var20 < this.field1294; var20++) {
-            if (this.field1291[var20] != null) {
-                this.field1291[var20].field1274 = var4.g1() == 1;
+        for (int var20 = 0; var20 < this.count; var20++) {
+            if (this.materials[var20] != null) {
+                this.materials[var20].field1274 = var4.g1() == 1;
             }
         }
-        for (int var21 = 0; var21 < this.field1294; var21++) {
-            if (this.field1291[var21] != null) {
-                this.field1291[var21].field1245 = var4.g1() == 1;
+        for (int var21 = 0; var21 < this.count; var21++) {
+            if (this.materials[var21] != null) {
+                this.materials[var21].field1245 = var4.g1() == 1;
             }
         }
-        for (int var22 = 0; var22 < this.field1294; var22++) {
-            if (this.field1291[var22] != null) {
-                this.field1291[var22].field1278 = var4.g1();
+        for (int var22 = 0; var22 < this.count; var22++) {
+            if (this.materials[var22] != null) {
+                this.materials[var22].field1278 = var4.g1();
             }
         }
-        for (int var23 = 0; var23 < this.field1294; var23++) {
-            if (this.field1291[var23] != null) {
-                this.field1291[var23].field1264 = var4.g4s();
+        for (int var23 = 0; var23 < this.count; var23++) {
+            if (this.materials[var23] != null) {
+                this.materials[var23].field1264 = var4.g4s();
             }
         }
-        for (int var24 = 0; var24 < this.field1294; var24++) {
-            if (this.field1291[var24] != null) {
-                this.field1291[var24].field1262 = (MaterialAlphaMode) SerializableEnums.decode(MaterialAlphaMode.method7322(), var4.g1());
+        for (int var24 = 0; var24 < this.count; var24++) {
+            if (this.materials[var24] != null) {
+                this.materials[var24].field1262 = (MaterialAlphaMode) SerializableEnums.decode(MaterialAlphaMode.method7322(), var4.g1());
             }
         }
     }
 
     @ObfuscatedName("cj.u(I)I")
     public int method894() {
-        return this.field1294;
+        return this.count;
     }
 
     @ObfuscatedName("cj.j(ILpy;FIIZI)Z")
     public boolean method898(int arg0, TextureRelated2 arg1, float arg2, int arg3, int arg4, boolean arg5) {
         boolean var7 = true;
-        if (this.field1291[arg0].field1245) {
+        if (this.materials[arg0].field1245) {
             var7 = this.field1293.method5630(arg0);
         }
         return var7 & this.field1292.method5630(arg0);
@@ -175,8 +175,8 @@ public class BasicMaterialTypeList implements MaterialTypeList {
             return null;
         }
         int[] var3 = null;
-        int var4 = this.field1291[arg0].field1252;
-        if (this.field1291[arg0].field1245) {
+        int var4 = this.materials[arg0].field1252;
+        if (this.materials[arg0].field1245) {
             byte[] var5 = this.field1293.method5635(arg0);
             if (var5 != null) {
                 try {
@@ -210,7 +210,7 @@ public class BasicMaterialTypeList implements MaterialTypeList {
 
     @ObfuscatedName("cj.m(II)Lcu;")
     public Material method889(int arg0) {
-        return this.field1291[arg0];
+        return this.materials[arg0];
     }
 
     @ObfuscatedName("cj.t(B)V")
@@ -243,7 +243,7 @@ public class BasicMaterialTypeList implements MaterialTypeList {
         int[] var5 = new int[var2.getWidth() * var2.getHeight()];
         if (var2.getType() == 10) {
             for (int var6 = 0; var6 < var5.length; var6++) {
-                var5[var6] = (var4[var6] << 8) + (var4[var6] << 16) + var4[var6] + -16777216;
+                var5[var6] = (var4[var6] << 8) + (var4[var6] << 16) + var4[var6] + 0xff000000;
             }
         } else {
             for (int var7 = 0; var7 < var5.length; var7++) {

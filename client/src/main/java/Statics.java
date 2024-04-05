@@ -2719,11 +2719,11 @@ public class Statics {
                         int var72 = (var71 >> 14 & 0x3FFF) - var69.x;
                         int var73 = (var71 & 0x3FFF) - var69.z;
                         if (var72 >= 0 && var72 < var2 && var73 >= 0 && var73 < var3) {
-                            MiniMap.field758.addFirst(new IntNode(var70));
+                            MiniMap.field758.addTail(new IntNode(var70));
                         } else {
                             MapElementType var74 = field8499.method7862(var68.field4253[var70]);
                             if (var74.field4788 != null && var74.field4792 + var72 >= 0 && var74.field4790 + var72 < var2 && var74.field4773 + var73 >= 0 && var74.field4791 + var73 < var3) {
-                                MiniMap.field758.addFirst(new IntNode(var70));
+                                MiniMap.field758.addTail(new IntNode(var70));
                             }
                         }
                     }
@@ -3535,7 +3535,7 @@ public class Statics {
             var6 = MiniMenu.field594 * MiniMenu.field582 + 21;
             field611 = (MiniMenu.formatted ? 26 : 22) + MiniMenu.field594 * MiniMenu.field582;
         } else {
-            for (MiniMenuEntry var4 = (MiniMenuEntry) MiniMenu.entries.last(); var4 != null; var4 = (MiniMenuEntry) MiniMenu.entries.prev()) {
+            for (MiniMenuEntry var4 = (MiniMenuEntry) MiniMenu.entries.head(); var4 != null; var4 = (MiniMenuEntry) MiniMenu.entries.next()) {
                 int var5 = MiniMenu.method5560(var4, var2);
                 if (var5 > var3) {
                     var3 = var5;
@@ -3861,7 +3861,7 @@ public class Statics {
                 }
             }
             if (!arg1) {
-                for (MiniMenuEntry var11 = (MiniMenuEntry) MiniMenu.entries.last(); var11 != null; var11 = (MiniMenuEntry) MiniMenu.entries.prev()) {
+                for (MiniMenuEntry var11 = (MiniMenuEntry) MiniMenu.entries.head(); var11 != null; var11 = (MiniMenuEntry) MiniMenu.entries.next()) {
                     if (var11.opcode == 23) {
                         var11.field10341 = TextUtil.createColourTag(16777215) + var6;
                         break;
@@ -4353,7 +4353,7 @@ public class Statics {
         }
         ClientWatch.method2676();
         GraphicsPacketQueue.method4786();
-        BasicMouseEvent var16 = (BasicMouseEvent) client.field9136.last();
+        BasicMouseEvent var16 = (BasicMouseEvent) client.field9136.head();
         if (client.world.getScene() != null) {
             if (cameraState == 3) {
                 client.method11197();
@@ -5131,10 +5131,10 @@ public class Statics {
 
     @ObfuscatedName("vx.iy(B)V")
     public static final void method12183() {
-        for (ProjectileEntityNode var0 = (ProjectileEntityNode) client.field9007.last(); var0 != null; var0 = (ProjectileEntityNode) client.field9007.prev()) {
+        for (ProjectileEntityNode var0 = (ProjectileEntityNode) client.field9007.head(); var0 != null; var0 = (ProjectileEntityNode) client.field9007.next()) {
             ProjectileAnimation var1 = var0.field10342;
             if (client.loopCycle > var1.field10622) {
-                var0.remove();
+                var0.unlink();
                 var1.method17159();
             } else if (client.loopCycle >= var1.field10625) {
                 var1.method17152();
@@ -6180,7 +6180,7 @@ public class Statics {
     public static void method8587(int arg0) {
         for (Node var1 = client.field9010.method11928(); var1 != null; var1 = client.field9010.method11929()) {
             if ((var1.field4228 >> 48 & 0xFFFFL) == (long) arg0) {
-                var1.remove();
+                var1.unlink();
             }
         }
     }
@@ -6222,7 +6222,7 @@ public class Statics {
         }
         ProjectileAnimation var21 = new ProjectileAnimation(client.world.getScene(), arg0, field3161, field3161, arg6, arg7, arg4, client.loopCycle + arg10, client.loopCycle + arg11, arg12, arg13, arg1, arg2, arg5, arg14, arg3, arg15);
         var21.method17162(arg8, arg9, client.getHeightmapY(arg8, arg9, field3161) - arg5, client.loopCycle + arg10);
-        client.field9007.addFirst(new ProjectileEntityNode(var21));
+        client.field9007.addTail(new ProjectileEntityNode(var21));
     }
 
     @ObfuscatedName("lg.apb(Lrn;I)V")

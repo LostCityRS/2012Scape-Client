@@ -110,7 +110,7 @@ public class i extends FloorModel implements ua {
     public void method212(int arg0, int arg1, int arg2, boolean[][] arg3, boolean arg4, int arg5) {
         int var7 = 0;
         float[] var8 = new float[this.field476.sizeBridged()];
-        for (Light var9 = (Light) this.field476.last(); var9 != null; var9 = (Light) this.field476.prev()) {
+        for (Light var9 = (Light) this.field476.head(); var9 != null; var9 = (Light) this.field476.next()) {
             var8[var7++] = var9.method14893();
         }
         this.t(var8);
@@ -139,7 +139,7 @@ public class i extends FloorModel implements ua {
 
     @ObfuscatedName("i.f(Lacg;[I)V")
     public void method204(Light arg0, int[] arg1) {
-        this.field476.addFirst(arg0);
+        this.field476.addTail(arg0);
         this.A(arg0.hashCode(), arg0.method14888(), arg0.method14882(), arg0.method14879(), arg0.method14880(), arg0.method14881(), arg1);
     }
 

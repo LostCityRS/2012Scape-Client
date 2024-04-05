@@ -6872,7 +6872,7 @@ public final class ScriptRunner {
             var2.component = arg0;
             var2.onop = arg0.field1778;
             var2.nestedCount = arg1.field5231 + 1;
-            client.hookRequests.addFirst(var2);
+            client.hookRequests.addTail(var2);
         }
     }
 
@@ -9798,7 +9798,7 @@ public final class ScriptRunner {
         }
         Node var3 = ClientWorldMap.field9766.getNode((long) var1);
         if (var3 != null && !var2) {
-            var3.remove();
+            var3.unlink();
         } else if (var3 == null && var2) {
             Node var4 = new Node();
             ClientWorldMap.field9766.put(var4, (long) var1);
@@ -9826,7 +9826,7 @@ public final class ScriptRunner {
         }
         Node var3 = ClientWorldMap.field9765.getNode((long) var1);
         if (var3 != null && !var2) {
-            var3.remove();
+            var3.unlink();
         } else if (var3 == null && var2) {
             Node var4 = new Node();
             ClientWorldMap.field9765.put(var4, (long) var1);

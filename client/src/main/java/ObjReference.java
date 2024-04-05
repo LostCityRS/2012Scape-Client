@@ -24,7 +24,7 @@ public class ObjReference {
         int var3 = this.field5241.x - var2.x;
         int var4 = this.field5241.z - var2.z;
         if (var3 >= 0 && var4 >= 0 && var3 < client.world.getSizeX() && var4 < client.world.getSizeZ()) {
-            for (Obj var5 = (Obj) var1.field9313.last(); var5 != null; var5 = (Obj) var1.field9313.prev()) {
+            for (Obj var5 = (Obj) var1.field9313.head(); var5 != null; var5 = (Obj) var1.field9313.next()) {
                 if (this.field5242 == var5.field9311) {
                     return (ObjStackEntity) client.world.getScene().method7436(this.field5241.level, var3, var4);
                 }

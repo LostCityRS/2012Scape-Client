@@ -130,14 +130,14 @@ public class MiniMenu {
         }
         field598.clearBridged();
         field599.clearBridged();
-        for (MiniMenuEntry var1 = (MiniMenuEntry) entries.last(); var1 != null; var1 = (MiniMenuEntry) entries.prev()) {
+        for (MiniMenuEntry var1 = (MiniMenuEntry) entries.head(); var1 != null; var1 = (MiniMenuEntry) entries.next()) {
             int var2 = var1.opcode;
             if (var2 < 1000) {
-                var1.remove();
+                var1.unlink();
                 if (var2 == 59 || var2 == 2 || var2 == 8 || var2 == 17 || var2 == 15 || var2 == 16 || var2 == 58) {
-                    field599.addFirst(var1);
+                    field599.addTail(var1);
                 } else {
-                    field598.addFirst(var1);
+                    field598.addTail(var1);
                 }
             }
         }
@@ -160,7 +160,7 @@ public class MiniMenu {
             Statics.field2654 = null;
             Statics.field627 = null;
         }
-        BasicMouseEvent var3 = (BasicMouseEvent) client.field9136.last();
+        BasicMouseEvent var3 = (BasicMouseEvent) client.field9136.head();
         int var4;
         int var5;
         if (var3 == null) {
@@ -435,7 +435,7 @@ public class MiniMenu {
         if (arg0 == null) {
             return;
         }
-        entries.addFirst(arg0);
+        entries.addTail(arg0);
         length++;
         Object var1 = null;
         MiniMenuSubMenu var4;
@@ -717,7 +717,7 @@ public class MiniMenu {
                                 ObjStackList var72 = (ObjStackList) client.field9088.getNode((long) (var29.field4563.level << 28 | var71 << 14 | var70));
                                 if (var72 != null) {
                                     int var73 = 0;
-                                    Obj var74 = (Obj) var72.field9313.method11565();
+                                    Obj var74 = (Obj) var72.field9313.tail();
                                     while (var74 != null) {
                                         ObjType var75 = Statics.objTypes.get(var74.field9311);
                                         int var76;
@@ -766,7 +766,7 @@ public class MiniMenu {
                                                 }
                                             }
                                         }
-                                        var74 = (Obj) var72.field9313.method11568();
+                                        var74 = (Obj) var72.field9313.prev();
                                         var73++;
                                     }
                                 }
@@ -839,7 +839,7 @@ public class MiniMenu {
         if (open) {
             return;
         }
-        arg0.remove();
+        arg0.unlink();
         length--;
         if (!arg0.field10338) {
             long var1 = arg0.field10330;
@@ -872,7 +872,7 @@ public class MiniMenu {
 
     @ObfuscatedName("ru.r(B)V")
     public static void method8628() {
-        for (MiniMenuEntry var0 = (MiniMenuEntry) entries.last(); var0 != null; var0 = (MiniMenuEntry) entries.prev()) {
+        for (MiniMenuEntry var0 = (MiniMenuEntry) entries.head(); var0 != null; var0 = (MiniMenuEntry) entries.next()) {
             if (Statics.method1367(var0.opcode)) {
                 method6643(var0);
             }
@@ -881,7 +881,7 @@ public class MiniMenu {
 
     @ObfuscatedName("sl.g(II)Z")
     public static boolean method11169(int arg0) {
-        for (MiniMenuEntry var1 = (MiniMenuEntry) entries.last(); var1 != null; var1 = (MiniMenuEntry) entries.prev()) {
+        for (MiniMenuEntry var1 = (MiniMenuEntry) entries.head(); var1 != null; var1 = (MiniMenuEntry) entries.next()) {
             if (method8731(var1.opcode) && var1.field10333 == (long) arg0) {
                 return true;
             }
@@ -1085,7 +1085,7 @@ public class MiniMenu {
 
         Component var4 = Statics.field1756[var2].field1732[var3];
         if (arg1 == -1 && var4.type == 0) {
-            for (MiniMenuEntry var5 = (MiniMenuEntry) entries.last(); var5 != null; var5 = (MiniMenuEntry) entries.prev()) {
+            for (MiniMenuEntry var5 = (MiniMenuEntry) entries.head(); var5 != null; var5 = (MiniMenuEntry) entries.next()) {
                 if (var5.opcode == 58 || var5.opcode == 1007 || var5.opcode == 25 || var5.opcode == 57 || var5.opcode == 30) {
                     for (Component var6 = Component.method11381(var5.field10335); var6 != null; var6 = client.method4752(Statics.field1756[var6.id >> 16], var6)) {
                         if (var4.id == var6.id) {
@@ -1095,7 +1095,7 @@ public class MiniMenu {
                 }
             }
         } else {
-            for (MiniMenuEntry var7 = (MiniMenuEntry) entries.last(); var7 != null; var7 = (MiniMenuEntry) entries.prev()) {
+            for (MiniMenuEntry var7 = (MiniMenuEntry) entries.head(); var7 != null; var7 = (MiniMenuEntry) entries.next()) {
                 if (var7.field10329 == arg1 && var4.id == var7.field10335 && (var7.opcode == 58 || var7.opcode == 1007 || var7.opcode == 25 || var7.opcode == 57 || var7.opcode == 30)) {
                     return true;
                 }
@@ -1242,7 +1242,7 @@ public class MiniMenu {
         int var3 = Statics.mouse.getY();
         if (!field586) {
             int var4 = 0;
-            for (MiniMenuEntry var5 = (MiniMenuEntry) entries.last(); var5 != null; var5 = (MiniMenuEntry) entries.prev()) {
+            for (MiniMenuEntry var5 = (MiniMenuEntry) entries.head(); var5 != null; var5 = (MiniMenuEntry) entries.next()) {
                 int var6 = field582 * (length - 1 - var4) + Statics.field2325 + 31;
                 Statics.method15995(var2, var3, Statics.field4756, Statics.field2325, Statics.field1571, Statics.field611, var6, var5, Statics.field670, Statics.field2399, -1, -256);
                 var4++;
@@ -1390,7 +1390,7 @@ public class MiniMenu {
             }
         } else {
             int var12 = 0;
-            for (MiniMenuEntry var13 = (MiniMenuEntry) entries.last(); var13 != null; var13 = (MiniMenuEntry) entries.prev()) {
+            for (MiniMenuEntry var13 = (MiniMenuEntry) entries.head(); var13 != null; var13 = (MiniMenuEntry) entries.next()) {
                 int var14 = field582 * (length - 1 - var12) + var8.field7176 + var2 + var5 + 1;
                 if (var10 > Statics.field4756 && var10 < Statics.field4756 + Statics.field1571 && var11 > var14 - var8.field7176 - 1 && var11 < var8.field7177 + var14 && var13.field10336) {
                     arg0.B(Statics.field4756, var14 - var8.field7176, Statics.field1571, field582, var9 << 24 | Statics.field1477, 1);
@@ -1401,7 +1401,7 @@ public class MiniMenu {
         method1740(arg0, Statics.field4756, Statics.field2325, Statics.field1571, Statics.field611, var5);
         if (!field586) {
             int var21 = 0;
-            for (MiniMenuEntry var22 = (MiniMenuEntry) entries.last(); var22 != null; var22 = (MiniMenuEntry) entries.prev()) {
+            for (MiniMenuEntry var22 = (MiniMenuEntry) entries.head(); var22 != null; var22 = (MiniMenuEntry) entries.next()) {
                 int var23 = field582 * (length - 1 - var21) + var8.field7176 + var2 + var5 + 1;
                 Statics.method15995(var10, var11, var1, var2, var3, var4, var23, var22, var7, var8, Statics.field8718 | 0xFF000000, Statics.field5086 | 0xFF000000);
                 var21++;

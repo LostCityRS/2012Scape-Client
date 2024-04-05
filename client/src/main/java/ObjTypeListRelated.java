@@ -36,7 +36,7 @@ public class ObjTypeListRelated {
                         this.field4856.put(var6, var4.field4228);
                         this.field4858.addFirst(var6);
                         var6.field9554 = 0L;
-                        var4.remove();
+                        var4.unlink();
                         var4.dualRemove();
                     } else {
                         this.field4858.addFirst(var4);
@@ -44,7 +44,7 @@ public class ObjTypeListRelated {
                     }
                     return var5;
                 }
-                var4.remove();
+                var4.unlink();
                 var4.dualRemove();
                 this.field4859 += var4.field10374;
             }
@@ -66,7 +66,7 @@ public class ObjTypeListRelated {
     @ObfuscatedName("qd.a(Lajb;)V")
     public final void method8003(CacheEntry arg0) {
         if (arg0 != null) {
-            arg0.remove();
+            arg0.unlink();
             arg0.dualRemove();
             this.field4859 += arg0.field10374;
         }
@@ -99,7 +99,7 @@ public class ObjTypeListRelated {
         for (CacheEntry var2 = (CacheEntry) this.field4858.last(); var2 != null; var2 = (CacheEntry) this.field4858.previous()) {
             if (var2.method16730()) {
                 if (var2.method16728() == null) {
-                    var2.remove();
+                    var2.unlink();
                     var2.dualRemove();
                     this.field4859 += var2.field10374;
                 }
@@ -107,7 +107,7 @@ public class ObjTypeListRelated {
                 SoftCacheEntry var3 = new SoftCacheEntry(var2.field10375, var2.method16728(), var2.field10374);
                 this.field4856.put(var3, var2.field4228);
                 DualIterableQueue.method2355(var3, var2);
-                var2.remove();
+                var2.unlink();
                 var2.dualRemove();
             }
         }
@@ -134,7 +134,7 @@ public class ObjTypeListRelated {
     public final void method8010() {
         for (CacheEntry var1 = (CacheEntry) this.field4858.last(); var1 != null; var1 = (CacheEntry) this.field4858.previous()) {
             if (var1.method16730()) {
-                var1.remove();
+                var1.unlink();
                 var1.dualRemove();
                 this.field4859 += var1.field10374;
             }

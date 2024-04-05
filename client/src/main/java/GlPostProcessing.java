@@ -87,7 +87,7 @@ public class GlPostProcessing {
         this.field1162 = null;
         this.field1163 = null;
         if (!this.field1157.method11585()) {
-            for (Node var1 = this.field1157.last(); var1 != this.field1157.sentinel; var1 = var1.prev) {
+            for (Node var1 = this.field1157.head(); var1 != this.field1157.sentinel; var1 = var1.prev) {
                 ((GlPostProcessEffect) var1).method14820();
             }
         }
@@ -200,7 +200,7 @@ public class GlPostProcessing {
         if (this.field1150 != arg2 || this.field1155 != arg3) {
             this.field1150 = arg2;
             this.field1155 = arg3;
-            for (Node var5 = this.field1157.last(); var5 != this.field1157.sentinel; var5 = var5.prev) {
+            for (Node var5 = this.field1157.head(); var5 != this.field1157.sentinel; var5 = var5.prev) {
                 ((GlPostProcessEffect) var5).method14821(this.field1150, this.field1155);
             }
             this.field1158 = true;
@@ -238,8 +238,8 @@ public class GlPostProcessing {
         int var1 = 0;
         int var2 = 1;
         GlPostProcessEffect var4;
-        for (GlPostProcessEffect var3 = (GlPostProcessEffect) this.field1157.last(); var3 != null; var3 = var4) {
-            var4 = (GlPostProcessEffect) this.field1157.prev();
+        for (GlPostProcessEffect var3 = (GlPostProcessEffect) this.field1157.head(); var3 != null; var3 = var4) {
+            var4 = (GlPostProcessEffect) this.field1157.next();
             int var5 = var3.method14832();
             for (int var6 = 0; var6 < var5; var6++) {
                 var3.method14822(var6, this.field1162[var1], this.field1166);
@@ -289,7 +289,7 @@ public class GlPostProcessing {
     public boolean method2301(GlPostProcessEffect arg0) {
         if (this.field1151 != null) {
             if (arg0.method14840() || arg0.method14844()) {
-                this.field1157.addFirst(arg0);
+                this.field1157.addTail(arg0);
                 this.method2303();
                 if (this.method2299()) {
                     if (this.field1150 != -1 && this.field1155 != -1) {
@@ -308,7 +308,7 @@ public class GlPostProcessing {
     public void method2302(GlPostProcessEffect arg0) {
         arg0.field9321 = false;
         arg0.method14820();
-        arg0.remove();
+        arg0.unlink();
         this.method2303();
     }
 
@@ -317,7 +317,7 @@ public class GlPostProcessing {
         int var1 = 0;
         boolean var2 = false;
         DataType var3 = DataType.field1501;
-        for (GlPostProcessEffect var4 = (GlPostProcessEffect) this.field1157.last(); var4 != null; var4 = (GlPostProcessEffect) this.field1157.prev()) {
+        for (GlPostProcessEffect var4 = (GlPostProcessEffect) this.field1157.head(); var4 != null; var4 = (GlPostProcessEffect) this.field1157.next()) {
             DataType var5 = var4.method14826();
             if (var5.field1508 > var3.field1508) {
                 var3 = var5;

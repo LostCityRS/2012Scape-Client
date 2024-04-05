@@ -5,7 +5,7 @@ public class SynthSoundAudioBuss extends SoundAudioBuss {
 
     public SynthSoundAudioBuss(SynthSoundPacket arg0, int arg1, int arg2, int arg3) {
         this.sound = arg0;
-        this.field10272 = arg0.field10294;
+        this.field10272 = arg0.start;
         this.field10275 = arg0.field10292;
         this.field10276 = arg0.field10293;
         this.field10264 = arg1;
@@ -33,7 +33,7 @@ public class SynthSoundAudioBuss extends SoundAudioBuss {
         if (this.field10266 < 0) {
             if (this.field10264 <= 0) {
                 this.method16394();
-                this.remove();
+                this.unlink();
                 return;
             }
             this.field10266 = 0;
@@ -41,7 +41,7 @@ public class SynthSoundAudioBuss extends SoundAudioBuss {
         if (this.field10266 >= var6) {
             if (this.field10264 >= 0) {
                 this.method16394();
-                this.remove();
+                this.unlink();
                 return;
             }
             this.field10266 = var6 - 1;
@@ -117,14 +117,14 @@ public class SynthSoundAudioBuss extends SoundAudioBuss {
                 if (this.field10266 < 0) {
                     this.field10266 = -1;
                     this.method16394();
-                    this.remove();
+                    this.unlink();
                 }
             } else {
                 this.method17025(arg0, var8, var6, var9, 0);
                 if (this.field10266 >= var6) {
                     this.field10266 = var6;
                     this.method16394();
-                    this.remove();
+                    this.unlink();
                 }
             }
         } else if (this.field10276) {

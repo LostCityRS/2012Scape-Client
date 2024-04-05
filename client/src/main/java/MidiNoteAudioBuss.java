@@ -18,7 +18,7 @@ public class MidiNoteAudioBuss extends AudioBuss {
 
     @ObfuscatedName("aij.j()Ladc;")
     public AudioBuss firstSubStream() {
-        MidiNote var1 = (MidiNote) this.notes.last();
+        MidiNote var1 = (MidiNote) this.notes.head();
         if (var1 == null) {
             return null;
         } else if (var1.stream == null) {
@@ -32,7 +32,7 @@ public class MidiNoteAudioBuss extends AudioBuss {
     public AudioBuss nextSubStream() {
         MidiNote var1;
         do {
-            var1 = (MidiNote) this.notes.prev();
+            var1 = (MidiNote) this.notes.next();
             if (var1 == null) {
                 return null;
             }
@@ -48,7 +48,7 @@ public class MidiNoteAudioBuss extends AudioBuss {
     @ObfuscatedName("aij.m([III)V")
     public void read(int[] arg0, int arg1, int arg2) {
         this.mixer.read(arg0, arg1, arg2);
-        for (MidiNote var4 = (MidiNote) this.notes.last(); var4 != null; var4 = (MidiNote) this.notes.prev()) {
+        for (MidiNote var4 = (MidiNote) this.notes.head(); var4 != null; var4 = (MidiNote) this.notes.next()) {
             if (!this.parent.method16296(var4)) {
                 int var5 = arg1;
                 int var6 = arg2;
@@ -69,7 +69,7 @@ public class MidiNoteAudioBuss extends AudioBuss {
     @ObfuscatedName("aij.t(I)V")
     public void skip(int arg0) {
         this.mixer.skip(arg0);
-        for (MidiNote var2 = (MidiNote) this.notes.last(); var2 != null; var2 = (MidiNote) this.notes.prev()) {
+        for (MidiNote var2 = (MidiNote) this.notes.head(); var2 != null; var2 = (MidiNote) this.notes.next()) {
             if (!this.parent.method16296(var2)) {
                 int var3 = arg0;
                 do {
@@ -106,19 +106,19 @@ public class MidiNoteAudioBuss extends AudioBuss {
                 }
                 SoundAudioBuss var10 = arg0.stream;
                 if (this.parent.field10248[arg0.channel] == 0) {
-                    arg0.stream = arg0.field9385.create(var10.method16397(), var10.method16442(), var10.method16426());
+                    arg0.stream = arg0.sound.create(var10.method16397(), var10.method16442(), var10.method16426());
                 } else {
-                    arg0.stream = arg0.field9385.create(var10.method16397(), 0, var10.method16426());
-                    this.parent.method16280(arg0, arg0.field9384.field9406[arg0.field9388] < 0);
+                    arg0.stream = arg0.sound.create(var10.method16397(), 0, var10.method16426());
+                    this.parent.method16280(arg0, arg0.instrument.field9406[arg0.midiKey] < 0);
                     arg0.stream.method16399(var8, var10.method16442());
                 }
-                if (arg0.field9384.field9406[arg0.field9388] < 0) {
+                if (arg0.instrument.field9406[arg0.midiKey] < 0) {
                     arg0.stream.setLoops(-1);
                 }
                 var10.method16418(var8);
                 var10.read(arg1, arg2, arg4 - arg2);
                 if (var10.method16383()) {
-                    this.mixer.method16452(var10);
+                    this.mixer.addSubStream(var10);
                 }
             }
         }
@@ -134,12 +134,12 @@ public class MidiNoteAudioBuss extends AudioBuss {
             if (var4 <= arg1) {
                 SoundAudioBuss var5 = instrument.stream;
                 if (this.parent.field10248[instrument.channel] == 0) {
-                    instrument.stream = instrument.field9385.create(var5.method16397(), var5.method16442(), var5.method16426());
+                    instrument.stream = instrument.sound.create(var5.method16397(), var5.method16442(), var5.method16426());
                 } else {
-                    instrument.stream = instrument.field9385.create(var5.method16397(), 0, var5.method16426());
-                    this.parent.method16280(instrument, instrument.field9384.field9406[instrument.field9388] < 0);
+                    instrument.stream = instrument.sound.create(var5.method16397(), 0, var5.method16426());
+                    this.parent.method16280(instrument, instrument.instrument.field9406[instrument.midiKey] < 0);
                 }
-                if (instrument.field9384.field9406[instrument.field9388] < 0) {
+                if (instrument.instrument.field9406[instrument.midiKey] < 0) {
                     instrument.stream.setLoops(-1);
                 }
                 arg1 = instrument.field9398 / var3;

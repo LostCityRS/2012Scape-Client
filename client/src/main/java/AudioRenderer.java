@@ -162,7 +162,7 @@ public class AudioRenderer {
                                 var1.field4188 = var1.field4185.create(var1.field4182, var13, var3);
                             }
                             var1.field4188.setLoops(var1.field4178 - 1);
-                            Statics.soundStream.method16452(var1.field4188);
+                            Statics.soundStream.addSubStream(var1.field4188);
                         }
                     }
                 } else {

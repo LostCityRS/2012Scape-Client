@@ -74,7 +74,7 @@ public final class JavaKeyboard extends Keyboard implements KeyListener, FocusLi
         var4.field9582 = arg1;
         var4.field9583 = arg2;
         var4.field9584 = MonotonicTime.get();
-        this.field9771.addFirst(var4);
+        this.field9771.addTail(var4);
     }
 
     @ObfuscatedName("aem.s(I)Lox;")
@@ -100,14 +100,14 @@ public final class JavaKeyboard extends Keyboard implements KeyListener, FocusLi
                     var2.field9583 = var1.field9583;
                     var2.field9584 = var1.field9584;
                     var2.field9580 = var1.field9580;
-                    this.field9773.addFirst(var2);
+                    this.field9773.addTail(var2);
                     this.field9775[var1.field9583] = true;
                 }
                 var1.field9581 = 2;
-                this.field9773.addFirst(var1);
+                this.field9773.addTail(var1);
             } else if (var1.field9581 == 1) {
                 if (this.field9775[var1.field9583]) {
-                    this.field9773.addFirst(var1);
+                    this.field9773.addTail(var1);
                     this.field9775[var1.field9583] = false;
                 }
             } else if (var1.field9581 == -1) {
@@ -119,12 +119,12 @@ public final class JavaKeyboard extends Keyboard implements KeyListener, FocusLi
                         var4.field9583 = var3;
                         var4.field9584 = var1.field9584;
                         var4.field9580 = var1.field9580;
-                        this.field9773.addFirst(var4);
+                        this.field9773.addTail(var4);
                         this.field9775[var3] = false;
                     }
                 }
             } else if (var1.field9581 == 3) {
-                this.field9773.addFirst(var1);
+                this.field9773.addTail(var1);
             }
         }
     }

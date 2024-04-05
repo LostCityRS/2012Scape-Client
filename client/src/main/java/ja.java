@@ -196,7 +196,7 @@ public class ja extends RendererToolkit implements ua {
         this.field452 = null;
         this.field437 = null;
         this.field441 = null;
-        for (ba var1 = (ba) this.field438.last(); var1 != null; var1 = (ba) this.field438.prev()) {
+        for (ba var1 = (ba) this.field438.head(); var1 != null; var1 = (ba) this.field438.next()) {
             var1.ha();
         }
         this.field438.clearBridged();
@@ -214,7 +214,7 @@ public class ja extends RendererToolkit implements ua {
     public void method444(int arg0) {
         cp.method2359();
         this.Y(arg0);
-        for (ba var2 = (ba) this.field438.last(); var2 != null; var2 = (ba) this.field438.prev()) {
+        for (ba var2 = (ba) this.field438.head(); var2 != null; var2 = (ba) this.field438.next()) {
             var2.u();
         }
     }
@@ -416,7 +416,7 @@ public class ja extends RendererToolkit implements ua {
     @ObfuscatedName("ja.bi(I)Lv;")
     public Heap method593(int arg0) {
         ba var2 = new ba(this, arg0);
-        this.field438.addFirst(var2);
+        this.field438.addTail(var2);
         return var2;
     }
 

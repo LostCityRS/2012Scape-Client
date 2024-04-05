@@ -7,7 +7,7 @@ public class MidiSong extends Node {
     public IterableMap field9382;
 
     @ObfuscatedName("acw.c")
-    public byte[] field9381;
+    public byte[] midiBytes;
 
     @ObfuscatedName("acw.u(Lls;II)Lacw;")
     public static MidiSong method14909(Js5 arg0, int arg1, int arg2) {
@@ -157,8 +157,8 @@ public class MidiSong extends Node {
         arg0.pos += var33;
         int var59 = arg0.pos;
         arg0.pos += var5 * 3;
-        this.field9381 = new byte[var22];
-        Packet var60 = new Packet(this.field9381);
+        this.midiBytes = new byte[var22];
+        Packet var60 = new Packet(this.midiBytes);
         var60.p4(1297377380);
         var60.p4(6);
         var60.p2(var2 > 1 ? 1 : 0);
@@ -306,24 +306,24 @@ public class MidiSong extends Node {
         int[] var2 = new int[16];
         var2[9] = 128;
         var1[9] = 128;
-        MidiRelated1 var4 = new MidiRelated1(this.field9381);
-        int var5 = var4.method3018();
+        MidiDecoder var4 = new MidiDecoder(this.midiBytes);
+        int var5 = var4.getTrackCount();
         for (int var6 = 0; var6 < var5; var6++) {
-            var4.method3030(var6);
-            var4.method3025(var6);
-            var4.method3020(var6);
+            var4.loadTrackPosition(var6);
+            var4.addDeltaTime(var6);
+            var4.saveTrackPosition(var6);
         }
         label52:
         do {
             while (true) {
-                int var7 = var4.method3027();
-                int var8 = var4.field1605[var7];
-                while (var4.field1605[var7] == var8) {
-                    var4.method3030(var7);
-                    int var9 = var4.method3029(var7);
+                int var7 = var4.getNextTrack();
+                int var8 = var4.times[var7];
+                while (var4.times[var7] == var8) {
+                    var4.loadTrackPosition(var7);
+                    int var9 = var4.getNextEvent(var7);
                     if (var9 == 1) {
-                        var4.method3043();
-                        var4.method3020(var7);
+                        var4.loadEndOfTrackPosition();
+                        var4.saveTrackPosition(var7);
                         continue label52;
                     }
                     int var10 = var9 & 0xF0;
@@ -357,11 +357,11 @@ public class MidiSong extends Node {
                             ((byte[]) var20.value)[var17] = 1;
                         }
                     }
-                    var4.method3025(var7);
-                    var4.method3020(var7);
+                    var4.addDeltaTime(var7);
+                    var4.saveTrackPosition(var7);
                 }
             }
-        } while (!var4.method3019());
+        } while (!var4.hasNextTrack());
     }
 
     @ObfuscatedName("acw.a()V")

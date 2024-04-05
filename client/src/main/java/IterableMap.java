@@ -93,7 +93,7 @@ public final class IterableMap implements Iterable {
     @ObfuscatedName("uo.c(Lnz;J)V")
     public void put(Node arg0, long arg1) {
         if (arg0.next != null) {
-            arg0.remove();
+            arg0.unlink();
         }
         Node var4 = this.field6725[(int) (arg1 & (long) (this.field6722 - 1))];
         arg0.next = var4.next;
@@ -112,7 +112,7 @@ public final class IterableMap implements Iterable {
                 if (var2 == var3) {
                     break;
                 }
-                var3.remove();
+                var3.unlink();
             }
         }
         this.field6727 = null;

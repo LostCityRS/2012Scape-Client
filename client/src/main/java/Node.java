@@ -13,7 +13,7 @@ public class Node {
     public Node next;
 
     @ObfuscatedName("nz.p(I)V")
-    public void remove() {
+    public void unlink() {
         if (this.next != null) {
             this.next.prev = this.prev;
             this.prev.next = this.next;
