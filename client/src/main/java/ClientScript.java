@@ -4,120 +4,120 @@ import deob.ObfuscatedName;
 public class ClientScript extends SecondaryNode {
 
     @ObfuscatedName("ajg.t")
-    public ClientTriggerType field10388;
+    public ClientTriggerType trigger;
 
     @ObfuscatedName("ajg.l")
-    public String field10377;
+    public String name;
 
     @ObfuscatedName("ajg.f")
-    public ClientScriptCommand[] field10378;
+    public ClientScriptCommand[] instructions;
 
     @ObfuscatedName("ajg.d")
-    public int[] field10385;
+    public int[] intOperands;
 
     @ObfuscatedName("ajg.z")
-    public Object[] field10380;
+    public Object[] objectOperands;
 
     @ObfuscatedName("ajg.n")
-    public long[] field10381;
+    public long[] longOperands;
 
     @ObfuscatedName("ajg.o")
-    public int field10379;
+    public int intLocalCount;
 
     @ObfuscatedName("ajg.q")
-    public int field10387;
+    public int objectLocalCount;
 
     @ObfuscatedName("ajg.p")
-    public int field10384;
+    public int longLocalCount;
 
     @ObfuscatedName("ajg.w")
-    public int field10382;
+    public int intArgCount;
 
     @ObfuscatedName("ajg.b")
-    public int field10386;
+    public int objectArgCount;
 
     @ObfuscatedName("ajg.x")
-    public int field10376;
+    public int longArgCount;
 
     @ObfuscatedName("ajg.i")
-    public HashTable[] field10383;
+    public HashTable[] switches;
 
-    public ClientScript(Packet arg0) {
-        int var2 = this.method16736(arg0);
+    public ClientScript(Packet buf) {
+        int var2 = this.decodeHeader(buf);
         int var3 = 0;
-        ClientScriptCommand[] var4 = ClientScriptCommand.method7977();
-        while (arg0.pos < var2) {
-            ClientScriptCommand var5 = this.method16735(arg0, var4);
-            this.method16734(arg0, var3, var5);
+        ClientScriptCommand[] all = ClientScriptCommand.values();
+        while (buf.pos < var2) {
+            ClientScriptCommand command = this.readCommand(buf, all);
+            this.decodeInstruction(buf, var3, command);
             var3++;
         }
     }
 
     @ObfuscatedName("ajg.u(Laet;[Lsd;I)Lsd;")
-    public ClientScriptCommand method16735(Packet arg0, ClientScriptCommand[] arg1) {
-        int var3 = arg0.g2();
-        if (var3 < 0 || var3 >= arg1.length) {
+    public ClientScriptCommand readCommand(Packet buf, ClientScriptCommand[] all) {
+        int id = buf.g2();
+        if (id < 0 || id >= all.length) {
             throw new RuntimeException("");
         }
-        return ClientScriptCommand.TRANSLATE_BY_ID[var3]; // arg1[var3];
+        return ClientScriptCommand.TRANSLATE_BY_ID[id]; // all[id];
     }
 
     @ObfuscatedName("ajg.j(Laet;S)I")
-    public int method16736(Packet arg0) {
-        arg0.pos = arg0.data.length - 2;
-        int var2 = arg0.g2();
-        int var3 = arg0.data.length - 2 - var2 - 16;
-        arg0.pos = var3;
-        int var4 = arg0.g4s();
-        this.field10379 = arg0.g2();
-        this.field10387 = arg0.g2();
-        this.field10384 = arg0.g2();
-        this.field10382 = arg0.g2();
-        this.field10386 = arg0.g2();
-        this.field10376 = arg0.g2();
-        int var5 = arg0.g1();
+    public int decodeHeader(Packet buf) {
+        buf.pos = buf.data.length - 2;
+        int var2 = buf.g2();
+        int var3 = buf.data.length - 2 - var2 - 16;
+        buf.pos = var3;
+        int var4 = buf.g4s();
+        this.intLocalCount = buf.g2();
+        this.objectLocalCount = buf.g2();
+        this.longLocalCount = buf.g2();
+        this.intArgCount = buf.g2();
+        this.objectArgCount = buf.g2();
+        this.longArgCount = buf.g2();
+        int var5 = buf.g1();
         if (var5 > 0) {
-            this.field10383 = new HashTable[var5];
+            this.switches = new HashTable[var5];
             for (int var6 = 0; var6 < var5; var6++) {
-                int var7 = arg0.g2();
+                int var7 = buf.g2();
                 HashTable var8 = new HashTable(IntMath.method2839(var7));
-                this.field10383[var6] = var8;
+                this.switches[var6] = var8;
                 while (var7-- > 0) {
-                    int var9 = arg0.g4s();
-                    int var10 = arg0.g4s();
+                    int var9 = buf.g4s();
+                    int var10 = buf.g4s();
                     var8.put(new IntNode(var10), (long) var9);
                 }
             }
         }
-        arg0.pos = 0;
-        this.field10377 = arg0.fastgstr();
-        this.field10378 = new ClientScriptCommand[var4];
+        buf.pos = 0;
+        this.name = buf.fastgstr();
+        this.instructions = new ClientScriptCommand[var4];
         return var3;
     }
 
     @ObfuscatedName("ajg.a(Laet;ILsd;I)V")
-    public void method16734(Packet arg0, int arg1, ClientScriptCommand arg2) {
-        int var4 = this.field10378.length;
-        if (ClientScriptCommand.field5271 == arg2) {
-            if (this.field10380 == null) {
-                this.field10380 = new String[var4];
+    public void decodeInstruction(Packet arg0, int arg1, ClientScriptCommand arg2) {
+        int var4 = this.instructions.length;
+        if (ClientScriptCommand.PUSH_CONSTANT_STRING == arg2) {
+            if (this.objectOperands == null) {
+                this.objectOperands = new String[var4];
             }
-            this.field10380[arg1] = arg0.gjstr().intern();
-        } else if (ClientScriptCommand.field5337 == arg2) {
-            if (this.field10381 == null) {
-                this.field10381 = new long[var4];
+            this.objectOperands[arg1] = arg0.gjstr().intern();
+        } else if (ClientScriptCommand.PUSH_CONSTANT_LONG == arg2) {
+            if (this.longOperands == null) {
+                this.longOperands = new long[var4];
             }
-            this.field10381[arg1] = arg0.g8();
+            this.longOperands[arg1] = arg0.g8();
         } else {
-            if (this.field10385 == null) {
-                this.field10385 = new int[var4];
+            if (this.intOperands == null) {
+                this.intOperands = new int[var4];
             }
             if (arg2.field6315) {
-                this.field10385[arg1] = arg0.g4s();
+                this.intOperands[arg1] = arg0.g4s();
             } else {
-                this.field10385[arg1] = arg0.g1();
+                this.intOperands[arg1] = arg0.g1();
             }
         }
-        this.field10378[arg1] = arg2;
+        this.instructions[arg1] = arg2;
     }
 }

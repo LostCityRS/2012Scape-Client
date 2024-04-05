@@ -10,7 +10,7 @@ public class MiniMenuSubMenu extends SecondaryNode {
     public final SecondaryLinkedList field10345;
 
     @ObfuscatedName("ajz.f")
-    public int field10346;
+    public int size;
 
     public MiniMenuSubMenu(String arg0) {
         this.field10344 = arg0;
@@ -30,14 +30,14 @@ public class MiniMenuSubMenu extends SecondaryNode {
         while (var3 != null) {
             if (MiniMenu.method5825(arg0.opcode, var3.opcode)) {
                 SecondaryLinkedList.insertBefore(arg0, var3);
-                this.field10346++;
+                this.size++;
                 return !var2;
             }
             var3 = (MiniMenuEntry) this.field10345.next();
             var2 = false;
         }
         this.field10345.addFirst(arg0);
-        this.field10346++;
+        this.size++;
         return var2;
     }
 
@@ -45,8 +45,8 @@ public class MiniMenuSubMenu extends SecondaryNode {
     public boolean method16650(MiniMenuEntry arg0) {
         int var2 = this.method16648();
         arg0.unlinkSecondary();
-        this.field10346--;
-        if (this.field10346 != 0) {
+        this.size--;
+        if (this.size != 0) {
             return var2 != this.method16648();
         }
         this.unlink();

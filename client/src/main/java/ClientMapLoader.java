@@ -31,7 +31,7 @@ public class ClientMapLoader extends MapLoader {
     public LocTypeList field8894;
 
     public ClientMapLoader(Scene arg0, LocTypeList arg1, int arg2, int arg3, int arg4, boolean arg5, SceneLevelTileFlags arg6, EnvironmentManager arg7) {
-        super(arg0, arg2, arg3, arg4, arg5, Statics.field3615, Statics.field4450, arg6);
+        super(arg0, arg2, arg3, arg4, arg5, Statics.floTypes, Statics.field4450, arg6);
         this.field8894 = arg1;
         this.field8883 = arg7;
     }
@@ -353,7 +353,7 @@ public class ClientMapLoader extends MapLoader {
     }
 
     @ObfuscatedName("md.ct(Ltz;[BIIIIB)I")
-    public static final int method6583(LocTypeList arg0, byte[] arg1, int arg2, int arg3, int arg4, int arg5) {
+    public static final int decodeLocs(LocTypeList arg0, byte[] arg1, int arg2, int arg3, int arg4, int arg5) {
         int var6 = 0;
         Packet var7 = new Packet(arg1);
         int var8 = -1;
@@ -410,18 +410,18 @@ public class ClientMapLoader extends MapLoader {
     }
 
     @ObfuscatedName("abo.cc(Lra;[BII[Lmv;B)V")
-    public final void method14271(RendererToolkit arg0, byte[] arg1, int arg2, int arg3, CollisionMap[] arg4) {
-        Packet var6 = new Packet(arg1);
+    public final void decodeLocs(RendererToolkit arg0, byte[] src, int arg2, int arg3, CollisionMap[] collision) {
+        Packet buf = new Packet(src);
         int var7 = -1;
         while (true) {
-            int var8 = var6.gExtended1or2();
+            int var8 = buf.gExtended1or2();
             if (var8 == 0) {
                 return;
             }
             var7 += var8;
             int var9 = 0;
             while (true) {
-                int var10 = var6.gSmart1or2();
+                int var10 = buf.gSmart1or2();
                 if (var10 == 0) {
                     break;
                 }
@@ -429,7 +429,7 @@ public class ClientMapLoader extends MapLoader {
                 int var11 = var9 & 0x3F;
                 int var12 = var9 >> 6 & 0x3F;
                 int var13 = var9 >> 12;
-                int var14 = var6.g1();
+                int var14 = buf.g1();
                 int var15 = var14 >> 2;
                 int var16 = var14 & 0x3;
                 int var17 = arg2 + var12;
@@ -442,7 +442,7 @@ public class ClientMapLoader extends MapLoader {
                             var20 = var13 - 1;
                         }
                         if (var20 >= 0) {
-                            var19 = arg4[var20];
+                            var19 = collision[var20];
                         }
                     }
                     this.method14304(arg0, var13, var13, var17, var18, var7, var16, var15, var19, -1);
@@ -452,7 +452,7 @@ public class ClientMapLoader extends MapLoader {
     }
 
     @ObfuscatedName("abo.cg(Lra;[BIIIIIII[Lmv;I)V")
-    public final void method14272(RendererToolkit arg0, byte[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, CollisionMap[] arg9) {
+    public final void decodeLocs(RendererToolkit arg0, byte[] arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, CollisionMap[] arg9) {
         Packet var11 = new Packet(arg1);
         int var12 = -1;
         while (true) {

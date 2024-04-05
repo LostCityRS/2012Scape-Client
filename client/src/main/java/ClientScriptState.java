@@ -4,73 +4,73 @@ import deob.ObfuscatedName;
 public class ClientScriptState {
 
     @ObfuscatedName("rn.u")
-    public int[] field5235;
+    public int[] intLocals;
 
     @ObfuscatedName("rn.j")
-    public Object[] field5211;
+    public Object[] objectLocals;
 
     @ObfuscatedName("rn.a")
-    public long[] field5212;
+    public long[] longLocals;
 
     @ObfuscatedName("rn.s")
-    public boolean field5238;
+    public boolean secondary;
 
     @ObfuscatedName("rn.c")
-    public int[] field5237 = new int[5];
+    public int[] arrayLocalsSizes = new int[5];
 
     @ObfuscatedName("rn.m")
-    public int[][] field5224 = new int[5][5000];
+    public int[][] arrayLocals = new int[5][5000];
 
     @ObfuscatedName("rn.t")
-    public int[] field5215 = new int[1000];
+    public int[] intStack = new int[1000];
 
     @ObfuscatedName("rn.l")
-    public int field5216 = 0;
+    public int isp = 0;
 
     @ObfuscatedName("rn.f")
-    public Object[] field5222 = new Object[1000];
+    public Object[] objectStack = new Object[1000];
 
     @ObfuscatedName("rn.d")
-    public int field5230 = 0;
+    public int osp = 0;
 
     @ObfuscatedName("rn.z")
-    public long[] field5219 = new long[1000];
+    public long[] longStack = new long[1000];
 
     @ObfuscatedName("rn.n")
-    public int field5220 = 0;
+    public int lsp = 0;
 
     @ObfuscatedName("rn.o")
-    public int field5221 = 0;
+    public int fp = 0;
 
     @ObfuscatedName("rn.q")
-    public ScriptFrame[] field5225 = new ScriptFrame[50];
+    public ScriptFrame[] frames = new ScriptFrame[50];
 
     @ObfuscatedName("rn.p")
-    public ActiveComponent field5223 = new ActiveComponent();
+    public ActiveComponent activeComponent = new ActiveComponent();
 
     @ObfuscatedName("rn.w")
-    public ActiveComponent field5210 = new ActiveComponent();
+    public ActiveComponent activeComponent2 = new ActiveComponent();
 
     @ObfuscatedName("rn.b")
-    public QuickChatPhrase field5213;
+    public QuickChatPhrase activeChatPhrase;
 
     @ObfuscatedName("rn.x")
-    public ClanSettings field5226;
+    public ClanSettings activeClanSettings;
 
     @ObfuscatedName("rn.i")
-    public ClanChannel field5217;
+    public ClanChannel activeClanChannel;
 
     @ObfuscatedName("rn.v")
-    public PathingEntity field5228;
+    public PathingEntity activeEntity;
 
     @ObfuscatedName("rn.k")
-    public Location field5229;
+    public Location activeLoc;
 
     @ObfuscatedName("rn.h")
-    public ObjStackEntity field5234;
+    public ObjStackEntity activeObj;
 
     @ObfuscatedName("rn.r")
-    public int field5231 = 0;
+    public int nestedCount = 0;
 
     @ObfuscatedName("rn.g")
     public int field5232;
@@ -79,14 +79,14 @@ public class ClientScriptState {
     public FileChooser field5233;
 
     @ObfuscatedName("rn.e")
-    public int[] field5227;
+    public int[] intOperands;
 
     @ObfuscatedName("rn.ay")
-    public ClientScriptCommand[] field5214;
+    public ClientScriptCommand[] instructions;
 
     @ObfuscatedName("rn.af")
-    public int field5236 = -1;
+    public int pc = -1;
 
     @ObfuscatedName("rn.ar")
-    public ClientScript field5218;
+    public ClientScript script;
 }

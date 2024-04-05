@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public abstract class PathingEntity extends PrimaryLayerEntity implements CameraTrackable {
 
     @ObfuscatedName("aay.o")
-    public int localPlayerIndex;
+    public int slot;
 
     @ObfuscatedName("aay.q")
     public int field8594;
@@ -82,25 +82,25 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
     public EntitySpotAnim[] spotAnims;
 
     @ObfuscatedName("aay.aw")
-    public int field8619;
+    public int exactMoveX0;
 
     @ObfuscatedName("aay.aa")
-    public int field8591;
+    public int exactMoveX1;
 
     @ObfuscatedName("aay.am")
-    public int field8621;
+    public int exactMoveZ0;
 
     @ObfuscatedName("aay.ad")
-    public int field8605;
+    public int exactMoveZ1;
 
     @ObfuscatedName("aay.az")
-    public int forceMoveEndCycle;
+    public int exactMoveT0;
 
     @ObfuscatedName("aay.ak")
-    public int forceMoveStartCycle;
+    public int exactMoveT1;
 
     @ObfuscatedName("aay.av")
-    public int field8625;
+    public int exactMoveAngle;
 
     @ObfuscatedName("aay.aj")
     public int field8626;
@@ -133,7 +133,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
     public int field8599;
 
     @ObfuscatedName("aay.bj")
-    public int field8636;
+    public int turnspeed;
 
     @ObfuscatedName("aay.bf")
     public int field8637;
@@ -163,7 +163,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
     public int field8648;
 
     @ObfuscatedName("aay.bc")
-    public int field8646;
+    public int routeLength3;
 
     @ObfuscatedName("aay.br")
     public int field8647;
@@ -214,13 +214,13 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
         this.field8631 = 0;
         this.field8618 = 0;
         this.field8599 = 0;
-        this.field8636 = 256;
+        this.turnspeed = 256;
         this.field8638 = new EasedAngle();
         this.field8639 = new EasedAngle();
         this.field8611 = new EasedAngle();
         this.routeLength = 0;
         this.field8648 = 0;
-        this.field8646 = 0;
+        this.routeLength3 = 0;
         this.field8647 = 0;
         this.field8613 = false;
         this.field8650 = false;
@@ -259,7 +259,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
     @ObfuscatedName("aay.f(II)V")
     public void method14013(int arg0) {
         BASType var2 = this.getBASType();
-        if (var2.field4723 == 0 && this.field8636 == 0) {
+        if (var2.field4723 == 0 && this.turnspeed == 0) {
             return;
         }
         this.field8638.method1388();
@@ -272,9 +272,9 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
     }
 
     @ObfuscatedName("aay.d(IZI)V")
-    public void method13946(int arg0, boolean arg1) {
+    public void turn(int arg0, boolean arg1) {
         BASType var3 = this.getBASType();
-        if (arg1 || var3.field4723 != 0 || this.field8636 != 0) {
+        if (arg1 || var3.field4723 != 0 || this.turnspeed != 0) {
             this.field8637 = arg0 & 0x3FFF;
             this.field8638.method1386(this.field8637);
         }
@@ -286,7 +286,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
         int var2 = this.field8638.field574;
         boolean var3;
         if (var1.field4723 == 0) {
-            var3 = this.field8638.method1385(this.field8637, this.field8636, this.field8636);
+            var3 = this.field8638.method1385(this.field8637, this.turnspeed, this.turnspeed);
         } else {
             var3 = this.field8638.method1385(this.field8637, var1.field4723, var1.field4722);
         }
@@ -522,7 +522,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
     @ObfuscatedName("aay.w(I)V")
     public final void method13952() {
         this.routeLength = 0;
-        this.field8646 = 0;
+        this.routeLength3 = 0;
     }
 
     @ObfuscatedName("aay.b(IIIIIIB)V")

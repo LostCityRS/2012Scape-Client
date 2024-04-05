@@ -74,14 +74,14 @@ public class NpcEntity extends PathingEntity {
     }
 
     @ObfuscatedName("ahs.gb(Lwq;I)V")
-    public void method16149(NPCType arg0) {
-        if (this.type != arg0 && MiniMenu.open && MiniMenu.method11169(this.localPlayerIndex)) {
+    public void setType(NPCType arg0) {
+        if (this.type != arg0 && MiniMenu.open && MiniMenu.method11169(this.slot)) {
             MiniMenu.close();
         }
         this.type = arg0;
         if (this.type != null) {
             this.name = this.type.name;
-            this.vislevel = this.type.field7233;
+            this.vislevel = this.type.vislevel;
         }
         if (this.field8640 != null) {
             this.field8640.method8100();
@@ -118,7 +118,7 @@ public class NpcEntity extends PathingEntity {
         if (Statics.options.characterShadows.method15709() == 1 && var9.field7249 && var8.field4714) {
             AnimationNode var11 = this.field8597.method11767() && this.field8597.method11776() ? this.field8597 : null;
             EntityWalkAnimationNode var12 = this.field8616.method11767() && (!this.field8616.field9899 || var11 == null) ? this.field8616 : null;
-            Model var13 = SpotShadowFactory.method1417(arg0, var5, this.field8601, this.field8644, this.field8603, this.type.field7213, this.field8651[0], this.type.field7236 & 0xFFFF, this.type.field7251 & 0xFFFF, this.type.field7252 & 0xFF, this.type.field7253 & 0xFF, var12 == null ? var11 : var12);
+            Model var13 = SpotShadowFactory.method1417(arg0, var5, this.field8601, this.field8644, this.field8603, this.type.size, this.field8651[0], this.type.field7236 & 0xFFFF, this.type.field7251 & 0xFFFF, this.type.field7252 & 0xFF, this.type.field7253 & 0xFF, var12 == null ? var11 : var12);
             if (var13 != null) {
                 if (this.field9811 == null || this.field9811.length < this.field8651.length + 1) {
                     this.method15642(this.field8651.length + 1);
@@ -218,7 +218,7 @@ public class NpcEntity extends PathingEntity {
     }
 
     @ObfuscatedName("ahs.gi(Lmz;II)V")
-    public final void method16152(CompassPoint arg0, int arg1) {
+    public final void move(CompassPoint arg0, int arg1) {
         int var3 = this.routeWaypointX[0];
         int var4 = this.routeWaypointZ[0];
         switch (arg0.field3916) {
@@ -277,7 +277,7 @@ public class NpcEntity extends PathingEntity {
     }
 
     @ObfuscatedName("ahs.ga(IIIZII)V")
-    public void method16153(int arg0, int arg1, int arg2, boolean arg3, int arg4) {
+    public void move(int arg0, int arg1, int arg2, boolean arg3, int arg4) {
         this.level = this.field9809 = (byte) arg0;
         if (client.world.getSceneLevelTileFlags().isLinkBelow(arg1, arg2)) {
             this.field9809++;
@@ -309,12 +309,12 @@ public class NpcEntity extends PathingEntity {
                 }
                 this.routeWaypointX[0] = arg1;
                 this.routeWaypointZ[0] = arg2;
-                this.field8645[0] = MoveSpeed.field3921.id;
+                this.field8645[0] = MoveSpeed.WALK.id;
                 return;
             }
         }
         this.routeLength = 0;
-        this.field8646 = 0;
+        this.routeLength3 = 0;
         this.field8648 = 0;
         this.routeWaypointX[0] = arg1;
         this.routeWaypointZ[0] = arg2;
@@ -395,7 +395,7 @@ public class NpcEntity extends PathingEntity {
                     {
                         if (this.type.field7274 <= 0) {
                             if (this.type.field7229 == -1) {
-                                if (this.type.field7213 != 1) {
+                                if (this.type.size != 1) {
                                     break label41;
                                 }
                             } else if (this.type.field7229 != 1) {
@@ -470,7 +470,7 @@ public class NpcEntity extends PathingEntity {
 
     @ObfuscatedName("ahs.dk(S)I")
     public int method13970() {
-        return this.localPlayerIndex + 1;
+        return this.slot + 1;
     }
 
     @ObfuscatedName("ahs.u(I)Ladu;")

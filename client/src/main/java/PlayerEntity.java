@@ -240,7 +240,7 @@ public class PlayerEntity extends PathingEntity {
             this.method8551(var33);
             var33.release();
         }
-        if (client.currentPlayerUid == this.localPlayerIndex && var32 != null) {
+        if (client.currentPlayerUid == this.slot && var32 != null) {
             for (int var34 = 0; var34 < var22.length; var34++) {
                 if (var22[var34] != var32[var34]) {
                     Statics.objTypes.method12297();
@@ -288,7 +288,7 @@ public class PlayerEntity extends PathingEntity {
         this.field8650 = false;
         if (Statics.options.characterShadows.method15709() == 1) {
             BASType var9 = this.getBASType();
-            if (var9.field4714 && (this.model.field5006 == -1 || Statics.field3774.method12565(this.model.field5006).field7249)) {
+            if (var9.field4714 && (this.model.field5006 == -1 || Statics.npcTypes.get(this.model.field5006).field7249)) {
                 AnimationNode var10 = this.field8597.method11767() && this.field8597.method11776() ? this.field8597 : null;
                 EntityWalkAnimationNode var11 = this.field8616.method11767() && (!this.field8616.field9899 || var10 == null) ? this.field8616 : null;
                 Model var12 = SpotShadowFactory.method1417(arg0, var5, this.field8601, this.field8644, this.field8603, 1, this.field8651[0], 0, 0, 160, 240, var11 == null ? var10 : var11);
@@ -309,7 +309,7 @@ public class PlayerEntity extends PathingEntity {
                 HintArrow var14 = client.field8936[var13];
                 if (var14 != null && var14.field779 != -1) {
                     if (var14.field776 == 1) {
-                        ObjectNode var15 = (ObjectNode) client.npcs.get((long) var14.field772);
+                        ObjectNode var15 = (ObjectNode) client.npcEntities.get((long) var14.field772);
                         if (var15 != null) {
                             NpcEntity var16 = (NpcEntity) var15.value;
                             Vector3 var17 = Vector3.method5377(var16.getTransform().trans, Statics.localPlayerEntity.getTransform().trans);
@@ -411,7 +411,7 @@ public class PlayerEntity extends PathingEntity {
         if (var10) {
             arg1 |= 0x80000;
         }
-        Model var11 = this.field8651[0] = this.model.method8244(arg0, arg1, Statics.field3769, Statics.field7650, Statics.field3774, Statics.objTypes, Statics.field566, Statics.field2669, var5, var6, this.field8633, this.field8654, var9, true, Statics.wearposDefaults);
+        Model var11 = this.field8651[0] = this.model.method8244(arg0, arg1, Statics.field3769, Statics.field7650, Statics.npcTypes, Statics.objTypes, Statics.field566, Statics.field2669, var5, var6, this.field8633, this.field8654, var9, true, Statics.wearposDefaults);
         int var12 = PlayerModel.method3503();
         if (GameShell.field4152 < 96 && var12 > 50) {
             SceneManager.method16899();
@@ -501,8 +501,8 @@ public class PlayerEntity extends PathingEntity {
         if (arg0 < 0 || arg0 >= client.world.getSizeX() || arg1 < 0 || arg1 >= client.world.getSizeZ()) {
             this.tele(arg0, arg1);
         } else if (this.routeWaypointX[0] >= 0 && this.routeWaypointX[0] < client.world.getSizeX() && this.routeWaypointZ[0] >= 0 && this.routeWaypointZ[0] < client.world.getSizeZ()) {
-            if (MoveSpeed.field3922.id == arg2) {
-                client.method6031(this, arg0, arg1, MoveSpeed.field3922.id);
+            if (MoveSpeed.RUN.id == arg2) {
+                client.method6031(this, arg0, arg1, MoveSpeed.RUN.id);
             }
             this.method16124(arg0, arg1, arg2);
         } else {
@@ -513,7 +513,7 @@ public class PlayerEntity extends PathingEntity {
     @ObfuscatedName("ahg.gd(IIB)V")
     public void tele(int arg0, int arg1) {
         this.routeLength = 0;
-        this.field8646 = 0;
+        this.routeLength3 = 0;
         this.field8648 = 0;
         this.routeWaypointX[0] = arg0;
         this.routeWaypointZ[0] = arg1;
@@ -553,7 +553,7 @@ public class PlayerEntity extends PathingEntity {
 
     @ObfuscatedName("ahg.k(I)I")
     public int size() {
-        return this.model == null || this.model.field5006 == -1 ? super.size() : Statics.field3774.method12565(this.model.field5006).field7213;
+        return this.model == null || this.model.field5006 == -1 ? super.size() : Statics.npcTypes.get(this.model.field5006).size;
     }
 
     @ObfuscatedName("ahg.bm(I)I")
@@ -611,7 +611,7 @@ public class PlayerEntity extends PathingEntity {
             if (this.field8629.field1232 == null) {
                 return null;
             }
-            if (client.field9177 == 0 || client.field9177 == 3 || client.field9177 == 1 && client.method3546(this.nameUnfiltered)) {
+            if (client.publicChatFilter == 0 || client.publicChatFilter == 3 || client.publicChatFilter == 1 && client.method3546(this.nameUnfiltered)) {
                 return this.field8629;
             }
         }
@@ -643,6 +643,6 @@ public class PlayerEntity extends PathingEntity {
 
     @ObfuscatedName("ahg.dk(S)I")
     public int method13970() {
-        return -this.localPlayerIndex - 1;
+        return -this.slot - 1;
     }
 }

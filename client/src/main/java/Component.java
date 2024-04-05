@@ -1031,7 +1031,7 @@ public class Component {
             var31.KA(var11);
             return var31;
         } else if (this.field1806 == 2) {
-            Model var35 = arg4.method12565(this.field1838).method12512(arg0, arg1, arg7, arg8, this.field1930);
+            Model var35 = arg4.get(this.field1838).method12512(arg0, arg1, arg7, arg8, this.field1930);
             if (var35 == null) {
                 field1761 = true;
                 return null;
@@ -1059,7 +1059,7 @@ public class Component {
                 return var38;
             }
         } else if (this.field1806 == 6) {
-            Model var39 = arg4.method12565(this.field1838).method12510(arg0, arg1, arg2, arg7, arg8, null, null, null, 0, this.field1930);
+            Model var39 = arg4.get(this.field1838).method12510(arg0, arg1, arg2, arg7, arg8, null, null, null, 0, this.field1930);
             if (var39 == null) {
                 field1761 = true;
                 return null;

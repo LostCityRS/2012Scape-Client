@@ -52,7 +52,7 @@ public class NPCTypeList {
     }
 
     @ObfuscatedName("wi.u(IB)Lwq;")
-    public NPCType method12565(int arg0) {
+    public NPCType get(int arg0) {
         SoftLruHashTable var2 = this.field7281;
         NPCType var3;
         synchronized (this.field7281) {

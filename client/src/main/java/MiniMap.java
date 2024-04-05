@@ -309,8 +309,8 @@ public class MiniMap {
 
     @ObfuscatedName("ci.z(Lra;IILew;Lta;III)V")
     public static void method2388(RendererToolkit arg0, int arg1, int arg2, Component arg3, GraphicsRelated arg4, int arg5, int arg6) {
-        for (int var7 = 0; var7 < client.npcCount; var7++) {
-            ObjectNode var8 = (ObjectNode) client.npcs.get((long) client.field9056[var7]);
+        for (int var7 = 0; var7 < client.npcSlotCount; var7++) {
+            ObjectNode var8 = (ObjectNode) client.npcEntities.get((long) client.npcSlots[var7]);
             if (var8 != null) {
                 NpcEntity var9 = (NpcEntity) var8.value;
                 if (var9.method16154() && Statics.localPlayerEntity.level == var9.level) {
@@ -386,7 +386,7 @@ public class MiniMap {
             HintArrow var8 = var6[var7];
             if (var8 != null && var8.field776 != 0 && client.loopCycle % 20 < 10) {
                 if (var8.field776 == 1) {
-                    ObjectNode var9 = (ObjectNode) client.npcs.get((long) var8.field772);
+                    ObjectNode var9 = (ObjectNode) client.npcEntities.get((long) var8.field772);
                     if (var9 != null) {
                         NpcEntity var10 = (NpcEntity) var9.value;
                         Vector3 var11 = var10.getTransform().trans;

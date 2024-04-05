@@ -235,7 +235,7 @@ public class ClientProt {
     public static final ClientProt IF_BUTTON4 = new ClientProt(76, 8);
 
     @ObfuscatedName("jm.bu")
-    public static final ClientProt SEND_SNAPSHOT = new ClientProt(77, -1);
+    public static final ClientProt SEND_ABUSE_REPORT = new ClientProt(77, -1);
 
     @ObfuscatedName("jm.cl")
     public static final ClientProt WORLDLIST_FETCH = new ClientProt(78, 4);

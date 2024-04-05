@@ -63,7 +63,7 @@ public class ClientScriptHelpers {
                     } catch (Exception var20) {
                         throw new RuntimeException(var20.getMessage() + " " + var13);
                     }
-                    var16.field10388 = arg0;
+                    var16.trigger = arg0;
                     field5186.method7958(var16, (long) var13 << 16);
                     return var16;
                 }
@@ -76,7 +76,7 @@ public class ClientScriptHelpers {
                 } catch (Exception var19) {
                     throw new RuntimeException(var19.getMessage() + " " + var8);
                 }
-                var11.field10388 = arg0;
+                var11.trigger = arg0;
                 field5186.method7958(var11, (long) var8 << 16);
                 return var11;
             }
@@ -89,7 +89,7 @@ public class ClientScriptHelpers {
             } catch (Exception var18) {
                 throw new RuntimeException(var18.getMessage() + " " + var3);
             }
-            var6.field10388 = arg0;
+            var6.trigger = arg0;
             field5186.method7958(var6, (long) var3 << 16);
             return var6;
         }

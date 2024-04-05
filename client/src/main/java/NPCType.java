@@ -18,7 +18,7 @@ public class NPCType {
     public String name = "null";
 
     @ObfuscatedName("wq.m")
-    public int field7213 = 1;
+    public int size = 1;
 
     @ObfuscatedName("wq.t")
     public int[] field7214;
@@ -78,7 +78,7 @@ public class NPCType {
     public boolean field7232 = true;
 
     @ObfuscatedName("wq.e")
-    public int field7233 = -1;
+    public int vislevel = -1;
 
     @ObfuscatedName("wq.ay")
     public int field7235 = 128;
@@ -108,7 +108,7 @@ public class NPCType {
     public int field7242 = -1;
 
     @ObfuscatedName("wq.al")
-    public int field7241 = 32;
+    public int turnspeed = 32;
 
     @ObfuscatedName("wq.at")
     public int[] multinpc;
@@ -222,7 +222,7 @@ public class NPCType {
         } else if (arg1 == 2) {
             this.name = arg0.gjstr();
         } else if (arg1 == 12) {
-            this.field7213 = arg0.g1();
+            this.size = arg0.g1();
         } else if (arg1 >= 30 && arg1 < 35) {
             this.op[arg1 - 30] = arg0.gjstr();
         } else if (arg1 == 40) {
@@ -286,7 +286,7 @@ public class NPCType {
         } else if (arg1 == 93) {
             this.field7232 = false;
         } else if (arg1 == 95) {
-            this.field7233 = arg0.g2();
+            this.vislevel = arg0.g2();
         } else if (arg1 == 97) {
             this.field7235 = arg0.g2();
         } else if (arg1 == 98) {
@@ -300,7 +300,7 @@ public class NPCType {
         } else if (arg1 == 102) {
             this.field7231 = arg0.g2();
         } else if (arg1 == 103) {
-            this.field7241 = arg0.g2();
+            this.turnspeed = arg0.g2();
         } else if (arg1 == 106 || arg1 == 118) {
             this.field7245 = arg0.g2();
             if (this.field7245 == 65535) {
@@ -353,7 +353,7 @@ public class NPCType {
         } else if (arg1 == 123) {
             this.field7266 = arg0.g2();
         } else if (arg1 == 125) {
-            this.field7243 = (CompassPoint) SerializableEnums.decode(Statics.method3921(), arg0.g1b());
+            this.field7243 = (CompassPoint) SerializableEnums.decode(Statics.values(), arg0.g1b());
         } else if (arg1 == 127) {
             this.field7217 = arg0.g2();
         } else if (arg1 == 128) {
@@ -855,10 +855,10 @@ public class NPCType {
             var2 = arg0.method1664(this.field7219);
         }
         if (var2 >= 0 && var2 < this.multinpc.length - 1) {
-            return this.multinpc[var2] == -1 ? null : this.field7210.method12565(this.multinpc[var2]);
+            return this.multinpc[var2] == -1 ? null : this.field7210.get(this.multinpc[var2]);
         } else {
             int var3 = this.multinpc[this.multinpc.length - 1];
-            return var3 == -1 ? null : this.field7210.method12565(var3);
+            return var3 == -1 ? null : this.field7210.get(var3);
         }
     }
 
@@ -882,13 +882,13 @@ public class NPCType {
     }
 
     @ObfuscatedName("wq.n(B)Z")
-    public boolean method12511() {
+    public boolean hasSound() {
         if (this.multinpc == null) {
             return this.bgsound != -1 || this.bgsound_walk != -1 || this.bgsound_run != -1;
         }
         for (int var1 = 0; var1 < this.multinpc.length; var1++) {
             if (this.multinpc[var1] != -1) {
-                NPCType var2 = this.field7210.method12565(this.multinpc[var1]);
+                NPCType var2 = this.field7210.get(this.multinpc[var1]);
                 if (var2.bgsound != -1 || var2.bgsound_walk != -1 || var2.bgsound_run != -1) {
                     return true;
                 }

@@ -147,7 +147,7 @@ public class AccountCreationManager {
                     client.lobbyConnection.lastPacketType2 = null;
                     client.lobbyConnection.idleNetCycles = 0;
                 } else {
-                    client.lobbyConnection.method1916();
+                    client.lobbyConnection.closeGracefully();
                 }
                 client.lobbyConnection.packetType = null;
                 Statics.field633 = null;

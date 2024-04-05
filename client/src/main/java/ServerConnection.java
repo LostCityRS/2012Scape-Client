@@ -127,7 +127,7 @@ public class ServerConnection {
     }
 
     @ObfuscatedName("ad.m(I)V")
-    public void method1916() {
+    public void closeGracefully() {
         if (this.stream != null) {
             this.stream.method7192();
             this.stream = null;

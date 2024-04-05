@@ -163,7 +163,7 @@ public class ProjectileAnimation extends PrimaryLayerEntity {
             }
         } else {
             int var3 = this.field10624 - 1;
-            ObjectNode var4 = (ObjectNode) client.npcs.get((long) var3);
+            ObjectNode var4 = (ObjectNode) client.npcEntities.get((long) var3);
             if (var4 != null) {
                 var1 = (PathingEntity) var4.value;
             }

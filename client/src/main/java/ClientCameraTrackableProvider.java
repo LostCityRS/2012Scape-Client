@@ -9,7 +9,7 @@ public class ClientCameraTrackableProvider implements CameraTrackableProvider {
             return client.players[arg1];
         }
         if (CameraTrackableType.field2217 == arg0) {
-            ObjectNode var3 = (ObjectNode) client.npcs.get((long) arg1);
+            ObjectNode var3 = (ObjectNode) client.npcEntities.get((long) arg1);
             if (var3 != null) {
                 return (CameraTrackable) var3.value;
             }

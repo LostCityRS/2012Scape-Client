@@ -385,7 +385,7 @@ public class LocalisedText {
     public static final LocalisedText field6991 = new LocalisedText("Attack", "Angreifen", "Attaquer", "Atacar");
 
     @ObfuscatedName("vt.dv")
-    public static final LocalisedText field6992 = new LocalisedText("Choose Option", "Wähl eine Option", "Choisir une option", "Selecionar opção");
+    public static final LocalisedText CHOOSE_OPTION = new LocalisedText("Choose Option", "Wähl eine Option", "Choisir une option", "Selecionar opção");
 
     @ObfuscatedName("vt.dn")
     public static final LocalisedText field6993 = new LocalisedText(" more options", " weitere Optionen", " autres options", " mais opções");

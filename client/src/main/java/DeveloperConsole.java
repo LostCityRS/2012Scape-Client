@@ -537,7 +537,7 @@ public class DeveloperConsole {
                 if (arg0.startsWith("directlogin")) {
                     String[] var17 = StringTools.method11508(arg0.substring(12), ' ');
                     if (var17.length == 2) {
-                        LoginManager.method12220(var17[0], var17[1]);
+                        LoginManager.requestLogin(var17[0], var17[1]);
                     }
                     return;
                 }

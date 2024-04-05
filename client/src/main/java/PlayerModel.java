@@ -142,7 +142,7 @@ public class PlayerModel {
     @ObfuscatedName("qc.t(Lra;ILpn;Lgq;Lwi;Lvj;Lst;Lug;Ltt;Ltt;[Ltt;[IIZLrt;B)Lqa;")
     public Model method8244(RendererToolkit arg0, int arg1, BASTypeList arg2, IDKTypeList arg3, NPCTypeList arg4, ObjTypeList arg5, SeqTypeList arg6, VarIntDomain arg7, AnimationNode arg8, AnimationNode arg9, AnimationNode[] arg10, int[] arg11, int arg12, boolean arg13, WearposDefaults arg14) {
         if (this.field5006 != -1) {
-            return arg4.method12565(this.field5006).method12510(arg0, arg1, arg2, arg7, arg8, arg9, arg10, arg11, arg12, null);
+            return arg4.get(this.field5006).method12510(arg0, arg1, arg2, arg7, arg8, arg9, arg10, arg11, arg12, null);
         }
         int var16 = arg1;
         long var17 = this.field5007;
@@ -405,7 +405,7 @@ public class PlayerModel {
     @ObfuscatedName("qc.l(Lra;ILgq;Lwi;Lvj;Lst;Lug;Ltt;I)Lqa;")
     public Model method8237(RendererToolkit arg0, int arg1, IDKTypeList arg2, NPCTypeList arg3, ObjTypeList arg4, SeqTypeList arg5, VarIntDomain arg6, AnimationNode arg7) {
         if (this.field5006 != -1) {
-            return arg3.method12565(this.field5006).method12512(arg0, arg1, arg6, arg7, null);
+            return arg3.get(this.field5006).method12512(arg0, arg1, arg6, arg7, null);
         }
         int var9 = arg7 == null ? arg1 : arg1 | arg7.method11779();
         SoftLruHashTable var10 = field4998;

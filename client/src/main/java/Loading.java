@@ -24,8 +24,8 @@ public class Loading {
     @ObfuscatedName("ta.u(B)V")
     public static void method186() {
         field3421 = true;
-        Statics.field6391 = LoginManager.field533;
-        Statics.field4814 = LoginManager.field534;
+        Statics.field6391 = LoginManager.username;
+        Statics.field4814 = LoginManager.password;
         client.logout(false);
         Statics.field3420 = null;
         Statics.field3562 = null;
@@ -57,7 +57,7 @@ public class Loading {
             client.setState(6);
             if (field3421) {
                 field3421 = false;
-                LoginManager.method12220(Statics.field6391, Statics.field4814);
+                LoginManager.requestLogin(Statics.field6391, Statics.field4814);
             }
         } else {
             Statics.field2324 = var0.field3397.get(Statics.language);
@@ -304,7 +304,7 @@ public class Loading {
             Statics.field3769 = new BASTypeList(client.modeGame, Statics.language, Statics.field7435, Statics.wearposDefaults);
             Statics.field3770 = new CursorTypeList(client.modeGame, Statics.language, Statics.field7435, Statics.field7387);
             Statics.field1244 = new EnumTypeList(client.modeGame, Statics.language, Statics.field6451);
-            Statics.field3615 = new FloorOverlayTypeList(client.modeGame, Statics.language, Statics.field7435);
+            Statics.floTypes = new FloorOverlayTypeList(client.modeGame, Statics.language, Statics.field7435);
             Statics.field4450 = new FloorUnderlayTypeList(client.modeGame, Statics.language, Statics.field7435);
             Statics.field5037 = new HitmarkTypeList(client.modeGame, Statics.language, Statics.field7435, Statics.field7387);
             Statics.field6705 = new HeadbarTypeList(client.modeGame, Statics.language, Statics.field7435, Statics.field7387);
@@ -316,7 +316,7 @@ public class Loading {
             Statics.asyncRebuild.method6038(new LocTypeList(client.modeGame, Statics.language, true, Statics.field1565, Statics.field4560));
             Statics.field8499 = new MapElementTypeList(client.modeGame, Statics.language, Statics.field7435, Statics.field7387);
             Statics.field850 = new MSITypeList(client.modeGame, Statics.language, Statics.field7435, Statics.field7387);
-            Statics.field3774 = new NPCTypeList(client.modeGame, Statics.language, true, Statics.field5080, Statics.field4560);
+            Statics.npcTypes = new NPCTypeList(client.modeGame, Statics.language, true, Statics.field5080, Statics.field4560);
             Statics.objTypes = new ObjTypeList(client.modeGame, Statics.language, true, Statics.paramTypes, Statics.field5130, Statics.field4560);
             Statics.field4959 = new QuestTypeList(client.modeGame, Statics.language, Statics.field7435, true);
             Statics.field566 = new SeqTypeList(client.modeGame, Statics.language, Statics.field3897, Statics.field7567, Statics.field6690);
@@ -354,7 +354,7 @@ public class Loading {
             }
         }
         if (Statics.field1208 == LoadingStage.field3408) {
-            WorldMap.method7080(Statics.field4059, Statics.field3615, Statics.field4450, client.world.getLocTypeList(), Statics.field8499, Statics.field850, Statics.field2669);
+            WorldMap.method7080(Statics.field4059, Statics.floTypes, Statics.field4450, client.world.getLocTypeList(), Statics.field8499, Statics.field850, Statics.field2669);
         }
         if (Statics.field1208 == LoadingStage.field3399) {
             Statics.field6666 = new int[Statics.field8455.field7160];

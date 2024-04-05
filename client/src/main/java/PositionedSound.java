@@ -257,8 +257,8 @@ public class PositionedSound extends Node {
                 var10 = var10.getMultiNPC(Statics.field2669);
             }
             if (var10 != null) {
-                var7.maxX = var10.field7213 + arg1 << 9;
-                var7.maxZ = var10.field7213 + arg2 << 9;
+                var7.maxX = var10.size + arg1 << 9;
+                var7.maxZ = var10.size + arg2 << 9;
                 var7.sound = method5936(arg5);
                 var7.field9537 = var10.field7264;
                 var7.range = var10.bgsound_range << 9;
@@ -279,7 +279,7 @@ public class PositionedSound extends Node {
             var7.maxspeed = 256;
             var7.minspeed = 256;
             var7.size = 0;
-            field9516.put(var7, (long) arg6.localPlayerIndex);
+            field9516.put(var7, (long) arg6.slot);
         }
     }
 
@@ -302,7 +302,7 @@ public class PositionedSound extends Node {
     }
 
     @ObfuscatedName("cu.m(Lahs;I)V")
-    public static void method2547(NpcEntity arg0) {
+    public static void remove(NpcEntity arg0) {
         for (PositionedSound var1 = (PositionedSound) field9528.head(); var1 != null; var1 = (PositionedSound) field9528.next()) {
             if (var1.npc == arg0) {
                 if (var1.primaryStream != null) {
@@ -317,7 +317,7 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("ot.t(Lahg;S)V")
     public static void method7377(PlayerEntity arg0) {
-        PositionedSound var1 = (PositionedSound) field9516.get((long) arg0.localPlayerIndex);
+        PositionedSound var1 = (PositionedSound) field9516.get((long) arg0.slot);
         if (var1 == null) {
             return;
         }
@@ -330,7 +330,7 @@ public class PositionedSound extends Node {
 
     @ObfuscatedName("ao.l(Lahg;I)V")
     public static void method1807(PlayerEntity arg0) {
-        PositionedSound var1 = (PositionedSound) field9516.get((long) arg0.localPlayerIndex);
+        PositionedSound var1 = (PositionedSound) field9516.get((long) arg0.slot);
         if (var1 == null) {
             add(arg0.level, arg0.routeWaypointX[0], arg0.routeWaypointZ[0], 0, null, null, arg0);
         } else {

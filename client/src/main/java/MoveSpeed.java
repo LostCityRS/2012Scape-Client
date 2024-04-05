@@ -7,20 +7,20 @@ public class MoveSpeed implements SerializableEnum {
     public static final MoveSpeed STATIONARY = new MoveSpeed((byte) -1);
 
     @ObfuscatedName("mk.j")
-    public static final MoveSpeed field3920 = new MoveSpeed((byte) 0);
+    public static final MoveSpeed CRAWL = new MoveSpeed((byte) 0);
 
     @ObfuscatedName("mk.a")
-    public static final MoveSpeed field3921 = new MoveSpeed((byte) 1);
+    public static final MoveSpeed WALK = new MoveSpeed((byte) 1);
 
     @ObfuscatedName("mk.s")
-    public static final MoveSpeed field3922 = new MoveSpeed((byte) 2);
+    public static final MoveSpeed RUN = new MoveSpeed((byte) 2);
 
     @ObfuscatedName("mk.m")
     public byte id;
 
     @ObfuscatedName("cc.u(I)[Lmk;")
     public static MoveSpeed[] values() {
-        return new MoveSpeed[]{STATIONARY, field3921, field3920, field3922};
+        return new MoveSpeed[]{STATIONARY, WALK, CRAWL, RUN};
     }
 
     public MoveSpeed(byte arg0) {

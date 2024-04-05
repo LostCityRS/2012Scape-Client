@@ -43,27 +43,27 @@ public final class CutsceneEntity {
             this.field1563 = true;
             if (this.field1560 >= 0) {
                 this.field1558 = new NpcEntity(client.world.getScene(), 25);
-                this.field1558.localPlayerIndex = this.field1559;
+                this.field1558.slot = this.field1559;
                 this.field1558.field8618 = client.loopCycle;
-                this.field1558.method16149(Statics.field3774.method12565(this.field1560));
-                this.field1558.setSize(this.field1558.type.field7213);
-                this.field1558.field8636 = this.field1558.type.field7241 << 3;
+                this.field1558.setType(Statics.npcTypes.get(this.field1560));
+                this.field1558.setSize(this.field1558.type.size);
+                this.field1558.turnspeed = this.field1558.type.turnspeed << 3;
                 this.field1558.field8600 = ++CutsceneManager.field1530 - 1;
             } else {
                 this.field1562 = new PlayerEntity(client.world.getScene(), 25);
                 this.field1562.getAppearance(Statics.field416);
-                this.field1562.localPlayerIndex = this.field1559;
+                this.field1562.slot = this.field1559;
                 this.field1562.field8618 = client.loopCycle;
                 this.field1562.field8600 = ++CutsceneManager.field1530 - 1;
             }
         }
         if (this.field1560 >= 0) {
-            this.field1558.method16153(arg2, arg0, arg1, true, this.field1558.size());
-            this.field1558.method13946(arg3, true);
+            this.field1558.move(arg2, arg0, arg1, true, this.field1558.size());
+            this.field1558.turn(arg3, true);
         } else {
             this.field1562.level = this.field1562.field9809 = (byte) arg2;
             this.field1562.tele(arg0, arg1);
-            this.field1562.method13946(arg3, true);
+            this.field1562.turn(arg3, true);
         }
     }
 
@@ -80,7 +80,7 @@ public final class CutsceneEntity {
             this.field1562.level = this.field1562.field9809 = (byte) arg0;
             this.field1562.tele(arg1, arg2);
         } else {
-            this.field1558.method16153(arg0, arg1, arg2, true, this.field1558.size());
+            this.field1558.move(arg0, arg1, arg2, true, this.field1558.size());
         }
     }
 
@@ -94,7 +94,7 @@ public final class CutsceneEntity {
         if (this.field1560 < 0) {
             return true;
         }
-        NPCType var1 = Statics.field3774.method12565(this.field1560);
+        NPCType var1 = Statics.npcTypes.get(this.field1560);
         boolean var2 = var1.method12513();
         if (this.field1564 == null) {
             BASType var3 = Statics.field3769.method7784(var1.field7217);

@@ -42,7 +42,7 @@ public class ReceivePlayerPositions {
         arg0.bits();
         int var1 = client.currentPlayerUid;
         PlayerEntity var2 = Statics.localPlayerEntity = client.players[var1] = new PlayerEntity(client.world.getScene());
-        var2.localPlayerIndex = var1;
+        var2.slot = var1;
         int var3 = arg0.gBit(30);
         byte var4 = (byte) (var3 >> 28);
         int var5 = var3 >> 14 & 0x3FFF;
@@ -82,7 +82,7 @@ public class ReceivePlayerPositions {
     }
 
     @ObfuscatedName("ao.j(Lajl;II)V")
-    public static final void method1805(PacketBit arg0, int arg1) {
+    public static final void update(PacketBit arg0, int arg1) {
         field728 = 0;
         method11491(arg0);
         method15865(arg0);
@@ -389,27 +389,27 @@ public class ReceivePlayerPositions {
             field730[arg1] = buf.g1b_alt1();
         }
         if ((extendedInfo & 0x200) != 0) {
-            arg2.field8619 = buf.g1b();
-            arg2.field8621 = buf.g1b();
-            arg2.field8591 = buf.g1b_alt1();
-            arg2.field8605 = buf.g1b();
-            arg2.forceMoveEndCycle = buf.g2_alt3() + client.loopCycle;
-            arg2.forceMoveStartCycle = buf.g2_alt3() + client.loopCycle;
-            arg2.field8625 = buf.g2();
+            arg2.exactMoveX0 = buf.g1b();
+            arg2.exactMoveZ0 = buf.g1b();
+            arg2.exactMoveX1 = buf.g1b_alt1();
+            arg2.exactMoveZ1 = buf.g1b();
+            arg2.exactMoveT0 = buf.g2_alt3() + client.loopCycle;
+            arg2.exactMoveT1 = buf.g2_alt3() + client.loopCycle;
+            arg2.exactMoveAngle = buf.g2();
             if (arg2.field10062) {
-                arg2.field8619 = arg2.field8619 + arg2.field10052;
-                arg2.field8621 = arg2.field8621 + arg2.field10064;
-                arg2.field8591 = arg2.field8591 + arg2.field10052;
-                arg2.field8605 = arg2.field8605 + arg2.field10064;
+                arg2.exactMoveX0 = arg2.exactMoveX0 + arg2.field10052;
+                arg2.exactMoveZ0 = arg2.exactMoveZ0 + arg2.field10064;
+                arg2.exactMoveX1 = arg2.exactMoveX1 + arg2.field10052;
+                arg2.exactMoveZ1 = arg2.exactMoveZ1 + arg2.field10064;
                 arg2.routeLength = 0;
             } else {
-                arg2.field8619 = arg2.field8619 + arg2.routeWaypointX[0];
-                arg2.field8621 = arg2.field8621 + arg2.routeWaypointZ[0];
-                arg2.field8591 = arg2.field8591 + arg2.routeWaypointX[0];
-                arg2.field8605 = arg2.field8605 + arg2.routeWaypointZ[0];
+                arg2.exactMoveX0 = arg2.exactMoveX0 + arg2.routeWaypointX[0];
+                arg2.exactMoveZ0 = arg2.exactMoveZ0 + arg2.routeWaypointZ[0];
+                arg2.exactMoveX1 = arg2.exactMoveX1 + arg2.routeWaypointX[0];
+                arg2.exactMoveZ1 = arg2.exactMoveZ1 + arg2.routeWaypointZ[0];
                 arg2.routeLength = 1;
             }
-            arg2.field8646 = 0;
+            arg2.routeLength3 = 0;
         }
         if ((extendedInfo & 0x4000) != 0) {
             int var55 = buf.g1_alt2();
@@ -485,7 +485,7 @@ public class ReceivePlayerPositions {
         highResolutionsCount = 0;
         for (int var0 = 0; var0 < 2048; var0++) {
             appearances[var0] = null;
-            field730[var0] = MoveSpeed.field3921.id;
+            field730[var0] = MoveSpeed.WALK.id;
             field733[var0] = null;
         }
     }

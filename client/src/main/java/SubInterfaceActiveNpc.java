@@ -13,7 +13,7 @@ public class SubInterfaceActiveNpc extends SubInterface {
 
     @ObfuscatedName("aji.u(B)Z")
     public boolean process() {
-        ObjectNode var1 = (ObjectNode) client.npcs.get((long) this.field10476);
+        ObjectNode var1 = (ObjectNode) client.npcEntities.get((long) this.field10476);
         if (var1 == null) {
             return false;
         } else {

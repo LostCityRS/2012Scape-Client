@@ -408,7 +408,7 @@ public class Scene {
     }
 
     @ObfuscatedName("oo.b(IIIILakb;B)V")
-    public void method7499(int arg0, int arg1, int arg2, int arg3, ObjLayerEntity arg4) {
+    public void addObjStack(int arg0, int arg1, int arg2, int arg3, ObjLayerEntity arg4) {
         Tile var6 = this.method7406(arg0, arg1, arg2);
         if (var6 == null) {
             return;

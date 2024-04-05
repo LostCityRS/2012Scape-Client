@@ -19,7 +19,7 @@ public class CollisionMap {
     public int[][] field3896;
 
     @ObfuscatedName("it.u(III)Lmv;")
-    public static CollisionMap method4718(int arg0, int arg1) {
+    public static CollisionMap create(int arg0, int arg1) {
         CollisionMap var2 = new CollisionMap();
         var2.field3857 = -1;
         var2.field3893 = -1;
