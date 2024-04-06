@@ -10008,36 +10008,36 @@ public final class ScriptRunner {
     @ObfuscatedName("aga.aff(Lrn;I)V")
     public static final void formatminimenu(ClientScriptState arg0) {
         arg0.isp -= 12;
-//        MiniMenu.close();
-//        MiniMenu.clearFormatting();
-//        Statics.field9426 = arg0.field5215[arg0.field5216];
-//        Statics.field6566 = arg0.field5215[arg0.field5216 + 1];
-//        Statics.field1477 = arg0.field5215[arg0.field5216 + 2];
-//        Statics.field5052 = arg0.field5215[arg0.field5216 + 3];
-//        Statics.field8531 = arg0.field5215[arg0.field5216 + 4];
-//        Statics.field6372 = arg0.field5215[arg0.field5216 + 5];
-//        Statics.field2333 = arg0.field5215[arg0.field5216 + 6];
-//        Statics.field617 = arg0.field5215[arg0.field5216 + 7];
-//        Statics.field2338 = arg0.field5215[arg0.field5216 + 8];
-//        Statics.field8718 = arg0.field5215[arg0.field5216 + 9];
-//        Statics.field5086 = arg0.field5215[arg0.field5216 + 10];
-//        Statics.field1387 = arg0.field5215[arg0.field5216 + 11];
-//        Statics.field7387.method5630(Statics.field8531);
-//        Statics.field7387.method5630(Statics.field6372);
-//        Statics.field7387.method5630(Statics.field2333);
-//        Statics.field7387.method5630(Statics.field617);
-//        Statics.field7387.method5630(Statics.field2338);
-//        Statics.field7387.method5630(Statics.field1387);
-//        Statics.field8745.method5630(Statics.field1387);
-//        Statics.field8519 = null;
-//        Statics.field3411 = null;
-//        Statics.field3925 = null;
-//        Statics.field1557 = null;
-//        Statics.field8491 = null;
-//        Statics.field2652 = null;
-//        Statics.field6819 = null;
-//        Statics.field6392 = null;
-//        MiniMenu.formatted = true;
+        MiniMenu.close();
+        MiniMenu.clearFormatting();
+        Statics.field9426 = arg0.intStack[arg0.isp];
+        Statics.field6566 = arg0.intStack[arg0.isp + 1];
+        Statics.field1477 = arg0.intStack[arg0.isp + 2];
+        Statics.field5052 = arg0.intStack[arg0.isp + 3];
+        Statics.field8531 = arg0.intStack[arg0.isp + 4];
+        Statics.field6372 = arg0.intStack[arg0.isp + 5];
+        Statics.field2333 = arg0.intStack[arg0.isp + 6];
+        Statics.field617 = arg0.intStack[arg0.isp + 7];
+        Statics.field2338 = arg0.intStack[arg0.isp + 8];
+        Statics.field8718 = arg0.intStack[arg0.isp + 9];
+        Statics.field5086 = arg0.intStack[arg0.isp + 10];
+        Statics.field1387 = arg0.intStack[arg0.isp + 11];
+        Statics.field7387.method5630(Statics.field8531);
+        Statics.field7387.method5630(Statics.field6372);
+        Statics.field7387.method5630(Statics.field2333);
+        Statics.field7387.method5630(Statics.field617);
+        Statics.field7387.method5630(Statics.field2338);
+        Statics.field7387.method5630(Statics.field1387);
+        Statics.field8745.method5630(Statics.field1387);
+        Statics.field8519 = null;
+        Statics.field3411 = null;
+        Statics.field3925 = null;
+        Statics.field1557 = null;
+        Statics.field8491 = null;
+        Statics.field2652 = null;
+        Statics.field6819 = null;
+        Statics.field6392 = null;
+        MiniMenu.formatted = true;
     }
 
     @ObfuscatedName("jv.afw(Lrn;B)V")
@@ -10752,7 +10752,7 @@ public final class ScriptRunner {
     @ObfuscatedName("r.aij(Lrn;I)V")
     public static final void method1622(ClientScriptState arg0) {
         String var1 = (String) arg0.objectStack[--arg0.osp];
-        AccountCreationManager.method12448(var1);
+        AccountCreationManager.checkEmail(var1);
     }
 
     @ObfuscatedName("eo.aih(Lrn;I)V")
@@ -10769,7 +10769,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("tf.aiu(Lrn;S)V")
     public static final void method11665(ClientScriptState arg0) {
-        AccountCreationManager.method3942(arg0.intStack[--arg0.isp]);
+        AccountCreationManager.stepReached(arg0.intStack[--arg0.isp]);
     }
 
     @ObfuscatedName("jj.aiq(Lrn;B)V")

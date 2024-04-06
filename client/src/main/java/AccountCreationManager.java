@@ -17,14 +17,14 @@ public class AccountCreationManager {
 
     @ObfuscatedName("aeb.j(B)V")
     public static void method15481() {
-        Statics.field633 = CreateConnectStage.field564;
-        Statics.field629 = ConnectReply.field6432;
-        Statics.field4011 = CreateAccountReply.field6449;
-        Statics.field9312 = CheckEmailReply.field6457;
+        Statics.createStage = CreateConnectStage.SEND_REQUEST;
+        Statics.field629 = ConnectReply.NONE;
+        Statics.field4011 = CreateAccountReply.NONE;
+        Statics.field9312 = CheckEmailReply.NONE;
     }
 
     @ObfuscatedName("vl.s(Ljava/lang/String;I)V")
-    public static void method12448(String arg0) {
+    public static void checkEmail(String arg0) {
         if (client.state != 14) {
             return;
         }
@@ -40,7 +40,7 @@ public class AccountCreationManager {
     }
 
     @ObfuscatedName("gz.m(II)V")
-    public static void method3942(int arg0) {
+    public static void stepReached(int arg0) {
         if (client.state == 14) {
             ClientMessage var1 = ClientMessage.createMessage(ClientProt.CREATE_LOG_PROGRESS, client.lobbyConnection.randomOut);
             var1.buf.p1(arg0);
@@ -55,12 +55,12 @@ public class AccountCreationManager {
 
     @ObfuscatedName("rz.l(B)Ltk;")
     public static CreateAccountReply method8659() {
-        return Statics.field4011 == null ? CreateAccountReply.field6449 : Statics.field4011;
+        return Statics.field4011 == null ? CreateAccountReply.NONE : Statics.field4011;
     }
 
     @ObfuscatedName("sz.f(I)Ltc;")
     public static CheckEmailReply method11157() {
-        return Statics.field9312 == null ? CheckEmailReply.field6457 : Statics.field9312;
+        return Statics.field9312 == null ? CheckEmailReply.NONE : Statics.field9312;
     }
 
     @ObfuscatedName("na.d(Ltk;I)V")
@@ -74,8 +74,8 @@ public class AccountCreationManager {
     }
 
     @ObfuscatedName("lw.n(I)V")
-    public static void method5945() {
-        if (Statics.field633 == null) {
+    public static void update() {
+        if (Statics.createStage == null) {
             return;
         }
         try {
@@ -89,7 +89,7 @@ public class AccountCreationManager {
             if (field634 > var0) {
                 Statics.method5540();
             }
-            if (Statics.field633 == CreateConnectStage.field564) {
+            if (Statics.createStage == CreateConnectStage.SEND_REQUEST) {
                 client.lobbyConnection.method1911(Stream.method12184(Statics.field6782.method12025(), 15000), Statics.field6782.field6765);
                 client.lobbyConnection.method1935();
                 ClientMessage var1 = ClientMessage.method4876();
@@ -118,9 +118,9 @@ public class AccountCreationManager {
                 var1.buf.psize2(var1.buf.pos - var2);
                 client.lobbyConnection.queue(var1);
                 client.lobbyConnection.method1912();
-                Statics.field633 = CreateConnectStage.field565;
+                Statics.createStage = CreateConnectStage.field565;
             }
-            if (Statics.field633 == CreateConnectStage.field565) {
+            if (Statics.createStage == CreateConnectStage.field565) {
                 if (client.lobbyConnection.getStream() == null) {
                     Statics.method5540();
                     return;
@@ -150,7 +150,7 @@ public class AccountCreationManager {
                     client.lobbyConnection.closeGracefully();
                 }
                 client.lobbyConnection.packetType = null;
-                Statics.field633 = null;
+                Statics.createStage = null;
             }
         } catch (IOException var8) {
             Statics.method5540();
@@ -173,7 +173,7 @@ public class AccountCreationManager {
             var1.p4((int) (Math.random() * 9.9999999E7D));
         }
         var1.p2((int) (Math.random() * 9.9999999E7D));
-        var1.rsaenc(PublicKeys.field666, PublicKeys.field667);
+        var1.rsaenc(PublicKeys.LOGIN_RSAE, PublicKeys.LOGIN_RSAN);
         arg0.buf.pdata(var1.data, 0, var1.pos);
         return var2;
     }

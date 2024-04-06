@@ -6,10 +6,10 @@ import java.math.BigInteger;
 public class PublicKeys {
 
     @ObfuscatedName("af.u")
-    public static final BigInteger field666 = new BigInteger("10001", 16);
+    public static final BigInteger LOGIN_RSAE = new BigInteger("10001", 16);
 
     @ObfuscatedName("af.j")
-    public static final BigInteger field667 = new BigInteger("b53461e2ecd4a79d360d17da997fc8e919dde09ea7cc6f11a815de567331db43818671aa0104f7384481002397b75efb0a86aa323260b9b8258c96baf3d23edf", 16);
+    public static final BigInteger LOGIN_RSAN = new BigInteger("b53461e2ecd4a79d360d17da997fc8e919dde09ea7cc6f11a815de567331db43818671aa0104f7384481002397b75efb0a86aa323260b9b8258c96baf3d23edf", 16);
 
     @ObfuscatedName("af.a")
     public static final BigInteger field665 = new BigInteger("10001", 16);

@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class CreateConnectStage {
 
     @ObfuscatedName("f.u")
-    public static final CreateConnectStage field564 = new CreateConnectStage();
+    public static final CreateConnectStage SEND_REQUEST = new CreateConnectStage();
 
     @ObfuscatedName("f.j")
     public static final CreateConnectStage field565 = new CreateConnectStage();

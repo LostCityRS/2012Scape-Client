@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class CreateAccountReply implements SerializableEnum {
 
     @ObfuscatedName("tk.u")
-    public static final CreateAccountReply field6449 = new CreateAccountReply(-2);
+    public static final CreateAccountReply NONE = new CreateAccountReply(-2);
 
     @ObfuscatedName("tk.j")
     public static final CreateAccountReply field6437 = new CreateAccountReply(-3);

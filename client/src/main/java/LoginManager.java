@@ -314,7 +314,7 @@ public class LoginManager {
                     var3.p8(client.field9138);
                     var3.p1(client.modeGame.game);
                     var3.p1((int) (Math.random() * 9.9999999E7D));
-                    var3.rsaenc(PublicKeys.field666, PublicKeys.field667);
+                    var3.rsaenc(PublicKeys.LOGIN_RSAE, PublicKeys.LOGIN_RSAN);
                     var1.buf.pdata(var3.data, 0, var3.pos);
                     var1.buf.psize2(var1.buf.pos - var2);
                 } else {
@@ -903,7 +903,7 @@ public class LoginManager {
         var0.pjstr(password);
         var0.p8(socialName);
         var0.p8(client.field9138);
-        var0.rsaenc(PublicKeys.field666, PublicKeys.field667);
+        var0.rsaenc(PublicKeys.LOGIN_RSAE, PublicKeys.LOGIN_RSAN);
         return var0;
     }
 

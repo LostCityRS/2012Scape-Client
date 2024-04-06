@@ -1149,7 +1149,7 @@ public class Statics {
     public static int[] field630;
 
     @ObfuscatedName("b.c")
-    public static CreateConnectStage field633;
+    public static CreateConnectStage createStage;
 
     @ObfuscatedName("st.fw")
     public static Js5 field6343;
@@ -1976,7 +1976,7 @@ public class Statics {
 
     @ObfuscatedName("dp.u(I)[Ltk;")
     public static CreateAccountReply[] method2615() {
-        return new CreateAccountReply[]{CreateAccountReply.field6439, CreateAccountReply.field6446, CreateAccountReply.field6448, CreateAccountReply.field6440, CreateAccountReply.field6436, CreateAccountReply.field6443, CreateAccountReply.field6437, CreateAccountReply.field6442, CreateAccountReply.field6438, CreateAccountReply.field6445, CreateAccountReply.field6447, CreateAccountReply.field6449, CreateAccountReply.field6444, CreateAccountReply.field6441};
+        return new CreateAccountReply[]{CreateAccountReply.field6439, CreateAccountReply.field6446, CreateAccountReply.field6448, CreateAccountReply.field6440, CreateAccountReply.field6436, CreateAccountReply.field6443, CreateAccountReply.field6437, CreateAccountReply.field6442, CreateAccountReply.field6438, CreateAccountReply.field6445, CreateAccountReply.field6447, CreateAccountReply.NONE, CreateAccountReply.field6444, CreateAccountReply.field6441};
     }
 
     @ObfuscatedName("dz.s(Lrn;I)V")
@@ -2171,7 +2171,7 @@ public class Statics {
 
     @ObfuscatedName("qk.a(I)Z")
     public static boolean method8399() {
-        return field633 != null;
+        return createStage != null;
     }
 
     @ObfuscatedName("ux.u(CI)I")
@@ -3291,9 +3291,9 @@ public class Statics {
             field6782.method12026();
             AccountCreationManager.field634 = 0;
             AccountCreationManager.field631++;
-            field633 = CreateConnectStage.field564;
+            createStage = CreateConnectStage.SEND_REQUEST;
         } else {
-            field633 = null;
+            createStage = null;
             field629 = ConnectReply.field6428;
             client.setState(6);
         }

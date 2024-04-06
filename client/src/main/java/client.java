@@ -1348,7 +1348,7 @@ public final class client extends GameShell {
         }
         if (isStateTitle(state) && !method12326(state)) {
             this.updateTitleScreen();
-            AccountCreationManager.method5945();
+            AccountCreationManager.update();
             LoginManager.login();
         } else if (isStateLobby(state) && !method12326(state)) {
             this.updateTitleScreen();

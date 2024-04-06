@@ -10,7 +10,7 @@ public class ConnectReply implements SerializableEnum {
     public static final ConnectReply field6425 = new ConnectReply(-2);
 
     @ObfuscatedName("ty.a")
-    public static final ConnectReply field6432 = new ConnectReply(-3);
+    public static final ConnectReply NONE = new ConnectReply(-3);
 
     @ObfuscatedName("ty.s")
     public static final ConnectReply field6429 = new ConnectReply(-4);
@@ -38,7 +38,7 @@ public class ConnectReply implements SerializableEnum {
 
     @ObfuscatedName("rz.u(S)[Lty;")
     public static ConnectReply[] method8658() {
-        return new ConnectReply[]{field6432, field6425, field6433, field6426, field6431, field6427, field6430, field6428, field6424, field6429};
+        return new ConnectReply[]{NONE, field6425, field6433, field6426, field6431, field6427, field6430, field6428, field6424, field6429};
     }
 
     public ConnectReply(int arg0) {
