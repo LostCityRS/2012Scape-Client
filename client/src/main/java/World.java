@@ -1058,7 +1058,7 @@ public class World {
                 }
             }
         }
-        int var17 = DrawDistance.method5012(Statics.options.drawDistance.method15853()).field2149 * 64;
+        int var17 = DrawDistance.method5012(Statics.options.drawDistance.method15853()).field2149;
         if (Statics.renderer.method454()) {
             var17++;
         }
