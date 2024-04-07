@@ -144,7 +144,7 @@ public class EnumType {
                 Object var7 = var6.getValue();
                 List var8 = (List) var1.get(var7);
                 if (var8 == null) {
-                    var8 = new LinkedList();
+                    var8 = new java.util.LinkedList();
                     var1.put(var7, var8);
                 }
                 var8.add(var6.getKey());
@@ -155,7 +155,7 @@ public class EnumType {
                     Object var3 = this.field6811[var2];
                     List var4 = (List) var1.get(var3);
                     if (var4 == null) {
-                        var4 = new LinkedList();
+                        var4 = new java.util.LinkedList();
                         var1.put(var3, var4);
                     }
                     var4.add(Integer.valueOf(var2));
