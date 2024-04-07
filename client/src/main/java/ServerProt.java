@@ -79,7 +79,7 @@ public class ServerProt {
     public static final ServerProt field3000 = new ServerProt(24, -2);
 
     @ObfuscatedName("jx.e")
-    public static final ServerProt field3045 = new ServerProt(25, 6); // sendCameraPos
+    public static final ServerProt CAM_MOVETO = new ServerProt(25, 6); // sendCameraPos
 
     @ObfuscatedName("jx.ay")
     public static final ServerProt field3077 = new ServerProt(26, 6); // sendIndex15Sound
@@ -331,7 +331,7 @@ public class ServerProt {
     public static final ServerProt IF_SETCOLOUR = new ServerProt(108, 6);
 
     @ObfuscatedName("jx.dg")
-    public static final ServerProt field3084 = new ServerProt(109, 6); // sendCameraLook
+    public static final ServerProt CAM_LOOKAT = new ServerProt(109, 6); // sendCameraLook
 
     @ObfuscatedName("jx.do")
     public static final ServerProt field3085 = new ServerProt(110, 29);
@@ -373,7 +373,7 @@ public class ServerProt {
     public static final ServerProt field3075 = new ServerProt(122, 2);
 
     @ObfuscatedName("jx.da")
-    public static final ServerProt field3098 = new ServerProt(123, -2); // sendCameraRotation
+    public static final ServerProt field3098 = new ServerProt(123, -2);
 
     @ObfuscatedName("jx.dr")
     public static final ServerProt field3073 = new ServerProt(124, 1);
@@ -503,7 +503,7 @@ public class ServerProt {
     @ObfuscatedName("acz.u(B)[Ljx;")
     public static ServerProt[] values() {
         return new ServerProt[]{
-            field3099, field2976, MESSAGE_GAME, IF_SETANGLE, UPDATE_STAT, field3008, UPDATE_ZONE_PARTIAL_FOLLOWS, field2982, field2983, field2984, VARP_SMALL, field2986, NO_TIMEOUT, field2988, field2989, field2990, IF_SETPOSITION, IF_SETANIM, field2993, field2994, field2995, LOGOUT, CLIENT_SETVARC_SMALL, field2998, field3000, field3045, field3077, field3002, CAM_RESET, RUNCLIENTSCRIPT, field3005, field3118, field3007, field3052, field3009, field3010, field3011, field3051, field2999, field3068, field3015, field3016, IF_SETOBJECT, field3018, field3019, IF_OPENTOP, field3111, IF_OPENSUB, field3023, field3024, CLIENT_SETVARCSTR_SMALL, field3026, field3057, field3028, UPDATE_RUNWEIGHT, CLIENT_SETVARCSTR_LARGE, field3063, field3092, field3033, field3034, field3041, URL_OPEN, field3037, field3038, field3039, NPC_INFO_LARGE, field3013, field3042, field3112, UPDATE_RUNENERGY, field3001, field3046, NPC_INFO, field3048, field3049, field3050, field3133, field3125, field3053, field3054, field3055, field3056, VARP_LARGE, IF_SETCLICKMASK, field3059, field3060, field3061, field3062, field3116, REBUILD_NORMAL, PLAYER_INFO, CAM_SHAKE, field3067, field3066, field3069, field3119, field3071, field3070, field3109, VARBIT_LARGE, field3080, field3076, field3031, field3078, field3079, field3014, field3043, IF_SETTEXT, IF_SETCOLOUR, field3084, field3085, field3086, field3087, IF_SETHIDE, field3097, field3090, field3091, field3035, IF_SETEVENTS, field3094, field3082, field3096, field3075, field3098, field3073, field3032, field3101, field3102, field3103, field3104, field3105, field3124, field3107, field3108, field3072, field3110, field3088, field3006, field3113, field3114, field3115, field3021, field3117, field3074, field3036, field3120, field3121, UPDATE_REBOOT_TIMER, IF_CLOSESUB, field3100, field3126, field2975, CLIENT_SETVARC_LARGE, REBUILD_REGION, field3129, field3130, VARBIT_SMALL, field3132, field3027, field3134, field3135, field3136, field3137,
+            field3099, field2976, MESSAGE_GAME, IF_SETANGLE, UPDATE_STAT, field3008, UPDATE_ZONE_PARTIAL_FOLLOWS, field2982, field2983, field2984, VARP_SMALL, field2986, NO_TIMEOUT, field2988, field2989, field2990, IF_SETPOSITION, IF_SETANIM, field2993, field2994, field2995, LOGOUT, CLIENT_SETVARC_SMALL, field2998, field3000, CAM_MOVETO, field3077, field3002, CAM_RESET, RUNCLIENTSCRIPT, field3005, field3118, field3007, field3052, field3009, field3010, field3011, field3051, field2999, field3068, field3015, field3016, IF_SETOBJECT, field3018, field3019, IF_OPENTOP, field3111, IF_OPENSUB, field3023, field3024, CLIENT_SETVARCSTR_SMALL, field3026, field3057, field3028, UPDATE_RUNWEIGHT, CLIENT_SETVARCSTR_LARGE, field3063, field3092, field3033, field3034, field3041, URL_OPEN, field3037, field3038, field3039, NPC_INFO_LARGE, field3013, field3042, field3112, UPDATE_RUNENERGY, field3001, field3046, NPC_INFO, field3048, field3049, field3050, field3133, field3125, field3053, field3054, field3055, field3056, VARP_LARGE, IF_SETCLICKMASK, field3059, field3060, field3061, field3062, field3116, REBUILD_NORMAL, PLAYER_INFO, CAM_SHAKE, field3067, field3066, field3069, field3119, field3071, field3070, field3109, VARBIT_LARGE, field3080, field3076, field3031, field3078, field3079, field3014, field3043, IF_SETTEXT, IF_SETCOLOUR, CAM_LOOKAT, field3085, field3086, field3087, IF_SETHIDE, field3097, field3090, field3091, field3035, IF_SETEVENTS, field3094, field3082, field3096, field3075, field3098, field3073, field3032, field3101, field3102, field3103, field3104, field3105, field3124, field3107, field3108, field3072, field3110, field3088, field3006, field3113, field3114, field3115, field3021, field3117, field3074, field3036, field3120, field3121, UPDATE_REBOOT_TIMER, IF_CLOSESUB, field3100, field3126, field2975, CLIENT_SETVARC_LARGE, REBUILD_REGION, field3129, field3130, VARBIT_SMALL, field3132, field3027, field3134, field3135, field3136, field3137,
             CUSTOM_OLDITEMSLOOK
         };
     }

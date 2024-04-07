@@ -395,7 +395,7 @@ public class LoginManager {
                 Statics.connection.in.pos = 0;
                 Statics.connection.method1935();
                 ClientMessage var8 = ClientMessage.method4876();
-                PacketBit var9 = var8.buf;
+                PacketBit buf = var8.buf;
                 if (Statics.field500 == 223) {
                     LoginProt var10;
                     if (field504) {
@@ -403,62 +403,62 @@ public class LoginManager {
                     } else {
                         var10 = LoginProt.GAMELOGIN;
                     }
-                    var9.p1(var10.id);
-                    var9.p2(0);
-                    int var11 = var9.pos;
-                    int var12 = var9.pos;
+                    buf.p1(var10.id);
+                    buf.p2(0);
+                    int var11 = buf.pos;
+                    int var12 = buf.pos;
                     if (!field504) {
-                        var9.p4(client.REVISION);
-                        var9.p4(client.SUBREVISION);
+                        buf.p4(client.REVISION);
+                        buf.p4(client.SUBREVISION);
                         if (client.CUSTOM_SEND_MAC_ADDRESS) {
-                            var9.pjstr("userMacAddress");
+                            buf.pjstr("userMacAddress");
                         }
-                        var9.p1(client.state == 9 ? 1 : 0);
+                        buf.p1(client.state == 9 ? 1 : 0);
                         if (client.CUSTOM_SEND_MAC_ADDRESS) {
-                            var9.pjstr("userMacAddress");
+                            buf.pjstr("userMacAddress");
                         }
-                        int var13 = var9.pos;
+                        int var13 = buf.pos;
                         Packet var14 = method5564();
-                        var9.pdata(var14.data, 0, var14.pos);
-                        var12 = var9.pos;
-                        var9.p1(socialKey == -1L ? 1 : 0);
+                        buf.pdata(var14.data, 0, var14.pos);
+                        var12 = buf.pos;
+                        buf.p1(socialKey == -1L ? 1 : 0);
                         if (socialKey == -1L) {
-                            var9.pjstr(username);
+                            buf.pjstr(username);
                         } else {
-                            var9.p8(socialKey);
+                            buf.p8(socialKey);
                         }
                     }
-                    var9.p1(client.method12476());
-                    var9.p2(Statics.canvasWid);
-                    var9.p2(Statics.canvasHei);
-                    var9.p1(Statics.options.antialiasing.getValue());
-                    GameShell.method3615(var9);
-                    var9.pjstr(client.field8947);
-                    var9.p4(client.field9043);
+                    buf.p1(client.method12476());
+                    buf.p2(Statics.canvasWid);
+                    buf.p2(Statics.canvasHei);
+                    buf.p1(Statics.options.antialiasing.getValue());
+                    GameShell.method3615(buf);
+                    buf.pjstr(client.field8947);
+                    buf.p4(client.field9043);
                     Packet var15 = Statics.options.createPreferencesBlock();
-                    var9.p1(var15.pos);
-                    var9.pdata(var15.data, 0, var15.pos);
+                    buf.p1(var15.pos);
+                    buf.pdata(var15.data, 0, var15.pos);
                     client.preferencesChangeNotified = true;
                     Packet var16 = new Packet(Statics.field2305.method15476());
                     Statics.field2305.createHardwareBlock(var16);
-                    var9.pdata(var16.data, 0, var16.data.length);
-                    var9.p4(client.currentIncrementVerifyId);
-                    var9.p8(client.field8910);
-                    var9.pjstr(Statics.field6817);
-                    var9.p1(client.createAdditionalInfo == null ? 0 : 1);
+                    buf.pdata(var16.data, 0, var16.data.length);
+                    buf.p4(client.currentIncrementVerifyId);
+                    buf.p8(client.field8910);
+                    buf.pjstr(Statics.field6817);
+                    buf.p1(client.createAdditionalInfo == null ? 0 : 1);
                     if (client.createAdditionalInfo != null) {
-                        var9.pjstr(client.createAdditionalInfo);
+                        buf.pjstr(client.createAdditionalInfo);
                     }
-                    var9.p1(Statics.field2137.method6799("jagtheora") ? 1 : 0);
-                    var9.p1(client.field8903 ? 1 : 0);
-                    var9.p1(client.field8987 ? 1 : 0);
-                    var9.p1(Statics.field7543);
-                    var9.p4(client.field9015);
-                    var9.pjstr(client.gamepack);
-                    var9.p1(Statics.field6779 != null && Statics.field6779.field6768 == Statics.field6772.field6768 ? 0 : 1);
-                    method4896(var9);
-                    var9.tinyenc(Statics.field541, var12, var9.pos);
-                    var9.psize2(var9.pos - var11);
+                    buf.p1(Statics.field2137.method6799("jagtheora") ? 1 : 0);
+                    buf.p1(client.field8903 ? 1 : 0);
+                    buf.p1(client.field8987 ? 1 : 0);
+                    buf.p1(Statics.field7543);
+                    buf.p4(client.field9015);
+                    buf.pjstr(client.gamepack);
+                    buf.p1(Statics.field6779 != null && Statics.field6779.field6768 == Statics.field6772.field6768 ? 0 : 1);
+                    method4896(buf);
+                    buf.tinyenc(Statics.field541, var12, buf.pos);
+                    buf.psize2(buf.pos - var11);
                 } else {
                     LoginProt var17;
                     if (field504) {
@@ -466,40 +466,40 @@ public class LoginManager {
                     } else {
                         var17 = LoginProt.LOBBYLOGIN;
                     }
-                    var9.p1(var17.id);
-                    var9.p2(0);
-                    int var18 = var9.pos;
-                    int var19 = var9.pos;
+                    buf.p1(var17.id);
+                    buf.p2(0);
+                    int var18 = buf.pos;
+                    int var19 = buf.pos;
                     if (!field504) {
-                        var9.p4(client.REVISION);
-                        var9.p4(client.SUBREVISION);
+                        buf.p4(client.REVISION);
+                        buf.p4(client.SUBREVISION);
                         Packet var20 = method5564();
-                        var9.pdata(var20.data, 0, var20.pos);
-                        var19 = var9.pos;
-                        var9.p1(socialKey == -1L ? 1 : 0);
+                        buf.pdata(var20.data, 0, var20.pos);
+                        var19 = buf.pos;
+                        buf.p1(socialKey == -1L ? 1 : 0);
                         if (socialKey == -1L) {
-                            var9.pjstr(username);
+                            buf.pjstr(username);
                         } else {
-                            var9.p8(socialKey);
+                            buf.p8(socialKey);
                         }
                     }
-                    var9.p1(client.modeGame.game);
-                    var9.p1(Statics.language.getId());
-                    GameShell.method3615(var9);
-                    var9.pjstr(client.field8947);
+                    buf.p1(client.modeGame.game);
+                    buf.p1(Statics.language.getId());
+                    GameShell.method3615(buf);
+                    buf.pjstr(client.field8947);
                     Packet var21 = Statics.options.createPreferencesBlock();
-                    var9.p1(var21.pos);
-                    var9.pdata(var21.data, 0, var21.pos);
+                    buf.p1(var21.pos);
+                    buf.pdata(var21.data, 0, var21.pos);
                     Packet var22 = new Packet(Statics.field2305.method15476());
                     Statics.field2305.createHardwareBlock(var22);
-                    var9.pdata(var22.data, 0, var22.data.length);
-                    var9.pjstr(Statics.field6817);
-                    var9.p4(client.field9043);
-                    var9.p4(client.field9015);
-                    var9.pjstr(client.gamepack);
-                    method4896(var9);
-                    var9.tinyenc(Statics.field541, var19, var9.pos);
-                    var9.psize2(var9.pos - var18);
+                    buf.pdata(var22.data, 0, var22.data.length);
+                    buf.pjstr(Statics.field6817);
+                    buf.p4(client.field9043);
+                    buf.p4(client.field9015);
+                    buf.pjstr(client.gamepack);
+                    method4896(buf);
+                    buf.tinyenc(Statics.field541, var19, buf.pos);
+                    buf.psize2(buf.pos - var18);
                 }
                 Statics.connection.queue(var8);
                 Statics.connection.method1912();

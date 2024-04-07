@@ -24,7 +24,7 @@ public class Js5Client {
     public Packet field3538;
 
     @ObfuscatedName("li.t")
-    public Js5NetResourceProvider[] field3544;
+    public Js5NetResourceProvider[] resourceProviders;
 
     public Js5Client(Js5TcpClient arg0, Js5DiskCache arg1, BigInteger arg2, BigInteger arg3) {
         this.field3540 = arg0;
@@ -74,17 +74,17 @@ public class Js5Client {
             }
         }
         this.field3538 = var1;
-        if (this.field3544 == null) {
-            this.field3544 = new Js5NetResourceProvider[var2];
+        if (this.resourceProviders == null) {
+            this.resourceProviders = new Js5NetResourceProvider[var2];
         } else {
-            for (int var9 = 0; var9 < this.field3544.length; var9++) {
-                if (this.field3544[var9] != null) {
+            for (int var9 = 0; var9 < this.resourceProviders.length; var9++) {
+                if (this.resourceProviders[var9] != null) {
                     this.field3538.pos = var9 * 72 + 6;
                     int var10 = this.field3538.g4s();
                     int var11 = this.field3538.g4s();
                     byte[] var12 = new byte[64];
                     this.field3538.gdata(var12, 0, 64);
-                    this.field3544[var9].method14234(var10, var12, var11);
+                    this.resourceProviders[var9].method14234(var10, var12, var11);
                 }
             }
         }
@@ -100,35 +100,35 @@ public class Js5Client {
     public Js5NetResourceProvider method5578(int arg0, DiskStore arg1, DiskStore arg2, boolean arg3) {
         if (this.field3538 == null) {
             throw new RuntimeException();
-        } else if (arg0 < 0 || arg0 >= this.field3544.length) {
+        } else if (arg0 < 0 || arg0 >= this.resourceProviders.length) {
             throw new RuntimeException();
-        } else if (this.field3544[arg0] == null) {
+        } else if (this.resourceProviders[arg0] == null) {
             this.field3538.pos = arg0 * 72 + 6;
             int var5 = this.field3538.g4s();
             int var6 = this.field3538.g4s();
             byte[] var7 = new byte[64];
             this.field3538.gdata(var7, 0, 64);
             Js5NetResourceProvider var8 = new Js5NetResourceProvider(arg0, arg1, arg2, this.field3540, this.field3539, var5, var7, var6, arg3);
-            this.field3544[arg0] = var8;
+            this.resourceProviders[arg0] = var8;
             return var8;
         } else {
-            return this.field3544[arg0];
+            return this.resourceProviders[arg0];
         }
     }
 
     @ObfuscatedName("li.s(I)V")
     public void method5576() {
-        if (this.field3544 == null) {
+        if (this.resourceProviders == null) {
             return;
         }
-        for (int var1 = 0; var1 < this.field3544.length; var1++) {
-            if (this.field3544[var1] != null) {
-                this.field3544[var1].method14238();
+        for (int var1 = 0; var1 < this.resourceProviders.length; var1++) {
+            if (this.resourceProviders[var1] != null) {
+                this.resourceProviders[var1].method14238();
             }
         }
-        for (int var2 = 0; var2 < this.field3544.length; var2++) {
-            if (this.field3544[var2] != null) {
-                this.field3544[var2].method14239();
+        for (int var2 = 0; var2 < this.resourceProviders.length; var2++) {
+            if (this.resourceProviders[var2] != null) {
+                this.resourceProviders[var2].method14239();
             }
         }
     }

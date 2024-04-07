@@ -311,34 +311,34 @@ public class HardwarePlatform extends Node {
     }
 
     @ObfuscatedName("aeb.j(Laet;I)V")
-    public void createHardwareBlock(Packet arg0) {
-        arg0.p1(6);
-        arg0.p1(this.field9698);
-        arg0.p1(this.field9687 ? 1 : 0);
-        arg0.p1(this.field9715);
-        arg0.p1(this.field9706);
-        arg0.p1(this.field9707);
-        arg0.p1(this.field9713);
-        arg0.p1(this.field9701);
-        arg0.p1(this.field9710 ? 1 : 0);
-        arg0.p2(this.field9711);
-        arg0.p1(this.field9705);
-        arg0.p3(this.field9703);
-        arg0.p2(this.field9716);
-        arg0.pjstr2(this.field9717);
-        arg0.pjstr2(this.field9718);
-        arg0.pjstr2(this.field9719);
-        arg0.pjstr2(this.field9720);
-        arg0.p1(this.field9722);
-        arg0.p2(this.field9721);
-        arg0.pjstr2(this.field9725);
-        arg0.pjstr2(this.field9726);
-        arg0.p1(this.field9728);
-        arg0.p1(this.field9724);
+    public void createHardwareBlock(Packet buf) {
+        buf.p1(6);
+        buf.p1(this.field9698);
+        buf.p1(this.field9687 ? 1 : 0);
+        buf.p1(this.field9715);
+        buf.p1(this.field9706);
+        buf.p1(this.field9707);
+        buf.p1(this.field9713);
+        buf.p1(this.field9701);
+        buf.p1(this.field9710 ? 1 : 0);
+        buf.p2(this.field9711);
+        buf.p1(this.field9705);
+        buf.p3(this.field9703);
+        buf.p2(this.field9716);
+        buf.pjstr2(this.field9717);
+        buf.pjstr2(this.field9718);
+        buf.pjstr2(this.field9719);
+        buf.pjstr2(this.field9720);
+        buf.p1(this.field9722);
+        buf.p2(this.field9721);
+        buf.pjstr2(this.field9725);
+        buf.pjstr2(this.field9726);
+        buf.p1(this.field9728);
+        buf.p1(this.field9724);
         for (int var2 = 0; var2 < this.field9727.length; var2++) {
-            arg0.p4(this.field9727[var2]);
+            buf.p4(this.field9727[var2]);
         }
-        arg0.p4(this.field9685);
+        buf.p4(this.field9685);
     }
 
     @ObfuscatedName("aeb.a(I)I")

@@ -546,7 +546,7 @@ public class Statics {
     public static int field3537;
 
     @ObfuscatedName("lb.eo")
-    public static Js5Client field3562;
+    public static Js5Client js5Client;
 
     @ObfuscatedName("lh.nr")
     public static int field3584;
@@ -843,7 +843,7 @@ public class Statics {
     public static int field4455;
 
     @ObfuscatedName("ow.ec")
-    public static Js5NetResourceProvider[] field4456;
+    public static Js5NetResourceProvider[] js5NetResourceProviders;
 
     @ObfuscatedName("ot.he")
     public static ParamTypeList paramTypes;
@@ -1392,7 +1392,7 @@ public class Statics {
     public static Mouse mouse;
 
     @ObfuscatedName("vq.gk")
-    public static DiskStore field7137;
+    public static DiskStore indexDiskStore;
 
     @ObfuscatedName("vq.br")
     public static EventQueue field7138;
@@ -3886,14 +3886,14 @@ public class Statics {
         int var3 = arg0.field10329;
         int var4 = arg0.field10335;
         int action = arg0.opcode;
-        int var6 = (int) arg0.field10333;
+        int index = (int) arg0.field10333;
         long var7 = arg0.field10333;
         if (action >= 2000) {
             action -= 2000;
         }
         CoordGrid var9 = client.world.getBase();
         if (action == 15) {
-            PlayerEntity var10 = client.players[var6];
+            PlayerEntity var10 = client.players[index];
             if (var10 != null) {
                 client.crossX = arg1;
                 client.crossY = arg2;
@@ -3904,7 +3904,7 @@ public class Statics {
                 var11.buf.p1(MiniMenu.method3496() ? 1 : 0);
                 var11.buf.p4(activeComponentParentLayer);
                 var11.buf.p2(client.activeComponentId);
-                var11.buf.p2_alt1(var6);
+                var11.buf.p2_alt1(index);
                 client.gameConnection.queue(var11);
                 client.method2677(var10.routeWaypointX[0], var10.routeWaypointZ[0], true, PathFinderEntityRelated.method11404(var10.routeWaypointX[0], var10.routeWaypointZ[0], var10.size(), var10.size(), 0));
             }
@@ -3946,7 +3946,7 @@ public class Statics {
             var14.buf.p1(MiniMenu.method3496() ? 1 : 0);
             var14.buf.p2_alt1(var9.z + var4);
             var14.buf.p2(var9.x + var3);
-            var14.buf.p2(var6);
+            var14.buf.p2(index);
             client.gameConnection.queue(var14);
             client.method12668(var3, var4);
         }
@@ -4001,14 +4001,14 @@ public class Statics {
             }
         }
         if (action == 57 || action == 1007) {
-            client.method5716(var6, var4, var3, arg0.opbase);
+            client.method5716(index, var4, var3, arg0.opbase);
         }
         if (action == 23) {
             if (client.userStaffModLevel > 0 && method1314()) {
                 method2617(localPlayerEntity.level, var9.x + var3, var9.z + var4);
             } else {
-                ClientMessage var18 = MiniMenu.createMoveMessage(var3, var4, var6);
-                if (var6 == 1) {
+                ClientMessage var18 = MiniMenu.createMoveMessage(var3, var4, index);
+                if (index == 1) {
                     var18.buf.p1(-1);
                     var18.buf.p1(-1);
                     var18.buf.p2((int) client.field9021);
@@ -4066,7 +4066,7 @@ public class Statics {
             var23.buf.p2_alt3(var9.z + var4);
             var23.buf.p4(activeComponentParentLayer);
             var23.buf.p2_alt2(client.activeComponentId);
-            var23.buf.p2_alt3(var6);
+            var23.buf.p2_alt3(index);
             var23.buf.p2_alt2(client.activeComponentInvobject);
             var23.buf.p2(var9.x + var3);
             var23.buf.p1_alt3(MiniMenu.method3496() ? 1 : 0);
@@ -4110,21 +4110,21 @@ public class Statics {
             var25 = ClientProt.OPPLAYER10;
         }
         if (var25 != null) {
-            PlayerEntity var26 = client.players[var6];
+            PlayerEntity var26 = client.players[index];
             if (var26 != null) {
                 client.crossX = arg1;
                 client.crossY = arg2;
                 client.crossMode = 2;
                 client.crossCycle = 0;
                 ClientMessage var27 = ClientMessage.createMessage(var25, client.gameConnection.randomOut);
-                var27.buf.p2_alt3(var6);
+                var27.buf.p2_alt3(index);
                 var27.buf.p1(MiniMenu.method3496() ? 1 : 0);
                 client.gameConnection.queue(var27);
                 client.method2677(var26.routeWaypointX[0], var26.routeWaypointZ[0], true, PathFinderEntityRelated.method11404(var26.routeWaypointX[0], var26.routeWaypointZ[0], var26.size(), var26.size(), 0));
             }
         }
         if (action == 8) {
-            ObjectNode var28 = (ObjectNode) client.npcEntities.get((long) var6);
+            ObjectNode var28 = (ObjectNode) client.npcEntities.get((long) index);
             if (var28 != null) {
                 NpcEntity var29 = (NpcEntity) var28.value;
                 client.crossX = arg1;
@@ -4132,7 +4132,7 @@ public class Statics {
                 client.crossMode = 2;
                 client.crossCycle = 0;
                 ClientMessage var30 = ClientMessage.createMessage(ClientProt.OPNPCT, client.gameConnection.randomOut);
-                var30.buf.p2_alt3(var6);
+                var30.buf.p2_alt3(index);
                 var30.buf.p4_alt2(activeComponentParentLayer);
                 var30.buf.p2_alt2(client.activeComponentInvobject);
                 var30.buf.p2(client.activeComponentId);
@@ -4156,7 +4156,7 @@ public class Statics {
             var31 = ClientProt.OPNPC6;
         }
         if (var31 != null) {
-            ObjectNode var32 = (ObjectNode) client.npcEntities.get((long) var6);
+            ObjectNode var32 = (ObjectNode) client.npcEntities.get((long) index);
             if (var32 != null) {
                 NpcEntity var33 = (NpcEntity) var32.value;
                 client.crossX = arg1;
@@ -4164,7 +4164,7 @@ public class Statics {
                 client.crossMode = 2;
                 client.crossCycle = 0;
                 ClientMessage var34 = ClientMessage.createMessage(var31, client.gameConnection.randomOut);
-                var34.buf.p2_alt1(var6);
+                var34.buf.p2_alt1(index);
                 var34.buf.p1(MiniMenu.method3496() ? 1 : 0);
                 client.gameConnection.queue(var34);
                 client.method2677(var33.routeWaypointX[0], var33.routeWaypointZ[0], true, PathFinderEntityRelated.method11404(var33.routeWaypointX[0], var33.routeWaypointZ[0], var33.size(), var33.size(), 0));
@@ -4177,7 +4177,7 @@ public class Statics {
             }
         }
         if (action == 1008 || action == 1009 || action == 1010 || action == 1011 || action == 1012) {
-            ClientWorldMap.method13878(action, var6, var3);
+            ClientWorldMap.method13878(action, index, var3);
         }
         if (client.targetModeActive) {
             client.cancelTargetMode();

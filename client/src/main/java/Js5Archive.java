@@ -133,7 +133,7 @@ public class Js5Archive {
     }
 
     @ObfuscatedName("ee.j(B)I")
-    public int method3089() {
+    public int getId() {
         return this.field1724;
     }
 }

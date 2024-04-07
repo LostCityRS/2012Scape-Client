@@ -10,7 +10,7 @@ import java.util.*;
 public final class client extends GameShell {
 
     public static final int REVISION = 742;
-    public static final int SUBREVISION = 2; // this client gamepack is actually 742-1, but servers expect 742-2
+    public static final int SUBREVISION = 1; // existing servers probably expect 742-2!
 
     public static final boolean ENABLE_HOST_CHECK = false;
     public static final boolean ENABLE_JS5_RSA = false;
@@ -1279,8 +1279,8 @@ public final class client extends GameShell {
         gameConnection.method1933();
         lobbyConnection.method1933();
         this.method14320();
-        if (Statics.field3562 != null) {
-            Statics.field3562.method5576();
+        if (Statics.js5Client != null) {
+            Statics.js5Client.method5576();
         }
         AudioRenderer.method7228();
         VideoTypeList.method16665();
@@ -1917,17 +1917,17 @@ public final class client extends GameShell {
 
     @ObfuscatedName("pp.fm(Lee;ZIZB)Lls;")
     public static Js5 method7706(Js5Archive arg0, boolean arg1, int arg2, boolean arg3) {
-        if (Statics.field4456 == null) {
-            Statics.field4456 = new Js5NetResourceProvider[Statics.method15963()];
+        if (Statics.js5NetResourceProviders == null) {
+            Statics.js5NetResourceProviders = new Js5NetResourceProvider[Statics.method15963()];
         }
         DiskStore var4 = null;
-        int var5 = arg0.method3089();
+        int var5 = arg0.getId();
         if (field4119 != null) {
             var4 = new DiskStore(var5, field4119, Statics.field4245[var5], 1500000);
         }
-        Statics.field4456[var5] = Statics.field3562.method5579(var5, var4, Statics.field7137);
-        Statics.field4456[var5].method14250();
-        return new Js5(Statics.field4456[var5], arg1, arg2);
+        Statics.js5NetResourceProviders[var5] = Statics.js5Client.method5579(var5, var4, Statics.indexDiskStore);
+        Statics.js5NetResourceProviders[var5].method14250();
+        return new Js5(Statics.js5NetResourceProviders[var5], arg1, arg2);
     }
 
     @ObfuscatedName("ga.fk(I)Lad;")
@@ -7451,7 +7451,7 @@ public final class client extends GameShell {
             ReceivePlayerPositions.update(buf, conn.packetSize);
             conn.packetType = null;
             return true;
-        } else if (ServerProt.field3084 == conn.packetType) {
+        } else if (ServerProt.CAM_LOOKAT == conn.packetType) {
             int var351 = buf.g1();
             int var352 = buf.g1_alt3();
             int var353 = buf.g1_alt2();
@@ -8165,7 +8165,7 @@ public final class client extends GameShell {
             field9183 += 32;
             conn.packetType = null;
             return true;
-        } else if (ServerProt.field3045 == conn.packetType) {
+        } else if (ServerProt.CAM_MOVETO == conn.packetType) {
             int var564 = buf.g1_alt3();
             int var565 = buf.g1_alt3();
             int var566 = buf.g1();
@@ -9436,39 +9436,39 @@ public final class client extends GameShell {
     }
 
     @ObfuscatedName("rn.kp(Lew;Lew;I)V")
-    public static void method11058(Component arg0, Component arg1) {
+    public static void method11058(Component from, Component to) {
         ClientMessage var2 = ClientMessage.createMessage(ClientProt.IF_BUTTOND, gameConnection.randomOut);
-        var2.buf.p2_alt3(arg1.invobject);
-        var2.buf.p2_alt1(arg1.parentlayer);
-        var2.buf.p4_alt2(arg1.id);
-        var2.buf.p2(arg0.parentlayer);
-        var2.buf.p4_alt3(arg0.id);
-        var2.buf.p2_alt3(arg0.invobject);
+        var2.buf.p2_alt3(to.invobject);
+        var2.buf.p2_alt1(to.parentlayer);
+        var2.buf.p4_alt2(to.id);
+        var2.buf.p2(from.parentlayer);
+        var2.buf.p4_alt3(from.id);
+        var2.buf.p2_alt3(from.invobject);
         gameConnection.queue(var2);
     }
 
     @ObfuscatedName("abm.kq(Lew;I)V")
-    public static void method14206(Component arg0) {
+    public static void method14206(Component com) {
         if (!targetModeActive) {
             return;
         }
-        if (arg0.field1788 != null) {
+        if (com.field1788 != null) {
             Component var1 = Component.get(Statics.activeComponentParentLayer, activeComponentId);
             if (var1 != null) {
                 HookRequest var2 = new HookRequest();
-                var2.component = arg0;
+                var2.component = com;
                 var2.drop = var1;
-                var2.onop = arg0.field1788;
+                var2.onop = com.field1788;
                 ScriptRunner.runHook(var2);
             }
         }
         ClientMessage var3 = ClientMessage.createMessage(ClientProt.IF_BUTTONT, gameConnection.randomOut);
-        var3.buf.p2_alt1(activeComponentInvobject);
-        var3.buf.p4_alt1(arg0.id);
-        var3.buf.p4_alt1(Statics.activeComponentParentLayer);
-        var3.buf.p2_alt2(activeComponentId);
-        var3.buf.p2(arg0.parentlayer);
-        var3.buf.p2_alt3(arg0.invobject);
+        var3.buf.p2_alt1(activeComponentInvobject); // from
+        var3.buf.p4_alt1(com.id); // to
+        var3.buf.p4_alt1(Statics.activeComponentParentLayer); // from
+        var3.buf.p2_alt2(activeComponentId); // from
+        var3.buf.p2(com.parentlayer); // to
+        var3.buf.p2_alt3(com.invobject); // to
         gameConnection.queue(var3);
     }
 
@@ -10102,11 +10102,11 @@ public final class client extends GameShell {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        for (int var22 = 0; var22 < Statics.field4456.length; var22++) {
-            if (Statics.field4456[var22] != null) {
-                var19 += Statics.field4456[var22].method14245();
-                var20 += Statics.field4456[var22].method14241();
-                var21 += Statics.field4456[var22].method14242();
+        for (int var22 = 0; var22 < Statics.js5NetResourceProviders.length; var22++) {
+            if (Statics.js5NetResourceProviders[var22] != null) {
+                var19 += Statics.js5NetResourceProviders[var22].method14245();
+                var20 += Statics.js5NetResourceProviders[var22].method14241();
+                var21 += Statics.js5NetResourceProviders[var22].method14242();
             }
         }
         int var23 = var21 * 100 / var19;

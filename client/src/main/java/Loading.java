@@ -28,7 +28,7 @@ public class Loading {
         Statics.field4814 = LoginManager.password;
         client.logout(false);
         Statics.field3420 = null;
-        Statics.field3562 = null;
+        Statics.js5Client = null;
         client.setState(12);
     }
 
@@ -152,10 +152,10 @@ public class Loading {
             }
         }
         if (Statics.field1208 == LoadingStage.field3390) {
-            if (Statics.field3562 == null) {
-                Statics.field3562 = new Js5Client(Statics.field848, Statics.field1210, PublicKeys.field665, PublicKeys.field668);
+            if (Statics.js5Client == null) {
+                Statics.js5Client = new Js5Client(Statics.field848, Statics.field1210, PublicKeys.field665, PublicKeys.field668);
             }
-            if (!Statics.field3562.method5587()) {
+            if (!Statics.js5Client.method5587()) {
                 return 0;
             }
             client.method11054(0, null, true);
@@ -166,9 +166,9 @@ public class Loading {
         }
         if (Statics.field1208 == LoadingStage.field3394) {
             boolean var1 = Statics.field1937.method5662();
-            int var2 = Statics.field4456[Js5Archive.LOADING_SCREEN.method3089()].method14244();
-            int var3 = var2 + Statics.field4456[Statics.field5109 ? Js5Archive.LOADING_SPRITES_RAW.method3089() : Js5Archive.LOADING_SPRITES.method3089()].method14244();
-            int var4 = var3 + Statics.field4456[Js5Archive.FONTMETRICS.method3089()].method14244();
+            int var2 = Statics.js5NetResourceProviders[Js5Archive.LOADING_SCREEN.getId()].method14244();
+            int var3 = var2 + Statics.js5NetResourceProviders[Statics.field5109 ? Js5Archive.LOADING_SPRITES_RAW.getId() : Js5Archive.LOADING_SPRITES.getId()].method14244();
+            int var4 = var3 + Statics.js5NetResourceProviders[Js5Archive.FONTMETRICS.getId()].method14244();
             int var5 = var4 + (var1 ? 100 : Statics.field1937.method5634());
             if (var5 != 400) {
                 return var5 / 4;
@@ -251,9 +251,9 @@ public class Loading {
         }
         if (Statics.field1208 == LoadingStage.field3392) {
             int var12 = 0;
-            for (int var13 = 0; var13 < Statics.field4456.length; var13++) {
-                if (Statics.field4456[var13] != null) {
-                    var12 += Statics.field4456[var13].method14244() * field3425[var13] / 100;
+            for (int var13 = 0; var13 < Statics.js5NetResourceProviders.length; var13++) {
+                if (Statics.js5NetResourceProviders[var13] != null) {
+                    var12 += Statics.js5NetResourceProviders[var13].method14244() * field3425[var13] / 100;
                 }
             }
             if (var12 != 100) {
