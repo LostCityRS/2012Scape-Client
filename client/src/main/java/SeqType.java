@@ -177,7 +177,7 @@ public class SeqType {
             } else if (arg1 == 249) {
                 int var19 = arg0.g1();
                 if (this.field6322 == null) {
-                    int var20 = IntMath.method2839(var19);
+                    int var20 = IntMath.bitceil(var19);
                     this.field6322 = new HashTable(var20);
                 }
                 for (int var21 = 0; var21 < var19; var21++) {
@@ -223,7 +223,7 @@ public class SeqType {
         int[] var2 = this.field6329;
         for (int var3 = 0; var3 < var2.length; var3++) {
             int var4 = var2[var3];
-            if (this.field6317.method11146(var4 >>> 16) == null) {
+            if (this.field6317.getFrameSet(var4 >>> 16) == null) {
                 var1 = false;
             }
         }
@@ -236,7 +236,7 @@ public class SeqType {
             return arg1;
         } else {
             IntNode var3 = (IntNode) this.field6322.get((long) arg0);
-            return var3 == null ? arg1 : var3.field9556;
+            return var3 == null ? arg1 : var3.value;
         }
     }
 

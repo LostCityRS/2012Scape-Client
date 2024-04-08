@@ -508,7 +508,7 @@ public class LocType {
         } else if (arg1 == 249) {
             int var32 = arg0.g1();
             if (this.field6543 == null) {
-                int var33 = IntMath.method2839(var32);
+                int var33 = IntMath.bitceil(var32);
                 this.field6543 = new HashTable(var33);
             }
             for (int var34 = 0; var34 < var32; var34++) {
@@ -558,7 +558,7 @@ public class LocType {
             for (int var4 = 0; var4 < this.field6475.length; var4++) {
                 if (this.field6475[var4] == arg0) {
                     for (int var5 = 0; var5 < this.field6471[var4].length; var5++) {
-                        if (!this.field6473.field6555.method5629(this.field6471[var4][var5], 0)) {
+                        if (!this.field6473.field6555.loadFile(this.field6471[var4][var5], 0)) {
                             var2 = false;
                         }
                     }
@@ -578,7 +578,7 @@ public class LocType {
         synchronized (this.field6473.field6555) {
             for (int var3 = 0; var3 < this.field6471.length; var3++) {
                 for (int var4 = 0; var4 < this.field6471[var3].length; var4++) {
-                    var1 &= this.field6473.field6555.method5629(this.field6471[var3][var4], 0);
+                    var1 &= this.field6473.field6555.loadFile(this.field6471[var3][var4], 0);
                 }
             }
             return var1;
@@ -653,7 +653,7 @@ public class LocType {
         }
         Model var28;
         if (var17 || var18) {
-            var28 = var22.method295((byte) 0, var16, true);
+            var28 = var22.copy((byte) 0, var16, true);
             if (var17) {
                 var28.pa(this.field6494, this.field6510, arg4, arg5, arg6, arg7, arg8);
             }
@@ -665,7 +665,7 @@ public class LocType {
             }
             var28.KA(arg1);
         } else {
-            var28 = var22.method295((byte) 0, arg1, true);
+            var28 = var22.copy((byte) 0, arg1, true);
         }
         this.field6473.field6564.field6757 = var28;
         this.field6473.field6564.field6756 = var23;
@@ -722,27 +722,27 @@ public class LocType {
         }
         boolean var22 = false;
         if (arg9 != null) {
-            var18 = var18.method295((byte) 1, arg1, true);
+            var18 = var18.copy((byte) 1, arg1, true);
             var22 = true;
             arg9.method11780(var18, arg3 & 0x3);
         }
         if (LocShape.field6572.field6590 == arg2 && arg3 > 3) {
             if (!var22) {
-                var18 = var18.method295((byte) 3, arg1, true);
+                var18 = var18.copy((byte) 3, arg1, true);
                 var22 = true;
             }
             var18.f(2048);
         }
         if (this.field6494 != 0) {
             if (!var22) {
-                var18 = var18.method295((byte) 3, arg1, true);
+                var18 = var18.copy((byte) 3, arg1, true);
                 var22 = true;
             }
             var18.pa(this.field6494, this.field6510, arg4, arg5, arg6, arg7, arg8);
         }
         if (this.field6550 != 0 || this.field6521 != 0 || this.field6498 != 0) {
             if (!var22) {
-                var18 = var18.method295((byte) 3, arg1, true);
+                var18 = var18.copy((byte) 3, arg1, true);
                 var22 = true;
             }
             var18.ia(this.field6550, this.field6521, this.field6498);
@@ -847,7 +847,7 @@ public class LocType {
                             var23++;
                         }
                     }
-                    var10 = arg0.method625(var21, var20, this.field6473.field6551, var6, var7);
+                    var10 = arg0.createModel(var21, var20, this.field6473.field6551, var6, var7);
                     SoftLruHashTable var27 = this.field6473.field6558;
                     synchronized (this.field6473.field6558) {
                         this.field6473.field6558.method7937(var10, var15);
@@ -858,7 +858,7 @@ public class LocType {
         if (var10 == null) {
             return null;
         }
-        Model var29 = var10.method295((byte) 0, arg1, true);
+        Model var29 = var10.copy((byte) 0, arg1, true);
         if (var6 != var10.c()) {
             var29.p(var6);
         }
@@ -923,9 +923,9 @@ public class LocType {
     public final LocType getMultiLoc(VarIntDomain arg0) {
         int var2 = -1;
         if (this.field6528 != -1) {
-            var2 = arg0.method1646(this.field6528);
+            var2 = arg0.getVarBit(this.field6528);
         } else if (this.field6529 != -1) {
-            var2 = arg0.method1664(this.field6529);
+            var2 = arg0.garVarInt(this.field6529);
         }
         if (var2 >= 0 && var2 < this.multiloc.length - 1) {
             return this.multiloc[var2] == -1 ? null : this.field6473.get(this.multiloc[var2]);
@@ -941,7 +941,7 @@ public class LocType {
             return arg1;
         } else {
             IntNode var3 = (IntNode) this.field6543.get((long) arg0);
-            return var3 == null ? arg1 : var3.field9556;
+            return var3 == null ? arg1 : var3.value;
         }
     }
 

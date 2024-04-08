@@ -28,7 +28,7 @@ public class GlGraphicRelated extends GlRelated2 {
         } else if (arg0.field8208) {
             return new GlGraphicRelated(arg0, 34037, arg1, arg2, arg3, arg4);
         } else {
-            return new GlGraphicRelated(arg0, arg1, arg2, arg3, arg4, IntMath.method2839(arg3), IntMath.method2839(arg4));
+            return new GlGraphicRelated(arg0, arg1, arg2, arg3, arg4, IntMath.bitceil(arg3), IntMath.bitceil(arg4));
         }
     }
 
@@ -39,7 +39,7 @@ public class GlGraphicRelated extends GlRelated2 {
         } else if (arg0.field8208) {
             return new GlGraphicRelated(arg0, 34037, arg1, arg2, arg3, arg4, arg5, arg6);
         } else {
-            return new GlGraphicRelated(arg0, arg1, arg2, IntMath.method2839(arg1), IntMath.method2839(arg2), arg4);
+            return new GlGraphicRelated(arg0, arg1, arg2, IntMath.bitceil(arg1), IntMath.bitceil(arg2), arg4);
         }
     }
 
@@ -50,7 +50,7 @@ public class GlGraphicRelated extends GlRelated2 {
         } else if (arg0.field8208) {
             return new GlGraphicRelated(arg0, 34037, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         } else {
-            return new GlGraphicRelated(arg0, arg1, arg2, arg3, arg4, IntMath.method2839(arg3), IntMath.method2839(arg4), arg6, arg7);
+            return new GlGraphicRelated(arg0, arg1, arg2, arg3, arg4, IntMath.bitceil(arg3), IntMath.bitceil(arg4), arg6, arg7);
         }
     }
 
@@ -61,7 +61,7 @@ public class GlGraphicRelated extends GlRelated2 {
         } else if (arg0.field8208) {
             return new GlGraphicRelated(arg0, 34037, arg1, arg2, arg3, arg4, true);
         } else {
-            return new GlGraphicRelated(arg0, arg1, arg2, arg3, arg4, IntMath.method2839(arg3), IntMath.method2839(arg4), true);
+            return new GlGraphicRelated(arg0, arg1, arg2, arg3, arg4, IntMath.bitceil(arg3), IntMath.bitceil(arg4), true);
         }
     }
 

@@ -52,7 +52,7 @@ public class SeqTypeList {
     }
 
     @ObfuscatedName("st.j(II)Laje;")
-    public FrameSet method11146(int arg0) {
+    public FrameSet getFrameSet(int arg0) {
         SoftLruHashTable var2 = this.field6340;
         synchronized (this.field6340) {
             FrameSet var3 = (FrameSet) this.field6340.get((long) arg0);

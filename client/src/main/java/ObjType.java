@@ -404,7 +404,7 @@ public class ObjType implements PlayerTypeRelated {
         } else if (code == 249) {
             int var21 = buf.g1();
             if (this.field7055 == null) {
-                int var22 = IntMath.method2839(var21);
+                int var22 = IntMath.bitceil(var21);
                 this.field7055 = new HashTable(var22);
             }
             for (int var23 = 0; var23 < var21; var23++) {
@@ -621,7 +621,7 @@ public class ObjType implements PlayerTypeRelated {
             if (var17.field1314 < 13) {
                 var17.method2634(2);
             }
-            var14 = arg0.method625(var17, var16, this.field7061.field7150, this.field7114 + 64, this.field7115 * 5 + 850);
+            var14 = arg0.createModel(var17, var16, this.field7061.field7150, this.field7114 + 64, this.field7115 * 5 + 850);
             if (this.field7084 != 128 || this.field7112 != 128 || this.field7113 != 128) {
                 var14.oa(this.field7084, this.field7112, this.field7113);
             }
@@ -655,7 +655,7 @@ public class ObjType implements PlayerTypeRelated {
             }
         }
         if (arg4 != null || arg8 != 0) {
-            var14 = var14.method295((byte) 1, var12, true);
+            var14 = var14.copy((byte) 1, var12, true);
             if (arg4 != null) {
                 arg4.method11780(var14, 0);
             }
@@ -721,7 +721,7 @@ public class ObjType implements PlayerTypeRelated {
             var16 = true;
             var15 |= 0x7;
         }
-        Model var17 = arg0.method625(var10, var15, 64, this.field7114 + 64, this.field7115 * 5 + 768);
+        Model var17 = arg0.createModel(var10, var15, 64, this.field7114 + 64, this.field7115 * 5 + 768);
         if (!var17.method291()) {
             return null;
         }
@@ -763,7 +763,7 @@ public class ObjType implements PlayerTypeRelated {
         arg0.IA((float) (Math.random() / 10.0D) + 0.95F);
         arg0.m(16777215, (float) (Math.random() / 10.0D) + 0.95F, (float) (Math.random() / 10.0D) + 0.95F, -50.0F, -10.0F, -50.0F);
         Matrix4x3 var23 = arg0.method516();
-        var23.method5106(0.0F, 0.0F, 1.0F, Trig1.method5096(-this.field7088 << 3));
+        var23.setToRotation(0.0F, 0.0F, 1.0F, Trig1.method5096(-this.field7088 << 3));
         var23.method5178(0.0F, 1.0F, 0.0F, Trig1.method5096(this.field7077 << 3));
         var23.method5116((float) (this.field7076 << 2), (float) ((Trig1.sin[this.field7073 << 3] * var19 >> 14) - var17.YA() / 2 + (this.field7075 << 2)), (float) ((this.field7075 << 2) + (Trig1.cos[this.field7073 << 3] * var19 >> 14)));
         var23.method5178(1.0F, 0.0F, 0.0F, Trig1.method5096(this.field7073 << 3));
@@ -881,13 +881,13 @@ public class ObjType implements PlayerTypeRelated {
             return true;
         }
         boolean var6 = true;
-        if (!this.field7061.field7149.method5629(var3, 0)) {
+        if (!this.field7061.field7149.loadFile(var3, 0)) {
             var6 = false;
         }
-        if (var4 != -1 && !this.field7061.field7149.method5629(var4, 0)) {
+        if (var4 != -1 && !this.field7061.field7149.loadFile(var4, 0)) {
             var6 = false;
         }
-        if (var5 != -1 && !this.field7061.field7149.method5629(var5, 0)) {
+        if (var5 != -1 && !this.field7061.field7149.loadFile(var5, 0)) {
             var6 = false;
         }
         return var6;
@@ -998,10 +998,10 @@ public class ObjType implements PlayerTypeRelated {
             return true;
         }
         boolean var5 = true;
-        if (!this.field7061.field7149.method5629(var3, 0)) {
+        if (!this.field7061.field7149.loadFile(var3, 0)) {
             var5 = false;
         }
-        if (var4 != -1 && !this.field7061.field7149.method5629(var4, 0)) {
+        if (var4 != -1 && !this.field7061.field7149.loadFile(var4, 0)) {
             var5 = false;
         }
         return var5;
@@ -1072,7 +1072,7 @@ public class ObjType implements PlayerTypeRelated {
             return arg1;
         } else {
             IntNode var3 = (IntNode) this.field7055.get((long) arg0);
-            return var3 == null ? arg1 : var3.field9556;
+            return var3 == null ? arg1 : var3.value;
         }
     }
 

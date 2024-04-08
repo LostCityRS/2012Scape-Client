@@ -156,7 +156,7 @@ public class ClanSettings {
             return null;
         } else {
             Node var2 = this.field2368.get((long) arg0);
-            return var2 != null && var2 instanceof IntNode ? Integer.valueOf(((IntNode) var2).field9556) : null;
+            return var2 != null && var2 instanceof IntNode ? Integer.valueOf(((IntNode) var2).value) : null;
         }
     }
 
@@ -168,7 +168,7 @@ public class ClanSettings {
         Node var4 = this.field2368.get((long) arg0);
         if (var4 != null && var4 instanceof IntNode) {
             int var5 = arg2 == 31 ? -1 : (0x1 << arg2 + 1) - 1;
-            return Integer.valueOf((((IntNode) var4).field9556 & var5) >>> arg1);
+            return Integer.valueOf((((IntNode) var4).value & var5) >>> arg1);
         } else {
             return null;
         }
@@ -380,10 +380,10 @@ public class ClanSettings {
             if (var3 != null) {
                 if (var3 instanceof IntNode) {
                     IntNode var4 = (IntNode) var3;
-                    if (var4.field9556 == arg1) {
+                    if (var4.value == arg1) {
                         return false;
                     }
-                    var4.field9556 = arg1;
+                    var4.value = arg1;
                     return true;
                 }
                 var3.unlink();
@@ -407,11 +407,11 @@ public class ClanSettings {
             if (var10 != null) {
                 if (var10 instanceof IntNode) {
                     IntNode var11 = (IntNode) var10;
-                    if ((var11.field9556 & var7) == var9) {
+                    if ((var11.value & var7) == var9) {
                         return false;
                     }
-                    var11.field9556 &= ~var7;
-                    var11.field9556 |= var9;
+                    var11.value &= ~var7;
+                    var11.value |= var9;
                     return true;
                 }
                 var10.unlink();
@@ -569,7 +569,7 @@ public class ClanSettings {
         if (var6 <= 0) {
             return;
         }
-        this.field2368 = new HashTable(var6 < 16 ? IntMath.method2839(var6) : 16);
+        this.field2368 = new HashTable(var6 < 16 ? IntMath.bitceil(var6) : 16);
         while (var6-- > 0) {
             int var7 = arg0.g4s();
             int var8 = var7 & 0x3FFFFFFF;

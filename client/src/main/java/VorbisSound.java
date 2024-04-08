@@ -428,7 +428,7 @@ public class VorbisSound extends Node {
     @ObfuscatedName("adr.f(Lls;II)Ladr;")
     public static VorbisSound method15065(Js5 arg0, int arg1, int arg2) {
         if (!method15064(arg0)) {
-            arg0.method5629(arg1, arg2);
+            arg0.loadFile(arg1, arg2);
             return null;
         }
         byte[] var3 = arg0.fetchFile(arg1, arg2);

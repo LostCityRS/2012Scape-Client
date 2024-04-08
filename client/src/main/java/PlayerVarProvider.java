@@ -30,7 +30,7 @@ public final class PlayerVarProvider {
             IntNode var4 = new IntNode(arg1);
             this.field1196.put(var4, (long) arg0);
         } else {
-            var3.field9556 = arg1;
+            var3.value = arg1;
         }
     }
 
@@ -41,7 +41,7 @@ public final class PlayerVarProvider {
             VarPlayerType var3 = Statics.field6667.method4890(arg0);
             return var3.field3309 == 'i' ? 0 : -1;
         } else {
-            return var2.field9556;
+            return var2.value;
         }
     }
 

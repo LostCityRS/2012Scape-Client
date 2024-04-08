@@ -489,7 +489,7 @@ public class ja extends RendererToolkit implements ua {
     }
 
     @ObfuscatedName("ja.cx(Ldw;IIII)Lqa;")
-    public Model method625(ModelUnlit arg0, int arg1, int arg2, int arg3, int arg4) {
+    public Model createModel(ModelUnlit arg0, int arg1, int arg2, int arg3, int arg4) {
         return new h(this, this.field437, arg0, arg1, arg2, arg3, arg4);
     }
 

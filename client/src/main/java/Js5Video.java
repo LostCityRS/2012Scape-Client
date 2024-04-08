@@ -35,7 +35,7 @@ public class Js5Video extends Video {
     @ObfuscatedName("aeh.u([BI)I")
     public int method7032(byte[] arg0) throws IOException {
         if (this.field9750 == null) {
-            if (!this.field9747.method5629(this.field9748, 0)) {
+            if (!this.field9747.loadFile(this.field9748, 0)) {
                 return 0;
             }
             byte[] var2 = this.field9747.fetchFile(this.field9748, 0);
@@ -94,7 +94,7 @@ public class Js5Video extends Video {
             return;
         }
         for (int var1 = 0; var1 < 10 && this.field9746 + var1 < this.field9750.length; var1++) {
-            if (this.field9749[var1] == null && this.field9747.method5629(this.field9750[this.field9746 + var1], 0)) {
+            if (this.field9749[var1] == null && this.field9747.loadFile(this.field9750[this.field9746 + var1], 0)) {
                 this.field9749[var1] = this.field9747.fetchFile(this.field9750[this.field9746 + var1], 0);
             }
         }

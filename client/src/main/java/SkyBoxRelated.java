@@ -112,7 +112,7 @@ public class SkyBoxRelated {
             this.field3967 = null;
             return false;
         }
-        int var12 = IntMath.method2839(this.field3966);
+        int var12 = IntMath.bitceil(this.field3966);
         if (var12 > arg3) {
             var12 = IntMath.method1962(arg3);
         }
@@ -218,7 +218,7 @@ public class SkyBoxRelated {
         arg0.IA(1.0F);
         arg0.m(this.field3952, 1.0F, 1.0F, (float) var4, (float) var5, (float) var6);
         var3.method2633(this.field3968 & 0x3FFF, this.field3975 & 0x3FFF, this.field3970 & 0x3FFF);
-        Model var15 = arg0.method625(var3, 2048, 0, 64, 768);
+        Model var15 = arg0.createModel(var3, 2048, 0, 64, 768);
         int var16 = var15.ya() - var15.RA();
         int var17 = var15.o() - var15.YA();
         int var18 = var16 > var17 ? var16 : var17;
@@ -274,7 +274,7 @@ public class SkyBoxRelated {
             var5 = var5 * var10 - var3 * var9 >> 14;
             var3 = var11;
         }
-        Model var12 = Statics.field3977.method295((byte) 0, 51200, true);
+        Model var12 = Statics.field3977.copy((byte) 0, 51200, true);
         var12.W((short) 0, (short) this.field3960);
         arg0.IA(1.0F);
         arg0.m(16777215, 1.0F, 1.0F, (float) var3, (float) var4, (float) var5);
@@ -341,7 +341,7 @@ public class SkyBoxRelated {
         var1.field1331 = null;
         var1.field1313 = null;
         var1.field1326 = null;
-        Statics.field3977 = arg0.method625(var1, 51200, 33, 64, 768);
+        Statics.field3977 = arg0.createModel(var1, 51200, 33, 64, 768);
     }
 
     @ObfuscatedName("mh.f(Lra;)V")

@@ -13,7 +13,7 @@ public class ClientOptionsGroundDecoration extends ClientOption {
 
     @ObfuscatedName("afy.z(B)V")
     public void method15723() {
-        if (this.field6462.method15452() != ModeGame.field6407) {
+        if (this.field6462.method15452() != ModeGame.RUNESCAPE) {
             this.value = 1;
         }
         if (this.value != 0 && this.value != 1) {
@@ -28,12 +28,12 @@ public class ClientOptionsGroundDecoration extends ClientOption {
 
     @ObfuscatedName("afy.n(B)Z")
     public boolean method15724() {
-        return this.field6462.method15452() == ModeGame.field6407;
+        return this.field6462.method15452() == ModeGame.RUNESCAPE;
     }
 
     @ObfuscatedName("afy.j(IB)I")
     public int canSetValue(int arg0) {
-        return this.field6462.method15452() == ModeGame.field6407 ? 1 : 3;
+        return this.field6462.method15452() == ModeGame.RUNESCAPE ? 1 : 3;
     }
 
     @ObfuscatedName("afy.s(II)V")

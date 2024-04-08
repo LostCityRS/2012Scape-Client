@@ -284,7 +284,7 @@ public class MovingParticle extends Particle {
                 var8.field2705 = new int[var8.field2698.length];
                 for (int var80 = 0; var80 < var8.field2698.length; var80++) {
                     ParticleEffectorType.method2938(var8.field2698[var80]);
-                    var8.field2705[var80] = ((IntNode) ParticleEffectorType.field2745.get((long) var8.field2698[var80])).field9556;
+                    var8.field2705[var80] = ((IntNode) ParticleEffectorType.field2745.get((long) var8.field2698[var80])).value;
                 }
             }
             for (int var81 = 0; var81 < var8.field2705.length; var81++) {

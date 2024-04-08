@@ -37,8 +37,8 @@ public class DxTexture extends DxBaseTexture implements GpuTexture {
             this.field8808 = 1.0F;
             this.field8809 = 1.0F;
         } else {
-            this.field8806 = IntMath.method2839(arg3);
-            this.field8810 = IntMath.method2839(arg4);
+            this.field8806 = IntMath.bitceil(arg3);
+            this.field8810 = IntMath.bitceil(arg4);
             this.field8808 = (float) arg3 / (float) this.field8806;
             this.field8809 = (float) arg4 / (float) this.field8810;
         }
@@ -53,8 +53,8 @@ public class DxTexture extends DxBaseTexture implements GpuTexture {
             this.field8808 = 1.0F;
             this.field8809 = 1.0F;
         } else {
-            this.field8806 = IntMath.method2839(arg1);
-            this.field8810 = IntMath.method2839(arg2);
+            this.field8806 = IntMath.bitceil(arg1);
+            this.field8810 = IntMath.bitceil(arg2);
             this.field8808 = (float) arg1 / (float) this.field8806;
             this.field8809 = (float) arg2 / (float) this.field8810;
             if (this.field8806 != arg1 || this.field8810 != arg2) {
@@ -85,8 +85,8 @@ public class DxTexture extends DxBaseTexture implements GpuTexture {
             this.field8808 = 1.0F;
             this.field8809 = 1.0F;
         } else {
-            this.field8806 = IntMath.method2839(arg2);
-            this.field8810 = IntMath.method2839(arg3);
+            this.field8806 = IntMath.bitceil(arg2);
+            this.field8810 = IntMath.bitceil(arg3);
             this.field8808 = (float) arg2 / (float) this.field8806;
             this.field8809 = (float) arg3 / (float) this.field8810;
             if (this.field8806 != arg2 || this.field8810 != arg3) {
@@ -129,8 +129,8 @@ public class DxTexture extends DxBaseTexture implements GpuTexture {
             this.field8808 = 1.0F;
             this.field8809 = 1.0F;
         } else {
-            this.field8806 = IntMath.method2839(arg2);
-            this.field8810 = IntMath.method2839(arg3);
+            this.field8806 = IntMath.bitceil(arg2);
+            this.field8810 = IntMath.bitceil(arg3);
             this.field8808 = (float) arg2 / (float) this.field8806;
             this.field8809 = (float) arg3 / (float) this.field8810;
             if (this.field8806 != arg2 || this.field8810 != arg3) {

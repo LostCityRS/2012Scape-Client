@@ -4,9 +4,9 @@ import deob.ObfuscatedName;
 public class IntNode extends Node {
 
     @ObfuscatedName("ado.s")
-    public int field9556;
+    public int value;
 
     public IntNode(int arg0) {
-        this.field9556 = arg0;
+        this.value = arg0;
     }
 }

@@ -759,7 +759,7 @@ public final class client extends GameShell {
     public static LinkedList field9125 = new LinkedList();
 
     @ObfuscatedName("client.rr")
-    public static HashTable field9010 = new HashTable(512);
+    public static HashTable serverComponentEvents = new HashTable(512);
 
     @ObfuscatedName("client.se")
     public static int field9000 = 0;
@@ -1214,7 +1214,7 @@ public final class client extends GameShell {
             Statics.field6782.field6766 = Statics.field6782.field6768 + 50000;
         }
         Statics.field6772 = Statics.field6773;
-        if (modeGame == ModeGame.field6407) {
+        if (modeGame == ModeGame.RUNESCAPE) {
             field8940 = false;
         }
         Statics.field2744 = LocType.field6530 = NPCType.field7209 = ObjType.field7118 = new short[256];
@@ -2162,7 +2162,7 @@ public final class client extends GameShell {
             Statics.renderer.method784(var6);
             Statics.renderer.IA(1.0F);
             Statics.renderer.m(16777215, 0.5F, 0.5F, 20.0F, -50.0F, 30.0F);
-            Model var7 = Statics.renderer.method625(var3, 2048, 64, 64, 768);
+            Model var7 = Statics.renderer.createModel(var3, 2048, 64, 64, 768);
             int var8 = 0;
             label42:
             for (int var9 = 0; var9 < 500; var9++) {
@@ -2674,7 +2674,7 @@ public final class client extends GameShell {
         for (int var2 = 0; var2 < npcCount; var2++) {
             NpcEntity var3 = (NpcEntity) npcs[var2].value;
             if (var3 != null) {
-                byte var4 = var3.type.field7220;
+                byte var4 = var3.type.walkflags;
                 if ((var4 & 0x1) != 0) {
                     int var5 = var3.size();
                     if ((var4 & 0x2) != 0 && var3.routeLength == 0 && Math.random() * 1000.0D < 10.0D) {
@@ -2803,7 +2803,7 @@ public final class client extends GameShell {
                                         if (var21.parentlayer < 0) {
                                             break;
                                         }
-                                        var22 = Component.method11381(var21.field1886);
+                                        var22 = Component.get(var21.field1886);
                                     } while (var22 == null || var22.field1915 == null || var21.parentlayer >= var22.field1915.length || var22.field1915[var21.parentlayer] != var21);
                                     ScriptRunner.runHook(var20);
                                 }
@@ -2812,7 +2812,7 @@ public final class client extends GameShell {
                             if (var18.parentlayer < 0) {
                                 break;
                             }
-                            var19 = Component.method11381(var18.field1886);
+                            var19 = Component.get(var18.field1886);
                         } while (var19 == null || var19.field1915 == null || var18.parentlayer >= var19.field1915.length || var19.field1915[var18.parentlayer] != var18);
                         ScriptRunner.runHook(var17);
                     }
@@ -2821,7 +2821,7 @@ public final class client extends GameShell {
                 if (var15.parentlayer < 0) {
                     break;
                 }
-                var16 = Component.method11381(var15.field1886);
+                var16 = Component.get(var15.field1886);
             } while (var16 == null || var16.field1915 == null || var15.parentlayer >= var16.field1915.length || var16.field1915[var15.parentlayer] != var15);
             ScriptRunner.runHook(var14);
         }
@@ -2846,19 +2846,19 @@ public final class client extends GameShell {
                 Statics.field3498[(int) var3] = var1.stringArg;
                 field9143[++field9144 - 1 & 0x1F] = (int) var3;
             } else if (var2 == 3) {
-                Component var5 = Component.method11381((int) var3);
+                Component var5 = Component.get((int) var3);
                 if (!var1.stringArg.equals(var5.text)) {
                     var5.text = var1.stringArg;
                     requestRedrawComponent(var5);
                 }
             } else if (var2 == 22) {
-                Component var6 = Component.method11381((int) var3);
+                Component var6 = Component.get((int) var3);
                 if (var6.field1860 != (var1.intArg1 == 1)) {
                     var6.field1860 = var1.intArg1 == 1;
                     requestRedrawComponent(var6);
                 }
             } else if (var2 == 4) {
-                Component var7 = Component.method11381((int) var3);
+                Component var7 = Component.get((int) var3);
                 int var8 = var1.intArg1;
                 int var9 = var1.intArg2;
                 int var10 = var1.intArg3;
@@ -2870,7 +2870,7 @@ public final class client extends GameShell {
                     requestRedrawComponent(var7);
                 }
             } else if (var2 == 5) {
-                Component var11 = Component.method11381((int) var3);
+                Component var11 = Component.get((int) var3);
                 if (var1.intArg1 != var11.field1747) {
                     if (var1.intArg1 == -1) {
                         var11.field1789 = null;
@@ -2889,20 +2889,20 @@ public final class client extends GameShell {
                 int var14 = var12 >> 5 & 0x1F;
                 int var15 = var12 & 0x1F;
                 int var16 = (var15 << 3) + (var13 << 19) + (var14 << 11);
-                Component var17 = Component.method11381((int) var3);
+                Component var17 = Component.get((int) var3);
                 if (var17.colour != var16) {
                     var17.colour = var16;
                     requestRedrawComponent(var17);
                 }
             } else if (var2 == 7) {
-                Component var18 = Component.method11381((int) var3);
+                Component var18 = Component.get((int) var3);
                 boolean var19 = var1.intArg1 == 1;
                 if (var18.field1807 != var19) {
                     var18.field1807 = var19;
                     requestRedrawComponent(var18);
                 }
             } else if (var2 == 8) {
-                Component var20 = Component.method11381((int) var3);
+                Component var20 = Component.get((int) var3);
                 if (var1.intArg1 != var20.field1812 || var1.intArg2 != var20.field1813 || var1.intArg3 != var20.field1818) {
                     var20.field1812 = var1.intArg1;
                     var20.field1813 = var1.intArg2;
@@ -2917,14 +2917,14 @@ public final class client extends GameShell {
                     requestRedrawComponent(var20);
                 }
             } else if (var2 == 9) {
-                Component var21 = Component.method11381((int) var3);
+                Component var21 = Component.get((int) var3);
                 if (var1.intArg1 != var21.invobject || var1.intArg2 != var21.invcount) {
                     var21.invobject = var1.intArg1;
                     var21.invcount = var1.intArg2;
                     requestRedrawComponent(var21);
                 }
             } else if (var2 == 10) {
-                Component var22 = Component.method11381((int) var3);
+                Component var22 = Component.get((int) var3);
                 if (var1.intArg1 != var22.field1810 || var1.intArg2 != var22.field1824 || var1.intArg3 != var22.field1814) {
                     var22.field1810 = var1.intArg1;
                     var22.field1824 = var1.intArg2;
@@ -2932,14 +2932,14 @@ public final class client extends GameShell {
                     requestRedrawComponent(var22);
                 }
             } else if (var2 == 11) {
-                Component var23 = Component.method11381((int) var3);
+                Component var23 = Component.get((int) var3);
                 var23.field1829 = 0;
                 var23.field1776 = var23.field1772 = var1.intArg1;
                 var23.field1769 = 0;
                 var23.field1777 = var23.field1774 = var1.intArg2;
                 requestRedrawComponent(var23);
             } else if (var2 == 12) {
-                Component var24 = Component.method11381((int) var3);
+                Component var24 = Component.get((int) var3);
                 int var25 = var1.intArg1;
                 if (var24 != null && var24.type == 0) {
                     if (var25 > var24.field1894 - var24.renderheight) {
@@ -2954,30 +2954,30 @@ public final class client extends GameShell {
                     }
                 }
             } else if (var2 == 14) {
-                Component var26 = Component.method11381((int) var3);
+                Component var26 = Component.get((int) var3);
                 var26.field1797 = var1.intArg1;
             } else if (var2 == 15) {
                 MiniMap.mapFlag = true;
                 MiniMap.mapFlagX = var1.intArg1;
                 MiniMap.mapFlagZ = var1.intArg2;
             } else if (var2 == 16) {
-                Component var27 = Component.method11381((int) var3);
+                Component var27 = Component.get((int) var3);
                 var27.field1793 = var1.intArg1;
             } else if (var2 == 20) {
-                Component var28 = Component.method11381((int) var3);
+                Component var28 = Component.get((int) var3);
                 var28.field1833 = var1.intArg1 == 1;
             } else if (var2 == 21) {
-                Component var29 = Component.method11381((int) var3);
+                Component var29 = Component.get((int) var3);
                 var29.field1805 = var1.intArg1 == 1;
             } else if (var2 == 17) {
-                Component var30 = Component.method11381((int) var3);
+                Component var30 = Component.get((int) var3);
                 var30.field1737 = var1.intArg1;
             } else if (var2 == 18) {
-                Component var31 = Component.method11381((int) var3);
+                Component var31 = Component.get((int) var3);
                 int var32 = (int) (var3 >> 32);
                 var31.method3158(var32, (short) var1.intArg1, (short) var1.intArg2);
             } else if (var2 == 19) {
-                Component var33 = Component.method11381((int) var3);
+                Component var33 = Component.get((int) var3);
                 int var34 = (int) (var3 >> 32);
                 var33.method3131(var34, (short) var1.intArg1, (short) var1.intArg2);
             }
@@ -3678,7 +3678,7 @@ public final class client extends GameShell {
         int var13 = 16;
         boolean var14 = true;
         if (arg0 instanceof NpcEntity) {
-            var14 = ((NpcEntity) arg0).type.field7259;
+            var14 = ((NpcEntity) arg0).type.walksmoothing;
         }
         if (var14) {
             int var15 = arg0.field8637 - arg0.field8638.field574;
@@ -4692,21 +4692,21 @@ public final class client extends GameShell {
                     }
                     int var11 = var10 + (5 - var9.size() << 2);
                     if (field9047 == 0) {
-                        if (var9.type.field7238) {
+                        if (var9.type.follower) {
                             var11 += 64;
                         } else {
                             var11 += 128;
                         }
                     } else if (field9047 == 1) {
-                        if (var9.type.field7238) {
+                        if (var9.type.follower) {
                             var11 += 32;
                         } else {
                             var11 += 64;
                         }
                     }
-                    if (var9.type.field7246) {
+                    if (var9.type.drawabove) {
                         var11 += 1024;
-                    } else if (!var9.type.field7237) {
+                    } else if (!var9.type.drawbelow) {
                         var11 += 256;
                     }
                     var9.field8600 = var11 + 1;
@@ -5216,8 +5216,8 @@ public final class client extends GameShell {
                             var37.method2500((int) (field9048[0] + (float) arg0 - 12.0F), var15);
                             var15 -= 2;
                         }
-                    } else if (var10.field7231 >= 0 && var10.field7231 < Statics.field9904.length) {
-                        Sprite var38 = Statics.field9904[var10.field7231];
+                    } else if (var10.headicon >= 0 && var10.headicon < Statics.field9904.length) {
+                        Sprite var38 = Statics.field9904[var10.headicon];
                         var15 -= var38.method1045();
                         var38.method2500((int) (field9048[0] + (float) arg0 - (float) (var38.method1061() >> 1)), var15);
                         var15 -= 2;
@@ -6578,17 +6578,17 @@ public final class client extends GameShell {
             incrementVerifyId();
             for (int var148 = var145; var148 <= var144; var148++) {
                 long var149 = ((long) var146 << 32) + (long) var148;
-                ServerKeyProperties var151 = (ServerKeyProperties) field9010.get(var149);
+                ServerKeyProperties var151 = (ServerKeyProperties) serverComponentEvents.get(var149);
                 ServerKeyProperties var152;
                 if (var151 != null) {
-                    var152 = new ServerKeyProperties(var151.field9416, var147);
+                    var152 = new ServerKeyProperties(var151.events, var147);
                     var151.unlink();
                 } else if (var148 == -1) {
-                    var152 = new ServerKeyProperties(Component.method11381(var146).field1841.field9416, var147);
+                    var152 = new ServerKeyProperties(Component.get(var146).field1841.events, var147);
                 } else {
                     var152 = new ServerKeyProperties(0, var147);
                 }
-                field9010.put(var152, var149);
+                serverComponentEvents.put(var152, var149);
             }
             conn.packetType = null;
             return true;
@@ -7013,17 +7013,17 @@ public final class client extends GameShell {
             incrementVerifyId();
             for (int var259 = var258; var259 <= var256; var259++) {
                 long var260 = ((long) var257 << 32) + (long) var259;
-                ServerKeyProperties var262 = (ServerKeyProperties) field9010.get(var260);
+                ServerKeyProperties var262 = (ServerKeyProperties) serverComponentEvents.get(var260);
                 ServerKeyProperties var263;
                 if (var262 != null) {
-                    var263 = new ServerKeyProperties(var255, var262.field9423);
+                    var263 = new ServerKeyProperties(var255, var262.targetParam);
                     var262.unlink();
                 } else if (var259 == -1) {
-                    var263 = new ServerKeyProperties(var255, Component.method11381(var257).field1841.field9423);
+                    var263 = new ServerKeyProperties(var255, Component.get(var257).field1841.targetParam);
                 } else {
                     var263 = new ServerKeyProperties(var255, -1);
                 }
-                field9010.put(var263, var260);
+                serverComponentEvents.put(var263, var260);
             }
             conn.packetType = null;
             return true;
@@ -8231,11 +8231,11 @@ public final class client extends GameShell {
                 var584.unlink();
                 field9075.put(var584, (long) var583);
             }
-            Component var586 = Component.method11381(var582);
+            Component var586 = Component.get(var582);
             if (var586 != null) {
                 requestRedrawComponent(var586);
             }
-            Component var587 = Component.method11381(var583);
+            Component var587 = Component.get(var583);
             if (var587 != null) {
                 requestRedrawComponent(var587);
                 method12722(Statics.field1756[var587.id >>> 16], var587, true);
@@ -8838,7 +8838,7 @@ public final class client extends GameShell {
                 } else if (var7 == 1) {
                     npcSlots[++npcSlotCount - 1] = var4;
                     var5.field8618 = field8971;
-                    CompassPoint var8 = (CompassPoint) SerializableEnums.decode(Statics.values(), buf.gBit(3));
+                    CompassPoint var8 = (CompassPoint) SerializableEnums.decode(CompassPoint.values(), buf.gBit(3));
                     var5.move(var8, MoveSpeed.WALK.id);
                     int var9 = buf.gBit(1);
                     if (var9 == 1) {
@@ -8848,12 +8848,12 @@ public final class client extends GameShell {
                     npcSlots[++npcSlotCount - 1] = var4;
                     var5.field8618 = field8971;
                     if (buf.gBit(1) == 1) {
-                        CompassPoint var10 = (CompassPoint) SerializableEnums.decode(Statics.values(), buf.gBit(3));
+                        CompassPoint var10 = (CompassPoint) SerializableEnums.decode(CompassPoint.values(), buf.gBit(3));
                         var5.move(var10, MoveSpeed.RUN.id);
-                        CompassPoint var11 = (CompassPoint) SerializableEnums.decode(Statics.values(), buf.gBit(3));
+                        CompassPoint var11 = (CompassPoint) SerializableEnums.decode(CompassPoint.values(), buf.gBit(3));
                         var5.move(var11, MoveSpeed.RUN.id);
                     } else {
-                        CompassPoint var12 = (CompassPoint) SerializableEnums.decode(Statics.values(), buf.gBit(3));
+                        CompassPoint var12 = (CompassPoint) SerializableEnums.decode(CompassPoint.values(), buf.gBit(3));
                         var5.move(var12, MoveSpeed.CRAWL.id);
                     }
                     int var13 = buf.gBit(1);
@@ -9001,14 +9001,14 @@ public final class client extends GameShell {
                 }
             }
             if ((extendedInfo & 0x2000) != 0) {
-                int var9 = var3.type.field7214.length;
+                int var9 = var3.type.model.length;
                 int var10 = 0;
-                if (var3.type.field7267 != null) {
-                    var10 = var3.type.field7267.length;
+                if (var3.type.recol_d != null) {
+                    var10 = var3.type.recol_d.length;
                 }
                 int var11 = 0;
-                if (var3.type.field7270 != null) {
-                    var11 = var3.type.field7270.length;
+                if (var3.type.retex_d != null) {
+                    var11 = var3.type.retex_d.length;
                 }
                 int var12 = buf.g1_alt3();
                 if ((var12 & 0x1) == 1) {
@@ -9221,14 +9221,14 @@ public final class client extends GameShell {
                 }
             }
             if ((extendedInfo & 0x10000) != 0) {
-                int var84 = var3.type.field7215.length;
+                int var84 = var3.type.headmodel.length;
                 int var85 = 0;
-                if (var3.type.field7267 != null) {
-                    var85 = var3.type.field7267.length;
+                if (var3.type.recol_d != null) {
+                    var85 = var3.type.recol_d.length;
                 }
                 byte var86 = 0;
-                if (var3.type.field7270 != null) {
-                    var85 = var3.type.field7270.length;
+                if (var3.type.retex_d != null) {
+                    var85 = var3.type.retex_d.length;
                 }
                 int var87 = buf.g1_alt2();
                 if ((var87 & 0x1) != 1) {
@@ -9597,7 +9597,7 @@ public final class client extends GameShell {
                     int var13 = var11.field1776 + arg6;
                     int var14 = var11.field1777 + arg7;
                     int var15 = var11.field1794;
-                    if (field9111 && (getComponentEvents(var11).field9416 != 0 || var11.type == 0) && var15 > 127) {
+                    if (field9111 && (getComponentEvents(var11).events != 0 || var11.type == 0) && var15 > 127) {
                         var15 = 127;
                     }
                     if (dragComponent == var11) {
@@ -9993,14 +9993,14 @@ public final class client extends GameShell {
                                         Statics.renderer.RA(false);
                                     }
                                     if (var11.field1816) {
-                                        field8979.method5106(1.0F, 0.0F, 0.0F, Trig1.method5096(var11.field1812));
+                                        field8979.setToRotation(1.0F, 0.0F, 0.0F, Trig1.method5096(var11.field1812));
                                         field8979.method5178(0.0F, 1.0F, 0.0F, Trig1.method5096(var11.field1813));
                                         field8979.method5178(0.0F, 0.0F, 1.0F, Trig1.method5096(var11.field1814));
                                         field8979.method5116((float) var11.field1811, (float) var11.field1916, (float) var11.field1817);
                                     } else {
                                         int var68 = (var11.field1818 << 2) * Trig1.sin[var11.field1812 << 3] >> 14;
                                         int var69 = (var11.field1818 << 2) * Trig1.cos[var11.field1812 << 3] >> 14;
-                                        field8979.method5106(0.0F, 0.0F, 1.0F, Trig1.method5096(-var11.field1814 << 3));
+                                        field8979.setToRotation(0.0F, 0.0F, 1.0F, Trig1.method5096(-var11.field1814 << 3));
                                         field8979.method5178(0.0F, 1.0F, 0.0F, Trig1.method5096(var11.field1813 << 3));
                                         field8979.method5116((float) (var11.field1810 << 2), (float) ((var11.field1824 << 2) + var68 + var52), (float) ((var11.field1824 << 2) + var69));
                                         field8979.method5178(1.0F, 0.0F, 0.0F, Trig1.method5096(var11.field1812 << 3));
@@ -10141,7 +10141,7 @@ public final class client extends GameShell {
             HashTableIterator var3 = new HashTableIterator(field9075);
             for (SubInterface var4 = (SubInterface) var3.method11955(); var4 != null; var4 = (SubInterface) var3.next()) {
                 if (var4.field9679 == var2) {
-                    return Component.method11381((int) var4.key);
+                    return Component.get((int) var4.key);
                 }
             }
         }
@@ -10263,7 +10263,7 @@ public final class client extends GameShell {
         if (arg0.field1771 == 4) {
             arg0.renderheight = arg0.renderwidth * arg0.field1781 / arg0.field1923;
         }
-        if (field9111 && (getComponentEvents(arg0).field9416 != 0 || arg0.type == 0)) {
+        if (field9111 && (getComponentEvents(arg0).events != 0 || arg0.type == 0)) {
             if (arg0.renderheight < 5 && arg0.renderwidth < 5) {
                 arg0.renderheight = 5;
                 arg0.renderwidth = 5;
@@ -10315,7 +10315,7 @@ public final class client extends GameShell {
         } else {
             arg0.field1777 = arg2 - arg0.renderheight - (arg0.field1774 * arg2 >> 14);
         }
-        if (!field9111 || getComponentEvents(arg0).field9416 == 0 && arg0.type != 0) {
+        if (!field9111 || getComponentEvents(arg0).events == 0 && arg0.type != 0) {
             return;
         }
         if (arg0.field1776 < 0) {
@@ -10414,7 +10414,7 @@ public final class client extends GameShell {
                     var17 = var19 < arg5 ? var19 : arg5;
                     var18 = var20 < arg6 ? var20 : arg6;
                 }
-                if (var12.type == 0 || var12.hashook || getComponentEvents(var12).field9416 != 0 || field9116 == var12 || Component.MINIMAP == var12.clientcode || Component.MOUSE_OVER_TEXT == var12.clientcode || Component.field1847 == var12.clientcode || Component.field1742 == var12.clientcode) {
+                if (var12.type == 0 || var12.hashook || getComponentEvents(var12).events != 0 || field9116 == var12 || Component.MINIMAP == var12.clientcode || Component.MOUSE_OVER_TEXT == var12.clientcode || Component.field1847 == var12.clientcode || Component.field1742 == var12.clientcode) {
                     if (!method14315(var12)) {
                         if (dragComponent == var12 && method12723(dragComponent)) {
                             field9080 = true;
@@ -10532,7 +10532,7 @@ public final class client extends GameShell {
                                         } else if (var35 == 10) {
                                             cancelTargetMode();
                                             ServerKeyProperties var41 = getComponentEvents(var12);
-                                            Statics.method11974(var12, var41.method14928(), var41.field9423);
+                                            Statics.method11974(var12, var41.getTargetMask(), var41.targetParam);
                                             field9103 = getComponentTargetVerb(var12);
                                             if (field9103 == null) {
                                                 field9103 = "Null";
@@ -11067,7 +11067,7 @@ public final class client extends GameShell {
                                 }
                                 SubInterface var123 = (SubInterface) field9075.get((long) var12.id);
                                 if (var123 != null) {
-                                    if (modeGame == ModeGame.field6407 && var123.field9678 == 0 && !MiniMenu.open && var23 && !field9111) {
+                                    if (modeGame == ModeGame.RUNESCAPE && var123.field9678 == 0 && !MiniMenu.open && var23 && !field9111) {
                                         MiniMenu.method1401();
                                     }
                                     updateInterface(var123, var123.field9679, var15, var16, var17, var18, var13, var14, mouseX, mouseY);
@@ -11111,7 +11111,7 @@ public final class client extends GameShell {
                 }
                 if (arg1 == 1 && var3.field1782 != null) {
                     if (var3.parentlayer >= 0) {
-                        Component var6 = Component.method11381(var3.id);
+                        Component var6 = Component.get(var3.id);
                         if (var6 == null || var6.field1915 == null || var3.parentlayer >= var6.field1915.length || var6.field1915[var3.parentlayer] != var3) {
                             continue;
                         }
@@ -11354,7 +11354,7 @@ public final class client extends GameShell {
         }
         field9075.put(arg1, (long) arg0);
         method6068(arg1.field9679, arg2);
-        Component var5 = Component.method11381(arg0);
+        Component var5 = Component.get(arg0);
         if (var5 != null) {
             requestRedrawComponent(var5);
         }
@@ -11384,7 +11384,7 @@ public final class client extends GameShell {
             Component.method13890(var3);
         }
         Statics.method8587(var3);
-        Component var5 = Component.method11381(var4);
+        Component var5 = Component.get(var4);
         if (var5 != null) {
             requestRedrawComponent(var5);
         }
@@ -11681,7 +11681,7 @@ public final class client extends GameShell {
 
     @ObfuscatedName("client.mi(Lew;)Lace;")
     public static ServerKeyProperties getComponentEvents(Component arg0) {
-        ServerKeyProperties var1 = (ServerKeyProperties) field9010.get(((long) arg0.id << 32) + (long) arg0.parentlayer);
+        ServerKeyProperties var1 = (ServerKeyProperties) serverComponentEvents.get(((long) arg0.id << 32) + (long) arg0.parentlayer);
         return var1 == null ? arg0.field1841 : var1;
     }
 
@@ -11707,7 +11707,7 @@ public final class client extends GameShell {
     @ObfuscatedName("client.mt(Lew;)Z")
     public static boolean method14315(Component arg0) {
         if (field9111) {
-            if (getComponentEvents(arg0).field9416 != 0) {
+            if (getComponentEvents(arg0).events != 0) {
                 return false;
             }
             if (arg0.type == 0) {
@@ -11730,7 +11730,7 @@ public final class client extends GameShell {
 
     @ObfuscatedName("abz.ms(Lew;I)Ljava/lang/String;")
     public static String getComponentTargetVerb(Component arg0) {
-        if (getComponentEvents(arg0).method14928() == 0) {
+        if (getComponentEvents(arg0).getTargetMask() == 0) {
             return null;
         } else if (arg0.field1914 == null || arg0.field1914.trim().length() == 0) {
             return field9111 ? "Hidden-use" : null;

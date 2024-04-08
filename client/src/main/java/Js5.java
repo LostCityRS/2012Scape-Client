@@ -144,7 +144,7 @@ public final class Js5 {
     }
 
     @ObfuscatedName("ls.f(III)Z")
-    public synchronized boolean method5629(int arg0, int arg1) {
+    public synchronized boolean loadFile(int arg0, int arg1) {
         if (!this.method5624(arg0, arg1)) {
             return false;
         } else if (this.field3565[arg0] != null && this.field3565[arg0][arg1] != null) {
@@ -162,11 +162,11 @@ public final class Js5 {
         if (!this.method5689()) {
             return false;
         } else if (this.field3572.field3561.length == 1) {
-            return this.method5629(0, arg0);
+            return this.loadFile(0, arg0);
         } else if (!this.method5623(arg0)) {
             return false;
         } else if (this.field3572.field3561[arg0] == 1) {
-            return this.method5629(arg0, 0);
+            return this.loadFile(arg0, 0);
         } else {
             throw new RuntimeException();
         }
@@ -525,7 +525,7 @@ public final class Js5 {
         int var5 = this.field3572.field3560.method3564(StringTools.method5016(var3));
         if (this.method5623(var5)) {
             int var6 = this.field3572.field3558[var5].method3564(StringTools.method5016(var4));
-            return this.method5629(var5, var6);
+            return this.loadFile(var5, var6);
         } else {
             return false;
         }

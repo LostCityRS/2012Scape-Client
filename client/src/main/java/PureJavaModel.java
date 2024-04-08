@@ -1024,7 +1024,7 @@ public class PureJavaModel extends Model {
     }
 
     @ObfuscatedName("yx.q(BIZ)Lqa;")
-    public Model method295(byte arg0, int arg1, boolean arg2) {
+    public Model copy(byte arg0, int arg1, boolean arg2) {
         this.method13000(Thread.currentThread());
         boolean var4 = false;
         PureJavaModel var5;

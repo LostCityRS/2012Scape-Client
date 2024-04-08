@@ -262,7 +262,7 @@ public class MiniMap {
             Statics.field6357.method2512((float) arg1.renderwidth / 2.0F + (float) arg2, (float) arg1.renderheight / 2.0F + (float) arg3, (float) var12, (float) var13, var10, var9 << 2, var5, arg2, arg3);
             WorldMapRelated var14 = client.world.method6093();
             for (IntNode var15 = (IntNode) field758.head(); var15 != null; var15 = (IntNode) field758.next()) {
-                int var16 = var15.field9556;
+                int var16 = var15.value;
                 int var17 = (var14.field4254[var16] >> 14 & 0x3FFF) - var6.x;
                 int var18 = (var14.field4254[var16] & 0x3FFF) - var6.z;
                 int var19 = var17 * 4 + 2 - var7 / 128;
@@ -318,14 +318,14 @@ public class MiniMap {
                     if (var10 != null && var10.multinpc != null) {
                         var10 = var10.getMultiNPC(Statics.field2669);
                     }
-                    if (var10 != null && var10.field7232 && var10.active) {
+                    if (var10 != null && var10.visonmap && var10.active) {
                         Vector3 var11 = var9.getTransform().trans;
                         int var12 = (int) var11.x / 128 - arg1 / 128;
                         int var13 = (int) var11.z / 128 - arg2 / 128;
-                        if (var10.field7268 == -1) {
+                        if (var10.mapelement == -1) {
                             Statics.method12552(arg3, arg4, arg5, arg6, var12, var13, Statics.field561[1]);
                         } else {
-                            method1712(arg0, arg4, arg3, arg5, arg6, var12, var13, var10.field7268);
+                            method1712(arg0, arg4, arg3, arg5, arg6, var12, var13, var10.mapelement);
                         }
                     }
                 }

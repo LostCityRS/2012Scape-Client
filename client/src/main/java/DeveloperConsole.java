@@ -526,12 +526,12 @@ public class DeveloperConsole {
                 }
                 if (arg0.startsWith("getclientvarpbit")) {
                     int var15 = Integer.parseInt(arg0.substring(17));
-                    addLine("varpbit=" + Statics.field2669.method1646(var15));
+                    addLine("varpbit=" + Statics.field2669.getVarBit(var15));
                     return;
                 }
                 if (arg0.startsWith("getclientvarp")) {
                     int var16 = Integer.parseInt(arg0.substring(14));
-                    addLine("varp=" + Statics.field2669.method1664(var16));
+                    addLine("varp=" + Statics.field2669.garVarInt(var16));
                     return;
                 }
                 if (arg0.startsWith("directlogin")) {

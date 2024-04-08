@@ -142,7 +142,7 @@ public class PlayerModel {
     @ObfuscatedName("qc.t(Lra;ILpn;Lgq;Lwi;Lvj;Lst;Lug;Ltt;Ltt;[Ltt;[IIZLrt;B)Lqa;")
     public Model method8244(RendererToolkit arg0, int arg1, BASTypeList arg2, IDKTypeList arg3, NPCTypeList arg4, ObjTypeList arg5, SeqTypeList arg6, VarIntDomain arg7, AnimationNode arg8, AnimationNode arg9, AnimationNode[] arg10, int[] arg11, int arg12, boolean arg13, WearposDefaults arg14) {
         if (this.field5006 != -1) {
-            return arg4.get(this.field5006).method12510(arg0, arg1, arg2, arg7, arg8, arg9, arg10, arg11, arg12, null);
+            return arg4.get(this.field5006).getBodyModel(arg0, arg1, arg2, arg7, arg8, arg9, arg10, arg11, arg12, null);
         }
         int var16 = arg1;
         long var17 = this.field5007;
@@ -292,7 +292,7 @@ public class PlayerModel {
                     }
                     ModelUnlit var61 = new ModelUnlit(var47, var47.length);
                     int var62 = var16 | 0x4000;
-                    var34 = arg0.method625(var61, var62, Statics.field3537, 64, 850);
+                    var34 = arg0.createModel(var61, var62, Statics.field3537, 64, 850);
                     for (int var63 = 0; var63 < 10; var63++) {
                         for (int var64 = 0; var64 < Statics.field5009[var63].length; var64++) {
                             if (this.field5000[var63] < Statics.field5010[var63][var64].length) {
@@ -350,7 +350,7 @@ public class PlayerModel {
                 var39++;
             }
         }
-        Model var67 = var34.method295((byte) 4, var16, true);
+        Model var67 = var34.copy((byte) 4, var16, true);
         if (!var28 && !var31) {
             return var67;
         }
@@ -380,7 +380,7 @@ public class PlayerModel {
                     int var73 = arg11[var72] - arg12;
                     int var74 = var73 & 0x3FFF;
                     Matrix4x3 var75 = new Matrix4x3();
-                    var75.method5106(0.0F, 1.0F, 0.0F, Trig1.method5096(var74));
+                    var75.setToRotation(0.0F, 1.0F, 0.0F, Trig1.method5096(var74));
                     var67.method239(var75, 0x1 << var72, false);
                 }
             }
@@ -393,7 +393,7 @@ public class PlayerModel {
             }
         }
         if (arg8 != null && arg9 != null) {
-            Statics.method3537(var67, arg8, arg9);
+            AnimationNode.method3537(var67, arg8, arg9);
         } else if (arg8 != null) {
             arg8.method11780(var67, 0);
         } else if (arg9 != null) {
@@ -405,7 +405,7 @@ public class PlayerModel {
     @ObfuscatedName("qc.l(Lra;ILgq;Lwi;Lvj;Lst;Lug;Ltt;I)Lqa;")
     public Model method8237(RendererToolkit arg0, int arg1, IDKTypeList arg2, NPCTypeList arg3, ObjTypeList arg4, SeqTypeList arg5, VarIntDomain arg6, AnimationNode arg7) {
         if (this.field5006 != -1) {
-            return arg3.get(this.field5006).method12512(arg0, arg1, arg6, arg7, null);
+            return arg3.get(this.field5006).getHeadModel(arg0, arg1, arg6, arg7, null);
         }
         int var9 = arg7 == null ? arg1 : arg1 | arg7.method11779();
         SoftLruHashTable var10 = field4998;
@@ -457,7 +457,7 @@ public class PlayerModel {
             }
             ModelUnlit var25 = new ModelUnlit(var18, var19);
             int var26 = var9 | 0x4000;
-            var11 = arg0.method625(var25, var26, Statics.field3537, 64, 768);
+            var11 = arg0.createModel(var25, var26, Statics.field3537, 64, 768);
             for (int var27 = 0; var27 < 10; var27++) {
                 for (int var28 = 0; var28 < Statics.field5009[var27].length; var28++) {
                     if (this.field5000[var27] < Statics.field5010[var27][var28].length) {
@@ -474,7 +474,7 @@ public class PlayerModel {
         if (arg7 == null) {
             return var11;
         } else {
-            Model var31 = var11.method295((byte) 4, var9, true);
+            Model var31 = var11.copy((byte) 4, var9, true);
             arg7.method11780(var31, 0);
             return var31;
         }
@@ -512,7 +512,7 @@ public class PlayerModel {
             }
             ModelUnlit var21 = new ModelUnlit(var16, var17);
             int var22 = var9 | 0x4000;
-            var13 = arg0.method625(var21, var22, Statics.field3537, 64, 768);
+            var13 = arg0.createModel(var21, var22, Statics.field3537, 64, 768);
             for (int var23 = 0; var23 < 10; var23++) {
                 for (int var24 = 0; var24 < Statics.field5009[var23].length; var24++) {
                     if (this.field5000[var23] < Statics.field5010[var23][var24].length) {
@@ -529,7 +529,7 @@ public class PlayerModel {
         if (arg4 == null) {
             return var13;
         } else {
-            Model var27 = var13.method295((byte) 4, var9, true);
+            Model var27 = var13.copy((byte) 4, var9, true);
             arg4.method11780(var27, 0);
             return var27;
         }

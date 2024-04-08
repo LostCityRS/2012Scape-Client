@@ -1431,7 +1431,7 @@ public class World {
                     int var13 = (this.field3820[var2] & 0xFF) * 64 - this.field3795.z + var11;
                     NPCType var14 = Statics.npcTypes.get(var5.g2());
                     ObjectNode var15 = (ObjectNode) client.npcEntities.get((long) var7);
-                    if (var15 == null && (var14.field7220 & 0x1) > 0 && var12 >= 0 && var14.size + var12 < this.mapSizeX && var13 >= 0 && var14.size + var13 < this.mapSizeZ) {
+                    if (var15 == null && (var14.walkflags & 0x1) > 0 && var12 >= 0 && var14.size + var12 < this.mapSizeX && var13 >= 0 && var14.size + var13 < this.mapSizeZ) {
                         NpcEntity var16 = new NpcEntity(this.scene);
                         var16.slot = var7;
                         ObjectNode var17 = new ObjectNode(var16);
@@ -1442,7 +1442,7 @@ public class World {
                         var16.setType(var14);
                         var16.setSize(var16.type.size);
                         var16.turnspeed = var16.type.turnspeed << 3;
-                        var16.turn(var16.type.field7243.method6342().getId() << 11 & 0x3FFF, true);
+                        var16.turn(var16.type.respawndir.method6342().getId() << 11 & 0x3FFF, true);
                         var16.move(var9, var12, var13, true, var16.size());
                     }
                 }

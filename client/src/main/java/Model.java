@@ -641,6 +641,9 @@ public abstract class Model {
     @ObfuscatedName("qa.ag(Lkc;IZ)V")
     public abstract void method239(Matrix4x3 arg0, int arg1, boolean arg2);
 
+    /**
+     * resize: this function is obfuscated because sw3d links to native dll functions
+     */
     @ObfuscatedName("qa.oa(III)V")
     public abstract void oa(int arg0, int arg1, int arg2);
 
@@ -653,6 +656,9 @@ public abstract class Model {
     @ObfuscatedName("qa.S(I)V")
     public abstract void S(int arg0);
 
+    /**
+     * setAllowedOperations: this function is obfuscated because sw3d links to native dll functions
+     */
     @ObfuscatedName("qa.KA(I)V")
     public abstract void KA(int arg0);
 
@@ -719,15 +725,24 @@ public abstract class Model {
     @ObfuscatedName("qa.Z()I")
     public abstract int Z();
 
+    /**
+     * recolour: this function is obfuscated because sw3d links to native dll functions
+     */
     @ObfuscatedName("qa.X(SS)V")
     public abstract void X(short arg0, short arg1);
 
     @ObfuscatedName("qa.al(B[B)V")
     public abstract void method288(byte arg0, byte[] arg1);
 
+    /**
+     * retexture: this function is obfuscated because sw3d links to native dll functions
+     */
     @ObfuscatedName("qa.W(SS)V")
     public abstract void W(short arg0, short arg1);
 
+    /**
+     * tint: this function is obfuscated because sw3d links to native dll functions
+     */
     @ObfuscatedName("qa.PA(IIII)V")
     public abstract void PA(int arg0, int arg1, int arg2, int arg3);
 
@@ -744,7 +759,7 @@ public abstract class Model {
     public abstract void method294(Matrix4x3 arg0);
 
     @ObfuscatedName("qa.q(BIZ)Lqa;")
-    public abstract Model method295(byte arg0, int arg1, boolean arg2);
+    public abstract Model copy(byte arg0, int arg1, boolean arg2);
 
     @ObfuscatedName("qa.ad(Lqa;IIIZ)V")
     public abstract void method297(Model arg0, int arg1, int arg2, int arg3, boolean arg4);

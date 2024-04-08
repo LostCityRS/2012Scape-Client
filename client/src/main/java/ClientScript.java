@@ -80,7 +80,7 @@ public class ClientScript extends SecondaryNode {
             this.switches = new HashTable[var5];
             for (int var6 = 0; var6 < var5; var6++) {
                 int var7 = buf.g2();
-                HashTable var8 = new HashTable(IntMath.method2839(var7));
+                HashTable var8 = new HashTable(IntMath.bitceil(var7));
                 this.switches[var6] = var8;
                 while (var7-- > 0) {
                     int var9 = buf.g4s();

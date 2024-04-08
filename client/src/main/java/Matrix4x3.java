@@ -226,7 +226,7 @@ public class Matrix4x3 {
     }
 
     @ObfuscatedName("kc.d(FFFF)V")
-    public void method5106(float arg0, float arg1, float arg2, float arg3) {
+    public void setToRotation(float arg0, float arg1, float arg2, float arg3) {
         float var5 = (float) Math.cos((double) arg3);
         float var6 = (float) Math.sin((double) arg3);
         this.field3453 = arg0 * arg0 * (1.0F - var5) + var5;

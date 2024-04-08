@@ -71,7 +71,7 @@ public class SpotShadowFactory {
                     }
                 }
             }
-            var17 = arg0.method625(var22, var12, Statics.field653, 64, 768);
+            var17 = arg0.createModel(var22, var12, Statics.field653, 64, 768);
             SoftLruHashTable var38 = field654;
             synchronized (field654) {
                 field654.method7937(var17, var14);
@@ -83,11 +83,11 @@ public class SpotShadowFactory {
         int var43 = arg6.ha();
         Model var44;
         if (arg11 == null) {
-            var44 = var17.method295((byte) 3, var12, true);
+            var44 = var17.copy((byte) 3, var12, true);
             var44.oa(var41 - var40 >> 1, 128, var43 - var42 >> 1);
             var44.ia(var40 + var41 >> 1, 0, var42 + var43 >> 1);
         } else {
-            var44 = var17.method295((byte) 3, var12, true);
+            var44 = var17.copy((byte) 3, var12, true);
             var44.oa(var41 - var40 >> 1, 128, var43 - var42 >> 1);
             var44.ia(var40 + var41 >> 1, 0, var42 + var43 >> 1);
             arg11.method11782(var44);

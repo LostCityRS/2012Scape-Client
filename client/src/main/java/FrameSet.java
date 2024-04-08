@@ -88,12 +88,12 @@ public class FrameSet extends SecondaryNode {
     }
 
     @ObfuscatedName("aje.a(II)Z")
-    public boolean method16653(int arg0) {
+    public boolean hasAlphaTransform(int arg0) {
         return this.field10350[arg0].field1492;
     }
 
     @ObfuscatedName("aje.s(II)Z")
-    public boolean method16654(int arg0) {
+    public boolean hasColourTransform(int arg0) {
         return this.field10350[arg0].field1493;
     }
 

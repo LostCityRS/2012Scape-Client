@@ -197,7 +197,7 @@ public class EffectAnimType {
             if (var17.field1314 < 13) {
                 var17.method2634(2);
             }
-            var14 = arg0.method625(var17, var16, this.field5256.field5248, this.field5257 + 64, this.field5263 + 850);
+            var14 = arg0.createModel(var17, var16, this.field5256.field5248, this.field5257 + 64, this.field5263 + 850);
             if (this.field5261 != null) {
                 for (int var18 = 0; var18 < this.field5261.length; var18++) {
                     var14.X(this.field5261[var18], this.field5254[var18]);
@@ -214,7 +214,7 @@ public class EffectAnimType {
                 this.field5256.field5245.method7937(var14, (long) (this.field5250 |= arg0.field397 << 29));
             }
         }
-        Model var22 = var14.method295(arg9, var11, true);
+        Model var22 = var14.copy(arg9, var11, true);
         if (arg8 != null) {
             arg8.method11780(var22, 0);
         }
@@ -241,6 +241,6 @@ public class EffectAnimType {
 
     @ObfuscatedName("se.c(I)Z")
     public final boolean method11104() {
-        return this.field5251 == -1 ? true : this.field5256.field5244.method5629(this.field5251, 0);
+        return this.field5251 == -1 ? true : this.field5256.field5244.loadFile(this.field5251, 0);
     }
 }

@@ -97,7 +97,7 @@ public final class CutsceneEntity {
         NPCType var1 = Statics.npcTypes.get(this.field1560);
         boolean var2 = var1.method12513();
         if (this.field1564 == null) {
-            BASType var3 = Statics.field3769.method7784(var1.field7217);
+            BASType var3 = Statics.field3769.method7784(var1.bas);
             this.field1564 = var3.method7754();
         }
         int[] var4 = this.field1564;

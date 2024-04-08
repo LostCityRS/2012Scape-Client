@@ -52,7 +52,7 @@ public class IntMath {
     }
 
     @ObfuscatedName("df.s(II)I")
-    public static int method2839(int arg0) {
+    public static int bitceil(int arg0) {
         int var6 = arg0 - 1;
         int var1 = var6 | var6 >>> 1;
         int var2 = var1 | var1 >>> 2;

@@ -27,6 +27,11 @@ public class CompassPoint implements SerializableEnum {
     @ObfuscatedName("mz.l")
     public static final CompassPoint field3908 = new CompassPoint(7, 7);
 
+    @ObfuscatedName("gq.u(B)[Lmz;")
+    public static CompassPoint[] values() {
+        return new CompassPoint[]{field3908, field3915, field3912, field3914, field3909, field3910, field3913, field3911};
+    }
+
     @ObfuscatedName("mz.f")
     public final int field3916;
 

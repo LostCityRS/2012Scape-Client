@@ -110,7 +110,7 @@ public class h extends Model implements ua {
     }
 
     @ObfuscatedName("h.q(BIZ)Lqa;")
-    public Model method295(byte arg0, int arg1, boolean arg2) {
+    public Model copy(byte arg0, int arg1, boolean arg2) {
         return this.field474.method987().method90(this, arg0, arg1, arg2);
     }
 

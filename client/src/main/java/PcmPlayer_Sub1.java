@@ -72,7 +72,7 @@ public class PcmPlayer_Sub1 extends AudioChannel {
                 this.field8901 = true;
                 throw var4;
             } else {
-                this.open(IntMath.method2839(arg0));
+                this.open(IntMath.bitceil(arg0));
             }
         }
     }

@@ -167,7 +167,7 @@ public class QuestType {
         } else if (arg1 == 249) {
             int var17 = arg0.g1();
             if (this.field5069 == null) {
-                int var18 = IntMath.method2839(var17);
+                int var18 = IntMath.bitceil(var17);
                 this.field5069 = new HashTable(var18);
             }
             for (int var19 = 0; var19 < var17; var19++) {
@@ -197,7 +197,7 @@ public class QuestType {
             return arg1;
         } else {
             IntNode var3 = (IntNode) this.field5069.get((long) arg0);
-            return var3 == null ? arg1 : var3.field9556;
+            return var3 == null ? arg1 : var3.value;
         }
     }
 
@@ -215,14 +215,14 @@ public class QuestType {
     public boolean method8448(VarIntDomain arg0) {
         if (this.field5060 != null) {
             for (int var2 = 0; var2 < this.field5060.length; var2++) {
-                if (arg0.method1664(this.field5060[var2][0]) >= this.field5060[var2][1]) {
+                if (arg0.garVarInt(this.field5060[var2][0]) >= this.field5060[var2][1]) {
                     return true;
                 }
             }
         }
         if (this.field5061 != null) {
             for (int var3 = 0; var3 < this.field5061.length; var3++) {
-                if (arg0.method1646(this.field5061[var3][0]) >= this.field5061[var3][1]) {
+                if (arg0.getVarBit(this.field5061[var3][0]) >= this.field5061[var3][1]) {
                     return true;
                 }
             }
@@ -234,14 +234,14 @@ public class QuestType {
     public boolean method8429(VarIntDomain arg0) {
         if (this.field5060 != null) {
             for (int var2 = 0; var2 < this.field5060.length; var2++) {
-                if (arg0.method1664(this.field5060[var2][0]) >= this.field5060[var2][2]) {
+                if (arg0.garVarInt(this.field5060[var2][0]) >= this.field5060[var2][2]) {
                     return true;
                 }
             }
         }
         if (this.field5061 != null) {
             for (int var3 = 0; var3 < this.field5061.length; var3++) {
-                if (arg0.method1646(this.field5061[var3][0]) >= this.field5061[var3][2]) {
+                if (arg0.getVarBit(this.field5061[var3][0]) >= this.field5061[var3][2]) {
                     return true;
                 }
             }
@@ -270,7 +270,7 @@ public class QuestType {
         }
         if (this.field5062 != null) {
             for (int var5 = 0; var5 < this.field5062.length; var5++) {
-                int var6 = arg0.method1664(this.field5062[var5]);
+                int var6 = arg0.garVarInt(this.field5062[var5]);
                 if (var6 < this.field5071[var5] || var6 > this.field5072[var5]) {
                     return false;
                 }
@@ -278,7 +278,7 @@ public class QuestType {
         }
         if (this.field5074 != null) {
             for (int var7 = 0; var7 < this.field5074.length; var7++) {
-                int var8 = arg0.method1646(this.field5074[var7]);
+                int var8 = arg0.getVarBit(this.field5074[var7]);
                 if (var8 < this.field5075[var7] || var8 > this.field5070[var7]) {
                     return false;
                 }
@@ -315,7 +315,7 @@ public class QuestType {
         if (this.field5062 == null || arg1 < 0 || arg1 >= this.field5062.length) {
             return false;
         } else {
-            int var3 = arg0.method1664(this.field5062[arg1]);
+            int var3 = arg0.garVarInt(this.field5062[arg1]);
             return var3 >= this.field5071[arg1] && var3 <= this.field5072[arg1];
         }
     }
@@ -325,7 +325,7 @@ public class QuestType {
         if (this.field5074 == null || arg1 < 0 || arg1 >= this.field5074.length) {
             return false;
         } else {
-            int var3 = arg0.method1646(this.field5074[arg1]);
+            int var3 = arg0.getVarBit(this.field5074[arg1]);
             return var3 >= this.field5075[arg1] && var3 <= this.field5070[arg1];
         }
     }

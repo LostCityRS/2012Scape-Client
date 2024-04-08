@@ -64,7 +64,7 @@ public class StaticWallEntity extends WallLayerEntity implements Location {
             this.field7557 = (Model) var15.field6757;
             this.field7555 = (HardShadow) var15.field6756;
             if (this.field7563 || arg3.field6472) {
-                this.field7557 = this.field7557.method295((byte) 0, var14, false);
+                this.field7557 = this.field7557.copy((byte) 0, var14, false);
                 if (arg3.field6472) {
                     LocTint var16 = client.world.method6094();
                     this.field7557.PA(var16.field3783, var16.field3782, var16.field3781, var16.field3784);

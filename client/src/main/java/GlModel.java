@@ -801,7 +801,7 @@ public class GlModel extends Model {
     }
 
     @ObfuscatedName("yz.q(BIZ)Lqa;")
-    public Model method295(byte arg0, int arg1, boolean arg2) {
+    public Model copy(byte arg0, int arg1, boolean arg2) {
         boolean var4 = false;
         GlModel var5;
         GlModel var6;

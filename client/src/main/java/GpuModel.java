@@ -895,7 +895,7 @@ public class GpuModel extends Model {
     }
 
     @ObfuscatedName("yg.q(BIZ)Lqa;")
-    public Model method295(byte arg0, int arg1, boolean arg2) {
+    public Model copy(byte arg0, int arg1, boolean arg2) {
         boolean var4 = false;
         GpuModel var5;
         GpuModel var6;

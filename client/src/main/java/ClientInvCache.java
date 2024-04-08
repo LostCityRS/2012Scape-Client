@@ -241,7 +241,7 @@ public class ClientInvCache extends Node {
             if (arg5 != null) {
                 var15 = var8 | 0x4000;
             }
-            var7 = arg0.method625(var27, var15, Statics.field2101, 65, 855);
+            var7 = arg0.createModel(var27, var15, Statics.field2101, 65, 855);
             if (arg5 != null) {
                 for (int var28 = 0; var28 < 10; var28++) {
                     for (int var29 = 0; var29 < Statics.field5009[var28].length; var29++) {
@@ -259,7 +259,7 @@ public class ClientInvCache extends Node {
         if (arg2 == null) {
             return var7;
         } else {
-            Model var30 = var7.method295((byte) 1, var8, true);
+            Model var30 = var7.copy((byte) 1, var8, true);
             arg2.method11780(var30, 0);
             return var30;
         }

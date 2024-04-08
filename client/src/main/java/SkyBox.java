@@ -195,7 +195,7 @@ public class SkyBox {
             if (var2) {
                 arg0.m(16777215, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F);
                 ModelUnlit var3 = ModelUnlit.method2664(Statics.field549, this.field3942, 0);
-                this.field3943 = arg0.method625(var3, 1099776, 0, 255, 1);
+                this.field3943 = arg0.createModel(var3, 1099776, 0, 255, 1);
                 byte[] var4 = this.field3943.ao();
                 if (var4 == null) {
                     this.field3944 = null;

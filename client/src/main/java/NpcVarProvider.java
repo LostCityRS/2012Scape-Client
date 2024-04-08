@@ -30,7 +30,7 @@ public final class NpcVarProvider {
             IntNode var4 = new IntNode(arg1);
             this.field1199.put(var4, (long) arg0);
         } else {
-            var3.field9556 = arg1;
+            var3.value = arg1;
         }
     }
 
@@ -41,7 +41,7 @@ public final class NpcVarProvider {
             VarnType var3 = Statics.field1510.method12004(arg0);
             return var3.field6760 == 'i' ? 0 : -1;
         } else {
-            return var2.field9556;
+            return var2.value;
         }
     }
 

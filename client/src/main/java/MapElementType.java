@@ -220,7 +220,7 @@ public class MapElementType {
         } else if (arg1 == 249) {
             int var9 = arg0.g1();
             if (this.field4804 == null) {
-                int var10 = IntMath.method2839(var9);
+                int var10 = IntMath.bitceil(var9);
                 this.field4804 = new HashTable(var10);
             }
             for (int var11 = 0; var11 < var9; var11++) {
@@ -263,9 +263,9 @@ public class MapElementType {
             if (this.field4783 == -1) {
                 return true;
             }
-            var2 = arg0.method1646(this.field4783);
+            var2 = arg0.getVarBit(this.field4783);
         } else {
-            var2 = arg0.method1664(this.field4784);
+            var2 = arg0.garVarInt(this.field4784);
         }
         if (var2 < this.field4781 || var2 > this.field4803) {
             return false;
@@ -276,9 +276,9 @@ public class MapElementType {
             if (this.field4787 == -1) {
                 return true;
             }
-            var4 = arg0.method1646(this.field4787);
+            var4 = arg0.getVarBit(this.field4787);
         } else {
-            var4 = arg0.method1664(this.field4765);
+            var4 = arg0.garVarInt(this.field4765);
         }
         return var4 >= this.field4789 && var4 <= this.field4786;
     }
@@ -323,7 +323,7 @@ public class MapElementType {
             return arg1;
         } else {
             IntNode var3 = (IntNode) this.field4804.get((long) arg0);
-            return var3 == null ? arg1 : var3.field9556;
+            return var3 == null ? arg1 : var3.value;
         }
     }
 

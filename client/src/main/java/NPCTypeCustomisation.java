@@ -4,39 +4,39 @@ import deob.ObfuscatedName;
 public class NPCTypeCustomisation {
 
     @ObfuscatedName("wf.u")
-    public long field7203;
+    public long uid;
 
     @ObfuscatedName("wf.j")
-    public int[] field7204;
+    public int[] models;
 
     @ObfuscatedName("wf.a")
-    public short[] field7205;
+    public short[] recol;
 
     @ObfuscatedName("wf.s")
-    public short[] field7206;
+    public short[] retex;
 
     public NPCTypeCustomisation(long arg0, int[] arg1, short[] arg2, short[] arg3) {
-        this.field7203 = arg0;
-        this.field7204 = arg1;
-        this.field7205 = arg2;
-        this.field7206 = arg3;
+        this.uid = arg0;
+        this.models = arg1;
+        this.recol = arg2;
+        this.retex = arg3;
     }
 
     public NPCTypeCustomisation(NPCType arg0, boolean arg1) {
         if (arg1) {
-            this.field7204 = new int[arg0.field7214.length];
-            System.arraycopy(arg0.field7214, 0, this.field7204, 0, this.field7204.length);
+            this.models = new int[arg0.model.length];
+            System.arraycopy(arg0.model, 0, this.models, 0, this.models.length);
         } else {
-            this.field7204 = new int[arg0.field7215.length];
-            System.arraycopy(arg0.field7215, 0, this.field7204, 0, this.field7204.length);
+            this.models = new int[arg0.headmodel.length];
+            System.arraycopy(arg0.headmodel, 0, this.models, 0, this.models.length);
         }
-        if (arg0.field7267 != null) {
-            this.field7205 = new short[arg0.field7267.length];
-            System.arraycopy(arg0.field7267, 0, this.field7205, 0, this.field7205.length);
+        if (arg0.recol_d != null) {
+            this.recol = new short[arg0.recol_d.length];
+            System.arraycopy(arg0.recol_d, 0, this.recol, 0, this.recol.length);
         }
-        if (arg0.field7270 != null) {
-            this.field7206 = new short[arg0.field7270.length];
-            System.arraycopy(arg0.field7270, 0, this.field7206, 0, this.field7206.length);
+        if (arg0.retex_d != null) {
+            this.retex = new short[arg0.retex_d.length];
+            System.arraycopy(arg0.retex_d, 0, this.retex, 0, this.retex.length);
         }
     }
 }

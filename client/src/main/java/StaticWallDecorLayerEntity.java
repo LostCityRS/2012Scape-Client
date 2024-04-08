@@ -51,7 +51,7 @@ public class StaticWallDecorLayerEntity extends WallDecorLayerEntity implements 
             this.field7544 = (Model) var16.field6757;
             this.field7547 = (HardShadow) var16.field6756;
             if (arg3.field6472) {
-                this.field7544 = this.field7544.method295((byte) 0, var15, false);
+                this.field7544 = this.field7544.copy((byte) 0, var15, false);
                 if (arg3.field6472) {
                     LocTint var17 = client.world.method6094();
                     this.field7544.PA(var17.field3783, var17.field3782, var17.field3781, var17.field3784);

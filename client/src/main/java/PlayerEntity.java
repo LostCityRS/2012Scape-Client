@@ -288,7 +288,7 @@ public class PlayerEntity extends PathingEntity {
         this.field8650 = false;
         if (Statics.options.characterShadows.method15709() == 1) {
             BASType var9 = this.getBASType();
-            if (var9.field4714 && (this.model.field5006 == -1 || Statics.npcTypes.get(this.model.field5006).field7249)) {
+            if (var9.field4714 && (this.model.field5006 == -1 || Statics.npcTypes.get(this.model.field5006).spotshadow)) {
                 AnimationNode var10 = this.field8597.method11767() && this.field8597.method11776() ? this.field8597 : null;
                 EntityWalkAnimationNode var11 = this.field8616.method11767() && (!this.field8616.field9899 || var10 == null) ? this.field8616 : null;
                 Model var12 = SpotShadowFactory.method1417(arg0, var5, this.field8601, this.field8644, this.field8603, 1, this.field8651[0], 0, 0, 160, 240, var11 == null ? var10 : var11);

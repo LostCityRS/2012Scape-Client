@@ -102,12 +102,12 @@ public class VarRelated1 implements VarIntDomain {
     }
 
     @ObfuscatedName("e.t(II)I")
-    public int method1664(int arg0) {
+    public int garVarInt(int arg0) {
         return this.field661[arg0];
     }
 
     @ObfuscatedName("e.l(II)I")
-    public int method1646(int arg0) {
+    public int getVarBit(int arg0) {
         VarBitType var2 = Statics.field4645.method7668(arg0);
         int var3 = var2.field4669;
         int var4 = var2.field4668;

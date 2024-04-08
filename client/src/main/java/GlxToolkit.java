@@ -598,7 +598,7 @@ public final class GlxToolkit extends GpuToolkit {
         } else if (this.field10025) {
             return new GlxTexture2(this, arg0, arg1, arg3, arg4, arg5);
         } else {
-            GlxTexture var7 = new GlxTexture(this, TextureFormat.field1296, DataType.field1501, IntMath.method2839(arg0), IntMath.method2839(arg1));
+            GlxTexture var7 = new GlxTexture(this, TextureFormat.field1296, DataType.field1501, IntMath.bitceil(arg0), IntMath.bitceil(arg1));
             var7.method4413(0, 0, arg0, arg1, arg3, arg4, arg5);
             return var7;
         }
@@ -611,7 +611,7 @@ public final class GlxToolkit extends GpuToolkit {
         } else if (this.field10025) {
             return new GlxTexture2(this, arg0, arg1, arg2, arg4, arg5, arg6);
         } else {
-            GlxTexture var8 = new GlxTexture(this, arg0, DataType.field1501, IntMath.method2839(arg1), IntMath.method2839(arg2));
+            GlxTexture var8 = new GlxTexture(this, arg0, DataType.field1501, IntMath.bitceil(arg1), IntMath.bitceil(arg2));
             var8.method4414(0, 0, arg1, arg2, arg4, arg0, arg5, arg6);
             return var8;
         }
@@ -624,7 +624,7 @@ public final class GlxToolkit extends GpuToolkit {
         } else if (this.field10025) {
             return new GlxTexture2(this, arg0, arg1, arg2, arg4, arg5, arg6);
         } else {
-            GlxTexture var8 = new GlxTexture(this, arg0, DataType.field1506, IntMath.method2839(arg1), IntMath.method2839(arg2));
+            GlxTexture var8 = new GlxTexture(this, arg0, DataType.field1506, IntMath.bitceil(arg1), IntMath.bitceil(arg2));
             var8.method14192(0, 0, arg1, arg2, arg4, arg0, arg5, arg6);
             return var8;
         }
@@ -637,7 +637,7 @@ public final class GlxToolkit extends GpuToolkit {
         } else if (this.field10025) {
             return new GlxTexture2(this, arg0, arg1, arg2, arg3);
         } else {
-            return new GlxTexture(this, arg0, arg1, IntMath.method2839(arg2), IntMath.method2839(arg3));
+            return new GlxTexture(this, arg0, arg1, IntMath.bitceil(arg2), IntMath.bitceil(arg3));
         }
     }
 
@@ -1033,7 +1033,7 @@ public final class GlxToolkit extends GpuToolkit {
         while (!this.field10005.method11585()) {
             IntNode var4 = (IntNode) this.field10005.method11560();
             this.field10012[var2++] = (int) var4.key;
-            this.field8252 -= var4.field9556;
+            this.field8252 -= var4.value;
             if (var2 == 1000) {
                 OpenGL.glDeleteBuffersARB(var2, this.field10012, 0);
                 var2 = 0;
@@ -1046,7 +1046,7 @@ public final class GlxToolkit extends GpuToolkit {
         while (!this.field10010.method11585()) {
             IntNode var5 = (IntNode) this.field10010.method11560();
             this.field10012[var2++] = (int) var5.key;
-            this.field8325 -= var5.field9556;
+            this.field8325 -= var5.value;
             if (var2 == 1000) {
                 OpenGL.glDeleteTextures(var2, this.field10012, 0);
                 var2 = 0;
@@ -1058,7 +1058,7 @@ public final class GlxToolkit extends GpuToolkit {
         }
         while (!this.field10007.method11585()) {
             IntNode var6 = (IntNode) this.field10007.method11560();
-            this.field10012[var2++] = var6.field9556;
+            this.field10012[var2++] = var6.value;
             if (var2 == 1000) {
                 OpenGL.glDeleteFramebuffersEXT(var2, this.field10012, 0);
                 var2 = 0;
@@ -1071,7 +1071,7 @@ public final class GlxToolkit extends GpuToolkit {
         while (!this.field10008.method11585()) {
             IntNode var7 = (IntNode) this.field10008.method11560();
             this.field10012[var2++] = (int) var7.key;
-            this.field8334 -= var7.field9556;
+            this.field8334 -= var7.value;
             if (var2 == 1000) {
                 OpenGL.glDeleteRenderbuffersEXT(var2, this.field10012, 0);
                 var2 = 0;
@@ -1083,7 +1083,7 @@ public final class GlxToolkit extends GpuToolkit {
         }
         while (!this.field10031.method11585()) {
             IntNode var9 = (IntNode) this.field10031.method11560();
-            OpenGL.glDeleteLists((int) var9.key, var9.field9556);
+            OpenGL.glDeleteLists((int) var9.key, var9.value);
         }
         while (!this.field10009.method11585()) {
             Node var10 = this.field10009.method11560();
@@ -1095,7 +1095,7 @@ public final class GlxToolkit extends GpuToolkit {
         }
         while (!this.field10031.method11585()) {
             IntNode var12 = (IntNode) this.field10031.method11560();
-            OpenGL.glDeleteLists((int) var12.key, var12.field9556);
+            OpenGL.glDeleteLists((int) var12.key, var12.value);
         }
         if (this.za() > 100663296 && MonotonicTime.get() > this.field10011 + 60000L) {
             System.gc();

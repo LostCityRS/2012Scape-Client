@@ -26,7 +26,7 @@ public class CutsceneAction_Sub17 extends CutsceneAction {
         if (var1 == null) {
             CutsceneManager.field1529.put(new IntNode(this.field8482), this.field8483);
         } else {
-            var1.field9556 = this.field8482;
+            var1.value = this.field8482;
         }
     }
 }

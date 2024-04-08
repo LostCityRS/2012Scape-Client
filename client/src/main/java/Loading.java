@@ -296,7 +296,7 @@ public class Loading {
             Statics.field2190 = new CutsceneDefaults(Statics.field849);
         }
         if (Statics.field1208 == LoadingStage.field3396) {
-            if (Statics.field4825.field5156 != -1 && !Statics.field4560.method5629(Statics.field4825.field5156, 0)) {
+            if (Statics.field4825.field5156 != -1 && !Statics.field4560.loadFile(Statics.field4825.field5156, 0)) {
                 return 99;
             }
             Statics.field8465 = new BasicMaterialTypeList(Statics.field7572, Statics.field808, Statics.field6435);
@@ -382,7 +382,7 @@ public class Loading {
             boolean var20 = true;
             for (int var21 = 0; var21 < Statics.field1756[Statics.field4825.field5162].field1732.length; var21++) {
                 Component var22 = Statics.field1756[Statics.field4825.field5162].field1732[var21];
-                if (var22.type == 5 && var22.field1797 != -1 && !Statics.field7387.method5629(var22.field1797, 0)) {
+                if (var22.type == 5 && var22.field1797 != -1 && !Statics.field7387.loadFile(var22.field1797, 0)) {
                     var20 = false;
                 }
             }

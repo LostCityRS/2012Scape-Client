@@ -301,7 +301,7 @@ public class Component {
     public boolean field1860 = false;
 
     @ObfuscatedName("ew.dw")
-    public ServerKeyProperties field1841 = ServerKeyProperties.field9419;
+    public ServerKeyProperties field1841 = ServerKeyProperties.NONE;
 
     @ObfuscatedName("ew.di")
     public boolean field1842 = false;
@@ -559,7 +559,7 @@ public class Component {
     public NPCTypeCustomisation field1930;
 
     @ObfuscatedName("tk.j(IB)Lew;")
-    public static Component method11381(int arg0) {
+    public static Component get(int arg0) {
         int var1 = arg0 >> 16;
         if (Statics.field1756[var1] == null || Statics.field1756[var1].method3108(arg0) == null) {
             boolean var2 = openInterface(var1, null);
@@ -577,7 +577,7 @@ public class Component {
 
     @ObfuscatedName("adi.s(III)Lew;")
     public static Component get(int arg0, int arg1) {
-        Component var2 = method11381(arg0);
+        Component var2 = get(arg0);
         if (arg1 == -1) {
             return var2;
         } else if (var2 == null || var2.field1915 == null || arg1 >= var2.field1915.length) {
@@ -816,7 +816,7 @@ public class Component {
         this.field1859 = arg0.g1();
         this.field1914 = arg0.gjstr();
         int var21 = -1;
-        if (ServerKeyProperties.method15568(var7) != 0) {
+        if (ServerKeyProperties.unpackTargetMask(var7) != 0) {
             var21 = arg0.g2();
             if (var21 == 65535) {
                 var21 = -1;
@@ -1011,7 +1011,7 @@ public class Component {
                 if (var32.field1314 < 13) {
                     var32.method2634(2);
                 }
-                var31 = arg0.method625(var32, arg1, Statics.field1290, 64, 768);
+                var31 = arg0.createModel(var32, arg1, Statics.field1290, 64, 768);
                 if (this.field1754 != null) {
                     for (int var33 = 0; var33 < this.field1754.length; var33++) {
                         var31.X(this.field1754[var33], this.field1802[var33]);
@@ -1025,13 +1025,13 @@ public class Component {
                 field1760.method7937(var31, var29);
             }
             if (arg8 != null) {
-                var31 = var31.method295((byte) 1, arg1, true);
+                var31 = var31.copy((byte) 1, arg1, true);
                 arg8.method11780(var31, 0);
             }
             var31.KA(var11);
             return var31;
         } else if (this.field1806 == 2) {
-            Model var35 = arg4.get(this.field1838).method12512(arg0, arg1, arg7, arg8, this.field1930);
+            Model var35 = arg4.get(this.field1838).getHeadModel(arg0, arg1, arg7, arg8, this.field1930);
             if (var35 == null) {
                 field1761 = true;
                 return null;
@@ -1059,7 +1059,7 @@ public class Component {
                 return var38;
             }
         } else if (this.field1806 == 6) {
-            Model var39 = arg4.get(this.field1838).method12510(arg0, arg1, arg2, arg7, arg8, null, null, null, 0, this.field1930);
+            Model var39 = arg4.get(this.field1838).getBodyModel(arg0, arg1, arg2, arg7, arg8, null, null, null, 0, this.field1930);
             if (var39 == null) {
                 field1761 = true;
                 return null;
@@ -1268,7 +1268,7 @@ public class Component {
             return arg1;
         } else {
             IntNode var3 = (IntNode) this.field1902.get((long) arg0);
-            return var3 == null ? arg1 : var3.field9556;
+            return var3 == null ? arg1 : var3.value;
         }
     }
 
@@ -1293,7 +1293,7 @@ public class Component {
         if (var3 == null) {
             this.field1902.put(new IntNode(arg1), (long) arg0);
         } else {
-            var3.field9556 = arg1;
+            var3.value = arg1;
         }
     }
 

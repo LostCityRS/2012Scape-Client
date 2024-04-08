@@ -4,8 +4,8 @@ import deob.ObfuscatedName;
 public interface VarIntDomain {
 
     @ObfuscatedName("ug.t(II)I")
-    int method1664(int arg0);
+    int garVarInt(int arg0);
 
     @ObfuscatedName("ug.l(II)I")
-    int method1646(int arg0);
+    int getVarBit(int arg0);
 }

@@ -119,7 +119,7 @@ public class IDKType implements PlayerTypeRelated {
         Js5 var2 = this.field2296.field2299;
         synchronized (this.field2296.field2299) {
             for (int var3 = 0; var3 < this.field2287.length; var3++) {
-                if (!this.field2296.field2299.method5629(this.field2287[var3], 0)) {
+                if (!this.field2296.field2299.loadFile(this.field2287[var3], 0)) {
                     var1 = false;
                 }
             }
@@ -177,7 +177,7 @@ public class IDKType implements PlayerTypeRelated {
         Js5 var2 = this.field2296.field2299;
         synchronized (this.field2296.field2299) {
             for (int var3 = 0; var3 < 5; var3++) {
-                if (this.field2294[var3] != -1 && !this.field2296.field2299.method5629(this.field2294[var3], 0)) {
+                if (this.field2294[var3] != -1 && !this.field2296.field2299.loadFile(this.field2294[var3], 0)) {
                     var1 = false;
                 }
             }

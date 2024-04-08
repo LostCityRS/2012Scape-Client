@@ -113,7 +113,7 @@ public class GpuFloorModelRelated extends Node {
             }
         }
         if (this.field9456 > 0) {
-            this.field9463 = new HashTable(IntMath.method2839(this.field9456));
+            this.field9463 = new HashTable(IntMath.bitceil(this.field9456));
             this.field9464 = this.field9460.field8244;
             this.field9464.clear();
             this.field9464.position(2097152);

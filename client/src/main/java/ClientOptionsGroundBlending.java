@@ -13,7 +13,7 @@ public class ClientOptionsGroundBlending extends ClientOption {
 
     @ObfuscatedName("afj.z(I)V")
     public void method15841() {
-        if (this.field6462.method15452() != ModeGame.field6407) {
+        if (this.field6462.method15452() != ModeGame.RUNESCAPE) {
             this.value = 1;
         }
         if (this.value != 0 && this.value != 1) {
@@ -28,12 +28,12 @@ public class ClientOptionsGroundBlending extends ClientOption {
 
     @ObfuscatedName("afj.n(I)Z")
     public boolean method15842() {
-        return this.field6462.method15452() == ModeGame.field6407;
+        return this.field6462.method15452() == ModeGame.RUNESCAPE;
     }
 
     @ObfuscatedName("afj.j(IB)I")
     public int canSetValue(int arg0) {
-        if (this.field6462.method15452() != ModeGame.field6407) {
+        if (this.field6462.method15452() != ModeGame.RUNESCAPE) {
             return 3;
         }
         if (arg0 == 0) {

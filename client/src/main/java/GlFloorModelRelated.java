@@ -118,7 +118,7 @@ public class GlFloorModelRelated extends Node {
         if (this.field9336 > 0) {
             this.field9338 = new Packet(this.field9336 * 2);
             this.field9339 = new GpuPacket(this.field9336 * 16);
-            this.field9340 = new HashTable(IntMath.method2839(this.field9336));
+            this.field9340 = new HashTable(IntMath.bitceil(this.field9336));
             int var21 = 0;
             int var22 = 0;
             for (int var23 = this.field9327; var23 <= this.field9328; var23++) {

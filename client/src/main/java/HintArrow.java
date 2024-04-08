@@ -49,10 +49,10 @@ public class HintArrow {
             if (var10.field1314 < 13) {
                 var10.method2634(2);
             }
-            var8 = arg0.method625(var10, var9, Statics.field783, 64, 768);
+            var8 = arg0.createModel(var10, var9, Statics.field783, 64, 768);
             field782.method7937(var8, var6);
         }
-        Model var11 = var8.method295((byte) 6, var9, true);
+        Model var11 = var8.copy((byte) 6, var9, true);
         if (arg1 != 0) {
             var11.f(arg1);
         }

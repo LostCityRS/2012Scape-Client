@@ -1087,7 +1087,7 @@ public class MiniMenu {
         if (arg1 == -1 && var4.type == 0) {
             for (MiniMenuEntry var5 = (MiniMenuEntry) entries.head(); var5 != null; var5 = (MiniMenuEntry) entries.next()) {
                 if (var5.opcode == 58 || var5.opcode == 1007 || var5.opcode == 25 || var5.opcode == 57 || var5.opcode == 30) {
-                    for (Component var6 = Component.method11381(var5.field10335); var6 != null; var6 = client.method4752(Statics.field1756[var6.id >> 16], var6)) {
+                    for (Component var6 = Component.get(var5.field10335); var6 != null; var6 = client.method4752(Statics.field1756[var6.id >> 16], var6)) {
                         if (var4.id == var6.id) {
                             return true;
                         }
@@ -1543,7 +1543,7 @@ public class MiniMenu {
         }
         if (client.targetModeActive && !arg1) {
             ParamType var5 = Statics.targetParam == -1 ? null : Statics.paramTypes.get(Statics.targetParam);
-            if ((Statics.targetMask & 0x2) != 0 && (var5 == null || var2.method12514(Statics.targetParam, var5.defaultint) != var5.defaultint)) {
+            if ((Statics.targetMask & 0x2) != 0 && (var5 == null || var2.getIntParam(Statics.targetParam, var5.defaultint) != var5.defaultint)) {
                 Statics.addEntry(client.field9103, client.field9151 + " " + TextUtil.ARROW + " " + TextUtil.createColourTag(16776960) + var3, Statics.targetCursor, 8, -1, (long) arg0.slot, 0, 0, true, false, (long) arg0.slot, false);
             }
         }
@@ -1558,7 +1558,7 @@ public class MiniMenu {
             return;
         }
         for (int var7 = var6.length - 1; var7 >= 0; var7--) {
-            if (var6[var7] != null && (var2.field7248 == 0 || !var6[var7].equalsIgnoreCase(LocalisedText.field6991.get(Statics.language)) && !var6[var7].equalsIgnoreCase(LocalisedText.field6874.get(Statics.language)))) {
+            if (var6[var7] != null && (var2.oppriority == 0 || !var6[var7].equalsIgnoreCase(LocalisedText.field6991.get(Statics.language)) && !var6[var7].equalsIgnoreCase(LocalisedText.field6874.get(Statics.language)))) {
                 short var8 = 0;
                 int var9 = client.field9098;
                 if (var7 == 0) {
@@ -1579,14 +1579,14 @@ public class MiniMenu {
                 if (var7 == 5) {
                     var8 = 1003;
                 }
-                int var10 = var2.method12543(var7);
+                int var10 = var2.getCursor(var7);
                 if (var10 != -1) {
                     var9 = var10;
                 }
-                Statics.addEntry(var6[var7], TextUtil.createColourTag(16776960) + var3, var6[var7].equalsIgnoreCase(LocalisedText.field6991.get(Statics.language)) ? var2.field7222 : var9, var8, -1, (long) arg0.slot, 0, 0, true, false, (long) arg0.slot, false);
+                Statics.addEntry(var6[var7], TextUtil.createColourTag(16776960) + var3, var6[var7].equalsIgnoreCase(LocalisedText.field6991.get(Statics.language)) ? var2.attackcursor : var9, var8, -1, (long) arg0.slot, 0, 0, true, false, (long) arg0.slot, false);
             }
         }
-        if (var2.field7248 != 1) {
+        if (var2.oppriority != 1) {
             return;
         }
         for (int var11 = 0; var11 < var6.length; var11++) {
@@ -1618,11 +1618,11 @@ public class MiniMenu {
                 if (var13 != 0) {
                     var13 += var12;
                 }
-                int var15 = var2.method12543(var11);
+                int var15 = var2.getCursor(var11);
                 if (var15 != -1) {
                     var14 = var15;
                 }
-                Statics.addEntry(var6[var11], TextUtil.createColourTag(16776960) + var3, var6[var11].equalsIgnoreCase(LocalisedText.field6991.get(Statics.language)) ? var2.field7222 : var14, var13, -1, (long) arg0.slot, 0, 0, true, false, (long) arg0.slot, false);
+                Statics.addEntry(var6[var11], TextUtil.createColourTag(16776960) + var3, var6[var11].equalsIgnoreCase(LocalisedText.field6991.get(Statics.language)) ? var2.attackcursor : var14, var13, -1, (long) arg0.slot, 0, 0, true, false, (long) arg0.slot, false);
             }
         }
     }

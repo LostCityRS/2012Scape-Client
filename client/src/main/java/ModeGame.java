@@ -4,7 +4,7 @@ import deob.ObfuscatedName;
 public class ModeGame {
 
     @ObfuscatedName("sv.u")
-    public static final ModeGame field6407 = new ModeGame("runescape", "RuneScape", 0);
+    public static final ModeGame RUNESCAPE = new ModeGame("runescape", "RuneScape", 0);
 
     @ObfuscatedName("sv.j")
     public static final ModeGame STELLARDAWN = new ModeGame("stellardawn", "Stellar Dawn", 1);
@@ -29,7 +29,7 @@ public class ModeGame {
 
     @ObfuscatedName("vh.u(S)[Lsv;")
     public static ModeGame[] method12452() {
-        return new ModeGame[]{field6406, field6403, STELLARDAWN, field6405, field6407};
+        return new ModeGame[]{field6406, field6403, STELLARDAWN, field6405, RUNESCAPE};
     }
 
     public ModeGame(String arg0, String arg1, int arg2) {

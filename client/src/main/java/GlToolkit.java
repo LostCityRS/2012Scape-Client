@@ -1497,7 +1497,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.cx(Ldw;IIII)Lqa;")
-    public Model method625(ModelUnlit arg0, int arg1, int arg2, int arg3, int arg4) {
+    public Model createModel(ModelUnlit arg0, int arg1, int arg2, int arg3, int arg4) {
         return new GlModel(this, arg0, arg1, arg3, arg4, arg2);
     }
 
@@ -2567,7 +2567,7 @@ public class GlToolkit extends RendererToolkit {
         while (!this.field8039.method11585()) {
             IntNode var4 = (IntNode) this.field8039.method11560();
             field8228[var2++] = (int) var4.key;
-            this.field8157 -= var4.field9556;
+            this.field8157 -= var4.value;
             if (var2 == 1000) {
                 OpenGL.glDeleteBuffersARB(var2, field8228, 0);
                 var2 = 0;
@@ -2580,7 +2580,7 @@ public class GlToolkit extends RendererToolkit {
         while (!this.field8198.method11585()) {
             IntNode var5 = (IntNode) this.field8198.method11560();
             field8228[var2++] = (int) var5.key;
-            this.field8096 -= var5.field9556;
+            this.field8096 -= var5.value;
             if (var2 == 1000) {
                 OpenGL.glDeleteTextures(var2, field8228, 0);
                 var2 = 0;
@@ -2592,7 +2592,7 @@ public class GlToolkit extends RendererToolkit {
         }
         while (!this.field8102.method11585()) {
             IntNode var6 = (IntNode) this.field8102.method11560();
-            field8228[var2++] = var6.field9556;
+            field8228[var2++] = var6.value;
             if (var2 == 1000) {
                 OpenGL.glDeleteFramebuffersEXT(var2, field8228, 0);
                 var2 = 0;
@@ -2605,7 +2605,7 @@ public class GlToolkit extends RendererToolkit {
         while (!this.field8103.method11585()) {
             IntNode var7 = (IntNode) this.field8103.method11560();
             field8228[var2++] = (int) var7.key;
-            this.field8098 -= var7.field9556;
+            this.field8098 -= var7.value;
             if (var2 == 1000) {
                 OpenGL.glDeleteRenderbuffersEXT(var2, field8228, 0);
                 var2 = 0;
@@ -2617,7 +2617,7 @@ public class GlToolkit extends RendererToolkit {
         }
         while (!this.field8099.method11585()) {
             IntNode var9 = (IntNode) this.field8099.method11560();
-            OpenGL.glDeleteLists((int) var9.key, var9.field9556);
+            OpenGL.glDeleteLists((int) var9.key, var9.value);
         }
         while (!this.field8194.method11585()) {
             Node var10 = this.field8194.method11560();
@@ -2629,7 +2629,7 @@ public class GlToolkit extends RendererToolkit {
         }
         while (!this.field8099.method11585()) {
             IntNode var12 = (IntNode) this.field8099.method11560();
-            OpenGL.glDeleteLists((int) var12.key, var12.field9556);
+            OpenGL.glDeleteLists((int) var12.key, var12.value);
         }
         this.field8083.method2326();
         if (this.za() > 100663296 && MonotonicTime.get() > this.field8078 + 60000L) {

@@ -177,7 +177,7 @@ public class AnimationNode {
     public final void method11780(Model arg0, int arg1) {
         if (this.field6671 != null && (this.field6671.field6329 != null && this.method11790())) {
             arg0.method375(this.field6681.field6687, this.field6681.field6689, this.field6681.field6688, this.field6681.field6686, this.field6672, this.field6671.field6321[this.field6670], arg1, this.field6671.field6332);
-            if (this.field6677 && this.field6671.field6320 != null && this.field6682.field6684) {
+            if (this.field6677 && this.field6671.field6320 != null && this.field6682.loaded) {
                 arg0.method375(this.field6682.field6687, this.field6682.field6689, this.field6682.field6688, this.field6682.field6686, this.field6672, this.field6671.field6321[this.field6670], arg1, this.field6671.field6332);
             }
         }
@@ -187,7 +187,7 @@ public class AnimationNode {
     public final void method11765(Model arg0, int arg1, int arg2) {
         if (this.field6671.field6329 != null && this.method11790()) {
             arg0.method260(this.field6681.field6687, this.field6681.field6689, this.field6681.field6688, this.field6681.field6686, this.field6672, this.field6671.field6321[this.field6670], arg1, arg2, this.field6671.field6332, null);
-            if (this.field6677 && this.field6671.field6320 != null && this.field6682.field6684) {
+            if (this.field6677 && this.field6671.field6320 != null && this.field6682.loaded) {
                 arg0.method260(this.field6682.field6687, this.field6682.field6689, this.field6682.field6688, this.field6682.field6686, this.field6672, this.field6671.field6321[this.field6670], arg1, arg2, this.field6671.field6332, null);
             }
         }
@@ -197,9 +197,18 @@ public class AnimationNode {
     public final void method11782(Model arg0) {
         if (this.field6671.field6329 != null && this.method11790()) {
             arg0.method262(this.field6681.field6687, this.field6681.field6689);
-            if (this.field6677 && this.field6671.field6320 != null && this.field6682.field6684) {
+            if (this.field6677 && this.field6671.field6320 != null && this.field6682.loaded) {
                 arg0.method262(this.field6682.field6687, this.field6682.field6689);
             }
+        }
+    }
+
+    @ObfuscatedName("fc.i(Lqa;Ltt;Ltt;I)V")
+    public static final void method3537(Model arg0, AnimationNode arg1, AnimationNode arg2) {
+        if (arg1.method11790() && arg2.method11790()) {
+            SeqType var3 = arg1.field6671;
+            SeqType var4 = arg2.field6671;
+            arg0.method301(arg1.field6681.field6687, arg1.field6681.field6689, arg1.field6681.field6688, arg1.field6681.field6686, arg1.field6672, var3.field6321[arg1.field6670], arg2.field6681.field6687, arg2.field6681.field6689, arg2.field6681.field6688, arg2.field6681.field6686, arg2.field6672, var4.field6321[arg2.field6670], var3.field6324, var3.field6332 | var4.field6332);
         }
     }
 
@@ -336,9 +345,9 @@ public class AnimationNode {
 
     @ObfuscatedName("tt.af(I)V")
     public final void method11801() {
-        this.field6681.method11839();
+        this.field6681.clear();
         if (this.field6677) {
-            this.field6682.method11839();
+            this.field6682.clear();
         }
     }
 }

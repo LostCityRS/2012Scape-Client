@@ -1063,7 +1063,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.cx(Ldw;IIII)Lqa;")
-    public final Model method625(ModelUnlit arg0, int arg1, int arg2, int arg3, int arg4) {
+    public final Model createModel(ModelUnlit arg0, int arg1, int arg2, int arg3, int arg4) {
         return new GpuModel(this, arg0, arg1, arg3, arg4, arg2);
     }
 

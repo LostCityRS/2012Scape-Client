@@ -502,7 +502,7 @@ public abstract class RendererToolkit {
     public abstract void CA(int arg0, int arg1, int arg2, int arg3, int arg4);
 
     @ObfuscatedName("ra.cx(Ldw;IIII)Lqa;")
-    public abstract Model method625(ModelUnlit arg0, int arg1, int arg2, int arg3, int arg4);
+    public abstract Model createModel(ModelUnlit arg0, int arg1, int arg2, int arg3, int arg4);
 
     @ObfuscatedName("ra.i()Z")
     public abstract boolean method629();

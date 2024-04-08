@@ -54,7 +54,7 @@ public class StaticGroundDecorEntity extends GroundDecorLayerEntity implements L
             this.field7580 = (Model) var14.field6757;
             this.field7581 = (HardShadow) var14.field6756;
             if (this.field7587 || arg3.field6472) {
-                this.field7580 = this.field7580.method295((byte) 0, var13, false);
+                this.field7580 = this.field7580.copy((byte) 0, var13, false);
                 if (arg3.field6472) {
                     LocTint var15 = client.world.method6094();
                     this.field7580.PA(var15.field3783, var15.field3782, var15.field3781, var15.field3784);

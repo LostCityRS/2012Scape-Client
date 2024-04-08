@@ -13,7 +13,7 @@ public class ClientOptionsTextures extends ClientOption {
 
     @ObfuscatedName("afg.z(I)V")
     public void method15685() {
-        if (this.field6462.method15452() != ModeGame.field6407) {
+        if (this.field6462.method15452() != ModeGame.RUNESCAPE) {
             this.value = 1;
         }
         if (this.value != 0 && this.value != 1) {
@@ -28,12 +28,12 @@ public class ClientOptionsTextures extends ClientOption {
 
     @ObfuscatedName("afg.n(B)Z")
     public boolean method15687() {
-        return this.field6462.method15452() == ModeGame.field6407;
+        return this.field6462.method15452() == ModeGame.RUNESCAPE;
     }
 
     @ObfuscatedName("afg.j(IB)I")
     public int canSetValue(int arg0) {
-        if (this.field6462.method15452() == ModeGame.field6407) {
+        if (this.field6462.method15452() == ModeGame.RUNESCAPE) {
             return arg0 == 0 || this.field6462.groundBlending.method15843() == 1 ? 1 : 2;
         } else {
             return 3;

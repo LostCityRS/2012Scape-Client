@@ -59,7 +59,7 @@ public class StaticSceneryEntity extends PrimaryLayerEntity implements Location 
             this.field7537 = (Model) var19.field6757;
             this.field7534 = (HardShadow) var19.field6756;
             if (this.field7533 || arg3.field6472) {
-                this.field7537 = this.field7537.method295((byte) 0, var18, false);
+                this.field7537 = this.field7537.copy((byte) 0, var18, false);
                 if (arg3.field6472) {
                     LocTint var20 = client.world.method6094();
                     this.field7537.PA(var20.field3783, var20.field3782, var20.field3781, var20.field3784);

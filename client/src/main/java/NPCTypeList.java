@@ -4,19 +4,19 @@ import deob.ObfuscatedName;
 public class NPCTypeList {
 
     @ObfuscatedName("wi.u")
-    public final ModeGame field7279;
+    public final ModeGame game;
 
     @ObfuscatedName("wi.j")
     public final Language field7284;
 
     @ObfuscatedName("wi.a")
-    public boolean field7278;
+    public boolean members;
 
     @ObfuscatedName("wi.s")
     public final Js5 field7277;
 
     @ObfuscatedName("wi.c")
-    public final Js5 field7280;
+    public final Js5 configNpcArchive;
 
     @ObfuscatedName("wi.m")
     public final SoftLruHashTable field7281 = new SoftLruHashTable(64);
@@ -34,17 +34,17 @@ public class NPCTypeList {
     public final String[] field7282;
 
     public NPCTypeList(ModeGame arg0, Language arg1, boolean arg2, Js5 arg3, Js5 arg4) {
-        this.field7279 = arg0;
+        this.game = arg0;
         this.field7284 = arg1;
-        this.field7278 = arg2;
+        this.members = arg2;
         this.field7277 = arg3;
-        this.field7280 = arg4;
+        this.configNpcArchive = arg4;
         if (this.field7277 != null) {
             int var6 = this.field7277.capacity() - 1;
             Js5ConfigGroup.NPCTYPE.method3071();
             this.field7277.getGroupCapacity(var6);
         }
-        if (ModeGame.field6407 == this.field7279) {
+        if (ModeGame.RUNESCAPE == this.game) {
             this.field7282 = new String[]{null, null, null, null, null, LocalisedText.field6874.get(this.field7284)};
         } else {
             this.field7282 = new String[]{null, null, null, null, null, null};
@@ -68,12 +68,12 @@ public class NPCTypeList {
         }
         NPCType var8 = new NPCType();
         var8.field7211 = arg0;
-        var8.field7210 = this;
+        var8.typeList = this;
         var8.op = (String[]) this.field7282.clone();
         if (var6 != null) {
-            var8.method12507(new Packet(var6));
+            var8.decode(new Packet(var6));
         }
-        var8.method12509();
+        var8.postDecode();
         SoftLruHashTable var9 = this.field7281;
         synchronized (this.field7281) {
             this.field7281.method7937(var8, (long) arg0);
@@ -83,8 +83,8 @@ public class NPCTypeList {
 
     @ObfuscatedName("wi.j(ZS)V")
     public void method12561(boolean arg0) {
-        if (this.field7278 != arg0) {
-            this.field7278 = arg0;
+        if (this.members != arg0) {
+            this.members = arg0;
             this.method12558();
         }
     }
