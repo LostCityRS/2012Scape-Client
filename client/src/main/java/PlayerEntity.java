@@ -156,7 +156,7 @@ public class PlayerEntity extends PathingEntity {
                         int var17 = var16 - 16384;
                         var10[var13] = var17 | 0x40000000;
                         var12[var13] = Statics.objTypes.get(var17);
-                        int var18 = var12[var13].field7116;
+                        int var18 = var12[var13].team;
                         if (var18 != 0) {
                             this.field10061 = var18;
                         }

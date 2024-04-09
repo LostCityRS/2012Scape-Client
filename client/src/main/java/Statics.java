@@ -3732,9 +3732,9 @@ public class Statics {
     public static int[] method3289(MiniMenuEntry arg0) {
         int[] var1 = null;
         if (MiniMenu.method5562(arg0.opcode)) {
-            var1 = objTypes.get((int) arg0.field10333).field7057;
+            var1 = objTypes.get((int) arg0.field10333).quest;
         } else if (arg0.field10332 != -1) {
-            var1 = objTypes.get(arg0.field10332).field7057;
+            var1 = objTypes.get(arg0.field10332).quest;
         } else if (MiniMenu.method8731(arg0.opcode)) {
             ObjectNode var2 = (ObjectNode) client.npcEntities.get((long) arg0.field10333);
             if (var2 != null) {
@@ -5623,15 +5623,15 @@ public class Statics {
     @ObfuscatedName("nt.abp(Lrn;I)V")
     public static final void method6647(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
-        arg0.intStack[++arg0.isp - 1] = objTypes.get(var1).field7078 == 1 ? 1 : 0;
+        arg0.intStack[++arg0.isp - 1] = objTypes.get(var1).stackable == 1 ? 1 : 0;
     }
 
     @ObfuscatedName("gz.aby(Lrn;I)V")
     public static final void method3945(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         ObjType var2 = objTypes.get(var1);
-        if (var2.field7108 == -1 && var2.field7107 >= 0) {
-            arg0.intStack[++arg0.isp - 1] = var2.field7107;
+        if (var2.certtemplate == -1 && var2.certlink >= 0) {
+            arg0.intStack[++arg0.isp - 1] = var2.certlink;
         } else {
             arg0.intStack[++arg0.isp - 1] = var1;
         }
@@ -5640,7 +5640,7 @@ public class Statics {
     @ObfuscatedName("ew.abj(Lrn;I)V")
     public static final void method3207(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
-        arg0.intStack[++arg0.isp - 1] = objTypes.get(var1).field7085;
+        arg0.intStack[++arg0.isp - 1] = objTypes.get(var1).wearpos;
     }
 
     @ObfuscatedName("nx.abk(Lrn;B)V")

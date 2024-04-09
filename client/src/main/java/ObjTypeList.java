@@ -84,30 +84,30 @@ public class ObjTypeList implements PlayerTypeListRelated {
         ObjType var8 = new ObjType();
         var8.field7061 = this;
         var8.field7062 = arg0;
-        var8.field7082 = (String[]) this.field7151.clone();
-        var8.field7083 = (String[]) this.field7152.clone();
+        var8.op = (String[]) this.field7151.clone();
+        var8.iop = (String[]) this.field7152.clone();
         if (var6 != null) {
             var8.method12236(new Packet(var6));
         }
         var8.method12235();
-        if (var8.field7108 != -1) {
-            var8.method12238(this.get(var8.field7108), this.get(var8.field7107));
+        if (var8.certtemplate != -1) {
+            var8.method12238(this.get(var8.certtemplate), this.get(var8.certlink));
         }
-        if (var8.field7064 != -1) {
-            var8.method12258(this.get(var8.field7064), this.get(var8.field7109));
+        if (var8.lenttemplate != -1) {
+            var8.method12258(this.get(var8.lenttemplate), this.get(var8.lentlink));
         }
-        if (var8.field7123 != -1) {
-            var8.method12240(this.get(var8.field7123), this.get(var8.field7122));
+        if (var8.boughttemplate != -1) {
+            var8.method12240(this.get(var8.boughttemplate), this.get(var8.boughtlink));
         }
-        if (!this.field7142 && var8.field7099) {
-            var8.field7116 = 0;
-            var8.field7082 = this.field7151;
-            var8.field7083 = this.field7152;
-            var8.field7117 = false;
-            var8.field7057 = null;
-            if (var8.field7055 != null) {
+        if (!this.field7142 && var8.members) {
+            var8.team = 0;
+            var8.op = this.field7151;
+            var8.iop = this.field7152;
+            var8.stockmarket = false;
+            var8.quest = null;
+            if (var8.params != null) {
                 boolean var9 = false;
-                for (Node var10 = var8.field7055.head(); var10 != null; var10 = var8.field7055.next()) {
+                for (Node var10 = var8.params.head(); var10 != null; var10 = var8.params.next()) {
                     ParamType var11 = this.field7141.get((int) var10.key);
                     if (var11.field7289) {
                         var10.unlink();
@@ -116,7 +116,7 @@ public class ObjTypeList implements PlayerTypeListRelated {
                     }
                 }
                 if (!var9) {
-                    var8.field7055 = null;
+                    var8.params = null;
                 }
             }
         }
@@ -148,11 +148,11 @@ public class ObjTypeList implements PlayerTypeListRelated {
             }
         }
         ObjType var13 = this.get(arg2);
-        if (arg3 > 1 && var13.field7105 != null) {
+        if (arg3 > 1 && var13.count_obj != null) {
             int var14 = -1;
             for (int var15 = 0; var15 < 10; var15++) {
-                if (arg3 >= var13.field7106[var15] && var13.field7106[var15] != 0) {
-                    var14 = var13.field7105[var15];
+                if (arg3 >= var13.count_co[var15] && var13.count_co[var15] != 0) {
+                    var14 = var13.count_obj[var15];
                 }
             }
             if (var14 != -1) {

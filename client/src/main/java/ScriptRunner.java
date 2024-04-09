@@ -5116,12 +5116,12 @@ public final class ScriptRunner {
         arg0.invcount = var6;
         arg0.invwearcol = arg2;
         ObjType var7 = Statics.objTypes.get(var5);
-        arg0.field1812 = var7.field7073;
-        arg0.field1813 = var7.field7077;
-        arg0.field1814 = var7.field7088;
-        arg0.field1810 = var7.field7076;
-        arg0.field1824 = var7.field7075;
-        arg0.field1818 = var7.field7072;
+        arg0.field1812 = var7.xan2d;
+        arg0.field1813 = var7.yan2d;
+        arg0.field1814 = var7.zan2d;
+        arg0.field1810 = var7.xof2d;
+        arg0.field1824 = var7.yof2d;
+        arg0.field1818 = var7.zoom2d;
         arg0.invcountvis = arg3;
         if (arg0.field1819 > 0) {
             arg0.field1818 = arg0.field1818 * 32 / arg0.field1819;
@@ -8872,10 +8872,10 @@ public final class ScriptRunner {
         int var1 = arg0.intStack[arg0.isp];
         int var2 = arg0.intStack[arg0.isp + 1];
         ObjType var3 = Statics.objTypes.get(var1);
-        if (var2 < 1 || var2 > 5 || var3.field7082[var2 - 1] == null) {
+        if (var2 < 1 || var2 > 5 || var3.op[var2 - 1] == null) {
             arg0.objectStack[++arg0.osp - 1] = "";
         } else {
-            arg0.objectStack[++arg0.osp - 1] = var3.field7082[var2 - 1];
+            arg0.objectStack[++arg0.osp - 1] = var3.op[var2 - 1];
         }
     }
 
@@ -8885,25 +8885,25 @@ public final class ScriptRunner {
         int var1 = arg0.intStack[arg0.isp];
         int var2 = arg0.intStack[arg0.isp + 1];
         ObjType var3 = Statics.objTypes.get(var1);
-        if (var2 < 1 || var2 > 5 || var3.field7083[var2 - 1] == null) {
+        if (var2 < 1 || var2 > 5 || var3.iop[var2 - 1] == null) {
             arg0.objectStack[++arg0.osp - 1] = "";
         } else {
-            arg0.objectStack[++arg0.osp - 1] = var3.field7083[var2 - 1];
+            arg0.objectStack[++arg0.osp - 1] = var3.iop[var2 - 1];
         }
     }
 
     @ObfuscatedName("acy.abf(Lrn;B)V")
     public static final void method14962(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
-        arg0.intStack[++arg0.isp - 1] = Statics.objTypes.get(var1).field7080;
+        arg0.intStack[++arg0.isp - 1] = Statics.objTypes.get(var1).cost;
     }
 
     @ObfuscatedName("cy.abx(Lrn;I)V")
     public static final void method2589(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         ObjType var2 = Statics.objTypes.get(var1);
-        if (var2.field7108 >= 0 && var2.field7107 >= 0) {
-            arg0.intStack[++arg0.isp - 1] = var2.field7107;
+        if (var2.certtemplate >= 0 && var2.certlink >= 0) {
+            arg0.intStack[++arg0.isp - 1] = var2.certlink;
         } else {
             arg0.intStack[++arg0.isp - 1] = var1;
         }
@@ -8912,19 +8912,19 @@ public final class ScriptRunner {
     @ObfuscatedName("io.abn(Lrn;I)V")
     public static final void method4605(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
-        arg0.intStack[++arg0.isp - 1] = Statics.objTypes.get(var1).field7087;
+        arg0.intStack[++arg0.isp - 1] = Statics.objTypes.get(var1).wearpos2;
     }
 
     @ObfuscatedName("rw.abr(Lrn;I)V")
     public static final void method8603(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
-        arg0.intStack[++arg0.isp - 1] = Statics.objTypes.get(var1).field7089;
+        arg0.intStack[++arg0.isp - 1] = Statics.objTypes.get(var1).wearpos3;
     }
 
     @ObfuscatedName("qe.abu(Lrn;I)V")
     public static final void method8317(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
-        arg0.intStack[++arg0.isp - 1] = Statics.objTypes.get(var1).field7099 ? 1 : 0;
+        arg0.intStack[++arg0.isp - 1] = Statics.objTypes.get(var1).members ? 1 : 0;
     }
 
     @ObfuscatedName("dn.abw(Lrn;I)V")
@@ -8998,7 +8998,7 @@ public final class ScriptRunner {
     public static final void method11199(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         ObjType var2 = Statics.objTypes.get(var1);
-        arg0.intStack[++arg0.isp - 1] = var2.field7086 ? 1 : 0;
+        arg0.intStack[++arg0.isp - 1] = var2.minimenucolouroverridden ? 1 : 0;
     }
 
     @ObfuscatedName("aw.abh(Lrn;I)V")
@@ -9006,9 +9006,9 @@ public final class ScriptRunner {
         int var1 = arg0.intStack[--arg0.isp];
         ObjType var2 = Statics.objTypes.get(var1);
         int var3;
-        if (var2.field7086) {
-            var3 = var2.field7097;
-        } else if (var2.field7099) {
+        if (var2.minimenucolouroverridden) {
+            var3 = var2.minimenucolour;
+        } else if (var2.members) {
             var3 = Statics.field1736.field5127;
         } else {
             var3 = Statics.field1736.field5128;

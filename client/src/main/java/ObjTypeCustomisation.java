@@ -22,23 +22,23 @@ public class ObjTypeCustomisation {
     public short[] field7135;
 
     public ObjTypeCustomisation(ObjType arg0) {
-        this.field7130[0] = arg0.field7081;
-        this.field7130[1] = arg0.field7090;
-        this.field7130[2] = arg0.field7093;
-        this.field7128[0] = arg0.field7091;
-        this.field7128[1] = arg0.field7092;
-        this.field7128[2] = arg0.field7119;
-        this.field7132[0] = arg0.field7101;
-        this.field7132[1] = arg0.field7120;
-        this.field7126[0] = arg0.field7111;
-        this.field7126[1] = arg0.field7104;
-        if (arg0.field7066 != null) {
-            this.field7134 = new short[arg0.field7066.length];
-            System.arraycopy(arg0.field7066, 0, this.field7134, 0, this.field7134.length);
+        this.field7130[0] = arg0.manwear;
+        this.field7130[1] = arg0.manwear2;
+        this.field7130[2] = arg0.manwear3;
+        this.field7128[0] = arg0.womanwear;
+        this.field7128[1] = arg0.womanwear2;
+        this.field7128[2] = arg0.womanwear3;
+        this.field7132[0] = arg0.manhead;
+        this.field7132[1] = arg0.manhead2;
+        this.field7126[0] = arg0.womanhead;
+        this.field7126[1] = arg0.womanhead2;
+        if (arg0.recol_d != null) {
+            this.field7134 = new short[arg0.recol_d.length];
+            System.arraycopy(arg0.recol_d, 0, this.field7134, 0, this.field7134.length);
         }
-        if (arg0.field7100 != null) {
-            this.field7135 = new short[arg0.field7100.length];
-            System.arraycopy(arg0.field7100, 0, this.field7135, 0, this.field7135.length);
+        if (arg0.retex_d != null) {
+            this.field7135 = new short[arg0.retex_d.length];
+            System.arraycopy(arg0.retex_d, 0, this.field7135, 0, this.field7135.length);
         }
     }
 
@@ -53,11 +53,11 @@ public class ObjTypeCustomisation {
         if (var4) {
             var2.field7130[0] = arg1.gSmart2or4null();
             var2.field7128[0] = arg1.gSmart2or4null();
-            if (arg0.field7090 != -1 || arg0.field7092 != -1) {
+            if (arg0.manwear2 != -1 || arg0.womanwear2 != -1) {
                 var2.field7130[1] = arg1.gSmart2or4null();
                 var2.field7128[1] = arg1.gSmart2or4null();
             }
-            if (arg0.field7093 != -1 || arg0.field7119 != -1) {
+            if (arg0.manwear3 != -1 || arg0.womanwear3 != -1) {
                 var2.field7130[2] = arg1.gSmart2or4null();
                 var2.field7128[2] = arg1.gSmart2or4null();
             }
@@ -65,7 +65,7 @@ public class ObjTypeCustomisation {
         if (var5) {
             var2.field7132[0] = arg1.gSmart2or4null();
             var2.field7126[0] = arg1.gSmart2or4null();
-            if (arg0.field7120 != -1 || arg0.field7104 != -1) {
+            if (arg0.manhead2 != -1 || arg0.womanhead2 != -1) {
                 var2.field7132[1] = arg1.gSmart2or4null();
                 var2.field7126[1] = arg1.gSmart2or4null();
             }

@@ -184,17 +184,17 @@ public class ObjStackEntity extends ObjLayerEntity {
     @ObfuscatedName("ali.fg(I)I")
     public int method15633() {
         ObjType var1 = Statics.objTypes.get(this.field10611);
-        int var2 = var1.field7121;
+        int var2 = var1.picksizeshift;
         if (this.field10607 != -1) {
             ObjType var3 = Statics.objTypes.get(this.field10607);
-            if (var3.field7121 > var2) {
-                var2 = var3.field7121;
+            if (var3.picksizeshift > var2) {
+                var2 = var3.picksizeshift;
             }
         }
         if (this.field10609 != -1) {
             ObjType var4 = Statics.objTypes.get(this.field10609);
-            if (var4.field7121 > var2) {
-                var2 = var4.field7121;
+            if (var4.picksizeshift > var2) {
+                var2 = var4.picksizeshift;
             }
         }
         return var2;

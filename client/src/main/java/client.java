@@ -6723,8 +6723,8 @@ public final class client extends GameShell {
             incrementVerifyId();
             DelayedStateChange.setComponentObject(var188, var190, var189);
             ObjType var191 = Statics.objTypes.get(var190);
-            DelayedStateChange.setComponentModelAngle(var188, var191.field7073, var191.field7077, var191.field7072);
-            DelayedStateChange.setComponentModelOffset(var188, var191.field7076, var191.field7075, var191.field7088);
+            DelayedStateChange.setComponentModelAngle(var188, var191.xan2d, var191.yan2d, var191.zoom2d);
+            DelayedStateChange.setComponentModelOffset(var188, var191.xof2d, var191.yof2d, var191.zan2d);
             conn.packetType = null;
             return true;
         } else if (ServerProt.field3109 == conn.packetType) {
@@ -7000,28 +7000,28 @@ public final class client extends GameShell {
             conn.packetType = null;
             return true;
         } else if (ServerProt.IF_SETEVENTS == conn.packetType) {
-            int var255 = buf.g4s_alt1();
-            int var256 = buf.g2_alt2();
-            if (var256 == 65535) {
-                var256 = -1;
+            int events = buf.g4s_alt1();
+            int max = buf.g2_alt2();
+            if (max == 65535) {
+                max = -1;
             }
-            int var257 = buf.g4s_alt2();
-            int var258 = buf.g2();
-            if (var258 == 65535) {
-                var258 = -1;
+            int combinedId = buf.g4s_alt2();
+            int min = buf.g2();
+            if (min == 65535) {
+                min = -1;
             }
             incrementVerifyId();
-            for (int var259 = var258; var259 <= var256; var259++) {
-                long var260 = ((long) var257 << 32) + (long) var259;
+            for (int var259 = min; var259 <= max; var259++) {
+                long var260 = ((long) combinedId << 32) + (long) var259;
                 ServerKeyProperties var262 = (ServerKeyProperties) serverComponentEvents.get(var260);
                 ServerKeyProperties var263;
                 if (var262 != null) {
-                    var263 = new ServerKeyProperties(var255, var262.targetParam);
+                    var263 = new ServerKeyProperties(events, var262.targetParam);
                     var262.unlink();
                 } else if (var259 == -1) {
-                    var263 = new ServerKeyProperties(var255, Component.get(var257).field1841.targetParam);
+                    var263 = new ServerKeyProperties(events, Component.get(combinedId).field1841.targetParam);
                 } else {
-                    var263 = new ServerKeyProperties(var255, -1);
+                    var263 = new ServerKeyProperties(events, -1);
                 }
                 serverComponentEvents.put(var263, var260);
             }
@@ -8673,14 +8673,14 @@ public final class client extends GameShell {
             return;
         }
         ObjType var8 = Statics.objTypes.get(arg3.field9311);
-        int var9 = var8.field7080;
-        if (var8.field7078 == 1) {
+        int var9 = var8.cost;
+        if (var8.stackable == 1) {
             var9 = (arg3.field9310 + 1) * var9;
         }
         for (Obj var10 = (Obj) var6.field9313.head(); var10 != null; var10 = (Obj) var6.field9313.next()) {
             ObjType var11 = Statics.objTypes.get(var10.field9311);
-            int var12 = var11.field7080;
-            if (var11.field7078 == 1) {
+            int var12 = var11.cost;
+            if (var11.stackable == 1) {
                 var12 = (var10.field9310 + 1) * var12;
             }
             if (var9 > var12) {
@@ -9788,7 +9788,7 @@ public final class client extends GameShell {
                                             if (var35 == null) {
                                                 var35 = "null";
                                             }
-                                            if ((var36.field7078 == 1 || var11.invcount != 1) && var11.invcount != -1) {
+                                            if ((var36.stackable == 1 || var11.invcount != 1) && var11.invcount != -1) {
                                                 var35 = TextUtil.createColourTag(16748608) + var35 + TextUtil.END_COLOUR_TAG + " x" + formatObjectCount(var11.invcount);
                                             }
                                         }
@@ -11788,7 +11788,7 @@ public final class client extends GameShell {
         int var11 = 0;
         for (int var12 = 0; var12 < Statics.objTypes.field7144; var12++) {
             ObjType var13 = Statics.objTypes.get(var12);
-            if ((!arg1 || var13.field7117) && var13.field7108 == -1 && var13.field7064 == -1 && var13.field7123 == -1 && var13.field7060 == 0 && var13.name.toLowerCase().indexOf(var6) != -1) {
+            if ((!arg1 || var13.stockmarket) && var13.certtemplate == -1 && var13.lenttemplate == -1 && var13.boughttemplate == -1 && var13.dummyitem == 0 && var13.name.toLowerCase().indexOf(var6) != -1) {
                 if (arg2 != -1) {
                     if (arg5) {
                         if (!arg4.equals(var13.method12248(arg2, var9))) {

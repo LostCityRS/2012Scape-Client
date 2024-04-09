@@ -721,9 +721,9 @@ public class MiniMenu {
                                     while (var74 != null) {
                                         ObjType var75 = Statics.objTypes.get(var74.field9311);
                                         int var76;
-                                        if (var75.field7086) {
-                                            var76 = var75.field7097;
-                                        } else if (var75.field7099) {
+                                        if (var75.minimenucolouroverridden) {
+                                            var76 = var75.minimenucolour;
+                                        } else if (var75.members) {
                                             var76 = Statics.field1736.field5127;
                                         } else {
                                             var76 = Statics.field1736.field5128;
@@ -735,7 +735,7 @@ public class MiniMenu {
                                             }
                                         }
                                         if (Statics.localPlayerEntity.level == var29.field4563.level) {
-                                            String[] var78 = var75.field7082;
+                                            String[] var78 = var75.op;
                                             for (int var79 = var78.length - 1; var79 >= 0; var79--) {
                                                 if (var78[var79] != null) {
                                                     short var80 = 0;
