@@ -187,8 +187,8 @@ public final class ScriptRunner {
             int var5 = 0;
             int var6 = 0;
             if (Statics.field4960 != null) {
-                var5 = Statics.field4960.field1776;
-                var6 = Statics.field4960.field1777;
+                var5 = Statics.field4960.x;
+                var6 = Statics.field4960.y;
             }
             arg3.intLocals[0] = Statics.mouse.getX() - var5;
             arg3.intLocals[1] = Statics.mouse.getY() - var6;
@@ -418,7 +418,7 @@ public final class ScriptRunner {
                 method6337(arg1);
                 return;
             case 581:
-                Statics.method1954(arg1);
+                method1954(arg1);
                 return;
             case 408:
                 method2810(arg1);
@@ -427,7 +427,7 @@ public final class ScriptRunner {
                 method1620(arg1);
                 return;
             case 551:
-                Statics.method2823(arg1);
+                method2823(arg1);
                 return;
             case 660:
                 method2887(arg1);
@@ -481,28 +481,28 @@ public final class ScriptRunner {
                 method3968(arg1);
                 return;
             case 504:
-                Statics.method12748(arg1);
+                method12748(arg1);
                 return;
             case 1030:
                 method12344(arg1);
                 return;
             case 471:
-                Statics.method7981(arg1);
+                method7981(arg1);
                 return;
             case 582:
                 method11080(arg1);
                 return;
             case 49:
-                Statics.method12369(arg1);
+                method12369(arg1);
                 return;
             case 166:
                 method12726(arg1);
                 return;
             case 580:
-                Statics.method7676(arg1);
+                method7676(arg1);
                 return;
             case 623:
-                Statics.method4729(arg1);
+                method4729(arg1);
                 return;
             case 666:
                 method3508(arg1);
@@ -511,7 +511,7 @@ public final class ScriptRunner {
                 method1247(arg1);
                 return;
             case 716:
-                Statics.method7693(arg1);
+                method7693(arg1);
                 return;
             case 669:
                 cam2_setlookatentity_player(arg1);
@@ -595,7 +595,7 @@ public final class ScriptRunner {
                 method13910(arg1);
                 return;
             case 592:
-                Statics.method3585(arg1);
+                method3585(arg1);
                 return;
             case 771:
                 bug_report(arg1);
@@ -730,7 +730,7 @@ public final class ScriptRunner {
                 method5616(arg1);
                 return;
             case 233:
-                Statics.method6035(arg1);
+                method6035(arg1);
                 return;
             case 224:
                 method11155(arg1);
@@ -775,7 +775,7 @@ public final class ScriptRunner {
                 method7178(arg1);
                 return;
             case 566:
-                Statics.method7744(arg1);
+                method7744(arg1);
                 return;
             case 647:
                 method8604(arg1);
@@ -823,7 +823,7 @@ public final class ScriptRunner {
                 method2814(arg1);
                 return;
             case 343:
-                Statics.method12909(arg1);
+                method12909(arg1);
                 return;
             case 614:
                 method12182(arg1);
@@ -835,7 +835,7 @@ public final class ScriptRunner {
                 method1369(arg1);
                 return;
             case 165:
-                Statics.method2843(arg1);
+                method2843(arg1);
                 return;
             case 807:
                 method12940(arg1);
@@ -847,7 +847,7 @@ public final class ScriptRunner {
                 method7395(arg1);
                 return;
             case 367:
-                Statics.method4697(arg1);
+                method4697(arg1);
                 return;
             case 86:
                 QuestCommands.method1982(arg1);
@@ -871,7 +871,7 @@ public final class ScriptRunner {
                 method11948(arg1);
                 return;
             case 962:
-                Statics.method7879(arg1);
+                method7879(arg1);
                 return;
             case 535:
                 method1959(arg1);
@@ -904,7 +904,7 @@ public final class ScriptRunner {
                 method14716(arg1);
                 return;
             case 866:
-                Statics.method4711(arg1);
+                method4711(arg1);
                 return;
             case 555:
                 login_request(arg1);
@@ -946,19 +946,19 @@ public final class ScriptRunner {
                 method5923(arg1);
                 return;
             case 1009:
-                Statics.method4654(arg1);
+                method4654(arg1);
                 return;
             case 379:
-                Statics.method3571(arg1);
+                method3571(arg1);
                 return;
             case 999:
-                Statics.method2426(arg1);
+                method2426(arg1);
                 return;
             case 349:
                 method11056(arg1);
                 return;
             case 562:
-                Statics.method3542(arg1);
+                method3542(arg1);
                 return;
             case 279:
                 method6345(arg1);
@@ -967,10 +967,10 @@ public final class ScriptRunner {
                 method8270(arg1);
                 return;
             case 168:
-                Statics.method3622(arg1);
+                method3622(arg1);
                 return;
             case 140:
-                Statics.method4615(arg1);
+                method4615(arg1);
                 return;
             case 797:
                 method6063(arg1);
@@ -979,7 +979,7 @@ public final class ScriptRunner {
                 method1701(arg1);
                 return;
             case 292:
-                Statics.method12702(arg1);
+                method12702(arg1);
                 return;
             case 11:
                 method5968(arg1);
@@ -997,7 +997,7 @@ public final class ScriptRunner {
                 method2493(arg1);
                 return;
             case 321:
-                Statics.method2894(arg1);
+                method2894(arg1);
                 return;
             case 955:
                 method1683(arg1);
@@ -1006,7 +1006,7 @@ public final class ScriptRunner {
                 method6488(arg1);
                 return;
             case 331:
-                Statics.method5827(arg1);
+                method5827(arg1);
                 return;
             case 692:
                 method6028(arg1);
@@ -1024,7 +1024,7 @@ public final class ScriptRunner {
                 method6021(arg1);
                 return;
             case 178:
-                Statics.method8398(arg1);
+                method8398(arg1);
                 return;
             case 122:
                 method15179(arg1);
@@ -1063,10 +1063,10 @@ public final class ScriptRunner {
                 method4035(arg1);
                 return;
             case 680:
-                Statics.method6876(arg1);
+                method6876(arg1);
                 return;
             case 296:
-                Statics.method8728(arg1);
+                method8728(arg1);
                 return;
             case 868:
                 method3906(arg1);
@@ -1090,7 +1090,7 @@ public final class ScriptRunner {
                 method15442(arg1);
                 return;
             case 1018:
-                Statics.method16476(arg1);
+                method16476(arg1);
                 return;
             case 462:
                 method13880(arg1);
@@ -1123,7 +1123,7 @@ public final class ScriptRunner {
                 method1418(arg1);
                 return;
             case 332:
-                Statics.method7975(arg1);
+                method7975(arg1);
                 return;
             case 273:
                 method5566(arg1);
@@ -1165,7 +1165,7 @@ public final class ScriptRunner {
                 method4725(arg1);
                 return;
             case 326:
-                Statics.method7814(arg1);
+                method7814(arg1);
                 return;
             case 858:
                 method1820(arg1);
@@ -1255,7 +1255,7 @@ public final class ScriptRunner {
                 method7067(arg1);
                 return;
             case 89:
-                Statics.method8660(arg1);
+                method8660(arg1);
                 return;
             case 534:
                 method827(arg1);
@@ -1327,7 +1327,7 @@ public final class ScriptRunner {
                 method8608(arg1);
                 return;
             case 552:
-                Statics.method2717(arg1);
+                QuestCommands.method2717(arg1);
                 return;
             case 202:
                 method3970(arg1);
@@ -1345,13 +1345,13 @@ public final class ScriptRunner {
                 QuestCommands.method7657(arg1);
                 return;
             case 149:
-                Statics.method11055(arg1);
+                method11055(arg1);
                 return;
             case 272:
                 method6487(arg1);
                 return;
             case 529:
-                Statics.method8622(arg1);
+                method8622(arg1);
                 return;
             case 110:
                 method6877(arg1);
@@ -1360,7 +1360,7 @@ public final class ScriptRunner {
                 method15609(arg1);
                 return;
             case 758:
-                Statics.method6879(arg1);
+                method6879(arg1);
                 return;
             case 235:
                 method7346(arg1);
@@ -1432,7 +1432,7 @@ public final class ScriptRunner {
                 method3568(arg1);
                 return;
             case 314:
-                Statics.method7717(arg1);
+                method7717(arg1);
                 return;
             case 375:
                 method3651(arg1);
@@ -1492,7 +1492,7 @@ public final class ScriptRunner {
                 method8045(arg1);
                 return;
             case 203:
-                Statics.method3967(arg1);
+                method3967(arg1);
                 return;
             case 448:
                 method12478(arg1);
@@ -1504,10 +1504,10 @@ public final class ScriptRunner {
                 method8617(arg1);
                 return;
             case 553:
-                Statics.method7074(arg1);
+                method7074(arg1);
                 return;
             case 297:
-                Statics.method8597(arg1);
+                method8597(arg1);
                 return;
             case 441:
                 method1679(arg1);
@@ -1537,7 +1537,7 @@ public final class ScriptRunner {
                 method4002(arg1);
                 return;
             case 465:
-                Statics.method3638(arg1);
+                method3638(arg1);
                 return;
             case 1006:
                 method2987(arg1);
@@ -1582,7 +1582,7 @@ public final class ScriptRunner {
                 method5024(arg1);
                 return;
             case 1038:
-                Statics.method1605(arg1);
+                method1605(arg1);
                 return;
             case 547:
                 cam2_setlookatspline_spline(arg1);
@@ -1591,10 +1591,10 @@ public final class ScriptRunner {
                 method11960(arg1);
                 return;
             case 25:
-                Statics.method16113(arg1);
+                method16113(arg1);
                 return;
             case 705:
-                Statics.method8406(arg1);
+                method8406(arg1);
                 return;
             case 91:
                 worldmap_listelement_next(arg1);
@@ -1636,7 +1636,7 @@ public final class ScriptRunner {
                 method16682(arg1);
                 return;
             case 182:
-                Statics.method12185(arg1);
+                method12185(arg1);
                 return;
             case 308:
                 method8080(arg1);
@@ -1654,7 +1654,7 @@ public final class ScriptRunner {
                 method7686(arg1);
                 return;
             case 998:
-                Statics.method3907(arg1);
+                method3907(arg1);
                 return;
             case 134:
                 method2871(arg1);
@@ -1663,7 +1663,7 @@ public final class ScriptRunner {
                 method3544(arg1);
                 return;
             case 645:
-                Statics.method6647(arg1);
+                method6647(arg1);
                 return;
             case 485:
                 method7374(arg1);
@@ -1708,19 +1708,19 @@ public final class ScriptRunner {
                 method1326(arg1);
                 return;
             case 886:
-                Statics.method6069(arg1);
+                method6069(arg1);
                 return;
             case 239:
                 method14131(arg1);
                 return;
             case 517:
-                Statics.method2611(arg1);
+                method2611(arg1);
                 return;
             case 259:
                 method5545(arg1);
                 return;
             case 576:
-                Statics.method13912(arg1);
+                method13912(arg1);
                 return;
             case 638:
                 method16790(arg1);
@@ -1729,7 +1729,7 @@ public final class ScriptRunner {
                 method1719(arg1);
                 return;
             case 599:
-                Statics.method16642(false, arg1);
+                method16642(false, arg1);
                 return;
             case 954:
                 method6820(arg1);
@@ -1837,7 +1837,7 @@ public final class ScriptRunner {
                 method2492(arg1);
                 return;
             case 901:
-                Statics.method14062(arg1);
+                method14062(arg1);
                 return;
             case 371:
                 method6972(arg1);
@@ -1873,7 +1873,7 @@ public final class ScriptRunner {
                 method11378(arg1);
                 return;
             case 608:
-                Statics.method13892(arg1);
+                method13892(arg1);
                 return;
             case 281:
                 method3524(arg1);
@@ -1882,7 +1882,7 @@ public final class ScriptRunner {
                 method11242(arg1);
                 return;
             case 159:
-                Statics.method3531(arg1);
+                method3531(arg1);
                 return;
             case 436:
                 method3846(arg1);
@@ -1927,13 +1927,13 @@ public final class ScriptRunner {
                 worldlist_fetch(arg1);
                 return;
             case 135:
-                Statics.method8303(arg1);
+                method8303(arg1);
                 return;
             case 975:
                 method4691(arg1);
                 return;
             case 753:
-                Statics.method11255(arg1);
+                method11255(arg1);
                 return;
             case 206:
                 method6064(arg1);
@@ -2038,7 +2038,7 @@ public final class ScriptRunner {
                 method3627(arg1);
                 return;
             case 657:
-                Statics.method7831(arg1);
+                method7831(arg1);
                 return;
             case 322:
                 method5542(arg1);
@@ -2050,7 +2050,7 @@ public final class ScriptRunner {
                 method12553(arg1);
                 return;
             case 871:
-                Statics.method3944(arg1);
+                method3944(arg1);
                 return;
             case 324:
                 method13853(arg1);
@@ -2080,7 +2080,7 @@ public final class ScriptRunner {
                 method3652(arg1);
                 return;
             case 731:
-                Statics.method2820(arg1);
+                method2820(arg1);
                 return;
             case 480:
                 method12679(arg1);
@@ -2122,7 +2122,7 @@ public final class ScriptRunner {
                 method11256(arg1);
                 return;
             case 968:
-                Statics.method15610(arg1);
+                method15610(arg1);
                 return;
             case 443:
                 method7741(arg1);
@@ -2140,7 +2140,7 @@ public final class ScriptRunner {
                 method2556(arg1);
                 return;
             case 41:
-                Statics.method11851(arg1);
+                method11851(arg1);
                 return;
             case 503:
                 method8455(arg1);
@@ -2152,10 +2152,10 @@ public final class ScriptRunner {
                 method2430(arg1);
                 return;
             case 626:
-                Statics.method3939(arg1);
+                method3939(arg1);
                 return;
             case 574:
-                Statics.method16642(true, arg1);
+                method16642(true, arg1);
                 return;
             case 701:
                 method4558(arg1);
@@ -2173,10 +2173,10 @@ public final class ScriptRunner {
                 method4565(arg1);
                 return;
             case 31:
-                Statics.method1977(arg1);
+                method1977(arg1);
                 return;
             case 736:
-                Statics.method2576(arg1);
+                method2576(arg1);
                 return;
             case 831:
                 worldmap_jumptodisplaycoord(arg1);
@@ -2203,7 +2203,7 @@ public final class ScriptRunner {
                 method4102(arg1);
                 return;
             case 453:
-                Statics.method12728(arg1);
+                method12728(arg1);
                 return;
             case 1040:
                 method11296(arg1);
@@ -2314,7 +2314,7 @@ public final class ScriptRunner {
                 method7181(arg1);
                 return;
             case 413:
-                Statics.method7991(arg1);
+                method7991(arg1);
                 return;
             case 542:
                 method8287(arg1);
@@ -2359,7 +2359,7 @@ public final class ScriptRunner {
                 method828(arg1);
                 return;
             case 750:
-                Statics.method3642(arg1);
+                method3642(arg1);
                 return;
             case 40:
                 method15467(arg1);
@@ -2398,10 +2398,10 @@ public final class ScriptRunner {
                 method2580(arg1);
                 return;
             case 1032:
-                Statics.method5615(arg1);
+                method5615(arg1);
                 return;
             case 939:
-                Statics.method6081(arg1);
+                method6081(arg1);
                 return;
             case 225:
                 method8483(arg1);
@@ -2431,7 +2431,7 @@ public final class ScriptRunner {
                 method2939(arg1);
                 return;
             case 154:
-                Statics.method7955(arg1);
+                method7955(arg1);
                 return;
             case 855:
                 method3068(arg1);
@@ -2443,13 +2443,13 @@ public final class ScriptRunner {
                 method4120(arg1);
                 return;
             case 5:
-                Statics.resend_uid_passport_request(arg1);
+                resend_uid_passport_request(arg1);
                 return;
             case 654:
-                Statics.method5938(arg1);
+                method5938(arg1);
                 return;
             case 66:
-                Statics.method2549(arg1);
+                QuestCommands.method2549(arg1);
                 return;
             case 906:
                 method2844(arg1);
@@ -2467,7 +2467,7 @@ public final class ScriptRunner {
                 method7572(arg1);
                 return;
             case 634:
-                Statics.method12465(arg1);
+                method12465(arg1);
                 return;
             case 344:
                 method5941(arg1);
@@ -2479,13 +2479,13 @@ public final class ScriptRunner {
                 method14088(arg1);
                 return;
             case 699:
-                Statics.method2577(arg1);
+                method2577(arg1);
                 return;
             case 316:
                 method5573(arg1);
                 return;
             case 353:
-                Statics.method4895(arg1);
+                method4895(arg1);
                 return;
             case 216:
                 method4747(arg1);
@@ -2500,7 +2500,7 @@ public final class ScriptRunner {
                 cam_modeisfollowplayer(arg1);
                 return;
             case 121:
-                Statics.method1822(arg1);
+                method1822(arg1);
                 return;
             case 102:
                 method4738(arg1);
@@ -2536,7 +2536,7 @@ public final class ScriptRunner {
                 method3466(arg1);
                 return;
             case 63:
-                Statics.method4893(arg1);
+                method4893(arg1);
                 return;
             case 440:
                 cam2_setpositionpoint_point(arg1);
@@ -2545,7 +2545,7 @@ public final class ScriptRunner {
                 chat_setmode(arg1);
                 return;
             case 1007:
-                Statics.method6829(arg1);
+                method6829(arg1);
                 return;
             case 119:
                 QuestCommands.method4614(arg1);
@@ -2584,7 +2584,7 @@ public final class ScriptRunner {
                 method15165(arg1);
                 return;
             case 739:
-                Statics.method13893(arg1);
+                method13893(arg1);
                 return;
             case 723:
                 method7375(arg1);
@@ -2635,7 +2635,7 @@ public final class ScriptRunner {
                 method3081(arg1);
                 return;
             case 818:
-                Statics.method7988(arg1);
+                method7988(arg1);
                 return;
             case 93:
                 method16254(arg1);
@@ -2680,7 +2680,7 @@ public final class ScriptRunner {
                 method7989(arg1);
                 return;
             case 169:
-                Statics.method6790(arg1);
+                method6790(arg1);
                 return;
             case 481:
                 method2817(arg1);
@@ -2746,7 +2746,7 @@ public final class ScriptRunner {
                 method12900(arg1);
                 return;
             case 74:
-                Statics.method5810(arg1);
+                method5810(arg1);
                 return;
             case 924:
                 method7715(arg1);
@@ -2776,7 +2776,7 @@ public final class ScriptRunner {
                 method7393(arg1);
                 return;
             case 567:
-                Statics.method3207(arg1);
+                method3207(arg1);
                 return;
             case 116:
                 method15732(arg1);
@@ -2785,7 +2785,7 @@ public final class ScriptRunner {
                 QuestCommands.method14038(arg1);
                 return;
             case 90:
-                Statics.method7050(arg1);
+                method7050(arg1);
                 return;
             case 327:
                 method2495(arg1);
@@ -2827,7 +2827,7 @@ public final class ScriptRunner {
                 mes(arg1);
                 return;
             case 318:
-                Statics.method1905(arg1);
+                method1905(arg1);
                 return;
             case 450:
                 method1722(arg1);
@@ -2869,7 +2869,7 @@ public final class ScriptRunner {
                 cam2_addeffect_shake(arg1);
                 return;
             case 798:
-                Statics.method5571(arg1);
+                method5571(arg1);
                 return;
             case 136:
                 method4721(arg1);
@@ -2944,7 +2944,7 @@ public final class ScriptRunner {
                 method1317(arg1);
                 return;
             case 366:
-                Statics.coordx(arg1);
+                coordx(arg1);
                 return;
             case 764:
                 method1973(arg1);
@@ -3037,7 +3037,7 @@ public final class ScriptRunner {
                 method1345(arg1);
                 return;
             case 2:
-                Statics.method8720(arg1);
+                method8720(arg1);
                 return;
             case 358:
                 method3646(arg1);
@@ -3091,7 +3091,7 @@ public final class ScriptRunner {
                 method4863(arg1);
                 return;
             case 29:
-                Statics.method12325(arg1);
+                method12325(arg1);
                 return;
             case 659:
                 method14218(arg1);
@@ -3103,7 +3103,7 @@ public final class ScriptRunner {
                 method6649(arg1);
                 return;
             case 7:
-                Statics.method7968(arg1);
+                method7968(arg1);
                 return;
             case 160:
                 method14217(arg1);
@@ -3112,7 +3112,7 @@ public final class ScriptRunner {
                 method2986(arg1);
                 return;
             case 784:
-                Statics.method234(arg1);
+                method234(arg1);
                 return;
             case 267:
                 method7902(arg1);
@@ -3121,7 +3121,7 @@ public final class ScriptRunner {
                 method8286(arg1);
                 return;
             case 1012:
-                Statics.method4706(arg1);
+                method4706(arg1);
                 return;
             case 400:
                 QuestCommands.method4601(arg1);
@@ -3157,7 +3157,7 @@ public final class ScriptRunner {
                 method13905(arg1);
                 return;
             case 468:
-                Statics.method4599(arg1);
+                method4599(arg1);
                 return;
             case 794:
                 method5543(arg1);
@@ -3181,10 +3181,10 @@ public final class ScriptRunner {
                 method2606(arg1);
                 return;
             case 1003:
-                Statics.method11638(arg1);
+                method11638(arg1);
                 return;
             case 585:
-                Statics.method13908(arg1);
+                method13908(arg1);
                 return;
             case 550:
                 method4592(arg1);
@@ -3193,13 +3193,13 @@ public final class ScriptRunner {
                 method8631(arg1);
                 return;
             case 1042:
-                Statics.method4771(arg1);
+                method4771(arg1);
                 return;
             case 158:
                 method11165(arg1);
                 return;
             case 832:
-                Statics.method12700(arg1);
+                QuestCommands.method12700(arg1);
                 return;
             case 914:
                 method3984(arg1);
@@ -3211,7 +3211,7 @@ public final class ScriptRunner {
                 method7677(arg1);
                 return;
             case 458:
-                Statics.method12749(arg1);
+                method12749(arg1);
                 return;
             case 262:
                 method3569(arg1);
@@ -3220,7 +3220,7 @@ public final class ScriptRunner {
                 method236(arg1);
                 return;
             case 329:
-                Statics.method8091(arg1);
+                method8091(arg1);
                 return;
             case 766:
                 method2885(arg1);
@@ -3247,7 +3247,7 @@ public final class ScriptRunner {
                 method3445(arg1);
                 return;
             case 139:
-                Statics.method4555(arg1);
+                method4555(arg1);
                 return;
             case 21:
                 method12998(arg1);
@@ -3265,13 +3265,13 @@ public final class ScriptRunner {
                 method5965(arg1);
                 return;
             case 484:
-                Statics.method14199(arg1);
+                method14199(arg1);
                 return;
             case 598:
                 method14119(arg1);
                 return;
             case 362:
-                Statics.method14037(arg1);
+                method14037(arg1);
                 return;
             case 966:
                 method2849(arg1);
@@ -3292,13 +3292,13 @@ public final class ScriptRunner {
                 method6885(arg1);
                 return;
             case 493:
-                Statics.method3922(arg1);
+                method3922(arg1);
                 return;
             case 153:
-                Statics.method4793(arg1);
+                method4793(arg1);
                 return;
             case 236:
-                Statics.method7053(arg1);
+                method7053(arg1);
                 return;
             case 709:
                 method2865(arg1);
@@ -3322,7 +3322,7 @@ public final class ScriptRunner {
                 method14741(arg1);
                 return;
             case 514:
-                Statics.method3532(arg1);
+                method3532(arg1);
                 return;
             case 515:
                 method6338(arg1);
@@ -3364,7 +3364,7 @@ public final class ScriptRunner {
                 method3985(arg1);
                 return;
             case 152:
-                Statics.method12347(arg1);
+                method12347(arg1);
                 return;
             case 541:
                 method3462(arg1);
@@ -3373,7 +3373,7 @@ public final class ScriptRunner {
                 method12758(arg1);
                 return;
             case 881:
-                Statics.method3945(arg1);
+                method3945(arg1);
                 return;
             case 656:
                 method4772(arg1);
@@ -3436,7 +3436,7 @@ public final class ScriptRunner {
                 mes_typed(arg1);
                 return;
             case 105:
-                Statics.method4795(arg1);
+                method4795(arg1);
                 return;
             case 569:
                 method12223(arg1);
@@ -3505,7 +3505,7 @@ public final class ScriptRunner {
                 method8302(arg1);
                 return;
             case 516:
-                Statics.method1821(arg1);
+                method1821(arg1);
                 return;
             case 209:
                 cam_forceangle(arg1);
@@ -3556,13 +3556,13 @@ public final class ScriptRunner {
     @ObfuscatedName("nd.k(Lrn;I)V")
     public static final void method7064(ClientScriptState arg0) {
         int var1 = arg0.intOperands[arg0.pc];
-        arg0.intStack[++arg0.isp - 1] = Statics.field2669.field661[var1];
+        arg0.intStack[++arg0.isp - 1] = client.localPlayerGameState.field661[var1];
     }
 
     @ObfuscatedName("adl.h(Lrn;B)V")
     public static final void method15179(ClientScriptState arg0) {
         int var1 = arg0.intOperands[arg0.pc];
-        Statics.field2669.method1642(var1, arg0.intStack[--arg0.isp]);
+        client.localPlayerGameState.method1642(var1, arg0.intStack[--arg0.isp]);
     }
 
     @ObfuscatedName("fn.r(Lrn;I)V")
@@ -3573,6 +3573,14 @@ public final class ScriptRunner {
     @ObfuscatedName("tl.g(Lrn;I)V")
     public static final void method11853(ClientScriptState arg0) {
         arg0.pc += arg0.intOperands[arg0.pc];
+    }
+
+    @ObfuscatedName("aax.y(Lrn;B)V")
+    public static final void method14037(ClientScriptState arg0) {
+        arg0.isp -= 2;
+        if (arg0.intStack[arg0.isp] != arg0.intStack[arg0.isp + 1]) {
+            arg0.pc += arg0.intOperands[arg0.pc];
+        }
     }
 
     @ObfuscatedName("on.e(Lrn;I)V")
@@ -3623,10 +3631,31 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = ((NpcEntity) arg0.activeEntity).field10078.method2417(var1);
     }
 
+    @ObfuscatedName("rg.as(Lrn;B)V")
+    public static final void method8720(ClientScriptState arg0) {
+        if (arg0.fp == 0) {
+            return;
+        }
+        ScriptFrame var1 = arg0.frames[--arg0.fp];
+        arg0.script = var1.field5191;
+        arg0.instructions = arg0.script.instructions;
+        arg0.intOperands = arg0.script.intOperands;
+        arg0.pc = var1.field5189;
+        arg0.intLocals = var1.field5188;
+        arg0.objectLocals = var1.field5190;
+        arg0.longLocals = var1.field5192;
+    }
+
     @ObfuscatedName("em.ai(Lrn;I)V")
     public static final void method3462(ClientScriptState arg0) {
         int var1 = arg0.intOperands[arg0.pc];
-        arg0.intStack[++arg0.isp - 1] = Statics.field2669.getVarBit(var1);
+        arg0.intStack[++arg0.isp - 1] = client.localPlayerGameState.getVarBit(var1);
+    }
+
+    @ObfuscatedName("po.ao(Lrn;I)V")
+    public static final void method7814(ClientScriptState arg0) {
+        int var1 = arg0.intOperands[arg0.pc];
+        client.localPlayerGameState.method1644(var1, arg0.intStack[--arg0.isp]);
     }
 
     @ObfuscatedName("pa.al(Lrn;I)V")
@@ -3663,6 +3692,14 @@ public final class ScriptRunner {
     @ObfuscatedName("cy.am(Lrn;B)V")
     public static final void method2582(ClientScriptState arg0) {
         arg0.objectLocals[arg0.intOperands[arg0.pc]] = arg0.objectStack[--arg0.osp];
+    }
+
+    @ObfuscatedName("py.ad(Lrn;B)V")
+    public static final void method7981(ClientScriptState arg0) {
+        int var1 = arg0.intOperands[arg0.pc];
+        arg0.osp -= var1;
+        String var2 = StringTools.method3527(arg0.objectStack, arg0.osp, var1);
+        arg0.objectStack[++arg0.osp - 1] = var2;
     }
 
     @ObfuscatedName("aj.az(Lrn;I)V")
@@ -3784,6 +3821,20 @@ public final class ScriptRunner {
         DelayedStateChange.onVarClientString(var1);
     }
 
+    @ObfuscatedName("jm.bq(Lrn;I)V")
+    public static final void method4729(ClientScriptState arg0) {
+        HashTable var1 = arg0.script.switches[arg0.intOperands[arg0.pc]];
+        IntNode var2 = (IntNode) var1.get((long) arg0.intStack[--arg0.isp]);
+        if (var2 != null) {
+            arg0.pc += var2.value;
+        }
+    }
+
+    @ObfuscatedName("jw.bz(Lrn;I)V")
+    public static final void method4893(ClientScriptState arg0) {
+        arg0.longStack[++arg0.lsp - 1] = arg0.script.longOperands[arg0.pc];
+    }
+
     @ObfuscatedName("lv.bv(Lrn;I)V")
     public static final void method5619(ClientScriptState arg0) {
         arg0.lsp--;
@@ -3803,6 +3854,14 @@ public final class ScriptRunner {
     public static final void method8141(ClientScriptState arg0) {
         arg0.lsp -= 2;
         if (arg0.longStack[arg0.lsp] != arg0.longStack[arg0.lsp + 1]) {
+            arg0.pc += arg0.intOperands[arg0.pc];
+        }
+    }
+
+    @ObfuscatedName("da.bg(Lrn;I)V")
+    public static final void method2820(ClientScriptState arg0) {
+        arg0.lsp -= 2;
+        if (arg0.longStack[arg0.lsp] == arg0.longStack[arg0.lsp + 1]) {
             arg0.pc += arg0.intOperands[arg0.pc];
         }
     }
@@ -3842,6 +3901,13 @@ public final class ScriptRunner {
     @ObfuscatedName("lp.ba(Lrn;S)V")
     public static final void method6028(ClientScriptState arg0) {
         if (arg0.intStack[--arg0.isp] == 1) {
+            arg0.pc += arg0.intOperands[arg0.pc];
+        }
+    }
+
+    @ObfuscatedName("pu.bd(Lrn;I)V")
+    public static final void method7988(ClientScriptState arg0) {
+        if (arg0.intStack[--arg0.isp] == 0) {
             arg0.pc += arg0.intOperands[arg0.pc];
         }
     }
@@ -3915,6 +3981,23 @@ public final class ScriptRunner {
             var4 = 0;
         } else {
             var4 = -1;
+        }
+        arg0.intStack[++arg0.isp - 1] = var4;
+    }
+
+    @ObfuscatedName("tj.bm(Lrn;I)V")
+    public static final void method11851(ClientScriptState arg0) {
+        int var1 = arg0.intOperands[arg0.pc];
+        VarClanSettingType var2 = Statics.field1202.method8290(var1);
+        if (var2 == null) {
+            throw new RuntimeException();
+        }
+        Integer var3 = arg0.activeClanSettings.method4080(client.modeGame.game << 16 | var2.field5033, var2.field5035, var2.field5034);
+        int var4;
+        if (var3 == null) {
+            var4 = 0;
+        } else {
+            var4 = var3;
         }
         arg0.intStack[++arg0.isp - 1] = var4;
     }
@@ -4003,6 +4086,18 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = var2.method11062(var1, -1) ? 1 : 0;
     }
 
+    @ObfuscatedName("ajk.cl(ZLrn;I)V")
+    public static final void method16642(boolean arg0, ClientScriptState arg1) {
+        int var2 = arg1.intStack[--arg1.isp];
+        Component var3 = Component.get(var2);
+        Interface var4 = Statics.field1756[var2 >> 16];
+        if (arg0) {
+            method2840(var4, var3);
+        } else {
+            method15937(var4, var3);
+        }
+    }
+
     @ObfuscatedName("af.cq(ZLrn;I)V")
     public static final void method1684(boolean arg0, ClientScriptState arg1) {
         ActiveComponent var2 = arg1.secondary ? arg1.activeComponent2 : arg1.activeComponent;
@@ -4019,14 +4114,23 @@ public final class ScriptRunner {
     public static final void method1964(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
-        Statics.method3983(var2, arg0);
+        method3983(var2, arg0);
     }
 
     @ObfuscatedName("gm.cb(Lrn;I)V")
     public static final void method3970(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
-        Statics.method3983(var2, arg0);
+        method3983(var2, arg0);
+    }
+
+    @ObfuscatedName("ge.cm(Lew;Lrn;B)V")
+    public static final void method3983(Component arg0, ClientScriptState arg1) {
+        if (client.getComponentEvents(arg0).isPauseButton() && client.field9108 == null) {
+            Statics.method11509(arg0.id, arg0.parentlayer);
+            client.field9108 = Component.get(arg0.id, arg0.parentlayer);
+            client.requestRedrawComponent(client.field9108);
+        }
     }
 
     @ObfuscatedName("ga.cw(Lrn;B)V")
@@ -4082,8 +4186,8 @@ public final class ScriptRunner {
     @ObfuscatedName("mn.cs(Lew;Lej;Lrn;I)V")
     public static final void method6334(Component arg0, Interface arg1, ClientScriptState arg2) {
         arg2.isp -= 4;
-        arg0.field1772 = arg2.intStack[arg2.isp];
-        arg0.field1774 = arg2.intStack[arg2.isp + 1];
+        arg0.xpos = arg2.intStack[arg2.isp];
+        arg0.ypos = arg2.intStack[arg2.isp + 1];
         int var3 = arg2.intStack[arg2.isp + 2];
         if (var3 < 0) {
             var3 = 0;
@@ -4096,8 +4200,8 @@ public final class ScriptRunner {
         } else if (var4 > 5) {
             var4 = 5;
         }
-        arg0.field1829 = (byte) var3;
-        arg0.field1769 = (byte) var4;
+        arg0.xmode = (byte) var3;
+        arg0.ymode = (byte) var4;
         client.requestRedrawComponent(arg0);
         client.method3293(arg1, arg0);
         if (arg0.type == 0) {
@@ -4127,9 +4231,9 @@ public final class ScriptRunner {
     @ObfuscatedName("ki.ci(Lew;Lej;Lrn;I)V")
     public static final void method5023(Component arg0, Interface arg1, ClientScriptState arg2) {
         arg2.isp -= 4;
-        arg0.field1910 = arg2.intStack[arg2.isp];
+        arg0.wsize = arg2.intStack[arg2.isp];
         arg0.field1775 = arg2.intStack[arg2.isp + 1];
-        arg0.field1819 = 0;
+        arg0.modelobjwidth = 0;
         arg0.field1895 = 0;
         int var3 = arg2.intStack[arg2.isp + 2];
         if (var3 < 0) {
@@ -4171,8 +4275,8 @@ public final class ScriptRunner {
     @ObfuscatedName("jh.cv(Lew;Lej;Lrn;I)V")
     public static final void method4788(Component arg0, Interface arg1, ClientScriptState arg2) {
         boolean var3 = arg2.intStack[--arg2.isp] == 1;
-        if (arg0.field1807 != var3) {
-            arg0.field1807 = var3;
+        if (arg0.hide != var3) {
+            arg0.hide = var3;
             client.requestRedrawComponent(arg0);
         }
         if (arg0.parentlayer == -1 && !arg1.field1734) {
@@ -4256,8 +4360,8 @@ public final class ScriptRunner {
             arg0.scrollx = 0;
         }
         arg0.scrolly = arg2.intStack[arg2.isp + 1];
-        if (arg0.scrolly > arg0.field1894 - arg0.renderheight) {
-            arg0.scrolly = arg0.field1894 - arg0.renderheight;
+        if (arg0.scrolly > arg0.scrollheight - arg0.renderheight) {
+            arg0.scrolly = arg0.scrollheight - arg0.renderheight;
         }
         if (arg0.scrolly < 0) {
             arg0.scrolly = 0;
@@ -4293,6 +4397,14 @@ public final class ScriptRunner {
         }
     }
 
+    @ObfuscatedName("ln.dp(Lrn;I)V")
+    public static final void method5938(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        Component var2 = Component.get(var1);
+        Interface var3 = Statics.field1756[var1 >> 16];
+        method7912(var2, var3, arg0);
+    }
+
     @ObfuscatedName("lg.dw(Lrn;I)V")
     public static final void method5808(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
@@ -4301,12 +4413,18 @@ public final class ScriptRunner {
         method7912(var2, var3, arg0);
     }
 
+    @ObfuscatedName("aey.di(Lew;Lej;Lrn;B)V")
+    public static final void method15567(Component arg0, Interface arg1, ClientScriptState arg2) {
+        arg0.field1741 = arg2.intStack[--arg2.isp] == 1;
+        client.requestRedrawComponent(arg0);
+    }
+
     @ObfuscatedName("abm.dg(Lrn;B)V")
     public static final void method14210(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
         Interface var3 = Statics.field1756[var1 >> 16];
-        Statics.method15567(var2, var3, arg0);
+        method15567(var2, var3, arg0);
     }
 
     @ObfuscatedName("aju.do(Lrn;B)V")
@@ -4314,7 +4432,7 @@ public final class ScriptRunner {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
         Interface var3 = var1.field5239;
-        Statics.method15567(var2, var3, arg0);
+        method15567(var2, var3, arg0);
     }
 
     @ObfuscatedName("ez.db(Lew;Lej;Lrn;B)V")
@@ -4328,6 +4446,14 @@ public final class ScriptRunner {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
         Interface var3 = Statics.field1756[var1 >> 16];
+        method3060(var2, var3, arg0);
+    }
+
+    @ObfuscatedName("gq.dh(Lrn;I)V")
+    public static final void method3922(ClientScriptState arg0) {
+        ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
         method3060(var2, var3, arg0);
     }
 
@@ -4356,8 +4482,8 @@ public final class ScriptRunner {
     @ObfuscatedName("ck.dz(Lew;Lej;Lrn;B)V")
     public static final void method2475(Component arg0, Interface arg1, ClientScriptState arg2) {
         int var3 = arg2.intStack[--arg2.isp];
-        if (arg0.field1797 != var3) {
-            arg0.field1797 = var3;
+        if (arg0.graphic != var3) {
+            arg0.graphic = var3;
             client.requestRedrawComponent(arg0);
         }
         if (arg0.parentlayer == -1 && !arg1.field1734) {
@@ -4417,10 +4543,18 @@ public final class ScriptRunner {
         method6308(var2, var3, arg0);
     }
 
+    @ObfuscatedName("dr.df(Lrn;B)V")
+    public static final void method2823(ClientScriptState arg0) {
+        ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
+        method6308(var2, var3, arg0);
+    }
+
     @ObfuscatedName("p.dv(Lew;Lej;Lrn;I)V")
     public static final void method1412(Component arg0, Interface arg1, ClientScriptState arg2) {
-        arg0.field1806 = 1;
-        arg0.field1838 = arg2.intStack[--arg2.isp];
+        arg0.modelkind = 1;
+        arg0.model = arg2.intStack[--arg2.isp];
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
             Statics.method4107(arg0.id);
@@ -4446,12 +4580,12 @@ public final class ScriptRunner {
     @ObfuscatedName("acp.dq(Lew;Lej;Lrn;I)V")
     public static final void method14729(Component arg0, Interface arg1, ClientScriptState arg2) {
         arg2.isp -= 6;
-        arg0.field1810 = arg2.intStack[arg2.isp];
-        arg0.field1824 = arg2.intStack[arg2.isp + 1];
-        arg0.field1812 = arg2.intStack[arg2.isp + 2];
-        arg0.field1813 = arg2.intStack[arg2.isp + 3];
-        arg0.field1814 = arg2.intStack[arg2.isp + 4];
-        arg0.field1818 = arg2.intStack[arg2.isp + 5];
+        arg0.modelxof = arg2.intStack[arg2.isp];
+        arg0.modelyof = arg2.intStack[arg2.isp + 1];
+        arg0.modelangle_x = arg2.intStack[arg2.isp + 2];
+        arg0.modelangle_y = arg2.intStack[arg2.isp + 3];
+        arg0.modelangle_z = arg2.intStack[arg2.isp + 4];
+        arg0.modelzoom = arg2.intStack[arg2.isp + 5];
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
             DelayedStateChange.onComponentAngle(arg0.id);
@@ -4478,16 +4612,16 @@ public final class ScriptRunner {
     @ObfuscatedName("ra.eg(Lew;Lej;Lrn;I)V")
     public static final void method829(Component arg0, Interface arg1, ClientScriptState arg2) {
         int var3 = arg2.intStack[--arg2.isp];
-        if (arg0.field1747 != var3) {
+        if (arg0.modelanim != var3) {
             if (var3 == -1) {
-                arg0.field1789 = null;
+                arg0.modelAnimator = null;
             } else {
-                if (arg0.field1789 == null) {
-                    arg0.field1789 = new InterfaceAnimationNode();
+                if (arg0.modelAnimator == null) {
+                    arg0.modelAnimator = new InterfaceAnimationNode();
                 }
-                arg0.field1789.method11769(var3);
+                arg0.modelAnimator.method11769(var3);
             }
-            arg0.field1747 = var3;
+            arg0.modelanim = var3;
             client.requestRedrawComponent(arg0);
         }
         if (arg0.parentlayer == -1 && !arg1.field1734) {
@@ -4551,6 +4685,14 @@ public final class ScriptRunner {
         method4103(var2, var3, arg0);
     }
 
+    @ObfuscatedName("pb.ee(Lrn;B)V")
+    public static final void method7831(ClientScriptState arg0) {
+        ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
+        method4103(var2, var3, arg0);
+    }
+
     @ObfuscatedName("qq.es(Lew;Lej;Lrn;I)V")
     public static final void method8067(Component arg0, Interface arg1, ClientScriptState arg2) {
         String var3 = (String) arg2.objectStack[--arg2.osp];
@@ -4581,7 +4723,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("ge.el(Lew;Lej;Lrn;B)V")
     public static final void method3981(Component arg0, Interface arg1, ClientScriptState arg2) {
-        arg0.field1793 = arg2.intStack[--arg2.isp];
+        arg0.textfont = arg2.intStack[--arg2.isp];
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
             DelayedStateChange.onType16(arg0.id);
@@ -4635,6 +4777,14 @@ public final class ScriptRunner {
         client.requestRedrawComponent(arg0);
     }
 
+    @ObfuscatedName("rj.ea(Lrn;B)V")
+    public static final void method8597(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        Component var2 = Component.get(var1);
+        Interface var3 = Statics.field1756[var1 >> 16];
+        method3463(var2, var3, arg0);
+    }
+
     @ObfuscatedName("jv.em(Lrn;I)V")
     public static final void method4720(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
@@ -4645,7 +4795,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("ae.ey(Lew;Lej;Lrn;B)V")
     public static final void method1965(Component arg0, Interface arg1, ClientScriptState arg2) {
-        arg0.field1860 = arg2.intStack[--arg2.isp] == 1;
+        arg0.textantimacro = arg2.intStack[--arg2.isp] == 1;
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
             DelayedStateChange.onComponentClickMask(arg0.id);
@@ -4696,6 +4846,22 @@ public final class ScriptRunner {
         client.requestRedrawComponent(arg0);
     }
 
+    @ObfuscatedName("qv.fp(Lrn;I)V")
+    public static final void method8303(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        Component var2 = Component.get(var1);
+        Interface var3 = Statics.field1756[var1 >> 16];
+        method2787(var2, var3, arg0);
+    }
+
+    @ObfuscatedName("pd.fv(Lrn;I)V")
+    public static final void method7676(ClientScriptState arg0) {
+        ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
+        method2787(var2, var3, arg0);
+    }
+
     @ObfuscatedName("et.fn(Lew;Lej;Lrn;I)V")
     public static final void method2916(Component arg0, Interface arg1, ClientScriptState arg2) {
         arg0.field1770 = arg2.intStack[--arg2.isp] == 1;
@@ -4724,6 +4890,14 @@ public final class ScriptRunner {
         client.requestRedrawComponent(arg0);
     }
 
+    @ObfuscatedName("ig.fy(Lrn;B)V")
+    public static final void method4555(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        Component var2 = Component.get(var1);
+        Interface var3 = Statics.field1756[var1 >> 16];
+        method1626(var2, var3, arg0);
+    }
+
     @ObfuscatedName("kk.fj(Lrn;B)V")
     public static final void method5566(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
@@ -4736,7 +4910,7 @@ public final class ScriptRunner {
     public static final void method7574(Component arg0, Interface arg1, ClientScriptState arg2) {
         arg2.isp -= 2;
         arg0.field1790 = arg2.intStack[arg2.isp];
-        arg0.field1894 = arg2.intStack[arg2.isp + 1];
+        arg0.scrollheight = arg2.intStack[arg2.isp + 1];
         client.requestRedrawComponent(arg0);
         if (arg0.type == 0) {
             client.method12722(arg1, arg0, false);
@@ -4759,12 +4933,18 @@ public final class ScriptRunner {
         method7574(var2, var3, arg0);
     }
 
+    @ObfuscatedName("yu.fg(Lew;Lej;Lrn;B)V")
+    public static final void method12994(Component arg0, Interface arg1, ClientScriptState arg2) {
+        arg0.field1804 = arg2.intStack[--arg2.isp] == 1;
+        client.requestRedrawComponent(arg0);
+    }
+
     @ObfuscatedName("vi.fu(Lrn;I)V")
     public static final void method12384(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
         Interface var3 = Statics.field1756[var1 >> 16];
-        Statics.method12994(var2, var3, arg0);
+        method12994(var2, var3, arg0);
     }
 
     @ObfuscatedName("pe.fh(Lrn;I)V")
@@ -4772,12 +4952,12 @@ public final class ScriptRunner {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
         Interface var3 = var1.field5239;
-        Statics.method12994(var2, var3, arg0);
+        method12994(var2, var3, arg0);
     }
 
     @ObfuscatedName("dl.fz(Lew;Lej;Lrn;B)V")
     public static final void method2604(Component arg0, Interface arg1, ClientScriptState arg2) {
-        arg0.field1818 = arg2.intStack[--arg2.isp];
+        arg0.modelzoom = arg2.intStack[--arg2.isp];
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
             DelayedStateChange.onComponentAngle(arg0.id);
@@ -4789,6 +4969,14 @@ public final class ScriptRunner {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
         Interface var3 = Statics.field1756[var1 >> 16];
+        method2604(var2, var3, arg0);
+    }
+
+    @ObfuscatedName("nh.fb(Lrn;B)V")
+    public static final void method6876(ClientScriptState arg0) {
+        ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
         method2604(var2, var3, arg0);
     }
 
@@ -4804,6 +4992,14 @@ public final class ScriptRunner {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
         Interface var3 = Statics.field1756[var1 >> 16];
+        method8485(var2, var3, arg0);
+    }
+
+    @ObfuscatedName("zl.fe(Lrn;B)V")
+    public static final void method13893(ClientScriptState arg0) {
+        ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
         method8485(var2, var3, arg0);
     }
 
@@ -4853,12 +5049,33 @@ public final class ScriptRunner {
         method1637(var2, var3, arg0);
     }
 
+    @ObfuscatedName("pk.gz(Lew;Lej;Lrn;S)V")
+    public static final void method7967(Component arg0, Interface arg1, ClientScriptState arg2) {
+        arg2.isp -= 2;
+        int var3 = arg2.intStack[arg2.isp];
+        int var4 = arg2.intStack[arg2.isp + 1];
+        ParamType var5 = Statics.paramTypes.get(var3);
+        if (var5.defaultint == var4) {
+            arg0.method3129(var3);
+        } else {
+            arg0.method3127(var3, var4);
+        }
+    }
+
     @ObfuscatedName("ack.gk(Lrn;I)V")
     public static final void method14904(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
         Interface var3 = Statics.field1756[var1 >> 16];
-        Statics.method7967(var2, var3, arg0);
+        method7967(var2, var3, arg0);
+    }
+
+    @ObfuscatedName("dv.gc(Lrn;B)V")
+    public static final void method2843(ClientScriptState arg0) {
+        ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
+        method7967(var2, var3, arg0);
     }
 
     @ObfuscatedName("tj.gm(Lew;Lej;Lrn;I)V")
@@ -4898,7 +5115,7 @@ public final class ScriptRunner {
         if (var3 < 0 || var3 >= 5) {
             return;
         }
-        arg0.method3158(var3, var4, var5);
+        arg0.setrecol(var3, var4, var5);
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
             DelayedStateChange.onType18(arg0.id, var3);
@@ -4956,12 +5173,19 @@ public final class ScriptRunner {
         method11368(var2, var3, arg0);
     }
 
+    @ObfuscatedName("on.gs(Lew;Lej;Lrn;I)V")
+    public static final void method7179(Component arg0, Interface arg1, ClientScriptState arg2) {
+        if (arg0.type == 4) {
+            method8481(arg0, arg1, arg2);
+        }
+    }
+
     @ObfuscatedName("tb.gd(Lrn;I)V")
     public static final void method11397(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
         Interface var3 = Statics.field1756[var1 >> 16];
-        Statics.method7179(var2, var3, arg0);
+        method7179(var2, var3, arg0);
     }
 
     @ObfuscatedName("qi.gj(Lrn;I)V")
@@ -4969,7 +5193,7 @@ public final class ScriptRunner {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
         Interface var3 = var1.field5239;
-        Statics.method7179(var2, var3, arg0);
+        method7179(var2, var3, arg0);
     }
 
     @ObfuscatedName("pp.gu(Lew;Lej;Lrn;I)V")
@@ -4981,7 +5205,7 @@ public final class ScriptRunner {
         if (var3 < 0 || var3 >= 5) {
             return;
         }
-        arg0.method3131(var3, var4, var5);
+        arg0.setretex(var3, var4, var5);
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
             DelayedStateChange.onType19(arg0.id, var3);
@@ -5006,7 +5230,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("rz.gt(Lew;Lej;Lrn;I)V")
     public static final void method8656(Component arg0, Interface arg1, ClientScriptState arg2) {
-        arg0.field1833 = arg2.intStack[--arg2.isp] == 1;
+        arg0.fontmono = arg2.intStack[--arg2.isp] == 1;
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
             DelayedStateChange.onType20(arg0.id);
@@ -5029,9 +5253,24 @@ public final class ScriptRunner {
         method8656(var2, var3, arg0);
     }
 
+    @ObfuscatedName("fl.he(Lrn;B)V")
+    public static final void method3571(ClientScriptState arg0) {
+        ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        Component var2 = var1.field5240;
+        arg0.isp -= 2;
+        int var3 = arg0.intStack[arg0.isp];
+        int var4 = arg0.intStack[arg0.isp + 1];
+        ParamType var5 = Statics.paramTypes.get(var3);
+        if (var5.defaultint == var4) {
+            var2.method3129(var3);
+        } else {
+            var2.method3127(var3, var4);
+        }
+    }
+
     @ObfuscatedName("ck.hk(Lew;Lej;Lrn;B)V")
     public static final void method2471(Component arg0, Interface arg1, ClientScriptState arg2) {
-        arg0.field1805 = arg2.intStack[--arg2.isp] == 1;
+        arg0.clickmask = arg2.intStack[--arg2.isp] == 1;
         client.requestRedrawComponent(arg0);
         if (arg0.parentlayer == -1 && !arg1.field1734) {
             DelayedStateChange.onType21(arg0.id);
@@ -5056,9 +5295,9 @@ public final class ScriptRunner {
 
     @ObfuscatedName("aju.hx(Lew;Lej;Lrn;I)V")
     public static final void method16788(Component arg0, Interface arg1, ClientScriptState arg2) {
-        arg0.field1806 = 2;
-        arg0.field1930 = null;
-        arg0.field1838 = arg2.intStack[--arg2.isp];
+        arg0.modelkind = 2;
+        arg0.customisation = null;
+        arg0.model = arg2.intStack[--arg2.isp];
         if (arg0.parentlayer == -1 && !arg1.field1734) {
             Statics.method4107(arg0.id);
         }
@@ -5080,12 +5319,22 @@ public final class ScriptRunner {
         method16788(var2, var3, arg0);
     }
 
+    @ObfuscatedName("qi.hb(Lew;Lej;Lrn;I)V")
+    public static final void method8049(Component arg0, Interface arg1, ClientScriptState arg2) {
+        arg0.modelkind = 3;
+        arg0.model = client.currentPlayerUid;
+        arg0.field1832 = 0;
+        if (arg0.parentlayer == -1 && !arg1.field1734) {
+            Statics.method4107(arg0.id);
+        }
+    }
+
     @ObfuscatedName("vu.hc(Lrn;I)V")
     public static final void method12204(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
         Interface var3 = Statics.field1756[var1 >> 16];
-        Statics.method8049(var2, var3, arg0);
+        method8049(var2, var3, arg0);
     }
 
     @ObfuscatedName("ap.hn(Lrn;B)V")
@@ -5093,7 +5342,7 @@ public final class ScriptRunner {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
         Interface var3 = var1.field5239;
-        Statics.method8049(var2, var3, arg0);
+        method8049(var2, var3, arg0);
     }
 
     @ObfuscatedName("oh.hd(Lew;Lej;ZILrn;B)V")
@@ -5107,8 +5356,8 @@ public final class ScriptRunner {
             DelayedStateChange.onComponentModelAngle(arg0.id);
         }
         if (var5 == -1) {
-            arg0.field1806 = 1;
-            arg0.field1838 = -1;
+            arg0.modelkind = 1;
+            arg0.model = -1;
             arg0.invobject = -1;
             return;
         }
@@ -5116,17 +5365,17 @@ public final class ScriptRunner {
         arg0.invcount = var6;
         arg0.invwearcol = arg2;
         ObjType var7 = Statics.objTypes.get(var5);
-        arg0.field1812 = var7.xan2d;
-        arg0.field1813 = var7.yan2d;
-        arg0.field1814 = var7.zan2d;
-        arg0.field1810 = var7.xof2d;
-        arg0.field1824 = var7.yof2d;
-        arg0.field1818 = var7.zoom2d;
+        arg0.modelangle_x = var7.xan2d;
+        arg0.modelangle_y = var7.yan2d;
+        arg0.modelangle_z = var7.zan2d;
+        arg0.modelxof = var7.xof2d;
+        arg0.modelyof = var7.yof2d;
+        arg0.modelzoom = var7.zoom2d;
         arg0.invcountvis = arg3;
-        if (arg0.field1819 > 0) {
-            arg0.field1818 = arg0.field1818 * 32 / arg0.field1819;
-        } else if (arg0.field1910 > 0) {
-            arg0.field1818 = arg0.field1818 * 32 / arg0.field1910;
+        if (arg0.modelobjwidth > 0) {
+            arg0.modelzoom = arg0.modelzoom * 32 / arg0.modelobjwidth;
+        } else if (arg0.wsize > 0) {
+            arg0.modelzoom = arg0.modelzoom * 32 / arg0.wsize;
         }
     }
 
@@ -5186,6 +5435,14 @@ public final class ScriptRunner {
         method7651(var2, var3, true, 0, arg0);
     }
 
+    @ObfuscatedName("dq.hp(Lrn;I)V")
+    public static final void method2894(ClientScriptState arg0) {
+        ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
+        method7651(var2, var3, true, 0, arg0);
+    }
+
     @ObfuscatedName("mq.hr(Lrn;I)V")
     public static final void method6403(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
@@ -5220,9 +5477,9 @@ public final class ScriptRunner {
 
     @ObfuscatedName("rx.ip(Lew;Lej;Lrn;I)V")
     public static final void method8585(Component arg0, Interface arg1, ClientScriptState arg2) {
-        arg0.field1806 = 6;
-        arg0.field1930 = null;
-        arg0.field1838 = arg2.intStack[--arg2.isp];
+        arg0.modelkind = 6;
+        arg0.customisation = null;
+        arg0.model = arg2.intStack[--arg2.isp];
         if (arg0.parentlayer == -1 && !arg1.field1734) {
             Statics.method4107(arg0.id);
         }
@@ -5244,12 +5501,21 @@ public final class ScriptRunner {
         method8585(var2, var3, arg0);
     }
 
+    @ObfuscatedName("nv.ii(Lew;Lej;Lrn;I)V")
+    public static final void method6788(Component arg0, Interface arg1, ClientScriptState arg2) {
+        arg0.modelkind = 5;
+        arg0.model = arg2.intStack[--arg2.isp];
+        if (arg0.parentlayer == -1 && !arg1.field1734) {
+            Statics.method4107(arg0.id);
+        }
+    }
+
     @ObfuscatedName("st.in(Lrn;B)V")
     public static final void method11155(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
         Interface var3 = Statics.field1756[var1 >> 16];
-        Statics.method6788(var2, var3, arg0);
+        method6788(var2, var3, arg0);
     }
 
     @ObfuscatedName("rq.ih(Lrn;I)V")
@@ -5257,7 +5523,7 @@ public final class ScriptRunner {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
         Interface var3 = var1.field5239;
-        Statics.method6788(var2, var3, arg0);
+        method6788(var2, var3, arg0);
     }
 
     @ObfuscatedName("ph.ig(Lew;Lej;Lrn;I)V")
@@ -5294,6 +5560,14 @@ public final class ScriptRunner {
         client.requestRedrawComponent(arg0);
     }
 
+    @ObfuscatedName("am.iv(Lrn;I)V")
+    public static final void method1905(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        Component var2 = Component.get(var1);
+        Interface var3 = Statics.field1756[var1 >> 16];
+        method14903(var2, var3, arg0);
+    }
+
     @ObfuscatedName("px.ij(Lrn;I)V")
     public static final void method7722(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
@@ -5305,12 +5579,12 @@ public final class ScriptRunner {
     @ObfuscatedName("iq.id(Lew;Lej;Lrn;I)V")
     public static final void method4571(Component arg0, Interface arg1, ClientScriptState arg2) {
         arg2.isp -= 4;
-        arg0.field1838 = arg2.intStack[arg2.isp];
+        arg0.model = arg2.intStack[arg2.isp];
         arg0.field1832 = arg2.intStack[arg2.isp + 1];
         if (arg2.intStack[arg2.isp + 2] == 1) {
-            arg0.field1806 = 9;
+            arg0.modelkind = 9;
         } else {
-            arg0.field1806 = 8;
+            arg0.modelkind = 8;
         }
         if (arg2.intStack[arg2.isp + 3] == 1) {
             arg0.invwearcol = true;
@@ -5340,8 +5614,8 @@ public final class ScriptRunner {
 
     @ObfuscatedName("ar.ix(Lew;Lej;Lrn;B)V")
     public static final void method1702(Component arg0, Interface arg1, ClientScriptState arg2) {
-        arg0.field1806 = 5;
-        arg0.field1838 = client.currentPlayerUid;
+        arg0.modelkind = 5;
+        arg0.model = client.currentPlayerUid;
         arg0.field1832 = 0;
         if (arg0.parentlayer == -1 && !arg1.field1734) {
             Statics.method4107(arg0.id);
@@ -5489,6 +5763,14 @@ public final class ScriptRunner {
         arg0.opbase = (String) arg2.objectStack[--arg2.osp];
     }
 
+    @ObfuscatedName("fp.ji(Lrn;I)V")
+    public static final void method3542(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        Component var2 = Component.get(var1);
+        Interface var3 = Statics.field1756[var1 >> 16];
+        method11906(var2, var3, arg0);
+    }
+
     @ObfuscatedName("ac.js(Lrn;I)V")
     public static final void method1975(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
@@ -5518,12 +5800,17 @@ public final class ScriptRunner {
         method3504(var2, var3, arg0);
     }
 
+    @ObfuscatedName("eb.jd(Lew;Lej;Lrn;I)V")
+    public static final void method3319(Component arg0, Interface arg1, ClientScriptState arg2) {
+        arg0.op = null;
+    }
+
     @ObfuscatedName("fh.je(Lrn;B)V")
     public static final void method3650(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
         Interface var3 = Statics.field1756[var1 >> 16];
-        Statics.method3319(var2, var3, arg0);
+        method3319(var2, var3, arg0);
     }
 
     @ObfuscatedName("nj.ju(Lrn;I)V")
@@ -5531,7 +5818,7 @@ public final class ScriptRunner {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
         Interface var3 = var1.field5239;
-        Statics.method3319(var2, var3, arg0);
+        method3319(var2, var3, arg0);
     }
 
     @ObfuscatedName("ae.jw(Lew;Lej;Lrn;B)V")
@@ -5602,12 +5889,17 @@ public final class ScriptRunner {
         method4712(var2, var3, arg0);
     }
 
+    @ObfuscatedName("ks.jl(Lew;Lej;Lrn;I)V")
+    public static final void method5069(Component arg0, Interface arg1, ClientScriptState arg2) {
+        arg0.field1855 = arg2.intStack[--arg2.isp];
+    }
+
     @ObfuscatedName("aau.kr(Lrn;I)V")
     public static final void method14088(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
         Interface var3 = Statics.field1756[var1 >> 16];
-        Statics.method5069(var2, var3, arg0);
+        method5069(var2, var3, arg0);
     }
 
     @ObfuscatedName("p.kh(Lrn;B)V")
@@ -5615,7 +5907,7 @@ public final class ScriptRunner {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
         Interface var3 = var1.field5239;
-        Statics.method5069(var2, var3, arg0);
+        method5069(var2, var3, arg0);
     }
 
     @ObfuscatedName("an.kb(Lew;IILrn;B)V")
@@ -5654,6 +5946,13 @@ public final class ScriptRunner {
         method1718(arg0, var2, var3, arg1);
     }
 
+    @ObfuscatedName("fg.ki(Lrn;I)V")
+    public static final void method3638(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        Component var2 = Component.get(var1);
+        method8614(var2, arg0);
+    }
+
     @ObfuscatedName("vw.ks(Lrn;I)V")
     public static final void method12345(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
@@ -5672,6 +5971,13 @@ public final class ScriptRunner {
     public static final void method7677(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
+        method7054(var2, arg0);
+    }
+
+    @ObfuscatedName("xb.kp(Lrn;I)V")
+    public static final void method12749(ClientScriptState arg0) {
+        ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        Component var2 = var1.field5240;
         method7054(var2, arg0);
     }
 
@@ -5708,6 +6014,16 @@ public final class ScriptRunner {
             throw new RuntimeException();
         }
         method1368(arg0, var4, arg1, arg2, arg3);
+    }
+
+    @ObfuscatedName("zm.kx(Lrn;I)V")
+    public static final void method13892(ClientScriptState arg0) {
+        arg0.isp -= 3;
+        byte[] var1 = new byte[]{(byte) arg0.intStack[arg0.isp]};
+        byte[] var2 = new byte[]{(byte) arg0.intStack[arg0.isp + 1]};
+        int var3 = arg0.intStack[arg0.isp + 2];
+        Component var4 = Component.get(var3);
+        method2813(var4, var1, var2, arg0);
     }
 
     @ObfuscatedName("fg.kn(Lrn;I)V")
@@ -5756,12 +6072,17 @@ public final class ScriptRunner {
         method4625(var2, var3, arg0);
     }
 
+    @ObfuscatedName("pi.ka(Lew;Lej;Lrn;I)V")
+    public static final void method7900(Component arg0, Interface arg1, ClientScriptState arg2) {
+        arg0.field1786 = arg2.intStack[--arg2.isp];
+    }
+
     @ObfuscatedName("oy.kd(Lrn;B)V")
     public static final void method7395(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
         Interface var3 = Statics.field1756[var1 >> 16];
-        Statics.method7900(var2, var3, arg0);
+        method7900(var2, var3, arg0);
     }
 
     @ObfuscatedName("dm.kz(Lrn;I)V")
@@ -5769,12 +6090,20 @@ public final class ScriptRunner {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
         Interface var3 = var1.field5239;
-        Statics.method7900(var2, var3, arg0);
+        method7900(var2, var3, arg0);
     }
 
     @ObfuscatedName("ns.kf(Lew;Lej;Lrn;I)V")
     public static final void method6973(Component arg0, Interface arg1, ClientScriptState arg2) {
         arg0.method3156();
+    }
+
+    @ObfuscatedName("pk.kj(Lrn;S)V")
+    public static final void method7968(ClientScriptState arg0) {
+        ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
+        method6973(var2, var3, arg0);
     }
 
     @ObfuscatedName("aja.kw(Lrn;I)V")
@@ -5982,7 +6311,7 @@ public final class ScriptRunner {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
         Interface var3 = Statics.field1756[var1 >> 16];
-        Statics.method4583(var2, var3, arg0);
+        method4583(var2, var3, arg0);
     }
 
     @ObfuscatedName("rw.lj(Lrn;I)V")
@@ -5990,7 +6319,29 @@ public final class ScriptRunner {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
         Interface var3 = var1.field5239;
-        Statics.method4583(var2, var3, arg0);
+        method4583(var2, var3, arg0);
+    }
+
+    @ObfuscatedName("iv.ll(Lew;Lej;Lrn;I)V")
+    public static final void method4583(Component arg0, Interface arg1, ClientScriptState arg2) {
+        String var3 = (String) arg2.objectStack[--arg2.osp];
+        if (method3662(var3, arg2) != null) {
+            var3 = var3.substring(0, var3.length() - 1);
+        }
+        arg0.ontargetleave = method8142(var3, arg2);
+        arg0.hashook = true;
+    }
+
+    @ObfuscatedName("aes.le(Lew;Lej;Lrn;B)V")
+    public static final void method15654(Component arg0, Interface arg1, ClientScriptState arg2) {
+        String var3 = (String) arg2.objectStack[--arg2.osp];
+        int[] var4 = method3662(var3, arg2);
+        if (var4 != null) {
+            var3 = var3.substring(0, var3.length() - 1);
+        }
+        arg0.field1874 = method8142(var3, arg2);
+        arg0.field1875 = var4;
+        arg0.hashook = true;
     }
 
     @ObfuscatedName("mx.lz(Lrn;B)V")
@@ -5998,7 +6349,7 @@ public final class ScriptRunner {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
         Interface var3 = Statics.field1756[var1 >> 16];
-        Statics.method15654(var2, var3, arg0);
+        method15654(var2, var3, arg0);
     }
 
     @ObfuscatedName("ec.lx(Lrn;S)V")
@@ -6006,7 +6357,17 @@ public final class ScriptRunner {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
         Interface var3 = var1.field5239;
-        Statics.method15654(var2, var3, arg0);
+        method15654(var2, var3, arg0);
+    }
+
+    @ObfuscatedName("eh.lp(Lew;Lej;Lrn;I)V")
+    public static final void method3070(Component arg0, Interface arg1, ClientScriptState arg2) {
+        String var3 = (String) arg2.objectStack[--arg2.osp];
+        if (method3662(var3, arg2) != null) {
+            var3 = var3.substring(0, var3.length() - 1);
+        }
+        arg0.field1784 = method8142(var3, arg2);
+        arg0.hashook = true;
     }
 
     @ObfuscatedName("fk.lr(Lrn;I)V")
@@ -6014,7 +6375,7 @@ public final class ScriptRunner {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
         Interface var3 = Statics.field1756[var1 >> 16];
-        Statics.method3070(var2, var3, arg0);
+        method3070(var2, var3, arg0);
     }
 
     @ObfuscatedName("nc.la(Lrn;I)V")
@@ -6022,7 +6383,7 @@ public final class ScriptRunner {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
         Interface var3 = var1.field5239;
-        Statics.method3070(var2, var3, arg0);
+        method3070(var2, var3, arg0);
     }
 
     @ObfuscatedName("mn.lf(Lew;Lej;Lrn;S)V")
@@ -6031,7 +6392,7 @@ public final class ScriptRunner {
         if (method3662(var3, arg2) != null) {
             var3 = var3.substring(0, var3.length() - 1);
         }
-        arg0.op = method8142(var3, arg2);
+        arg0.onop = method8142(var3, arg2);
         arg0.hashook = true;
     }
 
@@ -6229,6 +6590,14 @@ public final class ScriptRunner {
         method3497(var2, var3, arg0);
     }
 
+    @ObfuscatedName("vw.md(Lrn;B)V")
+    public static final void method12347(ClientScriptState arg0) {
+        ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        Component var2 = var1.field5240;
+        Interface var3 = var1.field5239;
+        method3497(var2, var3, arg0);
+    }
+
     @ObfuscatedName("adq.mc(Lew;Lej;Lrn;I)V")
     public static final void method15147(Component arg0, Interface arg1, ClientScriptState arg2) {
         String var3 = (String) arg2.objectStack[--arg2.osp];
@@ -6333,12 +6702,22 @@ public final class ScriptRunner {
         method7688(var2, var3, arg0);
     }
 
+    @ObfuscatedName("eu.nk(Lew;Lej;Lrn;I)V")
+    public static final void method2929(Component arg0, Interface arg1, ClientScriptState arg2) {
+        String var3 = (String) arg2.objectStack[--arg2.osp];
+        if (method3662(var3, arg2) != null) {
+            var3 = var3.substring(0, var3.length() - 1);
+        }
+        arg0.field1896 = method8142(var3, arg2);
+        arg0.hashook = true;
+    }
+
     @ObfuscatedName("tu.nc(Lrn;I)V")
     public static final void method11845(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
         Interface var3 = Statics.field1756[var1 >> 16];
-        Statics.method2929(var2, var3, arg0);
+        method2929(var2, var3, arg0);
     }
 
     @ObfuscatedName("am.na(Lrn;I)V")
@@ -6346,7 +6725,7 @@ public final class ScriptRunner {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
         Interface var3 = var1.field5239;
-        Statics.method2929(var2, var3, arg0);
+        method2929(var2, var3, arg0);
     }
 
     @ObfuscatedName("nk.nh(Lew;Lej;Lrn;I)V")
@@ -6411,6 +6790,14 @@ public final class ScriptRunner {
         arg0.hashook = true;
     }
 
+    @ObfuscatedName("jw.nz(Lrn;B)V")
+    public static final void method4895(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        Component var2 = Component.get(var1);
+        Interface var3 = Statics.field1756[var1 >> 16];
+        method8454(var2, var3, arg0);
+    }
+
     @ObfuscatedName("mv.no(Lrn;I)V")
     public static final void method6313(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
@@ -6453,6 +6840,14 @@ public final class ScriptRunner {
         }
         arg0.field1778 = method8142(var3, arg2);
         arg0.hashook = true;
+    }
+
+    @ObfuscatedName("re.of(Lrn;B)V")
+    public static final void method8660(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        Component var2 = Component.get(var1);
+        Interface var3 = Statics.field1756[var1 >> 16];
+        method12221(var2, var3, arg0);
     }
 
     @ObfuscatedName("li.oa(Lrn;B)V")
@@ -6627,14 +7022,14 @@ public final class ScriptRunner {
     public static final void method4808(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
-        arg0.intStack[++arg0.isp - 1] = var2.field1776;
+        arg0.intStack[++arg0.isp - 1] = var2.x;
     }
 
     @ObfuscatedName("gi.pd(Lrn;I)V")
     public static final void method4035(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
-        arg0.intStack[++arg0.isp - 1] = var2.field1777;
+        arg0.intStack[++arg0.isp - 1] = var2.y;
     }
 
     @ObfuscatedName("gp.pe(Lrn;I)V")
@@ -6655,7 +7050,7 @@ public final class ScriptRunner {
     public static final void method2815(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
-        arg0.intStack[++arg0.isp - 1] = var2.field1807 ? 1 : 0;
+        arg0.intStack[++arg0.isp - 1] = var2.hide ? 1 : 0;
     }
 
     @ObfuscatedName("ol.px(Lrn;B)V")
@@ -6713,35 +7108,35 @@ public final class ScriptRunner {
     public static final void method6067(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
-        arg0.intStack[++arg0.isp - 1] = var2.field1894;
+        arg0.intStack[++arg0.isp - 1] = var2.scrollheight;
     }
 
     @ObfuscatedName("fl.ph(Lrn;I)V")
     public static final void method3570(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
-        arg0.intStack[++arg0.isp - 1] = var2.field1818;
+        arg0.intStack[++arg0.isp - 1] = var2.modelzoom;
     }
 
     @ObfuscatedName("fz.pr(Lrn;I)V")
     public static final void method3661(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
-        arg0.intStack[++arg0.isp - 1] = var2.field1812;
+        arg0.intStack[++arg0.isp - 1] = var2.modelangle_x;
     }
 
     @ObfuscatedName("d.pc(Lrn;I)V")
     public static final void method1357(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
-        arg0.intStack[++arg0.isp - 1] = var2.field1814;
+        arg0.intStack[++arg0.isp - 1] = var2.modelangle_z;
     }
 
     @ObfuscatedName("nv.pj(Lrn;B)V")
     public static final void method6789(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
-        arg0.intStack[++arg0.isp - 1] = var2.field1813;
+        arg0.intStack[++arg0.isp - 1] = var2.modelangle_y;
     }
 
     @ObfuscatedName("lk.pi(Lrn;I)V")
@@ -6755,21 +7150,21 @@ public final class ScriptRunner {
     public static final void method6845(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
-        arg0.intStack[++arg0.isp - 1] = var2.field1810;
+        arg0.intStack[++arg0.isp - 1] = var2.modelxof;
     }
 
     @ObfuscatedName("la.pf(Lrn;I)V")
     public static final void method6063(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
-        arg0.intStack[++arg0.isp - 1] = var2.field1824;
+        arg0.intStack[++arg0.isp - 1] = var2.modelyof;
     }
 
     @ObfuscatedName("nf.pm(Lrn;I)V")
     public static final void method6639(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
-        arg0.intStack[++arg0.isp - 1] = var2.field1797;
+        arg0.intStack[++arg0.isp - 1] = var2.graphic;
     }
 
     @ObfuscatedName("dr.pk(Lrn;I)V")
@@ -6796,14 +7191,14 @@ public final class ScriptRunner {
     public static final void method15467(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
-        arg0.intStack[++arg0.isp - 1] = var2.field1806 == 1 ? var2.field1838 : -1;
+        arg0.intStack[++arg0.isp - 1] = var2.modelkind == 1 ? var2.model : -1;
     }
 
     @ObfuscatedName("iz.py(Lrn;I)V")
     public static final void method4626(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
-        arg0.intStack[++arg0.isp - 1] = var2.field1793;
+        arg0.intStack[++arg0.isp - 1] = var2.textfont;
     }
 
     @ObfuscatedName("adf.pu(Lrn;B)V")
@@ -6821,6 +7216,20 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = var4;
     }
 
+    @ObfuscatedName("pm.qu(Lrn;I)V")
+    public static final void method7955(ClientScriptState arg0) {
+        ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        Component var2 = var1.field5240;
+        arg0.intStack[++arg0.isp - 1] = var2.textfont;
+    }
+
+    @ObfuscatedName("gz.qd(Lrn;I)V")
+    public static final void method3944(ClientScriptState arg0) {
+        ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        Component var2 = var1.field5240;
+        arg0.intStack[++arg0.isp - 1] = var2.invobject;
+    }
+
     @ObfuscatedName("aet.qm(Lrn;I)V")
     public static final void method15442(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
@@ -6830,6 +7239,13 @@ public final class ScriptRunner {
         } else {
             arg0.intStack[++arg0.isp - 1] = var2.invcount;
         }
+    }
+
+    @ObfuscatedName("vv.qi(Lrn;I)V")
+    public static final void method12369(ClientScriptState arg0) {
+        ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        Component var2 = var1.field5240;
+        arg0.intStack[++arg0.isp - 1] = var2.parentlayer;
     }
 
     @ObfuscatedName("ov.qx(Lrn;I)V")
@@ -6845,10 +7261,10 @@ public final class ScriptRunner {
         Component var2 = var1.field5240;
         int var3 = arg0.intStack[--arg0.isp];
         int var4 = var3 - 1;
-        if (var2.field1852 == null || var4 >= var2.field1852.length || var2.field1852[var4] == null) {
+        if (var2.op == null || var4 >= var2.op.length || var2.op[var4] == null) {
             arg0.objectStack[++arg0.osp - 1] = "";
         } else {
-            arg0.objectStack[++arg0.osp - 1] = var2.field1852[var4];
+            arg0.objectStack[++arg0.osp - 1] = var2.op[var4];
         }
     }
 
@@ -6892,7 +7308,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("da.qw(Lew;Lrn;B)V")
     public static final void method2816(Component arg0, ClientScriptState arg1) {
-        FontMetrics var2 = arg0.method3188(Statics.field6784, client.field8914);
+        FontMetrics var2 = arg0.method3188(Statics.fontProvider, client.fontFactory);
         int var3 = arg1.intStack[--arg1.isp];
         int var4 = arg1.intStack[--arg1.isp];
         int var5 = var2.method12410(arg0.text, arg0.renderwidth, arg0.field1835, var4, var3, Statics.field8538);
@@ -6906,9 +7322,16 @@ public final class ScriptRunner {
         method2816(var2, arg0);
     }
 
+    @ObfuscatedName("if.qp(Lrn;I)V")
+    public static final void method4706(ClientScriptState arg0) {
+        ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        Component var2 = var1.field5240;
+        method2816(var2, arg0);
+    }
+
     @ObfuscatedName("lw.qf(Lew;Lrn;B)V")
     public static final void method5942(Component arg0, ClientScriptState arg1) {
-        FontMetrics var2 = arg0.method3188(Statics.field6784, client.field8914);
+        FontMetrics var2 = arg0.method3188(Statics.fontProvider, client.fontFactory);
         int var3 = arg1.intStack[--arg1.isp];
         Point var4 = var2.method12396(arg0.text, arg0.renderwidth, arg0.field1835, var3, Statics.field8538);
         arg1.intStack[++arg1.isp - 1] = var4.x;
@@ -6938,18 +7361,18 @@ public final class ScriptRunner {
     public static final void method6846(Component arg0, ClientScriptState arg1) {
         int var2 = arg1.intStack[--arg1.isp];
         int var3 = arg1.intStack[--arg1.isp] - 1;
-        if (arg0.field1806 != 6) {
+        if (arg0.modelkind != 6) {
             throw new RuntimeException("");
         }
-        NPCType var4 = Statics.npcTypes.get(arg0.field1838);
-        if (arg0.field1930 == null) {
-            arg0.field1930 = new NPCTypeCustomisation(var4, true);
+        NPCType var4 = Statics.npcTypes.get(arg0.model);
+        if (arg0.customisation == null) {
+            arg0.customisation = new NPCTypeCustomisation(var4, true);
         }
-        arg0.field1930.uid = method3530();
+        arg0.customisation.uid = method3530();
         if (var3 < 0 || var3 >= var4.model.length) {
             throw new RuntimeException("" + var3);
         }
-        arg0.field1930.models[var3] = var2;
+        arg0.customisation.models[var3] = var2;
         client.requestRedrawComponent(arg0);
     }
 
@@ -6967,18 +7390,37 @@ public final class ScriptRunner {
         method6846(var2, arg0);
     }
 
+    @ObfuscatedName("lh.qe(Lew;Lrn;I)V")
+    public static final void method5714(Component arg0, ClientScriptState arg1) {
+        int var2 = arg1.intStack[--arg1.isp];
+        int var3 = arg1.intStack[--arg1.isp] - 1;
+        if (arg0.modelkind != 2) {
+            throw new RuntimeException("");
+        }
+        NPCType var4 = Statics.npcTypes.get(arg0.model);
+        if (arg0.customisation == null) {
+            arg0.customisation = new NPCTypeCustomisation(var4, false);
+        }
+        arg0.customisation.uid = method3530();
+        if (var3 < 0 || var3 >= var4.headmodel.length) {
+            throw new RuntimeException("");
+        }
+        arg0.customisation.models[var3] = var2;
+        client.requestRedrawComponent(arg0);
+    }
+
     @ObfuscatedName("nj.qy(Lrn;I)V")
     public static final void method6971(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
-        Statics.method5714(var2, arg0);
+        method5714(var2, arg0);
     }
 
     @ObfuscatedName("agh.qs(Lrn;I)V")
     public static final void method15938(ClientScriptState arg0) {
         ActiveComponent var1 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
         Component var2 = var1.field5240;
-        Statics.method5714(var2, arg0);
+        method5714(var2, arg0);
     }
 
     @ObfuscatedName("iv.qk(Lew;Lrn;I)V")
@@ -6986,14 +7428,14 @@ public final class ScriptRunner {
         int var2 = arg1.intStack[--arg1.isp];
         int var3 = arg1.intStack[--arg1.isp] - 1;
         int var4 = var3;
-        if (arg0.field1806 != 6 && arg0.field1806 != 2) {
+        if (arg0.modelkind != 6 && arg0.modelkind != 2) {
             throw new RuntimeException("");
         }
-        NPCType var5 = Statics.npcTypes.get(arg0.field1838);
-        if (arg0.field1930 == null) {
-            arg0.field1930 = new NPCTypeCustomisation(var5, arg0.field1806 == 6);
+        NPCType var5 = Statics.npcTypes.get(arg0.model);
+        if (arg0.customisation == null) {
+            arg0.customisation = new NPCTypeCustomisation(var5, arg0.modelkind == 6);
         }
-        arg0.field1930.uid = method3530();
+        arg0.customisation.uid = method3530();
         if (var5.recolindex != null) {
             if (var3 < 0 || var3 >= var5.recolindex.length) {
                 throw new RuntimeException("");
@@ -7003,7 +7445,7 @@ public final class ScriptRunner {
         if (var5.recol_d == null || var4 < 0 || var4 >= var5.recol_d.length) {
             throw new RuntimeException("");
         }
-        arg0.field1930.recol[var4] = (short) var2;
+        arg0.customisation.recol[var4] = (short) var2;
         client.requestRedrawComponent(arg0);
     }
 
@@ -7026,14 +7468,14 @@ public final class ScriptRunner {
         int var2 = arg1.intStack[--arg1.isp];
         int var3 = arg1.intStack[--arg1.isp] - 1;
         int var4 = var3;
-        if (arg0.field1806 != 6 && arg0.field1806 != 2) {
+        if (arg0.modelkind != 6 && arg0.modelkind != 2) {
             throw new RuntimeException("");
         }
-        NPCType var5 = Statics.npcTypes.get(arg0.field1838);
-        if (arg0.field1930 == null) {
-            arg0.field1930 = new NPCTypeCustomisation(var5, arg0.field1806 == 6);
+        NPCType var5 = Statics.npcTypes.get(arg0.model);
+        if (arg0.customisation == null) {
+            arg0.customisation = new NPCTypeCustomisation(var5, arg0.modelkind == 6);
         }
-        arg0.field1930.uid = method3530();
+        arg0.customisation.uid = method3530();
         if (var5.retexindex != null) {
             if (var3 < 0 || var3 >= var5.retexindex.length) {
                 throw new RuntimeException("");
@@ -7043,7 +7485,7 @@ public final class ScriptRunner {
         if (var5.retex_d == null || var4 < 0 || var4 >= var5.retex_d.length) {
             throw new RuntimeException("");
         }
-        arg0.field1930.retex[var4] = (short) var2;
+        arg0.customisation.retex[var4] = (short) var2;
         client.requestRedrawComponent(arg0);
     }
 
@@ -7065,14 +7507,14 @@ public final class ScriptRunner {
     public static final void method7246(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
-        arg0.intStack[++arg0.isp - 1] = var2.field1776;
+        arg0.intStack[++arg0.isp - 1] = var2.x;
     }
 
     @ObfuscatedName("lq.ri(Lrn;I)V")
     public static final void method5929(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
-        arg0.intStack[++arg0.isp - 1] = var2.field1777;
+        arg0.intStack[++arg0.isp - 1] = var2.y;
     }
 
     @ObfuscatedName("ic.rx(Lrn;B)V")
@@ -7093,7 +7535,7 @@ public final class ScriptRunner {
     public static final void method14924(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
-        arg0.intStack[++arg0.isp - 1] = var2.field1807 ? 1 : 0;
+        arg0.intStack[++arg0.isp - 1] = var2.hide ? 1 : 0;
     }
 
     @ObfuscatedName("iz.rw(Lrn;I)V")
@@ -7126,6 +7568,13 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = var2.scrollx;
     }
 
+    @ObfuscatedName("aar.rp(Lrn;B)V")
+    public static final void method13908(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        Component var2 = Component.get(var1);
+        arg0.intStack[++arg0.isp - 1] = var2.scrolly;
+    }
+
     @ObfuscatedName("adq.ru(Lrn;B)V")
     public static final void method15146(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
@@ -7144,35 +7593,35 @@ public final class ScriptRunner {
     public static final void method1953(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
-        arg0.intStack[++arg0.isp - 1] = var2.field1894;
+        arg0.intStack[++arg0.isp - 1] = var2.scrollheight;
     }
 
     @ObfuscatedName("cd.rl(Lrn;I)V")
     public static final void method2496(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
-        arg0.intStack[++arg0.isp - 1] = var2.field1818;
+        arg0.intStack[++arg0.isp - 1] = var2.modelzoom;
     }
 
     @ObfuscatedName("fw.rz(Lrn;I)V")
     public static final void method3671(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
-        arg0.intStack[++arg0.isp - 1] = var2.field1812;
+        arg0.intStack[++arg0.isp - 1] = var2.modelangle_x;
     }
 
     @ObfuscatedName("aab.re(Lrn;I)V")
     public static final void method13910(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
-        arg0.intStack[++arg0.isp - 1] = var2.field1814;
+        arg0.intStack[++arg0.isp - 1] = var2.modelangle_z;
     }
 
     @ObfuscatedName("an.rg(Lrn;B)V")
     public static final void method1719(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
-        arg0.intStack[++arg0.isp - 1] = var2.field1813;
+        arg0.intStack[++arg0.isp - 1] = var2.modelangle_y;
     }
 
     @ObfuscatedName("rd.ro(Lrn;S)V")
@@ -7186,35 +7635,42 @@ public final class ScriptRunner {
     public static final void method3644(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
-        arg0.intStack[++arg0.isp - 1] = var2.field1810;
+        arg0.intStack[++arg0.isp - 1] = var2.modelxof;
     }
 
     @ObfuscatedName("je.rn(Lrn;I)V")
     public static final void method4863(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
-        arg0.intStack[++arg0.isp - 1] = var2.field1824;
+        arg0.intStack[++arg0.isp - 1] = var2.modelyof;
     }
 
     @ObfuscatedName("ev.rr(Lrn;I)V")
     public static final void method2987(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
-        arg0.intStack[++arg0.isp - 1] = var2.field1797;
+        arg0.intStack[++arg0.isp - 1] = var2.graphic;
+    }
+
+    @ObfuscatedName("xb.rq(Lrn;I)V")
+    public static final void method12748(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        Component var2 = Component.get(var1);
+        arg0.intStack[++arg0.isp - 1] = var2.field1783;
     }
 
     @ObfuscatedName("rh.rv(Lrn;I)V")
     public static final void method8615(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
-        arg0.intStack[++arg0.isp - 1] = var2.field1806 == 1 ? var2.field1838 : -1;
+        arg0.intStack[++arg0.isp - 1] = var2.modelkind == 1 ? var2.model : -1;
     }
 
     @ObfuscatedName("rg.se(Lrn;B)V")
     public static final void method8719(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
-        arg0.intStack[++arg0.isp - 1] = var2.field1793;
+        arg0.intStack[++arg0.isp - 1] = var2.textfont;
     }
 
     @ObfuscatedName("ig.sd(Lrn;I)V")
@@ -7236,7 +7692,13 @@ public final class ScriptRunner {
     public static final void method6977(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         Component var2 = Component.get(var1);
-        arg0.intStack[++arg0.isp - 1] = var2.field1793;
+        arg0.intStack[++arg0.isp - 1] = var2.textfont;
+    }
+
+    @ObfuscatedName("tq.st(Lrn;I)V")
+    public static final void method11638(ClientScriptState arg0) {
+        Component var1 = Component.get(arg0.intStack[--arg0.isp]);
+        arg0.intStack[++arg0.isp - 1] = var1.invobject;
     }
 
     @ObfuscatedName("cy.sz(Lrn;I)V")
@@ -7313,10 +7775,10 @@ public final class ScriptRunner {
         Component var2 = Component.get(var1);
         int var3 = arg0.intStack[--arg0.isp];
         int var4 = var3 - 1;
-        if (var2.field1852 == null || var4 >= var2.field1852.length || var2.field1852[var4] == null) {
+        if (var2.op == null || var4 >= var2.op.length || var2.op[var4] == null) {
             arg0.objectStack[++arg0.osp - 1] = "";
         } else {
-            arg0.objectStack[++arg0.osp - 1] = var2.field1852[var4];
+            arg0.objectStack[++arg0.osp - 1] = var2.op[var4];
         }
     }
 
@@ -7395,6 +7857,15 @@ public final class ScriptRunner {
         client.method8390(var4, var1, var2);
     }
 
+    @ObfuscatedName("wm.sj(Lrn;I)V")
+    public static final void method12702(ClientScriptState arg0) {
+        arg0.isp -= 2;
+        int var1 = arg0.intStack[arg0.isp];
+        int var2 = arg0.intStack[arg0.isp + 1];
+        ActiveComponent var3 = arg0.secondary ? arg0.activeComponent2 : arg0.activeComponent;
+        client.method8390(var3.field5240, var1, var2);
+    }
+
     @ObfuscatedName("fx.sr(Lrn;B)V")
     public static final void resume_objdialog(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
@@ -7457,6 +7928,15 @@ public final class ScriptRunner {
         client.gameConnection.queue(var2);
     }
 
+    @ObfuscatedName("pg.tc(Lrn;I)V")
+    public static final void method7975(ClientScriptState arg0) {
+        String var1 = (String) arg0.objectStack[--arg0.osp];
+        ClientMessage var2 = ClientMessage.createMessage(ClientProt.field2929, client.gameConnection.randomOut);
+        var2.buf.p1(var1.length() + 1);
+        var2.buf.pjstr(var1);
+        client.gameConnection.queue(var2);
+    }
+
     @ObfuscatedName("ob.tb(Lrn;I)V")
     public static final void method7277(ClientScriptState arg0) {
         arg0.isp -= 3;
@@ -7490,6 +7970,12 @@ public final class ScriptRunner {
     public static final void method2586(ClientScriptState arg0) {
         arg0.isp -= 3;
         AudioRenderer.method5596(arg0.intStack[arg0.isp], arg0.intStack[arg0.isp + 1], arg0.intStack[arg0.isp + 2]);
+    }
+
+    @ObfuscatedName("qk.tn(Lrn;B)V")
+    public static final void method8398(ClientScriptState arg0) {
+        arg0.isp -= 4;
+        AudioRenderer.method1717(arg0.intStack[arg0.isp], arg0.intStack[arg0.isp + 1], arg0.intStack[arg0.isp + 2], arg0.intStack[arg0.isp + 3], false, 256);
     }
 
     @ObfuscatedName("lo.tm(Lrn;B)V")
@@ -7566,6 +8052,12 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = client.field9092[var1];
     }
 
+    @ObfuscatedName("nv.tt(Lrn;I)V")
+    public static final void method6790(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        arg0.intStack[++arg0.isp - 1] = client.field9093[var1];
+    }
+
     @ObfuscatedName("et.tu(Lrn;S)V")
     public static final void method2922(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
@@ -7580,6 +8072,12 @@ public final class ScriptRunner {
         int var4 = ((int) var2.x >> 9) + var3.x;
         int var5 = ((int) var2.z >> 9) + var3.z;
         arg0.intStack[++arg0.isp - 1] = (var1 << 28) + (var4 << 14) + var5;
+    }
+
+    @ObfuscatedName("nt.tl(Lrn;I)V")
+    public static final void coordx(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        arg0.intStack[++arg0.isp - 1] = var1 >> 14 & 0x3FFF;
     }
 
     @ObfuscatedName("jp.ts(Lrn;I)V")
@@ -7637,6 +8135,11 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = client.systemUpdateTimer;
     }
 
+    @ObfuscatedName("fc.uo(Lrn;I)V")
+    public static final void method3531(ClientScriptState arg0) {
+        arg0.intStack[++arg0.isp - 1] = Statics.field6772.field6768;
+    }
+
     @ObfuscatedName("acz.uk(Lrn;I)V")
     public static final void method14810(ClientScriptState arg0) {
         arg0.intStack[++arg0.isp - 1] = client.field9109;
@@ -7645,6 +8148,15 @@ public final class ScriptRunner {
     @ObfuscatedName("dk.ug(Lrn;I)V")
     public static final void method2713(ClientScriptState arg0) {
         arg0.intStack[++arg0.isp - 1] = client.field8905;
+    }
+
+    @ObfuscatedName("k.ue(Lrn;I)V")
+    public static final void method1605(ClientScriptState arg0) {
+        if (client.field8916 >= 5 && client.field8916 <= 9) {
+            arg0.intStack[++arg0.isp - 1] = 1;
+        } else {
+            arg0.intStack[++arg0.isp - 1] = 0;
+        }
     }
 
     @ObfuscatedName("gm.uj(Lrn;I)V")
@@ -7746,6 +8258,11 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = Statics.mouse.getX();
     }
 
+    @ObfuscatedName("lu.vx(Lrn;B)V")
+    public static final void method5827(ClientScriptState arg0) {
+        arg0.intStack[++arg0.isp - 1] = Statics.mouse.getY();
+    }
+
     @ObfuscatedName("tr.va(Lrn;I)V")
     public static final void method11403(ClientScriptState arg0) {
         method2473(MiniMenu.getActiveEntry(), arg0);
@@ -7753,7 +8270,7 @@ public final class ScriptRunner {
 
     @ObfuscatedName("mo.ve(Lrn;S)V")
     public static final void method6083(ClientScriptState arg0) {
-        method2473(MiniMenu.method7326(), arg0);
+        method2473(MiniMenu.getSecondaryEntry(), arg0);
     }
 
     @ObfuscatedName("jp.vu(Lrn;I)V")
@@ -7864,6 +8381,27 @@ public final class ScriptRunner {
         int var1 = arg0.intStack[--arg0.isp];
         EnumType var2 = Statics.field1244.method12116(var1);
         arg0.intStack[++arg0.isp - 1] = var2.method12128();
+    }
+
+    @ObfuscatedName("cj.vv(Lrn;I)V")
+    public static final void method2576(ClientScriptState arg0) {
+        arg0.isp -= 3;
+        int var1 = arg0.intStack[arg0.isp];
+        int var2 = arg0.intStack[arg0.isp + 1];
+        int var3 = arg0.intStack[arg0.isp + 2];
+        if (var2 == -1) {
+            throw new RuntimeException();
+        }
+        EnumType var4 = Statics.field1244.method12116(var2);
+        if (var4.field6806 != var1) {
+            throw new RuntimeException();
+        }
+        int[] var5 = var4.method12141(var3);
+        int var6 = 0;
+        if (var5 != null) {
+            var6 = var5.length;
+        }
+        arg0.intStack[++arg0.isp - 1] = var6;
     }
 
     @ObfuscatedName("id.vk(Lrn;I)V")
@@ -8017,6 +8555,16 @@ public final class ScriptRunner {
         }
     }
 
+    @ObfuscatedName("aev.wd(Lrn;B)V")
+    public static final void method15610(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        if (client.field9121 == 2 && var1 < client.field9206) {
+            arg0.intStack[++arg0.isp - 1] = client.field9209[var1].field645;
+        } else {
+            arg0.intStack[++arg0.isp - 1] = 0;
+        }
+    }
+
     @ObfuscatedName("ay.wf(Lrn;B)V")
     public static final void method1679(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
@@ -8044,6 +8592,12 @@ public final class ScriptRunner {
     public static final void method1204(ClientScriptState arg0) {
         String var1 = (String) arg0.objectStack[--arg0.osp];
         Statics.method12716(var1);
+    }
+
+    @ObfuscatedName("ik.wp(Lrn;I)V")
+    public static final void method4654(ClientScriptState arg0) {
+        String var1 = (String) arg0.objectStack[--arg0.osp];
+        client.method13904(var1, false);
     }
 
     @ObfuscatedName("ga.ws(Lrn;I)V")
@@ -8155,6 +8709,23 @@ public final class ScriptRunner {
         }
     }
 
+    @ObfuscatedName("vp.wt(Lrn;B)V")
+    public static final void method12465(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        if (client.field9121 == 0 || var1 >= client.field9211) {
+            arg0.objectStack[++arg0.osp - 1] = "";
+            arg0.objectStack[++arg0.osp - 1] = "";
+            return;
+        }
+        Ignore var2 = client.field8999[var1];
+        arg0.objectStack[++arg0.osp - 1] = var2.field639;
+        if (var2.field638 == null) {
+            arg0.objectStack[++arg0.osp - 1] = "";
+        } else {
+            arg0.objectStack[++arg0.osp - 1] = var2.field638;
+        }
+    }
+
     @ObfuscatedName("fm.wu(Lrn;B)V")
     public static final void method3628(ClientScriptState arg0) {
         String var1 = (String) arg0.objectStack[--arg0.osp];
@@ -8193,6 +8764,16 @@ public final class ScriptRunner {
         }
     }
 
+    @ObfuscatedName("ji.wh(Lrn;I)V")
+    public static final void method4793(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        if (client.field9121 == 2 && var1 >= 0 && var1 < client.field9206) {
+            arg0.intStack[++arg0.isp - 1] = client.field9209[var1].field650;
+        } else {
+            arg0.intStack[++arg0.isp - 1] = 0;
+        }
+    }
+
     @ObfuscatedName("ct.xa(Lrn;B)V")
     public static final void method2539(ClientScriptState arg0) {
         String var1 = (String) arg0.objectStack[--arg0.osp];
@@ -8220,6 +8801,12 @@ public final class ScriptRunner {
     public static final void method12368(ClientScriptState arg0) {
         String var1 = (String) arg0.objectStack[--arg0.osp];
         client.method13904(var1, true);
+    }
+
+    @ObfuscatedName("ph.xy(Lrn;I)V")
+    public static final void method7879(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        arg0.intStack[++arg0.isp - 1] = client.field8999[var1].field640 ? 1 : 0;
     }
 
     @ObfuscatedName("io.xo(Lrn;I)V")
@@ -8290,6 +8877,11 @@ public final class ScriptRunner {
     @ObfuscatedName("iw.xd(Lrn;I)V")
     public static final void method4563(ClientScriptState arg0) {
         arg0.intStack[++arg0.isp - 1] = arg0.activeClanSettings.field2353;
+    }
+
+    @ObfuscatedName("gz.xq(Lrn;I)V")
+    public static final void method3939(ClientScriptState arg0) {
+        arg0.intStack[++arg0.isp - 1] = arg0.activeClanSettings.field2354;
     }
 
     @ObfuscatedName("rk.xr(Lrn;I)V")
@@ -8405,6 +8997,12 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = arg0.activeClanChannel.field9430;
     }
 
+    @ObfuscatedName("ol.yo(Lrn;B)V")
+    public static final void method7074(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        arg0.objectStack[++arg0.osp - 1] = arg0.activeClanChannel.field9429[var1].field2343;
+    }
+
     @ObfuscatedName("fh.yy(Lrn;I)V")
     public static final void method3653(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
@@ -8415,6 +9013,12 @@ public final class ScriptRunner {
     public static final void method12758(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         arg0.intStack[++arg0.isp - 1] = arg0.activeClanChannel.field9429[var1].field2341;
+    }
+
+    @ObfuscatedName("sp.yv(Lrn;I)V")
+    public static final void method11255(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        client.method12622(Statics.field8458 == arg0.activeClanChannel, var1);
     }
 
     @ObfuscatedName("oe.ym(Lrn;I)V")
@@ -8496,6 +9100,14 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = var2 == 1 ? 1 : 0;
     }
 
+    @ObfuscatedName("gp.yi(Lrn;B)V")
+    public static final void method3907(ClientScriptState arg0) {
+        arg0.isp -= 2;
+        int var1 = arg0.intStack[arg0.isp];
+        int var2 = arg0.intStack[arg0.isp + 1];
+        arg0.intStack[++arg0.isp - 1] = var1 + var2;
+    }
+
     @ObfuscatedName("act.zv(Lrn;I)V")
     public static final void method14812(ClientScriptState arg0) {
         arg0.isp -= 2;
@@ -8549,6 +9161,14 @@ public final class ScriptRunner {
         long var1 = (long) arg0.intStack[arg0.isp];
         long var3 = (long) arg0.intStack[arg0.isp + 1];
         arg0.intStack[++arg0.isp - 1] = (int) (var1 * var3 / 100L + var1);
+    }
+
+    @ObfuscatedName("mf.zn(Lrn;I)V")
+    public static final void method6081(ClientScriptState arg0) {
+        arg0.isp -= 2;
+        int var1 = arg0.intStack[arg0.isp];
+        int var2 = arg0.intStack[arg0.isp + 1];
+        arg0.intStack[++arg0.isp - 1] = var1 | 0x1 << var2;
     }
 
     @ObfuscatedName("pc.zz(Lrn;B)V")
@@ -8660,6 +9280,12 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = Statics.field5083[ColourUtils.method3444(var1) & 0xFFFF];
     }
 
+    @ObfuscatedName("aaf.zk(Lrn;I)V")
+    public static final void method14062(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        arg0.intStack[++arg0.isp - 1] = ~var1;
+    }
+
     @ObfuscatedName("pl.zo(Lrn;I)V")
     public static final void method7909(ClientScriptState arg0) {
         String var1 = (String) arg0.objectStack[--arg0.osp];
@@ -8688,9 +9314,15 @@ public final class ScriptRunner {
         arg0.objectStack[++arg0.osp - 1] = TextUtil.createColourTag(var1);
     }
 
+    @ObfuscatedName("ac.za(Lrn;I)V")
+    public static final void method1977(ClientScriptState arg0) {
+        String var1 = (String) arg0.objectStack[--arg0.osp];
+        arg0.objectStack[++arg0.osp - 1] = var1.toLowerCase();
+    }
+
     @ObfuscatedName("oo.zg(Lrn;B)V")
     public static final void method7553(ClientScriptState arg0) {
-        arg0.objectStack[++arg0.osp - 1] = TimeFormatter.method11921(Statics.method5541(arg0.intStack[--arg0.isp]), Statics.language.getId());
+        arg0.objectStack[++arg0.osp - 1] = TimeFormatter.method11921(TimeFormatter.method5541(arg0.intStack[--arg0.isp]), Statics.language.getId());
     }
 
     @ObfuscatedName("md.aar(Lrn;I)V")
@@ -8771,6 +9403,12 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = StringTools.method6078((char) var1) ? 1 : 0;
     }
 
+    @ObfuscatedName("lk.aay(Lrn;I)V")
+    public static final void method5571(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        arg0.intStack[++arg0.isp - 1] = StringTools.method8060((char) var1) ? 1 : 0;
+    }
+
     @ObfuscatedName("b.aax(Lrn;I)V")
     public static final void method1593(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
@@ -8781,6 +9419,16 @@ public final class ScriptRunner {
     public static final void method6255(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         arg0.intStack[++arg0.isp - 1] = StringTools.method14808((char) var1) ? 1 : 0;
+    }
+
+    @ObfuscatedName("ji.aam(Lrn;I)V")
+    public static final void method4795(ClientScriptState arg0) {
+        String var1 = (String) arg0.objectStack[--arg0.osp];
+        if (var1 == null) {
+            arg0.intStack[++arg0.isp - 1] = 0;
+        } else {
+            arg0.intStack[++arg0.isp - 1] = var1.length();
+        }
     }
 
     @ObfuscatedName("dm.aao(Lrn;B)V")
@@ -8832,6 +9480,12 @@ public final class ScriptRunner {
     public static final void method8090(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         arg0.intStack[++arg0.isp - 1] = Character.toLowerCase((char) var1);
+    }
+
+    @ObfuscatedName("al.aat(Lrn;I)V")
+    public static final void method1822(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        arg0.intStack[++arg0.isp - 1] = Character.toUpperCase((char) var1);
     }
 
     @ObfuscatedName("tv.aac(Lrn;B)V")
@@ -8898,6 +9552,23 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = Statics.objTypes.get(var1).cost;
     }
 
+    @ObfuscatedName("nt.abp(Lrn;I)V")
+    public static final void method6647(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        arg0.intStack[++arg0.isp - 1] = Statics.objTypes.get(var1).stackable == 1 ? 1 : 0;
+    }
+
+    @ObfuscatedName("gz.aby(Lrn;I)V")
+    public static final void method3945(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        ObjType var2 = Statics.objTypes.get(var1);
+        if (var2.certtemplate == -1 && var2.certlink >= 0) {
+            arg0.intStack[++arg0.isp - 1] = var2.certlink;
+        } else {
+            arg0.intStack[++arg0.isp - 1] = var1;
+        }
+    }
+
     @ObfuscatedName("cy.abx(Lrn;I)V")
     public static final void method2589(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
@@ -8907,6 +9578,12 @@ public final class ScriptRunner {
         } else {
             arg0.intStack[++arg0.isp - 1] = var1;
         }
+    }
+
+    @ObfuscatedName("ew.abj(Lrn;I)V")
+    public static final void method3207(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        arg0.intStack[++arg0.isp - 1] = Statics.objTypes.get(var1).wearpos;
     }
 
     @ObfuscatedName("io.abn(Lrn;I)V")
@@ -8971,6 +9648,12 @@ public final class ScriptRunner {
         Statics.field8729 = 0;
     }
 
+    @ObfuscatedName("nx.abk(Lrn;B)V")
+    public static final void method6829(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        arg0.intStack[++arg0.isp - 1] = Statics.objTypes.get(var1).field7068;
+    }
+
     @ObfuscatedName("ar.abq(Lrn;I)V")
     public static final void method1700(ClientScriptState arg0) {
         String var1 = (String) arg0.objectStack[--arg0.osp];
@@ -9009,9 +9692,9 @@ public final class ScriptRunner {
         if (var2.minimenucolouroverridden) {
             var3 = var2.minimenucolour;
         } else if (var2.members) {
-            var3 = Statics.field1736.field5127;
+            var3 = Statics.miniMenuDefaults.field5127;
         } else {
-            var3 = Statics.field1736.field5128;
+            var3 = Statics.miniMenuDefaults.field5128;
         }
         arg0.intStack[++arg0.isp - 1] = var3;
     }
@@ -9095,7 +9778,7 @@ public final class ScriptRunner {
     @ObfuscatedName("c.aba(Lrn;I)V")
     public static final void method1326(ClientScriptState arg0) {
         String var1 = (String) arg0.objectStack[--arg0.osp];
-        if (client.state != 15 || Statics.isInProgress()) {
+        if (client.state != 15 || LoginManager.isInProgress()) {
             client.field9030 = -5;
         } else if (var1.length() > 20) {
             client.field9030 = -4;
@@ -9186,6 +9869,15 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = var3;
     }
 
+    @ObfuscatedName("lr.acm(Lrn;I)V")
+    public static final void method6035(ClientScriptState arg0) {
+        if (Statics.field769 == null) {
+            arg0.intStack[++arg0.isp - 1] = -1;
+        } else {
+            arg0.intStack[++arg0.isp - 1] = Statics.field769.field6699;
+        }
+    }
+
     @ObfuscatedName("xz.acr(Lrn;I)V")
     public static final void chat_setmode(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
@@ -9193,6 +9885,135 @@ public final class ScriptRunner {
         ClientMessage var3 = ClientMessage.createMessage(ClientProt.CHAT_SETMODE, var2.randomOut);
         var3.buf.p1(var1);
         var2.queue(var3);
+    }
+
+    @ObfuscatedName("np.acx(Lrn;I)V")
+    public static final void method6879(ClientScriptState arg0) {
+        String var1 = (String) arg0.objectStack[--arg0.osp];
+        if (client.userStaffModLevel == 0 && (client.field9054 && !client.field9077 || client.field9081)) {
+            return;
+        }
+        String var2 = var1.toLowerCase();
+        byte var3 = 0;
+        if (var2.startsWith(LocalisedText.field7024.get(Language.field6376))) {
+            var3 = 0;
+            var1 = var1.substring(LocalisedText.field7024.get(Language.field6376).length());
+        } else if (var2.startsWith(LocalisedText.field7019.get(Language.field6376))) {
+            var3 = 1;
+            var1 = var1.substring(LocalisedText.field7019.get(Language.field6376).length());
+        } else if (var2.startsWith(LocalisedText.field6915.get(Language.field6376))) {
+            var3 = 2;
+            var1 = var1.substring(LocalisedText.field6915.get(Language.field6376).length());
+        } else if (var2.startsWith(LocalisedText.field6869.get(Language.field6376))) {
+            var3 = 3;
+            var1 = var1.substring(LocalisedText.field6869.get(Language.field6376).length());
+        } else if (var2.startsWith(LocalisedText.field7022.get(Language.field6376))) {
+            var3 = 4;
+            var1 = var1.substring(LocalisedText.field7022.get(Language.field6376).length());
+        } else if (var2.startsWith(LocalisedText.field7006.get(Language.field6376))) {
+            var3 = 5;
+            var1 = var1.substring(LocalisedText.field7006.get(Language.field6376).length());
+        } else if (var2.startsWith(LocalisedText.field6985.get(Language.field6376))) {
+            var3 = 6;
+            var1 = var1.substring(LocalisedText.field6985.get(Language.field6376).length());
+        } else if (var2.startsWith(LocalisedText.field6888.get(Language.field6376))) {
+            var3 = 7;
+            var1 = var1.substring(LocalisedText.field6888.get(Language.field6376).length());
+        } else if (var2.startsWith(LocalisedText.field7026.get(Language.field6376))) {
+            var3 = 8;
+            var1 = var1.substring(LocalisedText.field7026.get(Language.field6376).length());
+        } else if (var2.startsWith(LocalisedText.field6926.get(Language.field6376))) {
+            var3 = 9;
+            var1 = var1.substring(LocalisedText.field6926.get(Language.field6376).length());
+        } else if (var2.startsWith(LocalisedText.field7028.get(Language.field6376))) {
+            var3 = 10;
+            var1 = var1.substring(LocalisedText.field7028.get(Language.field6376).length());
+        } else if (var2.startsWith(LocalisedText.field7029.get(Language.field6376))) {
+            var3 = 11;
+            var1 = var1.substring(LocalisedText.field7029.get(Language.field6376).length());
+        } else if (Statics.language != Language.field6376) {
+            if (var2.startsWith(LocalisedText.field7024.get(Statics.language))) {
+                var3 = 0;
+                var1 = var1.substring(LocalisedText.field7024.get(Statics.language).length());
+            } else if (var2.startsWith(LocalisedText.field7019.get(Statics.language))) {
+                var3 = 1;
+                var1 = var1.substring(LocalisedText.field7019.get(Statics.language).length());
+            } else if (var2.startsWith(LocalisedText.field6915.get(Statics.language))) {
+                var3 = 2;
+                var1 = var1.substring(LocalisedText.field6915.get(Statics.language).length());
+            } else if (var2.startsWith(LocalisedText.field6869.get(Statics.language))) {
+                var3 = 3;
+                var1 = var1.substring(LocalisedText.field6869.get(Statics.language).length());
+            } else if (var2.startsWith(LocalisedText.field7022.get(Statics.language))) {
+                var3 = 4;
+                var1 = var1.substring(LocalisedText.field7022.get(Statics.language).length());
+            } else if (var2.startsWith(LocalisedText.field7006.get(Statics.language))) {
+                var3 = 5;
+                var1 = var1.substring(LocalisedText.field7006.get(Statics.language).length());
+            } else if (var2.startsWith(LocalisedText.field6985.get(Statics.language))) {
+                var3 = 6;
+                var1 = var1.substring(LocalisedText.field6985.get(Statics.language).length());
+            } else if (var2.startsWith(LocalisedText.field6888.get(Statics.language))) {
+                var3 = 7;
+                var1 = var1.substring(LocalisedText.field6888.get(Statics.language).length());
+            } else if (var2.startsWith(LocalisedText.field7026.get(Statics.language))) {
+                var3 = 8;
+                var1 = var1.substring(LocalisedText.field7026.get(Statics.language).length());
+            } else if (var2.startsWith(LocalisedText.field6926.get(Statics.language))) {
+                var3 = 9;
+                var1 = var1.substring(LocalisedText.field6926.get(Statics.language).length());
+            } else if (var2.startsWith(LocalisedText.field7028.get(Statics.language))) {
+                var3 = 10;
+                var1 = var1.substring(LocalisedText.field7028.get(Statics.language).length());
+            } else if (var2.startsWith(LocalisedText.field7029.get(Statics.language))) {
+                var3 = 11;
+                var1 = var1.substring(LocalisedText.field7029.get(Statics.language).length());
+            }
+        }
+        String var4 = var1.toLowerCase();
+        byte var5 = 0;
+        if (var4.startsWith(LocalisedText.field7030.get(Language.field6376))) {
+            var5 = 1;
+            var1 = var1.substring(LocalisedText.field7030.get(Language.field6376).length());
+        } else if (var4.startsWith(LocalisedText.field6940.get(Language.field6376))) {
+            var5 = 2;
+            var1 = var1.substring(LocalisedText.field6940.get(Language.field6376).length());
+        } else if (var4.startsWith(LocalisedText.field7032.get(Language.field6376))) {
+            var5 = 3;
+            var1 = var1.substring(LocalisedText.field7032.get(Language.field6376).length());
+        } else if (var4.startsWith(LocalisedText.field7033.get(Language.field6376))) {
+            var5 = 4;
+            var1 = var1.substring(LocalisedText.field7033.get(Language.field6376).length());
+        } else if (var4.startsWith(LocalisedText.field6866.get(Language.field6376))) {
+            var5 = 5;
+            var1 = var1.substring(LocalisedText.field6866.get(Language.field6376).length());
+        } else if (Statics.language != Language.field6376) {
+            if (var4.startsWith(LocalisedText.field7030.get(Statics.language))) {
+                var5 = 1;
+                var1 = var1.substring(LocalisedText.field7030.get(Statics.language).length());
+            } else if (var4.startsWith(LocalisedText.field6940.get(Statics.language))) {
+                var5 = 2;
+                var1 = var1.substring(LocalisedText.field6940.get(Statics.language).length());
+            } else if (var4.startsWith(LocalisedText.field7032.get(Statics.language))) {
+                var5 = 3;
+                var1 = var1.substring(LocalisedText.field7032.get(Statics.language).length());
+            } else if (var4.startsWith(LocalisedText.field7033.get(Statics.language))) {
+                var5 = 4;
+                var1 = var1.substring(LocalisedText.field7033.get(Statics.language).length());
+            } else if (var4.startsWith(LocalisedText.field6866.get(Statics.language))) {
+                var5 = 5;
+                var1 = var1.substring(LocalisedText.field6866.get(Statics.language).length());
+            }
+        }
+        ServerConnection var6 = client.getCurrentConnection();
+        ClientMessage var7 = ClientMessage.createMessage(ClientProt.MESSAGE_PUBLIC, var6.randomOut);
+        var7.buf.p1(0);
+        int var8 = var7.buf.pos;
+        var7.buf.p1(var3);
+        var7.buf.p1(var5);
+        WordPack.method14081(var7.buf, var1);
+        var7.buf.psize1(var7.buf.pos - var8);
+        var6.queue(var7);
     }
 
     @ObfuscatedName("gf.ach(Lrn;B)V")
@@ -9244,6 +10065,17 @@ public final class ScriptRunner {
             var3 = var2.field2102;
         }
         arg0.intStack[++arg0.isp - 1] = var3;
+    }
+
+    @ObfuscatedName("jj.acf(Lrn;B)V")
+    public static final void method4771(ClientScriptState arg0) {
+        String var1;
+        if (Statics.localPlayerEntity == null || Statics.localPlayerEntity.name == null) {
+            var1 = "";
+        } else {
+            var1 = Statics.localPlayerEntity.method16120(true);
+        }
+        arg0.objectStack[++arg0.osp - 1] = var1;
     }
 
     @ObfuscatedName("az.acj(Lrn;I)V")
@@ -9479,6 +10311,15 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = Statics.field3779.method12176(var1).method16751();
     }
 
+    @ObfuscatedName("io.adi(Lrn;I)V")
+    public static final void method4599(ClientScriptState arg0) {
+        arg0.isp -= 2;
+        int var1 = arg0.intStack[arg0.isp];
+        int var2 = arg0.intStack[arg0.isp + 1];
+        int var3 = Statics.field3779.method12176(var1).method16752(var2).field5029;
+        arg0.intStack[++arg0.isp - 1] = var3;
+    }
+
     @ObfuscatedName("dj.adq(Lrn;I)V")
     public static final void method2610(ClientScriptState arg0) {
         arg0.isp -= 2;
@@ -9528,6 +10369,19 @@ public final class ScriptRunner {
     @ObfuscatedName("fn.adw(Lrn;B)V")
     public static final void method3563(ClientScriptState arg0) {
         Statics.field8729 = 0;
+    }
+
+    @ObfuscatedName("nw.ads(Lrn;B)V")
+    public static final void method7050(ClientScriptState arg0) {
+        ServerConnection var1 = client.getCurrentConnection();
+        ClientMessage var2 = ClientMessage.createMessage(ClientProt.MESSAGE_QUICKCHAT_PUBLIC, var1.randomOut);
+        var2.buf.p1(0);
+        int var3 = var2.buf.pos;
+        var2.buf.p1(2);
+        var2.buf.p2(arg0.activeChatPhrase.field2655);
+        arg0.activeChatPhrase.field2656.method16748(var2.buf, arg0.activeChatPhrase.field2657);
+        var2.buf.psize1(var2.buf.pos - var3);
+        var1.queue(var2);
     }
 
     @ObfuscatedName("nz.adl(Lrn;B)V")
@@ -9713,6 +10567,35 @@ public final class ScriptRunner {
         }
     }
 
+    @ObfuscatedName("fg.aew(Lrn;I)V")
+    public static final void method3642(ClientScriptState arg0) {
+        arg0.intStack[++arg0.isp - 1] = ClientWorldMap.loadingProgress == 100 ? 1 : 0;
+    }
+
+    @ObfuscatedName("qg.aef(Lrn;I)V")
+    public static final void method8406(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        ClientWorldMap.method12730(var1 >> 14 & 0x3FFF, var1 & 0x3FFF);
+    }
+
+    @ObfuscatedName("fx.aev(Lrn;I)V")
+    public static final void method3585(ClientScriptState arg0) {
+        WorldMapAreaMetadata var1 = ClientWorldMap.getCurrentArea();
+        if (var1 == null) {
+            arg0.intStack[++arg0.isp - 1] = -1;
+            arg0.intStack[++arg0.isp - 1] = -1;
+            return;
+        }
+        boolean var2 = var1.getSourceCoord(Statics.displayX + Statics.currentAreaDisplayMinX, Statics.displayZ + Statics.currentAreaDisplayMinZ, result);
+        if (var2) {
+            arg0.intStack[++arg0.isp - 1] = result[1];
+            arg0.intStack[++arg0.isp - 1] = result[2];
+        } else {
+            arg0.intStack[++arg0.isp - 1] = -1;
+            arg0.intStack[++arg0.isp - 1] = -1;
+        }
+    }
+
     @ObfuscatedName("ey.aen(Lrn;I)V")
     public static final void worldmap_jumptodisplaycoord(ClientScriptState arg0) {
         arg0.isp -= 2;
@@ -9849,6 +10732,21 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = Statics.currentArea == null ? -1 : Statics.currentArea.id;
     }
 
+    @ObfuscatedName("pa.afd(Lrn;I)V")
+    public static final void method7744(ClientScriptState arg0) {
+        arg0.isp -= 2;
+        int var1 = arg0.intStack[arg0.isp];
+        int var2 = arg0.intStack[arg0.isp + 1];
+        int var3 = var2 >> 14 & 0x3FFF;
+        int var4 = var2 & 0x3FFF;
+        int var5 = ClientWorldMap.method7984(var1, var3, var4);
+        if (var5 < 0) {
+            arg0.intStack[++arg0.isp - 1] = -1;
+        } else {
+            arg0.intStack[++arg0.isp - 1] = var5;
+        }
+    }
+
     @ObfuscatedName("id.afx(Lrn;I)V")
     public static final void worldmap_closemap(ClientScriptState arg0) {
         client.closeMAp();
@@ -9877,7 +10775,7 @@ public final class ScriptRunner {
     @ObfuscatedName("acb.afh(Lrn;B)V")
     public static final void fullscreen_modecount(ClientScriptState arg0) {
         if (Fullscreen.allowed) {
-            FullscreenMode[] var1 = client.method1671();
+            FullscreenMode[] var1 = client.getFullscreenModes();
             arg0.intStack[++arg0.isp - 1] = var1.length;
         } else {
             arg0.intStack[++arg0.isp - 1] = 0;
@@ -9888,9 +10786,9 @@ public final class ScriptRunner {
     public static final void method1683(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         if (Fullscreen.allowed) {
-            FullscreenMode[] var2 = client.method1671();
-            arg0.intStack[++arg0.isp - 1] = var2[var1].field6709;
-            arg0.intStack[++arg0.isp - 1] = var2[var1].field6707;
+            FullscreenMode[] var2 = client.getFullscreenModes();
+            arg0.intStack[++arg0.isp - 1] = var2[var1].width;
+            arg0.intStack[++arg0.isp - 1] = var2[var1].height;
         } else {
             arg0.intStack[++arg0.isp - 1] = 0;
             arg0.intStack[++arg0.isp - 1] = 0;
@@ -9903,16 +10801,21 @@ public final class ScriptRunner {
         int var2 = Statics.field3315;
         int var3 = -1;
         if (Fullscreen.allowed) {
-            FullscreenMode[] var4 = client.method1671();
+            FullscreenMode[] var4 = client.getFullscreenModes();
             for (int var5 = 0; var5 < var4.length; var5++) {
                 FullscreenMode var6 = var4[var5];
-                if (var6.field6709 == var1 && var6.field6707 == var2) {
+                if (var6.width == var1 && var6.height == var2) {
                     var3 = var5;
                     break;
                 }
             }
         }
         arg0.intStack[++arg0.isp - 1] = var3;
+    }
+
+    @ObfuscatedName("fc.afm(Lrn;I)V")
+    public static final void method3532(ClientScriptState arg0) {
+        arg0.intStack[++arg0.isp - 1] = client.method12476();
     }
 
     @ObfuscatedName("dm.afo(Lrn;I)V")
@@ -9962,6 +10865,28 @@ public final class ScriptRunner {
         if (var1 >= 0 && var1 < 2) {
             client.cameraSpline[var1] = new int[var2 << 1][4];
         }
+    }
+
+    @ObfuscatedName("rb.afr(Lrn;I)V")
+    public static final void method11055(ClientScriptState arg0) {
+        arg0.isp -= 7;
+        int var1 = arg0.intStack[arg0.isp];
+        int var2 = arg0.intStack[arg0.isp + 1] << 1;
+        int var3 = arg0.intStack[arg0.isp + 2];
+        int var4 = arg0.intStack[arg0.isp + 3];
+        int var5 = arg0.intStack[arg0.isp + 4];
+        int var6 = arg0.intStack[arg0.isp + 5];
+        int var7 = arg0.intStack[arg0.isp + 6];
+        if (var1 >= 0 && var1 < 2 && client.cameraSpline[var1] != null && var2 >= 0 && var2 < client.cameraSpline[var1].length) {
+            client.cameraSpline[var1][var2] = new int[]{(var3 >> 14 & 0x3FFF) << 9, var4 << 2, (var3 & 0x3FFF) << 9, var7};
+            client.cameraSpline[var1][var2 + 1] = new int[]{(var5 >> 14 & 0x3FFF) << 9, var6 << 2, (var5 & 0x3FFF) << 9};
+        }
+    }
+
+    @ObfuscatedName("dj.afq(Lrn;B)V")
+    public static final void method2611(ClientScriptState arg0) {
+        int var1 = client.cameraSpline[arg0.intStack[--arg0.isp]].length >> 1;
+        arg0.intStack[++arg0.isp - 1] = var1;
     }
 
     @ObfuscatedName("fw.afj(Lrn;B)V")
@@ -10044,6 +10969,13 @@ public final class ScriptRunner {
     public static final void defaultminimenu(ClientScriptState arg0) {
         MiniMenu.setFormattingDefault();
         MiniMenu.formatted = false;
+    }
+
+    @ObfuscatedName("ahj.afe(Lrn;B)V")
+    public static final void method16113(ClientScriptState arg0) {
+        arg0.isp -= 2;
+        client.field9096 = arg0.intStack[arg0.isp];
+        client.field9098 = arg0.intStack[arg0.isp + 1];
     }
 
     @ObfuscatedName("acm.afu(Lrn;I)V")
@@ -10223,6 +11155,11 @@ public final class ScriptRunner {
     public static final void cam_forceangle(ClientScriptState arg0) {
         arg0.isp -= 2;
         client.method8486(arg0.intStack[arg0.isp], arg0.intStack[arg0.isp + 1], 0);
+    }
+
+    @ObfuscatedName("nw.agx(Lrn;B)V")
+    public static final void method7053(ClientScriptState arg0) {
+        arg0.intStack[++arg0.isp - 1] = (int) client.field9171 >> 3;
     }
 
     @ObfuscatedName("fr.agk(Lrn;I)V")
@@ -10722,6 +11659,21 @@ public final class ScriptRunner {
         Statics.cam2.setLookatAngularInterpolation((float) arg0.intStack[--arg0.isp] / 1000.0F);
     }
 
+    @ObfuscatedName("fo.ain(Lrn;I)V")
+    public static final void method3622(ClientScriptState arg0) throws CameraException {
+        Statics.cam2.setPositionAngularInterpolation((float) arg0.intStack[--arg0.isp] / 1000.0F);
+    }
+
+    @ObfuscatedName("iy.aio(Lrn;I)V")
+    public static final void method4697(ClientScriptState arg0) throws CameraException {
+        arg0.isp -= 4;
+        float var1 = (float) arg0.intStack[arg0.isp];
+        float var2 = (float) arg0.intStack[arg0.isp + 1];
+        float var3 = (float) arg0.intStack[arg0.isp + 2];
+        float var4 = (float) arg0.intStack[arg0.isp + 3] / 1000.0F;
+        Statics.cam2.method3768(Vector3.create(var1, var2, var3), var4);
+    }
+
     @ObfuscatedName("mz.aiw(Lrn;S)V")
     public static final void method6344(ClientScriptState arg0) throws CameraException {
         arg0.isp -= 4;
@@ -10742,9 +11694,14 @@ public final class ScriptRunner {
         }
     }
 
+    @ObfuscatedName("pe.aiy(Lrn;I)V")
+    public static final void method7693(ClientScriptState arg0) {
+        LoginManager.continueLogin();
+    }
+
     @ObfuscatedName("on.air(Lrn;B)V")
     public static final void login_resetreply(ClientScriptState arg0) {
-        if (!Statics.isInProgress()) {
+        if (!LoginManager.isInProgress()) {
             LoginManager.resetLoginState();
         }
     }
@@ -10780,6 +11737,11 @@ public final class ScriptRunner {
     @ObfuscatedName("dd.aid(Lrn;S)V")
     public static final void method2812(ClientScriptState arg0) {
         arg0.intStack[++arg0.isp - 1] = LoginManager.field526 * 2500;
+    }
+
+    @ObfuscatedName("qr.aip(Lrn;I)V")
+    public static final void method8091(ClientScriptState arg0) {
+        arg0.intStack[++arg0.isp - 1] = LoginManager.field507;
     }
 
     @ObfuscatedName("ut.aif(Lrn;B)V")
@@ -10830,6 +11792,14 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = LoginManager.enterLobbyReply;
     }
 
+    @ObfuscatedName("eu.ajc(Lrn;I)V")
+    public static final void resend_uid_passport_request(ClientScriptState arg0) {
+        if (client.state == 3) {
+            ClientMessage var1 = ClientMessage.createMessage(ClientProt.UID_PASSPORT_RESEND_REQUEST, client.lobbyConnection.randomOut);
+            client.lobbyConnection.queue(var1);
+        }
+    }
+
     @ObfuscatedName("mb.ajb(Lrn;B)V")
     public static final void method6479(ClientScriptState arg0) {
         if (client.field8909 == null) {
@@ -10843,6 +11813,11 @@ public final class ScriptRunner {
     public static final void method4009(ClientScriptState arg0) {
         arg0.intStack[++arg0.isp - 1] = (int) (client.field8910 >> 32);
         arg0.intStack[++arg0.isp - 1] = (int) (client.field8910 & 0xFFFFFFFFFFFFFFFFL);
+    }
+
+    @ObfuscatedName("aah.ajt(Lrn;B)V")
+    public static final void method13912(ClientScriptState arg0) {
+        arg0.intStack[++arg0.isp - 1] = client.field8946 ? 1 : 0;
     }
 
     @ObfuscatedName("fe.aju(Lrn;I)V")
@@ -10863,7 +11838,12 @@ public final class ScriptRunner {
 
     @ObfuscatedName("jc.ajv(Lrn;I)V")
     public static final void method4738(ClientScriptState arg0) {
-        arg0.intStack[++arg0.isp - 1] = Statics.isInProgress() ? 1 : 0;
+        arg0.intStack[++arg0.isp - 1] = LoginManager.isInProgress() ? 1 : 0;
+    }
+
+    @ObfuscatedName("lv.ajr(Lrn;I)V")
+    public static final void method5615(ClientScriptState arg0) {
+        arg0.intStack[++arg0.isp - 1] = LoginManager.field545;
     }
 
     @ObfuscatedName("aej.ajm(Lrn;I)V")
@@ -10871,10 +11851,16 @@ public final class ScriptRunner {
         LoginManager.cancelLogin();
     }
 
+    @ObfuscatedName("pq.ajw(Lrn;I)V")
+    public static final void method7717(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        LoginManager.method11156(var1);
+    }
+
     @ObfuscatedName("xh.ajn(Lrn;B)V")
     public static final void method12740(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
-        Statics.method11170(var1);
+        LoginManager.method11170(var1);
     }
 
     @ObfuscatedName("agj.ajy(Lrn;I)V")
@@ -11018,6 +12004,13 @@ public final class ScriptRunner {
         client.preferencesChangeNotified = false;
     }
 
+    @ObfuscatedName("rt.akt(Lrn;I)V")
+    public static final void method8622(ClientScriptState arg0) {
+        Statics.options.method15448(Statics.options.volumeBackgroundEffects, arg0.intStack[--arg0.isp]);
+        Statics.method1245();
+        client.preferencesChangeNotified = false;
+    }
+
     @ObfuscatedName("ml.akz(Lrn;I)V")
     public static final void method6242(ClientScriptState arg0) {
         int var1 = Statics.options.removeRoof.getValue();
@@ -11037,6 +12030,13 @@ public final class ScriptRunner {
     public static final void method3317(ClientScriptState arg0) {
         Statics.options.method15448(Statics.options.antialiasingDefault, arg0.intStack[--arg0.isp]);
         Statics.method1245();
+    }
+
+    @ObfuscatedName("lf.akf(Lrn;I)V")
+    public static final void method6069(ClientScriptState arg0) {
+        Statics.options.method15448(Statics.options.buildArea, arg0.intStack[--arg0.isp]);
+        Statics.method1245();
+        client.preferencesChangeNotified = false;
     }
 
     @ObfuscatedName("ml.aki(Lrn;B)V")
@@ -11074,6 +12074,19 @@ public final class ScriptRunner {
             var1 = 2;
         }
         Statics.method5600(var1, false);
+    }
+
+    @ObfuscatedName("it.akl(Lrn;I)V")
+    public static final void method4711(ClientScriptState arg0) {
+        arg0.isp -= 2;
+        int var1 = arg0.intStack[arg0.isp];
+        boolean var2 = arg0.intStack[arg0.isp + 1] == 1;
+        Statics.options.method15448(Statics.options.toolkitDefault, var1);
+        if (!var2) {
+            Statics.options.method15448(Statics.options.preset, 0);
+        }
+        Statics.method1245();
+        client.preferencesChangeNotified = false;
     }
 
     @ObfuscatedName("dr.ake(Lrn;I)V")
@@ -11156,6 +12169,11 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = Statics.options.brightness.method15672();
     }
 
+    @ObfuscatedName("abq.aln(Lrn;B)V")
+    public static final void method14199(ClientScriptState arg0) {
+        arg0.intStack[++arg0.isp - 1] = Statics.options.removeRoof.getValue() == 2 ? 1 : 0;
+    }
+
     @ObfuscatedName("ob.alk(Lrn;B)V")
     public static final void method7283(ClientScriptState arg0) {
         arg0.intStack[++arg0.isp - 1] = Statics.options.groundDecor.method15725() == 1 ? 1 : 0;
@@ -11201,9 +12219,19 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = Statics.options.antialiasing.getValue();
     }
 
+    @ObfuscatedName("gm.ali(Lrn;I)V")
+    public static final void method3967(ClientScriptState arg0) {
+        arg0.intStack[++arg0.isp - 1] = Statics.options.stereo.getValue() == 1 ? 1 : 0;
+    }
+
     @ObfuscatedName("zw.alv(Lrn;B)V")
     public static final void method13864(ClientScriptState arg0) {
         arg0.intStack[++arg0.isp - 1] = Statics.options.volumeMainEffects.getValue();
+    }
+
+    @ObfuscatedName("wb.alf(Lrn;I)V")
+    public static final void method12728(ClientScriptState arg0) {
+        arg0.intStack[++arg0.isp - 1] = Statics.options.volumeMainMusic.getValue();
     }
 
     @ObfuscatedName("vw.alb(Lrn;B)V")
@@ -11404,7 +12432,7 @@ public final class ScriptRunner {
         int var1 = arg0.intStack[arg0.isp];
         int var2 = arg0.intStack[arg0.isp + 1];
         int var3 = arg0.intStack[arg0.isp + 2];
-        long var4 = Statics.method11488(0, 0, 12, var1, var2, var3);
+        long var4 = TimeFormatter.method11488(0, 0, 12, var1, var2, var3);
         int var6 = TimeFormatter.method12062(var4);
         if (var3 < 1970) {
             var6--;
@@ -11447,12 +12475,12 @@ public final class ScriptRunner {
     @ObfuscatedName("q.amz(Lrn;I)V")
     public static final void method1396(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
-        arg0.intStack[++arg0.isp - 1] = (int) (Statics.method5541(var1) / 60000L);
+        arg0.intStack[++arg0.isp - 1] = (int) (TimeFormatter.method5541(var1) / 60000L);
     }
 
     @ObfuscatedName("afs.amt(Lrn;B)V")
     public static final void worldlist_fetch(ClientScriptState arg0) {
-        if (client.state != 15 || Statics.isInProgress()) {
+        if (client.state != 15 || LoginManager.isInProgress()) {
             arg0.intStack[++arg0.isp - 1] = 1;
         } else if (WorldSwitcher.field6777) {
             arg0.intStack[++arg0.isp - 1] = 0;
@@ -11521,7 +12549,7 @@ public final class ScriptRunner {
     public static final void worldlist_switch(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         String var2 = (String) arg0.objectStack[--arg0.osp];
-        if (client.state == 15 && !Statics.isInProgress()) {
+        if (client.state == 15 && !LoginManager.isInProgress()) {
             arg0.intStack[++arg0.isp - 1] = WorldSwitcher.method8621(var1, var2) ? 1 : 0;
         } else {
             arg0.intStack[++arg0.isp - 1] = 0;
@@ -11562,6 +12590,11 @@ public final class ScriptRunner {
         WorldSwitcher.method4774(var1, var2, var3, var4);
     }
 
+    @ObfuscatedName("yw.ano(Lrn;I)V")
+    public static final void method12909(ClientScriptState arg0) {
+        Statics.method12022();
+    }
+
     @ObfuscatedName("cr.anc(Lrn;I)V")
     public static final void method2354(ClientScriptState arg0) {
         if (client.state == 15) {
@@ -11579,6 +12612,8 @@ public final class ScriptRunner {
     public static final void method5542(ClientScriptState arg0) {
         arg0.intStack[++arg0.isp - 1] = client.topLevelInterface;
     }
+    
+    // ---- after this point we're relying solely on line number info, obforder incomplete ----
 
     @ObfuscatedName("wf.ank(Lrn;I)V")
     public static final void method12505(ClientScriptState arg0) {
@@ -11658,6 +12693,10 @@ public final class ScriptRunner {
         } else {
             arg0.intStack[++arg0.isp - 1] = Statics.field1756[var1].field1732[var2].field1850;
         }
+    }
+
+    @ObfuscatedName("aiq.ani(Lrn;I)V")
+    public static final void method16476(ClientScriptState arg0) {
     }
 
     @ObfuscatedName("l.anj(Lrn;I)V")
@@ -11817,6 +12856,13 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = client.field9054 && !client.field9077 ? 1 : 0;
     }
 
+    @ObfuscatedName("ch.aok(Lrn;I)V")
+    public static final void method2426(ClientScriptState arg0) {
+        arg0.intStack[++arg0.isp - 1] = (int) (Statics.field6701 / 60000L);
+        arg0.intStack[++arg0.isp - 1] = (int) ((Statics.field6701 - MonotonicTime.get() - Statics.field3384) / 60000L);
+        arg0.intStack[++arg0.isp - 1] = Statics.field628 ? 1 : 0;
+    }
+
     @ObfuscatedName("fd.aof(Lrn;B)V")
     public static final void method3509(ClientScriptState arg0) {
         arg0.intStack[++arg0.isp - 1] = Statics.field3585;
@@ -11928,6 +12974,14 @@ public final class ScriptRunner {
         client.preferencesChangeNotified = false;
     }
 
+    @ObfuscatedName("lg.apb(Lrn;I)V")
+    public static final void method5810(ClientScriptState arg0) {
+        Preferences.method1886(true);
+        client.world.method6102();
+        Statics.method1245();
+        client.preferencesChangeNotified = false;
+    }
+
     @ObfuscatedName("it.apl(Lrn;I)V")
     public static final void method4715(ClientScriptState arg0) {
         Statics.options.method15448(Statics.options.preset, 0);
@@ -12015,6 +13069,21 @@ public final class ScriptRunner {
         if (client.field8903) {
             JavascriptFunction.field3147.method4761();
         }
+    }
+
+    @ObfuscatedName("vj.api(Lrn;I)V")
+    public static final void method12325(ClientScriptState arg0) {
+        boolean var1 = true;
+        if (client.field8903) {
+            try {
+                Object var2 = JavascriptFunction.field3148.method4759();
+                if (var2 != null) {
+                    var1 = (Boolean) var2;
+                }
+            } catch (Throwable var4) {
+            }
+        }
+        arg0.intStack[++arg0.isp - 1] = var1 ? 1 : 0;
     }
 
     @ObfuscatedName("acr.apm(Lrn;I)V")
@@ -12147,6 +13216,12 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = Statics.options.characterShadows.canSetValue(var1);
     }
 
+    @ObfuscatedName("cj.aqk(Lrn;I)V")
+    public static final void method2577(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        arg0.intStack[++arg0.isp - 1] = Statics.options.sceneryShadows.canSetValue(var1);
+    }
+
     @ObfuscatedName("oo.aqg(Lrn;I)V")
     public static final void method7556(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
@@ -12191,10 +13266,28 @@ public final class ScriptRunner {
         arg0.intStack[++arg0.isp - 1] = Statics.options.groundBlending.canSetValue(var1);
     }
 
+    @ObfuscatedName("pu.aqi(Lrn;B)V")
+    public static final void method7991(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        arg0.intStack[++arg0.isp - 1] = Statics.options.texturing.canSetValue(var1);
+    }
+
+    @ObfuscatedName("ix.aqm(Lrn;B)V")
+    public static final void method4615(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        arg0.intStack[++arg0.isp - 1] = Statics.options.maxScreensize.canSetValue(var1);
+    }
+
     @ObfuscatedName("ur.aqu(Lrn;I)V")
     public static final void method12158(ClientScriptState arg0) {
         int var1 = arg0.intStack[--arg0.isp];
         arg0.intStack[++arg0.isp - 1] = Statics.options.fog.canSetValue(var1);
+    }
+
+    @ObfuscatedName("xa.aqb(Lrn;B)V")
+    public static final void method234(ClientScriptState arg0) {
+        int var1 = arg0.intStack[--arg0.isp];
+        arg0.intStack[++arg0.isp - 1] = Statics.options.orthographic.canSetValue(var1);
     }
 
     @ObfuscatedName("ti.aqw(Lrn;S)V")
@@ -12234,6 +13327,20 @@ public final class ScriptRunner {
         arg0.objectStack[++arg0.osp - 1] = ((PlayerEntity) arg0.activeEntity).method16120(true);
     }
 
+    @ObfuscatedName("al.aqf(Lrn;I)V")
+    public static final void method1821(ClientScriptState arg0) {
+        arg0.isp -= 2;
+        int var1 = arg0.intStack[arg0.isp];
+        int var2 = arg0.intStack[arg0.isp + 1];
+        ActiveComponent var3;
+        if (arg0.secondary) {
+            var3 = arg0.activeComponent2;
+        } else {
+            var3 = arg0.activeComponent;
+        }
+        arg0.intStack[++arg0.isp - 1] = var3.method11066(arg0.activeEntity.field8652, var1, var2) ? 1 : 0;
+    }
+
     @ObfuscatedName("oz.aqh(Lrn;B)V")
     public static final void method7572(ClientScriptState arg0) {
         arg0.isp -= 3;
@@ -12249,7 +13356,7 @@ public final class ScriptRunner {
         String var2 = var1.name;
         NPCType var3 = var1.type;
         if (var3.multinpc != null) {
-            NPCType var4 = var3.getMultiNPC(Statics.field2669);
+            NPCType var4 = var3.getMultiNPC(client.localPlayerGameState);
             if (var4 == null) {
                 var2 = "";
             } else {
@@ -12308,7 +13415,7 @@ public final class ScriptRunner {
         boolean var2 = false;
         NPCType var3 = var1.type;
         if (var3.multinpc != null) {
-            var3 = var3.getMultiNPC(Statics.field2669);
+            var3 = var3.getMultiNPC(client.localPlayerGameState);
         }
         if (var3 != null) {
             var2 = var3.active;
@@ -12321,7 +13428,7 @@ public final class ScriptRunner {
         NpcEntity var1 = (NpcEntity) arg0.activeEntity;
         NPCType var2 = var1.type;
         if (var2.multinpc != null) {
-            var2 = var2.getMultiNPC(Statics.field2669);
+            var2 = var2.getMultiNPC(client.localPlayerGameState);
         }
         arg0.intStack[++arg0.isp - 1] = var2 == null ? 0 : 1;
     }
@@ -12334,6 +13441,11 @@ public final class ScriptRunner {
         client.requestRedrawComponent(var1);
     }
 
+    @ObfuscatedName("va.arw(Lrn;B)V")
+    public static final void method12185(ClientScriptState arg0) {
+        arg0.intStack[++arg0.isp - 1] = ((NpcEntity) arg0.activeEntity).type.field7211;
+    }
+
     @ObfuscatedName("im.arz(Lrn;I)V")
     public static final void method4640(ClientScriptState arg0) {
         arg0.intStack[++arg0.isp - 1] = client.field8919 == arg0.activeEntity.method13970() ? 1 : 0;
@@ -12342,6 +13454,14 @@ public final class ScriptRunner {
     @ObfuscatedName("wo.aru(Lrn;I)V")
     public static final void method12646(ClientScriptState arg0) {
         client.method7883((GraphEntity) arg0.activeLoc, arg0.intStack[--arg0.isp]);
+        arg0.intStack[++arg0.isp - 1] = (int) client.field9048[0];
+        arg0.intStack[++arg0.isp - 1] = (int) client.field9048[1];
+        arg0.intStack[++arg0.isp - 1] = (int) client.field9048[2];
+    }
+
+    @ObfuscatedName("ak.ark(Lrn;I)V")
+    public static final void method1954(ClientScriptState arg0) {
+        client.method7883(arg0.activeObj, arg0.intStack[--arg0.isp]);
         arg0.intStack[++arg0.isp - 1] = (int) client.field9048[0];
         arg0.intStack[++arg0.isp - 1] = (int) client.field9048[1];
         arg0.intStack[++arg0.isp - 1] = (int) client.field9048[2];
@@ -12417,6 +13537,11 @@ public final class ScriptRunner {
     @ObfuscatedName("et.ars(Lrn;B)V")
     public static final void method2921(ClientScriptState arg0) {
         method1680(arg0.activeObj, arg0);
+    }
+
+    @ObfuscatedName("ro.arg(Lrn;I)V")
+    public static final void method8728(ClientScriptState arg0) {
+        method1680(arg0.activeEntity, arg0);
     }
 
     @ObfuscatedName("el.arj(Lrn;I)V")

@@ -19,7 +19,7 @@ public class MiniMenuDefaults {
     public KeyHeldBinding field5125;
 
     @ObfuscatedName("rx.m")
-    public KeyHeldBinding field5129;
+    public KeyHeldBinding ctrlrunning;
 
     @ObfuscatedName("rx.t")
     public KeyHeldBinding field5126;
@@ -56,7 +56,7 @@ public class MiniMenuDefaults {
             } else if (var2 == 5) {
                 this.field5125 = Statics.method3541(arg0);
             } else if (var2 == 6) {
-                this.field5129 = Statics.method3541(arg0);
+                this.ctrlrunning = Statics.method3541(arg0);
             } else if (var2 == 7) {
                 this.field5126 = Statics.method3541(arg0);
             } else if (var2 == 8) {

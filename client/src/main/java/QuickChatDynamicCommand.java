@@ -57,15 +57,26 @@ public class QuickChatDynamicCommand {
     @ObfuscatedName("qz.x")
     public int field5032;
 
-    @ObfuscatedName("wt.u(I)[Lqz;")
-    public static QuickChatDynamicCommand[] method12694() {
-        return new QuickChatDynamicCommand[]{field5021, field5022, field5031, field5028, field5025, field5015, field5027, field5030, field5026, field5024, field5017, field5019, field5020, field5023};
-    }
-
     public QuickChatDynamicCommand(int arg0, int arg1, int arg2, int arg3) {
         this.field5029 = arg0;
         this.field5016 = arg1;
         this.field5018 = arg2;
         this.field5032 = arg3;
+    }
+
+    @ObfuscatedName("wt.u(I)[Lqz;")
+    public static QuickChatDynamicCommand[] method12694() {
+        return new QuickChatDynamicCommand[]{field5021, field5022, field5031, field5028, field5025, field5015, field5027, field5030, field5026, field5024, field5017, field5019, field5020, field5023};
+    }
+
+    @ObfuscatedName("aer.j(IB)Lqz;")
+    public static QuickChatDynamicCommand method15663(int arg0) {
+        QuickChatDynamicCommand[] var1 = method12694();
+        for (int var2 = 0; var2 < var1.length; var2++) {
+            if (var1[var2].field5029 == arg0) {
+                return var1[var2];
+            }
+        }
+        return null;
     }
 }

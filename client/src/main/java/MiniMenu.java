@@ -95,13 +95,13 @@ public class MiniMenu {
     }
 
     @ObfuscatedName("ep.u(I)Z")
-    public static boolean method3496() {
-        return testBinding(Statics.field1736.field5129);
+    public static boolean isCtrlKeyHeld() {
+        return testBinding(Statics.miniMenuDefaults.ctrlrunning);
     }
 
     @ObfuscatedName("xb.j(I)Z")
     public static boolean method12751() {
-        return testBinding(Statics.field1736.field5125);
+        return testBinding(Statics.miniMenuDefaults.field5125);
     }
 
     @ObfuscatedName("fk.s(Lpf;B)Z")
@@ -131,7 +131,7 @@ public class MiniMenu {
         field598.clearBridged();
         field599.clearBridged();
         for (MiniMenuEntry var1 = (MiniMenuEntry) entries.head(); var1 != null; var1 = (MiniMenuEntry) entries.next()) {
-            int var2 = var1.opcode;
+            int var2 = var1.menuAction;
             if (var2 < 1000) {
                 var1.unlink();
                 if (var2 == 59 || var2 == 2 || var2 == 8 || var2 == 17 || var2 == 15 || var2 == 16 || var2 == 58) {
@@ -171,9 +171,9 @@ public class MiniMenu {
             var5 = var3.getY();
         }
         if (!open) {
-            boolean var36 = testBinding(Statics.field1736.field5120, var3);
-            boolean var37 = testBinding(Statics.field1736.field5121, var3);
-            boolean var38 = testBinding(Statics.field1736.field5122, var3);
+            boolean var36 = testBinding(Statics.miniMenuDefaults.field5120, var3);
+            boolean var37 = testBinding(Statics.miniMenuDefaults.field5121, var3);
+            boolean var38 = testBinding(Statics.miniMenuDefaults.field5122, var3);
             if ((var36 || var37) && (client.field8933 == 1 && length > 2 || method16114())) {
                 var38 = true;
             }
@@ -185,7 +185,7 @@ public class MiniMenu {
                 }
             } else if (var37) {
                 if (Statics.field627 != null) {
-                    Statics.handleEntryClicked(Statics.field627, var4, var5);
+                    handleEntryClicked(Statics.field627, var4, var5);
                 }
             } else if (var36) {
                 if (Statics.field6655 != null) {
@@ -194,7 +194,7 @@ public class MiniMenu {
                         field602 = 1;
                         Statics.field5136 = Statics.field6655;
                     } else {
-                        Statics.handleEntryClicked(Statics.field6655, var4, var5);
+                        handleEntryClicked(Statics.field6655, var4, var5);
                     }
                 } else if (client.targetModeActive) {
                     client.cancelTargetMode();
@@ -204,7 +204,7 @@ public class MiniMenu {
                 field602 = 0;
                 Statics.field5136 = null;
             }
-        } else if (!testBinding(Statics.field1736.field5123, var3)) {
+        } else if (!testBinding(Statics.miniMenuDefaults.field5123, var3)) {
             boolean var27 = false;
             if (submenu != null) {
                 if (var4 >= Statics.field384 - 10 && var4 <= Statics.field603 + Statics.field384 + 10 && var5 >= Statics.field9294 - 10 && var5 <= Statics.field9294 + Statics.field567 + 10) {
@@ -271,7 +271,7 @@ public class MiniMenu {
                 SecondaryLinkedListIterator var11 = new SecondaryLinkedListIterator(submenu.field10345);
                 for (MiniMenuEntry var12 = (MiniMenuEntry) var11.method11715(); var12 != null; var12 = (MiniMenuEntry) var11.next()) {
                     if (var6 == var10) {
-                        Statics.handleEntryClicked(var12, var4, var5);
+                        handleEntryClicked(var12, var4, var5);
                         break;
                     }
                     var10++;
@@ -301,7 +301,7 @@ public class MiniMenu {
                     SecondaryLinkedListIterator var25 = new SecondaryLinkedListIterator(submenus);
                     for (MiniMenuSubMenu var26 = (MiniMenuSubMenu) var25.method11715(); var26 != null; var26 = (MiniMenuSubMenu) var25.next()) {
                         if (var20 == var24) {
-                            Statics.handleEntryClicked((MiniMenuEntry) var26.field10345.sentinel.secondaryNext, var4, var5);
+                            handleEntryClicked((MiniMenuEntry) var26.field10345.sentinel.secondaryNext, var4, var5);
                             close();
                             break;
                         }
@@ -328,7 +328,7 @@ public class MiniMenu {
                     IterableQueueIterator var18 = new IterableQueueIterator(entries);
                     for (MiniMenuEntry var19 = (MiniMenuEntry) var18.method11701(); var19 != null; var19 = (MiniMenuEntry) var18.next()) {
                         if (var13 == var17) {
-                            Statics.handleEntryClicked(var19, var4, var5);
+                            handleEntryClicked(var19, var4, var5);
                             break;
                         }
                         var17++;
@@ -342,7 +342,7 @@ public class MiniMenu {
     @ObfuscatedName("zs.l(III)V")
     public static void method13889(int arg0, int arg1) {
         if (field602 == 1) {
-            Statics.handleEntryClicked(Statics.field5136, arg0, arg1);
+            handleEntryClicked(Statics.field5136, arg0, arg1);
         } else if (field602 == 2) {
             Statics.open(arg0, arg1);
         }
@@ -355,10 +355,10 @@ public class MiniMenu {
         if (Statics.field2654 == null) {
             return false;
         } else {
-            if (Statics.field2654.opcode >= 2000) {
-                Statics.field2654.opcode -= 2000;
+            if (Statics.field2654.menuAction >= 2000) {
+                Statics.field2654.menuAction -= 2000;
             }
-            return Statics.field2654.opcode == 1007;
+            return Statics.field2654.menuAction == 1007;
         }
     }
 
@@ -724,9 +724,9 @@ public class MiniMenu {
                                         if (var75.minimenucolouroverridden) {
                                             var76 = var75.minimenucolour;
                                         } else if (var75.members) {
-                                            var76 = Statics.field1736.field5127;
+                                            var76 = Statics.miniMenuDefaults.field5127;
                                         } else {
-                                            var76 = Statics.field1736.field5128;
+                                            var76 = Statics.miniMenuDefaults.field5128;
                                         }
                                         if (client.targetModeActive && Statics.localPlayerEntity.level == var29.field4563.level) {
                                             ParamType var77 = Statics.targetParam == -1 ? null : Statics.paramTypes.get(Statics.targetParam);
@@ -775,7 +775,7 @@ public class MiniMenu {
                         var83 = (Location) var29.field4563;
                         var84 = client.world.getLocTypeList().get(var83.getType());
                         if (var84.multiloc != null) {
-                            var84 = var84.getMultiLoc(Statics.field2669);
+                            var84 = var84.getMultiLoc(client.localPlayerGameState);
                         }
                     } while (var84 == null);
                     if (client.targetModeActive && Statics.localPlayerEntity.level == var29.field4563.level) {
@@ -873,7 +873,7 @@ public class MiniMenu {
     @ObfuscatedName("ru.r(B)V")
     public static void method8628() {
         for (MiniMenuEntry var0 = (MiniMenuEntry) entries.head(); var0 != null; var0 = (MiniMenuEntry) entries.next()) {
-            if (Statics.method1367(var0.opcode)) {
+            if (Statics.method1367(var0.menuAction)) {
                 method6643(var0);
             }
         }
@@ -882,7 +882,7 @@ public class MiniMenu {
     @ObfuscatedName("sl.g(II)Z")
     public static boolean method11169(int arg0) {
         for (MiniMenuEntry var1 = (MiniMenuEntry) entries.head(); var1 != null; var1 = (MiniMenuEntry) entries.next()) {
-            if (method8731(var1.opcode) && var1.field10333 == (long) arg0) {
+            if (method8731(var1.menuAction) && var1.field10333 == (long) arg0) {
                 return true;
             }
         }
@@ -1060,7 +1060,7 @@ public class MiniMenu {
                         }
                     }
                 }
-            } else if (Statics.field1736.field5124) {
+            } else if (Statics.miniMenuDefaults.field5124) {
                 if (Statics.field627 != null) {
                     return Statics.field627.field10331;
                 }
@@ -1086,8 +1086,8 @@ public class MiniMenu {
         Component var4 = Statics.field1756[var2].field1732[var3];
         if (arg1 == -1 && var4.type == 0) {
             for (MiniMenuEntry var5 = (MiniMenuEntry) entries.head(); var5 != null; var5 = (MiniMenuEntry) entries.next()) {
-                if (var5.opcode == 58 || var5.opcode == 1007 || var5.opcode == 25 || var5.opcode == 57 || var5.opcode == 30) {
-                    for (Component var6 = Component.get(var5.field10335); var6 != null; var6 = client.method4752(Statics.field1756[var6.id >> 16], var6)) {
+                if (var5.menuAction == 58 || var5.menuAction == 1007 || var5.menuAction == 25 || var5.menuAction == 57 || var5.menuAction == 30) {
+                    for (Component var6 = Component.get(var5.sceneBaseTileZ); var6 != null; var6 = client.method4752(Statics.field1756[var6.id >> 16], var6)) {
                         if (var4.id == var6.id) {
                             return true;
                         }
@@ -1096,7 +1096,7 @@ public class MiniMenu {
             }
         } else {
             for (MiniMenuEntry var7 = (MiniMenuEntry) entries.head(); var7 != null; var7 = (MiniMenuEntry) entries.next()) {
-                if (var7.field10329 == arg1 && var4.id == var7.field10335 && (var7.opcode == 58 || var7.opcode == 1007 || var7.opcode == 25 || var7.opcode == 57 || var7.opcode == 30)) {
+                if (var7.sceneBaseTileX == arg1 && var4.id == var7.sceneBaseTileZ && (var7.menuAction == 58 || var7.menuAction == 1007 || var7.menuAction == 25 || var7.menuAction == 57 || var7.menuAction == 30)) {
                     return true;
                 }
             }
@@ -1110,7 +1110,7 @@ public class MiniMenu {
     }
 
     @ObfuscatedName("oe.at(I)Lajs;")
-    public static MiniMenuEntry method7326() {
+    public static MiniMenuEntry getSecondaryEntry() {
         return Statics.field627;
     }
 
@@ -1132,7 +1132,7 @@ public class MiniMenu {
         } else if (arg0 == null) {
             return 0;
         } else {
-            int var1 = arg0.opcode;
+            int var1 = arg0.menuAction;
             if (Statics.method1367(var1)) {
                 return 1;
             } else if (method5562(var1)) {
@@ -1189,7 +1189,7 @@ public class MiniMenu {
         }
         String var1;
         if (client.targetModeActive && length < 2) {
-            var1 = client.field9103 + LocalisedText.field6984.get(Statics.language) + client.field9151 + " " + TextUtil.ARROW;
+            var1 = client.field9103 + LocalisedText.MINISEPERATOR.get(Statics.language) + client.field9151 + " " + TextUtil.ARROW;
         } else if (method12751() && length > 2) {
             var1 = method12186(Statics.field6655);
         } else {
@@ -1209,7 +1209,7 @@ public class MiniMenu {
         if (mouseOverTextComponent == null) {
             return;
         }
-        Font var4 = mouseOverTextComponent.method3116(Statics.field6784, client.field8914);
+        Font var4 = mouseOverTextComponent.method3116(Statics.fontProvider, client.fontFactory);
         if (var4 == null) {
             var4 = Statics.field670;
         }
@@ -1341,8 +1341,8 @@ public class MiniMenu {
         int var4 = Statics.field611 - 3;
         byte var5 = 20;
         if (Statics.field10523 == null || Statics.field2136 == null) {
-            Statics.field10523 = (Font) Statics.field6784.method4859(client.field8914, Statics.field1387, true, true);
-            Statics.field2136 = Statics.field6784.method4843(client.field8914, Statics.field1387);
+            Statics.field10523 = (Font) Statics.fontProvider.method4859(client.fontFactory, Statics.field1387, true, true);
+            Statics.field2136 = Statics.fontProvider.method4843(client.fontFactory, Statics.field1387);
             if (Statics.field10523 != null && Statics.field2136 != null) {
                 close();
                 int var6 = var3 / 2 + var1;
@@ -1435,11 +1435,11 @@ public class MiniMenu {
     @ObfuscatedName("va.bz(Lajs;I)Ljava/lang/String;")
     public static String method12186(MiniMenuEntry arg0) {
         if (arg0.field10341 == null || arg0.field10341.length() == 0) {
-            return arg0.opbase == null || arg0.opbase.length() <= 0 ? arg0.field10339 : arg0.field10339 + LocalisedText.field6984.get(Statics.language) + arg0.opbase;
+            return arg0.opbase == null || arg0.opbase.length() <= 0 ? arg0.field10339 : arg0.field10339 + LocalisedText.MINISEPERATOR.get(Statics.language) + arg0.opbase;
         } else if (arg0.opbase == null || arg0.opbase.length() <= 0) {
-            return arg0.field10339 + LocalisedText.field6984.get(Statics.language) + arg0.field10341;
+            return arg0.field10339 + LocalisedText.MINISEPERATOR.get(Statics.language) + arg0.field10341;
         } else {
-            return arg0.field10339 + LocalisedText.field6984.get(Statics.language) + arg0.opbase + LocalisedText.field6984.get(Statics.language) + arg0.field10341;
+            return arg0.field10339 + LocalisedText.MINISEPERATOR.get(Statics.language) + arg0.opbase + LocalisedText.MINISEPERATOR.get(Statics.language) + arg0.field10341;
         }
     }
 
@@ -1528,7 +1528,7 @@ public class MiniMenu {
         NPCType var2 = arg0.type;
         String var3 = arg0.name;
         if (var2.multinpc != null) {
-            var2 = var2.getMultiNPC(Statics.field2669);
+            var2 = var2.getMultiNPC(client.localPlayerGameState);
             if (var2 == null) {
                 return;
             }
@@ -1538,8 +1538,8 @@ public class MiniMenu {
             return;
         }
         if (arg0.vislevel != 0) {
-            String var4 = client.modeGame == ModeGame.STELLARDAWN ? LocalisedText.field6998.get(Statics.language) : LocalisedText.field6996.get(Statics.language);
-            var3 = var3 + method2609(arg0.vislevel, Statics.localPlayerEntity.combatLevel) + TextUtil.field489 + var4 + arg0.vislevel + TextUtil.field487;
+            String var4 = client.modeGame == ModeGame.STELLARDAWN ? LocalisedText.RATING.get(Statics.language) : LocalisedText.LEVEL.get(Statics.language);
+            var3 = var3 + method2609(arg0.vislevel, Statics.localPlayerEntity.combatLevel) + TextUtil.OPEN_PARENTHESIS + var4 + arg0.vislevel + TextUtil.CLOSE_PARENTHESIS;
         }
         if (client.targetModeActive && !arg1) {
             ParamType var5 = Statics.targetParam == -1 ? null : Statics.paramTypes.get(Statics.targetParam);
@@ -1629,12 +1629,12 @@ public class MiniMenu {
 
     @ObfuscatedName("el.bc(Lew;II)Ljava/lang/String;")
     public static String getComponentOp(Component arg0, int arg1) {
-        if (!client.getComponentEvents(arg0).isOpTransmitted(arg1) && arg0.op == null) {
+        if (!client.getComponentEvents(arg0).isOpTransmitted(arg1) && arg0.onop == null) {
             return null;
-        } else if (arg0.field1852 == null || arg0.field1852.length <= arg1 || arg0.field1852[arg1] == null || arg0.field1852[arg1].trim().length() == 0) {
+        } else if (arg0.op == null || arg0.op.length <= arg1 || arg0.op[arg1] == null || arg0.op[arg1].trim().length() == 0) {
             return client.field9111 ? "Hidden-" + arg1 : null;
         } else {
-            return arg0.field1852[arg1];
+            return arg0.op[arg1];
         }
     }
 
@@ -1662,6 +1662,317 @@ public class MiniMenu {
         }
     }
 
+    @ObfuscatedName("agw.bp(Lajs;III)V")
+    public static void handleEntryClicked(MiniMenuEntry arg0, int arg1, int arg2) {
+        if (arg0 == null || entries.sentinel == arg0) {
+            return;
+        }
+        int var3 = arg0.sceneBaseTileX;
+        int var4 = arg0.sceneBaseTileZ;
+        int action = arg0.menuAction;
+        int index = (int) arg0.field10333;
+        long var7 = arg0.field10333;
+        if (action >= 2000) {
+            action -= 2000;
+        }
+        CoordGrid var9 = client.world.getBase();
+        if (action == 15) {
+            PlayerEntity var10 = client.players[index];
+            if (var10 != null) {
+                client.crossX = arg1;
+                client.crossY = arg2;
+                client.crossMode = 2;
+                client.crossCycle = 0;
+                ClientMessage var11 = ClientMessage.createMessage(ClientProt.OPPLAYERT, client.gameConnection.randomOut);
+                var11.buf.p2_alt2(client.activeComponentInvobject);
+                var11.buf.p1(isCtrlKeyHeld() ? 1 : 0);
+                var11.buf.p4(Statics.activeComponentParentLayer);
+                var11.buf.p2(client.activeComponentId);
+                var11.buf.p2_alt1(index);
+                client.gameConnection.queue(var11);
+                client.method2677(var10.routeWaypointX[0], var10.routeWaypointZ[0], true, PathFinderEntityRelated.method11404(var10.routeWaypointX[0], var10.routeWaypointZ[0], var10.size(), var10.size(), 0));
+            }
+        }
+        if (action == 59) {
+            client.crossX = arg1;
+            client.crossY = arg2;
+            client.crossMode = 1;
+            client.crossCycle = 0;
+            ClientMessage var12 = ClientMessage.createMessage(ClientProt.APCOORDT, client.gameConnection.randomOut);
+            var12.buf.p2_alt3(client.activeComponentInvobject);
+            var12.buf.p2_alt3(var9.z + var4);
+            var12.buf.p2(client.activeComponentId);
+            var12.buf.p2(var9.x + var3);
+            var12.buf.p4(Statics.activeComponentParentLayer);
+            client.gameConnection.queue(var12);
+            client.method2677(var3, var4, true, PathFinderEntityRelated.method3645(var3, var4));
+        }
+        ClientProt var13 = null;
+        if (action == 18) {
+            var13 = ClientProt.OPOBJ1;
+        } else if (action == 19) {
+            var13 = ClientProt.OPOBJ2;
+        } else if (action == 20) {
+            var13 = ClientProt.OPOBJ3;
+        } else if (action == 21) {
+            var13 = ClientProt.OPOBJ4;
+        } else if (action == 22) {
+            var13 = ClientProt.OPOBJ5;
+        } else if (action == 1004) {
+            var13 = ClientProt.OPOBJ6;
+        }
+        if (var13 != null) {
+            client.crossX = arg1;
+            client.crossY = arg2;
+            client.crossMode = 2;
+            client.crossCycle = 0;
+            ClientMessage var14 = ClientMessage.createMessage(var13, client.gameConnection.randomOut);
+            var14.buf.p1(isCtrlKeyHeld() ? 1 : 0);
+            var14.buf.p2_alt1(var9.z + var4);
+            var14.buf.p2(var9.x + var3);
+            var14.buf.p2(index);
+            client.gameConnection.queue(var14);
+            client.method12668(var3, var4);
+        }
+        if (action == 2) {
+            client.crossX = arg1;
+            client.crossY = arg2;
+            client.crossMode = 2;
+            client.crossCycle = 0;
+            ClientMessage var15 = ClientMessage.createMessage(ClientProt.OPLOCT, client.gameConnection.randomOut);
+            var15.buf.p2_alt2(var9.z + var4);
+            var15.buf.p2_alt3(var9.x + var3);
+            var15.buf.p2(client.activeComponentInvobject);
+            var15.buf.p1_alt2(isCtrlKeyHeld() ? 1 : 0);
+            var15.buf.p4((int) (var7 >>> 32) & Integer.MAX_VALUE);
+            var15.buf.p4_alt1(Statics.activeComponentParentLayer);
+            var15.buf.p2_alt3(client.activeComponentId);
+            client.gameConnection.queue(var15);
+            client.method5830(var3, var4, var7);
+        }
+        ClientProt var16 = null;
+        if (action == 3) {
+            var16 = ClientProt.OPLOC1;
+        } else if (action == 4) {
+            var16 = ClientProt.OPLOC2;
+        } else if (action == 5) {
+            var16 = ClientProt.OPLOC3;
+        } else if (action == 6) {
+            var16 = ClientProt.OPLOC4;
+        } else if (action == 1001) {
+            var16 = ClientProt.OPLOC5;
+        } else if (action == 1002) {
+            var16 = ClientProt.OPLOC6;
+        }
+        if (var16 != null) {
+            client.crossX = arg1;
+            client.crossY = arg2;
+            client.crossMode = 2;
+            client.crossCycle = 0;
+            ClientMessage var17 = ClientMessage.createMessage(var16, client.gameConnection.randomOut);
+            var17.buf.p1_alt2(isCtrlKeyHeld() ? 1 : 0);
+            var17.buf.p2_alt3(var9.z + var4);
+            var17.buf.p4_alt1((int) (var7 >>> 32) & Integer.MAX_VALUE);
+            var17.buf.p2_alt3(var9.x + var3);
+            client.gameConnection.queue(var17);
+            client.method5830(var3, var4, var7);
+        }
+        if (action == 30 && client.field9108 == null) {
+            Statics.method11509(var4, var3);
+            client.field9108 = Component.get(var4, var3);
+            if (client.field9108 != null) {
+                client.requestRedrawComponent(client.field9108);
+            }
+        }
+        if (action == 57 || action == 1007) {
+            client.method5716(index, var4, var3, arg0.opbase);
+        }
+        if (action == 23) {
+            if (client.userStaffModLevel > 0 && Statics.method1314()) {
+                Statics.method2617(Statics.localPlayerEntity.level, var9.x + var3, var9.z + var4);
+            } else {
+                ClientMessage var18 = createMoveMessage(var3, var4, index);
+                if (index == 1) {
+                    var18.buf.p1(-1);
+                    var18.buf.p1(-1);
+                    var18.buf.p2((int) client.field9021);
+                    var18.buf.p1(57);
+                    var18.buf.p1(client.field9087);
+                    var18.buf.p1(client.field8976);
+                    var18.buf.p1(89);
+                    Vector3 var19 = Statics.localPlayerEntity.getTransform().trans;
+                    var18.buf.p2((int) var19.x);
+                    var18.buf.p2((int) var19.z);
+                    var18.buf.p1(63);
+                } else {
+                    client.crossX = arg1;
+                    client.crossY = arg2;
+                    client.crossMode = 1;
+                    client.crossCycle = 0;
+                }
+                client.gameConnection.queue(var18);
+                client.method2677(var3, var4, true, PathFinderEntityRelated.method3645(var3, var4));
+            }
+        }
+        if (action == 16) {
+            client.crossX = arg1;
+            client.crossY = arg2;
+            client.crossMode = 2;
+            client.crossCycle = 0;
+            ClientMessage var20 = ClientMessage.createMessage(ClientProt.OPPLAYERT, client.gameConnection.randomOut);
+            var20.buf.p2_alt2(client.activeComponentInvobject);
+            var20.buf.p1(isCtrlKeyHeld() ? 1 : 0);
+            var20.buf.p4(Statics.activeComponentParentLayer);
+            var20.buf.p2(client.activeComponentId);
+            var20.buf.p2_alt1(Statics.localPlayerEntity.slot);
+            client.gameConnection.queue(var20);
+        }
+        if (action == 25) {
+            Component var21 = Component.get(var4, var3);
+            if (var21 != null) {
+                client.cancelTargetMode();
+                ServerKeyProperties var22 = client.getComponentEvents(var21);
+                Statics.method11974(var21, var22.getTargetMask(), var22.targetParam);
+                client.field9103 = client.getComponentTargetVerb(var21);
+                if (client.field9103 == null) {
+                    client.field9103 = "Null";
+                }
+                client.field9151 = var21.opbase + TextUtil.createColourTag(16777215);
+            }
+            return;
+        }
+        if (action == 17) {
+            client.crossX = arg1;
+            client.crossY = arg2;
+            client.crossMode = 2;
+            client.crossCycle = 0;
+            ClientMessage var23 = ClientMessage.createMessage(ClientProt.OPOBJT, client.gameConnection.randomOut);
+            var23.buf.p2_alt3(var9.z + var4);
+            var23.buf.p4(Statics.activeComponentParentLayer);
+            var23.buf.p2_alt2(client.activeComponentId);
+            var23.buf.p2_alt3(index);
+            var23.buf.p2_alt2(client.activeComponentInvobject);
+            var23.buf.p2(var9.x + var3);
+            var23.buf.p1_alt3(isCtrlKeyHeld() ? 1 : 0);
+            client.gameConnection.queue(var23);
+            client.method12668(var3, var4);
+        }
+        if (action == 60) {
+            if (client.userStaffModLevel > 0 && Statics.method1314()) {
+                Statics.method2617(Statics.localPlayerEntity.level, var9.x + var3, var9.z + var4);
+            } else {
+                client.crossX = arg1;
+                client.crossY = arg2;
+                client.crossMode = 1;
+                client.crossCycle = 0;
+                ClientMessage var24 = ClientMessage.createMessage(ClientProt.FACE_SQUARE, client.gameConnection.randomOut);
+                var24.buf.p2_alt3(var9.x + var3);
+                var24.buf.p2_alt3(var9.z + var4);
+                client.gameConnection.queue(var24);
+            }
+        }
+        ClientProt var25 = null;
+        if (action == 44) {
+            var25 = ClientProt.OPPLAYER1;
+        } else if (action == 45) {
+            var25 = ClientProt.OPPLAYER2;
+        } else if (action == 46) {
+            var25 = ClientProt.OPPLAYER3;
+        } else if (action == 47) {
+            var25 = ClientProt.OPPLAYER4;
+        } else if (action == 48) {
+            var25 = ClientProt.OPPLAYER5;
+        } else if (action == 49) {
+            var25 = ClientProt.OPPLAYER6;
+        } else if (action == 50) {
+            var25 = ClientProt.OPPLAYER7;
+        } else if (action == 51) {
+            var25 = ClientProt.OPPLAYER8;
+        } else if (action == 52) {
+            var25 = ClientProt.OPPLAYER9;
+        } else if (action == 53) {
+            var25 = ClientProt.OPPLAYER10;
+        }
+        if (var25 != null) {
+            PlayerEntity var26 = client.players[index];
+            if (var26 != null) {
+                client.crossX = arg1;
+                client.crossY = arg2;
+                client.crossMode = 2;
+                client.crossCycle = 0;
+                ClientMessage var27 = ClientMessage.createMessage(var25, client.gameConnection.randomOut);
+                var27.buf.p2_alt3(index);
+                var27.buf.p1(isCtrlKeyHeld() ? 1 : 0);
+                client.gameConnection.queue(var27);
+                client.method2677(var26.routeWaypointX[0], var26.routeWaypointZ[0], true, PathFinderEntityRelated.method11404(var26.routeWaypointX[0], var26.routeWaypointZ[0], var26.size(), var26.size(), 0));
+            }
+        }
+        if (action == 8) {
+            ObjectNode var28 = (ObjectNode) client.npcEntities.get((long) index);
+            if (var28 != null) {
+                NpcEntity var29 = (NpcEntity) var28.value;
+                client.crossX = arg1;
+                client.crossY = arg2;
+                client.crossMode = 2;
+                client.crossCycle = 0;
+                ClientMessage var30 = ClientMessage.createMessage(ClientProt.OPNPCT, client.gameConnection.randomOut);
+                var30.buf.p2_alt3(index);
+                var30.buf.p4_alt2(Statics.activeComponentParentLayer);
+                var30.buf.p2_alt2(client.activeComponentInvobject);
+                var30.buf.p2(client.activeComponentId);
+                var30.buf.p1_alt3(isCtrlKeyHeld() ? 1 : 0);
+                client.gameConnection.queue(var30);
+                client.method2677(var29.routeWaypointX[0], var29.routeWaypointZ[0], true, PathFinderEntityRelated.method11404(var29.routeWaypointX[0], var29.routeWaypointZ[0], var29.size(), var29.size(), 0));
+            }
+        }
+        ClientProt var31 = null;
+        if (action == 9) {
+            var31 = ClientProt.OPNPC1;
+        } else if (action == 10) {
+            var31 = ClientProt.OPNPC2;
+        } else if (action == 11) {
+            var31 = ClientProt.OPNPC3;
+        } else if (action == 12) {
+            var31 = ClientProt.OPNPC4;
+        } else if (action == 13) {
+            var31 = ClientProt.OPNPC5;
+        } else if (action == 1003) {
+            var31 = ClientProt.OPNPC6;
+        }
+        if (var31 != null) {
+            ObjectNode var32 = (ObjectNode) client.npcEntities.get((long) index);
+            if (var32 != null) {
+                NpcEntity var33 = (NpcEntity) var32.value;
+                client.crossX = arg1;
+                client.crossY = arg2;
+                client.crossMode = 2;
+                client.crossCycle = 0;
+                ClientMessage var34 = ClientMessage.createMessage(var31, client.gameConnection.randomOut);
+                var34.buf.p2_alt1(index);
+                var34.buf.p1(isCtrlKeyHeld() ? 1 : 0);
+                client.gameConnection.queue(var34);
+                client.method2677(var33.routeWaypointX[0], var33.routeWaypointZ[0], true, PathFinderEntityRelated.method11404(var33.routeWaypointX[0], var33.routeWaypointZ[0], var33.size(), var33.size(), 0));
+            }
+        }
+        if (action == 58) {
+            Component var35 = Component.get(var4, var3);
+            if (var35 != null) {
+                client.method14206(var35);
+            }
+        }
+        if (action == 1008 || action == 1009 || action == 1010 || action == 1011 || action == 1012) {
+            ClientWorldMap.method13878(action, index, var3);
+        }
+
+        if (client.targetModeActive) {
+            client.cancelTargetMode();
+        }
+
+        if (Statics.selectedArea != null && client.selectedCycle == 0) {
+            client.requestRedrawComponent(Statics.selectedArea);
+        }
+    }
+
     @ObfuscatedName("am.bi(IIII)Lada;")
     public static ClientMessage createMoveMessage(int arg0, int arg1, int arg2) {
         ClientMessage var3 = null;
@@ -1674,11 +1985,11 @@ public class MiniMenu {
         CoordGrid var4 = client.world.getBase();
         var3.buf.p2(var4.z + arg1);
         var3.buf.p2_alt3(var4.x + arg0);
-        var3.buf.p1(method3496() ? 1 : 0);
+        var3.buf.p1(isCtrlKeyHeld() ? 1 : 0);
         MiniMap.mapFlagX = arg0;
         MiniMap.mapFlagZ = arg1;
         MiniMap.mapFlag = false;
-        DelayedStateChange.onType15();
+        DelayedStateChange.onMiniMapFlag();
         return var3;
     }
 

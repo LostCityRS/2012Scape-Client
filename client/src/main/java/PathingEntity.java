@@ -850,7 +850,7 @@ public abstract class PathingEntity extends PrimaryLayerEntity implements Camera
     }
 
     @ObfuscatedName("aay.cn(B)V")
-    public void method13962() {
+    public void removeChatLine() {
         if (this.field8629 != null && this.field8629.field1232 != null) {
             this.field8629.field1236--;
             if (this.field8629.field1236 == 0) {

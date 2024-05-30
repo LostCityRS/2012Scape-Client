@@ -13,6 +13,6 @@ public class CutsceneAction_Sub20 extends CutsceneAction {
 
     @ObfuscatedName("zl.j(I)V")
     public void method2873() {
-        Statics.field1537[this.field8484].method2852();
+        Statics.entities[this.field8484].method2852();
     }
 }

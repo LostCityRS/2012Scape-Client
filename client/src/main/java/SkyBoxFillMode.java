@@ -16,6 +16,11 @@ public class SkyBoxFillMode implements SerializableEnum {
         this.field4466 = arg0;
     }
 
+    @ObfuscatedName("aay.u(I)[Loc;")
+    public static SkyBoxFillMode[] method14028() {
+        return new SkyBoxFillMode[]{field4468, field4467};
+    }
+
     @ObfuscatedName("oc.j(B)I")
     public int getId() {
         return this.field4466;

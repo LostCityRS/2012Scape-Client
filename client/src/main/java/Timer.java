@@ -3,6 +3,15 @@ import deob.ObfuscatedName;
 @ObfuscatedName("nk")
 public abstract class Timer {
 
+    @ObfuscatedName("jj.u(I)Lnk;")
+    public static Timer method4777() {
+        try {
+            return new MillisTimer();
+        } catch (Throwable var1) {
+            return new NanoTimer();
+        }
+    }
+
     @ObfuscatedName("nk.j(J)I")
     public final int method6831(long arg0) {
         long var3 = this.method6839();

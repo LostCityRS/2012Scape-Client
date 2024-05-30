@@ -19,6 +19,51 @@ public final class Base37 {
         throw new Error();
     }
 
+    @ObfuscatedName("ji.u(Ljava/lang/CharSequence;B)J")
+    public static long method4796(CharSequence arg0) {
+        long var1 = 0L;
+        int var3 = arg0.length();
+        for (int var4 = 0; var4 < var3; var4++) {
+            var1 *= 37L;
+            char var5 = arg0.charAt(var4);
+            if (var5 >= 'A' && var5 <= 'Z') {
+                var1 += var5 + 1 - 65;
+            } else if (var5 >= 'a' && var5 <= 'z') {
+                var1 += var5 + 1 - 97;
+            } else if (var5 >= '0' && var5 <= '9') {
+                var1 += var5 + 27 - 48;
+            }
+            if (var1 >= 177917621779460413L) {
+                break;
+            }
+        }
+        while (var1 % 37L == 0L && var1 != 0L) {
+            var1 /= 37L;
+        }
+        return var1;
+    }
+
+    @ObfuscatedName("lq.j(J)Ljava/lang/String;")
+    public static String method5925(long arg0) {
+        if (arg0 <= 0L || arg0 >= 6582952005840035281L) {
+            return null;
+        } else if (arg0 % 37L == 0L) {
+            return null;
+        } else {
+            int var2 = 0;
+            for (long var3 = arg0; var3 != 0L; var3 /= 37L) {
+                var2++;
+            }
+            StringBuilder var5 = new StringBuilder(var2);
+            while (arg0 != 0L) {
+                long var6 = arg0;
+                arg0 /= 37L;
+                var5.append(field6393[(int) (var6 - arg0 * 37L)]);
+            }
+            return var5.reverse().toString();
+        }
+    }
+
     @ObfuscatedName("qx.a(J)Ljava/lang/String;")
     public static String method8066(long arg0) {
         if (arg0 <= 0L || arg0 >= 6582952005840035281L) {
@@ -50,7 +95,7 @@ public final class Base37 {
 
     @ObfuscatedName("fk.s(Ljava/lang/CharSequence;I)Ljava/lang/String;")
     public static String method3633(CharSequence arg0) {
-        String var1 = method8066(Statics.method4796(arg0));
+        String var1 = method8066(method4796(arg0));
         if (var1 == null) {
             var1 = "";
         }

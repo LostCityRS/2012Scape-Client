@@ -152,8 +152,8 @@ public class ProjectileAnimation extends PrimaryLayerEntity {
             return;
         }
         PathingEntity var1 = null;
-        if (client.field8988 == 0) {
-            var1 = Statics.field1537[this.field10624 - 1].method2854();
+        if (client.sceneState == 0) {
+            var1 = Statics.entities[this.field10624 - 1].method2854();
         } else if (this.field10624 < 0) {
             int var2 = -this.field10624 - 1;
             if (client.currentPlayerUid == var2) {

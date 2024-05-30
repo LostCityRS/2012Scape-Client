@@ -48,6 +48,11 @@ public class ZoneProt {
     @ObfuscatedName("it.p")
     public static final ZoneProt field2806 = new ZoneProt(7);
 
-    public ZoneProt(int arg0) {
+    public ZoneProt(int length) {
+    }
+
+    @ObfuscatedName("qv.u(I)[Lit;")
+    public static ZoneProt[] method8301() {
+        return new ZoneProt[]{field2802, field2801, field2810, field2803, field2804, field2805, field2814, field2807, field2808, field2809, field2812, field2811, field2800, field2813, field2806};
     }
 }

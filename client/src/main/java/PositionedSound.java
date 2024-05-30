@@ -147,7 +147,7 @@ public class PositionedSound extends Node {
         int prevSound = this.sound;
         boolean var2 = this.field9537;
         if (this.loc != null) {
-            LocType loc = this.loc.getMultiLoc(client.field8988 == 0 ? CutsceneManager.field1538 : Statics.field2669);
+            LocType loc = this.loc.getMultiLoc(client.sceneState == 0 ? CutsceneManager.field1538 : client.localPlayerGameState);
             if (loc == null) {
                 this.sound = -1;
                 this.field9537 = false;
@@ -178,7 +178,7 @@ public class PositionedSound extends Node {
                 this.sound = var4;
                 NPCType var5 = this.npc.type;
                 if (var5.multinpc != null) {
-                    var5 = var5.getMultiNPC(Statics.field2669);
+                    var5 = var5.getMultiNPC(client.localPlayerGameState);
                 }
                 if (var5 == null) {
                     this.size = 0;
@@ -254,7 +254,7 @@ public class PositionedSound extends Node {
             NPCType var10 = arg5.type;
             if (var10.multinpc != null) {
                 var7.multi = true;
-                var10 = var10.getMultiNPC(Statics.field2669);
+                var10 = var10.getMultiNPC(client.localPlayerGameState);
             }
             if (var10 != null) {
                 var7.maxX = var10.size + arg1 << 9;
@@ -342,7 +342,7 @@ public class PositionedSound extends Node {
     public static int method5936(NpcEntity arg0) {
         NPCType var1 = arg0.type;
         if (var1.multinpc != null) {
-            var1 = var1.getMultiNPC(Statics.field2669);
+            var1 = var1.getMultiNPC(client.localPlayerGameState);
             if (var1 == null) {
                 return -1;
             }
@@ -395,7 +395,7 @@ public class PositionedSound extends Node {
                 int var9 = method5936(var5.npc);
                 NPCType var10 = var5.npc.type;
                 if (var10.multinpc != null) {
-                    var10 = var10.getMultiNPC(Statics.field2669);
+                    var10 = var10.getMultiNPC(client.localPlayerGameState);
                 }
                 if (var10 == null || var9 == -1) {
                     var5.sound = -1;
@@ -532,7 +532,7 @@ public class PositionedSound extends Node {
         int var11 = (arg0.maxX + arg0.minX) / 2 - arg2;
         int var12 = (arg0.maxZ + arg0.minZ) / 2 - arg3;
         if (var11 != 0 || var12 != 0) {
-            int var13 = -Statics.cameraYaw - (int) (Math.atan2((double) var11, (double) var12) * 2607.5945876176133D) - 4096 & 0x3FFF;
+            int var13 = -client.cameraYaw - (int) (Math.atan2((double) var11, (double) var12) * 2607.5945876176133D) - 4096 & 0x3FFF;
             if (var13 > 8192) {
                 var13 = 16384 - var13;
             }

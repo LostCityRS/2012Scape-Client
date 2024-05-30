@@ -386,7 +386,7 @@ public class DeveloperConsole {
             }
             if (arg0.equalsIgnoreCase("getcamerapos")) {
                 CoordGrid var4 = client.world.getBase();
-                addLine("Pos: " + Statics.localPlayerEntity.level + "," + ((Statics.cameraX >> 9) + var4.x >> 6) + "," + ((Statics.cameraZ >> 9) + var4.z >> 6) + "," + ((Statics.cameraX >> 9) + var4.x & 0x3F) + "," + ((Statics.cameraZ >> 9) + var4.z & 0x3F) + " Height: " + (client.getHeightmapY(Statics.cameraX, Statics.cameraZ, Statics.localPlayerEntity.level) - Statics.cameraY));
+                addLine("Pos: " + Statics.localPlayerEntity.level + "," + ((client.cameraX >> 9) + var4.x >> 6) + "," + ((client.cameraZ >> 9) + var4.z >> 6) + "," + ((client.cameraX >> 9) + var4.x & 0x3F) + "," + ((client.cameraZ >> 9) + var4.z & 0x3F) + " Height: " + (client.getHeightmapY(client.cameraX, client.cameraZ, Statics.localPlayerEntity.level) - client.cameraY));
                 addLine("Look: " + Statics.localPlayerEntity.level + "," + (Statics.cameraLookX + var4.x >> 6) + "," + (Statics.cameraLookZ + var4.z >> 6) + "," + (Statics.cameraLookX + var4.x & 0x3F) + "," + (Statics.cameraLookZ + var4.z & 0x3F) + " Height: " + (client.getHeightmapY(Statics.cameraLookX, Statics.cameraLookZ, Statics.localPlayerEntity.level) - Statics.cameraLookY));
                 return;
             }
@@ -526,12 +526,12 @@ public class DeveloperConsole {
                 }
                 if (arg0.startsWith("getclientvarpbit")) {
                     int var15 = Integer.parseInt(arg0.substring(17));
-                    addLine("varpbit=" + Statics.field2669.getVarBit(var15));
+                    addLine("varpbit=" + client.localPlayerGameState.getVarBit(var15));
                     return;
                 }
                 if (arg0.startsWith("getclientvarp")) {
                     int var16 = Integer.parseInt(arg0.substring(14));
-                    addLine("varp=" + Statics.field2669.garVarInt(var16));
+                    addLine("varp=" + client.localPlayerGameState.garVarInt(var16));
                     return;
                 }
                 if (arg0.startsWith("directlogin")) {

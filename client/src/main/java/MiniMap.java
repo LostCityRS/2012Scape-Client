@@ -274,7 +274,7 @@ public class MiniMap {
                 int var23 = field757[var21] * 4 + 2 - var8 / 128;
                 LocType var24 = client.world.getLocTypeList().get(field761[var21]);
                 if (var24.multiloc != null) {
-                    var24 = var24.getMultiLoc(Statics.field2669);
+                    var24 = var24.getMultiLoc(client.localPlayerGameState);
                     if (var24 == null || var24.field6495 == -1) {
                         continue;
                     }
@@ -316,7 +316,7 @@ public class MiniMap {
                 if (var9.method16154() && Statics.localPlayerEntity.level == var9.level) {
                     NPCType var10 = var9.type;
                     if (var10 != null && var10.multinpc != null) {
-                        var10 = var10.getMultiNPC(Statics.field2669);
+                        var10 = var10.getMultiNPC(client.localPlayerGameState);
                     }
                     if (var10 != null && var10.visonmap && var10.active) {
                         Vector3 var11 = var9.getTransform().trans;
@@ -418,7 +418,7 @@ public class MiniMap {
     @ObfuscatedName("an.q(Lra;Lta;Lew;IIIIII)V")
     public static void method1712(RendererToolkit arg0, GraphicsRelated arg1, Component arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
         MapElementType var8 = Statics.field8499.method7862(arg7);
-        if (var8 == null || !var8.field4776 || !var8.method7835(Statics.field2669)) {
+        if (var8 == null || !var8.field4776 || !var8.method7835(client.localPlayerGameState)) {
             return;
         }
         if (var8.field4788 != null) {

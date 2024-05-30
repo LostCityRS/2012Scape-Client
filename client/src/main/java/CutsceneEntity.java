@@ -10,7 +10,7 @@ public final class CutsceneEntity {
     public final int field1560;
 
     @ObfuscatedName("dn.s")
-    public boolean field1563 = false;
+    public boolean exists = false;
 
     @ObfuscatedName("dn.c")
     public NpcEntity field1558 = null;
@@ -39,8 +39,8 @@ public final class CutsceneEntity {
 
     @ObfuscatedName("dn.u(IIIIB)V")
     public void method2851(int arg0, int arg1, int arg2, int arg3) {
-        if (!this.field1563) {
-            this.field1563 = true;
+        if (!this.exists) {
+            this.exists = true;
             if (this.field1560 >= 0) {
                 this.field1558 = new NpcEntity(client.world.getScene(), 25);
                 this.field1558.slot = this.field1559;
@@ -71,7 +71,7 @@ public final class CutsceneEntity {
     public void method2852() {
         this.field1558 = null;
         this.field1562 = null;
-        this.field1563 = false;
+        this.exists = false;
     }
 
     @ObfuscatedName("dn.a(IIII)V")

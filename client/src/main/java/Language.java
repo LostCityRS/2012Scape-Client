@@ -39,7 +39,7 @@ public class Language implements SerializableEnum {
     public static final Language[] field6381;
 
     static {
-        Language[] var0 = Statics.method11191();
+        Language[] var0 = method11191();
         field6381 = new Language[var0.length];
         Language[] var1 = var0;
         for (int var2 = 0; var2 < var1.length; var2++) {
@@ -62,14 +62,19 @@ public class Language implements SerializableEnum {
         }
     }
 
-    @ObfuscatedName("sn.a(I)Ljava/lang/String;")
-    public String method11187() {
-        return this.field6378;
+    @ObfuscatedName("sn.u(I)[Lsn;")
+    public static Language[] method11191() {
+        return new Language[]{field6376, field6377, field6375, field6384, field6373, field6374};
     }
 
     @ObfuscatedName("sn.j(B)I")
     public int getId() {
         return this.field6382;
+    }
+
+    @ObfuscatedName("sn.a(I)Ljava/lang/String;")
+    public String method11187() {
+        return this.field6378;
     }
 
     @ObfuscatedName("sn.m(I)Ljava/util/Locale;")

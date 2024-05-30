@@ -22,9 +22,19 @@ public final class QuestCommands {
         arg0.intStack[arg0.isp - 1] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 1]).field5078;
     }
 
+    @ObfuscatedName("dz.s(Lrn;I)V")
+    public static void method2717(ClientScriptState arg0) {
+        arg0.intStack[arg0.isp - 1] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 1]).field5063;
+    }
+
     @ObfuscatedName("rk.c(Lrn;B)V")
     public static void method8480(ClientScriptState arg0) {
         arg0.intStack[arg0.isp - 1] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 1]).field5057 ? 1 : 0;
+    }
+
+    @ObfuscatedName("wu.m(Lrn;I)V")
+    public static void method12700(ClientScriptState arg0) {
+        arg0.intStack[arg0.isp - 1] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 1]).field5065;
     }
 
     @ObfuscatedName("fl.t(Lrn;I)V")
@@ -33,9 +43,15 @@ public final class QuestCommands {
         arg0.intStack[++arg0.isp - 1] = var1.field5076 == null ? 0 : var1.field5076.length;
     }
 
+    @ObfuscatedName("cu.l(Lrn;I)V")
+    public static void method2549(ClientScriptState arg0) {
+        arg0.intStack[arg0.isp - 2] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 2]).field5076[arg0.intStack[arg0.isp - 1]];
+        arg0.isp--;
+    }
+
     @ObfuscatedName("iv.f(Lrn;I)V")
     public static void method4578(ClientScriptState arg0) {
-        arg0.intStack[arg0.isp - 2] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 2]).method8423(Statics.field2669, arg0.intStack[arg0.isp - 1]) ? 1 : 0;
+        arg0.intStack[arg0.isp - 2] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 2]).method8423(client.localPlayerGameState, arg0.intStack[arg0.isp - 1]) ? 1 : 0;
         arg0.isp--;
     }
 
@@ -46,7 +62,7 @@ public final class QuestCommands {
 
     @ObfuscatedName("pv.z(Lrn;I)V")
     public static void method7657(ClientScriptState arg0) {
-        arg0.intStack[arg0.isp - 1] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 1]).method8420(Statics.field2669) ? 1 : 0;
+        arg0.intStack[arg0.isp - 1] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 1]).method8420(client.localPlayerGameState) ? 1 : 0;
     }
 
     @ObfuscatedName("dh.n(Lrn;B)V")
@@ -87,7 +103,7 @@ public final class QuestCommands {
 
     @ObfuscatedName("io.x(Lrn;I)V")
     public static void method4601(ClientScriptState arg0) {
-        arg0.intStack[arg0.isp - 2] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 2]).method8411(Statics.field2669, arg0.intStack[arg0.isp - 1]) ? 1 : 0;
+        arg0.intStack[arg0.isp - 2] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 2]).method8411(client.localPlayerGameState, arg0.intStack[arg0.isp - 1]) ? 1 : 0;
         arg0.isp--;
     }
 
@@ -105,23 +121,23 @@ public final class QuestCommands {
 
     @ObfuscatedName("rc.k(Lrn;I)V")
     public static void method8606(ClientScriptState arg0) {
-        arg0.intStack[arg0.isp - 2] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 2]).method8424(Statics.field2669, arg0.intStack[arg0.isp - 1]) ? 1 : 0;
+        arg0.intStack[arg0.isp - 2] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 2]).method8424(client.localPlayerGameState, arg0.intStack[arg0.isp - 1]) ? 1 : 0;
         arg0.isp--;
     }
 
     @ObfuscatedName("rs.h(Lrn;B)V")
     public static void method8541(ClientScriptState arg0) {
-        arg0.intStack[arg0.isp - 1] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 1]).method8428(Statics.field2669, client.field9093) ? 1 : 0;
+        arg0.intStack[arg0.isp - 1] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 1]).method8428(client.localPlayerGameState, client.field9093) ? 1 : 0;
     }
 
     @ObfuscatedName("vq.r(Lrn;I)V")
     public static void method12290(ClientScriptState arg0) {
-        arg0.intStack[arg0.isp - 1] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 1]).method8448(Statics.field2669) ? 1 : 0;
+        arg0.intStack[arg0.isp - 1] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 1]).method8448(client.localPlayerGameState) ? 1 : 0;
     }
 
     @ObfuscatedName("vw.g(Lrn;I)V")
     public static void method12348(ClientScriptState arg0) {
-        arg0.intStack[arg0.isp - 1] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 1]).method8429(Statics.field2669) ? 1 : 0;
+        arg0.intStack[arg0.isp - 1] = Statics.field4959.method8401(arg0.intStack[arg0.isp - 1]).method8429(client.localPlayerGameState) ? 1 : 0;
     }
 
     @ObfuscatedName("ei.y(Lrn;I)V")

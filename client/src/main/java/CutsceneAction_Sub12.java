@@ -87,7 +87,7 @@ public class CutsceneAction_Sub12 extends CutsceneAction {
             var2 = this.field8551 * 512 + 256;
             var3 = this.field8547;
         } else {
-            PathingEntity var4 = Statics.field1537[this.field8539].method2854();
+            PathingEntity var4 = Statics.entities[this.field8539].method2854();
             Vector3 var5 = var4.getTransform().trans;
             var1 = (int) var5.x;
             var2 = (int) var5.z;
@@ -99,7 +99,7 @@ public class CutsceneAction_Sub12 extends CutsceneAction {
             var6 = this.field8546 * 512 + 256;
             var7 = this.field8548 * 512 + 256;
         } else {
-            PathingEntity var8 = Statics.field1537[this.field8541].method2854();
+            PathingEntity var8 = Statics.entities[this.field8541].method2854();
             Vector3 var9 = var8.getTransform().trans;
             var6 = (int) var9.x;
             var7 = (int) var9.z;

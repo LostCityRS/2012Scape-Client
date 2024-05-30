@@ -397,13 +397,13 @@ public class LocalisedText {
     public static final LocalisedText MINIMENU_FACE_HERE = new LocalisedText("Face here", "Hierhin drehen", "Regarder dans cette direction", "Virar para cá");
 
     @ObfuscatedName("vt.et")
-    public static final LocalisedText field6996 = new LocalisedText("level: ", "Stufe: ", "niveau ", "nível: ");
+    public static final LocalisedText LEVEL = new LocalisedText("level: ", "Stufe: ", "niveau ", "nível: ");
 
     @ObfuscatedName("vt.eu")
     public static final LocalisedText field6988 = new LocalisedText("skill: ", "Fertigkeit: ", "compétence ", "habilidade: ");
 
     @ObfuscatedName("vt.eg")
-    public static final LocalisedText field6998 = new LocalisedText("rating: ", "Kampfstufe: ", "classement ", "qualificação: ");
+    public static final LocalisedText RATING = new LocalisedText("rating: ", "Kampfstufe: ", "classement ", "qualificação: ");
 
     @ObfuscatedName("vt.ev")
     public static final LocalisedText field6999 = new LocalisedText("Please wait...", "Bitte warte...", "Veuillez attendre", "Aguarde...");
@@ -412,7 +412,7 @@ public class LocalisedText {
     public static final LocalisedText field6955 = new LocalisedText("Close", "Bitte schließ die momentan geöffnete Benutzeroberfläche,", "Fermez l'interface que vous avez ouverte avant d'utiliser le bouton « Signaler un abus ».", "Feche a interface aberta antes de usar o recurso \"Denunciar abuso\".");
 
     @ObfuscatedName("vt.eq")
-    public static final LocalisedText field6984 = new LocalisedText(" ", ": ", " ", " ");
+    public static final LocalisedText MINISEPERATOR = new LocalisedText(" ", ": ", " ", " ");
 
     @ObfuscatedName("vt.en")
     public static final LocalisedText field6896 = new LocalisedText("M", "M", "M", "M");

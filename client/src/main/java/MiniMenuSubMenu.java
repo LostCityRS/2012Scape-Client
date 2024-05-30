@@ -19,7 +19,7 @@ public class MiniMenuSubMenu extends SecondaryNode {
 
     @ObfuscatedName("ajz.u(I)I")
     public int method16648() {
-        return this.field10345.sentinel.secondaryNext == this.field10345.sentinel ? -1 : ((MiniMenuEntry) this.field10345.sentinel.secondaryNext).opcode;
+        return this.field10345.sentinel.secondaryNext == this.field10345.sentinel ? -1 : ((MiniMenuEntry) this.field10345.sentinel.secondaryNext).menuAction;
     }
 
     @ObfuscatedName("ajz.j(Lajs;I)Z")
@@ -28,7 +28,7 @@ public class MiniMenuSubMenu extends SecondaryNode {
         arg0.unlinkSecondary();
         MiniMenuEntry var3 = (MiniMenuEntry) this.field10345.head();
         while (var3 != null) {
-            if (MiniMenu.method5825(arg0.opcode, var3.opcode)) {
+            if (MiniMenu.method5825(arg0.menuAction, var3.menuAction)) {
                 SecondaryLinkedList.insertBefore(arg0, var3);
                 this.size++;
                 return !var2;

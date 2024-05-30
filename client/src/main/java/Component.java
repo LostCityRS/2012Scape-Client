@@ -82,10 +82,10 @@ public class Component {
     public int clientcode = 0;
 
     @ObfuscatedName("ew.ao")
-    public byte field1829 = 0;
+    public byte xmode = 0;
 
     @ObfuscatedName("ew.al")
-    public byte field1769 = 0;
+    public byte ymode = 0;
 
     @ObfuscatedName("ew.at")
     public byte field1856 = 0;
@@ -94,22 +94,22 @@ public class Component {
     public byte field1771 = 0;
 
     @ObfuscatedName("ew.aw")
-    public int field1772 = 0;
+    public int xpos = 0;
 
     @ObfuscatedName("ew.aa")
-    public int field1774 = 0;
+    public int ypos = 0;
 
     @ObfuscatedName("ew.am")
-    public int field1910 = 0;
+    public int wsize = 0;
 
     @ObfuscatedName("ew.ad")
     public int field1775 = 0;
 
     @ObfuscatedName("ew.az")
-    public int field1776 = 0;
+    public int x = 0;
 
     @ObfuscatedName("ew.ak")
-    public int field1777 = 0;
+    public int y = 0;
 
     @ObfuscatedName("ew.av")
     public int renderwidth = 0;
@@ -127,7 +127,7 @@ public class Component {
     public int field1886 = -1;
 
     @ObfuscatedName("ew.ac")
-    public boolean field1807 = false;
+    public boolean hide = false;
 
     @ObfuscatedName("ew.aq")
     public int field1827 = -1;
@@ -151,7 +151,7 @@ public class Component {
     public int field1790 = 0;
 
     @ObfuscatedName("ew.bt")
-    public int field1894 = 0;
+    public int scrollheight = 0;
 
     @ObfuscatedName("ew.bg")
     public int colour = 0;
@@ -169,7 +169,7 @@ public class Component {
     public boolean field1796 = false;
 
     @ObfuscatedName("ew.ba")
-    public int field1797 = -1;
+    public int graphic = -1;
 
     @ObfuscatedName("ew.bd")
     public int field1783 = 0;
@@ -193,13 +193,13 @@ public class Component {
     public boolean field1804 = false;
 
     @ObfuscatedName("ew.bb")
-    public boolean field1805 = true;
+    public boolean clickmask = true;
 
     @ObfuscatedName("ew.be")
-    public int field1806 = 1;
+    public int modelkind = 1;
 
     @ObfuscatedName("ew.bw")
-    public int field1838;
+    public int model;
 
     @ObfuscatedName("ew.bo")
     public int field1832 = -1;
@@ -208,19 +208,19 @@ public class Component {
     public boolean field1816;
 
     @ObfuscatedName("ew.by")
-    public int field1810 = 0;
+    public int modelxof = 0;
 
     @ObfuscatedName("ew.bu")
-    public int field1824 = 0;
+    public int modelyof = 0;
 
     @ObfuscatedName("ew.cl")
-    public int field1812 = 0;
+    public int modelangle_x = 0;
 
     @ObfuscatedName("ew.cq")
-    public int field1813 = 0;
+    public int modelangle_y = 0;
 
     @ObfuscatedName("ew.co")
-    public int field1814 = 0;
+    public int modelangle_z = 0;
 
     @ObfuscatedName("ew.cb")
     public int field1811 = 0;
@@ -232,10 +232,10 @@ public class Component {
     public int field1817 = 0;
 
     @ObfuscatedName("ew.cx")
-    public int field1818 = 100;
+    public int modelzoom = 100;
 
     @ObfuscatedName("ew.cn")
-    public int field1819 = 0;
+    public int modelobjwidth = 0;
 
     @ObfuscatedName("ew.cf")
     public int field1895 = 0;
@@ -274,10 +274,10 @@ public class Component {
     public int field1831;
 
     @ObfuscatedName("ew.cu")
-    public int field1793 = -1;
+    public int textfont = -1;
 
     @ObfuscatedName("ew.cc")
-    public boolean field1833 = true;
+    public boolean fontmono = true;
 
     @ObfuscatedName("ew.cg")
     public String text = "";
@@ -298,7 +298,7 @@ public class Component {
     public int field1839 = 0;
 
     @ObfuscatedName("ew.dp")
-    public boolean field1860 = false;
+    public boolean textantimacro = false;
 
     @ObfuscatedName("ew.dw")
     public ServerKeyProperties field1841 = ServerKeyProperties.NONE;
@@ -322,7 +322,7 @@ public class Component {
     public String opbase = "";
 
     @ObfuscatedName("ew.ds")
-    public String[] field1852;
+    public String[] op;
 
     @ObfuscatedName("ew.dc")
     public String pausetext;
@@ -385,7 +385,7 @@ public class Component {
     public Object[] field1872;
 
     @ObfuscatedName("ew.ed")
-    public Object[] field1873;
+    public Object[] ontargetleave;
 
     @ObfuscatedName("ew.ee")
     public Object[] field1874;
@@ -427,7 +427,7 @@ public class Component {
     public Object[] field1784;
 
     @ObfuscatedName("ew.ey")
-    public Object[] op;
+    public Object[] onop;
 
     @ObfuscatedName("ew.ek")
     public Object[] field1788;
@@ -505,10 +505,10 @@ public class Component {
     public int field1737 = -1;
 
     @ObfuscatedName("ew.fe")
-    public int field1747 = -1;
+    public int modelanim = -1;
 
     @ObfuscatedName("ew.fq")
-    public AnimationNode field1789;
+    public AnimationNode modelAnimator;
 
     @ObfuscatedName("ew.ft")
     public Component[] field1915;
@@ -556,7 +556,7 @@ public class Component {
     public ParticleSystem field1840;
 
     @ObfuscatedName("ew.go")
-    public NPCTypeCustomisation field1930;
+    public NPCTypeCustomisation customisation;
 
     @ObfuscatedName("tk.j(IB)Lew;")
     public static Component get(int arg0) {
@@ -660,14 +660,14 @@ public class Component {
             this.field1762 = arg0.gjstr();
         }
         this.clientcode = arg0.g2();
-        this.field1772 = arg0.g2s();
-        this.field1774 = arg0.g2s();
-        this.field1910 = arg0.g2();
+        this.xpos = arg0.g2s();
+        this.ypos = arg0.g2s();
+        this.wsize = arg0.g2();
         this.field1775 = arg0.g2();
         this.field1856 = arg0.g1b();
         this.field1771 = arg0.g1b();
-        this.field1829 = arg0.g1b();
-        this.field1769 = arg0.g1b();
+        this.xmode = arg0.g1b();
+        this.ymode = arg0.g1b();
         this.field1886 = arg0.g2();
         if (this.field1886 == 65535) {
             this.field1886 = -1;
@@ -675,19 +675,19 @@ public class Component {
             this.field1886 += this.id & 0xFFFF0000;
         }
         int var3 = arg0.g1();
-        this.field1807 = (var3 & 0x1) != 0;
+        this.hide = (var3 & 0x1) != 0;
         if (var2 >= 0) {
             this.field1787 = (var3 & 0x2) != 0;
         }
         if (this.type == 0) {
             this.field1790 = arg0.g2();
-            this.field1894 = arg0.g2();
+            this.scrollheight = arg0.g2();
             if (var2 < 0) {
                 this.field1787 = arg0.g1() == 1;
             }
         }
         if (this.type == 5) {
-            this.field1797 = arg0.g4s();
+            this.graphic = arg0.g4s();
             this.field1783 = arg0.g2();
             int var4 = arg0.g1();
             this.field1799 = (var4 & 0x1) != 0;
@@ -699,12 +699,12 @@ public class Component {
             this.field1803 = arg0.g1() == 1;
             this.colour = arg0.g4s();
             if (var2 >= 3) {
-                this.field1805 = arg0.g1() == 1;
+                this.clickmask = arg0.g1() == 1;
             }
         }
         if (this.type == 6) {
-            this.field1806 = 1;
-            this.field1838 = arg0.gSmart2or4null();
+            this.modelkind = 1;
+            this.model = arg0.gSmart2or4null();
             int var5 = arg0.g1();
             boolean var6 = (var5 & 0x1) == 1;
             this.field1816 = (var5 & 0x2) == 2;
@@ -713,31 +713,31 @@ public class Component {
             if (var6) {
                 this.field1811 = arg0.g2s();
                 this.field1916 = arg0.g2s();
-                this.field1812 = arg0.g2();
-                this.field1813 = arg0.g2();
-                this.field1814 = arg0.g2();
-                this.field1818 = arg0.g2();
+                this.modelangle_x = arg0.g2();
+                this.modelangle_y = arg0.g2();
+                this.modelangle_z = arg0.g2();
+                this.modelzoom = arg0.g2();
             } else if (this.field1816) {
                 this.field1811 = arg0.g2s();
                 this.field1916 = arg0.g2s();
                 this.field1817 = arg0.g2s();
-                this.field1812 = arg0.g2();
-                this.field1813 = arg0.g2();
-                this.field1814 = arg0.g2();
-                this.field1818 = arg0.g2s();
+                this.modelangle_x = arg0.g2();
+                this.modelangle_y = arg0.g2();
+                this.modelangle_z = arg0.g2();
+                this.modelzoom = arg0.g2s();
             }
-            this.field1747 = arg0.gSmart2or4null();
+            this.modelanim = arg0.gSmart2or4null();
             if (this.field1856 != 0) {
-                this.field1819 = arg0.g2();
+                this.modelobjwidth = arg0.g2();
             }
             if (this.field1771 != 0) {
                 this.field1895 = arg0.g2();
             }
         }
         if (this.type == 4) {
-            this.field1793 = arg0.gSmart2or4null();
+            this.textfont = arg0.gSmart2or4null();
             if (var2 >= 2) {
-                this.field1833 = arg0.g1() == 1;
+                this.fontmono = arg0.g1() == 1;
             }
             this.text = arg0.gjstr();
             this.field1835 = arg0.g1();
@@ -790,9 +790,9 @@ public class Component {
         int var15 = var14 & 0xF;
         int var16 = var14 >> 4;
         if (var15 > 0) {
-            this.field1852 = new String[var15];
+            this.op = new String[var15];
             for (int var17 = 0; var17 < var15; var17++) {
-                this.field1852[var17] = arg0.gjstr();
+                this.op[var17] = arg0.gjstr();
             }
         }
         if (var16 > 0) {
@@ -854,13 +854,13 @@ public class Component {
         this.field1862 = this.method3198(arg0);
         this.field1867 = this.method3198(arg0);
         this.field1888 = this.method3198(arg0);
-        this.field1873 = this.method3198(arg0);
+        this.ontargetleave = this.method3198(arg0);
         this.field1872 = this.method3198(arg0);
         this.field1874 = this.method3198(arg0);
         this.field1876 = this.method3198(arg0);
         this.field1878 = this.method3198(arg0);
         this.field1784 = this.method3198(arg0);
-        this.op = this.method3198(arg0);
+        this.onop = this.method3198(arg0);
         if (var2 >= 0) {
             this.field1788 = this.method3198(arg0);
         }
@@ -916,12 +916,12 @@ public class Component {
     @ObfuscatedName("ew.n(Lra;I)Lce;")
     public Sprite method3151(RendererToolkit arg0) {
         field1761 = false;
-        long var2 = ((this.field1803 ? 1L : 0L) << 39) + ((long) this.outline << 36) + ((this.field1804 ? 1L : 0L) << 35) + (long) this.field1797 + ((this.field1770 ? 1L : 0L) << 38) + ((long) this.graphicshadow << 40);
+        long var2 = ((this.field1803 ? 1L : 0L) << 39) + ((long) this.outline << 36) + ((this.field1804 ? 1L : 0L) << 35) + (long) this.graphic + ((this.field1770 ? 1L : 0L) << 38) + ((long) this.graphicshadow << 40);
         Sprite var4 = (Sprite) field1757.get(var2);
         if (var4 != null) {
             return var4;
         }
-        SpriteData var5 = SpriteDataProvider.method2590(Statics.field1600, this.field1797, 0);
+        SpriteData var5 = SpriteDataProvider.method2590(Statics.field1600, this.graphic, 0);
         if (var5 == null) {
             field1761 = true;
             return null;
@@ -953,14 +953,14 @@ public class Component {
 
     @ObfuscatedName("ew.o(Lje;Ljd;I)Ll;")
     public Font method3116(FontProvider arg0, FontFactory arg1) {
-        Font var3 = (Font) arg0.method4859(arg1, this.field1793, false, this.field1833);
+        Font var3 = (Font) arg0.method4859(arg1, this.textfont, false, this.fontmono);
         field1761 = var3 == null;
         return var3;
     }
 
     @ObfuscatedName("ew.q(Lje;Ljd;I)Lvm;")
     public FontMetrics method3188(FontProvider arg0, FontFactory arg1) {
-        FontMetrics var3 = arg0.method4843(arg1, this.field1793);
+        FontMetrics var3 = arg0.method4843(arg1, this.textfont);
         field1761 = var3 == null;
         return var3;
     }
@@ -968,11 +968,11 @@ public class Component {
     @ObfuscatedName("ew.p(Lra;ILpn;Lgq;Lwi;Lvj;Lst;Lug;Ltt;Lqc;I)Lqa;")
     public Model method3174(RendererToolkit arg0, int arg1, BASTypeList arg2, IDKTypeList arg3, NPCTypeList arg4, ObjTypeList arg5, SeqTypeList arg6, VarIntDomain arg7, AnimationNode arg8, PlayerModel arg9) {
         field1761 = false;
-        if (this.field1806 == 0) {
+        if (this.modelkind == 0) {
             return null;
-        } else if (this.field1806 == 1 && this.field1838 == -1) {
+        } else if (this.modelkind == 1 && this.model == -1) {
             return null;
-        } else if (this.field1806 == 1) {
+        } else if (this.modelkind == 1) {
             int var11 = arg1;
             if (arg8 != null) {
                 arg1 |= arg8.method11779();
@@ -997,13 +997,13 @@ public class Component {
                 }
                 arg1 |= 0x8000;
             }
-            long var29 = (long) arg0.field397 << 59 | (long) this.field1806 << 54 | (long) this.field1838 << 38 | var12 & 0x3FFFFFFFFFL;
+            long var29 = (long) arg0.field397 << 59 | (long) this.modelkind << 54 | (long) this.model << 38 | var12 & 0x3FFFFFFFFFL;
             Model var31 = (Model) field1760.get(var29);
             if (var31 == null || arg0.method519(var31.m(), arg1) != 0) {
                 if (var31 != null) {
                     arg1 = arg0.method520(arg1, var31.m());
                 }
-                ModelUnlit var32 = ModelUnlit.method2664(Statics.field1191, this.field1838, 0);
+                ModelUnlit var32 = ModelUnlit.method2664(Statics.field1191, this.model, 0);
                 if (var32 == null) {
                     field1761 = true;
                     return null;
@@ -1030,15 +1030,15 @@ public class Component {
             }
             var31.KA(var11);
             return var31;
-        } else if (this.field1806 == 2) {
-            Model var35 = arg4.get(this.field1838).getHeadModel(arg0, arg1, arg7, arg8, this.field1930);
+        } else if (this.modelkind == 2) {
+            Model var35 = arg4.get(this.model).getHeadModel(arg0, arg1, arg7, arg8, this.customisation);
             if (var35 == null) {
                 field1761 = true;
                 return null;
             } else {
                 return var35;
             }
-        } else if (this.field1806 == 3) {
+        } else if (this.modelkind == 3) {
             if (arg9 == null) {
                 return null;
             }
@@ -1049,8 +1049,8 @@ public class Component {
             } else {
                 return var36;
             }
-        } else if (this.field1806 == 4) {
-            ObjType var37 = arg5.get(this.field1838);
+        } else if (this.modelkind == 4) {
+            ObjType var37 = arg5.get(this.model);
             Model var38 = var37.method12241(arg0, arg1, 10, arg9, arg8, 0, 0, 0, 0);
             if (var38 == null) {
                 field1761 = true;
@@ -1058,21 +1058,21 @@ public class Component {
             } else {
                 return var38;
             }
-        } else if (this.field1806 == 6) {
-            Model var39 = arg4.get(this.field1838).getBodyModel(arg0, arg1, arg2, arg7, arg8, null, null, null, 0, this.field1930);
+        } else if (this.modelkind == 6) {
+            Model var39 = arg4.get(this.model).getBodyModel(arg0, arg1, arg2, arg7, arg8, null, null, null, 0, this.customisation);
             if (var39 == null) {
                 field1761 = true;
                 return null;
             } else {
                 return var39;
             }
-        } else if (this.field1806 != 7) {
+        } else if (this.modelkind != 7) {
             return null;
         } else if (arg9 == null) {
             return null;
         } else {
-            int var40 = this.field1838 >>> 16;
-            int var41 = this.field1838 & 0xFFFF;
+            int var40 = this.model >>> 16;
+            int var41 = this.model & 0xFFFF;
             int var42 = this.field1832;
             Model var43 = arg9.method8257(arg0, arg1, arg3, arg6, arg8, var40, var41, var42);
             if (var43 == null) {
@@ -1154,7 +1154,7 @@ public class Component {
         this.field1750 = null;
         this.field1871 = null;
         this.field1872 = null;
-        this.field1873 = null;
+        this.ontargetleave = null;
         this.field1874 = null;
         this.field1875 = null;
         this.field1876 = null;
@@ -1166,7 +1166,7 @@ public class Component {
         this.field1882 = null;
         this.field1883 = null;
         this.field1784 = null;
-        this.op = null;
+        this.onop = null;
         this.field1788 = null;
         this.onscrollwheel = null;
         this.field1890 = null;
@@ -1184,16 +1184,16 @@ public class Component {
 
     @ObfuscatedName("ew.g(ILjava/lang/String;I)V")
     public void method3166(int arg0, String arg1) {
-        if (this.field1852 == null || this.field1852.length <= arg0) {
+        if (this.op == null || this.op.length <= arg0) {
             String[] var3 = new String[arg0 + 1];
-            if (this.field1852 != null) {
-                for (int var4 = 0; var4 < this.field1852.length; var4++) {
-                    var3[var4] = this.field1852[var4];
+            if (this.op != null) {
+                for (int var4 = 0; var4 < this.op.length; var4++) {
+                    var3[var4] = this.op[var4];
                 }
             }
-            this.field1852 = var3;
+            this.op = var3;
         }
-        this.field1852[arg0] = arg1;
+        this.op[arg0] = arg1;
     }
 
     @ObfuscatedName("ew.y(IIB)V")
@@ -1218,7 +1218,7 @@ public class Component {
         long var2 = (long) this.id << 32 | (long) this.parentlayer & 0xFFFFFFFFL;
         Graphic var4 = (Graphic) field1768.get(var2);
         if (var4 != null) {
-            if (this.field1797 != var4.field1731) {
+            if (this.graphic != var4.field1731) {
                 field1768.method7917(var2);
                 var4 = null;
             }
@@ -1226,7 +1226,7 @@ public class Component {
                 return var4;
             }
         }
-        SpriteData var5 = SpriteDataProvider.method2590(Statics.field1600, this.field1797, 0);
+        SpriteData var5 = SpriteDataProvider.method2590(Statics.field1600, this.graphic, 0);
         if (var5 == null) {
             return null;
         }
@@ -1256,7 +1256,7 @@ public class Component {
         if (var15 == null) {
             return null;
         } else {
-            Graphic var16 = new Graphic(var6, var7, var9, var8, var15, this.field1797);
+            Graphic var16 = new Graphic(var6, var7, var9, var8, var15, this.graphic);
             field1768.method7937(var16, var2);
             return var16;
         }
@@ -1322,7 +1322,7 @@ public class Component {
     }
 
     @ObfuscatedName("ew.ag(ISSI)V")
-    public void method3158(int arg0, short arg1, short arg2) {
+    public void setrecol(int arg0, short arg1, short arg2) {
         if (arg0 >= 5) {
             return;
         }
@@ -1335,7 +1335,7 @@ public class Component {
     }
 
     @ObfuscatedName("ew.as(ISSI)V")
-    public void method3131(int arg0, short arg1, short arg2) {
+    public void setretex(int arg0, short arg1, short arg2) {
         if (arg0 >= 5) {
             return;
         }

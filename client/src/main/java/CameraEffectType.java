@@ -15,4 +15,15 @@ public class CameraEffectType {
     public CameraEffectType(int arg0) {
         this.field2121 = arg0;
     }
+
+    @ObfuscatedName("pv.u(II)Lfc;")
+    public static CameraEffectType method7654(int arg0) {
+        if (field2122.field2121 == arg0) {
+            return field2122;
+        } else if (field2120.field2121 == arg0) {
+            return field2120;
+        } else {
+            return null;
+        }
+    }
 }

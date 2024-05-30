@@ -23,9 +23,14 @@ public class DrawDistance {
         this.field2149 = arg1 * 8;
     }
 
+    @ObfuscatedName("ju.u(I)[Lfx;")
+    public static DrawDistance[] method4877() {
+        return new DrawDistance[]{field2148, field2146, field2147};
+    }
+
     @ObfuscatedName("kb.j(II)Lfx;")
     public static DrawDistance method5012(int arg0) {
-        DrawDistance[] var1 = Statics.method4877();
+        DrawDistance[] var1 = method4877();
         for (int var2 = 0; var2 < var1.length; var2++) {
             DrawDistance var3 = var1[var2];
             if (var3.field2145 == arg0) {

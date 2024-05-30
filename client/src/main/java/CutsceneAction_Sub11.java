@@ -43,7 +43,7 @@ public class CutsceneAction_Sub11 extends CutsceneAction {
         client.field9034 = 1;
         client.field8995 = this.field8490 * 4;
         Statics.cameraState = 1;
-        client.method6648();
+        client.applyCameraMoveAlong();
         client.field8989 = true;
     }
 }

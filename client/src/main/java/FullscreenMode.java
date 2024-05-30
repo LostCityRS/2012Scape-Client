@@ -4,13 +4,13 @@ import deob.ObfuscatedName;
 public class FullscreenMode {
 
     @ObfuscatedName("us.u")
-    public int field6709;
+    public int width;
 
     @ObfuscatedName("us.j")
-    public int field6707;
+    public int height;
 
     @ObfuscatedName("us.a")
-    public int field6708;
+    public int bitDepth;
 
     @ObfuscatedName("us.s")
     public int field6706;

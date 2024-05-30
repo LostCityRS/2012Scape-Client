@@ -411,7 +411,7 @@ public class PlayerEntity extends PathingEntity {
         if (var10) {
             arg1 |= 0x80000;
         }
-        Model var11 = this.field8651[0] = this.model.method8244(arg0, arg1, Statics.field3769, Statics.field7650, Statics.npcTypes, Statics.objTypes, Statics.field566, Statics.field2669, var5, var6, this.field8633, this.field8654, var9, true, Statics.wearposDefaults);
+        Model var11 = this.field8651[0] = this.model.method8244(arg0, arg1, Statics.field3769, Statics.field7650, Statics.npcTypes, Statics.objTypes, Statics.field566, client.localPlayerGameState, var5, var6, this.field8633, this.field8654, var9, true, Statics.wearposDefaults);
         int var12 = PlayerModel.method3503();
         if (GameShell.field4152 < 96 && var12 > 50) {
             SceneManager.method16899();

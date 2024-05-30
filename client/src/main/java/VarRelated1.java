@@ -24,7 +24,7 @@ public class VarRelated1 implements VarIntDomain {
     }
 
     @ObfuscatedName("e.u(ZB)I")
-    public int method1640(boolean arg0) {
+    public int pollServerValue(boolean arg0) {
         long var2 = MonotonicTime.get();
         for (LongNode var4 = (LongNode) (arg0 ? this.field662.head() : this.field662.next()); var4 != null; var4 = (LongNode) this.field662.next()) {
             if ((var4.field9555 & 0x3FFFFFFFFFFFFFFFL) < var2) {

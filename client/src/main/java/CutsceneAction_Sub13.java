@@ -21,6 +21,6 @@ public class CutsceneAction_Sub13 extends CutsceneAction_Sub25 {
 
     @ObfuscatedName("ahr.j(I)V")
     public void method2873() {
-        Statics.field1537[this.field10037].method2854().method13950(this.field8498, this.field8497 << 16, this.field8496, this.field10038, false, this.field10036);
+        Statics.entities[this.field10037].method2854().method13950(this.field8498, this.field8497 << 16, this.field8496, this.field10038, false, this.field10036);
     }
 }

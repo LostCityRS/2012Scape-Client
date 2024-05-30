@@ -107,7 +107,7 @@ public class ReceivePlayerPositions {
                         var1 = method12094(arg0);
                         nsn[var3] = (byte) (nsn[var3] | 0x2);
                     } else {
-                        Statics.method7394(arg0, var3);
+                        method7394(arg0, var3);
                     }
                 }
             }
@@ -129,7 +129,7 @@ public class ReceivePlayerPositions {
                         var1 = method12094(arg0);
                         nsn[var6] = (byte) (nsn[var6] | 0x2);
                     } else {
-                        Statics.method7394(arg0, var6);
+                        method7394(arg0, var6);
                     }
                 }
             }
@@ -150,7 +150,7 @@ public class ReceivePlayerPositions {
                     if (var10 == 0) {
                         var1 = method12094(arg0);
                         nsn[var9] = (byte) (nsn[var9] | 0x2);
-                    } else if (Statics.method3110(arg0, var9)) {
+                    } else if (method3110(arg0, var9)) {
                         nsn[var9] = (byte) (nsn[var9] | 0x2);
                     }
                 }
@@ -172,7 +172,7 @@ public class ReceivePlayerPositions {
                     if (var13 == 0) {
                         var1 = method12094(arg0);
                         nsn[var12] = (byte) (nsn[var12] | 0x2);
-                    } else if (Statics.method3110(arg0, var12)) {
+                    } else if (method3110(arg0, var12)) {
                         nsn[var12] = (byte) (nsn[var12] | 0x2);
                     }
                 }
@@ -209,6 +209,280 @@ public class ReceivePlayerPositions {
             var2 = arg0.gBit(11);
         }
         return var2;
+    }
+
+    @ObfuscatedName("oy.c(Lajl;IB)V")
+    public static void method7394(PacketBit arg0, int arg1) {
+        CoordGrid var2 = client.world.getBase();
+        boolean var3 = arg0.gBit(1) == 1;
+        if (var3) {
+            field738[++field728 - 1] = arg1;
+        }
+        int var4 = arg0.gBit(2);
+        PlayerEntity var5 = client.players[arg1];
+        if (var4 == 0) {
+            if (var3) {
+                var5.field10062 = false;
+            } else if (client.currentPlayerUid == arg1) {
+                throw new RuntimeException();
+            } else {
+                LowResPlayerInfo var6 = field733[arg1] = new LowResPlayerInfo();
+                var6.coord = (var2.z + var5.routeWaypointZ[0] >> 6) + (var2.x + var5.routeWaypointX[0] >> 6 << 14) + (var5.level << 28);
+                if (var5.field10058 == -1) {
+                    var6.field572 = var5.field8638.method1387();
+                } else {
+                    var6.field572 = var5.field10058;
+                }
+                var6.field569 = var5.field8624;
+                var6.field571 = var5.field10065;
+                var6.field568 = var5.field10067;
+                if (var5.bgsound_range > 0) {
+                    PositionedSound.method7377(var5);
+                }
+                client.players[arg1] = null;
+                if (arg0.gBit(1) != 0) {
+                    method3110(arg0, arg1);
+                }
+            }
+        } else if (var4 == 1) {
+            int var7 = arg0.gBit(3);
+            int var8 = var5.routeWaypointX[0];
+            int var9 = var5.routeWaypointZ[0];
+            if (var7 == 0) {
+                var8--;
+                var9--;
+            } else if (var7 == 1) {
+                var9--;
+            } else if (var7 == 2) {
+                var8++;
+                var9--;
+            } else if (var7 == 3) {
+                var8--;
+            } else if (var7 == 4) {
+                var8++;
+            } else if (var7 == 5) {
+                var8--;
+                var9++;
+            } else if (var7 == 6) {
+                var9++;
+            } else if (var7 == 7) {
+                var8++;
+                var9++;
+            }
+            if (var3) {
+                var5.field10052 = var8;
+                var5.field10064 = var9;
+                var5.field10062 = true;
+            } else {
+                var5.method16131(var8, var9, field730[arg1]);
+            }
+        } else if (var4 == 2) {
+            int var10 = arg0.gBit(4);
+            int var11 = var5.routeWaypointX[0];
+            int var12 = var5.routeWaypointZ[0];
+            if (var10 == 0) {
+                var11 -= 2;
+                var12 -= 2;
+            } else if (var10 == 1) {
+                var11--;
+                var12 -= 2;
+            } else if (var10 == 2) {
+                var12 -= 2;
+            } else if (var10 == 3) {
+                var11++;
+                var12 -= 2;
+            } else if (var10 == 4) {
+                var11 += 2;
+                var12 -= 2;
+            } else if (var10 == 5) {
+                var11 -= 2;
+                var12--;
+            } else if (var10 == 6) {
+                var11 += 2;
+                var12--;
+            } else if (var10 == 7) {
+                var11 -= 2;
+            } else if (var10 == 8) {
+                var11 += 2;
+            } else if (var10 == 9) {
+                var11 -= 2;
+                var12++;
+            } else if (var10 == 10) {
+                var11 += 2;
+                var12++;
+            } else if (var10 == 11) {
+                var11 -= 2;
+                var12 += 2;
+            } else if (var10 == 12) {
+                var11--;
+                var12 += 2;
+            } else if (var10 == 13) {
+                var12 += 2;
+            } else if (var10 == 14) {
+                var11++;
+                var12 += 2;
+            } else if (var10 == 15) {
+                var11 += 2;
+                var12 += 2;
+            }
+            if (var3) {
+                var5.field10052 = var11;
+                var5.field10064 = var12;
+                var5.field10062 = true;
+            } else {
+                var5.method16131(var11, var12, field730[arg1]);
+            }
+        } else {
+            int var13 = arg0.gBit(1);
+            if (var13 == 0) {
+                int var14 = arg0.gBit(12);
+                int var15 = var14 >> 10;
+                int var16 = var14 >> 5 & 0x1F;
+                if (var16 > 15) {
+                    var16 -= 32;
+                }
+                int var17 = var14 & 0x1F;
+                if (var17 > 15) {
+                    var17 -= 32;
+                }
+                int var18 = var5.routeWaypointX[0] + var16;
+                int var19 = var5.routeWaypointZ[0] + var17;
+                if (var3) {
+                    var5.field10052 = var18;
+                    var5.field10064 = var19;
+                    var5.field10062 = true;
+                } else {
+                    var5.method16131(var18, var19, field730[arg1]);
+                }
+                var5.level = var5.field9809 = (byte) (var5.level + var15 & 0x3);
+                if (client.world.getSceneLevelTileFlags().isLinkBelow(var18, var19)) {
+                    var5.field9809++;
+                }
+                if (client.currentPlayerUid == arg1 && Statics.currentPlayerLevel != var5.level) {
+                    Statics.currentPlayerLevel = var5.level;
+                }
+            } else {
+                int var20 = arg0.gBit(30);
+                int var21 = var20 >> 28;
+                int var22 = var20 >> 14 & 0x3FFF;
+                int var23 = var20 & 0x3FFF;
+                int var24 = (var2.x + var5.routeWaypointX[0] + var22 & 0x3FFF) - var2.x;
+                int var25 = (var2.z + var5.routeWaypointZ[0] + var23 & 0x3FFF) - var2.z;
+                if (var3) {
+                    var5.field10052 = var24;
+                    var5.field10064 = var25;
+                    var5.field10062 = true;
+                } else {
+                    var5.method16131(var24, var25, field730[arg1]);
+                }
+                var5.level = var5.field9809 = (byte) (var5.level + var21 & 0x3);
+                if (client.world.getSceneLevelTileFlags().isLinkBelow(var24, var25)) {
+                    var5.field9809++;
+                }
+                if (client.currentPlayerUid == arg1) {
+                    Statics.currentPlayerLevel = var5.level;
+                }
+            }
+        }
+    }
+
+    @ObfuscatedName("ej.m(Lajl;II)Z")
+    public static boolean method3110(PacketBit arg0, int arg1) {
+        int var2 = arg0.gBit(2);
+        if (var2 == 0) {
+            if (arg0.gBit(1) != 0) {
+                method3110(arg0, arg1);
+            }
+            int var3 = arg0.gBit(6);
+            int var4 = arg0.gBit(6);
+            boolean var5 = arg0.gBit(1) == 1;
+            if (var5) {
+                field738[++field728 - 1] = arg1;
+            }
+            if (client.players[arg1] != null) {
+                throw new RuntimeException();
+            }
+            LowResPlayerInfo var6 = field733[arg1];
+            PlayerEntity var7 = client.players[arg1] = new PlayerEntity(client.world.getScene());
+            var7.slot = arg1;
+            if (appearances[arg1] != null) {
+                var7.getAppearance(appearances[arg1]);
+            }
+            var7.turn(var6.field572, true);
+            var7.field8624 = var6.field569;
+            int var8 = var6.coord;
+            int var9 = var8 >> 28;
+            int var10 = var8 >> 14 & 0xFF;
+            int var11 = var8 & 0xFF;
+            CoordGrid var12 = client.world.getBase();
+            int var13 = (var10 << 6) + var3 - var12.x;
+            int var14 = (var11 << 6) + var4 - var12.z;
+            var7.field10065 = var6.field571;
+            var7.field10067 = var6.field568;
+            var7.field8645[0] = field730[arg1];
+            var7.level = var7.field9809 = (byte) var9;
+            if (client.world.getSceneLevelTileFlags().isLinkBelow(var13, var14)) {
+                var7.field9809++;
+            }
+            var7.tele(var13, var14);
+            var7.field10062 = false;
+            field733[arg1] = null;
+            return true;
+        } else if (var2 == 1) {
+            int var15 = arg0.gBit(2);
+            int var16 = field733[arg1].coord;
+            field733[arg1].coord = (((var16 >> 28) + var15 & 0x3) << 28) + (var16 & 0xFFFFFFF);
+            return false;
+        } else if (var2 == 2) {
+            int var17 = arg0.gBit(5);
+            int var18 = var17 >> 3;
+            int var19 = var17 & 0x7;
+            int var20 = field733[arg1].coord;
+            int var21 = (var20 >> 28) + var18 & 0x3;
+            int var22 = var20 >> 14 & 0xFF;
+            int var23 = var20 & 0xFF;
+            if (var19 == 0) {
+                var22--;
+                var23--;
+            }
+            if (var19 == 1) {
+                var23--;
+            }
+            if (var19 == 2) {
+                var22++;
+                var23--;
+            }
+            if (var19 == 3) {
+                var22--;
+            }
+            if (var19 == 4) {
+                var22++;
+            }
+            if (var19 == 5) {
+                var22--;
+                var23++;
+            }
+            if (var19 == 6) {
+                var23++;
+            }
+            if (var19 == 7) {
+                var22++;
+                var23++;
+            }
+            field733[arg1].coord = (var21 << 28) + (var22 << 14) + var23;
+            return false;
+        } else {
+            int var24 = arg0.gBit(18);
+            int var25 = var24 >> 16;
+            int var26 = var24 >> 8 & 0xFF;
+            int var27 = var24 & 0xFF;
+            int var28 = field733[arg1].coord;
+            int var29 = (var28 >> 28) + var25 & 0x3;
+            int var30 = (var28 >> 14) + var26 & 0xFF;
+            int var31 = var27 + var28 & 0xFF;
+            field733[arg1].coord = (var29 << 28) + (var30 << 14) + var31;
+            return false;
+        }
     }
 
     @ObfuscatedName("aft.t(Lajl;B)V")

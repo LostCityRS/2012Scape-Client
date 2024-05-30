@@ -41,7 +41,7 @@ public class SkyBoxType {
         } else if (arg1 == 3) {
             this.field4458 = arg0.g1();
         } else if (arg1 == 4) {
-            this.field4460 = (SkyBoxFillMode) SerializableEnums.decode(Statics.method14028(), arg0.g1());
+            this.field4460 = (SkyBoxFillMode) SerializableEnums.decode(SkyBoxFillMode.method14028(), arg0.g1());
         } else if (arg1 == 5) {
             this.field4461 = arg0.gSmart2or4null();
         }

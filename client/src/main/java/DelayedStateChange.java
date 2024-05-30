@@ -24,6 +24,10 @@ public class DelayedStateChange extends SecondaryNode {
     @ObfuscatedName("aif.ao")
     public static HashTable changes = new HashTable(16);
 
+    public DelayedStateChange(int type, long id) {
+        this.key = (long) type << 56 | id;
+    }
+
     @ObfuscatedName("qv.u(IJ)Laif;")
     public static DelayedStateChange create(int type, long id) {
         DelayedStateChange change = (DelayedStateChange) changes.get((long) type << 56 | id);
@@ -32,6 +36,13 @@ public class DelayedStateChange extends SecondaryNode {
             changes.put(change, change.key);
         }
         return change;
+    }
+
+    @ObfuscatedName("ws.j(I)V")
+    public static void method12620() {
+        changes.clear();
+        eventQueue.clear();
+        changeQueue.clear();
     }
 
     @ObfuscatedName("yw.a(I)Laif;")
@@ -160,7 +171,7 @@ public class DelayedStateChange extends SecondaryNode {
     }
 
     @ObfuscatedName("aaw.an(I)V")
-    public static void onType15() {
+    public static void onMiniMapFlag() {
         DelayedStateChange change = create(15, 0L);
         change.enqueueEvent();
     }
@@ -312,7 +323,7 @@ public class DelayedStateChange extends SecondaryNode {
     }
 
     @ObfuscatedName("eo.aq(III)V")
-    public static void setType15(int arg0, int arg1) {
+    public static void setMiniMapFlag(int arg0, int arg1) {
         DelayedStateChange change = create(15, 0L);
         change.enqueueChange();
         change.intArg1 = arg0;
@@ -333,10 +344,6 @@ public class DelayedStateChange extends SecondaryNode {
         var4.enqueueChange();
         var4.intArg1 = arg2;
         var4.intArg2 = arg3;
-    }
-
-    public DelayedStateChange(int type, long id) {
-        this.key = (long) type << 56 | id;
     }
 
     @ObfuscatedName("aif.bz(I)V")

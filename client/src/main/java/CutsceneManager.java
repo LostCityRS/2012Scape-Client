@@ -58,9 +58,9 @@ public class CutsceneManager {
                 Statics.field10534[var6] = new CutsceneSpline(var2);
             }
             int var7 = var2.gSmart1or2();
-            Statics.field1537 = new CutsceneEntity[var7];
+            Statics.entities = new CutsceneEntity[var7];
             for (int var8 = 0; var8 < var7; var8++) {
-                Statics.field1537[var8] = new CutsceneEntity(var2, var8);
+                Statics.entities[var8] = new CutsceneEntity(var2, var8);
             }
             int var9 = var2.gSmart1or2();
             Statics.field1528 = new CutsceneLocation[var9];
@@ -81,7 +81,7 @@ public class CutsceneManager {
         }
         if (Statics.field10188 == CutsceneLoadingStage.field1540) {
             boolean var15 = true;
-            CutsceneEntity[] var16 = Statics.field1537;
+            CutsceneEntity[] var16 = Statics.entities;
             for (int var17 = 0; var17 < var16.length; var17++) {
                 CutsceneEntity var18 = var16[var17];
                 if (!var18.method2860()) {
@@ -130,7 +130,7 @@ public class CutsceneManager {
         field1529.clear();
         field1534.clearBridged();
         Statics.field10534 = null;
-        Statics.field1537 = null;
+        Statics.entities = null;
         Statics.field1528 = null;
         Statics.field5181 = null;
         Statics.field6396 = null;
@@ -167,7 +167,7 @@ public class CutsceneManager {
 
     @ObfuscatedName("acy.c(ZI)V")
     public static void method14961(boolean arg0) {
-        if (client.field8988 == 1 || client.field8988 == 2) {
+        if (client.sceneState == 1 || client.sceneState == 2) {
             return;
         }
         if (!arg0) {
@@ -182,7 +182,7 @@ public class CutsceneManager {
                 AudioRenderer.method11057(field1536, 255, 50);
             }
         }
-        client.field8988 = 1;
+        client.sceneState = 1;
         Statics.field4561 = null;
         Statics.field416 = null;
         client.field8989 = false;

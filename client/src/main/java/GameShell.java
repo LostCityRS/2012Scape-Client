@@ -586,7 +586,7 @@ public abstract class GameShell implements GameShellStub, Runnable, FocusListene
         field4144 = Runtime.getRuntime().availableProcessors();
         this.addcanvas();
         this.maininit();
-        Statics.field8481 = Statics.method4777();
+        Statics.field8481 = Timer.method4777();
         while (field4149 == 0L || MonotonicTime.get() < field4149) {
             Statics.field4138 = Statics.field8481.method6831(field4120);
             for (int var5 = 0; var5 < Statics.field4138; var5++) {

@@ -112,7 +112,7 @@ public class NpcEntity extends PathingEntity {
         var4.method5115(var2);
         var4.method5116(0.0F, (float) (-20 - this.field8604), 0.0F);
         BASType var8 = this.getBASType();
-        NPCType var9 = this.type.multinpc == null ? this.type : this.type.getMultiNPC(Statics.field2669);
+        NPCType var9 = this.type.multinpc == null ? this.type : this.type.getMultiNPC(client.localPlayerGameState);
         this.field8650 = false;
         PickableEntity var10 = null;
         if (Statics.options.characterShadows.method15709() == 1 && var9.spotshadow && var8.field4714) {
@@ -175,7 +175,7 @@ public class NpcEntity extends PathingEntity {
             arg1 |= 0x80000;
         }
         int var10 = this.field8638.method1387();
-        Model var11 = this.field8651[0] = this.type.getBodyModel(arg0, arg1, Statics.field3769, Statics.field2669, var5, var6, this.field8633, this.field8654, var10, this.field10073, this.method13960(), false);
+        Model var11 = this.field8651[0] = this.type.getBodyModel(arg0, arg1, Statics.field3769, client.localPlayerGameState, var5, var6, this.field8633, this.field8654, var10, this.field10073, this.method13960(), false);
         if (var11 == null) {
             return false;
         }
@@ -339,7 +339,7 @@ public class NpcEntity extends PathingEntity {
             return this.field10069;
         }
         if (this.type.multinpc != null) {
-            NPCType var1 = this.type.getMultiNPC(Statics.field2669);
+            NPCType var1 = this.type.getMultiNPC(client.localPlayerGameState);
             if (var1 != null && var1.bas != -1) {
                 return var1.bas;
             }
@@ -350,7 +350,7 @@ public class NpcEntity extends PathingEntity {
     @ObfuscatedName("ahs.cx(I)I")
     public int method13961() {
         if (this.type.multinpc != null) {
-            NPCType var1 = this.type.getMultiNPC(Statics.field2669);
+            NPCType var1 = this.type.getMultiNPC(client.localPlayerGameState);
             if (var1 != null && var1.covermarker != -1) {
                 return var1.covermarker;
             }
@@ -361,7 +361,7 @@ public class NpcEntity extends PathingEntity {
     @ObfuscatedName("ahs.bp(I)I")
     public int method12811() {
         if (this.type.multinpc != null) {
-            NPCType var1 = this.type.getMultiNPC(Statics.field2669);
+            NPCType var1 = this.type.getMultiNPC(client.localPlayerGameState);
             if (var1 != null && var1.overlayheight != -1) {
                 return var1.overlayheight;
             }

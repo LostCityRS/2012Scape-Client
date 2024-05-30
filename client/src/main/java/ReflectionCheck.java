@@ -135,10 +135,10 @@ public class ReflectionCheck {
                     }
                     check.types[i] = type;
                     check.fieldValues[i] = value;
-                    if (Statics.classForName(className).getClassLoader() == null) {
+                    if (classForName(className).getClassLoader() == null) {
                         throw new SecurityException();
                     }
-                    check.fieldRequests[i] = Statics.classForName(className).getDeclaredField(fieldName);
+                    check.fieldRequests[i] = classForName(className).getDeclaredField(fieldName);
                 } else if (type == 3 || type == 4) {
                     String className = buf.gjstr();
                     String methodName = buf.gjstr();
@@ -159,13 +159,13 @@ public class ReflectionCheck {
                     check.types[i] = type;
                     Class[] parameterTypes = new Class[parameters];
                     for (int j = 0; j < parameters; j++) {
-                        parameterTypes[j] = Statics.classForName(parameterNames[j]);
+                        parameterTypes[j] = classForName(parameterNames[j]);
                     }
-                    Class var19 = Statics.classForName(var13);
-                    if (Statics.classForName(className).getClassLoader() == null) {
+                    Class var19 = classForName(var13);
+                    if (classForName(className).getClassLoader() == null) {
                         throw new SecurityException();
                     }
-                    Method[] var20 = Statics.classForName(className).getDeclaredMethods();
+                    Method[] var20 = classForName(className).getDeclaredMethods();
                     Method[] var21 = var20;
                     for (int var22 = 0; var22 < var21.length; var22++) {
                         Method var23 = var21[var22];
@@ -200,5 +200,30 @@ public class ReflectionCheck {
             }
         }
         queue.addTail(check);
+    }
+
+    @ObfuscatedName("aiv.c(Ljava/lang/String;S)Ljava/lang/Class;")
+    public static Class classForName(String name) throws ClassNotFoundException {
+        if (name.equals("B")) {
+            return Byte.TYPE;
+        } else if (name.equals("I")) {
+            return Integer.TYPE;
+        } else if (name.equals("S")) {
+            return Short.TYPE;
+        } else if (name.equals("J")) {
+            return Long.TYPE;
+        } else if (name.equals("Z")) {
+            return Boolean.TYPE;
+        } else if (name.equals("F")) {
+            return Float.TYPE;
+        } else if (name.equals("D")) {
+            return Double.TYPE;
+        } else if (name.equals("C")) {
+            return Character.TYPE;
+        } else if (name.equals("void")) {
+            return Void.TYPE;
+        } else {
+            return Class.forName(name);
+        }
     }
 }

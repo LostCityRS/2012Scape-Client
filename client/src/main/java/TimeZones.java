@@ -30,7 +30,7 @@ public final class TimeZones {
     public static String method2902(Date arg0, String arg1, TimeZone arg2, Language arg3) {
         if (Statics.field1572 == null) {
             Statics.field1572 = new HashMap(7);
-            Language[] var4 = Statics.method11191();
+            Language[] var4 = Language.method11191();
             for (int var5 = 0; var5 < var4.length; var5++) {
                 Language var6 = var4[var5];
                 Statics.field1572.put(var6, new ConcurrentLinkedQueue());

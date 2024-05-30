@@ -52,6 +52,11 @@ public class CreateAccountReply implements SerializableEnum {
         this.field6450 = arg0;
     }
 
+    @ObfuscatedName("dp.u(I)[Ltk;")
+    public static CreateAccountReply[] method2615() {
+        return new CreateAccountReply[]{field6439, field6446, field6448, field6440, field6436, field6443, field6437, field6442, field6438, field6445, field6447, NONE, field6444, field6441};
+    }
+
     @ObfuscatedName("tk.j(B)I")
     public int getId() {
         return this.field6450;

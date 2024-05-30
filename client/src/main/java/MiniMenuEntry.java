@@ -22,10 +22,10 @@ public class MiniMenuEntry extends SecondaryNode {
     public final long field10333;
 
     @ObfuscatedName("ajs.o")
-    public final int field10329;
+    public final int sceneBaseTileX;
 
     @ObfuscatedName("ajs.q")
-    public final int field10335;
+    public final int sceneBaseTileZ;
 
     @ObfuscatedName("ajs.p")
     public final boolean field10337;
@@ -37,7 +37,7 @@ public class MiniMenuEntry extends SecondaryNode {
     public final boolean field10338;
 
     @ObfuscatedName("ajs.x")
-    public int opcode;
+    public int menuAction;
 
     @ObfuscatedName("ajs.i")
     public String field10341;
@@ -46,11 +46,11 @@ public class MiniMenuEntry extends SecondaryNode {
         this.opbase = arg1;
         this.field10339 = arg0;
         this.field10331 = arg2;
-        this.opcode = arg3;
+        this.menuAction = arg3;
         this.field10332 = arg4;
         this.field10333 = arg5;
-        this.field10329 = arg6;
-        this.field10335 = arg7;
+        this.sceneBaseTileX = arg6;
+        this.sceneBaseTileZ = arg7;
         this.field10336 = arg8;
         this.field10337 = arg9;
         this.field10330 = arg10;

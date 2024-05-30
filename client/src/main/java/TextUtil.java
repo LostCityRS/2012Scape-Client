@@ -10,10 +10,10 @@ public class TextUtil {
     public static String field488 = ",";
 
     @ObfuscatedName("j.a")
-    public static String field489 = " (";
+    public static String OPEN_PARENTHESIS = " (";
 
     @ObfuscatedName("j.s")
-    public static String field487 = ")";
+    public static String CLOSE_PARENTHESIS = ")";
 
     @ObfuscatedName("j.c")
     public static String ARROW = "->";

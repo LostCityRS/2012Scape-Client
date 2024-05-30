@@ -117,6 +117,18 @@ public class LoginManager {
         }
     }
 
+    @ObfuscatedName("aiq.m(I)Z")
+    public static final boolean isInProgress() {
+        return loginState != 7;
+    }
+
+    @ObfuscatedName("gb.t(B)V")
+    public static void continueLogin() {
+        if (loginState == 106) {
+            loginState = 113;
+        }
+    }
+
     @ObfuscatedName("vg.l(Ljava/lang/String;Ljava/lang/String;I)V")
     public static void requestLogin(String arg0, String arg1) {
         if (arg0.length() <= 320 && isLoginReady()) {
@@ -148,6 +160,19 @@ public class LoginManager {
         resetSocialKeys();
         username = arg0;
         password = arg1;
+        client.setState(3);
+    }
+
+    @ObfuscatedName("sf.z(II)V")
+    public static void method11170(int arg0) {
+        if (!isLoginReady()) {
+            return;
+        }
+        if (ssoKey != arg0) {
+            socialKey = -1L;
+        }
+        ssoKey = arg0;
+        client.lobbyConnection.closeGracefully();
         client.setState(3);
     }
 
@@ -1037,13 +1062,13 @@ public class LoginManager {
         client.field9088.clear();
         ChangeLocationRequest.field9278 = new LinkedList();
         ChangeLocationRequest.field9292 = new LinkedList();
-        Statics.field2669.method1647();
-        Statics.method12620();
-        Statics.cameraMoveToX = 0;
-        Statics.cameraMoveToZ = 0;
+        client.localPlayerGameState.method1647();
+        DelayedStateChange.method12620();
+        client.cameraMoveToX = 0;
+        client.cameraMoveToZ = 0;
         Statics.cameraMoveToY = 0;
         Statics.cameraMoveToStep = 0;
-        Statics.cameraMoveToRate = 0;
+        client.cameraMoveToRate = 0;
         Statics.cameraLookX = 0;
         Statics.cameraLookZ = 0;
         Statics.cameraLookY = 0;
@@ -1098,7 +1123,7 @@ public class LoginManager {
     @ObfuscatedName("vq.ag(I)Z")
     public static boolean isLoginReady() {
         if (client.state == 6) {
-            return !Statics.isInProgress() && !Statics.method8399();
+            return !isInProgress() && !Statics.method8399();
         } else {
             return false;
         }

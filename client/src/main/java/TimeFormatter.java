@@ -23,9 +23,9 @@ public class TimeFormatter {
     @ObfuscatedName("uc.u(JIB)Ljava/lang/String;")
     public static String method11921(long arg0, int arg1) {
         method11113(arg0);
-        int var3 = field7180.get(5);
-        int var4 = field7180.get(2);
-        int var5 = field7180.get(1);
+        int var3 = field7180.get(Calendar.DATE);
+        int var4 = field7180.get(Calendar.MONTH);
+        int var5 = field7180.get(Calendar.YEAR);
         return arg1 == 3 ? method15440(arg0, arg1) : Integer.toString(var3 / 10) + var3 % 10 + "-" + field7181[arg1][var4] + "-" + var5;
     }
 
@@ -39,11 +39,11 @@ public class TimeFormatter {
             method11113(arg0);
             var4 = field7180;
         }
-        int var5 = var4.get(5);
-        int var6 = var4.get(2);
-        int var7 = var4.get(1);
-        int var8 = var4.get(11);
-        int var9 = var4.get(12);
+        int var5 = var4.get(Calendar.DATE);
+        int var6 = var4.get(Calendar.MONTH);
+        int var7 = var4.get(Calendar.YEAR);
+        int var8 = var4.get(Calendar.HOUR_OF_DAY);
+        int var9 = var4.get(Calendar.MINUTE);
         return arg1 == 3 ? method12091(arg0, arg1, arg2) : Integer.toString(var5 / 10) + var5 % 10 + "-" + field7181[arg1][var6] + "-" + var7 + " " + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10;
     }
 
@@ -57,20 +57,20 @@ public class TimeFormatter {
             method11113(arg0);
             var4 = field7180;
         }
-        int var5 = var4.get(5);
-        int var6 = var4.get(2) + 1;
-        int var7 = var4.get(1);
-        int var8 = var4.get(11);
-        int var9 = var4.get(12);
+        int var5 = var4.get(Calendar.DATE);
+        int var6 = var4.get(Calendar.MONTH) + 1;
+        int var7 = var4.get(Calendar.YEAR);
+        int var8 = var4.get(Calendar.HOUR_OF_DAY);
+        int var9 = var4.get(Calendar.MINUTE);
         return Integer.toString(var5 / 10) + var5 % 10 + "/" + var6 / 10 + var6 % 10 + "/" + var7 % 100 / 10 + var7 % 10 + " " + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10;
     }
 
     @ObfuscatedName("aet.s(JIB)Ljava/lang/String;")
     public static String method15440(long arg0, int arg1) {
         method11113(arg0);
-        int var3 = field7180.get(5);
-        int var4 = field7180.get(2) + 1;
-        int var5 = field7180.get(1);
+        int var3 = field7180.get(Calendar.DATE);
+        int var4 = field7180.get(Calendar.MONTH) + 1;
+        int var5 = field7180.get(Calendar.YEAR);
         return Integer.toString(var3 / 10) + var3 % 10 + "/" + var4 / 10 + var4 % 10 + "/" + var5 % 100 / 10 + var5 % 10;
     }
 
@@ -92,16 +92,28 @@ public class TimeFormatter {
     @ObfuscatedName("fx.l(II)[I")
     public static int[] method3586(int arg0) {
         int[] var1 = new int[3];
-        method11113(Statics.method5541(arg0));
-        var1[0] = field7180.get(5);
-        var1[1] = field7180.get(2);
-        var1[2] = field7180.get(1);
+        method11113(method5541(arg0));
+        var1[0] = field7180.get(Calendar.DATE);
+        var1[1] = field7180.get(Calendar.MONTH);
+        var1[2] = field7180.get(Calendar.YEAR);
         return var1;
+    }
+
+    @ObfuscatedName("tz.f(IIIIIIB)J")
+    public static long method11488(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+        field7179.clear();
+        field7179.set(arg5, arg4, arg3, arg2, arg1, arg0);
+        return field7179.getTime().getTime();
+    }
+
+    @ObfuscatedName("kf.d(II)J")
+    public static long method5541(int arg0) {
+        return (long) (arg0 + 11745) * 86400000L;
     }
 
     @ObfuscatedName("sh.z(J)I")
     public static int method11221(long arg0) {
         method11113(arg0);
-        return field7180.get(1);
+        return field7180.get(Calendar.YEAR);
     }
 }

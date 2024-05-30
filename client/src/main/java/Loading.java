@@ -35,7 +35,7 @@ public class Loading {
     @ObfuscatedName("wo.j(I)V")
     public static void method12645() {
         if (Statics.field3420 == null) {
-            Statics.field3420 = Statics.method5013();
+            Statics.field3420 = LoadingStage.method5013();
             Statics.field1208 = Statics.field3420[0];
             Statics.field1931 = MonotonicTime.get();
         }
@@ -191,11 +191,11 @@ public class Loading {
             }
         }
         if (Statics.field1208 == LoadingStage.field3388) {
-            Statics.field6784 = new FontProvider(Statics.field4761, Statics.field8745, DefaultSprites.method6244());
+            Statics.fontProvider = new FontProvider(Statics.field4761, Statics.field8745, DefaultSprites.method6244());
         }
         if (Statics.field1208 == LoadingStage.field3407) {
-            int var10 = Statics.field6784.method4839();
-            int var11 = Statics.field6784.method4841();
+            int var10 = Statics.fontProvider.method4839();
+            int var11 = Statics.fontProvider.method4841();
             if (var10 < var11) {
                 return var10 * 100 / var11;
             }
@@ -209,7 +209,7 @@ public class Loading {
                     return 0;
                 }
             }
-            Statics.field6784.method4837(client.field8914);
+            Statics.fontProvider.method4837(client.fontFactory);
             DefaultSprites.method2931(Statics.renderer);
             client.setState(2);
         }
@@ -263,7 +263,7 @@ public class Loading {
                 return (var12 - field3424) * 100 / (100 - field3424);
             }
             DefaultSprites.method8388(Statics.field7387);
-            Statics.field6784 = new FontProvider(Statics.field7387, Statics.field8745, DefaultSprites.method6244());
+            Statics.fontProvider = new FontProvider(Statics.field7387, Statics.field8745, DefaultSprites.method6244());
         }
         if (Statics.field1208 == LoadingStage.field3393) {
             byte[] var14 = Statics.field849.method5635(DefaultsGroup.field5143.field5145);
@@ -292,7 +292,7 @@ public class Loading {
                 client.field9068 = Statics.field4825.field5167;
             }
             Statics.wearposDefaults = new WearposDefaults(Statics.field849);
-            Statics.field1736 = new MiniMenuDefaults(Statics.field849);
+            Statics.miniMenuDefaults = new MiniMenuDefaults(Statics.field849);
             Statics.field2190 = new CutsceneDefaults(Statics.field849);
         }
         if (Statics.field1208 == LoadingStage.field3396) {
@@ -336,25 +336,25 @@ public class Loading {
             BillboardType.method8409(Statics.field8734);
             Statics.field3262 = new QuickChatCatTypeList(Statics.language, Statics.field6343, Statics.field6712);
             Statics.field3779 = new QuickChatPhraseTypeList(Statics.language, Statics.field6343, Statics.field6712, new ClientDynamicProvider());
-            Statics.field2669 = new VarRelated1();
+            client.localPlayerGameState = new VarRelated1();
             client.method13901();
             AnimationNode.method6490(Statics.field566);
             ParticleSystemRenderer.method12208(Statics.field8655);
             SkyBox.method12289(Statics.field4560, Statics.field8465);
             Huffman var16 = new Huffman(Statics.field3523.method5645("huffman", ""));
             WordPack.method15896(var16);
-            Statics.field8481 = Statics.method4777();
+            Statics.field8481 = Timer.method4777();
             Statics.field2305 = new HardwarePlatform(true);
         }
         if (Statics.field1208 == LoadingStage.field3387) {
-            int var17 = DefaultSprites.method12092(Statics.field7387) + Statics.field6784.method4840(true);
-            int var18 = DefaultSprites.method1589() + Statics.field6784.method4841();
+            int var17 = DefaultSprites.method12092(Statics.field7387) + Statics.fontProvider.method4840(true);
+            int var18 = DefaultSprites.method1589() + Statics.fontProvider.method4841();
             if (var17 < var18) {
                 return var17 * 100 / var18;
             }
         }
         if (Statics.field1208 == LoadingStage.field3408) {
-            WorldMap.method7080(Statics.field4059, Statics.floTypes, Statics.field4450, client.world.getLocTypeList(), Statics.field8499, Statics.field850, Statics.field2669);
+            WorldMap.method7080(Statics.field4059, Statics.floTypes, Statics.field4450, client.world.getLocTypeList(), Statics.field8499, Statics.field850, client.localPlayerGameState);
         }
         if (Statics.field1208 == LoadingStage.field3399) {
             Statics.field6666 = new int[Statics.field8455.field7160];
@@ -382,7 +382,7 @@ public class Loading {
             boolean var20 = true;
             for (int var21 = 0; var21 < Statics.field1756[Statics.field4825.field5162].field1732.length; var21++) {
                 Component var22 = Statics.field1756[Statics.field4825.field5162].field1732[var21];
-                if (var22.type == 5 && var22.field1797 != -1 && !Statics.field7387.loadFile(var22.field1797, 0)) {
+                if (var22.type == 5 && var22.graphic != -1 && !Statics.field7387.loadFile(var22.graphic, 0)) {
                     var20 = false;
                 }
             }
@@ -427,7 +427,7 @@ public class Loading {
                 }
             }
             client.setWindowMode(Statics.options.maxScreenSize.getValue(), -1, -1, false);
-            Statics.field6784.method4837(client.field8914);
+            Statics.fontProvider.method4837(client.fontFactory);
             DefaultSprites.method2931(Statics.renderer);
             DefaultSprites.method15812(Statics.renderer, Statics.field7387);
             MiniMenu.method3288(Statics.field8538);

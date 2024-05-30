@@ -135,7 +135,7 @@ public class AudioRenderer {
                                     int var15 = var1.field4187;
                                 }
                                 if (var9 != 0 || var11 != 0) {
-                                    int var16 = -Statics.cameraYaw - (int) (Math.atan2((double) var9, (double) var11) * 2607.5945876176133D) - 4096 & 0x3FFF;
+                                    int var16 = -client.cameraYaw - (int) (Math.atan2((double) var9, (double) var11) * 2607.5945876176133D) - 4096 & 0x3FFF;
                                     if (var16 > 8192) {
                                         var16 = 16384 - var16;
                                     }

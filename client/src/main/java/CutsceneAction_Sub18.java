@@ -48,7 +48,7 @@ public class CutsceneAction_Sub18 extends CutsceneAction {
 
     @ObfuscatedName("zs.j(I)V")
     public void method2873() {
-        PathingEntity var1 = Statics.field1537[this.field8474].method2854();
+        PathingEntity var1 = Statics.entities[this.field8474].method2854();
         var1.method13953(this.field8473, this.field8472, this.field8475, this.field8476, client.loopCycle, 0);
     }
 }

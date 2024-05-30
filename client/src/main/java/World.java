@@ -389,8 +389,8 @@ public class World {
         this.setBuildAreaSize(BuildAreaSize.forId(Statics.options.buildArea.getValue()));
         int var1 = this.field3795.x;
         int var2 = this.field3795.z;
-        int var3 = (Statics.cameraX >> 12) + (var1 >> 3);
-        int var4 = (Statics.cameraZ >> 12) + (var2 >> 3);
+        int var3 = (client.cameraX >> 12) + (var1 >> 3);
+        int var4 = (client.cameraZ >> 12) + (var2 >> 3);
         Statics.localPlayerEntity.level = 0;
         Statics.currentPlayerLevel = 0;
         Statics.localPlayerEntity.tele(8, 8);
@@ -728,11 +728,11 @@ public class World {
 
     @ObfuscatedName("ml.aa(IIIZI)V")
     public void method6178(int arg0, int arg1, int arg2, boolean arg3) {
-        if (client.field8988 == 1) {
+        if (client.sceneState == 1) {
             if (this.asyncRebuilding) {
                 throw new IllegalStateException();
             }
-            client.field8988 = 2;
+            client.sceneState = 2;
             client.cutsceneId = -1;
         }
         if (!arg3 && this.field3790 == arg0 && this.field3798 == arg1) {
@@ -893,12 +893,12 @@ public class World {
                 Statics.field1941 = -1;
             }
         } else {
-            Statics.cameraMoveToX -= var2;
-            Statics.cameraMoveToZ -= var3;
+            client.cameraMoveToX -= var2;
+            client.cameraMoveToZ -= var3;
             Statics.cameraLookX -= var2;
             Statics.cameraLookZ -= var3;
-            Statics.cameraX -= var2 * 512;
-            Statics.cameraZ -= var3 * 512;
+            client.cameraX -= var2 * 512;
+            client.cameraZ -= var3 * 512;
             if (Math.abs(var2) > this.mapSizeX || Math.abs(var3) > this.mapSizeZ) {
                 this.field3802.method8154();
             }

@@ -118,7 +118,7 @@ public class Algorithms {
     }
 
     @ObfuscatedName("afy.l([I[Ljava/lang/Object;B)V")
-    public static void method15733(int[] arg0, Object[] arg1) {
+    public static void quickSortParallel(int[] arg0, Object[] arg1) {
         method15811(arg0, arg1, 0, arg0.length - 1);
     }
 

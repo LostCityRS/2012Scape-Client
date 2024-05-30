@@ -68,7 +68,7 @@ public class EnvironmentManager {
     @ObfuscatedName("qp.u(Lml;B)V")
     public void method8144(World arg0) {
         if (client.isStateTitle(client.state) || client.isStateLobby(client.state)) {
-            this.method8152(Statics.cameraX >> 12, Statics.cameraZ >> 12, field4972);
+            this.method8152(client.cameraX >> 12, client.cameraZ >> 12, field4972);
         } else {
             int var2 = -1;
             int var3 = -1;

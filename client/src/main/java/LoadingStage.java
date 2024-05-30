@@ -95,4 +95,9 @@ public class LoadingStage {
         this.field3409 = arg5;
         this.field3406 = arg6;
     }
+
+    @ObfuscatedName("ky.u(I)[Lky;")
+    public static LoadingStage[] method5013() {
+        return new LoadingStage[]{field3390, field3394, field3388, field3407, field3386, field3389, field3392, field3393, field3391, field3395, field3396, field3387, field3408, field3399, field3400, field3401, field3402, field3403};
+    }
 }

@@ -58,7 +58,7 @@ public class Packet extends Node {
     }
 
     public Packet(int arg0) {
-        this.data = Statics.method11364(arg0);
+        this.data = ByteArrayPool.method11364(arg0);
         this.pos = 0;
     }
 
@@ -393,7 +393,7 @@ public class Packet extends Node {
         if (this.pos + var2 > this.data.length) {
             throw new IllegalStateException("");
         }
-        String var3 = Statics.method2786(this.data, this.pos, var2);
+        String var3 = OggKateStream.method2786(this.data, this.pos, var2);
         this.pos += var2;
         return var3;
     }
