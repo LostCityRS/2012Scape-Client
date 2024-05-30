@@ -799,7 +799,7 @@ public class GlToolkit extends RendererToolkit {
 
     @ObfuscatedName("yq.ar()Z")
     public boolean method452() {
-        return this.field8126 && (!this.method600() || this.field8202);
+        return this.field8126 && (!this.isBloomEnabled() || this.field8202);
     }
 
     @ObfuscatedName("yq.an()Z")
@@ -2079,7 +2079,7 @@ public class GlToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yq.cy()Z")
-    public final boolean method600() {
+    public final boolean isBloomEnabled() {
         return this.field8047 != null && this.field8047.method14819();
     }
 

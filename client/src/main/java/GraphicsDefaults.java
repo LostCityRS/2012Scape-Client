@@ -28,7 +28,7 @@ public class GraphicsDefaults {
     public int field5162;
 
     @ObfuscatedName("rh.o")
-    public int field5158;
+    public int lobby_interface;
 
     @ObfuscatedName("rh.q")
     public boolean field5159 = true;
@@ -104,7 +104,7 @@ public class GraphicsDefaults {
                 } else if (var3 == 5) {
                     this.field5162 = arg0.g3();
                 } else if (var3 == 6) {
-                    this.field5158 = arg0.g3();
+                    this.lobby_interface = arg0.g3();
                 } else if (var3 == 7) {
                     this.field5146 = new short[10][4];
                     this.field5161 = new short[10][4][];

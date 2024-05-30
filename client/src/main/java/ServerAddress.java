@@ -26,7 +26,7 @@ public class ServerAddress {
     public boolean field6763 = false;
 
     @ObfuscatedName("uf.u(B)Ljava/net/Socket;")
-    public Socket method12025() throws IOException {
+    public Socket getSocket() throws IOException {
         return this.field6763 ? AbstractSocket.method4864(this.field6765, this.field6767 ? this.field6766 : this.field6764).method12150() : new Socket(InetAddress.getByName(this.field6765), this.field6767 ? this.field6766 : this.field6764);
     }
 

@@ -213,7 +213,7 @@ public class EnvironmentManager {
 
     @ObfuscatedName("qp.o(I)V")
     public void method8194() {
-        this.field4973.IA(((float) Statics.options.brightness.method15672() * 0.1F + 0.7F + client.world.method6141()) * this.field4965.field4987);
+        this.field4973.IA(((float) client.options.brightness.method15672() * 0.1F + 0.7F + client.world.method6141()) * this.field4965.field4987);
         this.field4973.m(this.field4965.field4991, this.field4965.field4988, this.field4965.field4996, (float) ((int) this.field4980.x << 2), (float) ((int) this.field4980.y << 2), (float) ((int) this.field4980.z << 2));
         this.field4973.method549(this.field4965.field4993);
     }
@@ -222,7 +222,7 @@ public class EnvironmentManager {
     public void method8173() {
         byte var1 = 0;
         int var2 = (this.field4965.field4997 + 256 << 2) + var1;
-        this.field4973.c(this.field4965.field4989, Statics.options.fog.method15696() == 1 ? var2 : -1, 0);
+        this.field4973.c(this.field4965.field4989, client.options.fog.method15696() == 1 ? var2 : -1, 0);
     }
 
     @ObfuscatedName("qp.p(I)V")
@@ -232,7 +232,7 @@ public class EnvironmentManager {
 
     @ObfuscatedName("qp.w(I)V")
     public void method8158() {
-        this.field4973.IA(((float) Statics.options.brightness.method15672() * 0.1F + 0.7F + client.world.method6141()) * 1.1523438F);
+        this.field4973.IA(((float) client.options.brightness.method15672() * 0.1F + 0.7F + client.world.method6141()) * 1.1523438F);
         this.field4973.m(field4983, 0.69921875F, 1.2F, -200.0F, -240.0F, -200.0F);
         this.field4973.c(field4982, -1, 0);
         this.field4973.method549(Statics.field4971);

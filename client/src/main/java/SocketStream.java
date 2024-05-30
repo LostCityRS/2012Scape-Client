@@ -24,7 +24,7 @@ public class SocketStream extends Stream {
     }
 
     @ObfuscatedName("aey.j(II)Z")
-    public boolean method7212(int arg0) throws IOException {
+    public boolean hasAvailable(int arg0) throws IOException {
         return this.field9769.method7158(arg0);
     }
 
@@ -34,17 +34,17 @@ public class SocketStream extends Stream {
     }
 
     @ObfuscatedName("aey.s([BIII)I")
-    public int method7196(byte[] arg0, int arg1, int arg2) throws IOException {
+    public int read(byte[] arg0, int arg1, int arg2) throws IOException {
         return this.field9769.method7148(arg0, arg1, arg2);
     }
 
     @ObfuscatedName("aey.c([BIIB)V")
-    public void method7193(byte[] arg0, int arg1, int arg2) throws IOException {
+    public void write(byte[] arg0, int arg1, int arg2) throws IOException {
         this.field9768.method7219(arg0, arg1, arg2);
     }
 
     @ObfuscatedName("aey.m(I)V")
-    public void method7192() {
+    public void closeGracefully() {
         this.field9768.method7222();
         try {
             this.field9770.close();
@@ -60,6 +60,6 @@ public class SocketStream extends Stream {
     }
 
     public void finalize() {
-        this.method7192();
+        this.closeGracefully();
     }
 }

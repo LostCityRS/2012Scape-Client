@@ -65,8 +65,8 @@ public class ClientInvCache extends Node {
         }
         int var5 = 0;
         for (int var6 = 0; var6 < var4.field9276.length; var6++) {
-            if (var4.field9276[var6] >= 0 && var4.field9276[var6] < Statics.objTypes.field7144) {
-                ObjType var7 = Statics.objTypes.get(var4.field9276[var6]);
+            if (var4.field9276[var6] >= 0 && var4.field9276[var6] < client.objTypes.field7144) {
+                ObjType var7 = client.objTypes.get(var4.field9276[var6]);
                 int var8 = var7.method12250(arg1, Statics.paramTypes.get(arg1).defaultint);
                 if (arg2) {
                     var5 += var4.field9275[var6] * var8;
@@ -206,7 +206,7 @@ public class ClientInvCache extends Node {
             int var15 = var8;
             boolean var16 = false;
             for (int var17 = 0; var17 < var10.length; var17++) {
-                if (var10[var17] != -1 && !Statics.objTypes.get(var10[var17]).method12246(arg4, null)) {
+                if (var10[var17] != -1 && !client.objTypes.get(var10[var17]).method12246(arg4, null)) {
                     var16 = true;
                 }
             }
@@ -216,7 +216,7 @@ public class ClientInvCache extends Node {
             ModelUnlit[] var18 = new ModelUnlit[var10.length];
             for (int var19 = 0; var19 < var10.length; var19++) {
                 if (var10[var19] != -1) {
-                    var18[var19] = Statics.objTypes.get(var10[var19]).method12245(arg4, null);
+                    var18[var19] = client.objTypes.get(var10[var19]).method12245(arg4, null);
                 }
             }
             if (var9 != null && var9.field4716 != null) {

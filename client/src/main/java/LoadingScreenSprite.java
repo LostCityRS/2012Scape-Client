@@ -25,8 +25,8 @@ public class LoadingScreenSprite implements LoadingScreenElement {
     @ObfuscatedName("gz.j(ZI)V")
     public void method3932(boolean arg0) {
         if (arg0) {
-            int var2 = this.field2303.field2651.method4586(this.field2301.method1042(), client.field9067) + this.field2303.field2650;
-            int var3 = this.field2303.field2649.method4574(this.field2301.method1047(), client.field9068) + this.field2303.field2647;
+            int var2 = this.field2303.field2651.method4586(this.field2301.method1042(), client.frameWidth) + this.field2303.field2650;
+            int var3 = this.field2303.field2649.method4574(this.field2301.method1047(), client.frameHeight) + this.field2303.field2647;
             this.field2301.method2500(var2, var3);
         }
     }

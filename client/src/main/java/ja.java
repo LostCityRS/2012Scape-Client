@@ -623,7 +623,7 @@ public class ja extends RendererToolkit implements ua {
     }
 
     @ObfuscatedName("ja.cy()Z")
-    public boolean method600() {
+    public boolean isBloomEnabled() {
         return false;
     }
 

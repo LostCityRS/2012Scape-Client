@@ -201,12 +201,12 @@ public final class ChangeLocationRequest extends Node {
         if (client.world.getScene() == null) {
             return;
         }
-        client.world.method6157().method14280(Statics.renderer, arg0, arg1, arg2, arg3, client.world.method6101(arg0));
+        client.world.method6157().method14280(client.toolkit, arg0, arg1, arg2, arg3, client.world.method6101(arg0));
         if (arg4 >= 0) {
-            int var9 = Statics.options.groundDecor.method15725();
-            Statics.options.method15448(Statics.options.groundDecor, 1);
-            client.world.method6157().method14304(Statics.renderer, var8, arg0, arg2, arg3, arg4, arg5, arg6, client.world.method6101(arg0), arg7);
-            Statics.options.method15448(Statics.options.groundDecor, var9);
+            int var9 = client.options.groundDecor.method15725();
+            client.options.method15448(client.options.groundDecor, 1);
+            client.world.method6157().method14304(client.toolkit, var8, arg0, arg2, arg3, arg4, arg5, arg6, client.world.method6101(arg0), arg7);
+            client.options.method15448(client.options.groundDecor, var9);
         }
     }
 

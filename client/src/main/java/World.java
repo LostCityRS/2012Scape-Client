@@ -284,7 +284,7 @@ public class World {
     }
 
     @ObfuscatedName("ml.ay(I)V")
-    public void method6112() {
+    public void completeRebuild() {
         this.field3834 = RebuildStage.field3777;
         this.field3816 = 0;
         this.field3817 = 1;
@@ -294,7 +294,7 @@ public class World {
 
     @ObfuscatedName("ml.af(I)V")
     public void method6086() {
-        this.field3802 = new EnvironmentManager(Statics.renderer, this.mapSizeX >> 3, this.mapSizeZ >> 3);
+        this.field3802 = new EnvironmentManager(client.toolkit, this.mapSizeX >> 3, this.mapSizeZ >> 3);
     }
 
     @ObfuscatedName("ml.ar(B)V")
@@ -302,7 +302,7 @@ public class World {
         this.field3804 = 200;
         this.field3805 = (int) ((double) this.mapSizeX * 34.46D);
         this.field3805 <<= 0x2;
-        if (Statics.renderer.method454()) {
+        if (client.toolkit.method454()) {
             this.field3805 += 512;
         }
     }
@@ -323,7 +323,7 @@ public class World {
     @ObfuscatedName("ml.ap(I)V")
     public void method6102() {
         if (this.asyncRebuilding) {
-            this.method6112();
+            this.completeRebuild();
             ClientWorldMap.reset(true);
             World var1 = client.world;
             this.field3820 = var1.field3820;
@@ -386,7 +386,7 @@ public class World {
 
     @ObfuscatedName("ml.as(I)V")
     public void method6168() {
-        this.setBuildAreaSize(BuildAreaSize.forId(Statics.options.buildArea.getValue()));
+        this.setBuildAreaSize(BuildAreaSize.forId(client.options.buildArea.getValue()));
         int var1 = this.field3795.x;
         int var2 = this.field3795.z;
         int var3 = (client.cameraX >> 12) + (var1 >> 3);
@@ -742,7 +742,7 @@ public class World {
         this.field3798 = arg1;
         if (!this.asyncRebuilding) {
             client.setState(arg2);
-            Statics.method2579(LocalisedText.field6938.get(Statics.language), true, Statics.renderer, Statics.field560, Statics.field9813);
+            Statics.method2579(LocalisedText.field6938.get(Statics.language), true, client.toolkit, Statics.field560, Statics.field9813);
         }
         if (this.field3795 == null) {
             this.field3824 = new CoordGrid(0, 0, 0);
@@ -1023,7 +1023,7 @@ public class World {
             return false;
         }
         if (!this.asyncRebuilding && RebuildStage.field3777 != this.field3834) {
-            Statics.method2579(LocalisedText.field6938.get(Statics.language) + TextUtil.field492 + "(100%)", true, Statics.renderer, Statics.field560, Statics.field9813);
+            Statics.method2579(LocalisedText.field6938.get(Statics.language) + TextUtil.field492 + "(100%)", true, client.toolkit, Statics.field560, Statics.field9813);
         }
         this.field3834 = RebuildStage.field3778;
         if (!this.asyncRebuilding) {
@@ -1050,7 +1050,7 @@ public class World {
             VideoTypeList.method4743();
         }
         boolean var15 = false;
-        if (Statics.options.waterDetail.method15755() == 2) {
+        if (client.options.waterDetail.getValue() == 2) {
             for (int var16 = 0; var16 < this.field3800.length; var16++) {
                 if (this.field3832[var16] != null || this.field3830[var16] != null) {
                     var15 = true;
@@ -1058,13 +1058,13 @@ public class World {
                 }
             }
         }
-        int var17 = DrawDistance.method5012(Statics.options.drawDistance.method15853()).field2149;
-        if (Statics.renderer.method454()) {
+        int var17 = DrawDistance.method5012(client.options.drawDistance.method15853()).field2149;
+        if (client.toolkit.method454()) {
             var17++;
         }
         this.method6235();
         this.method6127();
-        this.scene = new Scene(Statics.renderer, 9, 4, this.mapSizeX, this.mapSizeZ, var17, var15, Statics.renderer.method768() > 0);
+        this.scene = new Scene(client.toolkit, 9, 4, this.mapSizeX, this.mapSizeZ, var17, var15, client.toolkit.method768() > 0);
         this.scene.method7404(false);
         this.scene.method7546(client.field8943);
         if (client.field8943 == 0) {
@@ -1076,11 +1076,11 @@ public class World {
         this.field3809 = -0.05F + (float) (Math.random() / 10.0D);
         this.field3794 = new ClientMapLoader(this.scene, this.field3815, 4, this.mapSizeX, this.mapSizeZ, false, this.sceneLevelTileFlags, this.field3802);
         this.field3794.method5834();
-        this.field3794.field3629 = Statics.options.sceneryShadows.method15747();
-        this.field3794.field3622 = Statics.options.waterDetail.method15755() == 2;
-        this.field3794.field3623 = Statics.options.lightDetail.method15667() == 1;
-        this.field3794.field3624 = Statics.options.groundBlending.method15843() == 1;
-        this.field3794.field3625 = Statics.options.texturing.method15686() == 1;
+        this.field3794.field3629 = client.options.sceneryShadows.getValue();
+        this.field3794.field3622 = client.options.waterDetail.getValue() == 2;
+        this.field3794.field3623 = client.options.lightDetail.getValue() == 1;
+        this.field3794.field3624 = client.options.groundBlending.method15843() == 1;
+        this.field3794.field3625 = client.options.texturing.getValue() == 1;
         if (this.rebuildType.isRegionType()) {
             this.method6131(this.field3794, this.field3800);
         } else {
@@ -1095,11 +1095,11 @@ public class World {
             this.scene.method7404(true);
             this.field3793 = new ClientMapLoader(this.scene, this.field3815, 1, this.mapSizeX, this.mapSizeZ, true, this.sceneLevelTileFlags, this.field3802);
             this.field3793.method5834();
-            this.field3793.field3629 = Statics.options.sceneryShadows.method15747();
-            this.field3793.field3622 = Statics.options.waterDetail.method15755() == 2;
-            this.field3793.field3623 = Statics.options.lightDetail.method15667() == 1;
-            this.field3793.field3624 = Statics.options.groundBlending.method15843() == 1;
-            this.field3793.field3625 = Statics.options.texturing.method15686() == 1;
+            this.field3793.field3629 = client.options.sceneryShadows.getValue();
+            this.field3793.field3622 = client.options.waterDetail.getValue() == 2;
+            this.field3793.field3623 = client.options.lightDetail.getValue() == 1;
+            this.field3793.field3624 = client.options.groundBlending.method15843() == 1;
+            this.field3793.field3625 = client.options.texturing.getValue() == 1;
             if (this.rebuildType.isRegionType()) {
                 this.method6131(this.field3793, this.field3830);
                 if (!this.asyncRebuilding) {
@@ -1112,13 +1112,13 @@ public class World {
                 }
             }
             this.field3793.method5841(0, this.field3794.field3697[0]);
-            this.field3793.method5842(Statics.renderer, null, null);
+            this.field3793.method5842(client.toolkit, null, null);
             this.scene.method7404(false);
             if (this.asyncRebuilding) {
                 this.method6174(50);
             }
         }
-        this.field3794.method5842(Statics.renderer, var15 ? this.field3793.field3697 : (int[][][]) null, this.field3811);
+        this.field3794.method5842(client.toolkit, var15 ? this.field3793.field3697 : (int[][][]) null, this.field3811);
         if (this.rebuildType.isRegionType()) {
             if (!this.asyncRebuilding) {
                 MapLogicRelated.method8512(true);
@@ -1136,11 +1136,11 @@ public class World {
         if (!this.asyncRebuilding) {
             MapLogicRelated.method8512(true);
         }
-        this.field3794.method5833(Statics.renderer, var15 ? this.scene.field4502[0] : null, null);
+        this.field3794.method5833(client.toolkit, var15 ? this.scene.field4502[0] : null, null);
         if (this.asyncRebuilding) {
             this.method6174(75);
         }
-        this.field3794.method14291(Statics.renderer, false);
+        this.field3794.method14291(client.toolkit, false);
         if (this.asyncRebuilding) {
             this.method6174(75);
         }
@@ -1160,8 +1160,8 @@ public class World {
             if (!this.asyncRebuilding) {
                 MapLogicRelated.method8512(true);
             }
-            this.field3793.method5833(Statics.renderer, null, this.scene.field4527[0]);
-            this.field3793.method14291(Statics.renderer, true);
+            this.field3793.method5833(client.toolkit, null, this.scene.field4527[0]);
+            this.field3793.method14291(client.toolkit, true);
             if (!this.asyncRebuilding) {
                 MapLogicRelated.method8512(true);
             }
@@ -1177,7 +1177,7 @@ public class World {
         this.scene.method7405();
         if (this.asyncRebuilding) {
             MonotonicTime.get();
-            while (!Statics.renderer.method495()) {
+            while (!client.toolkit.method495()) {
                 this.method6174(1);
             }
         }
@@ -1185,7 +1185,7 @@ public class World {
         if (this.asyncRebuilding) {
             World var19 = client.world;
             this.method6090(var19);
-            Statics.asyncRebuild.method6041(var19);
+            client.asyncRebuild.method6041(var19);
             var18 = true;
             MonotonicTime.get();
             Object var20 = client.field8983;
@@ -1292,7 +1292,7 @@ public class World {
                     AudioRenderer.method3461();
                 }
                 arg0.method5838(var6, var9, var10, this.field3795.x, this.field3795.z, this.field3811);
-                arg0.method14269(Statics.renderer, var6, var9, var10);
+                arg0.method14269(client.toolkit, var6, var9, var10);
             }
         }
         for (int var11 = 0; var11 < var3; var11++) {
@@ -1328,7 +1328,7 @@ public class World {
                                 if (this.field3820[var12] == var11 && arg1[var12] != null) {
                                     Packet var13 = new Packet(arg1[var12]);
                                     arg0.method5839(var13, var3, var4 * 8, var5 * 8, var7, var9, var10, var8, this.field3811);
-                                    arg0.method14270(Statics.renderer, var13, var3, var4 * 8, var5 * 8, var7, var9, var10, var8);
+                                    arg0.method14270(client.toolkit, var13, var3, var4 * 8, var5 * 8, var7, var9, var10, var8);
                                     break;
                                 }
                             }
@@ -1363,7 +1363,7 @@ public class World {
                 if (!this.asyncRebuilding) {
                     AudioRenderer.method3461();
                 }
-                arg0.decodeLocs(Statics.renderer, var5, var6, var7, this.field3811);
+                arg0.decodeLocs(client.toolkit, var5, var6, var7, this.field3811);
                 if (this.asyncRebuilding) {
                     this.method6174(10);
                 }
@@ -1389,7 +1389,7 @@ public class World {
                             int var11 = (var9 / 8 << 8) + var10 / 8;
                             for (int var12 = 0; var12 < this.field3820.length; var12++) {
                                 if (this.field3820[var12] == var11 && arg1[var12] != null) {
-                                    arg0.decodeLocs(Statics.renderer, arg1[var12], var3, var4 * 8, var5 * 8, var7, (var9 & 0x7) * 8, (var10 & 0x7) * 8, var8, this.field3811);
+                                    arg0.decodeLocs(client.toolkit, arg1[var12], var3, var4 * 8, var5 * 8, var7, (var9 & 0x7) * 8, (var10 & 0x7) * 8, var8, this.field3811);
                                     break;
                                 }
                             }
@@ -1429,7 +1429,7 @@ public class World {
                     int var11 = var8 & 0x3F;
                     int var12 = (this.field3820[var2] >> 8) * 64 - this.field3795.x + var10;
                     int var13 = (this.field3820[var2] & 0xFF) * 64 - this.field3795.z + var11;
-                    NPCType var14 = Statics.npcTypes.get(var5.g2());
+                    NPCType var14 = client.npcTypes.get(var5.g2());
                     ObjectNode var15 = (ObjectNode) client.npcEntities.get((long) var7);
                     if (var15 == null && (var14.walkflags & 0x1) > 0 && var12 >= 0 && var14.size + var12 < this.mapSizeX && var13 >= 0 && var14.size + var13 < this.mapSizeZ) {
                         NpcEntity var16 = new NpcEntity(this.scene);

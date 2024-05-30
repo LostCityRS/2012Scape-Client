@@ -2472,7 +2472,7 @@ public class PureJavaToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yt.cy()Z")
-    public boolean method600() {
+    public boolean isBloomEnabled() {
         return false;
     }
 

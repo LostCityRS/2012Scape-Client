@@ -28,6 +28,20 @@ public class AudioRenderer {
         throw new Error();
     }
 
+    @ObfuscatedName("fj.u(Lls;Lls;Lls;Laih;Lmg;I)Z")
+    public static boolean method3612(Js5 midiInstruments, Js5 vorbis, Js5 synthSounds, MidiAudioBuss arg3, AudioChannel musicChannel) {
+        Statics.field1586 = midiInstruments;
+        Statics.field1580 = vorbis;
+        Statics.field1581 = synthSounds;
+        Statics.field1735 = arg3;
+        Statics.field4165 = musicChannel;
+        Statics.field4559 = new int[16];
+        for (int var5 = 0; var5 < 16; var5++) {
+            Statics.field4559[var5] = 255;
+        }
+        return true;
+    }
+
     @ObfuscatedName("mf.j(Laih;I)Laih;")
     public static MidiAudioBuss method6082(MidiAudioBuss arg0) {
         MidiAudioBuss var1 = arg0 == null ? new MidiAudioBuss() : new MidiAudioBuss(arg0);
@@ -38,10 +52,10 @@ public class AudioRenderer {
     @ObfuscatedName("wu.a(I)V")
     public static void method12701() {
         Statics.method12330();
-        AudioChannel.init(22050, Statics.options.stereo.getValue() == 1, 2);
-        Statics.musicChannel = AudioChannel.create(Statics.canvas, 0, 22050);
+        AudioChannel.init(22050, client.options.stereo.getValue() == 1, 2);
+        Statics.musicChannel = AudioChannel.create(GameShell.canvas, 0, 22050);
         method3658(true, method6082(null));
-        Statics.soundChannel = AudioChannel.create(Statics.canvas, 1, 2048);
+        Statics.soundChannel = AudioChannel.create(GameShell.canvas, 1, 2048);
         Statics.soundChannel.setStream(Statics.soundStream);
     }
 
@@ -49,7 +63,7 @@ public class AudioRenderer {
     public static void method3658(boolean arg0, MidiAudioBuss arg1) {
         Statics.musicChannel.setStream(arg1);
         if (arg0) {
-            Statics.method3612(Statics.midiInstruments, Statics.vorbis, Statics.synthSounds, arg1, Statics.musicChannel);
+            method3612(Statics.midiInstruments, Statics.vorbis, Statics.synthSounds, arg1, Statics.musicChannel);
         }
     }
 
@@ -110,7 +124,7 @@ public class AudioRenderer {
                         int var3 = 8192;
                         int var13;
                         if (var1.field4177 == 0) {
-                            var13 = var1.field4181 * (var1.field4186 == 3 ? Statics.options.volumeSpeech.getValue() : Statics.options.volumeMainEffects.getValue()) >> 2;
+                            var13 = var1.field4181 * (var1.field4186 == 3 ? client.options.volumeSpeech.getValue() : client.options.volumeMainEffects.getValue()) >> 2;
                         } else {
                             int var4 = var1.field4177 >> 24 & 0x3;
                             if (Statics.localPlayerEntity.level == var4) {
@@ -129,7 +143,7 @@ public class AudioRenderer {
                                 if (var12 < 0) {
                                     var12 = 0;
                                 }
-                                var13 = (var5 - var12) * Statics.options.volumeBackgroundEffects.getValue() * var1.field4181 / var5 >> 2;
+                                var13 = (var5 - var12) * client.options.volumeBackgroundEffects.getValue() * var1.field4181 / var5 >> 2;
                                 if (var1.field4180 != -1) {
                                     int var14 = var1.field4180;
                                     int var15 = var1.field4187;
@@ -180,16 +194,16 @@ public class AudioRenderer {
             }
         }
         if (field4203 && !MidiPlayer.method13899()) {
-            if (Statics.options.volumeMainMusic.getValue() != 0 && field4202 != -1) {
+            if (client.options.volumeMainMusic.getValue() != 0 && field4202 != -1) {
                 if (Statics.field2327 == null) {
-                    MidiPlayer.method3986(Statics.midiSongs, field4202, 0, Statics.options.volumeMainMusic.getValue(), false);
+                    MidiPlayer.method3986(Statics.midiSongs, field4202, 0, client.options.volumeMainMusic.getValue(), false);
                 } else {
-                    MidiPlayer.method6359(Statics.midiSongs, field4202, 0, Statics.options.volumeMainMusic.getValue(), false, Statics.field2327);
+                    MidiPlayer.method6359(Statics.midiSongs, field4202, 0, client.options.volumeMainMusic.getValue(), false, Statics.field2327);
                 }
             }
             field4203 = false;
             Statics.field2327 = null;
-        } else if (Statics.options.volumeMainMusic.getValue() != 0 && field4202 != -1 && !MidiPlayer.method13899()) {
+        } else if (client.options.volumeMainMusic.getValue() != 0 && field4202 != -1 && !MidiPlayer.method13899()) {
             ClientMessage var21 = ClientMessage.createMessage(ClientProt.field2868, client.gameConnection.randomOut);
             var21.buf.p4(field4202);
             client.gameConnection.queue(var21);
@@ -199,7 +213,7 @@ public class AudioRenderer {
 
     @ObfuscatedName("aat.n(IIIIIB)Lnp;")
     public static Sound method14082(int arg0, int arg1, int arg2, int arg3, int arg4) {
-        if (Statics.options.volumeMainEffects.getValue() == 0 || arg1 == 0 || field4209 >= 50 || arg0 == -1) {
+        if (client.options.volumeMainEffects.getValue() == 0 || arg1 == 0 || field4209 >= 50 || arg0 == -1) {
             return null;
         } else {
             Sound var5 = new Sound((byte) 1, arg0, arg1, arg2, arg3, 0, arg4, null);
@@ -210,7 +224,7 @@ public class AudioRenderer {
 
     @ObfuscatedName("d.o(IIIIIIB)Lnp;")
     public static Sound method1356(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
-        if (Statics.options.volumeMainEffects.getValue() == 0 || arg1 == 0 || field4209 >= 50 || arg0 == -1) {
+        if (client.options.volumeMainEffects.getValue() == 0 || arg1 == 0 || field4209 >= 50 || arg0 == -1) {
             return null;
         } else {
             Sound var6 = new Sound((byte) 1, arg0, arg1, arg2, arg3, arg4, arg5, null);
@@ -221,7 +235,7 @@ public class AudioRenderer {
 
     @ObfuscatedName("an.q(IIIIZII)Lnp;")
     public static Sound method1717(int arg0, int arg1, int arg2, int arg3, boolean arg4, int arg5) {
-        if ((arg4 ? Statics.options.volumeSpeech.getValue() : Statics.options.volumeMainEffects.getValue()) == 0 || arg1 == 0 || field4209 >= 50 || arg0 == -1) {
+        if ((arg4 ? client.options.volumeSpeech.getValue() : client.options.volumeMainEffects.getValue()) == 0 || arg1 == 0 || field4209 >= 50 || arg0 == -1) {
             return null;
         } else {
             Sound var6 = new Sound((byte) (arg4 ? 3 : 2), arg0, arg1, arg2, arg3, 0, arg5, null);
@@ -232,7 +246,7 @@ public class AudioRenderer {
 
     @ObfuscatedName("xh.p(IIIIIZIB)Lnp;")
     public static Sound method12739(int arg0, int arg1, int arg2, int arg3, int arg4, boolean arg5, int arg6) {
-        if ((arg5 ? Statics.options.volumeSpeech.getValue() : Statics.options.volumeMainEffects.getValue()) == 0 || arg1 == 0 || field4209 >= 50 || arg0 == -1) {
+        if ((arg5 ? client.options.volumeSpeech.getValue() : client.options.volumeMainEffects.getValue()) == 0 || arg1 == 0 || field4209 >= 50 || arg0 == -1) {
             return null;
         } else {
             Sound var7 = new Sound((byte) (arg5 ? 3 : 2), arg0, arg1, arg2, arg3, arg4, arg6, null);
@@ -291,7 +305,7 @@ public class AudioRenderer {
             var3.buf.p4(-1);
             client.gameConnection.queue(var3);
         } else {
-            int var4 = arg1 * Statics.options.volumeMainMusic.getValue() >> 8;
+            int var4 = arg1 * client.options.volumeMainMusic.getValue() >> 8;
             if (arg0 == -1 && !field4203) {
                 MidiPlayer.method8662();
             } else if (arg0 != -1 && (field4202 != arg0 || !MidiPlayer.method13899()) && var4 != 0 && !field4203) {
@@ -308,7 +322,7 @@ public class AudioRenderer {
 
     @ObfuscatedName("js.v(Leq;IB)V")
     public static void method4800(MidiSoundRelated4 arg0, int arg1) {
-        int var2 = arg1 * Statics.options.volumeMainMusic.getValue() >> 8;
+        int var2 = arg1 * client.options.volumeMainMusic.getValue() >> 8;
         if (arg0 == null) {
             MidiPlayer.method8662();
         } else {
@@ -319,7 +333,7 @@ public class AudioRenderer {
 
     @ObfuscatedName("lb.k(IIIB)V")
     public static void method5596(int arg0, int arg1, int arg2) {
-        int var3 = arg2 * Statics.options.volumeMainMusic.getValue() >> 8;
+        int var3 = arg2 * client.options.volumeMainMusic.getValue() >> 8;
         if (var3 == 0 || arg0 == -1) {
             return;
         }

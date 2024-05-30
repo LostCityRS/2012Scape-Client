@@ -46,7 +46,7 @@ public class ClientOptionsTextures extends ClientOption {
     }
 
     @ObfuscatedName("afg.o(I)I")
-    public int method15686() {
+    public int getValue() {
         return this.value;
     }
 }

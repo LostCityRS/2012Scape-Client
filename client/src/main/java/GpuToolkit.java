@@ -966,7 +966,7 @@ public abstract class GpuToolkit extends RendererToolkit {
     }
 
     @ObfuscatedName("yk.cy()Z")
-    public final boolean method600() {
+    public final boolean isBloomEnabled() {
         return this.field8355[1] != null && this.field8355[1].method4282();
     }
 

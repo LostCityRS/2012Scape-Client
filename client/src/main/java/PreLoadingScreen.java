@@ -90,12 +90,12 @@ public class PreLoadingScreen implements LoadingScreen {
 
     @ObfuscatedName("kb.u(II)I")
     public final int method4980(int arg0) {
-        return this.field3373 ? (Statics.canvasWid - arg0) / 2 : 0;
+        return this.field3373 ? (GameShell.canvasWid - arg0) / 2 : 0;
     }
 
     @ObfuscatedName("kb.j(IB)I")
     public final int method4989(int arg0) {
-        return this.field3366 ? (Statics.canvasHei - arg0) / 2 : 0;
+        return this.field3366 ? (GameShell.canvasHei - arg0) / 2 : 0;
     }
 
     @ObfuscatedName("kb.a(ZB)V")
@@ -120,9 +120,9 @@ public class PreLoadingScreen implements LoadingScreen {
                 int var4 = StringTools.parseInt(var2[11]);
                 int var5 = StringTools.method4773(var2[12].substring(2), 16);
                 this.field3360 = new Font(var3, 0, var4);
-                this.field3361 = Statics.canvas.getFontMetrics(this.field3360);
+                this.field3361 = GameShell.canvas.getFontMetrics(this.field3360);
                 this.field3359 = new Color(var5);
-                MediaTracker var6 = new MediaTracker(Statics.canvas);
+                MediaTracker var6 = new MediaTracker(GameShell.canvas);
                 this.field3362 = this.method5008(var2[13]);
                 var6.addImage(this.field3362, 0);
                 this.field3383 = this.method5008(var2[14]);
@@ -151,20 +151,20 @@ public class PreLoadingScreen implements LoadingScreen {
             this.method4984();
             return;
         }
-        Graphics var8 = Statics.canvas.getGraphics();
+        Graphics var8 = GameShell.canvas.getGraphics();
         if (var8 == null) {
-            Statics.canvas.repaint();
+            GameShell.canvas.repaint();
             return;
         }
         try {
             int var9 = Statics.field6789.method4974();
             String var10 = Statics.field6789.method4959();
             if (Statics.field1209 == null) {
-                Statics.field1209 = Statics.canvas.createImage(Statics.canvasWid, Statics.canvasHei);
+                Statics.field1209 = GameShell.canvas.createImage(GameShell.canvasWid, GameShell.canvasHei);
             }
             Graphics var11 = Statics.field1209.getGraphics();
             var11.setColor(Color.BLACK);
-            var11.fillRect(0, 0, Statics.canvasWid, Statics.canvasHei);
+            var11.fillRect(0, 0, GameShell.canvasWid, GameShell.canvasHei);
             int var12 = this.field3371.getWidth(null);
             int var13 = this.field3370.getWidth(null);
             int var14 = this.field3369.getWidth(null);
@@ -193,7 +193,7 @@ public class PreLoadingScreen implements LoadingScreen {
             var11.drawImage(this.field3365, var31, (this.field3378 - var22) / 2 + var32, null);
             var11.drawImage(this.field3363, this.field3377 + var31 - var23, (this.field3378 - var24) / 2 + var32, null);
             if (this.field3372 == null) {
-                this.field3372 = Statics.canvas.createImage(this.field3377 - var21 - var23, this.field3378);
+                this.field3372 = GameShell.canvas.createImage(this.field3377 - var21 - var23, this.field3378);
             }
             Graphics var33 = this.field3372.getGraphics();
             for (int var34 = 0; var34 < this.field3377 - var21 - var23; var34 += var26) {
@@ -204,7 +204,7 @@ public class PreLoadingScreen implements LoadingScreen {
             }
             int var36 = (this.field3377 - var21 - var23) * var9 / 100;
             if (var36 > 0) {
-                Image var37 = Statics.canvas.createImage(var36, this.field3378 - var27 - var25);
+                Image var37 = GameShell.canvas.createImage(var36, this.field3378 - var27 - var25);
                 int var38 = var37.getWidth(null);
                 Graphics var39 = var37.getGraphics();
                 int var40 = this.field3374 * Loading.method3587() / 10 % var29;
@@ -215,7 +215,7 @@ public class PreLoadingScreen implements LoadingScreen {
             }
             int var43 = this.field3377 - var21 - var23 - var36;
             if (var43 > 0) {
-                Image var44 = Statics.canvas.createImage(var43, this.field3378 - var27 - var25);
+                Image var44 = GameShell.canvas.createImage(var43, this.field3378 - var27 - var25);
                 int var45 = var44.getWidth(null);
                 Graphics var46 = var44.getGraphics();
                 for (int var47 = 0; var47 < var45; var47 += var30) {

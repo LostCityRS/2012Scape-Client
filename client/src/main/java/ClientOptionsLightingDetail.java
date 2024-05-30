@@ -34,7 +34,7 @@ public class ClientOptionsLightingDetail extends ClientOption {
     }
 
     @ObfuscatedName("aea.n(I)I")
-    public int method15667() {
+    public int getValue() {
         return this.value;
     }
 }

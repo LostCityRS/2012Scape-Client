@@ -3457,7 +3457,7 @@ public class GpuModel extends Model {
         for (int var4 = 0; var4 < this.field7938; var4++) {
             GlModelRelated4 var5 = this.field7983[var4];
             GlModelRelated5 var6 = this.field7984[var4];
-            if (!var5.field2523 || !this.field7925.method600()) {
+            if (!var5.field2523 || !this.field7925.isBloomEnabled()) {
                 float var7 = (float) (this.field7932[var5.field2526] + this.field7932[var5.field2522] + this.field7932[var5.field2521]) * 0.3333333F;
                 float var8 = (float) (this.field7931[var5.field2526] + this.field7931[var5.field2522] + this.field7931[var5.field2521]) * 0.3333333F;
                 float var9 = (float) (this.field7934[var5.field2526] + this.field7934[var5.field2522] + this.field7934[var5.field2521]) * 0.3333333F;

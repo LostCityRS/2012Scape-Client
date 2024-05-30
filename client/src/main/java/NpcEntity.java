@@ -66,7 +66,7 @@ public class NpcEntity extends PathingEntity {
         this.field10081 = (int) (Math.random() * 4.0D) + 32;
         this.field10082 = (int) (Math.random() * 2.0D) + 3;
         this.field10083 = (int) (Math.random() * 3.0D) + 16;
-        if (Statics.options.texturing.method15686() == 1) {
+        if (client.options.texturing.getValue() == 1) {
             this.field10084 = (int) (Math.random() * 6.0D);
         } else {
             this.field10084 = (int) (Math.random() * 12.0D);
@@ -115,7 +115,7 @@ public class NpcEntity extends PathingEntity {
         NPCType var9 = this.type.multinpc == null ? this.type : this.type.getMultiNPC(client.localPlayerGameState);
         this.field8650 = false;
         PickableEntity var10 = null;
-        if (Statics.options.characterShadows.method15709() == 1 && var9.spotshadow && var8.field4714) {
+        if (client.options.characterShadows.method15709() == 1 && var9.spotshadow && var8.field4714) {
             AnimationNode var11 = this.field8597.method11767() && this.field8597.method11776() ? this.field8597 : null;
             EntityWalkAnimationNode var12 = this.field8616.method11767() && (!this.field8616.field9899 || var11 == null) ? this.field8616 : null;
             Model var13 = SpotShadowFactory.method1417(arg0, var5, this.field8601, this.field8644, this.field8603, this.type.size, this.field8651[0], this.type.spotshadowcolour_1 & 0xFFFF, this.type.spotshadowcolour_2 & 0xFFFF, this.type.spotshadowtrans_1 & 0xFF, this.type.spotshadowtrans_2 & 0xFF, var12 == null ? var11 : var12);
@@ -256,7 +256,7 @@ public class NpcEntity extends PathingEntity {
         }
         for (int var5 = 0; var5 < this.spotAnims.length; var5++) {
             if (this.spotAnims[var5].field1204 != -1) {
-                EffectAnimType var6 = Statics.field4213.method11082(this.spotAnims[var5].field1204);
+                EffectAnimType var6 = client.field4213.method11082(this.spotAnims[var5].field1204);
                 if (var6.field5264 && var6.field5252 != -1 && Statics.field566.method11144(var6.field5252).field6330 == 1) {
                     this.spotAnims[var5].field1203.method11769(-1);
                     this.spotAnims[var5].field1204 = -1;
@@ -288,7 +288,7 @@ public class NpcEntity extends PathingEntity {
         }
         for (int var6 = 0; var6 < this.spotAnims.length; var6++) {
             if (this.spotAnims[var6].field1204 != -1) {
-                EffectAnimType var7 = Statics.field4213.method11082(this.spotAnims[var6].field1204);
+                EffectAnimType var7 = client.field4213.method11082(this.spotAnims[var6].field1204);
                 if (var7.field5264 && var7.field5252 != -1 && Statics.field566.method11144(var7.field5252).field6330 == 1) {
                     this.spotAnims[var6].field1203.method11769(-1);
                     this.spotAnims[var6].field1204 = -1;
@@ -454,7 +454,7 @@ public class NpcEntity extends PathingEntity {
 
     @ObfuscatedName("ahs.cf(I)Z")
     public boolean method13942() {
-        return Statics.field4825.field5149;
+        return client.graphicsDefaults.field5149;
     }
 
     @ObfuscatedName("ahs.cs(S)Lcd;")
@@ -464,7 +464,7 @@ public class NpcEntity extends PathingEntity {
 
     @ObfuscatedName("ahs.gy(Ljava/lang/String;III)V")
     public void method16148(String arg0, int arg1, int arg2) {
-        int var4 = GameShell.method2809() * Statics.field4825.field5163;
+        int var4 = GameShell.method2809() * client.graphicsDefaults.field5163;
         this.method13998(arg0, arg1, arg2, var4);
     }
 

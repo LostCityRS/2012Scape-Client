@@ -169,42 +169,42 @@ public class ClientWorldMap extends WorldMap {
             MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else if (loadingProgress == 70) {
-            Statics.field4684 = new WorldMapFont(arg0, 11, true, Statics.canvas);
+            Statics.field4684 = new WorldMapFont(arg0, 11, true, GameShell.canvas);
             loadingProgress = 73;
             MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else if (loadingProgress == 73) {
-            Statics.field6790 = new WorldMapFont(arg0, 12, true, Statics.canvas);
+            Statics.field6790 = new WorldMapFont(arg0, 12, true, GameShell.canvas);
             loadingProgress = 76;
             MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else if (loadingProgress == 76) {
-            Statics.field1578 = new WorldMapFont(arg0, 14, true, Statics.canvas);
+            Statics.field1578 = new WorldMapFont(arg0, 14, true, GameShell.canvas);
             loadingProgress = 79;
             MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else if (loadingProgress == 79) {
-            Statics.field9549 = new WorldMapFont(arg0, 17, true, Statics.canvas);
+            Statics.field9549 = new WorldMapFont(arg0, 17, true, GameShell.canvas);
             loadingProgress = 82;
             MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else if (loadingProgress == 82) {
-            Statics.field3263 = new WorldMapFont(arg0, 19, true, Statics.canvas);
+            Statics.field3263 = new WorldMapFont(arg0, 19, true, GameShell.canvas);
             loadingProgress = 85;
             MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else if (loadingProgress == 85) {
-            Statics.field1388 = new WorldMapFont(arg0, 22, true, Statics.canvas);
+            Statics.field1388 = new WorldMapFont(arg0, 22, true, GameShell.canvas);
             loadingProgress = 88;
             MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else if (loadingProgress == 88) {
-            Statics.field7158 = new WorldMapFont(arg0, 26, true, Statics.canvas);
+            Statics.field7158 = new WorldMapFont(arg0, 26, true, GameShell.canvas);
             loadingProgress = 91;
             MapLogicRelated.method8512(true);
             GameShell.method2427();
         } else {
-            Statics.field4325 = new WorldMapFont(arg0, 30, true, Statics.canvas);
+            Statics.field4325 = new WorldMapFont(arg0, 30, true, GameShell.canvas);
             loadingProgress = 100;
             MapLogicRelated.method8512(true);
             GameShell.method2427();
@@ -809,10 +809,10 @@ public class ClientWorldMap extends WorldMap {
 
     @ObfuscatedName("ru.cb(IIIZB)V")
     public static void setMap(int arg0, int arg1, int arg2, boolean arg3) {
-        if (Statics.options.toolkit.getValue() == 0) {
+        if (client.options.toolkit.getValue() == 0) {
             reset(false);
         } else {
-            field9764 = Statics.options.toolkit.getValue();
+            field9764 = client.options.toolkit.getValue();
             Statics.method5600(0, true);
         }
         field9759 = arg1;
@@ -828,7 +828,7 @@ public class ClientWorldMap extends WorldMap {
             return;
         }
         Statics.method5600(field9764, false);
-        if (Statics.options.toolkit.getValue() != field9764) {
+        if (client.options.toolkit.getValue() != field9764) {
             switch (field9764) {
                 case 1:
                     GraphicsPacketQueue.method12023(ToolkitType.field7359);

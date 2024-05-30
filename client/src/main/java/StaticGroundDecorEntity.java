@@ -41,7 +41,7 @@ public class StaticGroundDecorEntity extends GroundDecorLayerEntity implements L
         this.field7584 = (byte) arg10;
         this.field7579 = arg3.active != 0 && !arg9;
         this.field7587 = arg11;
-        this.field7586 = arg1.method449() && arg3.field6541 && !this.field7585 && Statics.options.sceneryShadows.method15747() != 0;
+        this.field7586 = arg1.method449() && arg3.field6541 && !this.field7585 && client.options.sceneryShadows.getValue() != 0;
         int var13 = 2048;
         if (this.field7587) {
             var13 |= 0x10000;

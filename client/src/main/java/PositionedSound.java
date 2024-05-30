@@ -488,7 +488,7 @@ public class PositionedSound extends Node {
             return;
         }
         int var5 = 0;
-        int var6 = arg0.volume * Statics.options.volumeBackgroundEffects.getValue() >> 8;
+        int var6 = arg0.volume * client.options.volumeBackgroundEffects.getValue() >> 8;
         if (arg2 > arg0.maxX) {
             var5 += arg2 - arg0.maxX;
         } else if (arg2 < arg0.minX) {
@@ -499,7 +499,7 @@ public class PositionedSound extends Node {
         } else if (arg3 < arg0.minZ) {
             var5 += arg0.minZ - arg3;
         }
-        if (arg0.range == 0 || var5 - 256 > arg0.range || Statics.options.volumeBackgroundEffects.getValue() == 0 || arg0.level != arg1) {
+        if (arg0.range == 0 || var5 - 256 > arg0.range || client.options.volumeBackgroundEffects.getValue() == 0 || arg0.level != arg1) {
             if (arg0.primaryStream != null) {
                 Statics.soundStream.removeSubStream(arg0.primaryStream);
                 arg0.primaryStream = null;

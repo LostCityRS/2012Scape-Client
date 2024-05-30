@@ -18,6 +18,11 @@ public class ChatHistory {
         return ++field2099 - 1;
     }
 
+    @ObfuscatedName("ow.j(Ljava/lang/String;I)V")
+    public static void method7348(String arg0) {
+        addMessage(0, 0, "", "", "", arg0);
+    }
+
     @ObfuscatedName("b.a(ILjava/lang/String;S)V")
     public static void method1587(int arg0, String arg1) {
         addMessage(arg0, 0, "", "", "", arg1);

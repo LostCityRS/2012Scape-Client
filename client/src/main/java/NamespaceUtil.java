@@ -52,6 +52,11 @@ public class NamespaceUtil {
         }
     }
 
+    @ObfuscatedName("pn.a(CB)Z")
+    public static final boolean method7788(char arg0) {
+        return arg0 == 160 || arg0 == ' ' || arg0 == '_' || arg0 == '-';
+    }
+
     @ObfuscatedName("jf.s(Ljava/lang/CharSequence;I)Ljava/lang/String;")
     public static String method4744(CharSequence arg0) {
         return method12504(arg0, null);
@@ -64,10 +69,10 @@ public class NamespaceUtil {
         }
         int var2 = 0;
         int var3 = arg0.length();
-        while (var2 < var3 && Statics.method7788(arg0.charAt(var2))) {
+        while (var2 < var3 && method7788(arg0.charAt(var2))) {
             var2++;
         }
-        while (var3 > var2 && Statics.method7788(arg0.charAt(var3 - 1))) {
+        while (var3 > var2 && method7788(arg0.charAt(var3 - 1))) {
             var3--;
         }
         int var4 = var3 - var2;

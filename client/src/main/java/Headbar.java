@@ -29,10 +29,10 @@ public class Headbar extends Link {
         }
         if (var5 != null) {
             LinkQueue.method1968(new HeadbarUpdate(arg0, arg1, arg2, arg3), var5);
-            if (var6 >= Statics.field4825.field5151) {
+            if (var6 >= client.graphicsDefaults.field5151) {
                 this.field9267.method11649().method6975();
             }
-        } else if (var6 < Statics.field4825.field5151) {
+        } else if (var6 < client.graphicsDefaults.field5151) {
             this.field9267.method11641(new HeadbarUpdate(arg0, arg1, arg2, arg3));
         }
     }

@@ -28,10 +28,10 @@ public abstract class Js5TcpClient {
     public byte field3601 = 0;
 
     @ObfuscatedName("lo.o")
-    public volatile int field3602 = 0;
+    public volatile int errorCount = 0;
 
     @ObfuscatedName("lo.q")
-    public volatile int field3591 = 0;
+    public volatile int js5State = 0;
 
     @ObfuscatedName("lo.p")
     public Packet field3590 = new Packet(10);
@@ -83,10 +83,10 @@ public abstract class Js5TcpClient {
     public abstract void method5741();
 
     @ObfuscatedName("lo.t(I)Z")
-    public abstract boolean method5742();
+    public abstract boolean process();
 
     @ObfuscatedName("lo.l(Ljava/lang/Object;ZI)V")
-    public abstract void method5743(Object arg0, boolean arg1);
+    public abstract void createNewJs5Stream(Object arg0, boolean arg1);
 
     @ObfuscatedName("lo.f(ZB)V")
     public abstract void method5744(boolean arg0);

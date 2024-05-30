@@ -15,17 +15,17 @@ public abstract class Stream {
     public abstract int method7189() throws IOException;
 
     @ObfuscatedName("ov.m(I)V")
-    public abstract void method7192();
+    public abstract void closeGracefully();
 
     @ObfuscatedName("ov.c([BIIB)V")
-    public abstract void method7193(byte[] arg0, int arg1, int arg2) throws IOException;
+    public abstract void write(byte[] arg0, int arg1, int arg2) throws IOException;
 
     @ObfuscatedName("ov.s([BIII)I")
-    public abstract int method7196(byte[] arg0, int arg1, int arg2) throws IOException;
+    public abstract int read(byte[] arg0, int arg1, int arg2) throws IOException;
 
     @ObfuscatedName("ov.t(B)V")
     public abstract void method7203();
 
     @ObfuscatedName("ov.j(II)Z")
-    public abstract boolean method7212(int arg0) throws IOException;
+    public abstract boolean hasAvailable(int arg0) throws IOException;
 }

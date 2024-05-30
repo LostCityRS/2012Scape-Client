@@ -131,7 +131,7 @@ public class PlayerEntity extends PathingEntity {
         this.field10045 = buf.g1b();
         this.field10053 = buf.g1b();
         this.visibility = buf.g1b() == 1;
-        if (Statics.field6683 == ModeWhere.LIVE && client.userStaffModLevel >= 2) {
+        if (client.modewhere == ModeWhere.LIVE && client.userStaffModLevel >= 2) {
             this.visibility = false;
         }
         int var9 = -1;
@@ -155,7 +155,7 @@ public class PlayerEntity extends PathingEntity {
                     if (var16 >= 16384) {
                         int var17 = var16 - 16384;
                         var10[var13] = var17 | 0x40000000;
-                        var12[var13] = Statics.objTypes.get(var17);
+                        var12[var13] = client.objTypes.get(var17);
                         int var18 = var12[var13].team;
                         if (var18 != 0) {
                             this.field10061 = var18;
@@ -243,7 +243,7 @@ public class PlayerEntity extends PathingEntity {
         if (client.currentPlayerUid == this.slot && var32 != null) {
             for (int var34 = 0; var34 < var22.length; var34++) {
                 if (var22[var34] != var32[var34]) {
-                    Statics.objTypes.method12297();
+                    client.objTypes.method12297();
                     break;
                 }
             }
@@ -286,9 +286,9 @@ public class PlayerEntity extends PathingEntity {
         var2.method5116(0.0F, (float) (-20 - this.field8604), 0.0F);
         PickableEntity var8 = null;
         this.field8650 = false;
-        if (Statics.options.characterShadows.method15709() == 1) {
+        if (client.options.characterShadows.method15709() == 1) {
             BASType var9 = this.getBASType();
-            if (var9.field4714 && (this.model.field5006 == -1 || Statics.npcTypes.get(this.model.field5006).spotshadow)) {
+            if (var9.field4714 && (this.model.field5006 == -1 || client.npcTypes.get(this.model.field5006).spotshadow)) {
                 AnimationNode var10 = this.field8597.method11767() && this.field8597.method11776() ? this.field8597 : null;
                 EntityWalkAnimationNode var11 = this.field8616.method11767() && (!this.field8616.field9899 || var10 == null) ? this.field8616 : null;
                 Model var12 = SpotShadowFactory.method1417(arg0, var5, this.field8601, this.field8644, this.field8603, 1, this.field8651[0], 0, 0, 160, 240, var11 == null ? var10 : var11);
@@ -411,12 +411,12 @@ public class PlayerEntity extends PathingEntity {
         if (var10) {
             arg1 |= 0x80000;
         }
-        Model var11 = this.field8651[0] = this.model.method8244(arg0, arg1, Statics.field3769, Statics.field7650, Statics.npcTypes, Statics.objTypes, Statics.field566, client.localPlayerGameState, var5, var6, this.field8633, this.field8654, var9, true, Statics.wearposDefaults);
+        Model var11 = this.field8651[0] = this.model.method8244(arg0, arg1, Statics.field3769, Statics.field7650, client.npcTypes, client.objTypes, Statics.field566, client.localPlayerGameState, var5, var6, this.field8633, this.field8654, var9, true, Statics.wearposDefaults);
         int var12 = PlayerModel.method3503();
         if (GameShell.field4152 < 96 && var12 > 50) {
             SceneManager.method16899();
         }
-        if (Statics.field6683 != ModeWhere.LIVE && var12 < 50) {
+        if (client.modewhere != ModeWhere.LIVE && var12 < 50) {
             int var13 = 50 - var12;
             while (var13 > client.field8930) {
                 Statics.field2391[client.field8930] = new byte[102400];
@@ -426,7 +426,7 @@ public class PlayerEntity extends PathingEntity {
                 client.field8930--;
                 Statics.field2391[client.field8930] = null;
             }
-        } else if (Statics.field6683 != ModeWhere.LIVE) {
+        } else if (client.modewhere != ModeWhere.LIVE) {
             Statics.field2391 = new byte[50][];
             client.field8930 = 0;
         }
@@ -490,7 +490,7 @@ public class PlayerEntity extends PathingEntity {
         }
         for (int var4 = 0; var4 < this.spotAnims.length; var4++) {
             if (this.spotAnims[var4].field1204 != -1) {
-                EffectAnimType var5 = Statics.field4213.method11082(this.spotAnims[var4].field1204);
+                EffectAnimType var5 = client.field4213.method11082(this.spotAnims[var4].field1204);
                 if (var5.field5264 && var5.field5252 != -1 && Statics.field566.method11144(var5.field5252).field6330 == 1) {
                     this.spotAnims[var4].field1203.method11769(-1);
                     this.spotAnims[var4].field1204 = -1;
@@ -553,7 +553,7 @@ public class PlayerEntity extends PathingEntity {
 
     @ObfuscatedName("ahg.k(I)I")
     public int size() {
-        return this.model == null || this.model.field5006 == -1 ? super.size() : Statics.npcTypes.get(this.model.field5006).size;
+        return this.model == null || this.model.field5006 == -1 ? super.size() : client.npcTypes.get(this.model.field5006).size;
     }
 
     @ObfuscatedName("ahg.bm(I)I")
@@ -602,7 +602,7 @@ public class PlayerEntity extends PathingEntity {
 
     @ObfuscatedName("ahg.cf(I)Z")
     public boolean method13942() {
-        return Statics.field4825.field5157;
+        return client.graphicsDefaults.field5157;
     }
 
     @ObfuscatedName("ahg.cs(S)Lcd;")
@@ -620,7 +620,7 @@ public class PlayerEntity extends PathingEntity {
 
     @ObfuscatedName("ahg.gg(Ljava/lang/String;III)V")
     public void method16127(String arg0, int arg1, int arg2) {
-        this.method13998(arg0, arg1, arg2, GameShell.method2809() * Statics.field4825.field5165);
+        this.method13998(arg0, arg1, arg2, GameShell.method2809() * client.graphicsDefaults.field5165);
     }
 
     @ObfuscatedName("ahg.u(I)Ladu;")

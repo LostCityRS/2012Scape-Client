@@ -42,7 +42,7 @@ public class ClientOptionsBloom extends ClientOption {
     }
 
     @ObfuscatedName("afl.o(I)I")
-    public int method15816() {
+    public int getValue() {
         return this.value;
     }
 }

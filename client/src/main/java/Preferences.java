@@ -48,13 +48,13 @@ public class Preferences {
             var2 = 1;
             arg0.method15941(64);
         }
-        if (Statics.options.toolkit.getValue() == 0) {
-            Statics.options.method15449(Statics.options.toolkit, true);
+        if (client.options.toolkit.getValue() == 0) {
+            client.options.method15449(client.options.toolkit, true);
         } else {
-            Statics.options.method15448(Statics.options.toolkitDefault, 0);
+            client.options.method15448(client.options.toolkitDefault, 0);
             Statics.method5600(0, false);
         }
-        Statics.method1245();
+        save();
         arg0.method15943(var2);
     }
 
@@ -75,13 +75,13 @@ public class Preferences {
             method1886(true);
             var2 = 1;
         }
-        if (Statics.options.toolkit.getValue() == 2) {
-            Statics.options.method15449(Statics.options.toolkit, true);
+        if (client.options.toolkit.getValue() == 2) {
+            client.options.method15449(client.options.toolkit, true);
         } else {
-            Statics.options.method15448(Statics.options.toolkitDefault, 2);
+            client.options.method15448(client.options.toolkitDefault, 2);
             Statics.method5600(2, false);
         }
-        Statics.method1245();
+        save();
         arg0.method15943(var2);
     }
 
@@ -102,42 +102,42 @@ public class Preferences {
             method1886(true);
             var3 = 1;
         }
-        if (Statics.options.toolkit.getValue() == arg1) {
-            Statics.options.method15449(Statics.options.toolkit, true);
+        if (client.options.toolkit.getValue() == arg1) {
+            client.options.method15449(client.options.toolkit, true);
         } else {
-            Statics.options.method15448(Statics.options.toolkitDefault, arg1);
+            client.options.method15448(client.options.toolkitDefault, arg1);
             Statics.method5600(arg1, false);
         }
-        Statics.method1245();
+        save();
         arg0.method15943(var3);
     }
 
     @ObfuscatedName("lh.l(I)V")
     public static void method5717() {
-        Statics.options.method15448(Statics.options.removeRoof, 2);
-        Statics.options.method15448(Statics.options.removeRoofOverride, 2);
-        Statics.options.method15448(Statics.options.groundDecor, 1);
-        Statics.options.method15448(Statics.options.groundBlending, 1);
-        Statics.options.method15448(Statics.options.idleAnims, 1);
-        Statics.options.method15448(Statics.options.flickeringEffects, 1);
-        Statics.options.method15448(Statics.options.characterShadows, 1);
-        Statics.options.method15448(Statics.options.texturing, 1);
-        Statics.options.method15448(Statics.options.sceneryShadows, 2);
-        Statics.options.method15448(Statics.options.lightDetail, 1);
-        Statics.options.method15448(Statics.options.waterDetail, 2);
-        Statics.options.method15448(Statics.options.fog, 1);
-        Statics.options.method15448(Statics.options.antialiasingDefault, 0);
-        Statics.options.method15448(Statics.options.antialiasing, 0);
-        Statics.options.method15448(Statics.options.particles, 2);
-        Statics.options.method15448(Statics.options.buildArea, BuildAreaSize.field2139.field2143);
-        Statics.options.method15448(Statics.options.bloom, 0);
-        if (Statics.renderer != null && Statics.renderer.method450() && Statics.renderer.method600()) {
-            Statics.renderer.method558();
+        client.options.method15448(client.options.removeRoof, 2);
+        client.options.method15448(client.options.removeRoofOverride, 2);
+        client.options.method15448(client.options.groundDecor, 1);
+        client.options.method15448(client.options.groundBlending, 1);
+        client.options.method15448(client.options.idleAnims, 1);
+        client.options.method15448(client.options.flickeringEffects, 1);
+        client.options.method15448(client.options.characterShadows, 1);
+        client.options.method15448(client.options.texturing, 1);
+        client.options.method15448(client.options.sceneryShadows, 2);
+        client.options.method15448(client.options.lightDetail, 1);
+        client.options.method15448(client.options.waterDetail, 2);
+        client.options.method15448(client.options.fog, 1);
+        client.options.method15448(client.options.antialiasingDefault, 0);
+        client.options.method15448(client.options.antialiasing, 0);
+        client.options.method15448(client.options.particles, 2);
+        client.options.method15448(client.options.buildArea, BuildAreaSize.field2139.field2143);
+        client.options.method15448(client.options.bloom, 0);
+        if (client.toolkit != null && client.toolkit.method450() && client.toolkit.isBloomEnabled()) {
+            client.toolkit.method558();
         }
-        Statics.options.method15448(Statics.options.skyDetail, 1);
+        client.options.method15448(client.options.skyDetail, 1);
         method7165();
-        Statics.options.method15448(Statics.options.maxScreensize, 0);
-        Statics.options.method15448(Statics.options.preset, 4);
+        client.options.method15448(client.options.maxScreensize, 0);
+        client.options.method15448(client.options.preset, 4);
         client.method13901();
         client.world.getEnvironmentManager().method8154();
         client.field9165 = true;
@@ -145,30 +145,30 @@ public class Preferences {
 
     @ObfuscatedName("lq.f(I)V")
     public static void method5928() {
-        Statics.options.method15448(Statics.options.removeRoof, 2);
-        Statics.options.method15448(Statics.options.removeRoofOverride, 2);
-        Statics.options.method15448(Statics.options.groundDecor, 1);
-        Statics.options.method15448(Statics.options.groundBlending, 1);
-        Statics.options.method15448(Statics.options.idleAnims, 1);
-        Statics.options.method15448(Statics.options.flickeringEffects, 1);
-        Statics.options.method15448(Statics.options.characterShadows, 1);
-        Statics.options.method15448(Statics.options.texturing, 1);
-        Statics.options.method15448(Statics.options.sceneryShadows, 1);
-        Statics.options.method15448(Statics.options.lightDetail, 1);
-        Statics.options.method15448(Statics.options.waterDetail, 0);
-        Statics.options.method15448(Statics.options.fog, 1);
-        Statics.options.method15448(Statics.options.antialiasingDefault, 0);
-        Statics.options.method15448(Statics.options.antialiasing, 0);
-        Statics.options.method15448(Statics.options.particles, 1);
-        Statics.options.method15448(Statics.options.buildArea, BuildAreaSize.field2139.field2143);
-        Statics.options.method15448(Statics.options.bloom, 0);
-        if (Statics.renderer != null && Statics.renderer.method450() && Statics.renderer.method600()) {
-            Statics.renderer.method558();
+        client.options.method15448(client.options.removeRoof, 2);
+        client.options.method15448(client.options.removeRoofOverride, 2);
+        client.options.method15448(client.options.groundDecor, 1);
+        client.options.method15448(client.options.groundBlending, 1);
+        client.options.method15448(client.options.idleAnims, 1);
+        client.options.method15448(client.options.flickeringEffects, 1);
+        client.options.method15448(client.options.characterShadows, 1);
+        client.options.method15448(client.options.texturing, 1);
+        client.options.method15448(client.options.sceneryShadows, 1);
+        client.options.method15448(client.options.lightDetail, 1);
+        client.options.method15448(client.options.waterDetail, 0);
+        client.options.method15448(client.options.fog, 1);
+        client.options.method15448(client.options.antialiasingDefault, 0);
+        client.options.method15448(client.options.antialiasing, 0);
+        client.options.method15448(client.options.particles, 1);
+        client.options.method15448(client.options.buildArea, BuildAreaSize.field2139.field2143);
+        client.options.method15448(client.options.bloom, 0);
+        if (client.toolkit != null && client.toolkit.method450() && client.toolkit.isBloomEnabled()) {
+            client.toolkit.method558();
         }
-        Statics.options.method15448(Statics.options.skyDetail, 1);
+        client.options.method15448(client.options.skyDetail, 1);
         method7165();
-        Statics.options.method15448(Statics.options.maxScreensize, 1);
-        Statics.options.method15448(Statics.options.preset, 3);
+        client.options.method15448(client.options.maxScreensize, 1);
+        client.options.method15448(client.options.preset, 3);
         client.method13901();
         client.world.getEnvironmentManager().method8154();
         client.field9165 = true;
@@ -176,30 +176,30 @@ public class Preferences {
 
     @ObfuscatedName("oi.d(I)V")
     public static void method7359() {
-        Statics.options.method15448(Statics.options.removeRoof, 1);
-        Statics.options.method15448(Statics.options.removeRoofOverride, 1);
-        Statics.options.method15448(Statics.options.groundDecor, 1);
-        Statics.options.method15448(Statics.options.groundBlending, 1);
-        Statics.options.method15448(Statics.options.idleAnims, 0);
-        Statics.options.method15448(Statics.options.flickeringEffects, 0);
-        Statics.options.method15448(Statics.options.characterShadows, 0);
-        Statics.options.method15448(Statics.options.sceneryShadows, 0);
-        Statics.options.method15448(Statics.options.texturing, 0);
-        Statics.options.method15448(Statics.options.lightDetail, 0);
-        Statics.options.method15448(Statics.options.waterDetail, 0);
-        Statics.options.method15448(Statics.options.fog, 0);
-        Statics.options.method15448(Statics.options.antialiasingDefault, 0);
-        Statics.options.method15448(Statics.options.antialiasing, 0);
-        Statics.options.method15448(Statics.options.particles, 0);
-        Statics.options.method15448(Statics.options.buildArea, BuildAreaSize.field2139.field2143);
-        Statics.options.method15448(Statics.options.bloom, 0);
-        if (Statics.renderer != null && Statics.renderer.method450() && Statics.renderer.method600()) {
-            Statics.renderer.method558();
+        client.options.method15448(client.options.removeRoof, 1);
+        client.options.method15448(client.options.removeRoofOverride, 1);
+        client.options.method15448(client.options.groundDecor, 1);
+        client.options.method15448(client.options.groundBlending, 1);
+        client.options.method15448(client.options.idleAnims, 0);
+        client.options.method15448(client.options.flickeringEffects, 0);
+        client.options.method15448(client.options.characterShadows, 0);
+        client.options.method15448(client.options.sceneryShadows, 0);
+        client.options.method15448(client.options.texturing, 0);
+        client.options.method15448(client.options.lightDetail, 0);
+        client.options.method15448(client.options.waterDetail, 0);
+        client.options.method15448(client.options.fog, 0);
+        client.options.method15448(client.options.antialiasingDefault, 0);
+        client.options.method15448(client.options.antialiasing, 0);
+        client.options.method15448(client.options.particles, 0);
+        client.options.method15448(client.options.buildArea, BuildAreaSize.field2139.field2143);
+        client.options.method15448(client.options.bloom, 0);
+        if (client.toolkit != null && client.toolkit.method450() && client.toolkit.isBloomEnabled()) {
+            client.toolkit.method558();
         }
-        Statics.options.method15448(Statics.options.skyDetail, 0);
+        client.options.method15448(client.options.skyDetail, 0);
         method7165();
-        Statics.options.method15448(Statics.options.maxScreensize, 2);
-        Statics.options.method15448(Statics.options.preset, 2);
+        client.options.method15448(client.options.maxScreensize, 2);
+        client.options.method15448(client.options.preset, 2);
         client.method13901();
         client.world.getEnvironmentManager().method8154();
         client.field9165 = true;
@@ -207,30 +207,30 @@ public class Preferences {
 
     @ObfuscatedName("aw.z(ZI)V")
     public static void method1886(boolean arg0) {
-        Statics.options.method15448(Statics.options.removeRoof, 1);
-        Statics.options.method15448(Statics.options.removeRoofOverride, 1);
-        Statics.options.method15448(Statics.options.groundDecor, 0);
-        Statics.options.method15448(Statics.options.fog, 0);
-        Statics.options.method15448(Statics.options.groundBlending, 0);
-        Statics.options.method15448(Statics.options.idleAnims, 0);
-        Statics.options.method15448(Statics.options.flickeringEffects, 0);
-        Statics.options.method15448(Statics.options.characterShadows, 0);
-        Statics.options.method15448(Statics.options.sceneryShadows, 0);
-        Statics.options.method15448(Statics.options.texturing, 0);
-        Statics.options.method15448(Statics.options.lightDetail, 0);
-        Statics.options.method15448(Statics.options.waterDetail, 0);
-        Statics.options.method15448(Statics.options.antialiasingDefault, 0);
-        Statics.options.method15448(Statics.options.antialiasing, 0);
-        Statics.options.method15448(Statics.options.particles, 0);
-        Statics.options.method15448(Statics.options.buildArea, BuildAreaSize.field2139.field2143);
-        Statics.options.method15448(Statics.options.bloom, 0);
-        if (Statics.renderer != null && Statics.renderer.method450() && Statics.renderer.method600()) {
-            Statics.renderer.method558();
+        client.options.method15448(client.options.removeRoof, 1);
+        client.options.method15448(client.options.removeRoofOverride, 1);
+        client.options.method15448(client.options.groundDecor, 0);
+        client.options.method15448(client.options.fog, 0);
+        client.options.method15448(client.options.groundBlending, 0);
+        client.options.method15448(client.options.idleAnims, 0);
+        client.options.method15448(client.options.flickeringEffects, 0);
+        client.options.method15448(client.options.characterShadows, 0);
+        client.options.method15448(client.options.sceneryShadows, 0);
+        client.options.method15448(client.options.texturing, 0);
+        client.options.method15448(client.options.lightDetail, 0);
+        client.options.method15448(client.options.waterDetail, 0);
+        client.options.method15448(client.options.antialiasingDefault, 0);
+        client.options.method15448(client.options.antialiasing, 0);
+        client.options.method15448(client.options.particles, 0);
+        client.options.method15448(client.options.buildArea, BuildAreaSize.field2139.field2143);
+        client.options.method15448(client.options.bloom, 0);
+        if (client.toolkit != null && client.toolkit.method450() && client.toolkit.isBloomEnabled()) {
+            client.toolkit.method558();
         }
-        Statics.options.method15448(Statics.options.skyDetail, 0);
+        client.options.method15448(client.options.skyDetail, 0);
         method7165();
-        Statics.options.method15448(Statics.options.maxScreensize, 2);
-        Statics.options.method15448(Statics.options.preset, 1);
+        client.options.method15448(client.options.maxScreensize, 2);
+        client.options.method15448(client.options.preset, 1);
         client.method13901();
         client.world.getEnvironmentManager().method8154();
         client.field9165 = true;
@@ -239,9 +239,26 @@ public class Preferences {
     @ObfuscatedName("og.n(I)V")
     public static void method7165() {
         if (GameShell.field4144 > 1) {
-            Statics.options.method15448(Statics.options.cpuUsage, 4);
+            client.options.method15448(client.options.cpuUsage, 4);
         } else {
-            Statics.options.method15448(Statics.options.cpuUsage, 2);
+            client.options.method15448(client.options.cpuUsage, 2);
+        }
+    }
+
+    @ObfuscatedName("j.j(I)V")
+    public static void save() {
+        FileOnDisk var0 = null;
+        try {
+            var0 = GameShell.method4031("", client.modeGame.field6404, true);
+            Packet var1 = client.options.createPreferencesBlock();
+            var0.method12075(var1.data, 0, var1.pos);
+        } catch (Exception var5) {
+        }
+        try {
+            if (var0 != null) {
+                var0.method12076();
+            }
+        } catch (Exception var4) {
         }
     }
 }

@@ -34,7 +34,7 @@ public class GpuRelated13 {
                 arg1 = var6.field1252;
             }
             GpuTexture var8;
-            if (var6.field1245 && this.field2447.method600()) {
+            if (var6.field1245 && this.field2447.isBloomEnabled()) {
                 float[] var7 = this.field2446.method888(arg0, 0.7F, arg1, arg1, false);
                 var8 = this.field2447.method13697(TextureFormat.field1296, arg1, arg1, true, var7);
             } else {
@@ -60,7 +60,7 @@ public class GpuRelated13 {
         if (arg1 == -1) {
             arg1 = var3.field1252;
         }
-        if (var3.field1245 && this.field2447.method600()) {
+        if (var3.field1245 && this.field2447.isBloomEnabled()) {
             return this.field2446.method898(arg0, TextureRelated2.field4850, 0.7F, arg1, arg1, false);
         } else if (MaterialAlphaMode.field4853 != var3.field1262 && Material.method12638(var3.field1270)) {
             return this.field2446.method898(arg0, TextureRelated2.field4849, 0.7F, arg1, arg1, true);

@@ -496,7 +496,7 @@ public abstract class RendererToolkit {
     public abstract Heap method593(int arg0);
 
     @ObfuscatedName("ra.cy()Z")
-    public abstract boolean method600();
+    public abstract boolean isBloomEnabled();
 
     @ObfuscatedName("ra.CA(IIIII)V")
     public abstract void CA(int arg0, int arg1, int arg2, int arg3, int arg4);

@@ -63,8 +63,8 @@ public class ClientWatch {
         Queue var0 = field5041;
         synchronized (field5041) {
             Point var1;
-            if (Statics.canvas.isShowing()) {
-                var1 = Statics.canvas.getLocationOnScreen();
+            if (GameShell.canvas.isShowing()) {
+                var1 = GameShell.canvas.getLocationOnScreen();
             } else {
                 var1 = null;
             }
@@ -74,9 +74,9 @@ public class ClientWatch {
                     if (var2 == null) {
                         return;
                     }
-                    if (var1 != null && Statics.canvas.isShowing() && Statics.field578) {
+                    if (var1 != null && GameShell.canvas.isShowing() && Statics.field578) {
                         var2.method16843(var1);
-                        if (!var2.method16850() && var2.getX() < Statics.canvasWid && var2.getY() < Statics.canvasHei && var2.getX() >= 0 && var2.getY() >= 0) {
+                        if (!var2.method16850() && var2.getX() < GameShell.canvasWid && var2.getY() < GameShell.canvasHei && var2.getX() >= 0 && var2.getY() >= 0) {
                             int var3 = var2.method15181();
                             if (var2.method15181() == -1) {
                                 field5045.method8370(var2);
@@ -147,7 +147,7 @@ public class ClientWatch {
             ClientMessage var7 = ClientMessage.createMessage(ClientProt.CLIENT_DETAILOPTIONS_STATUS, client.gameConnection.randomOut);
             var7.buf.p1(0);
             int var8 = var7.buf.pos;
-            Packet var9 = Statics.options.createPreferencesBlock();
+            Packet var9 = client.options.createPreferencesBlock();
             var7.buf.pdata(var9.data, 0, var9.pos);
             var7.buf.psize1(var7.buf.pos - var8);
             client.gameConnection.queue(var7);

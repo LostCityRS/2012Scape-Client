@@ -266,8 +266,8 @@ public class Js5NetResourceProvider extends Js5ResourceProvider {
                     }
                     throw new RuntimeException();
                 }
-                this.field8853.field3602 = 0;
-                this.field8853.field3591 = 0;
+                this.field8853.errorCount = 0;
+                this.field8853.js5State = 0;
             } catch (RuntimeException var19) {
                 this.field8853.method5741();
                 var3.unlink();

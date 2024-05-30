@@ -19,7 +19,7 @@ public class LoadingScreenAlignmentX {
 
     @ObfuscatedName("id.j(III)I")
     public int method4586(int arg0, int arg1) {
-        int var3 = Statics.canvasWid > arg1 ? Statics.canvasWid : arg1;
+        int var3 = GameShell.canvasWid > arg1 ? GameShell.canvasWid : arg1;
         if (field2616 == this) {
             return 0;
         } else if (field2617 == this) {

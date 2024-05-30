@@ -1112,7 +1112,7 @@ public class Component {
     }
 
     @ObfuscatedName("am.x(II)V")
-    public static void method1903(int arg0) {
+    public static void resetModelCache(int arg0) {
         Statics.field1290 = arg0;
         field1760.method7922();
     }

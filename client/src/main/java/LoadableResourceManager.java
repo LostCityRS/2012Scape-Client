@@ -22,7 +22,7 @@ public class LoadableResourceManager {
                 return 1;
             }
             if (!((Js5DllResourceLoader) LoadableResource.field6838.method12192()).method5557()) {
-                Statics.field1543.method6676();
+                client.field1543.method6676();
                 ClientWatch.method13902();
                 try {
                     Ping.init();
@@ -93,7 +93,7 @@ public class LoadableResourceManager {
         }
         if (var10) {
             if (!((Js5DllResourceLoader) LoadableResource.field6843.method12192()).method5557()) {
-                client.field8944 = Statics.field1543.method6677();
+                client.field8944 = client.field1543.method6677();
             }
             Statics.field3496 = null;
         }

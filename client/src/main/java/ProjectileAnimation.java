@@ -84,7 +84,7 @@ public class ProjectileAnimation extends PrimaryLayerEntity {
         this.field10629 = false;
         this.field10627 = arg15;
         this.field10639 = arg16;
-        int var18 = Statics.field4213.method11082(this.field10630).field5252;
+        int var18 = client.field4213.method11082(this.field10630).field5252;
         this.field10638 = new EntityAnimationNode(this, false);
         this.field10638.method11769(var18);
         this.method15642(1);
@@ -234,7 +234,7 @@ public class ProjectileAnimation extends PrimaryLayerEntity {
 
     @ObfuscatedName("alv.c(Lra;II)Lqa;")
     public Model method17156(RendererToolkit arg0, int arg1) {
-        EffectAnimType var3 = Statics.field4213.method11082(this.field10630);
+        EffectAnimType var3 = client.field4213.method11082(this.field10630);
         return var3.method11102(arg0, arg1, this.field10638, (byte) 2);
     }
 

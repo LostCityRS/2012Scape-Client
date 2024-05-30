@@ -106,7 +106,7 @@ public class LoadableResource {
     }
 
     @ObfuscatedName("vu.a(II)V")
-    public void method12191(int arg0) {
+    public void setLength(int arg0) {
         this.field6856 = arg0;
     }
 

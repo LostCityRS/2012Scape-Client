@@ -27,9 +27,9 @@ public class FileChooser implements Runnable {
     }
 
     public void run() {
-        Container var1 = GameShell.method16494();
+        Container var1 = GameShell.getTopContainer();
         Frame var2 = null;
-        if (Statics.field1197 == null) {
+        if (GameShell.frame == null) {
             while (var1 != null) {
                 if (var1 instanceof Frame) {
                     var2 = (Frame) var1;
@@ -38,7 +38,7 @@ public class FileChooser implements Runnable {
                 var1 = var1.getParent();
             }
         } else {
-            var2 = Statics.field1197;
+            var2 = GameShell.frame;
         }
         if (var2 == null) {
             throw new RuntimeException("");

@@ -115,7 +115,7 @@ public class CutsceneAction_Sub12 extends CutsceneAction {
 
     @ObfuscatedName("aah.s(B)Z")
     public boolean method2883() {
-        EffectAnimType var1 = Statics.field4213.method11082(this.field8550);
+        EffectAnimType var1 = client.field4213.method11082(this.field8550);
         boolean var2 = var1.method11104();
         SeqType var3 = Statics.field566.method11144(var1.field5252);
         return var2 & var3.method11129();

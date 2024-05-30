@@ -40,10 +40,10 @@ public class ClientOptionsGroundBlending extends ClientOption {
             if (this.field6462.fog.method15696() == 1) {
                 return 2;
             }
-            if (this.field6462.texturing.method15686() == 1) {
+            if (this.field6462.texturing.getValue() == 1) {
                 return 2;
             }
-            if (this.field6462.waterDetail.method15755() > 0) {
+            if (this.field6462.waterDetail.getValue() > 0) {
                 return 2;
             }
         }

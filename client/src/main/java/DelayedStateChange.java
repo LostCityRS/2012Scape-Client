@@ -92,6 +92,12 @@ public class DelayedStateChange extends SecondaryNode {
         change.enqueueEvent();
     }
 
+    @ObfuscatedName("ga.l(IS)V")
+    public static void method4107(int arg0) {
+        DelayedStateChange var1 = create(4, (long) arg0);
+        var1.enqueueEvent();
+    }
+
     @ObfuscatedName("pc.f(II)V")
     public static void onComponentModelAnim(int id) {
         DelayedStateChange change = create(5, id);

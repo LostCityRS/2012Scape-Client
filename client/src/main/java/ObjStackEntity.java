@@ -53,7 +53,7 @@ public class ObjStackEntity extends ObjLayerEntity {
         this.field10614 = (int) (Math.random() * 4.0D) + 32;
         this.field10615 = (int) (Math.random() * 2.0D) + 3;
         this.field10616 = (int) (Math.random() * 3.0D) + 16;
-        if (Statics.options.texturing.method15686() == 1) {
+        if (client.options.texturing.getValue() == 1) {
             this.field10617 = (int) (Math.random() * 10.0D);
         } else {
             this.field10617 = (int) (Math.random() * 20.0D);
@@ -149,7 +149,7 @@ public class ObjStackEntity extends ObjLayerEntity {
         this.field10613 = false;
         this.field10612 = 0;
         if (this.field10609 != -1) {
-            Model var35 = Statics.objTypes.get(this.field10609).method12241(arg0, 526336, this.field10610, null, null, this.field10614, this.field10615, this.field10616, this.field10617);
+            Model var35 = client.objTypes.get(this.field10609).method12241(arg0, 526336, this.field10610, null, null, this.field10614, this.field10615, this.field10616, this.field10617);
             if (var35 != null) {
                 var35.method271(var6, this.field9811[2], 0);
                 this.field10613 |= var35.i();
@@ -157,7 +157,7 @@ public class ObjStackEntity extends ObjLayerEntity {
             }
         }
         if (this.field10607 != -1) {
-            Model var36 = Statics.objTypes.get(this.field10607).method12241(arg0, 526336, this.field10608, null, null, this.field10614, this.field10615, this.field10616, this.field10617);
+            Model var36 = client.objTypes.get(this.field10607).method12241(arg0, 526336, this.field10608, null, null, this.field10614, this.field10615, this.field10616, this.field10617);
             if (var36 != null) {
                 var36.method271(var6, this.field9811[1], 0);
                 this.field10613 |= var36.i();
@@ -166,7 +166,7 @@ public class ObjStackEntity extends ObjLayerEntity {
                 }
             }
         }
-        Model var37 = Statics.objTypes.get(this.field10611).method12241(arg0, 526336, this.field10605, null, null, this.field10614, this.field10615, this.field10616, this.field10617);
+        Model var37 = client.objTypes.get(this.field10611).method12241(arg0, 526336, this.field10605, null, null, this.field10614, this.field10615, this.field10616, this.field10617);
         if (var37 != null) {
             var37.method271(var6, this.field9811[0], 0);
             this.field10613 |= var37.i();
@@ -183,16 +183,16 @@ public class ObjStackEntity extends ObjLayerEntity {
 
     @ObfuscatedName("ali.fg(I)I")
     public int method15633() {
-        ObjType var1 = Statics.objTypes.get(this.field10611);
+        ObjType var1 = client.objTypes.get(this.field10611);
         int var2 = var1.picksizeshift;
         if (this.field10607 != -1) {
-            ObjType var3 = Statics.objTypes.get(this.field10607);
+            ObjType var3 = client.objTypes.get(this.field10607);
             if (var3.picksizeshift > var2) {
                 var2 = var3.picksizeshift;
             }
         }
         if (this.field10609 != -1) {
-            ObjType var4 = Statics.objTypes.get(this.field10609);
+            ObjType var4 = client.objTypes.get(this.field10609);
             if (var4.picksizeshift > var2) {
                 var2 = var4.picksizeshift;
             }
@@ -205,18 +205,18 @@ public class ObjStackEntity extends ObjLayerEntity {
         Matrix4x3 var4 = arg0.method516();
         var4.method5104(this.getTransform());
         var4.method5116(0.0F, -10.0F, 0.0F);
-        Model var5 = Statics.objTypes.get(this.field10611).method12241(arg0, 131072, this.field10605, null, null, 0, 0, 0, 0);
+        Model var5 = client.objTypes.get(this.field10611).method12241(arg0, 131072, this.field10605, null, null, 0, 0, 0, 0);
         if (var5 != null && var5.method272(arg1, arg2, var4, true, 0)) {
             return true;
         }
         if (this.field10607 != -1) {
-            Model var6 = Statics.objTypes.get(this.field10607).method12241(arg0, 131072, this.field10608, null, null, 0, 0, 0, 0);
+            Model var6 = client.objTypes.get(this.field10607).method12241(arg0, 131072, this.field10608, null, null, 0, 0, 0, 0);
             if (var6 != null && var6.method272(arg1, arg2, var4, true, 0)) {
                 return true;
             }
         }
         if (this.field10609 != -1) {
-            Model var7 = Statics.objTypes.get(this.field10609).method12241(arg0, 131072, this.field10610, null, null, 0, 0, 0, 0);
+            Model var7 = client.objTypes.get(this.field10609).method12241(arg0, 131072, this.field10610, null, null, 0, 0, 0, 0);
             if (var7 != null && var7.method272(arg1, arg2, var4, true, 0)) {
                 return true;
             }

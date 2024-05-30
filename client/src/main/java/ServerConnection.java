@@ -89,7 +89,7 @@ public class ServerConnection {
         while (true) {
             ClientMessage var1 = (ClientMessage) this.writeQueue.head();
             if (var1 == null || var1.field9465 > this.out.data.length - this.out.pos) {
-                this.stream.method7193(this.out.data, 0, this.out.pos);
+                this.stream.write(this.out.data, 0, this.out.pos);
                 this.totalBytesSent += this.out.pos;
                 this.numConnections = 0;
                 break;
@@ -129,7 +129,7 @@ public class ServerConnection {
     @ObfuscatedName("ad.m(I)V")
     public void closeGracefully() {
         if (this.stream != null) {
-            this.stream.method7192();
+            this.stream.closeGracefully();
             this.stream = null;
         }
         this.pingProvider.method1233(null);

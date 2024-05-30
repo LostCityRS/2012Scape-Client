@@ -141,10 +141,10 @@ public class Loading {
 
     @ObfuscatedName("k.l(I)I")
     public static int method1610() {
-        if (Statics.options.field9669.method15877() == 0) {
+        if (client.options.field9669.method15877() == 0) {
             for (int var0 = 0; var0 < client.field8950; var0++) {
                 if (client.field8951[var0].method7298() == 's' || client.field8951[var0].method7298() == 'S') {
-                    Statics.options.method15448(Statics.options.field9669, 1);
+                    client.options.method15448(client.options.field9669, 1);
                     client.field8912 = true;
                     GraphicsPacketQueue.method12023(ToolkitType.field7363);
                     break;
@@ -153,7 +153,7 @@ public class Loading {
         }
         if (Statics.field1208 == LoadingStage.field3390) {
             if (Statics.js5Client == null) {
-                Statics.js5Client = new Js5Client(Statics.field848, Statics.field1210, PublicKeys.field665, PublicKeys.field668);
+                Statics.js5Client = new Js5Client(client.js5TcpClient, Statics.field1210, PublicKeys.field665, PublicKeys.field668);
             }
             if (!Statics.js5Client.method5587()) {
                 return 0;
@@ -176,7 +176,7 @@ public class Loading {
             Statics.field9896 = Statics.field4761.method5622();
             Statics.field1625 = Statics.field1937.method5622();
             DefaultSprites.method11376(Statics.field4761);
-            int var6 = Statics.options.loadingScreen.method15859();
+            int var6 = client.options.loadingScreen.method15859();
             Statics.field7348 = new LoadingRelated3(client.modeGame, Statics.language, Statics.field1937);
             LoadingRelated1[] var7 = Statics.field7348.method12706(var6);
             if (var7.length == 0) {
@@ -210,7 +210,7 @@ public class Loading {
                 }
             }
             Statics.fontProvider.method4837(client.fontFactory);
-            DefaultSprites.method2931(Statics.renderer);
+            DefaultSprites.method2931(client.toolkit);
             client.setState(2);
         }
         if (Statics.field1208 == LoadingStage.field3389) {
@@ -284,19 +284,19 @@ public class Loading {
                 return var15;
             }
             method7678(Statics.field849.method5635(DefaultsGroup.field5144.field5145));
-            Statics.field4825 = new GraphicsDefaults(Statics.field849);
-            Statics.field5009 = Statics.field4825.field5146;
-            Statics.field5010 = Statics.field4825.field5161;
-            if (Statics.field4825.field5166 != -1 && Statics.field4825.field5167 != -1) {
-                client.field9067 = Statics.field4825.field5166;
-                client.field9068 = Statics.field4825.field5167;
+            client.graphicsDefaults = new GraphicsDefaults(Statics.field849);
+            Statics.field5009 = client.graphicsDefaults.field5146;
+            Statics.field5010 = client.graphicsDefaults.field5161;
+            if (client.graphicsDefaults.field5166 != -1 && client.graphicsDefaults.field5167 != -1) {
+                client.frameWidth = client.graphicsDefaults.field5166;
+                client.frameHeight = client.graphicsDefaults.field5167;
             }
             Statics.wearposDefaults = new WearposDefaults(Statics.field849);
             Statics.miniMenuDefaults = new MiniMenuDefaults(Statics.field849);
             Statics.field2190 = new CutsceneDefaults(Statics.field849);
         }
         if (Statics.field1208 == LoadingStage.field3396) {
-            if (Statics.field4825.field5156 != -1 && !Statics.field4560.loadFile(Statics.field4825.field5156, 0)) {
+            if (client.graphicsDefaults.field5156 != -1 && !Statics.field4560.loadFile(client.graphicsDefaults.field5156, 0)) {
                 return 99;
             }
             Statics.field8465 = new BasicMaterialTypeList(Statics.field7572, Statics.field808, Statics.field6435);
@@ -313,16 +313,16 @@ public class Loading {
             Statics.field785 = new LightTypeList(client.modeGame, Statics.language, Statics.field7435);
             Statics.field10355 = new LocTypeList(client.modeGame, Statics.language, true, Statics.field1565, Statics.field4560);
             client.world.method6159(Statics.field10355);
-            Statics.asyncRebuild.method6038(new LocTypeList(client.modeGame, Statics.language, true, Statics.field1565, Statics.field4560));
+            client.asyncRebuild.method6038(new LocTypeList(client.modeGame, Statics.language, true, Statics.field1565, Statics.field4560));
             Statics.field8499 = new MapElementTypeList(client.modeGame, Statics.language, Statics.field7435, Statics.field7387);
             Statics.field850 = new MSITypeList(client.modeGame, Statics.language, Statics.field7435, Statics.field7387);
-            Statics.npcTypes = new NPCTypeList(client.modeGame, Statics.language, true, Statics.field5080, Statics.field4560);
-            Statics.objTypes = new ObjTypeList(client.modeGame, Statics.language, true, Statics.paramTypes, Statics.field5130, Statics.field4560);
+            client.npcTypes = new NPCTypeList(client.modeGame, Statics.language, true, Statics.field5080, Statics.field4560);
+            client.objTypes = new ObjTypeList(client.modeGame, Statics.language, true, Statics.paramTypes, Statics.field5130, Statics.field4560);
             Statics.field4959 = new QuestTypeList(client.modeGame, Statics.language, Statics.field7435, true);
             Statics.field566 = new SeqTypeList(client.modeGame, Statics.language, Statics.field3897, Statics.field7567, Statics.field6690);
             Statics.field4678 = new SkyBoxTypeList(client.modeGame, Statics.language, Statics.field7435);
             Statics.field6360 = new SkyDecorTypeList(client.modeGame, Statics.language, Statics.field7435);
-            Statics.field4213 = new EffectAnimTypeList(client.modeGame, Statics.language, Statics.field2070, Statics.field4560);
+            client.field4213 = new EffectAnimTypeList(client.modeGame, Statics.language, Statics.field2070, Statics.field4560);
             Statics.field4214 = new StructTypeList(client.modeGame, Statics.language, Statics.field7435, true);
             Statics.field8514 = new VarcStrTypeList(client.modeGame, Statics.language, Statics.field7435);
             Statics.field8455 = new VarClientTypeList(client.modeGame, Statics.language, Statics.field7435);
@@ -376,12 +376,12 @@ public class Loading {
             client.field8938 = true;
         }
         if (Statics.field1208 == LoadingStage.field3400) {
-            if (!Component.openInterface(Statics.field4825.field5162, null)) {
+            if (!Component.openInterface(client.graphicsDefaults.field5162, null)) {
                 return 0;
             }
             boolean var20 = true;
-            for (int var21 = 0; var21 < Statics.field1756[Statics.field4825.field5162].field1732.length; var21++) {
-                Component var22 = Statics.field1756[Statics.field4825.field5162].field1732[var21];
+            for (int var21 = 0; var21 < Statics.field1756[client.graphicsDefaults.field5162].field1732.length; var21++) {
+                Component var22 = Statics.field1756[client.graphicsDefaults.field5162].field1732[var21];
                 if (var22.type == 5 && var22.graphic != -1 && !Statics.field7387.loadFile(var22.graphic, 0)) {
                     var20 = false;
                 }
@@ -407,29 +407,29 @@ public class Loading {
             Statics.field7348 = null;
             Statics.field3422 = null;
             MainLoadingScreen.method6065();
-            client.field8911 = Statics.options.field9669.method15877() == 1;
-            Statics.options.method15448(Statics.options.field9669, 1);
+            client.field8911 = client.options.field9669.method15877() == 1;
+            client.options.method15448(client.options.field9669, 1);
             if (client.field8911) {
-                Statics.options.method15448(Statics.options.toolkitDefault, 0);
-            } else if (Statics.options.toolkitDefault.field9844 && Statics.field2305.field9703 < 512 && Statics.field2305.field9703 != 0) {
-                Statics.options.method15448(Statics.options.toolkitDefault, 0);
+                client.options.method15448(client.options.toolkitDefault, 0);
+            } else if (client.options.toolkitDefault.field9844 && Statics.field2305.field9703 < 512 && Statics.field2305.field9703 != 0) {
+                client.options.method15448(client.options.toolkitDefault, 0);
             }
-            Statics.method1245();
+            Preferences.save();
             if (client.field8911) {
                 Statics.method5600(0, false);
                 if (!client.field8912) {
                     GraphicsPacketQueue.method12023(ToolkitType.field7356);
                 }
             } else {
-                Statics.method5600(Statics.options.toolkitDefault.getValue(), false);
-                if (Statics.options.toolkitDefault.getValue() == 0) {
+                Statics.method5600(client.options.toolkitDefault.getValue(), false);
+                if (client.options.toolkitDefault.getValue() == 0) {
                     GraphicsPacketQueue.method12023(ToolkitType.field7364);
                 }
             }
-            client.setWindowMode(Statics.options.maxScreenSize.getValue(), -1, -1, false);
+            client.setWindowMode(client.options.maxScreenSize.getValue(), -1, -1, false);
             Statics.fontProvider.method4837(client.fontFactory);
-            DefaultSprites.method2931(Statics.renderer);
-            DefaultSprites.method15812(Statics.renderer, Statics.field7387);
+            DefaultSprites.method2931(client.toolkit);
+            DefaultSprites.method15812(client.toolkit, Statics.field7387);
             MiniMenu.method3288(Statics.field8538);
         }
         return method4789();

@@ -29,7 +29,7 @@ public class SpotAnimation extends PrimaryLayerEntity {
         this.field10640 = arg1;
         this.field10646 = arg12;
         this.field10645 = arg14;
-        EffectAnimType var16 = Statics.field4213.method11082(this.field10640);
+        EffectAnimType var16 = client.field4213.method11082(this.field10640);
         int var17 = var16.field5252;
         if (var17 != -1) {
             this.field10642 = new EntityAnimationNode(this, false);
@@ -86,7 +86,7 @@ public class SpotAnimation extends PrimaryLayerEntity {
 
     @ObfuscatedName("alf.c(Lra;III)Lqa;")
     public Model method17190(RendererToolkit arg0, int arg1, int arg2) {
-        EffectAnimType var4 = Statics.field4213.method11082(arg2);
+        EffectAnimType var4 = client.field4213.method11082(arg2);
         FloorModel var5 = this.field9808.field4527[this.level];
         FloorModel var6 = this.field9809 < 3 ? this.field9808.field4527[this.field9809 + 1] : null;
         Vector3 var7 = this.getTransform().trans;

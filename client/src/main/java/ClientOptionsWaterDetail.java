@@ -39,7 +39,7 @@ public class ClientOptionsWaterDetail extends ClientOption {
     }
 
     @ObfuscatedName("afm.o(I)I")
-    public int method15755() {
+    public int getValue() {
         return this.value;
     }
 }

@@ -29,8 +29,8 @@ public abstract class LoadingScreenProgressDisplay implements LoadingScreenEleme
 
     @ObfuscatedName("gc.j(ZI)V")
     public void method3932(boolean arg0) {
-        int var2 = this.field2311.field2605.method4586(this.field2311.field2602, client.field9067) + this.field2311.field2604;
-        int var3 = this.field2311.field2603.method4574(this.field2311.field2607, client.field9068) + this.field2311.field2608;
+        int var2 = this.field2311.field2605.method4586(this.field2311.field2602, client.frameWidth) + this.field2311.field2604;
+        int var3 = this.field2311.field2603.method4574(this.field2311.field2607, client.frameHeight) + this.field2311.field2608;
         this.method3957(arg0, var2, var3);
         this.method3955(arg0, var2, var3);
         String var4 = Statics.field6789.method4959();
@@ -43,7 +43,7 @@ public abstract class LoadingScreenProgressDisplay implements LoadingScreenEleme
     @ObfuscatedName("gc.u(B)V")
     public void method3936() {
         FontMetrics var1 = FontMetrics.method14876(this.field2313, this.field2311.field2609);
-        this.field2312 = Statics.renderer.createFont(var1, (PalettedSpriteData[]) SpriteDataProvider.method2593(this.field2310, this.field2311.field2609), true);
+        this.field2312 = client.toolkit.createFont(var1, (PalettedSpriteData[]) SpriteDataProvider.method2593(this.field2310, this.field2311.field2609), true);
     }
 
     @ObfuscatedName("gc.a(I)Z")

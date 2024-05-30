@@ -3,6 +3,9 @@ import deob.ObfuscatedName;
 @ObfuscatedName("uu")
 public class WorldSwitcher {
 
+    @ObfuscatedName("uu.j")
+    public static ServerAddress content;
+
     @ObfuscatedName("uu.t")
     public static boolean field6777 = false;
 
@@ -57,12 +60,12 @@ public class WorldSwitcher {
 
     @ObfuscatedName("rt.j(ILjava/lang/String;I)Z")
     public static boolean method8621(int arg0, String arg1) {
-        Statics.field6772 = new ServerAddress();
-        Statics.field6772.field6768 = arg0;
-        Statics.field6772.field6765 = arg1;
-        if (Statics.field6683 != ModeWhere.LIVE) {
-            Statics.field6772.field6764 = Statics.field6772.field6768 + 40000;
-            Statics.field6772.field6766 = Statics.field6772.field6768 + 50000;
+        content = new ServerAddress();
+        content.field6768 = arg0;
+        content.field6765 = arg1;
+        if (client.modewhere != ModeWhere.LIVE) {
+            content.field6764 = content.field6768 + 40000;
+            content.field6766 = content.field6768 + 50000;
         }
         return true;
     }
@@ -114,7 +117,7 @@ public class WorldSwitcher {
 
     @ObfuscatedName("rc.l(S)Laex;")
     public static GWCWorld method8609() {
-        return GWC.method3630(Statics.field6772.field6768);
+        return GWC.method3630(content.field6768);
     }
 
     @ObfuscatedName("jj.f(IZIZI)V")

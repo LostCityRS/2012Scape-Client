@@ -7,7 +7,7 @@ public class TextUtil {
     public static String field493 = "true";
 
     @ObfuscatedName("j.j")
-    public static String field488 = ",";
+    public static String COMMA = ",";
 
     @ObfuscatedName("j.a")
     public static String OPEN_PARENTHESIS = " (";

@@ -90,7 +90,7 @@ public class AccountCreationManager {
                 Statics.method5540();
             }
             if (Statics.createStage == CreateConnectStage.SEND_REQUEST) {
-                client.lobbyConnection.method1911(Stream.method12184(Statics.field6782.method12025(), 15000), Statics.field6782.field6765);
+                client.lobbyConnection.method1911(Stream.method12184(Statics.field6782.getSocket(), 15000), Statics.field6782.field6765);
                 client.lobbyConnection.method1935();
                 ClientMessage var1 = ClientMessage.method4876();
                 var1.buf.p1(LoginProt.CREATE_ACCOUNT_CONNECT.id);
@@ -125,10 +125,10 @@ public class AccountCreationManager {
                     Statics.method5540();
                     return;
                 }
-                if (!client.lobbyConnection.getStream().method7212(1)) {
+                if (!client.lobbyConnection.getStream().hasAvailable(1)) {
                     return;
                 }
-                client.lobbyConnection.getStream().method7196(client.lobbyConnection.in.data, 0, 1);
+                client.lobbyConnection.getStream().read(client.lobbyConnection.in.data, 0, 1);
                 Statics.field629 = (ConnectReply) SerializableEnums.decode(ConnectReply.method8658(), client.lobbyConnection.in.data[0] & 0xFF);
                 if (Statics.field629 == ConnectReply.field6424) {
                     client.lobbyConnection.randomOut = new Isaac(Statics.field630);

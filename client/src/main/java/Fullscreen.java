@@ -50,4 +50,11 @@ public final class Fullscreen {
         arg0.method11884(var8, arg1, arg2, arg3, arg4);
         return var8;
     }
+
+    @ObfuscatedName("cv.a(Lub;Ljava/awt/Frame;I)V")
+    public static void method2431(FullscreenImpl arg0, Frame arg1) {
+        arg0.method11885();
+        arg1.setVisible(false);
+        arg1.dispose();
+    }
 }

@@ -45,7 +45,7 @@ public final class CutsceneEntity {
                 this.field1558 = new NpcEntity(client.world.getScene(), 25);
                 this.field1558.slot = this.field1559;
                 this.field1558.field8618 = client.loopCycle;
-                this.field1558.setType(Statics.npcTypes.get(this.field1560));
+                this.field1558.setType(client.npcTypes.get(this.field1560));
                 this.field1558.setSize(this.field1558.type.size);
                 this.field1558.turnspeed = this.field1558.type.turnspeed << 3;
                 this.field1558.field8600 = ++CutsceneManager.field1530 - 1;
@@ -94,7 +94,7 @@ public final class CutsceneEntity {
         if (this.field1560 < 0) {
             return true;
         }
-        NPCType var1 = Statics.npcTypes.get(this.field1560);
+        NPCType var1 = client.npcTypes.get(this.field1560);
         boolean var2 = var1.method12513();
         if (this.field1564 == null) {
             BASType var3 = Statics.field3769.method7784(var1.bas);

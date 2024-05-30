@@ -104,6 +104,11 @@ public class MiniMenu {
         return testBinding(Statics.miniMenuDefaults.field5125);
     }
 
+    @ObfuscatedName("s.a(I)Z")
+    public static boolean method1314() {
+        return testBinding(Statics.miniMenuDefaults.field5126);
+    }
+
     @ObfuscatedName("fk.s(Lpf;B)Z")
     public static boolean testBinding(KeyHeldBinding arg0) {
         return testBinding(arg0, null);
@@ -126,7 +131,7 @@ public class MiniMenu {
         }
         FontMetrics var0 = method8078();
         if (!open) {
-            field586 = subMenuMinLength != -1 && length >= subMenuMinLength || (formatted ? 26 : 22) + length * field582 > Statics.canvasHei;
+            field586 = subMenuMinLength != -1 && length >= subMenuMinLength || (formatted ? 26 : 22) + length * field582 > GameShell.canvasHei;
         }
         field598.clearBridged();
         field599.clearBridged();
@@ -379,7 +384,7 @@ public class MiniMenu {
         int var6 = field582 * arg0.size + 21;
         Statics.field567 = (formatted ? 26 : 22) + field582 * arg0.size;
         int var7 = Statics.field4756 + Statics.field1571;
-        if (var3 + var7 > Statics.canvasWid) {
+        if (var3 + var7 > GameShell.canvasWid) {
             var7 = Statics.field4756 - var3;
         }
         if (var7 < 0) {
@@ -387,8 +392,8 @@ public class MiniMenu {
         }
         int var8 = formatted ? var2.field7176 + 20 + 1 : 31;
         int var9 = var2.field7176 + (arg1 - var8) + 1;
-        if (var6 + var9 > Statics.canvasHei) {
-            var9 = Statics.canvasHei - var6;
+        if (var6 + var9 > GameShell.canvasHei) {
+            var9 = GameShell.canvasHei - var6;
         }
         if (var9 < 0) {
             var9 = 0;
@@ -719,7 +724,7 @@ public class MiniMenu {
                                     int var73 = 0;
                                     Obj var74 = (Obj) var72.field9313.tail();
                                     while (var74 != null) {
-                                        ObjType var75 = Statics.objTypes.get(var74.field9311);
+                                        ObjType var75 = client.objTypes.get(var74.field9311);
                                         int var76;
                                         if (var75.minimenucolouroverridden) {
                                             var76 = var75.minimenucolour;
@@ -1346,8 +1351,8 @@ public class MiniMenu {
             if (Statics.field10523 != null && Statics.field2136 != null) {
                 close();
                 int var6 = var3 / 2 + var1;
-                if (var3 + var6 > Statics.canvasWid) {
-                    var6 = Statics.canvasWid - var3;
+                if (var3 + var6 > GameShell.canvasWid) {
+                    var6 = GameShell.canvasWid - var3;
                 }
                 if (var6 < 0) {
                     var6 = 0;
@@ -1474,7 +1479,7 @@ public class MiniMenu {
                 if (var5 == null) {
                     SpriteData var6 = SpriteDataProvider.method2590(Statics.field7387, var4.field5079, 0);
                     if (var6 != null) {
-                        var5 = Statics.renderer.method517(var6, true);
+                        var5 = client.toolkit.method517(var6, true);
                         field620.method7937(var5, (long) var4.field5079);
                     }
                 }
@@ -1788,7 +1793,7 @@ public class MiniMenu {
             client.method5716(index, var4, var3, arg0.opbase);
         }
         if (action == 23) {
-            if (client.userStaffModLevel > 0 && Statics.method1314()) {
+            if (client.userStaffModLevel > 0 && method1314()) {
                 Statics.method2617(Statics.localPlayerEntity.level, var9.x + var3, var9.z + var4);
             } else {
                 ClientMessage var18 = createMoveMessage(var3, var4, index);
@@ -1858,7 +1863,7 @@ public class MiniMenu {
             client.method12668(var3, var4);
         }
         if (action == 60) {
-            if (client.userStaffModLevel > 0 && Statics.method1314()) {
+            if (client.userStaffModLevel > 0 && method1314()) {
                 Statics.method2617(Statics.localPlayerEntity.level, var9.x + var3, var9.z + var4);
             } else {
                 client.crossX = arg1;

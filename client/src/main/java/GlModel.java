@@ -3240,7 +3240,7 @@ public class GlModel extends Model {
         for (int var3 = 0; var3 < this.field7910; var3++) {
             GlModelRelated6 var4 = this.field7903[var3];
             GlModelRelated7 var5 = this.field7915[var3];
-            if (!var4.field1183 || !this.field7891.method600()) {
+            if (!var4.field1183 || !this.field7891.isBloomEnabled()) {
                 float var6 = (float) (this.field7865[var4.field1179] + this.field7865[var4.field1175] + this.field7865[var4.field1177]) * 0.3333333F;
                 float var7 = (float) (this.field7866[var4.field1179] + this.field7866[var4.field1175] + this.field7866[var4.field1177]) * 0.3333333F;
                 float var8 = (float) (this.field7904[var4.field1179] + this.field7904[var4.field1175] + this.field7904[var4.field1177]) * 0.3333333F;

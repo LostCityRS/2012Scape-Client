@@ -38,7 +38,7 @@ public class LoadingScreenNewsManager implements Runnable {
 
     public void run() {
         try {
-            int var1 = Statics.field6683 == ModeWhere.LIVE ? 80 : Statics.field6773.field6768 + 7000;
+            int var1 = client.modewhere == ModeWhere.LIVE ? 80 : Statics.field6773.field6768 + 7000;
             BufferedReader var2 = new BufferedReader(new InputStreamReader(new DataInputStream((new URL("http://" + Statics.field6773.field6765 + ":" + var1 + "/news.ws?game=" + client.modeGame.game)).openStream())));
             String var3 = var2.readLine();
             ArrayList var4 = new ArrayList();

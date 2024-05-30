@@ -113,7 +113,7 @@ public class LoadingScreenRenderer implements Runnable {
                         this.field3349.method4982(this.field3348);
                     } else {
                         long var4 = MonotonicTime.get();
-                        if (Statics.renderer == null || this.field3350 == null || this.field3350.method4983() == 0 || this.field3347 < var4 - (long) this.field3350.method4983()) {
+                        if (client.toolkit == null || this.field3350 == null || this.field3350.method4983() == 0 || this.field3347 < var4 - (long) this.field3350.method4983()) {
                             if (this.field3350 != null) {
                                 this.field3348 = true;
                                 this.field3350.method4985();
@@ -121,42 +121,42 @@ public class LoadingScreenRenderer implements Runnable {
                             }
                             if (this.field3348) {
                                 client.method3536();
-                                if (Statics.renderer != null) {
-                                    Statics.renderer.ba(1, 0);
+                                if (client.toolkit != null) {
+                                    client.toolkit.ba(1, 0);
                                 }
                             }
-                            this.field3349.method4982(this.field3348 || Statics.renderer != null && Statics.renderer.method447());
+                            this.field3349.method4982(this.field3348 || client.toolkit != null && client.toolkit.method447());
                         } else {
                             int var6 = (int) ((var4 - this.field3347) * 255L / (long) this.field3350.method4983());
                             int var7 = 255 - var6;
                             int var8 = var6 << 24 | 0xFFFFFF;
                             int var9 = var7 << 24 | 0xFFFFFF;
                             client.method3536();
-                            Statics.renderer.ba(1, 0);
-                            Sprite var10 = Statics.renderer.method777(Statics.canvasWid, Statics.canvasHei, true);
-                            Framebuffer var11 = Statics.renderer.method467();
+                            client.toolkit.ba(1, 0);
+                            Sprite var10 = client.toolkit.method777(GameShell.canvasWid, GameShell.canvasHei, true);
+                            Framebuffer var11 = client.toolkit.method467();
                             var11.method1206(0, var10.method1049());
-                            Statics.renderer.method464(var11);
+                            client.toolkit.method464(var11);
                             this.field3350.method4982(true);
-                            Statics.renderer.method696(var11);
+                            client.toolkit.method696(var11);
                             var10.method1054(0, 0, 0, var9, 1);
-                            Statics.renderer.method464(var11);
-                            Statics.renderer.ba(1, 0);
+                            client.toolkit.method464(var11);
+                            client.toolkit.ba(1, 0);
                             this.field3349.method4982(true);
-                            Statics.renderer.method696(var11);
+                            client.toolkit.method696(var11);
                             var10.method1054(0, 0, 0, var8, 1);
                         }
                         try {
-                            if (Statics.renderer != null && !(this.field3349 instanceof PreLoadingScreen)) {
-                                Statics.renderer.method466();
+                            if (client.toolkit != null && !(this.field3349 instanceof PreLoadingScreen)) {
+                                client.toolkit.method466();
                             }
                         } catch (RendererException var18) {
-                            JagException.method16252(var18.getMessage() + Statics.field1543.method6701(), var18);
+                            JagException.method16252(var18.getMessage() + client.field1543.method6701(), var18);
                             Statics.method5600(0, true);
                         }
                     }
                     this.field3348 = false;
-                    if (Statics.renderer != null && !(this.field3349 instanceof PreLoadingScreen) && this.field3356.field3404 < LoadingStage.field3401.field3404) {
+                    if (client.toolkit != null && !(this.field3349 instanceof PreLoadingScreen) && this.field3356.field3404 < LoadingStage.field3401.field3404) {
                         client.method13896();
                     }
                 } catch (Exception var19) {

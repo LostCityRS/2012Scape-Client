@@ -13,7 +13,7 @@ public class LoadingScreenClear implements LoadingScreenElement {
     @ObfuscatedName("gr.j(ZI)V")
     public void method3932(boolean arg0) {
         if (arg0) {
-            Statics.renderer.B(0, 0, Statics.canvasWid, Statics.canvasHei, this.field2326.field2590, 0);
+            client.toolkit.B(0, 0, GameShell.canvasWid, GameShell.canvasHei, this.field2326.field2590, 0);
         }
     }
 

@@ -44,8 +44,8 @@ public class MainLoadingScreen implements LoadingScreen {
 
     @ObfuscatedName("ki.t(B)V")
     public void method5006() {
-        if (Statics.renderer != this.field3418) {
-            this.field3418 = Statics.renderer;
+        if (client.toolkit != this.field3418) {
+            this.field3418 = client.toolkit;
             this.field3419 = true;
         }
         this.field3418.ba(3, 0);
@@ -98,7 +98,7 @@ public class MainLoadingScreen implements LoadingScreen {
         Sprite var2 = (Sprite) field3415.get((long) arg1);
         if (var2 == null) {
             if (Statics.field5109) {
-                var2 = Statics.renderer.method517(SpriteDataProvider.method2598(arg0, arg1), true);
+                var2 = client.toolkit.method517(SpriteDataProvider.method2598(arg0, arg1), true);
             } else {
                 var2 = Statics.method1604(arg0.method5635(arg1));
             }

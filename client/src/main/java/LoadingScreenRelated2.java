@@ -27,8 +27,8 @@ public class LoadingScreenRelated2 implements LoadingScreenElement {
         if (!arg0) {
             return;
         }
-        int var2 = Statics.canvasWid > client.field9067 ? Statics.canvasWid : client.field9067;
-        int var3 = Statics.canvasHei > client.field9068 ? Statics.canvasHei : client.field9068;
+        int var2 = GameShell.canvasWid > client.frameWidth ? GameShell.canvasWid : client.frameWidth;
+        int var3 = GameShell.canvasHei > client.frameHeight ? GameShell.canvasHei : client.frameHeight;
         int var4 = this.field2323.method1042();
         int var5 = this.field2323.method1047();
         int var6 = 0;

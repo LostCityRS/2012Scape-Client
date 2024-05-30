@@ -8,7 +8,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.management.GarbageCollectorMXBean;
-import java.net.Socket;
 import java.nio.ByteBuffer;
 import java.util.List;
 import java.util.*;
@@ -26,9 +25,6 @@ public class Statics {
 
     @ObfuscatedName("bj.ad")
     public static int field1025;
-
-    @ObfuscatedName("ajz.z")
-    public static int field10343;
 
     @ObfuscatedName("aje.l")
     public static Js5 field10347;
@@ -84,9 +80,6 @@ public class Statics {
     @ObfuscatedName("cr.k")
     public static Js5 field1191;
 
-    @ObfuscatedName("ci.v")
-    public static Frame field1197;
-
     @ObfuscatedName("ci.t")
     public static int field1198;
 
@@ -104,9 +97,6 @@ public class Statics {
 
     @ObfuscatedName("cv.ei")
     public static Js5DiskCache field1210;
-
-    @ObfuscatedName("ck.h")
-    public static Canvas canvas;
 
     @ObfuscatedName("ct.gb")
     public static EnumTypeList field1244;
@@ -177,9 +167,6 @@ public class Statics {
     @ObfuscatedName("dd.vu")
     public static int field1539;
 
-    @ObfuscatedName("da.ds")
-    public static client field1543;
-
     @ObfuscatedName("dv.bj")
     public static Sprite field1557;
 
@@ -209,9 +196,6 @@ public class Statics {
 
     @ObfuscatedName("ev.u")
     public static Js5 field1586;
-
-    @ObfuscatedName("ev.k")
-    public static Frame fsFrame;
 
     @ObfuscatedName("eq.au")
     public static int field1597;
@@ -302,9 +286,6 @@ public class Statics {
 
     @ObfuscatedName("fk.hf")
     public static CutsceneDefaults field2190;
-
-    @ObfuscatedName("fh.d")
-    public static int field2204;
 
     @ObfuscatedName("fz.h")
     public static Sprite[] field2209;
@@ -456,9 +437,6 @@ public class Statics {
     @ObfuscatedName("ju.y")
     public static Sprite[] field3311;
 
-    @ObfuscatedName("jw.p")
-    public static int field3315;
-
     @ObfuscatedName("kh.id")
     public static PingRequest field3357;
 
@@ -494,9 +472,6 @@ public class Statics {
 
     @ObfuscatedName("kj.t")
     public static int field3489;
-
-    @ObfuscatedName("kw.gv")
-    public static ObjTypeList objTypes;
 
     @ObfuscatedName("kw.tp")
     public static int field3493;
@@ -537,9 +512,6 @@ public class Statics {
     @ObfuscatedName("lh.of")
     public static int field3585;
 
-    @ObfuscatedName("lu.ew")
-    public static Stream field3614;
-
     @ObfuscatedName("lu.go")
     public static FloorOverlayTypeList floTypes;
 
@@ -554,9 +526,6 @@ public class Statics {
 
     @ObfuscatedName("lr.gl")
     public static CursorTypeList field3770;
-
-    @ObfuscatedName("la.gx")
-    public static NPCTypeList npcTypes;
 
     @ObfuscatedName("lf.ht")
     public static QuickChatPhraseTypeList field3779;
@@ -618,9 +587,6 @@ public class Statics {
     @ObfuscatedName("mb.t")
     public static CreateAccountReply field4011;
 
-    @ObfuscatedName("ms.ar")
-    public static FullscreenImpl field4013;
-
     @ObfuscatedName("mg.j")
     public static int sampleRate;
 
@@ -644,9 +610,6 @@ public class Statics {
 
     @ObfuscatedName("ng.l")
     public static float floatingInverseA0;
-
-    @ObfuscatedName("nv.n")
-    public static int canvasWid;
 
     @ObfuscatedName("nv.as")
     public static CursorManager field4133;
@@ -684,14 +647,8 @@ public class Statics {
     @ObfuscatedName("ne.o")
     public static MidiSoundRelated4 field4206;
 
-    @ObfuscatedName("ne.hm")
-    public static EffectAnimTypeList field4213;
-
     @ObfuscatedName("ne.hq")
     public static StructTypeList field4214;
-
-    @ObfuscatedName("ne.ej")
-    public static Socket field4215;
 
     @ObfuscatedName("nq.oa")
     public static int field4225;
@@ -704,9 +661,6 @@ public class Statics {
 
     @ObfuscatedName("ol.k")
     public static MidiAudioBuss field4262;
-
-    @ObfuscatedName("ol.eb")
-    public static long field4263;
 
     @ObfuscatedName("om.l")
     public static Js5 field4264;
@@ -864,9 +818,6 @@ public class Statics {
     @ObfuscatedName("pd.qq")
     public static Component[] field4667;
 
-    @ObfuscatedName("pp.o")
-    public static int canvasHei;
-
     @ObfuscatedName("pp.ho")
     public static SkyBoxTypeList field4678;
 
@@ -902,9 +853,6 @@ public class Statics {
 
     @ObfuscatedName("pf.gp")
     public static Js5 field4824;
-
-    @ObfuscatedName("pf.hj")
-    public static GraphicsDefaults field4825;
 
     @ObfuscatedName("pk.h")
     public static MidiSong field4835;
@@ -950,9 +898,6 @@ public class Statics {
 
     @ObfuscatedName("ql.aq")
     public static Component field4960;
-
-    @ObfuscatedName("ql.cj")
-    public static ClientOptions options;
 
     @ObfuscatedName("j.q")
     public static int field497;
@@ -1028,9 +973,6 @@ public class Statics {
 
     @ObfuscatedName("rl.qt")
     public static int field5185;
-
-    @ObfuscatedName("rz.cc")
-    public static RendererToolkit renderer;
 
     @ObfuscatedName("re.n")
     public static SkyBox field5193;
@@ -1245,9 +1187,6 @@ public class Statics {
     @ObfuscatedName("tv.hb")
     public static VarPlayerTypeList field6667;
 
-    @ObfuscatedName("tt.bi")
-    public static ModeWhere field6683;
-
     @ObfuscatedName("af.qc")
     public static int field669;
 
@@ -1256,9 +1195,6 @@ public class Statics {
 
     @ObfuscatedName("tj.tv")
     public static int field6692;
-
-    @ObfuscatedName("tl.q")
-    public static int field6693;
 
     @ObfuscatedName("af.k")
     public static Font field670;
@@ -1292,9 +1228,6 @@ public class Statics {
 
     @ObfuscatedName("uf.ac")
     public static int displayZ;
-
-    @ObfuscatedName("uu.j")
-    public static ServerAddress field6772;
 
     @ObfuscatedName("uu.a")
     public static ServerAddress field6773;
@@ -1593,9 +1526,6 @@ public class Statics {
     @ObfuscatedName("zt.nv")
     public static int field8469;
 
-    @ObfuscatedName("ad.el")
-    public static Js5TcpClient field848;
-
     @ObfuscatedName("zm.s")
     public static Timer field8481;
 
@@ -1640,9 +1570,6 @@ public class Statics {
 
     @ObfuscatedName("aay.fe")
     public static Js5 field8655;
-
-    @ObfuscatedName("aay.ib")
-    public static AsyncRebuild asyncRebuild;
 
     @ObfuscatedName("aat.av")
     public static int field8716;
@@ -1830,11 +1757,6 @@ public class Statics {
         ClientScriptHelpers.field5186.method7959();
     }
 
-    @ObfuscatedName("ow.j(Ljava/lang/String;I)V")
-    public static void method7348(String arg0) {
-        ChatHistory.addMessage(0, 0, "", "", "", arg0);
-    }
-
     @ObfuscatedName("dq.j(Ljava/lang/Object;ZI)[B")
     public static byte[] method2896(Object arg0, boolean arg1) {
         if (arg0 == null) {
@@ -1896,20 +1818,6 @@ public class Statics {
         }
     }
 
-    @ObfuscatedName("fj.u(Lls;Lls;Lls;Laih;Lmg;I)Z")
-    public static boolean method3612(Js5 midiInstruments, Js5 vorbis, Js5 synthSounds, MidiAudioBuss arg3, AudioChannel musicChannel) {
-        field1586 = midiInstruments;
-        field1580 = vorbis;
-        field1581 = synthSounds;
-        field1735 = arg3;
-        field4165 = musicChannel;
-        field4559 = new int[16];
-        for (int var5 = 0; var5 < 16; var5++) {
-            field4559[var5] = 255;
-        }
-        return true;
-    }
-
     @ObfuscatedName("qk.a(I)Z")
     public static boolean method8399() {
         return createStage != null;
@@ -1918,11 +1826,6 @@ public class Statics {
     @ObfuscatedName("ux.u(CI)I")
     public static int method11908(char arg0) {
         return arg0 >= 0 && arg0 < Base64.field6399.length ? Base64.field6399[arg0] : -1;
-    }
-
-    @ObfuscatedName("pn.a(CB)Z")
-    public static final boolean method7788(char arg0) {
-        return arg0 == 160 || arg0 == ' ' || arg0 == '_' || arg0 == '-';
     }
 
     @ObfuscatedName("cp.c(ZB)V")
@@ -1974,13 +1877,6 @@ public class Statics {
             arg1[arg2++] = (byte) ((var8 & 0x3) << 6 | var9);
         }
         return arg2 - var3;
-    }
-
-    @ObfuscatedName("cv.a(Lub;Ljava/awt/Frame;I)V")
-    public static void method2431(FullscreenImpl arg0, Frame arg1) {
-        arg0.method11885();
-        arg1.setVisible(false);
-        arg1.dispose();
     }
 
     @ObfuscatedName("pi.s([Ljava/lang/String;[IIIB)V")
@@ -2042,10 +1938,10 @@ public class Statics {
 
     @ObfuscatedName("ji.u(I)V")
     public static void method4790() {
-        AudioChannel.init(22050, options.stereo.getValue() == 1, 2);
-        musicChannel = AudioChannel.create(canvas, 0, 22050);
+        AudioChannel.init(22050, client.options.stereo.getValue() == 1, 2);
+        musicChannel = AudioChannel.create(GameShell.canvas, 0, 22050);
         AudioRenderer.method3658(true, AudioRenderer.method6082(null));
-        soundChannel = AudioChannel.create(canvas, 1, 2048);
+        soundChannel = AudioChannel.create(GameShell.canvas, 1, 2048);
         soundStream = new MixerAudioBuss();
         soundChannel.setStream(soundStream);
         field3160 = new SampleRateConverter(22050, sampleRate);
@@ -2108,23 +2004,6 @@ public class Statics {
         }
     }
 
-    @ObfuscatedName("j.j(I)V")
-    public static void method1245() {
-        FileOnDisk var0 = null;
-        try {
-            var0 = GameShell.method4031("", client.modeGame.field6404, true);
-            Packet var1 = options.createPreferencesBlock();
-            var0.method12075(var1.data, 0, var1.pos);
-        } catch (Exception var5) {
-        }
-        try {
-            if (var0 != null) {
-                var0.method12076();
-            }
-        } catch (Exception var4) {
-        }
-    }
-
     @ObfuscatedName("vj.c(I)V")
     public static void method12330() {
         if (musicChannel != null) {
@@ -2161,8 +2040,8 @@ public class Statics {
             if (var13 < field3502) {
                 var13 = field3502;
             }
-            int var14 = field748.method4586(var12, client.field9067) + field750;
-            int var15 = field6761.method4574(var13, client.field9068) + field752;
+            int var14 = field748.method4586(var12, client.frameWidth) + field750;
+            int var15 = field6761.method4574(var13, client.frameHeight) + field752;
             arg2.method517(field8719, false).method1070(var14 + field753.method2721(), var15 + field753.method2763(), var12 - field753.method2721() * 2, var13 - field753.method2763() * 2, 1, -1, 0);
             arg2.method517(field753, true).method2500(var14, var15);
             field753.flipHorizontally();
@@ -2468,12 +2347,6 @@ public class Statics {
         return true;
     }
 
-    @ObfuscatedName("ga.l(IS)V")
-    public static void method4107(int arg0) {
-        DelayedStateChange var1 = DelayedStateChange.create(4, (long) arg0);
-        var1.enqueueEvent();
-    }
-
     @ObfuscatedName("kw.s(B)V")
     public static void method5550() {
         if (field5084 != null) {
@@ -2591,7 +2464,7 @@ public class Statics {
         if (var1) {
             try {
                 var5 = client.method1380(2, 1000);
-                if (options.toolkit.getValue() == 2) {
+                if (client.options.toolkit.getValue() == 2) {
                     var0.method15941(1);
                 }
             } catch (Exception var20) {
@@ -2601,9 +2474,9 @@ public class Statics {
         if (var3) {
             try {
                 var7 = client.method1380(3, 1000);
-                if (options.toolkit.getValue() == 3) {
+                if (client.options.toolkit.getValue() == 3) {
                     var0.method15941(4);
-                    RendererInfo var9 = renderer.method456();
+                    RendererInfo var9 = client.toolkit.method456();
                     long var10 = var9.field1289 & 0xFFFFFFFFFFFFL;
                     switch (var9.field1285) {
                         case 4098:
@@ -2628,7 +2501,7 @@ public class Statics {
         if (var4) {
             try {
                 var6 = client.method1380(1, 1000);
-                if (options.toolkit.getValue() == 1) {
+                if (client.options.toolkit.getValue() == 1) {
                     var0.method15941(2);
                 }
             } catch (Exception var18) {
@@ -2671,7 +2544,7 @@ public class Statics {
                     int[] var5 = new int[var3 * var4];
                     PixelGrabber var6 = new PixelGrabber(var1, 0, 0, var3, var4, var5, 0, var3);
                     var6.grabPixels();
-                    return renderer.method506(var5, 0, var3, var3, var4);
+                    return client.toolkit.method506(var5, 0, var3, var3, var4);
                 }
                 throw new RuntimeException("");
             } catch (InterruptedException var8) {
@@ -2687,11 +2560,6 @@ public class Statics {
     @ObfuscatedName("qe.t([BI)Ljava/lang/String;")
     public static String method8318(byte[] arg0) {
         return Cp1252.method6881(arg0, 0, arg0.length);
-    }
-
-    @ObfuscatedName("s.a(I)Z")
-    public static boolean method1314() {
-        return MiniMenu.testBinding(miniMenuDefaults.field5126);
     }
 
     @ObfuscatedName("yu.o(CI)Z")
@@ -2759,10 +2627,10 @@ public class Statics {
         int var9 = arg0.field6335 == null ? 255 : arg0.field6335[arg1];
         if (var6 != 0) {
             if (localPlayerEntity == arg2) {
-                if (options.volumeMainEffects.getValue() == 0) {
+                if (client.options.volumeMainEffects.getValue() == 0) {
                     return;
                 }
-            } else if (options.volumeBackgroundEffects.getValue() == 0) {
+            } else if (client.options.volumeBackgroundEffects.getValue() == 0) {
                 return;
             }
             if (arg0.field6339 != -1) {
@@ -2883,7 +2751,7 @@ public class Statics {
         if (var3 == null) {
             return;
         }
-        ClientScriptState var4 = ScriptRunner.method8088();
+        ClientScriptState var4 = ScriptRunner.createClientScriptState();
         var4.intLocals = new int[var3.intLocalCount];
         var4.objectLocals = new String[var3.objectLocalCount];
         var4.objectLocals[0] = arg1;
@@ -2897,7 +2765,7 @@ public class Statics {
 
     @ObfuscatedName("lh.d(III)V")
     public static void open(int arg0, int arg1) {
-        if (!field4825.field5159) {
+        if (!client.graphicsDefaults.field5159) {
             if (MiniMenu.length == 1) {
                 return;
             }
@@ -2936,15 +2804,15 @@ public class Statics {
         }
         var3 += 10;
         int var9 = arg0 - var3 / 2;
-        if (var3 + var9 > canvasWid) {
-            var9 = canvasWid - var3;
+        if (var3 + var9 > GameShell.canvasWid) {
+            var9 = GameShell.canvasWid - var3;
         }
         if (var9 < 0) {
             var9 = 0;
         }
         int var10 = arg1;
-        if (var6 + arg1 > canvasHei) {
-            var10 = canvasHei - var6;
+        if (var6 + arg1 > GameShell.canvasHei) {
+            var10 = GameShell.canvasHei - var6;
         }
         if (var10 < 0) {
             var10 = 0;
@@ -3113,9 +2981,9 @@ public class Statics {
         field1941 = -1;
         client.setState(1);
         for (int var3 = 0; var3 < 100; var3++) {
-            client.field9204[var3] = true;
+            client.topLevelComponentRedrawRequestedTemp[var3] = true;
         }
-        client.method15612();
+        client.notifyWindowStatus();
         field3357 = null;
         field3307 = 0L;
         client.method7731();
@@ -3135,9 +3003,9 @@ public class Statics {
     public static int[] method3289(MiniMenuEntry arg0) {
         int[] var1 = null;
         if (MiniMenu.method5562(arg0.menuAction)) {
-            var1 = objTypes.get((int) arg0.field10333).quest;
+            var1 = client.objTypes.get((int) arg0.field10333).quest;
         } else if (arg0.field10332 != -1) {
-            var1 = objTypes.get(arg0.field10332).quest;
+            var1 = client.objTypes.get(arg0.field10332).quest;
         } else if (MiniMenu.method8731(arg0.menuAction)) {
             ObjectNode var2 = (ObjectNode) client.npcEntities.get((long) arg0.field10333);
             if (var2 != null) {
@@ -3262,11 +3130,6 @@ public class Statics {
         }
     }
 
-    @ObfuscatedName("dm.ek(II)Z")
-    public static boolean method2888(int arg0) {
-        return arg0 == 12 || arg0 == 2 || arg0 == 10;
-    }
-
     @ObfuscatedName("lb.fg(IZI)V")
     public static void method5600(int arg0, boolean arg1) {
         client.method4567(arg0, LocalisedText.field6938.get(language), arg1);
@@ -3274,7 +3137,7 @@ public class Statics {
 
     @ObfuscatedName("pf.gc(II)V")
     public static void method7913(int arg0) {
-        if (options.customCursors.method15908() == 0) {
+        if (client.options.customCursors.method15908() == 0) {
             arg0 = -1;
         }
         if (client.field9018 == arg0) {
@@ -3286,12 +3149,12 @@ public class Statics {
             if (var2 == null) {
                 arg0 = -1;
             } else {
-                field4133.setcustomcursor(canvas, var2.method2735(true), var2.method2762(), var2.method2728(), new Point(var1.field7163, var1.field7165));
+                field4133.setcustomcursor(GameShell.canvas, var2.method2735(true), var2.method2762(), var2.method2728(), new Point(var1.field7163, var1.field7165));
                 client.field9018 = arg0;
             }
         }
         if (arg0 == -1 && client.field9018 != -1) {
-            field4133.setcustomcursor(canvas, null, -1, -1, new Point());
+            field4133.setcustomcursor(GameShell.canvas, null, -1, -1, new Point());
             client.field9018 = -1;
         }
     }
@@ -3333,10 +3196,10 @@ public class Statics {
         field4450.method11899();
         field7650.method3917();
         client.world.getLocTypeList().method11477();
-        npcTypes.method12555();
-        objTypes.method12300();
+        client.npcTypes.method12555();
+        client.objTypes.method12300();
         field566.method11148();
-        field4213.method11087();
+        client.field4213.method11087();
         field4645.method7662();
         field6667.method4883();
         field1510.method12010();
@@ -3365,7 +3228,7 @@ public class Statics {
 
     @ObfuscatedName("dp.gg(IIII)V")
     public static final void method2617(int arg0, int arg1, int arg2) {
-        String var3 = "tele " + arg0 + TextUtil.field488 + (arg1 >> 6) + TextUtil.field488 + (arg2 >> 6) + TextUtil.field488 + (arg1 & 0x3F) + TextUtil.field488 + (arg2 & 0x3F);
+        String var3 = "tele " + arg0 + TextUtil.COMMA + (arg1 >> 6) + TextUtil.COMMA + (arg2 >> 6) + TextUtil.COMMA + (arg1 & 0x3F) + TextUtil.COMMA + (arg2 & 0x3F);
         System.out.println(var3);
         DeveloperConsole.method7065(var3, true, false);
     }
@@ -3473,7 +3336,7 @@ public class Statics {
             if (arg0.spotAnims[var2].field1204 != -1) {
                 AnimationNode var3 = arg0.spotAnims[var2].field1203;
                 if (var3.method11776()) {
-                    EffectAnimType var4 = field4213.method11082(arg0.spotAnims[var2].field1204);
+                    EffectAnimType var4 = client.field4213.method11082(arg0.spotAnims[var2].field1204);
                     SeqType var5 = var3.method11804();
                     if (var4.field5264) {
                         if (var5.field6323 == 3) {
@@ -3560,9 +3423,9 @@ public class Statics {
                 int var9 = arg3 * var6 * 512 / (var8 * 334);
                 int var10 = (arg2 - var9) / 2;
                 if (arg4) {
-                    renderer.L();
-                    renderer.fillRectangle(arg0, arg1, var10, arg3, -16777216);
-                    renderer.fillRectangle(arg0 + arg2 - var10, arg1, var10, arg3, -16777216);
+                    client.toolkit.L();
+                    client.toolkit.fillRectangle(arg0, arg1, var10, arg3, -16777216);
+                    client.toolkit.fillRectangle(arg0 + arg2 - var10, arg1, var10, arg3, -16777216);
                 }
                 arg0 += var10;
                 arg2 -= var10 * 2;
@@ -3575,9 +3438,9 @@ public class Statics {
                 int var12 = arg2 * var11 * 334 / (var6 * 512);
                 int var13 = (arg3 - var12) / 2;
                 if (arg4) {
-                    renderer.L();
-                    renderer.fillRectangle(arg0, arg1, arg2, var13, -16777216);
-                    renderer.fillRectangle(arg0, arg1 + arg3 - var13, arg2, var13, -16777216);
+                    client.toolkit.L();
+                    client.toolkit.fillRectangle(arg0, arg1, arg2, var13, -16777216);
+                    client.toolkit.fillRectangle(arg0, arg1 + arg3 - var13, arg2, var13, -16777216);
                 }
                 arg1 += var13;
                 arg3 -= var13 * 2;
@@ -3592,7 +3455,7 @@ public class Statics {
 
     @ObfuscatedName("ol.ig(S)V")
     public static final void method7076() {
-        int var0 = options.removeRoofOverride.getValue();
+        int var0 = client.options.removeRoofOverride.getValue();
         if (var0 == 0) {
             client.world.method6107(null);
             client.method8389(0);
@@ -3672,7 +3535,7 @@ public class Statics {
             if (var12 == null) {
                 return;
             }
-            var11 = renderer.method517(var12[0], true);
+            var11 = client.toolkit.method517(var12[0], true);
             client.field9131.method7937(var11, (long) var9);
         }
         Vector3 var13 = arg0.getTransform().trans;
@@ -3683,7 +3546,7 @@ public class Statics {
         int var17 = arg2 % 4 * 18 + var15;
         var11.method2500(var16, var17);
         if (arg0 == arg1) {
-            renderer.drawRectangle(var16 - 1, var17 - 1, 18, 18, -256);
+            client.toolkit.drawRectangle(var16 - 1, var17 - 1, 18, 18, -256);
         }
         CoverMarkerClickbox var18 = CoverMarkerClickbox.method12327();
         var18.field9250 = arg1;
@@ -3769,7 +3632,7 @@ public class Statics {
     @ObfuscatedName("kk.lh(Lew;I)V")
     public static void method5567(Component arg0) {
         if (arg0.type == 5 && arg0.invobject != -1) {
-            ObjIconFactory.ensureIconExists(renderer, arg0);
+            ObjIconFactory.ensureIconExists(client.toolkit, arg0);
         }
     }
 

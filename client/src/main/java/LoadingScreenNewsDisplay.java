@@ -29,15 +29,15 @@ public class LoadingScreenNewsDisplay implements LoadingScreenElement {
         if (var2 == null) {
             return;
         }
-        int var3 = this.field2306.field2599.method4586(this.field2306.field2598, client.field9067) + this.field2306.field2593;
-        int var4 = this.field2306.field2592.method4574(this.field2306.field2601, client.field9068) + this.field2306.field2594;
+        int var3 = this.field2306.field2599.method4586(this.field2306.field2598, client.frameWidth) + this.field2306.field2593;
+        int var4 = this.field2306.field2592.method4574(this.field2306.field2601, client.frameHeight) + this.field2306.field2594;
         if (this.field2306.field2597) {
-            Statics.renderer.drawRectangle(var3, var4, this.field2306.field2598, this.field2306.field2601, this.field2306.field2591, 0);
+            client.toolkit.drawRectangle(var3, var4, this.field2306.field2598, this.field2306.field2601, this.field2306.field2591, 0);
         }
         int var5 = var4 + this.method3946(Statics.field670, var2.field2315, var3, var4, 5) * 12;
         int var8 = var5 + 8;
         if (this.field2306.field2597) {
-            Statics.renderer.method825(var3, var8, this.field2306.field2598 + var3 - 1, var8, this.field2306.field2591, 0);
+            client.toolkit.method825(var3, var8, this.field2306.field2598 + var3 - 1, var8, this.field2306.field2591, 0);
         }
         var5 = var8 + 1;
         int var6 = var5 + this.method3946(Statics.field670, var2.field2316, var3, var5, 5) * 12;
